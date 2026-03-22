@@ -1,6 +1,10 @@
 """
 Shared utilities for circle map computations.
 
+The circle map is the canonical discrete dynamical system for a periodically
+driven oscillator. K controls the coupling strength between oscillator and
+drive; Omega is the ratio of natural to driving frequency.
+
 The standard circle map:
     θ_{n+1} = θ_n + Ω - (K/2π) sin(2π θ_n)
 

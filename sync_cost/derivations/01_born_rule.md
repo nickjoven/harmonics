@@ -99,7 +99,7 @@ theorem of cost landscapes.
 
 ## Connection to lattice results
 
-The Stribeck lattice has two basins: stick (subharmonic) and slip
+The Stribeck lattice (a chain of friction oscillators coupled by elastic springs, showing mode-locking and bifurcation thresholds analogous to synchronization transitions) has two basins: stick (subharmonic) and slip
 (fundamental). The bifurcation threshold is the saddle point between
 them. Below threshold, the system occupies the slip basin entirely.
 Above threshold, it transitions to the stick basin.
@@ -117,7 +117,7 @@ the bifurcation point.
 ## Connection to Arnold tongue geometry
 
 The quadratic basin structure above was assumed. It can be *derived*
-from the circle map dynamics that underlie the spectral tilt
+from the circle map dynamics (the circle map is the canonical discrete map for driven synchronization, defined by theta_{n+1} = theta_n + Omega - (K/2pi)sin(2pi*theta_n)) that underlie the spectral tilt
 derivation (see `born_rule_tongues.py`).
 
 Every Arnold tongue boundary is a **saddle-node bifurcation**: a

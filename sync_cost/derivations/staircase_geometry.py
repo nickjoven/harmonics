@@ -10,7 +10,8 @@ Three geometric representations:
    it a 3D surface.
 
 2. THE MODULAR SURFACE: The Stern-Brocot tree IS the Farey
-   tessellation of the hyperbolic plane (Poincaré disk). Each
+   tessellation of the hyperbolic plane — the tiling of the Poincaré
+   disk by ideal triangles whose vertices are Farey-adjacent rationals. Each
    node p/q maps to a point in H². The path to 1/φ is a
    hyperbolic geodesic. W(Ω) becomes a function on H².
 

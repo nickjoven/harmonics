@@ -131,7 +131,7 @@ mode is well into the saturating regime but not fully converged.
 ### Physical interpretation of K_half
 
 K_half is the synchronization timescale — the time for a mode to
-reach half its maximum synchronization depth. In the KE framework:
+reach half its maximum synchronization depth. In the KE (Kuramoto-equation) framework — the mean-field theory of coupled oscillators whose order parameter measures collective synchronization:
 
     K_half = π / (K_c × g(0))
 
@@ -231,7 +231,7 @@ choices?
 
 ## Superseded by Derivation 04
 
-A systematic scan (`cost_function_scan.py`) showed that **every
+A systematic scan (`cost_function_scan.py` — which tested Michaelis-Menten, Hill, stretched-exponential, and power-law cost functions, finding that all monotone forms produce the wrong sign of running) showed that **every
 monotonically decreasing cost function C(τ) with P ∝ 1/C produces
 positive running**. This is structural: ln(1/C(τ₀/k)) is convex in
 ln k for any monotone C.
@@ -247,6 +247,6 @@ where g(ω) is the frequency distribution shaped by mode-locking
 and concave regions — the running sign depends on the pivot's
 position on the staircase, not on the monotonicity of an envelope.
 
-Numerical exploration (`mode_locking_spectrum.py`) confirms that
+Numerical exploration (`mode_locking_spectrum.py` — which computed the power spectrum from the devil's staircase of the circle map across coupling strengths and identified where tilt and running have the observed signs simultaneously) confirms that
 regions with simultaneous red tilt and negative running exist just
 past rational plateaus (e.g., near ω = 2/3).

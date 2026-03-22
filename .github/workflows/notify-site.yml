@@ -1,0 +1,25 @@
+name: Notify Site Rebuild
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "sync_cost/**"
+      - "patches/**"
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dispatch rebuild to proslambenomenos-site
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.SITE_DISPATCH_TOKEN }}
+          repository: nickjoven/proslambenomenos-site
+          event-type: source-updated
+          client-payload: >-
+            {
+              "repository": "${{ github.repository }}",
+              "ref": "${{ github.ref }}",
+              "sha": "${{ github.sha }}"
+            }

@@ -1,6 +1,9 @@
 """
 Self-similar structure of the devil's staircase near 1/φ.
 
+The devil's staircase is the fractal step function W(Omega) of the circle map,
+constant on plateaus at each rational winding number p/q.
+
 The Fibonacci convergents bracket 1/φ at resolutions that shrink
 by φ² ≈ 2.618 per level:
 
