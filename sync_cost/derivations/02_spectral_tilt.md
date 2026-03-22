@@ -220,3 +220,25 @@ field costs energy.
 **Open**: Does the self-consistency condition on the cost functional
 select the Michaelis-Menten form, or is it one of several consistent
 choices?
+
+## Superseded by Derivation 04
+
+A systematic scan (`cost_function_scan.py`) showed that **every
+monotonically decreasing cost function C(τ) with P ∝ 1/C produces
+positive running**. This is structural: ln(1/C(τ₀/k)) is convex in
+ln k for any monotone C.
+
+The issue is ontological: "cost" carries optimization structure that
+obscures the mechanics. Derivation 04 (`04_spectral_tilt_reframed.md`)
+replaces the cost function with the direct mechanical observable:
+
+    P(k) ∝ g(ω) / (Kr)²
+
+where g(ω) is the frequency distribution shaped by mode-locking
+(Arnold tongues, devil's staircase). The staircase has both convex
+and concave regions — the running sign depends on the pivot's
+position on the staircase, not on the monotonicity of an envelope.
+
+Numerical exploration (`mode_locking_spectrum.py`) confirms that
+regions with simultaneous red tilt and negative running exist just
+past rational plateaus (e.g., near ω = 2/3).
