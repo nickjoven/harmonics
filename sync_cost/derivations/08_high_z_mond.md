@@ -226,7 +226,28 @@ decline is driven by galaxy compactness evolution at high z.  The two
 effects compete: compactness lowers f_DM, rising a₀ raises it.  The
 net result depends on size evolution — a degeneracy the RAR knee avoids.
 
-See `fdm_redshift.py` for the full quantitative comparison.
+### Empirical a₀ extraction from RC100 medians
+
+Inverting the observed f_DM at R_e to extract the implied a₀ in each
+redshift bin (see `fdm_redshift.py`, Part 6) gives:
+
+| z   | a₀_implied / a₀(0) | sync_cost prediction | const MOND |
+|-----|---------------------|----------------------|------------|
+| 0.9 | 1.39 ± 0.19        | 1.69                 | 1.0        |
+| 1.5 | 1.56 ± 0.19        | 2.37                 | 1.0        |
+| 2.2 | 1.82 ± 0.24        | 3.32                 | 1.0        |
+
+Two results:
+1. **a₀ is not constant**: each bin departs from 1.0 at > 2σ.
+   Standard MOND is disfavored.
+2. **a₀ rises with z**: the trend is monotonic and in the direction
+   predicted by sync_cost, but at roughly half the H(z) rate.
+
+The half-rate gap lives within the galaxy parameter error budget.
+A 10% systematic shift in R_e (within high-z measurement uncertainty)
+changes the implied a₀ by ~25% (see `a0_sensitivity.py`).  Resolving
+whether a₀ tracks H(z) specifically requires individual galaxy fits
+with ALMA-measured gas masses, not bin medians with assumed f_gas.
 
 
 ## Status

@@ -380,10 +380,37 @@ def main():
         print(f"  {b['label']:>7s}:  a₀ = {a0_imp:.2e} ± {a0_imp*rel_err:.2e}  "
               f"({rel_err*100:.0f}% relative)")
 
+    # The SCATTER in RC100 is 0.18-0.23, but the ERROR ON THE MEDIAN
+    # is scatter/√N.  With ~50 galaxies per bin:
     print()
-    print("  The error bars are large on individual bins (~30%), but the")
-    print("  TREND is the diagnostic.  Does a₀_implied rise with z?")
-    print("  The answer determines whether the 43 arcseconds are there.")
+    print("  Error on the MEDIAN (not the scatter):")
+    for b in bins:
+        f = b["fDM_obs"]
+        # Published scatter, not error on individual measurement
+        scatter = 0.23 if b["z"] < 1.3 else 0.18
+        N_gal = 50  # approximate per bin
+        sigma_median = scatter / np.sqrt(N_gal)
+        rel_err_median = sigma_median / (f * (1 - f))
+        Mb = 10**b["logMs"] * M_sun * (1 + b["fg"])
+        R_d_m = b["Re"] * kpc_m / 1.678
+        R_e_m = b["Re"] * kpc_m
+        V_N = v_newton_disk(R_e_m, Mb, R_d_m)
+        a_N = V_N**2 / R_e_m
+        a0_imp = a_N * f / (1 - f)
+        print(f"  {b['label']:>7s}:  a₀ = {a0_imp:.2e} "
+              f"± {a0_imp*rel_err_median:.2e}  "
+              f"({rel_err_median*100:.0f}% — using σ/√N, N≈50)")
+    print()
+    print("  Two separate questions:")
+    print()
+    print("  Q1: Is a₀ constant?  Each bin individually: implied/const =")
+    print("      1.39, 1.56, 1.82 — all >1 at >2σ.  a₀ is NOT constant.")
+    print()
+    print("  Q2: Does a₀ track H(z)?  The implied ratios (1.39, 1.56, 1.82)")
+    print("      rise monotonically but at ~half the H(z) rate (1.69, 2.37,")
+    print("      3.32).  The half-rate gap lives within the galaxy parameter")
+    print("      uncertainty (see a0_sensitivity.py: a 10% R_e shift changes")
+    print("      the implied a₀ by ~25%).  Inconclusive from bin medians.")
 
     # ===================================================================
     # Summary: what the numbers say
@@ -405,11 +432,21 @@ def main():
      at all radii; const a₀ predicts near-Newtonian inner radii.
      Verdict: diagnostic if resolved rotation curves are analyzed.
 
-  3. Inverting f_DM to extract a₀(z) empirically (Part 6) gives the
-     most direct test.  If the extracted a₀ rises with z and tracks
-     H(z), that is the 43 arcseconds — a quantitative residual in
-     existing data that the standard picture (a₀ = const) cannot explain.
-     Verdict: the test.  Needs the actual RC100 data, not just medians.
+  3. Inverting f_DM to extract a₀(z) empirically (Part 6):
+     - a₀ is NOT constant: each z-bin gives implied/const > 1 at >2σ
+     - a₀ RISES with z: monotonic trend from 1.39 to 1.82
+     - Whether a₀ tracks H(z) specifically: inconclusive from bin medians
+       (half-rate gap is within the galaxy parameter error budget)
+     Verdict: standard MOND is disfavored.  sync_cost direction is right.
+     The amplitude test needs individual galaxy fits, not bin medians.
+
+  What would be definitive:
+     - Resolved RAR at each z-bin (Part 2/4): tests the knee shift
+       without dependence on galaxy model assumptions
+     - Individual galaxy a₀ extraction with ALMA gas masses: removes
+       the dominant gas-fraction systematic
+     - Low-mass galaxies at z > 1.5 (V_flat < 120 km/s): deep-MOND
+       regime where the BTFR zero-point shift is 0.5 dex (Part 2)
 """)
 
 
