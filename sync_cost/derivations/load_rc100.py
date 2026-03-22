@@ -1,27 +1,14 @@
 #!/usr/bin/env python3
 """
-load_rc100.py — Data loader for RC100 Table B1
+load_rc100.py — Data loader for RC100 Table 3
 
-Reads data/rc100.csv and provides it in the formats expected by:
+Reads data/rc100_table3.csv and provides it in the formats expected by:
   - rar_high_z.py   (individual galaxy dicts for RAR construction)
   - fdm_redshift.py (redshift-binned medians for f_DM analysis)
   - a0_sensitivity.py (binned parameters for sensitivity sweeps)
 
-CSV columns (from Nestor Shachar et al. 2023, ApJ 944, 78, Table B1):
-  id        — galaxy identifier
-  z         — spectroscopic redshift
-  log_Mstar — log10(stellar mass / M_sun)
-  Re_kpc    — effective radius [kpc]
-  f_gas     — gas fraction M_gas / M_baryon
-  f_DM      — dark matter fraction within R_e
-  f_DM_err  — uncertainty on f_DM
-  V_circ    — circular velocity at R_e [km/s]
-  sigma_0   — central velocity dispersion [km/s]
-  B_T       — bulge-to-total ratio
-  inc_deg   — inclination [degrees]
-
-When the CSV has data rows, every downstream script uses real measurements.
-When it has only the header, scripts fall back to synthetic/fiducial parameters.
+Source: Nestor Shachar et al. (2023), ApJ 944, 78, Table 3
+  100 galaxies at z = 0.6–2.5 with best-fit rotation curve parameters.
 """
 
 import csv
@@ -29,35 +16,36 @@ import os
 import numpy as np
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
-_CSV = os.path.join(_HERE, "data", "rc100.csv")
+_CSV = os.path.join(_HERE, "data", "rc100_table3.csv")
 
 M_sun = 1.989e30  # kg
 
 
 def _read_csv():
-    """Read rc100.csv, return list of row dicts with floats where possible."""
+    """Read rc100_table3.csv, skipping comment lines."""
     rows = []
+    if not os.path.exists(_CSV):
+        return rows
     with open(_CSV, newline="") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            parsed = {}
-            for k, v in row.items():
-                k = k.strip()
-                v = v.strip()
-                try:
-                    parsed[k] = float(v)
-                except ValueError:
-                    parsed[k] = v
-            rows.append(parsed)
+        # Skip comment lines starting with #
+        lines = [line for line in f if not line.startswith("#")]
+    reader = csv.DictReader(lines)
+    for row in reader:
+        parsed = {}
+        for k, v in row.items():
+            k = k.strip()
+            v = v.strip()
+            try:
+                parsed[k] = float(v)
+            except ValueError:
+                parsed[k] = v
+        rows.append(parsed)
     return rows
 
 
 def has_data():
-    """True if rc100.csv contains at least one data row."""
-    if not os.path.exists(_CSV):
-        return False
-    rows = _read_csv()
-    return len(rows) > 0
+    """True if rc100_table3.csv exists and contains data rows."""
+    return len(_read_csv()) > 0
 
 
 def load_galaxies():
@@ -65,26 +53,28 @@ def load_galaxies():
 
     Returns list of dicts with keys:
         id, z, logMs, Re_kpc, f_gas, f_DM, f_DM_err,
-        V_circ, M_baryon, sigma_0, B_T, inc_deg
+        V_circ, sigma_0, log_Mbulge, M_baryon
     """
     raw = _read_csv()
     galaxies = []
     for r in raw:
         logMs = r["log_Mstar"]
-        f_gas = r["f_gas"]
+        logMb = r["log_Mbaryon"]
+        # f_gas = (M_baryon - M_star) / M_baryon = 1 - 10^(logMs - logMb)
+        f_gas = max(0.0, 1.0 - 10**(logMs - logMb))
+
         gal = {
-            "id": r.get("id", ""),
+            "id": r.get("Galaxy", ""),
             "z": r["z"],
             "logMs": logMs,
             "Re_kpc": r["Re_kpc"],
             "f_gas": f_gas,
-            "f_DM": r["f_DM"],
-            "f_DM_err": r.get("f_DM_err", 0.0),
-            "V_circ": r.get("V_circ", 0.0),
-            "sigma_0": r.get("sigma_0", 0.0),
-            "B_T": r.get("B_T", 0.0),
-            "inc_deg": r.get("inc_deg", 0.0),
-            "M_baryon": 10**logMs * M_sun * (1 + f_gas),
+            "f_DM": r["fDM"],
+            "f_DM_err": r.get("e_fDM", 0.0),
+            "V_circ": r.get("Vc_kms", 0.0),
+            "sigma_0": r.get("sigma0_kms", 0.0),
+            "log_Mbulge": r.get("log_Mbulge", 0.0),
+            "M_baryon": 10**logMb * M_sun,
         }
         galaxies.append(gal)
     return galaxies
@@ -147,7 +137,4 @@ if __name__ == "__main__":
                   f"f_gas={b['fg']:.2f}, f_DM={b['fDM_obs']:.2f} "
                   f"± {b['fDM_err']:.2f}")
     else:
-        print("data/rc100.csv has no data rows yet.")
-        print("Expected columns:")
-        print("  id, z, log_Mstar, Re_kpc, f_gas, f_DM, f_DM_err,")
-        print("  V_circ, sigma_0, B_T, inc_deg")
+        print("data/rc100_table3.csv not found or empty.")
