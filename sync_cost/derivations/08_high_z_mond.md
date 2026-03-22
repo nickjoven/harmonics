@@ -209,13 +209,31 @@ those radii the knee shift is detectable.
 
 ### What is needed
 
-The RC100 rotation curves are published.  The analysis requires:
+The RC100 data are published: Table B1 (Nestor Shachar et al. 2023,
+ApJ 944, 78) contains individual galaxy measurements (z, R_e, v_circ,
+M_baryon, f_DM, f_gas, σ₀, B/T) for all 100 galaxies, available as
+machine-readable tables on IOPscience.  The lead author has also
+released the **RotCurves** Python package (arXiv:2601.08348, MNRAS 546,
+2026) which may bundle example rotation curve data.
+
+**No resolved RAR analysis at z > 0.5 has been published.**  All
+existing RAR studies use local galaxies (z < 0.1; SPARC database).
+This test is an open frontier.
+
+The analysis requires:
 
 1. SED-based baryonic mass models → g_bar(r) at each radius
 2. Kinematic g_obs(r) from the rotation curves
 3. Bin by redshift, fit the RAR knee position in each bin
 
 No new observations.  This is detectable in existing data.
+
+Note: Sharma et al. (2025, A&A) analyzed 263 rotationally supported
+galaxies at 0.6 ≤ z < 2.5 and found f_DM within R_e > 50% on average
+— in tension with Nestor Shachar et al. (2023).  This methodological
+tension is itself diagnostic: the two analyses use different baryonic
+mass models.  A resolved RAR analysis sidesteps this by testing the
+*shape* of the g_obs–g_bar relation, not its absolute normalisation.
 
 ### Subtlety: f_DM within R_e
 
@@ -264,6 +282,12 @@ covers the right redshift range but the wrong mass range for the BTFR
 test.  The RAR test sidesteps this by using outer-radius data points
 from massive galaxies.  JWST Cycle 3+ programmes targeting low-mass
 lensed disks at z > 1.5 remain critical for the BTFR zero-point test.
+
+**Prior RAR work**: McGaugh et al. (2024, ApJ 976, 13) plotted the
+RC100 data on the local BTFR and found no evolution — but the BTFR is
+the *integrated* RAR, and these massive galaxies sit in the Newtonian
+regime where evolution is minimal.  The *resolved* RAR (g_obs vs g_bar
+at multiple radii per galaxy) has never been constructed at z > 0.5.
 
 **Timeline**: RAR reanalysis of RC100 is feasible now.  BTFR feasibility
 demonstration with ~10 low-mass galaxies could come from existing JWST
