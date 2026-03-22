@@ -16,23 +16,7 @@ Usage:
 """
 
 import math
-
-PHI = (1 + math.sqrt(5)) / 2
-INV_PHI = 1 / PHI
-
-
-# ---------------------------------------------------------------------------
-# Circle map (from circle_map.py)
-# ---------------------------------------------------------------------------
-
-def winding_number(omega, K, n_transient=2000, n_measure=10000):
-    theta = 0.0
-    for _ in range(n_transient):
-        theta = theta + omega - K / (2 * math.pi) * math.sin(2 * math.pi * theta)
-    theta_start = theta
-    for _ in range(n_measure):
-        theta = theta + omega - K / (2 * math.pi) * math.sin(2 * math.pi * theta)
-    return (theta - theta_start) / n_measure
+from circle_map_utils import winding_number, PHI, INV_PHI
 
 
 # ---------------------------------------------------------------------------

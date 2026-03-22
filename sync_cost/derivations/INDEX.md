@@ -76,6 +76,13 @@ These are referenced but not on the main line:
 
 ## Shared Code
 
-`winding_number(omega, K)` is defined in multiple files (circle_map, stern_brocot_map,
-phi_squared_zoom, k_omega_mapping, superharmonic_regime, staircase_geometry).
-A future refactor should extract this to a shared module.
+`circle_map_utils.py` — shared constants (PHI, INV_PHI, PHI_SQ, PSI, LN_PHI_SQ),
+`winding_number()`, `circle_map_step()`, `fibonacci_sequence()`,
+`fibonacci_convergents()`, and `farey_mediants()`.
+
+Imported by: stern_brocot_map, phi_squared_zoom, k_omega_mapping,
+superharmonic_regime, staircase_geometry.
+
+Note: `circle_map.py` retains its own implementation (different semantics —
+uses mod and tracks total advance). It was the first file written and has
+its own internal structure.

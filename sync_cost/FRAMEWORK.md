@@ -49,14 +49,26 @@ that probability = basin volume in the cost landscape.
 
 ### 2. Spectral Tilt (n_s ≈ 0.965)
 
-Synchronization cost gradient across scales. Larger scales had longer to
-synchronize, lower net cost, more power. The tilt is the slope of the
-cost function.
+The devil's staircase of the circle map, evaluated at the golden ratio
+1/φ, is exactly self-similar with scaling factor φ² ≈ 2.618. This gives
+an exactly scale-invariant power spectrum in the natural (Stern-Brocot)
+coordinates. The 3.5% tilt comes from the mapping between the staircase's
+Fibonacci levels and the CMB wavenumber k.
 
-Candidate cost function: Michaelis-Menten nonlinearity (from ket-dag).
-Saturating, near-linear over a range, producing near-scale-invariance
-with a tilt. The 3.5% deviation from scale-invariance encodes the cost
-function's curvature.
+The mapping traverses 0.0365 Fibonacci levels per e-fold of k (one
+level per 27.4 e-folds). In 60 e-folds of observable inflation, the
+universe samples ~2.2 Fibonacci levels — a tiny slice of the self-similar
+hierarchy. The amplitude A_s ≈ 2.1 × 10⁻⁹ places the pivot at level
+~21 (F₂₁ = 17711).
+
+The staircase provides exact scale-invariance; inflation provides the
+tilt. See `derivations/INDEX.md` for the full derivation chain.
+
+Earlier approach (superseded): Michaelis-Menten cost function. A
+systematic scan (cost_function_scan.py) showed that ALL monotonically
+decreasing cost functions produce wrong-sign running. The pivot to the
+circle map / devil's staircase resolves this — see
+`derivations/04_spectral_tilt_reframed.md`.
 
 ### 3. Planck Scale
 

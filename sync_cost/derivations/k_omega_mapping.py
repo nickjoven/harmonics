@@ -31,15 +31,7 @@ Usage:
 """
 
 import math
-
-# ---------------------------------------------------------------------------
-# Constants
-# ---------------------------------------------------------------------------
-
-PHI = (1 + math.sqrt(5)) / 2
-INV_PHI = 1 / PHI
-PHI_SQ = PHI ** 2
-LN_PHI_SQ = math.log(PHI_SQ)  # ≈ 0.9624
+from circle_map_utils import winding_number, PHI, INV_PHI, PHI_SQ, LN_PHI_SQ
 
 # Planck 2018 best-fit values
 N_S = 0.9649           # spectral index
@@ -52,20 +44,6 @@ K_PIVOT = 0.05         # pivot scale in Mpc^{-1}
 K_MIN = 1e-4   # largest observable scale
 K_MAX = 1e-1   # smallest scale with good CMB data
 N_EFOLDS = 60  # e-folds of observable inflation
-
-
-# ---------------------------------------------------------------------------
-# Circle map (for verification)
-# ---------------------------------------------------------------------------
-
-def winding_number(omega, K, n_transient=3000, n_measure=20000):
-    theta = 0.0
-    for _ in range(n_transient):
-        theta = theta + omega - K / (2 * math.pi) * math.sin(2 * math.pi * theta)
-    theta_start = theta
-    for _ in range(n_measure):
-        theta = theta + omega - K / (2 * math.pi) * math.sin(2 * math.pi * theta)
-    return (theta - theta_start) / n_measure
 
 
 # ---------------------------------------------------------------------------

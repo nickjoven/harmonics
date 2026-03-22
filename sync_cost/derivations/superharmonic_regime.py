@@ -31,21 +31,7 @@ Usage:
 """
 
 import math
-
-PHI = (1 + math.sqrt(5)) / 2
-INV_PHI = 1 / PHI
-PHI_SQ = PHI ** 2
-LN_PHI_SQ = math.log(PHI_SQ)
-
-
-def winding_number(omega, K, n_transient=3000, n_measure=20000):
-    theta = 0.0
-    for _ in range(n_transient):
-        theta = theta + omega - K / (2 * math.pi) * math.sin(2 * math.pi * theta)
-    theta_start = theta
-    for _ in range(n_measure):
-        theta = theta + omega - K / (2 * math.pi) * math.sin(2 * math.pi * theta)
-    return (theta - theta_start) / n_measure
+from circle_map_utils import winding_number, PHI, INV_PHI, PHI_SQ, LN_PHI_SQ
 
 
 def stern_brocot_subtree(lo_p, lo_q, hi_p, hi_q, depth=0, max_depth=6):

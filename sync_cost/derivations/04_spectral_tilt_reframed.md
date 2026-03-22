@@ -184,13 +184,44 @@ that determines the running sign.
    differential attenuation IS the frequency distribution being
    sculpted by mode-locking. Can we extract g(ω) from lattice data?
 
-## Status
+## Status: Resolved
 
-This reframing resolves the running sign problem in principle: the
-devil's staircase curvature can be negative at the pivot. Whether
-it IS negative at the specific pivot scale is a quantitative question
-that requires knowing g(ω) and the pivot's position on the staircase.
+The numerical follow-through (see below) resolved the open questions:
 
-The next step is numerical: model g(ω) as a devil's staircase (or
-Farey-mediant construction) and compute the tilt and running as a
-function of position.
+1. **The pivot sits at 1/φ** — the golden ratio, the hardest point to
+   mode-lock. This is the unique fixed point of the Gauss map, the
+   "most irrational" number.
+
+2. **The staircase at 1/φ is exactly self-similar** with scaling factor
+   φ² ≈ 2.618. Each Fibonacci bracket carries 1/φ² of the parent's
+   winding: Δ(ln|ΔW|) = -ln(φ²) per level. This gives an exactly
+   flat power spectrum in the natural (Stern-Brocot) coordinates.
+
+3. **The tilt comes from the k ↔ Ω mapping**, not from the staircase
+   itself. rate = (n_s - 1)/(-ln φ²) = 0.0365 Fibonacci levels per
+   e-fold. The observable universe samples ~2.2 levels.
+
+4. **The amplitude A_s ≈ 2.1 × 10⁻⁹** places the pivot at Fibonacci
+   level ~21 (F₂₁ = 17711, within 5×10⁻¹⁰ of 1/φ).
+
+The separation is clean: **the staircase provides scale-invariance;
+the dynamics provide the tilt.**
+
+## Computational chain
+
+The following Python scripts implement and verify this derivation
+(read in order — see `INDEX.md` for the full dependency graph):
+
+| Script | Role |
+|--------|------|
+| `cost_function_scan.py` | Shows all monotonic cost functions give wrong running sign |
+| `circle_map.py` | Circle map, Arnold tongues, devil's staircase |
+| `golden_ratio_pivot.py` | Zoom into 1/φ, identify it as the pivot |
+| `stern_brocot_map.py` | Sample staircase on Stern-Brocot tree, not decimal grid |
+| `phi_squared_zoom.py` | **Central result**: exact φ² self-similarity at 1/φ |
+| `k_omega_mapping.py` | The k↔Ω mapping: rate, amplitude, running |
+| `superharmonic_regime.py` | Non-Fibonacci rationals as overtone structure |
+| `staircase_geometry.py` | 3D representations: Arnold surface, Poincaré disk, curvature |
+| `fibonacci_ones.py` | The ψ-eigenmode and the alternating convergence |
+
+Shared utilities: `circle_map_utils.py`
