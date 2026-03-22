@@ -1,5 +1,8 @@
 # Derivation 2: Spectral Tilt from Synchronization Cost Gradient
 
+> The universe is not scale-invariant. It almost is — and the almost
+> is the whole story.
+
 ## Claim
 
 The CMB spectral tilt n_s ≈ 0.965 encodes the curvature of the
