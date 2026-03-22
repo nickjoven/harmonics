@@ -87,7 +87,7 @@ strongest coupling (largest K) to force into a tongue.
 
 ## Collapse duration is testable
 
-The framework (FRAMEWORK.md) states: "Collapse has duration, not a
+The framework (FRAMEWORK.md) -- the synchronization cost framework, which derives physical law from coupled-oscillator dynamics and cost minimization -- states: "Collapse has duration, not a
 timestamp." The tongue traversal picture makes this concrete and
 testable:
 
@@ -102,21 +102,21 @@ collapse (K barely above K_critical) should show anomalously long
 decoherence times — slow collapse near threshold. This is distinct
 from the Zeno effect (which prevents collapse entirely).
 
-The Stribeck lattice confirms this pattern: the bifurcation threshold
+The Stribeck lattice -- a chain of friction-coupled oscillators exhibiting stick-slip bifurcation between coherent and dissipative regimes -- confirms this pattern: the bifurcation threshold
 (A ≈ 0.8) shows the longest transients. Deep in either regime
 (stick or slip), the system settles quickly.
 
 ## Connection to other derivations
 
-**Born rule** (Derivation 1): the same saddle-node geometry gives
+**Born rule** (Derivation 1, which derives P = |ψ|² as basin measure of the cost landscape): the same saddle-node geometry gives
 Δθ ∝ √ε (basin size) and τ ∝ 1/√ε (locking time). Both emerge
 from the parabolic structure at tongue boundaries.
 
-**Planck scale** (Derivation 6): tongue structure requires N ≥ 3
+**Planck scale** (Derivation 6, which derives the Planck scale as the N = 3 self-sustaining threshold of the coupling loop): tongue structure requires N ≥ 3
 coupling stages. Below the Planck scale, no tongues can form —
 no superposition, no collapse, no Born rule.
 
-**Spectral tilt** (Derivation 4): the devil's staircase structure
+**Spectral tilt** (Derivation 4, which derives the CMB tilt from mode-locking structure via the devil's staircase of the circle map): the devil's staircase structure
 that governs collapse is the same self-similar structure that
 produces the CMB power spectrum. The gap at 1/φ that makes it
 "most quantum" is the same gap that determines the spectral tilt.

@@ -1,8 +1,9 @@
 """
 Superharmonic structure within the 2.2 Fibonacci levels.
 
-The observable universe samples ~2.2 Fibonacci levels of the
-staircase (levels ~20-22). Within each level, the Farey mediants
+The Fibonacci-level hierarchy of the devil's staircase assigns level n to
+winding numbers whose denominators are Fibonacci numbers F_n; the observable
+universe samples ~2.2 such levels (levels ~20-22). Within each level, the Farey mediants
 create a sub-hierarchy of higher-order resonances.
 
 Between F_n/F_{n+1} and F_{n+1}/F_{n+2}, the mediants are:

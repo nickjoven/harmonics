@@ -5,7 +5,7 @@
 
 ## The problem with Derivation 02
 
-Derivation 02 modeled the spectral tilt via P(k) ∝ 1/C(τ), where C
+Derivation 02 modeled the CMB spectral tilt (n_s ≈ 0.965) as a synchronization cost gradient across scales, deriving P(k) ∝ 1/C(τ) and attributing the 3.5% deviation from scale-invariance to the slope of that gradient. It used P(k) ∝ 1/C(τ), where C
 is a synchronization "cost function." A systematic scan of 7 cost
 function families (cost_function_scan.py) showed that **every
 monotonically decreasing C(τ) produces positive running**. This is

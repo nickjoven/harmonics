@@ -1,7 +1,10 @@
 """
 Circle map sampled on the Stern-Brocot tree.
 
-The devil's staircase is organized by rationals, not decimals.
+The devil's staircase — the fractal step function W(Omega) of the circle map,
+constant on plateaus at each rational winding number p/q — is organized by
+rationals, not decimals. (The winding number W is the average rotation per
+iterate of the circle map.)
 The natural grid is the Farey/Stern-Brocot tree, where the path
 to 1/φ goes through the Fibonacci convergents:
 

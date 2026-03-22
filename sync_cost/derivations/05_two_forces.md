@@ -7,6 +7,7 @@
 
 Derivations 02 and 04 modeled the spectral tilt with one drive:
 synchronization (coupling K pushes oscillators toward coherence).
+Derivation 02 attributed the CMB tilt to a synchronization cost gradient across scales; Derivation 04 replaced the cost function with the devil's staircase of the circle map, resolving a wrong-sign running problem and grounding the tilt in mode-locking structure.
 The frequency distribution g(ω), shaped by mode-locking, determined
 the power spectrum.
 

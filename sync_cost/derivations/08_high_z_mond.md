@@ -2,7 +2,7 @@
 
 ## The Prediction
 
-The sync_cost framework (Derivation 03) derives the MOND acceleration scale
+The sync_cost framework (Derivation 03, which derives the MOND acceleration scale a_0 = cH_0/(2pi) as the point where local gravitational synchronization cost equals cosmological mean-field maintenance cost) derives the MOND acceleration scale
 as the threshold where local gravitational synchronization cost equals
 cosmological mean-field maintenance cost:
 
@@ -162,7 +162,7 @@ would strongly discriminate.
   calculable way — providing a second, correlated observable.
 
 - **Galaxy clusters**: The cluster-scale anomaly noted in Derivation 03
-  (multi-body synchronization threshold) may also evolve with z.  Cluster
+  -- galaxy clusters show convergence failure in Lagrangian relaxation because they operate above the single-body MOND transition but below the multi-body synchronization threshold -- may also evolve with z.  Cluster
   dynamics at z > 1 (accessible via Sunyaev-Zel'dovich + X-ray with
   SPT-3G and eROSITA) provide an independent test channel.
 

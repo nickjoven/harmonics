@@ -8,7 +8,7 @@ threshold of the coupling loop.
 
 ## The N = 3 pattern
 
-The Stribeck lattice (RESULTS.md) shows a sharp threshold:
+The Stribeck lattice -- a chain of friction-coupled oscillators exhibiting stick-slip bifurcation between coherent (subharmonic) and dissipative (fundamental) regimes -- (RESULTS.md) shows a sharp threshold:
 
 | N | P(ω₀)/P(ω_d) | Behavior |
 |---|---|---|
@@ -57,7 +57,7 @@ constitute itself.
 
 ## The staircase depth
 
-The devil's staircase at 1/φ is self-similar with scaling factor φ².
+The devil's staircase -- the fractal step function W(Omega) of the circle map, constant on plateaus at each rational winding number -- at 1/φ is self-similar with scaling factor φ².
 How many levels fit between the Planck and Hubble scales?
 
     ω_Planck / H₀  ≈  8.4 × 10⁶⁰
@@ -88,7 +88,7 @@ Planck constants to the N = 3 lattice threshold.
 
 ## Connection to Born rule
 
-The Born rule (Derivation 1, `born_rule_tongues.py`) requires Arnold
+The Born rule (Derivation 1, which derives P = |ψ|² as the basin measure of the synchronization cost landscape under dissipative convergence; `born_rule_tongues.py`) requires Arnold
 tongue structure to exist — saddle-node bifurcations at tongue
 boundaries produce the |ψ|² weighting. But tongue structure itself
 requires N ≥ 3 coupling stages.

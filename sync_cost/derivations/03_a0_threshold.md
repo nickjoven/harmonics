@@ -5,7 +5,7 @@
 The MOND acceleration scale a₀ ≈ 1.2 × 10⁻¹⁰ m/s² is the point where
 local gravitational synchronization cost equals the cosmological mean
 field maintenance cost. This gives a mechanistic derivation of the
-dimensional relation a₀ = cH₀/2π already established in proslambenomenos,
+dimensional relation a₀ = cH₀/2π already established in proslambenomenos (a companion repository deriving cosmological dimensional relations from the Hubble frequency),
 and connects it to the Stribeck lattice bifurcation threshold.
 
 ## Setup
@@ -37,7 +37,7 @@ cost structures:
 
 ### The cosmological acceleration
 
-From the proslambenomenos derivation, the fundamental frequency set by
+From the proslambenomenos derivation (which showed that the cosmological constant Λ sets a fundamental oscillation frequency, and that H₀ and a₀ both reduce to expressions in that frequency), the fundamental frequency set by
 Λ is:
 
     ν_Λ = c√(Λ/3)
@@ -94,13 +94,13 @@ The factor 2π appears because:
        a₀ = c × (2H₀/π) / (2²)  ... [simplifying the coupling chain]
 
    The exact factor traces through the ADM-Kuramoto mapping in
-   proslambenomenos. The point: 2π is the ratio of angular to cyclic
+   proslambenomenos (a mapping that recasts the ADM decomposition of general relativity as a Kuramoto-type coupled-oscillator system, with the lapse function playing the role of coupling strength). The point: 2π is the ratio of angular to cyclic
    frequency in the Kuramoto model. It appears because synchronization
    is inherently a phase phenomenon, and phase is measured in radians.
 
 ### The Stribeck interpretation
 
-In the Stribeck lattice, the bifurcation threshold is the driving
+In the Stribeck lattice (a chain of friction oscillators coupled by elastic springs, showing mode-locking and bifurcation thresholds analogous to synchronization transitions), the bifurcation threshold is the driving
 amplitude at which the system transitions from linear passthrough
 (slip regime) to subharmonic conversion (stick regime).
 
@@ -155,7 +155,7 @@ Below a₀, the system faces a choice:
 2. **Pay enhanced (MOND) cost**: Transition to the stick regime where
    coupling is enhanced. The Stribeck friction provides additional
    force beyond the baryonic contribution — the "dark matter" that
-   Lagrangian relaxation in intersections identifies as the dual
+   Lagrangian relaxation in intersections (a companion repository applying constrained optimization to synchronization hierarchies) identifies as the dual
    variable (shadow price of the synchronization constraint).
 
 3. **Decohere**: Stop maintaining orbital synchronization. The galaxy
@@ -212,5 +212,5 @@ improving with JWST.
 **Open**: The cost equality condition (λ_local = λ_cosmo at the
 transition) needs independent justification. Why should the
 synchronization wavelengths match at the critical point? Is this a
-consequence of KKT complementary slackness — the constraint binds
+consequence of KKT complementary slackness (the Karush-Kuhn-Tucker condition requiring that at the optimum, either a constraint is exactly satisfied or its associated cost multiplier is zero) — the constraint binds
 exactly when the wavelengths match?

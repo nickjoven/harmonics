@@ -3,8 +3,8 @@ Running sign and golden ratio selection.
 
 Two connected open questions:
 
-#4: WHERE does the spectral running dn_s/d(ln k) come from?
-#8: WHY is 1/φ selected over other noble numbers?
+#4 (framework open question 4): WHERE does the spectral running dn_s/d(ln k) come from?
+#8 (framework open question 8): WHY is 1/φ selected over other noble numbers?
 
 Answer to both: the system is at NEAR-CRITICAL COUPLING (K → 1).
 Near criticality, only the golden gap survives (KAM theorem).

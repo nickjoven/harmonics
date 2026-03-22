@@ -42,17 +42,17 @@ attempt derivation rather than analogy.
 The amplitude squared is the fraction of initial condition space that
 drains into that attractor.
 
-Not axiomatic. The Stribeck lattice results provide a concrete model:
+Not axiomatic. The Stribeck lattice -- a chain of friction-coupled oscillators exhibiting stick-slip bifurcation between coherent (subharmonic) and dissipative (fundamental) regimes -- results provide a concrete model:
 each oscillator has basins (stick vs. slip), and the basin measure
 determines which attractor dominates. The Born rule is the statement
 that probability = basin volume in the cost landscape.
 
 ### 2. Spectral Tilt (n_s ≈ 0.965)
 
-The devil's staircase of the circle map, evaluated at the golden ratio
-1/φ, is exactly self-similar with scaling factor φ² ≈ 2.618. This gives
-an exactly scale-invariant power spectrum in the natural (Stern-Brocot)
-coordinates. The 3.5% tilt comes from the mapping between the staircase's
+The devil's staircase -- the fractal step function W(Omega) of the circle map, constant on plateaus at each rational winding number -- evaluated at the golden ratio
+1/φ, is exactly self-similar with scaling factor φ² ≈ 2.618. The circle map is the simplest discrete-time model of a driven nonlinear oscillator: theta_{n+1} = theta_n + Omega - (K/2pi) sin(2pi theta_n). This gives
+an exactly scale-invariant power spectrum in the natural Stern-Brocot
+coordinates (the binary tree that enumerates all rationals by mediant insertion, providing the natural indexing of mode-locked plateaus). The 3.5% tilt comes from the mapping between the staircase's
 Fibonacci levels and the CMB wavenumber k.
 
 The mapping traverses 0.0365 Fibonacci levels per e-fold of k (one
@@ -92,7 +92,7 @@ itself.
 
 MOND acceleration scale as the point where local gravitational binding
 energy becomes comparable to mean-field synchronization cost against the
-cosmological background. The proslambenomenos derivation (a₀ = cH₀/2π)
+cosmological background. The proslambenomenos derivation (a companion repository deriving cosmological dimensional relations from the Hubble frequency) (a₀ = cH₀/2π)
 gives the dimensional result. This framework provides the mechanism:
 below a₀, the synchronization cost of maintaining Newtonian dynamics
 exceeds the available coupling energy, and the system transitions to the
@@ -296,7 +296,7 @@ Everything else is accounting.
 ## Structural Principles
 
 1. Physical outcomes sit at constraint boundaries, not arbitrary preferred
-   points (KKT complementary slackness).
+   points (KKT complementary slackness -- the Karush-Kuhn-Tucker optimality condition requiring that at a solution, each constraint is either inactive or its associated cost multiplier is zero, so physical outcomes sit exactly at active constraint boundaries).
 
 2. The cost function must be self-consistent with the field it accounts for
    (renormalization as constraint enforcement, not formal trick).
