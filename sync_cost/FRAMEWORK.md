@@ -100,43 +100,36 @@ synchronization cost distribution across possible attractors. Measurement
 is a coupling event that drives the cost of maintaining superposition
 above what the system can sustain against the environmental mean field.
 
-**Testable**: Systems near the quantum-classical boundary should show
-anomalous decoherence timescales — collapse has duration, not a timestamp.
+Collapse has duration, not a timestamp. This is experimentally accessible
+at the quantum-classical boundary — systems near threshold should show
+anomalous decoherence timescales.
 
 ### Quantum-Classical Boundary
 
 A cost threshold, not a size cutoff. A system is quantum when maintaining
 phase superposition is affordable relative to available coupling energy
-and timescale. Einselection (Zurek's pointer states) falls out as
-synchronization-cheap attractors — the states that survive are those
-cheapest to maintain against the environmental mean field.
+and timescale. It is classical when it cannot afford superposition against
+the environmental mean field. Einselection (Zurek's pointer states) falls
+out as synchronization-cheap attractors — no separate postulate required.
 
 ### Renormalization
 
 UV divergences are self-consistency violations: summing synchronization
 costs that exceed the mean field generating them. Renormalization enforces
 the constraint that cost accounting must be consistent with the field it
-accounts for.
+accounts for. It works because the constraint is real.
 
 The 120-order vacuum energy discrepancy: what you get when you sum
-synchronization costs without imposing self-consistency.
+synchronization costs without imposing this self-consistency condition.
 
-### Electromagnetic Interaction
+### Mass
 
-The photon is the synchronization cost quantum for U(1) phase coupling.
-Classical EM emerges when photon occupation numbers are large and modes
-are coherent — a synchronization density statement.
-
-The Aharonov-Bohm effect is direct evidence that phase is primary and
-field is derivative: the particle's synchronization history, encoded in
-the potential, determines the outcome.
-
-### Gravity (KE Framework)
-
-Not a channel — the synchronization structure of the global mean field
-itself. The Wheeler-DeWitt frozen-time problem dissolves: time was never
-the stage, so losing it as a quantization parameter reveals a consistency
-condition on synchronization states, not a physical paradox.
+The Higgs condensate is a globally phase-coherent state — mean-field
+self-coupling that converged. Coupling cost to that field is mass. The
+mass hierarchy problem (m_e/m_p ≈ 1/1836) may encode the cost difference
+between a fundamental synchronization state and a composite three-body
+state (three valence quarks + QCD sea). Derivation target, not closed
+result.
 
 ### QPO and Rational Frequencies
 
@@ -144,23 +137,147 @@ Rational frequency ratios are synchronization-cheap (small beating
 frequency, low maintenance cost). The QPO spectrum maps which modes a
 system can afford given its energy budget. The stick-slip bowing geometry
 at rational string subdivisions selects rational ratios by the same cost
-mechanism.
+mechanism. Regge trajectories (mass² linear in spin) are consistent with
+synchronization cost increasing with internal phase coherence demand.
 
 ### CMB Low-ℓ Anomalies
 
 The quadrupole is too large to have completed synchronization before last
-scattering. Suppression is a mode that couldn't afford to lock. Silk
-damping is the small-scale synchronization affordability horizon. The
-spectral tilt is the cost gradient. Odd/even peak asymmetry is baryonic
-cost asymmetry — one phase direction is cheaper than the other due to
-baryonic inertia.
+scattering. Suppression is a mode that couldn't afford to lock —
+mechanistic where inflation offers only cosmic variance. Silk damping is
+the small-scale synchronization affordability horizon. The spectral tilt
+is the cost gradient. Odd/even peak asymmetry is baryonic cost asymmetry
+— one phase direction is cheaper than the other due to baryonic inertia.
 
-### Mass
+---
 
-Coupling cost to the Higgs condensate (a globally phase-coherent state).
-The mass hierarchy problem (m_e/m_p ≈ 1/1836) may encode the cost
-difference between a fundamental synchronization state and a composite
-three-body state (three valence quarks + QCD sea).
+## The Classical Forces as Cost Gradients
+
+Forces aren't fundamental. They are derivatives of the cost functional
+with respect to configuration — what we observe as force is the gradient
+of synchronization cost. The apparent diversity of forces reflects
+different coupling channels through which cost is denominated.
+
+### Gravity
+
+Cost structure of the global mean field itself. Gravitational attraction
+is configurations moving toward cheaper global synchronization states.
+Mass is synchronization cost already paid and stabilized. MOND is the
+boundary where local cost gradient becomes comparable to the cosmological
+mean field.
+
+### Electromagnetism
+
+Local U(1) phase synchronization cost. The photon is the cost-exchange
+quantum. Charge is coupling constant — participation strength in U(1)
+synchronization. The field is the cost gradient, not the primary object.
+
+The Aharonov-Bohm effect is direct evidence that phase is primary and
+field is derivative: the particle's synchronization history, encoded in
+the potential, determines the outcome.
+
+### Strong Force
+
+SU(3) synchronization. Confinement is separation cost exceeding pair
+production cost. Asymptotic freedom is cost approaching zero as
+synchronization domains fully overlap. Gluons self-interact because they
+participate in the synchronization they mediate.
+
+### Weak Force
+
+Attractor transition cost. The weak interaction changes particle identity:
+a mode driven by cost gradient across a threshold into a different stable
+attractor. W and Z bosons are massive because attractor transitions
+require paying the cost of breaking local synchronization state.
+
+Parity violation is a cost asymmetry in the attractor landscape —
+right-handed transitions are unaffordable at accessible energies.
+
+### Unification
+
+Not a larger symmetry group. Recognizing all four as cost gradients
+through different coupling channels at different scales. At high energy,
+channel distinctions become too cheap to matter — electroweak unification
+physically. Not symmetry restoration. A cost regime collapse.
+
+---
+
+## Two Stable Regimes and the Hierarchy Problem
+
+The self-consistency condition is a nonlinear fixed-point equation.
+Nonlinear fixed-point equations generically have multiple stable
+solutions.
+
+There are two structurally distinct synchronization operations:
+
+- **Local phase coupling** (EM, strong, weak): mean field constituted by
+  nearby participants, cost denominated in local coupling density, bounded
+  participation set.
+
+- **Global mean field coupling** (gravity, cosmological background): mean
+  field constituted by all participants, cost denominated in total
+  participation density, unbounded.
+
+These solve different fixed-point equations — same functional form,
+different domain. Each independently fixes a stable scale.
+
+The hierarchy between regimes is the ratio of cosmological participation
+density to local coupling density. This is large because the universe is
+large and Λ is small — not fine-tuned, but fixed by two independently
+derived quantities the KE derivation already handles.
+
+**The hierarchy problem dissolves.** It was asking why a ratio is large
+and apparently arbitrary. The synchronization answer: it's the ratio of
+global to local synchronization density, both fixed by the cost
+functional's self-consistency condition. Large because these are genuinely
+distinct operational scales, not because something is unnaturally tuned.
+
+---
+
+## Structure as Lowest-Cost Mediation
+
+**The central statement of the framework:**
+
+> Structure is what lowest-cost mediation looks like when you step back
+> from it.
+
+The manifold, dimensionality, and topology are the configuration of
+couplings that minimizes total synchronization cost across all
+participants. The universe isn't shaped a certain way and then doing
+physics inside that shape. The shape is the physics, settled.
+
+The inherited stage problem dissolves completely — the manifold is what
+you derive, not what you assume.
+
+### Dimensionality
+
+Three spatial dimensions is the lowest-cost mediation topology for this
+universe's coupling density and cost functional structure. Higher
+dimensions cost more to maintain coherence across. Lower dimensions can't
+mediate enough distinct coupling channels to support the observed attractor
+diversity. Three is the fixed point.
+
+### Laws of Physics
+
+Stable mediation protocols. The coupling rules that cost the least to
+maintain globally while remaining locally self-consistent. Not imposed on
+the structure. Co-emergent with it. Same fixed-point equation, same
+solution.
+
+### The Unreasonable Effectiveness of Mathematics
+
+Mathematics is the study of structure. Structure is lowest-cost mediation.
+Mathematics works because it independently discovers the same attractor
+landscape the universe settled into.
+
+### The Minimal System
+
+Two things: **distinguishable states** and **a cost functional**.
+
+Coupling, structure, dimensionality, laws — all are what the cost
+functional produces at its fixed point over the full participation set.
+
+Everything else is accounting.
 
 ---
 
@@ -170,15 +287,17 @@ three-body state (three valence quarks + QCD sea).
    points (KKT complementary slackness).
 
 2. The cost function must be self-consistent with the field it accounts for
-   (renormalization as constraint enforcement).
+   (renormalization as constraint enforcement, not formal trick).
 
 3. Synchronization cost can be denominated in energy or entropy depending
-   on regime.
+   on regime. The CMB low-ℓ anomalies may involve thermodynamic exclusion
+   rather than energetic exclusion.
 
 4. No external selector. Attractors, basins, cost gradients, and
    convergence dynamics. Probability is basin measure.
 
-5. Spacetime is a participant, not a stage.
+5. Spacetime is a participant, not a stage. Treating it as inherited
+   geometry is an open derivation debt, not a solved problem.
 
 ---
 
@@ -227,3 +346,9 @@ confirmation of a key mechanism:
   ω₀ propagates (low cost, stick regime). This is the spectral tilt in
   miniature — the cost gradient across frequencies, made visible in a
   chain of 8 oscillators.
+
+- **Forces as cost gradients**: The friction force in the lattice is
+  literally the derivative of synchronization cost with respect to
+  velocity. The Stribeck curve is the cost function. What the lattice
+  demonstrates at 8 elements, the framework claims at all scales: force
+  is cost gradient, structure is settled cost minimization.
