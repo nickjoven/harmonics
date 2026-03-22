@@ -297,6 +297,15 @@ JWST programme (Cycle 5+, ~100 hours) or ELT first light (~2028+).
 
 ## Computation
 
-See `a0_high_z.py` for the numerical predictions and observational
-comparison.  See `fdm_redshift.py` for the three-model f_DM comparison
-and the RAR knee analysis.
+- `a0_high_z.py` — Numerical predictions for a₀(z) and observational
+  comparison with RC100, McGaugh et al. (2024), Übler et al. (2024).
+- `fdm_redshift.py` — Three-model f_DM comparison, empirical a₀(z)
+  extraction from bin medians, RAR knee analysis.
+- `a0_sensitivity.py` — Sensitivity of implied a₀(z) to galaxy
+  parameters (gas fraction, effective radius).
+- `rar_high_z.py` — Resolved RAR test: constructs the radial
+  acceleration relation for a representative 100-galaxy population at
+  z = 0.6–2.5 under both models.  Demonstrates that the RAR knee
+  shifts by ~2× under sync_cost (from 5e-10 to 12e-10 m/s²) while
+  remaining fixed under const a₀.  Ready to accept actual Table B1
+  data when available.
