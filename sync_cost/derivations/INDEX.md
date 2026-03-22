@@ -54,11 +54,18 @@ These are referenced but not on the main line:
 | `one_force.py` | K is both synchronization and decoherence | Feeds into circle map understanding |
 | `self_consistent_D_v3.py` | Susceptibility-based fluctuation power | Earlier approach |
 
+### Phase 5: Born rule and Planck scale
+
+| File | Role |
+|------|------|
+| `born_rule_tongues.py` | **Born rule derived**: Δθ ∝ √ε at every tongue boundary (saddle-node universality). The exponent 2 in \|ψ\|² is the geometry of parabolas, not a postulate. |
+| `planck_threshold.py` | **Planck scale**: N = 3 minimum self-sustaining loop. Three coupling channels (ℏ, c, G) = three stages. 145.8 Fibonacci levels span Planck→Hubble. |
+
 ## Markdown Derivations
 
 | File | Role |
 |------|------|
-| `01_born_rule.md` | Born rule from basin measure |
+| `01_born_rule.md` | Born rule from basin measure + tongue geometry (resolved) |
 | `02_spectral_tilt.md` | Original cost function approach (superseded by 04) |
 | `03_a0_threshold.md` | MOND acceleration scale from synchronization cost |
 | `04_spectral_tilt_reframed.md` | **Current**: tilt from mode-locking structure |
