@@ -8,8 +8,7 @@ constitute itself — there aren't enough coupling stages.
 Three converging arguments:
 
 1. LATTICE ARGUMENT (N = 3):
-   The Stribeck lattice (a chain of friction oscillators coupled by elastic
-   springs) needs N ≥ 3 elements for frequency conversion.
+   The Stribeck lattice needs N ≥ 3 elements for frequency conversion.
    At N = 2, the medium passes through linearly. At N = 3, the
    subharmonic crosses over and new structure emerges. Three is the
    minimum chain length for self-sustaining mode-locking.
