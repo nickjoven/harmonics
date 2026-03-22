@@ -1,5 +1,7 @@
 # Derivation 8: High-Redshift Test of a₀(z) = cH(z)/(2π)
 
+**Consistency is required.  The threshold moves.**
+
 ## The Prediction
 
 The sync_cost framework (Derivation 03, which derives the MOND acceleration scale a_0 = cH_0/(2pi) as the point where local gravitational synchronization cost equals cosmological mean-field maintenance cost) derives the MOND acceleration scale
