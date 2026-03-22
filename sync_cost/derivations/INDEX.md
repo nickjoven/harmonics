@@ -60,6 +60,7 @@ These are referenced but not on the main line:
 |------|------|
 | `born_rule_tongues.py` | **Born rule derived**: Δθ ∝ √ε at every tongue boundary (saddle-node universality). The exponent 2 in \|ψ\|² is the geometry of parabolas, not a postulate. |
 | `planck_threshold.py` | **Planck scale**: N = 3 minimum self-sustaining loop. Three coupling channels (ℏ, c, G) = three stages. 145.8 Fibonacci levels span Planck→Hubble. |
+| `collapse_tongues.py` | **Measurement collapse**: τ ∝ 1/√ε (inverse Born rule). Uncertainty relation τ×Δθ = const. Zeno effect at ε→0. Superposition = quasiperiodic gap. |
 
 ## Markdown Derivations
 
@@ -70,6 +71,8 @@ These are referenced but not on the main line:
 | `03_a0_threshold.md` | MOND acceleration scale from synchronization cost |
 | `04_spectral_tilt_reframed.md` | **Current**: tilt from mode-locking structure |
 | `05_two_forces.md` | Two-force (sync/decoherence) narrative |
+| `06_planck_scale.md` | Planck scale from N = 3 self-sustaining threshold |
+| `07_measurement_collapse.md` | Collapse as tongue traversal (duration, uncertainty, Zeno) |
 
 ## Key Results (the short version)
 
