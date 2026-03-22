@@ -19,10 +19,9 @@ ApJ 944, 78; Table B1 with 100 individual galaxies) is the dataset.
 No resolved RAR at z > 0.5 has been published as of early 2026.
 
 USAGE:
-  This script generates a representative galaxy population based on
-  published RC100 summary statistics.  When Table B1 data becomes
-  available, replace the generate_rc100_population() function with
-  actual measurements.
+  When data/rc100.csv contains rows, this script uses the real RC100
+  Table B1 measurements.  Otherwise it falls back to a representative
+  galaxy population generated from published summary statistics.
 
   The key output is the RAR knee position (g_bar where g_obs/g_bar
   first exceeds a threshold) in each redshift bin, under each model.
@@ -31,6 +30,7 @@ USAGE:
 import numpy as np
 from scipy.special import i0, i1, k0, k1
 from scipy.optimize import brentq
+from load_rc100 import has_data, load_galaxies
 
 # ---------------------------------------------------------------------------
 # Cosmology (Planck 2018)
@@ -179,7 +179,14 @@ def main():
     print("  representative RC100-like galaxies at z = 0.6–2.5.")
     print()
 
-    galaxies = generate_rc100_population()
+    if has_data():
+        galaxies = load_galaxies()
+        source = "RC100 Table B1"
+    else:
+        galaxies = generate_rc100_population()
+        source = "synthetic (summary statistics)"
+    print(f"  Data source: {source}  ({len(galaxies)} galaxies)")
+    print()
 
     # Define redshift bins
     z_edges = [0.6, 1.22, 2.14, 2.53]

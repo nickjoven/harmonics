@@ -24,6 +24,7 @@ Three models, same galaxy parameters, one residual.
 
 import numpy as np
 from scipy.special import i0, i1, k0, k1
+from load_rc100 import has_data, load_bins as load_rc100_bins, load_galaxies
 
 # ---------------------------------------------------------------------------
 # Cosmology (Planck 2018)
@@ -111,11 +112,26 @@ bins = [
 
 def main():
     # ===================================================================
+    # Data source: real RC100 Table B1 or fiducial bin medians
+    # ===================================================================
+    global bins
+    if has_data():
+        bins = load_rc100_bins()
+        # Add n_radial estimate (not in Table B1; approximate from R_e and z)
+        for b in bins:
+            b.setdefault("n_radial", max(3, int(8 - b["z"])))
+        source = f"RC100 Table B1 ({sum(b['n_gal'] for b in bins)} galaxies)"
+    else:
+        source = "fiducial bin medians (Nestor Shachar et al. 2023)"
+
+    # ===================================================================
     # PART 1: Three-model comparison of f_DM(z)
     # ===================================================================
     print("=" * 78)
     print("PART 1:  f_DM(z) — three models vs. RC100 data")
     print("=" * 78)
+    print()
+    print(f"  Data source: {source}")
     print()
     print("  For context: 'const a₀' = standard MOND with a₀ fixed at the")
     print("  local value.  'sync_cost' = a₀(z) = cH(z)/(2π).  f_DM is the")

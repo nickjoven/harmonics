@@ -21,6 +21,7 @@ half-rate discrepancy is physical or parametric.
 
 import numpy as np
 from scipy.special import i0, i1, k0, k1
+from load_rc100 import has_data, load_bins as load_rc100_bins
 
 # Constants
 c_m_s = 2.998e8
@@ -69,15 +70,24 @@ def main():
     print("Sensitivity of implied a₀(z) to galaxy parameters")
     print("=" * 78)
 
-    # Fiducial RC100 bin parameters
-    bins = [
-        {"label": "z~0.9", "z": 0.9, "logMs": 10.8, "Re": 5.5,
-         "fg": 0.30, "fDM": 0.38},
-        {"label": "z~1.5", "z": 1.5, "logMs": 10.85, "Re": 5.0,
-         "fg": 0.40, "fDM": 0.32},
-        {"label": "z~2.2", "z": 2.2, "logMs": 10.9, "Re": 4.5,
-         "fg": 0.50, "fDM": 0.27},
-    ]
+    # RC100 bin parameters: real data if available, fiducial otherwise
+    if has_data():
+        rc100_bins = load_rc100_bins()
+        bins = [{"label": b["label"], "z": b["z"], "logMs": b["logMs"],
+                 "Re": b["Re"], "fg": b["fg"], "fDM": b["fDM_obs"]}
+                for b in rc100_bins]
+        print(f"  Data source: RC100 Table B1 ({len(bins)} bins)")
+    else:
+        bins = [
+            {"label": "z~0.9", "z": 0.9, "logMs": 10.8, "Re": 5.5,
+             "fg": 0.30, "fDM": 0.38},
+            {"label": "z~1.5", "z": 1.5, "logMs": 10.85, "Re": 5.0,
+             "fg": 0.40, "fDM": 0.32},
+            {"label": "z~2.2", "z": 2.2, "logMs": 10.9, "Re": 4.5,
+             "fg": 0.50, "fDM": 0.27},
+        ]
+        print("  Data source: fiducial bin medians")
+    print()
 
     # ---------------------------------------------------------------
     # 1. Gas fraction sensitivity
