@@ -18,13 +18,32 @@ See [sync_cost/FRAMEWORK.md](sync_cost/FRAMEWORK.md) for the full seed
 context — primitives, derivation targets, resolved framings, and
 structural principles.
 
-### Derivation targets (open)
+### Derivation targets
 
-1. **Born rule** — |ψ|² as basin measure of the cost landscape
-2. **Spectral tilt** (n_s ≈ 0.965) — cost gradient across scales
-3. **Planck scale** — minimum self-sustaining synchronization domain
-4. **Emergent spacetime** — large-N limit of synchronization structure
-5. **a₀** — MOND acceleration from synchronization cost threshold
+| # | Target | Status | Derivation |
+|---|--------|--------|------------|
+| 1 | **Born rule** — |ψ|² as basin measure of the cost landscape | Resolved | [01](sync_cost/derivations/01_born_rule.md), [09](sync_cost/derivations/09_fidelity_bound.md) |
+| 2 | **Spectral tilt** (n_s ≈ 0.965) — mode-locking self-similarity at 1/φ | Resolved | [04](sync_cost/derivations/04_spectral_tilt_reframed.md) |
+| 3 | **Planck scale** — N = 3 minimum self-sustaining synchronization domain | Resolved | [06](sync_cost/derivations/06_planck_scale.md) |
+| 4 | **Emergent spacetime** — large-N limit of synchronization structure | Open | — |
+| 5 | **a₀** — MOND acceleration from synchronization cost threshold | Resolved | [03](sync_cost/derivations/03_a0_threshold.md), [08](sync_cost/derivations/08_high_z_mond.md) |
+
+### Key results
+
+- **Fidelity bound** ([Derivation 9](sync_cost/derivations/09_fidelity_bound.md)):
+  the MOND transition and wavefunction collapse are the same structure —
+  a system resolving its own frequency against a reference it constitutes.
+  The RAR interpolating function, collapse duration, uncertainty relation,
+  and Zeno effect all follow from one constraint.
+
+- **Spectral tilt** ([Derivation 4](sync_cost/derivations/04_spectral_tilt_reframed.md)):
+  the devil's staircase at 1/φ is exactly self-similar with scaling φ².
+  The observed n_s − 1 = −0.035 comes from the k ↔ Ω mapping: 0.0365
+  Fibonacci levels per e-fold, 2.2 levels in 60 e-folds.
+
+- **Born rule** ([Derivation 1](sync_cost/derivations/01_born_rule.md)):
+  Δθ ∝ √ε at every tongue boundary (saddle-node universality). The
+  exponent 2 in |ψ|² is parabolic geometry, not a postulate.
 
 ### Key framings
 
@@ -60,6 +79,20 @@ propagates coherently through the stick regime. Copper wire was chosen
 because it linearizes the medium — eliminating the conversion mechanism
 that would make the medium itself useful.
 
+## Observational program
+
+[Derivation 8](sync_cost/derivations/08_high_z_mond.md) predicts a
+redshift-dependent MOND scale: a₀(z) = cH(z)/(2π). This is testable
+against high-z kinematic surveys.
+
+- **RC100** (Shachar et al. 2023): 100 high-z galaxies with resolved
+  kinematics. Data in [`ascii`](ascii).
+- **Predictions**: zero-free-parameter V_circ and f_DM for KLASS, GEKO,
+  CRISTAL surveys. Discriminating leverage at z > 3 where sync_cost
+  diverges from constant-a₀ and power-law models.
+- **Scripts**: `predict_highz.py`, `a0_observable.py`, `fdm_redshift.py`,
+  `rar_high_z.py` in [`sync_cost/derivations/`](sync_cost/derivations/).
+
 ## Prior work
 
 | Repository | Focus |
@@ -68,21 +101,28 @@ that would make the medium itself useful.
 | [201](https://github.com/nickjoven/201) | Gravity as synchronization in a frictional medium; metric tensor ↔ friction coefficient mapping |
 | [intersections](https://github.com/nickjoven/intersections) | Stick-slip dynamics and dark matter; Stribeck friction ↔ MOND interpolating function; bifurcation analysis |
 
+The [proslambenomenos site](https://github.com/nickjoven/proslambenomenos-site)
+aggregates all four repositories into a unified Jupyter Book. Pushes to
+`sync_cost/` on main trigger a site rebuild via CI.
+
 ## Structure
 
 ```
 harmonics/
-├── .ket/                  # knowledge substrate (content-addressed memory)
-├── ket/                   # ket submodule — BLAKE3 CAS, Merkle DAG, MCP tools
-├── sync_cost/             # synchronization cost framework
-│   ├── FRAMEWORK.md       # seed context and derivation targets
-│   └── derivations/       # formal derivation attempts
-├── driven_stribeck.py     # driven oscillator + coupled pair models
-├── stribeck_lattice.py    # N-element Stribeck chain
-├── bifurcation_sweep.py   # single + paired oscillator experiments
-├── lattice_sweep.py       # lattice length/amplitude/spatial experiments
-├── RESULTS.md             # experimental findings
-├── LICENSE                # CC0 1.0 Universal
+├── sync_cost/                 # synchronization cost framework
+│   ├── FRAMEWORK.md           # seed context, primitives, derivation targets
+│   └── derivations/           # 9 derivations (md) + computational scripts (py)
+│       └── INDEX.md           # reading order and dependency graph
+├── driven_stribeck.py         # driven oscillator + coupled pair models
+├── stribeck_lattice.py        # N-element Stribeck chain
+├── bifurcation_sweep.py       # single + paired oscillator experiments
+├── lattice_sweep.py           # lattice length/amplitude/spatial experiments
+├── ascii                      # RC100 galaxy data (100 high-z rotation curves)
+├── seed/                      # Rust tooling: seeds ket DAG with open questions + claims
+├── .ket/                      # knowledge substrate (content-addressed memory)
+├── ket/                       # ket submodule — BLAKE3 CAS, Merkle DAG, MCP tools
+├── RESULTS.md                 # experimental findings
+├── LICENSE                    # CC0 1.0 Universal
 └── README.md
 ```
 

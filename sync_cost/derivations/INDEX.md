@@ -42,6 +42,45 @@ These build on each other sequentially:
 |------|------|
 | `fibonacci_ones.py` | The two 1s in the Fibonacci seed carry positional information. The ψ-mode (eigenvalue -1/φ) creates the alternating convergence. Fibonacci/Lucas are sin/cos of the golden oscillation. |
 
+### Phase 5: Born rule and Planck scale
+
+| File | Role |
+|------|------|
+| `born_rule_tongues.py` | **Born rule derived**: Δθ ∝ √ε at every tongue boundary (saddle-node universality). The exponent 2 in \|ψ\|² is the geometry of parabolas, not a postulate. |
+| `planck_threshold.py` | **Planck scale**: N = 3 minimum self-sustaining loop. Three coupling channels (ℏ, c, G) = three stages. 145.8 Fibonacci levels span Planck→Hubble. |
+| `collapse_tongues.py` | **Measurement collapse**: τ ∝ 1/√ε (inverse Born rule). Uncertainty relation τ×Δθ = const. Zeno effect at ε→0. Superposition = quasiperiodic gap. |
+
+### Phase 6: Fidelity bound and unification
+
+| File | Role |
+|------|------|
+| `09_fidelity_bound.md` | **Self-referential fidelity bound**: unifies MOND transition and wavefunction collapse as self-referential frequency measurement with bounded resolution. RAR shape, collapse duration, uncertainty relation, and Zeno effect all follow from one constraint: the measurement instrument IS the measured dynamics. |
+
+### Phase 7: The observational line
+
+| File | Role |
+|------|------|
+| `predict_highz.py` | Zero-free-parameter V_circ and f_DM predictions for KLASS, GEKO, CRISTAL. Az9 (Pope+2023) as first test point. |
+| `fetch_catalogs.py` | Astroquery/VizieR data acquisition for high-z kinematic surveys. |
+| `a0_observable.py` | Extract a₀ from RC100 observables via RAR inversion. |
+| `fdm_redshift.py` | Dark matter fraction evolution with redshift in RC100. |
+| `rar_high_z.py` | Radial acceleration relation analysis at high-z. |
+| `load_rc100.py` | RC100 galaxy catalog loading (100 high-z galaxies with kinematics). |
+
+## Markdown Derivations
+
+| File | Status | Role |
+|------|--------|------|
+| `01_born_rule.md` | Resolved | Born rule from basin measure + tongue geometry |
+| `02_spectral_tilt.md` | Superseded | Original cost function approach (see 04) |
+| `03_a0_threshold.md` | Current | MOND acceleration scale from synchronization cost |
+| `04_spectral_tilt_reframed.md` | **Current** | Tilt from mode-locking structure (replaces 02) |
+| `05_two_forces.md` | Current | Two-force (sync/decoherence) narrative |
+| `06_planck_scale.md` | Current | Planck scale from N = 3 self-sustaining threshold |
+| `07_measurement_collapse.md` | Current | Collapse as tongue traversal (duration, uncertainty, Zeno) |
+| `08_high_z_mond.md` | Current | High-z MOND predictions: a₀(z) = cH(z)/(2π) tested against surveys |
+| `09_fidelity_bound.md` | **Current** | Self-referential fidelity bound unifying MOND + collapse (see Phase 6) |
+
 ## Supporting / Earlier Work
 
 These are referenced but not on the main line:
@@ -53,37 +92,6 @@ These are referenced but not on the main line:
 | `coherence_decoherence.py` | Two-force model (synchronization vs decoherence) | Context for `one_force.py` |
 | `one_force.py` | K is both synchronization and decoherence | Feeds into circle map understanding |
 | `self_consistent_D_v3.py` | Susceptibility-based fluctuation power | Earlier approach |
-
-### Phase 5: Born rule and Planck scale
-
-| File | Role |
-|------|------|
-| `born_rule_tongues.py` | **Born rule derived**: Δθ ∝ √ε at every tongue boundary (saddle-node universality). The exponent 2 in \|ψ\|² is the geometry of parabolas, not a postulate. |
-| `planck_threshold.py` | **Planck scale**: N = 3 minimum self-sustaining loop. Three coupling channels (ℏ, c, G) = three stages. 145.8 Fibonacci levels span Planck→Hubble. |
-| `collapse_tongues.py` | **Measurement collapse**: τ ∝ 1/√ε (inverse Born rule). Uncertainty relation τ×Δθ = const. Zeno effect at ε→0. Superposition = quasiperiodic gap. |
-
-## Markdown Derivations
-
-| File | Role |
-|------|------|
-| `01_born_rule.md` | Born rule from basin measure + tongue geometry (resolved) |
-| `02_spectral_tilt.md` | Original cost function approach (superseded by 04) |
-| `03_a0_threshold.md` | MOND acceleration scale from synchronization cost |
-| `04_spectral_tilt_reframed.md` | **Current**: tilt from mode-locking structure |
-| `05_two_forces.md` | Two-force (sync/decoherence) narrative |
-| `06_planck_scale.md` | Planck scale from N = 3 self-sustaining threshold |
-| `07_measurement_collapse.md` | Collapse as tongue traversal (duration, uncertainty, Zeno) |
-| `08_high_z_mond.md` | High-z MOND predictions: a₀(z) = cH(z)/(2π) tested against surveys |
-| `09_fidelity_bound.md` | **Self-referential fidelity bound**: unifies MOND transition and wavefunction collapse as self-referential frequency measurement with bounded resolution. RAR shape, collapse duration, uncertainty relation, and Zeno effect all follow from one constraint: the measurement instrument IS the measured dynamics. |
-
-### Phase 6: The observational line
-
-| File | Role |
-|------|------|
-| `predict_highz.py` | Zero-free-parameter V_circ and f_DM predictions for KLASS, GEKO, CRISTAL. Az9 (Pope+2023) as first test point. |
-| `fetch_catalogs.py` | Astroquery/VizieR data acquisition for high-z kinematic surveys. |
-| `a0_observable.py` | Extract a₀ from RC100 observables via RAR inversion. |
-| `fdm_redshift.py` | Dark matter fraction evolution with redshift in RC100. |
 
 ## Key Results (the short version)
 
