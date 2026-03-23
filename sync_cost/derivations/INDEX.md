@@ -56,7 +56,13 @@ These build on each other sequentially:
 |------|------|
 | `09_fidelity_bound.md` | **Self-referential fidelity bound**: unifies MOND transition and wavefunction collapse as self-referential frequency measurement with bounded resolution. RAR shape, collapse duration, uncertainty relation, and Zeno effect all follow from one constraint: the measurement instrument IS the measured dynamics. |
 
-### Phase 7: The observational line
+### Phase 8: Foundations
+
+| File | Role |
+|------|------|
+| `10_minimum_alphabet.md` | **Four irreducible primitives**: integers, mediant, fixed-point, parabola. Circle derived from integers + fixed-point (p ≡ 0 in phase space forces R/Z = S¹). All four shown irreducible. QM is the small-ε linearized limit of the tongue dynamics. Testable: nonlinear corrections to minimum-uncertainty bound at strong coupling. |
+
+### Phase 9: The observational line
 
 | File | Role |
 |------|------|
@@ -80,6 +86,7 @@ These build on each other sequentially:
 | `07_measurement_collapse.md` | Current | Collapse as tongue traversal (duration, uncertainty, Zeno) |
 | `08_high_z_mond.md` | Current | High-z MOND predictions: a₀(z) = cH(z)/(2π) tested against surveys |
 | `09_fidelity_bound.md` | **Current** | Self-referential fidelity bound unifying MOND + collapse (see Phase 6) |
+| `10_minimum_alphabet.md` | **Current** | Four irreducible primitives (integers, mediant, fixed-point, parabola); circle derived; QM as small-ε limit |
 
 ## Supporting / Earlier Work
 
@@ -103,6 +110,7 @@ These are referenced but not on the main line:
 6. Amplitude A_s ≈ 2.1×10⁻⁹ places the pivot at **level ~21** (F₂₁ = 17711)
 7. The ψ-eigenmode (-1/φ) creates the **alternating approach** from both sides
 8. The MOND transition and wavefunction collapse are **the same structure**: self-referential frequency measurement with bounded fidelity (Derivation 9)
+9. The entire framework follows from **four irreducible primitives**: integers, mediant, fixed-point equation, parabola. The circle is derived (integers + fixed-point). QM is the linearized small-ε limit. (Derivation 10)
 
 ## Shared Code
 
