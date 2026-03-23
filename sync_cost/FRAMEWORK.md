@@ -132,7 +132,10 @@ The self-referential fidelity bound (Derivation 9) unifies this with
 the MOND transition: both are instances of a system resolving its own
 frequency against a reference it participates in. The resolution is
 bounded because the measurement instrument and the measured quantity
-are the same dynamics. See `derivations/09_fidelity_bound.md`.
+are the same dynamics. The RAR interpolating function, collapse
+duration, uncertainty relation, and Zeno effect all follow from one
+constraint: the instrument IS the measured dynamics. See
+`derivations/09_fidelity_bound.md`.
 
 ### Quantum-Classical Boundary
 
@@ -333,11 +336,21 @@ Everything else is accounting.
 
 ## Open Questions
 
-1. Is the cost function Michaelis-Menten, or does it have additional
-   structure at cosmological scales?
+1. ~~Is the cost function Michaelis-Menten, or does it have additional
+   structure at cosmological scales?~~ **Resolved.** A systematic scan
+   (`cost_function_scan.py`) showed all monotonic cost functions produce
+   wrong-sign running. The framework pivoted to mode-locking structure:
+   the devil's staircase of the circle map provides the correct spectral
+   tilt via self-similar geometry at 1/φ. See
+   `derivations/04_spectral_tilt_reframed.md`.
 
-2. Can the Born rule be derived exactly from cost landscape geometry, or
-   only recovered asymptotically?
+2. ~~Can the Born rule be derived exactly from cost landscape geometry, or
+   only recovered asymptotically?~~ **Resolved.** Δθ ∝ √ε at every tongue
+   boundary (saddle-node universality). The exponent 2 in |ψ|² is the
+   geometry of parabolas, not a postulate. The self-referential fidelity
+   bound (Derivation 9) shows this is the same structure as the MOND
+   transition. See `derivations/01_born_rule.md` and
+   `derivations/09_fidelity_bound.md`.
 
 3. What is the entropy-vs-energy regime boundary for synchronization cost
    denomination?

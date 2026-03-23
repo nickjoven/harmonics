@@ -176,6 +176,31 @@ compatible with self-sustenance. QED.
 This is the formal content of "d = 3 is forced": the three
 one-parameter subgroups of SL(2,ℝ) biject with the three coupling
 stages, and killing any one is fatal.
+correct — and it is the physical content, not a gap.
+
+A nontrivial H means one or more degrees of freedom are gauge
+redundancies — present in the description but not dynamical. In
+synchronization language: a gauged-away degree of freedom is a
+coupling stage that doesn't participate. If phase is gauged away,
+there is no phase locking. If amplitude is gauged away, there is no
+coupling strength. If frequency is gauged away, there is no detuning.
+
+The N = 3 self-sustenance condition IS the statement that all three
+stages must be dynamical:
+
+    phase (ℏ) — must be dynamical for locking to occur
+    propagation (c) — must be dynamical for coupling to propagate
+    amplitude (G) — must be dynamical for self-coupling to close
+
+Quotienting by any H ≠ {e} kills at least one stage, drops the
+system to N ≤ 2 effective coupling stages, and the Stribeck
+threshold says: N = 2 cannot self-sustain (P(ω₀)/P(ω_d) = 0.06).
+
+So: H = {e} is not assumed. It is derived from the self-sustenance
+condition. A self-sustaining oscillator cannot have gauge
+redundancies in its coupling loop — every stage must be real.
+This is the non-classical step: the system is not a quotient
+of something larger. It is the full dynamical object.
 
 ## Connection to Born rule
 

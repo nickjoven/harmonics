@@ -328,18 +328,18 @@ fn main() {
             summary: "The Planck scale derivation shows N=3 emerges as a threshold from the synchronization cost geometry. Connects to QCD structure but does not directly verify β = -dV/dg.",
         },
         ClaimEntry {
-            derivation: "sync_cost/derivations/04_spectral_tilt.md",
+            derivation: "sync_cost/derivations/04_spectral_tilt_reframed.md",
             slug: "cosmological-scales",
             relation: "partially_addresses",
             saturation_delta: 0.2,
-            summary: "Derives spectral tilt from synchronization cost scaling, connecting to CMB observables. Partial progress toward cosmological predictions.",
+            summary: "Derives spectral tilt from mode-locking structure (devil's staircase at 1/φ, self-similar with φ²). Connects to CMB observables via k↔Ω mapping. Partial progress toward cosmological predictions.",
         },
         ClaimEntry {
-            derivation: "sync_cost/derivations/05_golden_ratio.md",
+            derivation: "sync_cost/derivations/05_two_forces.md",
             slug: "cluster-convergence",
             relation: "partially_addresses",
             saturation_delta: 0.2,
-            summary: "The golden ratio selection mechanism may explain why single-constraint relaxation fails at cluster scales — the multi-mode structure requires a different convergence path.",
+            summary: "The two-force (synchronization vs. decoherence) framing may explain why single-constraint relaxation fails at cluster scales — the multi-mode structure requires a different convergence path.",
         },
         ClaimEntry {
             derivation: "sync_cost/FRAMEWORK.md",
@@ -354,6 +354,20 @@ fn main() {
             relation: "partially_addresses",
             saturation_delta: 0.3,
             summary: "The cost equality at a₀ provides a uniqueness argument via convexity of the synchronization cost surface. Complements but does not replace the Lyapunov dissipation proof.",
+        },
+        ClaimEntry {
+            derivation: "sync_cost/derivations/09_fidelity_bound.md",
+            slug: "transition-zone-scatter",
+            relation: "partially_addresses",
+            saturation_delta: 0.6,
+            summary: "The fidelity bound predicts RAR scatter peaks at g_bar ≈ a₀ and decays as (g_bar/a₀)^{±1/2} on either side. The iteration-to-time mapping (1 iter = 2π/H) and coordinate identification ε_circle = g_bar/(4πK·a₀) make collapse timescale predictions quantitative.",
+        },
+        ClaimEntry {
+            derivation: "sync_cost/derivations/09_fidelity_bound.md",
+            slug: "decoherence-rates",
+            relation: "partially_addresses",
+            saturation_delta: 0.4,
+            summary: "The iteration-to-time mapping (1 iter = 2π/ω_env) and coordinate identification ε_circle = g_bar/(4πK·a₀) give quantitative collapse durations τ = (2π/ω_env)/√ε without free parameters. Testable against cavity QED and superconducting qubit decoherence timescales.",
         },
     ];
 
