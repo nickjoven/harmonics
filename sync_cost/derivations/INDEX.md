@@ -64,7 +64,13 @@ These build on each other sequentially:
 |------|------|
 | `10_minimum_alphabet.md` | **Four irreducible primitives**: integers, mediant, fixed-point, parabola. Circle derived from integers + fixed-point (p ≡ 0 in phase space forces R/Z = S¹). All four shown irreducible. QM is the small-ε linearized limit of the tongue dynamics. Testable: nonlinear corrections to minimum-uncertainty bound at strong coupling. |
 
-### Phase 9: The observational line
+### Phase 9: The field equation
+
+| File | Role |
+|------|------|
+| `11_rational_field_equation.md` | **The field equation**: self-consistency condition N(p/q) = N_total × g(p/q) × w(p/q, K₀F[N]) on the Stern-Brocot tree. Exact rational arithmetic forced by alphabet. K=1 is gravity (Einstein via ADM in continuum limit), K<1 is quantum (Schrödinger via linearization). Born rule is population distribution at fixed point. |
+
+### Phase 10: The observational line
 
 | File | Role |
 |------|------|
@@ -89,6 +95,7 @@ These build on each other sequentially:
 | `08_high_z_mond.md` | Current | High-z MOND predictions: a₀(z) = cH(z)/(2π) tested against surveys |
 | `09_fidelity_bound.md` | **Current** | Self-referential fidelity bound unifying MOND + collapse (see Phase 6) |
 | `10_minimum_alphabet.md` | **Current** | Four irreducible primitives (integers, mediant, fixed-point, parabola); circle derived; QM as small-ε limit |
+| `11_rational_field_equation.md` | **Current** | Self-consistency on Stern-Brocot tree; exact rational arithmetic; K=1 gravity, K<1 quantum; Born rule as fixed-point population |
 
 ## Supporting / Earlier Work
 
@@ -113,6 +120,7 @@ These are referenced but not on the main line:
 7. The ψ-eigenmode (-1/φ) creates the **alternating approach** from both sides
 8. The MOND transition and wavefunction collapse are **the same structure**: self-referential frequency measurement with bounded fidelity (Derivation 9)
 9. The entire framework follows from **four irreducible primitives**: integers, mediant, fixed-point equation, parabola. The circle is derived (integers + fixed-point). QM is the linearized small-ε limit. (Derivation 10)
+10. The **field equation** is N(p/q) = N_total × g(p/q) × w(p/q, K₀F[N]) on the Stern-Brocot tree in exact rational arithmetic. K=1 → Einstein (continuum limit), K<1 linearized → Schrödinger. Born rule is the population distribution at the fixed point. (Derivation 11)
 
 ## Shared Code
 
