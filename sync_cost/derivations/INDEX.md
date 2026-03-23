@@ -49,7 +49,6 @@ These build on each other sequentially:
 | `born_rule_tongues.py` | **Born rule derived**: Δθ ∝ √ε at every tongue boundary (saddle-node universality). The exponent 2 in \|ψ\|² is the geometry of parabolas, not a postulate. |
 | `planck_threshold.py` | **Planck scale**: N = 3 minimum self-sustaining loop. Three coupling channels (ℏ, c, G) = three stages. 145.8 Fibonacci levels span Planck→Hubble. |
 | `collapse_tongues.py` | **Measurement collapse**: τ ∝ 1/√ε (inverse Born rule). Uncertainty relation τ×Δθ = const. Zeno effect at ε→0. Superposition = quasiperiodic gap. |
-<<<<<<< HEAD
 | `fidelity_calibration.py` | **Fidelity calibration**: resolves C=1 via ε_circle = g_bar/(4πK·a₀). Iteration-to-time: 1 iter = 2π/ω_ref. Stribeck lattice calibration point. |
 | `tongue_uncertainty.py` | **Nonlinear corrections**: exact τ×Δθ across full ε range. Sub-Gaussian at large ε. Leading correction ε^(3/2). Conjugate pair (Δθ×λ = 4|μ|) verified. |
 
@@ -59,23 +58,19 @@ These build on each other sequentially:
 |------|------|
 | `09_fidelity_bound.md` | **Self-referential fidelity bound**: unifies MOND transition and wavefunction collapse as self-referential frequency measurement with bounded resolution. RAR shape, collapse duration, uncertainty relation, and Zeno effect all follow from one constraint: the measurement instrument IS the measured dynamics. |
 
-### Phase 8: Foundations
+### Phase 7: Foundations
 
 | File | Role |
 |------|------|
 | `10_minimum_alphabet.md` | **Four irreducible primitives**: integers, mediant, fixed-point, parabola. Circle derived from integers + fixed-point (p ≡ 0 in phase space forces R/Z = S¹). All four shown irreducible. QM is the small-ε linearized limit of the tongue dynamics. Testable: nonlinear corrections to minimum-uncertainty bound at strong coupling. |
 
-<<<<<<< HEAD
-### Phase 9: The field equation
+### Phase 8: The field equation
 
 | File | Role |
 |------|------|
 | `11_rational_field_equation.md` | **The field equation**: self-consistency condition N(p/q) = N_total × g(p/q) × w(p/q, K₀F[N]) on the Stern-Brocot tree. Exact rational arithmetic forced by alphabet. K=1 is gravity (Einstein via ADM in continuum limit), K<1 is quantum (Schrödinger via linearization). Born rule is population distribution at fixed point. |
 
-### Phase 10: The observational line
-=======
 ### Phase 9: The observational line
->>>>>>> 3f85a55 (Add Derivation 10: minimum alphabet (four irreducible primitives))
 
 | File | Role |
 |------|------|
@@ -100,10 +95,7 @@ These build on each other sequentially:
 | `08_high_z_mond.md` | Current | High-z MOND predictions: a₀(z) = cH(z)/(2π) tested against surveys |
 | `09_fidelity_bound.md` | **Current** | Self-referential fidelity bound unifying MOND + collapse (see Phase 6) |
 | `10_minimum_alphabet.md` | **Current** | Four irreducible primitives (integers, mediant, fixed-point, parabola); circle derived; QM as small-ε limit |
-<<<<<<< HEAD
 | `11_rational_field_equation.md` | **Current** | Self-consistency on Stern-Brocot tree; exact rational arithmetic; K=1 gravity, K<1 quantum; Born rule as fixed-point population |
-=======
->>>>>>> 3f85a55 (Add Derivation 10: minimum alphabet (four irreducible primitives))
 
 ## Supporting / Earlier Work
 
@@ -128,10 +120,7 @@ These are referenced but not on the main line:
 7. The ψ-eigenmode (-1/φ) creates the **alternating approach** from both sides
 8. The MOND transition and wavefunction collapse are **the same structure**: self-referential frequency measurement with bounded fidelity (Derivation 9)
 9. The entire framework follows from **four irreducible primitives**: integers, mediant, fixed-point equation, parabola. The circle is derived (integers + fixed-point). QM is the linearized small-ε limit. (Derivation 10)
-<<<<<<< HEAD
 10. The **field equation** is N(p/q) = N_total × g(p/q) × w(p/q, K₀F[N]) on the Stern-Brocot tree in exact rational arithmetic. K=1 → Einstein (continuum limit), K<1 linearized → Schrödinger. Born rule is the population distribution at the fixed point. (Derivation 11)
-=======
->>>>>>> 3f85a55 (Add Derivation 10: minimum alphabet (four irreducible primitives))
 
 ## Shared Code
 
