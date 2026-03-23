@@ -40,20 +40,19 @@ SIGMA_SQ_GRAV = 1.5  # 3/2 in natural units
 # Incremental Stern-Brocot tree: compute Σ 1/q² without storing all nodes
 # ---------------------------------------------------------------------------
 
-def sum_inv_q_squared_recursive(a_num, a_den, c_num, c_den, depth_remaining,
-                                count_holder):
+def sum_inv_q_recursive(a_num, a_den, c_num, c_den, depth_remaining,
+                        holder):
     """
-    Recursively compute Σ 1/q² for all Stern-Brocot nodes between
-    a/b and c/d, up to given depth.
+    Recursively compute Σ 1/q² and Σ 1/q³ for all Stern-Brocot nodes
+    between a/b and c/d, up to given depth.
 
     Uses the mediant (a+c)/(b+d) at each step. Does NOT store nodes
-    in memory — just accumulates the sum and count.
+    in memory — just accumulates sums and count.
 
-    Parameters:
-        a_num, a_den: left Farey neighbor numerator/denominator
-        c_num, c_den: right Farey neighbor numerator/denominator
-        depth_remaining: levels left to recurse
-        count_holder: [sum_so_far, node_count] (mutable list for accumulation)
+    holder: [sum_1/q², sum_1/q³, node_count]
+
+    The 1/q³ sum captures the stick-slip transition energy at each
+    tongue boundary (saddle-node energy ~ ε^(3/2) with ε ~ 1/q²).
     """
     if depth_remaining <= 0:
         return
@@ -62,35 +61,39 @@ def sum_inv_q_squared_recursive(a_num, a_den, c_num, c_den, depth_remaining,
     p = a_num + c_num
     q = a_den + c_den
 
-    # Accumulate 1/q²
-    count_holder[0] += 1.0 / (q * q)
-    count_holder[1] += 1
+    # Accumulate geometric (1/q²) and transition cost (1/q³)
+    q_sq = q * q
+    holder[0] += 1.0 / q_sq
+    holder[1] += 1.0 / (q_sq * q)
+    holder[2] += 1
 
     # Recurse left and right
-    sum_inv_q_squared_recursive(a_num, a_den, p, q, depth_remaining - 1,
-                                count_holder)
-    sum_inv_q_squared_recursive(p, q, c_num, c_den, depth_remaining - 1,
-                                count_holder)
+    sum_inv_q_recursive(a_num, a_den, p, q, depth_remaining - 1, holder)
+    sum_inv_q_recursive(p, q, c_num, c_den, depth_remaining - 1, holder)
 
 
-def compute_sigma_squared(max_depth):
+def compute_sigma_squared(max_depth, alpha=0.0):
     """
-    Compute σ²(d) = 1 / Σ_{tree depth d} (1/q²).
+    Compute σ²(d) with optional transition cost correction.
 
-    Memory-efficient: does not store nodes, only accumulates the sum.
-    Time complexity: O(2^d). For d=21: ~2M operations.
+    σ²(d) = 1 / (Σ 1/q² - α × Σ 1/q³)
+
+    α = 0: geometric only (tongue widths)
+    α > 0: includes stick-slip transition energy (ε^(3/2) scaling)
+
+    Memory-efficient: O(d) stack, O(2^d) time.
     """
-    holder = [0.0, 0]  # [sum, count]
+    holder = [0.0, 0.0, 0]  # [sum_1/q², sum_1/q³, count]
 
     t0 = time.time()
-    sum_inv_q_squared_recursive(0, 1, 1, 1, max_depth, holder)
+    sum_inv_q_recursive(0, 1, 1, 1, max_depth, holder)
     elapsed = time.time() - t0
 
-    total_sum = holder[0]
-    node_count = holder[1]
-    sigma_sq = 1.0 / total_sum if total_sum > 0 else float('inf')
+    s2, s3, n_nodes = holder
+    s_eff = s2 - alpha * s3
+    sigma_sq = 1.0 / s_eff if s_eff > 0 else float('inf')
 
-    return sigma_sq, total_sum, node_count, elapsed
+    return sigma_sq, s2, s3, n_nodes, elapsed
 
 
 # ---------------------------------------------------------------------------
@@ -107,7 +110,7 @@ def fibonacci_backbone_sums(max_depth):
     results = []
     for d in range(1, min(max_depth + 1, 25)):
         holder = [0.0, 0]
-        sum_inv_q_squared_recursive(0, 1, 1, 1, d, holder)
+        sum_inv_q_recursive(0, 1, 1, 1, d, holder)
         sigma_sq = 1.0 / holder[0] if holder[0] > 0 else float('inf')
         results.append((d, holder[1], holder[0], sigma_sq))
     return results
@@ -175,76 +178,72 @@ if __name__ == "__main__":
 
     all_results = []
     for d in range(1, max_depth + 1):
-        sigma_sq, total_sum, n_nodes, elapsed = compute_sigma_squared(d)
+        sigma_sq, s2, s3, n_nodes, elapsed = compute_sigma_squared(d)
         ratio = SIGMA_SQ_GRAV / sigma_sq
-        all_results.append((d, n_nodes, total_sum, sigma_sq, ratio, elapsed))
-        print(f"  {d:3d}  {n_nodes:10d}  {total_sum:14.8f}  {sigma_sq:12.8f}  "
+        all_results.append((d, n_nodes, s2, s3, sigma_sq, ratio, elapsed))
+        print(f"  {d:3d}  {n_nodes:10d}  {s2:14.8f}  {sigma_sq:12.8f}  "
               f"{ratio:12.6f}  {elapsed:7.2f}s")
         sys.stdout.flush()
 
-        # Safety: if taking too long, stop
-        if elapsed > 60 and d < max_depth:
+        if elapsed > 120 and d < max_depth:
             print(f"\n  [Stopping at depth {d}: last level took {elapsed:.1f}s]")
             max_depth = d
             break
 
-    # === 2. The running as spectral tilt ===
+    # === 2. Running with and without transition cost ===
     print(f"\n{'─' * 80}")
-    print("  2. RUNNING OF σ² = SPECTRAL TILT")
+    print("  2. RUNNING OF σ²: GEOMETRIC vs CORRECTED (with transition cost)")
     print(f"{'─' * 80}\n")
 
-    # Compute d(ln σ²)/d(d) numerically
-    print(f"  {'d':>3s}  {'ln(σ²)':>12s}  {'Δln(σ²)':>12s}  {'Δln(σ²)/ln(φ²)':>16s}")
-    print("  " + "-" * 50)
+    # The transition cost correction: each tongue lock-in (slip→stick)
+    # dissipates energy ~ ε^(3/2). With ε ~ 1/q², the cost per tongue
+    # scales as 1/q³. The corrected sum: S_eff = S2 - α × S3.
+    # α encodes the Stribeck coupling strength.
 
-    prev_ln_sig = None
-    for d, n_nodes, total_sum, sigma_sq, ratio, elapsed in all_results:
-        ln_sig = math.log(sigma_sq)
-        delta = ln_sig - prev_ln_sig if prev_ln_sig is not None else 0
-        delta_norm = delta / LN_PHI_SQ if prev_ln_sig is not None else 0
-        print(f"  {d:3d}  {ln_sig:12.6f}  {delta:12.6f}  {delta_norm:16.6f}")
-        prev_ln_sig = ln_sig
+    ALPHA = 0.5  # estimated; exact value from lattice parameters
 
-    # === 3. The A_s ratio ===
-    print(f"\n{'─' * 80}")
-    print("  3. A_s RATIO: σ²_grav / σ²(d_pivot)")
-    print(f"{'─' * 80}\n")
-
-    # Use the deepest computation as the pivot
-    d_final = all_results[-1][0]
-    sigma_final = all_results[-1][3]
-    ratio_final = all_results[-1][4]
-
-    print(f"  σ²_grav = {SIGMA_SQ_GRAV}")
-    print(f"  σ²(d={d_final}) = {sigma_final:.8f}")
-    print(f"  Ratio = {ratio_final:.6f}")
+    print(f"  α = {ALPHA} (transition cost coefficient)")
+    print(f"  Target tilt: -0.0365 (observed n_s rate)")
     print()
+    print(f"  {'d':>3s}  {'S2':>12s}  {'S3':>12s}  {'S3/S2':>8s}  "
+          f"{'tilt_geom':>10s}  {'tilt_corr':>10s}")
+    print("  " + "-" * 60)
 
-    # Extrapolate to d=21 if we didn't reach it
-    if d_final < 21:
-        # Use the trend: Σ(1/q²) grows as ~ (6/π²) ln(q_max) + C
-        # Fit C from the data
-        # At depth d, q_max ≈ F_{d+1} ≈ φ^{d+1}/√5
-        # ln(q_max) ≈ (d+1) ln(φ) - ln(√5)/2
+    prev_ln_g = None
+    prev_ln_c = None
+    crossover_g = None
+    crossover_c = None
 
-        # Use last two points to extrapolate
-        d1, _, s1, _, _, _ = all_results[-2]
-        d2, _, s2, _, _, _ = all_results[-1]
-        # S(d) ≈ a * d + b (crude linear in d)
-        a = (s2 - s1) / (d2 - d1)
-        b = s2 - a * d2
-        s_21 = a * 21 + b
-        sigma_21 = 1.0 / s_21
-        ratio_21 = SIGMA_SQ_GRAV / sigma_21
+    for d, n_nodes, s2, s3, sigma_sq, ratio, elapsed in all_results:
+        sig_g = 1.0 / s2
+        s_corr = s2 - ALPHA * s3
+        sig_c = 1.0 / s_corr if s_corr > 0 else 1e10
 
-        print(f"  Extrapolated to d=21:")
-        print(f"    Σ(1/q²) ≈ {s_21:.6f}")
-        print(f"    σ²(21) ≈ {sigma_21:.8f}")
-        print(f"    Ratio σ²_grav/σ²(21) ≈ {ratio_21:.4f}")
-        print(f"    Target ratio (from A_s): 11.56")
-        print(f"    Residual: {abs(ratio_21 - 11.56)/11.56 * 100:.1f}%")
+        ln_g = math.log(sig_g)
+        ln_c = math.log(sig_c) if sig_c < 1e10 else 0
 
-    # === 4. The √5 prediction check ===
+        tilt_g = (ln_g - prev_ln_g) / LN_PHI_SQ if prev_ln_g is not None else 0
+        tilt_c = (ln_c - prev_ln_c) / LN_PHI_SQ if prev_ln_c is not None else 0
+
+        prev_ln_g = ln_g
+        prev_ln_c = ln_c
+
+        # Track crossover with target
+        if tilt_g != 0 and abs(tilt_g) <= 0.0365 and crossover_g is None:
+            crossover_g = d
+        if tilt_c != 0 and abs(tilt_c) <= 0.0365 and crossover_c is None:
+            crossover_c = d
+
+        print(f"  {d:3d}  {s2:12.6f}  {s3:12.6f}  {s3/s2:8.4f}  "
+              f"{tilt_g:10.6f}  {tilt_c:10.6f}")
+
+    print()
+    if crossover_g:
+        print(f"  Geometric tilt crosses -0.0365 at d = {crossover_g}")
+    if crossover_c:
+        print(f"  Corrected tilt crosses -0.0365 at d = {crossover_c}")
+
+    # === 3. The √5 prediction check ===
     print(f"\n{'─' * 80}")
     print("  4. √5 PREDICTION STATUS")
     print(f"{'─' * 80}\n")
