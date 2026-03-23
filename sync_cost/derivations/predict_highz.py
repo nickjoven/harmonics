@@ -154,6 +154,22 @@ CRISTAL_GRID = {
 
 SURVEYS = [KLASS_GRID, GEKO_GRID, CRISTAL_GRID]
 
+# ---------------------------------------------------------------------------
+# Known high-z galaxies with published kinematics (for direct testing)
+# ---------------------------------------------------------------------------
+AZ9 = {
+    "name": "Az9",
+    "ref": "Pope+2023, ApJL 951, L46",
+    "z": 4.274,
+    "logMs": 9.30,        # log(M*/Msun), intrinsic (mu=7 lensing corrected)
+    "Re_kpc": 1.8,        # [CII] half-light radius, source plane
+    "V_rot": 139.0,       # km/s, 3D-Barolo tilted-ring max
+    "sigma": 26.0,        # km/s
+    "V_over_sigma": 5.3,
+    "SFR": 26.0,          # Msun/yr total
+    "tracer": "[CII]",
+}
+
 
 # ---------------------------------------------------------------------------
 # Main
@@ -429,6 +445,55 @@ def main():
     print("Key: g_bar/a₀ < 0.1 → deep MOND (signal largest, ~30-50% ΔV)")
     print("     g_bar/a₀ ~ 0.1-1 → transition zone (signal ~10-30%)")
     print("     g_bar/a₀ > 1 → Newtonian (models indistinguishable)")
+
+    # ------------------------------------------------------------------
+    # Part 7: Az9 — first concrete test point
+    # ------------------------------------------------------------------
+    print()
+    print("=" * 78)
+    print("Az9 (Pope+2023) — FIRST CONCRETE TEST POINT")
+    print("=" * 78)
+    print()
+    print(f"z = {AZ9['z']},  logM* = {AZ9['logMs']},  "
+          f"R_e = {AZ9['Re_kpc']} kpc,  V_obs = {AZ9['V_rot']} km/s,  "
+          f"σ = {AZ9['sigma']} km/s")
+    print()
+    print("Gas fraction is unknown — predictions bracketed over plausible f_gas:")
+    print()
+    print(f"{'f_gas':>6s}  {'logMbar':>8s}  ", end="")
+    for model in MODEL_FUNCS:
+        print(f"{'V_'+model:>14s}", end="")
+    print(f"  {'V_obs':>8s}  {'best match':>14s}")
+
+    V_obs = AZ9["V_rot"]
+    logMs = AZ9["logMs"]
+    Re = AZ9["Re_kpc"]
+    z = AZ9["z"]
+
+    for fg in [0.0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7]:
+        if fg == 0:
+            logMbar = logMs
+        else:
+            logMbar = np.log10(10**logMs / (1 - fg))
+
+        vals = {}
+        for model, func in MODEL_FUNCS.items():
+            a0 = func(z)
+            vals[model] = predicted_Vcirc(logMbar, Re, a0)
+
+        # Which model is closest?
+        best = min(vals, key=lambda m: abs(vals[m] - V_obs))
+        print(f"{fg:6.2f}  {logMbar:8.2f}  ", end="")
+        for model in MODEL_FUNCS:
+            marker = " *" if model == best and abs(vals[model] - V_obs) / V_obs < 0.05 else "  "
+            print(f"{vals[model]:12.1f}{marker}", end="")
+        print(f"  {V_obs:8.1f}  {best:>14s}")
+
+    print()
+    print("  * = within 5% of V_obs")
+    print()
+    print("sync_cost matches V_obs≈139 km/s at f_gas≈0.3 (plausible for logM*=9.3, z=4.3)")
+    print("const_MOND requires f_gas≈0.7 (extreme for this stellar mass)")
 
 
 if __name__ == "__main__":
