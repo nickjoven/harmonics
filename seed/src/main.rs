@@ -355,6 +355,20 @@ fn main() {
             saturation_delta: 0.3,
             summary: "The cost equality at a₀ provides a uniqueness argument via convexity of the synchronization cost surface. Complements but does not replace the Lyapunov dissipation proof.",
         },
+        ClaimEntry {
+            derivation: "sync_cost/derivations/09_fidelity_bound.md",
+            slug: "transition-zone-scatter",
+            relation: "partially_addresses",
+            saturation_delta: 0.6,
+            summary: "The fidelity bound predicts RAR scatter peaks at g_bar ≈ a₀ and decays as (g_bar/a₀)^{±1/2} on either side. The iteration-to-time mapping (1 iter = 2π/H) and coordinate identification ε_circle = g_bar/(4πK·a₀) make collapse timescale predictions quantitative.",
+        },
+        ClaimEntry {
+            derivation: "sync_cost/derivations/09_fidelity_bound.md",
+            slug: "decoherence-rates",
+            relation: "partially_addresses",
+            saturation_delta: 0.4,
+            summary: "The iteration-to-time mapping (1 iter = 2π/ω_env) and coordinate identification ε_circle = g_bar/(4πK·a₀) give quantitative collapse durations τ = (2π/ω_env)/√ε without free parameters. Testable against cavity QED and superconducting qubit decoherence timescales.",
+        },
     ];
 
     println!("\n── Writing {} harmonics claims ──", claims.len());
