@@ -86,6 +86,40 @@ Three dimensions is the cheapest topology that supports the minimum
 self-sustaining loop. This connects three spatial dimensions to three
 Planck constants to the N = 3 lattice threshold.
 
+### The trivial stabilizer condition
+
+In group-theoretic language: the coupling loop lives on SL(2,ℝ),
+which is 3-dimensional. The physical configuration space is M = G/H,
+where H is the isotropy (stabilizer) subgroup. If H ≠ {e}, then
+dim M = dim G - dim H < 3.
+
+The objection: "d = 3 is forced" assumes H is trivial. This is
+correct — and it is the physical content, not a gap.
+
+A nontrivial H means one or more degrees of freedom are gauge
+redundancies — present in the description but not dynamical. In
+synchronization language: a gauged-away degree of freedom is a
+coupling stage that doesn't participate. If phase is gauged away,
+there is no phase locking. If amplitude is gauged away, there is no
+coupling strength. If frequency is gauged away, there is no detuning.
+
+The N = 3 self-sustenance condition IS the statement that all three
+stages must be dynamical:
+
+    phase (ℏ) — must be dynamical for locking to occur
+    propagation (c) — must be dynamical for coupling to propagate
+    amplitude (G) — must be dynamical for self-coupling to close
+
+Quotienting by any H ≠ {e} kills at least one stage, drops the
+system to N ≤ 2 effective coupling stages, and the Stribeck
+threshold says: N = 2 cannot self-sustain (P(ω₀)/P(ω_d) = 0.06).
+
+So: H = {e} is not assumed. It is derived from the self-sustenance
+condition. A self-sustaining oscillator cannot have gauge
+redundancies in its coupling loop — every stage must be real.
+This is the non-classical step: the system is not a quotient
+of something larger. It is the full dynamical object.
+
 ## Connection to Born rule
 
 The Born rule (Derivation 1, `born_rule_tongues.py`) requires Arnold
@@ -130,5 +164,8 @@ exactly 1) is open.
   be derived from the crossover condition?
 - The ratio 145.8/86.3 ≈ 1.69 (Planck-Hubble span / EM-gravity span):
   is this meaningful or coincidental?
-- Dimensionality argument needs formalization beyond the
-  "minimum sufficient" heuristic
+- Dimensionality argument: the trivial stabilizer H = {e} follows
+  from N = 3 self-sustenance (gauging any stage breaks the loop).
+  The group-theoretic formulation (M = G/H with G = SL(2,ℝ)) is
+  now explicit. Remains open: rigorous proof that SL(2,ℝ) is the
+  unique G satisfying the coupling loop constraints
