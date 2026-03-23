@@ -51,6 +51,12 @@ structural principles.
   the dictionary — it is a theorem (Lovelock, 1971). One equation, one
   parameter, and the only consistent output is G_μν + Λg_μν = 8πGT_μν.
 
+- **Three dimensions from the mediant** ([Derivation 14](sync_cost/derivations/14_three_dimensions.md)):
+  d = 3 is not assumed — it is forced. The mediant generates SL(2,Z);
+  the continuum limit completes to SL(2,R); self-consistent adjacency
+  forces the spatial manifold to be the group itself. dim SL(2) = 2²−1 = 3.
+  SL(2,C) ≅ Spin(3,1) gives Lorentz symmetry from complexification.
+
 ### Key framings
 
 - Forces are cost gradients through different coupling channels
@@ -108,7 +114,7 @@ aggregates all four repositories into a unified Jupyter Book. Pushes to
 harmonics/
 ├── sync_cost/                 # synchronization cost framework
 │   ├── FRAMEWORK.md           # seed context, primitives, derivation targets
-│   └── derivations/           # 13 derivations (md) + computational scripts (py)
+│   └── derivations/           # 14 derivations (md) + computational scripts (py)
 │       └── INDEX.md           # reading order and dependency graph
 ├── driven_stribeck.py         # driven oscillator + coupled pair models
 ├── stribeck_lattice.py        # N-element Stribeck chain
