@@ -209,6 +209,51 @@ primitives generate Q and S¹(Q) = Q/Z. The reals, and the smooth
 circle S¹(R) = R/Z on which the standard circle map is defined,
 require completing. This is **not** a primitive — it is a limit.
 
+### What the completion discards: 0.999... = 1 as ψ-mode collapse
+
+The theorem 0.999... = 1 in the reals is the statement that the
+Fibonacci convergent sequence reaches its limit with no residual.
+In the tree, the convergents to 1/φ:
+
+    1/2, 2/3, 3/5, 5/8, 8/13, 13/21, ...
+
+bracket 1/φ from alternating sides. At every finite step n, the
+residual is Cassini's identity: F_{n-1}F_{n+1} - F_n² = (-1)^n.
+The magnitude shrinks as φ^{-2n}. The sign alternates. This
+alternation IS the ψ-mode — the decaying eigenvalue ψ = -1/φ
+producing the (-1)^n oscillation.
+
+The completion sends n → ∞ and sets the residual to zero. It
+declares the sequence has arrived. What it discards:
+
+1. **The alternating approach.** The ψ-mode's sign flips are the
+   Z₂ parity that produces Cassini's identity, which IS the
+   uncertainty relation τ×Δθ = const (Part III, §conjugate
+   eigenvalue). Setting the residual to zero sets τ×Δθ to zero —
+   infinite precision, no uncertainty. That is ℏ → 0.
+
+2. **The finite gap.** At step n, the distance from F_n/F_{n+1} to
+   1/φ is |F_n/F_{n+1} - 1/φ| = 1/(F_{n+1}²√5). This is nonzero
+   at every finite step. The completion declares it zero. But in
+   the tree at finite coupling K < 1, the gap is physical — it is
+   the width of the superposition, the quasiperiodic orbit that
+   has not resolved which tongue it belongs to.
+
+3. **The Planck floor.** The smallest resolved interval at tree
+   depth d is 1/q_max² where q_max ~ φ^d. The completion sends
+   d → ∞ and gives the Archimedean property (no infinitesimals).
+   At finite K < 1, the floor is nonzero and IS the UV cutoff
+   (Derivation 6).
+
+The reals are therefore the K = 1 sector of the framework. They
+work perfectly for gravity (where all tongues are filled and the
+completion is exact). They lose the quantum structure (where gaps
+carry physical content). The continuum limit IS the classical
+limit. This is why the framework needs exact rational arithmetic
+for the field equation (Derivation 11): the rationals are the
+physical states, the gaps are the quantum states, and completing
+to R collapses both into a continuum that cannot distinguish them.
+
 ### Standard quantum mechanics (linearization + completion)
 
 Standard QM is the theory obtained by:
