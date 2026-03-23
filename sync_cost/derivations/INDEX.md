@@ -49,6 +49,7 @@ These build on each other sequentially:
 | `born_rule_tongues.py` | **Born rule derived**: Δθ ∝ √ε at every tongue boundary (saddle-node universality). The exponent 2 in \|ψ\|² is the geometry of parabolas, not a postulate. |
 | `planck_threshold.py` | **Planck scale**: N = 3 minimum self-sustaining loop. Three coupling channels (ℏ, c, G) = three stages. 145.8 Fibonacci levels span Planck→Hubble. |
 | `collapse_tongues.py` | **Measurement collapse**: τ ∝ 1/√ε (inverse Born rule). Uncertainty relation τ×Δθ = const. Zeno effect at ε→0. Superposition = quasiperiodic gap. |
+<<<<<<< HEAD
 | `fidelity_calibration.py` | **Fidelity calibration**: resolves C=1 via ε_circle = g_bar/(4πK·a₀). Iteration-to-time: 1 iter = 2π/ω_ref. Stribeck lattice calibration point. |
 | `tongue_uncertainty.py` | **Nonlinear corrections**: exact τ×Δθ across full ε range. Sub-Gaussian at large ε. Leading correction ε^(3/2). Conjugate pair (Δθ×λ = 4|μ|) verified. |
 
