@@ -8,6 +8,61 @@ field maintenance cost. This gives a mechanistic derivation of the
 dimensional relation a₀ = cH₀/2π already established in proslambenomenos (a companion repository deriving cosmological dimensional relations from the Hubble frequency),
 and connects it to the Stribeck lattice bifurcation threshold.
 
+## The Pendulum
+
+A circular orbit is a gravitational pendulum. For any pendulum:
+
+    ω² = g / L
+
+where g is the gravitational acceleration and L is the length. A
+circular orbit at radius R with centripetal acceleration g(R) = V²/R
+satisfies the same relation with L → R:
+
+    ω_orbit² = g(R) / R
+
+Now ask: what pendulum oscillates at the Hubble frequency?
+
+    ω = H,    g = a₀,    L = ?
+
+    H² = a₀ / L    →    L = a₀ / H²
+
+Substituting a₀ = cH/(2π):
+
+    L = cH/(2π) / H² = c/(2πH) = ƛ_H
+
+This is the **reduced Hubble wavelength** — the Hubble radius divided
+by 2π. The most natural length scale in oscillator physics.
+
+**a₀ is the acceleration of a pendulum whose length is ƛ_H and whose
+frequency is H.**
+
+The 2π factor is not a Kuramoto subtlety or a cycle-vs-radian
+convention. It is the geometric factor between a physical length and
+its reduced wavelength — the same factor that appears in every
+oscillator in physics (ƛ = λ/2π, ħ = h/2π, k = 2π/λ).
+
+### The MOND transition as entrainment
+
+This makes the MOND transition physically transparent:
+
+- An orbit with g > a₀ has ω_orbit > H: the pendulum is **faster**
+  than the cosmic clock. Too fast to entrain. Newtonian regime.
+
+- An orbit with g < a₀ has ω_orbit < H: the pendulum is **slower**
+  than the cosmic clock. It locks to the cosmic oscillator. MOND
+  regime — the phantom acceleration boost appears.
+
+This is Kuramoto synchronization reduced to one sentence: slow
+pendulums lock to the dominant oscillator. The "dominant oscillator"
+is the Hubble expansion. The critical frequency is H. The critical
+acceleration is a₀ = cH/(2π).
+
+The rest of this derivation provides the cost-accounting detail for
+why locking is cheaper than not locking, and connects to the Stribeck
+lattice bifurcation. But the pendulum is the physical core.
+
+---
+
 ## Setup
 
 ### Two cost regimes

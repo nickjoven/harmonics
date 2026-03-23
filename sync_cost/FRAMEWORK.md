@@ -90,13 +90,24 @@ itself.
 
 ### 5. a₀ from Synchronization Cost
 
-MOND acceleration scale as the point where local gravitational binding
-energy becomes comparable to mean-field synchronization cost against the
-cosmological background. The proslambenomenos derivation (a companion repository deriving cosmological dimensional relations from the Hubble frequency) (a₀ = cH₀/2π)
-gives the dimensional result. This framework provides the mechanism:
-below a₀, the synchronization cost of maintaining Newtonian dynamics
-exceeds the available coupling energy, and the system transitions to the
-cheaper (enhanced) stick-regime coupling.
+A circular orbit is a gravitational pendulum: ω² = g/R. The pendulum
+that oscillates at the Hubble frequency H has acceleration a₀ = cH/(2π)
+and length ƛ_H = c/(2πH), the reduced Hubble wavelength. The 2π is the
+geometric factor between a length and its reduced wavelength — the same
+factor in ħ = h/2π.
+
+Orbits faster than H (g > a₀) are Newtonian — too fast to entrain.
+Orbits slower than H (g < a₀) lock to the cosmic oscillator — MOND
+regime. The "dark matter" boost is what entrainment looks like.
+
+The proslambenomenos derivation (a companion repository deriving
+cosmological dimensional relations from the Hubble frequency) gives the
+dimensional relation a₀ = cH₀/2π. The Stribeck lattice provides the
+bifurcation mechanism: below a₀, maintaining Newtonian dynamics costs
+more than locking to the enhanced stick-regime coupling.
+
+See `derivations/03_a0_threshold.md` for the full pendulum argument and
+cost-accounting detail.
 
 ---
 
