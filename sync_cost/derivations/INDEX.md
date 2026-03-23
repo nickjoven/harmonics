@@ -73,6 +73,17 @@ These are referenced but not on the main line:
 | `05_two_forces.md` | Two-force (sync/decoherence) narrative |
 | `06_planck_scale.md` | Planck scale from N = 3 self-sustaining threshold |
 | `07_measurement_collapse.md` | Collapse as tongue traversal (duration, uncertainty, Zeno) |
+| `08_high_z_mond.md` | High-z MOND predictions: a₀(z) = cH(z)/(2π) tested against surveys |
+| `09_fidelity_bound.md` | **Self-referential fidelity bound**: unifies MOND transition and wavefunction collapse as self-referential frequency measurement with bounded resolution. RAR shape, collapse duration, uncertainty relation, and Zeno effect all follow from one constraint: the measurement instrument IS the measured dynamics. |
+
+### Phase 6: The observational line
+
+| File | Role |
+|------|------|
+| `predict_highz.py` | Zero-free-parameter V_circ and f_DM predictions for KLASS, GEKO, CRISTAL. Az9 (Pope+2023) as first test point. |
+| `fetch_catalogs.py` | Astroquery/VizieR data acquisition for high-z kinematic surveys. |
+| `a0_observable.py` | Extract a₀ from RC100 observables via RAR inversion. |
+| `fdm_redshift.py` | Dark matter fraction evolution with redshift in RC100. |
 
 ## Key Results (the short version)
 
@@ -83,6 +94,7 @@ These are referenced but not on the main line:
 5. The observable universe samples **2.2 levels** of the hierarchy
 6. Amplitude A_s ≈ 2.1×10⁻⁹ places the pivot at **level ~21** (F₂₁ = 17711)
 7. The ψ-eigenmode (-1/φ) creates the **alternating approach** from both sides
+8. The MOND transition and wavefunction collapse are **the same structure**: self-referential frequency measurement with bounded fidelity (Derivation 9)
 
 ## Shared Code
 

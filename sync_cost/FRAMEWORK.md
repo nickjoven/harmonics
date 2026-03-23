@@ -123,9 +123,16 @@ synchronization cost distribution across possible attractors. Measurement
 is a coupling event that drives the cost of maintaining superposition
 above what the system can sustain against the environmental mean field.
 
-Collapse has duration, not a timestamp. This is experimentally accessible
-at the quantum-classical boundary — systems near threshold should show
-anomalous decoherence timescales.
+Collapse has duration, not a timestamp. The duration is τ ∝ 1/√ε, where
+ε is the depth past the tongue boundary — the same saddle-node geometry
+that produces the Born rule (Δθ ∝ √ε). This gives the uncertainty
+relation τ × Δθ = const: fast collapse ↔ coarse discrimination.
+
+The self-referential fidelity bound (Derivation 9) unifies this with
+the MOND transition: both are instances of a system resolving its own
+frequency against a reference it participates in. The resolution is
+bounded because the measurement instrument and the measured quantity
+are the same dynamics. See `derivations/09_fidelity_bound.md`.
 
 ### Quantum-Classical Boundary
 
