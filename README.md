@@ -25,7 +25,7 @@ structural principles.
 | 1 | **Born rule** — |ψ|² as basin measure of the cost landscape | Resolved | [01](sync_cost/derivations/01_born_rule.md), [09](sync_cost/derivations/09_fidelity_bound.md) |
 | 2 | **Spectral tilt** (n_s ≈ 0.965) — mode-locking self-similarity at 1/φ | Resolved | [04](sync_cost/derivations/04_spectral_tilt_reframed.md) |
 | 3 | **Planck scale** — N = 3 minimum self-sustaining synchronization domain | Resolved | [06](sync_cost/derivations/06_planck_scale.md) |
-| 4 | **Emergent spacetime** — large-N limit of synchronization structure | Open | — |
+| 4 | **Emergent spacetime** — large-N limit of synchronization structure | Resolved | [12](sync_cost/derivations/12_continuum_limits.md), [13](sync_cost/derivations/13_einstein_from_kuramoto.md) |
 | 5 | **a₀** — MOND acceleration from synchronization cost threshold | Resolved | [03](sync_cost/derivations/03_a0_threshold.md), [08](sync_cost/derivations/08_high_z_mond.md) |
 
 ### Key results
@@ -44,6 +44,12 @@ structural principles.
 - **Born rule** ([Derivation 1](sync_cost/derivations/01_born_rule.md)):
   Δθ ∝ √ε at every tongue boundary (saddle-node universality). The
   exponent 2 in |ψ|² is parabolic geometry, not a postulate.
+
+- **Einstein from Kuramoto** ([Derivation 13](sync_cost/derivations/13_einstein_from_kuramoto.md)):
+  the rational field equation at K = 1, in the continuum limit, uniquely
+  produces the Einstein field equations. Uniqueness is not a property of
+  the dictionary — it is a theorem (Lovelock, 1971). One equation, one
+  parameter, and the only consistent output is G_μν + Λg_μν = 8πGT_μν.
 
 ### Key framings
 
@@ -69,15 +75,6 @@ Stribeck friction demonstrates the dual-regime mechanism numerically.
 
 - **Differential attenuation** — high-frequency (slip regime) dissipates;
   subharmonic (stick regime) propagates. The spectral tilt in miniature.
-
-### Application: wireless power transfer
-
-The lattice results reframe Tesla's wireless charging vision. The medium's
-friction is not the obstacle — it is the frequency converter. Drive at
-2ω₀, let the Stribeck nonlinearity convert to ω₀, and the subharmonic
-propagates coherently through the stick regime. Copper wire was chosen
-because it linearizes the medium — eliminating the conversion mechanism
-that would make the medium itself useful.
 
 ## Observational program
 
@@ -111,7 +108,7 @@ aggregates all four repositories into a unified Jupyter Book. Pushes to
 harmonics/
 ├── sync_cost/                 # synchronization cost framework
 │   ├── FRAMEWORK.md           # seed context, primitives, derivation targets
-│   └── derivations/           # 9 derivations (md) + computational scripts (py)
+│   └── derivations/           # 13 derivations (md) + computational scripts (py)
 │       └── INDEX.md           # reading order and dependency graph
 ├── driven_stribeck.py         # driven oscillator + coupled pair models
 ├── stribeck_lattice.py        # N-element Stribeck chain

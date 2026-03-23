@@ -70,7 +70,13 @@ These build on each other sequentially:
 |------|------|
 | `11_rational_field_equation.md` | **The field equation**: self-consistency condition N(p/q) = N_total × g(p/q) × w(p/q, K₀F[N]) on the Stern-Brocot tree. Exact rational arithmetic forced by alphabet. K=1 is gravity (Einstein via ADM in continuum limit), K<1 is quantum (Schrödinger via linearization). Born rule is population distribution at fixed point. |
 
-### Phase 9: The observational line
+### Phase 9: Uniqueness (the capstone)
+
+| File | Role |
+|------|------|
+| `13_einstein_from_kuramoto.md` | **Einstein from Kuramoto (QED)**: the rational field equation at K=1, continuum limit, uniquely produces G_μν + Λg_μν = 8πGT_μν. Exact ADM from locked-state Kuramoto statistics. Uniqueness via Lovelock's theorem (1971): no other rank-2 divergence-free tensor exists in 4D. One assumption beyond framework: d=3 from N=3 minimum loop (Derivation 6). |
+
+### Phase 10: The observational line
 
 | File | Role |
 |------|------|
@@ -97,6 +103,7 @@ These build on each other sequentially:
 | `10_minimum_alphabet.md` | **Current** | Four irreducible primitives (integers, mediant, fixed-point, parabola); circle derived; QM as small-ε limit |
 | `11_rational_field_equation.md` | **Current** | Self-consistency on Stern-Brocot tree; exact rational arithmetic; K=1 gravity, K<1 quantum; Born rule as fixed-point population |
 | `12_continuum_limits.md` | **Current** | K=1 → Einstein (ADM evolution + constraints); K<1 linearized → Schrödinger (Madelung + Stern-Brocot osmotic velocity) |
+| `13_einstein_from_kuramoto.md` | **Current** | Exact ADM from Kuramoto; uniqueness via Lovelock; Einstein as sole output at K=1 (capstone) |
 
 ## Supporting / Earlier Work
 
@@ -123,6 +130,7 @@ These are referenced but not on the main line:
 9. The entire framework follows from **four irreducible primitives**: integers, mediant, fixed-point equation, parabola. The circle is derived (integers + fixed-point). QM is the linearized small-ε limit. (Derivation 10)
 10. The **field equation** is N(p/q) = N_total × g(p/q) × w(p/q, K₀F[N]) on the Stern-Brocot tree in exact rational arithmetic. K=1 → Einstein (continuum limit), K<1 linearized → Schrödinger. Born rule is the population distribution at the fixed point. (Derivation 11)
 11. Both **continuum limits derived structurally**: K=1 gives ADM evolution equations and constraints via coherence tensor differentiation; K<1 gives Schrödinger via Madelung transform with quantum pressure from Stern-Brocot osmotic velocity. One equation, one parameter, three regimes, two PDEs. (Derivation 12)
+12. The K=1 continuum limit **uniquely produces Einstein**: Lovelock's theorem (1971) says G_μν + Λg_μν is the only divergence-free rank-2 tensor in 4D built from the metric and its first two derivatives. The Kuramoto→ADM dictionary satisfies all four Lovelock premises. No other field equation is possible. (Derivation 13)
 
 ## Shared Code
 
