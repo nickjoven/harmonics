@@ -5,7 +5,8 @@ on:
     branches: [main]
     paths:
       - "sync_cost/**"
-      - "patches/**"
+      - "README.md"
+      - "RESULTS.md"
 
 jobs:
   notify:

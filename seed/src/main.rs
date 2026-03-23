@@ -328,18 +328,18 @@ fn main() {
             summary: "The Planck scale derivation shows N=3 emerges as a threshold from the synchronization cost geometry. Connects to QCD structure but does not directly verify β = -dV/dg.",
         },
         ClaimEntry {
-            derivation: "sync_cost/derivations/04_spectral_tilt.md",
+            derivation: "sync_cost/derivations/04_spectral_tilt_reframed.md",
             slug: "cosmological-scales",
             relation: "partially_addresses",
             saturation_delta: 0.2,
-            summary: "Derives spectral tilt from synchronization cost scaling, connecting to CMB observables. Partial progress toward cosmological predictions.",
+            summary: "Derives spectral tilt from mode-locking structure (devil's staircase at 1/φ, self-similar with φ²). Connects to CMB observables via k↔Ω mapping. Partial progress toward cosmological predictions.",
         },
         ClaimEntry {
-            derivation: "sync_cost/derivations/05_golden_ratio.md",
+            derivation: "sync_cost/derivations/05_two_forces.md",
             slug: "cluster-convergence",
             relation: "partially_addresses",
             saturation_delta: 0.2,
-            summary: "The golden ratio selection mechanism may explain why single-constraint relaxation fails at cluster scales — the multi-mode structure requires a different convergence path.",
+            summary: "The two-force (synchronization vs. decoherence) framing may explain why single-constraint relaxation fails at cluster scales — the multi-mode structure requires a different convergence path.",
         },
         ClaimEntry {
             derivation: "sync_cost/FRAMEWORK.md",
