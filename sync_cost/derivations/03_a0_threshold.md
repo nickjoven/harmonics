@@ -264,6 +264,15 @@ discrepancy and provide g(0) independently.
 the strongest test. Existing high-z rotation curve data is sparse but
 improving with JWST.
 
+**Related**: The early-exit mechanism in
+[kk-inference](https://github.com/nickjoven/kk-inference) applies the
+same structure in transformers: the Kramers-Kronig relation predicts
+from shallow layers whether deeper layers will change the output. When
+the dissipative channel (χ'') → 0, remaining computation is skipped.
+The MOND transition is the gravitational analogue — once g < a₀, the
+orbit is locked and the detailed mass distribution no longer determines
+V(r). A flat rotation curve is an early exit.
+
 **Open**: The cost equality condition (λ_local = λ_cosmo at the
 transition) needs independent justification. Why should the
 synchronization wavelengths match at the critical point? Is this a
