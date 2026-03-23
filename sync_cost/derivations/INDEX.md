@@ -58,19 +58,19 @@ These build on each other sequentially:
 |------|------|
 | `09_fidelity_bound.md` | **Self-referential fidelity bound**: unifies MOND transition and wavefunction collapse as self-referential frequency measurement with bounded resolution. RAR shape, collapse duration, uncertainty relation, and Zeno effect all follow from one constraint: the measurement instrument IS the measured dynamics. |
 
-### Phase 8: Foundations
+### Phase 7: Foundations
 
 | File | Role |
 |------|------|
 | `10_minimum_alphabet.md` | **Four irreducible primitives**: integers, mediant, fixed-point, parabola. Circle derived from integers + fixed-point (p ≡ 0 in phase space forces R/Z = S¹). All four shown irreducible. QM is the small-ε linearized limit of the tongue dynamics. Testable: nonlinear corrections to minimum-uncertainty bound at strong coupling. |
 
-### Phase 9: The field equation
+### Phase 8: The field equation
 
 | File | Role |
 |------|------|
 | `11_rational_field_equation.md` | **The field equation**: self-consistency condition N(p/q) = N_total × g(p/q) × w(p/q, K₀F[N]) on the Stern-Brocot tree. Exact rational arithmetic forced by alphabet. K=1 is gravity (Einstein via ADM in continuum limit), K<1 is quantum (Schrödinger via linearization). Born rule is population distribution at fixed point. |
 
-### Phase 10: The observational line
+### Phase 9: The observational line
 
 | File | Role |
 |------|------|
