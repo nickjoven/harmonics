@@ -155,6 +155,70 @@ with no internal dynamics.
 
 Coupling stage lost: **propagation/detuning (c)**. N drops to 2.
 
+### Why the mapping is structurally forced
+
+The bijection {elliptic, hyperbolic, parabolic} ↔ {phase, amplitude,
+detuning} is not an interpretive choice. It is forced by the spectral
+properties of sl(2,ℝ):
+
+The three generators have distinct eigenvalue types:
+
+    J = ((0,-1),(1,0))   eigenvalues ±i       periodic orbits
+    D = ((1,0),(0,-1))   eigenvalues ±1       exponential growth/decay
+    N₊ = ((0,1),(0,0))   eigenvalue 0 (×2)    linear drift
+
+These cannot be permuted:
+- J is the ONLY compact generator (eigenvalues on the imaginary axis).
+  Compactness = periodicity = phase. No other generator produces
+  periodic orbits on the group manifold.
+- D is the ONLY generator with real eigenvalues of opposite sign.
+  Opposite-sign eigenvalues = one direction grows while the other
+  shrinks = gain/loss = amplitude dynamics.
+- N₊ is the ONLY nilpotent generator (degenerate eigenvalue, Jordan
+  block). Nilpotency = pure shift without oscillation or scaling =
+  frequency detuning.
+
+The trichotomy is the discriminant of a 2×2 matrix: negative
+(oscillatory/underdamped), positive (exponential/overdamped), zero
+(critical). This IS the classification of oscillator dynamics. The
+group already knows about the coupling stages.
+
+### The Iwasawa decomposition
+
+The identification is not imposed on SL(2,ℝ) — it is the group's
+own canonical factorization. The Iwasawa decomposition theorem:
+
+    SL(2,ℝ) = K · A · N     (unique factorization)
+
+where:
+    K = SO(2)                  compact (phase/rotation)
+    A = positive diagonals     split (amplitude/dilation)
+    N = upper unipotent        nilpotent (detuning/shear)
+
+Every element of SL(2,ℝ) factors UNIQUELY as rotation × dilation ×
+shear. The three coupling stages are the Iwasawa factors. This is
+a theorem of Lie theory, not a physical interpretation.
+
+The coupling loop
+
+    phase (K) → amplitude (A) → detuning (N) → phase (K)
+    └──────────────────────────────────────────────────┘
+
+is the Iwasawa factorization read as a cycle. The loop closes because
+the group multiplication closes. The loop has three stages because
+SL(2,ℝ) has Iwasawa rank 1 with three factors. Removing any factor
+collapses the decomposition — the remaining two factors do not form a
+closed group, and the factorization is no longer unique.
+
+This answers the derivability question: the three-stage loop is not
+derived from physics and mapped onto SL(2,ℝ). It is derived FROM
+SL(2,ℝ) via Iwasawa. The physical content is the single identification:
+
+    The synchronization substrate is SL(2,ℝ).
+
+Everything else — three stages, three subgroup types, the
+impossibility of gauging any one away — follows from the group theory.
+
 ### Exhaustiveness
 
 These three cases exhaust all connected one-parameter subgroups
@@ -247,8 +311,9 @@ exactly 1) is open.
 - The ratio 145.8/86.3 ≈ 1.69 (Planck-Hubble span / EM-gravity span):
   is this meaningful or coincidental?
 - Dimensionality argument: complete classification of SL(2,ℝ)
-  subgroups shows every H ≠ {e} kills a coupling stage. Elliptic
-  kills phase, hyperbolic kills amplitude, parabolic kills frequency.
-  Each reduces to N ≤ 2, which cannot self-sustain.
-  Remains open: rigorous proof that SL(2,ℝ) is the unique G
-  satisfying the coupling loop constraints
+  subgroups shows every H ≠ {e} kills a coupling stage. The mapping
+  {elliptic, hyperbolic, parabolic} ↔ {phase, amplitude, detuning}
+  is forced by the Iwasawa decomposition SL(2,ℝ) = K·A·N, not
+  interpretive. Remains open: rigorous proof that SL(2,ℝ) is the
+  unique G satisfying the coupling loop constraints (why not
+  SL(2,ℂ), SU(2), or another 3D Lie group?)
