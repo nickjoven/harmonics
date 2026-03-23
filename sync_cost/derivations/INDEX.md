@@ -96,6 +96,7 @@ These build on each other sequentially:
 | `09_fidelity_bound.md` | **Current** | Self-referential fidelity bound unifying MOND + collapse (see Phase 6) |
 | `10_minimum_alphabet.md` | **Current** | Four irreducible primitives (integers, mediant, fixed-point, parabola); circle derived; QM as small-ε limit |
 | `11_rational_field_equation.md` | **Current** | Self-consistency on Stern-Brocot tree; exact rational arithmetic; K=1 gravity, K<1 quantum; Born rule as fixed-point population |
+| `12_continuum_limits.md` | **Current** | K=1 → Einstein (ADM evolution + constraints); K<1 linearized → Schrödinger (Madelung + Stern-Brocot osmotic velocity) |
 
 ## Supporting / Earlier Work
 
@@ -121,6 +122,7 @@ These are referenced but not on the main line:
 8. The MOND transition and wavefunction collapse are **the same structure**: self-referential frequency measurement with bounded fidelity (Derivation 9)
 9. The entire framework follows from **four irreducible primitives**: integers, mediant, fixed-point equation, parabola. The circle is derived (integers + fixed-point). QM is the linearized small-ε limit. (Derivation 10)
 10. The **field equation** is N(p/q) = N_total × g(p/q) × w(p/q, K₀F[N]) on the Stern-Brocot tree in exact rational arithmetic. K=1 → Einstein (continuum limit), K<1 linearized → Schrödinger. Born rule is the population distribution at the fixed point. (Derivation 11)
+11. Both **continuum limits derived structurally**: K=1 gives ADM evolution equations and constraints via coherence tensor differentiation; K<1 gives Schrödinger via Madelung transform with quantum pressure from Stern-Brocot osmotic velocity. One equation, one parameter, three regimes, two PDEs. (Derivation 12)
 
 ## Shared Code
 
