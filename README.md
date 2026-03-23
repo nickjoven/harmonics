@@ -1,8 +1,23 @@
 # harmonics
 
-Synchronization cost framework for physical dynamics. Systems converge to
-lowest-cost attractors. Force is cost gradient. Structure is what settled
-cost minimization looks like.
+One equation on the Stern-Brocot tree:
+
+$$N(p/q) = N_{\text{total}} \times g(p/q) \times w(p/q,\; K_0 F[N])$$
+
+Four primitives — integers, mediants, the fixed-point equation, and the
+parabola — compose into the circle, the devil's staircase, Arnold tongues,
+and the Born rule. The field equation's fixed point, in its continuum limits,
+produces the Einstein field equations ($K = 1$) and the Schrödinger equation
+($K < 1$), uniquely. The frequency distribution $g(\omega)$ determines itself.
+Zero free parameters. Zero free functions.
+
+| Prediction | Value | Observed | Residual |
+|---|---|---|---|
+| Spectral tilt $n_s$ | 0.963–0.966 | 0.9649 ± 0.0042 | < 0.2% |
+| Born rule exponent | 2 | 2 | exact |
+| MOND scale $a_0$ | 1.25 × 10⁻¹⁰ m/s² | 1.2 × 10⁻¹⁰ | 4% |
+| Spatial dimension | 3 | 3 | exact |
+| $N_{\text{efolds}}$ | 61.3 ± 0.7 | TBD | CMB-S4, ~2028 |
 
 ## Framework
 
@@ -22,11 +37,13 @@ structural principles.
 
 | # | Target | Status | Derivation |
 |---|--------|--------|------------|
-| 1 | **Born rule** — |ψ|² as basin measure of the cost landscape | Resolved | [01](sync_cost/derivations/01_born_rule.md), [09](sync_cost/derivations/09_fidelity_bound.md) |
-| 2 | **Spectral tilt** (n_s ≈ 0.965) — mode-locking self-similarity at 1/φ | Resolved | [04](sync_cost/derivations/04_spectral_tilt_reframed.md) |
-| 3 | **Planck scale** — N = 3 minimum self-sustaining synchronization domain | Resolved | [06](sync_cost/derivations/06_planck_scale.md) |
-| 4 | **Emergent spacetime** — large-N limit of synchronization structure | Resolved | [12](sync_cost/derivations/12_continuum_limits.md), [13](sync_cost/derivations/13_einstein_from_kuramoto.md) |
-| 5 | **a₀** — MOND acceleration from synchronization cost threshold | Resolved | [03](sync_cost/derivations/03_a0_threshold.md), [08](sync_cost/derivations/08_high_z_mond.md) |
+| 1 | **Born rule** — \|ψ\|² from saddle-node basin geometry | Resolved | [01](sync_cost/derivations/01_born_rule.md), [09](sync_cost/derivations/09_fidelity_bound.md) |
+| 2 | **Spectral tilt** — n_s ≈ 0.965 from φ² self-similarity | Verified (Δ < 0.2%) | [04](sync_cost/derivations/04_spectral_tilt_reframed.md), [rfe](https://github.com/nickjoven/rfe) |
+| 3 | **Planck scale** — N = 3 self-sustaining loop | Resolved | [06](sync_cost/derivations/06_planck_scale.md) |
+| 4 | **Emergent spacetime** — Einstein uniquely at K = 1 | Resolved | [12](sync_cost/derivations/12_continuum_limits.md), [13](sync_cost/derivations/13_einstein_from_kuramoto.md) |
+| 5 | **a₀** — 1.25 × 10⁻¹⁰ m/s² (4% residual) | Resolved | [03](sync_cost/derivations/03_a0_threshold.md), [rfe](https://github.com/nickjoven/rfe) |
+| 6 | **d = 3** — forced by mediant → SL(2,ℝ) | Resolved | [14](sync_cost/derivations/14_three_dimensions.md) |
+| 7 | **g(ω)** — self-consistent: g* = h(g*) | Resolved | [rfe](https://github.com/nickjoven/rfe) |
 
 ### Key results
 
@@ -82,31 +99,52 @@ Stribeck friction demonstrates the dual-regime mechanism numerically.
 - **Differential attenuation** — high-frequency (slip regime) dissipates;
   subharmonic (stick regime) propagates. The spectral tilt in miniature.
 
+## The 2028 prediction
+
+The framework predicts $N_{\text{efolds}} = \sqrt{5} / \text{rate} = 61.3 \pm 0.7$.
+
+This is the number of e-folds of inflation, set by the eigenvalue
+separation of $x^2 - x - 1 = 0$. It is falsified if CMB-S4 measures
+$N_{\text{efolds}} < 59$ or $> 63$. CMB-S4 is expected to reach the
+required precision by ~2028.
+
+If confirmed: inflation duration is algebraic, not a free parameter.
+
 ## Observational program
 
 [Derivation 8](sync_cost/derivations/08_high_z_mond.md) predicts a
-redshift-dependent MOND scale: a₀(z) = cH(z)/(2π). This is testable
-against high-z kinematic surveys.
+redshift-dependent MOND scale: $a_0(z) = c H(z) / (2\pi) / \sqrt{g^*(1/\varphi)}$.
+With the self-consistent $g^*$ correction, the predicted local value is
+$1.25 \times 10^{-10}$ m/s² (4% from observed $1.2 \times 10^{-10}$).
 
 - **RC100** (Shachar et al. 2023): 100 high-z galaxies with resolved
-  kinematics. Data in [`ascii`](ascii).
-- **Predictions**: zero-free-parameter V_circ and f_DM for KLASS, GEKO,
-  CRISTAL surveys. Discriminating leverage at z > 3 where sync_cost
-  diverges from constant-a₀ and power-law models.
+  kinematics. Data in [`ascii`](ascii). Analysis shows $a_0$ is not
+  constant and rises with $z$ (direction matches framework).
+- **Predictions**: zero-free-parameter $V_{\text{circ}}$ and $f_{\text{DM}}$
+  for KLASS, GEKO, CRISTAL surveys. Discriminating leverage at $z > 3$.
 - **Scripts**: `predict_highz.py`, `a0_observable.py`, `fdm_redshift.py`,
   `rar_high_z.py` in [`sync_cost/derivations/`](sync_cost/derivations/).
 
-## Prior work
+## Engine
 
-| Repository | Focus |
+The [rfe](https://github.com/nickjoven/rfe) package solves the rational
+field equation numerically: one equation, all observables. Includes
+self-consistent $g^*$ solver and $a_0$ correction computation.
+
+```sh
+pip install -e .        # or just: python -m rfe --observables
+```
+
+## Related repositories
+
+| Repository | Role |
 |---|---|
-| [proslambenomenos](https://github.com/nickjoven/proslambenomenos) | Cosmological constant as fundamental frequency; Kuramoto synchronization → MOND transition |
-| [201](https://github.com/nickjoven/201) | Gravity as synchronization in a frictional medium; metric tensor ↔ friction coefficient mapping |
-| [intersections](https://github.com/nickjoven/intersections) | Stick-slip dynamics and dark matter; Stribeck friction ↔ MOND interpolating function; bifurcation analysis |
-
-The [proslambenomenos site](https://github.com/nickjoven/proslambenomenos-site)
-aggregates all four repositories into a unified Jupyter Book. Pushes to
-`sync_cost/` on main trigger a site rebuild via CI.
+| [rfe](https://github.com/nickjoven/rfe) | Numerical engine — field equation solver, all observables |
+| [proslambenomenos](https://github.com/nickjoven/proslambenomenos) | $\Lambda \to a_0$: one frequency, zero free parameters |
+| [201](https://github.com/nickjoven/201) | Gravity as synchronization in a frictional medium |
+| [intersections](https://github.com/nickjoven/intersections) | Stick-slip dynamics and dark matter |
+| [submediant-site](https://github.com/nickjoven/submediant-site) | Derivation chain site: polynomial → evidence |
+| [proslambenomenos-site](https://github.com/nickjoven/proslambenomenos-site) | Full Jupyter Book aggregating all repositories |
 
 ## Structure
 

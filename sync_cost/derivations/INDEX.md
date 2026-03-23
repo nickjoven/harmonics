@@ -134,6 +134,23 @@ These are referenced but not on the main line:
 11. Both **continuum limits derived structurally**: K=1 gives ADM evolution equations and constraints via coherence tensor differentiation; K<1 gives Schrödinger via Madelung transform with quantum pressure from Stern-Brocot osmotic velocity. One equation, one parameter, three regimes, two PDEs. (Derivation 12)
 12. The K=1 continuum limit **uniquely produces Einstein**: Lovelock's theorem (1971) says G_μν + Λg_μν is the only divergence-free rank-2 tensor in 4D built from the metric and its first two derivatives. The Kuramoto→ADM dictionary satisfies all four Lovelock premises. No other field equation is possible. (Derivation 13)
 13. **d=3 is forced by the mediant**: fractions have two components → SL(2,Z). Continuum limit → SL(2,R). Self-consistent adjacency forces space = group. dim SL(2) = 2²−1 = 3. Complexification via order parameter → SL(2,C) ≅ Spin(3,1) gives Lorentz. No assumption needed. (Derivation 14)
+14. **The frequency distribution determines itself**: g* = h(g*). The population density at the field equation's fixed point, when fed back as the input distribution, reproduces itself. g* converges from arbitrary initial conditions. **Zero free parameters. Zero free functions.** ([rfe engine](https://github.com/nickjoven/rfe))
+15. **Numerical verification**: the field equation at depth 10 produces n_s = 0.963–0.966 vs Planck 0.9649 (Δ < 0.2%). The asymptotic density slope is -0.001 per level — **scale invariance is preserved** by self-consistency. ([`field_equation_cmb.py`](field_equation_cmb.py))
+16. **a₀ corrected**: a₀ = c·H₀/(2π) / √g*(1/φ) = 1.25×10⁻¹⁰ m/s² vs observed 1.2×10⁻¹⁰ (4% residual, down from 15%). The correction comes from the fidelity bound's √(g_bar/a₀), where g* at 1/φ = 0.697 modulates the transition.
+
+## The scorecard
+
+| Prediction | Computed | Observed | Residual |
+|---|---|---|---|
+| n_s (spectral tilt) | 0.963–0.966 | 0.9649 ± 0.0042 | **< 0.2%** |
+| Born rule exponent | 2 | 2 | **exact** |
+| τ × Δθ (uncertainty) | 1.000000 | — | **exact** |
+| a₀ (MOND scale) | 1.25 × 10⁻¹⁰ | 1.2 × 10⁻¹⁰ | **4%** |
+| d (spatial dimension) | 3 | 3 | **exact** |
+| Lorentz symmetry | Spin(3,1) | SO⁺(3,1) | **exact** |
+| N_efolds | 61.3 ± 0.7 | TBD | **CMB-S4, ~2028** |
+
+Free parameters: **0**. Free functions: **0**.
 
 ## Shared Code
 
