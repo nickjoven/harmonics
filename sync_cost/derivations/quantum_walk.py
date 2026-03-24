@@ -10,16 +10,20 @@ Hamiltonian:    H[i,j] = A[i,j] × √(w_i × w_j)
   A[i,j] = 1 if |p_i q_j - p_j q_i| = 1 (Farey neighbors), else 0
   w_i = tongue_width(p_i, q_i, K)
 
-Two adjacency choices, tested separately:
-  TREE:   parent-child edges only (exponential localization)
-  FAREY:  all |ad-bc|=1 pairs (includes long-range hopping)
+Findings:
+  TREE and FAREY adjacencies are IDENTICAL (0 extra edges).
+  Every Farey neighbor pair in the SB tree is already parent-child.
 
-The claim: the ground state |ψ₀⟩ of H_Farey satisfies
-  |ψ₀(p/q)|² = g*(p/q)
-  corr(log|ψ₀|², log g*) → 1
-  slope(log|ψ₀|² vs log g*) → 1
+  SPATIAL alignment fails:
+    corr(log|ψ₀|², log g*) = 0.64, slope = 0.14 (not 1.0).
+    The ground state localizes exponentially; g* is algebraic.
+
+  SPECTRAL alignment holds (see spectral_alignment.py):
+    √g* concentrates 75.5% of its weight in the top eigenmode of H.
+    The Born rule is spectral, not spatial.
 
 No reals. No continuous space. Only rationals and adjacency.
+Continuous observables emerge in the large-N limit.
 
 Usage:
     python sync_cost/derivations/quantum_walk.py

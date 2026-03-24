@@ -1,12 +1,15 @@
 """
 Cost function exploration for the spectral tilt.
 
-The Michaelis-Menten form recovers n_s = 0.965 but predicts positive
-running (+0.013). Planck weakly prefers negative running (-0.005 ± 0.007).
+SUPERSEDED by the circle map framework (04_spectral_tilt_reframed.md):
+all monotonic cost functions produce positive running (wrong sign).
+This file systematically proves that fact. The resolution — negative
+running from the devil's staircase gap closure — requires the circle
+map, not a cost function.
 
-This script explores alternative cost functions to find families that
-produce both the correct tilt AND negative running. The physical
-constraint: the cost function must have a synchronization interpretation.
+Historical result: the Michaelis-Menten form recovers n_s = 0.965 but
+predicts positive running (+0.013). This motivated the pivot to Arnold
+tongues. Retained as proof that the cost-function approach is exhausted.
 
 Usage:
     python sync_cost/derivations/cost_function_scan.py

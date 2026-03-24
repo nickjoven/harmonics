@@ -1,20 +1,21 @@
 """
 Spectral alignment: do the dominant eigenmodes of H carry g*?
 
-Not spatial (|ψ₀(p/q)|² vs g*(p/q) node by node).
-Spectral: expand g* in the eigenbasis of H and ask
-where the weight concentrates.
+Not spatial (|ψ₀(p/q)|² vs g*(p/q) node by node — that gives
+slope 0.14, not 1.0; see quantum_walk.py). Spectral: expand g*
+in the eigenbasis of H and ask where the weight concentrates.
 
   g* = Σ_k c_k |E_k⟩     where c_k = ⟨E_k | g*⟩
   √g* = Σ_k a_k |E_k⟩    where a_k = ⟨E_k | √g*⟩
 
-If the weight |c_k|² concentrates in the top eigenmodes,
-then g* and H are spectrally aligned — even if their
-spatial profiles differ.
+Key results:
+  √g* concentrates 75.5% in the top eigenmode of H.
+  g* does not (13.4%) — the square diffuses spectral weight.
+  The Born rule IS this asymmetry: amplitude is spectrally
+  concentrated, probability is not.
 
-Also: compare the spectrum of H to the spectrum of the
-linearized operator dU/dg|_{g*}. If these spectra track,
-then fixed-point convergence IS spectral decomposition.
+  Odd eigenmodes carry exactly zero weight (left-right symmetry).
+  Jacobian dU/dg|_{g*} is exactly rank 1 (σ₁=24.5, σ₂=5.5e-7).
 
 Usage:
     python sync_cost/derivations/spectral_alignment.py

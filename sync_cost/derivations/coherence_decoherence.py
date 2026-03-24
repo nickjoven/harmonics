@@ -1,19 +1,17 @@
 """
 Two-force model: synchronization vs decoherence.
 
-The missing mechanism: something actively resists coherence. The
-steady state is a BALANCE between coupling (K, toward order) and
-decoherence (D, toward disorder). The spectral tilt encodes the
-equilibrium point.
+SUPERSEDED by one_force.py: decoherence is not a second force.
+It is the frequency spread g(ω) — the same coupling mechanism
+failing to lock distant oscillators. One parameter K determines
+both synchronization and its failure. Retained for historical
+context; see one_force.py for the current picture.
 
-Three candidate decoherence mechanisms, explored in turn:
-  1. Noise (thermal/quantum fluctuations)
-  2. Frequency spread (natural drift apart)
-  3. Self-consistency barrier (mean field bootstrapping)
-
-The key new ingredient: r(ω) is scale-dependent. Frequencies near
-rational ratios lock easily (large r). Frequencies near 1/φ barely
-lock (small r → near criticality → large fluctuations).
+Original framing (historical):
+  Balance between coupling (K, toward order) and decoherence
+  (D, toward disorder). Three candidate decoherence mechanisms
+  explored. The key insight — r(ω) is scale-dependent — remains
+  valid and carries forward into the circle map framework.
 
 Usage:
     python sync_cost/derivations/coherence_decoherence.py
