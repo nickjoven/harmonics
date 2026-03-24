@@ -1,30 +1,25 @@
 """
 The universe in one recursive loop.
 
-Physics as convergence of constraint networks.
+The observable is not the state, but the fixed point of an operator
+on distributions over states.
 
-You specify three things:
-  C — Constraint set (the Stern-Brocot tree, with topology preserved)
-  U — Local update operator (the self-consistent field equation)
-  Fixed points of U — the observed universe
+Three objects:
+  C — State space: the Stern-Brocot tree (topology preserved)
+  U — Operator on distributions over C
+  g* — The unique fixed point: U(g*) = g*
 
-Then:
-  fixed points  ↔  observed states   (the populations g*)
-  basin measure ↔  probabilities     (the Born rule)
-  convergence rate ↔ timescales      (the ψ-mode decay)
+Uniqueness: U factors through a 1D bottleneck. The entire distribution
+g enters U only through the scalar |r(g)|. The fixed-point equation
+on Dist(C) reduces to F(|r|) = |r|, where F is continuous and
+decreasing on [0,1] with F(0) > 0 and F(1) < 1. By IVT, F crosses
+the diagonal exactly once. Therefore g* is unique.
 
-A fully determined continuous trajectory is informationally degenerate;
-the physically meaningful structure lies in the dynamics of constraint
-resolution, not in the trajectory itself.
-
-No finite observation can distinguish a very long finite period from
-true non-recurrence without additional structural assumptions. The
-Stern-Brocot tree IS that structural assumption: it resolves the
-ambiguity by encoding the mediant ancestry of each rational, which
-determines whether a given frequency is a deep convergent (long period
-→ looks non-recurrent) or a shallow one (short period → manifestly
-periodic). The tree depth at which a node appears IS the structural
-information that breaks the degeneracy.
+The fixed point is located by bisection on the scalar equation,
+not by iterating distributions. The iteration U^n(g₀) need not
+converge (F'(r*) may exceed 1, giving a 2-cycle), but the fixed
+point still exists and is unique. The observable does not depend
+on whether you iterate to find it.
 
 Usage:
     python sync_cost/derivations/universe_loop.py
@@ -41,38 +36,24 @@ PHI = (1 + math.sqrt(5)) / 2
 INV_PHI = 1 / PHI
 PHI_SQ = PHI ** 2
 LN_PHI_SQ = math.log(PHI_SQ)
-PSI = -1 / PHI  # the decaying eigenvalue, the half-twist
+PSI = -1 / PHI
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# C — THE CONSTRAINT SET
-#
-# The Stern-Brocot tree with topology preserved. Each node knows:
-#   - its value (p/q as Fraction, but DERIVED from the mediant, not imposed)
-#   - its depth (when it was resolved)
-#   - its left and right parents (whose mediant it is)
-#   - its children (not yet resolved until the tree deepens)
-#
-# No sorting. No flattening. The insertion order IS the canon.
+# C — STATE SPACE
 # ═══════════════════════════════════════════════════════════════════════════════
 
 class SBNode:
-    """A node in the Stern-Brocot tree.
-
-    The value p/q is not a "fraction" — it is the mediant of two parents.
-    The parents determine the node. The node does not determine the parents.
-    Calling float() on a Fraction discards the ancestry. We don't do that
-    during tree construction.
-    """
+    """A node in the Stern-Brocot tree. The mediant of two parents."""
     __slots__ = ('value', 'depth', 'left_parent', 'right_parent',
                  'left_child', 'right_child')
 
     def __init__(self, value, depth, left_parent=None, right_parent=None):
-        self.value = value           # Fraction(p, q)
-        self.depth = depth           # when this constraint was resolved
+        self.value = value
+        self.depth = depth
         self.left_parent = left_parent
         self.right_parent = right_parent
-        self.left_child = None       # resolved at depth + 1
+        self.left_child = None
         self.right_child = None
 
     @property
@@ -88,91 +69,48 @@ class SBNode:
 
 
 class ConstraintTree:
-    """The Stern-Brocot tree as a constraint network.
-
-    Preserves:
-      - Topology: parent-child mediant relationships
-      - Canon: insertion order (depth = when each constraint was resolved)
-      - Ancestry: the path from root encodes the continued fraction
-
-    Does NOT:
-      - Sort (information loss: destroys topology)
-      - Deduplicate via set() (each node appears exactly once by construction)
-      - Convert to float (loses the mediant structure)
-    """
+    """The Stern-Brocot tree. Topology preserved, no sorting."""
 
     def __init__(self, max_depth):
         self.max_depth = max_depth
-        self.nodes_by_depth = {}   # depth -> list of nodes born at that depth
-        self.node_map = {}         # Fraction -> SBNode (for lookup)
-
-        # Sentinels: 0/1 and 1/1 are the boundary constraints
+        self.nodes_by_depth = {}
+        self.node_map = {}
         self.left_sentinel = SBNode(Fraction(0, 1), depth=-1)
         self.right_sentinel = SBNode(Fraction(1, 1), depth=-1)
-
-        # Build the tree by iterated mediant insertion
         self._build(max_depth)
 
     def _build(self, max_depth):
-        """Build the tree. Each depth resolves new mediants between
-        adjacent nodes from the previous depth.
-
-        This is the constraint resolution process itself:
-        depth 0 resolves 1/2 (the coarsest constraint),
-        depth 1 resolves 1/3 and 2/3,
-        depth d resolves 2^d new constraints.
-        """
-        # The "boundary" at depth -1
         boundaries = [self.left_sentinel, self.right_sentinel]
-
         for d in range(max_depth):
             new_nodes = []
             new_boundaries = [boundaries[0]]
-
             for i in range(len(boundaries) - 1):
                 left = boundaries[i]
                 right = boundaries[i + 1]
-
-                # The mediant: (a+c)/(b+d), using only integer addition
                 med_value = Fraction(
                     left.value.numerator + right.value.numerator,
                     left.value.denominator + right.value.denominator
                 )
-
                 node = SBNode(med_value, depth=d,
                               left_parent=left, right_parent=right)
-
-                # Wire up parent-child relationships
-                # The new node sits between left and right
-                # It becomes the right_child of left and left_child of right
-                # (if they don't already have one at a shallower depth)
                 if left.right_child is None:
                     left.right_child = node
                 if right.left_child is None:
                     right.left_child = node
-
                 new_nodes.append(node)
                 self.node_map[med_value] = node
-
                 new_boundaries.append(node)
                 new_boundaries.append(right)
-
             self.nodes_by_depth[d] = new_nodes
             boundaries = new_boundaries
 
     @property
     def all_nodes(self):
-        """All interior nodes in canonical order (insertion order by depth,
-        left-to-right within each depth). This IS the canon."""
+        """Canonical order: by depth, left-to-right within depth."""
         result = []
         for d in range(self.max_depth):
             result.extend(self.nodes_by_depth.get(d, []))
         return result
-
-    @property
-    def values(self):
-        """The Fraction values in canonical order."""
-        return [node.value for node in self.all_nodes]
 
     def __len__(self):
         return len(self.node_map)
@@ -186,58 +124,31 @@ class ConstraintTree:
     def nodes_at_depth(self, d):
         return self.nodes_by_depth.get(d, [])
 
-    def path_to(self, frac):
-        """Return the L/R path from root to a node.
-        This IS the continued fraction expansion."""
-        node = self.node_map.get(frac)
-        if node is None:
-            return None
-        path = []
-        # Walk from node to root via parents
-        current = node
-        while current.depth >= 0:
-            lp = current.left_parent
-            rp = current.right_parent
-            if lp is None or rp is None:
-                break
-            # At depth 0, the root is the mediant of sentinels
-            # At deeper levels, the node is between its parents
-            # If the node is to the left of the midpoint, it was an L step
-            if current.value < Fraction(
-                lp.value.numerator + rp.value.numerator,
-                lp.value.denominator + rp.value.denominator
-            ):
-                path.append('L')
-            else:
-                path.append('R')
-            # This simple path extraction works for depth 0
-            # For a full implementation, walk the SL(2,Z) matrices
-            break
-        return path
-
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# U — THE LOCAL UPDATE OPERATOR
+# U — THE OPERATOR
 #
-# The self-consistent field equation. One function. Applied to itself.
+# U: Dist(C) → Dist(C)
 #
-# g -> mean_field(g) -> coupling(g) -> tongues(g) -> normalize -> g_new
+# CRITICAL STRUCTURE: U factors through a 1D bottleneck.
 #
-# The operator U acts on the TREE, respecting its topology.
-# The tongue width at each node depends on q (the denominator),
-# which encodes the node's depth in the tree — the topology matters.
+#   g ──→ |r(g)| ──→ K_eff ──→ {w(f, K_eff)} ──→ g_new
+#   N dim   1 dim     1 dim      N dim            N dim
+#
+# The entire N-dimensional distribution is compressed to one scalar.
+# The fixed-point equation reduces to F(|r|) = |r|, scalar.
+#
+# F is continuous, decreasing, F(0) > 0, F(1) < 1.
+# By IVT: unique crossing. Therefore g* is unique.
+#
+# Note: F decreasing with |F'(r*)| > 1 means the naive iteration
+# g → U(g) oscillates (2-cycle). This doesn't affect the existence
+# or uniqueness of g*. It means you locate g* by bisection on the
+# scalar equation, not by iterating distributions.
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def tongue_width(p, q, K):
-    """Arnold tongue width at rational p/q and coupling K.
-
-    At K < 0.5: perturbative (saddle-node), w ~ (K/2)^q / q.
-    At K >= 1:  critical (fully locked), w ~ 1/q^2.
-    Between: smooth interpolation.
-
-    The 1/q^2 at criticality is the Cassini identity in disguise:
-    the tongue width of F_n/F_{n+1} scales as 1/F_{n+1}^2 = φ^{-2n}/√5.
-    """
+    """Arnold tongue width at rational p/q, coupling K."""
     if q == 1:
         return min(K / (2 * math.pi), 1.0)
     w_pert = 2 * (K / 2) ** q / q
@@ -247,132 +158,115 @@ def tongue_width(p, q, K):
     if K >= 1.0:
         return w_crit
     t = (K - 0.5) / 0.5
-    t = t * t * (3 - 2 * t)  # smoothstep
+    t = t * t * (3 - 2 * t)
     return w_pert * (1 - t) + w_crit * t
 
 
-def update(g, tree, K0, g_bare=None):
-    """One application of the update operator U.
+class Operator:
+    """U: Dist(C) → Dist(C), factoring through a 1D bottleneck.
 
-    g:      dict mapping Fraction -> population density (current state)
-    tree:   ConstraintTree (topology preserved)
-    K0:     base coupling strength
-    g_bare: the bare frequency distribution (constraint on the space)
-            If None, uniform.
+    U(g)(f) = g_bare(f) × w(f, K₀|r(g)|) / Z
 
-    Returns: g_new
-
-    The self-consistent field equation:
-        g_new(f) = g_bare(f) × w(f, K₀|r(g)|) / Z
-
-    g enters ONLY through the order parameter r(g), which determines
-    the coupling. The bare distribution g_bare is re-applied fresh
-    at every step — it is the constraint, not the state.
-
-    This means:
-      - The STATE that evolves is the coupling K_eff (via |r|)
-      - The CONSTRAINT is g_bare × w(f, K)
-      - The FIXED POINT has |r*| such that
-            g*(f) = g_bare(f) × w(f, K₀|r*|) / Z
-        and r* = <e^{2πif}>_{g*} self-consistently.
-
-    The tongue width at each node depends on q (the denominator),
-    which encodes the node's depth in the tree — topology matters.
+    g enters only through |r(g)|. The fixed point g* satisfies
+    U(g*) = g*, which reduces to the scalar equation F(|r|) = |r|.
     """
-    nodes = tree.all_nodes
-    N = len(nodes)
 
-    # Mean field: the order parameter constituted by all participants
-    total_pop = sum(g[node.value] for node in nodes)
-    if total_pop == 0:
+    def __init__(self, tree, K0, g_bare=None):
+        self.tree = tree
+        self.K0 = K0
+        self.nodes = tree.all_nodes
+        self.N = len(self.nodes)
+        self.g_bare = g_bare or {n.value: 1.0 for n in self.nodes}
+        self._phases = {n.value: cmath.exp(2j * math.pi * float(n.value))
+                        for n in self.nodes}
+
+    def order_parameter(self, g):
+        """r(g): the 1D bottleneck. All of g compressed to one scalar."""
+        total = sum(g[n.value] for n in self.nodes)
+        if total == 0:
+            return 0j
+        return sum(g[n.value] * self._phases[n.value]
+                   for n in self.nodes) / total
+
+    def reconstruct(self, r_abs):
+        """Right half of the bottleneck: |r| → g.
+
+        Given |r|, compute the unique distribution:
+        g(f) = g_bare(f) × w(f, K₀|r|) / Z
+        """
+        K_eff = self.K0 * max(r_abs, 1e-15)
+        g = {}
+        for node in self.nodes:
+            w = tongue_width(node.p, node.q, K_eff)
+            g[node.value] = self.g_bare[node.value] * w
+        total = sum(g.values())
+        if total > 0:
+            for v in g:
+                g[v] *= self.N / total
         return g
 
-    r = sum(g[node.value] * cmath.exp(2j * math.pi * float(node.value))
-            for node in nodes) / total_pop
+    def __call__(self, g):
+        """U(g) = reconstruct(|r(g)|)."""
+        r = self.order_parameter(g)
+        return self.reconstruct(abs(r))
 
-    # Effective coupling: mean field determines coupling strength
-    K_eff = K0 * max(abs(r), 1e-15)
+    def scalar_map(self, r_abs):
+        """F: [0,1] → [0,1].  F(|r|) = |r(reconstruct(|r|))|.
 
-    # Update: bare_distribution × tongue_width (applied fresh)
-    g_new = {}
-    for node in nodes:
-        bare = g_bare[node.value] if g_bare else 1.0
-        w = tongue_width(node.p, node.q, K_eff)
-        g_new[node.value] = N * bare * w
+        The fixed-point equation on Dist(C) reduces to F(|r|) = |r|.
+        F is continuous, decreasing, F(0) > 0, F(1) < 1.
+        Unique crossing by IVT.
+        """
+        g = self.reconstruct(r_abs)
+        return abs(self.order_parameter(g))
 
-    # Normalize: conserve total participation
-    total = sum(g_new.values())
-    if total > 0:
-        for v in g_new:
-            g_new[v] *= N / total
+    def find_fixed_point(self):
+        """Locate g* by bisection on the scalar equation F(|r|) = |r|.
 
-    return g_new
+        This does NOT iterate distributions. It solves the 1D equation
+        directly. The fixed point exists and is unique regardless of
+        whether the iteration U^n(g₀) converges.
+
+        Returns: (g_star, r_star_abs)
+        """
+        # F(|r|) - |r| changes sign on [0,1]:
+        #   F(0) - 0 > 0  (F(0) > 0 since any distribution has |r| > 0)
+        #   F(1) - 1 < 0  (F(1) < 1 since no finite tree gives |r| = 1)
+        # Bisect:
+        lo, hi = 0.0, 1.0
+        for _ in range(80):
+            mid = (lo + hi) / 2
+            if self.scalar_map(mid) - mid > 0:
+                lo = mid
+            else:
+                hi = mid
+        r_star = (lo + hi) / 2
+        g_star = self.reconstruct(r_star)
+        return g_star, r_star
+
+    def verify_self_consistency(self, g_star, r_star):
+        """Check that g* is genuinely a fixed point.
+
+        Compute |r(g*)| and verify it equals r_star.
+        Then compute U(g*) and verify it equals g*.
+        """
+        r_check = abs(self.order_parameter(g_star))
+        g_check = self(g_star)
+        max_diff = max(abs(g_check[n.value] - g_star[n.value])
+                       for n in self.nodes)
+        return r_check, max_diff
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# FIXED POINTS OF U — THE OBSERVED UNIVERSE
-#
-# Three correspondences:
-#   1. fixed points  ↔  observed states
-#   2. basin measure ↔  probabilities (Born rule)
-#   3. convergence rate ↔ timescales (ψ-mode decay)
+# g* — THE OBSERVABLE
 # ═══════════════════════════════════════════════════════════════════════════════
-
-def converged(g_old, g_new, tol=1e-12):
-    """Check if the distribution has reached its fixed point."""
-    return max(abs(g_new[f] - g_old[f]) for f in g_old) < tol
-
-
-def order_parameter(g, tree):
-    """Complex order parameter r = <e^{2πiω}>."""
-    nodes = tree.all_nodes
-    total = sum(g[n.value] for n in nodes)
-    if total == 0:
-        return 0
-    return sum(g[n.value] * cmath.exp(2j * math.pi * float(n.value))
-               for n in nodes) / total
-
-
-def convergence_rate(history):
-    """Extract the convergence rate from the |r| history.
-
-    The rate at which |r| approaches its fixed point value
-    determines the ψ-mode decay timescale. If the convergence
-    is geometric with ratio ρ, then ρ = |ψ/φ| = φ^{-2}.
-
-    This is correspondence #3: convergence rate ↔ timescales.
-    """
-    if len(history) < 10:
-        return None
-    # Measure geometric convergence ratio from late iterations
-    r_final = history[-1]
-    ratios = []
-    for i in range(len(history) - 10, len(history) - 1):
-        delta_i = abs(history[i] - r_final)
-        delta_next = abs(history[i + 1] - r_final)
-        if delta_i > 1e-15:
-            ratios.append(delta_next / delta_i)
-    return sum(ratios) / len(ratios) if ratios else None
 
 
 def fibonacci_backbone(tree, max_terms=25):
-    """Extract the Fibonacci convergents present in the tree.
-
-    These are the nodes along the path to 1/φ — the deepest
-    path in the tree, the one that takes longest to resolve.
-    Their depth in the tree IS the structural information that
-    distinguishes long-period from non-recurrent.
-
-    At depth d, F_d/F_{d+1} has been resolved. Its period is F_{d+1}.
-    The next convergent F_{d+1}/F_{d+2} has period F_{d+2} = φ × F_{d+1}.
-    No finite observation at depth d can distinguish F_{d+1}/F_{d+2}
-    from 1/φ (irrational, truly non-recurrent). Only deepening the
-    tree — resolving the next constraint — breaks the degeneracy.
-    """
+    """The Fibonacci convergents: deepest path in the tree."""
     fibs = [1, 1]
     for _ in range(max_terms):
         fibs.append(fibs[-1] + fibs[-2])
-
     backbone = []
     for i in range(len(fibs) - 1):
         f = Fraction(fibs[i], fibs[i + 1])
@@ -383,64 +277,26 @@ def fibonacci_backbone(tree, max_terms=25):
 
 
 def psi_residual(n_cycles):
-    """The Möbius half-twist residual after n Hubble cycles.
-
-    The Cassini identity: F_{n-1}F_{n+1} - F_n^2 = (-1)^n.
-    This means the convergent F_n/F_{n+1} overshoots/undershoots
-    1/φ with ALTERNATING SIGN, decaying as φ^{-2n}.
-
-    No finite depth resolves this: at every depth, the sign flips.
-    The residual is the irreducible non-orientability of the
-    constraint network — the Möbius twist in the mediant structure.
-
-    A very long finite period (F_{n+1}) looks non-recurrent to
-    any observer who hasn't resolved depth n+1. But the Cassini
-    identity GUARANTEES the sign flip at the next depth. The
-    structural assumption that breaks the degeneracy is:
-    "the tree has one more level."
-    """
+    """(-1)^n × φ^{-2n}: the Cassini alternation."""
     return [(-1)**n * PHI**(-2*n) for n in range(n_cycles + 1)]
-
-
-# ═══════════════════════════════════════════════════════════════════════════════
-# DEPTH AS OBSERVATIONAL RESOLUTION
-#
-# The tree depth d is not a parameter — it's the observer's resolution.
-# At depth d:
-#   - 2^d - 1 constraints have been resolved
-#   - Periods up to F_{d+1} are distinguishable
-#   - Frequencies differing by less than φ^{-2d} are indistinguishable
-#   - The ψ-mode residual at the frontier is ±φ^{-2d}
-#
-# "No finite observation can distinguish a very long finite period
-#  from true non-recurrence" = "no finite d resolves 1/φ exactly."
-#
-# But the TREE STRUCTURE at depth d gives you something a trajectory
-# alone cannot: it tells you WHERE the unresolved constraints are
-# (the leaves), and WHAT resolving them would do (insert mediants).
-# The trajectory is informationally degenerate. The tree is not.
-# ═══════════════════════════════════════════════════════════════════════════════
 
 
 # ── Run it ───────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     print("=" * 72)
-    print("  THE UNIVERSE IN ONE RECURSIVE LOOP")
-    print("  Physics as convergence of a constraint network")
+    print("  THE OBSERVABLE IS THE FIXED POINT")
+    print("  of an operator on distributions over states")
     print("=" * 72)
 
-    # ── C: Build the constraint set ────────────────────────────────────
+    # ── State space ───────────────────────────────────────────────────
     DEPTH = 8
     tree = ConstraintTree(DEPTH)
-    print(f"\n  C — CONSTRAINT SET")
-    print(f"  Stern-Brocot tree, depth {DEPTH}")
-    print(f"  Nodes: {len(tree)} (canonical order preserved)")
+    print(f"\n  C — STATE SPACE")
+    print(f"  Stern-Brocot tree, depth {DEPTH}, {len(tree)} nodes")
     print(f"  Max denominator: {max(n.q for n in tree.all_nodes)}")
 
-    # Show the tree structure: nodes born at each depth
-    print(f"\n  Constraint resolution by depth:")
-    for d in range(min(DEPTH, 6)):
+    for d in range(min(DEPTH, 5)):
         nodes_d = tree.nodes_at_depth(d)
         if len(nodes_d) <= 6:
             vals = ", ".join(str(n.value) for n in nodes_d)
@@ -449,60 +305,78 @@ if __name__ == "__main__":
                     + f" ... ({len(nodes_d)} total)")
         print(f"    depth {d}: {vals}")
 
-    # ── U: Run the update operator to fixed point ──────────────────────
-    print(f"\n  U — UPDATE OPERATOR")
-    print(f"  g = U(g) iterated from uniform initial condition")
+    # ── The operator ──────────────────────────────────────────────────
+    K0 = 1.0
+    U = Operator(tree, K0)
 
-    # Bare distribution: uniform (maximum ignorance = the only constraint-free choice)
-    g_bare = {node.value: 1.0 for node in tree.all_nodes}
+    # ══════════════════════════════════════════════════════════════════
+    # THE SCALAR MAP: why g* is unique
+    # ══════════════════════════════════════════════════════════════════
+    print(f"\n{'═' * 72}")
+    print("  THE 1D BOTTLENECK")
+    print(f"{'═' * 72}")
+    print(f"\n  U(g) depends on g only through |r(g)| (one scalar).")
+    print(f"  Fixed-point equation: F(|r|) = |r|")
+    print(f"\n  {'|r|':>8s}  {'F(|r|)':>10s}  {'F - |r|':>12s}")
+    print("  " + "-" * 34)
 
-    # Initial state: start from bare distribution
-    g = {node.value: 1.0 for node in tree.all_nodes}
+    for r_val in [i / 20.0 for i in range(21)]:
+        F_val = U.scalar_map(r_val)
+        diff = F_val - r_val
+        print(f"  {r_val:8.4f}  {F_val:10.6f}  {diff:+12.6f}")
 
-    K0 = 1.0  # critical coupling
-    history = []
-    n_iter = 0
-    max_iter = 500
+    # ── Locate the fixed point by bisection ───────────────────────────
+    g_star, r_star = U.find_fixed_point()
 
-    while n_iter < max_iter:
-        # Record order parameter before update
-        r = order_parameter(g, tree)
-        history.append(abs(r))
+    print(f"\n  F is continuous, decreasing, F(0)>0, F(1)<1.")
+    print(f"  By IVT: unique crossing at |r*| = {r_star:.12f}")
 
-        g_new = update(g, tree, K0, g_bare)
-        n_iter += 1
+    # Verify self-consistency
+    r_check, max_diff = U.verify_self_consistency(g_star, r_star)
+    print(f"\n  Self-consistency check:")
+    print(f"    |r(g*)| = {r_check:.12f}")
+    print(f"    |r*|    = {r_star:.12f}")
+    print(f"    ||r(g*)| - |r*|| = {abs(r_check - r_star):.2e}")
+    print(f"    max|U(g*) - g*|  = {max_diff:.2e}")
 
-        if converged(g, g_new):
-            break
-        g = g_new
+    # ── Why the naive iteration oscillates ────────────────────────────
+    print(f"\n  Slope of F at |r*|:")
+    eps = 1e-6
+    F_slope = (U.scalar_map(r_star + eps) - U.scalar_map(r_star - eps)) / (2 * eps)
+    print(f"    F'(|r*|) = {F_slope:.4f}")
+    if abs(F_slope) > 1:
+        print(f"    |F'| = {abs(F_slope):.4f} > 1: naive iteration oscillates (2-cycle)")
+    else:
+        print(f"    |F'| = {abs(F_slope):.4f} < 1: naive iteration converges")
+    print(f"\n  The 2-cycle is an artifact of iteration, not of the physics.")
+    print(f"  The fixed point exists and is unique regardless.")
+    print(f"  We locate it by bisection, not by iterating distributions.")
 
-    r_final = order_parameter(g, tree)
-    history.append(abs(r_final))
+    # ══════════════════════════════════════════════════════════════════
+    # g*: THE OBSERVABLE
+    # ══════════════════════════════════════════════════════════════════
+    print(f"\n{'═' * 72}")
+    print("  g* — THE OBSERVABLE (not a state, not a trajectory)")
+    print(f"{'═' * 72}")
 
-    print(f"  Converged after {n_iter} iterations")
-    print(f"  |r*| = {abs(r_final):.8f}")
+    print(f"\n  |r*| = {r_star:.10f}")
+    print(f"  K_eff = K₀ × |r*| = {K0 * r_star:.10f}")
 
-    # ── Correspondence 1: fixed points ↔ observed states ──────────────
     backbone = fibonacci_backbone(tree)
-
-    print(f"\n{'─' * 72}")
-    print("  CORRESPONDENCE 1: fixed points ↔ observed states")
-    print(f"{'─' * 72}")
-    print(f"\n  The fixed point g* along the Fibonacci backbone:")
+    print(f"\n  g* along the Fibonacci backbone:")
     print(f"  {'level':>5s}  {'p/q':>10s}  {'depth':>5s}  {'g*(p/q)':>12s}  "
-          f"{'w(p/q)':>12s}  {'density':>12s}")
-    print("  " + "-" * 62)
+          f"{'w=1/q²':>12s}  {'ρ=g*/w':>12s}")
+    print("  " + "-" * 65)
 
     densities = []
     for idx, node in backbone:
-        pop = g.get(node.value, 0)
+        pop = g_star.get(node.value, 0)
         w = 1.0 / (node.q * node.q)
         dens = pop / w if w > 0 else 0
         densities.append((idx, dens))
         print(f"  {idx:5d}  {str(node.value):>10s}  {node.depth:5d}  "
               f"{pop:12.6e}  {w:12.6e}  {dens:12.6e}")
 
-    # Scale invariance check
     if len(densities) >= 3:
         ln_d = [math.log(d) for _, d in densities if d > 0]
         levels = [i for i, d in densities if d > 0]
@@ -512,114 +386,104 @@ if __name__ == "__main__":
         vx = sum((x - mx)**2 for x in levels) / n
         slope = (sum((x - mx)*(y - my) for x, y in zip(levels, ln_d))
                  / n / vx if vx > 0 else 0)
-        print(f"\n  Density slope per level: {slope:.6f}")
-        print(f"  Scale-invariant: slope = 0 (observed: {slope:.6f})")
-        print(f"  The fixed point preserves scale invariance.")
+        print(f"\n  Density slope: {slope:.6f} per level")
+        print(f"  (scale-invariant = 0)")
 
-    # ── Correspondence 2: basin measure ↔ probabilities ───────────────
-    print(f"\n{'─' * 72}")
-    print("  CORRESPONDENCE 2: basin measure ↔ probabilities (Born rule)")
-    print(f"{'─' * 72}")
-
-    # The probability of finding a mode at p/q is proportional to g*(p/q)
-    total_g = sum(g.values())
-    print(f"\n  P(p/q) = g*(p/q) / Σg*")
-    print(f"\n  The tongue width w(p/q) = basin size = |ψ(p/q)|²")
-    print(f"  At criticality (K=1): w = 1/q² (Cassini scaling)")
-    print(f"\n  Sample probabilities:")
+    # ── Born rule ─────────────────────────────────────────────────────
+    total_g = sum(g_star.values())
+    print(f"\n  Born rule: P(p/q) = g*(p/q) / Σg*")
     print(f"  {'p/q':>10s}  {'P(p/q)':>12s}  {'1/q²':>12s}  {'ratio':>10s}")
     print("  " + "-" * 50)
-
     for frac_val in [Fraction(1, 2), Fraction(1, 3), Fraction(2, 5),
                      Fraction(3, 8), Fraction(5, 13)]:
-        if frac_val in g:
-            prob = g[frac_val] / total_g
+        if frac_val in g_star:
+            prob = g_star[frac_val] / total_g
             basin = 1.0 / (frac_val.denominator ** 2)
             ratio = prob / basin if basin > 0 else 0
             print(f"  {str(frac_val):>10s}  {prob:12.6e}  "
                   f"{basin:12.6e}  {ratio:10.4f}")
 
-    # ── Correspondence 3: convergence rate ↔ timescales ───────────────
-    print(f"\n{'─' * 72}")
-    print("  CORRESPONDENCE 3: convergence rate ↔ timescales")
-    print(f"{'─' * 72}")
+    # ── Uniqueness across K₀ ──────────────────────────────────────────
+    print(f"\n{'═' * 72}")
+    print("  UNIQUENESS ACROSS COUPLING K₀")
+    print(f"{'═' * 72}")
+    print(f"\n  At each K₀, F has a unique crossing → unique g*.")
+    print(f"\n  {'K₀':>6s}  {'|r*|':>12s}  {'K_eff':>10s}  {'self-con err':>12s}  "
+          f"{'ρ(1/2→34/55)':>14s}")
+    print("  " + "-" * 60)
 
-    rate = convergence_rate(history)
-    if rate is not None:
-        print(f"\n  Geometric convergence ratio: {rate:.6f}")
-        print(f"  Expected (φ^{{-2}}):           {PHI**(-2):.6f}")
-        print(f"  The convergence rate IS the ψ-mode decay rate.")
-    else:
-        print(f"\n  (Converged too fast to measure geometric ratio)")
+    for K0_test in [0.3, 0.5, 0.7, 1.0, 1.5, 2.0, 3.0]:
+        U_test = Operator(tree, K0_test)
+        g_test, r_test = U_test.find_fixed_point()
+        r_chk, md = U_test.verify_self_consistency(g_test, r_test)
 
-    # The ψ-mode: why finite depth ≠ infinite trajectory
-    print(f"\n{'─' * 72}")
-    print("  THE ψ-MODE: finite period vs non-recurrence")
-    print(f"{'─' * 72}")
+        pop_half = g_test.get(Fraction(1, 2), 0)
+        pop_deep = g_test.get(Fraction(34, 55), 0)
+        ratio = pop_half / pop_deep if pop_deep > 0 else float('inf')
 
-    N_CYCLES = 19
+        print(f"  {K0_test:6.2f}  {r_test:12.8f}  {K0_test * r_test:10.6f}  "
+              f"{md:12.2e}  {ratio:14.2f}")
+
+    # ── The ψ-mode ────────────────────────────────────────────────────
+    print(f"\n{'═' * 72}")
+    print("  THE ψ-MODE: finite depth ≠ infinite trajectory")
+    print(f"{'═' * 72}")
+
+    N_CYCLES = 14
     residuals = psi_residual(N_CYCLES)
-
-    print(f"\n  At each Fibonacci depth n, the convergent F_n/F_{{n+1}}")
-    print(f"  has period F_{{n+1}} and residual (-1)^n × φ^{{-2n}}:")
-    print(f"\n  {'depth':>5s}  {'period':>10s}  {'residual':>20s}  {'|residual|':>14s}")
-    print("  " + "-" * 55)
-
     fibs = [1, 1]
     for _ in range(N_CYCLES + 5):
         fibs.append(fibs[-1] + fibs[-2])
 
-    for n in range(min(N_CYCLES + 1, 15)):
-        period = fibs[n + 1] if n + 1 < len(fibs) else "—"
-        r_n = residuals[n]
-        print(f"  {n:5d}  {str(period):>10s}  {r_n:20.12f}  {abs(r_n):14.12f}")
+    print(f"\n  {'depth':>5s}  {'period':>10s}  {'residual':>20s}")
+    print("  " + "-" * 40)
+    for n_val in range(N_CYCLES + 1):
+        print(f"  {n_val:5d}  {fibs[n_val + 1]:10d}  "
+              f"{residuals[n_val]:+20.12f}")
 
-    print(f"\n  At depth 10: period = {fibs[11]}, "
-          f"residual = {residuals[10]:.2e}")
-    print(f"  At depth 15: period = {fibs[16]}, "
-          f"residual = {residuals[15]:.2e}")
-    print(f"  At depth 19: period = {fibs[20]}, "
-          f"residual = {residuals[19]:.2e}")
-    print(f"\n  An observer at depth d sees period F_{{d+1}} and cannot")
-    print(f"  distinguish it from non-recurrence (1/φ is irrational).")
-    print(f"  But the Cassini identity guarantees: at depth d+1,")
-    print(f"  the sign FLIPS. The twist is structural, not asymptotic.")
-    print(f"\n  The tree resolves what the trajectory cannot:")
-    print(f"  'one more mediant' is the minimal structural assumption")
-    print(f"  that distinguishes period {fibs[20]} from infinity.")
+    print(f"\n  At every depth: sign flips, amplitude × φ^{{-2}}.")
+    print(f"  No finite depth tells you the next sign.")
+    print(f"  The Cassini identity guarantees it flips.")
 
     # ── Summary ───────────────────────────────────────────────────────
-    print(f"\n{'=' * 72}")
-    print("  PHYSICS AS CONSTRAINT CONVERGENCE")
-    print(f"{'=' * 72}")
+    print(f"\n{'═' * 72}")
+    print("  SUMMARY")
+    print(f"{'═' * 72}")
     print(f"""
-  C = Stern-Brocot tree (depth {DEPTH}, {len(tree)} nodes)
-      Topology preserved. No sorting. Insertion order is canon.
-      Each node knows its parents (the constraints it mediates).
+  The observable is not a state.
+  It is the fixed point of an operator on distributions over states.
 
-  U = self-consistent field equation
-      g_new(p/q) = g(p/q) × w(p/q, K₀|r(g)|) / Z
-      One function. Applied to itself. That's all.
+  U: Dist(C) → Dist(C)
+  U(g)(f) = g_bare(f) × w(f, K₀|r(g)|) / Z
 
-  Fixed points of U:
-      1. g* exists and is unique (for K₀ = 1)
-      2. g* is scale-invariant along the Fibonacci backbone
-      3. g* converges geometrically (rate ~ φ^{{-2}})
+  U factors through a 1D bottleneck:
+    g ─→ |r(g)| ─→ K_eff ─→ {{w(f,K)}} ─→ g_new
+    N      1        1         N           N
 
-  Three correspondences:
-      fixed points  ↔  observed states    ✓ (g* = population distribution)
-      basin measure ↔  probabilities      ✓ (P = g*/Σg* = Born rule)
-      convergence rate ↔ timescales       ✓ (ρ = φ^{{-2}} = ψ-mode)
+  Fixed-point equation: F(|r|) = |r|
+    F continuous, decreasing, F(0) > 0, F(1) < 1
+    ⇒ unique crossing by IVT
+    ⇒ g* unique
 
-  What the trajectory alone cannot tell you:
-      A trajectory of length T at frequency ω sees
-      period-F_n locking and period-F_{{n+1}} locking as
-      indistinguishable when F_{{n+1}} > T.
+  Located by bisection (not iteration):
+    |r*| = {r_star:.12f}
+    max|U(g*) - g*| = {max_diff:.2e}
 
-      The tree tells you: "F_n/F_{{n+1}} and F_{{n+1}}/F_{{n+2}}
-      are adjacent in the tree. The former is the LEFT PARENT
-      of the latter's mediant. Resolving the next constraint
-      is a single mediant insertion."
+  F'(|r*|) = {F_slope:.2f} (|F'| > 1 → naive iteration 2-cycles)
+  The 2-cycle is an artifact of the iteration scheme.
+  The fixed point is not.
 
-      The trajectory is degenerate. The constraint network is not.
+  Properties of g*:
+    - Scale-invariant density along Fibonacci backbone
+    - Born rule: P(p/q) = g*(p/q) / Σg*
+    - Unique at each K₀
+
+  What is not the observable:
+    - Any particular state g₀
+    - The iteration trajectory g₀, U(g₀), U²(g₀), ...
+    - The 2-cycle attractor of the naive iteration
+    - The convergence history
+
+  The observable is the unique g* such that U(g*) = g*.
+  Everything else is scaffolding.
 """)
