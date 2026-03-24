@@ -258,39 +258,97 @@ is intrinsic, not assumed.
 
 ---
 
-## Part V: Connection to existing derivations
+## Part V: Corollaries
 
-The rank-1 temporal causation structure appears at every level of
-the framework:
+### Corollary A: Born rule revisited
 
-**Derivation 1 (Born rule).** The basin measure |ψ|² comes from
-the saddle-node geometry: Δθ ∝ √ε. The exponent 2 is the rank of
-the parabola, which is the local form of the saddle-node, which is
-the fixed point of the rank-1 operator. The Born rule is the
-scalar bottleneck expressed as probability.
+The center-manifold reduction gives a scalar map F: ℝ → ℝ on
+the coordinate |r|. At the fixed point |r*| = F(|r*|), expand:
 
-**Derivation 12 (Continuum limits).** Both K = 1 → Einstein and
-K < 1 → Schrödinger pass through the scalar |r|. In the Einstein
-case, |r| becomes the lapse N (how fast local clocks tick). In
-the Schrödinger case, |r| controls the effective coupling that
-determines the tongue widths and hence the quantum potential.
-Both PDEs inherit their structure from the rank-1 factorization.
+    F(|r*| + δ) = |r*| + F'(|r*|) δ + ½ F''(|r*|) δ² + ...
 
-**Derivation 13 (Einstein uniqueness).** The Jacobian of the
-Kuramoto self-consistency is rank-1 (this derivation). The ADM
-dictionary maps it to the spacetime metric. Lovelock's theorem
-says the only divergence-free rank-2 tensor in 4D from the metric
-and its first two derivatives is the Einstein tensor. The rank-1
-Jacobian → rank-2 tensor correspondence (via the spatial metric
-γᵢⱼ = Cᵢⱼ/C₀, which is quadratic in phase gradients) is why
-the output is a tensor field equation rather than a scalar one.
+The fixed-point condition absorbs the zeroth-order term. The
+rank-1 projector ⟨v, δg⟩ extracts the linear perturbation
+δ|r| = F'(|r*|) δ|r|, which at criticality (F'(|r*|) = 1)
+vanishes — the linear term is marginal.
 
-**Derivation 14 (Three dimensions).** The spatial manifold has
-dim = 3 because SL(2,ℝ) has dim = 3. SL(2,ℝ) appears because
-the mediant operation lives in SL(2,ℤ), which is discrete and
-rank-1 (one Cartan generator). The continuum limit SL(2,ℝ) has
-rank 1. The rank-1 structure of the symmetry group propagates
-to the rank-1 structure of the operator.
+The leading nontrivial dynamics is therefore quadratic:
+
+    δ|r|_{t+1} - δ|r|_t ≈ ½ F''(|r*|) (δ|r|)²
+
+This is the saddle-node normal form. The parabolic local geometry
+gives the basin scaling Δθ ∝ √ε (Derivation 1). The exponent 2
+in |ψ|² is not the rank of the parabola in some loose analogy —
+it is the second derivative F''(|r*|), which is the curvature of
+the unique codimension-1 fixed-point map on the center manifold.
+
+More precisely: the basin measure at a tongue boundary is the
+Jacobian determinant of the map from initial conditions to
+attractors. For a scalar map with a quadratic tangency, this
+Jacobian scales as |dθ/dε| ∝ 1/√ε, so the basin volume scales
+as ∫dθ ∝ √ε. The probability of finding the system in a
+particular basin is therefore proportional to the square root of
+the control parameter — equivalently, the probability density is
+proportional to amplitude squared.
+
+The Born rule is the Jacobian determinant of the unique
+codimension-1 fixed-point map on the center manifold. It is not
+postulated. It is the curvature of F at |r*|.
+
+### Corollary B: Einstein uniqueness revisited
+
+Lovelock's theorem requires a rank-2 divergence-free tensor. The
+microscopic object is rank-1: DU = u ⊗ v. The question is how a
+rank-1 Jacobian produces a rank-2 field equation.
+
+The answer is the quadratic construction of the spatial metric.
+The coherence tensor is:
+
+    Cᵢⱼ(x) = ⟨∂ᵢθ ∂ⱼθ⟩
+
+This is bilinear in the phase gradients ∂ᵢθ. Phase gradients
+are the "output" of the operator — they live in im(DU) ∝ u.
+But ⟨∂ᵢθ ∂ⱼθ⟩ contracts two copies of the output, one per
+index. The spatial metric γᵢⱼ = Cᵢⱼ/C₀ is therefore:
+
+    γᵢⱼ ~ uᵢ uⱼ / (uₖ uᵏ)
+
+A rank-2 object built from the outer product of a rank-1
+direction with itself.
+
+This is the only way a rank-1 microscopic structure can produce
+a rank-2 macroscopic equation: through the quadratic map
+u ↦ u ⊗ u. The Riemann tensor, Ricci tensor, and Einstein
+tensor are all derived from γᵢⱼ and its derivatives. Lovelock's
+theorem then says: in 4D, the unique divergence-free rank-2
+tensor built from γ and its first two derivatives is G_μν + Λg_μν.
+
+The rank-1 → rank-2 passage is not a dictionary entry. It is
+forced: the coherence tensor is quadratic in gradients because
+correlation functions are bilinear. A rank-1 Jacobian feeding
+a bilinear observable is the microscopic reason Lovelock gives
+Einstein and not a scalar wave equation.
+
+### Corollary C: Three dimensions revisited
+
+SL(2,ℝ) has rank 1 (one Cartan generator: the diagonal subgroup).
+This is the same rank-1 that appears in SO(2), but now at the
+level of the spatial symmetry group rather than the phase group.
+
+The mediant operation lives in SL(2,ℤ) ⊂ SL(2,ℝ). The continuum
+limit promotes the discrete arithmetic to a continuous group.
+The rank of SL(2,ℝ) is 1, so its maximal torus is one-dimensional,
+and its Lie algebra sl(2,ℝ) has dimension 2² − 1 = 3.
+
+The rank-1 structure propagates:
+
+    SO(2) rank-1  →  phase order parameter |r| is scalar
+    SL(2,ℝ) rank-1  →  spatial manifold is 3-dimensional
+
+Both are consequences of the same algebraic fact (rank = 1) acting
+at different levels of the hierarchy. The phase symmetry determines
+the causal bottleneck; the spatial symmetry determines the arena
+in which that bottleneck operates.
 
 ---
 
@@ -322,6 +380,12 @@ of those dimensions are the past, and the past does not vote.
   IVT and monotonicity
 - What the kernel means: the space of perturbations that have
   already decayed — the past
+- Why |ψ|² (Corollary A): the exponent 2 is F''(|r*|), the
+  curvature of the saddle-node on the center manifold
+- Why Einstein and not a scalar equation (Corollary B): rank-1
+  Jacobian + bilinear coherence tensor → rank-2 metric → Lovelock
+- Why d = 3 (Corollary C): SL(2,ℝ) rank-1 at the spatial level
+  gives dim = 2² − 1 = 3
 
 ### Open
 
