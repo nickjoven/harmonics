@@ -355,6 +355,101 @@ uncertainty relation in the variable-denominator context: a
 measurement process that converges but never loses its half-twist,
 producing oscillation that decays but never vanishes.
 
+## The bowed string: two ends at different units
+
+Kawano et al. (2025, arXiv:2502.11902) provide experimental
+confirmation of this structure in a bowed string. Key findings:
+
+### The observation
+
+During subharmonic generation (a cellist producing a note below the
+string's fundamental via precise bow pressure control):
+
+1. **The two sides of the bow show different waveforms.** The
+   bridge-side waveform is horizontally stretched by a factor of 2
+   relative to the nut side. Same string, same physical system —
+   the two halves operate at different effective frequencies.
+
+2. **The bow contact becomes an additional reflective boundary.**
+   In normal playing, the Helmholtz corner (a kink traveling along
+   the string) completes a round-trip and returns at the fundamental
+   frequency. In the subharmonic technique, the corner reflects at
+   the bow contact point once every two cycles, halving the rate at
+   which it reaches the bridge.
+
+3. **The spectrum envelope reorganizes.** The harmonic content under
+   subharmonic conditions is not simply the normal spectrum shifted
+   down. The envelope — the smooth curve connecting the harmonic
+   peaks — changes shape, reflecting a different mode of vibration.
+
+### The Möbius reading
+
+The bow contact is the half-twist. On one side, the string vibrates
+at frequency f. On the other side, it vibrates at f/2. The contact
+point is where the "orientation" of the vibration flips — the
+Helmholtz corner approaching from one direction is reflected with a
+different period than from the other.
+
+This is a physical Möbius strip:
+- **The strip**: the string, parametrized by position
+- **The twist**: the bow contact, where the effective frequency
+  changes by a factor of 2
+- **Two traversals to return**: the corner must make two round-trips
+  on the bridge side to match one "cycle" as seen from the nut side
+
+The two ends of the strip are moving at different "units" — not
+different speeds in the same time, but different frequencies, which
+means different effective time scales. The bridge side counts two
+ticks for every one tick on the nut side.
+
+### Connection to the Stribeck lattice
+
+The Kawano result is the bowed-string analog of the Stribeck lattice
+frequency conversion (RESULTS.md):
+
+| Bowed string (Kawano) | Stribeck lattice | Variable denominator |
+|---|---|---|
+| Bow contact = reflective boundary | First contact converts frequency | Fidelity bound = measurement boundary |
+| Bridge side at f/2 | RX at ω₀ = ω_d/2 | Subharmonic emerges |
+| Nut side at f | TX at ω_d | Drive frequency |
+| High bow pressure required | A > bifurcation threshold | Deep inside tongue |
+| Two round-trips = one cycle | N = 3 minimum for conversion | Two traversals for orientation return |
+
+The lattice result (N = 3 critical) maps onto the string: the bow
+contact, the bridge, and the nut are the three coupling stages. The
+bow contact does the conversion (like element 1 in the lattice),
+and the bridge and nut are the boundaries that define the two
+frequency regimes.
+
+### The spectrum as envelope
+
+The user's observation: the spectrum is an envelope. Not the
+individual harmonic peaks, but the smooth curve connecting them.
+
+In normal playing, the envelope decays as ~1/n (sawtooth wave,
+Helmholtz motion). In subharmonic playing, the envelope changes
+shape because the mode structure has changed — the half-twist at
+the bow contact introduces a topological modification to the
+standing wave pattern.
+
+The envelope is the fidelity function. It encodes how many
+harmonics the system can sustain given its coupling strength (bow
+pressure/speed). The RAR interpolating function g_obs/g_bar =
+1/[1 - exp(-√x)] is an envelope in exactly this sense: it is the
+smooth curve that connects the discrete mode-locked states on the
+Stern-Brocot tree. The individual tongues are the harmonic peaks.
+The RAR is their envelope.
+
+If this identification holds, the bowed string's spectral envelope
+under subharmonic conditions should have the same functional form
+as the RAR — a self-referential resolution function determined by
+the coupling strength (bow pressure) and the frequency ratio
+(subharmonic order). This is directly testable: measure the
+harmonic envelope of a bowed string in subharmonic generation and
+compare it to g_obs = g_bar/[1 - exp(-√(g_bar/a₀))], with bow
+pressure mapping to g_bar and the subharmonic threshold mapping
+to a₀.
+
 ## Testable predictions
 
 1. **Structure formation as frequency resolution**: the depth of
@@ -380,6 +475,12 @@ producing oscillation that decays but never vanishes.
    1/4181 should not appear as persistent mode-locked structures in
    cosmological data.
 
+4. **Bowed string spectral envelope = RAR**: the harmonic envelope
+   of a bowed string in subharmonic generation should follow
+   g_obs = g_bar/[1 - exp(-√(g_bar/a₀))], with bow pressure → g_bar
+   and the subharmonic threshold → a₀. Measurable with existing
+   high-speed imaging and FFT analysis (Kawano et al. 2025 setup).
+
 ## Status
 
 **Proposed**: The variable denominator reframes Hz as a self-referential
@@ -397,6 +498,9 @@ integral rather than a rate × time product. Connects to:
   approach), half-twist (Cassini alternation)
 - The half-twist never smooths out at finite n — it IS the uncertainty relation
   in the variable-denominator context
+- Kawano et al. (2025) bowed string confirms: two sides of bow at different
+  effective frequencies, bow contact as half-twist/reflective boundary,
+  spectral envelope reorganization under subharmonic conditions
 
 **Open**:
 - Numerical computation of the self-consistent phase integral
