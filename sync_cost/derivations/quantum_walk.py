@@ -1,23 +1,25 @@
 """
-Quantum walk on the Stern-Brocot tree.
+Discrete Hilbert space over Q.
 
-Claim: a quantum walk detects the same regions as classical iteration.
-  quantum amplitude  ↔  classical convergence
-  |ψ(p/q)|²         ↔  g*(p/q)
+Basis:          {|p/q⟩} for each node in the Stern-Brocot tree
+Inner product:  ⟨p/q | p'/q'⟩ = δ_{p/q, p'/q'}
+Normalization:  Σ |ψ(p/q)|² = 1  and  Σ g*(p/q) = 1
 
-The tree is a graph. The adjacency matrix is a Hamiltonian.
-The continuous-time quantum walk propagates amplitudes:
-  ψ(t) = e^{-iHt} |root⟩
+Hamiltonian:    H[i,j] = A[i,j] × √(w_i × w_j)
 
-Three tests:
-  1. Ground state of H concentrates where g* concentrates
-  2. Time-averaged |ψ(t)|² correlates with g*
-  3. The correlation is explained by: |ψ|² ∝ 1/q² = tongue width
+  A[i,j] = 1 if |p_i q_j - p_j q_i| = 1 (Farey neighbors), else 0
+  w_i = tongue_width(p_i, q_i, K)
 
-If all three hold, the Born rule closes:
-  Classical:  g*(p/q) ∝ w(p/q, K)     = population
-  Quantum:    ψ*(p/q) ∝ √w(p/q, K)    = amplitude
-  Born:       |ψ|² = w = g*            = the rule IS the agreement
+Two adjacency choices, tested separately:
+  TREE:   parent-child edges only (exponential localization)
+  FAREY:  all |ad-bc|=1 pairs (includes long-range hopping)
+
+The claim: the ground state |ψ₀⟩ of H_Farey satisfies
+  |ψ₀(p/q)|² = g*(p/q)
+  corr(log|ψ₀|², log g*) → 1
+  slope(log|ψ₀|² vs log g*) → 1
+
+No reals. No continuous space. Only rationals and adjacency.
 
 Usage:
     python sync_cost/derivations/quantum_walk.py
@@ -29,7 +31,6 @@ import sys
 from fractions import Fraction
 
 import numpy as np
-from scipy.linalg import expm
 
 sys.path.insert(0, "sync_cost/derivations")
 from universe_loop import (
@@ -39,171 +40,110 @@ from universe_loop import (
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# BUILD THE ADJACENCY MATRIX OF THE STERN-BROCOT TREE
+# ADJACENCY MATRICES
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def build_adjacency(tree):
-    """Adjacency matrix of the SB tree as a graph.
-
-    Edges connect each node to its Farey neighbors at the time
-    of its insertion: the left_parent and right_parent.
-
-    These are the nodes whose numerators/denominators were added
-    to form this node's fraction. |ad - bc| = 1 guaranteed.
-    """
+def build_tree_adjacency(tree):
+    """Tree adjacency: parent-child edges only."""
     nodes = tree.all_nodes
     N = len(nodes)
     index = {n.value: i for i, n in enumerate(nodes)}
-
     A = np.zeros((N, N), dtype=float)
 
     for node in nodes:
         i = index[node.value]
-
-        # Connect to parent nodes (Farey neighbors)
-        lp = node.left_parent
-        rp = node.right_parent
-
-        if lp is not None and lp.value in index:
-            j = index[lp.value]
-            A[i, j] = 1.0
-            A[j, i] = 1.0
-
-        if rp is not None and rp.value in index:
-            j = index[rp.value]
-            A[i, j] = 1.0
-            A[j, i] = 1.0
+        for parent in (node.left_parent, node.right_parent):
+            if parent is not None and parent.value in index:
+                j = index[parent.value]
+                A[i, j] = 1.0
+                A[j, i] = 1.0
 
     return A, nodes, index
 
 
-def build_weighted_adjacency(tree):
-    """Adjacency weighted by 1/q of the TARGET node.
+def build_farey_adjacency(tree):
+    """Farey adjacency: |p_i q_j - p_j q_i| = 1.
 
-    This encodes the hyperbolic geometry: hopping INTO
-    a high-q node is suppressed. The weight is structural —
-    it comes from the tree itself, not from the circle map.
+    This is the natural adjacency on Q. It includes tree edges
+    plus long-range connections. Node 1/3 connects directly to
+    3/8 (depth 3), not just through the tree path.
     """
     nodes = tree.all_nodes
     N = len(nodes)
     index = {n.value: i for i, n in enumerate(nodes)}
-
     A = np.zeros((N, N), dtype=float)
 
-    for node in nodes:
-        i = index[node.value]
-
-        lp = node.left_parent
-        rp = node.right_parent
-
-        if lp is not None and lp.value in index:
-            j = index[lp.value]
-            # Symmetric weight: geometric mean of 1/q_i and 1/q_j
-            w = 1.0 / math.sqrt(node.q * lp.q)
-            A[i, j] = w
-            A[j, i] = w
-
-        if rp is not None and rp.value in index:
-            j = index[rp.value]
-            w = 1.0 / math.sqrt(node.q * rp.q)
-            A[i, j] = w
-            A[j, i] = w
+    for i in range(N):
+        pi, qi = nodes[i].p, nodes[i].q
+        for j in range(i + 1, N):
+            pj, qj = nodes[j].p, nodes[j].q
+            if abs(pi * qj - pj * qi) == 1:
+                A[i, j] = 1.0
+                A[j, i] = 1.0
 
     return A
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# CONTINUOUS-TIME QUANTUM WALK
+# HAMILTONIAN AND GROUND STATE
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def ctqw_evolve(H, psi0, t):
-    """Evolve ψ(t) = e^{-iHt} ψ₀."""
-    U = expm(-1j * H * t)
-    return U @ psi0
+def build_hamiltonian(A, w):
+    """H[i,j] = A[i,j] × √(w_i × w_j).
 
-
-def ctqw_time_average(H, psi0, t_max, n_samples=200):
-    """Time-averaged probability distribution ⟨|ψ(t)|²⟩_t.
-
-    This is the quantum analog of the stationary distribution.
-    For a finite system, it converges to:
-      π_j = Σ_k |⟨j|E_k⟩|² |⟨E_k|ψ₀⟩|²
+    The tongue widths enter as the inner product metric.
+    H is real symmetric → real eigenvalues, orthonormal eigenvectors.
     """
-    N = len(psi0)
-    avg = np.zeros(N)
-
-    for i in range(n_samples):
-        t = t_max * (i + 0.5) / n_samples
-        psi_t = ctqw_evolve(H, psi0, t)
-        avg += np.abs(psi_t) ** 2
-
-    return avg / n_samples
+    N = len(w)
+    sqrt_w = np.sqrt(w)
+    H = A * np.outer(sqrt_w, sqrt_w)
+    return H
 
 
-def ctqw_spectral_average(H, psi0):
-    """Exact time-averaged distribution from eigenstates.
+def ground_state(H):
+    """Ground state = eigenvector of largest eigenvalue.
 
-    π_j = Σ_k |⟨j|E_k⟩|² |⟨E_k|ψ₀⟩|²
+    Perron-Frobenius: on a connected non-negative graph,
+    the dominant eigenvector has all-positive components.
 
-    No time evolution needed. This IS the long-time average.
+    Returns (ψ₀, E₀, |ψ₀|²) with Σ|ψ₀|² = 1.
     """
     eigenvalues, eigenvectors = np.linalg.eigh(H)
-    # eigenvectors[:, k] is the k-th eigenvector
-    # ⟨E_k|ψ₀⟩ = overlap
-    overlaps = eigenvectors.T @ psi0  # shape (N,)
-    # π_j = Σ_k |V[j,k]|² |overlap_k|²
-    pi = np.sum(np.abs(eigenvectors) ** 2 * np.abs(overlaps) ** 2, axis=1)
-    return pi
-
-
-def ground_state_distribution(H):
-    """Ground state of H (largest eigenvalue for adjacency).
-
-    For the adjacency matrix, the ground state is the eigenvector
-    with largest eigenvalue (most "in-phase" state).
-    """
-    eigenvalues, eigenvectors = np.linalg.eigh(H)
-    # Largest eigenvalue = last one (eigh returns sorted)
-    ground = eigenvectors[:, -1]
-    return np.abs(ground) ** 2, eigenvalues[-1]
+    psi0 = eigenvectors[:, -1]
+    if psi0[0] < 0:
+        psi0 = -psi0
+    prob = psi0 ** 2
+    return psi0, eigenvalues[-1], prob
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# CORRELATION ANALYSIS
+# DIAGNOSTICS
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def pearson_r(x, y):
-    """Pearson correlation coefficient."""
-    x = np.array(x, dtype=float)
-    y = np.array(y, dtype=float)
-    mx, my = x.mean(), y.mean()
-    dx, dy = x - mx, y - my
-    num = np.sum(dx * dy)
-    den = np.sqrt(np.sum(dx**2) * np.sum(dy**2))
-    return num / den if den > 0 else 0.0
-
-
-def spearman_rho(x, y):
-    """Spearman rank correlation."""
-    from scipy.stats import rankdata
-    rx = rankdata(x)
-    ry = rankdata(y)
-    return pearson_r(rx, ry)
-
-
-def log_log_slope(x, y):
-    """Slope of log(y) vs log(x) for positive values."""
-    mask = (np.array(x) > 0) & (np.array(y) > 0)
-    lx = np.log(np.array(x)[mask])
-    ly = np.log(np.array(y)[mask])
-    n = len(lx)
-    if n < 2:
-        return 0.0
+def log_correlation(x, y):
+    """Pearson r of log(x) vs log(y), plus slope."""
+    x, y = np.asarray(x, float), np.asarray(y, float)
+    mask = (x > 0) & (y > 0)
+    n = mask.sum()
+    if n < 3:
+        return 0.0, 0.0, n
+    lx, ly = np.log(x[mask]), np.log(y[mask])
     mx, my = lx.mean(), ly.mean()
-    vx = np.sum((lx - mx)**2)
-    if vx == 0:
-        return 0.0
-    return np.sum((lx - mx) * (ly - my)) / vx
+    dx, dy = lx - mx, ly - my
+    vx, vy = np.dot(dx, dx), np.dot(dy, dy)
+    if vx == 0 or vy == 0:
+        return 0.0, 0.0, n
+    cov = np.dot(dx, dy)
+    return cov / math.sqrt(vx * vy), cov / vx, n
+
+
+def residual_stats(psi_sq, g_prob):
+    """Stats of log(|ψ|²/g*) — should → 0 if they agree."""
+    ratio = psi_sq / g_prob
+    lr = np.log(ratio[ratio > 0])
+    if len(lr) == 0:
+        return 0.0, 0.0, 0.0
+    return lr.mean(), lr.std(), np.max(np.abs(lr))
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -212,212 +152,259 @@ def log_log_slope(x, y):
 
 if __name__ == "__main__":
     print("=" * 72)
-    print("  QUANTUM WALK ON THE STERN-BROCOT TREE")
-    print("  amplitude ↔ convergence")
+    print("  DISCRETE HILBERT SPACE OVER Q")
+    print("  fixed-point convergence = spectral decomposition")
     print("=" * 72)
 
-    # ── Build the tree and classical fixed point ────────────────────────
-    DEPTH = 7
+    DEPTH = 8
+    K = 1.0
     tree = ConstraintTree(DEPTH)
+    N = len(tree)
     nodes = tree.all_nodes
-    N = len(nodes)
-    print(f"\n  Tree depth {DEPTH}, N = {N} nodes")
+    print(f"\n  Stern-Brocot tree, depth {DEPTH}, N = {N}")
+    print(f"  Basis: {{|p/q⟩}}. No reals. No continuum.")
 
-    U = Operator(tree, K0=1.0)
+    # ── Classical fixed point ──────────────────────────────────────────
+    U = Operator(tree, K0=K)
     g_star, r_star = U.find_fixed_point()
-    print(f"  Classical fixed point: |r*| = {r_star:.8f}")
-
-    # Normalize g* to a probability distribution
     g_vec = np.array([g_star[n.value] for n in nodes])
     g_prob = g_vec / g_vec.sum()
 
-    # Denominator vector
-    q_vec = np.array([n.q for n in nodes], dtype=float)
+    print(f"  Classical: |r*| = {r_star:.10f}, Σg* = {g_prob.sum():.15f}")
+
+    # ── Tongue widths ──────────────────────────────────────────────────
+    w_vec = np.array([tongue_width(n.p, n.q, K) for n in nodes])
+
+    # ── Both adjacencies ───────────────────────────────────────────────
+    A_tree, _, index = build_tree_adjacency(tree)
+    A_farey = build_farey_adjacency(tree)
+
+    n_tree_edges = int(A_tree.sum() / 2)
+    n_farey_edges = int(A_farey.sum() / 2)
+    print(f"\n  Tree edges:  {n_tree_edges}")
+    print(f"  Farey edges: {n_farey_edges}  "
+          f"({n_farey_edges - n_tree_edges} long-range)")
 
     # ══════════════════════════════════════════════════════════════════════
-    # BUILD HAMILTONIANS
-    # ══════════════════════════════════════════════════════════════════════
-    A_unweighted, _, index = build_adjacency(tree)
-    A_weighted = build_weighted_adjacency(tree)
-
-    print(f"\n  Adjacency matrix: {N}×{N}, {int(A_unweighted.sum()/2)} edges")
-
-    # ══════════════════════════════════════════════════════════════════════
-    # TEST 1: GROUND STATE
+    # CORE TEST: TREE vs FAREY HAMILTONIAN
     # ══════════════════════════════════════════════════════════════════════
     print(f"\n{'═' * 72}")
-    print("  TEST 1: GROUND STATE OF THE ADJACENCY HAMILTONIAN")
+    print("  H[i,j] = A[i,j] × √(w_i × w_j)")
     print(f"{'═' * 72}")
 
-    for label, H in [("unweighted", A_unweighted), ("weighted (1/√q)", A_weighted)]:
-        gs_prob, gs_eval = ground_state_distribution(H)
-        gs_prob /= gs_prob.sum()
+    results = {}
+    for label, A in [("TREE", A_tree), ("FAREY", A_farey)]:
+        H = build_hamiltonian(A, w_vec)
+        psi0, E0, psi0_sq = ground_state(H)
 
-        rho_pearson = pearson_r(gs_prob, g_prob)
-        rho_spearman = spearman_rho(gs_prob, g_prob)
+        r_log, slope, n_pts = log_correlation(psi0_sq, g_prob)
+        mean_r, std_r, max_r = residual_stats(psi0_sq, g_prob)
 
-        print(f"\n  H = {label} adjacency")
-        print(f"    Largest eigenvalue: {gs_eval:.6f}")
-        print(f"    Pearson  corr(|ψ₀|², g*): {rho_pearson:.6f}")
-        print(f"    Spearman corr(|ψ₀|², g*): {rho_spearman:.6f}")
+        results[label] = (psi0, E0, psi0_sq, r_log, slope)
 
-        # Show top 10 nodes by ground state probability
-        order = np.argsort(gs_prob)[::-1]
-        print(f"    {'rank':>4s}  {'p/q':>8s}  {'q':>4s}  {'|ψ₀|²':>12s}  "
-              f"{'g*':>12s}")
-        print(f"    " + "-" * 46)
-        for rank in range(min(10, N)):
-            idx = order[rank]
-            print(f"    {rank+1:4d}  {str(nodes[idx].value):>8s}  "
-                  f"{nodes[idx].q:4d}  {gs_prob[idx]:12.6e}  "
-                  f"{g_prob[idx]:12.6e}")
+        print(f"\n  {label} adjacency:")
+        print(f"    E₀ = {E0:.10f}")
+        print(f"    Σ|ψ₀|² = {psi0_sq.sum():.15f}")
+        print(f"    corr(log|ψ₀|², log g*) = {r_log:.8f}")
+        print(f"    slope(log|ψ₀|² vs log g*) = {slope:.8f}")
+        print(f"    residual: mean={mean_r:.4f}, std={std_r:.4f}, max={max_r:.4f}")
 
     # ══════════════════════════════════════════════════════════════════════
-    # TEST 2: TIME-AVERAGED QUANTUM WALK
+    # FIBONACCI BACKBONE — both adjacencies
     # ══════════════════════════════════════════════════════════════════════
     print(f"\n{'═' * 72}")
-    print("  TEST 2: TIME-AVERAGED CTQW FROM ROOT (1/2)")
-    print(f"{'═' * 72}")
-
-    # Start at the root = 1/2
-    root_idx = index[Fraction(1, 2)]
-    psi0 = np.zeros(N, dtype=complex)
-    psi0[root_idx] = 1.0
-
-    for label, H in [("unweighted", A_unweighted), ("weighted", A_weighted)]:
-        # Exact spectral average (infinite-time average)
-        pi_exact = ctqw_spectral_average(H, psi0)
-        pi_exact /= pi_exact.sum()
-
-        rho_p = pearson_r(pi_exact, g_prob)
-        rho_s = spearman_rho(pi_exact, g_prob)
-
-        print(f"\n  H = {label}")
-        print(f"    Pearson  corr(⟨|ψ|²⟩_t, g*): {rho_p:.6f}")
-        print(f"    Spearman corr(⟨|ψ|²⟩_t, g*): {rho_s:.6f}")
-
-    # ══════════════════════════════════════════════════════════════════════
-    # TEST 3: |ψ|² vs 1/q² (THE MECHANISM)
-    # ══════════════════════════════════════════════════════════════════════
-    print(f"\n{'═' * 72}")
-    print("  TEST 3: THE MECHANISM — |ψ|² ∝ 1/q²")
-    print(f"{'═' * 72}")
-
-    # If |ψ|² ∝ 1/q^α, what is α?
-    # And if g* ∝ 1/q^β, what is β?
-    # Born rule ↔ α = β.
-
-    tongue_vec = np.array([tongue_width(n.p, n.q, 1.0) for n in nodes])
-    inv_q2 = 1.0 / q_vec**2
-
-    gs_uw, _ = ground_state_distribution(A_unweighted)
-    gs_uw /= gs_uw.sum()
-
-    gs_w, _ = ground_state_distribution(A_weighted)
-    gs_w /= gs_w.sum()
-
-    pi_uw = ctqw_spectral_average(A_unweighted, psi0)
-    pi_uw /= pi_uw.sum()
-
-    pi_w = ctqw_spectral_average(A_weighted, psi0)
-    pi_w /= pi_w.sum()
-
-    print(f"\n  Scaling exponent α in P ∝ 1/q^α (log-log slope):")
-    print(f"    {'distribution':>30s}  {'α':>8s}  {'corr w/ 1/q²':>14s}")
-    print(f"    " + "-" * 56)
-
-    for name, dist in [("g* (classical)", g_prob),
-                       ("ground state (unweighted)", gs_uw),
-                       ("ground state (weighted)", gs_w),
-                       ("⟨|ψ|²⟩ (unweighted)", pi_uw),
-                       ("⟨|ψ|²⟩ (weighted)", pi_w),
-                       ("tongue width w(p/q,1)", tongue_vec / tongue_vec.sum())]:
-        alpha = log_log_slope(q_vec, dist)
-        rho = spearman_rho(dist, inv_q2)
-        print(f"    {name:>30s}  {alpha:8.4f}  {rho:14.6f}")
-
-    # ══════════════════════════════════════════════════════════════════════
-    # TEST 4: DEPTH-BY-DEPTH COMPARISON
-    # ══════════════════════════════════════════════════════════════════════
-    print(f"\n{'═' * 72}")
-    print("  TEST 4: DEPTH-BY-DEPTH — quantum vs classical")
-    print(f"{'═' * 72}")
-
-    print(f"\n  Average population per node at each depth:")
-    print(f"  {'depth':>5s}  {'#nodes':>6s}  {'⟨g*⟩':>12s}  "
-          f"{'⟨|ψ₀|²⟩uw':>12s}  {'⟨|ψ₀|²⟩w':>12s}  {'⟨1/q²⟩':>12s}")
-    print("  " + "-" * 68)
-
-    for d in range(DEPTH):
-        depth_nodes = tree.nodes_at_depth(d)
-        if not depth_nodes:
-            continue
-        idxs = [index[n.value] for n in depth_nodes]
-        n_d = len(idxs)
-
-        avg_g = np.mean(g_prob[idxs])
-        avg_gs_uw = np.mean(gs_uw[idxs])
-        avg_gs_w = np.mean(gs_w[idxs])
-        avg_inv_q2 = np.mean(inv_q2[idxs])
-
-        print(f"  {d:5d}  {n_d:6d}  {avg_g:12.6e}  "
-              f"{avg_gs_uw:12.6e}  {avg_gs_w:12.6e}  {avg_inv_q2:12.6e}")
-
-    # ══════════════════════════════════════════════════════════════════════
-    # TEST 5: FIBONACCI BACKBONE — the critical path
-    # ══════════════════════════════════════════════════════════════════════
-    print(f"\n{'═' * 72}")
-    print("  TEST 5: FIBONACCI BACKBONE — quantum amplitude tracks g*")
+    print("  FIBONACCI BACKBONE")
     print(f"{'═' * 72}")
 
     backbone = fibonacci_backbone(tree)
-    print(f"\n  {'level':>5s}  {'p/q':>10s}  {'q':>5s}  {'g*':>12s}  "
-          f"{'|ψ₀|²(uw)':>12s}  {'|ψ₀|²(w)':>12s}  {'1/q²':>12s}")
-    print("  " + "-" * 75)
+    fib_idxs = [index[node.value] for _, node in backbone]
 
-    for idx_val, node in backbone:
-        i = index[node.value]
-        print(f"  {idx_val:5d}  {str(node.value):>10s}  {node.q:5d}  "
-              f"{g_prob[i]:12.6e}  {gs_uw[i]:12.6e}  "
-              f"{gs_w[i]:12.6e}  {inv_q2[i]:12.6e}")
+    _, _, psi_tree = results["TREE"][0], results["TREE"][1], results["TREE"][2]
+    _, _, psi_farey = results["FAREY"][0], results["FAREY"][1], results["FAREY"][2]
+
+    fib_g = g_prob[fib_idxs]
+    fib_tree = psi_tree[fib_idxs]
+    fib_farey = psi_farey[fib_idxs]
+
+    r_fib_t, sl_fib_t, _ = log_correlation(fib_tree, fib_g)
+    r_fib_f, sl_fib_f, _ = log_correlation(fib_farey, fib_g)
+
+    print(f"\n  Fibonacci subset ({len(backbone)} nodes):")
+    print(f"    TREE:  corr = {r_fib_t:.6f}, slope = {sl_fib_t:.6f}")
+    print(f"    FAREY: corr = {r_fib_f:.6f}, slope = {sl_fib_f:.6f}")
+
+    print(f"\n  {'lev':>3s}  {'p/q':>8s}  {'q':>5s}  "
+          f"{'log g*':>10s}  {'log|ψ|²_T':>11s}  {'log|ψ|²_F':>11s}  "
+          f"{'|ψ|²_F/g*':>10s}")
+    print("  " + "-" * 68)
+
+    for (lev, node), idx in zip(backbone, fib_idxs):
+        lg = math.log(g_prob[idx]) if g_prob[idx] > 0 else float('-inf')
+        lt = math.log(psi_tree[idx]) if psi_tree[idx] > 0 else float('-inf')
+        lf = math.log(psi_farey[idx]) if psi_farey[idx] > 0 else float('-inf')
+        ratio = psi_farey[idx] / g_prob[idx] if g_prob[idx] > 0 else 0
+        print(f"  {lev:3d}  {str(node.value):>8s}  {node.q:5d}  "
+              f"{lg:10.4f}  {lt:11.4f}  {lf:11.4f}  {ratio:10.6f}")
 
     # ══════════════════════════════════════════════════════════════════════
-    # THE BORN RULE CLOSURE
+    # FULL NODE SET — top 20
     # ══════════════════════════════════════════════════════════════════════
     print(f"\n{'═' * 72}")
-    print("  THE BORN RULE CLOSURE")
+    print("  FULL NODE SET (top 20 by g*)")
     print(f"{'═' * 72}")
 
-    # The claim: g* and |ψ|² detect the same regions because both
-    # are controlled by the denominator q through the tree geometry.
+    order = np.argsort(g_prob)[::-1]
+    print(f"\n  {'#':>3s}  {'p/q':>7s}  {'q':>4s}  {'d':>2s}  "
+          f"{'g*':>11s}  {'|ψ|²_T':>11s}  {'|ψ|²_F':>11s}  "
+          f"{'F/g*':>8s}")
+    print("  " + "-" * 64)
 
-    # Compute the rank correlation between quantum and classical
-    # for each depth level independently
-    print(f"\n  Within-depth rank correlations (quantum vs classical):")
-    print(f"  {'depth':>5s}  {'#nodes':>6s}  {'Spearman ρ':>12s}  {'p-value proxy':>14s}")
-    print("  " + "-" * 42)
+    for rank in range(min(20, N)):
+        i = order[rank]
+        n = nodes[i]
+        ratio = psi_farey[i] / g_prob[i] if g_prob[i] > 0 else 0
+        print(f"  {rank+1:3d}  {str(n.value):>7s}  {n.q:4d}  {n.depth:2d}  "
+              f"{g_prob[i]:11.4e}  {psi_tree[i]:11.4e}  "
+              f"{psi_farey[i]:11.4e}  {ratio:8.4f}")
 
-    for d in range(DEPTH):
-        depth_nodes = tree.nodes_at_depth(d)
-        if len(depth_nodes) < 3:
+    # ══════════════════════════════════════════════════════════════════════
+    # SPECTRAL DECOMPOSITION — which eigenstates correlate with g*?
+    # ══════════════════════════════════════════════════════════════════════
+    print(f"\n{'═' * 72}")
+    print("  SPECTRAL DECOMPOSITION OF H_FAREY")
+    print(f"{'═' * 72}")
+
+    H_farey = build_hamiltonian(A_farey, w_vec)
+    eigenvalues, eigenvectors = np.linalg.eigh(H_farey)
+
+    print(f"\n  Top 15 eigenstates:")
+    print(f"  {'k':>3s}  {'E_k':>10s}  {'E_k/E₀':>8s}  "
+          f"{'corr(log)':>12s}  {'slope':>8s}  {'role':>15s}")
+    print("  " + "-" * 62)
+
+    for k in range(N - 1, max(N - 16, -1), -1):
+        ev = eigenvectors[:, k]
+        ev_prob = ev ** 2
+        r_ev, sl_ev, _ = log_correlation(ev_prob, g_prob)
+        ratio = eigenvalues[k] / eigenvalues[-1] if eigenvalues[-1] != 0 else 0
+        rank = N - 1 - k
+        role = ""
+        if rank == 0:
+            role = "GROUND STATE"
+        print(f"  {rank:3d}  {eigenvalues[k]:10.6f}  {ratio:8.4f}  "
+              f"{r_ev:12.6f}  {sl_ev:8.4f}  {role:>15s}")
+
+    # ══════════════════════════════════════════════════════════════════════
+    # DEPTH CONVERGENCE — does corr → 1 and slope → 1?
+    # ══════════════════════════════════════════════════════════════════════
+    print(f"\n{'═' * 72}")
+    print("  DEPTH CONVERGENCE")
+    print(f"{'═' * 72}")
+
+    print(f"\n  {'d':>3s}  {'N':>5s}  {'edges_T':>7s}  {'edges_F':>7s}  "
+          f"{'corr_T':>10s}  {'slope_T':>8s}  {'corr_F':>10s}  {'slope_F':>8s}")
+    print("  " + "-" * 68)
+
+    for d in range(3, 10):
+        tree_d = ConstraintTree(d)
+        nodes_d = tree_d.all_nodes
+        N_d = len(tree_d)
+
+        U_d = Operator(tree_d, K0=K)
+        g_d, _ = U_d.find_fixed_point()
+        g_d_vec = np.array([g_d[n.value] for n in nodes_d])
+        g_d_prob = g_d_vec / g_d_vec.sum()
+
+        w_d = np.array([tongue_width(n.p, n.q, K) for n in nodes_d])
+
+        A_t, _, _ = build_tree_adjacency(tree_d)
+        A_f = build_farey_adjacency(tree_d)
+        e_t = int(A_t.sum() / 2)
+        e_f = int(A_f.sum() / 2)
+
+        H_t = build_hamiltonian(A_t, w_d)
+        H_f = build_hamiltonian(A_f, w_d)
+
+        _, _, psi_t_sq = ground_state(H_t)
+        _, _, psi_f_sq = ground_state(H_f)
+
+        r_t, s_t, _ = log_correlation(psi_t_sq, g_d_prob)
+        r_f, s_f, _ = log_correlation(psi_f_sq, g_d_prob)
+
+        print(f"  {d:3d}  {N_d:5d}  {e_t:7d}  {e_f:7d}  "
+              f"{r_t:10.6f}  {s_t:8.4f}  {r_f:10.6f}  {s_f:8.4f}")
+
+    # ══════════════════════════════════════════════════════════════════════
+    # RESIDUAL CONVERGENCE
+    # ══════════════════════════════════════════════════════════════════════
+    print(f"\n{'═' * 72}")
+    print("  RESIDUAL: std(log|ψ₀|²/g*) vs DEPTH")
+    print(f"{'═' * 72}")
+
+    print(f"\n  {'d':>3s}  {'N':>5s}  "
+          f"{'std_T':>10s}  {'std_F':>10s}  {'max_T':>10s}  {'max_F':>10s}")
+    print("  " + "-" * 52)
+
+    for d in range(3, 10):
+        tree_d = ConstraintTree(d)
+        nodes_d = tree_d.all_nodes
+        N_d = len(tree_d)
+
+        U_d = Operator(tree_d, K0=K)
+        g_d, _ = U_d.find_fixed_point()
+        g_d_vec = np.array([g_d[n.value] for n in nodes_d])
+        g_d_prob = g_d_vec / g_d_vec.sum()
+
+        w_d = np.array([tongue_width(n.p, n.q, K) for n in nodes_d])
+
+        A_t, _, _ = build_tree_adjacency(tree_d)
+        A_f = build_farey_adjacency(tree_d)
+
+        H_t = build_hamiltonian(A_t, w_d)
+        H_f = build_hamiltonian(A_f, w_d)
+
+        _, _, psi_t_sq = ground_state(H_t)
+        _, _, psi_f_sq = ground_state(H_f)
+
+        _, std_t, max_t = residual_stats(psi_t_sq, g_d_prob)
+        _, std_f, max_f = residual_stats(psi_f_sq, g_d_prob)
+
+        print(f"  {d:3d}  {N_d:5d}  "
+              f"{std_t:10.4f}  {std_f:10.4f}  {max_t:10.4f}  {max_f:10.4f}")
+
+    # ══════════════════════════════════════════════════════════════════════
+    # WHAT DOES THE FAREY GRAPH GIVE THAT THE TREE DOESN'T?
+    # ══════════════════════════════════════════════════════════════════════
+    print(f"\n{'═' * 72}")
+    print("  WHY FAREY, NOT TREE")
+    print(f"{'═' * 72}")
+
+    # Show long-range connections for key nodes
+    print(f"\n  Long-range Farey connections (not in tree):")
+    key_nodes = [Fraction(1, 2), Fraction(1, 3), Fraction(2, 5),
+                 Fraction(3, 8), Fraction(5, 13)]
+
+    for frac in key_nodes:
+        if frac not in index:
             continue
-        idxs = [index[n.value] for n in depth_nodes]
-        g_depth = g_prob[idxs]
-        gs_depth = gs_w[idxs]
-        rho = spearman_rho(g_depth, gs_depth)
-        # Rough p-value proxy: 1/sqrt(n)
-        p_proxy = 1.0 / math.sqrt(len(idxs))
-        print(f"  {d:5d}  {len(depth_nodes):6d}  {rho:12.6f}  {p_proxy:14.6f}")
+        i = index[frac]
+        tree_neighbors = set()
+        farey_neighbors = set()
 
-    # Final: the key correlations
-    print(f"\n  ┌─────────────────────────────────────────────────────────┐")
-    rho_gw = spearman_rho(g_prob, gs_w)
-    rho_gt = spearman_rho(g_prob, tongue_vec / tongue_vec.sum())
-    rho_wt = spearman_rho(gs_w, tongue_vec / tongue_vec.sum())
-    print(f"  │  Spearman ρ(g*, |ψ₀|²_weighted)     = {rho_gw:10.6f}    │")
-    print(f"  │  Spearman ρ(g*, tongue_width)         = {rho_gt:10.6f}    │")
-    print(f"  │  Spearman ρ(|ψ₀|², tongue_width)      = {rho_wt:10.6f}    │")
-    print(f"  └─────────────────────────────────────────────────────────┘")
+        for j in range(N):
+            if A_tree[i, j] > 0:
+                tree_neighbors.add(nodes[j].value)
+            if A_farey[i, j] > 0:
+                farey_neighbors.add(nodes[j].value)
+
+        extra = farey_neighbors - tree_neighbors
+        if extra:
+            extra_str = ", ".join(str(f) for f in sorted(extra)[:8])
+            if len(extra) > 8:
+                extra_str += f" ... ({len(extra)} total)"
+            print(f"    {str(frac):>5s}: tree={len(tree_neighbors)}, "
+                  f"farey={len(farey_neighbors)}, "
+                  f"long-range: {extra_str}")
 
     # ══════════════════════════════════════════════════════════════════════
     # SUMMARY
@@ -425,35 +412,34 @@ if __name__ == "__main__":
     print(f"\n{'═' * 72}")
     print("  SUMMARY")
     print(f"{'═' * 72}")
+
+    _, _, _, r_tree, s_tree = results["TREE"]
+    _, _, _, r_farey, s_farey = results["FAREY"]
+
     print(f"""
-  The quantum walk on the Stern-Brocot tree detects the same
-  regions as the classical fixed-point iteration.
+  Discrete Hilbert space over Q (depth {DEPTH}, N = {N}).
 
-  Classical iteration (universe_loop.py):
-    g*(p/q) ∝ w(p/q, K)    — population proportional to tongue width
-    The tongue width at criticality: w ~ 1/q²
+  Hamiltonian:  H[i,j] = A[i,j] × √(w_i × w_j)
+  Normalization: Σ|ψ₀|² = 1,  Σg* = 1
 
-  Quantum walk (this file):
-    |ψ(p/q)|² ∝ 1/q^α      — amplitude squared falls with denominator
-    The ground state concentrates on small-q nodes
+                            corr(log|ψ₀|², log g*)    slope
+                            ──────────────────────    ──────
+  TREE adjacency:           {r_tree:10.6f}            {s_tree:8.4f}
+  FAREY adjacency:          {r_farey:10.6f}            {s_farey:8.4f}
 
-  The mechanism:
-    The Stern-Brocot tree is a hyperbolic graph. Nodes with
-    large q are exponentially deep. The quantum walk amplitude
-    decays with depth. Depth ~ log(q). So |ψ|² ~ 1/q^α.
+  Tree edges: {n_tree_edges}.  Farey edges: {n_farey_edges}.
+  The {n_farey_edges - n_tree_edges} extra edges are long-range
+  Farey neighbor connections (|ad-bc|=1 but not parent-child).
 
-    The tongue width at criticality: w ~ 1/q².
-    If α = 2, then |ψ|² = 1/q² = w ∝ g*.
+  The tree adjacency creates exponential localization:
+    amplitude tunnels through d edges, each weaker → e^{{-O(d²)}}
+    but g* decays as e^{{-O(d)}}
 
-  The Born rule:
-    |ψ|² = g* is not an axiom. It is the statement that the
-    quantum walk and the classical iteration agree on what
-    "probability at p/q" means. Both are controlled by q,
-    because q is the depth of the tree, and depth is the
-    only structural invariant.
+  The Farey adjacency adds direct connections from shallow
+  to deep nodes, bypassing intermediate edges.
 
-  This closes the loop:
-    Primitives → tree → operator U → g* ∝ 1/q²
-    Primitives → tree → quantum walk → |ψ|² ∝ 1/q²
-    Agreement: |ψ|² = g*. The Born rule.
+  Fixed-point convergence (classical) and spectral
+  decomposition (quantum) operate on the same structure:
+    Classical:  F(|r|) = |r|  →  bisect  →  g*
+    Quantum:    H|ψ₀⟩ = E₀|ψ₀⟩  →  diag  →  |ψ₀|²
 """)
