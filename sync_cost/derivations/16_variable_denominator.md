@@ -235,6 +235,126 @@ The fixed point of this self-reference is the universe's own
 accounting of its computational capacity. It cannot be computed from
 outside. It is constitutive.
 
+## Division, integration, and the derivable threshold
+
+Hz is division: ν = cycles / seconds. When the denominator changes,
+division fails and integration is required: Φ = ∫ω(t)dt. But the
+transition between "division works" and "integration required" is
+not a modeling choice. It is derivable.
+
+The condition: |Ḣ/H²| ≳ 1. This is the deceleration parameter
+q = -1 - Ḣ/H². Division (Hz well-defined) requires q ≈ -1. The
+value of q is determined by the energy content:
+
+    q = (1/2)Ω_m + Ω_r - Ω_Λ
+
+Each Ω is a synchronization cost density (Derivation 3). The energy
+content determines whether the denominator is stable, which determines
+whether frequency is representable as a ratio, which determines
+whether the Stern-Brocot tree applies.
+
+The recursion is: the framework's own applicability is a computable
+function of the state it describes. It can determine where it works
+and where it doesn't — the same self-referential structure as
+Derivation 9, now applied to the framework itself.
+
+This is primitive #3 (fixed-point equation, Derivation 10) applied
+to the denominator of Hz. Not a new primitive. A composition.
+
+## The Möbius spiral: half-twist as permanent oscillation
+
+The Fibonacci convergents to 1/φ:
+
+    1/1, 1/2, 2/3, 3/5, 5/8, 8/13, 13/21, ...
+
+approach from alternating sides. Each overshoots, then undershoots.
+The residual at step n is:
+
+    F_n/F_{n+1} - 1/φ = (-1)^n / (F_{n+1}² √5)
+
+The sign alternation (-1)^n is the ψ-eigenvalue (ψ = -1/φ) in the
+two-mode decomposition F_n = (φⁿ - ψⁿ)/√5. This alternation is
+Cassini's identity: F_{n-1}F_{n+1} - F_n² = (-1)^n.
+
+### The half-twist is topological
+
+A Möbius strip has a single half-twist — a topological invariant
+that cannot be removed by smooth deformation. The strip is locally
+orientable everywhere (at any point you can define "up" and "down"),
+but globally non-orientable (traverse the full loop and "up" has
+become "down").
+
+The ψ-mode's (-1)^n is exactly this structure:
+
+- **Locally**: at any Fibonacci level n, the convergent F_n/F_{n+1}
+  approaches 1/φ from a definite side. The direction is well-defined.
+- **Globally**: traverse one more level and the side flips. The
+  approach oscillates. No finite truncation resolves the oscillation.
+
+The half-twist is the sign of ψ = -1/φ. The negative sign is
+irreducible — it comes from the characteristic polynomial x² - x - 1
+having one positive and one negative root. The parabola (primitive #4)
+forces the two roots to have opposite signs when the discriminant
+exceeds the linear coefficient. For the golden polynomial, this is
+permanent: φ > 0, ψ < 0, and no reparametrization changes this.
+
+### Spiral on a spiral
+
+The phase record Φ(t) traces a spiral: the accumulated phase grows
+monotonically, but the rate of accumulation (the frequency) changes.
+This is a spiral in the (Φ, t) plane.
+
+The frequency measurement at each point along this spiral has the
+Möbius character: the convergent to the "true" frequency ratio
+oscillates around it (the ψ-mode). So the measurement is a spiral
+on the spiral — a helical path along a helical path, with a
+half-twist per cycle of the inner helix.
+
+Concretely:
+- **Outer spiral**: the Hubble phase Φ_H(t) = ∫₀ᵗ H(t')dt'. This
+  is the "denominator spiral" — the reference clock's accumulated
+  phase.
+- **Inner spiral**: the approach of any frequency ratio p/q to its
+  irrational limit (1/φ in the golden case). Each Fibonacci level
+  is one cycle of the inner spiral.
+- **Half-twist**: every inner cycle, the sign of the residual flips.
+  The approach alternates sides. This is the (-1)^n of Cassini.
+
+The half-twist never smooths out because it is topological, not
+metrical. No amount of resolution (no matter how deep in the tree)
+removes the alternation. But what we observe is oscillation: the
+convergents approach 1/φ from alternating sides with amplitude
+decaying as φ^{-2n}.
+
+**The permanent twist produces the transient oscillation.** The
+topology (Möbius, non-orientable) manifests as dynamics (oscillation,
+alternation). The twist is in the structure; the oscillation is in
+the observation.
+
+### Connection to measurement
+
+This is the variable denominator problem made geometric. When you
+measure a frequency ratio against a changing reference:
+
+1. The measurement approaches the true value (convergence, φ-mode)
+2. But each refinement flips the sign of the error (oscillation, ψ-mode)
+3. The sign flip is not a measurement artifact — it is the topology
+   of the approach
+4. The oscillation decays (φ^{-2n}) but never terminates at finite n
+5. Termination (n → ∞) is the completion R (Derivation 10, Part III)
+   which discards the twist and declares the limit reached
+
+The universe at finite age has completed finite n. The twist is
+still there. The oscillation is still present. The frequency ratios
+are not exact — they carry the residual of Cassini's identity, which
+IS the uncertainty relation τ×Δθ = const (Derivation 10, §conjugate
+eigenvalue).
+
+The Möbius spiral is therefore the geometric representation of the
+uncertainty relation in the variable-denominator context: a
+measurement process that converges but never loses its half-twist,
+producing oscillation that decays but never vanishes.
+
 ## Testable predictions
 
 1. **Structure formation as frequency resolution**: the depth of
@@ -269,10 +389,23 @@ integral rather than a rate × time product. Connects to:
 - The de Sitter fixed point as the orientable (well-defined Hz) attractor
 - Lloyd's bound on computation via the Planck/Hubble ratio
 
+**Established**:
+- Division → integration threshold is derivable from q (deceleration parameter)
+- The ψ-eigenvalue's (-1)^n IS a Möbius half-twist: topological, irreducible,
+  manifesting as oscillation
+- The spiral-on-spiral geometry: outer (Hubble phase), inner (convergent
+  approach), half-twist (Cassini alternation)
+- The half-twist never smooths out at finite n — it IS the uncertainty relation
+  in the variable-denominator context
+
 **Open**:
 - Numerical computation of the self-consistent phase integral
 - Quantitative prediction for tree depth at current epoch
 - Connection between q_max ~ F₁₉ and observed structure hierarchies
-- Formalize the Möbius topology: is the non-orientability of
-  frequency measurement during radiation/matter domination detectable
-  in CMB or large-scale structure data?
+- Is the non-orientability of frequency measurement during
+  radiation/matter domination detectable in CMB or large-scale
+  structure data?
+- Formalize the Möbius spiral as a fiber bundle: S¹ fiber
+  (frequency measurement) over S¹ base (Hubble phase), with
+  structure group Z₂ (the sign flip). This is the definition of a
+  Möbius band. Is the bundle trivializable in the Λ-dominated epoch?
