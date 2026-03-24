@@ -1,15 +1,16 @@
 """
-Cost function exploration for the spectral tilt.
+Exhaustion proof: no monotonic cost function gives negative running.
 
-SUPERSEDED by the circle map framework (04_spectral_tilt_reframed.md):
-all monotonic cost functions produce positive running (wrong sign).
-This file systematically proves that fact. The resolution — negative
-running from the devil's staircase gap closure — requires the circle
-map, not a cost function.
+Systematically scans cost functions C(τ) for the spectral tilt.
+Every monotonic cost produces positive running (+0.013 for
+Michaelis-Menten). Planck data prefer negative running. This
+rules out the cost-function approach entirely and motivates
+the circle map framework (04_spectral_tilt_reframed.md), where
+negative running arises from the devil's staircase gap closure.
 
-Historical result: the Michaelis-Menten form recovers n_s = 0.965 but
-predicts positive running (+0.013). This motivated the pivot to Arnold
-tongues. Retained as proof that the cost-function approach is exhausted.
+The Michaelis-Menten form recovers n_s = 0.965 (the tilt is
+correct) but the running sign is diagnostic: it proves the tilt
+comes from Arnold tongues, not synchronization cost.
 
 Usage:
     python sync_cost/derivations/cost_function_scan.py

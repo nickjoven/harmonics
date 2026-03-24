@@ -1,17 +1,17 @@
 """
-Two-force model: synchronization vs decoherence.
+Synchronization and decoherence as one mechanism.
 
-SUPERSEDED by one_force.py: decoherence is not a second force.
-It is the frequency spread g(ω) — the same coupling mechanism
-failing to lock distant oscillators. One parameter K determines
-both synchronization and its failure. Retained for historical
-context; see one_force.py for the current picture.
+Decoherence is not a second force — it is the frequency spread
+g(ω), the same coupling mechanism failing to lock distant
+oscillators. One parameter K determines both synchronization
+and its failure (see one_force.py for the complete picture).
 
-Original framing (historical):
-  Balance between coupling (K, toward order) and decoherence
-  (D, toward disorder). Three candidate decoherence mechanisms
-  explored. The key insight — r(ω) is scale-dependent — remains
-  valid and carries forward into the circle map framework.
+This file explores three candidate decoherence mechanisms and
+shows that only the frequency spread (mechanism 2) is consistent
+with the circle map framework. The key result: r(ω) is
+scale-dependent. Frequencies near rational ratios lock easily
+(large r). Frequencies near 1/φ barely lock (small r → near
+criticality → large fluctuations).
 
 Usage:
     python sync_cost/derivations/coherence_decoherence.py
