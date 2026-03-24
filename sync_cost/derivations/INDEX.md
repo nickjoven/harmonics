@@ -76,6 +76,7 @@ These build on each other sequentially:
 |------|------|
 | `13_einstein_from_kuramoto.md` | **Einstein from Kuramoto (QED)**: the rational field equation at K=1, continuum limit, uniquely produces G_μν + Λg_μν = 8πGT_μν. Exact ADM from locked-state Kuramoto statistics. Uniqueness via Lovelock's theorem (1971): no other rank-2 divergence-free tensor exists in 4D. |
 | `14_three_dimensions.md` | **Three dimensions from the mediant**: d=3 is forced, not assumed. Mediant → SL(2,Z) → SL(2,R) in continuum limit. Self-consistent adjacency (geometry defines coupling defines geometry) forces spatial manifold = group itself. dim SL(2,R) = 2²−1 = 3. Complexification via order parameter gives SL(2,C) ≅ Spin(3,1) — Lorentz symmetry. Closes Assumption A1 of Derivation 13. |
+| `15_lie_group_characterization.md` | **SL(2,R) is the unique substrate**: four entrance conditions (arithmetic skeleton from mediant, projective action on P¹, dynamical trichotomy from Iwasawa, Farey-hyperbolic geometry) characterize SL(2,R) uniquely. Bianchi classification eliminates all 3D alternatives. d=3, Einstein, and Lorentz become corollaries of one characterization theorem. |
 
 ### Phase 10: The observational line
 
@@ -106,6 +107,7 @@ These build on each other sequentially:
 | `12_continuum_limits.md` | **Current** | K=1 → Einstein (ADM evolution + constraints); K<1 linearized → Schrödinger (Madelung + Stern-Brocot osmotic velocity) |
 | `13_einstein_from_kuramoto.md` | **Current** | Exact ADM from Kuramoto; uniqueness via Lovelock; Einstein as sole output at K=1 (capstone) |
 | `14_three_dimensions.md` | **Current** | d=3 from mediant → SL(2,R) + self-consistent adjacency; closes Assumption A1; Lorentz from complexification |
+| `15_lie_group_characterization.md` | **Current** | SL(2,R) is the unique continuum substrate: four entrance conditions (arithmetic skeleton, projective action, dynamical trichotomy, Farey geometry) eliminate all alternatives via Bianchi classification. Closes the "why this group?" gap from Derivation 6. |
 
 ## Supporting / Earlier Work
 
@@ -134,6 +136,7 @@ These are referenced but not on the main line:
 11. Both **continuum limits derived structurally**: K=1 gives ADM evolution equations and constraints via coherence tensor differentiation; K<1 gives Schrödinger via Madelung transform with quantum pressure from Stern-Brocot osmotic velocity. One equation, one parameter, three regimes, two PDEs. (Derivation 12)
 12. The K=1 continuum limit **uniquely produces Einstein**: Lovelock's theorem (1971) says G_μν + Λg_μν is the only divergence-free rank-2 tensor in 4D built from the metric and its first two derivatives. The Kuramoto→ADM dictionary satisfies all four Lovelock premises. No other field equation is possible. (Derivation 13)
 13. **d=3 is forced by the mediant**: fractions have two components → SL(2,Z). Continuum limit → SL(2,R). Self-consistent adjacency forces space = group. dim SL(2) = 2²−1 = 3. Complexification via order parameter → SL(2,C) ≅ Spin(3,1) gives Lorentz. No assumption needed. (Derivation 14)
+14. **SL(2,R) is the unique substrate**: four entrance conditions — arithmetic skeleton (SL(2,Z) from mediant), projective action on P¹(R), dynamical trichotomy (Iwasawa KAN), Farey-hyperbolic geometry — characterize SL(2,R) among all connected real Lie groups. Bianchi classification eliminates all 3D alternatives. SU(2) fails (compact, no split/nilpotent sectors). SL(2,C) fails minimality (complexification, dim 6). Heisenberg fails (no arithmetic skeleton, no projective action). d=3, Einstein, and Lorentz become corollaries. (Derivation 15)
 14. **The frequency distribution determines itself**: g* = h(g*). The population density at the field equation's fixed point, when fed back as the input distribution, reproduces itself. g* converges from arbitrary initial conditions. **Zero free parameters. Zero free functions.** ([rfe engine](https://github.com/nickjoven/rfe))
 15. **Numerical verification**: the field equation at depth 10 produces n_s = 0.963–0.966 vs Planck 0.9649 (Δ < 0.2%). The asymptotic density slope is -0.001 per level — **scale invariance is preserved** by self-consistency. ([`field_equation_cmb.py`](field_equation_cmb.py))
 16. **a₀ corrected**: a₀ = c·H₀/(2π) / √g*(1/φ) = 1.25×10⁻¹⁰ m/s² vs observed 1.2×10⁻¹⁰ (4% residual, down from 15%). The correction comes from the fidelity bound's √(g_bar/a₀), where g* at 1/φ = 0.697 modulates the transition.
