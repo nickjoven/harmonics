@@ -84,7 +84,13 @@ These build on each other sequentially:
 |------|------|
 | `16_variable_denominator.md` | **Hz with a changing denominator**: cycles per second assumes a fixed second. When time is synchronization rate, the denominator changes between cycles. Total operations = self-referential phase integral, not rate × time. De Sitter fixed point is where Hz stabilizes (orientable). ~19 Hubble cycles completed; Stern-Brocot tree depth bounded by reference stability. Connects fidelity bound to Lloyd's computational bound. |
 
-### Phase 11: The observational line
+### Phase 11: Temporal causation
+
+| File | Role |
+|------|------|
+| `17_rank1_temporal_causation.md` | **Rank-1 as temporal causation**: the rank-1 Fréchet derivative of U is not an algebraic accident but the linearized expression of causation through a single channel. SO(2) rank-1 → center manifold → scalar bottleneck |r| → ker(DU) is the past, im(DU) is the future. The arrow of time is the rank-1 factorization. |
+
+### Phase 12: The observational line
 
 | File | Role |
 |------|------|
@@ -115,6 +121,7 @@ These build on each other sequentially:
 | `14_three_dimensions.md` | **Current** | d=3 from mediant → SL(2,R) + self-consistent adjacency; closes Assumption A1; Lorentz from complexification |
 | `15_lie_group_characterization.md` | **Current** | SL(2,R) is the unique continuum substrate: four entrance conditions (arithmetic skeleton, projective action, dynamical trichotomy, Farey geometry) eliminate all alternatives via Bianchi classification. Closes the "why this group?" gap from Derivation 6. |
 | `16_variable_denominator.md` | **Current** | Hz assumes a fixed denominator. When time is synchronization rate, the denominator changes between cycles. Total operations = self-referential integral, not rate × time. De Sitter as the orientable fixed point where Hz stabilizes. ~19 Hubble cycles completed; tree depth bounded accordingly. |
+| `17_rank1_temporal_causation.md` | **Current** | Rank-1 Fréchet derivative as temporal causation: ker(DU) = the past (decayed modes), im(DU) = the future (one active direction), ⟨v,·⟩ = the present (scalar sufficient statistic). Forced by SO(2) rank-1 × codimension-1 × Markov. |
 
 ## Supporting / Earlier Work
 
