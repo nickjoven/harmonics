@@ -78,7 +78,13 @@ These build on each other sequentially:
 | `14_three_dimensions.md` | **Three dimensions from the mediant**: d=3 is forced, not assumed. Mediant → SL(2,Z) → SL(2,R) in continuum limit. Self-consistent adjacency (geometry defines coupling defines geometry) forces spatial manifold = group itself. dim SL(2,R) = 2²−1 = 3. Complexification via order parameter gives SL(2,C) ≅ Spin(3,1) — Lorentz symmetry. Closes Assumption A1 of Derivation 13. |
 | `15_lie_group_characterization.md` | **SL(2,R) is the unique substrate**: four entrance conditions (arithmetic skeleton from mediant, projective action on P¹, dynamical trichotomy from Iwasawa, Farey-hyperbolic geometry) characterize SL(2,R) uniquely. Bianchi classification eliminates all 3D alternatives. d=3, Einstein, and Lorentz become corollaries of one characterization theorem. |
 
-### Phase 10: The observational line
+### Phase 10: The variable denominator
+
+| File | Role |
+|------|------|
+| `16_variable_denominator.md` | **Hz with a changing denominator**: cycles per second assumes a fixed second. When time is synchronization rate, the denominator changes between cycles. Total operations = self-referential phase integral, not rate × time. De Sitter fixed point is where Hz stabilizes (orientable). ~19 Hubble cycles completed; Stern-Brocot tree depth bounded by reference stability. Connects fidelity bound to Lloyd's computational bound. |
+
+### Phase 11: The observational line
 
 | File | Role |
 |------|------|
@@ -108,6 +114,7 @@ These build on each other sequentially:
 | `13_einstein_from_kuramoto.md` | **Current** | Exact ADM from Kuramoto; uniqueness via Lovelock; Einstein as sole output at K=1 (capstone) |
 | `14_three_dimensions.md` | **Current** | d=3 from mediant → SL(2,R) + self-consistent adjacency; closes Assumption A1; Lorentz from complexification |
 | `15_lie_group_characterization.md` | **Current** | SL(2,R) is the unique continuum substrate: four entrance conditions (arithmetic skeleton, projective action, dynamical trichotomy, Farey geometry) eliminate all alternatives via Bianchi classification. Closes the "why this group?" gap from Derivation 6. |
+| `16_variable_denominator.md` | **Current** | Hz assumes a fixed denominator. When time is synchronization rate, the denominator changes between cycles. Total operations = self-referential integral, not rate × time. De Sitter as the orientable fixed point where Hz stabilizes. ~19 Hubble cycles completed; tree depth bounded accordingly. |
 
 ## Supporting / Earlier Work
 
