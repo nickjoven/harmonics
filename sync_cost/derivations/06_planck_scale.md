@@ -289,6 +289,8 @@ exactly 1) is open.
   subgroups shows every H ≠ {e} kills a coupling stage. The mapping
   {elliptic, hyperbolic, parabolic} ↔ {phase, amplitude, detuning}
   is forced by the Iwasawa decomposition SL(2,ℝ) = K·A·N, not
-  interpretive. Remains open: rigorous proof that SL(2,ℝ) is the
-  unique G satisfying the coupling loop constraints (why not
-  SL(2,ℂ), SU(2), or another 3D Lie group?)
+  interpretive. **Resolved**: Derivation 15 proves SL(2,ℝ) is the
+  unique connected real Lie group satisfying the four entrance
+  conditions (arithmetic skeleton, projective action, dynamical
+  trichotomy, Farey geometry). The Bianchi classification eliminates
+  all 3D alternatives; dimension arguments eliminate dim ≠ 3.

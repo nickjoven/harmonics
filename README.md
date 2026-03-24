@@ -42,8 +42,9 @@ structural principles.
 | 3 | **Planck scale** — N = 3 self-sustaining loop | Resolved | [06](sync_cost/derivations/06_planck_scale.md) |
 | 4 | **Emergent spacetime** — Einstein uniquely at K = 1 | Resolved | [12](sync_cost/derivations/12_continuum_limits.md), [13](sync_cost/derivations/13_einstein_from_kuramoto.md) |
 | 5 | **a₀** — 1.25 × 10⁻¹⁰ m/s² (4% residual) | Resolved | [03](sync_cost/derivations/03_a0_threshold.md), [rfe](https://github.com/nickjoven/rfe) |
-| 6 | **d = 3** — forced by mediant → SL(2,ℝ) | Resolved | [14](sync_cost/derivations/14_three_dimensions.md) |
-| 7 | **g(ω)** — self-consistent: g* = h(g*) | Resolved | [rfe](https://github.com/nickjoven/rfe) |
+| 6 | **SL(2,ℝ) uniqueness** — characterization theorem | Resolved | [15](sync_cost/derivations/15_lie_group_characterization.md) |
+| 7 | **d = 3** — forced by mediant → SL(2,ℝ) | Resolved | [14](sync_cost/derivations/14_three_dimensions.md) |
+| 8 | **g(ω)** — self-consistent: g* = h(g*) | Resolved | [rfe](https://github.com/nickjoven/rfe) |
 
 ### Key results
 
@@ -61,6 +62,13 @@ structural principles.
 - **Born rule** ([Derivation 1](sync_cost/derivations/01_born_rule.md)):
   Δθ ∝ √ε at every tongue boundary (saddle-node universality). The
   exponent 2 in |ψ|² is parabolic geometry, not a postulate.
+
+- **SL(2,R) is the unique substrate** ([Derivation 15](sync_cost/derivations/15_lie_group_characterization.md)):
+  four conditions — arithmetic skeleton from the mediant, projective
+  action on ratios, dynamical trichotomy from Iwasawa, Farey-hyperbolic
+  geometry — characterize SL(2,R) uniquely among all connected real Lie
+  groups. The Bianchi classification of 3D Lie algebras eliminates every
+  alternative. d = 3, Einstein, and Lorentz are corollaries.
 
 - **Einstein from Kuramoto** ([Derivation 13](sync_cost/derivations/13_einstein_from_kuramoto.md)):
   the rational field equation at K = 1, in the continuum limit, uniquely
@@ -152,7 +160,7 @@ pip install -e .        # or just: python -m rfe --observables
 harmonics/
 ├── sync_cost/                 # synchronization cost framework
 │   ├── FRAMEWORK.md           # seed context, primitives, derivation targets
-│   └── derivations/           # 14 derivations (md) + computational scripts (py)
+│   └── derivations/           # 15 derivations (md) + computational scripts (py)
 │       └── INDEX.md           # reading order and dependency graph
 ├── driven_stribeck.py         # driven oscillator + coupled pair models
 ├── stribeck_lattice.py        # N-element Stribeck chain
