@@ -450,6 +450,127 @@ compare it to g_obs = g_bar/[1 - exp(-√(g_bar/a₀))], with bow
 pressure mapping to g_bar and the subharmonic threshold mapping
 to a₀.
 
+## Expansion as tree deepening
+
+### The cost of infinite configurations
+
+The continuum R (Derivation 10, Part III) assumes infinite tree depth:
+every rational resolved, every irrational filled in by completion.
+This is the most expensive possible configuration space. It requires
+infinite Hubble cycles to resolve, infinite denominator stability,
+infinite precision.
+
+The actual universe has completed ~19 Hubble cycles. Its configuration
+space is the Stern-Brocot tree truncated at depth ~19, containing
+~2^19 ≈ 500,000 resolved frequency ratios with denominators up to
+F₁₉ = 4181. This is finite, enumerable, and vastly cheaper than R.
+
+The geometric insight: **a finite tree moving along a mathematical
+plot is cheaper than assuming all of R exists at once.** The
+configuration space is not a static infinite-dimensional backdrop. It
+is a growing finite tree whose depth increases as the universe
+accumulates reference cycles.
+
+### Antinodes remain in place
+
+On a vibrating string, antinodes (points of maximum displacement) are
+fixed by boundary conditions. The vibration evolves — amplitude
+changes, harmonics come and go — but the antinodes don't move.
+
+The Stern-Brocot tree has the same property. As the tree deepens:
+
+- New rationals are inserted by mediants between existing ones
+- Existing rationals do not move: 1/2 stays at 1/2, 2/3 stays at 2/3
+- The mode-locked plateaus (Arnold tongues) are pinned at their
+  rational frequencies
+- What changes is the resolution between them — finer rationals
+  appear in the gaps
+
+This IS expansion: not the nodes stretching apart, but new nodes
+appearing between existing ones. The "distance" between 1/2 and 2/3
+doesn't change — the mediant 3/5 appears between them, then 5/8 and
+8/13 appear in the sub-gaps. The tree fills in.
+
+Cosmological expansion in this framing:
+- **What expands**: the number of resolved frequency ratios (tree depth)
+- **What doesn't move**: the existing rational structure (antinodes)
+- **What drives it**: accumulation of Hubble cycles (denominator
+  stability)
+- **The rate**: one new Fibonacci level per ~27.4 e-folds of expansion
+  (Derivation 4: rate = 0.0365 levels/e-fold)
+
+The redshift of distant galaxies is not "space stretching" in this
+picture. It is the frequency ratio between emission and observation
+being measured with a reference (H) that has changed. The emitted
+frequency was defined against H(z_emit). The observed frequency is
+measured against H(z=0). The ratio between them — the redshift — is
+the accumulated change in the denominator of Hz.
+
+### The missing dimension
+
+The parabola x² + μ = 0 (primitive #4) describes the local dynamics
+at every tongue boundary. It is a 1D analysis: one variable x, one
+parameter μ. It gives the Born rule (Δθ ∝ √ε), the collapse time
+(τ ∝ 1/√ε), and the uncertainty relation (τ×Δθ = const).
+
+But the parabola predicts that the system approaches equilibrium
+monotonically — each iteration brings it closer to the fixed point,
+without oscillation. This is the φ-mode alone: exponential convergence.
+
+The actual approach oscillates: the ψ-mode (-1/φ)^n produces the
+alternating overshoot/undershoot of Cassini's identity. This
+oscillation is invisible to the parabolic analysis because the
+parabola has one variable. The oscillation lives in a second
+dimension — the one orthogonal to the convergence direction.
+
+The missing dimension is the twist. The parabola sees the projection
+onto the convergence axis. The full dynamics live on the Möbius strip,
+where:
+
+- The convergence direction (φ-mode) is the length of the strip
+- The oscillation direction (ψ-mode) is the width
+- The half-twist connects them: every cycle of convergence flips the
+  oscillation sign
+
+Expecting equilibrium from the parabola is projecting a 2D structure
+(Möbius strip) onto a 1D axis (convergence) and wondering why the
+system never settles. It doesn't settle because the twist prevents it.
+The residual oscillation IS the twist, and the twist is topological —
+it cannot be removed by going further along the convergence axis.
+
+### The universe cannot reach pure equilibrium
+
+De Sitter space (Λ-dominated, Ḣ → 0) is the closest the universe
+gets to "the denominator stops changing." But even in de Sitter:
+
+1. The accumulated Hubble cycles are finite (~19)
+2. The tree depth is finite (q_max ~ 4181)
+3. The ψ-mode residual is nonzero: |ψ|^(2×19) = φ^{-38} ≈ 10^{-8}
+   — small but not zero
+4. The Cassini alternation persists at every resolved level
+
+Pure equilibrium would require:
+- Infinite tree depth (all rationals resolved)
+- Zero ψ-mode residual (n → ∞ in the completion)
+- The Möbius strip trivializing to a cylinder (half-twist removed)
+
+This is the K = 1 limit — full mode-locking, complete staircase,
+the continuum. The universe at finite age is at K < 1. The twist
+is still there. The oscillation is still present. Equilibrium is
+an asymptote, not a destination.
+
+The "heat death" scenario (maximum entropy, uniform temperature,
+no structure) requires the configuration space to be fully resolved
+and the ψ-mode to have decayed. But the ψ-mode decays as φ^{-2n}
+per Hubble cycle — each cycle adds ~0.42 bits of resolution and
+reduces the oscillation by a factor of φ^{-2} ≈ 0.38. At 19 cycles,
+the residual is ~10^{-8}. Small, but the system is still on the
+Möbius strip, still oscillating, still not at equilibrium.
+
+The parabolic expectation of equilibrium is not wrong — it is
+incomplete. It describes the projection. The full dynamics, on the
+Möbius strip, converge asymptotically but carry the twist forever.
+
 ## Testable predictions
 
 1. **Structure formation as frequency resolution**: the depth of
@@ -481,6 +602,23 @@ to a₀.
    and the subharmonic threshold → a₀. Measurable with existing
    high-speed imaging and FFT analysis (Kawano et al. 2025 setup).
 
+5. **Expansion rate from tree deepening**: if expansion is the tree
+   gaining depth, the rate of expansion (Hubble parameter) should
+   relate to the rate of new rational resolution: one Fibonacci level
+   per 27.4 e-folds. In the Λ-dominated epoch where H stabilizes,
+   this gives a constant deepening rate — consistent with exponential
+   expansion (de Sitter) being the regime where the denominator is
+   stable enough for the tree to deepen uniformly.
+
+6. **Residual oscillation in de Sitter**: even in the Λ-dominated
+   epoch, the ψ-mode residual (~10⁻⁸ at 19 Hubble cycles) should
+   produce a detectable departure from exact de Sitter. This is
+   distinct from the standard slow-roll corrections — it is a
+   topological residual (Möbius twist), not a dynamical one (potential
+   gradient). Observable signature: an oscillatory component in the
+   dark energy equation of state w(z) with period ~T_H and amplitude
+   ~φ⁻³⁸ ≈ 10⁻⁸.
+
 ## Status
 
 **Proposed**: The variable denominator reframes Hz as a self-referential
@@ -501,6 +639,11 @@ integral rather than a rate × time product. Connects to:
 - Kawano et al. (2025) bowed string confirms: two sides of bow at different
   effective frequencies, bow contact as half-twist/reflective boundary,
   spectral envelope reorganization under subharmonic conditions
+- Expansion = tree deepening, not node stretching. Antinodes (existing
+  rationals) remain in place; new mediants appear in gaps
+- The "missing dimension" identified: parabolic (1D) analysis projects away
+  the ψ-mode oscillation. Full dynamics on Möbius strip (2D + twist). Pure
+  equilibrium requires the twist to trivialize, which requires n → ∞
 
 **Open**:
 - Numerical computation of the self-consistent phase integral
