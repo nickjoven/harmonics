@@ -1,0 +1,152 @@
+# Canonical quantitative claims for the harmonics framework.
+# Other repos and build scripts should read from this file
+# rather than hardcoding these values.
+#
+# Updated: 2026-03-25
+# Source of truth: harmonics/sync_cost/derivations/INDEX.md
+
+# --- Structure ---
+
+derivation_count: 29
+derivation_range: "1–29"
+phases: 15
+
+primitives:
+  count: 4
+  note: "3 irreducible + 1 derived (mediant, via D29)"
+  list:
+    - "Integers Z (counting)"
+    - "Mediant (a+c)/(b+d) — derived from energy conservation + stability (D29)"
+    - "Fixed-point x = f(x) (self-reference)"
+    - "Parabola x² + μ = 0 (bifurcation)"
+
+free_parameters: 0
+free_functions: 0
+
+# --- Scorecard ---
+# Each prediction has: computed, observed, residual, source derivation(s)
+
+scorecard:
+  spectral_tilt:
+    name: "Spectral tilt n_s"
+    computed: "0.963–0.966"
+    observed: "0.9649 ± 0.0042"
+    residual: "< 0.2%"
+    source: ["D4", "rfe"]
+
+  born_rule:
+    name: "Born rule exponent"
+    computed: "2"
+    observed: "2"
+    residual: "exact"
+    source: ["D1", "D9"]
+
+  mond_scale:
+    name: "MOND scale a₀"
+    computed: "1.25 × 10⁻¹⁰ m/s²"
+    observed: "1.2 × 10⁻¹⁰"
+    residual: "4%"
+    source: ["D3", "D8", "rfe"]
+
+  spatial_dimension:
+    name: "Spatial dimension"
+    computed: "3"
+    observed: "3"
+    residual: "exact"
+    source: ["D14"]
+
+  lorentz:
+    name: "Lorentz symmetry"
+    computed: "Spin(3,1)"
+    observed: "SO⁺(3,1)"
+    residual: "exact"
+    source: ["D14", "D15"]
+
+  dark_energy:
+    name: "Dark energy fraction Ω_Λ"
+    computed: "13/19 = 0.6842"
+    observed: "0.6847 ± 0.0073"
+    residual: "0.07σ"
+    source: ["D25", "D28"]
+
+  hierarchy:
+    name: "Planck/Hubble ratio R"
+    computed: "6 × 13⁵⁴ = 8.533 × 10⁶⁰"
+    observed: "8.492 × 10⁶⁰"
+    residual: "0.48%"
+    source: ["D26"]
+
+  lambda_planck:
+    name: "Λ l_P²"
+    computed: "13⁻¹⁰⁸/12"
+    observed: "~10⁻¹²¹·⁵"
+    residual: "0.1% in exponent"
+    source: ["D27"]
+
+  uncertainty:
+    name: "τ × Δθ (uncertainty)"
+    computed: "1.000000"
+    observed: "—"
+    residual: "exact"
+    source: ["D7", "D9"]
+
+  efolds:
+    name: "N_efolds"
+    computed: "61.3 ± 0.7"
+    observed: "TBD"
+    residual: "CMB-S4, ~2028"
+    source: ["D10"]
+
+# --- Klein bottle constants ---
+# These are the integers from which the cosmological parameters follow.
+
+klein_bottle:
+  q2: 2
+  q3: 3
+  product: 6          # q2 × q3
+  farey_count: 13     # |F_6|
+  total_budget: 19    # |F_6| + q2×q3
+  exponent: 54        # q2 × q3^d = 2 × 27
+  double_exponent: 108  # 2 × exponent
+
+# --- Proof chains ---
+
+proof_chains:
+  A:
+    name: "Polynomial → General Relativity"
+    propositions: 8
+    repo: "harmonics"
+    file: "sync_cost/derivations/PROOF_A_gravity.md"
+  B:
+    name: "Polynomial → Quantum Mechanics"
+    propositions: 11
+    note: "5 shared with A + 6 quantum branch"
+    repo: "harmonics"
+    file: "sync_cost/derivations/PROOF_B_quantum.md"
+  C:
+    name: "The Bridge"
+    propositions: 7
+    repo: "proslambenomenos"
+    file: "PROOF_C_bridge.md"
+
+# --- Repos ---
+
+repos:
+  harmonics:
+    github: "nickjoven/harmonics"
+    role: "Derivation chain — the equation and its consequences"
+  rfe:
+    github: "nickjoven/rfe"
+    role: "Numerical engine — field equation solver, all observables"
+  proslambenomenos:
+    github: "nickjoven/proslambenomenos"
+    role: "Λ → a₀: one frequency, zero free parameters"
+  201:
+    github: "nickjoven/201"
+    role: "Gravity as synchronization in a frictional medium"
+  intersections:
+    github: "nickjoven/intersections"
+    role: "Stick-slip dynamics and dark matter"
+  submediant-site:
+    github: "nickjoven/submediant-site"
+    role: "Derivation chain site: polynomial → evidence"
