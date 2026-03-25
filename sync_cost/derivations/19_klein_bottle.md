@@ -266,6 +266,127 @@ to this checkerboard, is the Klein bottle's mode spectrum.
 The question is whether this checkerboard-filtered fixed point produces
 population ratios that match anything physical.
 
+## Where time lives
+
+### The two directions are not equivalent
+
+The Klein bottle has two directions: x (antiperiodic, twisted) and
+y (periodic, untwisted). These are topologically distinct. You cannot
+rotate the Klein bottle to exchange them — the twist is in x and
+only x. This asymmetry is not a coordinate choice. It is the topology.
+
+The x-direction cannot be a clock. A clock counts cycles: you traverse
+a loop, return to start, and increment. On the x-loop, you return
+orientation-reversed. The count after one traversal is not +1 — it is
++1 with a sign flip. After two traversals you return to the original
+orientation, but the cycle counter reads 2 while the orientation
+counter reads 0. Counting is entangled with orientation. This is
+the ψ-eigenvalue (-1)^n from Derivation 16: the approach to any
+frequency ratio along the twisted direction oscillates, never settling
+to a definite count.
+
+The y-direction can be a clock. It is periodic: traverse the loop,
+return to start, increment. No orientation reversal. No sign ambiguity.
+The count after n traversals is n. This is the φ-eigenvalue: monotone
+convergence, no oscillation.
+
+**Time is the periodic direction. Space is the antiperiodic direction.**
+
+### The simulation confirms this
+
+The Klein bottle phase lattice at K = 8:
+
+    5.376  4.227  2.843       ← y=2 (columns are x-positions)
+    5.259  4.061  2.836       ← y=1
+    5.120  4.000  2.924       ← y=0
+
+Read the columns (x-direction): phases span ~2.5 radians. This is
+where the 1/3 and 1/4 rational divisions live. Spatial structure.
+
+Read the rows (y-direction): phases vary by ~0.2 radians. Smooth,
+small variation. This is where the system ticks — the gentle evolution
+that doesn't disrupt the spatial structure. Temporal variation.
+
+The x-direction carries the topology (the twist). The y-direction
+carries the dynamics (the ticking). Structure lives in space. Time
+lives in the subordinate periodic direction.
+
+### The XOR rule as spacetime complementarity
+
+The Klein bottle selection rule p_x + p_y ≡ 1 (mod 2) says: a mode
+that is even in space must be odd in time, and vice versa. This is
+not a dynamical statement. It is topological — forced by the
+identification (0, y) ~ (1, 1-y).
+
+Consequences:
+
+1. **A spatially uniform mode (p_x = 0, even) must oscillate in time
+   (p_y = 1, odd).** A configuration that is the same everywhere in
+   space must vary in time. Stasis in space requires change in time.
+
+2. **A temporally constant mode (p_y = 0, even) must have spatial
+   structure (p_x = 1, odd).** A configuration that is the same at
+   all times must vary in space. Persistence in time requires
+   structure in space.
+
+3. **No mode can be both spatially uniform and temporally constant.**
+   The (0,0) pair is forbidden. There is no static, homogeneous state
+   on the Klein bottle. Something must vary — in space, in time, or
+   both (with opposite parities).
+
+4. **No mode can be both spatially structured and temporally varying
+   with the same parity.** The (1,1) pair is forbidden. A mode that
+   oscillates in space cannot oscillate in time with the same
+   harmonic structure. The spatial and temporal frequencies are
+   forced to be complementary.
+
+This is spacetime complementarity derived from topology, not
+postulated. The Klein bottle does not allow a state that is
+"the same everywhere and always." The simplest allowed state is
+"structured in space, constant in time" or "uniform in space,
+oscillating in time" — never both simultaneously.
+
+### Connection to Derivation 16
+
+Derivation 16 established that the de Sitter fixed point (Ḣ → 0,
+q → -1) is the unique state where Hz is well-defined — where the
+denominator of "cycles per second" stops changing. This is the state
+where the periodic direction (time) stabilizes.
+
+On the Klein bottle, the periodic direction IS the temporal direction.
+The de Sitter condition — that the reference oscillator's frequency
+stabilizes — is the condition that the y-direction behaves as a
+reliable clock. During radiation/matter domination (Ḣ/H² ~ 1), the
+y-direction is "changing its ruler" every cycle (D16 §variable
+denominator). Only when Λ dominates does the periodic direction
+become genuinely periodic.
+
+The antiperiodic direction (space) never stabilizes in this sense.
+The twist is permanent. Spatial structure always carries the Cassini
+alternation, the ψ-mode residual. Space is permanently non-orientable.
+Time asymptotically becomes orientable.
+
+### Why r ≈ 0.5
+
+Full synchronization (r = 1) on the Klein bottle would require all
+oscillators at the same phase — the (0,0) mode in both directions.
+But (0,0) is XOR-forbidden. The topology cannot produce full coherence.
+
+Full decoherence (r = 0) would mean no spatial structure — all modes
+equally populated, no rational divisions. But the coupling drives
+mode-locking; above K_c, structure must form.
+
+The Klein bottle forces the order parameter to an intermediate value:
+enough coherence for spatial structure (the 1/3 and 1/4 divisions),
+enough incoherence for the temporal direction to tick freely. The
+observed r ≈ 0.5 is not a tuned value — it is the topological
+equilibrium between spatial structure and temporal freedom.
+
+This is why the r ≈ 0.5 persists across all coupling strengths
+(K = 4 through K = 12 in the simulation). Increasing K sharpens
+the spatial divisions but cannot push r toward 1 because the XOR
+rule always reserves capacity for the temporal direction.
+
 ## Connection to existing derivations
 
 | This derivation | Builds on | What it adds |
