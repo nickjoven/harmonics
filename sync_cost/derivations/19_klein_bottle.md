@@ -734,17 +734,29 @@ the coprimality of 2 and 3 under a topology that can't let either win.
   (proslambenomenos) algebraically. Verified: F_{n+1} = F_n² − 1
   fails for all n ≠ 2.
 
-**Conjectural (numerical coincidence until structural identity shown)**:
+**Established (structural, beyond numerology)**:
+- ✓ Anomaly cancellation (`anomaly_check.py`): all six SM anomaly
+  conditions cancel exactly with the Klein bottle charges + N_c = 3
+  + Gell-Mann–Nishijima. The hypercharges are uniquely determined.
+  The key nontrivial check: [U(1)]³ requires N_c × (colored) +
+  (leptonic) = 0, giving 3 × (−54/27) + 6 = −6 + 6 = 0. This works
+  BECAUSE N_c = 3 and the charges are 1/3, 2/3. Change any of these
+  and the anomaly fails. This is not "the simplest fractions happen
+  to cancel" — it is a specific arithmetic constraint that the
+  Klein bottle's {q=2, q=3} output satisfies and that generic
+  charge assignments do not.
 
-The following observations are numerically exact but the identification
-of Klein bottle modes with particle physics quantum numbers has NOT
-been derived. The fractions {1/3, 1/2, 2/3} are the three simplest
-proper fractions. Any system that selects the lowest-order modes on
-the Stern-Brocot tree will produce them. The claim that these fractions
-ARE quark charges and weak isospin — rather than merely sharing the
-same values — requires showing that the reason the topology produces
-them and the reason gauge theory produces them is the same reason.
-That has not been done.
+**Conjectural (structural identity between topology and gauge theory
+not derived, despite anomaly cancellation)**:
+
+The anomaly cancellation is a necessary condition for the identification
+to be correct, but not a sufficient one. The fractions {1/3, 1/2, 2/3}
+satisfy the anomaly conditions, but the derivation still runs:
+assume identification → check anomaly → it works. The missing step
+is: derive the identification from the topology without assuming it.
+Derivation 20 showed the frame bundle route does not work (no SU(3)
+from Pin⁺(3)). Derivation 21 Path 2 (Jacobian) showed no Lie algebra
+structure at the fixed point.
 
 - ? The fractions {1/3, 2/3} numerically equal quark electric charges.
   The fraction {1/2} numerically equals weak isospin magnitude. But
