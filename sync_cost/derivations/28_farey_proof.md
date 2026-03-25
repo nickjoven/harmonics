@@ -20,6 +20,41 @@ operation, is:
 
 ## Proof
 
+### Step 0: The admissible scalars
+
+The Stern-Brocot tree at resolution n carries the SO(2) phase
+symmetry of the Kuramoto model (θ → θ + α for all oscillators).
+Under this symmetry:
+
+- The specific Farey fractions {p_i/q_i} are NOT invariant (they
+  shift with the phase).
+- The individual totient values φ(q) for each q ≤ n are invariant
+  but depend on a denominator LABEL q, which is not SO(2)-observable.
+- The TOTAL count |F_n| = 1 + Σ_{k=1}^{n} φ(k) IS invariant and
+  requires no label.
+- The resolution bound n IS invariant and requires no label.
+
+These are the only two SO(2)-invariant scalars at resolution n that
+do not reference a specific denominator. Any SO(2)-invariant scalar
+function of the Farey sequence at order n reduces to a function of
+(|F_n|, n).
+
+**Proof**: an SO(2)-invariant scalar is a function of the Farey
+sequence that is unchanged under phase rotation. Phase rotation
+permutes the fractions (p/q → (p + kq mod q)/q for the appropriate
+integer k) but preserves denominators. Therefore invariant quantities
+can depend on the SET of denominators {q_i} but not on the
+numerators. The only scalars extractable from the denominator
+multiset without choosing a specific q are:
+- The maximum: n
+- The count at each q: φ(q) — but these are determined by n alone
+  (the totient function depends only on q)
+- The total count: Σφ(q) + 1 = |F_n|
+
+All other invariants (e.g., Σq², Σ1/q²) are determined by n through
+the totient. So the space of independent invariant scalars is
+2-dimensional: {|F_n|, n}. □
+
 ### Step 1: The two sectors
 
 At resolution n = q₂q₃ = 6, the system has two components:
@@ -76,39 +111,53 @@ These sum to 1 (the partition is exhaustive).
 
 ### Step 4: Uniqueness
 
-The partition C/(C+S) is unique given:
+The partition Ω = f(C, S) must satisfy:
 
-(a) The two independent quantities at resolution n are C = |F_n|
-    and S = n. There is no third quantity.
+(a) **Domain**: f maps two positive integers to [0,1].
 
-(b) The combining operation is addition (from the mediant). There
-    is no other operation available in the framework's primitive
-    alphabet that takes two integers and produces a total.
+(b) **Exhaustive**: f(C, S) + f(S, C with roles swapped) = 1.
+    The two sectors partition the total.
 
-(c) The partition must be a fraction (a value in [0,1] representing
-    a proportion). The only way to form a fraction from two integers
-    A and B using addition is A/(A+B) or B/(A+B).
+(c) **Invariance**: f depends only on the SO(2)-invariant scalars
+    C = |F_n| and S = n (Step 0). It cannot depend on the specific
+    fractions or their arrangement.
 
-If any other combining operation were used:
+(d) **Mediant consistency**: the combining operation is addition
+    (the mediant's component operation, D10). The total T must
+    satisfy T = C ⊕ S where ⊕ is the framework's primitive.
+    Since ⊕ = + (addition), T = C + S.
 
-- **Multiplication**: C × S = 78. Then Ω = C/(C×S) = 13/78 = 1/6.
-  This does not match observation (0.167 vs 0.685). Moreover,
-  multiplication is not the mediant's operation — the mediant adds,
-  not multiplies.
+(e) **Linearity**: the partition must be a linear function of the
+    components. The mediant is linear on components: (a+c, b+d)
+    is linear in (a,b) and (c,d). A nonlinear partition (e.g.,
+    C²/(C²+S²)) would not be consistent with mediant algebra,
+    where the components add without transformation.
 
-- **Maximum**: max(C, S) = 13. Then Ω = C/max = 1. This is trivial
-  and uninformative.
+Given (a)-(e), the unique partition is:
 
-- **Exponentiation**: C^S or S^C. These are not mediant operations
-  and produce quantities that are not commensurable with the inputs.
+    Ω_C = C / (C + S) = |F_n| / (|F_n| + n)
 
-The mediant (addition) is the only primitive operation that:
-1. Combines two integers into a total
-2. Produces a total that is commensurable with both inputs
-3. Gives a nontrivial partition in [0,1]
-4. Is the framework's foundational operation (D10)
+**Proof of uniqueness**: a linear, exhaustive partition of T = C + S
+into two parts assigns weight C/T to the first and S/T to the second.
+Any other assignment violates either linearity (e) or exhaustiveness
+(b). Specifically:
 
-Therefore the partition is unique. □
+- **Multiplication** (T = C × S): violates (d). The mediant does
+  not multiply. The product 13 × 6 = 78 is not a mediant sum.
+
+- **Nonlinear** (Ω = C²/(C²+S²)): violates (e). The mediant adds
+  components without squaring.
+
+- **Weighted** (Ω = αC/(αC+βS) for α ≠ β): violates SO(2)
+  invariance unless α and β are themselves SO(2)-invariant scalars
+  (i.e., functions of C and S). But then the partition is a nonlinear
+  function of C and S, violating (e).
+
+- **Permuted** (Ω = S/(C+S)): this is f(S,C), which by (b) gives
+  the OTHER sector. It is the complementary partition, not an
+  alternative.
+
+No other partition satisfies (a)-(e). □
 
 ## Why C and S are the right quantities
 
