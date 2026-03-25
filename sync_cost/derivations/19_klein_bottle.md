@@ -788,12 +788,27 @@ that the current work does not contain. The gap is between D19's
 topological results (established) and the particle physics
 interpretation (conjectural).
 
-What would close the gap: derive the gauge coupling structure
-(not just the group ranks) from the Klein bottle's Z₂ holonomy
-in the continuum limit. If the holonomy of the XOR constraint,
-extended via D12–D13 to the ADM formulation, produces the gauge
-field equations with the correct structure constants, the
-identification is structural. Until then, it is suggestive.
+What would close the gap: take the XOR-filtered Stern-Brocot tree
+to the continuum limit using the procedure of Derivation 12, and
+check whether the Z₂ holonomy of the antiperiodic identification
+produces gauge field equations beyond the Einstein equations that
+Derivation 13 derives from the unfiltered tree. Specifically:
+
+- D12 §I derives Einstein from the K=1 continuum limit of the
+  full tree. Its "What remains to close" item 6 now poses the
+  Klein bottle variant explicitly.
+- D13 establishes uniqueness via Lovelock: the full tree at K=1
+  can ONLY produce Einstein. Its status section now asks: what
+  does the XOR-filtered tree produce?
+- If the XOR constraint in the continuum limit generates additional
+  field equations (gauge fields with SU(2) and SU(3) structure
+  constants), the identification is structural.
+- If it generates only Einstein with restricted mode content,
+  the numerical matches are coincidence.
+
+This is one computation on known equations. The Stern-Brocot tree,
+the continuum limit procedure, and the XOR filter are all specified.
+The output is either gauge field equations or not.
 
 ## The two Klein bottle scales (conjectural)
 

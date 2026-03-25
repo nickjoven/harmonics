@@ -391,6 +391,20 @@ q⁻² scaling). The second arrow (Kuramoto → PDE) uses the dictionary
    but necessary — that the only self-consistent continuum limit of
    the Stern-Brocot field equation at K = 1 is the Einstein equations.
 
+6. **Klein bottle continuum limit** (Derivation 19): the 2D field
+   equation on the Klein bottle collapses to 4 modes at denominator
+   classes (2,3) and (3,2). These fractions numerically match quark
+   charges and gauge group ranks, but the structural identity is
+   conjectural. The test: take the Klein bottle's XOR-filtered
+   Stern-Brocot tree to the continuum limit (this derivation's
+   procedure) and check whether the Z₂ holonomy of the antiperiodic
+   identification produces gauge field equations with the correct
+   structure constants. If the K=1 limit produces Einstein (gravity)
+   and the XOR constraint produces gauge structure (Standard Model),
+   the same continuum-limit machinery closes the gap between D19's
+   topology and particle physics. If it produces only Einstein with
+   no gauge structure, the numerical matches are coincidence.
+
 ---
 
 ## Part IV: The Structural Insight

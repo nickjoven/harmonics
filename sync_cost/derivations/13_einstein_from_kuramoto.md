@@ -223,3 +223,25 @@ The uniqueness is not a property of the dictionary — it is a property
 of the mathematics (Lovelock). The dictionary maps Kuramoto to ADM.
 Lovelock says ADM can only produce Einstein. Therefore Kuramoto at
 K = 1 can only produce Einstein. QED.
+
+**Connection to Derivation 19 (Klein bottle):** This derivation
+assumes the Stern-Brocot tree with periodic (torus) topology — the
+full tree, all modes, no topological constraint. Derivation 19 shows
+that imposing Klein bottle topology (XOR parity filter + twist)
+collapses the field equation to 4 modes at denominator classes {2,3}.
+The fractions that survive numerically match quark charges and gauge
+group ranks, but this identification is conjectural.
+
+The open question for this derivation: what happens to the K=1
+continuum limit when the XOR constraint is imposed? The standard
+result (Einstein from Lovelock) assumes the full mode spectrum is
+available. If the continuum limit of the XOR-filtered tree produces
+additional field equations beyond Einstein — specifically gauge field
+equations with the structure constants of SU(2) and SU(3) — the
+Klein bottle identification becomes structural. If it produces only
+Einstein with restricted mode content, the numerical matches in D19
+are coincidence involving the simplest fractions on the tree.
+
+This is the load-bearing computation that separates the established
+results (topology → 4 modes → dimension loop) from the conjectural
+ones (modes → particle physics).
