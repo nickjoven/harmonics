@@ -17,7 +17,16 @@ Zero free parameters. Zero free functions.
 | Born rule exponent | 2 | 2 | exact |
 | MOND scale $a_0$ | 1.25 × 10⁻¹⁰ m/s² | 1.2 × 10⁻¹⁰ | 4% |
 | Spatial dimension | 3 | 3 | exact |
+| Dark energy fraction $\Omega_\Lambda$ | 13/19 = 0.6842 | 0.6847 ± 0.0073 | **0.07σ** |
+| Planck/Hubble hierarchy $R$ | $6 \times 13^{54}$ | 8.49 × 10⁶⁰ | 0.48% |
+| $\Lambda l_P^2$ | $13^{-108}/12$ | $10^{-121.5}$ | 0.1% exponent |
 | $N_{\text{efolds}}$ | 61.3 ± 0.7 | TBD | CMB-S4, ~2028 |
+
+The cosmological parameters ($\Omega_\Lambda$, $R$, $\Lambda$) follow from
+three numbers: the Klein bottle's denominator classes $q_2 = 2$, $q_3 = 3$,
+and the Farey count $|F_6| = 13$. The mediant is derived from energy
+conservation + Arnold tongue stability (Stern-Brocot theorem, 1858). See
+[D25](sync_cost/derivations/25_farey_partition.md)–[D29](sync_cost/derivations/29_mediant_derivation.md).
 
 ## Framework
 
@@ -45,6 +54,9 @@ structural principles.
 | 6 | **SL(2,ℝ) uniqueness** — characterization theorem | Resolved | [15](sync_cost/derivations/15_lie_group_characterization.md) |
 | 7 | **d = 3** — forced by mediant → SL(2,ℝ) | Resolved | [14](sync_cost/derivations/14_three_dimensions.md) |
 | 8 | **g(ω)** — self-consistent: g* = h(g*) | Resolved | [rfe](https://github.com/nickjoven/rfe) |
+| 9 | **Möbius container** — topology forces rational divisions | Resolved | [18](sync_cost/derivations/18_mobius_container.md) |
+| 10 | **Klein bottle** — 4 modes at {2,3}, XOR selection | Resolved | [19](sync_cost/derivations/19_klein_bottle.md) |
+| 11 | **Ω_Λ = 13/19** — Farey partition, zero parameters | Resolved (0.07σ) | [25](sync_cost/derivations/25_farey_partition.md)–[29](sync_cost/derivations/29_mediant_derivation.md) |
 
 ### Key results
 
@@ -160,7 +172,7 @@ pip install -e .        # or just: python -m rfe --observables
 harmonics/
 ├── sync_cost/                 # synchronization cost framework
 │   ├── FRAMEWORK.md           # seed context, primitives, derivation targets
-│   └── derivations/           # 15 derivations (md) + computational scripts (py)
+│   └── derivations/           # 29 derivations (md) + computational scripts (py)
 │       └── INDEX.md           # reading order and dependency graph
 ├── driven_stribeck.py         # driven oscillator + coupled pair models
 ├── stribeck_lattice.py        # N-element Stribeck chain
