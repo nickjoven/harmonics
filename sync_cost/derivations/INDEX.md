@@ -26,7 +26,7 @@ These build on each other sequentially:
 |------|------|
 | `golden_ratio_pivot.py` | Zoom into 1/φ region. First observation: the golden ratio sits at the widest gap in the staircase. |
 | `stern_brocot_map.py` | **Key insight**: sample the staircase on the Stern-Brocot tree, not a decimal grid. The staircase talks in mediants, not decimals. |
-| `phi_squared_zoom.py` | **Central result**: the staircase is exactly self-similar at 1/φ with scaling factor φ². Each bracket carries 1/φ² of parent's winding. Δ(ln\|ΔW\|) = -ln(φ²) per level. |
+| `phi_squared_zoom.py` | **Central result**: the staircase is exactly self-similar at 1/φ with scaling factor φ². Each bracket carries 1/φ² of parent's winding. Δ(ln|ΔW|) = -ln(φ²) per level. |
 
 ### Phase 3: Connecting to the CMB
 
@@ -46,7 +46,7 @@ These build on each other sequentially:
 
 | File | Role |
 |------|------|
-| `born_rule_tongues.py` | **Born rule derived**: Δθ ∝ √ε at every tongue boundary (saddle-node universality). The exponent 2 in \|ψ\|² is the geometry of parabolas, not a postulate. |
+| `born_rule_tongues.py` | **Born rule derived**: Δθ ∝ √ε at every tongue boundary (saddle-node universality). The exponent 2 in |ψ|² is the geometry of parabolas, not a postulate. |
 | `planck_threshold.py` | **Planck scale**: N = 3 minimum self-sustaining loop. Three coupling channels (ℏ, c, G) = three stages. 145.8 Fibonacci levels span Planck→Hubble. |
 | `collapse_tongues.py` | **Measurement collapse**: τ ∝ 1/√ε (inverse Born rule). Uncertainty relation τ×Δθ = const. Zeno effect at ε→0. Superposition = quasiperiodic gap. |
 | `fidelity_calibration.py` | **Fidelity calibration**: resolves C=1 via ε_circle = g_bar/(4πK·a₀). Iteration-to-time: 1 iter = 2π/ω_ref. Stribeck lattice calibration point. |
@@ -62,7 +62,7 @@ These build on each other sequentially:
 
 | File | Role |
 |------|------|
-| `10_minimum_alphabet.md` | **Four irreducible primitives**: integers, mediant, fixed-point, parabola. Circle derived from integers + fixed-point (p ≡ 0 in phase space forces R/Z = S¹). All four shown irreducible. QM is the small-ε linearized limit of the tongue dynamics. Testable: nonlinear corrections to minimum-uncertainty bound at strong coupling. |
+| `10_minimum_alphabet.md` | **Four irreducible primitives**: integers, mediant, fixed-point, parabola. Circle derived from integers + fixed-point (p ≡ 0 in phase space forces R/Z = S¹). All four shown irreducible. QM is the small-ε linearized limit of the tongue dynamics. |
 
 ### Phase 8: The field equation
 
@@ -111,8 +111,22 @@ These build on each other sequentially:
 | `coupling_running.py` | β-functions from topology (zero free parameters). α₃/α₂ = 2/3 at 10⁸ GeV (see-saw scale). |
 | `normalization_v2.py` | α ∝ q²: α₃/α₂ = 9/4 at 17 TeV (hierarchy scale). Two Klein bottle ratios → two physical scales, linked the way SUSY GUTs link them but without superpartners. |
 | `20_xor_continuum_limit.md` | **The load-bearing computation.** Takes the XOR-filtered tree to K=1 continuum limit. Result: Klein bottle gives O(3) → Pin⁺(3) ≅ SU(2) × Z₂ from the frame bundle, but NOT SU(3) and NOT Yang-Mills. The XOR denominator-parity filter dissolves in the continuum — it is a discrete structure with no smooth analog. Honest negative: the frame bundle route does not produce the Standard Model. Two open paths remain: (1) the physical system is discrete (finite tree IS the configuration space), (2) gauge structure emerges from the mean-field functional F, not the tangent bundle. |
+| `21_discrete_gauge.md` | The two open paths formalized as five binary-outcome computations. Path 1 (discrete is physical): anomaly cancellation from charges, depth sweep vs β-ratio, tongue overlap vs structure constants. Path 2 (gauge from F): Jacobian at 4-mode fixed point, Z₂ algebra generation. Three immediate (anomaly, depth sweep, Jacobian), two subsequent. |
+| `22_engineering_targets.md` | Four physical devices from established results (independent of particle physics conjecture). N=3 Möbius resonator (benchtop, immediate), 4-state Klein bottle memory (9 oscillators), bifurcation sensor (critical slowing near K_c), r≈0.5 metamaterial (topologically protected partial coherence). |
+| `23_three_zeros.md` | **Three structurally distinct zeros** in the Klein bottle algebra: (0,0) the forbidden mode, 0 the additive identity, and the zero of the order parameter. Their conflation hides the 1+3 decomposition — one timelike zero (periodic direction) and three spacelike zeros (antiperiodic direction). |
 
-### Phase 14: The observational line
+### Phase 14: The cosmological parameters
+
+| File | Role |
+|------|------|
+| `24_vacuum_energy.md` | **The cosmological constant problem dissolves**: QFT sums all modes; the Klein bottle has exactly 4. Vacuum energy is not 10¹²⁰ times too large — it was computed on the wrong configuration space. The physical mode count is the XOR-filtered count, not the continuum estimate. |
+| `25_farey_partition.md` | **Ω_Λ = 13/19**: at the Klein bottle's resolution (q = 2, 3), the Farey sequence F₆ has |F₆| = 13 terms. The energy partition between locked (Λ) and unlocked (matter) modes gives Ω_Λ = |F₆|/(|F₆| + 6) = 13/19 = 0.6842. Observed: 0.685 ± 0.007. Residual: **0.07σ**. |
+| `26_hierarchy.md` | **R = 6 × 13⁵⁴**: the Planck/Hubble ratio from Klein bottle arithmetic. Prefactor 6 = q₂ × q₃ = 2 × 3. Base 13 = |F₆|. Exponent 54 = q₂ × q₃³. Computed: 8.45 × 10⁶⁰. Observed: 8.49 × 10⁶⁰. Residual: **0.48%**. |
+| `27_exponent.md` | **Why the exponent is q₂q₃³**: the exponent 54 = 2 × 27 = q₂ × q₃^d where d = 3 is the spatial dimension. Each factor has a specific origin. Λl_P² = 13⁻¹⁰⁸/12. Residual in exponent: **0.1%**. |
+| `28_farey_proof.md` | **Why the Farey partition**: closes the gap from D25. The step from "Klein bottle has {2,3}" to "energy partition = |F_n|/(|F_n| + n)" is derived, not observed. SO(2) structure of the locked/unlocked boundary forces the Farey counting. |
+| `29_mediant_derivation.md` | **The mediant is not an axiom**: the mediant (a+c)/(b+d) is derived as the unique operation satisfying monotonicity-preservation, denominator-additivity, and convergent-stability simultaneously. The configuration space is unique — no other combining rule produces a complete ordered field in the continuum limit. Closes the foundational gap from D10. |
+
+### Phase 15: The observational line
 
 | File | Role |
 |------|------|
@@ -144,12 +158,18 @@ These build on each other sequentially:
 | `15_lie_group_characterization.md` | **Current** | SL(2,R) is the unique continuum substrate: four entrance conditions (arithmetic skeleton, projective action, dynamical trichotomy, Farey geometry) eliminate all alternatives via Bianchi classification. Closes the "why this group?" gap from Derivation 6. |
 | `16_variable_denominator.md` | **Current** | Hz assumes a fixed denominator. When time is synchronization rate, the denominator changes between cycles. Total operations = self-referential integral, not rate × time. De Sitter as the orientable fixed point where Hz stabilizes. ~19 Hubble cycles completed; tree depth bounded accordingly. |
 | `17_rank1_temporal_causation.md` | **Current** | Rank-1 Fréchet derivative as temporal causation: ker(DU) = the past (decayed modes), im(DU) = the future (one active direction), ⟨v,·⟩ = the present (scalar sufficient statistic). Forced by SO(2) rank-1 × codimension-1 × Markov. |
-| `18_mobius_container.md` | **Current** | Bounded Möbius container as simulation target. Antiperiodic BC forces odd-mode selection, rational phase divisions from single perturbation. N=3 minimum, K>4γ threshold. Fully specified numerical experiment. |
 | `18_mobius_container.md` | **Current** | Bounded Möbius container. Antiperiodic BC forces rational divisions from single perturbation. Coherence length analysis: arms form freely, snap to quantized gradient at t_reflect. N=3 minimum. |
 | `19_klein_bottle.md` | **Current** | Fully closed non-orientable container. XOR parity constraint collapses 1,764 mode pairs to 4 survivors at (q₁,q₂) = (2,3) and (3,2). Population ratio 2/3 = perfect fifth. F₃ = F₂²−1 closes the dimension loop (algebraically verified). **Conjectural**: fractions {1/3, 1/2, 2/3} numerically match quark charges + weak isospin, but these are also the simplest fractions on the tree — structural identity not derived. See D20 for the honest negative. |
 | `20_xor_continuum_limit.md` | **Current** | The XOR-filtered continuum limit does NOT produce SU(3) or Yang-Mills from the frame bundle. Pin⁺(3) ≅ SU(2) × Z₂ emerges but this is spin/parity, not weak gauge. The discrete XOR filter dissolves in the continuum. Two open paths: discrete-is-physical, or gauge from mean-field F. |
 | `21_discrete_gauge.md` | **Proposed** | The two open paths formalized as five binary-outcome computations. Path 1 (discrete is physical): anomaly cancellation from charges, depth sweep vs β-ratio, tongue overlap vs structure constants. Path 2 (gauge from F): Jacobian at 4-mode fixed point, Z₂ algebra generation. Three immediate (anomaly, depth sweep, Jacobian), two subsequent. |
 | `22_engineering_targets.md` | **Proposed** | Four physical devices from established results (independent of particle physics conjecture). N=3 Möbius resonator (benchtop, immediate), 4-state Klein bottle memory (9 oscillators), bifurcation sensor (critical slowing near K_c), r≈0.5 metamaterial (topologically protected partial coherence). |
+| `23_three_zeros.md` | **Current** | Three structurally distinct zeros in the Klein bottle algebra. Conflation hides 1+3 decomposition: one timelike zero (periodic) + three spacelike zeros (antiperiodic). |
+| `24_vacuum_energy.md` | **Current** | Cosmological constant problem dissolves: QFT sums all modes, Klein bottle has exactly 4. Vacuum energy computed on wrong configuration space. |
+| `25_farey_partition.md` | **Current** | Ω_Λ = |F₆|/(|F₆| + 6) = 13/19 = 0.6842 vs observed 0.685 ± 0.007. Residual 0.07σ. |
+| `26_hierarchy.md` | **Current** | R = 6 × 13⁵⁴ ≈ 8.45 × 10⁶⁰ vs observed 8.49 × 10⁶⁰. Prefactor from q₂q₃, base from |F₆|, exponent from q₂q₃³. Residual 0.48%. |
+| `27_exponent.md` | **Current** | Exponent 54 = q₂ × q₃^d derived. Λl_P² = 13⁻¹⁰⁸/12. Residual in exponent 0.1%. |
+| `28_farey_proof.md` | **Current** | Farey partition derived (not observed): SO(2) structure at locked/unlocked boundary forces Farey counting. Closes D25 gap. |
+| `29_mediant_derivation.md` | **Current** | Mediant derived as unique operation satisfying monotonicity-preservation + denominator-additivity + convergent-stability. Configuration space is unique. Closes D10 foundational gap. |
 
 ## Supporting / Earlier Work
 
@@ -179,9 +199,12 @@ These are referenced but not on the main line:
 12. The K=1 continuum limit **uniquely produces Einstein**: Lovelock's theorem (1971) says G_μν + Λg_μν is the only divergence-free rank-2 tensor in 4D built from the metric and its first two derivatives. The Kuramoto→ADM dictionary satisfies all four Lovelock premises. No other field equation is possible. (Derivation 13)
 13. **d=3 is forced by the mediant**: fractions have two components → SL(2,Z). Continuum limit → SL(2,R). Self-consistent adjacency forces space = group. dim SL(2) = 2²−1 = 3. Complexification via order parameter → SL(2,C) ≅ Spin(3,1) gives Lorentz. No assumption needed. (Derivation 14)
 14. **SL(2,R) is the unique substrate**: four entrance conditions — arithmetic skeleton (SL(2,Z) from mediant), projective action on P¹(R), dynamical trichotomy (Iwasawa KAN), Farey-hyperbolic geometry — characterize SL(2,R) among all connected real Lie groups. Bianchi classification eliminates all 3D alternatives. SU(2) fails (compact, no split/nilpotent sectors). SL(2,C) fails minimality (complexification, dim 6). Heisenberg fails (no arithmetic skeleton, no projective action). d=3, Einstein, and Lorentz become corollaries. (Derivation 15)
-14. **The frequency distribution determines itself**: g* = h(g*). The population density at the field equation's fixed point, when fed back as the input distribution, reproduces itself. g* converges from arbitrary initial conditions. **Zero free parameters. Zero free functions.** ([rfe engine](https://github.com/nickjoven/rfe))
-15. **Numerical verification**: the field equation at depth 10 produces n_s = 0.963–0.966 vs Planck 0.9649 (Δ < 0.2%). The asymptotic density slope is -0.001 per level — **scale invariance is preserved** by self-consistency. ([`field_equation_cmb.py`](field_equation_cmb.py))
-16. **a₀ corrected**: a₀ = c·H₀/(2π) / √g*(1/φ) = 1.25×10⁻¹⁰ m/s² vs observed 1.2×10⁻¹⁰ (4% residual, down from 15%). The correction comes from the fidelity bound's √(g_bar/a₀), where g* at 1/φ = 0.697 modulates the transition.
+15. **The frequency distribution determines itself**: g* = h(g*). The population density at the field equation's fixed point, when fed back as the input distribution, reproduces itself. g* converges from arbitrary initial conditions. **Zero free parameters. Zero free functions.** ([rfe engine](https://github.com/nickjoven/rfe))
+16. **Numerical verification**: the field equation at depth 10 produces n_s = 0.963–0.966 vs Planck 0.9649 (Δ < 0.2%). The asymptotic density slope is -0.001 per level — **scale invariance is preserved** by self-consistency. ([`field_equation_cmb.py`](field_equation_cmb.py))
+17. **a₀ corrected**: a₀ = c·H₀/(2π) / √g*(1/φ) = 1.25×10⁻¹⁰ m/s² vs observed 1.2×10⁻¹⁰ (4% residual, down from 15%). The correction comes from the fidelity bound's √(g_bar/a₀), where g* at 1/φ = 0.697 modulates the transition.
+18. **Ω_Λ = 13/19 = 0.6842** from Farey partition at Klein bottle resolution. Observed: 0.685 ± 0.007. Residual: **0.07σ**. (Derivation 25)
+19. **R = 6 × 13⁵⁴ ≈ 8.45 × 10⁶⁰** — Planck/Hubble ratio from Klein bottle arithmetic. Observed: 8.49 × 10⁶⁰. Residual: **0.48%**. (Derivation 26)
+20. **Λl_P² = 13⁻¹⁰⁸/12** — cosmological constant in Planck units. Exponent 108 = 2 × q₂q₃³ derived from spatial dimension and Klein bottle denominators. Residual in exponent: **0.1%**. (Derivation 27)
 
 ## The scorecard
 
@@ -193,6 +216,9 @@ These are referenced but not on the main line:
 | a₀ (MOND scale) | 1.25 × 10⁻¹⁰ | 1.2 × 10⁻¹⁰ | **4%** |
 | d (spatial dimension) | 3 | 3 | **exact** |
 | Lorentz symmetry | Spin(3,1) | SO⁺(3,1) | **exact** |
+| Ω_Λ (dark energy) | 13/19 = 0.6842 | 0.685 ± 0.007 | **0.07σ** |
+| R (Planck/Hubble) | 6 × 13⁵⁴ = 8.45 × 10⁶⁰ | 8.49 × 10⁶⁰ | **0.48%** |
+| Λl_P² | 13⁻¹⁰⁸/12 | ~10⁻¹²² | **0.1% in exponent** |
 | N_efolds | 61.3 ± 0.7 | TBD | **CMB-S4, ~2028** |
 
 Free parameters: **0**. Free functions: **0**.
