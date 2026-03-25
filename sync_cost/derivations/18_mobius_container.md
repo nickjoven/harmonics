@@ -234,6 +234,158 @@ The CPU cycle count to produce one stable division:
 For K = 5γ (moderately above threshold), γ = 1, dt = 0.01:
 N_cycles ~ 200. Two hundred integration steps. Computationally trivial.
 
+## Coherence length and spiral arm formation
+
+### Local structure before the twist
+
+At small N (3, 5), the Möbius twist dominates immediately — every
+oscillator is within one or two coupling steps of the antiperiodic
+boundary. The rational divisions appear as global modes from the start.
+
+At large N, something different happens. A perturbation at oscillator
+j propagates outward in both directions at speed v_phase ~ K/γ
+(coupling strength over frequency spread). The synchronized domain
+grows as a coherent "arm" — a traveling wave of locked phases surfing
+along the chain. This arm doesn't know it's on a Möbius strip. It
+just synchronizes neighbors.
+
+The arm learns about the topology when its wavefront has traveled
+L/2 (half the ring length) and encounters the returning signal — the
+same perturbation, propagated in the opposite direction, but phase-
+shifted by π from the twist. At that moment, the growing arm must
+accommodate the antiperiodic boundary condition.
+
+### The coherence length
+
+Define the **coherence length** ξ as the maximum extent of a locally
+synchronized domain before the twist forces accommodation:
+
+    ξ = L/2 = N/(2 × lattice spacing)
+
+In oscillator units: ξ = N/2 sites. A perturbation starting at site
+j forms a coherent arm spanning sites j−ξ to j+ξ before the returning
+wavefront arrives.
+
+The **arrival time** of the reflected signal:
+
+    t_reflect = ξ / v_phase = N / (2 v_phase)
+
+where v_phase depends on coupling. For Kuramoto nearest-neighbor with
+coupling K and frequency spread γ:
+
+    v_phase ~ K × sin(Δθ_typical) / Δω_typical ~ K / γ
+
+So:
+
+    t_reflect ~ Nγ / (2K)
+
+For t < t_reflect, the arm grows freely — the dynamics are
+indistinguishable from a periodic ring. The arm is a traveling wave
+with a smooth phase gradient, exactly like a spiral arm in a galaxy:
+a coherent pattern that propagates because each neighbor locks to
+the next.
+
+### What happens at t_reflect
+
+At t = t_reflect, the two wavefronts meet. The left-propagating front
+carries phase θ_left. The right-propagating front carries θ_right.
+The antiperiodic BC requires:
+
+    θ_left = θ_right + π
+
+If the arm has locked to a uniform phase gradient (θ_i = θ_0 + iΔθ),
+then across the full ring:
+
+    NΔθ ≡ π (mod 2π)
+
+This quantizes the phase gradient:
+
+    Δθ = (2n + 1)π / N
+
+The arm's gradient snaps to the nearest allowed odd mode. The "surf"
+continues, but now quantized — the wavefronts reinforce on every
+subsequent traversal because the standing wave satisfies the boundary
+condition exactly.
+
+### Regimes
+
+**Small N (N ≲ 5):** ξ ~ 1–2 sites. No free propagation phase.
+The twist is felt immediately. Rational divisions emerge as the
+only possible fixed points. This is the D18 simulation regime.
+
+**Intermediate N (N ~ 8–21):** ξ ~ 4–10 sites. Arms form freely,
+then snap to quantized gradients at t_reflect. The transient looks
+like galaxy formation: local structure first, then global
+reorganization when the boundary is felt.
+
+**Large N (N ≫ 21):** ξ ≫ 1. Long free-propagation phase. Multiple
+independent arms can form before any of them reach the boundary.
+When the reflected signals arrive, the arms must merge and accommodate
+each other AND the twist. This is the regime where complex mode
+structure (multiple simultaneous rational divisions, nested tongues)
+can appear.
+
+### The maximum arm length
+
+An arm can persist if its internal coupling is strong enough to
+maintain coherence across its span. The Kuramoto coherence condition
+for a chain of n oscillators:
+
+    K > K_c(n) = 2γ / sin(π / (2n))
+
+For small n: K_c ~ 4γ/π × n (linear growth).
+For large n: K_c ~ 4γn/π (also linear, sin(π/2n) ~ π/2n).
+
+An arm of length n requires coupling K > 4γn/π to stay coherent.
+Given fixed K, the maximum arm length is:
+
+    n_max = πK / (4γ)
+
+Arms longer than n_max fragment. This sets the **maximum number of
+coherent spiral arms** on the Möbius ring:
+
+    N_arms = N / n_max = 4Nγ / (πK)
+
+For K/γ = 6 (moderately supercritical): n_max ~ 4.7, so a ring of
+N = 21 can support ~4 independent arms. Each arm spans ~5 sites and
+carries a quantized phase gradient.
+
+### Connection to galaxy spiral structure
+
+The arms on the Möbius ring are synchronization wavefronts — coherent
+domains where neighboring oscillators have locked to a common phase
+gradient. The analogy:
+
+| Möbius ring | Spiral galaxy |
+|---|---|
+| Synchronized arm | Spiral arm (density wave) |
+| Phase gradient Δθ | Pattern speed Ω_p |
+| Arm length n_max | Arm extent (corotation radius) |
+| Number of arms N/n_max | Number of spiral arms (2, 3, 4) |
+| Twist at boundary | Global topology of the gravitational field |
+| Quantized Δθ = (2n+1)π/N | Discrete arm count (not continuous) |
+
+The arm count is quantized because the total phase winding must
+accommodate the antiperiodic boundary condition. The galaxy doesn't
+"choose" to have 2 arms — the topology forces an integer from the
+allowed set.
+
+## Simulation specification (coherence length)
+
+```
+Domain:       1D Möbius ring, N ∈ {3, 5, 8, 13, 21, 34, 55, 89}
+Dynamics:     Kuramoto nearest-neighbor, antiperiodic BC
+Parameters:   K/γ ∈ {2, 4, 6, 8, 12}, ε = 0.1
+Observables:  - r(t) trajectory (detect transient vs steady state)
+              - Time to first reflection: t_reflect
+              - Phase gradient before/after reflection
+              - Number of coherent arms at steady state
+              - Arm length distribution
+Compare:      periodic BC at same N — does it form arms at all?
+Key test:     at N = 21, K/γ = 6, predict 4 arms of length ~5
+              each carrying quantized gradient (2n+1)π/21
+```
+
 ## Connection to existing derivations
 
 | This derivation | Builds on | What it adds |
