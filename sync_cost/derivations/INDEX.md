@@ -171,6 +171,15 @@ These build on each other sequentially:
 | `28_farey_proof.md` | **Current** | Farey partition derived (not observed): SO(2) structure at locked/unlocked boundary forces Farey counting. Closes D25 gap. |
 | `29_mediant_derivation.md` | **Current** | Mediant derived as unique operation satisfying monotonicity-preservation + denominator-additivity + convergent-stability. Configuration space is unique. Closes D10 foundational gap. |
 
+### Proof Chains (geometric proof format)
+
+| File | Role |
+|------|------|
+| `PROOF_A_gravity.md` | **Polynomial → General Relativity**: 8 propositions. Counting → mediant → Stern-Brocot → field equation → d=3, SL(2,R) → ADM → Lovelock → Einstein. Two inputs (energy conservation, stability), one output. |
+| `PROOF_B_quantum.md` | **Polynomial → Quantum Mechanics**: 5 shared + 6 quantum propositions. Same start, diverges at K<1. Unlocked oscillators → Madelung → Schrödinger. Parabola → √ε scaling → Born rule. The subcritical limit of the same equation whose critical limit gives GR. |
+
+The third proof chain — **The Bridge** (cosmological parameters connecting both legs) — lives in [proslambenomenos/PROOF_C_bridge.md](https://github.com/nickjoven/proslambenomenos/blob/main/PROOF_C_bridge.md). It derives Ω_Λ = 13/19, R = 6×13⁵⁴, and a₀ from the Klein bottle topology + Kuramoto critical coupling.
+
 ## Supporting / Earlier Work
 
 These are referenced but not on the main line:

@@ -245,3 +245,10 @@ are coincidence involving the simplest fractions on the tree.
 This is the load-bearing computation that separates the established
 results (topology → 4 modes → dimension loop) from the conjectural
 ones (modes → particle physics).
+
+---
+
+## Proof chain
+
+This derivation is Proposition P8 (the capstone) in
+[**Proof Chain A: Polynomial → General Relativity**](PROOF_A_gravity.md).

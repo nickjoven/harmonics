@@ -180,3 +180,10 @@ standard Born rule. Non-uniform curvature gives a modified rule.
 Are there physical systems where the modification is measurable?
 Candidates: systems near the quantum-classical boundary where the
 cost landscape is asymmetric.
+
+---
+
+## Proof chain
+
+This derivation is Proposition Q2 in
+[**Proof Chain B: Polynomial → Quantum Mechanics**](PROOF_B_quantum.md).

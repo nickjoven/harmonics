@@ -331,3 +331,13 @@ No free parameter is consumed. No additional primitive is needed. The
 mediant — already one of the four primitives — contains the adjacency
 structure. It was always there. The fifth primitive is the second
 reading of the second primitive.
+
+---
+
+## Proof chains
+
+This derivation is Proposition P5 in all three end-to-end proof chains:
+
+- [**Proof A: Polynomial → General Relativity**](PROOF_A_gravity.md)
+- [**Proof B: Polynomial → Quantum Mechanics**](PROOF_B_quantum.md)
+- [**Proof C: The Bridge**](https://github.com/nickjoven/proslambenomenos/blob/main/PROOF_C_bridge.md) (as B3)

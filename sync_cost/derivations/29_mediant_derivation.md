@@ -261,3 +261,14 @@ The prediction Ω_Λ = 13/19 now rests on:
 None of these are axioms in the sense of "assumed without
 justification." They are physical properties and mathematical
 theorems.
+
+---
+
+## Proof chains
+
+This derivation is the starting proposition (P2) in both end-to-end
+proof chains:
+
+- [**Proof A: Polynomial → General Relativity**](PROOF_A_gravity.md) — 8 propositions from the mediant to Einstein
+- [**Proof B: Polynomial → Quantum Mechanics**](PROOF_B_quantum.md) — the subcritical branch to Schrödinger + Born rule
+- [**Proof C: The Bridge**](https://github.com/nickjoven/proslambenomenos/blob/main/PROOF_C_bridge.md) — cosmological parameters connecting both legs

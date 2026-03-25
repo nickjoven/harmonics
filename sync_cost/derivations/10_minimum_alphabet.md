@@ -550,3 +550,14 @@ self-similarity) also produces the duration of inflation (through
   generates tongues via the parabola, and reproduces the staircase
   from the four primitives alone — no trig functions, no floating
   point, exact rational arithmetic throughout.
+
+---
+
+## Proof chains
+
+This derivation provides the shared foundation (P1, P3) for all three
+end-to-end proof chains:
+
+- [**Proof A: Polynomial → General Relativity**](PROOF_A_gravity.md)
+- [**Proof B: Polynomial → Quantum Mechanics**](PROOF_B_quantum.md)
+- [**Proof C: The Bridge**](https://github.com/nickjoven/proslambenomenos/blob/main/PROOF_C_bridge.md)

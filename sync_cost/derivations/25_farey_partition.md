@@ -143,3 +143,10 @@ question from D24.
 spectrum with the physical configuration space (D19, conjectural
 for the particle physics connection, but the cosmological partition
 requires only the denominator classes {2, 3}, which are established).
+
+---
+
+## Proof chain
+
+This derivation is Proposition B5 in
+[**Proof Chain C: The Bridge**](https://github.com/nickjoven/proslambenomenos/blob/main/PROOF_C_bridge.md).

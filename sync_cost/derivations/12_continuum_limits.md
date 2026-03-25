@@ -432,3 +432,12 @@ At K < 1: some p/q are populated (tongues), gaps contain the
 unlocked density Ψ, linearized evolution gives Schrödinger.
 
 One equation. One parameter K. Three regimes. Two PDEs.
+
+---
+
+## Proof chains
+
+This derivation serves both end-to-end proof chains:
+
+- K = 1 (Part I): Proposition P7 in [**Proof Chain A: Polynomial → General Relativity**](PROOF_A_gravity.md)
+- K < 1 (Part II): Propositions Q3–Q5 in [**Proof Chain B: Polynomial → Quantum Mechanics**](PROOF_B_quantum.md)
