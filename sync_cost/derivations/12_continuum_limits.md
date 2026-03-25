@@ -373,25 +373,15 @@ q⁻² scaling). The second arrow (Kuramoto → PDE) uses the dictionary
    σ² (coupling kernel normalization) produces all ADM prefactors
    (16πG in Hamiltonian, 8πG in momentum) simultaneously.
 
-3. **Nelson step**: ~~make the passage from Stern-Brocot ultrametric
-   to Nelson osmotic velocity rigorous.~~ **Resolved.** The naive
-   tree projection gives position-dependent D_eff ~ ρ², which fails.
-   But the tree is the RG structure, not the physical lattice. The
-   CLT over tree levels (convergent geometric series with ratio φ⁻⁴)
-   gives constant D_eff = D₀/(1 - φ⁻⁴) in the IR. This is the
-   variance fixed point — the same self-consistency applied to the
-   second moment. Constant D gives the standard Nelson osmotic
-   velocity and quantum potential by universality.
-
-4. **𝒦ᵢⱼ evolution**: complete the derivation of the second ADM
+3. **𝒦ᵢⱼ evolution**: complete the derivation of the second ADM
    evolution equation from the second time derivative of the
    coherence tensor.
 
-5. **Uniqueness**: show that the correspondence is not just compatible
+4. **Uniqueness**: show that the correspondence is not just compatible
    but necessary — that the only self-consistent continuum limit of
    the Stern-Brocot field equation at K = 1 is the Einstein equations.
 
-6. **Klein bottle continuum limit** (Derivation 19): the 2D field
+5. **Klein bottle continuum limit** (Derivation 19): the 2D field
    equation on the Klein bottle collapses to 4 modes at denominator
    classes (2,3) and (3,2). These fractions numerically match quark
    charges and gauge group ranks, but the structural identity is

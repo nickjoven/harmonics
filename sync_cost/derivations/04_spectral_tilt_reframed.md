@@ -164,49 +164,6 @@ The "cost function" was a smooth approximation to the envelope of
 a devil's staircase. The smoothing destroyed the curvature structure
 that determines the running sign.
 
-## Open questions
-
-1. **What sets the pivot position on the staircase?** The pivot scale
-   k_* = 0.05 Mpc⁻¹ corresponds to a specific location in the
-   rational hierarchy. Which transition is it near?
-
-2. **Can we compute g(ω) from first principles?** The frequency
-   distribution of primordial oscillators — what determines it?
-   In the Kuramoto model, g is an input. Here it must emerge from
-   the dynamics.
-
-3. **The r(ω) dependence**: how does the order parameter vary with
-   scale? This is the "how coherent is each sub-ensemble" question,
-   and it feeds into both tilt and running.
-
-4. **Connection to lattice**: the Stribeck lattice shows mode-locking
-   (subharmonic generation at rational ratios of ω_d/ω₀). The
-   differential attenuation IS the frequency distribution being
-   sculpted by mode-locking. Can we extract g(ω) from lattice data?
-
-## Status: Resolved
-
-The numerical follow-through (see below) resolved the open questions:
-
-1. **The pivot sits at 1/φ** — the golden ratio, the hardest point to
-   mode-lock. This is the unique fixed point of the Gauss map, the
-   "most irrational" number.
-
-2. **The staircase at 1/φ is exactly self-similar** with scaling factor
-   φ² ≈ 2.618. Each Fibonacci bracket carries 1/φ² of the parent's
-   winding: Δ(ln|ΔW|) = -ln(φ²) per level. This gives an exactly
-   flat power spectrum in the natural (Stern-Brocot) coordinates.
-
-3. **The tilt comes from the k ↔ Ω mapping**, not from the staircase
-   itself. rate = (n_s - 1)/(-ln φ²) = 0.0365 Fibonacci levels per
-   e-fold. The observable universe samples ~2.2 levels.
-
-4. **The amplitude A_s ≈ 2.1 × 10⁻⁹** places the pivot at Fibonacci
-   level ~21 (F₂₁ = 17711, within 5×10⁻¹⁰ of 1/φ).
-
-The separation is clean: **the staircase provides scale-invariance;
-the dynamics provide the tilt.**
-
 ## Computational chain
 
 The following Python scripts implement and verify this derivation
