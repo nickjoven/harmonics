@@ -180,6 +180,7 @@ These build on each other sequentially:
 | `mediant_test.py` | **Mediant resolution confirmed**: all 6 Stern-Brocot mediants present at parent degeneracy points. Two mediants (3/5, 4/3) exceed parents — tree selects the resolution mode. |
 | `staircase_spectrum.py` | Fourier analysis of classical waveforms vs devil's staircase (static). |
 | `staircase_spectrum_v2.py` | **Dynamic spectrum**: circle map time series at K = 0–1, square vs staircase comparison, variational (shortest path) test. Plateau fraction and total variation computed. |
+| `pythagorean_comma_variational.py` | **The comma is the Klein bottle's failure to close**: 12 fifths + 7 octaves = 19 transitions = Ω_Λ denominator. The 19 in 13/19 is the comma cycle length. Cost ratio → 2 at K → 1. The comma is irreducible because the Stern-Brocot tree has no loops. |
 | `waveform_evolution.py` | Waveform progression: sine → clipped → trapezoidal → subharmonic limit cycle. |
 | `stable_waveform.py` | Coupling sweep showing stable locked orbits in the mode-locking window. |
 | `stable_waveform_v2.py` | Refined: spatial progression at high coupling, element 1–5 waveform comparison. |
