@@ -171,6 +171,72 @@ With the mediant derived from betweenness + minimality:
 No axioms beyond "coupled oscillators conserve energy and lock to
 the most stable ratio." The rest is mathematics.
 
+## Why the Stern-Brocot tree and not a continuum
+
+### The continuum fails minimality
+
+A continuous frequency space ℝ satisfies betweenness: given any
+two reals, their average (or any convex combination) lies between
+them. But ℝ does NOT satisfy minimality: between any two reals
+there are uncountably many others, and no canonical "simplest" one
+exists. The arithmetic mean, geometric mean, and harmonic mean are
+all "between" but none is "simplest" because ℝ has no ordering by
+complexity.
+
+Minimality requires a DISCRETE ordering by denominator: p/q is
+simpler than p'/q' when q < q'. This ordering is not imposed — it
+is the stability ordering of the Arnold tongues. A mode with smaller
+q has tongue width w ~ (K/2)^q — exponentially wider, therefore
+exponentially more stable. The simplest fraction is the most
+physically robust one.
+
+The Stern-Brocot tree IS this ordering. It enumerates all rationals
+by increasing denominator, with each mediant being the simplest
+rational in its interval. No continuum structure has this property.
+
+### Why not a different discretization
+
+The Arnold tongue structure at rational p/q follows from Fourier
+analysis of the coupling function. The Kuramoto coupling
+sin(θ_j − θ_i) has a single Fourier harmonic. Its iterates
+produce tongues at ALL rationals p/q, with width scaling as
+(K/2)^q — ordered by denominator.
+
+Any periodic, antisymmetric coupling function can be expanded in
+a Fourier series. The fundamental mode (sin) dominates at weak
+coupling. The tongue structure at all rationals, ordered by
+denominator q, is universal — it does not depend on the specific
+coupling function, only on its periodicity and antisymmetry.
+
+A different discretization (powers of 2, decimals, algebraic
+numbers) would not reproduce this tongue ordering because the
+tongues occur at ALL rationals, not at a subset. The Stern-Brocot
+tree is the unique enumeration that respects the tongue width
+ordering.
+
+### The universality argument
+
+The result rests on three properties of the coupling:
+1. **Periodicity** (phases are circular: θ ∈ S¹)
+2. **Antisymmetry** (coupling is mutual: f(θ) = −f(−θ))
+3. **Smoothness** (Fourier series converges)
+
+Any coupling satisfying (1)-(3) produces Arnold tongues at all
+rationals, ordered by denominator. The Stern-Brocot tree is the
+configuration space of the resulting dynamics. No other structure
+emerges.
+
+If the coupling were not periodic (e.g., linear springs), there
+would be no mode-locking and no rational structure. If it were not
+antisymmetric, the coupling would not be mutual and the system
+would not synchronize. If it were not smooth, the Fourier analysis
+would fail.
+
+The three properties (1)-(3) are the defining properties of
+coupled oscillators on a circle. They are not choices — they are
+the definition of the physical system. The Stern-Brocot tree is
+their unique consequence.
+
 ## Status
 
 **Derived.** The mediant is the unique operation satisfying
@@ -178,6 +244,11 @@ betweenness (energy conservation) and minimality (widest Arnold
 tongue). The Stern-Brocot theorem (1858/1860) proves this.
 The framework's primitive (2) is replaced by a physical property
 (2') that is experimentally verifiable.
+
+The Stern-Brocot tree is the unique configuration space arising from
+coupled oscillators with periodic, antisymmetric, smooth coupling.
+It is not a choice of discretization — it is the Arnold tongue
+structure, which is universal for this class of dynamical systems.
 
 The prediction Ω_Λ = 13/19 now rests on:
 - Coupled oscillators conserve energy (testable)
