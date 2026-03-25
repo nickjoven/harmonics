@@ -150,7 +150,7 @@ if __name__ == "__main__":
     print(f"    |b3|/|b2| = 42/19 = {ratio_SM:.6f}")
     print(f"    ln(|b3/b2|) = ln(42/19) = {ln_ratio_SM:.6f}")
 
-    depths = [4, 5, 6, 7, 8, 9, 10]
+    depths = [4, 5, 6, 7, 8]  # 9-10 too expensive (product tree ~500k pairs)
 
     g_uniform = lambda f1, f2: 1.0
     g_golden = lambda f1, f2: math.exp(
