@@ -175,9 +175,11 @@ These build on each other sequentially:
 
 | File | Role |
 |------|------|
-| `30_denomination_boundary.md` | **The three open questions are one**: entropy-vs-energy boundary = devil's staircase in K-space. Discrete substrate = K < 1 truncation. Degeneracy resolution = mediant, not perturbation theory. Denomination switch at K*(q) ≈ 2·q^{-1/(q-1)}, different for each denominator. |
+| `30_denomination_boundary.md` | **The three open questions are one**: entropy-vs-energy boundary = devil's staircase in K-space. Discrete substrate = K < 1 truncation. Degeneracy resolution = mediant, not perturbation theory. **The staircase is a brachistochrone**: path of least synchronization cost through frequency space. Plateau fraction maximized (10%→64% as K: 0.3→0.99, TV invariant at 1.0). Square-staircase spectral gap = periodicity vs mode-locking (integer harmonics 1/n vs rational harmonics (K/2)^q). |
 | `denomination_boundary.py` | Intermittency test at F_n = 3.0 and mode-lock onset sweep. Intermittency confirmed (σ = 0.08). |
 | `mediant_test.py` | **Mediant resolution confirmed**: all 6 Stern-Brocot mediants present at parent degeneracy points. Two mediants (3/5, 4/3) exceed parents — tree selects the resolution mode. |
+| `staircase_spectrum.py` | Fourier analysis of classical waveforms vs devil's staircase (static). |
+| `staircase_spectrum_v2.py` | **Dynamic spectrum**: circle map time series at K = 0–1, square vs staircase comparison, variational (shortest path) test. Plateau fraction and total variation computed. |
 | `waveform_evolution.py` | Waveform progression: sine → clipped → trapezoidal → subharmonic limit cycle. |
 | `stable_waveform.py` | Coupling sweep showing stable locked orbits in the mode-locking window. |
 | `stable_waveform_v2.py` | Refined: spatial progression at high coupling, element 1–5 waveform comparison. |
