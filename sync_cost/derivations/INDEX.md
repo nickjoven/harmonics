@@ -148,6 +148,7 @@ These build on each other sequentially:
 | `18_mobius_container.md` | **Current** | Bounded Möbius container. Antiperiodic BC forces rational divisions from single perturbation. Coherence length analysis: arms form freely, snap to quantized gradient at t_reflect. N=3 minimum. |
 | `19_klein_bottle.md` | **Current** | Fully closed non-orientable container. XOR parity constraint collapses 1,764 mode pairs to 4 survivors at (q₁,q₂) = (2,3) and (3,2). Population ratio 2/3 = perfect fifth. F₃ = F₂²−1 closes the dimension loop (algebraically verified). **Conjectural**: fractions {1/3, 1/2, 2/3} numerically match quark charges + weak isospin, but these are also the simplest fractions on the tree — structural identity not derived. See D20 for the honest negative. |
 | `20_xor_continuum_limit.md` | **Current** | The XOR-filtered continuum limit does NOT produce SU(3) or Yang-Mills from the frame bundle. Pin⁺(3) ≅ SU(2) × Z₂ emerges but this is spin/parity, not weak gauge. The discrete XOR filter dissolves in the continuum. Two open paths: discrete-is-physical, or gauge from mean-field F. |
+| `21_discrete_gauge.md` | **Proposed** | The two open paths formalized as five binary-outcome computations. Path 1 (discrete is physical): anomaly cancellation from charges, depth sweep vs β-ratio, tongue overlap vs structure constants. Path 2 (gauge from F): Jacobian at 4-mode fixed point, Z₂ algebra generation. Three immediate (anomaly, depth sweep, Jacobian), two subsequent. |
 
 ## Supporting / Earlier Work
 
