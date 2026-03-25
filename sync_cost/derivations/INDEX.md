@@ -171,6 +171,17 @@ These build on each other sequentially:
 | `28_farey_proof.md` | **Current** | Farey partition derived (not observed): SO(2) structure at locked/unlocked boundary forces Farey counting. Closes D25 gap. |
 | `29_mediant_derivation.md` | **Current** | Mediant derived as unique operation satisfying monotonicity-preservation + denominator-additivity + convergent-stability. Configuration space is unique. Closes D10 foundational gap. |
 
+### Phase 16: The denomination boundary
+
+| File | Role |
+|------|------|
+| `30_denomination_boundary.md` | **The three open questions are one**: entropy-vs-energy boundary = devil's staircase in K-space. Discrete substrate = K < 1 truncation. Degeneracy resolution = mediant, not perturbation theory. Denomination switch at K*(q) ≈ 2·q^{-1/(q-1)}, different for each denominator. |
+| `denomination_boundary.py` | Intermittency test at F_n = 3.0 and mode-lock onset sweep. Intermittency confirmed (σ = 0.08). |
+| `mediant_test.py` | **Mediant resolution confirmed**: all 6 Stern-Brocot mediants present at parent degeneracy points. Two mediants (3/5, 4/3) exceed parents — tree selects the resolution mode. |
+| `waveform_evolution.py` | Waveform progression: sine → clipped → trapezoidal → subharmonic limit cycle. |
+| `stable_waveform.py` | Coupling sweep showing stable locked orbits in the mode-locking window. |
+| `stable_waveform_v2.py` | Refined: spatial progression at high coupling, element 1–5 waveform comparison. |
+
 ### Proof Chains (geometric proof format)
 
 | File | Role |

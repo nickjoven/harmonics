@@ -336,14 +336,19 @@ Everything else is accounting.
 
 ## Open Questions
 
-1. What is the entropy-vs-energy regime boundary for synchronization cost
-   denomination?
+These three questions were unified in
+[Derivation 30](derivations/30_denomination_boundary.md) as one
+structure: the denomination boundary is the devil's staircase in
+coupling space, the discrete substrate is the K < 1 truncation of
+the Stern-Brocot tree, and degeneracy is resolved by the mediant
+(not standard perturbation theory). Numerical validation in the
+Stribeck lattice confirms mediant peak emergence at all six
+parent-mode degeneracy points.
 
-2. Does spacetime emergence require a discrete substrate, or does the cost
-   function produce a continuum limit naturally?
-
-3. Is degenerate perturbation theory the right tool for near-threshold
-   synchronization states at the quantum-classical boundary?
+Remaining open:
+- CMB damping tail fine structure (rational l-ratios, Farey peak heights)
+- Fractal dimension of the mode-lock onset boundary (finer sweep needed)
+- Intermittency statistics at the denomination boundary (power law exponent)
 
 ---
 
