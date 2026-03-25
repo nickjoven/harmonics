@@ -161,7 +161,7 @@ These build on each other sequentially:
 | `18_mobius_container.md` | **Current** | Bounded Möbius container. Antiperiodic BC forces rational divisions from single perturbation. Coherence length analysis: arms form freely, snap to quantized gradient at t_reflect. N=3 minimum. |
 | `19_klein_bottle.md` | **Current** | Fully closed non-orientable container. XOR parity constraint collapses 1,764 mode pairs to 4 survivors at (q₁,q₂) = (2,3) and (3,2). Population ratio 2/3 = perfect fifth. F₃ = F₂²−1 closes the dimension loop (algebraically verified). **Conjectural**: fractions {1/3, 1/2, 2/3} numerically match quark charges + weak isospin, but these are also the simplest fractions on the tree — structural identity not derived. See D20 for the honest negative. |
 | `20_xor_continuum_limit.md` | **Current** | The XOR-filtered continuum limit does NOT produce SU(3) or Yang-Mills from the frame bundle. Pin⁺(3) ≅ SU(2) × Z₂ emerges but this is spin/parity, not weak gauge. The discrete XOR filter dissolves in the continuum. Two open paths: discrete-is-physical, or gauge from mean-field F. |
-| `21_discrete_gauge.md` | **Proposed** | The two open paths formalized as five binary-outcome computations. Path 1 (discrete is physical): anomaly cancellation from charges, depth sweep vs β-ratio, tongue overlap vs structure constants. Path 2 (gauge from F): Jacobian at 4-mode fixed point, Z₂ algebra generation. Three immediate (anomaly, depth sweep, Jacobian), two subsequent. |
+| `21_discrete_gauge.md` | **Partial** | Five binary computations. A (anomaly): PASS. B (tongue overlap): abelian only. C (depth sweep): null. D (Jacobian): rank-1. E (Z₂ algebra): fiber locked by XOR — but GCD gives Z₆ = center(SU(2)×SU(3)), and Klein bottle simulation shows topology reshapes mode occupation. Path 1 (discrete is physical): anomaly cancellation from charges, depth sweep vs β-ratio, tongue overlap vs structure constants. Path 2 (gauge from F): Jacobian at 4-mode fixed point, Z₂ algebra generation. Three immediate (anomaly, depth sweep, Jacobian), two subsequent. |
 | `22_engineering_targets.md` | **Proposed** | Four physical devices from established results (independent of particle physics conjecture). N=3 Möbius resonator (benchtop, immediate), 4-state Klein bottle memory (9 oscillators), bifurcation sensor (critical slowing near K_c), r≈0.5 metamaterial (topologically protected partial coherence). |
 | `23_three_zeros.md` | **Current** | Three structurally distinct zeros in the Klein bottle algebra. Conflation hides 1+3 decomposition: one timelike zero (periodic) + three spacelike zeros (antiperiodic). |
 | `24_vacuum_energy.md` | **Current** | Cosmological constant problem dissolves: QFT sums all modes, Klein bottle has exactly 4. Vacuum energy computed on wrong configuration space. |
@@ -170,6 +170,7 @@ These build on each other sequentially:
 | `27_exponent.md` | **Current** | Exponent 54 = q₂ × q₃^d derived. Λl_P² = 13⁻¹⁰⁸/12. Residual in exponent 0.1%. |
 | `28_farey_proof.md` | **Current** | Farey partition derived (not observed): SO(2) structure at locked/unlocked boundary forces Farey counting. Closes D25 gap. |
 | `29_mediant_derivation.md` | **Current** | Mediant derived as unique operation satisfying monotonicity-preservation + denominator-additivity + convergent-stability. Configuration space is unique. Closes D10 foundational gap. |
+| `30_denomination_boundary.md` | **Current** | Three open questions unified: denomination boundary = devil's staircase in K-space. Staircase is variational minimum (brachistochrone). Pythagorean comma = 19 = Ω_Λ denominator. XOR asymmetry: q=2 open, q=3 locked = confinement. Klein bottle topology inverts mode hierarchy (torus: 1/1 dominates; Klein: 1/3 dominates). GCD as gauge transformation gives Z₆ = center(SU(2)×SU(3)). |
 
 ### Phase 16: The denomination boundary
 
@@ -184,6 +185,15 @@ These build on each other sequentially:
 | `waveform_evolution.py` | Waveform progression: sine → clipped → trapezoidal → subharmonic limit cycle. |
 | `stable_waveform.py` | Coupling sweep showing stable locked orbits in the mode-locking window. |
 | `stable_waveform_v2.py` | Refined: spatial progression at high coupling, element 1–5 waveform comparison. |
+| `tongue_overlap_structure.py` | D21-B: Tongue overlap test. The XOR filter produces abelian vertex structure only — mediant(1/3,2/3)=1/2 but self-coupling is forbidden. |
+| `path_holonomy.py` | Transport group between {1/2,1/3,2/3} generates SL(2,Z) (non-abelian, infinite). Triangle loop holonomy trivial, but paths non-commutative. |
+| `fiber_bundle.py` | **GCD as gauge transformation**: scaling doesn't commute with mediant. GCD mod 3 gives Z₃, mod 2 gives Z₂. Full structure Z₆ = center(SU(2)×SU(3)). |
+| `z6_algebra.py` | D21-E v1: Fiber flat under field equation (tongue widths use reduced denominators). |
+| `z6_algebra_v2.py` | D21-E v2: Depth-dependent tongue widths — still flat (product structure, rank-1 Jacobian). |
+| `z6_algebra_v3.py` | D21-E v3: XOR filter locks the fiber — twist sign frozen because allowed scalings preserve parity. |
+| `xor_asymmetry.py` | **XOR asymmetry = confinement**: q=2 (even) fiber open → SU(2) unconfined. q=3 (odd) fiber locked → SU(3) confines. Asymmetry ratio = K/2 = the mediator mode. |
+| `slip_structure.py` | Slip is not flat: velocity histogram shows sub-plateaus at mediant frequencies. Dwell time graded by Stern-Brocot depth. |
+| `klein_slip_structure.py` | **Klein bottle reshapes mode occupation**: torus locks to 1/1 (59%), Klein locks to 1/3 (48%). Topology inverts the hierarchy. The slip is where particle physics lives. |
 
 ### Proof Chains (geometric proof format)
 
