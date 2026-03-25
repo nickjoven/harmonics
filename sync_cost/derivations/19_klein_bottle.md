@@ -727,35 +727,80 @@ the coprimality of 2 and 3 under a topology that can't let either win.
   not closing) is the topological residual of the antiperiodic
   identification. The population ratio 2/3 IS the perfect fifth.
 
-- ✓ Physical correlates identified (`physical_correlates.py`):
-  the four surviving mode fractions {1/3, 1/2, 2/3} match quark
-  charges and weak isospin exactly. Denominator classes {2, 3}
-  match the ranks of SU(2) and SU(3). Leptons (integer charges 0, 1)
-  correspond to the boundary q=1 of the Stern-Brocot tree — not
-  interior modes but boundary conditions.
-- ✓ Three generations from Iwasawa KAN (D6, D15): the same
-  dimension d=3 = dim SL(2,R) that produces three spatial dimensions
-  produces three Iwasawa factors (K compact, A split, N nilpotent),
-  each a distinct coupling stage. Mass hierarchy follows from
-  subgroup character: compact (lightest) < split < nilpotent (heaviest).
+**Established (algebraic, no physical interpretation required)**:
 - ✓ Dimension loop closed (`dimension_loop.py`): the identity
-  F₃ = F₂² − 1 = 3 holds at exactly one Fibonacci level. This is
-  why q=3 (Klein bottle), d=3 (spatial dimension), and Λ/3
-  (proslambenomenos) are the same number. The topology selects the
-  dimension of the space it lives in.
-- ✓ β-functions topologically determined (`coupling_running.py`):
-  the Klein bottle's gauge groups (SU(3)×SU(2)×U(1)), matter content
-  (3 generations), and charge assignments (1/3, 2/3, 0, 1) uniquely
-  fix the one-loop coefficients b₁ = 41/10, b₂ = −19/6, b₃ = −7.
-  Zero free parameters in the running.
-- ✓ α₃/α₂ = 9/4 at 17 TeV (`normalization_v2.py`): the tongue-width
-  squared ratio (q₃/q₂)² = 9/4 appears in the SM running of α₃/α₂
-  at μ = 17,255 GeV — just above LHC reach, at the hierarchy scale.
-- ✓ α₃/α₂ = 2/3 at 10⁸ GeV (`coupling_running.py`): the population
-  ratio under golden input appears in the running at the see-saw /
-  intermediate scale.
+  F₃ = F₂² − 1 = 3 holds at exactly one Fibonacci level. This links
+  q=3 (Klein bottle), d=3 (spatial dimension from D14), and Λ/3
+  (proslambenomenos) algebraically. Verified: F_{n+1} = F_n² − 1
+  fails for all n ≠ 2.
 
-## The two Klein bottle scales
+**Conjectural (numerical coincidence until structural identity shown)**:
+
+The following observations are numerically exact but the identification
+of Klein bottle modes with particle physics quantum numbers has NOT
+been derived. The fractions {1/3, 1/2, 2/3} are the three simplest
+proper fractions. Any system that selects the lowest-order modes on
+the Stern-Brocot tree will produce them. The claim that these fractions
+ARE quark charges and weak isospin — rather than merely sharing the
+same values — requires showing that the reason the topology produces
+them and the reason gauge theory produces them is the same reason.
+That has not been done.
+
+- ? The fractions {1/3, 2/3} numerically equal quark electric charges.
+  The fraction {1/2} numerically equals weak isospin magnitude. But
+  the topology produces these as the simplest modes on the tree, not
+  as outputs of a gauge theory calculation. The structural identity
+  is missing.
+- ? Denominator classes {2, 3} numerically equal the ranks of SU(2)
+  and SU(3). But q=2 and q=3 are also simply the two smallest
+  integers > 1 that are coprime. Any non-orientable compact surface
+  with a XOR constraint would select these same denominators. The
+  question is whether the connection to gauge groups is structural
+  or arithmetic coincidence.
+- ? Leptons as boundary (q=1): the framing is suggestive — integer
+  charges at the boundary, fractional charges in the interior — but
+  the Gell-Mann–Nishijima formula has not been derived from the tree
+  structure. The hypercharge assignments are imposed, not derived.
+- ? Three generations from Iwasawa KAN (D6, D15): the number matches,
+  and the mass hierarchy ordering (compact < split < nilpotent) is
+  consistent, but the mechanism by which Iwasawa factors become
+  fermion generations has not been specified. "Three of X maps to
+  three of Y" is not a derivation.
+- ? β-functions from topology (`coupling_running.py`): IF the gauge
+  group identification is accepted, then the β-functions follow with
+  zero free parameters. But the β-functions are consequences of the
+  gauge groups and matter content, not independent evidence for the
+  identification. The logic is: assume the identification → β-functions
+  are determined → running is correct. The assumption does the work.
+- ? α₃/α₂ = 9/4 at 17 TeV and 2/3 at 10⁸ GeV: these are facts
+  about SM running given the SM gauge groups. The Klein bottle ratios
+  9/4 and 2/3 appearing at physical scales is interesting, but the
+  SM running was computed with the measured couplings as input, not
+  derived from the topology. The claim that the Klein bottle
+  *predicts* these scales requires the gauge group identification
+  to be structural, which is the unproven step.
+
+The honest summary: the Klein bottle produces a 4-mode spectrum with
+the right numerology to match the quark sector of the Standard Model.
+The dimension loop (F₃ = F₂² − 1) is algebraically verified. But
+the step from "same numbers" to "same physics" requires a derivation
+that the current work does not contain. The gap is between D19's
+topological results (established) and the particle physics
+interpretation (conjectural).
+
+What would close the gap: derive the gauge coupling structure
+(not just the group ranks) from the Klein bottle's Z₂ holonomy
+in the continuum limit. If the holonomy of the XOR constraint,
+extended via D12–D13 to the ADM formulation, produces the gauge
+field equations with the correct structure constants, the
+identification is structural. Until then, it is suggestive.
+
+## The two Klein bottle scales (conjectural)
+
+*This section assumes the gauge group identification. If that
+identification is correct, the following is a consequence. If not,
+the ratios are properties of SM running that happen to match the
+Klein bottle's arithmetic.*
 
 The Klein bottle produces two characteristic ratios for the coupling
 between its denominator classes q=2 and q=3:
