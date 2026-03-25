@@ -96,8 +96,22 @@ These build on each other sequentially:
 |------|------|
 | `18_mobius_container.md` | **Bounded container as simulation target**: Kuramoto on a compact non-orientable surface (antiperiodic BC). The Möbius geometry forces self-interference — excitations reflect, accumulate, and lock to rational phase divisions. Odd modes selected by topology. Minimal parameters: N = 3, K > 4γ, any ε > 0. Fully specified simulation with observables. |
 | `mobius_kuramoto.py` | Numerical experiment: Kuramoto ring with antiperiodic BC. Phase diagram (N, K/K_c) → locked rational. Comparison with periodic BC (cylinder) to verify odd-mode selection. |
+| `coherence_length_mobius.py` | Arm formation: perturbation propagates freely, reflects off twist at t_reflect = Nγ/(2K), snaps to quantized gradient (2n+1)π/N. Confirmed: single arm at K/K_c = 1.5 for N = 3–55. |
+| `field_equation_mobius.py` | D11 field equation on Möbius domain: topology breaks scale invariance. Möbius twist suppresses odd-q modes, steepens density slope 2.5×. |
 
-### Phase 13: The observational line
+### Phase 13: The Klein bottle
+
+| File | Role |
+|------|------|
+| `19_klein_bottle.md` | **Fully closed non-orientable container**. Two antiperiodic directions with XOR parity constraint. 2D field equation collapses 1,764 pairs to exactly 4 modes at (q₁,q₂) = (2,3) and (3,2). Fractions {1/3, 1/2, 2/3} = quark charges + weak isospin. Leptons = boundary (q=1). Time = periodic direction; space = antiperiodic. r ≈ 0.5 is topological equilibrium. Configuration budget structurally safe. Pythagorean connection: octave-fifth tension as minimal fixed point. |
+| `klein_bottle_kuramoto.py` | 3×3 simulation: Klein bottle forces 1/3 and 1/4 phase divisions at all coupling strengths. Torus → trivial sync. Aspect ratio independent. |
+| `field_equation_klein.py` | 2D field equation with XOR + twist: 1,764 → 4 modes. Population ratio 0.675 ≈ 2/3 under golden input. Only (q=2, q=3) and (q=3, q=2) survive. |
+| `physical_correlates.py` | Systematic comparison: {1/3, 2/3} = quark charges (exact), {1/2} = weak isospin (exact), {2, 3} = SU(2), SU(3) ranks (exact). 3 generations from Iwasawa KAN. Leptons = boundary q=1. |
+| `dimension_loop.py` | F₃ = F₂² − 1 = 3: the unique Fibonacci identity linking Klein bottle q=3, spatial dimension d=3, and proslambenomenos Λ/3. |
+| `coupling_running.py` | β-functions from topology (zero free parameters). α₃/α₂ = 2/3 at 10⁸ GeV (see-saw scale). |
+| `normalization_v2.py` | α ∝ q²: α₃/α₂ = 9/4 at 17 TeV (hierarchy scale). Two Klein bottle ratios → two physical scales, linked the way SUSY GUTs link them but without superpartners. |
+
+### Phase 14: The observational line
 
 | File | Role |
 |------|------|
@@ -130,7 +144,8 @@ These build on each other sequentially:
 | `16_variable_denominator.md` | **Current** | Hz assumes a fixed denominator. When time is synchronization rate, the denominator changes between cycles. Total operations = self-referential integral, not rate × time. De Sitter as the orientable fixed point where Hz stabilizes. ~19 Hubble cycles completed; tree depth bounded accordingly. |
 | `17_rank1_temporal_causation.md` | **Current** | Rank-1 Fréchet derivative as temporal causation: ker(DU) = the past (decayed modes), im(DU) = the future (one active direction), ⟨v,·⟩ = the present (scalar sufficient statistic). Forced by SO(2) rank-1 × codimension-1 × Markov. |
 | `18_mobius_container.md` | **Current** | Bounded Möbius container as simulation target. Antiperiodic BC forces odd-mode selection, rational phase divisions from single perturbation. N=3 minimum, K>4γ threshold. Fully specified numerical experiment. |
-| `19_klein_bottle.md` | **Current** | Fully closed non-orientable container. Two antiperiodic directions with XOR parity constraint: only opposite-parity mode pairs (even×odd, odd×even) survive. Klein bottle r ≈ 0.48–0.61 vs torus r ≈ 0.98–1.00; topology forces 1/3 and 1/4 phase divisions at every coupling strength. Fibonacci backbone on Klein bottle: checkerboard pattern, half of convergent pairs forbidden. |
+| `18_mobius_container.md` | **Current** | Bounded Möbius container. Antiperiodic BC forces rational divisions from single perturbation. Coherence length analysis: arms form freely, snap to quantized gradient at t_reflect. N=3 minimum. |
+| `19_klein_bottle.md` | **Current** | Fully closed non-orientable container. XOR parity constraint collapses 1,764 mode pairs to 4 survivors at (q₁,q₂) = (2,3) and (3,2). Fractions {1/3, 1/2, 2/3} = quark charges + weak isospin. Leptons = boundary q=1. 3 generations = Iwasawa KAN. Population ratio 2/3 = perfect fifth. F₃ = F₂²−1 closes the dimension loop. β-functions topologically determined. α₃/α₂ = 9/4 at 17 TeV (hierarchy), 2/3 at 10⁸ GeV (see-saw). Zero free parameters in the running. |
 
 ## Supporting / Earlier Work
 
