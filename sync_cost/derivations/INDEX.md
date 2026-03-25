@@ -90,7 +90,14 @@ These build on each other sequentially:
 |------|------|
 | `17_rank1_temporal_causation.md` | **Rank-1 as temporal causation**: the rank-1 Fréchet derivative of U is not an algebraic accident but the linearized expression of causation through a single channel. SO(2) rank-1 → center manifold → scalar bottleneck |r| → ker(DU) is the past, im(DU) is the future. The arrow of time is the rank-1 factorization. |
 
-### Phase 12: The observational line
+### Phase 12: The Möbius container
+
+| File | Role |
+|------|------|
+| `18_mobius_container.md` | **Bounded container as simulation target**: Kuramoto on a compact non-orientable surface (antiperiodic BC). The Möbius geometry forces self-interference — excitations reflect, accumulate, and lock to rational phase divisions. Odd modes selected by topology. Minimal parameters: N = 3, K > 4γ, any ε > 0. Fully specified simulation with observables. |
+| `mobius_kuramoto.py` | Numerical experiment: Kuramoto ring with antiperiodic BC. Phase diagram (N, K/K_c) → locked rational. Comparison with periodic BC (cylinder) to verify odd-mode selection. |
+
+### Phase 13: The observational line
 
 | File | Role |
 |------|------|
@@ -122,6 +129,7 @@ These build on each other sequentially:
 | `15_lie_group_characterization.md` | **Current** | SL(2,R) is the unique continuum substrate: four entrance conditions (arithmetic skeleton, projective action, dynamical trichotomy, Farey geometry) eliminate all alternatives via Bianchi classification. Closes the "why this group?" gap from Derivation 6. |
 | `16_variable_denominator.md` | **Current** | Hz assumes a fixed denominator. When time is synchronization rate, the denominator changes between cycles. Total operations = self-referential integral, not rate × time. De Sitter as the orientable fixed point where Hz stabilizes. ~19 Hubble cycles completed; tree depth bounded accordingly. |
 | `17_rank1_temporal_causation.md` | **Current** | Rank-1 Fréchet derivative as temporal causation: ker(DU) = the past (decayed modes), im(DU) = the future (one active direction), ⟨v,·⟩ = the present (scalar sufficient statistic). Forced by SO(2) rank-1 × codimension-1 × Markov. |
+| `18_mobius_container.md` | **Current** | Bounded Möbius container as simulation target. Antiperiodic BC forces odd-mode selection, rational phase divisions from single perturbation. N=3 minimum, K>4γ threshold. Fully specified numerical experiment. |
 
 ## Supporting / Earlier Work
 
