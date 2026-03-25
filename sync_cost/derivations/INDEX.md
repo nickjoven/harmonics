@@ -130,6 +130,7 @@ These build on each other sequentially:
 | `16_variable_denominator.md` | **Current** | Hz assumes a fixed denominator. When time is synchronization rate, the denominator changes between cycles. Total operations = self-referential integral, not rate × time. De Sitter as the orientable fixed point where Hz stabilizes. ~19 Hubble cycles completed; tree depth bounded accordingly. |
 | `17_rank1_temporal_causation.md` | **Current** | Rank-1 Fréchet derivative as temporal causation: ker(DU) = the past (decayed modes), im(DU) = the future (one active direction), ⟨v,·⟩ = the present (scalar sufficient statistic). Forced by SO(2) rank-1 × codimension-1 × Markov. |
 | `18_mobius_container.md` | **Current** | Bounded Möbius container as simulation target. Antiperiodic BC forces odd-mode selection, rational phase divisions from single perturbation. N=3 minimum, K>4γ threshold. Fully specified numerical experiment. |
+| `19_klein_bottle.md` | **Current** | Fully closed non-orientable container. Two antiperiodic directions with XOR parity constraint: only opposite-parity mode pairs (even×odd, odd×even) survive. Klein bottle r ≈ 0.48–0.61 vs torus r ≈ 0.98–1.00; topology forces 1/3 and 1/4 phase divisions at every coupling strength. Fibonacci backbone on Klein bottle: checkerboard pattern, half of convergent pairs forbidden. |
 
 ## Supporting / Earlier Work
 
