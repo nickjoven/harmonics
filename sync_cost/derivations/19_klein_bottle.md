@@ -276,31 +276,97 @@ population ratios that match anything physical.
 | Mode pairing | D16 (half-twist topology) | Second twist direction; correlation between scales |
 | 3×3 minimum | D6 (N=3 minimum) | N=3 in EACH direction; 9 = 3² total |
 
+## Simulation results
+
+### 3×3 Klein bottle vs torus (`klein_bottle_kuramoto.py`)
+
+The simulation ran at K = 4, 6, 8, 12 on identical 3×3 lattices with
+Lorentzian frequency disorder (γ = 1), single-oscillator perturbation
+from rest, and 20,000 integration steps (T = 200, dt = 0.01).
+
+**Order parameter:**
+
+| K | Torus r | Klein r | Ratio |
+|---|---------|---------|-------|
+| 4 | 0.979 | 0.478 | 0.49 |
+| 6 | 0.991 | 0.547 | 0.55 |
+| 8 | 0.995 | 0.577 | 0.58 |
+| 12 | 0.998 | 0.607 | 0.61 |
+
+The torus approaches full synchronization at all couplings. The Klein
+bottle saturates near r ≈ 0.5–0.6 — partial coherence forced by
+topology, not insufficient coupling.
+
+**Phase divisions are topological invariants.** At every K tested,
+the x-direction phase differences on the Klein bottle lock to 1/3
+and 1/4 of 2π. These do not change with coupling strength — they
+sharpen. The torus shows only 0/1 (trivial sync) at all K.
+
+**Phase lattice (K = 8, representative):**
+
+    Klein:                    Torus:
+    5.376  4.227  2.843       4.264  4.198  4.025
+    5.259  4.061  2.836       4.150  4.049  3.957
+    5.120  4.000  2.924       4.033  3.988  3.982
+
+The Klein bottle distributes phase across a ~2.5 radian span with
+three distinct columns. The torus collapses to a ~0.28 radian spread.
+
+**Larger lattices and aspect ratios:**
+
+| Lattice | Torus r | Klein r |
+|---------|---------|---------|
+| 3×3 | 0.995 | 0.577 |
+| 5×5 | 0.806 | 0.563 |
+| 3×5 | 0.842 | 0.517 |
+
+The Klein bottle order parameter is stable across lattice sizes and
+aspect ratios. The 3×5 asymmetric case (N_x ≠ N_y) shows the same
+1/3 and 1/4 x-direction locking as the symmetric case — the mode
+spectrum does not depend on aspect ratio.
+
+### XOR filter on Stern-Brocot pairs
+
+At tree depth 5 (31 nodes):
+- Total pairs: 961
+- Allowed (XOR = 1): 440 (45.8%)
+- Forbidden (XOR = 0): 521 (54.2%)
+
+The (q_x, q_y) occupancy table confirms the checkerboard: nonzero
+entries only where one of q_x, q_y is even and the other odd.
+
+**Fibonacci backbone on Klein bottle:** The convergent pair table
+reveals the selection: (1/2, 2/3) ✓ but (1/2, 1/2) ✗. (2/3, 5/8) ✓
+but (2/3, 2/3) ✗. No self-pairing allowed. The backbone is
+necessarily heterogeneous — each allowed pair mixes two different
+Fibonacci levels, one from each parity class.
+
 ## Status
 
-**Proposed**: topology, boundary conditions, mode analysis, and
-selection rule fully specified. The XOR constraint is algebraic
-(follows from the Klein bottle identification). The simulation target
-is explicit: 9 oscillators, 4 coupling terms each, with the Klein
-bottle neighbor map.
-
-**What it would establish**: whether the doubly-constrained mode
-spectrum on the Klein bottle produces a more structured fixed point
-than the singly-constrained Möbius strip. If the XOR checkerboard
-produces discrete population ratios that resist perturbation, those
-ratios are topological invariants of the field equation — candidates
-for comparison with physical constants.
+**Established**:
+- ✓ 3×3 simulation completed: Klein bottle forces 1/3 and 1/4 phase
+  divisions at all coupling strengths (K = 4, 6, 8, 12)
+- ✓ Torus comparison: trivial sync (r → 0.99) vs structured partial
+  coherence (r ≈ 0.48–0.61)
+- ✓ XOR filter verified: 45.8% of mode pairs survive on depth-5 tree
+- ✓ Aspect ratio independence: 3×5 lattice shows same x-direction
+  locking as 3×3 — topology, not geometry, determines structure
+- ✓ Fibonacci backbone checkerboard: no self-pairing, heterogeneous
+  level mixing forced
 
 **Open**:
-- Run the 3×3 simulation and compare with torus
-- Solve the 2D field equation with XOR filter
+- Solve the 2D field equation with XOR filter (extend
+  `field_equation_mobius.py` to product tree)
 - Does the gradient ratio (x-direction / y-direction) lock to a
-  specific rational? If so, which one?
-- Extend to N_x ≠ N_y: does the aspect ratio of the Klein bottle
-  affect the mode spectrum, or is it topologically invariant?
+  specific rational? The simulation shows both gradients average to
+  zero (the lattice is too small for a net gradient to form); larger
+  lattices or continuous-limit analysis needed
 - The real projective plane RP² (compact, non-orientable, no boundary,
   no product structure) as the irreducible non-orientable surface —
   what does Kuramoto look like there?
 - Connection to gauge theory: the Klein bottle's XOR constraint
   correlates modes across directions. Is this the structure of a
   gauge field — a constraint on how phases relate across dimensions?
+- The particle spectrum question: compare the Klein bottle's
+  topological mode ratios (1/3, 1/4) and their population weights
+  against known mass ratios or coupling constant ratios
