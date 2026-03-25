@@ -462,6 +462,102 @@ but (2/3, 2/3) ✗. No self-pairing allowed. The backbone is
 necessarily heterogeneous — each allowed pair mixes two different
 Fibonacci levels, one from each parity class.
 
+## Structural safety of the configuration budget
+
+### Nothing is lost
+
+The Klein bottle admits 45.8% of mode pairs (at tree depth 5). The
+remaining 54.2% — the (even, even) and (odd, odd) parity pairs —
+are excluded. A natural question: what happened to the excluded modes?
+Is their absence a problem? Does it require explanation?
+
+No. The excluded modes are not suppressed, decayed, or hidden. They
+are **not part of the configuration space**. The Klein bottle's
+topology does not admit them, the same way a guitar string does not
+admit wavelengths incommensurate with its length. The boundary
+conditions (here, the identification (0,y) ~ (1,1-y)) define which
+functions exist on the surface. Functions that violate the
+identification are not solutions that got discarded — they are
+non-functions on this surface. They were never in the budget.
+
+### Three kinds of absence
+
+It is important to distinguish the Klein bottle exclusion from other
+mechanisms that reduce the number of available states:
+
+**1. Symmetry breaking** (e.g., Higgs mechanism): a mode exists in
+the full theory but acquires a large mass, making it dynamically
+inaccessible at low energies. The mode is still in the Hilbert space.
+It can be excited with sufficient energy. Its absence at low energy
+requires explanation (why this vacuum? why this mass?).
+
+**2. Dissipation** (e.g., thermalization): a mode exists and is
+populated, but its energy leaks to an environment. There is a "before"
+state with the mode and an "after" state without it. The environment
+carries the record. Information is redistributed, not destroyed (in
+unitary QM) or irreversibly lost (in the framework's non-injective
+account, D16).
+
+**3. Topological exclusion** (Klein bottle): the mode does not exist
+on the surface. There is no "before" state that included it. No
+environment carries a record of it. No energy was required to remove
+it. The identification that defines the surface is the identification
+that excludes the mode. They are the same operation.
+
+The third kind is structurally safe because there is no process —
+dynamical, thermodynamic, or informational — that references the
+excluded modes. They are not addresses in the configuration space.
+No observable can probe them because no state on the Klein bottle
+couples to them.
+
+### No boundary means no exterior
+
+On the Möbius strip (one boundary), one could imagine an excitation
+reaching the boundary edge and coupling to an external system that
+does support the forbidden modes. The boundary is a surface where the
+Klein bottle's rules meet a region where different rules might apply.
+This is why D18 noted that the boundary is "a degree of freedom the
+geometry doesn't determine."
+
+The Klein bottle has no boundary. There is no edge where the internal
+topology meets an external topology. The 45.8% that survives the XOR
+filter is the totality of what exists on this surface. There is no
+exterior system that could, in principle, contain the (0,0) mode.
+The question "where did the excluded modes go?" has no referent.
+
+### The (0,0) mode and the impossibility of nothing
+
+The (0,0) mode — spatially uniform, temporally constant — would be
+the state where nothing happens anywhere at any time. The XOR rule
+forbids it. On the Klein bottle, absolute stasis is not a state. It
+is not that stasis is unstable, or energetically costly, or entropically
+disfavored. It is that stasis is not a function on this surface. The
+identification that makes the Klein bottle what it is — the same
+identification that produces the twist, the spatial structure, the
+rational divisions — is the identification that excludes nothing.
+
+This is the converse of the structural safety argument: not only is
+nothing lost, but nothing (the state of nothing happening) is
+specifically what is excluded. The topology requires that something
+varies — in space, in time, or in complementary combination. The
+minimum cost of existing on the Klein bottle is one unit of variation.
+
+### Connection to the fidelity bound
+
+Derivation 9 established that self-referential frequency measurement
+has bounded fidelity: a system measuring its own frequency cannot
+achieve infinite precision because the measurement instrument IS
+the dynamics. The fidelity bound produces the RAR shape, the collapse
+duration, and the uncertainty relation.
+
+The Klein bottle's topological exclusion is the geometric realization
+of this bound. The (0,0) mode would represent infinite precision:
+no variation in space, no variation in time, exact knowledge of the
+state for all positions and all moments. The topology forbids this
+mode. The fidelity bound is not a dynamical limitation — it is a
+topological one. The surface on which the dynamics occur does not
+admit the state that would correspond to unlimited precision.
+
 ## Status
 
 **Established**:
@@ -474,20 +570,39 @@ Fibonacci levels, one from each parity class.
   locking as 3×3 — topology, not geometry, determines structure
 - ✓ Fibonacci backbone checkerboard: no self-pairing, heterogeneous
   level mixing forced
+- ✓ Time identified with the periodic (y) direction; space with the
+  antiperiodic (x) direction. Confirmed by simulation: x carries
+  structure (~2.5 rad span), y carries evolution (~0.2 rad variation)
+- ✓ r ≈ 0.5 explained as topological equilibrium: XOR forbids (0,0)
+  full-sync mode, forcing partial coherence at all coupling strengths
+- ✓ Configuration budget is structurally safe: excluded modes are
+  non-functions on the surface, not suppressed states. No boundary
+  means no exterior to leak to. (0,0) stasis is topologically
+  excluded — the fidelity bound realized geometrically
 
 **Open**:
-- Solve the 2D field equation with XOR filter (extend
-  `field_equation_mobius.py` to product tree)
-- Does the gradient ratio (x-direction / y-direction) lock to a
-  specific rational? The simulation shows both gradients average to
-  zero (the lattice is too small for a net gradient to form); larger
-  lattices or continuous-limit analysis needed
-- The real projective plane RP² (compact, non-orientable, no boundary,
-  no product structure) as the irreducible non-orientable surface —
-  what does Kuramoto look like there?
-- Connection to gauge theory: the Klein bottle's XOR constraint
-  correlates modes across directions. Is this the structure of a
-  gauge field — a constraint on how phases relate across dimensions?
-- The particle spectrum question: compare the Klein bottle's
-  topological mode ratios (1/3, 1/4) and their population weights
-  against known mass ratios or coupling constant ratios
+- Solve the 2D field equation with XOR filter on the product
+  Stern-Brocot tree. The 1D Möbius field equation
+  (`field_equation_mobius.py`) shows the twist changes the fixed
+  point. The 2D version with the full XOR constraint is the next
+  calculation. This is where population ratios become quantitative.
+- The particle spectrum question remains the load-bearing test:
+  do the Klein bottle's topological mode ratios and their population
+  weights at the field equation's fixed point correspond to observed
+  mass ratios or coupling constant ratios? The XOR checkerboard on
+  the 2D tree produces a specific, computable population vector.
+  Comparing it against known physics is a finite computation.
+- RP² (real projective plane): compact, non-orientable, no boundary,
+  but not a product of two circles. It is the quotient of S² by the
+  antipodal map. Kuramoto on RP² would impose a single global
+  antiperiodic constraint without the product structure of the Klein
+  bottle. Whether this produces a different (simpler? more
+  constrained?) mode spectrum is an open question.
+- Gauge connection: the XOR rule correlates the parity of modes
+  across two directions. This is formally identical to a Z₂ gauge
+  constraint — the "gauge field" is the parity, and the constraint
+  is that the product of parities around a non-contractible loop
+  equals -1 (the twist). Whether this is literally a gauge field
+  in the physics sense, or merely structurally analogous, requires
+  checking whether the Klein bottle's holonomy reproduces the
+  structure of known gauge groups.
