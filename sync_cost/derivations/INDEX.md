@@ -110,6 +110,7 @@ These build on each other sequentially:
 | `dimension_loop.py` | F₃ = F₂² − 1 = 3: the unique Fibonacci identity linking Klein bottle q=3, spatial dimension d=3, and proslambenomenos Λ/3. |
 | `coupling_running.py` | β-functions from topology (zero free parameters). α₃/α₂ = 2/3 at 10⁸ GeV (see-saw scale). |
 | `normalization_v2.py` | α ∝ q²: α₃/α₂ = 9/4 at 17 TeV (hierarchy scale). Two Klein bottle ratios → two physical scales, linked the way SUSY GUTs link them but without superpartners. |
+| `20_xor_continuum_limit.md` | **The load-bearing computation.** Takes the XOR-filtered tree to K=1 continuum limit. Result: Klein bottle gives O(3) → Pin⁺(3) ≅ SU(2) × Z₂ from the frame bundle, but NOT SU(3) and NOT Yang-Mills. The XOR denominator-parity filter dissolves in the continuum — it is a discrete structure with no smooth analog. Honest negative: the frame bundle route does not produce the Standard Model. Two open paths remain: (1) the physical system is discrete (finite tree IS the configuration space), (2) gauge structure emerges from the mean-field functional F, not the tangent bundle. |
 
 ### Phase 14: The observational line
 
@@ -145,7 +146,8 @@ These build on each other sequentially:
 | `17_rank1_temporal_causation.md` | **Current** | Rank-1 Fréchet derivative as temporal causation: ker(DU) = the past (decayed modes), im(DU) = the future (one active direction), ⟨v,·⟩ = the present (scalar sufficient statistic). Forced by SO(2) rank-1 × codimension-1 × Markov. |
 | `18_mobius_container.md` | **Current** | Bounded Möbius container as simulation target. Antiperiodic BC forces odd-mode selection, rational phase divisions from single perturbation. N=3 minimum, K>4γ threshold. Fully specified numerical experiment. |
 | `18_mobius_container.md` | **Current** | Bounded Möbius container. Antiperiodic BC forces rational divisions from single perturbation. Coherence length analysis: arms form freely, snap to quantized gradient at t_reflect. N=3 minimum. |
-| `19_klein_bottle.md` | **Current** | Fully closed non-orientable container. XOR parity constraint collapses 1,764 mode pairs to 4 survivors at (q₁,q₂) = (2,3) and (3,2). Population ratio 2/3 = perfect fifth. F₃ = F₂²−1 closes the dimension loop (algebraically verified). **Conjectural**: fractions {1/3, 1/2, 2/3} numerically match quark charges + weak isospin, but these are also the simplest fractions on the tree — the structural identity between topological mode selection and gauge quantum numbers has not been derived. |
+| `19_klein_bottle.md` | **Current** | Fully closed non-orientable container. XOR parity constraint collapses 1,764 mode pairs to 4 survivors at (q₁,q₂) = (2,3) and (3,2). Population ratio 2/3 = perfect fifth. F₃ = F₂²−1 closes the dimension loop (algebraically verified). **Conjectural**: fractions {1/3, 1/2, 2/3} numerically match quark charges + weak isospin, but these are also the simplest fractions on the tree — structural identity not derived. See D20 for the honest negative. |
+| `20_xor_continuum_limit.md` | **Current** | The XOR-filtered continuum limit does NOT produce SU(3) or Yang-Mills from the frame bundle. Pin⁺(3) ≅ SU(2) × Z₂ emerges but this is spin/parity, not weak gauge. The discrete XOR filter dissolves in the continuum. Two open paths: discrete-is-physical, or gauge from mean-field F. |
 
 ## Supporting / Earlier Work
 
