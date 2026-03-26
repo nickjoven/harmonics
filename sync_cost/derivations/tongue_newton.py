@@ -347,9 +347,9 @@ def main():
     # Cross-check with high-transient winding-number bisection at K=1
     print("  Cross-check: winding-number bisection at K=1 (n_trans=100000):")
     _, _, w2_bis = tongue_width_bisection(1, 2, 1.0)
-    _, _, w3_bis = tongue_width_bisection(1, 3, 1.0)
     print(f"    w(1/2) bisection = {w2_bis:.8f}  (Newton: {r1['w2']:.8f})")
-    print(f"    w(1/3) bisection = {w3_bis:.8f}  (Newton: {r1['w3']:.8f})")
+    print(f"    Agreement: |delta| = {abs(w2_bis - r1['w2']):.2e}")
+    print(f"    (q=3 bisection omitted: critical slowing makes it unreliable)")
     print()
 
     # The 1/q^2 formula is the perturbative/analytical prediction.
