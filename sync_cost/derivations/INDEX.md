@@ -171,6 +171,7 @@ These build on each other sequentially:
 | `28_farey_proof.md` | **Current** | Farey partition derived (not observed): SO(2) structure at locked/unlocked boundary forces Farey counting. Closes D25 gap. |
 | `29_mediant_derivation.md` | **Current** | Mediant derived as unique operation satisfying monotonicity-preservation + denominator-additivity + convergent-stability. Configuration space is unique. Closes D10 foundational gap. |
 | `30_denomination_boundary.md` | **Current** | Three open questions unified: denomination boundary = devil's staircase in K-space. Staircase is variational minimum (brachistochrone). Pythagorean comma = 19 = Ω_Λ denominator. XOR asymmetry: q=2 open, q=3 locked = confinement. Klein bottle topology inverts mode hierarchy (torus: 1/1 dominates; Klein: 1/3 dominates). GCD as gauge transformation gives Z₆ = center(SU(2)×SU(3)). |
+| `31_speed_of_light.md` | **New** | c as gate propagation speed of the coherent medium. Phase coincidence = gate. K=1 = maximum gate correlation = maximum speed. Nilpotent N₊ = constant velocity (N₊²=0 → no acceleration). Coherence = speed differential. Lorentz boost = relative phase gradient. |
 
 ### Phase 16: The denomination boundary
 
@@ -194,6 +195,12 @@ These build on each other sequentially:
 | `xor_asymmetry.py` | **XOR asymmetry = confinement**: q=2 (even) fiber open → SU(2) unconfined. q=3 (odd) fiber locked → SU(3) confines. Asymmetry ratio = K/2 = the mediator mode. |
 | `slip_structure.py` | Slip is not flat: velocity histogram shows sub-plateaus at mediant frequencies. Dwell time graded by Stern-Brocot depth. |
 | `klein_slip_structure.py` | **Klein bottle reshapes mode occupation**: torus locks to 1/1 (59%), Klein locks to 1/3 (48%). Topology inverts the hierarchy. The slip is where particle physics lives. |
+
+### Phase 17: The speed of light
+
+| File | Role |
+|------|------|
+| `31_speed_of_light.md` | **c derived as gate propagation speed**: the speed of light is the rate at which phase coincidence (the "gate of observability") sweeps through a coherent oscillator medium. Pendulums in phase have coordinated zero-crossings; a photon rides the wave of gate-openings. c is maximum because K=1 gives maximum gate correlation. c is constant because it is a structure constant of sl(2,R) (ratio of parabolic to compact generator), preserved by all SL(2,C) transformations. Coherence = zero speed differential = same rest frame. The Lorentz boost is relative phase gradient between coherent domains. Connects to Iwasawa N-factor (Derivation 6), complexification quotient (Derivation 14). |
 
 ### Proof Chains (geometric proof format)
 
