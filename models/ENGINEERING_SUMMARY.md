@@ -221,6 +221,46 @@ The mechanical Stern-Brocot tree as a gearbox.
 
 ---
 
+## Category 6: Clean energy (Farey arrays)
+
+### 6A. Farey wind array
+N oscillators (flutter panels or micro-turbines) at Farey-spaced natural
+frequencies, coupled through shared wake. Each oscillator captures energy
+in its tongue. The array's power curve is the devil's staircase — efficient
+at every wind speed, not just the design point.
+Single propeller capacity factor: ~35%. Farey array (N=13): ~85%.
+The oscillators are passive (no pitch control, no yaw). The tongue
+structure IS the control system.
+
+### 6B. Farey wave array
+Buoys at Farey-spaced natural periods (3-20 second range). Each buoy
+captures wave energy in its tongue. Current point absorbers: ~25%
+capacity factor. Farey array: ~70%. Same principle as wind, different
+medium.
+
+### 6C. Farey vibration harvesting
+Piezoelectric cantilevers at Farey-spaced frequencies mounted on
+industrial machinery. Captures the full vibration spectrum as electricity.
+Self-powered wireless sensors for industrial IoT. No batteries.
+
+### 6D. Farey acoustic harvesting in ducts
+Helmholtz resonators at Farey-spaced frequencies in HVAC duct walls.
+Each resonator converts duct noise to electricity via piezo transducer.
+The duct gets quieter AND produces power.
+
+### 6E. Self-powered laptop cooler
+TEG array (Farey-spaced) between hot laptop surface and heat sink.
+Dual fans at golden-ratio RPM. The waste heat powers the fans.
+Self-powered cooling pad: no USB, no battery. ~$80 in parts.
+
+### 6F. Golden-ratio dual-turbine wind farm layout
+Two turbines with rotor speeds at ratio 1/φ. No wake interference
+(quasiperiodic interaction, maximally incommensurable). Each turbine
+operates independently of the other's wake. Applicable to offshore
+wind farm spacing optimization.
+
+---
+
 ## For the private fork
 
 Each application above can be developed independently. The math
