@@ -29,11 +29,17 @@ Binary and ternary compositions of the four primitives. Examples:
 
 ### Layer 2: Structures (Compositions of Derived Types)
 
+**Location**: `structures/`
+
 Compositions of Layer 1 objects into the full geometric and dynamical structures:
 
-- The devil's staircase (all tongues assembled)
-- The Farey graph (all mediants assembled)
-- The circle map (all bifurcations assembled)
+- Coupling constants from duty cycles (`coupling.md`)
+- The Weinberg angle (`weinberg.md`)
+- Three generations of fermions (`generations.md`)
+- 12 gauge bosons (`gauge.md`)
+- Clifford algebra Cl(3,1) (`clifford.md`)
+- Conservation from compactness (`conservation.md`)
+- Higgs mass from crossing curvature (`higgs.md`)
 
 **Tested by**: self-consistency — the structure must satisfy the fixed-point condition globally, not just locally.
 
@@ -41,12 +47,12 @@ Compositions of Layer 1 objects into the full geometric and dynamical structures
 
 **Location**: `predictions/`
 
-Concrete numbers derived from the structures, compared against observation:
+Concrete numbers derived from the structures, compared against observation. 12 predictions, all under 3.5% residual, no free parameters:
 
-- Tongue widths at specific parameter values
-- Rotation numbers at specific parameter values
-- Critical exponents at the golden mean
-- Fractal dimensions of the staircase complement
+- α_s/α₂ = 27/8 (3.2%), sin²θ_W = 8/35 (1.1%), m_H = v/q₂ (1.6%)
+- m_τ/m_e = 26^(5/2) (0.9%), Ω_Λ ∈ [13/19, 11/16] (within band)
+- d = 3, signature (3,1), generations = 3, gauge bosons = 12 (all exact)
+- Born exponent = 2, Cl(3,1), conservation (all exact)
 
 **Tested by**: observation — the predicted number must match the measured number within stated precision.
 
