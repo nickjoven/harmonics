@@ -6,3 +6,5 @@ __pycache__/
 
 # Rust build artifacts
 seed/target/
+models/
+engine/
