@@ -311,6 +311,105 @@ function draw(t) {
   ctx.fill();
   ctx.globalAlpha = 1;
 
+  // === SPOKED WHEEL ===
+  // The wagon wheel effect IS mode-locking: apparent rotation locks
+  // to rationals of (spoke frequency / frame rate). The wheel spins
+  // at true rate proportional to t, but we SAMPLE it at discrete
+  // frames. At certain speeds it appears to reverse. That's an
+  // Arnold tongue.
+  (function drawWheel() {
+    var wheelX = W - 90, wheelY = 80, wheelR = 32;
+    var nSpokes = 8;
+    // True angular velocity increases with K (more coupling = more spin)
+    var trueOmega = 0.3 + K * 4.5;
+    // The winding number of the wheel: how the discrete sampling
+    // aliases the true rotation. This IS the staircase.
+    var sampledAngle = (trueOmega * t * 0.001) % (Math.PI * 2);
+    // At certain K, the spoke pattern appears locked/reversed
+    var spokeAngle = sampledAngle;
+
+    ctx.save();
+    ctx.translate(wheelX, wheelY);
+    ctx.globalAlpha = 0.25 + K * 0.25;
+
+    // Rim
+    ctx.beginPath();
+    ctx.arc(0, 0, wheelR, 0, Math.PI * 2);
+    ctx.strokeStyle = season.bar;
+    ctx.lineWidth = 1.2;
+    ctx.stroke();
+
+    // Hub
+    ctx.beginPath();
+    ctx.arc(0, 0, 3, 0, Math.PI * 2);
+    ctx.fillStyle = season.bar;
+    ctx.fill();
+
+    // Spokes
+    ctx.lineWidth = 0.8;
+    for (var s = 0; s < nSpokes; s++) {
+      var a = spokeAngle + (s / nSpokes) * Math.PI * 2;
+      ctx.beginPath();
+      ctx.moveTo(Math.cos(a) * 3, Math.sin(a) * 3);
+      ctx.lineTo(Math.cos(a) * wheelR, Math.sin(a) * wheelR);
+      ctx.strokeStyle = season.bar;
+      ctx.stroke();
+    }
+    ctx.restore();
+  })();
+
+  // === HEDGEHOG ===
+  // 5px tall. Absurdly fast. Speed proportional to K.
+  (function drawHedgehog() {
+    var speed = 60 + K * 900; // pixels per second
+    var hY = H - 58;
+    var hX = (speed * t * 0.001) % (W + 40) - 20;
+
+    ctx.save();
+    ctx.globalAlpha = 0.35 + K * 0.35;
+
+    // Body (blue oval)
+    ctx.fillStyle = "#3355aa";
+    ctx.beginPath();
+    ctx.ellipse
+      ? ctx.ellipse(hX, hY, 7, 5, 0, 0, Math.PI * 2)
+      : (ctx.arc(hX, hY, 6, 0, Math.PI * 2)); // fallback
+    ctx.fill();
+
+    // Spines (3 lines trailing back)
+    ctx.strokeStyle = "#4466cc";
+    ctx.lineWidth = 1;
+    var spineLen = 4 + K * 6;
+    for (var sp = 0; sp < 3; sp++) {
+      var sAngle = Math.PI * 0.75 + sp * 0.25;
+      ctx.beginPath();
+      ctx.moveTo(hX - 3, hY - 2 + sp * 2);
+      ctx.lineTo(hX - 3 - Math.cos(sAngle) * spineLen, hY - 2 + sp * 2 - Math.sin(sAngle) * spineLen);
+      ctx.stroke();
+    }
+
+    // Eye
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(Math.round(hX + 4), Math.round(hY - 2), 1, 1);
+
+    // Speed lines (only at high K)
+    if (K > 0.5) {
+      ctx.strokeStyle = season.bar;
+      ctx.globalAlpha = (K - 0.5) * 0.4;
+      ctx.lineWidth = 0.5;
+      for (var sl = 0; sl < 3; sl++) {
+        var slX = hX - 12 - sl * 8 - ((t * 0.3) % 12);
+        var slY = hY - 1 + sl * 2;
+        ctx.beginPath();
+        ctx.moveTo(slX, slY);
+        ctx.lineTo(slX - 5 - K * 8, slY);
+        ctx.stroke();
+      }
+    }
+
+    ctx.restore();
+  })();
+
   // Season bar
   var bar = document.getElementById("season-bar");
   var progress = idx / (concepts.length - 1);
