@@ -583,9 +583,342 @@ function initContent() {
 
 
 // ═══════════════════════════════════════════════════════════════════
-// PHASE 2 PLACEHOLDER: initAnimations()
+// PHASE 2: PROCEDURAL CANVAS ANIMATIONS
 // ═══════════════════════════════════════════════════════════════════
-// Will be filled with procedural canvas animations per step
+
+function initAnimations() {
+  const anims = [];
+
+  function anim(id, drawFn) {
+    const c = document.getElementById(id);
+    if (!c) return;
+    anims.push({ ctx: c.getContext('2d'), w: c.width, h: c.height, draw: drawFn, t: 0 });
+  }
+
+  // ── 0. Void: empty black, single pixel pulses into existence ──
+  anim('vis-void', (ctx, w, h, t) => {
+    ctx.clearRect(0, 0, w, h);
+    const alpha = Math.max(0, Math.sin(t * 0.02) * 0.6);
+    const r = 1 + alpha * 2;
+    ctx.fillStyle = `rgba(200,200,200,${alpha})`;
+    ctx.beginPath();
+    ctx.arc(w/2, h/2, r, 0, TAU);
+    ctx.fill();
+  });
+
+  // ── 1. First Bit: binary split, 0/1 flickering columns ──
+  anim('vis-bit', (ctx, w, h, t) => {
+    ctx.clearRect(0, 0, w, h);
+    const split = Math.min(t * 0.005, 1);
+    const gap = split * w * 0.4;
+    // Left: 0
+    ctx.fillStyle = `rgba(200,100,100,${0.3 + 0.2 * Math.sin(t*0.05)})`;
+    ctx.font = '48px Courier New';
+    ctx.textAlign = 'center';
+    ctx.fillText('0', w/2 - gap/2 - 20, h/2 + 16);
+    // Right: 1
+    ctx.fillStyle = `rgba(100,100,200,${0.3 + 0.2 * Math.cos(t*0.05)})`;
+    ctx.fillText('1', w/2 + gap/2 + 20, h/2 + 16);
+    // Dividing line
+    ctx.strokeStyle = `rgba(255,255,255,${split * 0.3})`;
+    ctx.lineWidth = 0.5;
+    ctx.setLineDash([3, 5]);
+    ctx.beginPath();
+    ctx.moveTo(w/2, 10);
+    ctx.lineTo(w/2, h - 10);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.textAlign = 'left';
+  });
+
+  // ── 2. Golden spiral unfolding ──
+  anim('vis-phi', (ctx, w, h, t) => {
+    ctx.clearRect(0, 0, w, h);
+    const cx = w * 0.45, cy = h * 0.55;
+    const maxTheta = Math.min(t * 0.03, 6 * TAU);
+    ctx.strokeStyle = 'rgba(200,180,100,0.6)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    const steps = 500;
+    for (let i = 0; i <= steps; i++) {
+      const theta = (i / steps) * maxTheta;
+      const r = 2 * Math.pow(PHI, theta / (TAU/4));
+      if (r > w) break;
+      const x = cx + Math.cos(theta) * r;
+      const y = cy - Math.sin(theta) * r;
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+    // φ label
+    ctx.fillStyle = 'rgba(200,180,100,0.4)';
+    ctx.font = '11px Courier New';
+    ctx.fillText('φ = 1.618...', 8, 16);
+  });
+
+  // ── 3. Möbius strip: figure-8 ribbon rotating ──
+  anim('vis-mobius', (ctx, w, h, t) => {
+    ctx.clearRect(0, 0, w, h);
+    const cx = w/2, cy = h/2;
+    const rot = t * 0.008;
+    ctx.strokeStyle = 'rgba(150,150,200,0.5)';
+    ctx.lineWidth = 1;
+    // Draw Möbius as parametric curve (Lissajous-like with twist)
+    const N = 200;
+    for (let strip = -1; strip <= 1; strip += 2) {
+      ctx.beginPath();
+      for (let i = 0; i <= N; i++) {
+        const u = (i / N) * TAU;
+        // Möbius parametric in 2D projection
+        const R = 50;
+        const halfW = 12;
+        const x = cx + (R + halfW * strip * Math.cos(u/2)) * Math.cos(u + rot);
+        const y = cy + (R + halfW * strip * Math.cos(u/2)) * Math.sin(u + rot) * 0.4;
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    }
+    // det = -1 label
+    ctx.fillStyle = 'rgba(150,150,200,0.3)';
+    ctx.font = '10px Courier New';
+    ctx.fillText('det = −1', 8, 16);
+  });
+
+  // ── 4. Klein bottle: XOR parity grid pulsing ──
+  anim('vis-klein', (ctx, w, h, t) => {
+    ctx.clearRect(0, 0, w, h);
+    const cols = 6, rows = 6;
+    const cw = w / (cols + 2), ch = h / (rows + 2);
+    for (let i = 0; i < cols; i++) {
+      for (let j = 0; j < rows; j++) {
+        const xor = (i % 2) ^ (j % 2);
+        const pulse = 0.2 + 0.15 * Math.sin(t * 0.03 + i * 0.5 + j * 0.7);
+        const x = cw + i * cw, y = ch + j * ch;
+        if (xor) {
+          ctx.fillStyle = `rgba(100,200,160,${pulse})`;
+          ctx.fillRect(x, y, cw - 2, ch - 2);
+        } else {
+          ctx.strokeStyle = `rgba(80,80,80,${pulse * 0.5})`;
+          ctx.lineWidth = 0.5;
+          ctx.strokeRect(x, y, cw - 2, ch - 2);
+        }
+      }
+    }
+    ctx.fillStyle = 'rgba(100,200,160,0.3)';
+    ctx.font = '10px Courier New';
+    ctx.fillText('XOR', 8, 16);
+    ctx.fillText('q₂=2  q₃=3', 8, 28);
+  });
+
+  // ── 5. Devil's staircase unfolding ──
+  anim('vis-stairs', (ctx, w, h, t) => {
+    ctx.clearRect(0, 0, w, h);
+    // Build staircase from Farey fractions
+    const fracs = [0, 1/6, 1/5, 1/4, 1/3, 2/5, 1/2, 3/5, 2/3, 3/4, 4/5, 5/6, 1];
+    const progress = Math.min(t * 0.004, 1);
+    const shown = Math.floor(progress * fracs.length);
+    const margin = 20;
+    const pw = w - margin * 2, ph = h - margin * 2;
+
+    ctx.strokeStyle = 'rgba(200,120,80,0.6)';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(margin, h - margin);
+    for (let i = 0; i < shown; i++) {
+      const x1 = margin + fracs[i] * pw;
+      const x2 = margin + (fracs[i+1] || fracs[i]) * pw;
+      const y = h - margin - (i / (fracs.length - 1)) * ph;
+      const yNext = h - margin - ((i + 1) / (fracs.length - 1)) * ph;
+      // Horizontal plateau
+      ctx.lineTo(x2, y);
+      // Vertical riser
+      if (i < shown - 1) ctx.lineTo(x2, yNext);
+    }
+    ctx.stroke();
+
+    // Gap indicator
+    const gapAlpha = Math.max(0, Math.sin(t * 0.02) * 0.4);
+    ctx.fillStyle = `rgba(200,80,80,${gapAlpha})`;
+    ctx.font = '10px Courier New';
+    ctx.fillText('gap = 18.7%', 8, 16);
+    ctx.fillText('|F₆| = 13', 8, 28);
+  });
+
+  // ── 6. Kuramoto synchronization + rose curve ──
+  anim('vis-sync', (ctx, w, h, t) => {
+    ctx.clearRect(0, 0, w, h);
+
+    // Left half: Kuramoto dots on circle
+    const cx1 = w * 0.28, cy1 = h / 2, R = 55;
+    const nDots = 8;
+    ctx.strokeStyle = 'rgba(100,100,100,0.3)';
+    ctx.lineWidth = 0.5;
+    ctx.beginPath();
+    ctx.arc(cx1, cy1, R, 0, TAU);
+    ctx.stroke();
+
+    // Dots sync over time
+    const syncRate = Math.min(t * 0.001, 0.95);
+    for (let i = 0; i < nDots; i++) {
+      const natural = i * TAU / nDots;
+      const target = 0; // sync to 0
+      const phase = natural * (1 - syncRate) + target * syncRate + t * 0.01;
+      const x = cx1 + Math.cos(phase) * R;
+      const y = cy1 + Math.sin(phase) * R;
+      ctx.fillStyle = `rgba(100,180,255,${0.5 + 0.3 * syncRate})`;
+      ctx.beginPath();
+      ctx.arc(x, y, 3, 0, TAU);
+      ctx.fill();
+    }
+
+    // Right half: rose curve r = cos(5θ)
+    const cx2 = w * 0.72, cy2 = h / 2, R2 = 55;
+    const maxAng = Math.min(t * 0.02, TAU);
+    ctx.strokeStyle = 'rgba(200,100,180,0.5)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    for (let i = 0; i <= 300; i++) {
+      const theta = (i / 300) * maxAng;
+      const r = R2 * Math.cos(5 * theta);
+      const x = cx2 + r * Math.cos(theta);
+      const y = cy2 + r * Math.sin(theta);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+
+    ctx.fillStyle = 'rgba(100,180,255,0.3)';
+    ctx.font = '10px Courier New';
+    ctx.fillText('K_c = 2/π', 8, 16);
+  });
+
+  // ── 7. Spiraling mediants toward 1/φ + triangle overturning ──
+  anim('vis-boundary', (ctx, w, h, t) => {
+    ctx.clearRect(0, 0, w, h);
+
+    // Left: Stern-Brocot mediants spiraling to 1/φ
+    const cx1 = w * 0.3, cy1 = h/2;
+    // Fibonacci ratios approaching 1/φ
+    const fibs = [1,1,2,3,5,8,13,21,34,55];
+    const shown = Math.min(Math.floor(t * 0.02), fibs.length - 1);
+    const R = 60;
+
+    for (let i = 0; i < shown; i++) {
+      const ratio = fibs[i] / fibs[i + 1];
+      const angle = ratio * TAU + i * 0.3;
+      const dist = R * (1 - i / fibs.length * 0.6);
+      const x = cx1 + Math.cos(angle) * dist;
+      const y = cy1 + Math.sin(angle) * dist;
+      const alpha = 0.3 + 0.3 * (i / shown);
+      ctx.fillStyle = `rgba(180,140,220,${alpha})`;
+      ctx.beginPath();
+      ctx.arc(x, y, 2.5 - i * 0.15, 0, TAU);
+      ctx.fill();
+      // Connect
+      if (i > 0) {
+        const pRatio = fibs[i-1] / fibs[i];
+        const pAngle = pRatio * TAU + (i-1) * 0.3;
+        const pDist = R * (1 - (i-1) / fibs.length * 0.6);
+        const px = cx1 + Math.cos(pAngle) * pDist;
+        const py = cy1 + Math.sin(pAngle) * pDist;
+        ctx.strokeStyle = `rgba(180,140,220,${alpha * 0.5})`;
+        ctx.lineWidth = 0.5;
+        ctx.beginPath();
+        ctx.moveTo(px, py);
+        ctx.lineTo(x, y);
+        ctx.stroke();
+      }
+    }
+
+    // Right: triangle overturning (rotating equilateral)
+    const cx2 = w * 0.72, cy2 = h/2;
+    const triR = 40;
+    const flipAngle = t * 0.015;
+    ctx.strokeStyle = 'rgba(180,140,220,0.5)';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    for (let v = 0; v <= 3; v++) {
+      const a = flipAngle + (v % 3) * (TAU / 3) - Math.PI / 2;
+      // Simulate overturning by squashing Y
+      const squash = Math.cos(t * 0.02);
+      const x = cx2 + Math.cos(a) * triR;
+      const y = cy2 + Math.sin(a) * triR * squash;
+      if (v === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+
+    ctx.fillStyle = 'rgba(180,140,220,0.3)';
+    ctx.font = '10px Courier New';
+    ctx.fillText('Ω_Λ = 0.6847', 8, 16);
+  });
+
+  // ── 8. The Address: orbital tree ──
+  anim('vis-address', (ctx, w, h, t) => {
+    ctx.clearRect(0, 0, w, h);
+
+    // Tree branching from left
+    const startX = 30, startY = h/2;
+    const depth = 7;
+    const branchLen = 35;
+    const progress = Math.min(t * 0.003, 1);
+
+    function branch(x, y, angle, d, maxD) {
+      if (d > maxD * progress || d > maxD) return;
+      const endX = x + Math.cos(angle) * branchLen * Math.pow(0.72, d);
+      const endY = y + Math.sin(angle) * branchLen * Math.pow(0.72, d);
+      const alpha = 0.15 + 0.35 * (1 - d / maxD);
+      ctx.strokeStyle = `rgba(150,200,150,${alpha})`;
+      ctx.lineWidth = Math.max(0.5, 2 - d * 0.25);
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      ctx.lineTo(endX, endY);
+      ctx.stroke();
+      // Branch
+      const spread = 0.5 * Math.pow(0.85, d);
+      branch(endX, endY, angle - spread, d + 1, maxD);
+      branch(endX, endY, angle + spread, d + 1, maxD);
+    }
+    branch(startX, startY, 0, 0, depth);
+
+    // Orbiting dot at the "address" depth
+    const orbitR = 15;
+    const orbitAngle = t * 0.02;
+    const addrX = w * 0.78 + Math.cos(orbitAngle) * orbitR;
+    const addrY = h * 0.4 + Math.sin(orbitAngle) * orbitR;
+    ctx.fillStyle = 'rgba(150,200,150,0.6)';
+    ctx.beginPath();
+    ctx.arc(addrX, addrY, 3, 0, TAU);
+    ctx.fill();
+
+    // Trail
+    for (let i = 1; i <= 8; i++) {
+      const trailAngle = orbitAngle - i * 0.15;
+      const tx = w * 0.78 + Math.cos(trailAngle) * orbitR;
+      const ty = h * 0.4 + Math.sin(trailAngle) * orbitR;
+      ctx.fillStyle = `rgba(150,200,150,${0.3 - i * 0.035})`;
+      ctx.beginPath();
+      ctx.arc(tx, ty, 2, 0, TAU);
+      ctx.fill();
+    }
+
+    ctx.fillStyle = 'rgba(150,200,150,0.3)';
+    ctx.font = '10px Courier New';
+    ctx.fillText('145.8 levels', 8, 16);
+    ctx.fillText('9 digits', 8, 28);
+  });
+
+  // ── Animation loop ──
+  function tick() {
+    for (const a of anims) {
+      a.t++;
+      a.draw(a.ctx, a.w, a.h, a.t);
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
 
 
 // ═══════════════════════════════════════════════════════════════════
