@@ -149,6 +149,18 @@ tx_norm = (TX / tx_max - 0.5) * 1.7
 ty_up = -TD * 0.17 + 0.82     # upper tree: root at top, grows down
 ty_dn = TD * 0.17 - 0.82      # lower tree: root at bottom, grows up
 
+# Ball trail (afterimage)
+TRAIL_LEN = 12
+ball_trail = []  # list of (x, y) recent positions
+trail_dots = [plt.Circle((0, 0), 0.02, color="white", alpha=0, visible=False)
+              for _ in range(TRAIL_LEN)]
+for dot in trail_dots:
+    ax.add_patch(dot)
+
+# Spiral point markers (for Stage 4)
+N_SPIRAL_MARKERS = 20
+spiral_markers = ax.scatter([], [], s=30, c="white", alpha=0, zorder=6)
+
 # Ball physics state
 ball_state = {"x": 0.0, "y": 0.0, "vx": 0.03, "vy": 0.018,
               "converging": False, "conv_start": 0}
@@ -159,6 +171,7 @@ def reset_ball():
     ball_state["vx"] = 0.03
     ball_state["vy"] = 0.018
     ball_state["converging"] = False
+    ball_trail.clear()
 
 # ---------------------------------------------------------------------------
 # Frame update
@@ -183,6 +196,11 @@ def update(frame):
     tree_lines_dn.set_alpha(0)
     twist_line.set_alpha(0)
     twist_dot.set_visible(False)
+    for dot in trail_dots:
+        dot.set_visible(False)
+        dot.set_alpha(0)
+    spiral_markers.set_alpha(0)
+    spiral_markers.set_offsets(np.empty((0, 2)))
     fig.set_facecolor("black")
     ax.set_facecolor("black")
 
@@ -240,24 +258,32 @@ def update(frame):
         yaxis_line.set_data([0, 0], [-1.1, 1.1])
         yaxis_line.set_alpha(0.15)
 
-        # Paddles
+        # Coupling: paddles drift inward as t grows, oscillation dampens
+        coupling = ease_in_out(t)  # 0 → 1 over the stage
+        pad_wall = 1.05 - coupling * 0.45  # paddles: 1.05 → 0.60
+        bounce_wall = pad_wall - 0.10
+
         paddle_l.set_visible(True)
         paddle_r.set_visible(True)
+        paddle_l.set_x(-pad_wall)
+        paddle_r.set_x(pad_wall - 0.04)
 
-        # Ball bouncing
+        # Ball bouncing with dampened velocity
         bx, by = ball_state["x"], ball_state["y"]
         vx, vy = ball_state["vx"], ball_state["vy"]
 
-        bx += vx
-        by += vy
+        # Dampen horizontal oscillation as coupling increases
+        speed_scale = 1.0 - 0.6 * coupling
+        bx += vx * speed_scale
+        by += vy * speed_scale
 
-        # Bounce off paddles
-        if bx < -0.95:
+        # Bounce off paddles (walls close in)
+        if bx < -bounce_wall:
             vx = abs(vx)
-            bx = -0.95
-        if bx > 0.95:
+            bx = -bounce_wall
+        if bx > bounce_wall:
             vx = -abs(vx)
-            bx = 0.95
+            bx = bounce_wall
         # Bounce off top/bottom
         if abs(by) > 0.85:
             vy = -vy
@@ -271,14 +297,36 @@ def update(frame):
         ball.center = (bx, by)
         ball.set_visible(True)
 
-        # Paddles track ball y
-        paddle_l.set_y(by - 0.15 + np.random.normal(0, 0.02))
-        paddle_r.set_y(by - 0.15 + np.random.normal(0, 0.02))
+        # Afterimage trail
+        ball_trail.append((bx, by))
+        if len(ball_trail) > TRAIL_LEN:
+            ball_trail.pop(0)
+        for i, dot in enumerate(trail_dots):
+            if i < len(ball_trail):
+                tx_, ty_ = ball_trail[i]
+                age = (i + 1) / len(ball_trail)  # 0..1, newest = 1
+                dot.center = (tx_, ty_)
+                dot.set_radius(0.015 + 0.01 * age)
+                dot.set_alpha(age * 0.35 * (0.5 + 0.5 * coupling))
+                dot.set_visible(True)
+                # Trail colour shifts toward yellow as coupling grows
+                r_c = coupling
+                dot.set_color((1.0, 1.0, 1.0 - 0.6 * r_c))
 
-        # Score-like label
-        if t > 0.3:
+        # Paddles track ball y (noise decreases with coupling)
+        noise = np.random.normal(0, 0.02 * (1 - 0.8 * coupling))
+        paddle_l.set_y(by - 0.15 + noise)
+        paddle_r.set_y(by - 0.15 + noise)
+
+        # Label: exchange count → "maximum coupling"
+        if t > 0.3 and t < 0.75:
             txt_small.set_text(f"exchange {int(t * 12)}")
             txt_small.set_alpha(0.3)
+            txt_small.set_position((0, 0.92))
+        elif t >= 0.75:
+            mc_alpha = ease_in_out((t - 0.75) / 0.25)
+            txt_small.set_text("maximum coupling")
+            txt_small.set_alpha(mc_alpha * 0.7)
             txt_small.set_position((0, 0.92))
 
     # ===================== STAGE 4: FIXED POINT =====================
@@ -300,6 +348,33 @@ def update(frame):
 
         ball.center = (bx, by)
         ball.set_visible(True)
+
+        # Dramatized spiral markers: spacing inversely proportional to
+        # number of completed turns.  Few turns → wide gaps; many → dense.
+        n_turns = t * 6  # total turns so far (0→6)
+        if n_turns < 0.3:
+            n_marks = 2
+        else:
+            n_marks = min(N_SPIRAL_MARKERS, max(3, int(n_turns * 3.5)))
+        # Non-uniform parameterisation: cube-root bunches points toward
+        # the outer (early) part of the spiral when n_marks is low,
+        # spreading them dramatically.  As n_marks grows, the effect
+        # is diluted and the spacing becomes denser overall.
+        u = np.linspace(0, 1, n_marks)
+        spread = 1.0 / (1.0 + n_turns)       # 1 → ~0.14
+        tau = u ** (1.0 - 0.6 * spread)       # exponent: ~0.4 (early) → ~0.9 (late)
+        mk_t = tau * t                        # map to stage-local time
+        mk_decay = np.exp(-3.0 * mk_t)
+        mk_angle = mk_t * 12 * math.pi
+        mk_r = 0.8 * mk_decay
+        mk_x = mk_r * np.cos(mk_angle)
+        mk_y = mk_r * np.sin(mk_angle)
+        spiral_markers.set_offsets(np.column_stack([mk_x, mk_y]))
+        # Size: larger when sparse, smaller when dense
+        mk_size = max(15, 55 - n_marks * 2)
+        spiral_markers.set_sizes(np.full(n_marks, mk_size))
+        spiral_markers.set_facecolor("white")
+        spiral_markers.set_alpha(min(1.0, 0.3 + te * 0.7))
 
         # Paddles drift toward center
         pad_x = 1.01 - t * 0.5
@@ -441,7 +516,8 @@ def update(frame):
             xaxis_line, yaxis_line, vortex_line,
             tree_scatter_up, tree_scatter_dn,
             tree_lines_up, tree_lines_dn,
-            twist_line, twist_dot)
+            twist_line, twist_dot, spiral_markers,
+            *trail_dots)
 
 
 # ---------------------------------------------------------------------------
