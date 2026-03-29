@@ -6,7 +6,6 @@
 <title>Our Address on the Tree</title>
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
 body {
   background: #000;
   color: #c8c8c8;
@@ -16,392 +15,584 @@ body {
   overflow-x: hidden;
 }
 
-canvas#bg {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: 0;
-  pointer-events: none;
+/* ── Game screen ─────────────────────────────────── */
+#game-screen {
+  position: fixed; top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 100;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+}
+#game-screen canvas { display: block; }
+#game-screen .hint {
+  color: #555; font-size: 11px; margin-top: 12px;
+  letter-spacing: 0.1em;
 }
 
-main {
-  position: relative;
-  z-index: 1;
+/* ── Content (hidden until game solved) ──────────── */
+#content {
+  display: none;
   max-width: 720px;
   margin: 0 auto;
-  padding: 60px 24px 120px;
+  padding: 60px 24px 200px;
+  position: relative; z-index: 1;
 }
 
-h1 {
-  font-size: 18px;
-  font-weight: normal;
-  letter-spacing: 0.3em;
+/* ── Step sections ───────────────────────────────── */
+.step {
+  margin-bottom: 64px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+.step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.step-num {
+  color: #333;
+  font-size: 11px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #fff;
+  margin-bottom: 6px;
+}
+.step-title {
+  color: #e0e0e0;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+/* ── Triangular hierarchy: Equation / Conjecture / Visual ── */
+.triad {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+.triad-face {
+  padding: 12px 16px;
+  border-left: 2px solid;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.triad-face.eq {
+  border-color: #c44;
+  color: #e88;
+}
+.triad-face.cj {
+  border-color: #48c;
+  color: #8bf;
+}
+.triad-face.vis {
+  border-color: #a4c;
+  padding: 0;
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+.triad-face.vis canvas {
+  border: 1px solid #1a1a1a;
+  display: block;
+}
+.triad-label {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #555;
   margin-bottom: 4px;
 }
 
-.subtitle {
-  color: #666;
-  font-size: 12px;
-  margin-bottom: 48px;
+/* ── Nav indicator (fixed) ───────────────────────── */
+#nav-indicator {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  display: none;
+}
+#nav-indicator canvas {
+  display: block;
+  cursor: pointer;
 }
 
-section {
-  margin-bottom: 40px;
-}
-
-.step-label {
-  color: #555;
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.step-title {
-  color: #e0e0e0;
-  font-size: 15px;
-  margin-bottom: 12px;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  padding: 3px 0;
-  border-bottom: 1px solid #111;
-}
-
-.row .label { color: #777; }
-.row .value { color: #ddd; text-align: right; }
-
-.derived {
-  color: #7faaff;
-}
-
-.note {
-  color: #555;
-  font-size: 12px;
-  font-style: italic;
-  margin-top: 6px;
-}
-
-.divider {
-  border: none;
-  border-top: 1px solid #1a1a1a;
-  margin: 48px 0;
-}
-
-/* predictions table */
-.pred-grid {
-  display: grid;
-  grid-template-columns: 60px 60px 1fr;
-  gap: 2px 12px;
-  font-size: 13px;
-}
-
-.pred-grid .hdr {
-  color: #555;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #1a1a1a;
-}
-
-.pred-grid .settled { color: #5a5; }
-.pred-grid .unsettled { color: #444; }
-
-/* address block */
-.address-block {
-  background: #060606;
-  border: 1px solid #1a1a1a;
-  padding: 24px;
-  margin-top: 24px;
-}
-
-.address-block .group-label {
-  color: #555;
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-top: 20px;
-  margin-bottom: 8px;
-}
-
-.address-block .group-label:first-child {
-  margin-top: 0;
-}
-
+/* ── Closing ─────────────────────────────────────── */
 .closing {
+  text-align: center;
   color: #444;
   font-size: 13px;
-  text-align: center;
-  margin-top: 48px;
   line-height: 2;
+  margin-top: 48px;
 }
+.closing .hl { color: #888; }
 
-.closing .highlight {
-  color: #888;
+/* ── Decoherence overlay ─────────────────────────── */
+#decohere-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 200;
 }
 </style>
 </head>
 <body>
 
-<canvas id="bg"></canvas>
-
-<main>
-
-<h1>Our Address on the Tree</h1>
-<p class="subtitle">From first principles + three observables</p>
-
-<!-- Step 1 -->
-<section>
-  <div class="step-label">Step 1</div>
-  <div class="step-title">The self-similarity rate</div>
-  <div class="row"><span class="label">n_s</span><span class="value">0.9649 <span style="color:#555">(Planck 2018)</span></span></div>
-  <div class="row"><span class="label">ln(phi^2)</span><span class="value">0.962424 <span style="color:#555">(from x^2 - x - 1 = 0)</span></span></div>
-  <div class="row"><span class="label">rate</span><span class="value">0.036470 levels / e-fold</span></div>
-</section>
-
-<!-- Step 2 -->
-<section>
-  <div class="step-label">Step 2</div>
-  <div class="step-title">Total tree depth</div>
-  <div class="row"><span class="label">omega_Planck</span><span class="value">1.855 x 10^43 Hz</span></div>
-  <div class="row"><span class="label">omega_Hubble</span><span class="value">2.183 x 10^-18 Hz</span></div>
-  <div class="row"><span class="label">ratio</span><span class="value">8.497 x 10^60</span></div>
-  <div class="row"><span class="label">depth</span><span class="value">145.8 Fibonacci levels</span></div>
-</section>
-
-<!-- Step 3 -->
-<section>
-  <div class="step-label">Step 3</div>
-  <div class="step-title">The CMB window</div>
-  <div class="row"><span class="label">sqrt(5)</span><span class="value">2.236068</span></div>
-  <div class="row"><span class="label">N_efolds</span><span class="value">61.3</span></div>
-  <div class="row"><span class="label">sampled levels</span><span class="value">sqrt(5) = 2.236</span></div>
-  <div class="row"><span class="label">CMB pivot</span><span class="value">level ~21 from root</span></div>
-</section>
-
-<!-- Step 4 -->
-<section>
-  <div class="step-label">Step 4</div>
-  <div class="step-title">Spent cycles</div>
-  <div class="row"><span class="label">age of universe</span><span class="value derived">13.80 Gyr (derived)</span></div>
-  <div class="row"><span class="label">Hubble time</span><span class="value">1.451 x 10^10 yr</span></div>
-  <div class="row"><span class="label">spent Hubble cycles</span><span class="value">0.95</span></div>
-  <p class="note">No hardcoded 13.8 Gyr. Age follows from H_0 + Omega_Lambda via Friedmann integration.</p>
-</section>
-
-<!-- Step 5 -->
-<section>
-  <div class="step-label">Step 5</div>
-  <div class="step-title">Computational progress</div>
-  <div class="row"><span class="label">oscillations / cycle</span><span class="value">49</span></div>
-  <div class="row"><span class="label">total oscillations</span><span class="value">47</span></div>
-  <div class="row"><span class="label">convergence rate</span><span class="value">2/pi = 0.6366</span></div>
-  <div class="row"><span class="label">digits of |r|</span><span class="value">9</span></div>
-</section>
-
-<!-- Step 6 -->
-<section>
-  <div class="step-label">Step 6</div>
-  <div class="step-title">The boundary weight</div>
-  <div class="row"><span class="label">Omega_Lambda</span><span class="value">0.6847 <span style="color:#555">(predicted)</span></span></div>
-  <div class="row"><span class="label">w*</span><span class="value">0.8281</span></div>
-  <div class="row"><span class="label">effective modes</span><span class="value">12.66</span></div>
-  <div class="row"><span class="label">effective depth</span><span class="value">5.83</span></div>
-</section>
-
-<!-- Step 7 -->
-<section>
-  <div class="step-label">Step 7</div>
-  <div class="step-title">The gap twin</div>
-  <div class="row"><span class="label">gap fraction</span><span class="value">0.187 of frequency axis</span></div>
-  <div class="row"><span class="label">per dimension</span><span class="value">0.572</span></div>
-  <div class="row"><span class="label">twin's cycles</span><span class="value">0.5</span></div>
-  <div class="row"><span class="label">twin's digits</span><span class="value">5</span></div>
-  <div class="row"><span class="label">distance</span><span class="value">2.6 x 10^-61 (Planck length)</span></div>
-  <div class="row"><span class="label">phase accumulated</span><span class="value">7.7 x 10^-59 rad</span></div>
-  <div class="row"><span class="label">time to 1 bit</span><span class="value">5.6 x 10^68 yr</span></div>
-</section>
-
-<hr class="divider">
-
-<!-- Step 8 -->
-<section>
-  <div class="step-label">Step 8</div>
-  <div class="step-title">What's been computed</div>
-  <p style="color:#777; margin-bottom:12px;">Digits available: <span style="color:#ddd">9</span></p>
-
-  <div class="pred-grid">
-    <span class="hdr">digits</span><span class="hdr">status</span><span class="hdr">prediction</span>
-
-    <span>1</span><span class="settled">settled</span><span>d = 3 (spatial dimension)</span>
-    <span>1</span><span class="settled">settled</span><span>q_2 = 2, q_3 = 3 (Klein bottle)</span>
-    <span>2</span><span class="settled">settled</span><span>Omega_Lambda in [13/19, 11/16]</span>
-    <span>2</span><span class="settled">settled</span><span>alpha_s / alpha_2 = 27/8</span>
-    <span>3</span><span class="settled">settled</span><span>sin^2(theta_W) = 8/35</span>
-    <span>4</span><span class="settled">settled</span><span>|r| correction to couplings</span>
-    <span>4</span><span class="settled">settled</span><span>n_s = 0.965 (tilt to 3 sig figs)</span>
-    <span>10</span><span class="unsettled">&mdash;</span><span style="color:#555">Omega_Lambda to 0.07 sigma</span>
-    <span>15</span><span class="unsettled">&mdash;</span><span style="color:#555">R = 6 x 13^54 (hierarchy)</span>
-    <span>61</span><span class="unsettled">&mdash;</span><span style="color:#555">Planck-scale structure</span>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- The Address -->
-<div class="address-block">
-  <div class="group-label">First principles</div>
-  <div class="row"><span class="label">phi</span><span class="value">(1 + sqrt(5)) / 2</span></div>
-  <div class="row"><span class="label">d</span><span class="value">3</span></div>
-  <div class="row"><span class="label">|F_6|</span><span class="value">13</span></div>
-
-  <div class="group-label">Three observables</div>
-  <div class="row"><span class="label">n_s</span><span class="value">0.9649</span></div>
-  <div class="row"><span class="label">H_0</span><span class="value">67.36 km/s/Mpc</span></div>
-  <div class="row"><span class="label">Planck units</span><span class="value">hbar, G, c</span></div>
-
-  <div class="group-label">Derived address</div>
-  <div class="row"><span class="label">total depth</span><span class="value">145.8 Fibonacci levels</span></div>
-  <div class="row"><span class="label">CMB window</span><span class="value">2.236 levels (= sqrt 5)</span></div>
-  <div class="row"><span class="label">CMB pivot</span><span class="value">level ~21</span></div>
-  <div class="row"><span class="label">age</span><span class="value derived">13.80 Gyr (derived)</span></div>
-  <div class="row"><span class="label">spent cycles</span><span class="value">0.95</span></div>
-  <div class="row"><span class="label">oscillations</span><span class="value">47</span></div>
-  <div class="row"><span class="label">digits of |r|</span><span class="value">9</span></div>
-
-  <div class="group-label">The staircase</div>
-  <div class="row"><span class="label">rate</span><span class="value">0.036470 levels / e-fold</span></div>
-  <div class="row"><span class="label">levels sampled</span><span class="value">sqrt(5) = 2.236068</span></div>
-  <div class="row"><span class="label">N_efolds</span><span class="value">61.3</span></div>
-
-  <div class="group-label">Boundary weight</div>
-  <div class="row"><span class="label">w*</span><span class="value">0.8281</span></div>
-  <div class="row"><span class="label">effective modes</span><span class="value">12.66</span></div>
-  <div class="row"><span class="label">effective depth</span><span class="value">5.83</span></div>
-  <div class="row"><span class="label">Omega_Lambda</span><span class="value">0.6847</span></div>
+<!-- ════════════════════════════════════════════════════ -->
+<!-- GAME SCREEN: Asteroid laser alignment              -->
+<!-- ════════════════════════════════════════════════════ -->
+<div id="game-screen">
+  <canvas id="game" width="800" height="500"></canvas>
+  <div class="hint">LEFT / RIGHT to rotate &mdash; SPACE to fire</div>
 </div>
 
-<div class="closing">
-  <span class="highlight">One tree. 145 levels. 9 digits known.</span><br>
-  The universe knows itself. We are reading the printout.
+<!-- ════════════════════════════════════════════════════ -->
+<!-- CONTENT: Derivation steps (Phase 2 fills these)    -->
+<!-- ════════════════════════════════════════════════════ -->
+<div id="content">
+  <!-- Steps injected by JS -->
 </div>
 
-</main>
+<!-- ════════════════════════════════════════════════════ -->
+<!-- NAV INDICATOR (Phase 3 activates)                  -->
+<!-- ════════════════════════════════════════════════════ -->
+<div id="nav-indicator">
+  <canvas id="nav-canvas" width="48" height="48"></canvas>
+</div>
+
+<!-- ════════════════════════════════════════════════════ -->
+<!-- DECOHERENCE OVERLAY (Phase 3 activates)            -->
+<!-- ════════════════════════════════════════════════════ -->
+<canvas id="decohere-overlay"></canvas>
 
 <script>
-// ── Perturbation field ──────────────────────────────────────────────
-// Sparse drifting particles + subtle Kuramoto-inspired phase waves
-// rendered on a full-screen canvas behind the content.
-
-const canvas = document.getElementById('bg');
-const ctx = canvas.getContext('2d');
-
-let W, H;
-function resize() {
-  W = canvas.width = window.innerWidth;
-  H = canvas.height = window.innerHeight;
-}
-resize();
-window.addEventListener('resize', resize);
-
-// Particles: sparse, dim, slow
+// ═══════════════════════════════════════════════════════════════════
+// CONSTANTS
+// ═══════════════════════════════════════════════════════════════════
 const PHI = (1 + Math.sqrt(5)) / 2;
-const N = 180;
-const particles = [];
+const TAU = Math.PI * 2;
 
-for (let i = 0; i < N; i++) {
-  particles.push({
-    x: Math.random() * 2 - 1,   // normalised [-1, 1]
-    y: Math.random() * 2 - 1,
-    phase: Math.random() * Math.PI * 2,
-    freq: (0.2 + Math.random() * 0.8) * (i % 2 === 0 ? 1 : PHI), // mode frequencies
-    radius: 0.5 + Math.random() * 1.5,
-    drift_x: (Math.random() - 0.5) * 0.0003,
-    drift_y: (Math.random() - 0.5) * 0.0002,
-  });
-}
+// ═══════════════════════════════════════════════════════════════════
+// PHASE 1: ASTEROID LASER GAME
+// ═══════════════════════════════════════════════════════════════════
+(function initGame() {
+  const cvs = document.getElementById('game');
+  const ctx = cvs.getContext('2d');
+  const W = cvs.width, H = cvs.height;
 
-// A few "tongue" bands — horizontal sine waves at rational frequencies
-const tongues = [
-  { p: 1, q: 2, amp: 0.15 },
-  { p: 1, q: 3, amp: 0.10 },
-  { p: 2, q: 5, amp: 0.08 },
-  { p: 1, q: 1, amp: 0.06 },
-  { p: 3, q: 5, amp: 0.07 },
-];
+  // Ship
+  const ship = { x: 90, y: H / 2 };
 
-let t = 0;
+  // 12 configs: config 0 is the correct geodesic angle.
+  // Correct angle threads through a gap in the asteroid field.
+  const CORRECT = 0;
+  const BASE_ANGLE = -0.18; // slight upward, radians from horizontal
+  const ANGLE_STEP = TAU / 12;
 
-function draw() {
-  ctx.clearRect(0, 0, W, H);
+  let currentConfig = Math.floor(Math.random() * 11) + 1; // start wrong
+  let laserFiring = false;
+  let laserProgress = 0;
+  let solved = false;
+  let solvedTimer = 0;
+  let t = 0;
 
-  // tongue wave bands (very subtle horizontal perturbations)
-  for (const tg of tongues) {
-    const yCenter = (tg.p / tg.q) * H;
-    const omega = tg.p / tg.q * 0.4;
-    ctx.beginPath();
-    for (let x = 0; x < W; x += 3) {
-      const wave = Math.sin(x * 0.008 + t * omega) * tg.amp * 40;
-      const y = yCenter + wave;
-      const alpha = 0.025 * (1 + 0.5 * Math.sin(t * omega * 0.3));
-      ctx.fillStyle = `rgba(60, 80, 120, ${alpha})`;
-      ctx.fillRect(x, y - 0.5, 3, 1);
+  // Asteroids: positioned so config 0 (BASE_ANGLE) threads through gap
+  // Gap corridor runs from ship along BASE_ANGLE
+  // Asteroids cluster on either side of this corridor
+  const asteroids = [];
+  const rng = (seed) => {
+    // Simple seeded RNG for reproducibility
+    let s = seed;
+    return () => { s = (s * 16807 + 0) % 2147483647; return s / 2147483647; };
+  };
+  const rand = rng(42);
+
+  // Build asteroid field with a clear gap at BASE_ANGLE
+  for (let i = 0; i < 40; i++) {
+    const dist = 120 + rand() * (W - 200);
+    // Angle offset from the correct path
+    let offsetAngle = (rand() - 0.5) * Math.PI * 0.8;
+    // Enforce gap: push asteroids away from the correct angle corridor
+    const corridorHalf = 0.06; // half-width of gap in radians
+    if (Math.abs(offsetAngle) < corridorHalf) {
+      offsetAngle += (offsetAngle >= 0 ? corridorHalf : -corridorHalf) * 1.5;
+    }
+    const a = BASE_ANGLE + offsetAngle;
+    asteroids.push({
+      x: ship.x + Math.cos(a) * dist,
+      y: ship.y + Math.sin(a) * dist,
+      r: 4 + rand() * 10,
+      rot: rand() * TAU,
+      rotSpeed: (rand() - 0.5) * 0.01,
+      verts: 5 + Math.floor(rand() * 4), // irregular polygon
+      irregularity: [],
+    });
+  }
+  // Generate irregular shapes
+  for (const a of asteroids) {
+    for (let v = 0; v < a.verts; v++) {
+      a.irregularity.push(0.6 + rand() * 0.8);
     }
   }
 
-  // particles
-  for (const p of particles) {
-    p.phase += p.freq * 0.008;
-    p.x += p.drift_x;
-    p.y += p.drift_y;
-
-    // wrap
-    if (p.x > 1.1) p.x = -1.1;
-    if (p.x < -1.1) p.x = 1.1;
-    if (p.y > 1.1) p.y = -1.1;
-    if (p.y < -1.1) p.y = 1.1;
-
-    const sx = (p.x + 1) * 0.5 * W;
-    const sy = (p.y + 1) * 0.5 * H;
-
-    // brightness oscillates with phase (Kuramoto sync visual)
-    const brightness = 0.12 + 0.08 * Math.sin(p.phase);
-    const r = p.radius * (1 + 0.2 * Math.sin(p.phase * PHI));
-
-    ctx.beginPath();
-    ctx.arc(sx, sy, r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(180, 190, 220, ${brightness})`;
-    ctx.fill();
+  function getLaserAngle() {
+    return BASE_ANGLE + currentConfig * ANGLE_STEP;
   }
 
-  // Occasional coupling lines between nearby particles (very faint)
-  for (let i = 0; i < N; i += 3) {
-    const a = particles[i];
-    const b = particles[(i + 7) % N];
-    const dx = a.x - b.x;
-    const dy = a.y - b.y;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    if (dist < 0.15) {
-      const alpha = 0.04 * (1 - dist / 0.15) * (0.5 + 0.5 * Math.cos(a.phase - b.phase));
+  function drawShip(ctx, x, y, angle) {
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(angle);
+    ctx.strokeStyle = '#aaa';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.moveTo(18, 0);
+    ctx.lineTo(-10, -9);
+    ctx.lineTo(-6, 0);
+    ctx.lineTo(-10, 9);
+    ctx.closePath();
+    ctx.stroke();
+    // Thruster flicker
+    if (Math.random() > 0.3) {
+      ctx.strokeStyle = '#664';
       ctx.beginPath();
-      ctx.moveTo((a.x + 1) * 0.5 * W, (a.y + 1) * 0.5 * H);
-      ctx.lineTo((b.x + 1) * 0.5 * W, (b.y + 1) * 0.5 * H);
-      ctx.strokeStyle = `rgba(100, 130, 200, ${alpha})`;
-      ctx.lineWidth = 0.5;
+      ctx.moveTo(-6, 0);
+      ctx.lineTo(-12 - Math.random() * 6, (Math.random() - 0.5) * 6);
       ctx.stroke();
     }
+    ctx.restore();
   }
 
-  t += 1;
+  function drawAsteroid(ctx, a) {
+    ctx.save();
+    ctx.translate(a.x, a.y);
+    ctx.rotate(a.rot);
+    ctx.strokeStyle = '#666';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    for (let v = 0; v <= a.verts; v++) {
+      const i = v % a.verts;
+      const ang = (i / a.verts) * TAU;
+      const r = a.r * a.irregularity[i];
+      const px = Math.cos(ang) * r;
+      const py = Math.sin(ang) * r;
+      if (v === 0) ctx.moveTo(px, py);
+      else ctx.lineTo(px, py);
+    }
+    ctx.closePath();
+    ctx.stroke();
+    ctx.restore();
+  }
+
+  function laserHitsAsteroid(angle) {
+    // Check if laser ray from ship at given angle hits any asteroid
+    const dx = Math.cos(angle);
+    const dy = Math.sin(angle);
+    for (const a of asteroids) {
+      // Point-to-line distance
+      const ex = a.x - ship.x;
+      const ey = a.y - ship.y;
+      const proj = ex * dx + ey * dy;
+      if (proj < 20) continue; // behind ship
+      const perpSq = (ex * ex + ey * ey) - proj * proj;
+      if (perpSq < (a.r + 2) * (a.r + 2)) return { hit: true, dist: proj, asteroid: a };
+    }
+    return { hit: false };
+  }
+
+  function drawLaser(ctx, angle, progress) {
+    const maxLen = W + H;
+    const hitTest = laserHitsAsteroid(angle);
+    const len = hitTest.hit ? Math.min(hitTest.dist, progress * maxLen) : progress * maxLen;
+
+    const ex = ship.x + Math.cos(angle) * len;
+    const ey = ship.y + Math.sin(angle) * len;
+
+    // Laser beam
+    ctx.strokeStyle = hitTest.hit ? '#c44' : (currentConfig === CORRECT ? '#4c4' : '#cc4');
+    ctx.lineWidth = hitTest.hit ? 1 : 1.5;
+    ctx.setLineDash(hitTest.hit ? [4, 4] : []);
+    ctx.beginPath();
+    ctx.moveTo(ship.x + Math.cos(angle) * 20, ship.y + Math.sin(angle) * 20);
+    ctx.lineTo(ex, ey);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Impact flash
+    if (hitTest.hit && progress > hitTest.dist / maxLen) {
+      ctx.fillStyle = '#f44';
+      ctx.beginPath();
+      ctx.arc(ship.x + Math.cos(angle) * hitTest.dist,
+              ship.y + Math.sin(angle) * hitTest.dist,
+              4 + Math.random() * 3, 0, TAU);
+      ctx.fill();
+    }
+
+    // Clean pass indicator
+    if (!hitTest.hit && currentConfig === CORRECT && progress > 0.8) {
+      ctx.fillStyle = '#4c4';
+      ctx.font = '12px Courier New';
+      ctx.fillText('GEODESIC', W - 100, 30);
+    }
+  }
+
+  // Aiming reticle: show which of 12 positions we're at
+  function drawReticle(ctx) {
+    const rx = 60, ry = H - 50;
+    ctx.strokeStyle = '#333';
+    ctx.lineWidth = 0.5;
+    ctx.beginPath();
+    ctx.arc(rx, ry, 20, 0, TAU);
+    ctx.stroke();
+    // 12 ticks
+    for (let i = 0; i < 12; i++) {
+      const a = i * ANGLE_STEP;
+      const inner = i === currentConfig ? 10 : 15;
+      ctx.strokeStyle = i === currentConfig ? '#fff' : '#333';
+      ctx.lineWidth = i === currentConfig ? 1.5 : 0.5;
+      ctx.beginPath();
+      ctx.moveTo(rx + Math.cos(a) * inner, ry + Math.sin(a) * inner);
+      ctx.lineTo(rx + Math.cos(a) * 20, ry + Math.sin(a) * 20);
+      ctx.stroke();
+    }
+    // Config number
+    ctx.fillStyle = '#555';
+    ctx.font = '10px Courier New';
+    ctx.textAlign = 'center';
+    ctx.fillText(currentConfig + '/11', rx, ry + 34);
+    ctx.textAlign = 'left';
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    t++;
+
+    // Border
+    ctx.strokeStyle = '#222';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(0.5, 0.5, W - 1, H - 1);
+
+    // Asteroids
+    for (const a of asteroids) {
+      a.rot += a.rotSpeed;
+      drawAsteroid(ctx, a);
+    }
+
+    const angle = getLaserAngle();
+
+    // Aiming line (faint)
+    if (!laserFiring) {
+      ctx.strokeStyle = 'rgba(255,255,255,0.08)';
+      ctx.lineWidth = 0.5;
+      ctx.beginPath();
+      ctx.moveTo(ship.x + Math.cos(angle) * 20, ship.y + Math.sin(angle) * 20);
+      ctx.lineTo(ship.x + Math.cos(angle) * W, ship.y + Math.sin(angle) * W);
+      ctx.stroke();
+    }
+
+    // Laser
+    if (laserFiring) {
+      laserProgress = Math.min(laserProgress + 0.06, 1);
+      drawLaser(ctx, angle, laserProgress);
+
+      // Check result
+      if (laserProgress >= 1) {
+        const hit = laserHitsAsteroid(angle);
+        if (!hit.hit && currentConfig === CORRECT) {
+          solved = true;
+        }
+        if (laserProgress >= 1 && !solved) {
+          // Reset after showing result
+          if (++solvedTimer > 40) {
+            laserFiring = false;
+            laserProgress = 0;
+            solvedTimer = 0;
+          }
+        }
+      }
+    }
+
+    // Ship
+    drawShip(ctx, ship.x, ship.y, angle);
+
+    // Reticle
+    drawReticle(ctx);
+
+    // Title
+    ctx.fillStyle = '#555';
+    ctx.font = '11px Courier New';
+    ctx.fillText('FIND THE GEODESIC', 10, 20);
+
+    // Solved transition
+    if (solved) {
+      solvedTimer++;
+      const fade = Math.min(solvedTimer / 60, 1);
+      ctx.fillStyle = `rgba(0,0,0,${fade * 0.8})`;
+      ctx.fillRect(0, 0, W, H);
+      ctx.fillStyle = `rgba(200,200,200,${fade})`;
+      ctx.font = '14px Courier New';
+      ctx.textAlign = 'center';
+      ctx.fillText('THE SHORTEST PATH', W / 2, H / 2 - 10);
+      ctx.fillStyle = `rgba(100,100,100,${fade})`;
+      ctx.font = '11px Courier New';
+      ctx.fillText('the only one that threads the gap', W / 2, H / 2 + 14);
+      ctx.textAlign = 'left';
+
+      if (solvedTimer > 120) {
+        document.getElementById('game-screen').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+        document.getElementById('nav-indicator').style.display = 'block';
+        initContent();
+        return; // stop game loop
+      }
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  // Input
+  document.addEventListener('keydown', (e) => {
+    if (solved) return;
+    if (e.key === 'ArrowRight' || e.key === 'd') {
+      currentConfig = (currentConfig + 1) % 12;
+      laserFiring = false; laserProgress = 0; solvedTimer = 0;
+    } else if (e.key === 'ArrowLeft' || e.key === 'a') {
+      currentConfig = (currentConfig + 11) % 12;
+      laserFiring = false; laserProgress = 0; solvedTimer = 0;
+    } else if (e.key === ' ' || e.key === 'Enter') {
+      e.preventDefault();
+      if (!laserFiring) {
+        laserFiring = true;
+        laserProgress = 0;
+        solvedTimer = 0;
+      }
+    }
+  });
+
+  // Touch/click: left half rotates left, right half rotates right, center fires
+  cvs.addEventListener('click', (e) => {
+    if (solved) return;
+    const rect = cvs.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width;
+    if (x < 0.33) {
+      currentConfig = (currentConfig + 11) % 12;
+      laserFiring = false; laserProgress = 0; solvedTimer = 0;
+    } else if (x > 0.66) {
+      currentConfig = (currentConfig + 1) % 12;
+      laserFiring = false; laserProgress = 0; solvedTimer = 0;
+    } else {
+      if (!laserFiring) {
+        laserFiring = true; laserProgress = 0; solvedTimer = 0;
+      }
+    }
+  });
+
   requestAnimationFrame(draw);
+})();
+
+
+// ═══════════════════════════════════════════════════════════════════
+// CONTENT INITIALIZATION (called after game solved)
+// Placeholder — Phase 2 fills the derivation steps
+// ═══════════════════════════════════════════════════════════════════
+function initContent() {
+  const content = document.getElementById('content');
+
+  // Step data: filled in Phase 2 with full algebra + animations
+  const steps = [
+    { num: '0', title: 'The Void',
+      eq: String.raw`∅`,
+      cj: 'From nothing, distinction.',
+      visId: 'vis-void' },
+    { num: '1', title: 'The First Bit',
+      eq: String.raw`∅ → {∅}  ⟹  |{∅, {∅}}| = 2`,
+      cj: 'Binary is forced, not chosen.',
+      visId: 'vis-bit' },
+    { num: '2', title: 'Self-Reference',
+      eq: String.raw`x² − x − 1 = 0  ⟹  φ = (1+√5)/2 = 1.618...`,
+      cj: 'The simplest self-referential fixed point yields the golden ratio.',
+      visId: 'vis-phi' },
+    { num: '3', title: 'The Half-Twist',
+      eq: String.raw`M = [[1,1],[1,0]]   det(M) = −1   F_{n−1}F_{n+1} − F_n² = (−1)^n`,
+      cj: 'Non-orientability is forced. Removing det = −1 kills convergence to 1/φ.',
+      visId: 'vis-mobius' },
+    { num: '4', title: 'The Klein Bottle',
+      eq: String.raw`parity(q₁) ⊕ parity(q₂) = 1  ⟹  q₂ = 2, q₃ = 3   n = 6`,
+      cj: 'Topology selects the denominators. Two antiperiodic constraints on S¹ × S¹.',
+      visId: 'vis-klein' },
+    { num: '5', title: 'The Staircase',
+      eq: String.raw`|F₆| = 13   gap = 1 − Σ φ(q)/q² ≈ 0.187   α_s/α₂ = 27/8`,
+      cj: '13 modes are the minimum self-predicting set. Couplings emerge from duty cycles.',
+      visId: 'vis-stairs' },
+    { num: '6', title: 'Synchronization',
+      eq: String.raw`K_c = 2/π   sin²θ_W = 8/35 ≈ 0.229   digits = −log₁₀(ρ^N)`,
+      cj: 'Kuramoto critical coupling sets the convergence rate. 9 digits in 0.95 Hubble cycles.',
+      visId: 'vis-sync' },
+    { num: '7', title: 'The Boundary',
+      eq: String.raw`Ω_Λ(w) = (11 + 2w) / (16 + 3w)   dΩ/dw < 0   w* unique`,
+      cj: 'Monotonicity guarantees one solution. Ω_Λ = 0.6847, 0.07σ from observation.',
+      visId: 'vis-boundary' },
+    { num: '8', title: 'The Address',
+      eq: String.raw`depth = 145.8   age = 13.80 Gyr (derived)   digits = 9`,
+      cj: 'The universe knows itself. We are reading the printout.',
+      visId: 'vis-address' },
+  ];
+
+  // Build DOM
+  for (const s of steps) {
+    const sec = document.createElement('section');
+    sec.className = 'step';
+    sec.innerHTML = `
+      <div class="step-num">Step ${s.num}</div>
+      <div class="step-title">${s.title}</div>
+      <div class="triad">
+        <div class="triad-face eq">
+          <div class="triad-label">Equation</div>
+          ${s.eq}
+        </div>
+        <div class="triad-face cj">
+          <div class="triad-label">Conjecture</div>
+          ${s.cj}
+        </div>
+        <div class="triad-face vis">
+          <canvas id="${s.visId}" width="320" height="200"></canvas>
+        </div>
+      </div>
+    `;
+    content.appendChild(sec);
+  }
+
+  // Closing
+  const closing = document.createElement('div');
+  closing.className = 'closing';
+  closing.innerHTML = '<span class="hl">One tree. 145 levels. 9 digits known.</span><br>The universe knows itself. We are reading the printout.';
+  content.appendChild(closing);
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    }
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.step').forEach(s => observer.observe(s));
+
+  // Start Phase 2 animations
+  if (typeof initAnimations === 'function') initAnimations();
+  // Start Phase 3 nav
+  if (typeof initNav === 'function') initNav();
 }
 
-requestAnimationFrame(draw);
+
+// ═══════════════════════════════════════════════════════════════════
+// PHASE 2 PLACEHOLDER: initAnimations()
+// ═══════════════════════════════════════════════════════════════════
+// Will be filled with procedural canvas animations per step
+
+
+// ═══════════════════════════════════════════════════════════════════
+// PHASE 3 PLACEHOLDER: initNav(), decoherence
+// ═══════════════════════════════════════════════════════════════════
+// Will be filled with circle→triangle morph + decoherence
+
 </script>
 </body>
 </html>
