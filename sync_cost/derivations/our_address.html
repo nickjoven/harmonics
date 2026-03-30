@@ -209,19 +209,22 @@ const TAU = Math.PI * 2;
 
   // Build asteroid field with a clear gap at BASE_ANGLE
   for (let i = 0; i < 40; i++) {
-    const dist = 120 + rand() * (W - 200);
+    const dist = 140 + rand() * (W - 220);
+    const asteroidR = 3 + rand() * 8;
     // Angle offset from the correct path
     let offsetAngle = (rand() - 0.5) * Math.PI * 0.8;
-    // Enforce gap: push asteroids away from the correct angle corridor
-    const corridorHalf = 0.06; // half-width of gap in radians
+    // Enforce gap: push asteroids well clear of the correct angle corridor
+    // Gap must be wide enough that no asteroid (including its radius) touches the laser
+    const safeMargin = (asteroidR + 6) / dist; // angular size of asteroid at its distance
+    const corridorHalf = 0.14 + safeMargin; // generous corridor
     if (Math.abs(offsetAngle) < corridorHalf) {
-      offsetAngle += (offsetAngle >= 0 ? corridorHalf : -corridorHalf) * 1.5;
+      offsetAngle = (offsetAngle >= 0 ? 1 : -1) * (corridorHalf + 0.03 + rand() * 0.05);
     }
     const a = BASE_ANGLE + offsetAngle;
     asteroids.push({
       x: ship.x + Math.cos(a) * dist,
       y: ship.y + Math.sin(a) * dist,
-      r: 4 + rand() * 10,
+      r: asteroidR,
       rot: rand() * TAU,
       rotSpeed: (rand() - 0.5) * 0.01,
       verts: 5 + Math.floor(rand() * 4), // irregular polygon
@@ -308,8 +311,8 @@ const TAU = Math.PI * 2;
     const ex = ship.x + Math.cos(angle) * len;
     const ey = ship.y + Math.sin(angle) * len;
 
-    // Laser beam
-    ctx.strokeStyle = hitTest.hit ? '#c44' : (currentConfig === CORRECT ? '#4c4' : '#cc4');
+    // Laser beam: green if clear, red if blocked, yellow if clear but wrong angle
+    ctx.strokeStyle = hitTest.hit ? '#c44' : '#4c4';
     ctx.lineWidth = hitTest.hit ? 1 : 1.5;
     ctx.setLineDash(hitTest.hit ? [4, 4] : []);
     ctx.beginPath();
@@ -398,7 +401,7 @@ const TAU = Math.PI * 2;
       // Check result
       if (laserProgress >= 1) {
         const hit = laserHitsAsteroid(angle);
-        if (!hit.hit && currentConfig === CORRECT) {
+        if (!hit.hit) {
           solved = true;
         }
         if (laserProgress >= 1 && !solved) {
