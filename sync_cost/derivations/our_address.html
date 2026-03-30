@@ -160,7 +160,7 @@ body {
 <!-- ════════════════════════════════════════════════════ -->
 <div id="game-screen">
   <canvas id="game" width="800" height="500"></canvas>
-  <div class="hint">LEFT / RIGHT to rotate &mdash; SPACE to fire</div>
+  <div class="hint">LEFT / RIGHT to aim &mdash; ENTER to launch &mdash; SPACE to skip &mdash; 0 to reset</div>
 </div>
 
 <!-- ════════════════════════════════════════════════════ -->
@@ -190,319 +190,487 @@ const PHI = (1 + Math.sqrt(5)) / 2;
 const TAU = Math.PI * 2;
 
 // ═══════════════════════════════════════════════════════════════════
-// PHASE 1: ASTEROID LASER GAME
+// PHASE 1: ASTEROID GAME — GEODESICS ON A SPHERE
+//
+// The screen is an equirectangular projection of a sphere.
+// Edges wrap — revealing the manifold. The ship rides its own
+// laser along a great circle. Course is locked once fired.
+// 12 headings, one threads the gap. SPACE to skip (decohere past).
 // ═══════════════════════════════════════════════════════════════════
 (function initGame() {
   const cvs = document.getElementById('game');
   const ctx = cvs.getContext('2d');
   const W = cvs.width, H = cvs.height;
 
-  // Ship
-  const ship = { x: 90, y: H / 2 };
+  // ── Sphere geometry ──
+  // Coordinates: (lon, lat) in radians. lon ∈ [0, 2π), lat ∈ [-π/2, π/2]
+  // Screen mapping: x = lon / 2π * W,  y = (0.5 - lat/π) * H
 
-  // 12 configs: config 0 is the correct geodesic angle.
-  // Correct angle threads through a gap in the asteroid field.
-  const CORRECT = 0;
-  const BASE_ANGLE = -0.18; // slight upward, radians from horizontal
+  function toScreen(lon, lat) {
+    // Normalize lon to [0, TAU)
+    let l = ((lon % TAU) + TAU) % TAU;
+    return {
+      x: (l / TAU) * W,
+      y: (0.5 - lat / Math.PI) * H,
+    };
+  }
+
+  // Great circle step: advance (lon, lat) by arc distance ds along heading α
+  // Returns new {lon, lat, heading}
+  function greatCircleStep(lon, lat, heading, ds) {
+    const sinLat = Math.sin(lat), cosLat = Math.cos(lat);
+    const sinDs = Math.sin(ds), cosDs = Math.cos(ds);
+    const sinH = Math.sin(heading), cosH = Math.cos(heading);
+
+    const newLat = Math.asin(sinLat * cosDs + cosLat * sinDs * cosH);
+    const dlon = Math.atan2(sinH * sinDs * cosLat, cosDs - sinLat * Math.sin(newLat));
+    const newLon = lon + dlon;
+
+    // New heading at destination
+    const newHeading = Math.atan2(sinH, cosH * Math.cos(newLat - lat + ds * 0.0001) );
+    // More accurate heading update using spherical trig
+    const hdg = Math.atan2(
+      Math.sin(dlon) * cosLat,
+      Math.cos(lat) * Math.sin(newLat) - Math.sin(lat) * Math.cos(newLat) * Math.cos(dlon)
+    );
+    // The forward heading at new position (continue in same great circle direction)
+    const fwdHeading = Math.atan2(
+      Math.sin(newLon - lon) * Math.cos(lat),
+      Math.cos(newLat) * Math.sin(lat) - Math.sin(newLat) * Math.cos(lat) * Math.cos(newLon - lon)
+    );
+
+    return { lon: newLon, lat: newLat, heading: fwdHeading };
+  }
+
+  // ── Seeded RNG ──
+  let seed = 42;
+  function rand() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+
+  // ── Ship state ──
+  const SHIP_START = { lon: 0.5, lat: 0.0 }; // roughly center-left on screen
+  let shipLon = SHIP_START.lon;
+  let shipLat = SHIP_START.lat;
+  let shipHeading = 0; // current heading in radians (0 = east)
+
+  // ── 12 headings ──
   const ANGLE_STEP = TAU / 12;
+  const CORRECT_IDX = 3; // the geodesic that threads the gap
+  const CORRECT_HEADING = CORRECT_IDX * ANGLE_STEP; // = π/2 is straight north
+  let currentIdx = 0; // start at 0
 
-  let currentConfig = Math.floor(Math.random() * 11) + 1; // start wrong
-  let laserFiring = false;
-  let laserProgress = 0;
-  let solved = false;
-  let solvedTimer = 0;
-  let t = 0;
+  function getHeading() {
+    return currentIdx * ANGLE_STEP;
+  }
 
-  // Asteroids: positioned so config 0 (BASE_ANGLE) threads through gap
-  // Gap corridor runs from ship along BASE_ANGLE
-  // Asteroids cluster on either side of this corridor
+  // ── Asteroids on the sphere ──
   const asteroids = [];
-  const rng = (seed) => {
-    // Simple seeded RNG for reproducibility
-    let s = seed;
-    return () => { s = (s * 16807 + 0) % 2147483647; return s / 2147483647; };
-  };
-  const rand = rng(42);
+  // Place asteroids everywhere EXCEPT along the correct great circle corridor
+  for (let i = 0; i < 50; i++) {
+    const aLon = rand() * TAU;
+    const aLat = (rand() - 0.5) * Math.PI * 0.85; // avoid poles
 
-  // Build asteroid field with a clear gap at BASE_ANGLE
-  for (let i = 0; i < 40; i++) {
-    const dist = 140 + rand() * (W - 220);
-    const asteroidR = 3 + rand() * 8;
-    // Angle offset from the correct path
-    let offsetAngle = (rand() - 0.5) * Math.PI * 0.8;
-    // Enforce gap: push asteroids well clear of the correct angle corridor
-    // Gap must be wide enough that no asteroid (including its radius) touches the laser
-    const safeMargin = (asteroidR + 6) / dist; // angular size of asteroid at its distance
-    const corridorHalf = 0.14 + safeMargin; // generous corridor
-    if (Math.abs(offsetAngle) < corridorHalf) {
-      offsetAngle = (offsetAngle >= 0 ? 1 : -1) * (corridorHalf + 0.03 + rand() * 0.05);
+    // Check angular distance from the correct great circle path
+    // For a great circle from SHIP_START heading CORRECT_HEADING,
+    // we sample points along it and check min distance to this asteroid
+    let tooClose = false;
+    for (let s = 0; s < 40; s++) {
+      const pt = greatCircleStep(SHIP_START.lon, SHIP_START.lat, CORRECT_HEADING, s * 0.15);
+      // Angular distance on sphere
+      const dlon = aLon - pt.lon;
+      const dlat = aLat - pt.lat;
+      const a = Math.sin(dlat/2)**2 + Math.cos(pt.lat) * Math.cos(aLat) * Math.sin(dlon/2)**2;
+      const angDist = 2 * Math.asin(Math.sqrt(Math.min(1, a)));
+      if (angDist < 0.15) { tooClose = true; break; }
     }
-    const a = BASE_ANGLE + offsetAngle;
+    if (tooClose) { i--; continue; } // reject, try again
+
+    const r = 3 + rand() * 9;
+    const verts = 5 + Math.floor(rand() * 4);
+    const irreg = [];
+    for (let v = 0; v < verts; v++) irreg.push(0.6 + rand() * 0.8);
+
     asteroids.push({
-      x: ship.x + Math.cos(a) * dist,
-      y: ship.y + Math.sin(a) * dist,
-      r: asteroidR,
-      rot: rand() * TAU,
-      rotSpeed: (rand() - 0.5) * 0.01,
-      verts: 5 + Math.floor(rand() * 4), // irregular polygon
-      irregularity: [],
+      lon: aLon, lat: aLat, r: r,
+      rot: rand() * TAU, rotSpeed: (rand() - 0.5) * 0.008,
+      verts: verts, irregularity: irreg,
     });
   }
-  // Generate irregular shapes
-  for (const a of asteroids) {
-    for (let v = 0; v < a.verts; v++) {
-      a.irregularity.push(0.6 + rand() * 0.8);
+
+  // ── Game state ──
+  let state = 'aim'; // 'aim' | 'fly' | 'crash' | 'solved' | 'skip'
+  let trail = []; // screen-space trail of ship path
+  let crashTimer = 0;
+  let solvedTimer = 0;
+  let t = 0;
+  const SHIP_SPEED = 0.012; // radians per frame on the sphere
+
+  function resetShip() {
+    shipLon = SHIP_START.lon;
+    shipLat = SHIP_START.lat;
+    trail = [];
+    state = 'aim';
+    crashTimer = 0;
+    solvedTimer = 0;
+  }
+
+  function exitGame() {
+    document.getElementById('game-screen').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+    document.getElementById('nav-indicator').style.display = 'block';
+    initContent();
+  }
+
+  // ── Drawing ──
+  function drawAsteroid(a) {
+    const s = toScreen(a.lon, a.lat);
+    // Draw at primary position and wrapped positions (near edges)
+    const positions = [s];
+    if (s.x < a.r * 2) positions.push({ x: s.x + W, y: s.y });
+    if (s.x > W - a.r * 2) positions.push({ x: s.x - W, y: s.y });
+
+    for (const p of positions) {
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(a.rot);
+      ctx.strokeStyle = '#666';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      for (let v = 0; v <= a.verts; v++) {
+        const idx = v % a.verts;
+        const ang = (idx / a.verts) * TAU;
+        const r = a.r * a.irregularity[idx];
+        const px = Math.cos(ang) * r;
+        const py = Math.sin(ang) * r;
+        if (v === 0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
+      }
+      ctx.closePath();
+      ctx.stroke();
+      ctx.restore();
     }
   }
 
-  function getLaserAngle() {
-    return BASE_ANGLE + currentConfig * ANGLE_STEP;
-  }
-
-  function drawShip(ctx, x, y, angle) {
+  function drawShip(x, y, angle) {
     ctx.save();
     ctx.translate(x, y);
     ctx.rotate(angle);
-    ctx.strokeStyle = '#aaa';
+    ctx.strokeStyle = state === 'fly' ? '#4c4' : '#aaa';
     ctx.lineWidth = 1.5;
     ctx.beginPath();
-    ctx.moveTo(18, 0);
-    ctx.lineTo(-10, -9);
-    ctx.lineTo(-6, 0);
-    ctx.lineTo(-10, 9);
+    ctx.moveTo(14, 0);
+    ctx.lineTo(-8, -7);
+    ctx.lineTo(-4, 0);
+    ctx.lineTo(-8, 7);
     ctx.closePath();
     ctx.stroke();
-    // Thruster flicker
-    if (Math.random() > 0.3) {
+    // Thruster when flying
+    if (state === 'fly' && Math.random() > 0.3) {
       ctx.strokeStyle = '#664';
       ctx.beginPath();
-      ctx.moveTo(-6, 0);
-      ctx.lineTo(-12 - Math.random() * 6, (Math.random() - 0.5) * 6);
+      ctx.moveTo(-4, 0);
+      ctx.lineTo(-10 - Math.random() * 5, (Math.random() - 0.5) * 5);
       ctx.stroke();
     }
     ctx.restore();
   }
 
-  function drawAsteroid(ctx, a) {
-    ctx.save();
-    ctx.translate(a.x, a.y);
-    ctx.rotate(a.rot);
-    ctx.strokeStyle = '#666';
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    for (let v = 0; v <= a.verts; v++) {
-      const i = v % a.verts;
-      const ang = (i / a.verts) * TAU;
-      const r = a.r * a.irregularity[i];
-      const px = Math.cos(ang) * r;
-      const py = Math.sin(ang) * r;
-      if (v === 0) ctx.moveTo(px, py);
-      else ctx.lineTo(px, py);
-    }
-    ctx.closePath();
-    ctx.stroke();
-    ctx.restore();
-  }
-
-  function laserHitsAsteroid(angle) {
-    // Check if laser ray from ship at given angle hits any asteroid
-    const dx = Math.cos(angle);
-    const dy = Math.sin(angle);
+  function checkCollision() {
     for (const a of asteroids) {
-      // Point-to-line distance
-      const ex = a.x - ship.x;
-      const ey = a.y - ship.y;
-      const proj = ex * dx + ey * dy;
-      if (proj < 20) continue; // behind ship
-      const perpSq = (ex * ex + ey * ey) - proj * proj;
-      if (perpSq < (a.r + 2) * (a.r + 2)) return { hit: true, dist: proj, asteroid: a };
+      const dlon = shipLon - a.lon;
+      const dlat = shipLat - a.lat;
+      const angDist2 = Math.sin(dlat/2)**2 + Math.cos(a.lat) * Math.cos(shipLat) * Math.sin(dlon/2)**2;
+      const angDist = 2 * Math.asin(Math.sqrt(Math.min(1, angDist2)));
+      // Convert asteroid radius from screen pixels to sphere radians
+      const rRad = a.r / W * TAU * 0.4;
+      if (angDist < rRad) return a;
     }
-    return { hit: false };
+    return null;
   }
 
-  function drawLaser(ctx, angle, progress) {
-    const maxLen = W + H;
-    const hitTest = laserHitsAsteroid(angle);
-    const len = hitTest.hit ? Math.min(hitTest.dist, progress * maxLen) : progress * maxLen;
-
-    const ex = ship.x + Math.cos(angle) * len;
-    const ey = ship.y + Math.sin(angle) * len;
-
-    // Laser beam: green if clear, red if blocked, yellow if clear but wrong angle
-    ctx.strokeStyle = hitTest.hit ? '#c44' : '#4c4';
-    ctx.lineWidth = hitTest.hit ? 1 : 1.5;
-    ctx.setLineDash(hitTest.hit ? [4, 4] : []);
-    ctx.beginPath();
-    ctx.moveTo(ship.x + Math.cos(angle) * 20, ship.y + Math.sin(angle) * 20);
-    ctx.lineTo(ex, ey);
-    ctx.stroke();
-    ctx.setLineDash([]);
-
-    // Impact flash
-    if (hitTest.hit && progress > hitTest.dist / maxLen) {
-      ctx.fillStyle = '#f44';
-      ctx.beginPath();
-      ctx.arc(ship.x + Math.cos(angle) * hitTest.dist,
-              ship.y + Math.sin(angle) * hitTest.dist,
-              4 + Math.random() * 3, 0, TAU);
-      ctx.fill();
-    }
-
-    // Clean pass indicator
-    if (!hitTest.hit && currentConfig === CORRECT && progress > 0.8) {
-      ctx.fillStyle = '#4c4';
-      ctx.font = '12px Courier New';
-      ctx.fillText('GEODESIC', W - 100, 30);
-    }
-  }
-
-  // Aiming reticle: show which of 12 positions we're at
-  function drawReticle(ctx) {
-    const rx = 60, ry = H - 50;
-    ctx.strokeStyle = '#333';
+  // Reticle
+  function drawReticle() {
+    const rx = 60, ry = H - 45, R = 20;
+    ctx.strokeStyle = '#222';
     ctx.lineWidth = 0.5;
     ctx.beginPath();
-    ctx.arc(rx, ry, 20, 0, TAU);
+    ctx.arc(rx, ry, R, 0, TAU);
     ctx.stroke();
-    // 12 ticks
     for (let i = 0; i < 12; i++) {
-      const a = i * ANGLE_STEP;
-      const inner = i === currentConfig ? 10 : 15;
-      ctx.strokeStyle = i === currentConfig ? '#fff' : '#333';
-      ctx.lineWidth = i === currentConfig ? 1.5 : 0.5;
+      const a = i * ANGLE_STEP - Math.PI / 2;
+      const inner = i === currentIdx ? 8 : 14;
+      ctx.strokeStyle = i === currentIdx ? '#fff' : '#333';
+      ctx.lineWidth = i === currentIdx ? 2 : 0.5;
       ctx.beginPath();
       ctx.moveTo(rx + Math.cos(a) * inner, ry + Math.sin(a) * inner);
-      ctx.lineTo(rx + Math.cos(a) * 20, ry + Math.sin(a) * 20);
+      ctx.lineTo(rx + Math.cos(a) * R, ry + Math.sin(a) * R);
       ctx.stroke();
     }
-    // Config number
     ctx.fillStyle = '#555';
     ctx.font = '10px Courier New';
     ctx.textAlign = 'center';
-    ctx.fillText(currentConfig + '/11', rx, ry + 34);
+    ctx.fillText(currentIdx + '/11', rx, ry + 34);
     ctx.textAlign = 'left';
   }
 
+  // ── Main loop ──
   function draw() {
     ctx.clearRect(0, 0, W, H);
     t++;
 
-    // Border
-    ctx.strokeStyle = '#222';
-    ctx.lineWidth = 1;
+    // Border (the "arbitrary" edge of the projection)
+    ctx.strokeStyle = '#1a1a1a';
+    ctx.lineWidth = 0.5;
+    ctx.setLineDash([4, 6]);
     ctx.strokeRect(0.5, 0.5, W - 1, H - 1);
+    ctx.setLineDash([]);
+
+    // Latitude grid lines (faint, show it's a projection)
+    ctx.strokeStyle = 'rgba(255,255,255,0.03)';
+    ctx.lineWidth = 0.5;
+    for (let lat = -60; lat <= 60; lat += 30) {
+      const y = (0.5 - (lat * Math.PI / 180) / Math.PI) * H;
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(W, y);
+      ctx.stroke();
+    }
 
     // Asteroids
     for (const a of asteroids) {
       a.rot += a.rotSpeed;
-      drawAsteroid(ctx, a);
+      drawAsteroid(a);
     }
 
-    const angle = getLaserAngle();
+    // ── State machine ──
+    if (state === 'aim') {
+      shipHeading = getHeading();
+      const s = toScreen(shipLon, shipLat);
 
-    // Aiming line (faint)
-    if (!laserFiring) {
-      ctx.strokeStyle = 'rgba(255,255,255,0.08)';
+      // Aim line: preview the great circle path (faint)
+      ctx.strokeStyle = 'rgba(255,255,255,0.06)';
       ctx.lineWidth = 0.5;
       ctx.beginPath();
-      ctx.moveTo(ship.x + Math.cos(angle) * 20, ship.y + Math.sin(angle) * 20);
-      ctx.lineTo(ship.x + Math.cos(angle) * W, ship.y + Math.sin(angle) * W);
-      ctx.stroke();
-    }
-
-    // Laser
-    if (laserFiring) {
-      laserProgress = Math.min(laserProgress + 0.06, 1);
-      drawLaser(ctx, angle, laserProgress);
-
-      // Check result
-      if (laserProgress >= 1) {
-        const hit = laserHitsAsteroid(angle);
-        if (!hit.hit) {
-          solved = true;
+      let first = true;
+      let prevX = null;
+      for (let d = 0; d < 60; d++) {
+        const pt = greatCircleStep(shipLon, shipLat, shipHeading, d * 0.05);
+        const ps = toScreen(pt.lon, pt.lat);
+        // Don't draw across wrapping discontinuity
+        if (prevX !== null && Math.abs(ps.x - prevX) > W / 2) {
+          ctx.stroke();
+          ctx.beginPath();
+          first = true;
         }
-        if (laserProgress >= 1 && !solved) {
-          // Reset after showing result
-          if (++solvedTimer > 40) {
-            laserFiring = false;
-            laserProgress = 0;
-            solvedTimer = 0;
-          }
+        if (first) { ctx.moveTo(ps.x, ps.y); first = false; }
+        else ctx.lineTo(ps.x, ps.y);
+        prevX = ps.x;
+      }
+      ctx.stroke();
+
+      drawShip(s.x, s.y, shipHeading);
+      drawReticle();
+
+    } else if (state === 'fly') {
+      // Advance ship along great circle
+      const step = greatCircleStep(shipLon, shipLat, shipHeading, SHIP_SPEED);
+      shipLon = step.lon;
+      shipLat = step.lat;
+      shipHeading = step.heading;
+
+      const s = toScreen(shipLon, shipLat);
+      trail.push({ x: s.x, y: s.y });
+
+      // Draw trail
+      ctx.strokeStyle = 'rgba(80,200,80,0.3)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      let prevTX = null;
+      for (let i = 0; i < trail.length; i++) {
+        const p = trail[i];
+        if (prevTX !== null && Math.abs(p.x - prevTX) > W / 2) {
+          ctx.stroke();
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+        } else {
+          if (i === 0) ctx.moveTo(p.x, p.y);
+          else ctx.lineTo(p.x, p.y);
+        }
+        prevTX = p.x;
+      }
+      ctx.stroke();
+
+      drawShip(s.x, s.y, shipHeading);
+
+      // Check collision
+      const hit = checkCollision();
+      if (hit) {
+        state = 'crash';
+        crashTimer = 0;
+      }
+
+      // Check if traversed full great circle (back near start)
+      if (trail.length > 80) {
+        const dlon = shipLon - SHIP_START.lon;
+        const dlat = shipLat - SHIP_START.lat;
+        const d2 = Math.sin(dlat/2)**2 + Math.cos(shipLat) * Math.cos(SHIP_START.lat) * Math.sin(dlon/2)**2;
+        const dist = 2 * Math.asin(Math.sqrt(Math.min(1, d2)));
+        if (dist < 0.1) {
+          state = 'solved';
+          solvedTimer = 0;
         }
       }
-    }
 
-    // Ship
-    drawShip(ctx, ship.x, ship.y, angle);
+    } else if (state === 'crash') {
+      crashTimer++;
+      const s = toScreen(shipLon, shipLat);
+      // Explosion
+      const nBits = 12;
+      for (let i = 0; i < nBits; i++) {
+        const a = i * TAU / nBits + crashTimer * 0.05;
+        const r = crashTimer * 1.5;
+        ctx.fillStyle = `rgba(255,${100 - crashTimer * 2},50,${Math.max(0, 0.8 - crashTimer * 0.015)})`;
+        ctx.fillRect(s.x + Math.cos(a) * r - 1, s.y + Math.sin(a) * r - 1, 2, 2);
+      }
 
-    // Reticle
-    drawReticle(ctx);
+      // Draw old trail
+      ctx.strokeStyle = 'rgba(200,80,80,0.2)';
+      ctx.lineWidth = 0.5;
+      ctx.beginPath();
+      let pTX = null;
+      for (let i = 0; i < trail.length; i++) {
+        const p = trail[i];
+        if (pTX !== null && Math.abs(p.x - pTX) > W / 2) {
+          ctx.stroke(); ctx.beginPath(); ctx.moveTo(p.x, p.y);
+        } else {
+          if (i === 0) ctx.moveTo(p.x, p.y);
+          else ctx.lineTo(p.x, p.y);
+        }
+        pTX = p.x;
+      }
+      ctx.stroke();
 
-    // Title
-    ctx.fillStyle = '#555';
-    ctx.font = '11px Courier New';
-    ctx.fillText('FIND THE GEODESIC', 10, 20);
+      ctx.fillStyle = '#c44';
+      ctx.font = '11px Courier New';
+      ctx.textAlign = 'center';
+      ctx.fillText('COLLISION', W/2, 30);
+      ctx.fillStyle = '#555';
+      ctx.fillText('0 to reset', W/2, 46);
+      ctx.textAlign = 'left';
 
-    // Solved transition
-    if (solved) {
+      if (crashTimer > 200) resetShip();
+
+    } else if (state === 'solved') {
       solvedTimer++;
+      // Draw the complete trail
+      ctx.strokeStyle = 'rgba(80,200,80,0.5)';
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      let pSX = null;
+      for (let i = 0; i < trail.length; i++) {
+        const p = trail[i];
+        if (pSX !== null && Math.abs(p.x - pSX) > W / 2) {
+          ctx.stroke(); ctx.beginPath(); ctx.moveTo(p.x, p.y);
+        } else {
+          if (i === 0) ctx.moveTo(p.x, p.y);
+          else ctx.lineTo(p.x, p.y);
+        }
+        pSX = p.x;
+      }
+      ctx.stroke();
+
       const fade = Math.min(solvedTimer / 60, 1);
-      ctx.fillStyle = `rgba(0,0,0,${fade * 0.8})`;
+      ctx.fillStyle = `rgba(0,0,0,${fade * 0.7})`;
       ctx.fillRect(0, 0, W, H);
       ctx.fillStyle = `rgba(200,200,200,${fade})`;
       ctx.font = '14px Courier New';
       ctx.textAlign = 'center';
-      ctx.fillText('THE SHORTEST PATH', W / 2, H / 2 - 10);
-      ctx.fillStyle = `rgba(100,100,100,${fade})`;
+      ctx.fillText('GEODESIC', W/2, H/2 - 18);
+      ctx.font = '12px Georgia, serif';
+      ctx.fillStyle = `rgba(140,140,140,${fade})`;
+      ctx.fillText('the great circle closes on the manifold', W/2, H/2 + 6);
       ctx.font = '11px Courier New';
-      ctx.fillText('the only one that threads the gap', W / 2, H / 2 + 14);
+      ctx.fillStyle = `rgba(100,100,100,${fade * 0.7})`;
+      ctx.fillText('the edges were never boundaries', W/2, H/2 + 28);
       ctx.textAlign = 'left';
 
-      if (solvedTimer > 120) {
-        document.getElementById('game-screen').style.display = 'none';
-        document.getElementById('content').style.display = 'block';
-        document.getElementById('nav-indicator').style.display = 'block';
-        initContent();
-        return; // stop game loop
+      if (solvedTimer > 150) exitGame();
+
+    } else if (state === 'skip') {
+      // Decohere-skip animation
+      solvedTimer++;
+      const intensity = Math.min(solvedTimer * 0.03, 1);
+      ctx.fillStyle = `rgba(0,0,0,${0.15})`;
+      ctx.fillRect(0, 0, W, H);
+      const chars = '∅φ²π−10⊕ΩΛ√';
+      for (let i = 0; i < intensity * 60; i++) {
+        const ch = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillStyle = `rgba(${120+Math.random()*80},${120+Math.random()*80},${150+Math.random()*80},${0.05+Math.random()*0.2})`;
+        ctx.font = `${8 + Math.random() * 12}px Courier New`;
+        ctx.fillText(ch, Math.random() * W, Math.random() * H);
       }
+      if (solvedTimer > 60) exitGame();
+    }
+
+    // Title (always)
+    if (state !== 'solved' && state !== 'skip') {
+      ctx.fillStyle = '#444';
+      ctx.font = '11px Courier New';
+      ctx.fillText('FIND THE GEODESIC', 10, 20);
+      // Manifold hint
+      ctx.fillStyle = '#2a2a2a';
+      ctx.font = '10px Georgia, serif';
+      ctx.fillText('edges are projections — the surface is closed', 10, H - 12);
     }
 
     requestAnimationFrame(draw);
   }
 
-  // Input
+  // ── Input ──
   document.addEventListener('keydown', (e) => {
-    if (solved) return;
-    if (e.key === 'ArrowRight' || e.key === 'd') {
-      currentConfig = (currentConfig + 1) % 12;
-      laserFiring = false; laserProgress = 0; solvedTimer = 0;
-    } else if (e.key === 'ArrowLeft' || e.key === 'a') {
-      currentConfig = (currentConfig + 11) % 12;
-      laserFiring = false; laserProgress = 0; solvedTimer = 0;
-    } else if (e.key === ' ' || e.key === 'Enter') {
-      e.preventDefault();
-      if (!laserFiring) {
-        laserFiring = true;
-        laserProgress = 0;
+    if (state === 'solved' || state === 'skip') return;
+
+    if (e.key === '0' || e.key === 'o' || e.key === 'O') {
+      resetShip();
+      return;
+    }
+
+    if (state === 'aim') {
+      if (e.key === 'ArrowRight' || e.key === 'd') {
+        currentIdx = (currentIdx + 1) % 12;
+      } else if (e.key === 'ArrowLeft' || e.key === 'a') {
+        currentIdx = (currentIdx + 11) % 12;
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        shipHeading = getHeading();
+        state = 'fly';
+        trail = [];
+      } else if (e.key === ' ') {
+        e.preventDefault();
+        state = 'skip';
         solvedTimer = 0;
       }
+    } else if (state === 'crash') {
+      resetShip();
     }
   });
 
-  // Touch/click: left half rotates left, right half rotates right, center fires
+  // Touch/click
   cvs.addEventListener('click', (e) => {
-    if (solved) return;
+    if (state === 'solved' || state === 'skip') return;
+    if (state === 'crash') { resetShip(); return; }
+
     const rect = cvs.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width;
-    if (x < 0.33) {
-      currentConfig = (currentConfig + 11) % 12;
-      laserFiring = false; laserProgress = 0; solvedTimer = 0;
-    } else if (x > 0.66) {
-      currentConfig = (currentConfig + 1) % 12;
-      laserFiring = false; laserProgress = 0; solvedTimer = 0;
-    } else {
-      if (!laserFiring) {
-        laserFiring = true; laserProgress = 0; solvedTimer = 0;
+
+    if (state === 'aim') {
+      if (x < 0.3) {
+        currentIdx = (currentIdx + 11) % 12;
+      } else if (x > 0.7) {
+        currentIdx = (currentIdx + 1) % 12;
+      } else {
+        shipHeading = getHeading();
+        state = 'fly';
+        trail = [];
       }
     }
   });
