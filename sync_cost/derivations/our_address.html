@@ -10,9 +10,9 @@
 body {
   background: #000;
   color: #c8c8c8;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 14px;
-  line-height: 1.6;
+  font-family: 'Georgia', 'Times New Roman', 'Garamond', serif;
+  font-size: 15px;
+  line-height: 1.7;
   overflow-x: hidden;
 }
 
@@ -28,6 +28,7 @@ body {
 #game-screen .hint {
   color: #555; font-size: 11px; margin-top: 12px;
   letter-spacing: 0.1em;
+  font-family: 'Courier New', monospace;
 }
 
 /* ── Content (hidden until game solved) ──────────── */
@@ -52,6 +53,7 @@ body {
 }
 .step-num {
   color: #333;
+  font-family: 'Courier New', monospace;
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -59,7 +61,8 @@ body {
 }
 .step-title {
   color: #e0e0e0;
-  font-size: 16px;
+  font-size: 18px;
+  font-style: italic;
   margin-bottom: 16px;
 }
 
@@ -68,16 +71,20 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0;
+  position: relative;
 }
 .triad-face {
   padding: 12px 16px;
   border-left: 2px solid;
   margin-bottom: 8px;
-  font-size: 13px;
+  font-size: 14px;
+  transition: opacity 0.3s;
 }
 .triad-face.eq {
   border-color: #c44;
   color: #e88;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
 }
 .triad-face.cj {
   border-color: #48c;
@@ -94,7 +101,17 @@ body {
   border: 1px solid #1a1a1a;
   display: block;
 }
+/* Mode: interference (all three overlaid at reduced opacity) */
+.triad.mode-interference .triad-face {
+  display: block !important;
+  opacity: 0.45;
+  position: relative;
+}
+.triad.mode-interference .triad-face.vis {
+  display: flex !important;
+}
 .triad-label {
+  font-family: 'Courier New', monospace;
   font-size: 10px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -935,12 +952,13 @@ function initNav() {
   const S = navCvs.width; // 48
   const cx = S / 2, cy = S / 2, R = 18;
 
-  // Colors for the circular linked list
-  const COLORS = ['#c44', '#48c', '#a4c']; // red, blue, purple
-  const LABELS = ['EQ', 'CJ', 'VI'];
+  // Colors for the 4-mode circular linked list
+  // 0=Equation(red), 1=Conjecture(blue), 2=Visual(purple), 3=Interference(all)
+  const COLORS = ['#c44', '#48c', '#a4c', '#888'];
+  const MODE_NAMES = ['eq', 'cj', 'vis', 'interference'];
 
   let morphProgress = 0; // 0 = circle, 1 = triangle
-  let currentFace = 0; // 0=eq, 1=cj, 2=vis (for highlighting)
+  let currentFace = 0; // 0-3
 
   // Decoherence state
   const decohereCvs = document.getElementById('decohere-overlay');
@@ -969,23 +987,27 @@ function initNav() {
     morphProgress = Math.max(0, Math.min((sf - 0.8) / 0.2, 1));
 
     if (morphProgress < 1) {
-      // ── CIRCLE MODE: three colored arcs ──
-      for (let i = 0; i < 3; i++) {
-        const startA = -Math.PI / 2 + i * TAU / 3;
-        const endA = startA + TAU / 3;
+      // ── CIRCLE MODE: four arcs (R, B, P, interference) ──
+      for (let i = 0; i < 4; i++) {
+        const startA = -Math.PI / 2 + i * TAU / 4;
+        const endA = startA + TAU / 4;
         navCtx.strokeStyle = COLORS[i];
         navCtx.lineWidth = i === currentFace ? 3 : 1.5;
-        navCtx.globalAlpha = i === currentFace ? 1 : 0.4;
+        navCtx.globalAlpha = i === currentFace ? 1 : 0.35;
         navCtx.beginPath();
         navCtx.arc(cx, cy, R, startA, endA);
         navCtx.stroke();
       }
       navCtx.globalAlpha = 1;
-      // Center dot
-      navCtx.fillStyle = '#333';
-      navCtx.beginPath();
-      navCtx.arc(cx, cy, 2, 0, TAU);
-      navCtx.fill();
+      // Center: show mode initial
+      const modeChar = ['E', 'C', 'V', '*'][currentFace];
+      navCtx.fillStyle = COLORS[currentFace];
+      navCtx.font = '10px Courier New';
+      navCtx.textAlign = 'center';
+      navCtx.textBaseline = 'middle';
+      navCtx.fillText(modeChar, cx, cy);
+      navCtx.textAlign = 'left';
+      navCtx.textBaseline = 'alphabetic';
     } else {
       // ── TRIANGLE MODE: equilateral divided into 4 ──
       const v = [triVert(0, R), triVert(1, R), triVert(2, R)];
@@ -1028,30 +1050,76 @@ function initNav() {
     }
   }
 
+  // ── Scroll-anchored mode switching ──
+  // Find the step element closest to the viewport center
+  function getAnchorStep() {
+    const steps = document.querySelectorAll('.step');
+    const viewMid = window.scrollY + window.innerHeight / 2;
+    let closest = null, closestDist = Infinity;
+    for (const s of steps) {
+      const rect = s.getBoundingClientRect();
+      const elMid = window.scrollY + rect.top + rect.height / 2;
+      const dist = Math.abs(elMid - viewMid);
+      if (dist < closestDist) { closestDist = dist; closest = s; }
+    }
+    return closest;
+  }
+
+  function applyMode(mode) {
+    // Anchor: record the offset of the anchor step from viewport top
+    const anchor = getAnchorStep();
+    const anchorOffsetBefore = anchor ? anchor.getBoundingClientRect().top : 0;
+
+    const triads = document.querySelectorAll('.triad');
+    for (const triad of triads) {
+      // Remove interference class
+      triad.classList.remove('mode-interference');
+
+      const eq = triad.querySelector('.triad-face.eq');
+      const cj = triad.querySelector('.triad-face.cj');
+      const vis = triad.querySelector('.triad-face.vis');
+
+      if (mode === 3) {
+        // Interference: all visible, reduced opacity (handled by CSS class)
+        triad.classList.add('mode-interference');
+        if (eq) eq.style.display = 'block';
+        if (cj) cj.style.display = 'block';
+        if (vis) vis.style.display = 'flex';
+      } else {
+        if (eq) eq.style.display = mode === 0 ? 'block' : 'none';
+        if (cj) cj.style.display = mode === 1 ? 'block' : 'none';
+        if (vis) vis.style.display = mode === 2 ? 'flex' : 'none';
+      }
+    }
+
+    // Restore scroll so the anchor step stays in the same viewport position
+    if (anchor) {
+      const anchorOffsetAfter = anchor.getBoundingClientRect().top;
+      const drift = anchorOffsetAfter - anchorOffsetBefore;
+      if (Math.abs(drift) > 1) {
+        window.scrollBy(0, drift);
+      }
+    }
+  }
+
   // Click handler on nav canvas
   navCvs.addEventListener('click', (e) => {
     if (morphProgress < 1) {
-      // Circle mode: cycle through faces
-      currentFace = (currentFace + 1) % 3;
-      // Toggle visibility of triad faces
-      document.querySelectorAll('.triad-face.eq').forEach(el => {
-        el.style.display = currentFace === 0 ? 'block' : 'none';
-      });
-      document.querySelectorAll('.triad-face.cj').forEach(el => {
-        el.style.display = currentFace === 1 ? 'block' : 'none';
-      });
-      document.querySelectorAll('.triad-face.vis').forEach(el => {
-        el.style.display = currentFace === 2 ? 'flex' : 'none';
-      });
+      // Circle mode: cycle through 4 modes
+      currentFace = (currentFace + 1) % 4;
+      applyMode(currentFace);
     } else {
       // Triangle mode: check if click is in center triangle
       const rect = navCvs.getBoundingClientRect();
       const mx = e.clientX - rect.left;
       const my = e.clientY - rect.top;
-      // Simple hit test: within ~8px of center
       const dist = Math.sqrt((mx - cx) ** 2 + (my - cy) ** 2);
       if (dist < R * 0.5) {
         startDecoherence();
+      } else {
+        // Outer triangles still cycle modes
+        currentFace = (currentFace + 1) % 4;
+        applyMode(currentFace);
       }
     }
   });
