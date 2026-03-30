@@ -298,11 +298,15 @@ const TAU = Math.PI * 2;
 
   // ── Game state ──
   let state = 'aim'; // 'aim' | 'fly' | 'crash' | 'solved' | 'skip'
-  let trail = []; // screen-space trail of ship path
+  let trail = []; // {x, y, visible} screen-space trail
   let crashTimer = 0;
   let solvedTimer = 0;
   let t = 0;
   const SHIP_SPEED = 0.012; // radians per frame on the sphere
+  let wasOnScreen = true; // track edge crossings
+  let offScreenFrames = 0; // how long ship has been off-screen
+  let reEntryFlash = 0; // flash timer when ship re-enters
+  let wrapCount = 0; // number of times ship has wrapped
 
   function resetShip() {
     shipLon = SHIP_START.lon;
@@ -311,6 +315,10 @@ const TAU = Math.PI * 2;
     state = 'aim';
     crashTimer = 0;
     solvedTimer = 0;
+    wasOnScreen = true;
+    offScreenFrames = 0;
+    reEntryFlash = 0;
+    wrapCount = 0;
   }
 
   function exitGame() {
@@ -472,34 +480,80 @@ const TAU = Math.PI * 2;
 
     } else if (state === 'fly') {
       // Advance ship along great circle
+      const prevS = toScreen(shipLon, shipLat);
       const step = greatCircleStep(shipLon, shipLat, shipHeading, SHIP_SPEED);
       shipLon = step.lon;
       shipLat = step.lat;
       shipHeading = step.heading;
 
       const s = toScreen(shipLon, shipLat);
-      trail.push({ x: s.x, y: s.y });
 
-      // Draw trail
-      ctx.strokeStyle = 'rgba(80,200,80,0.3)';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      let prevTX = null;
-      for (let i = 0; i < trail.length; i++) {
-        const p = trail[i];
-        if (prevTX !== null && Math.abs(p.x - prevTX) > W / 2) {
-          ctx.stroke();
-          ctx.beginPath();
-          ctx.moveTo(p.x, p.y);
-        } else {
-          if (i === 0) ctx.moveTo(p.x, p.y);
-          else ctx.lineTo(p.x, p.y);
-        }
-        prevTX = p.x;
+      // Detect edge crossing: large screen-x jump means wrapping
+      const wrapped = trail.length > 0 && Math.abs(s.x - prevS.x) > W * 0.4;
+      trail.push({ x: s.x, y: s.y, wrap: wrapped });
+
+      // Track on/off screen for the coherence beat
+      const onScreen = s.x >= -10 && s.x <= W + 10 && s.y >= -10 && s.y <= H + 10;
+      if (!onScreen) {
+        offScreenFrames++;
+        wasOnScreen = false;
+      } else if (!wasOnScreen && onScreen) {
+        // Ship just re-entered the viewport
+        reEntryFlash = 30;
+        wrapCount++;
+        wasOnScreen = true;
+        offScreenFrames = 0;
       }
-      ctx.stroke();
 
-      drawShip(s.x, s.y, shipHeading);
+      // Draw trail — segments break at wraps, fade with age
+      for (let i = 1; i < trail.length; i++) {
+        if (trail[i].wrap) continue; // skip the wrap-jump segment
+        const age = (trail.length - i) / trail.length;
+        const alpha = 0.15 + 0.35 * (1 - age);
+        ctx.strokeStyle = `rgba(80,200,80,${alpha})`;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(trail[i-1].x, trail[i-1].y);
+        ctx.lineTo(trail[i].x, trail[i].y);
+        ctx.stroke();
+      }
+
+      // Ship — only draw if on screen (let it vanish at the edge)
+      if (onScreen) {
+        drawShip(s.x, s.y, shipHeading);
+      }
+
+      // Off-screen hint: the asteroids keep going, the ship is still there
+      if (!onScreen && offScreenFrames > 15) {
+        ctx.fillStyle = `rgba(100,100,100,${Math.min(offScreenFrames * 0.005, 0.3)})`;
+        ctx.font = '11px Georgia, serif';
+        ctx.textAlign = 'center';
+        ctx.fillText('the surface continues', W/2, H/2 - 8);
+        if (offScreenFrames > 40) {
+          ctx.fillStyle = `rgba(80,80,80,${Math.min((offScreenFrames - 40) * 0.005, 0.2)})`;
+          ctx.fillText('time passes here too', W/2, H/2 + 12);
+        }
+        ctx.textAlign = 'left';
+      }
+
+      // Re-entry flash
+      if (reEntryFlash > 0) {
+        reEntryFlash--;
+        const flashAlpha = reEntryFlash / 30 * 0.5;
+        // Flash at the re-entry point
+        ctx.fillStyle = `rgba(80,200,80,${flashAlpha})`;
+        ctx.beginPath();
+        ctx.arc(s.x, s.y, 8 + (30 - reEntryFlash) * 0.5, 0, TAU);
+        ctx.fill();
+        // Label on first wrap
+        if (wrapCount === 1 && reEntryFlash > 15) {
+          ctx.fillStyle = `rgba(80,200,80,${flashAlpha})`;
+          ctx.font = '10px Courier New';
+          ctx.textAlign = 'center';
+          ctx.fillText('SAME SURFACE', s.x, s.y - 16);
+          ctx.textAlign = 'left';
+        }
+      }
 
       // Check collision
       const hit = checkCollision();
@@ -535,19 +589,13 @@ const TAU = Math.PI * 2;
       // Draw old trail
       ctx.strokeStyle = 'rgba(200,80,80,0.2)';
       ctx.lineWidth = 0.5;
-      ctx.beginPath();
-      let pTX = null;
-      for (let i = 0; i < trail.length; i++) {
-        const p = trail[i];
-        if (pTX !== null && Math.abs(p.x - pTX) > W / 2) {
-          ctx.stroke(); ctx.beginPath(); ctx.moveTo(p.x, p.y);
-        } else {
-          if (i === 0) ctx.moveTo(p.x, p.y);
-          else ctx.lineTo(p.x, p.y);
-        }
-        pTX = p.x;
+      for (let i = 1; i < trail.length; i++) {
+        if (trail[i].wrap) continue;
+        ctx.beginPath();
+        ctx.moveTo(trail[i-1].x, trail[i-1].y);
+        ctx.lineTo(trail[i].x, trail[i].y);
+        ctx.stroke();
       }
-      ctx.stroke();
 
       ctx.fillStyle = '#c44';
       ctx.font = '11px Courier New';
@@ -564,19 +612,13 @@ const TAU = Math.PI * 2;
       // Draw the complete trail
       ctx.strokeStyle = 'rgba(80,200,80,0.5)';
       ctx.lineWidth = 1.5;
-      ctx.beginPath();
-      let pSX = null;
-      for (let i = 0; i < trail.length; i++) {
-        const p = trail[i];
-        if (pSX !== null && Math.abs(p.x - pSX) > W / 2) {
-          ctx.stroke(); ctx.beginPath(); ctx.moveTo(p.x, p.y);
-        } else {
-          if (i === 0) ctx.moveTo(p.x, p.y);
-          else ctx.lineTo(p.x, p.y);
-        }
-        pSX = p.x;
+      for (let i = 1; i < trail.length; i++) {
+        if (trail[i].wrap) continue;
+        ctx.beginPath();
+        ctx.moveTo(trail[i-1].x, trail[i-1].y);
+        ctx.lineTo(trail[i].x, trail[i].y);
+        ctx.stroke();
       }
-      ctx.stroke();
 
       const fade = Math.min(solvedTimer / 60, 1);
       ctx.fillStyle = `rgba(0,0,0,${fade * 0.7})`;
