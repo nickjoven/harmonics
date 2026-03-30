@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>The Ontology</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#06060a; color:#b0b0c0; font-family:'Courier New',Courier,monospace; overflow:hidden; height:100vh; }
+canvas { position:absolute; top:0; left:0; }
+#overlay {
+  position:absolute; top:0; left:0; right:0; bottom:0; z-index:2;
+  display:-webkit-flex; display:flex; flex-direction:column;
+  justify-content:flex-end; padding:24px; pointer-events:none;
+}
+#concept { font-size:15px; line-height:1.7; max-width:640px; }
+#concept .name { font-size:22px; color:#d0d0f0; margin-bottom:6px; }
+#concept .formal { color:#7788bb; }
+#concept .visual { color:#88aa77; }
+#concept .metaphor { color:#aa8866; }
+#concept .narrative { color:#998899; }
+#concept .human { color:#aaa; font-style:italic; }
+#season-bar {
+  position:absolute; top:0; left:0; right:0; height:3px; z-index:3;
+}
+#season-label {
+  position:absolute; top:10px; right:16px; z-index:3;
+  font-size:11px; color:#444;
+}
+#k-label {
+  position:absolute; top:10px; left:16px; z-index:3;
+  font-size:11px; color:#555;
+}
+.dim { opacity:0; transition:opacity 0.6s; }
+.dim.show { opacity:1; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="season-bar"></div>
+<div id="k-label"></div>
+<div id="season-label"></div>
+<div id="overlay"><div id="concept" class="dim"></div></div>
+
+<script>
+(function(){
+"use strict";
+
+// === STAIRCASE ENGINE ===
+function circleMap(theta, omega, K) {
+  return theta + omega - (K / 6.283185307) * Math.sin(6.283185307 * theta);
+}
+function windingNumber(omega, K) {
+  var theta = 0, i;
+  for (i = 0; i < 60; i++) theta = circleMap(theta, omega, K);
+  var total = 0;
+  for (i = 0; i < 120; i++) {
+    var next = circleMap(theta, omega, K);
+    total += next - theta;
+    theta = next;
+  }
+  return total / 120;
+}
+
+// Precompute staircase at several K values
+var STEPS = 300;
+var K_VALUES = [];
+var STAIRCASES = {};
+(function precompute() {
+  var ks = [0.0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.85, 0.92, 0.97, 1.0];
+  for (var ki = 0; ki < ks.length; ki++) {
+    var K = ks[ki];
+    K_VALUES.push(K);
+    var arr = new Array(STEPS);
+    for (var i = 0; i < STEPS; i++) {
+      arr[i] = windingNumber(i / STEPS, K);
+    }
+    STAIRCASES[K] = arr;
+  }
+})();
+
+function getStaircase(K) {
+  // Find two nearest precomputed K values and interpolate
+  var lo = 0, hi = K_VALUES.length - 1;
+  for (var i = 0; i < K_VALUES.length; i++) {
+    if (K_VALUES[i] <= K) lo = i;
+    if (K_VALUES[i] >= K) { hi = i; break; }
+  }
+  if (lo === hi) return STAIRCASES[K_VALUES[lo]];
+  var t = (K - K_VALUES[lo]) / (K_VALUES[hi] - K_VALUES[lo]);
+  var a = STAIRCASES[K_VALUES[lo]], b = STAIRCASES[K_VALUES[hi]];
+  var result = new Array(STEPS);
+  for (var j = 0; j < STEPS; j++) result[j] = a[j] * (1-t) + b[j] * t;
+  return result;
+}
+
+// === ONTOLOGY ===
+var concepts = [
+  { K: 0.0, season: "void",
+    name: "0. Integers",
+    formal: "Z: the natural numbers. Counting exists.",
+    visual: "A dark field. One dot appears. Then another.",
+    metaphor: "Before rhythm, there is pulse. Before pulse, there is one.",
+    narrative: "Something can be distinguished from nothing.",
+    human: "You can count."
+  },
+  { K: 0.05, season: "spring",
+    name: "1. Mediant",
+    formal: "(a+c)/(b+d): the unique operation satisfying betweenness and minimality.",
+    visual: "Two dots. A third appears between them, closer to the simpler one.",
+    metaphor: "Two voices find a third that is neither, and simpler than both.",
+    narrative: "Coupling produces the most stable intermediate.",
+    human: "When two things meet, what emerges is the simplest thing that fits between."
+  },
+  { K: 0.12, season: "spring",
+    name: "2. Fixed point",
+    formal: "x = f(x): self-reference. The output is the input.",
+    visual: "A loop closes. The dot returns to itself.",
+    metaphor: "The mirror reflects the mirror.",
+    narrative: "The system that measures itself finds a value that survives the measurement.",
+    human: "You are the thing looking."
+  },
+  { K: 0.20, season: "spring",
+    name: "3. Parabola",
+    formal: "x\u00B2 + \u03BC = 0: bifurcation. One becomes two.",
+    visual: "The dot splits. Two paths diverge from a cusp.",
+    metaphor: "The river hits a rock and divides.",
+    narrative: "At a critical parameter, a single state becomes unstable and two stable states appear.",
+    human: "Every choice is a fork that was forced."
+  },
+  { K: 0.30, season: "summer",
+    name: "4. Circle",
+    formal: "S\u00B9 = R/Z: integers + fixed point \u2192 phase is periodic.",
+    visual: "The line wraps. The ends join. A circle.",
+    metaphor: "The year has no start. The clock has no edge.",
+    narrative: "Compact phase space. Derived, not assumed. Counting modulo itself.",
+    human: "Things repeat."
+  },
+  { K: 0.42, season: "summer",
+    name: "5. Circle map",
+    formal: "\u03B8\u2099\u208A\u2081 = \u03B8\u2099 + \u03A9 \u2212 (K/2\u03C0)sin(2\u03C0\u03B8\u2099)",
+    visual: "The circle distorts. Some regions stretch, others compress.",
+    metaphor: "The river has fast sections and slow. The slow ones trap you.",
+    narrative: "Phase + frequency + coupling. The three-body problem on a circle.",
+    human: "Two oscillators. How they pull each other."
+  },
+  { K: 0.55, season: "summer",
+    name: "6. Arnold tongues",
+    formal: "w(p/q) ~ (K/2)\u1D60: width decreases exponentially with denominator.",
+    visual: "Wedges grow from each rational. The simple ones are widest.",
+    metaphor: "The loudest bells ring longest. The subtle ones fade first.",
+    narrative: "Stability is denominator. Simpler fractions lock over wider parameter ranges.",
+    human: "Simple patterns are harder to break."
+  },
+  { K: 0.70, season: "autumn",
+    name: "7. Devil\u2019s staircase",
+    formal: "W(\u03A9, K): flat on every rational, continuous, monotone, singular.",
+    visual: "Steps form. Wide at 1/2. Narrower at 1/3, 2/3. Dust between.",
+    metaphor: "The seasons are not equal. Summer lingers. The equinox is a knife edge.",
+    narrative: "The winding number locks to rationals. The staircase IS the coupled dynamics.",
+    human: "You spend most of your time on plateaus. The transitions are instant."
+  },
+  { K: 0.78, season: "autumn",
+    name: "8. Stern-Brocot tree",
+    formal: "Every rational appears exactly once, ordered by denominator.",
+    visual: "A binary tree. Each node is a mediant of its ancestors.",
+    metaphor: "The family tree of all fractions. Every ratio has parents.",
+    narrative: "The configuration space. Not chosen \u2014 forced by betweenness + minimality.",
+    human: "Every possible pattern has an address."
+  },
+  { K: 0.82, season: "autumn",
+    name: "9. Born rule",
+    formal: "\u0394\u03B8 \u221D \u221A\u03B5: tongue boundary is a saddle-node. Exponent = 2.",
+    visual: "The edge of a step. The slope is a square root. Always.",
+    metaphor: "The probability of being here is the width of the step you\u2019re standing on.",
+    narrative: "|ψ|\u00B2 is not a postulate. It is the geometry of parabolas at tongue boundaries.",
+    human: "How likely you are to find something there is how wide the plateau is."
+  },
+  { K: 0.88, season: "autumn",
+    name: "10. Field equation",
+    formal: "N(p/q) = N\u209C\u2092\u209C\u2090\u2097 \u00D7 g(p/q) \u00D7 w(p/q, K\u2080F[N])",
+    visual: "The tree glows. Each node\u2019s brightness determines its neighbors\u2019 brightness.",
+    metaphor: "The forest grows itself. Each tree\u2019s shade shapes the others.",
+    narrative: "Self-consistency on the Stern-Brocot tree. K=1 \u2192 Einstein. K<1 \u2192 Schr\u00F6dinger.",
+    human: "The pattern that produces itself when you apply it to itself."
+  },
+  { K: 0.92, season: "winter",
+    name: "11. Three dimensions",
+    formal: "Mediant \u2192 SL(2,Z) \u2192 SL(2,R). dim = 2\u00B2\u22121 = 3.",
+    visual: "The tree unfolds into space. The flat page lifts.",
+    metaphor: "Two hands clapping need three dimensions to meet.",
+    narrative: "d=3 is forced. The mediant has two components. Its symmetry group has dimension 3.",
+    human: "Space has three directions because fractions have two parts."
+  },
+  { K: 0.95, season: "winter",
+    name: "12. Klein bottle",
+    formal: "Two antiperiodic directions. XOR parity. 1,764 \u2192 4 modes.",
+    visual: "The surface closes through itself. A bottle with no inside.",
+    metaphor: "The M\u00F6bius strip married itself. The children are the four survivors.",
+    narrative: "Topology selects. From all possible modes, exactly four survive the twist.",
+    human: "The shape of the container determines what can exist inside it."
+  },
+  { K: 0.98, season: "winter",
+    name: "13. Farey partition",
+    formal: "\u03A9\u039B = |F\u2086|/(|F\u2086| + q\u2082q\u2083) = 13/19 = 0.6842",
+    visual: "13 bright nodes. 6 dark gaps. The ratio is the universe.",
+    metaphor: "Count what the bottle can see. Count the door it sees through. Divide.",
+    narrative: "13 resolved states. 6 interaction channels. 0.07\u03C3 from Planck.",
+    human: "The universe is 13 nineteenths dark energy because 13 fractions fit in a bottle with a twist."
+  },
+  { K: 1.0, season: "winter",
+    name: "\u25A0",
+    formal: "K = 1. The staircase fills the line.",
+    visual: "All steps. No gaps. The dust has measure zero.",
+    metaphor: "Every frequency is locked. The music is the silence between.",
+    narrative: "The fixed point. The field equation solved. Zero free parameters.",
+    human: "Everything that can lock, has locked. What remains is what is."
+  }
+];
+
+// === CANVAS ===
+var canvas = document.getElementById("c");
+var ctx = canvas.getContext("2d");
+var dpr = window.devicePixelRatio || 1;
+var W, H;
+function resize() {
+  dpr = window.devicePixelRatio || 1;
+  W = window.innerWidth; H = window.innerHeight;
+  canvas.width = W * dpr; canvas.height = H * dpr;
+  canvas.style.width = W + "px"; canvas.style.height = H + "px";
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+resize();
+window.addEventListener("resize", resize);
+
+// === SEASON COLORS ===
+var seasonColors = {
+  void:   { bg:"#06060a", bar:"#222", text:"#444" },
+  spring: { bg:"#080a08", bar:"#4a7744", text:"#5a8855" },
+  summer: { bg:"#0a0a06", bar:"#8a7733", text:"#9a8844" },
+  autumn: { bg:"#0a0808", bar:"#884433", text:"#995544" },
+  winter: { bg:"#08080c", bar:"#445588", text:"#5566aa" }
+};
+
+// === ANIMATION ===
+var CYCLE_MS = 42000; // full cycle
+var HOLD_MS = 2800;   // hold each concept
+var elapsed = 0;
+var lastT = 0;
+var currentIdx = -1;
+
+function getConceptIndex(t) {
+  var total = concepts.length * HOLD_MS;
+  var pos = (t % total);
+  return Math.floor(pos / HOLD_MS) % concepts.length;
+}
+
+function draw(t) {
+  var idx = getConceptIndex(t);
+  var c = concepts[idx];
+  var K = c.K;
+  var season = seasonColors[c.season];
+
+  // Background
+  ctx.fillStyle = season.bg;
+  ctx.fillRect(0, 0, W, H);
+
+  // Draw staircase
+  var staircase = getStaircase(K);
+  var margin = 40;
+  var plotW = W - margin * 2;
+  var plotH = H * 0.55;
+  var plotY = H * 0.05;
+
+  // Faint grid: Farey fractions
+  ctx.globalAlpha = 0.04;
+  ctx.strokeStyle = season.bar;
+  ctx.lineWidth = 0.5;
+  var f6 = [0, 1/6, 1/4, 1/3, 2/5, 1/2, 3/5, 2/3, 3/4, 5/6, 1];
+  for (var fi = 0; fi < f6.length; fi++) {
+    var gx = margin + f6[fi] * plotW;
+    ctx.beginPath(); ctx.moveTo(gx, plotY); ctx.lineTo(gx, plotY + plotH); ctx.stroke();
+    var gy = plotY + (1 - f6[fi]) * plotH;
+    ctx.beginPath(); ctx.moveTo(margin, gy); ctx.lineTo(margin + plotW, gy); ctx.stroke();
+  }
+  ctx.globalAlpha = 1;
+
+  // Staircase curve
+  ctx.beginPath();
+  for (var i = 0; i < STEPS; i++) {
+    var x = margin + (i / STEPS) * plotW;
+    var y = plotY + (1 - staircase[i]) * plotH;
+    if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+  }
+  ctx.strokeStyle = season.bar;
+  ctx.lineWidth = 1.5;
+  ctx.globalAlpha = 0.7;
+  ctx.stroke();
+  ctx.globalAlpha = 1;
+
+  // Highlight current concept's K on the staircase
+  var dotFrac = Math.min(0.99, K);
+  var dotIdx = Math.floor(dotFrac * STEPS);
+  if (dotIdx >= STEPS) dotIdx = STEPS - 1;
+  var dotX = margin + dotFrac * plotW;
+  var dotY = plotY + (1 - (staircase[dotIdx] || 0)) * plotH;
+  ctx.beginPath();
+  ctx.arc(dotX, dotY, 4, 0, Math.PI * 2);
+  ctx.fillStyle = "#fff";
+  ctx.globalAlpha = 0.6;
+  ctx.fill();
+  ctx.globalAlpha = 1;
+
+  // === SPOKED WHEEL ===
+  // The wagon wheel effect IS mode-locking: apparent rotation locks
+  // to rationals of (spoke frequency / frame rate). The wheel spins
+  // at true rate proportional to t, but we SAMPLE it at discrete
+  // frames. At certain speeds it appears to reverse. That's an
+  // Arnold tongue.
+  (function drawWheel() {
+    var wheelX = W - 90, wheelY = 80, wheelR = 32;
+    var nSpokes = 8;
+    // True angular velocity increases with K (more coupling = more spin)
+    var trueOmega = 0.3 + K * 4.5;
+    // The winding number of the wheel: how the discrete sampling
+    // aliases the true rotation. This IS the staircase.
+    var sampledAngle = (trueOmega * t * 0.001) % (Math.PI * 2);
+    // At certain K, the spoke pattern appears locked/reversed
+    var spokeAngle = sampledAngle;
+
+    ctx.save();
+    ctx.translate(wheelX, wheelY);
+    ctx.globalAlpha = 0.25 + K * 0.25;
+
+    // Rim
+    ctx.beginPath();
+    ctx.arc(0, 0, wheelR, 0, Math.PI * 2);
+    ctx.strokeStyle = season.bar;
+    ctx.lineWidth = 1.2;
+    ctx.stroke();
+
+    // Hub
+    ctx.beginPath();
+    ctx.arc(0, 0, 3, 0, Math.PI * 2);
+    ctx.fillStyle = season.bar;
+    ctx.fill();
+
+    // Spokes
+    ctx.lineWidth = 0.8;
+    for (var s = 0; s < nSpokes; s++) {
+      var a = spokeAngle + (s / nSpokes) * Math.PI * 2;
+      ctx.beginPath();
+      ctx.moveTo(Math.cos(a) * 3, Math.sin(a) * 3);
+      ctx.lineTo(Math.cos(a) * wheelR, Math.sin(a) * wheelR);
+      ctx.strokeStyle = season.bar;
+      ctx.stroke();
+    }
+    ctx.restore();
+  })();
+
+  // === HEDGEHOG ===
+  // 5px tall. Absurdly fast. Speed proportional to K.
+  (function drawHedgehog() {
+    var speed = 60 + K * 900; // pixels per second
+    var hY = H - 58;
+    var hX = (speed * t * 0.001) % (W + 40) - 20;
+
+    ctx.save();
+    ctx.globalAlpha = 0.35 + K * 0.35;
+
+    // Body (blue oval)
+    ctx.fillStyle = "#3355aa";
+    ctx.beginPath();
+    ctx.ellipse
+      ? ctx.ellipse(hX, hY, 7, 5, 0, 0, Math.PI * 2)
+      : (ctx.arc(hX, hY, 6, 0, Math.PI * 2)); // fallback
+    ctx.fill();
+
+    // Spines (3 lines trailing back)
+    ctx.strokeStyle = "#4466cc";
+    ctx.lineWidth = 1;
+    var spineLen = 4 + K * 6;
+    for (var sp = 0; sp < 3; sp++) {
+      var sAngle = Math.PI * 0.75 + sp * 0.25;
+      ctx.beginPath();
+      ctx.moveTo(hX - 3, hY - 2 + sp * 2);
+      ctx.lineTo(hX - 3 - Math.cos(sAngle) * spineLen, hY - 2 + sp * 2 - Math.sin(sAngle) * spineLen);
+      ctx.stroke();
+    }
+
+    // Eye
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(Math.round(hX + 4), Math.round(hY - 2), 1, 1);
+
+    // Speed lines (only at high K)
+    if (K > 0.5) {
+      ctx.strokeStyle = season.bar;
+      ctx.globalAlpha = (K - 0.5) * 0.4;
+      ctx.lineWidth = 0.5;
+      for (var sl = 0; sl < 3; sl++) {
+        var slX = hX - 12 - sl * 8 - ((t * 0.3) % 12);
+        var slY = hY - 1 + sl * 2;
+        ctx.beginPath();
+        ctx.moveTo(slX, slY);
+        ctx.lineTo(slX - 5 - K * 8, slY);
+        ctx.stroke();
+      }
+    }
+
+    ctx.restore();
+  })();
+
+  // Season bar
+  var bar = document.getElementById("season-bar");
+  var progress = idx / (concepts.length - 1);
+  bar.style.background = "linear-gradient(to right, " + season.bar + " " + (progress*100) + "%, #111 " + (progress*100) + "%)";
+
+  // Labels
+  document.getElementById("k-label").textContent = "K = " + K.toFixed(2);
+  document.getElementById("k-label").style.color = season.text;
+  document.getElementById("season-label").textContent = c.season;
+  document.getElementById("season-label").style.color = season.text;
+
+  // Concept text (stop-motion: only update on index change)
+  if (idx !== currentIdx) {
+    currentIdx = idx;
+    var el = document.getElementById("concept");
+    el.classList.remove("show");
+    setTimeout(function() {
+      el.innerHTML =
+        '<div class="name">' + c.name + '</div>' +
+        '<div class="formal">' + c.formal + '</div>' +
+        '<div class="visual">' + c.visual + '</div>' +
+        '<div class="metaphor">' + c.metaphor + '</div>' +
+        '<div class="narrative">' + c.narrative + '</div>' +
+        '<div class="human">' + c.human + '</div>';
+      el.classList.add("show");
+    }, 300);
+  }
+}
+
+var raf = window.requestAnimationFrame || function(cb){ return setTimeout(cb,16); };
+function frame(ts) {
+  if (!ts) ts = +new Date();
+  if (!lastT) lastT = ts;
+  elapsed += ts - lastT;
+  lastT = ts;
+  draw(elapsed);
+  raf(frame);
+}
+raf(frame);
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Möbius Projector</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;overflow:hidden;height:100vh;width:100vw}
+canvas{display:block;position:absolute;top:0;left:0}
+#label{
+  position:fixed;bottom:12px;left:16px;z-index:2;
+  font:11px 'Courier New',monospace;color:#333;
+  pointer-events:none;
+}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="label"></div>
+<script>
+(function(){
+"use strict";
+
+var canvas = document.getElementById("c");
+var ctx = canvas.getContext("2d");
+var dpr = window.devicePixelRatio || 1;
+var W, H;
+function resize(){
+  dpr = window.devicePixelRatio || 1;
+  W = window.innerWidth; H = window.innerHeight;
+  canvas.width = W*dpr; canvas.height = H*dpr;
+  canvas.style.width = W+"px"; canvas.style.height = H+"px";
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+resize();
+window.addEventListener("resize", resize);
+
+// === FAREY FRACTIONS as the temporal skeleton ===
+// Instead of linear time, events happen at Farey fractions of each cycle.
+// F6 = 13 fractions. The "projector" hits each fraction once per revolution.
+// Simple fractions (1/2, 1/3, 2/3) get longer holds. Complex ones flash.
+var F6 = [
+  [0,1], [1,6], [1,5], [1,4], [1,3], [2,5],
+  [1,2],
+  [3,5], [2,3], [3,4], [4,5], [5,6], [1,1]
+];
+var F6_float = [];
+var F6_weight = []; // dwell time proportional to 1/q^2 (Ford circle)
+var totalWeight = 0;
+for (var i = 0; i < F6.length; i++) {
+  F6_float.push(F6[i][0] / F6[i][1]);
+  var q = F6[i][1]; if (q === 0) q = 1;
+  var w = 1.0 / (q * q);
+  F6_weight.push(w);
+  totalWeight += w;
+}
+// Normalize weights to get cumulative distribution
+var F6_cumul = [];
+var running = 0;
+for (i = 0; i < F6_weight.length; i++) {
+  running += F6_weight[i] / totalWeight;
+  F6_cumul.push(running);
+}
+
+// Map linear phase [0,1) to Farey-warped phase
+// Dwells longer at simple fractions
+function fareyWarp(phase) {
+  phase = phase % 1; if (phase < 0) phase += 1;
+  for (var i = 0; i < F6_cumul.length; i++) {
+    if (phase <= F6_cumul[i]) {
+      var prevCumul = i > 0 ? F6_cumul[i-1] : 0;
+      var prevFrac = i > 0 ? F6_float[i-1] : 0;
+      var nextFrac = F6_float[i];
+      var t = (phase - prevCumul) / (F6_cumul[i] - prevCumul);
+      return prevFrac + t * (nextFrac - prevFrac);
+    }
+  }
+  return phase;
+}
+
+// Which Farey fraction are we nearest?
+function nearestFarey(phase) {
+  phase = phase % 1; if (phase < 0) phase += 1;
+  var best = 0, bestD = 2;
+  for (var i = 0; i < F6_float.length; i++) {
+    var d = Math.abs(phase - F6_float[i]);
+    if (d < bestD) { bestD = d; best = i; }
+  }
+  return { idx: best, frac: F6[best], val: F6_float[best], q: F6[best][1], dist: bestD };
+}
+
+// === AUDIO ENGINE ===
+var AudioCtor = window.AudioContext || window.webkitAudioContext || null;
+var audioCtx = null;
+var masterGain = null;
+var droneOsc = null;
+var droneGain = null;
+var lastTwistSound = 0;
+
+function initAudio() {
+  if (!AudioCtor || audioCtx) return;
+  try {
+    audioCtx = new AudioCtor();
+    masterGain = audioCtx.createGain();
+    masterGain.gain.value = 0.15;
+    masterGain.connect(audioCtx.destination);
+
+    // Continuous drone: pitch follows the gradient
+    droneOsc = audioCtx.createOscillator();
+    droneGain = audioCtx.createGain();
+    droneOsc.type = "sine";
+    droneOsc.frequency.value = 110;
+    droneGain.gain.value = 0;
+    droneOsc.connect(droneGain);
+    droneGain.connect(masterGain);
+    droneOsc.start();
+  } catch(e) {}
+}
+
+function updateDrone(freq, amp) {
+  if (!audioCtx || !droneOsc) return;
+  var now = audioCtx.currentTime;
+  droneOsc.frequency.setTargetAtTime(Math.max(20, freq), now, 0.08);
+  droneGain.gain.setTargetAtTime(amp, now, 0.08);
+}
+
+function playTwist(t) {
+  if (!audioCtx || t - lastTwistSound < 500) return;
+  lastTwistSound = t;
+  try {
+    var now = audioCtx.currentTime;
+    // Phase-inverted click: two short tones cancelling
+    var o1 = audioCtx.createOscillator();
+    var g1 = audioCtx.createGain();
+    o1.type = "sine"; o1.frequency.value = 220;
+    g1.gain.setValueAtTime(0.3, now);
+    g1.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+    o1.connect(g1); g1.connect(masterGain);
+    o1.start(now); o1.stop(now + 0.15);
+
+    var o2 = audioCtx.createOscillator();
+    var g2 = audioCtx.createGain();
+    o2.type = "sine"; o2.frequency.value = 220;
+    // Start in antiphase
+    o2.connect(g2); g2.connect(masterGain);
+    g2.gain.setValueAtTime(-0.25, now + 0.01);
+    g2.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
+    o2.start(now + 0.01); o2.stop(now + 0.12);
+  } catch(e) {}
+}
+
+// Start audio on first interaction
+var audioStarted = false;
+document.addEventListener("click", function() {
+  if (!audioStarted) { initAudio(); audioStarted = true; }
+}, {once: false});
+document.addEventListener("touchstart", function() {
+  if (!audioStarted) { initAudio(); audioStarted = true; }
+}, {once: false});
+
+// === THE STRIP ===
+// The Möbius strip is a gradient from dark to light.
+// It loops, but the second pass is inverted (light to dark).
+// The "twist" is the frame where polarity flips.
+
+var CYCLE_S = 8.0; // seconds per full Möbius cycle
+var elapsed = 0;
+var lastTime = 0;
+
+// Filmstrip: vertical columns, each column is one "frame"
+// The gradient value at position x depends on the Farey-warped phase
+function getGradient(x, phase, inverted) {
+  // x in [0, 1] across screen width
+  // phase in [0, 1] is current position on the strip
+  // The "film" is a gradient that scrolls
+  var filmPos = (x + phase) % 1;
+  var val = filmPos; // 0 = dark, 1 = light
+  if (inverted) val = 1 - val;
+  return val;
+}
+
+function draw(t) {
+  ctx.clearRect(0, 0, W, H);
+
+  var cyclePhase = (elapsed / 1000 / CYCLE_S) % 1; // linear phase [0,1)
+  var warpedPhase = fareyWarp(cyclePhase); // Farey-warped: dwells at simple fractions
+  var nearest = nearestFarey(warpedPhase);
+
+  // Which pass? First half = normal, second half = inverted (the twist)
+  var onSecondPass = warpedPhase >= 0.5;
+  var stripPhase = (warpedPhase * 2) % 1; // phase within current pass
+  var inverted = onSecondPass;
+
+  // === MAIN GRADIENT (the filmstrip) ===
+  var cols = Math.min(W, 400); // resolution
+  var colW = W / cols;
+
+  for (var col = 0; col < cols; col++) {
+    var x = col / cols;
+    var val = getGradient(x, stripPhase, inverted);
+
+    // Perturb by proximity to Farey fraction: simple fractions = more contrast
+    var fareyBoost = 1.0 / (1 + nearest.dist * 40);
+    val = val * (0.6 + 0.4 * fareyBoost);
+
+    // The twist frame: when warpedPhase crosses 0.5 or 1.0
+    var twistDist = Math.min(
+      Math.abs(warpedPhase - 0.5),
+      Math.abs(warpedPhase - 1.0),
+      Math.abs(warpedPhase - 0.0)
+    );
+    var twistProximity = Math.max(0, 1 - twistDist * 30);
+
+    // At the twist: the gradient scrambles
+    if (twistProximity > 0) {
+      // Static/noise at the seam
+      var noise = (Math.sin(x * 347.7 + elapsed * 0.1) * 0.5 + 0.5);
+      val = val * (1 - twistProximity) + noise * twistProximity;
+    }
+
+    // Color: gradient goes warm (normal) to cool (inverted)
+    var r, g, b;
+    if (!inverted) {
+      r = val * 180 + 10;
+      g = val * 140 + 8;
+      b = val * 100 + 12;
+    } else {
+      r = val * 100 + 12;
+      g = val * 130 + 10;
+      b = val * 180 + 15;
+    }
+
+    // Twist flash
+    if (twistProximity > 0.3) {
+      var flash = (twistProximity - 0.3) * 1.4;
+      r += flash * 60;
+      g += flash * 60;
+      b += flash * 60;
+    }
+
+    ctx.fillStyle = "rgb(" +
+      Math.round(Math.min(255,Math.max(0,r))) + "," +
+      Math.round(Math.min(255,Math.max(0,g))) + "," +
+      Math.round(Math.min(255,Math.max(0,b))) + ")";
+    ctx.fillRect(col * colW, 0, colW + 1, H);
+  }
+
+  // === FAREY MARKERS ===
+  // Vertical lines at Farey fraction positions, pulsing at their dwell rate
+  ctx.globalAlpha = 0.08;
+  for (i = 0; i < F6_float.length; i++) {
+    var fx = F6_float[i] * W;
+    var q = F6[i][1] || 1;
+    var thickness = 4.0 / q;
+    var pulse = 0.5 + 0.5 * Math.sin(elapsed * 0.001 * (2 * Math.PI / q));
+    ctx.globalAlpha = 0.02 + 0.06 * pulse / q;
+    ctx.fillStyle = inverted ? "#8888cc" : "#ccaa66";
+    ctx.fillRect(fx - thickness/2, 0, thickness, H);
+  }
+  ctx.globalAlpha = 1;
+
+  // === SPROCKET HOLES ===
+  // Film strip perforations along top and bottom
+  // Spaced at Farey fractions, not uniformly
+  for (i = 0; i < F6_float.length; i++) {
+    var sx = F6_float[i] * W;
+    var scrollOffset = (stripPhase * W * 0.3) % W;
+    var holeX = ((sx + scrollOffset) % W);
+    var holeW = 6 + 8 / (F6[i][1] || 1); // wider holes at simpler fractions
+    ctx.fillStyle = "#000";
+    ctx.globalAlpha = 0.4;
+    // Top
+    ctx.fillRect(holeX - holeW/2, 2, holeW, 10);
+    ctx.fillRect(holeX - holeW/2, H - 12, holeW, 10);
+    ctx.globalAlpha = 1;
+  }
+
+  // === THE TWIST INDICATOR ===
+  // A thin line that traces the "seam" — the point on screen where
+  // the emulsion faces backward
+  var seamX = (0.5 - stripPhase + 1) % 1 * W;
+  if (twistProximity < 0.5) {
+    ctx.strokeStyle = inverted ? "#334" : "#332";
+    ctx.globalAlpha = 0.15;
+    ctx.lineWidth = 1;
+    ctx.setLineDash([3, 8]);
+    ctx.beginPath();
+    ctx.moveTo(seamX, 0);
+    ctx.lineTo(seamX, H);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.globalAlpha = 1;
+  }
+
+  // === CENTER RING ===
+  // The reel hub — shows the Möbius topology
+  // One ring, half warm half cool, with a twist at the seam
+  var cx = W/2, cy = H/2, cr = Math.min(W,H) * 0.08;
+  ctx.globalAlpha = 0.07;
+  ctx.lineWidth = 2;
+  for (var a = 0; a < 360; a += 2) {
+    var rad = a * Math.PI / 180;
+    var angPhase = a / 360;
+    // The strip surface: at angle a, we see the gradient at that position
+    // Half the ring is "normal" side, half is "inverted" side
+    var ringVal = (angPhase + warpedPhase) % 1;
+    var ringInv = ringVal > 0.5;
+    var rv = (ringVal * 2) % 1;
+    if (ringInv) rv = 1 - rv;
+    var rr = ringInv ? rv*80+20 : rv*160+20;
+    var rg = rv*120+20;
+    var rb = ringInv ? rv*160+20 : rv*80+20;
+    ctx.fillStyle = "rgb("+Math.round(rr)+","+Math.round(rg)+","+Math.round(rb)+")";
+    ctx.beginPath();
+    ctx.arc(cx + Math.cos(rad)*cr, cy + Math.sin(rad)*cr, 3, 0, Math.PI*2);
+    ctx.fill();
+  }
+  ctx.globalAlpha = 1;
+
+  // === AUDIO UPDATE ===
+  if (audioCtx) {
+    // Drone pitch follows the gradient center value
+    var centerVal = getGradient(0.5, stripPhase, inverted);
+    var freq = 80 + centerVal * 200;
+    // At the twist, frequency drops to subsonic
+    if (twistProximity > 0.2) {
+      freq = freq * (1 - twistProximity * 0.7);
+    }
+    updateDrone(freq, 0.5 + nearest.q > 3 ? 0.1 : 0.4);
+
+    // Twist sound
+    if (twistProximity > 0.6) {
+      playTwist(elapsed);
+    }
+  }
+
+  // === LABEL ===
+  var label = document.getElementById("label");
+  var fracStr = nearest.frac[0] + "/" + nearest.frac[1];
+  var passStr = inverted ? "inverted" : "normal";
+  label.textContent = fracStr + "  q=" + nearest.q + "  " + passStr;
+  label.style.color = inverted ? "#335" : "#553";
+}
+
+var raf = window.requestAnimationFrame || function(cb){return setTimeout(cb,16);};
+function frame(ts) {
+  if (!ts) ts = +new Date();
+  if (!lastTime) lastTime = ts;
+  elapsed += ts - lastTime;
+  lastTime = ts;
+  draw(elapsed);
+  raf(frame);
+}
+raf(frame);
+
+})();
+</script>
+</body>
+</html>
