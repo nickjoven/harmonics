@@ -89,6 +89,8 @@ const TAU = Math.PI * 2;
 const RED = '#c44';
 const BLUE = '#48c';
 const PURPLE = '#a4c';
+const ORANGE = '#c84';
+const ORANGE_A = (a) => `rgba(204,136,68,${a})`;
 
 // ═══════════════════════════════════════════════════════════════
 // DOUBLE PENDULUM PHYSICS
@@ -235,7 +237,7 @@ function drawPendulum() {
   // Trail
   for (let i = 1; i < trail2.length; i++) {
     const a = i / trail2.length;
-    pendCtx.strokeStyle = `rgba(170,68,204,${a * 0.5})`;
+    pendCtx.strokeStyle = ORANGE_A(a * 0.55);
     pendCtx.lineWidth = 1;
     pendCtx.beginPath();
     pendCtx.moveTo(trail2[i-1].x, trail2[i-1].y);
@@ -244,7 +246,7 @@ function drawPendulum() {
   }
 
   // Rods
-  pendCtx.strokeStyle = '#666';
+  pendCtx.strokeStyle = ORANGE_A(0.5);
   pendCtx.lineWidth = 2;
   pendCtx.beginPath();
   pendCtx.moveTo(cx, cy);
@@ -259,19 +261,19 @@ function drawPendulum() {
   pendCtx.fill();
 
   // Masses
-  pendCtx.fillStyle = RED;
+  pendCtx.fillStyle = ORANGE;
   pendCtx.beginPath();
   pendCtx.arc(x1, y1, 6, 0, TAU);
   pendCtx.fill();
 
-  pendCtx.fillStyle = BLUE;
+  pendCtx.fillStyle = ORANGE_A(0.8);
   pendCtx.beginPath();
   pendCtx.arc(x2, y2, 5, 0, TAU);
   pendCtx.fill();
 
   // Energy label
   const E = totalEnergy(simState);
-  pendCtx.fillStyle = '#444';
+  pendCtx.fillStyle = ORANGE_A(0.4);
   pendCtx.font = '10px Courier New';
   pendCtx.textAlign = 'left';
   pendCtx.fillText(`E = ${E.toFixed(2)}`, 8, 16);
@@ -304,7 +306,7 @@ function drawPhase() {
 
   for (let i = 1; i < phaseTrail.length; i++) {
     const a = i / phaseTrail.length;
-    phaseCtx.fillStyle = `rgba(204,68,68,${a * 0.6})`;
+    phaseCtx.fillStyle = ORANGE_A(a * 0.6);
     const x = cx + phaseTrail[i].x * scale;
     const y = cy + phaseTrail[i].y * scale;
     phaseCtx.fillRect(x - 0.5, y - 0.5, 1.5, 1.5);
@@ -454,10 +456,10 @@ function computeFreqSweep() {
     const x = margin.l + (r.E_frac) * pw;
     const y = margin.t + ph - ((r.ratio - minR) / (maxR - minR)) * ph;
 
-    // Color by regularity: regular = red, chaotic = purple
+    // Color by regularity: regular = orange, chaotic = purple
     const chaos = Math.min(r.regularity * 3, 1);
     const cr = Math.round(204 * (1 - chaos) + 170 * chaos);
-    const cg = Math.round(68 * (1 - chaos) + 68 * chaos);
+    const cg = Math.round(136 * (1 - chaos) + 68 * chaos);
     const cb = Math.round(68 * (1 - chaos) + 204 * chaos);
     ctx.fillStyle = `rgba(${cr},${cg},${cb},0.7)`;
     ctx.beginPath();
@@ -485,7 +487,7 @@ function computeFreqSweep() {
   ctx.restore();
 
   // Legend
-  ctx.fillStyle = RED;
+  ctx.fillStyle = ORANGE;
   ctx.beginPath(); ctx.arc(W - margin.r - 60, margin.t + 12, 4, 0, TAU); ctx.fill();
   ctx.fillStyle = '#555';
   ctx.textAlign = 'left';
@@ -502,7 +504,7 @@ function computeFreqSweep() {
     `  Small-angle ratio: w1/w2 = 1 + sqrt(2) = ${small_angle.toFixed(6)}\n` +
     `  This is IRRATIONAL — the double pendulum is born in a gap, not a tongue.\n` +
     `  Nearest simple rationals: 12/5 (q=5, err=0.59%), 29/12 (q=12, err=0.10%)\n\n` +
-    `  At low energy: ratio near 1+sqrt(2), regular motion (red)\n` +
+    `  At low energy: ratio near 1+sqrt(2), regular motion (orange)\n` +
     `  At high energy: ratio wanders, chaotic (purple)\n` +
     `  The transition is where the effective coupling crosses a tongue boundary.`;
 
@@ -609,7 +611,7 @@ function computeLyapSweep() {
   for (const r of results) {
     const x = margin.l + r.E_frac * pw;
     const y = margin.t + ph - (r.lyap / maxLyap) * ph;
-    ctx.fillStyle = r.lyap > 0.5 ? PURPLE : RED;
+    ctx.fillStyle = r.lyap > 0.5 ? PURPLE : ORANGE;
     ctx.beginPath();
     ctx.arc(x, y, 2.5, 0, TAU);
     ctx.fill();
