@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Three-Body Catalog: Denominator Complexity</title>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #000;
+  color: #c8c8c8;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 40px 24px;
+}
+h1 {
+  color: #e0e0e0;
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: normal;
+}
+h2 {
+  color: #888;
+  font-size: 13px;
+  margin: 32px 0 12px;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.subtitle {
+  color: #555;
+  font-size: 11px;
+  margin-bottom: 24px;
+}
+canvas {
+  display: block;
+  margin: 16px auto;
+  border: 1px solid #111;
+}
+.stats {
+  max-width: 800px;
+  margin: 16px auto;
+  padding: 12px;
+  border-left: 2px solid #333;
+  color: #888;
+  font-size: 12px;
+  white-space: pre;
+}
+.insight {
+  max-width: 800px;
+  margin: 16px auto;
+  padding: 12px;
+  border-left: 2px solid #c44;
+  color: #aaa;
+  font-size: 12px;
+}
+.eq { color: #e88; border-color: #c44; }
+.cj { color: #8bf; border-color: #48c; }
+.vis { color: #c8f; border-color: #a4c; }
+</style>
+</head>
+<body>
+
+<h1>Three-Body Periodic Orbits: Denominator Complexity Analysis</h1>
+<div class="subtitle">Li & Liao catalog (695 families) — do orbits organize by rational complexity?</div>
+
+<h2>1. Word length distribution</h2>
+<canvas id="hist-wordlen" width="800" height="300"></canvas>
+<div id="stats-wordlen" class="stats"></div>
+
+<h2>2. Scale-invariant period T* vs word length L_f</h2>
+<canvas id="scatter-tstar-lf" width="800" height="400"></canvas>
+<div id="stats-ratio" class="stats"></div>
+
+<h2>3. T*/L_f ratio — the "period per letter"</h2>
+<canvas id="hist-ratio" width="800" height="300"></canvas>
+<div id="stats-ratio2" class="stats"></div>
+
+<h2>4. Word complexity spectrum</h2>
+<canvas id="complexity" width="800" height="400"></canvas>
+<div id="stats-complexity" class="stats"></div>
+
+<h2>5. Prediction: orbit count vs denominator</h2>
+<canvas id="count-vs-q" width="800" height="350"></canvas>
+<div id="stats-count" class="stats"></div>
+
+<h2>Findings</h2>
+<div id="findings" class="insight"></div>
+
+<script>
+const DATA_CSV = `CLASS,V1,V2,T,T_STAR,LF,WORD
+`;
+
+// Colors: red, blue, purple
+const RED = '#c44';
+const BLUE = '#48c';
+const PURPLE = '#a4c';
+const RED_A = (a) => `rgba(204,68,68,${a})`;
+const BLUE_A = (a) => `rgba(68,136,204,${a})`;
+const PURPLE_A = (a) => `rgba(170,68,204,${a})`;
+
+let orbits = [];
+
+async function loadData() {
+  const resp = await fetch('data/three_body_catalog.csv');
+  const text = await resp.text();
+  const lines = text.trim().split('\n');
+  const header = lines[0].split(',');
+
+  for (let i = 1; i < lines.length; i++) {
+    const parts = lines[i].split(',');
+    if (parts.length < 7) continue;
+    const cls = parts[0];
+    const v1 = parseFloat(parts[1]);
+    const v2 = parseFloat(parts[2]);
+    const T = parseFloat(parts[3]);
+    const T_star = parseFloat(parts[4]);
+    const Lf = parseInt(parts[5]);
+    const word = parts[6];
+    if (isNaN(Lf) || isNaN(T_star)) continue;
+
+    // Analyze word complexity
+    // The free group has generators a,b,A,B (A=a^-1, B=b^-1)
+    // "Denominator" analog: the minimal period of the braid
+    // Word length Lf is the total number of letters
+    // Distinct letters used tells us about the generator structure
+    const uniqueLetters = new Set(word).size;
+
+    // Count transitions (consecutive different letters)
+    let transitions = 0;
+    for (let j = 1; j < word.length; j++) {
+      if (word[j] !== word[j-1]) transitions++;
+    }
+
+    // Count generator pairs: how many times each of a,b,A,B appears
+    const counts = { a: 0, b: 0, A: 0, B: 0 };
+    for (const ch of word) {
+      if (counts.hasOwnProperty(ch)) counts[ch]++;
+    }
+
+    // The "winding number" analog: ratio of a-type to b-type moves
+    const a_total = counts.a + counts.A;
+    const b_total = counts.b + counts.B;
+    const winding_ratio = b_total > 0 ? a_total / b_total : Infinity;
+
+    // Net winding: (a - A) and (b - B)
+    const net_a = counts.a - counts.A;
+    const net_b = counts.b - counts.B;
+
+    // Syllable count: number of maximal runs of same letter
+    let syllables = 1;
+    for (let j = 1; j < word.length; j++) {
+      if (word[j] !== word[j-1]) syllables++;
+    }
+
+    // Class type
+    const classType = cls.match(/^([IVX]+\.[A-C])/)?.[1] || cls;
+
+    orbits.push({
+      cls, v1, v2, T, T_star, Lf, word,
+      uniqueLetters, transitions, syllables,
+      counts, a_total, b_total, winding_ratio,
+      net_a, net_b, classType
+    });
+  }
+
+  console.log(`Loaded ${orbits.length} orbits`);
+  drawAll();
+}
+
+function drawAll() {
+  drawWordLenHist();
+  drawTstarVsLf();
+  drawRatioHist();
+  drawComplexity();
+  drawCountVsQ();
+  writeFindings();
+}
+
+function drawWordLenHist() {
+  const c = document.getElementById('hist-wordlen');
+  const ctx = c.getContext('2d');
+  const W = c.width, H = c.height;
+  const margin = { t: 20, r: 20, b: 40, l: 50 };
+
+  ctx.fillStyle = '#000';
+  ctx.fillRect(0, 0, W, H);
+
+  // Bin by word length
+  const bins = {};
+  for (const o of orbits) {
+    const bin = Math.floor(o.Lf / 4) * 4; // bin width 4
+    bins[bin] = (bins[bin] || 0) + 1;
+  }
+
+  const binKeys = Object.keys(bins).map(Number).sort((a, b) => a - b);
+  const maxCount = Math.max(...Object.values(bins));
+  const pw = W - margin.l - margin.r;
+  const ph = H - margin.t - margin.b;
+  const barW = pw / binKeys.length - 2;
+
+  // Draw bars
+  binKeys.forEach((bin, i) => {
+    const x = margin.l + (i / binKeys.length) * pw;
+    const h = (bins[bin] / maxCount) * ph;
+    const y = margin.t + ph - h;
+
+    // Color by bin position: low=red, mid=blue, high=purple
+    const t = i / binKeys.length;
+    let color;
+    if (t < 0.33) color = RED_A(0.7);
+    else if (t < 0.66) color = BLUE_A(0.7);
+    else color = PURPLE_A(0.7);
+
+    ctx.fillStyle = color;
+    ctx.fillRect(x, y, barW, h);
+  });
+
+  // Axes
+  ctx.strokeStyle = '#333';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(margin.l, margin.t);
+  ctx.lineTo(margin.l, margin.t + ph);
+  ctx.lineTo(margin.l + pw, margin.t + ph);
+  ctx.stroke();
+
+  // Labels
+  ctx.fillStyle = '#666';
+  ctx.font = '10px Courier New';
+  ctx.textAlign = 'center';
+  for (let i = 0; i < binKeys.length; i += 5) {
+    const x = margin.l + (i / binKeys.length) * pw + barW / 2;
+    ctx.fillText(binKeys[i], x, H - margin.b + 16);
+  }
+  ctx.textAlign = 'right';
+  for (let i = 0; i <= 4; i++) {
+    const v = Math.round(maxCount * i / 4);
+    const y = margin.t + ph - (i / 4) * ph;
+    ctx.fillText(v, margin.l - 6, y + 4);
+  }
+
+  ctx.fillStyle = '#555';
+  ctx.textAlign = 'center';
+  ctx.fillText('Word length L_f', W / 2, H - 4);
+  ctx.save();
+  ctx.translate(12, H / 2);
+  ctx.rotate(-Math.PI / 2);
+  ctx.fillText('Count', 0, 0);
+  ctx.restore();
+
+  // Stats
+  const lens = orbits.map(o => o.Lf);
+  const mean = lens.reduce((a, b) => a + b) / lens.length;
+  const median = [...lens].sort((a, b) => a - b)[Math.floor(lens.length / 2)];
+  document.getElementById('stats-wordlen').textContent =
+    `  N = ${orbits.length} orbits\n` +
+    `  L_f range: ${Math.min(...lens)} — ${Math.max(...lens)}\n` +
+    `  Mean: ${mean.toFixed(1)}, Median: ${median}\n` +
+    `  Shortest word: "${orbits.find(o => o.Lf === Math.min(...lens)).word}"`;
+}
+
+function drawTstarVsLf() {
+  const c = document.getElementById('scatter-tstar-lf');
+  const ctx = c.getContext('2d');
+  const W = c.width, H = c.height;
+  const margin = { t: 20, r: 20, b: 40, l: 60 };
+  const pw = W - margin.l - margin.r;
+  const ph = H - margin.t - margin.b;
+
+  ctx.fillStyle = '#000';
+  ctx.fillRect(0, 0, W, H);
+
+  const maxLf = Math.max(...orbits.map(o => o.Lf));
+  const maxTs = Math.max(...orbits.map(o => o.T_star));
+
+  // Grid
+  ctx.strokeStyle = '#111';
+  ctx.lineWidth = 0.5;
+  for (let i = 0; i <= 5; i++) {
+    const y = margin.t + (i / 5) * ph;
+    ctx.beginPath(); ctx.moveTo(margin.l, y); ctx.lineTo(W - margin.r, y); ctx.stroke();
+    const x = margin.l + (i / 5) * pw;
+    ctx.beginPath(); ctx.moveTo(x, margin.t); ctx.lineTo(x, margin.t + ph); ctx.stroke();
+  }
+
+  // Color by class type
+  const classColors = { 'I.A': RED, 'I.B': BLUE, 'II.A': PURPLE, 'II.B': RED, 'II.C': BLUE };
+
+  for (const o of orbits) {
+    const x = margin.l + (o.Lf / maxLf) * pw;
+    const y = margin.t + ph - (o.T_star / maxTs) * ph;
+    const color = classColors[o.classType] || PURPLE;
+
+    ctx.fillStyle = color.replace(')', ',0.5)').replace('rgb', 'rgba');
+    ctx.beginPath();
+    ctx.arc(x, y, 2.5, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // Axes
+  ctx.strokeStyle = '#333';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(margin.l, margin.t);
+  ctx.lineTo(margin.l, margin.t + ph);
+  ctx.lineTo(margin.l + pw, margin.t + ph);
+  ctx.stroke();
+
+  ctx.fillStyle = '#555';
+  ctx.font = '10px Courier New';
+  ctx.textAlign = 'center';
+  ctx.fillText('Word length L_f', W / 2, H - 4);
+  ctx.save();
+  ctx.translate(14, H / 2);
+  ctx.rotate(-Math.PI / 2);
+  ctx.fillText('Scale-invariant period T*', 0, 0);
+  ctx.restore();
+
+  // Legend
+  ctx.font = '10px Courier New';
+  let ly = margin.t + 16;
+  for (const [cls, col] of Object.entries(classColors)) {
+    ctx.fillStyle = col;
+    ctx.fillRect(W - margin.r - 80, ly - 8, 10, 10);
+    ctx.fillStyle = '#666';
+    ctx.textAlign = 'left';
+    ctx.fillText(cls, W - margin.r - 66, ly);
+    ly += 14;
+  }
+
+  // Compute ratio stats
+  const ratios = orbits.map(o => o.T_star / o.Lf);
+  const meanR = ratios.reduce((a, b) => a + b) / ratios.length;
+  const stdR = Math.sqrt(ratios.map(r => (r - meanR) ** 2).reduce((a, b) => a + b) / ratios.length);
+  document.getElementById('stats-ratio').textContent =
+    `  T*/L_f ratio — "period per letter" of the free group word\n` +
+    `  Mean: ${meanR.toFixed(3)}, Std: ${stdR.toFixed(3)}\n` +
+    `  If T*/L_f is constant, orbits are evenly spaced in complexity.\n` +
+    `  If T*/L_f grows with L_f, complex orbits are "stretched."`;
+}
+
+function drawRatioHist() {
+  const c = document.getElementById('hist-ratio');
+  const ctx = c.getContext('2d');
+  const W = c.width, H = c.height;
+  const margin = { t: 20, r: 20, b: 40, l: 50 };
+  const pw = W - margin.l - margin.r;
+  const ph = H - margin.t - margin.b;
+
+  ctx.fillStyle = '#000';
+  ctx.fillRect(0, 0, W, H);
+
+  const ratios = orbits.map(o => o.T_star / o.Lf);
+  const binSize = 0.1;
+  const bins = {};
+  for (const r of ratios) {
+    const bin = Math.floor(r / binSize) * binSize;
+    bins[bin] = (bins[bin] || 0) + 1;
+  }
+
+  const binKeys = Object.keys(bins).map(Number).sort((a, b) => a - b);
+  const maxCount = Math.max(...Object.values(bins));
+  const minBin = binKeys[0];
+  const maxBin = binKeys[binKeys.length - 1] + binSize;
+  const range = maxBin - minBin;
+
+  for (const bin of binKeys) {
+    const x = margin.l + ((bin - minBin) / range) * pw;
+    const bw = (binSize / range) * pw - 1;
+    const h = (bins[bin] / maxCount) * ph;
+    const y = margin.t + ph - h;
+
+    ctx.fillStyle = BLUE_A(0.7);
+    ctx.fillRect(x, y, bw, h);
+  }
+
+  // Axes
+  ctx.strokeStyle = '#333';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(margin.l, margin.t + ph);
+  ctx.lineTo(margin.l + pw, margin.t + ph);
+  ctx.stroke();
+
+  ctx.fillStyle = '#555';
+  ctx.font = '10px Courier New';
+  ctx.textAlign = 'center';
+  ctx.fillText('T* / L_f', W / 2, H - 4);
+
+  // Key ratios
+  const meanR = ratios.reduce((a, b) => a + b) / ratios.length;
+  ctx.strokeStyle = RED;
+  ctx.lineWidth = 1;
+  ctx.setLineDash([4, 4]);
+  const mx = margin.l + ((meanR - minBin) / range) * pw;
+  ctx.beginPath();
+  ctx.moveTo(mx, margin.t);
+  ctx.lineTo(mx, margin.t + ph);
+  ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle = RED;
+  ctx.fillText(`mean = ${meanR.toFixed(2)}`, mx, margin.t - 4);
+
+  document.getElementById('stats-ratio2').textContent =
+    `  The T*/L_f ratio measures "dynamical cost per topological letter."\n` +
+    `  A peaked distribution means the free group word length is a good\n` +
+    `  proxy for dynamical complexity — each letter costs ~the same period.`;
+}
+
+function drawComplexity() {
+  const c = document.getElementById('complexity');
+  const ctx = c.getContext('2d');
+  const W = c.width, H = c.height;
+  const margin = { t: 20, r: 20, b: 40, l: 60 };
+  const pw = W - margin.l - margin.r;
+  const ph = H - margin.t - margin.b;
+
+  ctx.fillStyle = '#000';
+  ctx.fillRect(0, 0, W, H);
+
+  // Plot winding ratio (a-moves / b-moves) vs word length
+  // This is the analog of the frequency ratio — the "p/q" of the orbit
+  const maxLf = Math.max(...orbits.map(o => o.Lf));
+
+  for (const o of orbits) {
+    if (!isFinite(o.winding_ratio)) continue;
+    const x = margin.l + (o.Lf / maxLf) * pw;
+    const y = margin.t + ph - (Math.min(o.winding_ratio, 3) / 3) * ph;
+
+    ctx.fillStyle = PURPLE_A(0.4);
+    ctx.beginPath();
+    ctx.arc(x, y, 2, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // Mark rational lines
+  ctx.strokeStyle = '#222';
+  ctx.lineWidth = 0.5;
+  ctx.setLineDash([2, 4]);
+  const rationalLines = [1, 0.5, 2, 1/3, 3, 2/3, 3/2];
+  for (const r of rationalLines) {
+    if (r > 3) continue;
+    const y = margin.t + ph - (r / 3) * ph;
+    ctx.beginPath();
+    ctx.moveTo(margin.l, y);
+    ctx.lineTo(W - margin.r, y);
+    ctx.stroke();
+    ctx.fillStyle = '#333';
+    ctx.font = '9px Courier New';
+    ctx.textAlign = 'right';
+    ctx.fillText(r === 1 ? '1' : r < 1 ? `1/${Math.round(1/r)}` : `${Math.round(r)}/1`, margin.l - 4, y + 3);
+  }
+  ctx.setLineDash([]);
+
+  // Axes
+  ctx.strokeStyle = '#333';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(margin.l, margin.t);
+  ctx.lineTo(margin.l, margin.t + ph);
+  ctx.lineTo(margin.l + pw, margin.t + ph);
+  ctx.stroke();
+
+  ctx.fillStyle = '#555';
+  ctx.font = '10px Courier New';
+  ctx.textAlign = 'center';
+  ctx.fillText('Word length L_f', W / 2, H - 4);
+  ctx.save();
+  ctx.translate(14, H / 2);
+  ctx.rotate(-Math.PI / 2);
+  ctx.fillText('a-moves / b-moves (winding ratio)', 0, 0);
+  ctx.restore();
+
+  // Stats
+  const windRatios = orbits.filter(o => isFinite(o.winding_ratio)).map(o => o.winding_ratio);
+  const nearOne = windRatios.filter(r => Math.abs(r - 1) < 0.1).length;
+  document.getElementById('stats-complexity').textContent =
+    `  Winding ratio = (count of a,A letters) / (count of b,B letters)\n` +
+    `  This is the analog of a frequency ratio p/q on the torus.\n` +
+    `  Near 1: ${nearOne}/${orbits.length} (${(nearOne/orbits.length*100).toFixed(1)}%) — ` +
+    `equal use of both generators\n` +
+    `  If orbits cluster at simple rationals (1, 1/2, 2/1, ...),\n` +
+    `  the three-body system organizes by denominator complexity.`;
+}
+
+function drawCountVsQ() {
+  const c = document.getElementById('count-vs-q');
+  const ctx = c.getContext('2d');
+  const W = c.width, H = c.height;
+  const margin = { t: 20, r: 20, b: 40, l: 50 };
+  const pw = W - margin.l - margin.r;
+  const ph = H - margin.t - margin.b;
+
+  ctx.fillStyle = '#000';
+  ctx.fillRect(0, 0, W, H);
+
+  // The "denominator" analog: half the word length (since each full
+  // cycle of the orbit uses L_f letters, and the minimum word "BabA"
+  // has L_f=4, the denominator analog is L_f/4 or L_f/2)
+  // Let's use L_f/2 as the "q" analog (half-period in letters)
+  const qAnalog = {};
+  for (const o of orbits) {
+    const q = Math.round(o.Lf / 2);
+    qAnalog[q] = (qAnalog[q] || 0) + 1;
+  }
+
+  const qs = Object.keys(qAnalog).map(Number).sort((a, b) => a - b);
+  const maxQ = Math.max(...qs);
+  const maxCount = Math.max(...Object.values(qAnalog));
+
+  // Draw actual counts
+  for (const q of qs) {
+    const x = margin.l + (q / maxQ) * pw;
+    const h = (qAnalog[q] / maxCount) * ph;
+    const y = margin.t + ph - h;
+    ctx.fillStyle = RED_A(0.7);
+    ctx.fillRect(x - 2, y, 4, h);
+  }
+
+  // Overlay theoretical curve: count ~ 1/q^2 (tongue width scaling)
+  // Normalized to match the peak
+  const peakQ = qs.reduce((a, b) => qAnalog[a] > qAnalog[b] ? a : b);
+  const norm = qAnalog[peakQ] * peakQ * peakQ;
+
+  ctx.strokeStyle = PURPLE;
+  ctx.lineWidth = 1.5;
+  ctx.setLineDash([4, 4]);
+  ctx.beginPath();
+  let first = true;
+  for (let q = 2; q <= maxQ; q++) {
+    const predicted = norm / (q * q);
+    const x = margin.l + (q / maxQ) * pw;
+    const h = Math.min((predicted / maxCount) * ph, ph);
+    const y = margin.t + ph - h;
+    if (first) { ctx.moveTo(x, y); first = false; }
+    else ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Also overlay Euler totient * 1/q^2 (Farey density)
+  function eulerPhi(n) {
+    let result = n;
+    let p = 2, temp = n;
+    while (p * p <= temp) {
+      if (temp % p === 0) {
+        while (temp % p === 0) temp /= p;
+        result -= Math.floor(result / p);
+      }
+      p++;
+    }
+    if (temp > 1) result -= Math.floor(result / temp);
+    return result;
+  }
+
+  const normPhi = qAnalog[peakQ] * peakQ * peakQ / eulerPhi(peakQ);
+  ctx.strokeStyle = BLUE;
+  ctx.lineWidth = 1.5;
+  ctx.setLineDash([2, 3]);
+  ctx.beginPath();
+  first = true;
+  for (let q = 2; q <= maxQ; q++) {
+    const predicted = normPhi * eulerPhi(q) / (q * q);
+    const x = margin.l + (q / maxQ) * pw;
+    const h = Math.min((predicted / maxCount) * ph, ph);
+    const y = margin.t + ph - h;
+    if (first) { ctx.moveTo(x, y); first = false; }
+    else ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Axes
+  ctx.strokeStyle = '#333';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(margin.l, margin.t);
+  ctx.lineTo(margin.l, margin.t + ph);
+  ctx.lineTo(margin.l + pw, margin.t + ph);
+  ctx.stroke();
+
+  ctx.fillStyle = '#555';
+  ctx.font = '10px Courier New';
+  ctx.textAlign = 'center';
+  ctx.fillText('q = L_f / 2  (denominator analog)', W / 2, H - 4);
+
+  // Legend
+  ctx.fillStyle = RED;
+  ctx.fillRect(W - margin.r - 160, margin.t + 10, 10, 10);
+  ctx.fillStyle = '#666';
+  ctx.textAlign = 'left';
+  ctx.fillText('Observed count', W - margin.r - 146, margin.t + 19);
+
+  ctx.fillStyle = PURPLE;
+  ctx.fillRect(W - margin.r - 160, margin.t + 26, 10, 2);
+  ctx.fillStyle = '#666';
+  ctx.fillText('1/q² (critical tongues)', W - margin.r - 146, margin.t + 33);
+
+  ctx.fillStyle = BLUE;
+  ctx.fillRect(W - margin.r - 160, margin.t + 42, 10, 2);
+  ctx.fillStyle = '#666';
+  ctx.fillText('φ(q)/q² (Farey density)', W - margin.r - 146, margin.t + 49);
+
+  document.getElementById('stats-count').textContent =
+    `  If the three-body system organizes like a tongue spectrum,\n` +
+    `  orbit count at "denominator" q should scale as φ(q)/q².\n` +
+    `  Red bars: observed. Blue dashes: Farey prediction. Purple dashes: 1/q².`;
+}
+
+function writeFindings() {
+  // Compute key statistics
+  const ratios = orbits.map(o => o.T_star / o.Lf);
+  const meanR = ratios.reduce((a, b) => a + b) / ratios.length;
+  const stdR = Math.sqrt(ratios.map(r => (r - meanR) ** 2).reduce((a, b) => a + b) / ratios.length);
+  const cv = stdR / meanR;
+
+  const windRatios = orbits.filter(o => isFinite(o.winding_ratio)).map(o => o.winding_ratio);
+  const nearOne = windRatios.filter(r => Math.abs(r - 1) < 0.15).length;
+
+  // Check if word length distribution follows 1/q^2
+  const qBins = {};
+  for (const o of orbits) {
+    const q = Math.round(o.Lf / 2);
+    qBins[q] = (qBins[q] || 0) + 1;
+  }
+  const qs = Object.keys(qBins).map(Number).sort((a, b) => a - b);
+
+  // Log-log regression: log(count) vs log(q)
+  let sumX = 0, sumY = 0, sumXY = 0, sumX2 = 0, n = 0;
+  for (const q of qs) {
+    if (q < 10) continue; // skip low q where counts are noisy
+    const x = Math.log(q);
+    const y = Math.log(qBins[q]);
+    sumX += x; sumY += y; sumXY += x * y; sumX2 += x * x;
+    n++;
+  }
+  const slope = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
+
+  document.getElementById('findings').innerHTML =
+    `<strong>T*/L_f ratio:</strong> mean = ${meanR.toFixed(2)}, CV = ${(cv*100).toFixed(1)}%<br>` +
+    `The period-per-letter is ${cv < 0.3 ? 'relatively stable' : 'variable'} — ` +
+    `${cv < 0.3 ? 'word length is a good complexity proxy' : 'word length alone is insufficient'}.<br><br>` +
+    `<strong>Winding ratio:</strong> ${nearOne}/${orbits.length} orbits ` +
+    `(${(nearOne/orbits.length*100).toFixed(1)}%) have a/b ratio near 1.<br>` +
+    `${nearOne > orbits.length * 0.5 ? 'Strong clustering at ratio 1 — the system prefers symmetric exchange.' : 'No dominant clustering — orbits explore the full ratio space.'}<br><br>` +
+    `<strong>Count vs denominator:</strong> log-log slope = ${slope.toFixed(2)}<br>` +
+    `Expected for 1/q²: slope = -2. Expected for φ(q)/q²: slope ~ -1.<br>` +
+    `${Math.abs(slope + 1) < 0.5 ? 'Consistent with Farey density scaling.' : Math.abs(slope + 2) < 0.5 ? 'Consistent with 1/q² tongue scaling.' : 'Does not clearly match either prediction.'}<br><br>` +
+    `<strong>Key test:</strong> Does the three-body system shed high-q orbits the way<br>` +
+    `the framework predicts? The answer depends on whether the count<br>` +
+    `falls as 1/q² (tongue width) or faster (perturbative regime).`;
+}
+
+loadData();
+</script>
+</body>
+</html>
