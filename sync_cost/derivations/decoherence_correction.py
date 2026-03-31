@@ -32,7 +32,7 @@ import sys
 from fractions import Fraction
 
 sys.path.insert(0, "sync_cost/derivations")
-from circle_map_utils import PHI, INV_PHI, winding_number, circle_map_step
+from circle_map_utils import PHI, INV_PHI, winding_number, circle_map_step, tongue_width
 
 
 # ── Constants ─────────────────────────────────────────────────────────────────
@@ -43,27 +43,8 @@ SIN2_TW = 0.23121
 K_STAR = 0.891973
 
 
-# ── Tongue width ──────────────────────────────────────────────────────────────
-
-def tongue_width(q, K):
-    if q == 0:
-        return 0.0
-    if q == 1:
-        return min(K / (2 * math.pi), 1.0)
-    w_pert = 2 * (K / 2) ** q / q
-    w_crit = 1.0 / (q * q)
-    if K <= 0.5:
-        return w_pert
-    elif K >= 1.0:
-        return w_crit
-    else:
-        t = (K - 0.5) / 0.5
-        t = t * t * (3 - 2 * t)
-        return w_pert * (1 - t) + w_crit * t
-
-
 def duty(q, K):
-    return tongue_width(q, K) / q
+    return tongue_width(1, q, K) / q
 
 
 # ── Tongue coverage ──────────────────────────────────────────────────────────
@@ -80,7 +61,7 @@ def tongue_coverage(K, q_max=200):
     for q in range(1, q_max + 1):
         for p in range(1, q):
             if math.gcd(p, q) == 1:
-                w = tongue_width(q, K)
+                w = tongue_width(1, q, K)
                 total += w
                 if total >= 1.0:
                     return 1.0
@@ -96,7 +77,7 @@ def tongue_coverage_by_q(K, q_max=100):
         for p in range(1, q):
             if math.gcd(p, q) == 1:
                 count += 1
-                width += tongue_width(q, K)
+                width += tongue_width(p, q, K)
         if count > 0:
             by_q[q] = {"count": count, "width": width,
                         "euler_phi": count}

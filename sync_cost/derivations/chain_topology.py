@@ -17,7 +17,11 @@ Usage:
 """
 
 import math
+import sys
 from fractions import Fraction
+
+sys.path.insert(0, "sync_cost/derivations")
+from circle_map_utils import tongue_width
 
 
 # ── Stern-Brocot tree ────────────────────────────────────────────────────────
@@ -48,27 +52,10 @@ def sb_ancestors(p, q):
     return chain
 
 
-def tongue_width(q, K):
-    if q == 0:
-        return 0.0
-    if q == 1:
-        return min(K / (2 * math.pi), 1.0)
-    w_pert = 2 * (K / 2) ** q / q
-    w_crit = 1.0 / (q * q)
-    if K <= 0.5:
-        return w_pert
-    elif K >= 1.0:
-        return w_crit
-    else:
-        t = (K - 0.5) / 0.5
-        t = t * t * (3 - 2 * t)
-        return w_pert * (1 - t) + w_crit * t
-
-
 def is_locked(f, K, threshold=1e-4):
     """Is fraction f locked (tongue open) at coupling K?"""
     q = f.denominator
-    w = tongue_width(q, K)
+    w = tongue_width(1, q, K)
     return w > threshold
 
 

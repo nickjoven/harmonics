@@ -30,7 +30,7 @@ import sys
 from fractions import Fraction
 
 sys.path.insert(0, "sync_cost/derivations")
-from circle_map_utils import PHI, INV_PHI, PHI_SQ, LN_PHI_SQ
+from circle_map_utils import PHI, INV_PHI, PHI_SQ, LN_PHI_SQ, tongue_width
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -50,22 +50,6 @@ def stern_brocot_tree(max_depth):
             new.append(b)
         fracs = new
     return sorted(f for f in set(fracs) if Fraction(0) < f < Fraction(1))
-
-
-def tongue_width(p, q, K):
-    """Tongue width at p/q and coupling K."""
-    if q == 1:
-        return min(K / (2 * math.pi), 1.0)
-    w_pert = 2 * (K / 2) ** q / q
-    w_crit = 1.0 / (q * q)
-    if K <= 0.5:
-        return w_pert
-    elif K >= 1.0:
-        return w_crit
-    else:
-        t = (K - 0.5) / 0.5
-        t = t * t * (3 - 2 * t)
-        return w_pert * (1 - t) + w_crit * t
 
 
 # ═══════════════════════════════════════════════════════════════════════════════

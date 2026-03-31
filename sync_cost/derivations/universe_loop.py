@@ -27,7 +27,11 @@ Usage:
 
 import math
 import cmath
+import sys
 from fractions import Fraction
+
+sys.path.insert(0, "sync_cost/derivations")
+from circle_map_utils import tongue_width
 
 
 # ── Constants ────────────────────────────────────────────────────────────────
@@ -147,19 +151,6 @@ class ConstraintTree:
 # scalar equation, not by iterating distributions.
 # ═══════════════════════════════════════════════════════════════════════════════
 
-def tongue_width(p, q, K):
-    """Arnold tongue width at rational p/q, coupling K."""
-    if q == 1:
-        return min(K / (2 * math.pi), 1.0)
-    w_pert = 2 * (K / 2) ** q / q
-    w_crit = 1.0 / (q * q)
-    if K <= 0.5:
-        return w_pert
-    if K >= 1.0:
-        return w_crit
-    t = (K - 0.5) / 0.5
-    t = t * t * (3 - 2 * t)
-    return w_pert * (1 - t) + w_crit * t
 
 
 class Operator:
