@@ -19,6 +19,7 @@ import math
 import sys
 
 sys.path.insert(0, "sync_cost/derivations")
+from circle_map_utils import tongue_width
 
 
 # ── SM parameters ─────────────────────────────────────────────────────────────
@@ -63,25 +64,8 @@ def ratio_sm(mu):
 
 # ── Tongue width and duty ────────────────────────────────────────────────────
 
-def tongue_width(q, K):
-    if q == 0:
-        return 0.0
-    if q == 1:
-        return min(K / (2 * math.pi), 1.0)
-    w_pert = 2 * (K / 2) ** q / q
-    w_crit = 1.0 / (q * q)
-    if K <= 0.5:
-        return w_pert
-    elif K >= 1.0:
-        return w_crit
-    else:
-        t = (K - 0.5) / 0.5
-        t = t * t * (3 - 2 * t)
-        return w_pert * (1 - t) + w_crit * t
-
-
 def duty(q, K):
-    return tongue_width(q, K) / q
+    return tongue_width(1, q, K) / q
 
 
 def duty_ratio(K):

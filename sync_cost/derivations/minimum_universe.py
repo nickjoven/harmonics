@@ -16,7 +16,11 @@ Usage:
 """
 
 import math
+import sys
 from fractions import Fraction
+
+sys.path.insert(0, "sync_cost/derivations")
+from circle_map_utils import tongue_width
 
 
 # ── Farey sequence ────────────────────────────────────────────────────────────
@@ -44,25 +48,6 @@ def euler_totient(n):
     if temp > 1:
         result -= result // temp
     return result
-
-
-# ── Tongue widths ─────────────────────────────────────────────────────────────
-
-def tongue_width(q, K):
-    if q == 0:
-        return 0.0
-    if q == 1:
-        return min(K / (2 * math.pi), 1.0)
-    w_pert = 2 * (K / 2) ** q / q
-    w_crit = 1.0 / (q * q)
-    if K <= 0.5:
-        return w_pert
-    elif K >= 1.0:
-        return w_crit
-    else:
-        t = (K - 0.5) / 0.5
-        t = t * t * (3 - 2 * t)
-        return w_pert * (1 - t) + w_crit * t
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -215,7 +200,7 @@ def main():
         max_q = 0
         for f in F6_interior:
             q = f.denominator
-            w = tongue_width(q, K)
+            w = tongue_width(1, q, K)
             if w > 1e-4:  # resolvable
                 surviving.append(f)
                 total_cov += w
@@ -225,8 +210,8 @@ def main():
         has_2 = any(f.denominator == 2 for f in surviving)
         has_3 = any(f.denominator == 3 for f in surviving)
         if has_2 and has_3:
-            d2 = tongue_width(2, K) / 2
-            d3 = tongue_width(3, K) / 3
+            d2 = tongue_width(1, 2, K) / 2
+            d3 = tongue_width(1, 3, K) / 3
             ratio = d2 / d3
             r_est = 27 / (8 * ratio)
         else:

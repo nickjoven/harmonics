@@ -20,7 +20,11 @@ Usage:
 """
 
 import math
+import sys
 from fractions import Fraction
+
+sys.path.insert(0, "sync_cost/derivations")
+from circle_map_utils import tongue_width
 
 
 def euler_totient(n):
@@ -38,23 +42,6 @@ def euler_totient(n):
     return result
 
 
-def tongue_width(q, K):
-    if q == 0:
-        return 0.0
-    if q == 1:
-        return min(K / (2 * math.pi), 1.0)
-    w_pert = 2 * (K / 2) ** q / q
-    w_crit = 1.0 / (q * q)
-    if K <= 0.5:
-        return w_pert
-    elif K >= 1.0:
-        return w_crit
-    else:
-        t = (K - 0.5) / 0.5
-        t = t * t * (3 - 2 * t)
-        return w_pert * (1 - t) + w_crit * t
-
-
 def omega_lambda(w):
     """Ω_Λ as function of boundary weight w."""
     return (11 + 2 * w) / (16 + 3 * w)
@@ -66,7 +53,7 @@ def tongue_coverage_q6(K):
     Each has tongue width w(6, K). Total coverage = 2 × w(6, K).
     Fractional weight = total_coverage / max_coverage.
     At K=1: max_coverage = 2 × 1/36 = 1/18."""
-    w6 = tongue_width(6, K)
+    w6 = tongue_width(1, 6, K)
     max_w6 = 1.0 / 36.0  # 1/q² at K=1
     if max_w6 <= 0:
         return 0.0
@@ -206,8 +193,8 @@ def main():
         N_eff = 2.0  # boundary modes 0/1 and 1/1 always present
         for q in range(1, 7):
             phi_q = euler_totient(q)
-            w_q = tongue_width(q, K)
-            w_q_max = tongue_width(q, 1.0)
+            w_q = tongue_width(1, q, K)
+            w_q_max = tongue_width(1, q, 1.0)
             frac_q = min(w_q / w_q_max, 1.0) if w_q_max > 0 else 0
             fracs.append(frac_q)
             N_eff += phi_q * frac_q

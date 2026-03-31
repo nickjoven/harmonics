@@ -36,7 +36,11 @@ Usage:
 """
 
 import math
+import sys
 from fractions import Fraction
+
+sys.path.insert(0, "sync_cost/derivations")
+from circle_map_utils import tongue_width
 
 
 PHI = (1 + math.sqrt(5)) / 2
@@ -57,23 +61,6 @@ def euler_phi(n):
     if temp > 1:
         result -= result // temp
     return result
-
-
-def tongue_width(q, K):
-    """Arnold tongue width for denominator q at coupling K."""
-    if q == 0:
-        return 0.0
-    if q == 1:
-        return min(K / (2 * math.pi), 1.0)
-    w_pert = 2 * (K / 2) ** q / q
-    w_crit = 1.0 / (q * q)
-    if K <= 0.5:
-        return w_pert
-    if K >= 1.0:
-        return w_crit
-    t = (K - 0.5) / 0.5
-    t = t * t * (3 - 2 * t)
-    return w_pert * (1 - t) + w_crit * t
 
 
 def farey_sequence(n):
@@ -163,7 +150,7 @@ def main():
     for frac in interior_modes:
         p, q = frac.numerator, frac.denominator
 
-        w = tongue_width(q, K_STAR)
+        w = tongue_width(1, q, K_STAR)
 
         # Penetration depth: how far inside the tongue is this mode?
         # At K_STAR, the effective coupling K_eff = K_STAR * |r*|
@@ -374,7 +361,7 @@ def main():
     print("  " + "-" * 80)
 
     for q in range(1, 51):
-        w = tongue_width(q, K_STAR)
+        w = tongue_width(1, q, K_STAR)
         eps = w / 2
         lam = floquet_rate(eps, K_STAR)
         full_cycles = TOTAL_OSCILLATIONS / q
@@ -407,7 +394,7 @@ def main():
 
     # Binary search for the q where digits crosses 1
     for q in range(1, 1000):
-        w = tongue_width(q, K_STAR)
+        w = tongue_width(1, q, K_STAR)
         eps = w / 2
         lam = floquet_rate(eps, K_STAR)
         full_cycles = TOTAL_OSCILLATIONS / q
@@ -457,8 +444,8 @@ def main():
     cumul_k1 = 0.0
     for q in range(1, 51):
         phi_q = euler_phi(q)
-        w_kstar = tongue_width(q, K_STAR)
-        w_k1 = tongue_width(q, 1.0)
+        w_kstar = tongue_width(1, q, K_STAR)
+        w_k1 = tongue_width(1, q, 1.0)
         band_kstar = phi_q * w_kstar
         band_k1 = phi_q * w_k1
         cumul_kstar += band_kstar
@@ -469,9 +456,9 @@ def main():
                   f"  {cumul_kstar:10.6f}  {w_k1:12.8f}  {cumul_k1:12.6f}")
 
     # What fraction is q <= 6?
-    cov_leq6_kstar = sum(euler_phi(q) * tongue_width(q, K_STAR) for q in range(1, 7))
+    cov_leq6_kstar = sum(euler_phi(q) * tongue_width(1, q, K_STAR) for q in range(1, 7))
     cov_gt6_kstar = cumul_kstar - cov_leq6_kstar
-    cov_leq6_k1 = sum(euler_phi(q) * tongue_width(q, 1.0) for q in range(1, 7))
+    cov_leq6_k1 = sum(euler_phi(q) * tongue_width(1, q, 1.0) for q in range(1, 7))
 
     print(f"\n  At K* = {K_STAR}:")
     print(f"    q <= 6 coverage: {cov_leq6_kstar:.6f}"
