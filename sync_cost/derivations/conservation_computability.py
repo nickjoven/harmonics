@@ -19,7 +19,11 @@ Usage:
 """
 
 import math
+import sys
 from fractions import Fraction
+
+sys.path.insert(0, "sync_cost/derivations")
+from circle_map_utils import tongue_width
 
 
 PHI = (1 + math.sqrt(5)) / 2
@@ -41,25 +45,8 @@ def euler_totient(n):
     return result
 
 
-def tongue_width(q, K):
-    if q == 0:
-        return 0.0
-    if q == 1:
-        return min(K / (2 * math.pi), 1.0)
-    w_pert = 2 * (K / 2) ** q / q
-    w_crit = 1.0 / (q * q)
-    if K <= 0.5:
-        return w_pert
-    elif K >= 1.0:
-        return w_crit
-    else:
-        t = (K - 0.5) / 0.5
-        t = t * t * (3 - 2 * t)
-        return w_pert * (1 - t) + w_crit * t
-
-
 def duty(q, K):
-    return tongue_width(q, K) / q
+    return tongue_width(1, q, K) / q
 
 
 def main():
@@ -105,7 +92,7 @@ def main():
         tongue_total = 0.0
         for q in range(1, 100):
             phi_q = euler_totient(q)
-            w = tongue_width(q, K)
+            w = tongue_width(1, q, K)
             tongue_total += phi_q * w
 
         tongue_total = min(tongue_total, 1.0)
@@ -142,7 +129,7 @@ def main():
     total_info = 0.0
     for q in range(1, 8):
         phi_q = euler_totient(q)
-        w = tongue_width(q, K)
+        w = tongue_width(1, q, K)
         d = w / q
         bits_per_gate = -math.log2(d) if d > 0 else float('inf')
         channel_info = phi_q * bits_per_gate
@@ -197,7 +184,7 @@ def main():
 
     for q, name in [(1, "vacuum"), (2, "SU(2)"), (3, "SU(3)"),
                      (4, "composite"), (5, "Fibonacci"), (6, "boundary")]:
-        bw = tongue_width(q, 1.0)  # bandwidth = tongue width
+        bw = tongue_width(1, q, 1.0)  # bandwidth = tongue width
         max_sig = 1.0  # max sin = 1
         max_force = bw * max_sig
         d = bw / q

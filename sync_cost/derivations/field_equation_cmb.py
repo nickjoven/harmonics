@@ -23,7 +23,7 @@ sys.path.insert(0, "sync_cost/derivations")
 from circle_map_utils import (
     circle_map_step, winding_number,
     PHI, INV_PHI, PHI_SQ, LN_PHI_SQ,
-    fibonacci_sequence,
+    fibonacci_sequence, tongue_width,
 )
 
 # ── Planck 2018 best-fit ─────────────────────────────────────────────────────
@@ -95,29 +95,8 @@ def tongue_width_numerical(p, q, K, n_sample=400, n_trans=2000, n_meas=8000):
     return max(right - left, 0.0)
 
 
-def tongue_width_fast(p, q, K):
-    """
-    Fast tongue-width estimate combining perturbative and critical formulas.
-
-    At K < 0.5: perturbative formula 2(K/2)^q / q
-    At K = 1:   critical formula ~ 1/q^2
-    Interpolate between them.
-    """
-    if q == 1:
-        return min(K / (2 * math.pi), 1.0)
-
-    w_pert = 2 * (K / 2) ** q / q
-    w_crit = 1.0 / (q * q)
-
-    if K <= 0.5:
-        return w_pert
-    elif K >= 1.0:
-        return w_crit
-    else:
-        # Smooth interpolation
-        t = (K - 0.5) / 0.5  # 0 at K=0.5, 1 at K=1
-        t = t * t * (3 - 2 * t)  # smoothstep
-        return w_pert * (1 - t) + w_crit * t
+# Alias for backward compatibility
+tongue_width_fast = tongue_width
 
 
 # ── 3. Field equation solver ─────────────────────────────────────────────────
