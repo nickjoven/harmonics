@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>harmonics</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[
+    {left:'$$',right:'$$',display:true},
+    {left:'$',right:'$',display:false}
+  ]});"></script>
+<style>
+  :root { --max-w: 720px; --fg: #222; --fg2: #555; --bg: #fff; --rule: #ddd; --link: #0055aa; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font: 17px/1.7 Georgia, 'Times New Roman', serif; color: var(--fg); background: var(--bg); padding: 48px 24px 80px; }
+  main { max-width: var(--max-w); margin: 0 auto; }
+  h1 { font-size: 28px; font-weight: bold; margin-bottom: 24px; }
+  h2 { font-size: 19px; font-weight: bold; margin: 40px 0 14px; border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+  p { margin-bottom: 14px; }
+  li { margin-bottom: 8px; }
+  ul, ol { padding-left: 24px; margin-bottom: 14px; }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 15px; }
+  th, td { border: 1px solid var(--rule); padding: 6px 10px; text-align: left; }
+  th { background: #f7f7f7; font-weight: bold; }
+  .eq-block { margin: 20px 0; text-align: center; }
+  .footer { margin-top: 48px; font-size: 13px; color: var(--fg2); border-top: 1px solid var(--rule); padding-top: 16px; }
+  .footer a { color: var(--fg2); }
+  @media (max-width: 600px) { body { font-size: 15px; padding: 24px 16px 48px; } table { font-size: 13px; } }
+</style>
+</head>
+<body>
+<main>
+
+<h1>harmonics</h1>
+
+<h2>The situation</h2>
+
+<p>Physics has two governing equations. General relativity describes
+gravity: massive objects curve spacetime, and the curvature tells
+objects how to move. Quantum mechanics describes everything else:
+particles exist as probability amplitudes that evolve by the
+Schrödinger equation and collapse to definite outcomes when measured.
+Both are confirmed to extraordinary precision. They cannot both be
+right, because they contradict each other at small scales and high
+energies.</p>
+
+<p>Beyond this incompatibility, both frameworks contain numbers that are
+measured but never explained. Some examples:</p>
+
+<ul>
+  <li><strong>Why 3 spatial dimensions?</strong> Every calculation in
+    physics begins by setting $d = 3$. No derivation exists for this.
+    It is observed.</li>
+  <li><strong>Why $|\psi|^2$?</strong> Quantum mechanics predicts
+    probabilities by squaring amplitudes. The exponent 2 is a postulate
+    &mdash;Born's rule (1926). A century later, no derivation from
+    deeper principles exists in standard physics.</li>
+  <li><strong>Why is gravity $10^{40}$ times weaker than
+    electromagnetism?</strong> The hierarchy problem. The ratio of the
+    Planck scale to the Hubble scale is $\sim 10^{60}$. Standard physics
+    parameterizes this ratio but does not compute it.</li>
+  <li><strong>Why is 68.5% of the universe dark energy?</strong>
+    The measured value is $\Omega_\Lambda = 0.685 \pm 0.007$. Quantum
+    field theory, asked to predict this, gives a number $10^{120}$
+    times too large. This is the cosmological constant problem&mdash;the
+    worst prediction in physics.</li>
+  <li><strong>Why does the power spectrum of the CMB tilt by 3.5%?</strong>
+    The spectral tilt $n_s \approx 0.965$ is measured precisely. In
+    inflationary models, it depends on the choice of inflaton potential
+    &mdash;a free function.</li>
+</ul>
+
+<p>These are not obscure technicalities. They are values that appear
+in every calculation in modern physics&mdash;each one set by experiment,
+not by the theory that uses it.</p>
+
+<h2>The ingredients</h2>
+
+<p>This framework uses four mathematical objects. They are
+undergraduate-level. No new mathematics is introduced.</p>
+
+<p><strong>1. Integers.</strong> Distinguishable states that can be
+counted: $1, 2, 3, \ldots$ This is the minimum requirement for
+anything to be described at all.</p>
+
+<p><strong>2. The mediant.</strong> Given two fractions $a/b$ and $c/d$,
+form $(a{+}c)/(b{+}d)$. This is not a definition or a choice. When
+two oscillators at frequencies $\nu_1$ and $\nu_2$ couple, the
+resulting locked frequency lies between them (energy conservation)
+and has the smallest available denominator (because Arnold tongue
+width scales as $(K/2)^q$&mdash;larger denominators have exponentially
+narrower stability regions, so the system locks to the smallest $q$
+first). The mediant is the unique operation satisfying both
+constraints (<a href="sync_cost/derivations/29_mediant_derivation.md">D29</a>).
+Iterating it from $0/1$ and $1/0$ generates every positive rational
+number exactly once. The resulting tree is the
+<a href="https://en.wikipedia.org/wiki/Stern%E2%80%93Brocot_tree">Stern-Brocot tree</a>
+(Stern 1858, Brocot 1861).</p>
+
+<p><strong>3. The fixed-point condition.</strong> Require that the output
+of a process equals its input. If a system distributes populations
+across frequencies, and the coupling depends on those populations,
+then self-consistency means: the populations you get out must be the
+populations you put in. This closes the equation on itself.</p>
+
+<p><strong>4. The parabola.</strong> Near a
+<a href="https://en.wikipedia.org/wiki/Saddle-node_bifurcation">saddle-node bifurcation</a>,
+the deviation from equilibrium scales as $\Delta\theta \propto
+\sqrt{\varepsilon}$, where $\varepsilon$ is the distance past the
+bifurcation threshold. This is universal&mdash;it is the local geometry
+of every Arnold tongue boundary in the circle map. It is not specific
+to physics. It is a fact about parabolas.</p>
+
+<p>One further structure is derived, not assumed. Integers together with
+the fixed-point condition ($p \equiv 0$ identifying endpoints of the
+phase interval) force $\mathbb{R}/\mathbb{Z} = S^1$: the circle. The
+<a href="https://en.wikipedia.org/wiki/Circle_map">circle map</a>,
+$\theta_{n+1} = \theta_n + \Omega - \frac{K}{2\pi}\sin(2\pi\theta_n)$,
+is the simplest invertible map on $S^1$ with a single coupling
+parameter $K$. Its mode-locked regions (Arnold tongues) and its
+winding-number staircase (the devil's staircase) are textbook
+dynamical systems (Arnold 1961).</p>
+
+<h2>The equation</h2>
+
+<p>Place a population $N(p/q)$ at every rational frequency $p/q$ on
+the Stern-Brocot tree. Write the self-consistency condition:</p>
+
+<div class="eq-block">
+$$N(p/q) \;=\; N_{\text{total}} \;\times\; g(p/q) \;\times\; w\!\left(\frac{p}{q},\; K_0\, F[N]\right)$$
+</div>
+
+<p>$g(p/q)$ is the fraction of oscillators near frequency $p/q$.
+$w(p/q, K)$ is the width of the Arnold tongue at $p/q$&mdash;how large
+a range of bare frequencies will lock to that ratio at coupling $K$.
+$F[N]$ is a functional of the entire population distribution. $K_0$
+is the bare coupling.</p>
+
+<p>In words: the number of oscillators locked to $p/q$ equals the total
+count, times how many have natural frequencies near $p/q$, times how
+wide the locking region is at the current collective coupling. The
+coupling depends on the population. The population depends on the
+coupling.</p>
+
+<p>The distribution $g$ is not an input. At the fixed point, $g$
+reproduces itself: $g^* = h(g^*)$. The equation determines its own
+frequency distribution. There are zero free parameters and zero free
+functions.</p>
+
+<h2>Two limits of one equation</h2>
+
+<p>The coupling parameter $K$ ranges from 0 (no coupling) to 1 (critical
+coupling, where the circle map becomes non-invertible). The field
+equation has two structurally distinct continuum limits.</p>
+
+<p><strong>At $K = 1$: Einstein's field equations.</strong>
+At critical coupling, the Arnold tongue widths scale as $w(p/q) \sim c/q^2$&mdash;the
+tongues fill the frequency axis. The Farey measure (weight $1/q^2$ per
+fraction) converges to Lebesgue measure on $[0,1]$. The sum over the
+Stern-Brocot tree becomes an integral. This integral is the
+<a href="https://en.wikipedia.org/wiki/Kuramoto_model">Kuramoto
+self-consistency equation</a> (Kuramoto 1984). Promoting it to a spatial
+manifold and computing the correlation tensor of locked oscillator
+phases produces the ADM evolution equations of general relativity
+(<a href="sync_cost/derivations/13_einstein_from_kuramoto.md">D13</a>).
+The uniqueness is not a feature of the dictionary&mdash;it is a theorem.
+Lovelock (1971) proved that $G_{\mu\nu} + \Lambda g_{\mu\nu}$ is the
+only divergence-free, symmetric, rank-2 tensor in 4 dimensions built
+from the metric and its first two derivatives. The Kuramoto-to-ADM
+map satisfies all four Lovelock premises. No other field equation is
+possible at $K = 1$.</p>
+
+<p><strong>At $K &lt; 1$: the Schrödinger equation.</strong>
+Below critical coupling, some oscillators remain unlocked&mdash;they
+drift through the Arnold tongue gaps. Linearizing the field equation
+around the partially locked state and applying the Madelung transform
+(writing $\psi = \sqrt{\rho}\,e^{iS/\hbar}$, a standard variable
+substitution that is not specific to quantum mechanics) produces the
+Schrödinger equation. The quantum pressure term is set by the
+Stern-Brocot osmotic velocity&mdash;the drift rate through the tree's
+gap structure
+(<a href="sync_cost/derivations/12_continuum_limits.md">D12</a>).</p>
+
+<p><strong>The Born rule.</strong>
+The exponent 2 in $|\psi|^2$ is not a separate postulate. At every
+Arnold tongue boundary, the phase deviation scales as
+$\Delta\theta \propto \sqrt{\varepsilon}$ (saddle-node universality).
+Squaring to get a probability is squaring the parabolic geometry.
+The Born rule is the population distribution at the fixed
+point&mdash;a property of the equation, not an additional assumption
+(<a href="sync_cost/derivations/01_born_rule.md">D1</a>).</p>
+
+<h2>Where $d = 3$, Lorentz symmetry, and the cosmological constants come from</h2>
+
+<p><strong>Three dimensions.</strong>
+The mediant acts on pairs of integers. The matrices that implement
+it are $2 \times 2$ with integer entries and determinant $\pm 1$:
+the group $\mathrm{SL}(2,\mathbb{Z})$. Its continuum completion is
+$\mathrm{SL}(2,\mathbb{R})$, which is characterized uniquely by
+four conditions the framework satisfies (arithmetic skeleton,
+projective action on ratios, Iwasawa dynamical trichotomy,
+Farey-hyperbolic geometry). The Bianchi classification of 3D Lie
+algebras eliminates every alternative
+(<a href="sync_cost/derivations/15_lie_group_characterization.md">D15</a>).
+Self-consistent adjacency&mdash;the requirement that geometry defines
+coupling and coupling defines geometry&mdash;forces the spatial manifold
+to be the group itself. $\dim\,\mathrm{SL}(2,\mathbb{R}) = 2^2 - 1 = 3$
+(<a href="sync_cost/derivations/14_three_dimensions.md">D14</a>).</p>
+
+<p><strong>Lorentz symmetry.</strong>
+The order parameter of the Kuramoto equation is complex. Complexifying
+$\mathrm{SL}(2,\mathbb{R})$ gives
+$\mathrm{SL}(2,\mathbb{C}) \cong \mathrm{Spin}(3,1)$&mdash;the double
+cover of the Lorentz group.</p>
+
+<p><strong>The (3,1) signature.</strong>
+The Klein bottle's phase states form a $2 \times 2$ matrix indexed by
+{locked, unlocked} $\times$ {locked, unlocked}. Three states are
+observable (at least one channel is locked). The fourth (both unlocked)
+is dark&mdash;coupling averages to zero. Three observable directions plus
+one dark direction gives signature $(3,1)$. The minus sign in
+$ds^2 = dx^2 + dy^2 + dz^2 - c^2 dt^2$ is the dark state's negative
+contribution to the norm
+(<a href="sync_cost/derivations/32_minkowski_signature.md">D32</a>).</p>
+
+<p><strong>Cosmological parameters from three integers.</strong>
+The fully closed non-orientable surface is the Klein bottle. An XOR
+parity constraint on the field equation collapses 1,764 candidate mode
+pairs to 4 survivors at denominators $q = 2$ and $q = 3$
+(<a href="sync_cost/derivations/19_klein_bottle.md">D19</a>).
+These two integers, together with the Farey count at their product
+scale $|F_6| = 13$, determine:</p>
+
+<ul>
+  <li>$\Omega_\Lambda = |F_6| / (|F_6| + 6) = 13/19 = 0.6842$
+    &mdash;the dark energy fraction
+    (<a href="sync_cost/derivations/25_farey_partition.md">D25</a>).
+    The Farey sequence $F_6$ counts the distinguishable rational states
+    at the interaction scale $q_2 \times q_3 = 6$. There are 13. The
+    partition between locked modes (dark energy) and unlocked modes
+    (matter) is $13:6$.</li>
+  <li>$R = q_2 q_3 \times |F_6|^{q_2 q_3^3} = 6 \times 13^{54}$
+    &mdash;the Planck-to-Hubble ratio
+    (<a href="sync_cost/derivations/26_hierarchy.md">D26</a>).
+    The exponent $54 = 2 \times 3^3 = q_2 \times q_3^d$ encodes
+    the spatial dimension
+    (<a href="sync_cost/derivations/27_exponent.md">D27</a>).</li>
+  <li>$\Lambda\, l_P^2 = 13^{-108}/12$
+    &mdash;the cosmological constant in Planck units.
+    The exponent $108 = 2 \times 54$ is twice the hierarchy exponent.</li>
+</ul>
+
+<h2>Scorecard</h2>
+
+<p>Every entry is computed from the equation above. No row uses a
+measured input.</p>
+
+<table>
+  <tr><th>Quantity</th><th>Derived</th><th>Observed</th><th>Residual</th></tr>
+  <tr>
+    <td>Spectral tilt $n_s$</td>
+    <td>0.963&ndash;0.966</td>
+    <td>$0.9649 \pm 0.0042$</td>
+    <td>&lt;&thinsp;0.2%</td>
+  </tr>
+  <tr>
+    <td>Born rule exponent</td>
+    <td>2</td>
+    <td>2</td>
+    <td>exact</td>
+  </tr>
+  <tr>
+    <td>MOND scale $a_0$</td>
+    <td>$1.25 \times 10^{-10}$ m/s²</td>
+    <td>$1.2 \times 10^{-10}$</td>
+    <td>4%</td>
+  </tr>
+  <tr>
+    <td>Spatial dimension $d$</td>
+    <td>3</td>
+    <td>3</td>
+    <td>exact</td>
+  </tr>
+  <tr>
+    <td>Dark energy fraction $\Omega_\Lambda$</td>
+    <td>$13/19 = 0.6842$</td>
+    <td>$0.685 \pm 0.007$</td>
+    <td>$0.07\sigma$</td>
+  </tr>
+  <tr>
+    <td>Planck/Hubble ratio $R$</td>
+    <td>$6 \times 13^{54}$</td>
+    <td>$8.49 \times 10^{60}$</td>
+    <td>0.48%</td>
+  </tr>
+  <tr>
+    <td>$\Lambda\, l_P^2$</td>
+    <td>$13^{-108}/12$</td>
+    <td>${\sim}\,10^{-122}$</td>
+    <td>0.1% in exponent</td>
+  </tr>
+  <tr>
+    <td>Lorentz group</td>
+    <td>$\mathrm{Spin}(3,1)$</td>
+    <td>$\mathrm{SO}^+(3,1)$</td>
+    <td>exact</td>
+  </tr>
+  <tr>
+    <td>$N_{\text{efolds}}$ (testable ~2028)</td>
+    <td>$61.3 \pm 0.7$</td>
+    <td>TBD</td>
+    <td>CMB-S4</td>
+  </tr>
+</table>
+
+<h2>Falsifiable prediction</h2>
+
+<p>The framework predicts the number of e-folds of inflation:
+$N_{\text{efolds}} = 61.3 \pm 0.7$, set by the eigenvalue
+separation of $x^2 - x - 1 = 0$ (the golden ratio's minimal
+polynomial). CMB-S4 is expected to reach the required precision
+by ~2028. The prediction is falsified if $N_{\text{efolds}} &lt; 59$
+or $&gt; 63$. If confirmed, the duration of inflation is an algebraic
+number, not a free parameter.</p>
+
+<h2>What is not yet derived</h2>
+
+<p>The XOR parity filter that selects 4 modes at denominators $(2, 3)$
+is a discrete structure. It does not survive the continuum limit
+(<a href="sync_cost/derivations/20_xor_continuum_limit.md">D20</a>).
+The frame bundle of the resulting 3-manifold gives
+$\mathrm{Pin}^+(3) \cong \mathrm{SU}(2) \times \mathbb{Z}_2$
+(spin and parity), but does not produce $\mathrm{SU}(3)$ or
+Yang-Mills gauge theory. Two paths remain open: either the Stern-Brocot
+tree is the physical configuration space (the continuum is the
+approximation, not the other way around), or gauge structure emerges
+from the mean-field functional, not from the tangent bundle
+(<a href="sync_cost/derivations/21_discrete_gauge.md">D21</a>).</p>
+
+<h2>Reading order</h2>
+
+<p>The derivation chain has
+<a href="sync_cost/derivations/INDEX.md">39 derivations</a>
+organized in two proof chains:</p>
+
+<ul>
+  <li><a href="sync_cost/derivations/PROOF_A_gravity.md">Proof A</a>
+    (gravity, 8 propositions): counting $\to$ mediant $\to$ Stern-Brocot
+    tree $\to$ field equation $\to$ $\mathrm{SL}(2,\mathbb{R})$, $d = 3$
+    $\to$ ADM $\to$ Lovelock $\to$ Einstein.</li>
+  <li><a href="sync_cost/derivations/PROOF_B_quantum.md">Proof B</a>
+    (quantum, 11 propositions): same start, diverges at $K &lt; 1$ $\to$
+    Madelung $\to$ Schrödinger. Parabola $\to$ $\sqrt{\varepsilon}$
+    $\to$ Born rule.</li>
+  <li><a href="https://github.com/nickjoven/proslambenomenos/blob/main/PROOF_C_bridge.md">Proof C</a>
+    (cosmology): Klein bottle topology $\to$ $\Omega_\Lambda = 13/19$,
+    $R = 6 \times 13^{54}$, $a_0$.</li>
+</ul>
+
+<h2>Code and applications</h2>
+
+<p>The <a href="https://github.com/nickjoven/rfe">rfe</a> engine solves
+the field equation numerically. One equation, all observables.
+Self-consistent $g^*$ solver and $a_0$ correction included.</p>
+
+<p><a href="sync_cost/applications/">Interactive applications</a>:
+Stern-Brocot walk, Möbius projector, Arnold tongue explorer, double
+pendulum, three-body orbit catalog.</p>
+
+<p class="footer">
+  <a href="https://github.com/nickjoven/harmonics">github.com/nickjoven/harmonics</a>
+  &ensp;&middot;&ensp; <a href="LICENSE">CC0 1.0</a>&mdash;no rights reserved
+</p>
+
+</main>
+</body>
+</html>

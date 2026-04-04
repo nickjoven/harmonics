@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - "index.html"
       - "sync_cost/applications/**"
   workflow_dispatch:
 
@@ -28,10 +29,17 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      - name: Prepare site
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp -r sync_cost _site/
+          cp LICENSE _site/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: sync_cost/applications
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment
