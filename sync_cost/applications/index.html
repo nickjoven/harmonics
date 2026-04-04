@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harmonics — Interactive Applications</title>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: #08080c;
+  color: #b0b0c0;
+  font-family: 'Courier New', Courier, monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 24px 80px;
+}
+h1 {
+  font-size: 18px;
+  font-weight: normal;
+  color: #d0d0e0;
+  margin-bottom: 6px;
+}
+.subtitle {
+  font-size: 11px;
+  color: #556;
+  margin-bottom: 48px;
+}
+.apps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  max-width: 720px;
+  width: 100%;
+}
+.app {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  border: 1px solid #1a1a22;
+  border-radius: 4px;
+  transition: all 0.2s;
+  background: rgba(255,255,255,0.01);
+}
+.app:hover {
+  border-color: #334;
+  background: rgba(255,255,255,0.03);
+}
+.app-name {
+  font-size: 14px;
+  color: #aabbdd;
+  margin-bottom: 6px;
+}
+.app-desc {
+  font-size: 11px;
+  color: #667;
+  line-height: 1.5;
+}
+.app-artifacts {
+  margin-top: 8px;
+  font-size: 9px;
+  color: #445;
+}
+footer {
+  margin-top: 60px;
+  font-size: 10px;
+  color: #333;
+  text-align: center;
+}
+footer a { color: #446; text-decoration: none; }
+footer a:hover { color: #668; }
+</style>
+</head>
+<body>
+
+<h1>Harmonics</h1>
+<div class="subtitle">Interactive applications for the synchronization-cost framework</div>
+
+<div class="apps">
+
+  <a class="app" href="ontology.html">
+    <div class="app-name">The Ontology</div>
+    <div class="app-desc">
+      14 concepts cycle as the coupling K sweeps from 0 to 1.
+      The devil's staircase grows; the hedgehog accelerates.
+    </div>
+    <div class="app-artifacts">integers &middot; mediant &middot; circle map &middot; Arnold tongues &middot; Farey partition</div>
+  </a>
+
+  <a class="app" href="stern_brocot_walk.html">
+    <div class="app-name">Stern-Brocot Walk</div>
+    <div class="app-desc">
+      Animate the continued-fraction path [0; 8, 1, 1, 3] down the
+      tree to 7/60.  Depth 13 = |F&#8326;|.
+    </div>
+    <div class="app-artifacts">Stern-Brocot tree &middot; mediant &middot; continued fraction &middot; Farey partition</div>
+  </a>
+
+  <a class="app" href="mobius_projector.html">
+    <div class="app-name">M&ouml;bius Projector</div>
+    <div class="app-desc">
+      A filmstrip with a half-twist.  Time is Farey-warped:
+      simple fractions get longer holds.
+    </div>
+    <div class="app-artifacts">M&ouml;bius strip &middot; Klein bottle &middot; Farey warping</div>
+  </a>
+
+  <a class="app" href="mobius_views.html">
+    <div class="app-name">M&ouml;bius Views</div>
+    <div class="app-desc">
+      Four simultaneous perspectives: the strip, both sides overlaid,
+      the ring, and the Farey exchange matrix.
+    </div>
+    <div class="app-artifacts">M&ouml;bius strip &middot; interference &middot; Farey partition</div>
+  </a>
+
+  <a class="app" href="double_pendulum.html">
+    <div class="app-name">Double Pendulum</div>
+    <div class="app-desc">
+      Mode locking and the tongue boundary.  Frequency ratio sweeps,
+      Lyapunov exponents, and the KAM &rarr; chaos transition.
+    </div>
+    <div class="app-artifacts">circle map &middot; Arnold tongues &middot; Lyapunov &middot; KAM tori</div>
+  </a>
+
+  <a class="app" href="three_body_catalog.html">
+    <div class="app-name">Three-Body Catalog</div>
+    <div class="app-desc">
+      695 periodic orbits from Li &amp; Liao.  Denominator complexity,
+      winding ratios, and astronomical resonances on the Stern-Brocot tree.
+    </div>
+    <div class="app-artifacts">Stern-Brocot tree &middot; free-group words &middot; winding number</div>
+  </a>
+
+</div>
+
+<footer>
+  Press <strong>?</strong> inside any application to explore artifact definitions and the reference graph.
+  <br>
+  <a href="https://github.com/nickjoven/harmonics">github.com/nickjoven/harmonics</a>
+</footer>
+
+</body>
+</html>
