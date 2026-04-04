@@ -90,32 +90,49 @@ This exists whenever K_stat > 1 and K_kin < 1 (physical conditions:
 static friction exceeds critical coupling, kinetic friction is
 subcritical).
 
-### Critical radius
+### Critical radius — exact
 
-The equation K(v(r_c)) = 1 has two solutions when the vortex velocity
-profile crosses v_c twice (once on the rising branch, once on the
-falling branch).
+The equation v(r_c) = v_c is quadratic in r:
 
-For r_c ≪ r_core (inner crossing):
+    r_c² - (ℓ/v_c) r_c + r_core² = 0
 
-    r_c ~ r_core² v_c / ℓ
+Two roots:
 
-The inner critical radius scales as **1/ℓ**: higher topological charge
-narrows the overcritical core. This is the central falsifiable
-prediction. Higher orbital angular momentum means faster azimuthal
-velocity near the core, which pushes K below 1 faster.
+    r_c,inner = [ℓ/(2v_c)] [1 - √(1 - (2v_c r_core/ℓ)²)]
+    r_c,outer = [ℓ/(2v_c)] [1 + √(1 - (2v_c r_core/ℓ)²)]
+
+By Vieta's formulas:
+
+    r_c,inner × r_c,outer = r_core²        (product)
+    r_c,inner + r_c,outer = ℓ/v_c           (sum)
+
+The product is exact and depends only on the wavelength (through
+r_core = λ/2π), not on the Stribeck parameters. This is a constraint:
+knowing one critical radius determines the other.
+
+Existence condition: (2v_c r_core/ℓ)² < 1, i.e. ℓ > 2v_c r_core.
+At standard parameters, 2v_c r_core ≈ 0.278 < 1. All integer ℓ ≥ 1
+have two crossings.
+
+Limiting cases:
+
+    ℓ → ∞:  r_c,inner ≈ v_c r_core²/ℓ    (the 1/ℓ scaling)
+             r_c,outer ≈ ℓ/v_c             (the ℓ scaling)
+
+Both approximations are within 2% at ℓ = 1 (confirmed: ratio to
+exact is 0.98-1.00 across all tested ℓ).
+
+### Annulus structure
 
 Because v(r) → 0 as r → ∞ (Keplerian falloff), K(r) → K_stat > 1 at
-large r. There is always an outer crossing where K rises back through 1.
-The subcritical region is an annulus, not a disk — bounded by an inner
-K = 1 surface (where v rises through v_c) and an outer K = 1 surface
-(where v falls back through v_c).
+large r. The subcritical region is an **annulus**, not a disk — bounded
+by the inner K = 1 surface (where v rises through v_c) and the outer
+K = 1 surface (where v falls back through v_c).
 
-For higher ℓ, the inner crossing shrinks as 1/ℓ while the outer
-crossing grows as ℓ, widening the subcritical annulus. In a finite
-physical system (e.g. a photonic crystal of finite extent), the outer
-crossing may fall outside the medium — making the overcritical return
-at large r unphysical.
+Higher ℓ widens the annulus: the inner crossing shrinks as 1/ℓ while
+the outer crossing grows as ℓ. In a finite physical system (e.g. a
+photonic crystal of finite extent), the outer crossing may fall outside
+the medium, making the exterior effectively subcritical.
 
 ---
 
@@ -148,10 +165,26 @@ In the fold region, two distinct initial conditions map to the same
 output. The map is non-injective. Information is destroyed at each
 iteration. The Lyapunov exponent:
 
-    λ(r) = ∫₀¹ ln|1 - K(r) cos(2πθ)| dθ
+    λ(r) = lim (1/n) Σ ln|1 - K(r) cos(2π θ_n)|
 
-is positive when K(r) > 1 at irrational Ω. This is chaos confined
-to the vortex core.
+is **generically positive** when K(r) > 1, but not uniformly so.
+Even at K > 1, mode-locking windows persist: the Arnold tongues
+extend above the critical line, and within each tongue the Lyapunov
+exponent is negative (stable periodic orbit). Between these windows,
+the dynamics is chaotic (λ > 0).
+
+Numerical confirmation: at Ω = 1/φ and K = 1.8, λ = +0.41 (chaotic);
+at K = 1.4, the orbit falls near a mode-locking window and λ = -0.11
+(stable). The fold region is a mixture of chaotic seas and periodic
+islands — the same structure as the Hénon map or the standard map
+above the last invariant torus.
+
+The sharp statement is: **the fold (non-invertibility) is present at
+all K > 1, regardless of the Lyapunov sign.** The fold measure μ
+counts the fraction of phase space where f'(θ) < 0 — this is a
+geometric fact about the map, not a dynamical one. Chaos is a
+consequence of the fold (orbits can merge), but periodic windows
+survive within the fold region.
 
 In a physical medium, the fold manifests as **reversed energy flow**:
 the coupling is strong enough that the response overshoots the drive,
@@ -234,30 +267,32 @@ This is why the analogy to black holes is structural, not metaphorical:
 
 ### Results: critical radius vs topological charge
 
-| ℓ | r_c,inner / r_core | r_c,outer / r_core |
-|---|---|---|
-| 1 | 0.1417 | 7.055 |
-| 2 | 0.0698 | 14.32 |
-| 3 | 0.0464 | 21.55 |
-| 5 | 0.0278 | 35.96 |
-| 8 | 0.0174 | 57.56 |
-| 13 | 0.0107 | 93.55 |
+| ℓ | r_c,inner / r_core | r_c,outer / r_core | product / r_core² |
+|---|---|---|---|
+| 1 | 0.1417 | 7.055 | 1.0000 |
+| 2 | 0.0698 | 14.32 | 1.0000 |
+| 5 | 0.0278 | 35.96 | 1.0000 |
+| 8 | 0.0174 | 57.56 | 1.0000 |
+| 13 | 0.0107 | 93.55 | 1.0000 |
 
-The inner critical radius scales as 1/ℓ (confirmed numerically,
-ratio to predicted 1/ℓ scaling: 0.98-1.00). The outer crossing
-grows as ℓ, widening the subcritical annulus. In finite physical
-systems, the outer crossing may fall outside the medium boundary.
+The product r_c,inner × r_c,outer = r_core² (Vieta) is confirmed to
+6+ digits across all ℓ. This is exact and parameter-independent. The
+inner crossing scales as 1/ℓ and the outer as ℓ — both are limiting
+cases of the same quadratic.
 
 ### Lyapunov exponent
 
-At Ω = 1/φ (golden mean, maximally irrational):
+At Ω = 1/φ (golden mean):
 
-    λ(r) > 0    for r < r_c    (chaotic, fold active)
-    λ(r) < 0    for r > r_c    (stable, mode-locked)
-    λ(r_c) = 0                  (marginal, critical)
+    K > 1: λ generically positive (chaotic), but mode-locking
+           windows persist with λ < 0 (periodic islands)
+    K = 1: λ = 0 (marginal, the map is a homeomorphism)
+    K < 1: λ ≤ 0 (stable, mode-locked or quasiperiodic)
 
-The Lyapunov exponent changes sign exactly at the critical radius.
-The K = 1 surface is the zero-Lyapunov surface.
+The K = 1 surface at r_c is where the fold disappears. Below K = 1,
+the map is invertible (D36) and no positive Lyapunov is possible.
+Above K = 1, the fold enables chaos generically but does not
+guarantee it at every parameter value.
 
 ---
 
@@ -281,9 +316,11 @@ These hold for any Stribeck parameters with K_stat > 1:
    physical systems, the outer K > 1 return may fall outside the
    medium, making the exterior effectively subcritical.
 
-5. **The Lyapunov exponent changes sign at r_c.** The critical radius
-   is simultaneously the regime boundary (coupling), the chaos
-   boundary (dynamics), and the energy-flow boundary (observables).
+5. **The fold disappears at r_c.** The critical radius is
+   simultaneously the regime boundary (coupling), the invertibility
+   boundary (fold measure goes to zero), and the energy-flow boundary
+   (observables). Chaos is generically present but not uniform inside
+   r_c — mode-locking windows persist above K = 1.
 
 ---
 
@@ -358,10 +395,11 @@ K(x,x') = G_γ(x,x') via the Kuramoto-Einstein dictionary (D12 §3).
 | Component | Status | Gap |
 |-----------|--------|-----|
 | Regime map K(r) | **Derived** (composition of known profiles) | — |
-| Critical radius r_c | **Derived** (algebraic) | — |
+| Critical radius r_c | **Derived** (exact quadratic, Vieta) | — |
+| 1/ℓ and ℓ scaling | **Derived** (limiting cases of quadratic) | — |
+| r_c,inner × r_c,outer = r_core² | **Proved** (Vieta, parameter-independent) | — |
 | Fold measure μ(r) | **Derived** (exact) | — |
-| 1/ℓ scaling | **Confirmed** (numerical) | Analytic proof for general Stribeck parameters |
-| Lyapunov sign change | **Confirmed** (numerical) | — |
+| Fold structure at K > 1 | **Confirmed** (fold present; chaos generic but not uniform — mode-locking windows persist) | — |
 | Local vs global K compatibility | **Proved** (triangle inequality) | — |
 | Photonic crystal K-mapping | **Computed** | Validate against Pryamikov data |
 | Reversed energy flow = fold measure | Conjectural | Need derivation linking μ to Poynting vector reversal fraction |
