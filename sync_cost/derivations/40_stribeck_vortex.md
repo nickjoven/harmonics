@@ -443,9 +443,9 @@ uncoupled at the horizon.
 
 | Derivation | Connection |
 |---|---|
-| D12 (continuum limits) | K(x,x') = G_γ(x,x') is spatially varying. The Stribeck vortex is the first explicit K(r) profile with K > 1 core. In the gravity sector, K_eff = √(1-2M/r) — complementary structure (K → 0 at horizon, not K → ∞). |
+| D12 (continuum limits) | K(x,x') = G_γ(x,x') is spatially varying. The Stribeck vortex provides an explicit K(r) profile with K > 1 core. In the gravity sector, K_eff = √(1-2M/r) — complementary structure (K → 0 at horizon, not K → ∞). |
 | D30 (denomination boundary) | The K*(q) values (all > 1) are denomination switches that live inside the vortex core. The core is the denomination-boundary laboratory. |
-| D31 (speed of light) | D31 argued K > 1 "if it existed" would degrade coherence. Now answered: K > 1 exists at the core of material vortices with K_stat > 1. Coherence is degraded there (fold, chaos). The c = maximum speed result holds in the K < 1 exterior. |
+| D31 (speed of light) | K > 1 exists at the core of material vortices with K_stat > 1. Coherence is degraded there (fold, chaos). The c = maximum speed result holds in the K < 1 exterior. |
 | D36 (conservation = computability) | Reconciled: K > 1 locally is compatible with K_eff ≤ 1 globally. The fold is local information destruction; global information is conserved by the triangle inequality on S¹. |
 
 ---
