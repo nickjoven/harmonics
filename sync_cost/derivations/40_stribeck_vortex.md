@@ -324,20 +324,54 @@ These hold for any Stribeck parameters with K_stat > 1:
 
 ---
 
+## The Bragg-circle map identification
+
+### Transfer matrix = circle map iteration
+
+The coupled-mode equations for a 1D Bragg grating with coupling κ
+and detuning δ give a transfer matrix M per period Λ. Iterating M^N
+(cascading N grating periods) is structurally identical to iterating
+the circle map N times:
+
+    Ω ↔ δΛ/π    (normalized detuning)
+    K ↔ sec(κΛ) = 1/cos(κΛ)    (normalized coupling)
+    θ_n ↔ arg(transmission after n periods)
+
+### Stop band = fold = reversed energy flow
+
+The stop band (where the transfer matrix eigenvalue is real > 1,
+the backward wave B grows exponentially, and energy flow |A|² - |B|²
+reverses) occupies fraction κΛ/π of the Brillouin zone.
+
+With K = sec(κΛ):
+
+    stop band fraction = κΛ/π = arccos(1/K)/π = μ (fold measure)
+
+This equality is **exact** — verified numerically to 4 decimal places
+across κΛ ∈ [0.1, 1.5] (bragg_circle_map.py, Part 3).
+
+**The fold measure μ IS the reversed-energy-flow fraction.** The
+identification is not conjectural — it follows from the equivalence
+between the circle map fold (f'(θ) < 0) and the Bragg stop band
+(eigenvalues real, |B| > |A|). Both count the same fraction of
+phase space.
+
+---
+
 ## Application: 2D photonic crystals
 
 ### The K-mapping
 
-For a 2D hexagonal photonic crystal (arXiv:2601.21704), the coupling
-parameters map from crystal properties:
+For a 2D hexagonal photonic crystal (arXiv:2601.21704), the 1D Bragg
+result extends via the three equivalent Bragg directions {G₁, G₂, G₃}:
 
-    K_stat = K_2D(Δn, f) = 1 + 2(Δn)²(1 + f π/√3)
+    K_stat = 1 + 2(Δn)²(1 + f π/√3)
 
-This extends the 1D Bragg result by the hexagonal geometric factor.
-The 1D Bragg coupling is K_1D = 1 + 2(Δn)² (from coupled-mode theory:
-the reflection coefficient at a Bragg grating maps to the circle map's
-fold parameter). The hexagonal lattice adds cross-coupling between
-three equivalent Bragg directions, giving the (1 + f π/√3) enhancement.
+The coefficient 2(Δn)² comes from the step-index Fourier coefficient
+(stronger than the sinusoidal sec expansion by factor ~16/π² due to
+the sharp index profile). The geometric factor (1 + f π/√3) comes
+from the hexagonal unit cell: the area ratio A_hex/A_circle = π/√3
+weights the coherent sum of three Bragg directions.
 
     K_kin = f(Δn)²
 
@@ -346,8 +380,7 @@ contributes. Subcritical by construction.
 
     v_thr = 1/(n_eff Q)
 
-Coherent response bandwidth of the crystal mode. Q is the quality
-factor; n_eff is the effective index.
+Coherent response bandwidth of the crystal mode.
 
 ### Velocity field with Bessel modulation
 
@@ -357,9 +390,7 @@ Bessel lattice modulation:
     v(r) = v_LG(r) [1 - α J₀(G₁ r)]
 
 where G₁ is the first reciprocal lattice vector and α is the modulation
-depth (set by the filling fraction f). The Bessel envelope modulates
-the smooth LG profile, creating secondary zero-crossings where K can
-spike.
+depth (set by the filling fraction f).
 
 ### Numerical result
 
@@ -374,8 +405,30 @@ Extract Δn, f, Q from Pryamikov's specific geometry (Figs. 3-5 of
 arXiv:2601.21704) and compare the predicted r_c to the observed
 spatial extent of reversed Poynting vector flow.
 
-For the gravity sector, the analogous K-derivation is complete:
-K(x,x') = G_γ(x,x') via the Kuramoto-Einstein dictionary (D12 §3).
+---
+
+## The gravity sector: complementarity, not analogy
+
+The Schwarzschild K(r) profile (schwarzschild_K_profile.py) reveals
+that the gravity sector has the **inverse** structure of the Stribeck
+vortex:
+
+| | Stribeck vortex | Schwarzschild |
+|---|---|---|
+| Core/horizon | K > 1, fold, reversed flow | K → 0, fully unlocked, quantum |
+| K = 1 surface | Critical radius r_c | Asymptotic infinity |
+| Exterior | K < 1, mode-locked | K < 1 everywhere (D36 absolute) |
+
+The D12 dictionary gives K_eff = K₀N = K₀√(1-2M/r), which goes to
+zero at the horizon and 1 at infinity. The horizon is a **decoherence**
+boundary (zero synchronization), not an overcritical boundary. D36's
+prohibition K_eff ≤ 1 is absolute in the gravity sector.
+
+The K > 1 regime exists only in **material** systems where coupling is
+set by velocity-dependent friction (Stribeck), not by the lapse. The
+photonic crystal and the black hole occupy opposite ends of the same
+coupling landscape: one is overcoupled at rest, the other is
+uncoupled at the horizon.
 
 ---
 
@@ -383,7 +436,7 @@ K(x,x') = G_γ(x,x') via the Kuramoto-Einstein dictionary (D12 §3).
 
 | Derivation | Connection |
 |---|---|
-| D12 (continuum limits) | K(x,x') = G_γ(x,x') is already spatially varying. The Stribeck vortex is the first explicit K(r) profile with K > 1 core. |
+| D12 (continuum limits) | K(x,x') = G_γ(x,x') is spatially varying. The Stribeck vortex is the first explicit K(r) profile with K > 1 core. In the gravity sector, K_eff = √(1-2M/r) — complementary structure (K → 0 at horizon, not K → ∞). |
 | D30 (denomination boundary) | The K*(q) values (all > 1) are denomination switches that live inside the vortex core. The core is the denomination-boundary laboratory. |
 | D31 (speed of light) | D31 argued K > 1 "if it existed" would degrade coherence. The vortex shows where it exists: at the core of any vortex with K_stat > 1. The c = maximum speed result holds in the K < 1 exterior. |
 | D36 (conservation = computability) | Reconciled: K > 1 locally is compatible with K_eff ≤ 1 globally. The fold is local information destruction; global information is conserved by the triangle inequality on S¹. |
@@ -402,8 +455,9 @@ K(x,x') = G_γ(x,x') via the Kuramoto-Einstein dictionary (D12 §3).
 | Fold structure at K > 1 | **Confirmed** (fold present; chaos generic but not uniform — mode-locking windows persist) | — |
 | Local vs global K compatibility | **Proved** (triangle inequality) | — |
 | Photonic crystal K-mapping | **Computed** | Validate against Pryamikov data |
-| Reversed energy flow = fold measure | Conjectural | Need derivation linking μ to Poynting vector reversal fraction |
-| Gravity sector K(r) profile | Identified | Compute K(r) near a Schwarzschild source via D12 dictionary |
+| Reversed energy flow = fold measure | **Derived** (Bragg stop band = fold, bragg_circle_map.py) | — |
+| K = sec(κΛ) identification | **Derived and verified** (exact to 4 digits, bragg_circle_map.py) | — |
+| Gravity sector K(r) profile | **Computed** (schwarzschild_K_profile.py) | Stribeck and Schwarzschild have COMPLEMENTARY structures (see below) |
 | Information fate in fold core | Open | Black hole information analogue: does the global fixed point encode local fold data? |
 
 ---
@@ -412,6 +466,6 @@ K(x,x') = G_γ(x,x') via the Kuramoto-Einstein dictionary (D12 §3).
 
 This derivation extends all three proof chains:
 
-- [**Proof A: Polynomial → General Relativity**](PROOF_A_gravity.md) — the K(r) profile near a gravitating source gives the first spatial structure to the K = 1 limit. The critical radius r_c is the horizon.
+- [**Proof A: Polynomial → General Relativity**](PROOF_A_gravity.md) — the gravity sector has K_eff = √(1-2M/r) ≤ 1 everywhere: D36 is absolute. The horizon is a decoherence boundary (K → 0), not an overcritical one. Stribeck vortex structure is complementary, not analogous.
 - [**Proof B: Polynomial → Quantum Mechanics**](PROOF_B_quantum.md) — the K < 1 exterior is the quantum regime; the vortex provides the spatial boundary condition.
 - [**Proof C: The Bridge**](https://github.com/nickjoven/proslambenomenos/blob/main/PROOF_C_bridge.md) — the local/global K distinction reconciles D36's "K > 1 = no physics" with physically realizable vortex systems.

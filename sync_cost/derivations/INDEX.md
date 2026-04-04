@@ -215,6 +215,8 @@ These build on each other sequentially:
 | `40_stribeck_vortex.md` | **Local K > 1 reconciled with global K_eff ≤ 1**: the Stribeck vortex regime map K(r) = K(v(r)) produces radial structure — overcritical core surrounded by subcritical annulus. Critical radii from quadratic; r_c,inner × r_c,outer = r_core² (Vieta). Fold at all K > 1; chaos generic but mode-locking windows persist. Triangle inequality on S¹ preserves global self-consistency. |
 | `stribeck_vortex_regime.py` | Core computation: regime map K(r), critical radii vs ℓ, fold measure profile, Lyapunov exponent, global order parameter |r| ≤ 1 confirmation, photonic crystal K-mapping (Δn=0.5, f=0.15, Q=50 → K_stat=1.636, μ(0)=29.1%), near-criticality saddle-node scaling. |
 | `stribeck_vortex_gaps.py` | Gap-closing: exact quadratic formula for r_c (6-digit match to bisection), Vieta verification (product = r_core² across all ℓ), fine Lyapunov profile revealing mode-locking windows above K = 1, outer crossing scaling (linear in ℓ). |
+| `bragg_circle_map.py` | **Gaps A+D closed.** Bragg coupled-mode transfer matrix → circle map identification K = sec(κΛ). Stop band fraction = fold measure μ = arccos(1/K)/π — exact to 4 digits. Reversed energy flow IS the fold. Hexagonal 2D extension derives K_stat = 1 + 2(Δn)²(1 + fπ/√3). |
+| `schwarzschild_K_profile.py` | **Gap B resolved.** Four candidate K(r) profiles near Schwarzschild compared. Result: gravity sector has COMPLEMENTARY structure to Stribeck vortex. K_eff = √(1-2M/r) → 0 at horizon (decoherence), not → ∞ (overcritical). D36 absolute in gravity. K > 1 exists only in material systems. |
 
 ### Proof Chains (geometric proof format)
 
