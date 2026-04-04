@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reference &mdash; Harmonics</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[
+    {left:'$$',right:'$$',display:true},
+    {left:'$',right:'$',display:false}
+  ]});"></script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="index.html" class="active">Reference</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="derivations.html">Derivations</a>
+</nav>
+
+<h1>Reference</h1>
+<p class="subtitle">Quick-reference supplement to the
+<a href="../index.html">main page</a>. Glossary, derivation index,
+proof chains, and predictions at a glance.</p>
+
+<!-- ── Predictions ───────────────────────── -->
+
+<h2>Predictions vs. observations</h2>
+
+<table>
+<tr><th>Observable</th><th>Predicted</th><th>Observed</th><th>Residual</th><th>Status</th></tr>
+<tr>
+  <td>Spectral tilt $n_s$</td>
+  <td class="val">0.963&ndash;0.966</td>
+  <td class="val">0.9649 &plusmn; 0.0042</td>
+  <td class="val">&lt; 0.2%</td>
+  <td class="match">verified</td>
+</tr>
+<tr>
+  <td>Born rule exponent</td>
+  <td class="val">2</td>
+  <td class="val">2</td>
+  <td class="val">exact</td>
+  <td class="match">verified</td>
+</tr>
+<tr>
+  <td>MOND scale $a_0$</td>
+  <td class="val">1.25 &times; 10<sup>&minus;10</sup> m/s&sup2;</td>
+  <td class="val">1.2 &times; 10<sup>&minus;10</sup></td>
+  <td class="val">4%</td>
+  <td class="match">verified</td>
+</tr>
+<tr>
+  <td>Spatial dimension $d$</td>
+  <td class="val">3</td>
+  <td class="val">3</td>
+  <td class="val">exact</td>
+  <td class="match">verified</td>
+</tr>
+<tr>
+  <td>Dark energy $\Omega_\Lambda$</td>
+  <td class="val">13/19 = 0.6842</td>
+  <td class="val">0.6847 &plusmn; 0.0073</td>
+  <td class="val">0.07&sigma;</td>
+  <td class="match">verified</td>
+</tr>
+<tr>
+  <td>Planck/Hubble hierarchy $R$</td>
+  <td class="val">$6 \times 13^{54}$</td>
+  <td class="val">$8.49 \times 10^{60}$</td>
+  <td class="val">0.48%</td>
+  <td class="match">verified</td>
+</tr>
+<tr>
+  <td>Vacuum energy $\Lambda\, l_P^2$</td>
+  <td class="val">$13^{-108}/12$</td>
+  <td class="val">$\sim\!10^{-121.5}$</td>
+  <td class="val">0.1% exp.</td>
+  <td class="match">verified</td>
+</tr>
+<tr>
+  <td>Inflation $N_{\text{efolds}}$</td>
+  <td class="val">61.3 &plusmn; 0.7</td>
+  <td class="val">TBD</td>
+  <td class="val">&mdash;</td>
+  <td class="pending">CMB-S4 ~2028</td>
+</tr>
+</table>
+
+<!-- ── Proof chains ──────────────────────── -->
+
+<h2>Proof chain A: Integers &rarr; Einstein</h2>
+
+<div class="card">
+<p>From energy conservation + stability, the Einstein
+field equations follow <em>uniquely</em>.</p>
+
+<ol class="chain">
+  <li data-step="P1">Integers + fixed-point &rarr; $S^1$ (the circle)</li>
+  <li data-step="P2">Energy conservation + stability &rarr; mediant (Stern-Brocot, 1858)</li>
+  <li data-step="P3">Mediant enumeration &rarr; Stern-Brocot tree (configuration space)</li>
+  <li data-step="P4">Self-consistency on the tree &rarr; rational field equation</li>
+  <li data-step="P5">Mediant generators &rarr; $\mathrm{SL}(2,\mathbb{Z}) \to \mathrm{SL}(2,\mathbb{R})$, forcing $d = 3$</li>
+  <li data-step="P6">Four conditions uniquely characterize $\mathrm{SL}(2,\mathbb{R})$ (Bianchi classification)</li>
+  <li data-step="P7">Continuum limit at $K = 1$ &rarr; ADM evolution equations</li>
+  <li data-step="P8">Lovelock uniqueness (1971) &rarr; $G_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi G\, T_{\mu\nu}$</li>
+</ol>
+</div>
+
+<h2>Proof chain B: Integers &rarr; Schr&ouml;dinger + Born</h2>
+
+<div class="card">
+<p>Same inputs, subcritical regime $K &lt; 1$.</p>
+
+<ol class="chain">
+  <li data-step="P1-5">Shared steps with Proof A (circle &rarr; SL(2) &rarr; $d = 3$)</li>
+  <li data-step="Q1">Parabola at tongue boundaries &rarr; $\Delta\theta \propto \sqrt{\varepsilon}$ (saddle-node universality)</li>
+  <li data-step="Q2">Basin measure with parabolic geometry &rarr; $P = |\psi|^2$</li>
+  <li data-step="Q3">$K &lt; 1$ &rarr; partial locking; unlocked oscillators = quantum states</li>
+  <li data-step="Q4">Madelung variables $(\rho, S)$ for unlocked population</li>
+  <li data-step="Q5">Madelung &harr; Schr&ouml;dinger equivalence &rarr; $i\hbar\, \partial_t \psi = H\psi$</li>
+</ol>
+</div>
+
+<!-- ── Four primitives ───────────────────── -->
+
+<h2>The four primitives</h2>
+
+<table>
+<tr><th>Primitive</th><th>Role</th><th>What it builds</th></tr>
+<tr>
+  <td><strong>Integers $\mathbb{Z}$</strong></td>
+  <td>Counting cycle multiplicity</td>
+  <td>Winding numbers $p, q$</td>
+</tr>
+<tr>
+  <td><strong>Mediant $\frac{a+c}{b+d}$</strong></td>
+  <td>Combining two frequency ratios</td>
+  <td>Stern-Brocot tree</td>
+</tr>
+<tr>
+  <td><strong>Fixed point $x = f(x)$</strong></td>
+  <td>Self-consistency</td>
+  <td>Field equation, circle ($p \equiv 0 \Rightarrow S^1$)</td>
+</tr>
+<tr>
+  <td><strong>Parabola $x^2 + \mu = 0$</strong></td>
+  <td>Bifurcation geometry</td>
+  <td>Saddle-node universality, $\sqrt{\varepsilon}$ scaling &rarr; Born rule</td>
+</tr>
+</table>
+
+<!-- ── Related work ──────────────────────── -->
+
+<h2>Related repositories</h2>
+
+<table>
+<tr><th>Repository</th><th>Role</th></tr>
+<tr>
+  <td><a href="https://github.com/nickjoven/rfe">rfe</a></td>
+  <td>Numerical engine &mdash; rational field equation solver, all observables</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/nickjoven/proslambenomenos">proslambenomenos</a></td>
+  <td>$\Lambda \to a_0$: one frequency, zero free parameters</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/nickjoven/201">201</a></td>
+  <td>Gravity as synchronization in a frictional medium</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/nickjoven/intersections">intersections</a></td>
+  <td>Stick-slip dynamics and dark matter</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/nickjoven/submediant-site">submediant-site</a></td>
+  <td>Derivation chain site: polynomial &rarr; evidence</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/nickjoven/proslambenomenos-site">proslambenomenos-site</a></td>
+  <td>Full Jupyter Book aggregating all repositories</td>
+</tr>
+</table>
+
+<footer>
+  <p><a href="https://github.com/nickjoven/harmonics">Source</a> &middot;
+  CC0 1.0 Universal &mdash; No rights reserved.</p>
+</footer>
+
+</body>
+</html>

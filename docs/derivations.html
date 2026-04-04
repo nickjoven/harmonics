@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Derivations &mdash; Harmonics</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[
+    {left:'$$',right:'$$',display:true},
+    {left:'$',right:'$',display:false}
+  ]});"></script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Reference</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="derivations.html" class="active">Derivations</a>
+</nav>
+
+<h1>Derivation Index</h1>
+<p class="subtitle">39 derivations, two proof chains, and computational scripts.<br>
+Start with <a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/FRAMEWORK.md">FRAMEWORK.md</a>,
+then follow the phases below.</p>
+
+<!-- ── Proof chains ──────────────────────── -->
+
+<h2>Proof chains</h2>
+
+<table>
+<tr><th>Chain</th><th>Statement</th><th>Steps</th></tr>
+<tr>
+  <td><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/PROOF_A_gravity.md">Proof A</a></td>
+  <td>Integers &rarr; Einstein field equations (8 propositions)</td>
+  <td>P1&ndash;P8: circle &rarr; mediant &rarr; SB tree &rarr; field eq. &rarr; SL(2) &rarr; ADM &rarr; Lovelock</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/PROOF_B_quantum.md">Proof B</a></td>
+  <td>Integers &rarr; Schr&ouml;dinger + Born rule (7 propositions)</td>
+  <td>P1&ndash;P5 shared, then Q1&ndash;Q5: tongues &rarr; $\sqrt{\varepsilon}$ &rarr; $|\psi|^2$ &rarr; Madelung &rarr; Schr&ouml;dinger</td>
+</tr>
+</table>
+
+<!-- ── Phase 1 ───────────────────────────── -->
+
+<h2>Phase 1: Cost functions &rarr; circle map</h2>
+
+<div class="deriv-grid">
+  <span class="deriv-num" id="d04">04</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/04_spectral_tilt_reframed.md">Spectral tilt reframed</a> &mdash; strip away "cost," keep phase, frequency, coupling</span>
+  <span class="deriv-status">narrative</span>
+</div>
+
+<h3>Key scripts</h3>
+<p><code>circle_map.py</code> &middot; <code>cost_function_scan.py</code></p>
+
+<!-- ── Phase 2 ───────────────────────────── -->
+
+<h2>Phase 2: Golden ratio structure</h2>
+
+<p>The devil&rsquo;s staircase at $\Omega = 1/\varphi$ is exactly self-similar
+with scaling $\varphi^2$. Each bracket carries $1/\varphi^2$ of the parent&rsquo;s
+winding number.</p>
+
+<h3>Key scripts</h3>
+<p><code>golden_ratio_pivot.py</code> &middot; <code>stern_brocot_map.py</code> &middot; <code>phi_squared_zoom.py</code></p>
+
+<!-- ── Phase 3 ───────────────────────────── -->
+
+<h2>Phase 3: Connecting to the CMB</h2>
+
+<div class="deriv-grid">
+  <span class="deriv-num" id="d02">02</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/02_spectral_tilt.md">Spectral tilt</a> &mdash; $n_s$ from $\varphi^2$ self-similarity</span>
+  <span class="deriv-status">&lt; 0.2%</span>
+</div>
+
+<h3>Key scripts</h3>
+<p><code>k_omega_mapping.py</code> &middot; <code>superharmonic_regime.py</code> &middot; <code>staircase_geometry.py</code></p>
+
+<!-- ── Phase 4&ndash;5 ─────────────────────── -->
+
+<h2>Phase 4&ndash;5: Born rule and Planck scale</h2>
+
+<div class="deriv-grid">
+  <span class="deriv-num" id="d01">01</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/01_born_rule.md">Born rule</a> &mdash; $P = |\psi|^2$ from saddle-node basin geometry</span>
+  <span class="deriv-status">exact</span>
+
+  <span class="deriv-num" id="d06">06</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/06_planck_scale.md">Planck scale</a> &mdash; $N = 3$ minimum self-sustaining loop</span>
+  <span class="deriv-status">resolved</span>
+
+  <span class="deriv-num" id="d07">07</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/07_measurement_collapse.md">Measurement collapse</a> &mdash; $\tau \propto 1/\sqrt{\varepsilon}$, uncertainty, Zeno</span>
+  <span class="deriv-status">resolved</span>
+</div>
+
+<h3>Key scripts</h3>
+<p><code>born_rule_tongues.py</code> &middot; <code>planck_threshold.py</code> &middot; <code>collapse_tongues.py</code> &middot; <code>tongue_uncertainty.py</code></p>
+
+<!-- ── Phase 6 ───────────────────────────── -->
+
+<h2>Phase 6: Fidelity bound and unification</h2>
+
+<div class="deriv-grid">
+  <span class="deriv-num" id="d09">09</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/09_fidelity_bound.md">Fidelity bound</a> &mdash; MOND + collapse = same self-referential limit</span>
+  <span class="deriv-status">4% ($a_0$)</span>
+
+  <span class="deriv-num" id="d03">03</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/03_a0_threshold.md">$a_0$ threshold</a> &mdash; MOND scale from $cH_0 / (2\pi\sqrt{g^*})$</span>
+  <span class="deriv-status">4%</span>
+</div>
+
+<!-- ── Phase 7 ───────────────────────────── -->
+
+<h2>Phase 7: Foundations</h2>
+
+<div class="deriv-grid">
+  <span class="deriv-num" id="d05">05</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/05_two_forces.md">Two forces</a> &mdash; gravity + electromagnetism from coupling channels</span>
+  <span class="deriv-status">resolved</span>
+
+  <span class="deriv-num" id="d10">10</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/10_minimum_alphabet.md">Minimum alphabet</a> &mdash; four primitives are irreducible</span>
+  <span class="deriv-status">proven</span>
+</div>
+
+<!-- ── Phase 8 ───────────────────────────── -->
+
+<h2>Phase 8: The field equation</h2>
+
+<div class="deriv-grid">
+  <span class="deriv-num" id="d11">11</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/11_rational_field_equation.md">Rational field equation</a> &mdash; $N = N_{\text{total}} \cdot g \cdot w$ on the Stern-Brocot tree</span>
+  <span class="deriv-status">closed form</span>
+</div>
+
+<!-- ── Phase 9: Uniqueness ───────────────── -->
+
+<h2>Phase 9: Uniqueness (capstone)</h2>
+
+<div class="deriv-grid">
+  <span class="deriv-num" id="d12">12</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/12_continuum_limits.md">Continuum limits</a> &mdash; Kuramoto &rarr; ADM at $K = 1$, Schr&ouml;dinger at $K &lt; 1$</span>
+  <span class="deriv-status">theorem</span>
+
+  <span class="deriv-num" id="d13">13</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/13_einstein_from_kuramoto.md">Einstein from Kuramoto</a> &mdash; $G_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi G T_{\mu\nu}$ uniquely</span>
+  <span class="deriv-status">Lovelock</span>
+
+  <span class="deriv-num" id="d14">14</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/14_three_dimensions.md">Three dimensions</a> &mdash; $d = 3$ forced by mediant &rarr; $\mathrm{SL}(2,\mathbb{R})$</span>
+  <span class="deriv-status">forced</span>
+
+  <span class="deriv-num" id="d15">15</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/15_lie_group_characterization.md">$\mathrm{SL}(2,\mathbb{R})$ uniqueness</a> &mdash; four-condition characterization theorem</span>
+  <span class="deriv-status">Bianchi</span>
+</div>
+
+<!-- ── Phases 10&ndash;12 ────────────────── -->
+
+<h2>Phases 10&ndash;12: Topology and causation</h2>
+
+<div class="deriv-grid">
+  <span class="deriv-num" id="d16">16</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/16_variable_denominator.md">Variable denominator</a> &mdash; Hz with a changing denominator</span>
+  <span class="deriv-status">resolved</span>
+
+  <span class="deriv-num" id="d17">17</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/17_rank1_temporal_causation.md">Rank-1 temporal causation</a> &mdash; arrow of time from rank-1 factorization</span>
+  <span class="deriv-status">resolved</span>
+
+  <span class="deriv-num" id="d18">18</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/18_mobius_container.md">M&ouml;bius container</a> &mdash; antiperiodic BC forces rational divisions</span>
+  <span class="deriv-status">simulation</span>
+
+  <span class="deriv-num" id="d19">19</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/19_klein_bottle.md">Klein bottle</a> &mdash; XOR parity at $\{2, 3\}$ &rarr; particle spectrum</span>
+  <span class="deriv-status">resolved</span>
+
+  <span class="deriv-num" id="d20">20</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/20_xor_continuum_limit.md">XOR continuum limit</a> &mdash; Klein bottle Kuramoto &rarr; selection rule</span>
+  <span class="deriv-status">derived</span>
+
+  <span class="deriv-num" id="d21">21</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/21_discrete_gauge.md">Discrete gauge</a> &mdash; broken circles &rarr; quotient symmetries</span>
+  <span class="deriv-status">resolved</span>
+</div>
+
+<!-- ── Phase 13 ──────────────────────────── -->
+
+<h2>Phase 13: Three zeros and engineering</h2>
+
+<div class="deriv-grid">
+  <span class="deriv-num" id="d22">22</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/22_engineering_targets.md">Engineering targets</a> &mdash; applications of the framework</span>
+  <span class="deriv-status">targets</span>
+
+  <span class="deriv-num" id="d23">23</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/23_three_zeros.md">Three zeros</a> &mdash; Planck, $a_0$, CMB peak from fixed-point zeros</span>
+  <span class="deriv-status">resolved</span>
+</div>
+
+<!-- ── Phase 14: Cosmology ───────────────── -->
+
+<h2>Phase 14: Cosmological parameters</h2>
+
+<div class="deriv-grid">
+  <span class="deriv-num" id="d24">24</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/24_vacuum_energy.md">Vacuum energy</a> &mdash; $\Lambda l_P^2 = 13^{-108}/12$</span>
+  <span class="deriv-status">0.1% exp.</span>
+
+  <span class="deriv-num" id="d25">25</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/25_farey_partition.md">Farey partition</a> &mdash; $\Omega_\Lambda = 13/19$</span>
+  <span class="deriv-status">0.07$\sigma$</span>
+
+  <span class="deriv-num" id="d26">26</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/26_hierarchy.md">Hierarchy</a> &mdash; Planck/Hubble ratio from coupling density</span>
+  <span class="deriv-status">0.48%</span>
+
+  <span class="deriv-num" id="d27">27</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/27_exponent.md">Exponent</a> &mdash; $n_s - 1$ from Fibonacci level counting</span>
+  <span class="deriv-status">&lt; 0.2%</span>
+
+  <span class="deriv-num" id="d28">28</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/28_farey_proof.md">Farey proof</a> &mdash; $|F_6| = 13$, $q_2 q_3 = 6$ &rarr; $13/19$</span>
+  <span class="deriv-status">proven</span>
+
+  <span class="deriv-num" id="d29">29</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/29_mediant_derivation.md">Mediant derivation</a> &mdash; energy conservation + stability &rarr; mediant uniquely</span>
+  <span class="deriv-status">proven</span>
+</div>
+
+<!-- ── Phase 15: Advanced ────────────────── -->
+
+<h2>Phase 15: Advanced structure</h2>
+
+<div class="deriv-grid">
+  <span class="deriv-num" id="d30">30</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/30_denomination_boundary.md">Denomination boundary</a> &mdash; devil&rsquo;s staircase degeneracy resolution</span>
+  <span class="deriv-status">resolved</span>
+
+  <span class="deriv-num" id="d31">31</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/31_speed_of_light.md">Speed of light</a> &mdash; $c$ as emergent from coupling timescale</span>
+  <span class="deriv-status">derived</span>
+
+  <span class="deriv-num" id="d32">32</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/32_minkowski_signature.md">Minkowski signature</a> &mdash; $(3,1)$ forced by Klein bottle topology</span>
+  <span class="deriv-status">forced</span>
+
+  <span class="deriv-num" id="d33">33</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/33_duty_cycle_dictionary.md">Duty cycle dictionary</a> &mdash; coupling/phase &rarr; EM + QCD gauge structure</span>
+  <span class="deriv-status">resolved</span>
+
+  <span class="deriv-num" id="d34">34</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/34_generation_mechanism.md">Generation mechanism</a> &mdash; three generations from phase-observability levels</span>
+  <span class="deriv-status">resolved</span>
+
+  <span class="deriv-num" id="d35">35</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/35_cosmological_cycle.md">Cosmological cycle</a> &mdash; age, horizon, inflation from Friedmann</span>
+  <span class="deriv-status">resolved</span>
+
+  <span class="deriv-num" id="d36">36</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/36_conservation_computability.md">Conservation &amp; computability</a> &mdash; Noether symmetries from RG-fixed coherence</span>
+  <span class="deriv-status">resolved</span>
+
+  <span class="deriv-num" id="d37">37</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/37_figure_eight.md">Figure-eight topology</a> &mdash; handles &rarr; internal degrees of freedom</span>
+  <span class="deriv-status">resolved</span>
+
+  <span class="deriv-num" id="d38">38</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/38_boundary_weight.md">Boundary weight</a> &mdash; mode amplitude from boundary conditions</span>
+  <span class="deriv-status">resolved</span>
+
+  <span class="deriv-num" id="d39">39</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/39_half_mobius_boundary.md">Half-M&ouml;bius ($\mathbb{Z}_4$)</a> &mdash; four-fold twist, $\mathbb{Z}_4$ symmetry</span>
+  <span class="deriv-status">resolved</span>
+</div>
+
+<!-- ── Observational program ─────────────── -->
+
+<h2>Observational program</h2>
+
+<div class="deriv-grid">
+  <span class="deriv-num" id="d08">08</span>
+  <span class="deriv-title"><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/08_high_z_mond.md">High-$z$ MOND</a> &mdash; redshift-dependent $a_0(z)$, testable with KLASS/GEKO/CRISTAL</span>
+  <span class="deriv-status">prediction</span>
+</div>
+
+<p>RC100 (Shachar et al. 2023): 100 high-$z$ galaxies show $a_0$ rising with $z$
+(direction matches framework). Discriminating leverage at $z > 3$.</p>
+
+<!-- ── Numerical evidence ────────────────── -->
+
+<h2>Numerical evidence: Stribeck lattice</h2>
+
+<p>A chain of oscillators coupled by Stribeck friction. Key findings
+(<a href="https://github.com/nickjoven/harmonics/blob/main/RESULTS.md">RESULTS.md</a>):</p>
+
+<table>
+<tr><th>Finding</th><th>Detail</th></tr>
+<tr>
+  <td>$N = 3$ is critical</td>
+  <td>Below 3: linear passthrough. At 3+: subharmonic dominates 2&ndash;60&times;</td>
+</tr>
+<tr>
+  <td>Dual-regime operation</td>
+  <td>Below bifurcation ($A &lt; 0.8$): passthrough, $\eta \approx 0.99$.
+      Above: frequency conversion, energy redistributed</td>
+</tr>
+<tr>
+  <td>Conversion at one contact</td>
+  <td>First contact drops $\omega_d$ by $10^3$. Subharmonic propagates with
+      &sim;0% attenuation through stick regime</td>
+</tr>
+<tr>
+  <td>Differential attenuation</td>
+  <td>High-frequency (slip) dissipates; subharmonic (stick) propagates.
+      The spectral tilt in miniature</td>
+</tr>
+</table>
+
+<h3>Key scripts</h3>
+<p><code>driven_stribeck.py</code> &middot; <code>stribeck_lattice.py</code> &middot;
+<code>bifurcation_sweep.py</code> &middot; <code>lattice_sweep.py</code></p>
+
+<!-- ── Interactive visualizations ─────────── -->
+
+<h2>Interactive visualizations</h2>
+
+<table>
+<tr><th>Page</th><th>Description</th></tr>
+<tr>
+  <td><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/applications/stern_brocot_walk.html">Stern-Brocot walk</a></td>
+  <td>Interactive walk on the Stern-Brocot tree</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/applications/mobius_views.html">M&ouml;bius views</a></td>
+  <td>M&ouml;bius strip visualizations</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/applications/mobius_projector.html">M&ouml;bius projector</a></td>
+  <td>M&ouml;bius projection tool</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/applications/double_pendulum.html">Double pendulum</a></td>
+  <td>Coupled oscillator demonstration</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/applications/three_body_catalog.html">Three-body catalog</a></td>
+  <td>Three-body problem solutions catalog</td>
+</tr>
+<tr>
+  <td><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/our_address.html">Our address</a></td>
+  <td>Our address on the tree</td>
+</tr>
+</table>
+
+<!-- ── Dependency sketch ─────────────────── -->
+
+<h2>Dependency sketch</h2>
+
+<pre><code>FRAMEWORK.md
+ &boxur; D04 spectral tilt reframed
+    &boxur; circle_map.py &rarr; D02 spectral tilt
+    &boxur; golden_ratio_pivot.py &rarr; phi_squared_zoom.py
+ &boxur; D01 Born rule
+    &boxur; D07 measurement collapse
+    &boxur; D06 Planck scale
+ &boxur; D09 fidelity bound (MOND + collapse)
+    &boxur; D03 $a_0$ threshold
+    &boxur; D08 high-$z$ MOND (observational)
+ &boxur; D10 minimum alphabet
+ &boxur; D11 rational field equation
+    &boxur; D12 continuum limits
+       &boxur; D13 Einstein from Kuramoto    (Proof A capstone)
+       &boxur; D14 three dimensions          (Proof A, forces $d=3$)
+       &boxur; D15 SL(2,$\mathbb{R}$) uniqueness     (Proof A, Bianchi)
+    &boxur; D16 variable denominator
+    &boxur; D17 rank-1 temporal causation
+ &boxur; D18 M&ouml;bius container
+    &boxur; D19 Klein bottle
+    &boxur; D20 XOR continuum limit
+    &boxur; D39 half-M&ouml;bius ($\mathbb{Z}_4$)
+ &boxur; D21 discrete gauge
+ &boxur; D25 Farey partition ($\Omega_\Lambda$)
+    &boxur; D24 vacuum energy
+    &boxur; D26 hierarchy
+    &boxur; D27 exponent
+    &boxur; D28 Farey proof
+    &boxur; D29 mediant derivation
+ &boxur; D30&ndash;D38 advanced structure</code></pre>
+
+<footer>
+  <p><a href="https://github.com/nickjoven/harmonics">Source</a> &middot;
+  CC0 1.0 Universal &mdash; No rights reserved.</p>
+</footer>
+
+</body>
+</html>

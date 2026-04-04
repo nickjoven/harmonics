@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glossary &mdash; Harmonics</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[
+    {left:'$$',right:'$$',display:true},
+    {left:'$',right:'$',display:false}
+  ]});"></script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Reference</a>
+  <a href="glossary.html" class="active">Glossary</a>
+  <a href="derivations.html">Derivations</a>
+</nav>
+
+<h1>Glossary</h1>
+<p class="subtitle">Key terms, objects, and concepts in the synchronization cost framework.</p>
+
+<!-- ── Mathematical objects ──────────────── -->
+
+<h2>Mathematical objects</h2>
+
+<dl>
+
+<dt><code>Arnold tongue</code></dt>
+<dd>A region in the $(\Omega, K)$ parameter plane of the circle map where the
+rotation number locks to a rational $p/q$. Tongue width scales as
+$(K/2)^q$ near $K = 0$. The tongue boundaries are saddle-node
+bifurcations with universal parabolic geometry &mdash; the source of the
+Born rule exponent 2. See <a href="derivations.html#d01">D01</a>.</dd>
+
+<dt><code>Born rule</code></dt>
+<dd>The probability postulate $P = |\psi|^2$ of quantum mechanics. In this
+framework it is not a postulate: the exponent 2 comes from
+$\Delta\theta \propto \sqrt{\varepsilon}$ at every tongue boundary
+(saddle-node universality). The basin measure of a parabola is quadratic.
+See <a href="derivations.html#d01">D01</a>.</dd>
+
+<dt><code>Circle map</code></dt>
+<dd>The discrete dynamical system
+$\theta_{n+1} = \theta_n + \Omega - \frac{K}{2\pi}\sin(2\pi\theta_n)$.
+$\Omega$ is the bare frequency, $K$ is the coupling strength. At $K = 0$
+it is a rigid rotation; at $K = 1$ the map becomes noninvertible and the
+devil&rsquo;s staircase is complete. The foundation for all derivations.</dd>
+
+<dt><code>Devil's staircase</code></dt>
+<dd>The function $W(\Omega, K)$ mapping bare frequency to winding number in
+the circle map. A Cantor function: constant on every rational plateau
+(Arnold tongue), strictly increasing on a set of measure zero. At
+$\Omega = 1/\varphi$ and $K = 1$ it is exactly self-similar with scaling
+factor $\varphi^2$. This self-similarity produces the spectral tilt.
+See <a href="derivations.html#d04">D04</a>.</dd>
+
+<dt><code>Farey sequence</code> $F_n$</dt>
+<dd>The set of irreducible fractions with denominator $\leq n$, ordered on
+$[0,1]$. $|F_6| = 13$ is the state count that sets $\Omega_\Lambda = 13/19$.
+See <a href="derivations.html#d25">D25</a>, <a href="derivations.html#d28">D28</a>.</dd>
+
+<dt><code>Fixed point</code></dt>
+<dd>A solution to $x = f(x)$. One of the four irreducible primitives. In the
+field equation, the fixed point is the self-consistent population
+distribution: the coupling $K$ depends on the population $N$ which depends
+on $K$. The universe is a fixed point of its own field equation.</dd>
+
+<dt><code>Klein bottle</code></dt>
+<dd>A closed non-orientable surface with no boundary. In the framework, the
+Klein bottle&rsquo;s topology constrains the particle spectrum via an XOR
+parity selection rule at denominator classes $q = 2$ and $q = 3$. Its
+four mode slots map to the four known forces. See
+<a href="derivations.html#d19">D19</a>, <a href="derivations.html#d20">D20</a>.</dd>
+
+<dt><code>Mediant</code></dt>
+<dd>Given fractions $a/b$ and $c/d$, the mediant is $(a+c)/(b+d)$. This is
+<em>not</em> ordinary addition of fractions &mdash; it is the operation
+that generates the Stern-Brocot tree. Derived from energy conservation +
+stability as the unique way to combine two frequency ratios. See
+<a href="derivations.html#d29">D29</a>.</dd>
+
+<dt><code>M&ouml;bius strip</code></dt>
+<dd>A one-boundary non-orientable surface. In the framework, Kuramoto
+oscillators on the M&ouml;bius strip (antiperiodic boundary conditions)
+exhibit self-interference that forces rational phase divisions and selects
+odd modes. See <a href="derivations.html#d18">D18</a>.</dd>
+
+<dt><code>Parabola</code> $x^2 + \mu = 0$</dt>
+<dd>The normal form of a saddle-node bifurcation. One of the four primitives.
+Universality of this normal form means the $\sqrt{\varepsilon}$ scaling
+at every tongue boundary is exact, giving $P = |\psi|^2$ with exponent
+exactly 2.</dd>
+
+<dt><code>Rational field equation</code></dt>
+<dd>The self-consistency condition
+$N(p/q) = N_{\text{total}} \times g(p/q) \times w(p/q, K_0 F[N])$
+on the Stern-Brocot tree. Exact rational arithmetic, no continuum assumed.
+Its fixed point determines all coupling strengths and populations.
+See <a href="derivations.html#d11">D11</a>.</dd>
+
+<dt><code>$\mathrm{SL}(2,\mathbb{R})$</code></dt>
+<dd>The group of $2\times 2$ real matrices with determinant 1. Uniquely
+characterized by four conditions derived from the mediant: arithmetic
+skeleton, projective action, dynamical trichotomy, Farey-hyperbolic
+geometry. Its dimension ($2^2 - 1 = 3$) forces spatial dimension $d = 3$.
+See <a href="derivations.html#d14">D14</a>, <a href="derivations.html#d15">D15</a>.</dd>
+
+<dt><code>$\mathrm{SL}(2,\mathbb{Z})$</code></dt>
+<dd>The group of $2\times 2$ integer matrices with determinant 1, generated
+by the mediant operation&rsquo;s left and right moves $L = \binom{1\;1}{0\;1}$,
+$R = \binom{1\;0}{1\;1}$. The discrete skeleton that completes to
+$\mathrm{SL}(2,\mathbb{R})$ in the continuum limit.</dd>
+
+<dt><code>Stern-Brocot tree</code></dt>
+<dd>The complete binary tree of positive rationals, generated by the mediant.
+Every positive rational appears exactly once. This is the configuration
+space of the framework: mode-locked states live on the tree, and the
+field equation operates on it. Historically due to Stern (1858) and
+Brocot (1861).</dd>
+
+</dl>
+
+<!-- ── Physical concepts ─────────────────── -->
+
+<h2>Physical concepts</h2>
+
+<dl>
+
+<dt><code>$a_0$</code> &mdash; MOND acceleration scale</dt>
+<dd>The characteristic acceleration below which galaxy dynamics deviate from
+Newtonian gravity: $a_0 \approx 1.2 \times 10^{-10}$ m/s$^2$. In the
+framework: $a_0 = cH_0 / (2\pi\sqrt{g^*})$ where $g^*$ is the
+self-consistent frequency distribution evaluated at $1/\varphi$. Predicted
+value: $1.25 \times 10^{-10}$ (4% residual). See
+<a href="derivations.html#d03">D03</a>, <a href="derivations.html#d09">D09</a>.</dd>
+
+<dt><code>Collapse</code></dt>
+<dd>Wavefunction collapse = dissipative convergence completing, with finite
+duration $\tau \propto 1/\sqrt{\varepsilon}$. Not instantaneous, not
+mysterious. The uncertainty relation $\tau \cdot \Delta\theta = \text{const}$
+and the Zeno effect ($\varepsilon \to 0 \Rightarrow \tau \to \infty$) are
+corollaries.</dd>
+
+<dt><code>Continuum limit</code></dt>
+<dd>Two regimes: at $K = 1$ (critical coupling), the rational field equation
+reproduces the ADM formalism of general relativity, hence Einstein&rsquo;s
+equations via Lovelock uniqueness. At $K &lt; 1$ (subcritical), linearization
+of the unlocked population gives the Schr&ouml;dinger equation.
+See <a href="derivations.html#d12">D12</a>, <a href="derivations.html#d13">D13</a>.</dd>
+
+<dt><code>Cost functional</code></dt>
+<dd>The central object. Physical dynamics are cost minimization on a
+synchronization landscape. Forces are cost gradients through different
+coupling channels: gravity (global mean field), electromagnetism
+(U(1) phase), strong (SU(3) confinement), weak (attractor transition).</dd>
+
+<dt><code>Coupling $K$</code></dt>
+<dd>The coupling strength in the circle map. $K = 0$: no interaction.
+$K = 1$: critical (noninvertible map, complete staircase, gravity).
+$K &lt; 1$: subcritical (partial locking, quantum mechanics).
+$K$ is not a free parameter &mdash; it is determined self-consistently by
+the population at the field equation&rsquo;s fixed point.</dd>
+
+<dt><code>$d = 3$</code></dt>
+<dd>Spatial dimensionality is forced, not assumed. The mediant generates
+$\mathrm{SL}(2,\mathbb{Z})$; the continuum limit completes to
+$\mathrm{SL}(2,\mathbb{R})$; self-consistent adjacency forces the
+spatial manifold to be the group itself.
+$\dim\,\mathrm{SL}(2) = 2^2 - 1 = 3$.
+See <a href="derivations.html#d14">D14</a>.</dd>
+
+<dt><code>Fidelity bound</code></dt>
+<dd>The self-referential constraint: the measurement instrument IS the measured
+dynamics. Unifies the MOND transition and wavefunction collapse as the
+same structure &mdash; a system resolving its own frequency against a
+reference it constitutes. The RAR interpolating function, collapse
+duration, uncertainty relation, and Zeno effect all follow.
+See <a href="derivations.html#d09">D09</a>.</dd>
+
+<dt><code>$N_{\text{efolds}}$</code></dt>
+<dd>The number of e-folds of cosmic inflation. Predicted:
+$\sqrt{5}\,/\,\text{rate} = 61.3 \pm 0.7$, set by the eigenvalue
+separation of $x^2 - x - 1 = 0$ (the golden ratio&rsquo;s minimal
+polynomial). Falsifiable by CMB-S4 (~2028).</dd>
+
+<dt><code>$\Omega_\Lambda = 13/19$</code></dt>
+<dd>The dark energy fraction. $13 = |F_6|$ (Farey count at depth 6).
+$19 = q_2 q_3 + |F_6| = 6 + 13$, where $q_2 = 2$ and $q_3 = 3$ are
+the Klein bottle&rsquo;s denominator classes. Observed: $0.6847 \pm 0.0073$.
+Predicted: $0.6842$. Residual: $0.07\sigma$.
+See <a href="derivations.html#d25">D25</a>.</dd>
+
+<dt><code>Spectral tilt $n_s$</code></dt>
+<dd>The power-law index of the primordial power spectrum. The devil&rsquo;s
+staircase at $1/\varphi$ is self-similar with scaling $\varphi^2$. The
+$k \leftrightarrow \Omega$ mapping gives 0.0365 Fibonacci levels per
+e-fold, producing $n_s \approx 0.965$ ($&lt; 0.2\%$ from Planck 2018).
+See <a href="derivations.html#d04">D04</a>.</dd>
+
+<dt><code>Stribeck friction</code></dt>
+<dd>Velocity-dependent friction with a characteristic dip: static friction
+dominates at low velocity (stick), drops through a minimum, then rises
+(slip). The Stribeck lattice &mdash; a chain of oscillators coupled by
+this friction &mdash; is the numerical testbed. It demonstrates dual-regime
+operation: frequency conversion above bifurcation ($A &gt; 0.8$), linear
+passthrough below.</dd>
+
+<dt><code>Synchronization</code></dt>
+<dd>Phase locking between oscillators. In the Kuramoto model: oscillator $i$
+adjusts phase toward the mean field. The framework&rsquo;s claim: all
+physical law is synchronization cost minimization. The circle map is the
+simplest discrete model of synchronization.</dd>
+
+</dl>
+
+<!-- ── Notation ──────────────────────────── -->
+
+<h2>Notation</h2>
+
+<dl>
+
+<dt>$p/q$</dt>
+<dd>A rational winding number (mode-locked state on the Stern-Brocot tree).</dd>
+
+<dt>$\Omega$</dt>
+<dd>Bare (natural) frequency ratio of a driven oscillator.</dd>
+
+<dt>$K$</dt>
+<dd>Coupling strength in the circle map / Kuramoto model.</dd>
+
+<dt>$w(p/q, K)$</dt>
+<dd>Width of the Arnold tongue at mode $p/q$ and coupling $K$.</dd>
+
+<dt>$g(\omega)$, $g^*$</dt>
+<dd>Frequency distribution. $g^*$ is the self-consistent fixed point:
+$g^* = h(g^*)$.</dd>
+
+<dt>$\varepsilon$</dt>
+<dd>Distance from a tongue boundary (bifurcation parameter).</dd>
+
+<dt>$\varphi = (1+\sqrt{5})/2$</dt>
+<dd>The golden ratio. The most irrational number; sits at the widest gap in
+the devil&rsquo;s staircase.</dd>
+
+<dt>$F_n$, $|F_n|$</dt>
+<dd>Farey sequence of order $n$; its cardinality.</dd>
+
+</dl>
+
+<footer>
+  <p><a href="https://github.com/nickjoven/harmonics">Source</a> &middot;
+  CC0 1.0 Universal &mdash; No rights reserved.</p>
+</footer>
+
+</body>
+</html>
