@@ -1,10 +1,11 @@
-name: Deploy Interactive Applications
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [main]
     paths:
       - "index.html"
+      - "docs/**"
       - "sync_cost/applications/**"
   workflow_dispatch:
 
@@ -34,6 +35,7 @@ jobs:
           mkdir -p _site
           cp index.html _site/
           cp -r sync_cost _site/
+          cp -r docs _site/
           cp LICENSE _site/
 
       - name: Upload artifact

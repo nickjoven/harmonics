@@ -1,0 +1,276 @@
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0a0a0c;
+  --bg-card: #111114;
+  --bg-code: #16161a;
+  --border: #222228;
+  --text: #c8c8cc;
+  --text-dim: #777780;
+  --text-bright: #e8e8ec;
+  --accent: #7b93af;
+  --accent-dim: #4a5a6e;
+  --link: #8aa4c0;
+  --link-hover: #b0c8e0;
+  --green: #6a9a6a;
+  --gold: #c0a060;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 15px;
+  line-height: 1.75;
+  max-width: 52em;
+  margin: 0 auto;
+  padding: 3em 2em 6em;
+}
+
+/* ── Typography ──────────────────────────── */
+
+h1 {
+  font-size: 1.6em;
+  color: var(--text-bright);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.3em;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.15em;
+  color: var(--accent);
+  margin-top: 2.5em;
+  margin-bottom: 0.6em;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3em;
+}
+
+h3 {
+  font-size: 1em;
+  color: var(--text-dim);
+  margin-top: 1.8em;
+  margin-bottom: 0.4em;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85em;
+}
+
+p { margin-bottom: 1em; }
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-dim);
+  transition: color 0.2s, border-color 0.2s;
+}
+a:hover {
+  color: var(--link-hover);
+  border-color: var(--link-hover);
+}
+
+code {
+  font-family: 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
+  font-size: 0.88em;
+  background: var(--bg-code);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1em 1.2em;
+  overflow-x: auto;
+  margin: 1em 0;
+  font-size: 0.85em;
+  line-height: 1.6;
+}
+pre code {
+  background: none;
+  padding: 0;
+}
+
+blockquote {
+  border-left: 2px solid var(--accent-dim);
+  padding-left: 1.2em;
+  margin: 1.2em 0;
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* ── Navigation ──────────────────────────── */
+
+nav {
+  margin-bottom: 2.5em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9em;
+  letter-spacing: 0.04em;
+}
+nav a {
+  margin-right: 1.8em;
+  border-bottom: none;
+  color: var(--text-dim);
+}
+nav a:hover, nav a.active {
+  color: var(--text-bright);
+}
+nav a.active {
+  border-bottom: 1px solid var(--accent);
+}
+
+.subtitle {
+  color: var(--text-dim);
+  font-size: 0.95em;
+  margin-bottom: 2em;
+}
+
+/* ── Tables ──────────────────────────────── */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0 1.5em;
+  font-size: 0.9em;
+}
+th, td {
+  text-align: left;
+  padding: 0.5em 0.8em;
+  border-bottom: 1px solid var(--border);
+}
+th {
+  color: var(--text-dim);
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.06em;
+}
+td { color: var(--text); }
+
+tr:hover td { background: var(--bg-card); }
+
+.val { font-family: 'Menlo', monospace; font-size: 0.88em; }
+.match { color: var(--green); }
+.pending { color: var(--gold); }
+
+/* ── Cards / sections ────────────────────── */
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.4em 1.6em;
+  margin: 1.2em 0;
+}
+.card h3 {
+  margin-top: 0;
+  color: var(--accent);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 1em;
+}
+
+/* ── Proof chain ─────────────────────────── */
+
+.chain {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+}
+.chain li {
+  position: relative;
+  padding-left: 2em;
+  margin-bottom: 0.6em;
+  font-size: 0.92em;
+}
+.chain li::before {
+  content: attr(data-step);
+  position: absolute;
+  left: 0;
+  color: var(--accent-dim);
+  font-family: 'Menlo', monospace;
+  font-size: 0.8em;
+}
+.chain li + li::after {
+  content: '';
+  position: absolute;
+  left: 0.55em;
+  top: -0.5em;
+  height: 0.5em;
+  border-left: 1px solid var(--border);
+}
+
+/* ── Glossary ────────────────────────────── */
+
+dl { margin: 1em 0; }
+dt {
+  color: var(--text-bright);
+  font-weight: normal;
+  margin-top: 1.4em;
+  font-size: 1em;
+}
+dt code {
+  font-size: 0.95em;
+  color: var(--accent);
+  background: none;
+  padding: 0;
+}
+dd {
+  margin-left: 0;
+  padding-left: 1.2em;
+  border-left: 1px solid var(--border);
+  margin-top: 0.3em;
+  color: var(--text);
+  font-size: 0.93em;
+}
+
+/* ── Derivation index ────────────────────── */
+
+.deriv-grid {
+  display: grid;
+  grid-template-columns: 3em 1fr auto;
+  gap: 0.2em 1em;
+  font-size: 0.9em;
+  margin: 0.8em 0 1.5em;
+}
+.deriv-num {
+  color: var(--accent-dim);
+  font-family: 'Menlo', monospace;
+  font-size: 0.85em;
+  text-align: right;
+}
+.deriv-title { color: var(--text); }
+.deriv-status {
+  font-size: 0.8em;
+  color: var(--text-dim);
+}
+
+/* ── Footer ──────────────────────────────── */
+
+footer {
+  margin-top: 4em;
+  padding-top: 1.5em;
+  border-top: 1px solid var(--border);
+  color: var(--text-dim);
+  font-size: 0.82em;
+}
+footer a { color: var(--text-dim); }
+
+/* ── Math (KaTeX) ────────────────────────── */
+
+.katex { font-size: 1em; }
+.katex-display { margin: 1.2em 0; overflow-x: auto; }
+
+/* ── Responsive ──────────────────────────── */
+
+@media (max-width: 640px) {
+  body { padding: 1.5em 1em 4em; font-size: 14px; }
+  nav a { margin-right: 1em; }
+  .deriv-grid { grid-template-columns: 2.5em 1fr; }
+  .deriv-status { display: none; }
+}
