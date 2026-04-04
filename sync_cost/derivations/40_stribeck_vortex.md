@@ -13,13 +13,15 @@ the **global** effective coupling K_eff = K₀|r| ≤ 1, not the local
 coupling at every point. A spatially localized K > 1 region, embedded
 in a K < 1 exterior, is compatible with the global self-consistency
 condition. The vortex core is a region where the circle map folds
-locally, producing reversed energy flow and positive Lyapunov exponent,
-while the global fixed point survives because the spatial average over
-all oscillators still satisfies |r| ≤ 1.
+locally, producing reversed energy flow, while the global fixed point
+survives because the spatial average over all oscillators still
+satisfies |r| ≤ 1.
 
-This is the GR analogy made precise: a black hole has locally extreme
-curvature (even a singularity), but the global spacetime is well-defined.
-The K = 1 surface at r_c is the event horizon analogue.
+This regime exists in material systems (photonic crystals, fluid
+vortices) where coupling is set by velocity-dependent friction. In the
+gravity sector, the D12 dictionary gives K_eff = √(1-2M/r) ≤ 1
+everywhere outside the horizon — the Stribeck vortex and Schwarzschild
+have complementary, not identical, regime structures.
 
 ---
 
@@ -241,17 +243,22 @@ local information is destroyed. Outside it, mode-locking and forward
 energy flow persist. The global fixed point survives because it depends
 on the spatial integral, not the local value.
 
-This is why the analogy to black holes is structural, not metaphorical:
+The Stribeck vortex provides a material analogue of a horizon-like
+boundary, with one key difference: the Schwarzschild horizon has K → 0
+(decoherence), while the vortex core has K > 1 (overcoupling). The
+structural parallel is in the global/local distinction:
 
-| General relativity | Stribeck vortex |
-|---|---|
-| Schwarzschild radius r_s | Critical radius r_c |
-| Curvature diverges at r = 0 | K(0) = K_stat > 1 (fold maximal) |
-| Horizon at r = r_s | K = 1 surface at r = r_c |
-| Exterior: geodesics well-defined | Exterior: mode-locked, forward flow |
-| Interior: geodesic incompleteness | Interior: non-invertible, reversed flow |
-| Global spacetime well-defined (Penrose) | Global K_eff ≤ 1 (triangle inequality) |
-| Information paradox | Fold measure μ: where does the information go? |
+| Property | Material vortex | Gravity (Schwarzschild) |
+|---|---|---|
+| Boundary surface | K = 1 at r_c | N = 0 at r = 2M |
+| Interior | K > 1, fold, reversed flow | K → 0, unlocked, quantum |
+| Exterior | K < 1, mode-locked | K < 1 everywhere |
+| Global consistency | K_eff ≤ 1 (triangle inequality) | K_eff ≤ 1 (D36 absolute) |
+| Open question | Where does fold information go? | Black hole information problem |
+
+The analogy is in the structure (a surface separating locally
+pathological dynamics from a well-defined exterior), not in the
+mechanism (overcoupling vs decoherence).
 
 ---
 
@@ -438,7 +445,7 @@ uncoupled at the horizon.
 |---|---|
 | D12 (continuum limits) | K(x,x') = G_γ(x,x') is spatially varying. The Stribeck vortex is the first explicit K(r) profile with K > 1 core. In the gravity sector, K_eff = √(1-2M/r) — complementary structure (K → 0 at horizon, not K → ∞). |
 | D30 (denomination boundary) | The K*(q) values (all > 1) are denomination switches that live inside the vortex core. The core is the denomination-boundary laboratory. |
-| D31 (speed of light) | D31 argued K > 1 "if it existed" would degrade coherence. The vortex shows where it exists: at the core of any vortex with K_stat > 1. The c = maximum speed result holds in the K < 1 exterior. |
+| D31 (speed of light) | D31 argued K > 1 "if it existed" would degrade coherence. Now answered: K > 1 exists at the core of material vortices with K_stat > 1. Coherence is degraded there (fold, chaos). The c = maximum speed result holds in the K < 1 exterior. |
 | D36 (conservation = computability) | Reconciled: K > 1 locally is compatible with K_eff ≤ 1 globally. The fold is local information destruction; global information is conserved by the triangle inequality on S¹. |
 
 ---
@@ -457,8 +464,8 @@ uncoupled at the horizon.
 | Photonic crystal K-mapping | **Computed** | Validate against Pryamikov data |
 | Reversed energy flow = fold measure | **Derived** (Bragg stop band = fold, bragg_circle_map.py) | — |
 | K = sec(κΛ) identification | **Derived and verified** (exact to 4 digits, bragg_circle_map.py) | — |
-| Gravity sector K(r) profile | **Computed** (schwarzschild_K_profile.py) | Stribeck and Schwarzschild have COMPLEMENTARY structures (see below) |
-| Information fate in fold core | Open | Black hole information analogue: does the global fixed point encode local fold data? |
+| Gravity sector K(r) profile | **Computed** (schwarzschild_K_profile.py) | Stribeck and Schwarzschild have complementary structures (§ gravity sector above) |
+| Information fate in fold core | Open | The fold destroys local information (non-injective map). Does the global fixed point encode what was lost? Not a black hole analogue (different mechanism), but the same structural question: local pathology, global consistency. |
 
 ---
 
