@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CMB-S4 Prediction &mdash; Harmonics</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[
+    {left:'$$',right:'$$',display:true},
+    {left:'$',right:'$',display:false}
+  ]});"></script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Reference</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="derivations.html">Derivations</a>
+  <a href="walkthrough.html">Walkthrough</a>
+  <a href="cmb-s4.html" class="active">CMB-S4</a>
+</nav>
+
+<h1>CMB-S4 Prediction</h1>
+<p class="subtitle">A falsifiable, zero-parameter prediction for the number of
+e-folds of inflation, testable by CMB-S4 (~2028) and LiteBIRD.</p>
+
+<!-- ── The prediction ─────────────────────── -->
+
+<h2>The prediction</h2>
+
+$$N_{\text{efolds}} = \frac{\sqrt{5}}{\text{rate}} = \frac{\sqrt{5}}{(1 - n_s) / \ln \varphi^2} = 61.3 \pm 0.7$$
+
+<p>where $\varphi = (1+\sqrt{5})/2$ is the golden ratio and $n_s = 0.9649 \pm 0.0042$ is
+the Planck 2018 spectral tilt. The uncertainty is dominated by the
+measurement uncertainty on $n_s$.</p>
+
+<p>The prediction is registered here prior to CMB-S4 data release.
+It has zero free parameters. The number $\sqrt{5}$ is determined by the
+algebra of the Fibonacci recurrence; the rate $0.0365$ levels per e-fold
+is determined by the spectral tilt and the self-similar scaling of the
+devil's staircase at $1/\varphi$.</p>
+
+<!-- ── Derivation ─────────────────────────── -->
+
+<h2>Derivation</h2>
+
+<p>The devil's staircase of the circle map at the golden ratio $1/\varphi$
+is self-similar with scaling factor $\varphi^2$ (D4). Each level of the
+Stern-Brocot tree corresponds to one Fibonacci bracket. The staircase's
+self-similarity means the power spectrum is flat in Stern-Brocot
+coordinates; the observed tilt $n_s - 1 = -0.035$ comes from the mapping
+between Stern-Brocot levels and physical wavenumber $k$ (D4).</p>
+
+<p>The rate at which the observable universe samples Fibonacci levels is:</p>
+
+$$\text{rate} = \frac{1 - n_s}{-\ln \varphi^2} = \frac{0.0351}{0.9624} = 0.03649 \text{ levels per e-fold}$$
+
+<p>The Fibonacci recurrence $F_n = F_{n-1} + F_{n-2}$ has characteristic
+polynomial $x^2 - x - 1 = 0$ with roots $\varphi$ and $\psi = -1/\varphi$.
+The general solution is $F_n = (\varphi^n - \psi^n)/\sqrt{5}$. The
+eigenvalue separation $\varphi - \psi = \sqrt{5}$ is the normalization
+constant of the two-mode decomposition.</p>
+
+<p>A complete sample of the self-similar structure requires capturing both
+modes across their full separation: one pass from $\varphi^n$ dominance
+to $\psi^n$ dominance and back. That separation is $\sqrt{5}$ levels.
+The number of e-folds required to sample $\sqrt{5}$ levels at the
+observed rate is:</p>
+
+$$N_{\text{efolds}} = \frac{\sqrt{5}}{0.03649} = 61.3$$
+
+<p>The uncertainty $\pm 0.7$ propagates from $\sigma(n_s) = 0.0042$.</p>
+
+<!-- ── What CMB-S4 measures ───────────────── -->
+
+<h2>What CMB-S4 measures</h2>
+
+<p>CMB-S4 will measure the tensor-to-scalar ratio $r$ to precision
+$\sigma(r) \sim 10^{-3}$ and the spectral tilt $n_s$ to $\sigma(n_s)
+\sim 0.002$. In slow-roll inflation, $r$ and $n_s$ jointly constrain
+$N_{\text{efolds}}$ via consistency relations that depend on the
+inflationary potential.</p>
+
+<p>For common slow-roll models:</p>
+
+<table>
+<tr><th>Model</th><th>$N_{\text{efolds}}$</th><th>$r$</th></tr>
+<tr><td>Starobinsky / $R^2$</td><td>$\approx 54$&ndash;$58$</td><td>$\approx 0.003$&ndash;$0.004$</td></tr>
+<tr><td>Axion monodromy ($\phi^{2/3}$)</td><td>$\approx 45$&ndash;$55$</td><td>$\approx 0.04$&ndash;$0.07$</td></tr>
+<tr><td>Natural inflation</td><td>$\approx 50$&ndash;$60$</td><td>$\approx 0.03$&ndash;$0.07$</td></tr>
+<tr><td><strong>This framework ($\sqrt{5}/\text{rate}$)</strong></td><td><strong>$61.3 \pm 0.7$</strong></td><td><strong>model-dependent</strong></td></tr>
+</table>
+
+<p>The prediction $N_{\text{efolds}} = 61.3$ sits above most slow-roll
+models. It is distinguishable from Starobinsky ($\approx 54$&ndash;$58$)
+at $\geq 2\sigma$ given CMB-S4 precision. It is distinguishable from
+axion monodromy ($\leq 55$) already with current data.</p>
+
+<!-- ── Falsification criteria ─────────────── -->
+
+<h2>Falsification criteria</h2>
+
+<h3>Confirmation</h3>
+
+<p>If CMB-S4 determines $N_{\text{efolds}}$ to $\pm 2$ precision and
+the central value falls within $61.3 \pm 0.7$, the framework's
+prediction is confirmed. This would be a post-diction-free test: the
+number $\sqrt{5}/\text{rate}$ was computed from the Fibonacci algebra
+and the Planck 2018 spectral tilt before CMB-S4 data.</p>
+
+<h3>Falsification</h3>
+
+<p>A measurement of $N_{\text{efolds}} < 59$ or $N_{\text{efolds}} > 63$
+falsifies the prediction at $\geq 3\sigma$. Specifically:</p>
+
+<ul>
+<li>$N_{\text{efolds}} < 59$: the observable universe samples fewer than
+$\sqrt{5}$ Fibonacci levels. The eigenvalue separation of the golden
+polynomial does not set the inflationary duration. The framework's
+identification of inflation with a complete staircase sampling is wrong.</li>
+<li>$N_{\text{efolds}} > 63$: the observable universe oversamples the
+staircase. More than one eigenvalue separation is traversed, meaning
+the $\sqrt{5}$ normalization is not the relevant scale. The framework's
+algebraic constraint on inflation fails.</li>
+</ul>
+
+<p>In either case, the falsification is clean: the prediction has no
+adjustable parameters, and no modification of the framework can change
+$\sqrt{5}$ or the rate (which is fixed by $n_s$ and $\varphi$).</p>
+
+<!-- ── Relation to other predictions ──────── -->
+
+<h2>Relation to other predictions</h2>
+
+<p>$N_{\text{efolds}}$ is the only forward-looking prediction in the
+framework's scorecard. All other predictions (22 quantities, 0&ndash;8%
+residuals) match already-observed values. If $N_{\text{efolds}} = 61.3$
+is confirmed by CMB-S4, it becomes the first prediction that:</p>
+
+<ol>
+<li>Was computed before the measurement.</li>
+<li>Has zero free parameters.</li>
+<li>Is distinguishable from the leading competing models (Starobinsky, axion monodromy).</li>
+<li>Cannot be produced by adjusting the Standard Model or general relativity, since neither theory predicts $N_{\text{efolds}}$.</li>
+</ol>
+
+<p>This addresses the gap identified in the
+<a href="walkthrough.html">walkthrough</a> (Section 8.6): no experimental
+prediction unique to the framework. A confirmed $N_{\text{efolds}}$
+measurement would close that gap.</p>
+
+<!-- ── Timeline ───────────────────────────── -->
+
+<h2>Timeline</h2>
+
+<table>
+<tr><th>Date</th><th>Event</th></tr>
+<tr><td>2026-04-07</td><td>Prediction registered (this page). $N_{\text{efolds}} = 61.3 \pm 0.7$.</td></tr>
+<tr><td>~2028&ndash;2029</td><td>CMB-S4 first data release. Expected $\sigma(r) \sim 10^{-3}$.</td></tr>
+<tr><td>~2028</td><td>LiteBIRD launch. Independent $r$ measurement from space.</td></tr>
+<tr><td>~2030</td><td>Combined CMB-S4 + LiteBIRD analysis. $N_{\text{efolds}}$ precision $\pm 2$.</td></tr>
+</table>
+
+<!-- ── Source ──────────────────────────────── -->
+
+<h2>Source derivation</h2>
+
+<p>The computation is in D10 (The Minimum Alphabet), Part V, Section 3.
+The staircase self-similarity is established in D4. The rate is computed
+in D4 and the k&harr;&Omega; mapping. The eigenvalue separation $\sqrt{5}$
+comes from the characteristic polynomial of the Fibonacci recurrence.</p>
+
+<p>Source file:
+<a href="../sync_cost/derivations/minimum_alphabet.md"><code>sync_cost/derivations/minimum_alphabet.md</code></a>,
+lines 455&ndash;513.</p>
+
+</body>
+</html>

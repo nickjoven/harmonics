@@ -95,7 +95,7 @@ and has the smallest available denominator (because Arnold tongue
 width scales as $(K/2)^q$&mdash;larger denominators have exponentially
 narrower stability regions, so the system locks to the smallest $q$
 first). The mediant is the unique operation satisfying both
-constraints (<a href="sync_cost/derivations/29_mediant_derivation.md">D29</a>).
+constraints (<a href="sync_cost/derivations/mediant_derivation.md">D29</a>).
 Iterating it from $0/1$ and $1/0$ generates every positive rational
 number exactly once. The resulting tree is the
 <a href="https://en.wikipedia.org/wiki/Stern%E2%80%93Brocot_tree">Stern-Brocot tree</a>
@@ -166,7 +166,7 @@ Stern-Brocot tree becomes an integral. This integral is the
 self-consistency equation</a> (Kuramoto 1984). Promoting it to a spatial
 manifold and computing the correlation tensor of locked oscillator
 phases produces the ADM evolution equations of general relativity
-(<a href="sync_cost/derivations/13_einstein_from_kuramoto.md">D13</a>).
+(<a href="sync_cost/derivations/einstein_from_kuramoto.md">D13</a>).
 The uniqueness is not a feature of the dictionary&mdash;it is a theorem.
 Lovelock (1971) proved that $G_{\mu\nu} + \Lambda g_{\mu\nu}$ is the
 only divergence-free, symmetric, rank-2 tensor in 4 dimensions built
@@ -183,7 +183,7 @@ substitution that is not specific to quantum mechanics) produces the
 Schrödinger equation. The quantum pressure term is set by the
 Stern-Brocot osmotic velocity&mdash;the drift rate through the tree's
 gap structure
-(<a href="sync_cost/derivations/12_continuum_limits.md">D12</a>).</p>
+(<a href="sync_cost/derivations/continuum_limits.md">D12</a>).</p>
 
 <p><strong>The Born rule.</strong>
 The exponent 2 in $|\psi|^2$ is not a separate postulate. At every
@@ -192,7 +192,7 @@ $\Delta\theta \propto \sqrt{\varepsilon}$ (saddle-node universality).
 Squaring to get a probability is squaring the parabolic geometry.
 The Born rule is the population distribution at the fixed
 point&mdash;a property of the equation, not an additional assumption
-(<a href="sync_cost/derivations/01_born_rule.md">D1</a>).</p>
+(<a href="sync_cost/derivations/born_rule.md">D1</a>).</p>
 
 <h2>Where $d = 3$, Lorentz symmetry, and the cosmological constants come from</h2>
 
@@ -205,11 +205,11 @@ four conditions the framework satisfies (arithmetic skeleton,
 projective action on ratios, Iwasawa dynamical trichotomy,
 Farey-hyperbolic geometry). The Bianchi classification of 3D Lie
 algebras eliminates every alternative
-(<a href="sync_cost/derivations/15_lie_group_characterization.md">D15</a>).
+(<a href="sync_cost/derivations/lie_group_characterization.md">D15</a>).
 Self-consistent adjacency&mdash;the requirement that geometry defines
 coupling and coupling defines geometry&mdash;forces the spatial manifold
 to be the group itself. $\dim\,\mathrm{SL}(2,\mathbb{R}) = 2^2 - 1 = 3$
-(<a href="sync_cost/derivations/14_three_dimensions.md">D14</a>).</p>
+(<a href="sync_cost/derivations/three_dimensions.md">D14</a>).</p>
 
 <p><strong>Lorentz symmetry.</strong>
 The order parameter of the Kuramoto equation is complex. Complexifying
@@ -225,30 +225,30 @@ is dark&mdash;coupling averages to zero. Three observable directions plus
 one dark direction gives signature $(3,1)$. The minus sign in
 $ds^2 = dx^2 + dy^2 + dz^2 - c^2 dt^2$ is the dark state's negative
 contribution to the norm
-(<a href="sync_cost/derivations/32_minkowski_signature.md">D32</a>).</p>
+(<a href="sync_cost/derivations/minkowski_signature.md">D32</a>).</p>
 
 <p><strong>Cosmological parameters from three integers.</strong>
 The fully closed non-orientable surface is the Klein bottle. An XOR
 parity constraint on the field equation collapses 1,764 candidate mode
 pairs to 4 survivors at denominators $q = 2$ and $q = 3$
-(<a href="sync_cost/derivations/19_klein_bottle.md">D19</a>).
+(<a href="sync_cost/derivations/klein_bottle.md">D19</a>).
 These two integers, together with the Farey count at their product
 scale $|F_6| = 13$, determine:</p>
 
 <ul>
   <li>$\Omega_\Lambda = |F_6| / (|F_6| + 6) = 13/19 = 0.6842$
     &mdash;the dark energy fraction
-    (<a href="sync_cost/derivations/25_farey_partition.md">D25</a>).
+    (<a href="sync_cost/derivations/farey_partition.md">D25</a>).
     The Farey sequence $F_6$ counts the distinguishable rational states
     at the interaction scale $q_2 \times q_3 = 6$. There are 13. The
     partition between locked modes (dark energy) and unlocked modes
     (matter) is $13:6$.</li>
   <li>$R = q_2 q_3 \times |F_6|^{q_2 q_3^3} = 6 \times 13^{54}$
     &mdash;the Planck-to-Hubble ratio
-    (<a href="sync_cost/derivations/26_hierarchy.md">D26</a>).
+    (<a href="sync_cost/derivations/hierarchy.md">D26</a>).
     The exponent $54 = 2 \times 3^3 = q_2 \times q_3^d$ encodes
     the spatial dimension
-    (<a href="sync_cost/derivations/27_exponent.md">D27</a>).</li>
+    (<a href="sync_cost/derivations/exponent.md">D27</a>).</li>
   <li>$\Lambda\, l_P^2 = 13^{-108}/12$
     &mdash;the cosmological constant in Planck units.
     The exponent $108 = 2 \times 54$ is twice the hierarchy exponent.</li>
@@ -331,7 +331,7 @@ number, not a free parameter.</p>
 
 <p>The XOR parity filter that selects 4 modes at denominators $(2, 3)$
 is a discrete structure. It does not survive the continuum limit
-(<a href="sync_cost/derivations/20_xor_continuum_limit.md">D20</a>).
+(<a href="sync_cost/derivations/xor_continuum_limit.md">D20</a>).
 The frame bundle of the resulting 3-manifold gives
 $\mathrm{Pin}^+(3) \cong \mathrm{SU}(2) \times \mathbb{Z}_2$
 (spin and parity), but does not produce $\mathrm{SU}(3)$ or
@@ -339,7 +339,7 @@ Yang-Mills gauge theory. Two paths remain open: either the Stern-Brocot
 tree is the physical configuration space (the continuum is the
 approximation, not the other way around), or gauge structure emerges
 from the mean-field functional, not from the tangent bundle
-(<a href="sync_cost/derivations/21_discrete_gauge.md">D21</a>).</p>
+(<a href="sync_cost/derivations/discrete_gauge.md">D21</a>).</p>
 
 <h2>Reading order</h2>
 
