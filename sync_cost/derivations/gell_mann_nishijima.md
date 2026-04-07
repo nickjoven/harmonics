@@ -233,8 +233,6 @@ identification geometry. The factor 1/2 is the order of the
 y-reflection. No new assumptions.
 
 **Dependencies**: D19 (Klein bottle topology, charge fractions),
-D42 (gauge group identification, where GNN was used as input —
-now closed).
+D42 (gauge group identification).
 
-**Closes**: the GNN gap identified in D42. The full SM charge
-table is now derived from topology alone.
+The full SM charge table is derived from topology alone.

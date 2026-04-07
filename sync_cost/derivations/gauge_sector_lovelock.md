@@ -26,7 +26,7 @@ in a prior derivation. No new assumptions are introduced.
 
 ### Premise 1: The structure group center is Z_2 × Z_3
 
-**Source**: D41 (resolving D21-E), `fiber_bundle.py`
+**Source**: D41, `fiber_bundle.py`
 
 The Klein bottle's GCD structure under the mediant operation produces
 Z_2 × Z_3 = Z_6 acting on the fibers of the mode space. Specifically:
@@ -275,21 +275,21 @@ Both leave one coupling constant undetermined.
 4. **The confinement pattern**: SU(3) confines (q=3 locked), SU(2)
    does not (q=2 open) (`xor_asymmetry.py`).
 
-### Resolved by subsequent derivations
+### Determined by subsequent derivations
 
-5. **The Gell-Mann-Nishijima relation** Q = T_3 + Y/2. Derived
-   from the Klein bottle identification geometry in D43. The 1/2
-   is the order of the y-reflection.
+5. **The Gell-Mann-Nishijima relation** Q = T_3 + Y/2. The 1/2
+   is the order of the y-reflection at the Klein bottle
+   identification boundary (D43).
 
-6. **The θ-parameter** = 0. Derived from Pin⁺(3) non-orientability
-   in D45. The strong CP problem dissolves.
+6. **The θ-parameter** = 0. Pin⁺(3) non-orientability forces
+   vanishing eta invariant (D45). The strong CP problem dissolves.
 
-7. **The Higgs mechanism.** Derived in D44 from the tongue boundary
-   of the open q=2 fiber. Scalar doublet, Mexican hat potential,
-   SU(2) × U(1) → U(1)_em breaking.
+7. **The Higgs mechanism.** Scalar doublet at the tongue boundary
+   of the open q=2 fiber. Mexican hat potential from saddle-node
+   bifurcation. SU(2) × U(1) → U(1)_em breaking (D44).
 
-8. **Coupling ratios.** All dimensionless gauge quantities computed
-   in D33 from q₂ = 2, q₃ = 3, d = 3: sin²θ_W = 8/35 (1.1%),
+8. **Coupling ratios.** All dimensionless gauge quantities follow
+   from q₂ = 2, q₃ = 3, d = 3 (D33): sin²θ_W = 8/35 (1.1%),
    m_H/v = 1/2 (1.6%), α_s/α₂ = 27/8 (3.2%).
 
 ### Not determined
@@ -343,9 +343,9 @@ to premises established by the topology.
 bottle), D41 (discrete gauge resolution: center, confinement,
 charges), D13 (structural parallel).
 
-**Resolved by D43-45**: GNN relation (D43), Higgs mechanism (D44),
-θ = 0 (D45), coupling ratios (D33). **Open**: one dimensionful
-scale (v = 246 GeV).
+**See also**: GNN relation (D43), Higgs mechanism (D44),
+θ = 0 (D45), coupling ratios (D33). **Undetermined**: one
+dimensionful scale (v = 246 GeV).
 
 ## Proof chain position
 

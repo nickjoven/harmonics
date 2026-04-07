@@ -7,9 +7,8 @@ postulate. It is the unique identification consistent with the
 symmetries of the locked-state Kuramoto system at K=1. Each entry
 in the dictionary is forced by a uniqueness argument.
 
-This derivation closes the identification gap noted in D12 (Section
-3, "Status: Identified/assumed. This is the dictionary, not a
-derivation.").
+Each entry is the unique identification consistent with the
+symmetries of the locked-state Kuramoto system at K=1.
 
 ---
 
@@ -265,18 +264,15 @@ choices in the dictionary.
 
 ---
 
-## What changed
+## Uniqueness summary
 
-D12 presented the dictionary as "postulated." This derivation shows
-each entry is forced by a uniqueness argument:
+Each entry is forced by a uniqueness argument:
 
 - The metric is the unique positive-definite rank-2 tensor
 - The lapse is the unique dynamical scalar with the right range
 - The shift is the unique spatial vector
 - The frequency is forced by the Hamiltonian constraint coefficient
 - The coupling kernel is the unique self-consistent propagator
-
-The dictionary is derived, not assumed.
 
 ---
 
@@ -289,4 +285,4 @@ uniqueness arguments. No free choices remain.
 postulated), D13 (Einstein from Kuramoto, which provides the
 Hamiltonian constraint), D14 (d=3).
 
-**Closes**: the identification gap in D12, Section 3.
+All five entries are derived from uniqueness, not postulated.

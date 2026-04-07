@@ -258,9 +258,8 @@ This is the gauge-sector analog of Lovelock. See Derivation 42.
 
 ## Proof chain position
 
-This derivation closes the open question from D20 and the
-computation plan from D21. It sits between the Klein bottle
-topology (D19) and any future work on gauge dynamics.
+This derivation sits between the Klein bottle topology (D19)
+and any future work on gauge dynamics.
 
 Dependencies: D19 (Klein bottle), D20 (continuum limit negative),
 D21 (five computations), D15 (SL(2,R) uniqueness for substrate

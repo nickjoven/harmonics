@@ -325,8 +325,7 @@ scale. See D45.
 D19 (Klein bottle), D33 (duty cycle dictionary — numerical values),
 D41 (open q=2 fiber), D42 (Yang-Mills), D43 (GNN).
 
-**Closes**: the Higgs mechanism gap from D42. D33 closes the
-numerical gap for all dimensionless quantities.
+D33 determines all dimensionless electroweak quantities.
 
 ## Proof chain position
 

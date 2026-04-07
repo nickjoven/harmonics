@@ -170,7 +170,7 @@ scales. The argument:
 
 ---
 
-## Part III: The gauge coupling scales (D33 resolves the ratios)
+## Part III: The gauge coupling scales (ratios from D33)
 
 ### The duty cycle dictionary
 
@@ -261,13 +261,12 @@ DOES determine is:
 - The hierarchy (why gravity is 10^{60} times weaker than EM)
 - The internal consistency of all scales
 
-### What changed from D42
+### The remaining freedom
 
-D42 listed the absolute coupling scale as an open problem. This
-derivation narrows the gap: D_0 is not free (it equals 1/2), so
-hbar/m is determined. The remaining freedom is the single
-dimensionful scale — the root oscillator frequency — which cannot
-be determined by any dimensionless mathematical structure.
+D_0 = 1/2, so hbar/m is determined. The remaining freedom is
+the single dimensionful scale — the root oscillator frequency —
+which cannot be determined by any dimensionless mathematical
+structure.
 
 ---
 
@@ -340,9 +339,8 @@ closing the strong CP problem.
 D26 (hierarchy), D19/D41 (Klein bottle mode counting), D20 (Pin+
 structure).
 
-**Closes**: the coupling scale gap from D42, to the extent possible
-(dimensionless ratios fully determined; one dimensionful scale
-remains).
+All dimensionless ratios are fully determined. One dimensionful
+scale remains.
 
 **Opens**: the single-scale question — what sets the root oscillator
 frequency? This may be a question about the framework's initial
