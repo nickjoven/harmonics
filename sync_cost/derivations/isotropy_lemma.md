@@ -261,14 +261,14 @@ $d = \dim G = 3$.
 
 ## References
 
-- Derivation 6 (06_planck_scale.md): Classification of
+- Derivation 6 (planck_scale.md): Classification of
   $\mathrm{SL}(2,\mathbb{R})$ subgroups and the $N = 3$
   self-sustaining threshold
-- Derivation 14 (14_three_dimensions.md): The full chain
+- Derivation 14 (three_dimensions.md): The full chain
   mediant $\to$ $\mathrm{SL}(2,\mathbb{Z})$ $\to$
   $\mathrm{SL}(2,\mathbb{R})$ $\to$ $d = 3$, with Step 3c
   being the argument formalized here
-- Derivation 15 (15_lie_group_characterization.md): Uniqueness of
+- Derivation 15 (lie_group_characterization.md): Uniqueness of
   $\mathrm{SL}(2,\mathbb{R})$ as the continuum substrate
 - PROOFREADER_RESPONSE.md: Gap identification (gap #4, "trivial
   isotropy needs formalization")

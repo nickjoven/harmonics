@@ -68,7 +68,7 @@ Earlier approach (superseded): Michaelis-Menten cost function. A
 systematic scan (cost_function_scan.py) showed that ALL monotonically
 decreasing cost functions produce wrong-sign running. The pivot to the
 circle map / devil's staircase resolves this — see
-`derivations/04_spectral_tilt_reframed.md`.
+`derivations/spectral_tilt_reframed.md`.
 
 ### 3. Planck Scale
 
@@ -106,7 +106,7 @@ dimensional relation a₀ = cH₀/2π. The Stribeck lattice provides the
 bifurcation mechanism: below a₀, maintaining Newtonian dynamics costs
 more than locking to the enhanced stick-regime coupling.
 
-See `derivations/03_a0_threshold.md` for the full pendulum argument and
+See `derivations/a0_threshold.md` for the full pendulum argument and
 cost-accounting detail.
 
 ---
@@ -135,7 +135,7 @@ bounded because the measurement instrument and the measured quantity
 are the same dynamics. The RAR interpolating function, collapse
 duration, uncertainty relation, and Zeno effect all follow from one
 constraint: the instrument IS the measured dynamics. See
-`derivations/09_fidelity_bound.md`.
+`derivations/fidelity_bound.md`.
 
 ### Quantum-Classical Boundary
 
@@ -337,7 +337,7 @@ Everything else is accounting.
 ## Open Questions
 
 These three questions were unified in
-[Derivation 30](derivations/30_denomination_boundary.md) as one
+[Derivation 30](derivations/denomination_boundary.md) as one
 structure: the denomination boundary is the devil's staircase in
 coupling space, the discrete substrate is the K < 1 truncation of
 the Stern-Brocot tree, and degeneracy is resolved by the mediant

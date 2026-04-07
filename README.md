@@ -26,7 +26,7 @@ The cosmological parameters ($\Omega_\Lambda$, $R$, $\Lambda$) follow from
 three numbers: the Klein bottle's denominator classes $q_2 = 2$, $q_3 = 3$,
 and the Farey count $|F_6| = 13$. The mediant is derived from energy
 conservation + Arnold tongue stability (Stern-Brocot theorem, 1858). See
-[D25](sync_cost/derivations/25_farey_partition.md)–[D29](sync_cost/derivations/29_mediant_derivation.md).
+[D25](sync_cost/derivations/farey_partition.md)–[D29](sync_cost/derivations/mediant_derivation.md).
 
 ## Framework
 
@@ -46,49 +46,49 @@ structural principles.
 
 | # | Target | Status | Derivation |
 |---|--------|--------|------------|
-| 1 | **Born rule** — \|ψ\|² from saddle-node basin geometry | Resolved | [01](sync_cost/derivations/01_born_rule.md), [09](sync_cost/derivations/09_fidelity_bound.md) |
-| 2 | **Spectral tilt** — n_s ≈ 0.965 from φ² self-similarity | Verified (Δ < 0.2%) | [04](sync_cost/derivations/04_spectral_tilt_reframed.md), [rfe](https://github.com/nickjoven/rfe) |
-| 3 | **Planck scale** — N = 3 self-sustaining loop | Resolved | [06](sync_cost/derivations/06_planck_scale.md) |
-| 4 | **Emergent spacetime** — Einstein uniquely at K = 1 | Resolved | [12](sync_cost/derivations/12_continuum_limits.md), [13](sync_cost/derivations/13_einstein_from_kuramoto.md) |
-| 5 | **a₀** — 1.25 × 10⁻¹⁰ m/s² (4% residual) | Resolved | [03](sync_cost/derivations/03_a0_threshold.md), [rfe](https://github.com/nickjoven/rfe) |
-| 6 | **SL(2,ℝ) uniqueness** — characterization theorem | Resolved | [15](sync_cost/derivations/15_lie_group_characterization.md) |
-| 7 | **d = 3** — forced by mediant → SL(2,ℝ) | Resolved | [14](sync_cost/derivations/14_three_dimensions.md) |
+| 1 | **Born rule** — \|ψ\|² from saddle-node basin geometry | Resolved | [01](sync_cost/derivations/born_rule.md), [09](sync_cost/derivations/fidelity_bound.md) |
+| 2 | **Spectral tilt** — n_s ≈ 0.965 from φ² self-similarity | Verified (Δ < 0.2%) | [04](sync_cost/derivations/spectral_tilt_reframed.md), [rfe](https://github.com/nickjoven/rfe) |
+| 3 | **Planck scale** — N = 3 self-sustaining loop | Resolved | [06](sync_cost/derivations/planck_scale.md) |
+| 4 | **Emergent spacetime** — Einstein uniquely at K = 1 | Resolved | [12](sync_cost/derivations/continuum_limits.md), [13](sync_cost/derivations/einstein_from_kuramoto.md) |
+| 5 | **a₀** — 1.25 × 10⁻¹⁰ m/s² (4% residual) | Resolved | [03](sync_cost/derivations/a0_threshold.md), [rfe](https://github.com/nickjoven/rfe) |
+| 6 | **SL(2,ℝ) uniqueness** — characterization theorem | Resolved | [15](sync_cost/derivations/lie_group_characterization.md) |
+| 7 | **d = 3** — forced by mediant → SL(2,ℝ) | Resolved | [14](sync_cost/derivations/three_dimensions.md) |
 | 8 | **g(ω)** — self-consistent: g* = h(g*) | Resolved | [rfe](https://github.com/nickjoven/rfe) |
-| 9 | **Möbius container** — topology forces rational divisions | Resolved | [18](sync_cost/derivations/18_mobius_container.md) |
-| 10 | **Klein bottle** — 4 modes at {2,3}, XOR selection | Resolved | [19](sync_cost/derivations/19_klein_bottle.md) |
-| 11 | **Ω_Λ = 13/19** — Farey partition, zero parameters | Resolved (0.07σ) | [25](sync_cost/derivations/25_farey_partition.md)–[29](sync_cost/derivations/29_mediant_derivation.md) |
+| 9 | **Möbius container** — topology forces rational divisions | Resolved | [18](sync_cost/derivations/mobius_container.md) |
+| 10 | **Klein bottle** — 4 modes at {2,3}, XOR selection | Resolved | [19](sync_cost/derivations/klein_bottle.md) |
+| 11 | **Ω_Λ = 13/19** — Farey partition, zero parameters | Resolved (0.07σ) | [25](sync_cost/derivations/farey_partition.md)–[29](sync_cost/derivations/mediant_derivation.md) |
 
 ### Key results
 
-- **Fidelity bound** ([Derivation 9](sync_cost/derivations/09_fidelity_bound.md)):
+- **Fidelity bound** ([Derivation 9](sync_cost/derivations/fidelity_bound.md)):
   the MOND transition and wavefunction collapse are the same structure —
   a system resolving its own frequency against a reference it constitutes.
   The RAR interpolating function, collapse duration, uncertainty relation,
   and Zeno effect all follow from one constraint.
 
-- **Spectral tilt** ([Derivation 4](sync_cost/derivations/04_spectral_tilt_reframed.md)):
+- **Spectral tilt** ([Derivation 4](sync_cost/derivations/spectral_tilt_reframed.md)):
   the devil's staircase at 1/φ is exactly self-similar with scaling φ².
   The observed n_s − 1 = −0.035 comes from the k ↔ Ω mapping: 0.0365
   Fibonacci levels per e-fold, 2.2 levels in 60 e-folds.
 
-- **Born rule** ([Derivation 1](sync_cost/derivations/01_born_rule.md)):
+- **Born rule** ([Derivation 1](sync_cost/derivations/born_rule.md)):
   Δθ ∝ √ε at every tongue boundary (saddle-node universality). The
   exponent 2 in |ψ|² is parabolic geometry, not a postulate.
 
-- **SL(2,R) is the unique substrate** ([Derivation 15](sync_cost/derivations/15_lie_group_characterization.md)):
+- **SL(2,R) is the unique substrate** ([Derivation 15](sync_cost/derivations/lie_group_characterization.md)):
   four conditions — arithmetic skeleton from the mediant, projective
   action on ratios, dynamical trichotomy from Iwasawa, Farey-hyperbolic
   geometry — characterize SL(2,R) uniquely among all connected real Lie
   groups. The Bianchi classification of 3D Lie algebras eliminates every
   alternative. d = 3, Einstein, and Lorentz are corollaries.
 
-- **Einstein from Kuramoto** ([Derivation 13](sync_cost/derivations/13_einstein_from_kuramoto.md)):
+- **Einstein from Kuramoto** ([Derivation 13](sync_cost/derivations/einstein_from_kuramoto.md)):
   the rational field equation at K = 1, in the continuum limit, uniquely
   produces the Einstein field equations. Uniqueness is not a property of
   the dictionary — it is a theorem (Lovelock, 1971). One equation, one
   parameter, and the only consistent output is G_μν + Λg_μν = 8πGT_μν.
 
-- **Three dimensions from the mediant** ([Derivation 14](sync_cost/derivations/14_three_dimensions.md)):
+- **Three dimensions from the mediant** ([Derivation 14](sync_cost/derivations/three_dimensions.md)):
   d = 3 is not assumed — it is forced. The mediant generates SL(2,Z);
   the continuum limit completes to SL(2,R); self-consistent adjacency
   forces the spatial manifold to be the group itself. dim SL(2) = 2²−1 = 3.
@@ -132,7 +132,7 @@ If confirmed: inflation duration is algebraic, not a free parameter.
 
 ## Observational program
 
-[Derivation 8](sync_cost/derivations/08_high_z_mond.md) predicts a
+[Derivation 8](sync_cost/derivations/high_z_mond.md) predicts a
 redshift-dependent MOND scale: $a_0(z) = c H(z) / (2\pi) / \sqrt{g^*(1/\varphi)}$.
 With the self-consistent $g^*$ correction, the predicted local value is
 $1.25 \times 10^{-10}$ m/s² (4% from observed $1.2 \times 10^{-10}$).
