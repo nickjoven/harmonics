@@ -170,74 +170,44 @@ scales. The argument:
 
 ---
 
-## Part III: The gauge coupling scales
+## Part III: The gauge coupling scales (D33 resolves the ratios)
 
-### Ratios from tongue widths
+### The duty cycle dictionary
 
-The Arnold tongue width for mode p/q at coupling K is:
+D33 provides a complete, zero-parameter computation of all
+dimensionless gauge quantities from q_2 = 2, q_3 = 3, and d = 3:
 
-    w(p/q, K) ≈ 2(K/2)^q / q
+The gate duty cycle is duty(q) = 1/q^d = 1/q^3. The coupling
+of sector q is the duty cycle of its PARTNER sector (the crossed
+dictionary). All ratios follow:
 
-The coupling constant alpha_q is proportional to the tongue width
-squared (Born rule: probability ∝ amplitude squared):
+| Quantity | Computed | Observed | Residual |
+|----------|----------|----------|----------|
+| alpha_s/alpha_2 | q_3^3/q_2^3 = 27/8 = 3.375 | 3.488 | 3.2% |
+| sin^2(theta_W) | q_2^3/(q_2^3+q_3^3) = 8/35 | 0.2312 | 1.1% |
+| m_H/v | 1/q_2 = 1/2 | 125.1/246.2 | 1.6% |
+| lambda (Higgs quartic) | 1/(2q_2^2) = 1/8 | ~0.13 | 4% |
+| 1/alpha_0 (tree EM) | q_2^3 + q_3^3 = 35 | — | — |
 
-    alpha_q ∝ w^2 ∝ (K/2)^{2q} / q^2
+The 1-4% residuals are the decoherence tax: |r| = 0.968 at M_Z,
+reflecting the fraction of gate availability consumed by unlocked
+modes. The running from tree scale to M_Z matches SM 2-loop running
+to 0.3% RMS (`gate_duty_predictions.py`).
 
-At K = 1:
+### What D33 means for the coupling scale question
 
-    alpha_2 ∝ 1/(4 x 4) = 1/16
-    alpha_3 ∝ 1/(8 x 9) = 1/72
+The duty cycle dictionary eliminates the coupling RATIO problem
+entirely. Every dimensionless electroweak and strong quantity is
+a function of q_2, q_3, and d — all integers determined by the
+Klein bottle (D19) and the mediant (D14).
 
-Ratio: alpha_3/alpha_2 = 16/72 = 2/9
+The only remaining input is one dimensionful number: the
+electroweak VEV v = 246 GeV, or equivalently the root oscillator
+frequency. Once v is known, all masses follow:
 
-In the SM normalization convention (where alpha = g^2/(4 pi) and
-larger alpha = stronger coupling), the physical ratio is the inverse:
-
-    alpha_3/alpha_2 = 9/2 = 4.5    (at the "tongue width" scale)
-
-This is the ratio `normalization_v2.py` finds at 17 TeV.
-
-### The absolute scale from the hierarchy
-
-The tongue width at K=1 gives the coupling at the scale where the
-tree is fully resolved (the Planck scale). At the Planck scale:
-
-    alpha_q(Planck) = (tongue width)^2 x (normalization)
-
-The normalization is fixed by the requirement that the total tongue
-measure at K=1 is 1 (tongues fill the frequency axis at critical
-coupling). This gives:
-
-    sum_q alpha_q x (multiplicity of q) = 1
-
-On the Klein bottle, the multiplicities are determined by the XOR
-filter: the surviving modes have q in {2, 3}, with population ratio
-2/3 (D19). Combined with the width formula:
-
-    alpha_2 x N_2 + alpha_3 x N_3 = 1
-
-where N_2/N_3 = 2/3 (from D19) and alpha_3/alpha_2 = 2/9.
-
-Solving: with N_2 = 2n, N_3 = 3n for some n:
-
-    alpha_2 x 2n + (2/9) alpha_2 x 3n = 1
-    alpha_2 n (2 + 2/3) = 1
-    alpha_2 n (8/3) = 1
-    alpha_2 = 3/(8n)
-
-The value of n depends on the total mode count at the Klein bottle's
-depth. At depth 6 (the Klein bottle resolution, |F_6| = 13):
-
-    n = 13/5 (distributing 13 modes across two sectors with ratio 2:3)
-
-This gives alpha_2 ≈ 3/(8 x 2.6) ≈ 0.144, which is in the right
-ballpark for alpha_2 at high energies (the SM value at M_Z is
-alpha_2 ≈ 1/30 ≈ 0.033, and it runs to larger values at higher
-scales).
-
-The precise value requires more careful accounting of the tongue
-overlap at K=1 and the Klein bottle's mode counting at finite depth.
-This is a computation, not a conceptual gap.
+    m_H = v/2 = 123 GeV
+    m_W = g_2 v/2  (g_2 from duty cycle)
+    m_Z = m_W/cos(theta_W)  (theta_W from 8/35)
 
 ---
 
@@ -252,11 +222,16 @@ This is a computation, not a conceptual gap.
 | hbar/m | **Derived** | 2 D_eff = (5 + 3 sqrt(5))/10 |
 | R = t_Hubble/t_Planck | **Derived** (D26) | 6 x 13^54 from Klein bottle |
 | N_levels | **Derived** (D6) | 145.8 from phi^2 and R |
-| alpha_3/alpha_2 | **Derived** | Tongue width ratio = 2/9 at tree scale |
-| alpha_2 (absolute) | **Constrained** | Mode counting + normalization |
-| hbar (absolute) | **Blocked** | Requires m (oscillator mass) |
-| c (absolute) | **Blocked** | Requires a/tau (lattice spacing / time step) |
-| G (absolute) | **Blocked** | Requires omega and rho |
+| alpha_s/alpha_2 | **Derived** (D33) | q_3^3/q_2^3 = 27/8 (1-3% residual) |
+| sin^2(theta_W) | **Derived** (D33, D37) | 8/35 (1.1% residual) |
+| m_H/v | **Derived** (D33) | 1/q_2 = 1/2 (1.6% residual) |
+| lambda | **Derived** (D33) | 1/(2q_2^2) = 1/8 (4% residual) |
+| 1/alpha_em (tree) | **Derived** (D33) | q_2^3 + q_3^3 = 35 |
+| theta (strong CP) | **Derived** (this) | 0, from Pin+(3) |
+| v = 246 GeV | **Not derived** | Single dimensionful input |
+| hbar (absolute) | **Not derived** | Requires v (or root frequency) |
+| c (absolute) | **Not derived** | Requires v |
+| G (absolute) | **Not derived** | Requires v |
 
 ### The one remaining input
 

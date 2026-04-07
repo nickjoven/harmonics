@@ -268,53 +268,65 @@ for the q=2 mode on the Klein bottle.
    Goldstones. Uniqueness from one tongue boundary per
    denominator class.
 
-### Not derived (requires coupling scale, D45)
+### Dimensionless ratios (already computed in D33)
 
-7. **v = 246 GeV**: requires knowing epsilon and K at the
-   electroweak scale.
+D33 (duty cycle dictionary) computes all dimensionless electroweak
+quantities from q_2 = 2, q_3 = 3, and d = 3 alone:
 
-8. **m_H = 125 GeV**: requires v and lambda individually, not
-   just their ratio.
+7. **sin^2(theta_W) = q_2^3/(q_2^3 + q_3^3) = 8/35 = 0.2286**.
+   Observed: 0.2312. Residual: **1.1%**. Also derived independently
+   in D37 as the figure-eight crossing probability.
 
-9. **sin^2(theta_W) = 0.231**: requires g_1/g_2 at the
-   electroweak scale. The framework constrains this ratio at
-   specific scales (`coupling_running.py`) but the electroweak
-   scale itself needs to be identified.
+8. **m_H/v = 1/q_2 = 1/2**. Gives m_H = v/2 = 123.1 GeV.
+   Observed: 125.1 GeV. Residual: **1.6%**.
 
-10. **m_W = 80.4 GeV, m_Z = 91.2 GeV**: follow from v and
-    theta_W once those are known.
+9. **lambda = 1/(2 q_2^2) = 1/8 = 0.125**. Observed: ~0.13.
+   Residual: **4%**.
 
-### The structural vs numerical gap
+10. **alpha_s/alpha_2 = q_3^3/q_2^3 = 27/8 = 3.375**. Observed:
+    3.488. Residual: **3.2%**.
 
-The Higgs mechanism's STRUCTURE is fully derived: what kind of
-field, what potential shape, what breaks, what survives. The
-NUMBERS (masses, VEV, mixing angle) require knowing the coupling
-scale — the same blocker identified in D42 and addressed in D45.
+11. **M_W/M_Z = cos(theta_W) = sqrt(27/35)**. Observed: 80.4/91.2
+    = 0.882. Computed: 0.878. Residual: **0.4%**.
 
-This mirrors the gravity sector: D13 derives the structure of
-Einstein's equations (the unique rank-2 divergence-free tensor),
-but Newton's constant G is identified, not derived.
+The 1-4% residuals are the decoherence tax: the fraction of gate
+availability consumed by unlocked modes at K < 1. The running from
+tree scale to M_Z matches SM 2-loop running to 0.3% RMS.
+
+### Not derived (single dimensionful scale)
+
+12. **v = 246 GeV**: the single dimensionful input. Once v is known,
+    m_H = v/2, m_W = g_2 v/2, m_Z = m_W/cos(theta_W) all follow.
+    This is the root oscillator frequency in electroweak units — the
+    same irreducible input identified in D45.
+
+### The gap is narrower than expected
+
+D33 shows that the numerical predictions are already computed to
+1-4% accuracy from pure integer arithmetic. The only remaining
+input is one dimensionful scale (v or equivalently the root
+oscillator frequency). All mass RATIOS, mixing angles, and coupling
+RATIOS are zero-parameter predictions.
 
 ---
 
 ## Status
 
-**Derived (structural).** The Higgs mechanism's qualitative
-structure — scalar doublet, Mexican hat potential, tachyonic mass,
-SU(2) x U(1) -> U(1)_em breaking, three massive gauge bosons,
-one physical Higgs — follows from the tongue boundary geometry
-of the Klein bottle's open q=2 fiber.
+**Derived (structural + numerical ratios).** The Higgs mechanism's
+structure follows from the tongue boundary geometry of the open q=2
+fiber. The dimensionless quantities (sin^2 theta_W, m_H/v, lambda,
+coupling ratios) are computed in D33 from q_2, q_3, d alone — zero
+free parameters, 1-4% residuals.
 
-**Not derived (numerical).** The VEV (v = 246 GeV), the Higgs
-mass (125 GeV), and the Weinberg angle require knowing the
-absolute coupling scale. See D45.
+**Not derived.** The VEV (v = 246 GeV) — the single dimensionful
+scale. See D45.
 
-**Dependencies**: D1 (Born rule / saddle-node geometry), D7
-(tongue boundary dynamics), D19 (Klein bottle, r ≈ 0.5), D41
-(open q=2 fiber), D42 (gauge group and Yang-Mills), D43 (GNN
-relation for hypercharge assignment).
+**Dependencies**: D1 (saddle-node geometry), D7 (tongue boundary),
+D19 (Klein bottle), D33 (duty cycle dictionary — numerical values),
+D41 (open q=2 fiber), D42 (Yang-Mills), D43 (GNN).
 
-**Closes**: the Higgs mechanism gap identified in D42.
+**Closes**: the Higgs mechanism gap from D42. D33 closes the
+numerical gap for all dimensionless quantities.
 
 ## Proof chain position
 
