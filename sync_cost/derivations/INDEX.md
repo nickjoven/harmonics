@@ -117,6 +117,8 @@ These build on each other sequentially:
 | `gell_mann_nishijima.md` | **Q = T₃ + Y/2 derived from geometry.** The factor 1/2 is the order of the y-reflection in the Klein bottle identification (0,y)~(1,1-y). T₃ from the twist (antiperiodic direction), Y from the periodic direction. At the identification boundary, the reflection y→1−y has order 2, so its generator on charge-Y states is Y/2. The full SM charge table follows from topology alone. Closes the GNN gap from D42. |
 | `higgs_from_tongue_boundary.md` | **Electroweak symmetry breaking from the tongue boundary.** The Higgs doublet is the tongue boundary mode of the open q=2 fiber (Y=1 forced by neutral-VEV requirement + GNN). The Mexican hat potential is the universal saddle-node normal form at the Arnold tongue boundary (D1, D7). Tachyonic mass from the system living on the gap side (r≈0.5 equilibrium). SU(2)×U(1)→U(1)_em breaking, 3 massive + 1 massless gauge bosons, 1 physical Higgs. Structure derived; numerical values (v, m_H, θ_W) require coupling scale. |
 | `coupling_scales.md` | **D₀ = 1/2 is not free.** The bare diffusion constant on the Stern-Brocot tree is fixed by its geometry (symmetric binary random walk with unit root spacing). D_eff = (5+3√5)/20 ≈ 0.585. All dimensionless ratios determined. The absolute scale reduces to one dimensionful input (root oscillator frequency) that no mathematical framework can produce. **θ = 0** from Pin⁺(3) on the Klein bottle — the strong CP problem dissolves like the cosmological constant problem (D24). |
+| `adm_dictionary.md` | **The ADM dictionary is derived, not assumed.** Each entry (metric = coherence tensor, lapse = order parameter, shift = phase gradient, frequency = Jeans frequency, kernel = Green's function) is the unique identification consistent with the symmetries of the K=1 Kuramoto system. Closes the identification gap from D12. |
+| `baryon_fraction.md` | **Ω_b = 1/19, Ω_DM = 5/19.** The cosmic energy budget partitions 13:5:1 from Z₆ irreducibility at the product scale q₂q₃ = 6. Coprime-to-6 modes (baryonic) vs reducible modes (dark). Ω_DM/Ω_b = 5 (observed: 5.41, 7.5%). Dark matter is not a particle but the set of matter modes reducible to a single gauge sector. |
 | `engineering_targets.md` | Four physical devices from established results (independent of particle physics conjecture). N=3 Möbius resonator (benchtop, immediate), 4-state Klein bottle memory (9 oscillators), bifurcation sensor (critical slowing near K_c), r≈0.5 metamaterial (topologically protected partial coherence). |
 | `three_zeros.md` | **Three structurally distinct zeros** in the Klein bottle algebra: (0,0) the forbidden mode, 0 the additive identity, and the zero of the order parameter. Their conflation hides the 1+3 decomposition — one timelike zero (periodic direction) and three spacelike zeros (antiperiodic direction). |
 
@@ -286,6 +288,9 @@ These are referenced but not on the main line:
 | Lorentz symmetry | Spin(3,1) | SO⁺(3,1) | **exact** | D14, D15 |
 | Spacetime signature | (3,1) | (3,1) | **exact** | D32 |
 | Ω_Λ (dark energy) | 13/19 = 0.6842 | 0.685 ± 0.007 | **0.07σ** | D25, D28 |
+| Ω_DM (dark matter) | 5/19 = 0.2632 | 0.265 ± 0.007 | **0.7%** | D47 |
+| Ω_b (baryonic) | 1/19 = 0.0526 | 0.0493 ± 0.0003 | **6.7%** | D47 |
+| Ω_DM/Ω_b | 5 | 5.41 | **7.5%** | D47 |
 | R (Planck/Hubble) | 6 × 13⁵⁴ = 8.45 × 10⁶⁰ | 8.49 × 10⁶⁰ | **0.48%** | D26 |
 | Λl_P² | 13⁻¹⁰⁸/12 | ~10⁻¹²² | **0.1% in exp** | D27 |
 | N_efolds | 61.3 ± 0.7 | TBD | CMB-S4, ~2028 | D10 |

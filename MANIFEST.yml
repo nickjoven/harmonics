@@ -7,8 +7,8 @@
 
 # --- Structure ---
 
-derivation_count: 45
-derivation_range: "1–45"
+derivation_count: 47
+derivation_range: "1–47"
 phases: 16
 
 primitives:
@@ -154,6 +154,27 @@ scorecard:
     observed: "all 6 conditions = 0"
     residual: "exact"
     source: ["D41"]
+
+  dark_matter_fraction:
+    name: "Dark matter fraction Ω_DM"
+    computed: "5/19 = 0.2632"
+    observed: "0.265 ± 0.007"
+    residual: "0.7%"
+    source: ["D47"]
+
+  baryon_fraction:
+    name: "Baryon fraction Ω_b"
+    computed: "1/19 = 0.0526"
+    observed: "0.0493 ± 0.0003"
+    residual: "6.7%"
+    source: ["D47"]
+
+  dm_baryon_ratio:
+    name: "Ω_DM/Ω_b"
+    computed: "5"
+    observed: "5.41"
+    residual: "7.5%"
+    source: ["D47"]
 
 # --- Klein bottle constants ---
 # These are the integers from which the cosmological parameters follow.
