@@ -254,7 +254,7 @@ gravity (Einstein) but not gauge theory (Yang-Mills).
 
 What remains is not a computation but a theorem: the uniqueness
 of Yang-Mills given the Klein bottle's kinematic constraints.
-This is the gauge-sector analog of Lovelock.
+This is the gauge-sector analog of Lovelock. See Derivation 42.
 
 ## Proof chain position
 
