@@ -2,13 +2,9 @@
 
 ## Claim
 
-The mapping from Kuramoto variables to ADM variables is not a
-postulate. It is the unique identification consistent with the
-symmetries of the locked-state Kuramoto system at K=1. Each entry
-in the dictionary is forced by a uniqueness argument.
-
-Each entry is the unique identification consistent with the
-symmetries of the locked-state Kuramoto system at K=1.
+The mapping from Kuramoto variables to ADM variables is the unique
+identification consistent with the symmetries of the locked-state
+Kuramoto system at K=1. Each entry is forced by a uniqueness argument.
 
 ---
 
@@ -264,25 +260,9 @@ choices in the dictionary.
 
 ---
 
-## Uniqueness summary
-
-Each entry is forced by a uniqueness argument:
-
-- The metric is the unique positive-definite rank-2 tensor
-- The lapse is the unique dynamical scalar with the right range
-- The shift is the unique spatial vector
-- The frequency is forced by the Hamiltonian constraint coefficient
-- The coupling kernel is the unique self-consistent propagator
-
----
-
 ## Status
 
-**Derived.** All five entries of the ADM dictionary follow from
-uniqueness arguments. No free choices remain.
+**Derived.** All five entries follow from uniqueness arguments.
 
-**Dependencies**: D12 (continuum limits, where the dictionary was
-postulated), D13 (Einstein from Kuramoto, which provides the
-Hamiltonian constraint), D14 (d=3).
-
-All five entries are derived from uniqueness, not postulated.
+**Dependencies**: D12 (continuum limits), D13 (Hamiltonian
+constraint), D14 (d=3).

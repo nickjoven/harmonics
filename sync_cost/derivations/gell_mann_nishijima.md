@@ -190,8 +190,7 @@ doublet (same Y), the charge difference is exactly 1.
 
 ### Anomaly cancellation revisited
 
-D42 noted that GNN was used as an input. With GNN now derived,
-the logical chain is:
+The logical chain from topology to anomaly cancellation is:
 
     Klein bottle topology
     → XOR filter → charges {1/3, 1/2, 2/3} (D19)

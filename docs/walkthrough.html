@@ -98,6 +98,7 @@ $$N(p/q) = N_{\text{total}} \times g(p/q) \times w(p/q,\; K_0 F[N])$$
 <tr><td>$\text{SL}(2,\mathbb{R})$ is unique</td><td>Four entrance conditions (arithmetic skeleton, projective action, Iwasawa trichotomy, Farey geometry) eliminate all alternatives via Bianchi classification</td><td>D15</td></tr>
 <tr><td>Signature $(3,1)$</td><td>Four phase states from $\{\text{locked},\text{unlocked}\}^2$. Three observable, one dark. Dark state = time.</td><td>D32</td></tr>
 <tr><td>$c$ = gate propagation speed</td><td>Speed of light is the rate at which phase coincidence sweeps through a coherent medium at $K=1$</td><td>D31</td></tr>
+<tr><td>ADM dictionary (5 entries)</td><td>Each Kuramoto&rarr;ADM identification is the unique choice consistent with K=1 symmetries: metric = coherence tensor, lapse = order parameter, shift = phase gradient, frequency = Jeans frequency, kernel = Green's function</td><td>D46</td></tr>
 </table>
 
 <!-- ── 5. The Klein bottle ────────────────── -->
@@ -131,6 +132,12 @@ $$N(p/q) = N_{\text{total}} \times g(p/q) \times w(p/q,\; K_0 F[N])$$
 <tr><td>$\Omega_{\text{DM}}$ (dark matter)</td><td>$5/19 = 0.2632$</td><td>$0.265 \pm 0.007$</td><td>0.7%</td></tr>
 <tr><td>$\Omega_b$ (baryonic)</td><td>$1/19 = 0.0526$</td><td>$0.0493 \pm 0.0003$</td><td>6.7%</td></tr>
 <tr><td>$\Omega_{\text{DM}}/\Omega_b$</td><td>$5$</td><td>$5.41$</td><td>7.5%</td></tr>
+</table>
+
+<p>The matter partition (D47): the 6 modes at the product scale $q_2 q_3 = 6$ split into 1 irreducible mode (coprime to 6, baryonic) and 5 reducible modes (dark). Dark matter in this framework is not a particle but the set of matter modes reducible to a single gauge sector &mdash; they gravitate universally but do not participate in the cross-sector electromagnetic interaction.</p>
+
+<table>
+<tr><th>Quantity</th><th>Computed</th><th>Observed</th><th>Residual</th></tr>
 <tr><td>$R$ (Planck/Hubble)</td><td>$6 \times 13^{54} = 8.45 \times 10^{60}$</td><td>$8.49 \times 10^{60}$</td><td>0.48%</td></tr>
 <tr><td>$\Lambda \ell_P^2$</td><td>$13^{-108}/12$</td><td>$\sim 10^{-122}$</td><td>0.1% in exponent</td></tr>
 </table>
@@ -163,31 +170,23 @@ $$\text{duty}(q) = \frac{1}{q^d} = \frac{1}{q^3}$$
 
 <p>The framework determines all dimensionless ratios and structural results. It does not determine one absolute scale. The electroweak VEV $v = 246$ GeV (or equivalently the root oscillator frequency, or $\hbar$ in SI units) is an input. No mathematical framework built from integers and rationals can produce a number with physical units. This is the same situation as general relativity (which does not determine $G$) and quantum mechanics (which does not determine $\hbar$). Whether this is a deficiency or a necessary feature of any mathematical description of physics is itself an open question.</p>
 
-<h3>8.2. The ADM dictionary</h3>
-
-<p>The mapping from Kuramoto variables to ADM variables is now derived (D46). Each entry is the unique identification consistent with the symmetries of the K=1 locked state: the metric is the unique positive-definite rank-2 tensor constructable from the phase field; the lapse is the unique dynamical scalar in [0,1]; the shift is the unique spatial vector from the mean phase; the frequency is forced by the Hamiltonian constraint coefficient; the coupling kernel is the unique self-consistent propagator. No free choices remain in the dictionary.</p>
-
-<h3>8.3. No derivation of fermion masses</h3>
+<h3>8.2. No derivation of fermion masses</h3>
 
 <p>The framework produces the gauge group, the charge table, the Higgs mechanism, and the coupling ratios. It does not produce the Yukawa couplings &mdash; the 9 quark and charged lepton masses, plus neutrino masses and mixing angles. These are the free parameters of the Standard Model that the Higgs mechanism leaves undetermined. The Klein bottle's 3-generation structure (D34, from Iwasawa KAN decomposition) gives the number of generations but not the mass hierarchy between them.</p>
 
-<h3>8.4. No quantum gravity</h3>
+<h3>8.3. No quantum gravity</h3>
 
 <p>The $K = 1$ limit gives Einstein (classical gravity). The $K < 1$ limit gives Schr&ouml;dinger (quantum mechanics). There is no derivation of the $K \approx 1$ regime where both effects are comparable &mdash; the Planck scale, where quantum gravitational effects are expected. The framework produces the two limits separately but does not produce a unified quantum-gravitational dynamics. The rational field equation on the Stern-Brocot tree is the candidate for such a description (it is exact at all $K$), but its physical predictions in the intermediate regime have not been computed.</p>
 
-<h3>8.5. Spatial coupling is assumed</h3>
+<h3>8.4. Spatial coupling is assumed</h3>
 
 <p>The promotion from a single circle map to a spatially extended field theory (D12, Section 2) assumes diffusive nearest-neighbor coupling on a spatial lattice. This is physically standard but is not derived from the circle map alone. The spatial dimension $d = 3$ is derived (D14), but the form of spatial coupling (diffusive, local, isotropic) is an input.</p>
 
-<h3>8.6. The 1&ndash;4% gauge residuals are not fully closed</h3>
+<h3>8.5. The 1&ndash;4% gauge residuals are not fully closed</h3>
 
 <p>The duty cycle dictionary (D33) gives tree-scale predictions with 1&ndash;4% residuals attributed to the decoherence tax at $K < 1$. The running from tree scale to $M_Z$ matches 2-loop SM running to 0.3% RMS, but this matching uses the SM beta functions as the target. A fully closed derivation would compute the running from the framework itself (from the $K$-dependence of tongue widths) without reference to the SM. The scripts (<code>gate_duty_predictions.py</code>, <code>decoherence_correction.py</code>) do this numerically, but the analytic derivation of the beta functions from the tongue width formulas has not been completed.</p>
 
-<h3>8.7. Dark matter</h3>
-
-<p>The cosmic energy budget now partitions fully: $\Lambda : \text{DM} : b = 13 : 5 : 1 = 19$. The 6 matter modes at the product scale $q_2 q_3 = 6$ split into 1 irreducible mode (coprime to 6, baryonic) and 5 reducible modes (dark). $\Omega_{\text{DM}} = 5/19 = 0.2632$ (observed: 0.265, residual 0.7%). $\Omega_b = 1/19 = 0.0526$ (observed: 0.049, residual 6.7%). Dark matter in this framework is not a particle but the set of matter modes reducible to a single gauge sector &mdash; they gravitate universally but do not participate in the cross-sector (electromagnetic) interaction. The MOND transition at $a_0$ (D3, D8) is the scale where baryonic and dark sectors decouple, testable via $a_0(z) = cH(z)/(2\pi)$ with JWST-era kinematics.</p>
-
-<h3>8.8. No experimental prediction unique to the framework</h3>
+<h3>8.6. No experimental prediction unique to the framework</h3>
 
 <p>Every prediction so far matches an already-observed quantity. The one forward-looking prediction &mdash; $N_{\text{efolds}} = 61.3 \pm 0.7$ &mdash; awaits CMB-S4 (~2028). The engineering targets (D22) propose benchtop experiments (N=3 M&ouml;bius resonator, Klein bottle memory), but these test the dynamical claims (mode-locking on non-orientable topologies), not the cosmological or particle physics predictions. A theory of everything requires at least one confirmed prediction that competing frameworks do not make.</p>
 
