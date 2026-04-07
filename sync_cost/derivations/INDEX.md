@@ -274,20 +274,36 @@ These are referenced but not on the main line:
 
 ## The scorecard
 
-| Prediction | Computed | Observed | Residual |
-|---|---|---|---|
-| n_s (spectral tilt) | 0.963–0.966 | 0.9649 ± 0.0042 | **< 0.2%** |
-| Born rule exponent | 2 | 2 | **exact** |
-| τ × Δθ (uncertainty) | 1.000000 | — | **exact** |
-| a₀ (MOND scale) | 1.25 × 10⁻¹⁰ | 1.2 × 10⁻¹⁰ | **4%** |
-| d (spatial dimension) | 3 | 3 | **exact** |
-| Lorentz symmetry | Spin(3,1) | SO⁺(3,1) | **exact** |
-| Ω_Λ (dark energy) | 13/19 = 0.6842 | 0.685 ± 0.007 | **0.07σ** |
-| R (Planck/Hubble) | 6 × 13⁵⁴ = 8.45 × 10⁶⁰ | 8.49 × 10⁶⁰ | **0.48%** |
-| Λl_P² | 13⁻¹⁰⁸/12 | ~10⁻¹²² | **0.1% in exponent** |
-| N_efolds | 61.3 ± 0.7 | TBD | **CMB-S4, ~2028** |
+### Cosmological and structural
 
-Free parameters: **0**. Free functions: **0**.
+| Prediction | Computed | Observed | Residual | Source |
+|---|---|---|---|---|
+| n_s (spectral tilt) | 0.963–0.966 | 0.9649 ± 0.0042 | **< 0.2%** | D4, rfe |
+| Born rule exponent | 2 | 2 | **exact** | D1, D9 |
+| τ × Δθ (uncertainty) | 1.000000 | — | **exact** | D7, D9 |
+| a₀ (MOND scale) | 1.25 × 10⁻¹⁰ m/s² | 1.2 × 10⁻¹⁰ | **4%** | D3, D8, rfe |
+| d (spatial dimension) | 3 | 3 | **exact** | D14 |
+| Lorentz symmetry | Spin(3,1) | SO⁺(3,1) | **exact** | D14, D15 |
+| Spacetime signature | (3,1) | (3,1) | **exact** | D32 |
+| Ω_Λ (dark energy) | 13/19 = 0.6842 | 0.685 ± 0.007 | **0.07σ** | D25, D28 |
+| R (Planck/Hubble) | 6 × 13⁵⁴ = 8.45 × 10⁶⁰ | 8.49 × 10⁶⁰ | **0.48%** | D26 |
+| Λl_P² | 13⁻¹⁰⁸/12 | ~10⁻¹²² | **0.1% in exp** | D27 |
+| N_efolds | 61.3 ± 0.7 | TBD | CMB-S4, ~2028 | D10 |
+
+### Gauge sector and particle physics
+
+| Prediction | Computed | Observed | Residual | Source |
+|---|---|---|---|---|
+| Gauge group | SU(3) × SU(2) × U(1) | SU(3) × SU(2) × U(1) | **exact** | D41, D42 |
+| SM anomaly cancellation | all 6 = 0 | all 6 = 0 | **exact** | D41 |
+| sin²θ_W (Weinberg) | 8/35 = 0.2286 | 0.2312 | **1.1%** | D33, D37 |
+| m_H/v (Higgs ratio) | 1/2 | 0.508 | **1.6%** | D33, D44 |
+| λ (Higgs quartic) | 1/8 = 0.125 | ~0.13 | **4%** | D33 |
+| α_s/α_2 (coupling ratio) | 27/8 = 3.375 | 3.488 | **3.2%** | D33 |
+| θ (strong CP) | 0 | < 10⁻¹⁰ | **exact** | D45 |
+| Q = T₃ + Y/2 (GNN) | derived | confirmed | **exact** | D43 |
+
+Free parameters: **0**. Free functions: **0**. Dimensionful inputs: **1** (root oscillator frequency / v = 246 GeV).
 
 ## Shared Code
 

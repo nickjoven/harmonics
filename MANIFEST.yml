@@ -2,13 +2,13 @@
 # Other repos and build scripts should read from this file
 # rather than hardcoding these values.
 #
-# Updated: 2026-03-25
+# Updated: 2026-04-07
 # Source of truth: harmonics/sync_cost/derivations/INDEX.md
 
 # --- Structure ---
 
-derivation_count: 30
-derivation_range: "1–30"
+derivation_count: 45
+derivation_range: "1–45"
 phases: 16
 
 primitives:
@@ -22,6 +22,8 @@ primitives:
 
 free_parameters: 0
 free_functions: 0
+dimensionful_inputs: 1
+dimensionful_input_note: "Root oscillator frequency (equivalently v = 246 GeV). No mathematical framework can produce its own units."
 
 # --- Scorecard ---
 # Each prediction has: computed, observed, residual, source derivation(s)
@@ -96,6 +98,62 @@ scorecard:
     observed: "TBD"
     residual: "CMB-S4, ~2028"
     source: ["D10"]
+
+  weinberg_angle:
+    name: "Weinberg angle sin²θ_W"
+    computed: "8/35 = 0.2286"
+    observed: "0.2312"
+    residual: "1.1%"
+    source: ["D33", "D37"]
+
+  higgs_mass_ratio:
+    name: "Higgs mass ratio m_H/v"
+    computed: "1/2"
+    observed: "0.508"
+    residual: "1.6%"
+    source: ["D33", "D44"]
+
+  higgs_quartic:
+    name: "Higgs quartic λ"
+    computed: "1/8 = 0.125"
+    observed: "~0.13"
+    residual: "4%"
+    source: ["D33"]
+
+  coupling_ratio:
+    name: "α_s/α_2"
+    computed: "27/8 = 3.375"
+    observed: "3.488"
+    residual: "3.2%"
+    source: ["D33"]
+
+  em_coupling_tree:
+    name: "1/α₀ (tree-level EM)"
+    computed: "35"
+    observed: "—"
+    residual: "—"
+    source: ["D33"]
+
+  gauge_group:
+    name: "Gauge group"
+    computed: "SU(3) × SU(2) × U(1)"
+    observed: "SU(3) × SU(2) × U(1)"
+    residual: "exact"
+    source: ["D41", "D42"]
+
+  strong_cp:
+    name: "θ (strong CP)"
+    computed: "0"
+    observed: "< 10⁻¹⁰"
+    residual: "exact"
+    source: ["D45"]
+
+  anomaly_cancellation:
+    name: "SM anomaly cancellation"
+    computed: "all 6 conditions = 0"
+    observed: "all 6 conditions = 0"
+    residual: "exact"
+    source: ["D41"]
 
 # --- Klein bottle constants ---
 # These are the integers from which the cosmological parameters follow.

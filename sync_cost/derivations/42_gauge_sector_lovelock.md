@@ -275,30 +275,28 @@ Both leave one coupling constant undetermined.
 4. **The confinement pattern**: SU(3) confines (q=3 locked), SU(2)
    does not (q=2 open) (`xor_asymmetry.py`).
 
+### Resolved by subsequent derivations
+
+5. **The Gell-Mann-Nishijima relation** Q = T_3 + Y/2. Derived
+   from the Klein bottle identification geometry in D43. The 1/2
+   is the order of the y-reflection.
+
+6. **The θ-parameter** = 0. Derived from Pin⁺(3) non-orientability
+   in D45. The strong CP problem dissolves.
+
+7. **The Higgs mechanism.** Derived in D44 from the tongue boundary
+   of the open q=2 fiber. Scalar doublet, Mexican hat potential,
+   SU(2) × U(1) → U(1)_em breaking.
+
+8. **Coupling ratios.** All dimensionless gauge quantities computed
+   in D33 from q₂ = 2, q₃ = 3, d = 3: sin²θ_W = 8/35 (1.1%),
+   m_H/v = 1/2 (1.6%), α_s/α₂ = 27/8 (3.2%).
+
 ### Not determined
 
-5. **The gauge couplings g_1, g_2, g_3** at any particular scale.
-   The Klein bottle constrains their ratios at specific scales
-   (α_3/α_2 = 2/3 at the population ratio, α_3/α_2 = 9/4 at the
-   tongue-width-squared ratio — see `coupling_running.py`,
-   `normalization_v2.py`) but does not derive the absolute scale.
-   This parallels Lovelock not determining G.
-
-6. **The Gell-Mann-Nishijima relation** Q = T_3 + Y/2. Used as an
-   input to connect the non-abelian charges to hypercharge. Not
-   derived from the topology.
-
-7. **The θ-parameter** (CP violation in the strong sector). The
-   Pontryagin term Tr(F ∧ F) is allowed by all symmetries but
-   does not affect classical dynamics. Its coefficient is not
-   determined by the Klein bottle.
-
-8. **The Higgs mechanism.** Yang-Mills with SU(2) × U(1) gives
-   massless gauge bosons. The electroweak symmetry breaking that
-   gives W and Z their masses requires additional structure (the
-   Higgs field or equivalent). The Klein bottle does not produce
-   this — though the q=2 open fiber and the boundary weight
-   (D38) may provide constraints.
+9. **One dimensionful scale.** The absolute values of g_1, g_2, g_3
+   (equivalently v = 246 GeV or the root oscillator frequency).
+   This parallels Lovelock not determining G. See D45.
 
 ---
 
@@ -345,9 +343,9 @@ to premises established by the topology.
 bottle), D41 (discrete gauge resolution: center, confinement,
 charges), D13 (structural parallel).
 
-**Open**: GNN relation (Premise, not derived), Higgs mechanism
-(electroweak symmetry breaking), θ-parameter, absolute coupling
-scale.
+**Resolved by D43-45**: GNN relation (D43), Higgs mechanism (D44),
+θ = 0 (D45), coupling ratios (D33). **Open**: one dimensionful
+scale (v = 246 GeV).
 
 ## Proof chain position
 
