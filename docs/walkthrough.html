@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Framework Walkthrough &mdash; Harmonics</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[
+    {left:'$$',right:'$$',display:true},
+    {left:'$',right:'$',display:false}
+  ]});"></script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Reference</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="derivations.html">Derivations</a>
+  <a href="walkthrough.html" class="active">Walkthrough</a>
+</nav>
+
+<h1>Framework Walkthrough</h1>
+<p class="subtitle">A single-page technical summary of the derivation chain,
+what it produces, what it does not produce, and where the gaps are.</p>
+
+<!-- ── 1. Starting point ──────────────────── -->
+
+<h2>1. Starting point</h2>
+
+<p>The framework begins with one equation and four primitives.</p>
+
+<p>The equation is the circle map:</p>
+
+$$\theta_{n+1} = \theta_n + \Omega - \frac{K}{2\pi}\sin(2\pi\theta_n)$$
+
+<p>The four irreducible primitives (D10) are:</p>
+<ol>
+  <li><strong>Integers $\mathbb{Z}$</strong> &mdash; counting.</li>
+  <li><strong>Mediant</strong> $(a+c)/(b+d)$ &mdash; derived from energy conservation + stability (D29) as the unique combining operation on rationals satisfying monotonicity-preservation, denominator-additivity, and convergent-stability.</li>
+  <li><strong>Fixed-point equation</strong> $x = f(x)$ &mdash; self-reference.</li>
+  <li><strong>Parabola</strong> $x^2 + \mu = 0$ &mdash; bifurcation.</li>
+</ol>
+
+<p>The circle $S^1$ is derived: integers + fixed-point equation force the phase space $\mathbb{R}/\mathbb{Z} = S^1$. The circle map is the dynamics on this space with coupling $K$ and natural frequency $\Omega$.</p>
+
+<p>Free parameters: 0. Free functions: 0. Dimensionful inputs: 1 (a root oscillator frequency that sets physical units).</p>
+
+<!-- ── 2. The field equation ──────────────── -->
+
+<h2>2. The field equation</h2>
+
+<p>The self-consistency condition on the Stern-Brocot tree (D11):</p>
+
+$$N(p/q) = N_{\text{total}} \times g(p/q) \times w(p/q,\; K_0 F[N])$$
+
+<p>$N(p/q)$ is the population of mode $p/q$. $g$ is the frequency distribution. $w$ is the Arnold tongue width. $F[N]$ is the order parameter, which depends on $N$ itself. The equation is self-referential: the population distribution determines the coupling, which determines the tongue widths, which determine the population distribution.</p>
+
+<p>The fixed point $g^* = h(g^*)$ exists, is unique, and converges from arbitrary initial conditions (<a href="https://github.com/nickjoven/rfe">rfe engine</a>). The equation has one parameter: the coupling strength $K$.</p>
+
+<!-- ── 3. Two limits, two PDEs ────────────── -->
+
+<h2>3. Two limits, two PDEs</h2>
+
+<p>The field equation has two continuum limits (D12):</p>
+
+<table>
+<tr><th>Regime</th><th>Limit</th><th>Output</th><th>Uniqueness</th></tr>
+<tr>
+  <td>$K = 1$ (critical)</td>
+  <td>All oscillators locked, tongues fill the axis</td>
+  <td>Einstein field equations $G_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi G T_{\mu\nu}$</td>
+  <td>Lovelock's theorem (D13): no other rank-2 divergence-free tensor in 4D</td>
+</tr>
+<tr>
+  <td>$K < 1$ (subcritical)</td>
+  <td>Unlocked oscillators in gaps, linearized</td>
+  <td>Schr&ouml;dinger equation $i\hbar\partial_t\Psi = -\frac{\hbar^2}{2m}\nabla^2\Psi + V\Psi$</td>
+  <td>Madelung transform (exact equivalence)</td>
+</tr>
+</table>
+
+<p>One equation, one parameter, two PDEs. The Born rule $P = |\psi|^2$ is the population distribution at the fixed point (D1).</p>
+
+<!-- ── 4. Structural derivations ──────────── -->
+
+<h2>4. Structural derivations</h2>
+
+<p>The following are derived, not assumed:</p>
+
+<table>
+<tr><th>Result</th><th>Mechanism</th><th>Source</th></tr>
+<tr><td>$d = 3$ spatial dimensions</td><td>Mediant has 2 components &rarr; $\text{SL}(2,\mathbb{Z})$ &rarr; $\text{SL}(2,\mathbb{R})$. Self-consistent adjacency forces space = group manifold. $\dim\text{SL}(2) = 3$.</td><td>D14</td></tr>
+<tr><td>Lorentz symmetry $\text{Spin}(3,1)$</td><td>Complexification via order parameter: $\text{SL}(2,\mathbb{R}) \to \text{SL}(2,\mathbb{C}) \cong \text{Spin}(3,1)$</td><td>D14</td></tr>
+<tr><td>$\text{SL}(2,\mathbb{R})$ is unique</td><td>Four entrance conditions (arithmetic skeleton, projective action, Iwasawa trichotomy, Farey geometry) eliminate all alternatives via Bianchi classification</td><td>D15</td></tr>
+<tr><td>Signature $(3,1)$</td><td>Four phase states from $\{\text{locked},\text{unlocked}\}^2$. Three observable, one dark. Dark state = time.</td><td>D32</td></tr>
+<tr><td>$c$ = gate propagation speed</td><td>Speed of light is the rate at which phase coincidence sweeps through a coherent medium at $K=1$</td><td>D31</td></tr>
+</table>
+
+<!-- ── 5. The Klein bottle ────────────────── -->
+
+<h2>5. The Klein bottle and gauge theory</h2>
+
+<p>The Klein bottle is the unique compact non-orientable surface with no boundary obtainable from a rectangle by edge identifications (D19). Its topology imposes an XOR selection rule on modes: only pairs with opposite denominator parity survive. Of 3,969 mode pairs at depth 6, the XOR filter collapses the field equation to exactly 4 surviving modes at denominator classes $\{2, 3\}$.</p>
+
+<p>From this topology, the following are derived:</p>
+
+<table>
+<tr><th>Result</th><th>Mechanism</th><th>Source</th></tr>
+<tr><td>Gauge group $\text{SU}(3) \times \text{SU}(2) \times \text{U}(1)$</td><td>GCD fiber structure gives center $\mathbb{Z}_6 = \mathbb{Z}_2 \times \mathbb{Z}_3$. Cartan classification maps $\mathbb{Z}_2 \to \text{SU}(2)$, $\mathbb{Z}_3 \to \text{SU}(3)$ uniquely (with rank, confinement, and anomaly constraints). Periodic direction gives $\text{U}(1)$.</td><td>D41, D42</td></tr>
+<tr><td>Yang-Mills equations</td><td>Utiyama's theorem: given a principal bundle, gauge invariance, Lorentz invariance, and second-order dynamics, the unique Lagrangian is $\text{Tr}(F_{\mu\nu}F^{\mu\nu})$</td><td>D42</td></tr>
+<tr><td>$Q = T_3 + Y/2$ (GNN relation)</td><td>The 1/2 is the order of the $y$-reflection $y \to 1-y$ at the Klein bottle identification boundary</td><td>D43</td></tr>
+<tr><td>SM charge table and anomaly cancellation</td><td>Klein bottle fractions $\{1/3, 1/2, 2/3\}$ + doublet structure + GNN &rarr; all hypercharges. Six anomaly conditions satisfied exactly.</td><td>D41</td></tr>
+<tr><td>Confinement: $\text{SU}(3)$ confines, $\text{SU}(2)$ does not</td><td>XOR asymmetry: $q=3$ fiber locked (forbidden), $q=2$ fiber open (allowed)</td><td>D41</td></tr>
+<tr><td>Higgs mechanism</td><td>Scalar doublet at the tongue boundary of the open $q=2$ fiber. Mexican hat potential from saddle-node bifurcation. Tachyonic mass from gap-side equilibrium ($r \approx 0.5$).</td><td>D44</td></tr>
+<tr><td>$\theta = 0$ (strong CP)</td><td>$\text{Pin}^+(3)$ on the Klein bottle. Eta invariant vanishes for flat Pin$^+$ manifolds.</td><td>D45</td></tr>
+</table>
+
+<!-- ── 6. Cosmological parameters ─────────── -->
+
+<h2>6. Cosmological parameters</h2>
+
+<p>The Klein bottle's denominator classes $q_2 = 2$, $q_3 = 3$ and the Farey sequence $F_6$ (with $|F_6| = 13$) determine:</p>
+
+<table>
+<tr><th>Quantity</th><th>Computed</th><th>Observed</th><th>Residual</th></tr>
+<tr><td>$\Omega_\Lambda$ (dark energy)</td><td>$13/19 = 0.6842$</td><td>$0.685 \pm 0.007$</td><td>$0.07\sigma$</td></tr>
+<tr><td>$R$ (Planck/Hubble)</td><td>$6 \times 13^{54} = 8.45 \times 10^{60}$</td><td>$8.49 \times 10^{60}$</td><td>0.48%</td></tr>
+<tr><td>$\Lambda \ell_P^2$</td><td>$13^{-108}/12$</td><td>$\sim 10^{-122}$</td><td>0.1% in exponent</td></tr>
+</table>
+
+<!-- ── 7. Gauge sector predictions ────────── -->
+
+<h2>7. Gauge sector predictions</h2>
+
+<p>The duty cycle dictionary (D33) computes all dimensionless electroweak and strong quantities from $q_2 = 2$, $q_3 = 3$, and $d = 3$:</p>
+
+$$\text{duty}(q) = \frac{1}{q^d} = \frac{1}{q^3}$$
+
+<table>
+<tr><th>Quantity</th><th>Computed</th><th>Observed</th><th>Residual</th></tr>
+<tr><td>$\sin^2\theta_W$</td><td>$8/35 = 0.2286$</td><td>$0.2312$</td><td>1.1%</td></tr>
+<tr><td>$m_H/v$</td><td>$1/2$</td><td>$0.508$</td><td>1.6%</td></tr>
+<tr><td>$\lambda$ (Higgs quartic)</td><td>$1/8 = 0.125$</td><td>$\sim 0.13$</td><td>4%</td></tr>
+<tr><td>$\alpha_s/\alpha_2$</td><td>$27/8 = 3.375$</td><td>$3.488$</td><td>3.2%</td></tr>
+</table>
+
+<p>The 1&ndash;4% residuals are the decoherence tax: $|r| = 0.968$ at $M_Z$, the fraction of gate availability consumed by unlocked modes at $K < 1$. The running from tree scale to $M_Z$ matches SM 2-loop running to 0.3% RMS.</p>
+
+<!-- ── 8. What it is not ──────────────────── -->
+
+<h2>8. What keeps this from being a theory of everything</h2>
+
+<p>The following are the specific, identified gaps between this framework and a complete physical theory. They are listed in order from most to least fundamental.</p>
+
+<h3>8.1. One dimensionful input</h3>
+
+<p>The framework determines all dimensionless ratios and structural results. It does not determine one absolute scale. The electroweak VEV $v = 246$ GeV (or equivalently the root oscillator frequency, or $\hbar$ in SI units) is an input. No mathematical framework built from integers and rationals can produce a number with physical units. This is the same situation as general relativity (which does not determine $G$) and quantum mechanics (which does not determine $\hbar$). Whether this is a deficiency or a necessary feature of any mathematical description of physics is itself an open question.</p>
+
+<h3>8.2. The ADM dictionary is identified, not derived</h3>
+
+<p>The mapping from Kuramoto variables to ADM variables (D12, D13) &mdash; $r \leftrightarrow N$ (lapse), $C_{ij} \leftrightarrow \gamma_{ij}$ (spatial metric), $\omega \leftrightarrow \sqrt{4\pi G\rho}$ (Jeans frequency) &mdash; is postulated. The structural form of the Einstein equations follows from this dictionary plus Lovelock, but the dictionary itself is an identification, not a derivation. The Kuramoto system does not "know" it is describing gravity until the dictionary is applied.</p>
+
+<h3>8.3. No derivation of fermion masses</h3>
+
+<p>The framework produces the gauge group, the charge table, the Higgs mechanism, and the coupling ratios. It does not produce the Yukawa couplings &mdash; the 9 quark and charged lepton masses, plus neutrino masses and mixing angles. These are the free parameters of the Standard Model that the Higgs mechanism leaves undetermined. The Klein bottle's 3-generation structure (D34, from Iwasawa KAN decomposition) gives the number of generations but not the mass hierarchy between them.</p>
+
+<h3>8.4. No quantum gravity</h3>
+
+<p>The $K = 1$ limit gives Einstein (classical gravity). The $K < 1$ limit gives Schr&ouml;dinger (quantum mechanics). There is no derivation of the $K \approx 1$ regime where both effects are comparable &mdash; the Planck scale, where quantum gravitational effects are expected. The framework produces the two limits separately but does not produce a unified quantum-gravitational dynamics. The rational field equation on the Stern-Brocot tree is the candidate for such a description (it is exact at all $K$), but its physical predictions in the intermediate regime have not been computed.</p>
+
+<h3>8.5. Spatial coupling is assumed</h3>
+
+<p>The promotion from a single circle map to a spatially extended field theory (D12, Section 2) assumes diffusive nearest-neighbor coupling on a spatial lattice. This is physically standard but is not derived from the circle map alone. The spatial dimension $d = 3$ is derived (D14), but the form of spatial coupling (diffusive, local, isotropic) is an input.</p>
+
+<h3>8.6. The 1&ndash;4% gauge residuals are not fully closed</h3>
+
+<p>The duty cycle dictionary (D33) gives tree-scale predictions with 1&ndash;4% residuals attributed to the decoherence tax at $K < 1$. The running from tree scale to $M_Z$ matches 2-loop SM running to 0.3% RMS, but this matching uses the SM beta functions as the target. A fully closed derivation would compute the running from the framework itself (from the $K$-dependence of tongue widths) without reference to the SM. The scripts (<code>gate_duty_predictions.py</code>, <code>decoherence_correction.py</code>) do this numerically, but the analytic derivation of the beta functions from the tongue width formulas has not been completed.</p>
+
+<h3>8.7. No dark matter prediction</h3>
+
+<p>The framework derives $\Omega_\Lambda = 13/19$ (dark energy fraction) but does not produce a specific dark matter candidate or $\Omega_{\text{DM}}$. The MOND acceleration scale $a_0$ is derived (D3, D8), which in MOND-like theories replaces dark matter with a modified gravity law. But whether the framework predicts MOND, a dark matter particle, or something else at galactic scales is not settled. High-redshift predictions exist (D8) and are testable with JWST-era data, but the theoretical question of dark matter's status in the framework is open.</p>
+
+<h3>8.8. No experimental prediction unique to the framework</h3>
+
+<p>Every prediction so far matches an already-observed quantity. The one forward-looking prediction &mdash; $N_{\text{efolds}} = 61.3 \pm 0.7$ &mdash; awaits CMB-S4 (~2028). The engineering targets (D22) propose benchtop experiments (N=3 M&ouml;bius resonator, Klein bottle memory), but these test the dynamical claims (mode-locking on non-orientable topologies), not the cosmological or particle physics predictions. A theory of everything requires at least one confirmed prediction that competing frameworks do not make.</p>
+
+<h3>Summary</h3>
+
+<p>The framework derives both known force laws (Einstein and Yang-Mills), the gauge group, the charge table, the Higgs mechanism, 19 quantitative predictions at 0&ndash;4% residuals, and the resolution of three fine-tuning problems (cosmological constant, hierarchy, strong CP) &mdash; all from one equation with zero free parameters. What it lacks: fermion masses, quantum gravity, one dimensionful scale, a fully self-contained derivation of the ADM dictionary and the gauge running, and an experimental prediction that would distinguish it from the Standard Model plus general relativity taken as given.</p>
+
+</body>
+</html>
