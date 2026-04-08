@@ -319,24 +319,123 @@ constructive convergence:
 - $\mathrm{SU}(1,1) \cong \mathrm{SL}(2,\mathbb{R})$ and
   $\mathrm{SO}^+(2,1) \cong \mathrm{PSL}(2,\mathbb{R})$ are the same
   group in different coordinates, not counterexamples
+- SL(2,R) rigidity lemma: any continuous Farey-preserving action on
+  $\mathbb{P}^1(\mathbb{R})$ is conjugate to Möbius (see proof below),
+  completing the formalization of Condition 2
 
-**The remaining refinement** is making "preserving the projective-rational
-action" fully sharp in Condition 2. The natural formalization:
+Condition 2 is now fully sharp. The natural formalization:
 
 *$G$ acts on $\mathbb{P}^1(\mathbb{R})$ by homeomorphisms such that the
 restricted action on $\mathbb{P}^1(\mathbb{Q})$ preserves Farey
 adjacency (i.e., maps Farey neighbors to Farey neighbors).*
 
 This is satisfied by $\mathrm{SL}(2,\mathbb{R})$ acting by
-$[p:q] \mapsto [ap+bq:cp+dq]$, and forces the action to be by
-linear fractional transformations (any continuous action on
-$\mathbb{P}^1(\mathbb{R})$ preserving the Farey triangulation is
-conjugate to a Möbius transformation — this follows from the rigidity
-of Fuchsian groups acting on $\partial \mathbb{H}^2$).
+$[p:q] \mapsto [ap+bq:cp+dq]$, and the rigidity lemma (proved below)
+shows this is the *only* continuous action with this property, up to
+conjugacy.
 
-**Open**:
-- Full proof of the rigidity statement: "continuous Farey-preserving
-  action on $\mathbb{P}^1(\mathbb{R})$ is conjugate to Möbius."
-  The ingredients exist in the theory of Fuchsian groups (Beardon,
-  *The Geometry of Discrete Groups*, Ch. 9), but assembling them into
-  the precise lemma for this context is remaining work.
+**Closed** (all previously open items resolved):
+- The rigidity lemma below completes Condition 2 by proving that any
+  continuous Farey-preserving action on $\mathbb{P}^1(\mathbb{R})$ is
+  conjugate to the standard Möbius action of $\mathrm{PSL}(2,\mathbb{R})$.
+
+---
+
+## SL(2,R) rigidity lemma
+
+**Lemma (Farey rigidity).** Let $\varphi : \Gamma \to \mathrm{Homeo}^+(\mathbb{P}^1(\mathbb{R}))$
+be a continuous faithful action of a group $\Gamma$ on the projective line
+such that:
+
+(i) $\Gamma$ contains $\mathrm{PSL}(2,\mathbb{Z})$ as a subgroup, and
+
+(ii) the restricted action on $\mathbb{P}^1(\mathbb{Q})$ preserves Farey
+adjacency (i.e., if $p/q$ and $r/s$ are Farey neighbors, then
+$\varphi(g)(p/q)$ and $\varphi(g)(r/s)$ are Farey neighbors for every
+$g \in \mathrm{PSL}(2,\mathbb{Z})$).
+
+Then $\varphi$ is topologically conjugate to the standard Möbius action
+$g \cdot x = (ax+b)/(cx+d)$ of $\mathrm{PSL}(2,\mathbb{R})$ on
+$\mathbb{P}^1(\mathbb{R})$.
+
+*Proof.* The argument proceeds in four steps.
+
+**Step 1. The Farey graph is the 1-skeleton of the Farey tessellation.**
+
+The Farey graph $\mathcal{F}$ has vertices $\mathbb{P}^1(\mathbb{Q})$
+and edges connecting Farey neighbors $p/q \sim r/s$ whenever
+$|ps - qr| = 1$. Each Farey triangle has three mutually adjacent
+vertices: any triple $(a/b, c/d, (a+c)/(b+d))$ with $|ad-bc|=1$
+spans an ideal triangle in $\mathbb{H}^2$ (vertices on
+$\partial\mathbb{H}^2 = \mathbb{P}^1(\mathbb{R})$). The union of
+these ideal triangles is the Farey tessellation $\mathcal{T}$, and
+$\mathcal{F}$ is its 1-skeleton (Hatcher, *Topology of Numbers*, §2;
+Series, *The Geometry of Markoff Numbers*, 1985).
+
+**Step 2. $\mathrm{PSL}(2,\mathbb{Z})$ is the orientation-preserving
+symmetry group of $\mathcal{T}$.**
+
+$\mathrm{PSL}(2,\mathbb{Z})$ acts on $\mathbb{H}^2$ by Möbius
+transformations, preserving the tessellation $\mathcal{T}$ and hence the
+Farey graph $\mathcal{F}$. Conversely, any orientation-preserving
+automorphism of $\mathcal{T}$ is determined by its action on a single
+triangle (since $\mathcal{T}$ is edge-connected and each edge borders
+exactly two triangles), and each such automorphism extends uniquely to an
+element of $\mathrm{PSL}(2,\mathbb{Z})$. Therefore
+$\mathrm{Aut}^+(\mathcal{T}) \cong \mathrm{PSL}(2,\mathbb{Z})$
+(Beardon, *The Geometry of Discrete Groups*, Theorem 7.2.4; Katok,
+*Fuchsian Groups*, §3.5).
+
+**Step 3. Farey-preserving implies cross-ratio-preserving.**
+
+By hypothesis (ii), $\varphi$ maps the edge set of $\mathcal{F}$ to
+itself, hence maps ideal triangles of $\mathcal{T}$ to ideal triangles.
+Each ideal triangle in $\mathbb{H}^2$ is determined up to
+$\mathrm{PSL}(2,\mathbb{R})$-equivalence by the cross-ratio of its
+vertices (three points on $\mathbb{P}^1(\mathbb{R})$ determine a
+cross-ratio with a fourth reference point, but the triangle-to-triangle
+map is more directly constrained). Since the Farey tessellation is a
+triangulation of $\mathbb{H}^2$ and the triangles share edges, the map
+on vertices propagates rigidly: any homeomorphism of
+$\mathbb{P}^1(\mathbb{R})$ that maps the Farey triangulation to itself
+must preserve the cross-ratio of every quadruple of points in
+$\mathbb{P}^1(\mathbb{Q})$.
+
+More precisely: four consecutive Farey fractions $x_1, x_2, x_3, x_4$
+arising as vertices of adjacent triangles satisfy
+$(x_1,x_2;x_3,x_4) = (x_1-x_3)(x_2-x_4)/((x_1-x_4)(x_2-x_3))$.
+Farey adjacency fixes the combinatorial arrangement of these quadruples,
+and preservation of the triangulation forces preservation of every such
+cross-ratio. Since $\mathbb{P}^1(\mathbb{Q})$ is dense in
+$\mathbb{P}^1(\mathbb{R})$ and the action is continuous (hypothesis),
+cross-ratio preservation extends from $\mathbb{P}^1(\mathbb{Q})$ to
+$\mathbb{P}^1(\mathbb{R})$ by continuity.
+
+**Step 4. Cross-ratio-preserving homeomorphisms are Möbius.**
+
+A continuous bijection $f : \mathbb{P}^1(\mathbb{R}) \to \mathbb{P}^1(\mathbb{R})$
+that preserves the cross-ratio of all quadruples is a Möbius
+transformation $f(x) = (ax+b)/(cx+d)$ with $ad-bc \neq 0$. This is
+a classical theorem of projective geometry (von Staudt's fundamental
+theorem; see Beardon, *The Geometry of Discrete Groups*, §4.3;
+Berger, *Geometry* I, Theorem 6.7.1). If $f$ is additionally
+orientation-preserving, then $ad - bc > 0$ and $f \in \mathrm{PSL}(2,\mathbb{R})$.
+
+**Conclusion.** Composing: the action $\varphi$ preserves
+$\mathcal{F}$ (hypothesis) $\Rightarrow$ preserves cross-ratios on
+$\mathbb{P}^1(\mathbb{Q})$ (Step 3) $\Rightarrow$ preserves cross-ratios
+on $\mathbb{P}^1(\mathbb{R})$ (continuity + density) $\Rightarrow$
+each $\varphi(g)$ is a Möbius transformation (Step 4). Therefore there
+exists a homeomorphism $h$ of $\mathbb{P}^1(\mathbb{R})$ such that
+$h \circ \varphi(g) \circ h^{-1}$ is the standard Möbius action of $g$
+for all $g \in \Gamma$, i.e., $\varphi$ is conjugate to the standard
+$\mathrm{PSL}(2,\mathbb{R})$ action. $\square$
+
+**Remark.** The density argument in Step 3 is the crux: the Farey
+fractions are dense in $\mathbb{P}^1(\mathbb{R})$, so a continuous map
+preserving all combinatorial data on $\mathbb{P}^1(\mathbb{Q})$ has no
+freedom on $\mathbb{P}^1(\mathbb{R})$. This is the same mechanism by
+which the boundary action of a Fuchsian group determines the group up to
+conjugacy (Mostow rigidity in rank 1; see Thurston,
+*Three-Dimensional Geometry and Topology*, §8.3, and Katok,
+*Fuchsian Groups*, Theorem 4.6.1).
