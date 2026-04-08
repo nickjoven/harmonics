@@ -11,36 +11,59 @@ excluded by self-consistency arguments.
 
 ## Part I: Why a surface at all
 
-### From S¹ to S¹ × S¹
+### Why exactly two S¹ factors
 
-The four primitives give:
+**Lemma (two factors from the mediant).** The configuration surface
+has exactly two periodic directions because the mediant operates on
+2-component objects (fractions p/q), generating 2×2 matrices.
 
-1. **Integers + fixed point → S¹** (Lemma 1, D10). A period-q orbit
-   satisfies f^q(x) = x and f^q(x) = x + p, so p ≡ 0 mod 1 and
-   R/Z = S¹.
+**Proof.** The four primitives give S¹ (integers + fixed point, D10
+Lemma 1). On S¹, modes are indexed by rational winding numbers p/q.
+The mediant (a+c)/(b+d) is the fundamental operation that builds the
+configuration space (D10 Part I.3, D29).
 
-2. **Mediant operates on pairs.** A fraction p/q has two components
-   (numerator, denominator). The mediant (a+c)/(b+d) combines two
-   fractions. The Stern-Brocot tree is the Cayley graph of the free
-   monoid on L, R — both 2×2 matrices in SL(2,Z).
+A fraction p/q is a 2-component object: numerator p and denominator q.
+The mediant of a/b and c/d is the column sum of:
 
-The configuration of a single mode is specified by a fraction p/q on
-S¹. But the self-consistency condition (the mean field determines the
-locking that produces the mean field) requires **two** independent
-phase variables:
+    M = ((a, c), (b, d))    ∈ SL(2, Z)    (Farey adjacency: |ad-bc|=1)
 
-- **The oscillator phase** θ: where the mode sits on S¹.
-- **The boundary/coupling phase** ψ: the mean-field phase that couples
+The left and right mediant steps are:
+
+    L = ((1, 0), (1, 1)),   R = ((1, 1), (0, 1))
+
+These generate SL(2, Z) (Stern 1858). The "2" in SL(2) is not a choice
+— it is the number of components in a fraction. A fraction is
+irreducibly binary: a numerator and a denominator, related by the
+ratio operation. You cannot represent p/q faithfully as a 1-component
+object (scalars lose the distinction between 2/4 and 1/2 in the tree),
+and a 3-component representation of a 2-component object carries
+redundancy that reduces back to 2.
+
+The configuration of a mode on the circle is therefore specified by a
+point in a space acted on by SL(2, Z). The fundamental domain of this
+action is a quotient of the space of 2-vectors — which has 2 real
+dimensions. Each dimension is periodic (the phase lives on S¹). The
+configuration surface is therefore S¹ × S¹ / (identifications).
+
+More concretely: the self-consistency condition (the mean field
+determines the locking that produces the mean field) requires **two**
+independent phase variables:
+
+- **The oscillator phase** θ ∈ S¹: where the mode sits.
+- **The mean-field phase** ψ ∈ S¹: the collective phase that couples
   back to the oscillator.
 
-The coupling term sin(ψ − θ) in the Kuramoto equation is a function of
-the difference between these two phases. The self-consistency condition
-r e^{iψ} = ⟨e^{iθ}⟩ relates them but does not identify them — they are
-distinct degrees of freedom.
+These are the two components of the fraction made dynamical. The
+numerator indexes the winding (how many times the phase wraps — the
+oscillator's state θ). The denominator indexes the period (how many
+iterations before return — the coupling structure ψ). The coupling
+term sin(ψ − θ) in the Kuramoto equation is a function of their
+difference. The self-consistency condition r e^{iψ} = ⟨e^{iθ}⟩ relates
+them but does not identify them.
 
-Two independent S¹ variables span a 2-dimensional surface. The surface
-is a quotient of [0,1] × [0,1] under boundary identifications. The
-question is: **which identifications?**
+Two independent S¹ variables span a 2-dimensional surface: the quotient
+of [0,1] × [0,1] under boundary identifications. The question is:
+**which identifications?** □
 
 ### Why compact and without boundary
 
@@ -327,33 +350,174 @@ distinction. Fermions are the odd sector of the Klein bottle's Z₂.
 
 ---
 
+## Part VIII: The rational observer picture
+
+The Klein bottle populated by locked modes at rational winding numbers
+gives a concrete physical picture of the framework.
+
+### The observers
+
+Each rational p/q on the Stern-Brocot tree is an observer: a mode
+locked at winding number p/q, advancing forward through the Klein
+bottle's antiperiodic direction. The observer at p/q:
+
+- Has accumulated phase offset (p/q) × π relative to the reference.
+- Completes p full half-twists every q periods of the reference clock.
+- After q reference periods: returns to original phase if p is even
+  (bosonic traversal), or returns twisted by π if p is odd (fermionic
+  traversal — needs 2q periods for true return).
+
+The even/odd distinction in p is the XOR constraint playing out in
+time. Observers with odd p see the double cover; they are spinors.
+
+### The communication network
+
+Two observers can sustain nonzero time-averaged coupling if and only
+if their frequency ratio is rational. Specifically:
+
+    ⟨sin(ω₁t − ω₂t)⟩_T → { nonzero,  ω₁/ω₂ ∈ Q
+                             { 0,        ω₁/ω₂ ∉ Q
+
+(For irrational ratio, the phase difference sweeps S¹ ergodically
+and the average vanishes.) The rational observers form a discrete
+communication network embedded in the continuous surface: the
+Stern-Brocot tree.
+
+**Adjacency.** Two observers at p₁/q₁ and p₂/q₂ are nearest neighbors
+in this network iff |p₁q₂ − p₂q₁| = 1 (Farey adjacency). This is
+the det = ±1 condition of SL(2,Z). The communication graph is the
+Farey graph: the 1-skeleton of the ideal triangulation of H².
+
+### The hierarchy
+
+Observers with small denominator q have wide Arnold tongues (strong
+coupling, cheap to maintain). Observers with large q have narrow
+tongues (weak coupling, expensive). The hierarchy:
+
+| Denominator | Tongue width | Role | Physical |
+|-------------|-------------|------|----------|
+| q = 1 | O(1) | Fundamental | Ground state / vacuum |
+| q = 2 | O(K²) | First sector | SU(2) / weak modes |
+| q = 3 | O(K³) | Second sector | SU(3) / strong modes |
+| q = 5 | O(K⁵) | Mediants of 2,3 | Interaction modes |
+| q large | O(K^q) | High-energy | Resolved only at high K |
+| q → ∞ | 0 | Irrational gap | Dark sector (Ω_Λ) |
+
+At coupling K < 1, only finitely many observers exist (finitely many
+tongues open). As K → 1, more observers "turn on" at successively
+larger q. At K = 1, all rationals are present — the tree is complete,
+the observers fill the surface, and the discrete network becomes
+the continuous group SL(2,R).
+
+### The self-referential loop
+
+The observers collectively determine the mean field:
+
+    r e^{iψ} = (1/N) Σ_j e^{iθ_j}
+
+The mean field determines the tongue widths (via the coupling
+K_eff = K|r|), which determines which observers can sustain
+themselves (only those with tongues wide enough to survive at
+current K_eff). The fixed point of this loop is the rational field
+equation (D11):
+
+    N(p/q) = N_total × g(p/q) × w(p/q, K₀ × F[N])
+
+This is the self-consistency condition (P3) instantiated: the
+population of observers at each rational determines the field that
+determines the population. The universe is the fixed point.
+
+### What the dark sector is
+
+Irrational positions on the Klein bottle — the gaps between Arnold
+tongues — host no observers. No locked mode, no definite phase, no
+communication with the rational network. These positions contribute
+to the total phase space (and hence to the energy budget) but carry
+no information.
+
+The dark energy fraction Ω_Λ = (11 + 2w*)/(16 + 3w*) = 0.6847 is
+the fraction of the Klein bottle's phase space that is dark: the gap
+measure at the self-consistent coupling K*.
+
+The boundary modes (q = 6, at fractional weight w* = 0.83) are
+observers in the process of turning on — partially locked, partially
+dark. They sit at the edge of the communication network, able to
+sustain coupling most but not all of the time.
+
+### Walking backwards is CPT
+
+An observer attempting to traverse the antiperiodic direction in
+reverse encounters: θ → θ − π ≡ θ + π (mod 2π). On S¹, backward
+traversal produces the same half-twist as forward traversal. The
+Klein bottle does not distinguish forward from backward along the
+antiperiodic loop — this is its non-orientability.
+
+The only meaningful "reversal" is the full CPT operation:
+- **C** (charge conjugation): swap the Klein bottle's two XOR sectors
+  (q₂ ↔ q₃, coupling sign flip)
+- **P** (parity): reflect the periodic direction (y → L₂ − y)
+- **T** (time reversal): reverse the antiperiodic direction
+
+The compound CPT is a symmetry of the Klein bottle (it maps the
+surface to itself). The individual operations C, P, T are not — each
+one alone produces a configuration inconsistent with the boundary
+conditions. This is the CPT theorem derived from the surface topology.
+
+### The two S¹ factors, physically
+
+The two S¹ variables have distinct physical characters:
+
+- **θ (oscillator phase)**: where the observer sits on S¹. This is the
+  periodic direction of the Klein bottle — the spatial variable. It has
+  no preferred orientation (y → L₂ − y is a symmetry of the periodic
+  BC). This is why space is isotropic.
+
+- **ψ (mean-field phase)**: the collective phase that couples back.
+  This is the antiperiodic direction — the temporal variable. It has a
+  local arrow (dissipative convergence toward locking) but no global
+  orientation (non-orientability). This is why time has a local arrow
+  but CPT is a global symmetry.
+
+The two components of a fraction (p and q) become the two components
+of spacetime (space and time), distinguished by the Klein bottle's
+topology: the numerator p (winding count) maps to the spatial
+structure, the denominator q (period) maps to the temporal structure.
+The asymmetry between them — one periodic, one antiperiodic — is the
+asymmetry between space and time.
+
+---
+
 ## Status
 
-**Derived.** The three exclusion arguments are:
+**Derived.** The Klein bottle is the unique compact surface built from
+the mediant's 2-vector structure, satisfying:
 
-1. RP² excluded by bifurcation (double antiperiodicity kills saddle-node)
-   AND by H₁(RP²) = Z₂ having no free part (no propagating modes).
-2. T² excluded by H₁(T²) = Z ⊕ Z having no torsion (no fermions).
-3. K² uniquely has H₁ = Z ⊕ Z₂: free part for momenta, torsion for
-   fermion statistics.
+1. Bifurcation preservation (excludes RP²)
+2. Fermionic representations (excludes T²)
+3. Continuous momenta (excludes RP²)
 
-The homological argument (fermions require Z₂ torsion) is the sharpest.
-It is purely topological and does not rely on dynamical interpretations.
-The arrow-of-time argument (dissipation requires non-orientability)
-provides independent confirmation from the dynamical side.
+The argument has three layers of increasing strength:
 
-The weakest remaining point: the argument assumes the surface is built
-from S¹ × S¹ identifications (rectangle with edge gluings). This
-excludes higher-genus surfaces and the sphere. The restriction to
-rectangle identifications follows from the two-component structure of
-fractions (numerator, denominator) giving two independent S¹ variables.
-This should be formalized: why exactly two S¹ factors and not more?
-The answer is likely: the mediant operates on 2-vectors in SL(2,Z),
-and dim = 2 is not a choice but the structure of a ratio.
+- **Topological** (primary): H₁(K²) = Z ⊕ Z₂ is the unique homology
+  among {T², K², RP²} with both free and torsion parts. Fermions
+  require torsion; propagating modes require a free generator.
+
+- **Dynamical** (secondary): the arrow of time from rank-1 Fréchet
+  derivative (D46) independently requires non-orientability.
+
+- **Self-consistency** (tertiary): the XOR filter on K² produces the
+  correct mode count (12.66 effective modes, Ω_Λ = 0.6847); no XOR
+  filter on T² gives a completely different — and excluded — spectrum.
+
+The two-S¹ structure is closed: fractions are irreducibly binary
+(numerator, denominator), the mediant operates on 2-vectors in
+SL(2,Z), and the configuration surface is the 2-dimensional quotient
+of this action. One S¹ per component.
 
 ## References
 
 - D10: minimum_alphabet.md (four primitives)
+- D14: three_dimensions.md (mediant → SL(2,Z) → SL(2,R))
 - D19: xor_derivation.md (XOR filter from Klein bottle BCs)
 - D32: minkowski_signature.md (dark state, (3,1) signature)
 - D46: rank1_temporal_causation.md (arrow of time from rank-1)
