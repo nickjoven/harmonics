@@ -465,25 +465,44 @@ conditions. This is the CPT theorem derived from the surface topology.
 
 ### The two S¹ factors, physically
 
-The two S¹ variables have distinct physical characters:
+**Lemma (denominator–time correspondence).** The antiperiodic
+direction of the Klein bottle couples to the denominator q of a mode
+p/q, not to the numerator p. The assignment q ↔ temporal,
+p ↔ spatial is forced by a divisibility condition.
 
-- **θ (oscillator phase)**: where the observer sits on S¹. This is the
-  periodic direction of the Klein bottle — the spatial variable. It has
-  no preferred orientation (y → L₂ − y is a symmetry of the periodic
-  BC). This is why space is isotropic.
+**Proof.** The Klein bottle's antiperiodic identification shifts by
+1/2 on S¹ per traversal (the half-twist π = 1/2 of a full turn).
 
-- **ψ (mean-field phase)**: the collective phase that couples back.
-  This is the antiperiodic direction — the temporal variable. It has a
-  local arrow (dissipative convergence toward locking) but no global
-  orientation (non-orientability). This is why time has a local arrow
-  but CPT is a global symmetry.
+A mode at winding number p/q has orbit period q: after q iterations,
+f^q(x) = x + p ≡ x on S¹. The period q counts iterations before
+return.
 
-The two components of a fraction (p and q) become the two components
-of spacetime (space and time), distinguished by the Klein bottle's
-topology: the numerator p (winding count) maps to the spatial
-structure, the denominator q (period) maps to the temporal structure.
-The asymmetry between them — one periodic, one antiperiodic — is the
-asymmetry between space and time.
+After q traversals of the antiperiodic direction, the half-twist has
+been applied q times, accumulating total twist q/2 full turns. For
+self-consistent closure (the mode must return to its starting
+configuration):
+
+    q × (1/2) ∈ Z    ⟺    2 | q
+
+This is a divisibility condition on q, the denominator. It requires
+the period to be even. The numerator p is unconstrained — the winding
+count need not accommodate the twist, because winding measures
+displacement, not duration.
+
+The period q counts iterations (the dynamical clock — discrete proper
+time). The winding p counts phase displacement per period (the
+dynamical position — discrete spatial extent). The divisibility
+condition 2|q locks the denominator to the antiperiodic direction.
+Since the antiperiodic direction carries the arrow of time (non-
+orientable, coupling-sign reversal upon traversal), the denominator
+is the temporal index and the numerator is the spatial index. □
+
+**Corollary.** The smallest surviving denominators on the Klein bottle
+are q₂ = 2 (even, antiperiodic/temporal) and q₃ = 3 (smallest odd
+admitting non-trivial probability, periodic/spatial). The assignment
+{q₂ = 2 ↔ temporal, q₃ = 3 ↔ spatial} is not a labeling convention
+— it is forced by the divisibility condition 2|q on the antiperiodic
+direction.
 
 ---
 
