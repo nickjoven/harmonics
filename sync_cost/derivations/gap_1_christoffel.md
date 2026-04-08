@@ -2,168 +2,278 @@
 
 ## Status
 
-**Open.** The weak-gradient ADM evolution equation is derived. The exact
-Levi-Civita connection from Kuramoto ensemble averages is not.
+**Partially resolved, partially confused.** Two documents in the repo
+make conflicting claims about this gap:
 
-## What is derived
+- `continuum_limits.md` (§4, line 105): "The passage to exact Christoffel
+  symbols requires proving that the Kuramoto ensemble averages generate
+  the Levi-Civita connection of γᵢⱼ." — **Gap open.**
 
-At K=1 (critical coupling, full locking), the spatially extended
-Kuramoto equation with coherence tensor
+- `einstein_from_kuramoto.md` (Part I, line 36): "This is a tautology
+  of Riemannian geometry: given any smooth positive-definite symmetric
+  tensor field, its Levi-Civita connection exists and is unique." —
+  **Gap closed by construction.**
 
-    C_ij(x,t) = delta_ij - <partial_i theta  partial_j theta>
+Both cannot be right as stated. This document resolves the confusion
+by identifying what is actually at stake.
 
-produces, after time-differentiation and the ADM dictionary
-(r = N, partial_i psi = N_i/N, K_ij = <partial_i theta cos(psi-theta) partial_j theta>):
+---
 
-    partial_t gamma_ij = -2N K_ij + D_i N_j + D_j N_i
+## The tautology argument and why it's half-right
 
-This is the first ADM evolution equation. The derivation is valid in the
-**weak-gradient regime** where partial_i theta is small and nonlinear
-terms in the ensemble averages are negligible.
+`einstein_from_kuramoto.md` argues: γᵢⱼ = Cᵢⱼ/C₀ is a smooth
+positive-definite symmetric tensor field. By the fundamental theorem
+of Riemannian geometry, it has a unique Levi-Civita connection. The
+Christoffel symbols Γᵏᵢⱼ are expressible in terms of first derivatives
+of γ, which are expressible in terms of Kuramoto three-point
+correlations. Therefore the connection is determined. No gap.
 
-The Hamiltonian constraint (R + K^2 - K_ij K^ij = 16piG rho) and
-momentum constraint (D_j(K^j_i - delta^j_i K) = 8piG J_i) are derived
-structurally. The single normalization sigma^2 = 1/4 produces both
-prefactors simultaneously, because the 16piG/8piG ratio is forced by
-the Gauss-Codazzi structure of the 3+1 decomposition.
+**What's right about this:** The connection EXISTS and is UNIQUE. Given
+γᵢⱼ, the Christoffel symbols are determined. Metric compatibility
+∇ₖγᵢⱼ = 0 holds identically. This is indeed a tautology.
 
-## What is not derived
+**What's wrong about this:** The question was never whether the
+Levi-Civita connection of γ exists. The question is whether the
+**dynamics** use it.
 
-The covariant derivative D_i in the evolution equation is defined by the
-Levi-Civita connection:
+The first ADM equation reads:
 
-    Gamma^k_ij = (1/2) g^{kl} (partial_i gamma_{jl} + partial_j gamma_{il} - partial_l gamma_{ij})
+    ∂γᵢⱼ/∂t = -2N𝒦ᵢⱼ + DᵢNⱼ + DⱼNᵢ
 
-This connection is the unique torsion-free, metric-compatible connection
-on (Sigma, gamma_ij). The gap: **no proof exists that the Kuramoto
-ensemble averages produce exactly this connection at finite gradient.**
+The Dᵢ in DᵢNⱼ is a covariant derivative. In the ADM formalism, it
+is the Levi-Civita connection of γ. In the Kuramoto derivation, the
+corresponding term arises from:
 
-## The precise mathematical problem
+    -⟨∂ᵢ(r sin(ψ-θ)) ∂ⱼθ⟩ - (i↔j)
 
-### What needs to be proved
+expanded using the product rule. The question: does this expansion,
+at all orders, produce exactly the Levi-Civita covariant derivative
+DᵢNⱼ = ∂ᵢNⱼ - ΓᵏᵢⱼNₖ, or does it produce ∂ᵢNⱼ − Γ̃ᵏᵢⱼNₖ for
+some other connection Γ̃?
 
-**Theorem (unproven).** Let theta(x,t) satisfy the spatially extended
-Kuramoto equation at K=1 with coupling kernel K(x,x') and local order
-parameter r(x,t) e^{i psi(x,t)}. Define the coherence tensor
+---
 
-    gamma_ij(x,t) = C_ij / C_0  where  C_ij = delta_ij - <partial_i theta partial_j theta>
+## The actual gap: precise statement
 
-Then the ensemble averages of second-order terms in the evolution equation
-satisfy:
+The metric γᵢⱼ has a unique Levi-Civita connection Γ. The Kuramoto
+dynamics produces transport terms that define an effective connection
+Γ̃. The gap is:
 
-1. **Metric compatibility**: nabla_k gamma_ij = 0, where nabla is the
-   connection defined by the natural transport structure of the Kuramoto
-   ensemble.
+**Does Γ̃ = Γ?**
 
-2. **Torsion-free**: Gamma^k_ij = Gamma^k_ji (the connection is symmetric).
+Equivalently: when the Kuramoto evolution equation is written in the
+form
 
-These two conditions determine the Levi-Civita connection uniquely
-(Fundamental Theorem of Riemannian geometry).
+    ∂γᵢⱼ/∂t = -2N𝒦ᵢⱼ + ∂ᵢNⱼ + ∂ⱼNᵢ − Γ̃ᵏᵢⱼNₖ − Γ̃ᵏⱼᵢNₖ
 
-### Why it is hard
+is Γ̃ᵏᵢⱼ = Γᵏᵢⱼ (the Christoffel symbols of γ)?
 
-At weak gradients, all metric connections agree to leading order. The
-Levi-Civita connection differs from other connections only at O(h^2)
-where h ~ |partial gamma|. The derivation must therefore control the
-second-order ensemble averages:
+### Why this might be trivially true
 
-    <(partial_i theta)^2 partial_j theta>,  <partial_i theta partial_j theta partial_k theta>,  etc.
+`einstein_from_kuramoto.md` (line 42) argues: "The nontrivial content
+is that the Kuramoto dynamics **preserves** this structure." And then
+gives four conditions under which the first ADM equation holds exactly:
 
-and show that these higher moments arrange into exactly the Christoffel
-symbols of gamma, not some other connection coefficients.
+| Condition | Status | Type |
+|-----------|--------|------|
+| C₀ = 1 (absorbed into lapse) | Gauge choice | Kinematic |
+| ⟨∂ᵢθ⟩ = 0 (centered ensemble) | Ensemble symmetry | Kinematic |
+| ⟨cos(ψ-θ) ∂ⱼθ⟩ = ∂ⱼψ | Locked state (K≈1) | Dynamical |
+| ⟨sin(ψ-θ) ∂ⱼθ⟩ = 0 | Locked state (antisymmetry) | Dynamical |
 
-The difficulty is that Kuramoto oscillators are not geodesics — they are
-phase-coupled nonlinear oscillators. There is no a priori reason why
-their collective spatial correlations should produce the geometric
-connection. The self-consistency condition (the oscillators determine the
-field that determines the oscillators) constrains the ensemble, but
-whether it constrains it enough to force Levi-Civita is unknown.
+If these four conditions hold, the argument is:
 
-### Why it might be true
+1. The evolution equation for γᵢⱼ involves only γᵢⱼ itself and its
+   first spatial derivatives (through the ψᵢ = Nᵢ/N terms).
+2. The only connection built from γ and ∂γ alone is Levi-Civita.
+3. Therefore Γ̃ = Γ — not because we checked term by term, but
+   because there's nothing else it could be.
 
-**Self-consistency as metric compatibility.** The Kuramoto self-consistency
-equation r = integral g w e^{2pi i Omega} dOmega is a fixed-point
-condition: the order parameter is consistent with the locking it produces.
-Metric compatibility nabla g = 0 is also a self-consistency condition:
-the metric is consistent with its own parallel transport. These are
-structurally analogous — the metric "determines" the connection which
-"preserves" the metric, just as the order parameter "determines" the
-locking which "produces" the order parameter.
+**This argument is actually strong.** The question reduces to:
 
-**Torsion-free from S^1 compactness.** The circle map operates on S^1,
-which has no preferred direction. The ensemble averages inherit this
-symmetry: <partial_i theta partial_j theta> = <partial_j theta partial_i theta>.
-If the connection inherits this symmetry at all orders, torsion vanishes.
+**Do the four locked-state conditions hold exactly at K=1, or only
+approximately?**
 
-**Lovelock as consistency check.** If the connection is Levi-Civita and
-d=3+1, then by Lovelock's theorem the only divergence-free rank-2
-tensor is G_mu_nu + Lambda g_mu_nu. The framework already derives d=3+1
-and the constraints match Einstein's equations with the correct prefactors.
-The Lovelock result is independent of the connection derivation — it
-provides a cross-check, not a substitute.
+---
 
-## Possible approaches
+## Sharpening: what exactly needs to be proved
 
-### A. Direct expansion
+### Condition 3: ⟨cos(ψ-θ) ∂ⱼθ⟩ = ∂ⱼψ
 
-Expand the Kuramoto evolution to O(h^2) explicitly. The ensemble averages
-at second order involve the coupling kernel K(x,x') and the locked-state
-phase distribution. In the fully locked state (K=1), the phase theta(x)
-is determined by the frequency distribution omega(x) through the
-self-consistency equation. The second-order terms depend on how this
-solution varies spatially. Check whether the O(h^2) terms match
-Gamma^k_ij term by term.
+This is the critical one. Write φ = ψ − θ (the phase offset from
+the mean field). In the locked state, φ is small. Expand:
 
-This is a brute-force calculation. It would settle the question but
-provides no structural insight into why the result holds (if it does).
+    cos(φ) = 1 − φ²/2 + φ⁴/24 − ...
 
-### B. Variational approach
+So:
 
-The Kuramoto system at K=1 minimizes a free energy functional
-F[theta] = -(K/2N) sum_{ij} cos(theta_i - theta_j). In the continuum,
-this becomes F = -(1/2) integral K(x,x') cos(theta(x) - theta(x')) dx dx'.
-The fully locked state is a critical point of F.
+    ⟨cos(φ) ∂ⱼθ⟩ = ⟨∂ⱼθ⟩ − ½⟨φ² ∂ⱼθ⟩ + ...
+                    = ∂ⱼψ − ½⟨φ² ∂ⱼθ⟩ + ...
 
-If F can be identified with the Einstein-Hilbert action (or a functional
-whose Euler-Lagrange equations are the ADM equations), then the
-connection question reduces to: does the variational principle produce
-Levi-Civita? For the Einstein-Hilbert action S = integral R sqrt(g) d^4x,
-the answer is yes (Palatini variation).
+(using ⟨∂ⱼθ⟩ = ∂ⱼψ in the locked state). The condition holds
+exactly iff the correction terms vanish:
 
-This approach would close the gap by construction, but requires
-identifying the Kuramoto free energy with the gravitational action —
-which is itself an unproven step.
+    **⟨φ² ∂ⱼθ⟩ = 0**    (and all higher-order corrections)
 
-### C. Rigidity from self-consistency
+This is a statement about the **third moment** of the locked-state
+ensemble. It says: the phase fluctuations φ are uncorrelated with
+the phase gradient ∂ⱼθ. Specifically, the covariance of φ² with
+∂ⱼθ vanishes.
 
-Prove that the self-consistency condition at K=1 is rigid enough that
-the connection is determined by gamma_ij alone (no additional degrees
-of freedom). If the connection has no freedom beyond the metric, it
-must be Levi-Civita (by the fundamental theorem).
+### When does ⟨φ² ∂ⱼθ⟩ = 0?
 
-The argument would be: at K=1, the oscillator distribution is completely
-determined by gamma_ij (via the self-consistency equation). Therefore
-the ensemble averages are functionals of gamma_ij alone. Therefore the
-connection defined by these averages depends only on gamma_ij. By the
-fundamental theorem, the unique metric-compatible torsion-free connection
-depending only on the metric is Levi-Civita.
+**Case 1: Gaussian fluctuations.** If the locked-state fluctuations
+are Gaussian in φ, then ⟨φ² ∂ⱼθ⟩ = ⟨φ²⟩⟨∂ⱼθ⟩ + 2⟨φ ∂ⱼθ⟩⟨φ⟩.
+With ⟨φ⟩ = 0 (centered) and ⟨φ ∂ⱼθ⟩ = 0 (locked-state symmetry),
+this gives ⟨φ² ∂ⱼθ⟩ = ⟨φ²⟩∂ⱼψ. This is NOT zero — it gives a
+correction proportional to the variance.
 
-The weak point: "ensemble averages are functionals of gamma_ij alone"
-needs proof. If the ensemble retains memory of higher-order structure
-(e.g., the specific frequency distribution omega(x) beyond what gamma_ij
-encodes), the connection could depend on non-metric data.
+BUT: this correction can be absorbed into the normalization C₀. The
+coherence tensor already divides by C₀ = 1 − ⟨|∇θ|²⟩ (which
+contains ⟨φ²⟩). The question is whether the C₀ normalization
+exactly absorbs all variance corrections.
 
-## Connection to other gaps
+**Case 2: Thermodynamic limit (N→∞).** In the limit of infinitely
+many oscillators, the central limit theorem makes fluctuations
+Gaussian with variance O(1/N). The corrections ⟨φ² ∂ⱼθ⟩ are
+O(1/N) and vanish. The connection is exactly Levi-Civita in the
+continuum limit.
 
-This gap is shared with Gap 2 (Schrödinger): both require the
-**spatialization step** — promoting the oscillator ensemble to a field
-on a 3-manifold. The spatialization itself (why a field theory rather
-than a discrete system?) is a separate assumption, not derived from the
-four primitives.
+**Case 3: Finite ensemble.** For finite N, the corrections are
+O(1/N) and produce a non-Levi-Civita contribution to the connection
+(torsion or non-metricity). These are suppressed in the thermodynamic
+limit but could be relevant at the Planck scale where N is minimal.
+
+### The resolution (proposed)
+
+The gap reduces to proving:
+
+**Lemma (connection exactness).** In the continuum limit (N→∞) of
+the Kuramoto ensemble at K=1, the four locked-state conditions hold
+exactly, and therefore Γ̃ = Γ.
+
+The proof strategy:
+
+1. The locked state at K=1 has fluctuations φ = ψ − θ with variance
+   σ²_φ = O(1/N) (central limit theorem for the mean field).
+
+2. The correction to Condition 3 is ⟨φ² ∂ⱼθ⟩ = O(σ²_φ) = O(1/N).
+
+3. The correction to Condition 4 is ⟨sin(φ) ∂ⱼθ⟩ ≈ ⟨φ ∂ⱼθ⟩ = 0
+   by the centered-ensemble condition (exact, no N dependence).
+
+4. In the N→∞ continuum limit, all corrections vanish.
+   Therefore Γ̃ = Γ exactly.
+
+5. At finite N, the O(1/N) corrections produce a connection that
+   differs from Levi-Civita by torsion/non-metricity of order 1/N.
+   This is a **prediction**: Planck-scale gravity has O(1/N) corrections
+   to general relativity, which could manifest as torsion.
+
+---
+
+## The second ADM equation
+
+The first evolution equation (∂γ/∂t) is the cleaner case. The second
+evolution equation (∂𝒦ᵢⱼ/∂t) is harder because it involves the Ricci
+tensor ³Rᵢⱼ, which requires second derivatives of γ (hence fourth
+moments of the θ-ensemble).
+
+`einstein_from_kuramoto.md` decomposes this into five term classes
+(Part I, lines 56-98). The key terms:
+
+| Term | Kuramoto origin | Difficulty |
+|------|----------------|------------|
+| -DᵢDⱼN | Second derivative of ⟨sin(φ) ∂ⱼθ⟩ | Moderate: involves third moments |
+| N ³Rᵢⱼ | Phase stiffness (kinematic from γ) | **None**: follows from γ definition |
+| N(K𝒦-2𝒦²) | Products of two-point correlations | Moderate: mean-field factorization needed |
+| ℒ_β 𝒦 | Shift transport | Easy: locked-state symmetry |
+| Matter | ω-dependent correlations | Separate: normalization question |
+
+The Ricci tensor term (³Rᵢⱼ) is kinematic — it's defined by γ
+regardless of Kuramoto dynamics. The extrinsic curvature self-
+interaction term requires mean-field factorization:
+
+    ⟨cos²φ ∂ᵢθ ∂ⱼθ ∂ₖθ ∂ₗθ⟩ ≈ ⟨cos φ ∂ᵢθ ∂ⱼθ⟩ γᵏˡ ⟨cos φ ∂ₖθ ∂ₗθ⟩
+
+This is Wick's theorem for a Gaussian ensemble. It holds exactly in
+the N→∞ limit and has O(1/N) corrections (connected four-point
+cumulants) at finite N.
+
+---
+
+## Computation plan for next session
+
+### Step 1: Verify the tautology argument (30 min)
+
+Write a short script that:
+- Defines γᵢⱼ = δᵢⱼ − ⟨∂ᵢθ ∂ⱼθ⟩ for a random smooth θ(x) on [0,1]³
+- Computes Γᵏᵢⱼ from the standard Levi-Civita formula
+- Computes the three-point correlations Tᵢⱼₗ from θ
+- Checks that the Christoffel symbols computed both ways agree
+
+This verifies that the tautology is correct: the connection of γ is
+expressible in terms of θ-correlations. This is expected to pass
+trivially (it's just the chain rule).
+
+### Step 2: Verify Condition 3 at finite N (1 hr)
+
+Write a Kuramoto simulation:
+- N oscillators on a 1D ring at K=1 (full locking)
+- Compute ⟨cos(φ) ∂ⱼθ⟩ and ∂ⱼψ
+- Measure the difference as a function of N
+- Verify O(1/N) scaling of the correction
+
+If the correction scales as 1/N, the gap is closed in the continuum
+limit. If it doesn't, there's a real problem.
+
+### Step 3: Check the second ADM equation (2 hr)
+
+Extend the simulation to compute:
+- The Ricci tensor ³Rᵢⱼ from γ (numerical differentiation)
+- The mean-field factorization error for the 𝒦² terms
+- The full ∂𝒦/∂t and compare with the ADM prediction
+
+This is the hardest step. If it works, both ADM evolution equations
+are verified numerically, and the gap reduces to proving the 1/N
+scaling analytically (a standard result for Kuramoto systems).
+
+### Step 4: Analytic proof (if numerics pass)
+
+The analytic proof should follow from:
+1. Kuramoto fluctuation theory (Strogatz & Mirollo 1991): at K=1,
+   the locked state has Gaussian fluctuations with variance O(1/N).
+2. Wick's theorem: Gaussian fluctuations produce exact factorization
+   of higher moments.
+3. Fundamental theorem of Riemannian geometry: the unique connection
+   built from γ alone is Levi-Civita.
+
+The combination gives: Γ̃ = Γ + O(1/N), with the correction vanishing
+in the continuum limit.
+
+---
+
+## What closing this gap means
+
+If the Christoffel connection is verified:
+
+1. The ADM evolution equations follow exactly from Kuramoto at K=1
+   (not just at weak gradients).
+2. Lovelock's theorem then gives Einstein's equations as the unique
+   output — no other field equation is possible.
+3. The gravitational sector of the framework is fully derived: four
+   primitives → circle → SL(2,Z) → SL(2,R) → d=3 → Klein bottle →
+   K=1 continuum → Kuramoto → ADM → Einstein. One identification
+   remains (the ADM dictionary), but it's Type A (forced by
+   uniqueness of available tensors).
+4. The O(1/N) correction is a prediction: Planck-scale gravity has
+   torsion of order l_P²/L², where L is the scale of observation.
 
 ## References
 
 - continuum_limits.md §4 (lines 87–107): weak-gradient derivation
-- continuum_limits.md §7 (lines 200–210): stated gaps
-- adm_prefactor_verification.py: sigma^2 = 1/4 verification
-- rational_field_equation.md Part VI item 2: continuum limit as open question
+- einstein_from_kuramoto.md Part I (lines 18–55): tautology argument
+- einstein_from_kuramoto.md Part I (lines 56–98): second ADM equation
+- adm_prefactor_verification.py: σ² = 1/4 verification
+- rational_field_equation.md Part VI item 2: continuum limit question
+- Strogatz & Mirollo (1991): Stability of incoherence in coupled oscillators
