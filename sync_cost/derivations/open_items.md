@@ -43,9 +43,9 @@ throughout the session. Items 1, 3-9 are updated below.
 ## 7. Planck-scale non-metricity prediction: O(1/√N)
 - **Status:** Unchanged. Prediction from Gap 1 (Christoffel connection).
 
-## 8. 4th generation lepton prediction: ~7.3 GeV
-- **Status (updated):** The generation exponent law is now embedded in the integer conservation law. A 4th generation would require extending the walk beyond the current pattern. The prediction of ~7.3 GeV from the original exponent law now needs re-examination: does the integer conservation law permit a 4th generation at all? Since the 4th lepton walk would require depth × |3Q| = 9 with a deeper position, the walker would need to find a mode at depth 9 with the same q constraint. Whether such a mode exists on the Fibonacci backbone is a tree-geometry question.
-- **What would close it:** Check whether depth 9 on the lepton Fibonacci backbone hosts a viable base pair element. If yes, 4th gen lepton exists at predicted mass. If no, 4th gen is forbidden.
+## 8. 4th generation lepton prediction: ~7.3 GeV — CLOSED (forbidden)
+- **Status (closed, 2026-04-09):** The integer conservation law `depth × |3Q| = 9` caps charged leptons at tree depth 3. The Fibonacci backbone has exactly three base slots at depth ≤ 3 (root, 3/2, 5/3), all consumed by `{e, μ, τ}`. A 4th generation would need either a new base slot at depth ≤ 3 (none exists after walk-before-repetition exhausts the budget) or a position at depth ≥ 4 (violates the integer law: 4 × 3 = 12 ≠ 9). The old ~7.3 GeV prediction used mode 13/8 at depth 5, which gives depth × |3Q| = 15 ≠ 9 and is excluded. See `fourth_generation_revisited.md`.
+- **Upgraded prediction:** No charged lepton beyond τ at **any** mass. Detection of any such particle would falsify the integer conservation law and the cross-link uniqueness of (q₂, q₃) = (2, 3).
 
 ## 9. N_efolds = 61.3 (CMB-S4 testable ~2028)
 - **Status:** Unchanged. Independent of mass sector closure.
