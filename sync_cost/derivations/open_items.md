@@ -58,18 +58,28 @@ short appendix at the bottom; the full history is in git.
 - Prediction, falsifiable by CMB-S4 (~2028). Independent of all
   other items.
 
-## 9. sin²θ_W running compatibility
+## 9. sin²θ_W running compatibility — CLOSED (reclassified as near-coincidence)
 
-- `sinW_running_check.py` shows the tree-scale rational 8/35 does
-  **not** run to the observed 0.2312 at M_Z under SM 1-loop betas:
-  sign is wrong, absolute values go negative, matching scale is
-  ~54 GeV (not a high scale).
-- Either the tree scale is not M_Pl (breaks R = 6×13⁵⁴ as
-  Planck/Hubble), or the framework's "running" is the duty-cycle
-  K→μ mapping (not SM RG), in which case 1.1% agreement is a fit
-  at M_Z, not a high-scale prediction.
-- **What would close it:** identify which branch is correct and
-  revise either `hierarchy.md` or the 8/35 claim accordingly.
+- `sinW_running_check.py` showed the tree-scale rational 8/35
+  does not run to 0.2312 at M_Z under SM 1-loop betas from any
+  high scale (sign wrong, absolute values go negative, matching
+  scale ~54 GeV).
+- `sinw_fixed_point.py` tested whether both branches (tree ≠ M_Pl;
+  running is K→μ) could be simultaneously true as a fixed point.
+  Numerical circle-map tongue widths at K ∈ [0.93, 0.99] give
+  α_s/α_2 ratios in [3.66, 3.99] (all above observed 3.488) and
+  sin²θ_W in [0.200, 0.214] (all below observed 0.23121). No K*
+  reproduces either constraint, so no joint fixed point exists.
+- **Resolution:** 8/35 is a **measure-theoretic identity** (Ford
+  circle / Gauss-Kuzmin measure of the 1/3 tongue in the
+  tongue-filling limit), not a dynamical value at any K. Its 1.1%
+  agreement with observed sin²θ_W at M_Z is a numerical
+  near-coincidence of the smallest nontrivial rational of the form
+  q_a^3 / (q_a^3 + q_b^3), not a derivation via running.
+- **Status:** Reclassified. See `sinw_fixed_point.md` for the full
+  analysis. The gauge-group derivation in `gauge_sector_lovelock.md`
+  (D42) is unaffected — it uses only the center Z_2 × Z_3, not the
+  specific sin²θ_W value.
 
 ## 10. CKM angles beyond Cabibbo
 

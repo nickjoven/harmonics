@@ -324,9 +324,20 @@ Both leave one coupling constant undetermined.
    of the open q=2 fiber. Mexican hat potential from saddle-node
    bifurcation. SU(2) × U(1) → U(1)_em breaking (D44).
 
-8. **Coupling ratios.** All dimensionless gauge quantities follow
-   from q₂ = 2, q₃ = 3, d = 3 (D33): sin²θ_W = 8/35 (1.1%),
-   m_H/v = 1/2 (1.6%), α_s/α₂ = 27/8 (3.2%).
+8. **Coupling ratios — measure-theoretic near-coincidences, not
+   running derivations.** Using duty(q) = 1/q^d (the Gauss-Kuzmin /
+   Ford-circle measure of the 1/q tongue at the K=1 tongue-filling
+   limit), the framework produces rationals that agree with
+   observation at the few-percent level: sin²θ_W = 8/35 (1.1%),
+   m_H/v = 1/2 (1.6%), α_s/α₂ = 27/8 (3.2%). **These are NOT
+   running predictions.** `sinw_fixed_point.py` shows that the
+   numerical K-dependent tongue widths do not reach observed
+   values at any K in [0.93, 0.99], and the 1.1% residual in
+   sin²θ_W is not a running effect. The framework predicts the
+   **structural form** of these ratios (a quotient of q^d
+   expressions); the specific numerical agreement is a
+   near-coincidence of the smallest nontrivial such rationals with
+   the electroweak-scale values. See `sinw_fixed_point.md`.
 
 ### Not determined
 
