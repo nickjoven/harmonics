@@ -265,21 +265,20 @@ All 11 predictions have zero free parameters.
 
 ---
 
-## What's left by category (priority)
+## What's left (active items)
 
-| Priority | Category | Item |
-|----------|----------|------|
-| High | Cosmological | Dark twin formalization |
-| Medium | Gravity | Cosmological dynamics K(t) |
-| Medium | Gauge | CKM angles from SL(2,Z) traces |
-| Medium | Quantum | A_s amplitude (needs v scale) |
-| Low | Gauge | sin²θ_W running at all scales |
-| Low | Quantum | Measurement outcome problem (likely irreducible) |
-| — | Infrastructure | Seed ket DAG (next session) |
+See `open_items.md` for the full list. Summary:
 
-Closed this session:
-- Mass: neutrino mass scale (depth (q₂q₃)² = 36, Majorana prediction)
-- Mass: 4th generation lepton forbidden by integer conservation law
+| Category | Item |
+|----------|------|
+| Cosmological | Dark twin structure (speculative) |
+| Cosmological | K(t) from field-equation evolution |
+| Gauge | CKM θ_13, θ_23 from full mass-matrix diagonalization |
+| Gauge | sin²θ_W running compatibility (active problem) |
+| Quantum | A_s amplitude (needs v scale) |
+| Quantum | Measurement outcome (likely irreducible) |
+| Mass | a₁ closed form (likely Feigenbaum-like, transcendental) |
+| Mass | Quark masses end-to-end via QCD running |
 
 ---
 
@@ -287,7 +286,7 @@ Closed this session:
 
 The universe is a self-consistent address book on a Klein bottle
 whose two denominator classes (q₂=2, q₃=3) are the unique integer
-pair where the SU(2) and SU(3) adjoint dimensions cross-link, making
-the mass sector and gauge sector two readings of the same fixed
-point; everything else is either derived, a single dimensionful
-scale, or under active investigation.
+pair where the SU(2) and SU(3) adjoint dimensions cross-link; the
+mass sector and gauge sector are two readings of the same fixed
+point. Everything else is derived, a single dimensionful scale, or
+an active open item.

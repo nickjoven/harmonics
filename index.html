@@ -39,53 +39,35 @@
 
 <h2>The situation</h2>
 
-<p>Physics has two governing equations. General relativity describes
-gravity: massive objects curve spacetime, and the curvature tells
-objects how to move. Quantum mechanics describes everything else:
-particles exist as probability amplitudes that evolve by the
-Schrödinger equation and collapse to definite outcomes when measured.
-Both are confirmed to extraordinary precision. They cannot both be
-right, because they contradict each other at small scales and high
-energies.</p>
-
-<p>Beyond this incompatibility, both frameworks contain numbers that are
-measured but never explained. Some examples:</p>
+<p>General relativity and quantum mechanics are each confirmed to high
+precision, but they are incompatible at small scales and high energies.
+Both frameworks also contain numerical inputs that the underlying theory
+does not compute. A partial list:</p>
 
 <ul>
-  <li><strong>Why 3 spatial dimensions?</strong> Every calculation in
-    physics begins by setting $d = 3$. No derivation exists for this.
-    It is observed.</li>
-  <li><strong>Why $|\psi|^2$?</strong> Quantum mechanics predicts
-    probabilities by squaring amplitudes. The exponent 2 is a postulate
-    &mdash;Born's rule (1926). A century later, no derivation from
-    deeper principles exists in standard physics.</li>
-  <li><strong>Why is gravity $10^{40}$ times weaker than
-    electromagnetism?</strong> The hierarchy problem. The ratio of the
-    Planck scale to the Hubble scale is $\sim 10^{60}$. Standard physics
-    parameterizes this ratio but does not compute it.</li>
-  <li><strong>Why is 68.5% of the universe dark energy?</strong>
-    The measured value is $\Omega_\Lambda = 0.685 \pm 0.007$. Quantum
-    field theory, asked to predict this, gives a number $10^{120}$
-    times too large. This is the cosmological constant problem&mdash;the
-    worst prediction in physics.</li>
-  <li><strong>Why does the power spectrum of the CMB tilt by 3.5%?</strong>
-    The spectral tilt $n_s \approx 0.965$ is measured precisely. In
-    inflationary models, it depends on the choice of inflaton potential
-    &mdash;a free function.</li>
+  <li><strong>Spatial dimension $d = 3$</strong> is set by hand in
+    every calculation.</li>
+  <li><strong>Born's rule $P = |\psi|^2$</strong> is a postulate
+    (1926). No derivation from deeper principles exists in standard
+    quantum mechanics.</li>
+  <li><strong>The Planck/Hubble ratio $\sim 10^{60}$</strong> is
+    parameterized, not computed.</li>
+  <li><strong>Dark energy $\Omega_\Lambda = 0.685 \pm 0.007$.</strong>
+    QFT's vacuum-energy estimate exceeds observation by $10^{121}$.</li>
+  <li><strong>Spectral tilt $n_s \approx 0.965$</strong> is set by
+    the choice of inflaton potential &mdash; a free function.</li>
+  <li><strong>Three generations; fermion mass hierarchy over 12 orders
+    of magnitude.</strong> Generation count is an input; Yukawa
+    couplings are fit to data.</li>
 </ul>
-
-<p>These are not obscure technicalities. They are values that appear
-in every calculation in modern physics&mdash;each one set by experiment,
-not by the theory that uses it.</p>
 
 <h2>The ingredients</h2>
 
-<p>This framework uses four mathematical objects. They are
-undergraduate-level. No new mathematics is introduced.</p>
+<p>Four mathematical objects, all undergraduate-level.</p>
 
 <p><strong>1. Integers.</strong> Distinguishable states that can be
-counted: $1, 2, 3, \ldots$ This is the minimum requirement for
-anything to be described at all.</p>
+counted: $1, 2, 3, \ldots$ The minimum requirement for anything to
+be described.</p>
 
 <p><strong>2. The mediant.</strong> Given two fractions $a/b$ and $c/d$,
 form $(a{+}c)/(b{+}d)$. This is not a definition or a choice. When
@@ -254,6 +236,65 @@ scale $|F_6| = 13$, determine:</p>
     The exponent $108 = 2 \times 54$ is twice the hierarchy exponent.</li>
 </ul>
 
+<p>On the Klein bottle the vacuum-energy sum has four terms, not the
+torus's $\sim\!10^{183}$. The $10^{121}$ discrepancy of standard QFT
+is the ratio of those configuration spaces times the frequency
+scale ratio Planck/Hubble&mdash;counting, not fine-tuning. The numerical
+value is self-consistent but not independently predicted; see
+<a href="sync_cost/derivations/vacuum_energy.md">vacuum_energy.md</a>.</p>
+
+<h2>Mass sector: integer conservation law</h2>
+
+<p>Each fermion sector walks the Stern-Brocot tree. The number of
+steps it takes before the walk closes is set by the integer
+conservation law</p>
+
+<div class="eq-block">
+$$\text{depth} \times |3Q| \;=\; k_{\text{sector}}$$
+</div>
+
+<p>where $Q$ is electric charge and $k_{\text{sector}}$ is the
+dimension of a dual gauge adjoint:</p>
+
+<ul>
+  <li>$k_{\text{lepton}} = (\dim\,\text{adj}\,\mathrm{SU}(2))^2 = q_3^2 = 9$</li>
+  <li>$k_{\text{quark}} = \dim\,\text{adj}\,\mathrm{SU}(3) = q_2^3 = 8$</li>
+</ul>
+
+<p>The cross-link $q_2^2 - 1 = q_3$, $q_3^2 - 1 = q_2^3$ has the
+unique integer solution $(q_2, q_3) = (2, 3)$. The same two integers
+that set the Klein bottle's XOR mode filter are also the only pair
+whose adjoint dimensions satisfy the cross-link. The mass sector and
+gauge sector are two readings of one fixed point
+(<a href="sync_cost/derivations/mass_sector_closure.md">mass_sector_closure.md</a>,
+<a href="sync_cost/derivations/integer_conservation_law.py">integer_conservation_law.py</a>).</p>
+
+<p>Consequences:</p>
+
+<ul>
+  <li><strong>Generation exponent.</strong> $a_2 / a_1 = q_3/q_2 = 3/2$.
+    The two-step formula predicts $\tau/\mu$ and $\mu/e$ to 0.07%.</li>
+  <li><strong>Three generations; no fourth charged lepton.</strong>
+    The Fibonacci backbone has exactly three base slots at depth
+    $\leq 3$ (root, $3/2$, $5/3$). A fourth would require depth
+    $\geq 4$, which violates $4 \times 3 > 9$. See
+    <a href="sync_cost/derivations/fourth_generation_revisited.md">fourth_generation_revisited.md</a>.</li>
+  <li><strong>Neutrino mass scale.</strong> With $|Q| = 0$ the
+    integer law is trivial, so the neutrino depth is fixed by
+    $\text{depth}_\nu = q_2^2 \times k_{\text{lepton}} = (q_2 q_3)^2 = 36$.
+    The walk cycles back through $q_2^2 = 4$ weak interactions
+    because there is no EM anchor. Result: three neutrinos at
+    depths 35, 36, 37 with $m_\nu \sim 17$ meV,
+    $m_3/m_1 = (K^\ast/2)^{-2} \approx 5.4$ (observed 5.77),
+    $\Sigma m_\nu \sim 64$ meV (Planck bound $<120$ meV).
+    Depth 36 = four antiperiodic Klein-bottle traversals, so
+    the mode self-identifies: the neutrinos are
+    <strong>Majorana</strong>. Testable by neutrinoless double
+    beta decay (LEGEND-1000, nEXO, 10&ndash;20 meV sensitivity).
+    See
+    <a href="sync_cost/derivations/neutrino_mass_prediction.py">neutrino_mass_prediction.py</a>.</li>
+</ul>
+
 <h2>Scorecard</h2>
 
 <p>Every entry is computed from the equation above. No row uses a
@@ -310,55 +351,148 @@ measured input.</p>
     <td>exact</td>
   </tr>
   <tr>
-    <td>$N_{\text{efolds}}$ (testable ~2028)</td>
+    <td>Generation ratio $a_2/a_1$</td>
+    <td>$3/2$</td>
+    <td>$1.5006$ (from $m_\tau, m_\mu, m_e$)</td>
+    <td>0.04%</td>
+  </tr>
+  <tr>
+    <td>$m_\tau/m_\mu$ (two-step formula)</td>
+    <td>16.805</td>
+    <td>16.817</td>
+    <td>0.07%</td>
+  </tr>
+  <tr>
+    <td>$m_\mu/m_e$ (two-step formula)</td>
+    <td>206.92</td>
+    <td>206.77</td>
+    <td>0.07%</td>
+  </tr>
+  <tr>
+    <td>Strong CP angle $\theta$</td>
+    <td>0</td>
+    <td>$&lt; 10^{-10}$</td>
+    <td>consistent</td>
+  </tr>
+  <tr>
+    <td>Higgs self-coupling $\lambda$</td>
+    <td>$1/(2q_2^2) = 1/8$</td>
+    <td>$0.129$</td>
+    <td>3.3%</td>
+  </tr>
+  <tr>
+    <td>$m_H / v$</td>
+    <td>$1/q_2 = 1/2$</td>
+    <td>$0.5085$</td>
+    <td>1.7%</td>
+  </tr>
+  <tr>
+    <td>Neutrino hierarchy $m_3/m_1$</td>
+    <td>$(K^\ast/2)^{-2} \approx 5.4$</td>
+    <td>5.77</td>
+    <td>6.4%</td>
+  </tr>
+  <tr>
+    <td>4th charged lepton</td>
+    <td>forbidden by $\text{depth}\cdot|3Q|=9$</td>
+    <td>not observed</td>
+    <td>consistent</td>
+  </tr>
+  <tr>
+    <td>$N_{\text{efolds}}$</td>
     <td>$61.3 \pm 0.7$</td>
-    <td>TBD</td>
-    <td>CMB-S4</td>
+    <td>TBD (CMB-S4 ~2028)</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr>
+    <td>Neutrino mass ordering</td>
+    <td>Majorana, $\Sigma m_\nu \sim 64$ meV</td>
+    <td>TBD (LEGEND-1000, nEXO)</td>
+    <td>&mdash;</td>
   </tr>
 </table>
 
-<h2>Falsifiable prediction</h2>
+<h2>Falsifiable predictions</h2>
 
-<p>The framework predicts the number of e-folds of inflation:
-$N_{\text{efolds}} = 61.3 \pm 0.7$, set by the eigenvalue
-separation of $x^2 - x - 1 = 0$ (the golden ratio's minimal
-polynomial). CMB-S4 is expected to reach the required precision
-by ~2028. The prediction is falsified if $N_{\text{efolds}} &lt; 59$
-or $&gt; 63$. If confirmed, the duration of inflation is an algebraic
-number, not a free parameter.</p>
+<ul>
+  <li><strong>$N_{\text{efolds}} = 61.3 \pm 0.7$</strong>, set by
+    the eigenvalue separation of $x^2 - x - 1 = 0$ (the golden
+    ratio's minimal polynomial). Falsified outside $[59, 63]$.
+    CMB-S4 ~2028.</li>
+  <li><strong>No charged lepton beyond $\tau$</strong>, at any mass.
+    Detection of a 4th generation charged lepton falsifies the
+    integer conservation law.</li>
+  <li><strong>Neutrinos are Majorana</strong>, with
+    $\Sigma m_\nu \sim 64$ meV. Testable by neutrinoless double
+    beta decay at LEGEND-1000 and nEXO (10&ndash;20 meV sensitivity).</li>
+  <li><strong>Strong CP $\theta = 0$</strong> exactly, from
+    $\mathrm{Pin}^+(3)$ topology.</li>
+  <li><strong>Dark-energy equation of state $w = -1$</strong> plus
+    a small twist-breathing correction. Testable by DESI / Euclid
+    (~2028).</li>
+</ul>
 
 <h2>What is not yet derived</h2>
 
-<p>The XOR parity filter that selects 4 modes at denominators $(2, 3)$
-is a discrete structure. It does not survive the continuum limit
-(<a href="sync_cost/derivations/xor_continuum_limit.md">D20</a>).
-The frame bundle of the resulting 3-manifold gives
-$\mathrm{Pin}^+(3) \cong \mathrm{SU}(2) \times \mathbb{Z}_2$
-(spin and parity), but does not produce $\mathrm{SU}(3)$ or
-Yang-Mills gauge theory. Two paths remain open: either the Stern-Brocot
-tree is the physical configuration space (the continuum is the
-approximation, not the other way around), or gauge structure emerges
-from the mean-field functional, not from the tangent bundle
-(<a href="sync_cost/derivations/discrete_gauge.md">D21</a>).</p>
+<ul>
+  <li><strong>sin²θ_W running compatibility.</strong> The tree-scale
+    rational $8/35$ matches the observed $0.2312$ at $M_Z$ to 1.1%,
+    but does not run from that value to any high scale under SM
+    1-loop betas (sign and absolute value both fail; see
+    <a href="sync_cost/derivations/sinW_running_check.py">sinW_running_check.py</a>).
+    Either the tree scale is not $M_{\text{Pl}}$ (breaking
+    $R = 6 \times 13^{54}$ as the Planck/Hubble ratio), or the
+    framework's "running" is the duty-cycle $K \to \mu$ mapping
+    rather than SM RG. Open.</li>
+  <li><strong>CKM mixing beyond the Cabibbo angle.</strong>
+    $\theta_{12}$ is reproduced to ~3% by
+    $\arctan\sqrt{m_d/m_s}$ (derived as a walk overlap);
+    $\theta_{13}$ and $\theta_{23}$ need the full mass-matrix
+    diagonalization, which has not been computed.</li>
+  <li><strong>Cosmological dynamics $K(t)$.</strong> The Friedmann
+    structure is identified; the time evolution of the coupling is
+    not derived from field-equation iteration.</li>
+  <li><strong>XOR filter in the continuum.</strong> The filter that
+    selects 4 modes at $(q_2, q_3) = (2, 3)$ is defined on the
+    discrete Stern-Brocot tree and does not survive the continuum
+    limit via the frame bundle
+    (<a href="sync_cost/derivations/xor_continuum_limit.md">D20</a>,
+    <a href="sync_cost/derivations/discrete_gauge.md">D21</a>). The
+    gauge group is recovered instead from the Klein bottle center
+    $\mathbb{Z}_2 \times \mathbb{Z}_3$ via Cartan classification
+    (D41&ndash;42); whether the two routes are equivalent is open.</li>
+  <li><strong>Measurement outcome problem.</strong> Mechanism
+    derived; specific outcome requires an inaccessible initial
+    condition. Likely irreducible.</li>
+</ul>
 
 <h2>Reading order</h2>
 
-<p>The derivation chain has
-<a href="sync_cost/derivations/INDEX.md">39 derivations</a>
-organized in two proof chains:</p>
+<p>The derivation chain is catalogued in
+<a href="sync_cost/derivations/INDEX.md">sync_cost/derivations/INDEX.md</a>
+and sorted by physical sector in
+<a href="sync_cost/derivations/framework_by_category.md">framework_by_category.md</a>.
+Proof chains:</p>
 
 <ul>
-  <li><a href="sync_cost/derivations/PROOF_A_gravity.md">Proof A</a>
-    (gravity, 8 propositions): counting $\to$ mediant $\to$ Stern-Brocot
-    tree $\to$ field equation $\to$ $\mathrm{SL}(2,\mathbb{R})$, $d = 3$
+  <li><a href="sync_cost/derivations/PROOF_A_gravity.md">Proof A &mdash; gravity</a>
+    (8 propositions): counting $\to$ mediant $\to$ Stern-Brocot tree
+    $\to$ field equation $\to$ $\mathrm{SL}(2,\mathbb{R})$, $d = 3$
     $\to$ ADM $\to$ Lovelock $\to$ Einstein.</li>
-  <li><a href="sync_cost/derivations/PROOF_B_quantum.md">Proof B</a>
-    (quantum, 11 propositions): same start, diverges at $K &lt; 1$ $\to$
+  <li><a href="sync_cost/derivations/PROOF_B_quantum.md">Proof B &mdash; quantum</a>
+    (11 propositions): same start, diverges at $K &lt; 1$ $\to$
     Madelung $\to$ Schrödinger. Parabola $\to$ $\sqrt{\varepsilon}$
     $\to$ Born rule.</li>
-  <li><a href="https://github.com/nickjoven/proslambenomenos/blob/main/PROOF_C_bridge.md">Proof C</a>
-    (cosmology): Klein bottle topology $\to$ $\Omega_\Lambda = 13/19$,
+  <li><a href="https://github.com/nickjoven/proslambenomenos/blob/main/PROOF_C_bridge.md">Proof C &mdash; cosmology</a>:
+    Klein bottle topology $\to$ $\Omega_\Lambda = 13/19$,
     $R = 6 \times 13^{54}$, $a_0$.</li>
+  <li><strong>Mass sector</strong>
+    (<a href="sync_cost/derivations/mass_sector_closure.md">mass_sector_closure.md</a>):
+    integer conservation law $\to$ cross-link identity
+    $q_2^2 - 1 = q_3$, $q_3^2 - 1 = q_2^3$ $\to$ unique
+    $(q_2, q_3) = (2, 3)$ $\to$ generation exponent $3/2$ $\to$
+    lepton ratios at 0.07% $\to$ 4th generation forbidden $\to$
+    neutrino depth 36 (Majorana).</li>
 </ul>
 
 <h2>Code and applications</h2>
