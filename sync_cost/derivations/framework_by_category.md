@@ -82,7 +82,9 @@ organized by physical sector.
 - **8+3+1 decomposition** via electroweak mixing
 - **Anomaly cancellation**: all 6 SM conditions exactly
 - **α_s/α₂ = 27/8** from duty cycle ratios
-- **sin²θ_W = 8/35** from duty cycle partition
+- **sin²θ_W = 8/35** from duty cycle partition — **NOTE: this is the
+  tree-scale rational identity, not an RG-run prediction. See
+  Open → sin²θ_W running.**
 - **Strong CP θ=0** from Pin⁺(3) topology
 
 ### Cross-link identity (NEW THIS SESSION)
@@ -92,11 +94,26 @@ organized by physical sector.
 - This identity links mass sector to gauge sector via the
   cross-link between SU(2) and SU(3) representation dimensions.
 
-### Open
+### Open / Problems
 - **CKM angles from SL(2,Z) traces**: D42 derives gauge group;
   flavor mixing requires additional structure.
-- **sin²θ_W running compatibility**: duty-cycle prediction at
-  tree scale; full running through intermediate scales not checked.
+- **sin²θ_W running compatibility — ACTIVE PROBLEM.** The check in
+  `sinW_running_check.py` shows the tree-scale value 8/35 = 0.2286
+  does **not** run to the observed 0.2312 at M_Z under SM 1-loop
+  beta functions from any high-scale boundary:
+  - Sign is wrong: SM running drives sin²θ_W UPWARD with energy,
+    but 8/35 < 0.2312 means the framework needs it to increase
+    toward the IR — opposite sign.
+  - Absolute duty-dictionary values (1/α₂ = 8, 1/α_Y = 27) at M_Pl
+    give unphysical 1/α₂(M_Z) < 0.
+  - The scale where SM running matches 8/35 is ~54 GeV — just
+    below M_Z, not a meaningful high scale.
+  - Either (a) the tree scale isn't M_Pl, breaking R = 6×13⁵⁴
+    as the Planck/Hubble ratio, or (b) the framework's "running"
+    is the duty-cycle K → μ mapping (not SM RG), in which case
+    the 1.1% agreement is a fit to K* at M_Z, not a derivation.
+  - **The 1.1% agreement between 8/35 and observed is a
+    near-coincidence at the EW scale, not a high-scale prediction.**
 
 ---
 

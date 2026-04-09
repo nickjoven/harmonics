@@ -50,6 +50,17 @@ throughout the session. Items 1, 3-9 are updated below.
 ## 9. N_efolds = 61.3 (CMB-S4 testable ~2028)
 - **Status:** Unchanged. Independent of mass sector closure.
 
+## 10. sin²θ_W running — ACTIVE PROBLEM (new)
+- **Status (2026-04-09):** The tree-scale rational 8/35 = 0.22857 is NOT demonstrably the M_Pl boundary that runs via SM 1-loop to the observed 0.23121 at M_Z. Details in `sinW_running_check.py`:
+  - **Sign wrong**: SM running drives sin²θ_W upward with energy; the framework needs a downward run.
+  - **Absolute values unphysical**: 1/α₂ = 8 at M_Pl runs to 1/α₂(M_Z) ≈ −12 (negative).
+  - **Scale mismatch**: the scale μ* where SM-run sin²θ_W = 8/35 is ~54 GeV — just below M_Z, not a high scale.
+- **Consequences:**
+  - Either the tree scale is not M_Pl (breaking R = 6×13⁵⁴ as Planck/Hubble ratio)
+  - Or the framework's "running" is the duty-cycle K→μ mapping (not SM RG), in which case the 1.1% agreement is a fit to K* at M_Z, not a high-scale prediction.
+- **What would close it:** Identify which of the two branches is correct and revise either `hierarchy.md` (R = Planck/Hubble) or the claim that 8/35 is "the tree-scale prediction that runs to M_Z."
+- **File:** `sinW_running_check.py`
+
 ---
 
 ## Items NO LONGER open (resolved by mass sector closure)
