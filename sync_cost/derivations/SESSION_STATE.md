@@ -201,7 +201,33 @@ Most detailed predictions from `empirical_predictions.py`.
 
 The Klein bottle's rational field equation has one fixed point; all
 physics observables are readings of that fixed point through different
-topological coordinate systems, and the remaining open question is
-whether the quark coordinates (13/5, 16/7) and (11/6, 11/8) can be
-derived from SU(3) representation structure rather than found by
-numerical search.
+topological coordinate systems, and the mass sector closes through the
+integer conservation law depth × |3Q| = k_sector where k_sector is the
+dual gauge adjoint dimension, cross-linked to (q₂, q₃) = (2, 3) by
+the unique integer identity q₂² − 1 = q₃, q₃² − 1 = q₂³.
+
+## UPDATE (session continuation)
+
+### Mass sector closure
+The integer conservation law has been connected to SU(2)/SU(3)
+representation theory (`mass_sector_closure.md`, `sector_constants_to_adjoints.py`):
+
+- **k_lepton = 9 = (dim adj SU(2))² = q₃²**
+- **k_quark = 8 = dim adj SU(3) = q₂³**
+- **Cross-link**: q₂² − 1 = q₃ (SU(2) adjoint dim equals q₃)
+  and q₃² − 1 = q₂³ (SU(3) adjoint dim equals q₂³)
+- **(q₂, q₃) = (2, 3) is the unique integer pair** satisfying both.
+
+The mass sector and gauge sector (D42) share one number-theoretic
+foundation. The 9/8 factor that appears throughout is
+(dim adj SU(2))² / dim adj SU(3).
+
+Selection rule "why each sector picks its specific walk" is now
+resolved at the structural level. Open items updated in `open_items.md`.
+
+### Cross-session files to read first (updated)
+1. `SESSION_STATE.md` — this file
+2. `mass_sector_closure.md` — the integer conservation theorem
+3. `sector_constants_to_adjoints.py` — the cross-link computation
+4. `integer_conservation_law.py` — the integer formulation
+5. `open_items.md` — updated open items list
