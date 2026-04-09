@@ -70,10 +70,9 @@ throughout the session. Items 1, 3-9 are updated below.
 
 ## New questions raised by the mass sector closure
 
-### Q1: Neutrino mass scale from depth → ∞ limit
-- **Problem:** |Q| = 0 for neutrinos, so depth × 0 = 0 is trivially satisfied. Neutrinos have no finite walk constraint from the integer law.
-- **Rough estimate:** m_ν ~ m_Planck × (K*/2)^145.8 ~ 10⁻²⁶ eV. Below observational bound (0.12 eV) by 25 orders.
-- **Status:** Very rough, needs proper treatment of the finite tree cutoff.
+### Q1: Neutrino mass scale from depth → ∞ limit — CLOSED
+- **Problem (was):** |Q| = 0 for neutrinos, so depth × 0 = 0 is trivially satisfied. Neutrinos have no finite walk constraint from the naive integer law.
+- **Resolution (2026-04-09):** The neutrino depth is fixed by the **modified** rule `depth_ν = q₂² × k_lepton = 4 × 9 = (q₂q₃)² = 36`. The neutrino walks the full lepton budget (9 steps) and then cycles back through q₂² = 4 weak interactions because it has no EM anchor. Three neutrinos at depths 35, 36, 37 give m_ν ~ 17 meV, reproduce atmospheric and solar splittings within 7–20%, m₃/m₁ = (K*/2)⁻² ≈ 5.4 (observed 5.77), and Σm_ν ~ 64 meV (below Planck bound). Depth 36 = 4 × (2q₂q₃) = 4 antiperiodic Klein-bottle traversals, (−1)⁴ = +1, so neutrinos self-identify — they are **Majorana**. Testable by neutrinoless double beta decay (LEGEND-1000, nEXO ~10–20 meV sensitivity). See `neutrino_mass_prediction.py`.
 
 ### Q2: Why is the lepton budget squared but quark budget linear?
 - **Problem:** $k_{\text{lepton}} = (\text{adj SU(2)})^2$ but $k_{\text{quark}} = \text{adj SU(3)}$. The asymmetry is empirical.
