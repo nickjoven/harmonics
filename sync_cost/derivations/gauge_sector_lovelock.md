@@ -61,14 +61,19 @@ observable (spatial) and one dark (temporal).
 
 ### Premise 4: Gauge invariance
 
-**Source**: D21-E (`fiber_bundle.py`, `z6_algebra.py`)
+**Source**: D21-E (`fiber_bundle.py`, `gap3_principal_bundle.py`)
 
-The GCD reduction acts as a gauge transformation on the fiber bundle:
-scaling a fraction k·(p/q) → kp/kq does not change the physical mode,
-but the mediant does not commute with this scaling. This
-non-commutativity is the defining property of a gauge structure.
-The fiber bundle has well-defined transition functions determined
-by GCD(k_1 + 2k_2, 3(k_1 + k_2)).
+The GCD-reduction fibers over the Klein bottle mode space form a
+**principal Z_6-bundle with verified cocycle conditions**:
+`gap3_principal_bundle.py` checks g_αβ · g_βγ · g_γα = e for all 24
+triangles in the mode graph and they all pass. The base space is the
+4 irreducible Klein bottle modes {A, B, C, D}, the structure group is
+Z_2 × Z_3 = Z_6, and the fiber over each base mode is the orbit of
+scaled representatives under the GCD action. Freeness and transitivity
+of the G-action on fibers are also verified.
+
+A principal G-bundle with a connection IS a gauge structure; the
+cocycle verification makes this formal rather than informal.
 
 ### Premise 5: Second-order equations of motion
 
@@ -111,34 +116,56 @@ are SU(3) and E_6.
 **Center Z_2**: The simple compact Lie groups with center Z_2 include
 SU(2), SO(2n+1), Sp(2n), and E_7.
 
-The Klein bottle provides additional constraints beyond the center:
+The Klein bottle provides four additional constraints beyond "the
+center contains Z_p". The Cartan selection is performed explicitly
+in `gauge_lovelock_wiring.py`; the criteria are listed here.
 
-1. **Rank from denominator class.** The Klein bottle's denominator
-   classes are q_2 = 2 and q_3 = 3. The rank of the gauge group
-   equals q − 1: rank(SU(2)) = 1, rank(SU(3)) = 2. This eliminates
-   E_6 (rank 6), E_7 (rank 7), SO(5) (rank 2 but center Z_2, and
-   no denominator-class origin), and all Sp(2n) with n > 1.
+1. **Minimum rank given the center.** Among simple compact Lie groups
+   whose center contains Z_n, SU(n) is the unique group of minimum
+   rank: rank(SU(2)) = 1 (tied with Sp(2), but Sp(2) ≅ SU(2) as Lie
+   groups), rank(SU(3)) = 2 (next is E_6 at rank 6). The Klein bottle
+   supplies one denominator class per Z factor (q_2 = 2 for the Z_2,
+   q_3 = 3 for the Z_3). A gauge group of higher rank would require
+   additional Cartan generators that the topology does not provide.
+   The minimum-rank criterion selects SU(n) uniquely and rules out
+   E_6 (rank 6 for Z_3), E_7 (rank 7 for Z_2), Sp(2n) for n > 1, and
+   SO(2n+1) for n ≥ 2.
 
-2. **Confinement from XOR asymmetry.** The q = 3 sector is confined
-   (XOR-locked), the q = 2 sector is not (`xor_asymmetry.py`). Among
-   Z_3-center groups, SU(3) confines and E_6 does not (E_6 breaks to
-   SU(3) × SU(3) × SU(3), which is a product). Among Z_2-center
-   groups, SU(2) at low energy is in the Higgs phase (unconfined at
-   accessible scales), consistent with the open q = 2 fiber.
+2. **Direct-product decomposition rules out SU(6).** As abstract
+   groups, Z_2 × Z_3 ≅ Z_6 (Chinese Remainder Theorem), so SU(6)
+   (center Z_6) could in principle carry the same center. The Klein
+   bottle distinguishes the two: the Z_2 factor acts on q_2-denominator
+   modes and the Z_3 factor acts on q_3-denominator modes — different
+   mode classes, different GCD residues (`fiber_bundle.py` shows
+   GCD mod 2 and GCD mod 3 have independent structure). SU(6)'s
+   cyclic Z_6 acts on a single 6-dimensional fundamental, which does
+   not admit this two-class decomposition. The Klein bottle realizes
+   Z_6 as a *direct product* Z_2 × Z_3, not as a cyclic Z_6.
 
-3. **Anomaly cancellation.** The Klein bottle charges {1/3, 1/2, 2/3}
+3. **Confinement from XOR asymmetry.** The q = 3 sector is confined
+   (XOR-locked fiber), the q = 2 sector is not (`xor_asymmetry.py`).
+   Among Z_3-center candidates at any rank, the confinement pattern
+   matches SU(3) in the expected phase structure; among Z_2-center
+   candidates at minimum rank, SU(2) in the Higgs phase matches the
+   open q = 2 fiber. This criterion is redundant with criterion 1 for
+   minimum-rank selection but reinforces the identification.
+
+4. **Anomaly cancellation.** The Klein bottle charges {1/3, 1/2, 2/3}
    satisfy all six SM anomaly conditions exactly (`anomaly_check.py`).
-   Replacing SU(3) with E_6 or SU(2) with Sp(4) changes the anomaly
-   conditions (different representations, different Casimirs). The
-   anomaly cancellation is specific to SU(3) × SU(2).
+   Replacing SU(3) with any other Z_3-center group, or SU(2) with
+   any other Z_2-center group, changes the representation dimensions
+   and Casimir invariants in the anomaly polynomials and breaks the
+   cancellation. Anomaly cancellation is therefore a nontrivial check
+   specific to SU(3) × SU(2).
 
-**Result**: The Klein bottle's center Z_2 × Z_3, combined with
-rank = q − 1, confinement pattern, and anomaly cancellation,
-uniquely selects:
+**Result**: The Klein bottle's center Z_2 × Z_3 (as a direct product,
+not a cyclic Z_6), combined with minimum rank given the center, the
+XOR confinement pattern, and anomaly cancellation, uniquely selects
 
-    G = SU(3) × SU(2)
+    G_non-abelian = SU(3) × SU(2)
 
-among all products of simple compact Lie groups.
+among all products of simple compact Lie groups. Explicit enumeration
+is in `gauge_lovelock_wiring.py`.
 
 ### The U(1) factor
 
@@ -149,19 +176,28 @@ The Klein bottle has two topologically distinct directions:
 - **Periodic** (no twist): the orientable direction. Topologically
   S^1, with symmetry group U(1).
 
-The periodic direction's U(1) is the hypercharge group. Its
-identification with the boundary sector (q = 1, leptons) follows
-from the Klein bottle's mode structure: q = 1 modes are the
-boundary of the Stern-Brocot tree (depth 0), and the boundary
-of the antiperiodic directions is the periodic direction.
+The periodic direction gives a U(1) factor, but this is **an**
+arbitrary U(1), not specifically U(1)_Y. No feature of the periodic
+direction's topology alone distinguishes hypercharge from, e.g.,
+B − L or any other U(1). Its identification as **U(1)_Y** is downstream:
 
-The Gell-Mann-Nishijima relation Q = T_3 + Y/2 connects the
-non-abelian charges (from the twist) to the abelian charge (from
-the periodic direction). This relation is not derived here — it
-is used in D41's anomaly check as an input. But given the relation,
-the full gauge group is:
+- The Gell-Mann-Nishijima relation Q = T_3 + Y/2 (D43) ties the
+  abelian charge to the non-abelian T_3.
+- With that relation, the Klein bottle fractions {1/3, 1/2, 2/3}
+  fix the hypercharge assignment uniquely.
+- Those hypercharges satisfy all six SM anomaly cancellation
+  conditions exactly (`anomaly_check.py`).
 
-    G_SM = SU(3) × SU(2) × U(1)
+So the topology supplies a U(1), and the charge table + GNN + anomaly
+cancellation promotes it to U(1)_Y. This is the weakest link in the
+chain — the U(1) group exists a priori from the periodic direction,
+but its **identity** as hypercharge is fixed by the charge
+constraints, not by the topology alone. D43 formalises GNN; until
+then, U(1)_Y is identified a posteriori.
+
+Given all of the above, the full gauge group is:
+
+    G_SM = SU(3) × SU(2) × U(1)_Y
 
 ---
 
@@ -333,19 +369,52 @@ hierarchy) but not fully derived.
 
 ## Status
 
-**Derived.** Yang-Mills is the unique gauge dynamics consistent with
-the Klein bottle's kinematic constraints and the requirement of
-second-order equations of motion. The derivation parallels D13
-(Einstein from Lovelock) exactly: a classification theorem applied
-to premises established by the topology.
+**Derived, with the wiring verified end-to-end.** Yang-Mills is the
+unique gauge dynamics consistent with the Klein bottle's kinematic
+constraints and the requirement of second-order equations of motion.
+The derivation parallels D13 (Einstein from Lovelock) exactly: a
+classification theorem applied to premises established by the
+topology.
+
+The chain was reviewed and five exposition gaps were fixed in this
+revision (see `gauge_lovelock_wiring.py` for the self-review):
+
+- **M1** "rank = q − 1" replaced by minimum rank given the center
+  (the correct derived criterion).
+- **M2** E_6 elimination moved from confinement to rank (confinement
+  argument was wrong — any non-abelian asymptotically-free theory
+  confines in the pure-glue IR).
+- **M3** SU(6) explicitly ruled out via the Z_6-cyclic vs
+  Z_2 × Z_3-direct-product distinction, using the Klein bottle's
+  two independent denominator classes.
+- **M4** Premise 4 (gauge invariance) grounded in the verified
+  principal-bundle cocycles from `gap3_principal_bundle.py`,
+  replacing the informal "non-commutativity" phrasing.
+- **M5** U(1)_Y identification flagged as a posteriori (the
+  topology gives *a* U(1); its identity as hypercharge requires
+  D43 + anomaly cancellation).
+
+After these fixes the derivation closes. The computational premises
+are verified; the remaining gaps are structural and explicitly
+catalogued below.
 
 **Dependencies**: D14 (dimension), D32 (signature), D19 (Klein
 bottle), D41 (discrete gauge resolution: center, confinement,
 charges), D13 (structural parallel).
 
+**Verification**: `gauge_lovelock_wiring.py` runs all dependency
+scripts (anomaly_check, fiber_bundle, xor_asymmetry,
+gap3_principal_bundle), enumerates the simple compact Lie groups with
+Z_2 or Z_3 in their center, applies the four Cartan-selection
+criteria, and confirms that SU(3) × SU(2) is the unique survivor.
+
 **See also**: GNN relation (D43), Higgs mechanism (D44),
-θ = 0 (D45), coupling ratios (D33). **Undetermined**: one
-dimensionful scale (v = 246 GeV).
+θ = 0 (D45), coupling ratios (D33).
+
+**Undetermined (parallels Lovelock's lack of fixing Newton's G)**:
+one dimensionful scale (g or equivalently v = 246 GeV). The
+Gell-Mann-Nishijima relation (D43) is also used but not derived
+here.
 
 ## Proof chain position
 
