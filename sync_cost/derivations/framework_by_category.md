@@ -124,6 +124,17 @@ organized by physical sector.
   leptons have DIFFERENT SU(2) reps for L and R (doublet vs singlet),
   needing two copies of the adjoint. Quarks have the SAME SU(3) rep
   for both chiralities, needing one copy.
+- **Neutrino mass scale from depth (q₂q₃)² = 36**:
+  - m_ν ~ v × (K*/2)^36 ≈ 17 meV at depth 36
+  - Three neutrinos at depths 35, 36, 37 reproduce atmospheric
+    and solar splittings within 7–20%
+  - m₃/m₁ = (K*/2)⁻² ≈ 5.4 (observed 5.77)
+  - **Majorana prediction** from 4-traversal self-identification:
+    depth 36 = 4 × (2q₂q₃), and (−1)⁴ = +1 returns the mode to itself
+  - Structural interpretation: 36 = q₂² × k_lepton. The neutrino
+    walks the full lepton budget (9) then cycles back through
+    q₂² = 4 weak interactions because it has no EM anchor on which
+    to terminate. See `neutrino_mass_prediction.py`.
 
 ### Open
 - **a₁ ≈ 2.320 closed form**: RESOLVED as "structural reading,
@@ -131,16 +142,15 @@ organized by physical sector.
   walk coordinates. Like Feigenbaum δ, computable but transcendental.
 - **Quark masses at physical scales**: tree-scale boundary conditions
   fixed; QCD running pipeline remains standard SM computation.
-- **4th generation lepton prediction ~7.3 GeV**: needs re-examination
-  under the integer conservation law. Does depth 9 host a viable
-  Fibonacci backbone mode?
-
-### New open (this session)
-- **Neutrino masses**: |Q|=0 breaks the integer law trivially.
-  Neutrinos live in the GAP (between Arnold tongues), not in the
-  locked spectrum. Rough estimate: m_ν/m_e ~ gap_fraction^n with
-  n ≈ 5.6 for atmospheric splitting, but this isn't a clean
-  derivation. Direction, not answer.
+- **4th generation lepton — FORBIDDEN under integer law**:
+  The old prediction (~7.3 GeV from extending the Fibonacci backbone
+  to depth 5, mode 13/8) is superseded. The integer conservation law
+  depth × |3Q| = 9 = q₃² forces any charged lepton to depth 3, and
+  the Fibonacci backbone has only two base positions below that cap
+  (3/2 at depth 2 and 5/3 at depth 3). A 4th generation would need a
+  new base pair at depth ≤ 3 that isn't already used, and none exists.
+  Beyond depth 3 (8/5 at depth 4, 13/8 at depth 5, …) the law is
+  violated: depth × 3 > 9. See `fourth_generation_revisited.md`.
 
 ---
 
@@ -186,13 +196,21 @@ organized by physical sector.
 8. **Spectral running dn_s/d(ln k)** specific value (CMB-S4, LiteBIRD)
 
 ### Already tested
-9. **No 4th gen lepton below LEP bound** (consistent, and now under
-    re-examination with integer law)
+9. **No 4th gen lepton** (consistent, now upgraded to a STRUCTURAL
+    forbidding by the integer conservation law — see
+    `fourth_generation_revisited.md`)
+
+### Testable by neutrinoless double beta decay (~2030)
+10. **Three neutrinos at depths 35, 36, 37**:
+    m₃/m₁ = (K*/2)⁻² ≈ 5.4 (observed 5.77, 7% error);
+    Σm_ν ~ 64 meV (Planck bound <120 meV, consistent);
+    **Neutrinos are Majorana** (testable by neutrinoless double
+    beta decay: LEGEND-1000, nEXO at 10–20 meV sensitivity)
 
 ### Long term
-10. **Planck-scale non-metricity O(l_P/L)** (not tech-accessible)
+11. **Planck-scale non-metricity O(l_P/L)** (not tech-accessible)
 
-All 10 predictions have zero free parameters.
+All 11 predictions have zero free parameters.
 
 ---
 
@@ -234,15 +252,17 @@ All 10 predictions have zero free parameters.
 
 | Priority | Category | Item |
 |----------|----------|------|
-| High | Mass | Neutrino mass scale from gap fraction |
 | High | Cosmological | Dark twin formalization |
-| High | Mass | Re-examine 4th gen under integer law |
 | Medium | Gravity | Cosmological dynamics K(t) |
 | Medium | Gauge | CKM angles from SL(2,Z) traces |
 | Medium | Quantum | A_s amplitude (needs v scale) |
 | Low | Gauge | sin²θ_W running at all scales |
 | Low | Quantum | Measurement outcome problem (likely irreducible) |
 | — | Infrastructure | Seed ket DAG (next session) |
+
+Closed this session:
+- Mass: neutrino mass scale (depth (q₂q₃)² = 36, Majorana prediction)
+- Mass: 4th generation lepton forbidden by integer conservation law
 
 ---
 
