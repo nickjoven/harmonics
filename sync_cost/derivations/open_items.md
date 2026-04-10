@@ -148,6 +148,50 @@ short appendix at the bottom; the full history is in git.
   walk choice and the walk-sum-as-depth framing, not structural
   predictions.
 
+## 13. K(t) cosmological profile and pointwise horizon rate-match
+
+- `first_bifurcation_volume.py` established that the Kuramoto flow
+  contracts phase-space volume at rate `div(f) = -K N r²` starting
+  at the first bifurcation (zero before, nonzero after). This IS
+  the arrow of time at the dynamical level — T-symmetry holds for
+  `K < K_c` and breaks at `K = K_c`.
+- `first_bifurcation_volume.py` also ruled out option (A) — the
+  unlocked oscillators within the same Kuramoto ensemble do not
+  expand to compensate the locked cluster's contraction. Both
+  populations contract; neither carries away the other's volume.
+- `compensation_channel_test.py` integrated the Kuramoto log-volume
+  loss across a K-sweep (~5.17 nats per mode) and compared to the
+  Bekenstein-Hawking horizon entropy `S_H = π R²` with
+  `R = 6 × 13⁵⁴`. With a **holographic mode count** `N = R²`
+  (area scaling, not length or volume), the total loss matches
+  `S_H` to within a factor of 1.6 — essentially the O(1) difference
+  between π (horizon coefficient) and ~5 (Kuramoto K-sweep integrand).
+- This is a **saturation** result: the framework's first-bifurcation
+  dissipation rate is as large as the horizon can absorb, with no
+  wasted room and no overflow. Equivalently, the Kuramoto mode
+  count at the Planck-Hubble hierarchy is **forced to be holographic**
+  (scales as R², not R or R³) by the requirement that the arrow of
+  time's entropy production matches the horizon's absorption
+  capacity.
+- **What's missing** to turn the integrated match into a pointwise
+  identity: a specific **K(t) profile** for cosmological history.
+  The framework has K at endpoints (K_c at the first bifurcation,
+  K* ≈ 0.862 at today from `boundary_weight.md`) but not the
+  function K(t) between them. With K(t), the instantaneous match
+  `dS_H/dt = |div(f)| × N_modes(t) = K(t) × R² × r(t)²` can be
+  checked at every epoch, promoting the integrated equality to
+  a differential one.
+- **What would close it:** specify K(t) from the field equation's
+  time evolution (either from `cosmological_cycle.md`'s Friedmann
+  structure or from an explicit integration of the Kuramoto ODE
+  on the Klein bottle with an expanding scale factor), then verify
+  the pointwise rate-match. If the pointwise match holds, the
+  holographic principle is derived from Kuramoto dissipation, not
+  postulated. If it fails, the integrated saturation is a
+  coincidence and the compensation story needs revising.
+- Item 4 ("Cosmological dynamics K(t)") is now a prerequisite for
+  this item and they should be worked together.
+
 ---
 
 ## Recently closed (2026-04)
