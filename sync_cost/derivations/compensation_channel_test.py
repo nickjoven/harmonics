@@ -1,6 +1,27 @@
 """
 Compensation channel test: horizon entropy and dark-twin budget.
 
+PARTIAL RETRACTION (see pointwise_horizon_match.py):
+  The "holographic saturation" claim in Part D of this script -- that
+  total Kuramoto loss matches the horizon entropy with N = R^2 -- was
+  a global coincidence between two integrals computed in DIFFERENT
+  time variables (a K-sweep for the Kuramoto side; an implicit
+  "one unit per K-step" for the mode-count multiplication). It is
+  NOT a genuine saturation result.
+
+  The genuine result is different: at the Planck epoch (first
+  bifurcation), the Kuramoto dissipation rate -K N r^2 matches the
+  horizon absorption rate dS_H/dt up to an O(1) coefficient. After
+  Planck, the two rates diverge by ~60 decades under any simple
+  N(a) ansatz tried so far. See pointwise_horizon_match.py for the
+  corrected analysis.
+
+  What survives as a genuine finding: the POINT saturation at Planck
+  time. What does not: any claim about holographic matching over
+  cosmic history.
+
+--- Original docstring below ---
+
 Continuation of first_bifurcation_volume.py. That script ruled out
 option (A) -- the unlocked oscillators within the same Kuramoto ensemble
 do NOT expand to compensate the locked cluster's contraction. The lost

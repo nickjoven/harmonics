@@ -148,7 +148,7 @@ short appendix at the bottom; the full history is in git.
   walk choice and the walk-sum-as-depth framing, not structural
   predictions.
 
-## 13. K(t) cosmological profile and pointwise horizon rate-match
+## 13. Planck-epoch saturation; post-Planck story is open
 
 - `first_bifurcation_volume.py` established that the Kuramoto flow
   contracts phase-space volume at rate `div(f) = -K N r²` starting
@@ -159,38 +159,48 @@ short appendix at the bottom; the full history is in git.
   unlocked oscillators within the same Kuramoto ensemble do not
   expand to compensate the locked cluster's contraction. Both
   populations contract; neither carries away the other's volume.
-- `compensation_channel_test.py` integrated the Kuramoto log-volume
-  loss across a K-sweep (~5.17 nats per mode) and compared to the
-  Bekenstein-Hawking horizon entropy `S_H = π R²` with
-  `R = 6 × 13⁵⁴`. With a **holographic mode count** `N = R²`
-  (area scaling, not length or volume), the total loss matches
-  `S_H` to within a factor of 1.6 — essentially the O(1) difference
-  between π (horizon coefficient) and ~5 (Kuramoto K-sweep integrand).
-- This is a **saturation** result: the framework's first-bifurcation
-  dissipation rate is as large as the horizon can absorb, with no
-  wasted room and no overflow. Equivalently, the Kuramoto mode
-  count at the Planck-Hubble hierarchy is **forced to be holographic**
-  (scales as R², not R or R³) by the requirement that the arrow of
-  time's entropy production matches the horizon's absorption
-  capacity.
-- **What's missing** to turn the integrated match into a pointwise
-  identity: a specific **K(t) profile** for cosmological history.
-  The framework has K at endpoints (K_c at the first bifurcation,
-  K* ≈ 0.862 at today from `boundary_weight.md`) but not the
-  function K(t) between them. With K(t), the instantaneous match
-  `dS_H/dt = |div(f)| × N_modes(t) = K(t) × R² × r(t)²` can be
-  checked at every epoch, promoting the integrated equality to
-  a differential one.
-- **What would close it:** specify K(t) from the field equation's
-  time evolution (either from `cosmological_cycle.md`'s Friedmann
-  structure or from an explicit integration of the Kuramoto ODE
-  on the Klein bottle with an expanding scale factor), then verify
-  the pointwise rate-match. If the pointwise match holds, the
-  holographic principle is derived from Kuramoto dissipation, not
-  postulated. If it fails, the integrated saturation is a
-  coincidence and the compensation story needs revising.
-- Item 4 ("Cosmological dynamics K(t)") is now a prerequisite for
-  this item and they should be worked together.
+- `pointwise_horizon_match.py` did a proper pointwise comparison
+  of `|div(f)|` against the horizon growth rate `dS_H/dt` across a
+  ΛCDM cosmic history from Planck time to today, using a consistent
+  time dictionary (everything in Planck units, scale factor `a` as
+  the integration variable, ΛCDM `H(a)` with `Ω_Λ = 13/19`,
+  `Ω_m = 6/19`). Result:
+  - **At the Planck epoch (first bifurcation)**: the ratio
+    `|div(f)| / dS_H/dt ≈ 0.11`, i.e. O(1). Within an O(1) numerical
+    coefficient the Kuramoto dissipation rate equals the horizon
+    absorption rate. **This is a genuine pointwise saturation at
+    the Planck epoch.**
+  - **Post-Planck**: the ratio grows by ~60 decades, reaching
+    ~10⁶⁰ by today. Under the N(a) = 1/H(a)² ansatz, the Kuramoto
+    side vastly overshoots the horizon side at late times.
+- The earlier "integrated saturation" claim in
+  `compensation_channel_test.py` has been **partially retracted**
+  (see the new header block in that file). The integrated match
+  there was a global coincidence between two integrals computed in
+  different "time" variables (K-sweep vs cosmic time), not a
+  genuine cosmological saturation. The Planck-epoch point match
+  survives as the real finding.
+- **Honest current status:**
+  - At the first bifurcation, the Kuramoto dissipation rate is
+    matched to the horizon absorption rate up to O(1). The
+    holographic budget is set at Planck time. Area scaling wins
+    at Planck.
+  - After Planck, the rates diverge under the simple ansatze
+    tested. Either the mode count N(a) follows a different (not
+    holographic) scaling at later epochs, or the Kuramoto
+    description is localised to the first bifurcation and doesn't
+    extend to later "bifurcations" as independent events.
+- **What would close it**: a derivation of `N(a)` from the
+  framework's field equation directly, not an ansatz. The current
+  attempts (`N = R`, `N = R²`, `N = R³`) all fail in different
+  ways — the first two by integrated mismatch, the third by
+  cosmological-time divergence. The right N(a) should emerge from
+  counting XOR-surviving modes on the Klein bottle at each epoch,
+  which depends on the field equation's time evolution.
+- Item 4 (`K(t)` cosmological profile) remains a prerequisite, but
+  the problem is now more specific: we need both `K(t)` and `N(t)`
+  together, with the constraint that their product reproduces the
+  horizon growth rate at all epochs, not just Planck.
 
 ---
 
