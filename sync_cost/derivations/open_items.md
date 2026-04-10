@@ -148,6 +148,60 @@ short appendix at the bottom; the full history is in git.
   walk choice and the walk-sum-as-depth framing, not structural
   predictions.
 
+## 14. Multi-twisted substrate unification
+
+- `zn_twist_filter.py` applied Z_n residue (q mod n == 1) and coprime
+  (gcd(q, n) == 1) filters to Stern-Brocot denominators up to q = 60,
+  looking for framework-special integers.
+- **Z_6 residue filter** (q mod 6 == 1) gives `{1, 7, 13, 19, 25, ...}`.
+  The first two non-trivial survivors are **13 and 19** — the integers
+  that appear in the framework's `Ω_Λ = 13/19` partition.
+- **Z_6 coprime filter** (gcd(q, 6) == 1) gives `{1, 5, 7, 11, 13, 17,
+  19, ...}`. The first four framework-special integers are
+  `{1, 5, 13, 19}` — the complete 1:5:13 partition (baryons : DM : DE)
+  plus 19 as the total.
+- The **gauge center Z_6 = Z_2 × Z_3** and the **Farey partition at
+  interaction scale `q_2 q_3 = 6`** produce the same integer set
+  `{13, 19}` under two different constructions. This links the gauge
+  sector and the cosmological sector through a single twist parameter.
+- **Golden-ratio rotation** (irrational twist, `α = 1/φ`) selects the
+  Fibonacci backbone `{1, 3, 8, 21, 55, ...}` under the Dirichlet bound
+  `|p/q − 1/φ| < 1/(q²√5)`. The Fibonacci backbone falls out as the
+  continuum (`n → ∞` along Fibonacci) limit of the Z_n filter
+  sequence, with no discrete filter needed — irrationality itself is
+  the filter.
+- `density_check.py` verified an important limitation: the **density**
+  13/19 is NOT a Z_n filter density on any small Farey sequence. The
+  Z_6 filters give different densities at each `F_N`, none of which
+  equal 13/19 exactly. The density `Ω_Λ = 13/19` lives in a separate
+  structural claim:
+
+       Ω_Λ = |F_6| / |F_7| = 13 / 19
+
+  "The retained fraction of modes at one step above the interaction
+  scale q_2 q_3 = 6." The 6 new modes added at the F_6 → F_7 step
+  are exactly the fractions with denominator 7.
+- **Structural proposal**: the framework's integer sectors may be
+  different Z_n (or irrational) projections of a single multi-
+  twisted substrate. Z_2 → (2, 3) [mass sector]. Z_4 → 13
+  [half-Möbius]. Z_6 → (13, 19) [cosmological integers, gauge center].
+  φ-rotation → Fibonacci backbone [generation ratios]. Each is a
+  window onto the same underlying object.
+- **What would close it:** construct an explicit object (likely a
+  non-commutative torus with a specific parameter, or a multi-twisted
+  Stern-Brocot variant) whose Z_2, Z_4, Z_6, and φ-rotation
+  projections simultaneously give the framework-relevant integer sets.
+  The object should be buildable in constructive mathematics without
+  requiring the full axiom of choice — the existing framework is
+  entirely computable, and the multi-twisted substrate should inherit
+  that property.
+- **Caveat**: this item is an "integer-level" structural hint, not a
+  derivation of the density Ω_Λ = 13/19. The density lives in the
+  Farey count ratio `|F_6|/|F_7|`, which is a different mechanism. Z_6
+  and the Farey partition both pivot on the same number 6 = q_2 q_3,
+  so they produce the same integer outputs, but the density content
+  lives in the Farey side.
+
 ## 13. Planck-epoch saturation; post-Planck story is open
 
 - `first_bifurcation_volume.py` established that the Kuramoto flow
