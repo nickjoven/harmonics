@@ -7,13 +7,22 @@ short appendix at the bottom; the full history is in git.
 
 ## 1. a₁ ≈ 2.320 (lepton base exponent)
 
-- Fixed-point output of the rational field equation. No closed form.
-- Understood as a reading through the Fibonacci backbone — the integer
-  conservation law fixes the structural form, a₁ is its projection
-  onto the observed lepton masses.
-- **What would close it:** high-precision iteration of the field
-  equation at the Klein bottle's extended mode tower. Computation,
-  not a closed form (Feigenbaum-like).
+- a₁ is a *fitted continuous exponent* in the Fibonacci power-law
+  mass formulation (formulation B: m ∝ (3/2)^{a_1 n}, (5/3)^{a_1 n},
+  etc. per sector). Each sector gets its own fitted a_1.
+- A discrete walk interpretation was tested and ruled out:
+  `committed_walk_masses.py` attempted a walk-sum reading at the
+  committed K* = 0.862, but the walk-independent quantity
+  `log(m/v)/log(K*/2)` gives messy non-integer within-sector deltas
+  (leptons land at +3.35/+6.34, not clean +3/+6) and the
+  `a₂/a₁ = 3/2` ratio is not recovered from the walk-product formula
+  at all. The "nearly-integer" appearance in that script was an
+  artifact of specific naive walk choices.
+- The item remains open, but the scope is now wider: this is a
+  symptom of the mass sector's deeper issue — see the new
+  "Continuous mass formulation" item below. a₁ will only get a
+  principled value once the mass formula is derived from the field
+  equation directly, rather than fitted per sector.
 
 ## 2. Quark masses at physical scales
 
@@ -97,30 +106,39 @@ short appendix at the bottom; the full history is in git.
   (`dark_twin_formalization.py`).
 - Not formally derived.
 
-## 12. Cross-sector anchors (heaviest-member walk-sums)
+## 12. Continuous mass formulation
 
-- `committed_walk_masses.py` showed that within each sector the
-  generation walk-sums are small integer combinations of (q₂, q₃)
-  and match observation to |Δ walk-sum| ≤ 0.5. But the walk-sum
-  of the *heaviest* member of each sector — the "anchor" — is
-  different per sector and is not predicted by a single formula:
-  - top (up-type): walk-sum ≈ 0 (≈ v itself)
-  - bottom (down-type): walk-sum ≈ 5 = q₂ + q₃
-  - tau (charged leptons): walk-sum ≈ 7 (≈ q₂² + q₃)
-  - ν_τ (neutrinos): walk-sum ≈ 36 = (q₂q₃)²
-- Each anchor is individually expressible in (q₂, q₃), but no
-  single formula takes (sector type) → (anchor walk-sum) across
-  all four sectors. Absolute masses therefore need four structural
-  inputs (one per sector), not zero.
-- The up-type within-sector increments (+6, +7) don't fit a clean
-  (q₂, q₃) expression the way the other three sectors do
-  (leptons +3, +6; down-type +3, +2; neutrinos +2, +2). The +7 is
-  close to q₂³ = 8 but not exactly. This may be a PDG-uncertainty
-  artifact on the top anchor or a real mismatch; not yet resolved.
-- **What would close it:** either derive a formula that emits
-  (0, 5, 7, 36) from (q₂, q₃) + sector type, or accept that the
-  framework provides within-sector mass structure plus four
-  integer anchors as inputs. Honest outcome is likely the latter.
+- The framework currently has **two incompatible mass formulations**
+  that give different answers:
+  - **(A) Discrete walk product** at base (K*/2), with walk-sums as
+    integer walk depths along the Stern-Brocot walk.
+  - **(B) Fibonacci base power law** at bases (3/2), (5/3), etc.,
+    with continuous fitted exponents a_1 per sector.
+- Formulation (A) was tested in `committed_walk_masses.py` and
+  fails to reproduce within-sector ratios: walk-independent
+  log(m/v)/log(K*/2) gives messy non-integer deltas, and the
+  a₂/a₁ = 3/2 sector ratio is not recovered from the walk-product
+  formula at all.
+- The simplest integral formulations were tested in
+  `integral_mass_test.py` — four candidate measures on q-space
+  (bare exponential, 1/q, 1/q², 1/q³). All four fail: the bare
+  exponential saturates after top, and the 1/q^n measures can't
+  even reach top's mass starting from q=1.
+- Formulation (B) is what gives the famous 0.07% τ/μ and μ/e
+  matches, but it uses *continuous fitted exponents per sector*
+  and does not yield absolute masses — only ratios within a sector
+  once a_1 is fixed.
+- **What's missing** is a derivation of the mass formula from the
+  field equation directly — likely a 2D phase-space integral, a
+  modular/Eisenstein form, an action integral along an explicit
+  path, or a spectral trace formula (Selberg-style). Whichever it
+  turns out to be, it must yield continuous exponents *naturally*,
+  not as fits.
+- This item supersedes items 1 and 12 in the previous version
+  (fitted a_1 and the heaviest-member "anchor" walk-sums). The
+  specific anchor values (0, 5, 7, 36) were artifacts of the naive
+  walk choice and the walk-sum-as-depth framing, not structural
+  predictions.
 
 ---
 
@@ -130,30 +148,33 @@ short appendix at the bottom; the full history is in git.
   connects to gauge adjoint dimensions via the cross-link identity
   `q₂² − 1 = q₃`, `q₃² − 1 = q₂³` (unique solution (2,3)).
   `mass_sector_closure.md`.
-- **Neutrino mass scale and K* circulation**: the K*_Λ vs K*_ν
-  oscillation (0.862 from `boundary_weight.md` vs 0.8668 refit from
-  the A-2 neutrino tightening) is resolved. `committed_walk_masses.py`
-  pins K* to the Ω_Λ value (0.862), writes an explicit walk-sum for
-  each of the 12 fermions, and inverts the walk-product formula to
-  recover the walk-sum each observed mass needs. The three neutrinos
-  land at walk-sums 35.5 / 37.2 / 39.2, rounding to 36 / 37 / 39.
-  The heaviest-neutrino value (q₂q₃)² = 36 is recovered from the
-  committed K* without any refit, so the A-2 refit was not
-  structurally required. Majorana prediction from
-  4-traversal self-identification stands. `neutrino_mass_prediction.py`
-  still uses the older K* but the conclusion is unchanged.
+- **Neutrino K* circulation**: the K*_Λ vs K*_ν oscillation (0.862
+  from `boundary_weight.md` vs 0.8668 refit from the A-2 neutrino
+  tightening) was a symptom of the two incompatible mass
+  formulations (see the new "Continuous mass formulation" open
+  item). Neither K* value is structurally privileged until the
+  right mass formulation is identified — the earlier claim that
+  `committed_walk_masses.py` recovers (q₂q₃)² = 36 from committed
+  K* is retracted; that 36 was another walk-choice artifact. The
+  Majorana neutrino prediction from 4-traversal self-identification
+  on the Klein bottle stands as a separate topological result, not
+  dependent on the mass formula.
 - **4th generation lepton**: forbidden by the integer law
   (depth × 3 > 9 beyond τ). Old ~7.3 GeV prediction superseded.
   `fourth_generation_revisited.md`.
 - **Selection rule, lepton/quark 9/8 factor, sector base pair
   algebraic forms**: all resolved at the structural level by the
   mass sector closure.
-- **"depth" overloading**: the symbol `depth` was doing three
+- **"depth" overloading**: the symbol `depth` is still doing three
   different jobs (integer-law sector index, walk length, Yukawa
-  exponent). `committed_walk_masses.py` disambiguates: the
-  mass-formula quantity is the *walk-sum*, Σ q_i along the Stern-
-  Brocot walk. All 12 fermion walk-sums sit within 0.5 of
-  integers at K*_Λ = 0.862.
+  exponent), and none of the single-formula meanings we have
+  tested work as the mass-formula quantity — walk-sum Σ q_i along
+  the Stern-Brocot walk was tested in `committed_walk_masses.py`
+  and fails on within-sector ratios; the simplest integral forms
+  were tested in `integral_mass_test.py` and also fail. The
+  symbol overloading is a symptom of the missing continuous
+  formulation (see new open item), not something that can be
+  resolved by picking one of the existing meanings.
 
 ---
 
