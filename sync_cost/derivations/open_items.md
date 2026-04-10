@@ -148,6 +148,33 @@ short appendix at the bottom; the full history is in git.
   walk choice and the walk-sum-as-depth framing, not structural
   predictions.
 
+### Update (item12_characterize_a1.py): 3 fits reduced to 1
+
+`item12_characterize_a1.py` computes `a_1` per sector precisely
+from PDG masses and tests simple structural candidates. Verdict:
+
+- `a_1` is NOT a log of a small integer in any fixed base across
+  sectors. Near-hits at `log_2(5)` for leptons (0.07%) and
+  `log_2(51)` for down-type (0.10%) are not a universal form.
+- **Cross-sector squared ratios are clean**:
+  ```
+      a_1(leptons)^2 : a_1(up)^2 : a_1(down)^2
+              1      :   9/4    :     6
+              1      : (q_3/q_2)^2 : q_2 q_3
+  ```
+  Both ratios match observed `a_1^2` to within 0.2%.
+
+This reduces the mass-sector fit count from **3 per-sector `a_1`
+values to 1 overall constant** `C = a_1(leptons)^2 ≈ 5.3838`, with
+    `a_1(sector)^2 = C × s(sector)`,
+where `s(leptons) = 1`, `s(up) = (q_3/q_2)^2`, `s(down) = q_2 q_3`.
+
+**What's still open**: whether `C` is structurally derivable (as a
+fixed-point output of the rational field equation, a K-theory trace
+on the Fibonacci-indexed NCT sequence, or a modular form residue)
+or is the framework's one genuinely-fitted mass-sector parameter.
+This is the remaining piece of item 12.
+
 ## 14. Multi-twisted substrate unification
 
 - `zn_twist_filter.py` applied Z_n residue (q mod n == 1) and coprime
