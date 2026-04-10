@@ -1,4 +1,33 @@
 """
+STALE — see open_items.md item 12 ("Continuous mass formulation").
+
+The specific numerical predictions below (m_ν ~ 17 meV, depth (q₂q₃)² = 36,
+the three-neutrino hierarchy at depths 35/36/37) use the discrete walk-sum
+interpretation of the mass formula, which was tested in
+committed_walk_masses.py and integral_mass_test.py and does NOT reproduce
+within-sector ratios or absolute masses cleanly. The "(q₂q₃)² = 36"
+recovery was shown to be a walk-choice artifact, and the K* value used
+here (0.862) is not structurally privileged until the right mass
+formulation is identified.
+
+What stands from this file, independent of the mass-formula question:
+
+  - NEUTRINOS ARE MAJORANA. The 4-traversal self-identification argument
+    ((-1)^4 = +1 returns the mode to itself) is a topological statement
+    about Klein-bottle traversals, not a numerical prediction. Testable
+    by neutrinoless double beta decay (LEGEND-1000, nEXO).
+
+  - The integer conservation law depth × |3Q| = k_sector IS trivially
+    satisfied for neutrinos because |Q| = 0. That observation motivates
+    the search for a separate neutrino rule but doesn't by itself
+    provide one.
+
+The rest of this file is kept as a historical record of the discrete
+walk-sum attempt. Do NOT cite the numerical values (17 meV, etc.) as
+current framework predictions.
+
+--- Original header below ---
+
 Neutrino mass from tree depth (q₂q₃)² = 36.
 
 The neutrino integer conservation law breaks trivially because |Q|=0.

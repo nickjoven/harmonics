@@ -128,6 +128,14 @@ short appendix at the bottom; the full history is in git.
   matches, but it uses *continuous fitted exponents per sector*
   and does not yield absolute masses — only ratios within a sector
   once a_1 is fixed.
+- The symbol **`depth`** is overloaded across this item. In the
+  integer conservation law it's a sector index; in formulation (A)
+  it's meant to be the walk length or Σ q_i along the walk; in
+  formulation (B) it's the continuous exponent a_1. None of the
+  single-formula meanings we have tested work as the mass-formula
+  quantity. The overloading is a symptom of the missing continuous
+  formulation, not something that can be resolved by picking one
+  of the existing meanings.
 - **What's missing** is a derivation of the mass formula from the
   field equation directly — likely a 2D phase-space integral, a
   modular/Eisenstein form, an action integral along an explicit
@@ -165,16 +173,6 @@ short appendix at the bottom; the full history is in git.
 - **Selection rule, lepton/quark 9/8 factor, sector base pair
   algebraic forms**: all resolved at the structural level by the
   mass sector closure.
-- **"depth" overloading**: the symbol `depth` is still doing three
-  different jobs (integer-law sector index, walk length, Yukawa
-  exponent), and none of the single-formula meanings we have
-  tested work as the mass-formula quantity — walk-sum Σ q_i along
-  the Stern-Brocot walk was tested in `committed_walk_masses.py`
-  and fails on within-sector ratios; the simplest integral forms
-  were tested in `integral_mass_test.py` and also fail. The
-  symbol overloading is a symptom of the missing continuous
-  formulation (see new open item), not something that can be
-  resolved by picking one of the existing meanings.
 
 ---
 
