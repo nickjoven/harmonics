@@ -97,6 +97,31 @@ short appendix at the bottom; the full history is in git.
   (`dark_twin_formalization.py`).
 - Not formally derived.
 
+## 12. Cross-sector anchors (heaviest-member walk-sums)
+
+- `committed_walk_masses.py` showed that within each sector the
+  generation walk-sums are small integer combinations of (q₂, q₃)
+  and match observation to |Δ walk-sum| ≤ 0.5. But the walk-sum
+  of the *heaviest* member of each sector — the "anchor" — is
+  different per sector and is not predicted by a single formula:
+  - top (up-type): walk-sum ≈ 0 (≈ v itself)
+  - bottom (down-type): walk-sum ≈ 5 = q₂ + q₃
+  - tau (charged leptons): walk-sum ≈ 7 (≈ q₂² + q₃)
+  - ν_τ (neutrinos): walk-sum ≈ 36 = (q₂q₃)²
+- Each anchor is individually expressible in (q₂, q₃), but no
+  single formula takes (sector type) → (anchor walk-sum) across
+  all four sectors. Absolute masses therefore need four structural
+  inputs (one per sector), not zero.
+- The up-type within-sector increments (+6, +7) don't fit a clean
+  (q₂, q₃) expression the way the other three sectors do
+  (leptons +3, +6; down-type +3, +2; neutrinos +2, +2). The +7 is
+  close to q₂³ = 8 but not exactly. This may be a PDG-uncertainty
+  artifact on the top anchor or a real mismatch; not yet resolved.
+- **What would close it:** either derive a formula that emits
+  (0, 5, 7, 36) from (q₂, q₃) + sector type, or accept that the
+  framework provides within-sector mass structure plus four
+  integer anchors as inputs. Honest outcome is likely the latter.
+
 ---
 
 ## Recently closed (2026-04)
@@ -105,15 +130,30 @@ short appendix at the bottom; the full history is in git.
   connects to gauge adjoint dimensions via the cross-link identity
   `q₂² − 1 = q₃`, `q₃² − 1 = q₂³` (unique solution (2,3)).
   `mass_sector_closure.md`.
-- **Neutrino mass scale**: depth_ν = (q₂q₃)² = 36, m_ν ~ 17 meV,
-  three neutrinos at depths 35/36/37, Majorana from
-  4-traversal self-identification. `neutrino_mass_prediction.py`.
+- **Neutrino mass scale and K* circulation**: the K*_Λ vs K*_ν
+  oscillation (0.862 from `boundary_weight.md` vs 0.8668 refit from
+  the A-2 neutrino tightening) is resolved. `committed_walk_masses.py`
+  pins K* to the Ω_Λ value (0.862), writes an explicit walk-sum for
+  each of the 12 fermions, and inverts the walk-product formula to
+  recover the walk-sum each observed mass needs. The three neutrinos
+  land at walk-sums 35.5 / 37.2 / 39.2, rounding to 36 / 37 / 39.
+  The heaviest-neutrino value (q₂q₃)² = 36 is recovered from the
+  committed K* without any refit, so the A-2 refit was not
+  structurally required. Majorana prediction from
+  4-traversal self-identification stands. `neutrino_mass_prediction.py`
+  still uses the older K* but the conclusion is unchanged.
 - **4th generation lepton**: forbidden by the integer law
   (depth × 3 > 9 beyond τ). Old ~7.3 GeV prediction superseded.
   `fourth_generation_revisited.md`.
 - **Selection rule, lepton/quark 9/8 factor, sector base pair
   algebraic forms**: all resolved at the structural level by the
   mass sector closure.
+- **"depth" overloading**: the symbol `depth` was doing three
+  different jobs (integer-law sector index, walk length, Yukawa
+  exponent). `committed_walk_masses.py` disambiguates: the
+  mass-formula quantity is the *walk-sum*, Σ q_i along the Stern-
+  Brocot walk. All 12 fermion walk-sums sit within 0.5 of
+  integers at K*_Λ = 0.862.
 
 ---
 
