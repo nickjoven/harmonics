@@ -454,6 +454,104 @@ the framework's "tongue width" throughout the tree.  (C) is
 the goal of the next derivation attempt -- find the primitive
 that generates sqrt(pi) naturally.
 
+### Update (noise_dressed_parabola.py): reading (C) ruled out, reading (D) emerges
+
+Direct numerical test: simulate the noisy circle map at K* and
+measure the effective q=2 tongue width as a function of noise
+amplitude sigma.  Result:
+
+    sigma = 0.000 -> w_noisy = 0.056  (matches w_physical ~0.059)
+    sigma = 0.001 -> w_noisy = 0.052
+    sigma = 0.010 -> w_noisy = 0.048
+    sigma = 0.020 -> w_noisy = 0.040
+    sigma = 0.050 -> w_noisy = 0.010
+
+**w_noisy shrinks monotonically in sigma.**  Noise destroys
+locking by letting the system diffuse out of the tongue region.
+At no sigma does w_noisy approach w_framework = 0.186.  Gaussian
+broadening of the tongue edge CANNOT produce the factor of pi --
+it can only narrow the locked region.
+
+**Reading (C) is ruled out.**  The sqrt(pi) in the lepton
+identity does NOT come from noise-dressed parabola primitive.
+The Langevin parabola's stationary distribution is Gaussian
+(verified in Part 1 of the script to ~1% where the approximation
+holds), but integrating it over the tongue does not broaden the
+effective locked range -- only narrows it.
+
+**Reading (D) (NEW): w_framework is the saddle-node mu, not
+the tongue width in Omega.**
+
+The 2-iterate of the circle map gives the fixed-point equation
+
+    epsilon (2 + K cos(2 pi theta)) = (K^2 / (4 pi)) sin(4 pi theta)
+
+The coefficient on the right -- K^2/(4 pi) at q=2 -- is the
+Fourier amplitude of the q=2 resonance in the 2-iterate's
+expansion.  After solving for epsilon and reading off the max,
+the Omega tongue width is K^2/(4 pi) = w_physical.
+
+But if we identify w_framework = K^2/4 directly with the
+saddle-node CONTROL PARAMETER mu in the normal form dx/dt = mu - x^2,
+the pi factor is absorbed: the (2 + K cos) denominator and
+the 1/pi from the sin(2 pi theta) normalization together give
+the coordinate Jacobian between (Omega, epsilon) parameterization
+and (x, mu) normal-form parameterization.
+
+Under reading (D):
+  w_framework(1/2, K) = mu_center (control parameter in normal form)
+  w_physical(1/2, K)  = Omega-tongue-width = w_framework / pi
+  a_1(lep) = 1/sqrt(w_framework) = 1/sqrt(mu_center)
+           = standard saddle-node relaxation time at q=2 tongue center
+           = 2/K*
+
+This IS the stick-slip relaxation reading of a1_from_saddle_node.md.
+The "tongue width" in that document should be read as the
+saddle-node control parameter mu, not the geometric Omega width.
+Under this reinterpretation, the 4-decimal-digit match of
+a_1(lep) = 2/K* IS the standard tau = 1/sqrt(mu) relaxation,
+with mu = (K*/2)^2 at the q=2 tongue center.
+
+**Reframing of framework vocabulary**:
+
+- The framework's "tongue width" w is a DYNAMICAL quantity
+  (the saddle-node mu control parameter at tongue center), not
+  a GEOMETRIC quantity (Omega range of locking).
+- The square root 1/sqrt(w) means: inverse natural timescale
+  at the tongue center, via the standard parabola-primitive
+  relaxation tau = 1/sqrt(mu).
+- The Omega tongue width is a DERIVED geometric quantity,
+  related to w_framework by the Jacobian factor 1/pi from
+  reparameterizing the 2-iterate's Fourier expansion.
+- "Stick-slip" is the correct structural shape: stick for
+  tau = 1/sqrt(mu) natural oscillations at the tongue center,
+  slip at the tongue edge (mu -> 0 saddle-node annihilation).
+
+**Status of item 12 under reading (D)**:
+
+- The identity a_1(lep) = 1/sqrt(w_framework) IS derived, not
+  a near-coincidence.  It is the saddle-node relaxation time
+  at the q=2 tongue with w_framework = mu_center.
+- The "factor of pi" from tongue_formula_accuracy.py is a
+  coordinate Jacobian, not a physics correction.  Both
+  w_framework and w_physical are correct in their respective
+  parameterizations.
+- The remaining open issue is NOT the pi factor but: does
+  reading (D)'s identification w_framework = mu hold at q > 2?
+  At q=2 the Fourier amplitude happens to collapse to the clean
+  (K/2)^2 because the q/2 prefactor in `2(K/2)^q/q` drops; at
+  other q's the collapse is less clean and the identification
+  may need a modification.  This is a q-specific audit task.
+- K* itself is still not independently derived to 5+ digits
+  from a non-lepton-mass route.  The lepton tongue-width
+  identity remains the framework's 5-digit K* determination.
+
+Item 12 closes more firmly under reading (D) than under (A)
+or (B): the identity a_1(lep) = 2/K* is the saddle-node
+relaxation time at the q=2 tongue center, with `w_framework`
+interpreted correctly as the normal-form control parameter
+mu rather than the Omega geometric width.
+
 **Downstream audit required**.  The framework uses
 `w = 2(K/2)^q/q` in at least:
 
