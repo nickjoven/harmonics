@@ -207,11 +207,49 @@ values to 1 overall constant** `C = a_1(leptons)^2 ≈ 5.3838`, with
     `a_1(sector)^2 = C × s(sector)`,
 where `s(leptons) = 1`, `s(up) = (q_3/q_2)^2`, `s(down) = q_2 q_3`.
 
-**What's still open**: whether `C` is structurally derivable (as a
-fixed-point output of the rational field equation, a K-theory trace
-on the Fibonacci-indexed NCT sequence, or a modular form residue)
-or is the framework's one genuinely-fitted mass-sector parameter.
-This is the remaining piece of item 12.
+### Update (item12_cross_sector_derivation.py): structural readings for 9/4 and 6
+
+`item12_cross_sector_derivation.py` and `item12_cross_sector_ratios.md`
+test both scaling factors against PDG 2024 with full 1-σ
+propagation and propose a structural reading for each:
+
+- **9/4 (up-type)**: the up-type base pair `(8/5, 3/2)` is the
+  Fibonacci shift of the lepton pair `(3/2, 5/3)`. The cross-sector
+  identity `a_1(up) = (3/2) a_1(lep)` (equivalently
+  `a_1(up) = a_2(lep)`) holds at 0.34 σ, consistent with exact
+  equality at PDG precision. Squared: `(q_3/q_2)^2 = 9/4`.
+
+- **6 (down-type)**: down-type is the one sector with Klein-bottle
+  parity `+1` (both denominators even, `(4, 8)`), i.e. the one
+  sector whose walks are orientation-**preserving**. Conjecture:
+  orientation-preserving walks lift to the orientable double
+  cover (torus `T² = S¹ × S¹` with cycle counts `q_2, q_3`) and
+  pick up mode volume `q_2 q_3 = 6` instead of the single-sheet
+  Fibonacci-shifted scaling. The identity
+  `a_1(dn)^2 = 6 a_1(lep)^2` holds at 0.04 σ.
+
+  The joint success of the parity assignment in **both** the
+  sign-flip and the magnitude-factor readings (same parity
+  partition, two independent observables) is what distinguishes
+  this from a post-hoc fit.
+
+**What's still open**:
+1. The `q_2 q_3` double-cover step is a **conjecture**, not a
+   first-principled derivation. A formal argument from the
+   rational field equation (path-integral normalization of the
+   orientable-lift walk) is missing.
+2. The intra-lepton ratio `a_2(lep)/a_1(lep) = 1.4994` is
+   16 σ away from exact `3/2` — a known finite-K residual in
+   the lepton sector that this pass does not touch.
+3. `C = a_1(leptons)^2 = 5.3838` has no closed form. The
+   tightest near miss `3 ln(q_2 q_3) = 5.3753` is 0.16% but
+   33 σ away from `C` at PDG precision. Most plausibly `C`
+   is a Feigenbaum-style fixed-point output of the rational
+   field equation at the lepton sector's Fibonacci convergent,
+   computable by iteration but without a closed form in
+   elementary functions.
+
+This is the remaining state of item 12.
 
 ## 14. Multi-twisted substrate unification
 
