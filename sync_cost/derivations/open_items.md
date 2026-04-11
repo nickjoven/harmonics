@@ -357,6 +357,41 @@ Item 12 is consequently **conditionally closed**:
 
 Both are open. The direct Kuramoto r-iteration is ruled out.
 
+### Update (a1_from_saddle_node.md): stick-slip structural reading
+
+`a1_from_saddle_node.md` promotes the tongue-width identity to a
+full structural reading using primitives already in the framework:
+
+  1. Every Arnold-tongue boundary is a saddle-node bifurcation
+     (`born_rule.md` §"Connection to Arnold tongue geometry").
+  2. Saddle-node relaxation time is `τ = 1/sqrt(μ)`
+     (`parabola_csd_demo.py`, line 55).
+  3. Natural normalization: `μ_center = w_tongue` (self-selecting
+     at q = 2, where `w = (K/2)^2` cleanly; no q-dependent prefactor).
+  4. Therefore `τ(3/2, K*) = 1/sqrt(w) = 2/K* = a_1(leptons)`.
+
+The sector's generation step IS one saddle-node relaxation time
+at the primary-base tongue -- the "stick" phase of a full
+stick-slip cycle. Same parabola primitive as:
+  - Born rule basin selection (`born_rule.md`)
+  - Critical slowing down (`parabola_csd_demo.py`)
+  - Seismic strain accumulation (`parabola_csd_pipeline.py`,
+    `seismic_eigenstate_dictionary.md`)
+  - Stick-slip friction (`stribeck_vortex.md`)
+
+Five applications, one primitive. The lepton generation exponent
+is reading the same saddle-node geometry at the q=2 Arnold tongue
+that the Born rule reads at every tongue boundary.
+
+The reading does NOT close item 12 to 0 fits, but it does answer
+"why is `a_1 = 1/sqrt(w)` the right form?": it is the framework's
+own saddle-node relaxation time, applied at the lepton sector's
+primary base. What remains open is the **normalization
+convention** `μ_center = w` -- a more careful mean-field
+linearization near the tongue boundary should derive the
+proportionality constant exactly, turning the 4-decimal-digit
+near-match into a theorem.
+
 ## 14. Multi-twisted substrate unification
 
 - `zn_twist_filter.py` applied Z_n residue (q mod n == 1) and coprime
