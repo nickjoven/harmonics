@@ -301,6 +301,62 @@ expressions in `(q_2, q_3, K*)`. Mass sector fit count drops from
 See `item12_C_from_K_star.md` for the full derivation attempt and
 structural reading.
 
+### Update (K_star_iteration.py): the independent K* derivation attempt FAILS
+
+`K_star_iteration.py` tried to close item 12 by deriving `K*` from
+the rational field equation `|r| = |Σ g(p/q) w(p/q, K_0|r|) e^{2πi p/q}|`
+independently of lepton masses.  It implements the iteration on
+three ensembles: Fibonacci backbone, full Stern-Brocot to depth 14,
+and Farey-weighted to q=200.
+
+**Result: none of them reproduces K* = 0.862.**
+
+At K_0 = 1 every ensemble contracts to the trivial vacuum r* = 0.
+This is not a quirk of the 4-mode Klein minimum that
+`field_equation_iteration.py` originally flagged -- it is the
+generic behavior of the map whenever K_0 is below the onset of
+partial synchronization.  Above K_0 ≈ 3 a non-trivial upper branch
+appears at r* ≈ 0.38, but the product K_0 r* gives K > 1, not 0.862,
+and scales linearly with K_0 so there is no special value.
+
+**Concrete finding**: `K* = 0.862` is not the fixed point of the
+standard Kuramoto-on-tree self-consistency on any of the ensembles
+tried.  Grep across the entire `sync_cost/derivations/` tree confirms
+the value has been cited as input from "MSPU D30 coherence cascade
+data" for years with no corresponding code that actually computes it.
+(`field_equation_iteration.py` admits this openly; `creation_frontier_test.py`
+uses `K_today = 0.862` as an input to cosmological running; no script
+produces 0.862 as output.)
+
+**Conclusion**: the framework has no independent derivation of `K*`
+in the form an r-iteration would provide.  The lepton tongue-width
+identity of `item12_C_from_K_star.md` is therefore the **framework's
+first and currently only 5-digit determination of K***.  It uses
+PDG lepton masses as input and produces `K* = 0.8619606 ± 2.1e-5`.
+
+Item 12 is consequently **conditionally closed**:
+- Accept `K* = q_2 / a_1(leptons)` as the high-precision
+  determination → `C = q_2²/K*²` is a closed form, mass sector is
+  1-fit (`K*` itself, determined by lepton masses).
+- Otherwise → the 4-decimal-digit match of `a_1(lep) · K* ≈ q_2`
+  is a strong but unexplained numerical near-coincidence, and
+  item 12 remains at 1 fit with `C ≈ 5.3838` unexplained.
+
+**What would actually close item 12 at 0 fits**:
+1. An independent K* derivation from a framework primitive that
+   does NOT use lepton masses, producing `0.8619606` to 5+ digits.
+   Candidates that have NOT yet been tried in code:
+    - Cosmological running `K(t)` from Planck to today matching
+      the observed cosmic age ratio (input today, not output).
+    - Boundary-weight `w*-K*` coupling via the partial-locking
+      formula (naive solve gives K > 1, unusable).
+    - Lyapunov spectrum of the circle map at specific Ω (untested).
+2. A path-integral argument deriving `a_1 = 1/sqrt(w)` from the
+   rational field equation directly, turning the tongue-width
+   identity from a near-coincidence into a theorem.
+
+Both are open. The direct Kuramoto r-iteration is ruled out.
+
 ## 14. Multi-twisted substrate unification
 
 - `zn_twist_filter.py` applied Z_n residue (q mod n == 1) and coprime
