@@ -469,6 +469,58 @@ uncoupled at the horizon.
 
 ---
 
+## Parabola primitive in the seismic domain
+
+A concrete terrestrial application: **tectonic stick-slip release
+is governed by the same parabola primitive that gives `|ψ|²` in the
+quantum sector**. The local normal form for an approach to a
+saddle-node bifurcation is `dx/dt = μ − x² + noise`, and this is
+exactly the form of a fault approaching its release threshold. The
+same form drops out of the Kuramoto self-consistency at the tongue
+boundary (Proof B's Born rule derivation) and out of a stick-slip
+friction law near its critical strain.
+
+One primitive, two applications:
+
+- **Quantum**: fluctuations near the saddle-node scale as `Δθ ~ √ε`
+  where `ε` is the distance past the bifurcation threshold. Squaring
+  to get the basin measure gives `P = |ψ|²`, which is the Born rule
+  (`born_rule.md`, Proof B).
+
+- **Seismic**: the relaxation time near the saddle-node scales as
+  `τ ~ 1/√ε`. The variance of strain fluctuations grows as `1/√ε`,
+  the lag-1 autocorrelation approaches 1, and the skewness shifts
+  toward the unstable side. These are the **critical slowing down**
+  (CSD) indicators that the early-warning-signals literature
+  (Scheffer, Carpenter, Dakos, from ~2008 onward) already uses on
+  real ecological, climate, financial, and seismic time-series data
+  to detect approach to bifurcations.
+
+The Chilean, Japanese, and Cascadia seismic gap assessments that
+have been revised upward in 2024-2026 ("30-year probability" rising
+sharply, release windows compressing) have the quantitative shape
+of this approach: **nonlinear probability updates** and **window
+compression** are exactly what `1/√ε` scaling gives you as `ε` is
+re-estimated downward. A system far from its saddle-node updates
+linearly; a system near it updates in jumps.
+
+What the framework adds to the seismology literature: **structural
+unification**, not new machinery. The early-warning-signals tools
+already exist and already work. The framework's contribution is
+the observation that the saddle-node normal form these tools
+exploit is the same parabola primitive that produces the Born
+rule, which is one of the framework's four fundamental objects
+alongside integers, the mediant, and the fixed point. One local
+geometry underwrites both quantum measurement collapse and
+terrestrial stick-slip release.
+
+See `parabola_csd_demo.py` for a short working example that
+simulates the normal form and computes the CSD indicators, with
+notes on how to extend the same code to real GPS / InSAR strain
+data.
+
+---
+
 ## Proof chains
 
 This derivation extends all three proof chains:
