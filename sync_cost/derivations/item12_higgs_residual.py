@@ -15,30 +15,28 @@ include:
 """
 
 import math
-from itertools import product
 
-
-PHI = (1 + math.sqrt(5)) / 2
-Q2, Q3 = 2, 3
-K_LEPTON = Q3 ** 2         # 9
-K_QUARK = Q2 ** 3          # 8
-MEDIANT = Q2 + Q3          # 5
-INTERACT = Q2 * Q3         # 6
+from framework_constants import (
+    INTERACT,
+    K_LEPTON,
+    K_QUARK,
+    MEDIANT,
+    PDG_MASS,
+    PHI,
+    Q2, Q3,
+    V_GEV,
+)
+from framework_utils import fib as _fib  # local alias to avoid shadowing
 
 
 # Observed Higgs values (PDG 2024)
-M_H = 125.25
-V_GEV = 246.22
+M_H = PDG_MASS["H"][0] / 1e3    # in GeV
 LAMBDA_OBS = M_H ** 2 / (2 * V_GEV ** 2)
 LAMBDA_TREE = 1 / Q2 ** 3   # 1/8 = 0.125
 RES = LAMBDA_OBS - LAMBDA_TREE   # ~0.00438
 
 
-def fib(k):
-    a, b = 1, 1
-    for _ in range(k - 1):
-        a, b = b, a + b
-    return a
+fib = _fib  # shared, from framework_utils
 
 
 def structural_reading(N):

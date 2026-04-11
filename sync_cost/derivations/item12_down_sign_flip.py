@@ -53,12 +53,9 @@ two cleanest structural candidates and notes they're
 observationally equivalent.
 """
 
-import math
 from fractions import Fraction
 
-
-PHI = (1 + math.sqrt(5)) / 2
-Q2, Q3 = 2, 3
+from framework_constants import PHI, Q2, Q3   # shared single-source-of-truth
 
 
 def parity_product(denominators):
