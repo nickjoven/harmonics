@@ -383,14 +383,92 @@ Five applications, one primitive. The lepton generation exponent
 is reading the same saddle-node geometry at the q=2 Arnold tongue
 that the Born rule reads at every tongue boundary.
 
-The reading does NOT close item 12 to 0 fits, but it does answer
-"why is `a_1 = 1/sqrt(w)` the right form?": it is the framework's
-own saddle-node relaxation time, applied at the lepton sector's
-primary base. What remains open is the **normalization
-convention** `μ_center = w` -- a more careful mean-field
-linearization near the tongue boundary should derive the
-proportionality constant exactly, turning the 4-decimal-digit
-near-match into a theorem.
+### Update (tongue_formula_accuracy.py): sqrt(pi) correction to reading
+
+**The saddle-node reading is off by `sqrt(pi)` when evaluated
+against the physical Arnold tongue.**
+
+`tongue_formula_accuracy.py` derives the analytic q=2 tongue
+width from the 2-iterate of the standard circle map at leading
+order:
+
+    w_true(1/2, K) = K^2 / (4 pi)
+
+verified numerically at tight tolerance across K in [0.3, 1.0]
+to within 5% (higher-order K corrections).
+
+The framework's perturbative formula is
+
+    w_framework(p/q, K) = 2 (K/2)^q / q
+
+which for q=2 gives `K^2 / 4`. **The framework formula is
+systematically pi times the physical tongue width** -- verified
+analytically at q=1 (framework K vs physical K/pi) and at q=2
+(framework K^2/4 vs physical K^2/(4 pi)).
+
+This has a sharp consequence for the lepton identity. The
+structural reading "a_1(lep) = 1/sqrt(w) = saddle-node relaxation"
+works only with w_framework, NOT with the physical tongue width:
+
+    1 / sqrt(w_framework) = 2 / K*     ≈ 2.3202  == a_1(lep) ✓
+    1 / sqrt(w_true)      = 2 sqrt(pi) / K* ≈ 4.1124  ≠ a_1(lep) ✗
+
+The precise relation against physical quantities is
+
+    a_1(lep) * sqrt(pi) = 1 / sqrt(w_true(1/2, K*))
+    (observed agreement 0.999954)
+
+i.e. **a_1(lep) is `1/sqrt(pi)` times the true saddle-node
+relaxation time at the physical q=2 Arnold tongue**.
+
+### Three readings of the lepton identity after the sqrt(pi) finding
+
+  (A) ALGEBRAIC / NON-PHYSICAL: the 4-decimal-digit match
+      `a_1(lep) * K* = q_2` is an algebraic identity between the
+      lepton generation exponent, the Klein-bottle integer q_2,
+      and the Kuramoto self-consistent coupling K*. It does NOT
+      correspond to a physical saddle-node relaxation time at
+      the Arnold tongue -- the sqrt(pi) factor is unaccounted for.
+      "Stick-slip" is a shape metaphor but not an exact physical
+      identification.
+
+  (B) CONVENTIONAL: the framework's `w = 2(K/2)^q/q` is a
+      conventional quantity (pi * w_physical) used consistently
+      throughout, and `a_1(lep) = 1/sqrt(w_framework)` holds by
+      the framework's own definition.  This rescues the formal
+      identity but at the cost of recognizing that the framework's
+      "w" is not the physical Arnold tongue width.
+
+  (C) HIDDEN PRIMITIVE: the sqrt(pi) factor comes from a
+      framework primitive not yet identified.  Likely candidates:
+        - Kramers-style saddle-node passage time, which is
+          pi/sqrt(mu) (not 1/sqrt(mu)), giving an explicit pi.
+        - Gaussian-integral normalization at the tongue tip.
+        - Mean-field Kuramoto integral normalization with
+          2 pi from the circular measure.
+      Each could naturally produce sqrt(pi).
+
+Reading (A) is the most honest for now.  (B) is internally
+consistent but requires re-stating the structural meaning of
+the framework's "tongue width" throughout the tree.  (C) is
+the goal of the next derivation attempt -- find the primitive
+that generates sqrt(pi) naturally.
+
+**Downstream audit required**.  The framework uses
+`w = 2(K/2)^q/q` in at least:
+
+  - `framework_utils.py` tongue_width()
+  - `circle_map_utils.py` tongue_width()
+  - `boundary_weight.py` tongue_coverage_q6()
+  - `field_equation_iteration.py` w normalization
+  - `K_star_iteration.py` field sum weightings
+  - `born_rule.md` tongue-width / `Δθ²` relation
+
+If any of these computes a physical observable (not just a
+self-consistent framework quantity), the sqrt(pi) or pi
+correction propagates.  The Omega_Lambda = 13/19 derivation
+via boundary_weight.md is the most load-bearing of these and
+the first to audit.
 
 ## 14. Multi-twisted substrate unification
 
