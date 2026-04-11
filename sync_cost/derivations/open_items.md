@@ -233,23 +233,73 @@ propagation and propose a structural reading for each:
   partition, two independent observables) is what distinguishes
   this from a post-hoc fit.
 
-**What's still open**:
-1. The `q_2 q_3` double-cover step is a **conjecture**, not a
-   first-principled derivation. A formal argument from the
-   rational field equation (path-integral normalization of the
-   orientable-lift walk) is missing.
-2. The intra-lepton ratio `a_2(lep)/a_1(lep) = 1.4994` is
-   16 σ away from exact `3/2` — a known finite-K residual in
-   the lepton sector that this pass does not touch.
-3. `C = a_1(leptons)^2 = 5.3838` has no closed form. The
-   tightest near miss `3 ln(q_2 q_3) = 5.3753` is 0.16% but
-   33 σ away from `C` at PDG precision. Most plausibly `C`
-   is a Feigenbaum-style fixed-point output of the rational
-   field equation at the lepton sector's Fibonacci convergent,
-   computable by iteration but without a closed form in
-   elementary functions.
+### Update (item12_C_from_K_star.py): closed form C = q_2^2 / K*^2
 
-This is the remaining state of item 12.
+The "iterate the field equation for C" plan turned into a different
+finding: `C` has a **direct closed form** in terms of the Arnold
+tongue width at the lepton's primary base rational.
+
+    a_1(leptons) = 1 / sqrt(w(3/2, K*)) = q_2 / K*
+    C = q_2^2 / K*^2
+
+where `w(p/q, K) = 2 (K/2)^q / q` is the perturbative Arnold-tongue
+width and `K*` is the framework's self-consistent coupling.
+
+**Numerical status at PDG 2024** (`K* = 0.862`):
+
+    a_1(lep) observed = 2.3202917 +/- 5.6e-5
+    2 / K*            = 2.3201856
+    agreement         = 4 decimal digits (1.9 sigma)
+
+**Lepton-implied K* at high precision**:
+
+    K* = q_2 / a_1(lep) = 0.8619606 +/- 2.1e-5
+
+This is consistent with the framework's cited `K* = 0.862` under
+3-digit rounding, and sharpens it by 3 more digits. The framework
+has no prior independent computation of `K*` at better than 3-digit
+precision (`field_equation_iteration.py` admits the direct `r -> K r`
+iteration hits a degenerate `r* = 0` vacuum and treats `K*` as an
+"effective coupling parameter").
+
+**Combined with the cross-sector scalings**:
+
+    a_1(leptons)^2   = q_2^2 / K*^2
+    a_1(up)^2        = (q_3/q_2)^2 * q_2^2 / K*^2 = q_3^2 / K*^2
+    a_1(down)^2      = q_2 q_3 * q_2^2 / K*^2 = q_2^3 q_3 / K*^2
+
+All three per-sector `a_1` values become explicit structural
+expressions in `(q_2, q_3, K*)`. Mass sector fit count drops from
+1 (the constant C) to **0**, pending:
+
+1. Independent computation of `K*` at 5+ digits confirming the
+   identity. The current 4-decimal-digit agreement is a strong
+   near-coincidence but does not rule out "numerical accident at
+   1 part in 10^4".
+2. A first-principled derivation of the `1 / sqrt(w)` prescription
+   from the rational field equation.  The structural reading (tongue
+   width is an "area" in (K, Omega) space; the log-mass ladder
+   scale is "linear", so the natural quantity is its inverse
+   square root) is suggestive but not yet mechanized.
+3. A clean account of why the formula applies *directly* to leptons
+   but requires the Fibonacci-shift / Klein-parity corrections for
+   quarks.  The reading is: the lepton sector has the simplest Klein
+   topology (q_2 twist, single sheet, no Fibonacci shift); quark
+   sectors are derived from it by the cross-sector scalings.
+
+**Still open from this pass**:
+- The intra-lepton `a_2(lep)/a_1(lep) = 1.4994` is 16 sigma away
+  from exact `3/2` — a known finite-K residual in the lepton sector
+  that this pass does not touch.
+- The `q_2 q_3` Klein-bottle double-cover conjecture still needs a
+  first-principled derivation, independent of the tongue-width
+  identity for leptons.
+- An independent 5+ digit determination of `K*` is the most leveraged
+  remaining task — it decides between "C = q_2^2/K*^2 is exact" and
+  "tight numerical near-coincidence".
+
+See `item12_C_from_K_star.md` for the full derivation attempt and
+structural reading.
 
 ## 14. Multi-twisted substrate unification
 
