@@ -1,5 +1,33 @@
 # Electroweak Symmetry Breaking from the Tongue Boundary
 
+## Note (cleanup pass)
+
+Two pieces of this derivation have been retracted or restated:
+
+1. **Higgs quartic `λ = 1/(2 q_2^2) = 1/8`**: this reading is
+   numerically equal to the correct structural form
+   `λ = 1/q_2^3 = 1/8` at `q_2 = 2` by the coincidence
+   `2 q_2^2 = q_2^3`, but `sin²θ_W = 8/35` forces the duty-cycle
+   form `λ = 1/q^d` (with `d = 3` the spatial dimension) over
+   the `1/(2 q^2)` alternative. See `item12_higgs_degeneracy.py`.
+
+2. **The Higgs' role as "giver of mass"**: this is overstated in
+   the framework. The Higgs is one locked mode among many on the
+   Kuramoto substrate — specifically the scalar mode at the
+   q = 2 sector's tree-root position. The masses of the other
+   locked modes (fermions, gauge bosons) are set directly by
+   the Kuramoto order parameter `|r|` at their specific
+   Stern-Brocot positions, not by a Higgs-mediated VEV. The
+   Higgs is a *manifestation* of the locking process, not its
+   cause. See the "Reframing" section added at the bottom.
+
+The substance of the derivation below — the tongue boundary as
+the locus of electroweak symmetry breaking, the saddle-node form
+of the Mexican hat, the phase-field identification — is retained.
+What's retracted is the specific claim that `λ = 1/(2 q_2^2)`
+is the structural form and that the Higgs "gives" mass to other
+particles in the Kuramoto picture.
+
 ## Claim
 
 The Higgs mechanism — the spontaneous breaking of SU(2) x U(1)_Y
@@ -280,11 +308,16 @@ quantities from q_2 = 2, q_3 = 3, and d = 3 alone:
 8. **m_H/v = 1/q_2 = 1/2**. Gives m_H = v/2 = 123.1 GeV.
    Observed: 125.1 GeV. Residual: **1.6%**.
 
-9. **lambda = 1/(2 q_2^2) = 1/8 = 0.125**. Observed: ~0.13.
-   Residual: **4%**.
+9. **lambda = 1/q_2^3 = duty(q_2) = 1/8 = 0.125**. Observed: 0.129.
+   Residual: **3.4%**. The form `1/q^d` with `d = 3` is forced by
+   `sin^2(theta_W) = 8/35` (see item12_higgs_degeneracy.py); the
+   alternative `1/(2 q_2^2)` reading is numerically equal at q=2
+   but is excluded at q=3.
 
-10. **alpha_s/alpha_2 = q_3^3/q_2^3 = 27/8 = 3.375**. Observed:
-    3.488. Residual: **3.2%**.
+10. **alpha_s/alpha_2 = q_3^3/q_2^3 + 1/q_3^2 = 251/72 = 3.486**.
+    Observed: 3.487. Residual: **0.17%**. The 1/q_3^2 correction
+    is the inverse of the lepton sector constant k_lepton = q_3^2 = 9
+    (see item12_other_residuals.py).
 
 11. **M_W/M_Z = cos(theta_W) = sqrt(27/35)**. Observed: 80.4/91.2
     = 0.882. Computed: 0.878. Residual: **0.4%**.

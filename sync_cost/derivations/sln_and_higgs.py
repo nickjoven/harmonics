@@ -155,12 +155,18 @@ def main():
     print()
     print(f"    m_H = v/q₂ = {v}/{q2} = {v/q2:.2f} GeV")
     print()
-    print("  More precisely: λ = 1/(2q₂²) gives m_H = v√(2λ) = v/q₂.")
+    print("  The structural form is λ = 1/q₂³ = duty(q₂) = α₂(tree),")
+    print("  forced by sin²θ_W = 8/35 under the 1/q^d duty-cycle reading.")
+    print("  The alternative 1/(2q₂²) form is numerically equal at q₂=2")
+    print("  but is excluded at q₃=3 (gives sin²θ_W = 4/13, 33% off).")
+    print("  See item12_higgs_degeneracy.py for the degeneracy-breaking test.")
+    print()
+    print("  Since m_H² = 2λv² and λ = 1/8, we have m_H = v·√(1/4) = v/2 = v/q₂.")
     print()
 
-    lam_pred = 1 / (2 * q2**2)
+    lam_pred = 1 / (q2**3)
     lam_obs = (m_H_obs / v)**2 / 2
-    print(f"    λ(predicted) = 1/(2q₂²) = 1/{2*q2**2} = {lam_pred:.4f}")
+    print(f"    λ(predicted) = 1/q₂³ = 1/{q2**3} = {lam_pred:.4f}")
     print(f"    λ(observed)  = (m_H/v)²/2 = {lam_obs:.4f}")
     print(f"    Δ(λ) = {abs(lam_pred - lam_obs)/lam_obs:.1%}")
 
@@ -242,18 +248,26 @@ def main():
 
   HIGGS MASS PREDICTION:
     m_H = v/q₂ = 246.22/2 = 123.11 GeV
-    Observed: 125.10 ± 0.14 GeV
-    Residual: 1.6%
+    Observed: 125.25 ± 0.17 GeV
+    Residual: 1.7%
 
-    The Higgs quartic coupling:
-    λ = 1/(2q₂²) = 1/8 = 0.125
+    The Higgs quartic coupling (structural form):
+    λ = 1/q₂³ = duty(q₂) = α₂(tree) = 1/8 = 0.125
     Observed: λ ≈ 0.129
-    Residual: 3.3%
+    Residual: 3.4%
 
-    Physical meaning: the Higgs mass is the VEV divided by
-    the period of the sector it lives in. The q₂=2 mode
-    opens its gate twice per cycle. The curvature of the
-    crossing potential scales as 1/q₂².
+    The 1/(2q₂²) = 1/8 reading is numerically equal at q₂=2
+    but is excluded by sin²θ_W = 8/35 requiring the 1/q^d
+    duty-cycle form. See item12_higgs_degeneracy.py.
+
+    Physical meaning: the Higgs quartic is the q₂ sector's
+    own duty cycle at tree level. The Higgs is one locked
+    mode among many in the Kuramoto substrate, sharing the
+    duty-cycle structure of the gauge couplings. It does NOT
+    "give mass to particles" -- masses of fermions and gauge
+    bosons are set directly by the Kuramoto order parameter
+    |r| at their specific Stern-Brocot positions. The Higgs
+    is a manifestation of the locking process, not its cause.
 
   NEW PREDICTION TABLE ENTRY:
     m_H = v/q₂ = 123.1 GeV  (observed 125.1, 1.6%)
