@@ -517,7 +517,15 @@ terrestrial stick-slip release.
 See `parabola_csd_demo.py` for a short working example that
 simulates the normal form and computes the CSD indicators, with
 notes on how to extend the same code to real GPS / InSAR strain
-data.
+data. `parabola_csd_pipeline.py` is the real-data companion,
+pointed at the Nevada Geodetic Laboratory open archive.
+
+See `seismic_eigenstate_dictionary.md` for the companion reading
+of **waveform-based** precursors (repeating earthquakes, tremor,
+b-value, coda dv/v) as framework tongue-locked modes. That
+document explains what enabled the 2024–2026 Iquique / Nankai
+probability updates and maps each empirical precursor to a
+framework variable without adding a new tool.
 
 ---
 
