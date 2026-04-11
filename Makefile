@@ -120,7 +120,7 @@ FIGURES := \
 	$(DERIVATIONS)/window_normalization.png \
 	$(DERIVATIONS)/klein_phase_diagram.png
 
-.PHONY: all gifs figures clean
+.PHONY: all gifs figures clean lint lint-fix format
 
 all: gifs figures
 
@@ -130,3 +130,20 @@ figures: $(FIGURES)
 
 clean:
 	rm -f $(GIFS) $(FIGURES)
+
+# ───────────────────────── Linting ─────────────────────────
+
+# Run ruff in check mode across the derivation scripts.
+# Config lives in pyproject.toml.
+lint:
+	ruff check sync_cost/derivations/
+
+# Auto-fix safe issues (unused imports, import ordering, etc.).
+# Does NOT touch rules that require human judgment.
+lint-fix:
+	ruff check --fix sync_cost/derivations/
+
+# Apply ruff's formatter (equivalent to black). Whitespace only,
+# no semantic changes. Preview before committing.
+format:
+	ruff format sync_cost/derivations/
