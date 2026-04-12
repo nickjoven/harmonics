@@ -140,25 +140,42 @@ def tongue_width_numerical(p, q, K, n_trans=5000, n_meas=20000, n_bisect=40):
 
 def tongue_width(p, q, K):
     """
-    Arnold tongue width at rational p/q, coupling K.
+    Saddle-node control parameter mu at the q-resonance, coupling K.
+
+    NAMING NOTE: historically called "tongue_width".  Under reading
+    (D) from noise_dressed_parabola.py and the audit in
+    tongue_formula_accuracy.py, the quantity returned here is the
+    saddle-node CONTROL PARAMETER mu in (x, mu) normal-form
+    coordinates, NOT the Omega-space Arnold tongue width.  The
+    physical Omega-space width is mu / pi (verified at q=1 and q=2
+    analytically; same Jacobian holds at leading order throughout).
+    Both parameterizations are correct; they are related by a
+    coordinate change.
+
+    Every framework caller of this function uses it either as a
+    ratio within the same convention (pi cancels) or as a normalized
+    amplitude, so no numerical adjustment propagates to any physical
+    observable.  Omega_Lambda = 13/19, neutrino closures, and K* all
+    hold unchanged.  See tongue_formula_accuracy.py Part 6 for the
+    robustness audit.
 
     Uses the two analytically derived regimes with NO interpolation:
 
       Perturbative (valid for K well below 1):
-        w(p/q, K) = 2 * (K/2)^q / q
+        mu(p/q, K) = 2 * (K/2)^q / q
         From: K^q appears at q-th order in the Fourier expansion
         of the circle map's q-th iterate. This is exact to leading
         order and the primitives (mediant + parabola) determine it.
 
       Critical (valid at K = 1):
-        w(p/q, 1) = 1/q^2
+        mu(p/q, 1) = 1/q^2
         From: the Gauss-Kuzmin measure = Ford circle areas = hyperbolic
         area at each cusp. This is exact and follows from the mediant
         (Stern-Brocot tree structure).
 
-    At K < 1, the perturbative formula is the honest one: tongue widths
-    grow as K^q. The critical formula 1/q^2 applies ONLY at K = 1.
-    Between them, the actual dynamics interpolate — but that interpolation
+    At K < 1, the perturbative formula is the honest one: mu grows
+    as K^q. The critical formula 1/q^2 applies ONLY at K = 1.
+    Between them, the actual dynamics interpolate -- but that interpolation
     is determined by the circle map, not by a smoothstep.
 
     For sub-critical K (the physical regime, K* ~ 0.86), we use the

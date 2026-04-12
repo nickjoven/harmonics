@@ -19,17 +19,18 @@ Contents
 """
 
 import math
-from typing import Iterable
 
 from framework_constants import (
-    F_6_COUNT, F_7_COUNT,
+    F_6_COUNT,
+    F_7_COUNT,
     FRAMEWORK_INTEGERS,
     INTERACT,
-    K_LEPTON, K_QUARK,
+    K_LEPTON,
+    K_QUARK,
     MEDIANT,
-    Q2, Q3,
+    Q2,
+    Q3,
 )
-
 
 # ============================================================================
 # Fibonacci
@@ -214,10 +215,24 @@ def scan_integer_denoms(
 
 def tongue_width(p: int, q: int, K: float) -> float:
     """
-    Arnold tongue width at rational p/q, coupling K.
+    Saddle-node control parameter mu at the q-resonance, coupling K.
 
-    Perturbative form (K < 1): w(p/q, K) = 2 (K/2)^q / q
-    Critical form (K = 1):      w(p/q, 1) = 1 / q^2
+    Perturbative form (K < 1): mu(p/q, K) = 2 (K/2)^q / q
+    Critical form (K = 1):     mu(p/q, 1) = 1 / q^2
+
+    Naming note: this function is historically called "tongue_width"
+    but under reading (D) from noise_dressed_parabola.py and the audit
+    in tongue_formula_accuracy.py, the quantity returned here is the
+    saddle-node CONTROL PARAMETER mu in (x, mu) normal-form coordinates,
+    NOT the Omega-space Arnold tongue width.  The physical Omega-space
+    tongue width is mu / pi (e.g. at q=2, mu = (K/2)^2 and
+    w_physical = K^2/(4*pi)).  Both are correct in their respective
+    parameterizations; they differ by a coordinate Jacobian.
+
+    All framework callers of this function use it as a dimensionless
+    amplitude or a ratio (pi cancels), so no numerical adjustment is
+    required anywhere downstream.  See tongue_formula_accuracy.py
+    Part 6 for the full audit.
     """
     if q <= 0:
         raise ValueError(f"q must be positive, got {q}")

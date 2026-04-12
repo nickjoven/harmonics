@@ -19,7 +19,6 @@ Usage:
     python3 sync_cost/derivations/boundary_weight.py
 """
 
-import math
 import sys
 from fractions import Fraction
 
@@ -48,13 +47,35 @@ def omega_lambda(w):
 
 
 def tongue_coverage_q6(K):
-    """Fractional tongue coverage of q=6 modes at coupling K.
+    """Fractional tongue coverage of q=6 modes at coupling K (DIAGNOSTIC ONLY).
+
     There are φ(6) = 2 modes at q=6 (namely 1/6 and 5/6).
     Each has tongue width w(6, K). Total coverage = 2 × w(6, K).
     Fractional weight = total_coverage / max_coverage.
-    At K=1: max_coverage = 2 × 1/36 = 1/18."""
+    At K=1: max_coverage = 2 × 1/36 = 1/18.
+
+    CONVENTION WARNING: under reading (D) from
+    noise_dressed_parabola.py, tongue_width returns the saddle-node
+    control parameter mu (normal-form coordinates), while 1/36 = 1/q^2
+    is the Gauss-Kuzmin Omega-space tongue width at K = 1.  Taking
+    their ratio mixes two conventions (mu in the numerator, Omega-
+    width in the denominator) and yields 0.1875 at K = 1 rather than
+    the expected 1.0 -- this is the framework formula's well-known
+    discontinuity at K = 1, NOT a physical result.
+
+    This function is USED ONLY for diagnostic scans below in the
+    "self-consistency search" section.  It is NOT used in the actual
+    Omega_Lambda = 13/19 derivation, which is driven by the algebraic
+    inversion `w* = (11 - 16 Omega) / (3 Omega - 2)` in `main()` Part 1
+    (line 94).  The consistent-convention ratio used in "PART 4:
+    FULL SELF-CONSISTENT PARTITION AT EACH K" (line 196-198 below)
+    takes `tongue_width(1, q, K) / tongue_width(1, q, 1.0)`, which
+    has pi cancel cleanly and is the correct form.
+
+    See tongue_formula_accuracy.py Part 6 for the full audit.
+    """
     w6 = tongue_width(1, 6, K)
-    max_w6 = 1.0 / 36.0  # 1/q² at K=1
+    max_w6 = 1.0 / 36.0  # 1/q² at K=1 (Omega-space, NOT the framework mu)
     if max_w6 <= 0:
         return 0.0
     return min(w6 / max_w6, 1.0)
@@ -97,12 +118,12 @@ def main():
 
     # As exact fraction with Ω = 13/19
     w_exact_13_19 = Fraction(11 * 19 - 16 * 13, 3 * 13 - 2 * 19)
-    print(f"\n  For Ω_Λ = 13/19 exactly:")
-    print(f"    w = (11×19 − 16×13) / (3×13 − 2×19)")
+    print("\n  For Ω_Λ = 13/19 exactly:")
+    print("    w = (11×19 − 16×13) / (3×13 − 2×19)")
     print(f"      = ({11*19} − {16*13}) / ({3*13} − {2*19})")
     print(f"      = {11*19 - 16*13} / {3*13 - 2*19}")
     print(f"      = {w_exact_13_19} = {float(w_exact_13_19):.6f}")
-    print(f"    (= 1, confirming F₆ is the w=1 limit)")
+    print("    (= 1, confirming F₆ is the w=1 limit)")
 
     # ── 2. Self-consistency: w = tongue_fraction(K(w)) ────────────────────
     print(f"\n{'─' * 75}")
@@ -136,9 +157,11 @@ def main():
     K_star = None
     for K_test in [x * 0.001 for x in range(1, 1001)]:
         w_t = tongue_coverage_q6(K_test)
-        if abs(w_t - w_obs) < 0.005:
-            if K_star is None or abs(w_t - w_obs) < abs(tongue_coverage_q6(K_star) - w_obs):
-                K_star = K_test
+        if abs(w_t - w_obs) < 0.005 and (  # noqa: SIM102
+            K_star is None
+            or abs(w_t - w_obs) < abs(tongue_coverage_q6(K_star) - w_obs)
+        ):
+            K_star = K_test
 
     if K_star:
         w_at_K = tongue_coverage_q6(K_star)
@@ -151,7 +174,7 @@ def main():
         print(f"  Δ = {abs(ol_at_K - OMEGA_OBS)/OMEGA_OBS:.2%}")
     else:
         print(f"  w_obs = {w_obs:.4f}")
-        print(f"  Scanning for K where tongue_fraction(q=6) = w_obs...")
+        print("  Scanning for K where tongue_fraction(q=6) = w_obs...")
 
         # More careful scan
         best_K = 0.5
@@ -217,7 +240,7 @@ def main():
     print(f"{'─' * 75}\n")
 
     print("  The observed Ω_Λ determines w uniquely:")
-    print(f"    w* = (11 − 16Ω) / (3Ω − 2)")
+    print("    w* = (11 − 16Ω) / (3Ω − 2)")
     print()
 
     for omega_test in [0.680, 0.682, 0.684, 0.6842, 0.6847, 0.685, 0.687, 0.690]:
@@ -235,7 +258,6 @@ def main():
     w_star = w_obs
     N_modes = 11 + 2 * w_star
     n_depth = 5 + w_star  # depth interpolates between 5 and 6
-    effective_F = N_modes
 
     print(f"  w* = {w_star:.4f}")
     print(f"  Effective mode count: 11 + 2×{w_star:.4f} = {N_modes:.4f}")
@@ -247,20 +269,20 @@ def main():
     print(f"  at effective Farey depth {n_depth:.2f}.")
     print()
     print(f"  The boundary modes (1/6 and 5/6) are {w_star*100:.0f}% locked.")
-    print(f"  They're not fully in (w=1 → 13/19) and not fully out")
-    print(f"  (w=0 → 11/16). The physical value is between.")
+    print("  They're not fully in (w=1 → 13/19) and not fully out")
+    print("  (w=0 → 11/16). The physical value is between.")
     print()
 
     # Does this close the n=6 gap?
-    print(f"  THE n=6 GAP:")
-    print(f"    n=5 gives 11/16 = 0.6875 (0.41% above observed)")
-    print(f"    n=6 gives 13/19 = 0.6842 (0.07% below observed)")
+    print("  THE n=6 GAP:")
+    print("    n=5 gives 11/16 = 0.6875 (0.41% above observed)")
+    print("    n=6 gives 13/19 = 0.6842 (0.07% below observed)")
     print(f"    w=0.71 gives {omega_lambda(w_star):.6f}"
           f" ({abs(omega_lambda(w_star)-OMEGA_OBS)/OMEGA_OBS:.3%} from observed)")
     print()
-    print(f"  The gap dissolves: the question was 'n=5 or n=6?'")
-    print(f"  The answer is 'n = 5.71' — the boundary modes are")
-    print(f"  partially locked, and the Farey depth is not an integer.")
+    print("  The gap dissolves: the question was 'n=5 or n=6?'")
+    print("  The answer is 'n = 5.71' — the boundary modes are")
+    print("  partially locked, and the Farey depth is not an integer.")
 
     # ── 7. Uniqueness ─────────────────────────────────────────────────────
     print(f"\n{'─' * 75}")
@@ -269,27 +291,27 @@ def main():
 
     print("  Ω_Λ(w) = (11 + 2w)/(16 + 3w) is MONOTONICALLY DECREASING:")
     print("    dΩ/dw = (2(16+3w) - 3(11+2w)) / (16+3w)²")
-    print(f"          = (32+6w-33-6w) / (16+3w)²")
-    print(f"          = -1 / (16+3w)²")
-    print(f"          < 0 for all w")
+    print("          = (32+6w-33-6w) / (16+3w)²")
+    print("          = -1 / (16+3w)²")
+    print("          < 0 for all w")
     print()
-    print(f"  Ω_Λ(w) is strictly decreasing. For any observed Ω_Λ")
-    print(f"  in the range [13/19, 11/16], there is EXACTLY ONE w.")
+    print("  Ω_Λ(w) is strictly decreasing. For any observed Ω_Λ")
+    print("  in the range [13/19, 11/16], there is EXACTLY ONE w.")
     print()
-    print(f"  The solution is unique. The boundary weight is determined")
-    print(f"  by observation. The self-predicting set has a unique size")
-    print(f"  for any given Ω_Λ.")
+    print("  The solution is unique. The boundary weight is determined")
+    print("  by observation. The self-predicting set has a unique size")
+    print("  for any given Ω_Λ.")
     print()
-    print(f"  This ALSO means: Ω_Λ is not predicted from the topology")
-    print(f"  alone — it's predicted to lie in [13/19, 11/16], with")
-    print(f"  the exact value determined by the boundary coupling.")
-    print(f"  The topology gives the RANGE. The dynamics give the POINT.")
+    print("  This ALSO means: Ω_Λ is not predicted from the topology")
+    print("  alone — it's predicted to lie in [13/19, 11/16], with")
+    print("  the exact value determined by the boundary coupling.")
+    print("  The topology gives the RANGE. The dynamics give the POINT.")
 
     # ── Summary ───────────────────────────────────────────────────────────
     print(f"\n{'=' * 75}")
     print("  SUMMARY")
     print(f"{'=' * 75}")
-    print(f"""
+    print("""
   The n=5 vs n=6 question dissolves.
 
   The boundary modes (q=6: fractions 1/6 and 5/6) are partially
