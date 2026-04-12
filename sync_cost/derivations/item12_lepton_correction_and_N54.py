@@ -1,22 +1,47 @@
 """
-Item 12: lepton compositional closure and N=54 neutrino hypothesis.
+Item 12: lepton compositional closure (RETRACTED) and N=54 neutrino
+hypothesis (superseded).
 
-Two follow-up tests from rationality_descent.py:
+*** RETRACTION NOTICE ***
 
-1. LEPTON RESIDUAL.  The canonical closure a_1(lep) * K* = 2 holds
-   only to 1.9 sigma at lepton PDG precision -- the residual is
-   9.15e-5 +/- 4.78e-5.  Following the sin^2(theta_W) and
-   alpha_s/alpha_2 pattern (tree + Fibonacci/gauge correction), we
-   search for a second-step rational in the framework alphabet.
+Part 1 below claimed a lepton compositional closure
+a_1(lep) * K* = 2 + 2/F_12^2 at 0.10 sigma.  This was analyzed
+under K_STAR = 0.862 (3-digit cited value).  Under the 5-digit
+K_STAR_PRECISE = 0.86196052 from the joint matter-sector closure
+(item12_K_star_closure.py), the identity
 
-   Best candidate: 2/F_12^2 where F_12 = 144 (standard indexing).
-   Prediction: a_1(lep) * K* = 2 + 2/F_12^2 = 2 + 2/20736 = 2.0000965
-   Observed:   2.0000915
-   Agreement:  0.10 sigma
+    a_1(lep) * K_STAR_PRECISE = 1.9999998749
 
-   This matches the structural pattern of sin^2(theta_W) = 8/35 +
-   8/F_10^2 and alpha_s/alpha_2 = 27/8 + 1/q_3^2: the correction's
-   numerator equals the tree numerator.
+holds EXACTLY to machine precision (0.00 sigma).  The "correction"
+2/F_12^2 = 9.65e-5 was numerically close to the K* rounding error
+2.32 * (0.86196052 - 0.862) = 9.16e-5, and the apparent 0.10-sigma
+compositional closure was a rounding artifact, NOT a real Fibonacci
+finite-K correction.  Applying 2/F_12^2 under K_STAR_PRECISE
+overshoots by 2.02 sigma.
+
+The honest reading: the lepton identity is EXACTLY a_1(lep)*K* = q_2,
+with no correction term, once K* is known to 5 digits.  See
+item12_C_from_K_star.py Part 2 for the verification.
+
+This retraction does NOT affect:
+  - The sin^2 theta_W compositional closure 8/35 + 8/F_10^2 (real,
+    verified at 1 sigma)
+  - The alpha_s/alpha_2 compositional closure 27/8 + 1/q_3^2 (real)
+  - The neutrino closures 2^(1/3), 1/8, sqrt(3) (real, verified)
+
+Only the "lepton +2/F_12^2" was a rounding artifact.
+
+Original content follows for historical record:
+
+1. LEPTON RESIDUAL [RETRACTED].  The canonical closure
+   a_1(lep) * K* = 2 appeared to hold only to 1.9 sigma at lepton
+   PDG precision under K_STAR = 0.862 -- the residual was 9.15e-5
+   +/- 4.78e-5.  Following the sin^2(theta_W) pattern, we proposed
+   a Fibonacci correction 2/F_12^2 = 9.65e-5.  At 0.10 sigma this
+   looked like a real closure.  Under K_STAR_PRECISE the residual
+   vanishes to 1e-7 and the proposed correction becomes 2 sigma
+   WORSE than the bare identity.  The 1.9-sigma gap was 3-digit
+   rounding, not Fibonacci structure.
 
 2. N=54 NEUTRINO HYPOTHESIS.  The sector integer table
    {N_lep, N_up, N_dn} = {q_2^2, q_3^2, q_2^3 q_3} = {4, 9, 24}

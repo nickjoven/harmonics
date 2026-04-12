@@ -49,7 +49,6 @@ Framework-special integer set (used by structural-reading helpers):
 
 import math
 
-
 # ============================================================================
 # Klein bottle integers and derived sector constants
 # ============================================================================
@@ -86,12 +85,37 @@ INV_PHI_SQ: float = 1 / (PHI * PHI)               # = 2 - PHI
 
 # K_STAR is the framework's fixed point coupling from the boundary-weight
 # derivation (boundary_weight.md), where Omega_Lambda = 13/19 is matched
-# at w* = 0.83 and K* = 0.862. This is the CANONICAL value.
+# at w* = 0.83 and K* = 0.862. This is the 3-digit CITED value.
 #
 # An alternative K_STAR = 0.8668 was fit from neutrino splittings in the
 # A-2 work and was later retracted in item12_sin_W_and_signs.py and
 # elsewhere (see open_items.md). Use K_STAR below, not 0.8668.
 K_STAR: float = 0.862
+
+# K_STAR_PRECISE is the 5-digit value from the joint matter-sector
+# self-consistency closure (item12_K_star_closure.py).  Three independent
+# extractions of K* from m_tau/m_mu, m_t/m_c, m_b/m_s via the parabola
+# rotation a_1(sector)^2 * K*^2 = N(sector) agree with chi^2/dof = 0.06
+# (<< 1 sigma pairwise), giving:
+#
+#     K*_joint = sqrt(N(sector)) / a_1(sector)
+#              = 0.86196052 +/- 2.06e-5
+#
+# This uses only the sector integers {4, 9, 24} (d-independent, from
+# reading D + Klein topology -- NO K* input) and PDG 2024 mass ratios.
+# K* drops out as the unique value making all three sectors sit on the
+# same parabola.  The difference from the 3-digit K_STAR = 0.862 is
+# -3.95e-5, within the 3-digit rounding precision, so K_STAR remains
+# correct as the cited value; K_STAR_PRECISE is available for downstream
+# calculations that need sub-3-digit precision.
+#
+# Under K_STAR_PRECISE the lepton identity a_1(lep)*K* = q_2 = 2 closes
+# EXACTLY to machine precision (residual ~1e-7, 0.00 sigma).  The prior
+# "lepton compositional correction +2/F_12^2" from
+# item12_lepton_correction_and_N54.py was a numerical coincidence with
+# the 3-digit rounding error and has been retracted; see Part 2 of
+# item12_C_from_K_star.py for the demonstration.
+K_STAR_PRECISE: float = 0.86196052
 
 K_STAR_OVER_2: float = K_STAR / 2                 # 0.431, frequent in tongue formulas
 

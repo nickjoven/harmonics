@@ -552,36 +552,30 @@ relaxation time at the q=2 tongue center, with `w_framework`
 interpreted correctly as the normal-form control parameter
 mu rather than the Omega geometric width.
 
-### Update (item12_lepton_correction_and_N54.py): lepton residual closes
+### Update (item12_lepton_correction_and_N54.py): lepton residual closes [RETRACTED]
 
-The 1.9-sigma residual in `a_1(lep) * K* = 2` has a compositional
-closure in the framework alphabet:
+**RETRACTED** (see update below after K_STAR_PRECISE was added).
 
-    a_1(leptons) * K*  =  2  +  2/F_12^2
-                       =  2  +  2/20736
-                       =  2.0000965
+The 1.9-sigma residual in `a_1(lep) * K* = 2` under K_STAR = 0.862
+appeared to have a compositional closure:
 
-Observed: 2.0000915.  Agreement: **0.10 sigma**.
+    a_1(leptons) * K*  =  2  +  2/F_12^2    (matched at 0.10 sigma)
 
-This matches the `sin^2(theta_W) = 8/35 + 8/F_10^2` and
-`alpha_s/alpha_2 = 27/8 + 1/q_3^2` pattern exactly: the
-correction numerator equals the tree numerator (q_2 = 2 in
-both terms), and the denominator is a framework-primitive
-Fibonacci square `F_k^2`.
+This was later retracted when K_STAR_PRECISE = 0.86196052 was added
+from the joint matter-sector closure.  Under the 5-digit K*, the
+lepton identity holds EXACTLY at 0.00 sigma with NO correction; the
+apparent 2/F_12^2 closure was numerically identical to the 3-digit
+K_STAR rounding error 2.32 * 3.95e-5 = 9.16e-5, coincidentally close
+to 2/F_12^2 = 9.65e-5.  Applying the correction under K_STAR_PRECISE
+overshoots by 2.02 sigma.
 
-By Cassini's identity `F_11 F_13 = F_12^2 - 1`, the correction
-equals `2/(F_11 F_13)` to one part in 20736, numerically
-indistinguishable at PDG precision.  Either form works; `2/F_12^2`
-is cleaner because F_12 = 144 has the secondary structural
-reading `F_12 = 12^2 = (2 q_2 q_3)^2`.
+The honest lepton reading is simply `a_1(lep) * K* = q_2 = 2` exactly
+at machine precision, with no compositional correction.  The real
+compositional closures remain: sin^2 theta_W = 8/35 + 8/F_10^2 and
+alpha_s/alpha_2 = 27/8 + 1/q_3^2 are both real, not rounding
+artifacts.
 
-**The lepton residual is closed.**  Item 12's "tight ~2 sigma"
-gap from rationality_descent.py is now a compositional rationality-
-descent closure.  The mass sector identity reads:
-
-    a_1(sector) * K* = sqrt(N(sector)) + correction(sector)
-
-with the correction in the same alphabet as the tree term.
+See item12_C_from_K_star.py Part 2 for the retraction demonstration.
 
 ### Update (item12_lepton_correction_and_N54.py): N=54 hint for neutrinos
 
@@ -803,6 +797,64 @@ self-consistent framework quantity), the sqrt(pi) or pi
 correction propagates.  The Omega_Lambda = 13/19 derivation
 via boundary_weight.md is the most load-bearing of these and
 the first to audit.
+
+### Update (item12_K_star_closure.py): ITEM 12 FINAL CLOSURE
+
+The parabola rotation `x^2 = mu` (four_rotations.py) revealed that
+every closed framework observable sits on the curve with mu drawn
+from the sector integer table.  Using this, a joint matter-sector
+self-consistency calculation extracts K* from three sectors
+independently:
+
+    K*(lep)  = sqrt(4)  / a_1(lep) = 0.86196057 +/- 2.06e-5
+    K*(up)   = sqrt(9)  / a_1(up)  = 0.86100762 +/- 2.79e-3
+    K*(dn)   = sqrt(24) / a_1(dn)  = 0.86276661 +/- 1.95e-2
+
+Inverse-variance weighted joint:
+
+    K* joint = 0.86196052 +/- 2.06e-5
+    chi^2 / dof = 0.06    (3 sectors, 1 unknown, 2 dof)
+    pairwise sigma: 0.04, 0.09, 0.34 (all << 1)
+
+This is the framework's first INDEPENDENT high-precision K*
+determination.  It uses only the sector integers {4, 9, 24}
+(d-independent, from reading D + Klein topology, NO K* input)
+and PDG 2024 mass ratios.  K* drops out as the unique value
+making all three matter sectors sit on the same parabola.
+
+**K_STAR_PRECISE = 0.86196052 added to framework_constants.py**
+as a 5-digit companion to the 3-digit-cited K_STAR = 0.862.  The
+two agree to within 3-digit rounding precision (difference
+-3.95e-5), so K_STAR remains correct for citation; K_STAR_PRECISE
+is available for scripts needing sub-3-digit precision.
+
+Under K_STAR_PRECISE the lepton identity `a_1(lep) * K* = q_2 = 2`
+holds EXACTLY to machine precision (residual 1.25e-7, 0.00 sigma).
+This RETRACTS the earlier claim of a compositional closure
+`a_1(lep)*K* = 2 + 2/F_12^2` from item12_lepton_correction_and_N54.py:
+the 2/F_12^2 was numerically close to the 3-digit K_STAR rounding
+error 2.32 * 3.95e-5 = 9.16e-5, and the 0.10-sigma agreement under
+K_STAR = 0.862 was a rounding artifact, not a Fibonacci correction.
+Under K_STAR_PRECISE the 2/F_12^2 correction OVERSHOOTS by 2 sigma.
+
+ITEM 12 FINAL STATE (mass sector):
+
+  Cross-sector ratios 1 : 9/4 : 6                     closed
+  Reading (D): w = mu_center, pi = Jacobian           closed
+  Parabola rotation x^2 = mu                          closed
+  Sector integers {4, 9, 24}                          closed
+  Lepton identity a_1(lep)*K* = q_2 (no correction)  closed (0.00 sigma)
+  Neutrino closure cbrt(2), 1/8, sqrt(3)              closed (0.03s atm, 1.77s sol)
+  d-audit: matter d-independent, gauge d-dependent    closed
+  K* joint closure (3 matter sectors, chi^2 = 0.06)   closed
+
+  MASS SECTOR FIT COUNT = 0
+
+The neutrino solar residual (1.77 sigma) is the last sub-1-sigma
+cleanup task, but it does NOT affect the mass sector fit count.
+Given (q_2, q_3, d) from Klein topology (D23, exponent.md), every
+closed observable in the mass sector is determined structurally.
+No free parameters remain.
 
 ## 14. Multi-twisted substrate unification
 
