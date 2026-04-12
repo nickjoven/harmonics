@@ -552,6 +552,84 @@ relaxation time at the q=2 tongue center, with `w_framework`
 interpreted correctly as the normal-form control parameter
 mu rather than the Omega geometric width.
 
+### Update (item12_lepton_correction_and_N54.py): lepton residual closes
+
+The 1.9-sigma residual in `a_1(lep) * K* = 2` has a compositional
+closure in the framework alphabet:
+
+    a_1(leptons) * K*  =  2  +  2/F_12^2
+                       =  2  +  2/20736
+                       =  2.0000965
+
+Observed: 2.0000915.  Agreement: **0.10 sigma**.
+
+This matches the `sin^2(theta_W) = 8/35 + 8/F_10^2` and
+`alpha_s/alpha_2 = 27/8 + 1/q_3^2` pattern exactly: the
+correction numerator equals the tree numerator (q_2 = 2 in
+both terms), and the denominator is a framework-primitive
+Fibonacci square `F_k^2`.
+
+By Cassini's identity `F_11 F_13 = F_12^2 - 1`, the correction
+equals `2/(F_11 F_13)` to one part in 20736, numerically
+indistinguishable at PDG precision.  Either form works; `2/F_12^2`
+is cleaner because F_12 = 144 has the secondary structural
+reading `F_12 = 12^2 = (2 q_2 q_3)^2`.
+
+**The lepton residual is closed.**  Item 12's "tight ~2 sigma"
+gap from rationality_descent.py is now a compositional rationality-
+descent closure.  The mass sector identity reads:
+
+    a_1(sector) * K* = sqrt(N(sector)) + correction(sector)
+
+with the correction in the same alphabet as the tree term.
+
+### Update (item12_lepton_correction_and_N54.py): N=54 hint for neutrinos
+
+The sector integer table {q_2^2, q_3^2, q_2^3 q_3} = {4, 9, 24}
+extrapolates naturally to a fourth cell:
+
+    N(?) = q_3^3 q_2 = 27 * 2 = 54
+
+the q_2/q_3 dual of `N(dn) = q_2^3 q_3`.  Under reading (D),
+the sector with N = 54 would have:
+
+    a_1 * K* = sqrt(54) ~= 7.35
+    a_1      ~= 8.525
+
+For the neutrino sector with observed m_3/m_2 ~= 5.77 (normal
+ordering, m_1 small), the required step base is b ~= 15/14,
+which is NOT in the framework's primitive alphabet.  Framework-
+alphabet candidates (17/16, 10/9, 14/13, 28/27) all miss at
+>= 15%.
+
+Under b = 15/14 and a_1 = 8.525, the predicted neutrino hierarchy
+is:
+
+    m_1 ~= 0.6 meV
+    m_2 ~= 8.7 meV
+    m_3 ~= 50 meV
+    Sum ~= 60 meV  (well below Planck bound < 120 meV)
+    Ordering: normal
+
+**Status: structural hint, not closure.**  The sector integer
+extrapolation is clean; the numerical fit lands in a plausible
+neutrino hierarchy; but the step base 15/14 is outside the
+framework's primitive alphabet.  Three readings:
+
+  (a) The alphabet needs to include 15/14 or a structural
+      basis for it.  15 = q_3 * mediant = 3 * 5, 14 = 2 * 7
+      -- but 7 isn't a framework primitive.
+  (b) The neutrino sector uses a different parameterization
+      than a single step base (e.g., finite-K corrections).
+  (c) N = 54 is not the right sector integer for neutrinos;
+      a different quantity closes there, and neutrinos close
+      at a different N.
+
+Next diagnostic: find whatever observable in the framework, if
+any, closes at N = 54 under a clean framework-alphabet base.
+Candidates to test: CKM entries, dark-sector splittings, Higgs
+self-coupling pieces, gauge coupling ratios at specific scales.
+
 ### Update (item12_q_greater_2_audit.py): reading (D) extends to all sectors via sector integers
 
 The q > 2 audit asks whether reading (D)'s identification
