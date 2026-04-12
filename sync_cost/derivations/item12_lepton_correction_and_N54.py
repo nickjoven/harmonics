@@ -288,11 +288,45 @@ def main():
     print("  generation steps, probably a_2/a_1 = q_3/q_2 applied")
     print("  to the neutrino sector).")
     print()
-    print(f"  PREDICTION: m_1 = {m1*1000:.3f} meV")
-    print("  (testable by KATRIN endpoint, CMB-S4, DESI)")
+
+    # ---------------------------------------------------------------
+    print("-" * 78)
+    print("  PART 4: full neutrino closure via cross-exponentiation")
+    print("-" * 78)
     print()
-    print("    Next diagnostic: find which observable, if any, closes at")
-    print("    N=54 using a clean framework-alphabet base.")
+    print("  The non-uniform a_2/a_1 = 3/2 increment WORSENS the solar")
+    print("  gap (43.6 sigma).  Instead, the observed splittings require")
+    print("  m_1/m_3 = 1/q_2^3 = 1/8 (atmospheric) and m_2/m_1 = sqrt(3)")
+    print("  = q_3^(1/q_2) (solar).")
+    print()
+
+    m1_new = m3 / Q2 ** 3
+    m2_new = m1_new * Q3 ** (1 / Q2)
+
+    dm31_new = m3 ** 2 - m1_new ** 2
+    dm21_new = m2_new ** 2 - m1_new ** 2
+    s31 = abs(dm31_new - 2.455e-3) / 2.8e-5
+    s21 = abs(dm21_new - 7.42e-5) / 2.1e-6
+
+    print(f"  m_3 = v (K*/2)^35 cbrt(2)        = {m3*1000:.3f} meV")
+    print(f"  m_1 = m_3 / q_2^3 = m_3 / 8      = {m1_new*1000:.3f} meV")
+    print(f"  m_2 = m_1 q_3^(1/q_2) = m_1 sqrt3 = {m2_new*1000:.3f} meV")
+    print(f"  Sum                               = {(m3+m2_new+m1_new)*1000:.3f} meV")
+    print()
+    print(f"  Dm^2_31 = {dm31_new:.4e}  obs 2.455e-3  ({s31:.2f} sigma)")
+    print(f"  Dm^2_21 = {dm21_new:.4e}  obs 7.42e-5   ({s21:.2f} sigma)")
+    print()
+    print("  Cross-exponentiation set {-3, 1/3, 1/2}:")
+    print(f"    q_2^(1/q_3) = 2^(1/3) = {Q2**(1/Q3):.6f}  (depth correction)")
+    print(f"    q_3^(1/q_2) = 3^(1/2) = {Q3**(1/Q2):.6f}  (m_2/m_1 ratio)")
+    print(f"    q_2^(-3)    = 1/8     = {Q2**(-3):.6f}  (m_1/m_3 hierarchy)")
+    print()
+    print("  PREDICTIONS:")
+    print(f"    m_1(nu) = {m1_new*1000:.2f} meV")
+    print(f"    m_2(nu) = {m2_new*1000:.2f} meV")
+    print(f"    m_3(nu) = {m3*1000:.2f} meV")
+    print(f"    Sum     = {(m1_new+m2_new+m3)*1000:.2f} meV")
+    print("    (testable: KATRIN, CMB-S4, DESI)")
     print()
 
 
