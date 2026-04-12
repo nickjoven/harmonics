@@ -630,6 +630,85 @@ any, closes at N = 54 under a clean framework-alphabet base.
 Candidates to test: CKM entries, dark-sector splittings, Higgs
 self-coupling pieces, gauge coupling ratios at specific scales.
 
+### Audit (December 2024): 54 is already primitive; belongs to cosmology
+
+A grep audit of the derivations tree for existing uses of 14 and 54
+as structural integers:
+
+**54 IS a framework primitive, already in use.**  From `exponent.md`:
+
+    54 = q_2 x q_3^d = 2 x 27     (temporal x spatial^d resolution)
+
+and `framework_predictions.py` records the Planck/Hubble hierarchy
+
+    R = 6 x 13^54
+
+with observed match to 0.5%.  The 54 is the total resolution exponent
+of the Klein bottle's (d+1)-dimensional structure: one temporal
+direction (q_2 = 2) times three spatial directions each with q_3 = 3
+resolution (q_3^d = 27).  It is a COSMOLOGICAL / GRAVITATIONAL
+primitive, not a particle-sector integer.
+
+**Implication for the N=54 neutrino conjecture**: the conjecture
+collides with existing framework content.  54 is already being spent
+on the cosmological hierarchy exponent.  Reusing it for neutrinos
+would require either (a) justifying a double-use, or (b) recognizing
+that the fourth cell of the sector integer table belongs to a
+DIFFERENT PLANE than the particle sectors.
+
+Reading (b) is the natural resolution.  The sector integer table
+splits across two planes:
+
+    matter cells:     {q_2^2, q_3^2, q_2^3 q_3} = {4, 9, 24}
+                      (leptons, up-type, down-type)
+
+    space-time cell:  q_2 x q_3^d = 54
+                      (Planck/Hubble hierarchy, exponent.md)
+
+The q_2/q_3 asymmetry in the matter cells IS the Klein-parity
+asymmetry; the space-time cell restores q_3 to full multiplicity
+(q_3^d, not q_3^2 or q_3^1).  The "fourth cell" exists but lives in
+the gravity sector, not as a fourth particle sector.
+
+**Implication for the 14 in b = 15/14**: none.  The audit found no
+framework primitive for 14.  The closest structural reading is
+`7 = q_2^2 + q_3` (from `committed_walk_masses.py:401` for the tau
+walk-sum anchor), which makes `14 = 2 x 7` expressible but ugly.
+No file treats 14 as a standalone primitive; there is no use of
+`|F_6| + 1` as a structural offset.
+
+**Implication for the neutrino sector**: still structurally open.
+The framework has TWO existing readings:
+
+  - `committed_walk_masses.py`: anchor (q_2 q_3)^2 = 36, increments
+    +q_2 per generation.  Predicts m_nu_tau ~ 17 meV (off from the
+    observed atmospheric splitting ~ 50 meV by 2.5x).  Internal
+    within-sector increment ratio is 1.29, not the structural
+    a_2/a_1 = 3/2.
+  - `field_equation_iteration.py`: anchor depth 35 (fitted), gives
+    m_nu_tau ~ 50 meV (matches atm splitting) but uses the anchor
+    as a free parameter.
+
+Neither closes at PDG precision in reading-D form.  My N=54
+proposal conflicts with existing cosmological use of 54 AND uses
+a non-alphabet step base (15/14).  **N=54 is killed as a neutrino
+conjecture.**
+
+The neutrino sector needs its own dedicated structural derivation,
+not an extrapolation from the quark-lepton sector integer table.
+This is an open item with higher priority than before, now that
+the audit has ruled out the simplest extension.
+
+**Asymmetry principle at work**: the matter sector has three cells
+(`q_2^2, q_3^2, q_2^3 q_3`), the space-time sector has one (`q_2
+q_3^d`).  The q_2/q_3 multiplicities in the matter cells are NOT
+symmetric -- q_2 appears with powers {2, 0, 3}, q_3 appears with
+powers {0, 2, 1}.  The space-time cell restores symmetry in q_3 by
+using the full d-dimensional spatial exponent.  This is what
+"symmetry in one plane, inversions in another" looks like
+concretely: the planes are matter vs. gravity, and they exchange
+the q_2/q_3 multiplicity pattern.
+
 ### Update (item12_q_greater_2_audit.py): reading (D) extends to all sectors via sector integers
 
 The q > 2 audit asks whether reading (D)'s identification
