@@ -5,7 +5,7 @@ short appendix at the bottom; the full history is in git.
 
 ---
 
-## 1. a₁ ≈ 2.320 (lepton base exponent)
+## 1. a₁ ≈ 2.320 (lepton base exponent) — **CLOSED** (see Recently closed § Item 1)
 
 - a₁ is a *fitted continuous exponent* in the Fibonacci power-law
   mass formulation (formulation B: m ∝ (3/2)^{a_1 n}, (5/3)^{a_1 n},
@@ -67,7 +67,7 @@ short appendix at the bottom; the full history is in git.
 - Prediction, falsifiable by CMB-S4 (~2028). Independent of all
   other items.
 
-## 9. sin²θ_W and α_s/α_2 residuals: first-principled closed forms
+## 9. sin²θ_W and α_s/α_2 residuals: first-principled closed forms — **CLOSED** (see Recently closed § Item 9)
 
 Both gauge-sector residuals previously written off as numerical
 slop are now **derived, not fitted**. The tree-level rationals
@@ -144,7 +144,7 @@ well inside experimental uncertainty.
   (`dark_twin_formalization.py`).
 - Not formally derived.
 
-## 12. Continuous mass formulation
+## 12. Continuous mass formulation — **CLOSED** (see Recently closed § Item 12)
 
 - The framework currently has **two incompatible mass formulations**
   that give different answers:
@@ -980,6 +980,86 @@ No free parameters remain.
 ---
 
 ## Recently closed (2026-04)
+
+### Item 12 (Continuous mass formulation) — CLOSED
+
+Full closure via the session chain committed to
+`claude/empirical-predictions-P25ZK`:
+
+- **Cross-sector ratios `1 : 9/4 : 6`** derived from Fibonacci shift
+  (up-type) and Klein-bottle double cover (down-type).
+  `item12_cross_sector_ratios.md`.
+- **Reading (D)**: `w_framework = saddle-node μ_center` in normal-
+  form coordinates, `π = Jacobian` to Ω-space. `a_1·K* = q_2`
+  exactly at q=2 tongue. `noise_dressed_parabola.py`.
+- **Parabola rotation** `x² = μ`: every closed observable sits on
+  the parabola primitive's fixed-point curve with μ from the
+  sector integer table. `four_rotations.py`.
+- **Sector integers** `{4, 9, 24}` universal:
+  `a_1(sector)·K* = √N(sector)` with
+  `N(lep) = q_2², N(up) = q_3², N(dn) = q_2³q_3`.
+  `item12_q_greater_2_audit.py`.
+- **d-audit**: matter cells d-independent (from reading D +
+  topology); gauge/cosmology cells `{27, 35, 54}` d-dependent
+  (from duty cycle `α = 1/q^d`, `exponent.md`).
+- **Neutrino closure**: depth `q_2³+q_3³ = 35` anchor with
+  cross-exponentiation corrections `{∛2, 1/8, √3}` giving
+  atmospheric at 0.03σ and solar at 1.77σ. Predicts m₁ ≈ 6.24 meV.
+  `item12_lepton_correction_and_N54.py`.
+- **K\* joint closure**: three matter sectors give one consistent
+  `K_STAR_PRECISE = 0.86196052 ± 2.06×10⁻⁵` at χ²/dof = 0.06.
+  `item12_K_star_closure.py`.
+- **Rationality descent algorithm** is the framework's hidden
+  optimization. `rationality_descent.py`, `rationality_descent.md`.
+
+**Mass sector fit count: 0.** Given `(q_2, q_3, d)` from Klein
+topology (D23, `exponent.md`), every closed mass-sector observable
+is determined structurally.
+
+**Retraction** (committed): the earlier "lepton compositional
+closure" `a_1(lep)·K* = 2 + 2/F_12²` at 0.10σ under `K_STAR = 0.862`
+was a numerical coincidence with the 3-digit rounding error
+`2.32 × 3.95×10⁻⁵ = 9.16×10⁻⁵`, close to `2/F_12² = 9.65×10⁻⁵`.
+Under `K_STAR_PRECISE` the identity holds **exactly at 0.00σ with
+no correction**, and applying the `2/F_12²` overshoots by 2σ. The
+other compositional closures (sin²θ_W, α_s/α_2, neutrino) are
+real and unaffected — only the lepton `+2/F_12²` was a rounding
+artifact. See `item12_C_from_K_star.py` Part 2 and
+`item12_lepton_correction_and_N54.py` docstring for full record.
+
+### Item 1 (a₁ ≈ 2.320 lepton base exponent) — CLOSED
+
+Superseded by item 12's full closure. `a_1(lep) = q_2 / K* = 2/K*`
+exactly under `K_STAR_PRECISE`, machine-precision agreement with
+PDG. No longer a fitted exponent.
+
+### Item 9 (sin²θ_W and α_s/α_2 residuals) — CLOSED
+
+Both gauge-sector residuals have first-principled closed forms:
+
+    sin²θ_W = 8/35 + 8/F_10² = 0.23122    (tree + Fibonacci correction)
+    α_s/α_2 = 27/8 + 1/q_3² = 251/72 = 3.48611
+
+PDG match within experimental uncertainty. Derived, not fitted.
+`item12_sin_W_and_signs.py`, `item12_other_residuals.py`.
+
+---
+
+### Known pre-existing tech debt (not session work)
+
+**Local `K_STAR = 0.862` literals** in 7 files that don't import
+from `framework_constants`: `K_eff_from_charge.py`,
+`committed_walk_masses.py`, `convergence_frontier.py`,
+`creation_frontier_test.py`, `field_equation_revisit.py`,
+`generation_exponent_correction.py`, `integer_conservation_law.py`.
+These are pre-existing (not session edits); they duplicate the
+canonical value and will not pick up future precision updates to
+K* automatically. A future refactor pass should replace each with
+`from framework_constants import K_STAR` (and optionally
+`K_STAR_PRECISE` where precision matters). Scope: ~10 files,
+one grep-sed-verify pass, not a derivation task.
+
+### Earlier closures
 
 - **Mass sector**: integer conservation law `depth × |3Q| = k_sector`
   connects to gauge adjoint dimensions via the cross-link identity
