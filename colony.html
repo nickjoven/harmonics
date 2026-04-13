@@ -213,8 +213,103 @@ function drift(t) {
 }
 
 // ============================================================================
-// LEVEL 1 DRAW: parabola substrate with sector nodes
-// (stub; full multilevel system added next segment)
+// LEVEL DESCRIPTIONS (label overlay content)
+// ============================================================================
+var LEVELS = [
+  {
+    name: "the colony",
+    formal: "R = 6 \u00d7 13\u2075\u2074 \u2248 10\u2076\u2070.  Planck : Hubble.",
+    gloss: "one luminous point. everything the framework describes, compressed."
+  },
+  {
+    name: "parabola substrate",
+    formal: "x\u00b2 = \u03bc.  six sector integers on the curve.",
+    gloss: "every observable sits on this one curve at an integer already owned by the framework alphabet."
+  },
+  {
+    name: "Stern-Brocot tree",
+    formal: "mediants from 0/1 and 1/0.  every rational exactly once.",
+    gloss: "inside each integer node, the configuration space of ratios \u2014 the tree that generates the rationals."
+  },
+  {
+    name: "Farey + Arnold tongues",
+    formal: "w(p/q) \u2243 (K/2)\u1d60.  locking widths at every rational.",
+    gloss: "each ratio grows a tongue. simpler fractions dominate; the collapse is a devil's staircase."
+  },
+  {
+    name: "saddle-node normal form",
+    formal: "dx/dt = \u03bc \u2212 x\u00b2.  the parabola again.",
+    gloss: "zoom into any tongue boundary. the same curve re-appears. the Born exponent is just this geometry."
+  },
+  {
+    name: "new integers, new nodes",
+    formal: "the fractal restarts.  alphabet is scale-free.",
+    gloss: "the framework is self-similar under its own operations. each level is the previous level re-read."
+  },
+  {
+    name: "periodic lock",
+    formal: "K \u2192 1.  all modes locked.  \u0394H \u2192 0.",
+    gloss: "once something becomes periodic, it no longer adds information. the fractal terminates."
+  }
+];
+
+// approximate physical scale at each depth (log10 of a meaningful ratio)
+var SCALE_EXP = [60, 50, 40, 30, 20, 10, 0];
+
+// superscript unicode digits for the scale readout
+var SUP = ["\u2070","\u00b9","\u00b2","\u00b3","\u2074","\u2075","\u2076","\u2077","\u2078","\u2079"];
+function superscript(n) {
+  var s = n.toString();
+  var out = "";
+  for (var i = 0; i < s.length; i++) {
+    var c = s.charCodeAt(i) - 48;
+    out += (c >= 0 && c < 10) ? SUP[c] : s.charAt(i);
+  }
+  return out;
+}
+
+// ============================================================================
+// LEVEL 0: the colony as a single adrift point
+// ============================================================================
+function drawColony(t, alpha) {
+  var d = drift(t);
+  ctx.save();
+  ctx.translate(CX + d.x, CY + d.y);
+
+  var pulse = 0.82 + 0.18 * Math.sin(t * 0.0011);
+
+  // wide soft halo
+  var maxR = 110;
+  for (var r = maxR; r > 0; r -= 3) {
+    var frac = 1 - r / maxR;
+    var a = alpha * frac * frac * 0.05 * pulse;
+    ctx.beginPath();
+    ctx.arc(0, 0, r, 0, Math.PI * 2);
+    ctx.fillStyle = rgba(PAL.node, a);
+    ctx.fill();
+  }
+
+  // core
+  ctx.beginPath();
+  ctx.arc(0, 0, 2.8 * pulse, 0, Math.PI * 2);
+  ctx.fillStyle = rgba(PAL.node, alpha * 0.95);
+  ctx.fill();
+
+  // a single orbiting glimmer (structure hinted, not revealed)
+  var orbitR = 38;
+  var theta = t * 0.00042;
+  var ox = Math.cos(theta) * orbitR;
+  var oy = Math.sin(theta) * orbitR * 0.38;
+  ctx.beginPath();
+  ctx.arc(ox, oy, 1.3, 0, Math.PI * 2);
+  ctx.fillStyle = rgba(PAL.curve, alpha * 0.55);
+  ctx.fill();
+
+  ctx.restore();
+}
+
+// ============================================================================
+// LEVEL 1: parabola substrate with sector nodes
 // ============================================================================
 function drawParabola(t, alpha) {
   var d = drift(t);
@@ -296,30 +391,485 @@ function drawParabola(t, alpha) {
 }
 
 // ============================================================================
-// MAIN LOOP (temporary: level-1 only)
+// LEVEL 2: Stern-Brocot tree (binary, mediant-generated)
+// ============================================================================
+function drawSternBrocot(t, alpha) {
+  var d = drift(t);
+  ctx.save();
+  ctx.translate(CX + d.x * 0.6, CY + d.y * 0.6);
+
+  var maxDepth = 6;
+  var rootY = -H * 0.34;
+  var rootSpread = W * 0.42;
+  var levelGap = H * 0.115;
+
+  function drawNode(px, py, spread, dep, lNum, lDen, rNum, rDen) {
+    if (dep > maxDepth) return;
+    var mNum = lNum + rNum;
+    var mDen = lDen + rDen;
+
+    var radius = Math.max(1.4, 5.2 * (1 - dep / maxDepth));
+    var a = alpha * (0.9 - dep * 0.1);
+
+    // halo at shallow depths only
+    if (dep < 4) {
+      for (var r = radius * 3; r > 0; r -= 1.5) {
+        ctx.beginPath();
+        ctx.arc(px, py, r, 0, Math.PI * 2);
+        ctx.fillStyle = rgba(PAL.node, a * (1 - r / (radius * 3)) * 0.09);
+        ctx.fill();
+      }
+    }
+
+    // core
+    ctx.beginPath();
+    ctx.arc(px, py, radius, 0, Math.PI * 2);
+    ctx.fillStyle = rgba(PAL.node, a);
+    ctx.fill();
+
+    // label for shallow nodes
+    if (dep <= 2) {
+      ctx.fillStyle = rgba(PAL.ghost, alpha * 0.72);
+      ctx.font = (13 - dep) + "px 'Courier New', monospace";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "alphabetic";
+      ctx.fillText(mNum + "/" + mDen, px, py - radius - 5);
+    }
+
+    if (dep < maxDepth) {
+      var childSpread = spread * 0.5;
+      var leftX  = px - spread * 0.5;
+      var rightX = px + spread * 0.5;
+      var childY = py + levelGap;
+
+      // edges
+      ctx.strokeStyle = rgba(PAL.curve, alpha * 0.28);
+      ctx.lineWidth = 0.7;
+      ctx.beginPath();
+      ctx.moveTo(px, py);
+      ctx.lineTo(leftX, childY);
+      ctx.moveTo(px, py);
+      ctx.lineTo(rightX, childY);
+      ctx.stroke();
+
+      drawNode(leftX,  childY, childSpread, dep + 1, lNum, lDen, mNum, mDen);
+      drawNode(rightX, childY, childSpread, dep + 1, mNum, mDen, rNum, rDen);
+    }
+  }
+
+  drawNode(0, rootY, rootSpread, 0, 0, 1, 1, 0);
+
+  ctx.restore();
+}
+
+// ============================================================================
+// LEVEL 3: Farey sequence + Arnold tongues (devil's staircase)
+// ============================================================================
+var FAREY6 = [
+  [0,1],[1,6],[1,5],[1,4],[1,3],[2,5],[1,2],
+  [3,5],[2,3],[3,4],[4,5],[5,6],[1,1]
+];
+function drawFareyTongues(t, alpha) {
+  var d = drift(t);
+  ctx.save();
+  ctx.translate(CX + d.x, CY + d.y);
+
+  var baseY = H * 0.22;
+  var axisLen = W * 0.78;
+  var startX = -axisLen / 2;
+  var K = 0.862;   // the framework's self-consistent coupling
+
+  // baseline
+  ctx.strokeStyle = rgba(PAL.curve, alpha * 0.5);
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(startX, baseY);
+  ctx.lineTo(startX + axisLen, baseY);
+  ctx.stroke();
+
+  // tongues: draw from widest (small q) to narrowest (large q), so
+  // narrow tongues overlay wider ones at their apex.
+  // Order by ascending q so they paint narrower-on-top.
+  var order = [];
+  for (var i = 0; i < FAREY6.length; i++) order.push(i);
+  order.sort(function(a, b){ return FAREY6[a][1] - FAREY6[b][1]; });
+
+  for (var oi = 0; oi < order.length; oi++) {
+    var idx = order[oi];
+    var p = FAREY6[idx][0], q = FAREY6[idx][1];
+    var frac = p / q;
+    var fx = startX + frac * axisLen;
+    // width: perturbative (K/2)^q, scaled for visibility
+    var w = Math.pow(K / 2, q);
+    var wPix = Math.max(1.2, Math.min(80, w * 520));
+    var height = Math.max(6, w * 1400);
+
+    // fill (glowing triangle)
+    var grad = ctx.createLinearGradient(fx, baseY, fx, baseY - height);
+    grad.addColorStop(0, rgba(PAL.tongue, alpha * 0.42));
+    grad.addColorStop(1, rgba(PAL.tongue, 0));
+    ctx.fillStyle = grad;
+    ctx.beginPath();
+    ctx.moveTo(fx - wPix / 2, baseY);
+    ctx.lineTo(fx + wPix / 2, baseY);
+    ctx.lineTo(fx, baseY - height);
+    ctx.closePath();
+    ctx.fill();
+
+    // apex dot
+    ctx.beginPath();
+    ctx.arc(fx, baseY - height, 1.6, 0, Math.PI * 2);
+    ctx.fillStyle = rgba(PAL.node, alpha * 0.75);
+    ctx.fill();
+
+    // label for the simplest fractions
+    if (q <= 4) {
+      ctx.fillStyle = rgba(PAL.ghost, alpha * 0.75);
+      ctx.font = "10px 'Courier New', monospace";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "top";
+      ctx.fillText(p + "/" + q, fx, baseY + 6);
+    }
+  }
+
+  // formula
+  ctx.fillStyle = rgba(PAL.ghost, alpha * 0.5);
+  ctx.font = "11px 'Courier New', monospace";
+  ctx.textAlign = "left";
+  ctx.textBaseline = "alphabetic";
+  ctx.fillText("w(p/q) = 2 (K/2)\u1d60 / q", -W * 0.38, -H * 0.36);
+
+  ctx.restore();
+}
+
+// ============================================================================
+// LEVEL 4: saddle-node normal form (parabola reappears)
+// ============================================================================
+function drawSaddleNode(t, alpha) {
+  var d = drift(t);
+  ctx.save();
+  ctx.translate(CX + d.x, CY + d.y);
+
+  var xr = W * 0.32;
+  var yr = H * 0.38;
+  var offset = H * 0.10;
+
+  // the parabola mu = x^2
+  ctx.beginPath();
+  var steps = 180;
+  for (var i = 0; i <= steps; i++) {
+    var xn = -1 + (2 * i / steps);
+    var yn = xn * xn;
+    var px = xn * xr;
+    var py = -yn * yr + offset;
+    if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+  }
+  ctx.strokeStyle = rgba(PAL.curve, alpha * 0.75);
+  ctx.lineWidth = 1.7;
+  ctx.stroke();
+
+  // two branches sqrt(mu), -sqrt(mu) shaded
+  ctx.strokeStyle = rgba(PAL.node, alpha * 0.32);
+  ctx.lineWidth = 0.8;
+  ctx.setLineDash([3, 4]);
+  ctx.beginPath();
+  for (var j = 0; j <= 60; j++) {
+    var fr = j / 60;
+    var pxL = -Math.sqrt(fr) * xr;
+    var pyL = -fr * yr + offset;
+    if (j === 0) ctx.moveTo(pxL, pyL); else ctx.lineTo(pxL, pyL);
+  }
+  ctx.stroke();
+  ctx.beginPath();
+  for (var k = 0; k <= 60; k++) {
+    var fr2 = k / 60;
+    var pxR = Math.sqrt(fr2) * xr;
+    var pyR = -fr2 * yr + offset;
+    if (k === 0) ctx.moveTo(pxR, pyR); else ctx.lineTo(pxR, pyR);
+  }
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // arrow of time at the cusp
+  ctx.fillStyle = rgba(PAL.node, alpha * 0.9);
+  ctx.beginPath();
+  ctx.arc(0, offset, 3.2, 0, Math.PI * 2);
+  ctx.fill();
+
+  // formulas
+  ctx.fillStyle = rgba(PAL.ghost, alpha * 0.7);
+  ctx.font = "15px 'Courier New', monospace";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "alphabetic";
+  ctx.fillText("dx/dt = \u03bc \u2212 x\u00b2", 0, -H * 0.25);
+
+  ctx.font = "11px 'Courier New', monospace";
+  ctx.fillStyle = rgba(PAL.grid, alpha * 0.8);
+  ctx.fillText("\u0394\u03b8 \u221d \u221a\u03b5   \u2192   |\u03c8|\u00b2", 0, -H * 0.19);
+
+  ctx.restore();
+}
+
+// ============================================================================
+// LEVEL 5: self-similar mini-parabolas (new integers)
+// ============================================================================
+function drawSelfSimilar(t, alpha) {
+  var d = drift(t);
+  ctx.save();
+  ctx.translate(CX + d.x * 0.7, CY + d.y * 0.7);
+
+  var nCopies = 5;
+  var spacing = W * 0.17;
+  var xr = W * 0.055;
+  var yr = H * 0.19;
+  var copyOffset = H * 0.02;
+
+  // connecting thread
+  ctx.strokeStyle = rgba(PAL.grid, alpha * 0.45);
+  ctx.lineWidth = 0.6;
+  ctx.setLineDash([2, 5]);
+  ctx.beginPath();
+  ctx.moveTo(-W * 0.44, copyOffset);
+  ctx.lineTo(W * 0.44, copyOffset);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  for (var ci = 0; ci < nCopies; ci++) {
+    var ox = (ci - (nCopies - 1) / 2) * spacing;
+    var bob = Math.sin(t * 0.00065 + ci * 1.3) * 3;
+    ctx.save();
+    ctx.translate(ox, bob);
+
+    // small parabola
+    ctx.beginPath();
+    var steps = 90;
+    for (var i = 0; i <= steps; i++) {
+      var xn = -1 + (2 * i / steps);
+      var yn = xn * xn;
+      var px = xn * xr;
+      var py = -yn * yr + copyOffset;
+      if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+    }
+    ctx.strokeStyle = rgba(PAL.curve, alpha * 0.6);
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
+    // three small integers on it
+    var SMALL = [1, 2, 3];
+    for (var si = 0; si < SMALL.length; si++) {
+      var v = SMALL[si];
+      var xnv = Math.sqrt(v / 3);
+      var side = ((ci + si) % 2 === 0) ? -1 : 1;
+      var npx = side * xnv * xr;
+      var npy = -(v / 3) * yr + copyOffset;
+      ctx.beginPath();
+      ctx.arc(npx, npy, 1.8, 0, Math.PI * 2);
+      ctx.fillStyle = rgba(PAL.node, alpha * 0.82);
+      ctx.fill();
+    }
+
+    // tiny caption (only for middle copy)
+    if (ci === (nCopies - 1) / 2) {
+      ctx.fillStyle = rgba(PAL.grid, alpha * 0.65);
+      ctx.font = "9px 'Courier New', monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("the same curve", 0, yr * 0.4 + copyOffset + 18);
+    }
+
+    ctx.restore();
+  }
+
+  // level annotation
+  ctx.fillStyle = rgba(PAL.ghost, alpha * 0.5);
+  ctx.font = "11px 'Courier New', monospace";
+  ctx.textAlign = "center";
+  ctx.fillText("self-similarity under the alphabet", 0, -H * 0.30);
+
+  ctx.restore();
+}
+
+// ============================================================================
+// LEVEL 6: periodic lock (crystalline lattice, information terminates)
+// ============================================================================
+function drawPeriodic(t, alpha) {
+  var d = drift(t);
+  ctx.save();
+  // only 20% of the drift: periodic = locked = nearly still
+  ctx.translate(CX + d.x * 0.18, CY + d.y * 0.18);
+
+  var spacing = 30;
+  var cols = Math.ceil(W / spacing) + 2;
+  var rows = Math.ceil(H / spacing) + 2;
+
+  // regular lattice of dim points
+  for (var cr = -rows / 2; cr < rows / 2; cr++) {
+    for (var cc = -cols / 2; cc < cols / 2; cc++) {
+      var px = cc * spacing;
+      var py = cr * spacing;
+      // faint crosshairs on each lattice site
+      ctx.strokeStyle = rgba(PAL.grid, alpha * 0.25);
+      ctx.lineWidth = 0.4;
+      ctx.beginPath();
+      ctx.moveTo(px - 2, py); ctx.lineTo(px + 2, py);
+      ctx.moveTo(px, py - 2); ctx.lineTo(px, py + 2);
+      ctx.stroke();
+      // dot
+      ctx.beginPath();
+      ctx.arc(px, py, 0.9, 0, Math.PI * 2);
+      ctx.fillStyle = rgba(PAL.pale, alpha * 0.45);
+      ctx.fill();
+    }
+  }
+
+  // central terminal glyph
+  ctx.fillStyle = rgba(PAL.ghost, alpha * 0.82);
+  ctx.font = "58px 'Courier New', monospace";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText("\u220e", 0, -2);
+
+  ctx.fillStyle = rgba(PAL.grid, alpha * 0.8);
+  ctx.font = "11px 'Courier New', monospace";
+  ctx.fillText("\u0394H = 0", 0, 42);
+
+  ctx.restore();
+}
+
+// ============================================================================
+// LEVEL DISPATCH + CROSSFADE
+// ============================================================================
+var drawFns = [
+  drawColony,        // 0
+  drawParabola,      // 1
+  drawSternBrocot,   // 2
+  drawFareyTongues,  // 3
+  drawSaddleNode,    // 4
+  drawSelfSimilar,   // 5
+  drawPeriodic       // 6
+];
+
+// ============================================================================
+// MAIN LOOP: auto-zoom through 0..6 with crossfade, wheel/keyboard control
 // ============================================================================
 var lastT = 0;
+var zoom = 0.0;                // continuous depth in [0, LEVELS.length)
+var targetZoom = 0.0;
+var autoZoom = true;
+var ZOOM_SPEED = 0.000092;     // depth units / ms  (full cycle ~ 76 sec)
+
+function drawAt(depth, ts) {
+  // wrap
+  var N = LEVELS.length;
+  while (depth < 0) depth += N;
+  depth = depth % N;
+
+  var level = Math.floor(depth);
+  var frac = depth - level;
+
+  // crossfade envelopes
+  var alphaMain;
+  if (frac < 0.18)       alphaMain = 0.35 + (frac / 0.18) * 0.65;
+  else if (frac > 0.82)  alphaMain = 0.35 + ((1 - frac) / 0.18) * 0.65;
+  else                   alphaMain = 1.0;
+
+  drawFns[level](ts, alphaMain);
+
+  // fade in next level early
+  if (frac > 0.70) {
+    var alphaNext = (frac - 0.70) / 0.30;
+    drawFns[(level + 1) % N](ts, alphaNext * 0.85);
+  }
+  // fade in previous level at start
+  if (frac < 0.18) {
+    var alphaPrev = 1 - (frac / 0.18);
+    drawFns[(level - 1 + N) % N](ts, alphaPrev * 0.35);
+  }
+
+  return level;
+}
 
 function frame(ts) {
   if (!ts) ts = +new Date();
   if (!lastT) lastT = ts;
+  var dt = ts - lastT;
   lastT = ts;
+
+  if (autoZoom) {
+    zoom += dt * ZOOM_SPEED;
+    if (zoom >= LEVELS.length) zoom = 0;
+  } else {
+    zoom += (targetZoom - zoom) * Math.min(1, dt * 0.0045);
+  }
 
   ctx.fillStyle = PAL.bg;
   ctx.fillRect(0, 0, W, H);
 
-  drawParabola(ts, 1.0);
+  var level = drawAt(zoom, ts);
 
-  // temporary overlay text
-  document.getElementById("scale-text").textContent = "scale: 10\u2070";
-  document.getElementById("depth-text").textContent = "depth 1 / 6";
-  document.getElementById("label-name").textContent = "parabola substrate";
-  document.getElementById("label-formal").textContent = "x\u00b2 = \u03bc.  six sector integers on the curve.";
-  document.getElementById("label-gloss").textContent = "every observable sits on this one curve at an integer already owned by the framework alphabet.";
+  // readouts
+  var exp = SCALE_EXP[level];
+  document.getElementById("scale-text").textContent =
+    "scale \u00b7 10" + superscript(exp);
+  document.getElementById("depth-text").textContent =
+    "depth " + level + " / " + (LEVELS.length - 1);
+
+  var lab = LEVELS[level];
+  var nameEl = document.getElementById("label-name");
+  var formalEl = document.getElementById("label-formal");
+  var glossEl = document.getElementById("label-gloss");
+  if (nameEl.textContent !== lab.name) nameEl.textContent = lab.name;
+  if (formalEl.textContent !== lab.formal) formalEl.textContent = lab.formal;
+  if (glossEl.textContent !== lab.gloss) glossEl.textContent = lab.gloss;
 
   requestAnimationFrame(frame);
 }
 requestAnimationFrame(frame);
+
+// ============================================================================
+// INPUT: scroll-to-zoom, space to toggle auto, r to reset
+// ============================================================================
+window.addEventListener("wheel", function(e) {
+  e.preventDefault();
+  autoZoom = false;
+  var delta = e.deltaY * 0.0022;
+  targetZoom += delta;
+  var N = LEVELS.length;
+  while (targetZoom < 0) targetZoom += N;
+  while (targetZoom >= N) targetZoom -= N;
+}, { passive: false });
+
+window.addEventListener("keydown", function(e) {
+  if (e.code === "Space") {
+    e.preventDefault();
+    autoZoom = !autoZoom;
+    if (!autoZoom) targetZoom = zoom;
+  } else if (e.code === "KeyR") {
+    zoom = 0; targetZoom = 0; autoZoom = true;
+  }
+});
+
+// touch: vertical drag to zoom
+var touchStartY = null;
+var touchStartZoom = 0;
+canvas.addEventListener("touchstart", function(e) {
+  if (e.touches.length === 1) {
+    touchStartY = e.touches[0].clientY;
+    touchStartZoom = zoom;
+    autoZoom = false;
+  }
+}, { passive: true });
+canvas.addEventListener("touchmove", function(e) {
+  if (touchStartY !== null && e.touches.length === 1) {
+    var dy = e.touches[0].clientY - touchStartY;
+    targetZoom = touchStartZoom - dy * 0.01;
+    var N = LEVELS.length;
+    while (targetZoom < 0) targetZoom += N;
+    while (targetZoom >= N) targetZoom -= N;
+  }
+}, { passive: true });
+canvas.addEventListener("touchend", function() {
+  touchStartY = null;
+}, { passive: true });
 
 })();
 </script>
