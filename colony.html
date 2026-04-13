@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>the colony &mdash; harmonics</title>
+<meta name="description" content="A smooth zoom across the harmonics framework's closed state. The parabola x² = μ with integer nodes, Stern-Brocot mediants, Farey tongues, a devil's staircase at the locking boundary, and the periodic lock where information terminates.">
+<meta property="og:title" content="the colony">
+<meta property="og:description" content="Smooth zoom across orders of magnitude through the closed harmonics framework. Adrift, but structurally principled.">
+<meta property="og:type" content="website">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  background: #04060c;
+  color: #c0d0e0;
+  font-family: 'Courier New', Courier, monospace;
+  overflow: hidden;
+  height: 100vh; width: 100vw;
+  -webkit-text-size-adjust: 100%;
+}
+canvas {
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+  cursor: ns-resize;
+}
+#readout {
+  position: fixed; top: 18px; left: 18px; z-index: 10;
+  font-size: 12px; opacity: 0.6; pointer-events: none;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.3px;
+}
+#readout .scale { color: #8899bb; font-size: 11px; }
+#readout .depth { color: #445566; font-size: 10px; margin-top: 2px; }
+#label {
+  position: fixed; bottom: 22px; left: 22px; right: 22px; z-index: 10;
+  font-size: 13px; line-height: 1.65; max-width: 560px;
+  pointer-events: none;
+}
+#label .name {
+  color: #e0e8f0; font-size: 14px; letter-spacing: 0.5px;
+  transition: opacity 0.8s;
+}
+#label .formal {
+  color: #6a88aa; margin-top: 3px;
+  transition: opacity 0.8s;
+}
+#label .gloss {
+  color: #445566; margin-top: 6px; font-style: italic;
+  transition: opacity 0.8s;
+}
+#controls {
+  position: fixed; top: 14px; right: 18px; z-index: 10;
+  font-size: 10px; color: #445566;
+  text-align: right; line-height: 1.8;
+  pointer-events: none;
+  letter-spacing: 0.4px;
+}
+#controls kbd {
+  background: none;
+  border: 1px solid #223344;
+  padding: 1px 5px; font-family: inherit; font-size: 10px;
+  color: #667788; border-radius: 0;
+}
+#home {
+  position: fixed; bottom: 18px; right: 18px; z-index: 11;
+  font-size: 11px; color: #556677;
+  text-decoration: none;
+  padding: 4px 12px;
+  border: 1px solid #223344;
+  letter-spacing: 0.6px;
+  pointer-events: auto;
+}
+#home:hover { color: #aabbcc; border-color: #556677; }
+noscript {
+  display: block; padding: 44px 24px; color: #8899bb;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px; line-height: 1.9;
+  max-width: 720px; margin: 0 auto;
+}
+noscript h1 { font-size: 15px; color: #c0d0e0; margin-bottom: 12px; letter-spacing: 1px; }
+noscript pre { color: #8899bb; font-size: 12px; margin-top: 14px; white-space: pre-wrap; }
+</style>
+</head>
+<body>
+
+<canvas id="c"
+  role="img"
+  aria-label="A deep-sea-dark canvas. A luminous parabola x squared equals mu floats gently, carrying six sector integers as glowing nodes at positions 4, 9, 24, 27, 35, and 54. The view zooms smoothly across six orders of structural magnitude: from a single adrift point, through the parabola substrate, into a Stern-Brocot tree of mediants, into a Farey sequence of Arnold tongues forming a devil's staircase, into a saddle-node parabola that reveals new integers on itself, and finally into a crystalline periodic lattice where the fractal terminates because once something becomes periodic it no longer adds information.">
+</canvas>
+
+<div id="readout">
+  <div class="scale" id="scale-text">&middot;</div>
+  <div class="depth" id="depth-text">&middot;</div>
+</div>
+
+<div id="controls">
+  <div><kbd>scroll</kbd> zoom</div>
+  <div><kbd>space</kbd> auto / pause</div>
+  <div><kbd>r</kbd> reset</div>
+</div>
+
+<div id="label" aria-hidden="true">
+  <div class="name" id="label-name">&nbsp;</div>
+  <div class="formal" id="label-formal">&nbsp;</div>
+  <div class="gloss" id="label-gloss">&nbsp;</div>
+</div>
+
+<a id="home" href="index.html">&larr; home</a>
+
+<noscript>
+  <h1>the colony</h1>
+  <p>A smooth-zoom visualization of the harmonics framework's closed
+  state. JavaScript is required to render the animation; the structural
+  description follows.</p>
+  <pre>
+depth 0 &mdash; the colony, adrift. a single luminous point.
+            everything the framework describes, at a scale of 10^60.
+
+depth 1 &mdash; parabola substrate. x^2 = mu. six integer nodes glow
+            at positions {4, 9, 24, 27, 35, 54}, corresponding to
+            lepton a_1, up a_1, down a_1, alpha_s tree, neutrino
+            depth, and the cosmological hierarchy.
+
+depth 2 &mdash; Stern-Brocot tree. each node is itself a branching of
+            mediants from 0/1 and 1/0, producing every rational
+            exactly once.
+
+depth 3 &mdash; Farey sequence with Arnold tongues. each ratio grows
+            a tongue whose width scales as (K/2)^q. simpler
+            fractions dominate; complex ones taper to a devil's
+            staircase.
+
+depth 4 &mdash; saddle-node normal form. zoom into any tongue
+            boundary and the same parabola x^2 = mu reappears.
+            this is why the Born exponent is 2.
+
+depth 5 &mdash; self-similarity. new integers pin themselves to the
+            inner parabolas. the alphabet is scale-free. the
+            framework re-reads itself at every level.
+
+depth 6 &mdash; periodic lock. K approaches 1; all modes lock; the
+            distinction count collapses. once something becomes
+            periodic, it no longer adds information. the fractal
+            terminates, and the glyph is a square.
+  </pre>
+</noscript>
+
+<script>
+(function(){
+"use strict";
+
+// ============================================================================
+// CANVAS SETUP
+// ============================================================================
+var canvas = document.getElementById("c");
+var ctx = canvas.getContext("2d");
+var dpr = window.devicePixelRatio || 1;
+var W, H, CX, CY;
+
+function resize() {
+  dpr = window.devicePixelRatio || 1;
+  W = window.innerWidth;
+  H = window.innerHeight;
+  canvas.width = Math.floor(W * dpr);
+  canvas.height = Math.floor(H * dpr);
+  canvas.style.width = W + "px";
+  canvas.style.height = H + "px";
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  CX = W / 2;
+  CY = H / 2;
+}
+resize();
+window.addEventListener("resize", resize);
+
+// ============================================================================
+// PALETTE (bioluminescent blue-green on deep-sea dark)
+// ============================================================================
+var PAL = {
+  bg:     "#04060c",
+  curve:  [170, 220, 255],
+  node:   [180, 255, 220],
+  ghost:  [110, 160, 200],
+  tongue: [140, 180, 255],
+  grid:   [60,  90, 130],
+  pale:   [100, 130, 170]
+};
+function rgba(triple, a) {
+  return "rgba(" + triple[0] + "," + triple[1] + "," + triple[2] + "," + a.toFixed(3) + ")";
+}
+
+// ============================================================================
+// SECTOR NODES on x^2 = mu
+// six integers, from the closed state of the framework
+// ============================================================================
+var SECTORS = [
+  { mu: 4,  label: "4",  name: "lepton a\u2081" },
+  { mu: 9,  label: "9",  name: "up a\u2081" },
+  { mu: 24, label: "24", name: "down a\u2081" },
+  { mu: 27, label: "27", name: "\u03b1_s tree = 1/q\u2083\u00b3" },
+  { mu: 35, label: "35", name: "\u03bd depth = q\u2082\u00b3 + q\u2083\u00b3" },
+  { mu: 54, label: "54", name: "cosmology = q\u2082\u00b7q\u2083\u00b3" }
+];
+
+// ============================================================================
+// DRIFT (Lissajous breath)
+// ============================================================================
+function drift(t) {
+  return {
+    x: Math.sin(t * 0.00017) * 22 + Math.sin(t * 0.00043) * 7,
+    y: Math.cos(t * 0.00021) * 14 + Math.sin(t * 0.00031) * 5
+  };
+}
+
+// ============================================================================
+// LEVEL 1 DRAW: parabola substrate with sector nodes
+// (stub; full multilevel system added next segment)
+// ============================================================================
+function drawParabola(t, alpha) {
+  var d = drift(t);
+  ctx.save();
+  ctx.translate(CX + d.x, CY + d.y * 0.5 - H * 0.10);
+
+  var xRange = 8;                    // +/- sqrt(mu_max)
+  var yRange = 60;                   // mu_max
+  var xScale = (W * 0.38) / xRange;
+  var yScale = (H * 0.58) / yRange;
+
+  // faint horizontal grid (mu = 10, 20, 30, ...)
+  ctx.strokeStyle = rgba(PAL.grid, alpha * 0.28);
+  ctx.lineWidth = 0.5;
+  for (var gy = 10; gy <= 60; gy += 10) {
+    var yPix = -gy * yScale + H * 0.20;
+    ctx.beginPath();
+    ctx.moveTo(-W * 0.44, yPix);
+    ctx.lineTo(W * 0.44, yPix);
+    ctx.stroke();
+  }
+
+  // parabola curve x^2 = mu  (drawn as y = -mu*yScale, x = x*xScale)
+  ctx.beginPath();
+  var steps = 240;
+  for (var i = 0; i <= steps; i++) {
+    var x = -xRange + (2 * xRange * i / steps);
+    var mu = x * x;
+    if (mu > yRange) continue;
+    var px = x * xScale;
+    var py = -mu * yScale + H * 0.20;
+    if (i === 0) ctx.moveTo(px, py); else ctx.lineTo(px, py);
+  }
+  ctx.strokeStyle = rgba(PAL.curve, alpha * 0.55);
+  ctx.lineWidth = 1.3;
+  ctx.stroke();
+
+  // sector nodes
+  for (var si = 0; si < SECTORS.length; si++) {
+    var s = SECTORS[si];
+    var side = (si % 2 === 0) ? -1 : 1;
+    var nx = side * Math.sqrt(s.mu) * xScale;
+    var ny = -s.mu * yScale + H * 0.20;
+    var pulse = 0.78 + 0.22 * Math.sin(t * 0.0008 + si * 0.9);
+
+    // halo
+    for (var r = 20; r > 0; r -= 2) {
+      ctx.beginPath();
+      ctx.arc(nx, ny, r, 0, Math.PI * 2);
+      ctx.fillStyle = rgba(PAL.node, alpha * (1 - r / 20) * 0.08 * pulse);
+      ctx.fill();
+    }
+    // core
+    ctx.beginPath();
+    ctx.arc(nx, ny, 2.5, 0, Math.PI * 2);
+    ctx.fillStyle = rgba(PAL.node, alpha * 0.9);
+    ctx.fill();
+
+    // label
+    ctx.fillStyle = rgba(PAL.ghost, alpha * 0.72);
+    ctx.font = "11px 'Courier New', monospace";
+    ctx.textAlign = side < 0 ? "right" : "left";
+    ctx.textBaseline = "middle";
+    ctx.fillText(s.label, nx + side * 10, ny - 2);
+
+    ctx.fillStyle = rgba(PAL.grid, alpha * 0.6);
+    ctx.font = "9px 'Courier New', monospace";
+    ctx.fillText(s.name, nx + side * 10, ny + 10);
+  }
+
+  // formula annotation (top-left of plot area)
+  ctx.fillStyle = rgba(PAL.ghost, alpha * 0.55);
+  ctx.font = "11px 'Courier New', monospace";
+  ctx.textAlign = "left";
+  ctx.textBaseline = "alphabetic";
+  ctx.fillText("x\u00b2 = \u03bc", -W * 0.42, -H * 0.38);
+
+  ctx.restore();
+}
+
+// ============================================================================
+// MAIN LOOP (temporary: level-1 only)
+// ============================================================================
+var lastT = 0;
+
+function frame(ts) {
+  if (!ts) ts = +new Date();
+  if (!lastT) lastT = ts;
+  lastT = ts;
+
+  ctx.fillStyle = PAL.bg;
+  ctx.fillRect(0, 0, W, H);
+
+  drawParabola(ts, 1.0);
+
+  // temporary overlay text
+  document.getElementById("scale-text").textContent = "scale: 10\u2070";
+  document.getElementById("depth-text").textContent = "depth 1 / 6";
+  document.getElementById("label-name").textContent = "parabola substrate";
+  document.getElementById("label-formal").textContent = "x\u00b2 = \u03bc.  six sector integers on the curve.";
+  document.getElementById("label-gloss").textContent = "every observable sits on this one curve at an integer already owned by the framework alphabet.";
+
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+
+})();
+</script>
+</body>
+</html>
