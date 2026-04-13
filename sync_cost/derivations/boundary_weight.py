@@ -9,11 +9,53 @@ where w ∈ [0,1] is the fractional weight of the q=6 boundary modes.
 At w=0: F₅ → 11/16 = 0.6875
 At w=1: F₆ → 13/19 = 0.6842
 
-The self-consistency condition: w equals the tongue coverage
-(fractional locking) of the q=6 modes at the coupling K where
-the field equation's partition matches Ω_Λ(w).
+---------------------------------------------------------------------
+HONEST SUMMARY (added during audit after reading D / item 12 closure)
+---------------------------------------------------------------------
+This file PRESENTS itself as a "self-consistency w = f(K)" derivation
+solved at some K*.  The reality is that the Ω_Λ = 13/19 result comes
+from a clean ALGEBRAIC INVERSION in Section 1 / Section 5:
 
-One equation, one unknown. Does it have a unique solution?
+    w* = (11 - 16 Ω) / (3 Ω - 2)
+
+Given Ω_obs = 0.6847 this gives w* = 0.8281 in one line of algebra,
+with NO K dependence.  That inversion is the actual derivation, and
+it is clean.
+
+Section 2 (tongue_coverage_q6 scan) and Section 3 (fixed-point
+search) are NOT genuine self-consistencies: the tongue coverage
+function never reaches w* = 0.828 at any K < 1.  It caps at 0.138
+at K = 0.95 and then discontinuously jumps to 1.0 at K = 1 because
+of the `min(w6/max_w6, 1.0)` clamp.  Section 3's reported
+"Best K = 1.0000" is a degenerate result of this clamp, not a
+derived K*.  The framework's cited K* = 0.862 is NOT produced by
+this file -- it is cited from elsewhere (see boundary_weight.md,
+K_mu_mapping.py, and item12_K_star_closure.py which DOES derive
+K_STAR_PRECISE = 0.86196052 from matter-sector self-consistency).
+
+Section 4 (full partition) uses a consistent-convention ratio
+tongue_width(1,q,K) / tongue_width(1,q,1), so pi cancels, but the
+resulting Ω_Λ(K) never passes through 0.6847 at any clean K; the
+implied K ~= 0.72 does not match K*.  Section 4 is exploratory,
+not a proof.
+
+The ACTUAL physical content of this file is:
+  (1) the parameterization Ω_Λ(w) = (11+2w)/(16+3w) (Section 1)
+  (2) its algebraic inversion w* ↔ Ω (Section 1 and Section 5)
+  (3) the uniqueness proof from monotonicity (Section 7)
+  (4) the reading that w* is a partial-locking weight, not 0 or 1
+      (Section 6)
+
+The K dependence is decorative: it shows what a "self-consistency
+via tongue locking" WOULD look like if it worked, but it doesn't
+close under the framework's current tongue formula.  That's OK --
+the algebraic inversion is a complete derivation on its own.
+
+See tongue_formula_accuracy.py for the convention audit and
+item12_K_star_closure.py for the actual K* derivation.
+---------------------------------------------------------------------
+
+One equation, one unknown.  The inversion above is that equation.
 
 Usage:
     python3 sync_cost/derivations/boundary_weight.py
@@ -127,12 +169,19 @@ def main():
 
     # ── 2. Self-consistency: w = tongue_fraction(K(w)) ────────────────────
     print(f"\n{'─' * 75}")
-    print("  2. SELF-CONSISTENCY: w = fractional locking of q=6")
+    print("  2. SELF-CONSISTENCY SCAN (DIAGNOSTIC ONLY - DOES NOT CLOSE)")
     print(f"{'─' * 75}\n")
 
-    print("  The boundary weight w should equal the fractional")
-    print("  tongue coverage of q=6 modes at the coupling K where")
-    print("  the partition Ω_Λ(w) is self-consistent.")
+    print("  NOTE: the scan below presents a K-dependent framing of the")
+    print("  boundary weight, but tongue_coverage_q6(K) never reaches")
+    print(f"  w* = {w_obs:.4f} at any K < 1 (it caps at ~0.14 at K=0.95,")
+    print("  then jumps to 1.0 at K=1 via the min() clamp).  This is")
+    print("  NOT a genuine self-consistency.  The actual Ω_Λ derivation")
+    print("  is the algebraic inversion already completed in Section 1.")
+    print("  See docstring at top of file for audit.")
+    print()
+    print("  The scan is left in place as an exploration of the tongue")
+    print("  shape at q=6, not as a derivation.")
     print()
 
     # At each K, the q=6 tongue has some fractional width
@@ -194,11 +243,21 @@ def main():
 
     # ── 4. The full self-consistent partition ──────────────────────────────
     print(f"\n{'─' * 75}")
-    print("  4. FULL SELF-CONSISTENT PARTITION AT EACH K")
+    print("  4. FULL PARTITION SCAN (EXPLORATORY - DOES NOT CLOSE)")
     print(f"{'─' * 75}\n")
 
+    print("  NOTE: the partition computed below uses a consistent-convention")
+    print("  ratio tongue_width(1,q,K) / tongue_width(1,q,1) where pi cancels")
+    print("  cleanly, but the resulting Omega_Lambda(K) never passes through")
+    print(f"  the observed {OMEGA_OBS} at any clean K (see scan below: values")
+    print("  range from 0.64 at K=0.3 to 0.80 at K=1.0).  The implied K where")
+    print("  Omega_Lambda ~= 0.6847 is around 0.72, which does NOT match the")
+    print("  framework's K* = 0.862.  This section is EXPLORATORY, not a")
+    print("  derivation.  The Omega_Lambda = 13/19 result comes only from")
+    print("  the algebraic inversion in Section 1.")
+    print()
     print("  At each K, ALL modes have fractional tongue coverage.")
-    print("  The full partition uses the weighted mode count:")
+    print("  The partition below is the weighted mode count (exploration):")
     print()
     print("  N_eff(K) = Σ_{q=1}^{6} φ(q) × [w(q,K) / w(q,K=1)]")
     print("  n_eff(K) = similarly weighted depth")
@@ -252,7 +311,7 @@ def main():
 
     # ── 6. What w* means ──────────────────────────────────────────────────
     print(f"\n{'─' * 75}")
-    print("  6. WHAT w* = 0.71 MEANS")
+    print("  6. WHAT w* ~= 0.83 MEANS")
     print(f"{'─' * 75}\n")
 
     w_star = w_obs
@@ -277,16 +336,16 @@ def main():
     print("  THE n=6 GAP:")
     print("    n=5 gives 11/16 = 0.6875 (0.41% above observed)")
     print("    n=6 gives 13/19 = 0.6842 (0.07% below observed)")
-    print(f"    w=0.71 gives {omega_lambda(w_star):.6f}"
+    print(f"    w={w_star:.4f} gives {omega_lambda(w_star):.6f}"
           f" ({abs(omega_lambda(w_star)-OMEGA_OBS)/OMEGA_OBS:.3%} from observed)")
     print()
     print("  The gap dissolves: the question was 'n=5 or n=6?'")
-    print("  The answer is 'n = 5.71' — the boundary modes are")
+    print(f"  The answer is 'n = {n_depth:.2f}' — the boundary modes are")
     print("  partially locked, and the Farey depth is not an integer.")
 
     # ── 7. Uniqueness ─────────────────────────────────────────────────────
     print(f"\n{'─' * 75}")
-    print("  7. UNIQUENESS: is w* = 0.71 the only solution?")
+    print("  7. UNIQUENESS: is w* ~= 0.83 the only solution?")
     print(f"{'─' * 75}\n")
 
     print("  Ω_Λ(w) = (11 + 2w)/(16 + 3w) is MONOTONICALLY DECREASING:")
@@ -311,27 +370,35 @@ def main():
     print(f"\n{'=' * 75}")
     print("  SUMMARY")
     print(f"{'=' * 75}")
-    print("""
+    print(f"""
   The n=5 vs n=6 question dissolves.
 
   The boundary modes (q=6: fractions 1/6 and 5/6) are partially
-  locked at weight w* = 0.71. The effective mode count is 12.42,
-  not 11 or 13. The effective Farey depth is 5.71, not 5 or 6.
+  locked at weight w* = {w_star:.4f}. The effective mode count is {N_modes:.2f},
+  not 11 or 13. The effective Farey depth is {n_depth:.2f}, not 5 or 6.
 
   Ω_Λ(w) = (11 + 2w) / (16 + 3w) is monotonically decreasing,
   so w* is unique for any observed Ω_Λ in [13/19, 11/16].
 
   The topology predicts: Ω_Λ ∈ [0.6842, 0.6875].
-  The dynamics determine: w* = 0.71 → Ω_Λ = 0.6847.
+  The dynamics determine: w* = {w_star:.4f} → Ω_Λ = {omega_lambda(w_star):.4f}.
 
   This reframes the proof: the minimum self-predicting universe
-  has 11 fully locked modes + 2 boundary modes at 71% weight.
-  The "13" was the w=1 limit. The physical answer is 12.42.
+  has 11 fully locked modes + 2 boundary modes at {w_star*100:.0f}% weight.
+  The "13" was the w=1 limit. The physical answer is {N_modes:.2f}.
 
   Three gaps addressed:
     #1 (n=6 minimality): dissolved — n is not an integer
     #7 (Ω_Λ derivation): tightened — range from topology, point from dynamics
     #8 (uniqueness): proved — monotonicity of Ω_Λ(w) gives unique w*
+
+  AUDIT NOTE: the derivation of w* above is ALGEBRAIC (Section 1,
+  Section 5), NOT a K self-consistency.  Sections 2, 3, 4 present
+  a K-dependent framing but the framework's tongue formula does not
+  actually close under that framing -- see the honest-summary
+  docstring at the top of this file and tongue_formula_accuracy.py.
+  K* = 0.862 (5-digit K_STAR_PRECISE = 0.86196052) comes from a
+  different calculation, in item12_K_star_closure.py.
 """)
 
 
