@@ -170,9 +170,8 @@ It is most plausibly a fixed-point output of the rational field
 equation at the lepton sector's Fibonacci convergent — i.e. a
 Feigenbaum-style limit computable by iteration of the self-
 consistency map, but without a closed form in elementary
-functions. Confirming this requires executing the iteration
-(this has been flagged in `open_items.md` for a while and has
-not been done).
+functions. Confirming this requires executing the iteration;
+not done.
 
 ## What this pass closes and does not close
 
@@ -206,4 +205,3 @@ not been done).
 - `item12_residual_test.py` — the lepton `C` residual (~1e-4),
   the finite-K correction responsible for the intra-lepton
   16 σ deviation from exact `3/2`.
-- `open_items.md` item 12 — the mass-sector status tracker.

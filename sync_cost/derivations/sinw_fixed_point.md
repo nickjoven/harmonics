@@ -145,21 +145,18 @@ rational coincides exactly with the measured value is a numerical
 question that the topology alone does not settle — and the answer
 is "to 1.1%, yes, but not exactly".
 
-## Action items
+## Closure notes
 
-1. Mark sin²θ_W = 8/35 in `duty_cycle_dictionary.md` and the
-   open-items list as a **measure-theoretic near-coincidence**,
-   not a running result. The 1.1% residual is NOT from running.
-
-2. Update `open_items.md` item 9 (sin²θ_W running) to reflect
-   this closure: the dichotomy (i) / (ii) is resolved by
-   REJECTING both. Neither branch produces the observed value
-   through running, and the tree-scale identity is a measure,
-   not a dynamical quantity.
-
-3. The framework's derivation of the gauge group via Cartan +
-   Utiyama (D42) is **not affected** — it only uses the center
-   Z_2 × Z_3, not the specific sin²θ_W value.
+- `sin²θ_W = 8/35` in the duty-cycle dictionary is a
+  **measure-theoretic near-coincidence**, not a running result.
+  The 1.1% residual is NOT from running.
+- The dichotomy (i) / (ii) for sin²θ_W running is resolved by
+  rejecting both. Neither branch produces the observed value
+  through running; the tree-scale identity is a measure, not a
+  dynamical quantity.
+- The framework's derivation of the gauge group via Cartan +
+  Utiyama (D42) is not affected — it only uses the center
+  Z_2 × Z_3, not the specific sin²θ_W value.
 
 4. `gauge_sector_lovelock.md` Part V, item 8 ("coupling ratios
    follow from q₂ = 2, q₃ = 3, d = 3") should be annotated to

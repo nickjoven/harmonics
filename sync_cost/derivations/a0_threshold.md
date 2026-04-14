@@ -201,7 +201,7 @@ handles this through Ω_Λ corrections.
 > *Update:* The self-consistent frequency distribution from the rational
 > field equation (Derivation 11) gives g\*(1/φ) = 0.697, refining the
 > prediction to a₀ = cH₀/(2π√g\*) = 1.25 × 10⁻¹⁰ m/s² (4% residual
-> vs observed 1.2 × 10⁻¹⁰). See INDEX.md Key Results.
+> vs observed 1.2 × 10⁻¹⁰).
 
 ## The cost landscape at the transition
 

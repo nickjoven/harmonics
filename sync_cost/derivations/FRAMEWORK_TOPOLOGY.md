@@ -338,15 +338,11 @@ structural item. The most robust point is the cross-link uniqueness
 
 ## What this map omits
 
-- **Chronology.** Every "first I tried X, then Y" lives in
-  `RECONCILIATION_LOG.md`, `SESSION_RETROSPECTIVE_2026_04_13.md`,
-  and the commit history. None of that belongs in a topology.
-- **Retracted intermediate results.** The cross-branch retractions
-  (`+2/F_12²`, N=54 neutrino conjecture, neutrino depth 36, etc.)
-  are not in this graph because they are not in the canonical state.
-  See the retraction list in `CLAUDE.md` if you need them.
-- **`open_items.md`** as a source. Per user instruction, derive item
-  status from code + this topology, not from `open_items.md`.
+- **Chronology.** Order of discovery is in the git history, not in
+  the topology. None of that belongs here.
+- **Retracted intermediate results.** Anything not in the current
+  code/topology is not canonical. Derive item status from code + this
+  topology directly.
 
 ## How to use this topology
 

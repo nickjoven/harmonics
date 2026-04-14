@@ -1,8 +1,8 @@
 """
 Item 12, first pass: characterize the continuous exponent a_1 per sector.
 
-Item 12 in open_items.md is about deriving the continuous per-sector
-exponents a_1 that appear in the generation exponent law:
+The continuous per-sector exponents a_1 appear in the generation
+exponent law:
 
     m_{g+1}/m_g = b_step^(d * a_step)
     a_2 / a_1 = q_3 / q_2 = 3/2  (structural, derived)
