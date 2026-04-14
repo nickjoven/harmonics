@@ -32,9 +32,8 @@ This script tests the two remaining candidates:
 
   (B) Dark twin -- absorbs entropy in proportion to the framework's
       1:5:13 partition (baryons : dark matter : dark energy) from
-      farey_partition.md / dark_twin_formalization.py. The twin
-      sectors together carry 18/19 of the total budget; our
-      baryonic sector carries 1/19.
+      farey_partition.md. The twin sectors together carry 18/19 of
+      the total budget; our baryonic sector carries 1/19.
 
   (C) Cosmological horizon (Bekenstein-Hawking) -- entropy S_H = A/4
       with A the Hubble horizon area. In Planck units S_H = pi R^2

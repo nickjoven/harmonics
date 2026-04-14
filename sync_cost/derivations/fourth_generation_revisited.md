@@ -232,8 +232,6 @@ extension that didn't respect the integer constraint. The
 constraint is now the primary object; the exponent law is its
 projection onto the logarithm of mass.
 
-**Closure status:** Item 8 in `open_items.md` is now closed.
-The 4th generation question is resolved in the negative, with a
-stronger structural argument than the original "consistent with
-LEP" status. Update the status line to read
-"4th charged lepton: forbidden by depth × |3Q| = 9."
+**Closure status:** The 4th generation question is resolved in
+the negative: 4th charged lepton is forbidden by the integer
+conservation law `depth × |3Q| = 9`.

@@ -93,9 +93,9 @@ Implications
 
    Interpretation (A) is internally consistent and does not require
    revisiting downstream results that use w_framework (e.g.,
-   boundary_weight.py, field_equation_iteration.py).  But it
-   requires re-stating the structural reading of the lepton
-   identity away from "physical saddle-node relaxation".
+   boundary_weight.py).  But it requires re-stating the structural
+   reading of the lepton identity away from "physical saddle-node
+   relaxation".
 
 This script computes both quantities, verifies the analytic
 result against tight-tolerance numerics, and reports the
@@ -226,7 +226,7 @@ def main():
     inv_sqrt_fw = 1 / math.sqrt(w2_fw)
     inv_sqrt_true = 1 / math.sqrt(w2_true)
 
-    print("  Three quantities at K* = 0.862:")
+    print(f"  Three quantities at K* = {K_STAR:.8f}:")
     print()
     print(f"    a_1(leptons) observed          = {a1_lep:.8f}")
     print(f"    2 / K*                         = {2/K_STAR:.8f}")

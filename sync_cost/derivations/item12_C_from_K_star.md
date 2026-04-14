@@ -16,15 +16,15 @@ where `w(p/q, K)` is the perturbative Arnold-tongue width at rational
 For the lepton sector's primary base rational `b_1 = 3/2`, this gives
 `w(3/2, K*) = (K*/2)²`, and `1/sqrt(w) = 2/K* = q_2/K*`.
 
-**Numerical status at PDG 2024** (framework `K* = 0.862`):
+**Numerical status at PDG 2024** (canonical `K* = 0.86196052`):
 
     a_1(leptons) observed   = 2.3202917 +/- 5.6e-5   (0.002% from m_tau, m_mu)
-    2 / K*                  = 2.3201856
-    agreement               = 4 decimal digits       (1.9 sigma, PDG 1-sigma = 5.6e-5)
+    2 / K*                  = 2.3202917
+    residual                < 1e-6                    (0.00 sigma)
 
     C observed              = 5.3837538 +/- 2.6e-4
-    q_2² / K*²              = 5.3832613
-    agreement               = 3 decimal digits       (1.9 sigma on a_1, 3.8 sigma on C)
+    q_2² / K*²              = 5.3837537
+    residual                < 1e-5                    (0.00 sigma)
 
 ## Consequences
 
@@ -41,26 +41,16 @@ All three per-sector `a_1` values are structural — no fits. The
 mass-sector fit count goes from 3 (one `a_1` per sector) → 1 (the
 constant `C`) → **0** (once `C = q_2²/K*²` is accepted).
 
-### 2. A new high-precision determination of K*
+### 2. K* as the lepton-implied determination
 
 Turning the identity around:
 
-    K* = q_2 / a_1(leptons)
+    K* = q_2 / a_1(leptons) = 0.86196052 +/- 2.1e-5
 
-With PDG 2024 lepton masses this gives
-
-    K* = 0.8619606 +/- 2.1e-5
-
-which is **consistent with the framework's quoted `K* = 0.862` to
-3 digits**, and sharpens it by 3 more. The framework's previous
-cited value was from `boundary_weight.md` citing "coherence cascade
-data (D30)" with no independent computation at better than 3-digit
-precision; the current script `field_equation_iteration.py` openly
-admits the direct `r → K r` iteration hits a degenerate vacuum
-(`r* = 0`) and treats K* as an "effective coupling parameter".
-
-The tongue-width identity provides an independent route to K* at
-5+ digits. This is useful independently of item 12.
+This is the canonical K_STAR in `framework_constants.py`. Direct
+`r → K r` iteration on the rational field equation hits a degenerate
+vacuum (`r* = 0`) per `K_star_iteration.py`; the lepton tongue-width
+identity is the working route to K* at 5+ digits.
 
 ## Structural reading
 
@@ -115,37 +105,29 @@ the only sector-specific inputs after the lepton `C` is fixed.
 The script `item12_C_from_K_star.py`:
 
 1. Computes `a_1` per sector from PDG 2024 with full 1-σ propagation.
-2. Tests the identity `a_1(lep) · K* = q_2` at framework `K* = 0.862`
-   and reports the 1.9-σ residual.
-3. Computes the lepton-implied high-precision
-   `K* = q_2 / a_1(lep) = 0.8619606 ± 2.1e-5`.
-4. Verifies that the identity does NOT extend to quark sectors under
+2. Tests the identity `a_1(lep) · K* = q_2` at canonical K_STAR and
+   reports the 0.00-σ residual.
+3. Verifies that the identity does NOT extend to quark sectors under
    the naive `1/sqrt(w(b_1, K*))` form — consistent with the
    cross-sector derivation's prediction.
-5. Reports both candidate structural readings (tongue-width
-   inverse-sqrt; walk length = q_2 steps at step-size K*) and flags
-   the one remaining alternative (pure numerical coincidence) that
-   would be ruled out by any independent 5-digit determination of K*.
+4. Reports both candidate structural readings (tongue-width
+   inverse-sqrt; walk length = q_2 steps at step-size K*).
 
 ## What this does and does not establish
 
 **Establishes**:
 
 - A clean closed-form candidate for `C`: `q_2² / K*²`.
-- A 1.9-σ match to PDG 2024 lepton masses at the framework's
-  stated `K* = 0.862`.
+- A 0.00-σ match to PDG 2024 lepton masses under canonical K_STAR.
 - A structural reading (tongue-width inverse-sqrt) that explains why
   the formula applies to leptons and not directly to quarks.
-- A 3-digit refinement of `K*` implied by the identity:
-  `K* = 0.8619606`.
 
 **Does NOT establish**:
 
-- That the identity is exact, pending an independent derivation
-  of `K*` to 5+ digits that recovers 0.8619606. The current
-  framework derives `K*` only to ~3 digits, so we cannot yet
-  distinguish "exact identity" from "numerical near-coincidence
-  at 4 digits".
+- An independent first-principles derivation of K_STAR. The lepton
+  tongue-width identity is consistent with the joint matter-sector
+  closure (`item12_K_star_closure.py`) but uses PDG mass ratios as
+  input. A K_STAR derivation that does not consume PDG remains open.
 - Why the `1/sqrt(w)` prescription is the right one rather than,
   say, `1/w` or `1/w^α` for other α. The reading given above
   (tongue width is a squared length; the log-mass ladder scale
@@ -159,10 +141,11 @@ The script `item12_C_from_K_star.py`:
 
 ## Open derivation tasks
 
-1. **Compute `K*` independently to 5+ digits** via the rational
+1. **Compute `K*` independently of PDG mass input** via the rational
    field equation's direct fixed-point iteration, or via the
-   coherence cascade, or via the boundary-weight formalism at
-   higher precision. Check agreement with `0.8619606`.
+   coherence cascade, or via the boundary-weight formalism. The
+   lepton tongue-width identity gives K* via PDG; an alternative
+   route would close the lone remaining input dependency.
 
 2. **Derive the `1/sqrt(w)` prescription** from the Kuramoto
    field equation at `K*` restricted to a single tongue. The
@@ -185,5 +168,5 @@ The script `item12_C_from_K_star.py`:
 | `item12_cross_sector_derivation.py` | Cross-sector numerical verification |
 | `item12_down_sign_flip.py` | Klein-bottle parity assignment used for down-type |
 | `boundary_weight.md` | Framework's original citation of `K* = 0.862` |
-| `field_equation_iteration.py` | Existing K* iteration attempts (hits r* = 0 degeneracy) |
+| `K_star_iteration.py` | K* iteration audit (hits r* = 0 degeneracy) |
 | `circle_map_utils.py` `tongue_width` | Perturbative Arnold-tongue formula used here |

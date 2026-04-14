@@ -1,10 +1,10 @@
 """
 Multi-twisted substrate: constructive realization in the framework vocabulary.
 
-Item 14 in open_items.md conjectures that the framework's integer sectors
--- (2, 3) from mass, 13 from half-Mobius, (13, 19) from cosmology, the
-Fibonacci backbone from generations -- are projections of a single
-multi-twisted substrate. This script attempts a constructive realization
+Conjecture: the framework's integer sectors -- (2, 3) from mass, 13
+from half-Mobius, (13, 19) from cosmology, the Fibonacci backbone from
+generations -- are projections of a single multi-twisted substrate.
+This script attempts a constructive realization
 in the framework's existing vocabulary (Stern-Brocot walks, tongue widths,
 integer-labeled modes), without full AC or non-Hausdorff quotient spaces.
 

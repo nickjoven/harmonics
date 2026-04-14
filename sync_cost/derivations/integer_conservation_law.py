@@ -219,9 +219,10 @@ print()
 print("log(mass) ∝ -depth × log(K*/2) = -depth × 0.841")
 print()
 
-K_star = 0.862
+from framework_constants import K_STAR_PRECISE
+
 for name, depth, mass_obs in fermion_depths:
-    expected_log_mass = -depth * np.log(K_star/2) + 3  # rough normalization
+    expected_log_mass = -depth * np.log(K_STAR_PRECISE / 2) + 3  # rough normalization
     expected_mass = np.exp(expected_log_mass)
     ratio = mass_obs / expected_mass
     # print(f"  {name:>10}: depth={depth}, expected ~{expected_mass:.2f}, actual={mass_obs:.2f}, ratio={ratio:.2f}")

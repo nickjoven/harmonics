@@ -66,10 +66,9 @@ sector.  Its "effective N" = q_2^3 q_3 = 24 is consistent with
 traversal of the color q_3 cycle", which is what the double
 cover produces.
 
-No new K* value is needed.  The same K* = 0.862 (framework) or
-K* = 0.8619606 (lepton-implied refinement) applies to all three
-sectors via the same identity a_1 * K* = sqrt(N), with the
-sector-specific N integer.
+No new K* value is needed.  The canonical K* = 0.86196052
+applies to all three sectors via the same identity
+a_1 * K* = sqrt(N), with the sector-specific N integer.
 """
 
 from __future__ import annotations

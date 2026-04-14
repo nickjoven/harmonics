@@ -167,7 +167,7 @@ that determines the running sign.
 ## Computational chain
 
 The following Python scripts implement and verify this derivation
-(read in order — see `INDEX.md` for the full dependency graph):
+(read in order):
 
 | Script | Role |
 |--------|------|

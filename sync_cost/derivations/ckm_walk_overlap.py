@@ -1,8 +1,6 @@
 """
 CKM angles from Stern-Brocot walk overlap (elliptic pairs only).
 
-Tightens Calc 3 of remaining_calculations.py.
-
 ckm_from_sl2z.py classifies generation pairs by the trace of
 M_i^{-1} M_j into:
     elliptic  (|tr| < 2): flavour mixing

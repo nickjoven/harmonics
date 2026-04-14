@@ -82,7 +82,6 @@ jobs:
             _site/docs/index.html \
             _site/docs/glossary.html \
             _site/docs/derivations.html \
-            _site/docs/walkthrough.html \
             _site/docs/cmb-s4.html
 
   # Runs only on push to main, gated on validate.  Real Pages deploy.

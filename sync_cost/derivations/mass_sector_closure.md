@@ -199,4 +199,3 @@ sector is the overall scale (electroweak VEV).
 - `walk_before_repetition.py`: the tree acyclicity mechanism
 - `gauge_sector_lovelock.md`: D42, the gauge sector derivation
 - `gell_mann_nishijima.md`: Q = T₃ + Y/2 from Klein bottle geometry
-- `SESSION_STATE.md`: full session context

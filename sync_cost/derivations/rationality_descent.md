@@ -180,4 +180,3 @@ the algorithm that computes it.
 | `item12_q_greater_2_audit.py` | the mass-sector `a_1·K* = √N` closure that the algorithm recovers at depth 1-4 |
 | `item12_C_from_K_star.md` | reading (D) setting up the sector integers |
 | `conservation_computability.md` | D36, the existence theorem for the algorithm |
-| `open_items.md` | current open items; each one is a rationality-descent gap in the algorithm's sense |

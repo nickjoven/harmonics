@@ -27,7 +27,7 @@ print("=" * 70)
 print()
 
 # The framework's primary fixed point
-K_star = 0.862
+from framework_constants import K_STAR as K_star
 
 # The walker reaches depth d_max where the tongue width at d_max
 # equals some threshold ε. The tongue width at depth d on the

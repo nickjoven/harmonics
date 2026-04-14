@@ -11,11 +11,11 @@ where
     w(p/q, K) = 2 (K/2)^q / q                      (Arnold-tongue width)
     g(p/q)   = density on the Stern-Brocot tree    (choice of ensemble)
 
-The fixed point r* gives K* = K_0 * r*.  The framework's stated
-K* = 0.862 has been quoted at 3 digits from "coherence cascade data"
-without independent recomputation; field_equation_iteration.py openly
-admits its direct r -> K*r iteration hits the XOR-degenerate vacuum
-r* = 0 because the 4 minimum Klein-bottle modes cancel.
+The fixed point r* gives K* = K_0 * r*.  The canonical K* = 0.86196052
+comes from the joint matter-sector closure (item12_K_star_closure.py),
+not from this iteration; the direct r -> K*r iteration hits the
+XOR-degenerate vacuum r* = 0 because the 4 minimum Klein-bottle
+modes cancel.
 
 The XOR degeneracy is a consequence of using only the minimum modes.
 Including the Fibonacci backbone (modes at F_n/F_{n+1} converging to
@@ -450,7 +450,7 @@ def main():
     print()
     print("=" * 78)
     print()
-    print("  OUTCOME: the naive iteration FAILS to reproduce K* = 0.862.")
+    print(f"  OUTCOME: the naive iteration FAILS to reproduce K* = {K_STAR:.8f}.")
     print()
     print("  Observations:")
     print()
@@ -467,11 +467,10 @@ def main():
     print("     gives K* > 1, NOT 0.862.  Increasing K_0 just scales K*")
     print("     linearly -- there is no fixed K* value that falls out.")
     print()
-    print("  3. Therefore the framework's K* = 0.862 is NOT the fixed")
-    print("     point of the standard Kuramoto self-consistency on any")
-    print("     of the ensembles tried here.  The 3-digit value 0.862")
-    print("     has been cited from 'MSPU D30 coherence cascade data'")
-    print("     for years without corresponding code that recomputes it.")
+    print("  3. Therefore the canonical K* is NOT the fixed point of")
+    print("     the standard Kuramoto self-consistency on any of the")
+    print("     ensembles tried here.  The canonical value comes from")
+    print("     the joint matter-sector closure, not from this iteration.")
     print()
     print("  Conclusion: the 'independent K* derivation' does not exist")
     print("  in the framework in the form an r-iteration would require.")

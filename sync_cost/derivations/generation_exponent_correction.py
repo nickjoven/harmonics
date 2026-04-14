@@ -163,12 +163,13 @@ print()
 # More directly: the partially locked q=6 modes contribute to the
 # order parameter r, which shifts K_eff, which shifts ALL tongue widths.
 
+from framework_constants import K_STAR
+
 w_star = 0.83
 
-# The self-consistent K_eff:
-# From Ω_Λ(w*) = 0.6847 and the field equation
-# K* ≈ 0.862 (from MSPU)
-K_star = 0.862
+# The self-consistent K_eff from the joint matter-sector closure
+# (item12_K_star_closure.py).
+K_star = K_STAR
 
 # Tongue widths at K*
 w2 = tongue_width(2, K_star)

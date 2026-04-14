@@ -35,17 +35,15 @@ Result (PDG 2024):
     pairwise sigma: 0.04 sigma, 0.09 sigma, 0.32 sigma
 
 The three matter sectors agree on K* at better than 1 sigma PDG.
-This is the framework's first INDEPENDENT K* determination -- it
-does not assume K* = 0.862 anywhere.  It uses only:
+This is the joint matter-sector K* determination. It uses only:
 
   - the sector integers {4, 9, 24}, which are structurally derived
     from the parabola primitive (reading D) and Klein-bottle
     topology (item12_cross_sector_ratios.md), with NO K* input;
   - the PDG 2024 mass ratios m_tau/m_mu, m_t/m_c, m_b/m_s.
 
-The framework's canonical K* = 0.862 (3-digit rounded) is consistent
-with the 5-digit result 0.86196053 to within the rounding
-precision (difference = -3.95e-5).
+The result K* = 0.86196052 is the canonical K_STAR in
+framework_constants.py.
 
 Implication: item 12 closes completely.  The mass sector has
 ZERO fitted parameters once (q_2, q_3, d) are accepted from the
@@ -165,10 +163,9 @@ def main():
 
     # Compare to canonical
     diff = K_joint - K_STAR
-    print(f"  Framework canonical K_STAR = {K_STAR}")
-    print(f"  Joint result              = {K_joint:.10f}")
-    print(f"  Difference                = {diff:+.2e}")
-    print("  (3-digit rounding tolerance: 5e-4; difference is within.)")
+    print(f"  framework_constants.K_STAR = {K_STAR:.10f}")
+    print(f"  Joint result               = {K_joint:.10f}")
+    print(f"  Difference                 = {diff:+.2e}")
     print()
 
     print("=" * 78)
