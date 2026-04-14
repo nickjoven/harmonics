@@ -1,5 +1,3 @@
----
-
 # Analytic Proof: Farey Graph Laplacian → Laplace-Beltrami
 
 ## Theorem
