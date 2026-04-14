@@ -6,47 +6,69 @@ Updated 2026-04-13 after the cross-branch reconciliation.*
 
 ## Canonical branch
 
-**`claude/empirical-predictions-P25ZK`** is the canonical branch for
-active derivation work.  Its HEAD is the source of truth for the
-framework's closed state.
+**`main`** is canonical as of 2026-04-13 (PR #58 landed). The full
+mass-sector closure, K_STAR_PRECISE, neutrino solar closure, tongue
+audit, gauge residuals, and Higgs λ all live on `main`.
+
+Pre-merge canonical work was on `claude/empirical-predictions-P25ZK`;
+that branch is now equivalent to `main` and can be considered
+archived.
 
 Do **not** start new branches from older merge-bases (e.g. `07ba6ed`
-or `fa83443`) without first checking what's already on
-`claude/empirical-predictions-P25ZK`.  The 2026-04-13 reconciliation
-was necessitated by exactly that mistake: a new branch started from
-a merge-base while the canonical branch had already closed the work
-under different definitions.
+or `fa83443`) without first checking what's on `main`. The 2026-04-13
+reconciliation was necessitated by exactly that mistake: a new branch
+started from a merge-base while the canonical work had already
+closed under different definitions.
 
-Main is behind canonical; see `sync_cost/derivations/RECONCILIATION_LOG.md`
-for the per-file timeline as of 2026-04-13.  PR #58 lands 111 commits.
+## Topology, not chronology
+
+**Read `sync_cost/derivations/FRAMEWORK_TOPOLOGY.md` for the
+dependency-driven map of the canonical state.**  It is the one-stop
+"what depends on what" reference. Use it before deriving anything.
+
+The topology is organized in five levels:
+- **L0** — Foundations (four primitives, Klein bottle topology)
+- **L1** — Forced selections from L0 (`(q_2, q_3) = (2, 3)`, `d = 3`,
+  Klein parity, signature)
+- **L2** — Derived integers from L1 (framework alphabet)
+- **L3** — Derived structural laws from L2 (integer conservation,
+  per-sector base pairs, sector integers `N`, tongue audit)
+- **L4** — Tree-scale coupling `K_STAR_PRECISE = 0.86196052` from
+  joint matter-sector fit
+- **L5** — Predicted observables (mass, neutrino, gauge, Higgs,
+  cosmology, generation count)
+
+Chronology of how the framework was discovered is in
+`RECONCILIATION_LOG.md` and `SESSION_RETROSPECTIVE_2026_04_13.md`.
+**Use chronology for context, topology for work.**
 
 ## Session-start checklist
 
-**Before deriving anything**, survey what's already closed:
+**Before deriving anything**, walk the topology:
 
-1. Read `sync_cost/derivations/mass_sector_closure.md` — the
-   cross-link uniqueness theorem.  The framework's integers
+1. Read `sync_cost/derivations/FRAMEWORK_TOPOLOGY.md` — the dependency
+   map. Five levels (L0 foundations → L5 observables). Find where
+   your candidate sits in the graph; if it's already at L2/L3/L4 you
+   are about to re-derive canonical work.
+2. Read `sync_cost/derivations/mass_sector_closure.md` — the
+   cross-link uniqueness theorem (L1). The framework's integers
    `(q_2, q_3) = (2, 3)` are not chosen; they are the unique integer
-   solution to `q_2² − 1 = q_3`, `q_3² − 1 = q_2³`.  This is the
-   master statement.  Any new "why (2, 3)" derivation is at best
-   a pedagogical restatement.
-2. Read `sync_cost/derivations/framework_constants.py` — the canonical
-   numerical values.  **Always import from this, never hardcode**.
-   Key values:
-     - `K_STAR_PRECISE = 0.86196052` (5-digit, from joint matter-sector
+   solution to `q_2² − 1 = q_3`, `q_3² − 1 = q_2³`. Any new
+   "why (2, 3)" derivation is at best a pedagogical restatement.
+3. Read `sync_cost/derivations/framework_constants.py` — the canonical
+   numerical values (L2 → L4). **Always import from this, never
+   hardcode**. Key values:
+     - `K_STAR_PRECISE = 0.86196052` (5-digit, joint matter-sector
        closure; use this, not `K_STAR = 0.862`)
      - `K_LEPTON = 9 = q_3²`, `K_QUARK = 8 = q_2³`
      - `F_6_COUNT = 13 = |F_6| = q_2² + q_3²`, `F_7_COUNT = 19`
      - PDG masses (`PDG_MASS` dict, `M_E`, `M_MU`, `M_TAU`, ...)
-3. Check `sync_cost/derivations/RECONCILIATION_LOG.md` for the most
-   recent cross-branch reconciliation.  It lists which files are
-   canonical vs stale.
-4. Check `git log --oneline` on this branch for the **last few
-   commits**.  Recent commits often retract or refine earlier work
-   on the same branch (see Retractions below).
-5. **Do NOT trust `open_items.md`** as a source.  User flagged it as
-   the fastest-staling document on any branch.  Derive item status
-   from the code + commit history instead.
+4. Check `git log --oneline main -- sync_cost/derivations/` for the
+   last few commits. Recent commits often retract or refine earlier
+   work — trust HEAD, not history.
+5. **Do NOT trust `open_items.md`** as a source. It is the
+   fastest-staling document. Derive item status from the topology
+   and the code, not from `open_items.md`.
 
 ## Canonical closures (as of 2026-04-13)
 
