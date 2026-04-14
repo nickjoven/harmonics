@@ -1,0 +1,1 @@
+[R4] Walk-product mass formulas are retracted. Canonical mass sector uses two-step Fibonacci formula with a_1 = sqrt(N_sector)/K_STAR (C17, C18). Retracted in commit e387fe3: remaining_calculations.py, walk_products_absolute.py deleted (self-reported failure modes).

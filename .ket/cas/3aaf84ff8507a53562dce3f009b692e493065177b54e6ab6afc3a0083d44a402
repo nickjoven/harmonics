@@ -1,0 +1,1 @@
+[R1] K_STAR = 0.8668 (A-2 walk-product formulation) is retracted. Canonical K_STAR = 0.86196052 via joint matter-sector closure. Retracted in commit e387fe3 (2026-04-14): dark_twin_formalization.py, k_eff_to_gev.py, field_equation_iteration.py deleted.

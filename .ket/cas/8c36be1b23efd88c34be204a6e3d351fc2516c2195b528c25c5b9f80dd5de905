@@ -1,0 +1,1 @@
+[R3] Neutrino depth = 36 conjecture is retracted. Canonical depth = q_2^3 + q_3^3 = 35 (C11). Retracted in commit e387fe3: neutrino_mass_prediction.py, committed_walk_masses.py, integral_mass_test.py deleted.

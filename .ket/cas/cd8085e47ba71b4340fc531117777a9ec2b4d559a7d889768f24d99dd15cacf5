@@ -1,0 +1,1 @@
+[R2] K_STAR = 0.862 (3-digit rounded) is superseded by K_STAR = 0.86196052 (full precision). Retracted in commit e387fe3: hardcoded 0.862 stripped from K_eff_from_charge.py, convergence_frontier.py, field_equation_revisit.py, generation_exponent_correction.py, integer_conservation_law.py, item12_characterize_a1.py, sector_constants_to_adjoints.py.

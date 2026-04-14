@@ -1,0 +1,1 @@
+framework_constants.py — single source of truth for Q2, Q3, D, K_LEPTON, K_QUARK, MEDIANT, INTERACT, |F_6|=13, |F_7|=19, K_STAR=0.86196052, PDG masses, Omega partition (1/19, 5/19, 13/19, 6/19). Canonical at BLAKE3 fa3276d0c00109e87784fb6528c272ab68d019ff474fb510f4749ae9746b4c9a (harmonics sync_cost/derivations/framework_constants.py, post-e387fe3).
