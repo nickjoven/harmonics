@@ -1,15 +1,27 @@
 # harmonics
 
-One equation on the Stern-Brocot tree:
+One equation on the Stern-Brocot tree of rationals:
 
 $$N(p/q) = N_{\text{total}} \times g(p/q) \times w(p/q,\; K_0 F[N])$$
 
-Four primitives — integers, mediants, the fixed-point equation, and the
-parabola — compose into the circle, the devil's staircase, Arnold tongues,
-and the Born rule. The field equation's fixed point, in its continuum limits,
-produces the Einstein field equations ($K = 1$) and the Schrödinger equation
-($K < 1$), uniquely. The frequency distribution $g(\omega)$ determines itself.
-Zero free parameters. Zero free functions.
+Each rational $p/q$ carries a population given by the total mass, a
+frequency density $g$, and the Arnold tongue width $w$ at coupling
+$K_0 F[N]$. The coupling depends on the population through the order
+parameter $F[N]$, so the equation is its own fixed-point condition.
+Solve it.
+
+The fixed point has two continuum limits. At $K = 1$ — full
+synchronization — it produces the Einstein field equations, uniquely
+under Lovelock's theorem given Klein-bottle topology. At $K < 1$ —
+partial synchronization — it produces the Schrödinger equation. Between
+them, the Stern-Brocot denominator classes $(q_2, q_3) = (2, 3)$,
+forced by the cross-link identity $q_2^2 - 1 = q_3$ and
+$q_3^2 - 1 = q_2^3$, generate the Standard Model gauge group, three
+generations, and matter-sector mass ratios at PDG precision.
+
+The frequency density $g(\omega)$ is the fixed point of its own
+self-consistency, not a free function. The only dimensionful input is
+the electroweak scale $v = 246$ GeV.
 
 | Prediction | Value | Observed | Residual |
 |---|---|---|---|
