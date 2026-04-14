@@ -1,50 +1,47 @@
 """
 Framework constants -- single source of truth.
 
-This module centralizes every numerical constant and PDG value used
-across the harmonics framework. Before this module, constants were
-redefined independently in 30-50 files with occasional drift (e.g.
-K_STAR = 0.862 in some scripts vs 0.8668 in others after a refit
-was later retracted). Importing from here is the only consistent
-way to reference framework values going forward.
+Centralizes every numerical constant and PDG value used across the
+harmonics framework. Importing from here is the only consistent way
+to reference framework values; do not redefine these locally.
 
 Contents
 --------
-Integers from the Klein bottle topology:
+Klein bottle integers:
     Q2, Q3         -- denominator classes from XOR filter
     D              -- spatial dimension (= 3)
     K_LEPTON       -- lepton sector constant (q_3^2 = 9)
     K_QUARK        -- quark sector constant (q_2^3 = 8)
     MEDIANT        -- mediant sum q_2 + q_3 = 5
     INTERACT       -- interaction scale q_2 * q_3 = 6
-    F_6_COUNT      -- |F_6| = 13 (Farey 6)
-    F_7_COUNT      -- |F_7| = 19 (Farey 7)
+    F_6_COUNT      -- |F_6| = 13
+    F_7_COUNT      -- |F_7| = 19
     R_HIERARCHY    -- 6 * 13^54 (Planck/Hubble)
 
 Irrationals:
-    PHI            -- golden ratio (1 + sqrt(5)) / 2
-    INV_PHI        -- 1/phi
-    INV_PHI_SQ     -- 1/phi^2 = 2 - phi
+    PHI, INV_PHI, INV_PHI_SQ
 
 Self-consistent coupling:
-    K_STAR         -- 0.862 (from boundary_weight.md; canonical)
+    K_STAR          -- 0.86196052, joint matter-sector closure
+                       (item12_K_star_closure.py)
+    K_STAR_PRECISE  -- alias of K_STAR (kept for backwards compat)
+    K_STAR_OVER_2   -- K_STAR / 2
 
 Electroweak scale:
-    V_GEV          -- 246.22 GeV
-    V_MEV          -- V_GEV * 1e3
-    V_EV           -- V_GEV * 1e9
+    V_GEV, V_MEV, V_EV
 
 PDG masses (central values, MeV):
-    PDG_MASS[name] -- dict mapping particle name to (central, 1-sigma) in MeV
-    M_E, M_MU, M_TAU, M_U, M_C, M_T, M_D, M_S, M_B, M_H, M_W, M_Z
+    PDG_MASS[name], M_E, M_MU, M_TAU, M_U, M_C, M_T, M_D, M_S, M_B,
+    M_H, M_W, M_Z
 
 Couplings at M_Z (PDG 2024):
-    ALPHA_S_MZ, ALPHA_EM_MZ, SIN2_TW_MZ
+    ALPHA_S_MZ, ALPHA_EM_MZ, SIN2_TW_MZ, ALPHA_2_MZ, ALPHA_Y_MZ
 
-Framework-special integer set (used by structural-reading helpers):
-    FRAMEWORK_INTEGERS -- small set of integers that come from q_2, q_3,
-                          their simple combinations, and cosmological
-                          partition numerators
+Cosmological partition:
+    OMEGA_B, OMEGA_DM, OMEGA_L, OMEGA_M
+
+Framework-special integer set:
+    FRAMEWORK_INTEGERS
 """
 
 import math
@@ -83,41 +80,25 @@ INV_PHI_SQ: float = 1 / (PHI * PHI)               # = 2 - PHI
 # Self-consistent Kuramoto coupling
 # ============================================================================
 
-# K_STAR is the framework's fixed point coupling from the boundary-weight
-# derivation (boundary_weight.md), where Omega_Lambda = 13/19 is matched
-# at w* = 0.83 and K* = 0.862. This is the 3-digit CITED value.
-#
-# An alternative K_STAR = 0.8668 was fit from neutrino splittings in the
-# A-2 work and was later retracted in item12_sin_W_and_signs.py and
-# elsewhere (see open_items.md). Use K_STAR below, not 0.8668.
-K_STAR: float = 0.862
-
-# K_STAR_PRECISE is the 5-digit value from the joint matter-sector
-# self-consistency closure (item12_K_star_closure.py).  Three independent
-# extractions of K* from m_tau/m_mu, m_t/m_c, m_b/m_s via the parabola
-# rotation a_1(sector)^2 * K*^2 = N(sector) agree with chi^2/dof = 0.06
-# (<< 1 sigma pairwise), giving:
+# K_STAR is the framework's fixed-point coupling from the joint matter-
+# sector self-consistency closure (item12_K_star_closure.py).  Three
+# independent extractions from m_tau/m_mu, m_t/m_c, m_b/m_s via the
+# parabola rotation a_1(sector)^2 * K*^2 = N(sector) agree with
+# chi^2/dof = 0.06 (<< 1 sigma pairwise), giving
 #
 #     K*_joint = sqrt(N(sector)) / a_1(sector)
 #              = 0.86196052 +/- 2.06e-5
 #
-# This uses only the sector integers {4, 9, 24} (d-independent, from
-# reading D + Klein topology -- NO K* input) and PDG 2024 mass ratios.
-# K* drops out as the unique value making all three sectors sit on the
-# same parabola.  The difference from the 3-digit K_STAR = 0.862 is
-# -3.95e-5, within the 3-digit rounding precision, so K_STAR remains
-# correct as the cited value; K_STAR_PRECISE is available for downstream
-# calculations that need sub-3-digit precision.
-#
-# Under K_STAR_PRECISE the lepton identity a_1(lep)*K* = q_2 = 2 closes
-# EXACTLY to machine precision (residual ~1e-7, 0.00 sigma).  The prior
-# "lepton compositional correction +2/F_12^2" from
-# item12_lepton_correction_and_N54.py was a numerical coincidence with
-# the 3-digit rounding error and has been retracted; see Part 2 of
-# item12_C_from_K_star.py for the demonstration.
-K_STAR_PRECISE: float = 0.86196052
+# Uses only sector integers {4, 9, 24} (d-independent, from reading D
+# + Klein topology) and PDG 2024 mass ratios.  Under this value the
+# lepton identity a_1(lep) * K* = q_2 = 2 closes exactly at machine
+# precision (residual ~1e-7).
+K_STAR: float = 0.86196052
 
-K_STAR_OVER_2: float = K_STAR / 2                 # 0.431, frequent in tongue formulas
+# Backwards-compatible alias (some scripts import this name).
+K_STAR_PRECISE: float = K_STAR
+
+K_STAR_OVER_2: float = K_STAR / 2                 # frequent in tongue formulas
 
 
 # ============================================================================

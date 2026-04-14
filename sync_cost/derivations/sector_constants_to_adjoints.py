@@ -237,16 +237,17 @@ print()
 # from Planck to Hubble), then:
 # m_ν ~ m_Planck × (K*/2)^145 = ~10^19 GeV × (0.43)^145
 
-K_star = 0.862
+from framework_constants import K_STAR_PRECISE
+
 m_Planck = 1.22e19  # GeV
 
 # Framework says 145.8 Fibonacci levels span Planck to Hubble
 # Neutrinos might sit at this maximum depth
 d_max = 145.8
-mass_scale = m_Planck * (K_star/2)**d_max
+mass_scale = m_Planck * (K_STAR_PRECISE / 2) ** d_max
 
 print(f"Estimate neutrino mass scale (max depth = {d_max}):")
-print(f"  m_ν ~ {m_Planck:.1e} GeV × ({K_star}/2)^{d_max}")
+print(f"  m_ν ~ {m_Planck:.1e} GeV × ({K_STAR_PRECISE}/2)^{d_max}")
 print(f"      ~ {mass_scale:.2e} GeV")
 print(f"      ~ {mass_scale * 1e9:.2e} eV")
 print()

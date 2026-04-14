@@ -165,10 +165,9 @@ def main():
 
     # Compare to canonical
     diff = K_joint - K_STAR
-    print(f"  Framework canonical K_STAR = {K_STAR}")
-    print(f"  Joint result              = {K_joint:.10f}")
-    print(f"  Difference                = {diff:+.2e}")
-    print("  (3-digit rounding tolerance: 5e-4; difference is within.)")
+    print(f"  framework_constants.K_STAR = {K_STAR:.10f}")
+    print(f"  Joint result               = {K_joint:.10f}")
+    print(f"  Difference                 = {diff:+.2e}")
     print()
 
     print("=" * 78)

@@ -286,7 +286,7 @@ def _all() -> list[Prediction]:
         correction_value=(MEDIANT + INV_PHI_SQ) * (1 / (fib(10) ** 2)),
         observed=2.320292 ** 2,          # from observed m_tau/m_mu
         observed_err=0.00029,
-        source="item12_characterize_a1.py, item12_residual_test.py",
+        source="item12_characterize_a1.py, item12_C_from_K_star.py",
         notes="mediant scale + golden-ratio residue + Fibonacci-10 correction",
     ))
 

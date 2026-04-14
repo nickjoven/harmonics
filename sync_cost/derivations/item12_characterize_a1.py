@@ -36,14 +36,12 @@ from fractions import Fraction
 # Pinned constants
 # ============================================================================
 
+from framework_constants import K_STAR, Q2, Q3, D
+
 PHI = (1 + math.sqrt(5)) / 2
 INV_PHI = 1 / PHI
-K_STAR = 0.862              # boundary_weight.md fixed point
-HALF_K = K_STAR / 2         # 0.431
+HALF_K = K_STAR / 2
 LOG_HALF_K = math.log(HALF_K)
-
-Q2, Q3 = 2, 3
-D = 3                        # spatial dimension
 
 
 # ============================================================================

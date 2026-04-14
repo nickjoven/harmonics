@@ -1,19 +1,15 @@
 """
 Item 12 (neutrino): solar-splitting closure via interaction-scale correction.
 
-The earlier neutrino closure in item12_lepton_correction_and_N54.py used:
+The bare neutrino closure is
 
     m_3 = v (K*/2)^(q_2^3+q_3^3) * q_2^(1/q_3)     ~= 50 meV
     m_1 = m_3 / q_2^d = m_3 / 8                      ~= 6.2 meV
     m_2 = m_1 * q_3^(1/q_2) = m_1 * sqrt(3)         ~= 10.8 meV
 
-giving atmospheric at 0.03 sigma (under K_STAR = 0.862) or 0.31 sigma
-(under K_STAR_PRECISE = 0.86196052), but solar at 1.77 sigma.  The
-solar residual was flagged as the last sub-1-sigma cleanup task for
-the mass sector.
-
-This script closes it.  The required correction to the m_2/m_1 ratio
-is an additive finite-boundary correction at the interaction scale:
+This gives atmospheric splitting at 0.31 sigma but solar at 1.77 sigma.
+The solar residual is closed by an additive finite-boundary correction
+to the m_2/m_1 ratio at the interaction scale:
 
     m_2/m_1 = q_3^(1/q_2) - 1/(q_2 q_3)^2 = sqrt(3) - 1/36
 
@@ -26,9 +22,8 @@ alpha_s/alpha_2 += 1/q_3^2) -- same compositional pattern, different
 structural alphabet element (interaction scale squared instead of
 Fibonacci squared).
 
-Numerically: under K_STAR_PRECISE = 0.86196052, the full closure gives
-atmospheric at 0.31 sigma and solar at 0.12 sigma, both well within
-PDG 1-sigma.  This is the final cleanup of the neutrino sector.
+Numerically: the full closure gives atmospheric at 0.31 sigma and
+solar at 0.12 sigma, both well within PDG 1-sigma.
 
 The cross-exponentiation set for the neutrino sector is now COMPLETE:
 

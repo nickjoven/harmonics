@@ -98,7 +98,8 @@ def floquet_rate(epsilon, K):
 # CONSTANTS (from framework)
 # ═══════════════════════════════════════════════════════════════════════
 
-K_STAR = 0.862          # self-consistent coupling from universe_loop.py
+from framework_constants import K_STAR
+
 K_C = 2 / math.pi       # Kuramoto critical coupling (global average)
 N_FAREY = 6              # Farey depth
 F6 = farey_sequence(N_FAREY)

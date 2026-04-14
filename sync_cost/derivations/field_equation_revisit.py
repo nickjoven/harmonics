@@ -24,6 +24,8 @@ import numpy as np
 from fractions import Fraction
 from math import gcd
 
+from framework_constants import K_STAR_PRECISE
+
 
 # ================================================================
 # Part 1: The field equation at the minimum-depth 4-mode level
@@ -237,7 +239,7 @@ print()
 # Let's compute tongue widths (duty cycles) at each base element
 # as isolated modes, to see the SINGLE-MODE populations
 
-K_star = 0.862  # from the boundary weight computation
+K_star = K_STAR_PRECISE
 base_elements = [
     ("3/2", 3, "Lepton b₁"),
     ("5/3", 3, "Lepton b₂"),
@@ -246,7 +248,7 @@ base_elements = [
     ("9/8", 8, "Down-type b₂"),
 ]
 
-print("Single-mode duty cycles at K* = 0.862:")
+print(f"Single-mode duty cycles at K* = {K_star:.8f}:")
 print(f"{'Fraction':>10} {'q':>4} {'duty = (K*/2)^q/q':>20} {'role':>15}")
 print("-" * 55)
 for frac, q, role in base_elements:
@@ -280,7 +282,7 @@ print()
 # depths. The TOTAL duty cycle along the walk = product of individual
 # duties = (K*/2)^(depth_sum) × (1/product of q values)
 
-print("Total walk duty per sector at K* = 0.862:")
+print(f"Total walk duty per sector at K* = {K_star:.8f}:")
 print()
 
 walks = [

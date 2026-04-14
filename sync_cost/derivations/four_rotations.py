@@ -285,7 +285,7 @@ def main():
     print("  FOUR ROTATIONS OF THE FIBONACCI SYMMETRY AXIS")
     print("=" * 78)
     print()
-    print("  K* = 0.862, phi = 1.618, q_2 = 2, q_3 = 3")
+    print(f"  K* = {K_STAR:.8f}, phi = 1.618, q_2 = 2, q_3 = 3")
     print()
     print("  Observables (closed framework content):")
     obs = build_observables()
