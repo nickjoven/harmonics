@@ -5,8 +5,21 @@ on:
     branches: [main]
     paths:
       - "index.html"
+      - "colony.html"
       - "docs/**"
       - "sync_cost/applications/**"
+      - "sync_cost/derivations/**"
+      - ".github/workflows/pages.yml"
+      - ".github/scripts/check_links.py"
+  pull_request:
+    paths:
+      - "index.html"
+      - "colony.html"
+      - "docs/**"
+      - "sync_cost/applications/**"
+      - "sync_cost/derivations/**"
+      - ".github/workflows/pages.yml"
+      - ".github/scripts/check_links.py"
   workflow_dispatch:
 
 permissions:
@@ -14,12 +27,68 @@ permissions:
   pages: write
   id-token: write
 
+# Per-ref so two PRs don't fight each other; main pushes still serialize.
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
+  # Runs on every PR and on push to main. Required status check for
+  # branch protection should be set to this job's name: "validate".
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Assemble _site
+        # NOTE: must stay in sync with the deploy job's "Prepare site" step.
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp colony.html _site/
+          cp -r sync_cost _site/
+          cp -r docs _site/
+          cp LICENSE _site/
+
+      - name: Structural checks
+        run: |
+          test -f _site/index.html
+          test -f _site/colony.html
+          test -d _site/docs
+          test -d _site/sync_cost
+          # No symlinks (Pages does not follow them)
+          if find _site -type l | grep -q .; then
+            echo "::error::symlinks found in _site/"
+            find _site -type l
+            exit 1
+          fi
+          # No huge files (Pages 100MB hard limit per file)
+          if find _site -type f -size +50M | grep -q .; then
+            echo "::error::files larger than 50M found in _site/"
+            find _site -type f -size +50M -exec ls -lh {} +
+            exit 1
+          fi
+
+      - name: Link check
+        run: |
+          python3 .github/scripts/check_links.py \
+            _site/index.html \
+            _site/colony.html \
+            _site/docs/index.html \
+            _site/docs/glossary.html \
+            _site/docs/derivations.html \
+            _site/docs/walkthrough.html \
+            _site/docs/cmb-s4.html
+
+  # Runs only on push to main, gated on validate.  Real Pages deploy.
   deploy:
+    needs: validate
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -31,9 +100,11 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Prepare site
+        # NOTE: must stay in sync with the validate job's "Assemble _site" step.
         run: |
           mkdir -p _site
           cp index.html _site/
+          cp colony.html _site/
           cp -r sync_cost _site/
           cp -r docs _site/
           cp LICENSE _site/
