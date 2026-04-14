@@ -13,9 +13,9 @@ where
 
 The fixed point r* gives K* = K_0 * r*.  The framework's stated
 K* = 0.862 has been quoted at 3 digits from "coherence cascade data"
-without independent recomputation; field_equation_iteration.py openly
-admits its direct r -> K*r iteration hits the XOR-degenerate vacuum
-r* = 0 because the 4 minimum Klein-bottle modes cancel.
+without independent recomputation; the direct r -> K*r iteration
+hits the XOR-degenerate vacuum r* = 0 because the 4 minimum Klein-
+bottle modes cancel.
 
 The XOR degeneracy is a consequence of using only the minimum modes.
 Including the Fibonacci backbone (modes at F_n/F_{n+1} converging to

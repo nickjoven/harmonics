@@ -93,9 +93,9 @@ Implications
 
    Interpretation (A) is internally consistent and does not require
    revisiting downstream results that use w_framework (e.g.,
-   boundary_weight.py, field_equation_iteration.py).  But it
-   requires re-stating the structural reading of the lepton
-   identity away from "physical saddle-node relaxation".
+   boundary_weight.py).  But it requires re-stating the structural
+   reading of the lepton identity away from "physical saddle-node
+   relaxation".
 
 This script computes both quantities, verifies the analytic
 result against tight-tolerance numerics, and reports the

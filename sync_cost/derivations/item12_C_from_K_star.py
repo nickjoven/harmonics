@@ -32,9 +32,7 @@ framework's rounded 0.862.  This script tests:
      down-type sectors -- it should NOT, because those sectors have
      different Klein-bottle parities and different sector-scaling
      factors.
-  4. Consistency with other framework constraints on K* that exist in
-     the derivations tree (field_equation_iteration.py's neutrino-mass
-     fit of K*, boundary_weight.md's cited value).
+  4. Consistency with the framework's cited K* from boundary_weight.md.
   5. Candidate structural readings for WHY a_1(lep) = q_2/K* would be
      exact:
        (a) 1 / sqrt(tongue_width(3/2, K*)) = 2/K*  (perturbative Arnold)

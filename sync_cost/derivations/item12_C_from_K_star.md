@@ -55,9 +55,8 @@ which is **consistent with the framework's quoted `K* = 0.862` to
 3 digits**, and sharpens it by 3 more. The framework's previous
 cited value was from `boundary_weight.md` citing "coherence cascade
 data (D30)" with no independent computation at better than 3-digit
-precision; the current script `field_equation_iteration.py` openly
-admits the direct `r → K r` iteration hits a degenerate vacuum
-(`r* = 0`) and treats K* as an "effective coupling parameter".
+precision; direct `r → K r` iteration on the rational field equation
+hits a degenerate vacuum (`r* = 0`) per `K_star_iteration.py`.
 
 The tongue-width identity provides an independent route to K* at
 5+ digits. This is useful independently of item 12.
@@ -185,5 +184,5 @@ The script `item12_C_from_K_star.py`:
 | `item12_cross_sector_derivation.py` | Cross-sector numerical verification |
 | `item12_down_sign_flip.py` | Klein-bottle parity assignment used for down-type |
 | `boundary_weight.md` | Framework's original citation of `K* = 0.862` |
-| `field_equation_iteration.py` | Existing K* iteration attempts (hits r* = 0 degeneracy) |
+| `K_star_iteration.py` | K* iteration audit (hits r* = 0 degeneracy) |
 | `circle_map_utils.py` `tongue_width` | Perturbative Arnold-tongue formula used here |
