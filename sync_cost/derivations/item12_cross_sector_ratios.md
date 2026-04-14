@@ -186,10 +186,8 @@ not done.
 
 **Does not close**:
 - The intra-lepton ratio `a_2(lep)/a_1(lep) = 1.4994` is 16 σ
-  away from exact `3/2` at lepton PDG precision. This is a
-  known finite-K residual (`item12_residual_test.py`) and is
-  not touched here.
-- `C` has no closed form yet.
+  away from exact `3/2` at lepton PDG precision. Known finite-K
+  residual; not addressed here.
 - The "orientation-preserving walk has mode volume `q_2 q_3`"
   conjecture needs a first-principled derivation from the
   rational field equation.
@@ -202,6 +200,3 @@ not done.
   of the identities at PDG precision with full error propagation.
 - `item12_down_sign_flip.py` — the Klein-bottle parity assignment
   used in the `6` factor reading.
-- `item12_residual_test.py` — the lepton `C` residual (~1e-4),
-  the finite-K correction responsible for the intra-lepton
-  16 σ deviation from exact `3/2`.
