@@ -186,10 +186,33 @@ From the 2026-04-13 reconciliation, the failure mode was:
 **Defense:**
 
 - Never start a new branch from a merge-base you haven't surveyed.
-- Always check `git log claude/empirical-predictions-P25ZK -- sync_cost/derivations/` first.
-- When in doubt, work directly on `claude/empirical-predictions-P25ZK`.
+- Always check `git log main -- sync_cost/derivations/` first.
+- When in doubt, work directly on `main`.
 - If a new branch is needed for isolation, first rebase it on top of
-  the canonical HEAD.
+  `main`.
+
+**Branch hygiene principles (added 2026-04-13 in response to a
+second-order failure):**
+
+- **PR on branch creation.** Every new branch gets a PR opened at
+  the moment it is pushed, with a defined merge path. A branch
+  without a PR is an orphan that compounds into a reconciliation
+  problem.
+- **Modifications stay close to additions.** A new branch with N
+  pure additions and 0 modifications cannot diverge. A new branch
+  with even 1 modification of an existing file can diverge if
+  anything else lands on that file. Modifications need fast merge
+  windows.
+- **Branches measured in minutes, not days.** The orphan-branch
+  failure mode was a 13-commit branch that lived for 16 hours
+  before reconciliation. The window between push and PR should be
+  measured in minutes — tighter than the time it takes to write the
+  PR description. If you find yourself debating whether to open a
+  PR, you have already waited too long.
+- **No strategy that forces inconsistency or fails to account for
+  it.** Every branch that adds divergence must have a defined plan
+  for how the divergence is resolved. Otherwise it is a future
+  reconciliation problem deferred.
 
 ## The framework in one paragraph (for quick grounding)
 
