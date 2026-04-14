@@ -333,7 +333,9 @@ print(f"    After θ_W mixing: {cross}+{within_23+within_32-1}+1")
 print(f"\n  Layer 11: Higgs mass")
 
 print(f"    m_H = v / q₂ = v / {q2}")
-print(f"    λ = 1/(2q₂²) = 1/{2*q2**2} = {Fraction(1, 2*q2**2)}")
+print(f"    λ = 1/q₂³ = duty(q₂) = 1/{q2**3} = {Fraction(1, q2**3)}")
+print(f"    (The 1/(2q₂²) reading is excluded by sin²θ_W; see")
+print(f"     item12_higgs_degeneracy.py.)")
 
 
 # ═══════════════════════════════════════════════════════════════════════

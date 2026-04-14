@@ -1,0 +1,42 @@
+[tool.ruff]
+# Only touch the analysis/derivation scripts, not the generated assets.
+# Line length 100 is a compromise -- many framework scripts use
+# wide print tables that benefit from the extra room.
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+# Start conservative: catch real problems, encourage idioms, avoid
+# forcing type annotations or strict docstring formats that would
+# require rewriting large portions of the exploration scripts.
+select = [
+    "E",     # pycodestyle errors
+    "W",     # pycodestyle warnings
+    "F",     # pyflakes (unused imports, undefined names, etc.)
+    "I",     # isort (import ordering)
+    "UP",    # pyupgrade (modern Python idioms)
+    "B",     # flake8-bugbear (likely bugs)
+    "SIM",   # flake8-simplify
+    "PIE",   # flake8-pie (misc improvements)
+    "RET",   # flake8-return
+    "C4",    # flake8-comprehensions
+]
+
+ignore = [
+    "E501",    # line too long -- wide tables are fine in this codebase
+    "E741",    # ambiguous variable names (l, I, O) -- physicists use 'l' for angular momentum
+    "E731",    # lambda assignment -- occasionally clearer than def
+    "B007",    # unused loop control variable -- common in enumerate-style scans
+    "B008",    # function call in default arg -- used intentionally in a few places
+    "SIM108",  # prefer ternary -- readability choice, leave to author
+    "SIM300",  # "yoda" conditions -- sometimes clearer in math
+    "RET504",  # unnecessary assign before return -- often clearer
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Scripts in sync_cost/applications are mostly interactive; don't be strict.
+"sync_cost/applications/**/*.py" = ["F401", "F841"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

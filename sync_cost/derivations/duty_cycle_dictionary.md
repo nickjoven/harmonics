@@ -264,10 +264,10 @@ product of the individual duty cycles summed over sectors.
 
 | Quantity | Tree value | Observed (M_Z) | Residual | Source |
 |----------|-----------|-----------------|----------|--------|
-| alpha_s / alpha_2 | 27/8 = 3.375 | 3.488 | 3.2% | duty(q_2)/duty(q_3) |
-| sin^2(theta_W) | 8/35 = 0.2286 | 0.2312 | 1.1% | q_2^3/(q_2^3+q_3^3) |
-| m_H | v/2 = 123.1 GeV | 125.1 GeV | 1.6% | v/q_2 |
-| lambda (Higgs quartic) | 1/8 = 0.125 | ~0.13 | 4% | 1/(2q_2^2) |
+| alpha_s / alpha_2 | 27/8 + 1/9 = 251/72 | 3.487 | 0.17% | q_3^3/q_2^3 + 1/q_3^2 |
+| sin^2(theta_W) | 8/35 + 8/F_10^2 | 0.23122 | ~2e-5 | q_2^3/(q_2^3+q_3^3) + q_2^3/F_10^2 |
+| m_H | v/2 = 123.1 GeV | 125.25 GeV | 1.7% | v/q_2 |
+| lambda (Higgs quartic) | 1/q_2^3 = 1/8 | 0.129 | 3.4% | duty(q_2) (forced by sin^2 theta_W, see item12_higgs_degeneracy.py) |
 | 1/alpha_0 (tree EM) | 35 | — | — | q_2^3 + q_3^3 |
 | |r| at M_Z | 1.000 (tree) | 0.968 | 3.2% | decoherence tax |
 

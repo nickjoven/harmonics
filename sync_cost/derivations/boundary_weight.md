@@ -119,6 +119,19 @@ Numerically, from the coherence cascade data (D30):
     w* = 0.83
     K* = 0.862
 
+**K\* precision refinement (2026)**: `item12_K_star_closure.py`
+derived `K* = 0.86196052 ± 2.06×10⁻⁵` from a joint matter-sector
+self-consistency (χ²/dof = 0.06 across three sectors). This 5-digit
+value `K_STAR_PRECISE` is now available in `framework_constants.py`
+alongside the 3-digit-cited `K_STAR = 0.862`. The two agree within
+3-digit rounding precision (difference = −3.95×10⁻⁵), so the cited
+value here remains correct; downstream calculations that need
+sub-3-digit precision should import `K_STAR_PRECISE`. The K\* cited
+above is the D30 coherence cascade value, not newly derived in
+this file — see the honest-summary docstring at the top of
+`boundary_weight.py` for the audit of what that file actually
+derives.
+
 At w* = 0.83:
 
     Omega_Lambda(0.83) = (11 + 1.66) / (16 + 2.49)
