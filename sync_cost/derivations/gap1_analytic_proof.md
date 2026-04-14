@@ -1,5 +1,3 @@
----
-
 # Analytic Proof: Levi-Civita from Kuramoto at K=1
 
 ## Theorem
