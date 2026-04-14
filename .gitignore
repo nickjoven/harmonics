@@ -8,3 +8,6 @@ __pycache__/
 seed/target/
 models/
 engine/
+
+# no thanks
+CLAUDE.md
