@@ -64,7 +64,25 @@ See <a href="derivations.html#d04">D04</a>.</dd>
 <dt><code>Farey sequence</code> $F_n$</dt>
 <dd>The set of irreducible fractions with denominator $\leq n$, ordered on
 $[0,1]$. $|F_6| = 13$ is the state count that sets $\Omega_\Lambda = 13/19$.
-See <a href="derivations.html#d25">D25</a>, <a href="derivations.html#d28">D28</a>.</dd>
+$|F_4| = 7$ is the state count used in the $K_\star$ chain. See
+<a href="derivations.html#d25">D25</a>, <a href="derivations.html#d28">D28</a>.</dd>
+
+<dt><code>Farey index</code></dt>
+<dd>The integer $n$ in $F_n$ &mdash; the denominator cutoff for the Farey
+sequence. Distinct from the integer-conservation-law &ldquo;depth&rdquo;
+that appears per sector in the mass closure (lepton depth $= 3$, up-type
+$= 4$, down-type $= 8$). In the $K_\star$ chain, the framework Farey
+index is $4$, forced by matching the signature $(3,1)$ orbit decomposition
+on $F_n$ under the Klein-bottle-induced involution $r \to 1-r$.</dd>
+
+<dt><code>Farey involution</code> $r \to 1 - r$</dt>
+<dd>The complement map on $F_n$. An involution for every $n \geq 1$; sends
+$p/q \to (q - p)/q$. Preserves $F_n$, with exactly one fixed point
+(namely $r = 1/2$) for $n \geq 2$ and $(|F_n| - 1)/2$ pair orbits.
+Induced on the $y$-coordinate by the Klein bottle&rsquo;s antiperiodic
+identification $(0, y) \sim (1, 1 - y)$. At $n = 4$ the orbit decomposition
+is $(3$&nbsp;pairs$, 1$&nbsp;fixed$)$, uniquely matching signature
+$(3,1)$. See <a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/step3_step5_klein_proof.py">step3_step5_klein_proof.py</a>.</dd>
 
 <dt><code>Fixed point</code></dt>
 <dd>A solution to $x = f(x)$. One of the four irreducible primitives. In the
@@ -73,11 +91,33 @@ distribution: the coupling $K$ depends on the population $N$ which depends
 on $K$. The universe is a fixed point of its own field equation.</dd>
 
 <dt><code>Klein bottle</code></dt>
-<dd>A closed non-orientable surface with no boundary. In the framework, the
-Klein bottle&rsquo;s topology constrains the particle spectrum via an XOR
-parity selection rule at denominator classes $q = 2$ and $q = 3$. Its
-four mode slots map to the four known forces. See
-<a href="derivations.html#d19">D19</a>, <a href="derivations.html#d20">D20</a>.</dd>
+<dd>A closed non-orientable surface with no boundary. Quotient of the unit
+square $[0,1]^2$ under $(x, 0) \sim (x, 1)$ (periodic $y$) and
+$(0, y) \sim (1, 1 - y)$ (antiperiodic $x$, the half-twist). In the
+framework, the Klein bottle&rsquo;s topology constrains the particle
+spectrum via an XOR parity selection rule at denominator classes
+$q = 2$ and $q = 3$. Its four mode slots map to the four known forces.
+The antiperiodic identification also induces the Farey involution used
+in the $K_\star$ chain. See <a href="derivations.html#d19">D19</a>,
+<a href="derivations.html#d20">D20</a>.</dd>
+
+<dt><code>Klein parity</code></dt>
+<dd>The $\mathbb{Z}_2 \times \mathbb{Z}_3 = \mathbb{Z}_6$ center that arises
+from the XOR filter on the Stern-Brocot tree at $(q_2, q_3)$ and
+(equivalently) from the GCD fiber as a principal $\mathbb{Z}_6$-bundle.
+Canonical L1 structure. Its $\mathbb{Z}_2$ projection gives the
+sector parity signs $\{\text{lep}: -1,\ \text{up}: -1,\ \text{dn}: +1\}$
+used in the mass sector and matter-sector reciprocity arguments. See
+<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/klein_bottle.md">klein_bottle.md</a>.</dd>
+
+<dt><code>Klein four-group</code> (signature $(3,1)$)</dt>
+<dd>The four phase states of $\{\text{locked}, \text{unlocked}\}^2$ on the
+Klein bottle. $\mathbb{Z}_2 \times \mathbb{Z}_2$, order 4. Three
+observable (at least one channel locked), one dark (both unlocked).
+This is the integer $4 = N_{\text{lep}}$ that enters Step 2 of the
+$K_\star$ chain. Distinct from the XOR-filter Klein four-group, though
+both are abstractly isomorphic. See
+<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/minkowski_signature.md">minkowski_signature.md</a>.</dd>
 
 <dt><code>Mediant</code></dt>
 <dd>Given fractions $a/b$ and $c/d$, the mediant is $(a+c)/(b+d)$. This is
@@ -167,6 +207,26 @@ $K = 1$: critical (noninvertible map, complete staircase, gravity).
 $K &lt; 1$: subcritical (partial locking, quantum mechanics).
 $K$ is not a free parameter &mdash; it is determined self-consistently by
 the population at the field equation&rsquo;s fixed point.</dd>
+
+<dt><code>$K_\star$</code> &mdash; matter-sector coupling</dt>
+<dd>The subcritical coupling value at which the three charged-fermion
+sector ladders (leptons, up-type, down-type) are simultaneously
+self-consistent. Canonical joint-fit value $K_\star = 0.86196052$ (from
+PDG 2024 charged-fermion mass ratios, tau-mass-limited to
+$\sigma \approx 2.06 \times 10^{-5}$). The closed form is
+$K_\star^{14} = q_2^{-q_3} = 1/8$, equivalently $K_\star = 2^{-3/14}$,
+derived from Klein-bottle topology in the six-step
+<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/CHAIN_KSTAR.md">$K_\star$ chain</a>.
+Currently verified at $0.594\sigma$ against PDG 2024; decisive resolution
+requires $\sigma(m_\tau) &lt; 0.03$&nbsp;MeV.</dd>
+
+<dt><code>$K_\star$ closed form</code></dt>
+<dd>The algebraic identity $K_\star^{14} = q_2^{-q_3} = 1/8$. If exact, it
+forces $K_\star = 2^{-3/14}$ and predicts
+$m_\tau = 1776.78875 \pm 3.87 \times 10^{-5}$&nbsp;MeV via the generation
+law and the muon mass reference. The integer 14 decomposes as
+$q_2 \cdot |F_4|$: the product of the framework&rsquo;s primary prime
+and the Farey count at the framework Farey index.</dd>
 
 <dt><code>$d = 3$</code></dt>
 <dd>Spatial dimensionality is forced, not assumed. The mediant generates

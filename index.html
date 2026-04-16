@@ -300,138 +300,291 @@ gauge sector are two readings of one fixed point
     <a href="sync_cost/derivations/item12_neutrino_solar_closure.py">item12_neutrino_solar_closure.py</a>.</li>
 </ul>
 
+<h2>$K_\star$ closed form</h2>
+
+<p>The matter-sector coupling $K_\star$ is the value that makes
+the three charged-fermion sector ladders (charged leptons, up-type,
+down-type) simultaneously self-consistent under the generation
+law $m_{g+1}/m_g = b_1^{d\,a_1}$. Its joint inverse-variance fit
+against PDG 2024 mass ratios is $K_\star = 0.86196052$ with
+$\sigma \approx 2.06\times10^{-5}$ (tau-mass-limited). The closed
+form comes from Klein-bottle topology.</p>
+
+<p><strong>Step 1.</strong> $q_2 = 2$, the framework's primary
+prime (L1 canonical,
+<a href="sync_cost/derivations/mass_sector_closure.md">mass_sector_closure.md</a>).</p>
+
+<p><strong>Step 2.</strong> $N_{\text{lep}} = q_2^2 = 4$, the lepton
+sector's phase-state count from signature $(3,1)$'s
+$\{\text{locked, unlocked}\}^2$ lattice
+(<a href="sync_cost/derivations/klein_bottle.md">klein_bottle.md</a>).</p>
+
+<p><strong>Step 3.</strong> The framework Farey index is $4$. The
+Klein bottle's canonical antiperiodic identification
+$(0, y) \sim (1, 1-y)$ induces the involution $y \to 1-y$ on the
+$y$-coordinate. Restricted to rationals in $F_n$, this is
+$r \to 1-r$. The involution partitions $F_n$ into pairs
+$\{r, 1-r\}$ and a fixed point $r = 1/2$. The orbit decomposition
+matches signature $(3,1)$'s $(3$ observable $+ 1$ dark$)$ at
+exactly one index, $n = 4$:</p>
+
+<table>
+<tr><th>$n$</th><th>pairs</th><th>fixed</th><th>matches $(3,1)$?</th></tr>
+<tr><td>1</td><td>1</td><td>0</td><td>no</td></tr>
+<tr><td>2</td><td>1</td><td>1</td><td>no</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>no</td></tr>
+<tr><td><strong>4</strong></td><td><strong>3</strong></td><td><strong>1</strong></td><td><strong>yes &mdash; unique</strong></td></tr>
+<tr><td>5</td><td>5</td><td>1</td><td>no</td></tr>
+</table>
+
+<p>$F_4 = \{0/1, 1/4, 1/3, 1/2, 2/3, 3/4, 1/1\}$ with pairs
+$\{0,1\}, \{1/4, 3/4\}, \{1/3, 2/3\}$ and fixed point $1/2$.</p>
+
+<p><strong>Step 4.</strong> $|F_4| = 7$ by the Farey count formula
+$|F_n| = 1 + \sum_{k=1}^n \varphi(k)$.</p>
+
+<p><strong>Step 5.</strong> The EDO basis at the framework's Farey
+index is $q_2 \cdot |F_4| = 14$. The factor $q_2 = 2$ comes from
+the Klein bottle's two mode-bearing coordinate directions: the
+periodic $y$ and the antiperiodic $x$ each support an independent
+Stern-Brocot mode lattice at the same Farey depth, giving total
+$|F_d|_x + |F_d|_y = 2\,|F_d|$ rational phase positions.</p>
+
+<p><strong>Step 6.</strong> The closed form:</p>
+
+<div class="eq-block">
+$$K_\star \;=\; 2^{-q_3 / (q_2\,|F_4|)} \;=\; 2^{-3/14}, \qquad K_\star^{14} \;=\; q_2^{-q_3} \;=\; \tfrac{1}{8}.$$
+</div>
+
+<p>Steps 1&ndash;5 derive the integer $14$ from canonical L0/L1
+framework objects. Step 6 asserts that $K_\star$ is located at
+$-q_3$ steps in this 14-basis; it is a precision claim, not a
+structural one. The PDG-derived $K_\star^{14} = 0.12497513$ is
+$0.594\,\sigma$ below $1/8$; the gap is tau-mass-limited
+(dominated by $\sigma(m_\tau) = 0.12$ MeV). See
+<a href="sync_cost/derivations/CHAIN_KSTAR.md">CHAIN_KSTAR.md</a>
+for the full walkthrough,
+<a href="sync_cost/derivations/step3_step5_klein_proof.py">step3_step5_klein_proof.py</a>
+for the Steps 3&ndash;5 derivation, and
+<a href="sync_cost/derivations/K_star_precision_check.py">K_star_precision_check.py</a>
+for the PDG comparison.</p>
+
+<p><strong>Forward prediction.</strong> If the closed form holds
+exactly, the tau lepton mass is determined by $m_\mu$ and the
+generation law:</p>
+
+<div class="eq-block">
+$$m_\tau \;=\; m_\mu \cdot (3/2)^{3 \cdot 2^{17/14}} \;=\; 1776.78875 \pm 3.87\times10^{-5}\ \text{MeV}.$$
+</div>
+
+<p>The framework precision ($\sim\!22$ parts per billion) is
+inherited from the muon mass reference, about $3{,}100\!\times$
+tighter than the PDG experimental value
+$m_\tau = 1776.86 \pm 0.12$ MeV. A future measurement at
+$\sigma < 0.03$ MeV resolves the closed form. See
+<a href="sync_cost/derivations/tau_mass_prediction.py">tau_mass_prediction.py</a>.</p>
+
 <h2>Scorecard</h2>
 
 <p>Every entry is computed from the equation above. No row uses a
-measured input.</p>
+measured input. The <strong>Status</strong> column reports whether
+each row is currently verified against observation, a forward
+prediction awaiting decisive data, or an open structural item. The
+<strong>Blocker</strong> column names what stands between a
+predictive row and a decisive verdict.</p>
 
 <table>
-  <tr><th>Quantity</th><th>Derived</th><th>Observed</th><th>Residual</th></tr>
+  <tr><th>Quantity</th><th>Derived</th><th>Observed</th><th>Residual</th><th>Status</th><th>Blocker</th></tr>
   <tr>
     <td>Spectral tilt $n_s$</td>
     <td>0.963&ndash;0.966</td>
     <td>$0.9649 \pm 0.0042$</td>
     <td>&lt;&thinsp;0.2%</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>Born rule exponent</td>
     <td>2</td>
     <td>2</td>
     <td>exact</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>MOND scale $a_0$</td>
     <td>$1.25 \times 10^{-10}$ m/s²</td>
     <td>$1.2 \times 10^{-10}$</td>
     <td>4%</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>Spatial dimension $d$</td>
     <td>3</td>
     <td>3</td>
     <td>exact</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>Dark energy fraction $\Omega_\Lambda$</td>
     <td>$13/19 = 0.6842$</td>
     <td>$0.685 \pm 0.007$</td>
     <td>$0.07\sigma$</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>Planck/Hubble ratio $R$</td>
     <td>$6 \times 13^{54}$</td>
     <td>$8.49 \times 10^{60}$</td>
     <td>0.48%</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>$\Lambda\, l_P^2$</td>
     <td>$13^{-108}/12$</td>
     <td>${\sim}\,10^{-122}$</td>
     <td>0.1% in exponent</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>Lorentz group</td>
     <td>$\mathrm{Spin}(3,1)$</td>
     <td>$\mathrm{SO}^+(3,1)$</td>
     <td>exact</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>Generation ratio $a_2/a_1$</td>
     <td>$3/2$</td>
     <td>$1.5006$ (from $m_\tau, m_\mu, m_e$)</td>
     <td>0.04%</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>$m_\tau/m_\mu$ (two-step formula)</td>
     <td>16.805</td>
     <td>16.817</td>
     <td>0.07%</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>$m_\mu/m_e$ (two-step formula)</td>
     <td>206.92</td>
     <td>206.77</td>
     <td>0.07%</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>Strong CP angle $\theta$</td>
     <td>0</td>
     <td>$&lt; 10^{-10}$</td>
     <td>consistent</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>Higgs self-coupling $\lambda$</td>
     <td>$1/(2q_2^2) = 1/8$</td>
     <td>$0.129$</td>
     <td>3.3%</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>$m_H / v$</td>
     <td>$1/q_2 = 1/2$</td>
     <td>$0.5085$</td>
     <td>1.7%</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>Neutrino atmospheric $m_1/m_3$</td>
     <td>$q_2^{-d} = 1/8$</td>
     <td>0.125</td>
     <td>exact</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>Neutrino $\Delta m^2_{31}$</td>
     <td>$2.446 \times 10^{-3}$ eV$^2$</td>
     <td>$2.455 \times 10^{-3}$</td>
     <td>0.31&sigma;</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>Neutrino $\Delta m^2_{21}$</td>
     <td>$7.40 \times 10^{-5}$ eV$^2$</td>
     <td>$7.42 \times 10^{-5}$</td>
     <td>0.12&sigma;</td>
+    <td>verified</td>
+    <td>&mdash;</td>
   </tr>
   <tr>
     <td>4th charged lepton</td>
     <td>forbidden by $\text{depth}\cdot|3Q|=9$</td>
     <td>not observed</td>
     <td>consistent</td>
+    <td>verified</td>
+    <td>&mdash;</td>
+  </tr>
+  <tr>
+    <td>$K_\star$ closed form</td>
+    <td>$K_\star^{14} = q_2^{-q_3} = 1/8$</td>
+    <td>$K_\star^{14} = 0.12498 \pm 4.2\!\times\!10^{-5}$</td>
+    <td>$0.594\sigma$</td>
+    <td>prediction</td>
+    <td>$\sigma(m_\tau) < 0.03$ MeV (Belle&nbsp;II, BESIII upgrades)</td>
+  </tr>
+  <tr>
+    <td>$m_\tau$ (tau lepton mass)</td>
+    <td>$1776.78875 \pm 3.87\!\times\!10^{-5}$ MeV</td>
+    <td>$1776.86 \pm 0.12$ MeV</td>
+    <td>$0.594\sigma$</td>
+    <td>prediction</td>
+    <td>$\sigma(m_\tau) < 0.03$ MeV (Belle&nbsp;II, BESIII upgrades)</td>
   </tr>
   <tr>
     <td>$N_{\text{efolds}}$</td>
     <td>$61.3 \pm 0.7$</td>
-    <td>TBD (CMB-S4 ~2028)</td>
+    <td>TBD</td>
     <td>&mdash;</td>
+    <td>prediction</td>
+    <td>CMB-S4 $r$ and $n_s$ measurement (&sim;2028)</td>
   </tr>
   <tr>
     <td>Neutrino mass ordering</td>
     <td>Majorana, $\Sigma m_\nu \approx 66.7$ meV</td>
-    <td>TBD (LEGEND-1000, nEXO)</td>
+    <td>TBD</td>
     <td>&mdash;</td>
+    <td>prediction</td>
+    <td>LEGEND-1000 / nEXO double-$\beta$ reach</td>
   </tr>
 </table>
 
 <h2>Falsifiable predictions</h2>
 
 <ul>
+  <li><strong>$m_\tau = 1776.78875 \pm 3.87\times10^{-5}$&nbsp;MeV</strong>,
+    from the $K_\star^{14} = 1/8$ closed form and the muon mass
+    reference. Framework precision $\sim\!22$ parts per billion,
+    $\sim\!3{,}100\!\times$ tighter than current PDG. Falsified by
+    a future measurement at $\sigma < 0.03$&nbsp;MeV whose central
+    value converges to $1776.86$&nbsp;MeV or higher; confirmed by
+    one that converges to $1776.789$&nbsp;MeV.
+    See
+    <a href="sync_cost/derivations/tau_mass_prediction.py">tau_mass_prediction.py</a>.</li>
   <li><strong>$N_{\text{efolds}} = 61.3 \pm 0.7$</strong>, set by
     the eigenvalue separation of $x^2 - x - 1 = 0$ (the golden
     ratio's minimal polynomial). Falsified outside $[59, 63]$.
@@ -508,6 +661,16 @@ measured input.</p>
     $(q_2, q_3) = (2, 3)$ $\to$ generation exponent $3/2$ $\to$
     lepton ratios at 0.07% $\to$ 4th generation forbidden $\to$
     neutrino depth $q_2^d + q_3^d = 35$ (Majorana).</li>
+  <li><strong>$K_\star$ chain</strong>
+    (<a href="sync_cost/derivations/CHAIN_KSTAR.md">CHAIN_KSTAR.md</a>):
+    $q_2 = 2 \to N_{\text{lep}} = q_2^2 = 4$ from signature
+    $(3,1)$ $\to$ Klein antiperiodic identification induces
+    $r \to 1-r$ on $F_n$ $\to$ unique match to signature $(3,1)$
+    at $n = 4$ $\to$ $|F_4| = 7$ $\to$ EDO basis $q_2 \cdot |F_4|
+    = 14$ from the Klein bottle's two mode-bearing directions
+    $\to$ $K_\star = 2^{-3/14}$, $K_\star^{14} = 1/8$ $\to$
+    tau mass prediction $m_\tau = 1776.78875$&nbsp;MeV at
+    $\sim\!22$&nbsp;ppb.</li>
 </ul>
 
 <h2>Code and applications</h2>

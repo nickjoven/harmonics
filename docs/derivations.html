@@ -284,6 +284,62 @@ winding number.</p>
   <span class="deriv-status">resolved</span>
 </div>
 
+<!-- ── K_STAR chain ──────────────────────── -->
+
+<h2>$K_\star$ chain</h2>
+
+<p>Six-step derivation of the matter-sector coupling $K_\star$
+from Klein-bottle topology, ending in the closed form
+$K_\star^{14} = q_2^{-q_3} = 1/8$ and a forward prediction for
+the tau lepton mass. Walkthrough in
+<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/CHAIN_KSTAR.md">CHAIN_KSTAR.md</a>.</p>
+
+<table>
+<tr><th>Step</th><th>Statement</th><th>Source</th></tr>
+<tr>
+  <td>1</td>
+  <td>$q_2 = 2$, framework primary prime</td>
+  <td>L1 canonical</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>$N_{\text{lep}} = q_2^2 = 4$ from signature $(3,1)$ phase lattice</td>
+  <td>L1 canonical</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>Framework Farey index $= 4$ via Klein antiperiodic $(0,y) \sim (1,1{-}y)$ inducing $r \to 1{-}r$ on $F_n$, unique match to $(3,1)$ at $n=4$</td>
+  <td><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/step3_step5_klein_proof.py">step3_step5_klein_proof.py</a></td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>$|F_4| = 7$, Farey count formula</td>
+  <td>elementary</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>EDO basis $= q_2 \cdot |F_4| = 14$ from Klein bottle's two mode-bearing directions</td>
+  <td><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/step3_step5_klein_proof.py">step3_step5_klein_proof.py</a></td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>$K_\star^{14} = q_2^{-q_3} = 1/8$ (closed form, $0.594\sigma$ from PDG 2024)</td>
+  <td><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/K_star_precision_check.py">K_star_precision_check.py</a></td>
+</tr>
+<tr>
+  <td>&rarr;</td>
+  <td>$m_\tau = 1776.78875 \pm 3.87\!\times\!10^{-5}$ MeV forward prediction</td>
+  <td><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/tau_mass_prediction.py">tau_mass_prediction.py</a></td>
+</tr>
+</table>
+
+<p><strong>Scratch paper.</strong> Earlier exploratory notebooks
+from the investigation that surfaced this chain live under
+<a href="https://github.com/nickjoven/harmonics/tree/main/sync_cost/derivations/scratch">sync_cost/derivations/scratch/</a>.
+They are not required reading &mdash; the three load-bearing
+files above plus <code>CHAIN_KSTAR.md</code> are complete on
+their own.</p>
+
 <!-- ── Observational program ─────────────── -->
 
 <h2>Observational program</h2>
