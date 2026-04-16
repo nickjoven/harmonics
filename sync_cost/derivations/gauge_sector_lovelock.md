@@ -75,6 +75,14 @@ of the G-action on fibers are also verified.
 A principal G-bundle with a connection IS a gauge structure; the
 cocycle verification makes this formal rather than informal.
 
+**Open-gap cross-reference**: `gap_3_gauge_center.md` restates this
+step carefully and flags that the verified Z₆ torsor on a discrete
+4-mode graph is not the same object as a continuous Lie-group
+principal bundle with a Lie-algebra-valued connection, which is what
+Utiyama's theorem (Part III) requires as hypothesis. The step from
+the former to the latter is an identification the gap document
+labels Level A.
+
 ### Premise 5: Second-order equations of motion
 
 **Source**: Same principle as Lovelock (D13, Premise (c))
@@ -408,6 +416,18 @@ revision (see `gauge_lovelock_wiring.py` for the self-review):
 After these fixes the derivation closes. The computational premises
 are verified; the remaining gaps are structural and explicitly
 catalogued below.
+
+**Reconciliation note** (added 2026-04-16): Issue #56 (2026-04-08)
+grades the step "Klein bottle residue Z₂ × Z₃ → center of the SM
+gauge group" as a Tier 1 Type C identification. The M1–M5 fixes in
+this document sharpen the exposition but do not change the
+identification's type — the bundle constructed by
+`gap3_principal_bundle.py` is a finite Z₆ torsor, not a continuous
+principal Lie-group bundle. `gap_3_gauge_center.md` catalogs the
+three structural steps (Level A bundle construction, Level B rank
+selection, Level C direct-product realization) that remain open
+before the chain qualifies as derived in the framework's own
+Type A/B classification.
 
 **Dependencies**: D14 (dimension), D32 (signature), D19 (Klein
 bottle), D41 (discrete gauge resolution: center, confinement,
