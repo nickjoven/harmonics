@@ -169,3 +169,72 @@ for k in range(3):
 
 print(f"Metric compatibility: max|∇_k γ_ij| = {max_nabla_g:.2e}")
 print(f"  (Should be ~0: Levi-Civita is metric-compatible by construction)")
+print()
+
+# --- Closed-form check: Γ^k_ij = -(γ^{kl} ∂_l θ) · (∂_i ∂_j θ) ---
+# The Levi-Civita formula with γ = δ - uu collapses under H-symmetry
+# cancellation to a single product. Derivation:
+#
+#   ∂_i γ_jl + ∂_j γ_il - ∂_l γ_ij
+#     = (−H_ij u_l − u_j H_il) + (−H_ij u_l − u_i H_jl) − (−H_li u_j − u_i H_lj)
+#     = −2 H_ij u_l
+#
+# so Γ^k_ij = (γ^{kl}/2)(−2 H_ij u_l) = −v^k H_ij, with v^k := γ^{kl} u_l.
+#
+# This is a stronger identity than the T-comparison above: it exhibits the
+# closed form of the connection, not just an algebraic rearrangement.
+
+print("=== Closed-form check: Γ^k_ij = -(γ^kl ∂_l θ) · (∂_i ∂_j θ) ===\n")
+
+# Hessian H_ij = ∂_i ∂_j θ
+H = np.zeros((3, 3, Nx, Nx, Nx))
+for i in range(3):
+    for j in range(3):
+        H[i, j] = second_deriv(theta, dx, i, j)
+
+# Raised gradient v^k = γ^{kl} u_l (u_l = ∂_l θ = grad_theta[l])
+v = np.zeros((3, Nx, Nx, Nx))
+for k in range(3):
+    for l in range(3):
+        v[k] += gamma_inv[k, l] * grad_theta[l]
+
+# Closed-form Γ
+Gamma_CF = np.zeros((3, 3, 3, Nx, Nx, Nx))
+for k in range(3):
+    for i in range(3):
+        for j in range(3):
+            Gamma_CF[k, i, j] = -v[k] * H[i, j]
+
+max_diff_cf = 0.0
+for k in range(3):
+    for i in range(3):
+        for j in range(3):
+            diff = np.max(np.abs(Gamma_LC[k, i, j] - Gamma_CF[k, i, j]))
+            max_diff_cf = max(max_diff_cf, diff)
+
+print(f"  max|Γ^k_ij (Levi-Civita)| = {max_gamma:.4e}")
+print(f"  max|Γ^k_ij (closed form) - Γ^k_ij (LC)| = {max_diff_cf:.2e}")
+print(f"  Relative error: {max_diff_cf/max_gamma:.2e}")
+print()
+
+if max_diff_cf / max_gamma < 1e-6:
+    print("✓ PASS: The closed form Γ^k_ij = -v^k · H_ij reproduces Levi-Civita")
+    print("  exactly, up to numerical differentiation noise.")
+    print()
+    print("Interpretation: the Christoffel connection of the coherence metric is")
+    print("a direct contraction of the Hessian with the raised gradient of θ.")
+    print("In ensemble language, this is Γ^k_ij = -γ^{kl} ⟨∂_i∂_j θ · ∂_l θ⟩,")
+    print("the single 3-point correlator with no algebraic cancellations remaining.")
+else:
+    print("✗ FAIL: Closed-form collapse does not hold. Check H-symmetry handling.")
+print()
+
+print("=== Step 1 verdict ===")
+print(f"  Weaker tautology (Γ from T == Γ from LC):    {max_diff/max_gamma:.2e}")
+print(f"  Stronger closed form (Γ = -v·H == Γ from LC): {max_diff_cf/max_gamma:.2e}")
+print(f"  Metric compatibility (|∇γ|):                  {max_nabla_g:.2e}")
+print()
+print("If all three are at numerical-differentiation precision, the pointwise")
+print("tautology is verified. Next: Step 2 — Kuramoto ensemble simulation at")
+print("K=1, verify O(1/N) scaling of the four locked-state conditions in")
+print("gap_1_christoffel.md §'Sharpening: what exactly needs to be proved.'")

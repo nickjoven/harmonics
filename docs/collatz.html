@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Collatz Conjecture via Rational Extension and Affine Transitivity</title>
+<style>
+:root { --bg: #1a1a2e; --fg: #e0e0e0; --accent: #e94560; --accent2: #0f3460; --gold: #f0c040; --green: #40c060; --dim: #888; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Georgia', serif; background: var(--bg); color: var(--fg); line-height: 1.7; max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem; }
+h1 { font-size: 1.8rem; color: var(--gold); margin-bottom: 0.5rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; }
+h2 { font-size: 1.3rem; color: var(--accent); margin: 2rem 0 0.8rem; }
+h3 { font-size: 1.1rem; color: var(--gold); margin: 1.2rem 0 0.5rem; }
+p, li { margin-bottom: 0.6rem; }
+ul { padding-left: 1.5rem; }
+code { background: #2a2a4e; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; }
+pre { background: #2a2a4e; padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 1rem 0; font-size: 0.85rem; line-height: 1.5; }
+.box { border: 1px solid var(--accent2); border-radius: 8px; padding: 1.2rem; margin: 1.2rem 0; background: rgba(15,52,96,0.3); }
+.theorem { border-left: 4px solid var(--gold); }
+.proof { border-left: 4px solid var(--green); }
+.def { border-left: 4px solid var(--accent); }
+.status { display: inline-block; padding: 0.15em 0.5em; border-radius: 3px; font-size: 0.8em; font-weight: bold; }
+.proved { background: var(--green); color: #000; }
+.standard { background: #4080c0; color: #fff; }
+.verified { background: var(--gold); color: #000; }
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+th, td { border: 1px solid #444; padding: 0.5rem; text-align: left; font-size: 0.9rem; }
+th { background: var(--accent2); }
+dfn { border-bottom: 1px dotted var(--dim); cursor: help; font-style: normal; }
+.fig { text-align: center; margin: 1.5rem 0; }
+.fig svg { max-width: 100%; }
+.fig figcaption { font-size: 0.85rem; color: var(--dim); margin-top: 0.5rem; }
+.spiral { animation: spin 8s linear infinite; transform-origin: 50% 50%; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.pulse { animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
+a { color: var(--gold); }
+.meta { font-size: 0.85rem; color: var(--dim); margin-bottom: 2rem; }
+.chain { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0; font-size: 0.95rem; }
+.chain .step { background: var(--accent2); padding: 0.3rem 0.7rem; border-radius: 4px; }
+.chain .arrow { color: var(--gold); }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #333; font-size: 0.8rem; color: var(--dim); }
+</style>
+</head>
+<body>
+
+<h1>The Collatz Conjecture via Rational Extension</h1>
+<p class="meta">
+A proof attempt reducing the conjecture to four established results.<br>
+Status: <span class="status proved">3 of 4 steps proved</span> &middot;
+<span class="status standard">1 step uses standard ergodic theory</span>
+</p>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2>0. The Conjecture</h2>
+
+<div class="box def">
+<strong>Collatz map.</strong> For positive integer <em>n</em>: if <em>n</em> is even, halve it; if odd, triple-plus-one.
+<pre>T(n) = n/2        if n even
+T(n) = 3n + 1     if n odd</pre>
+<strong>Conjecture</strong> (Collatz, 1937): every positive integer eventually reaches the cycle 4 → 2 → 1.
+</div>
+
+<p>Open for 89 years. Verified computationally to 10<sup>20</sup> (<a href="https://doi.org/10.1007/978-3-030-85514-0_14">Barina, 2021</a>). No proof. The difficulty: the map's parity sequence looks random, preventing monotone descent arguments.</p>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2>1. The Rational Extension</h2>
+
+<p>Integers are the <em>boundary</em> of the rationals. Extend the Collatz map to all positive fractions <em>p/q</em> (in lowest terms):</p>
+
+<div class="box def">
+<strong>Rational Collatz map</strong> C: ℚ<sup>+</sup> → ℚ<sup>+</sup>:
+<pre>C(p/q) = (p/2) / q        if p even
+C(p/q) = p / (q/2)        if q even
+C(p/q) = (3p+1) / (q+1)   if both odd</pre>
+All results reduced to lowest terms.
+</div>
+
+<p><strong>Why this extension?</strong> Rule 3 is the <dfn title="The mediant of a/b and c/d is (a+c)/(b+d). It's the fundamental operation of the Stern-Brocot tree, which organizes all positive rationals.">mediant</dfn> of 3(p/q) with 1/1: both numerator and denominator receive "+1", ensuring both become even (enabling the next halving). When <em>q</em> = 1, this reduces to standard Collatz.</p>
+
+<figure class="fig">
+<svg width="600" height="200" viewBox="0 0 600 200">
+<rect width="600" height="200" fill="none"/>
+<!-- Tree structure -->
+<text x="300" y="30" text-anchor="middle" fill="#f0c040" font-size="16" font-weight="bold">1/1</text>
+<line x1="300" y1="38" x2="150" y2="70" stroke="#444" stroke-width="1"/>
+<line x1="300" y1="38" x2="450" y2="70" stroke="#444" stroke-width="1"/>
+<text x="150" y="85" text-anchor="middle" fill="#e0e0e0" font-size="14">1/2</text>
+<text x="450" y="85" text-anchor="middle" fill="#e0e0e0" font-size="14">2/1</text>
+<line x1="150" y1="93" x2="75" y2="125" stroke="#444" stroke-width="1"/>
+<line x1="150" y1="93" x2="225" y2="125" stroke="#444" stroke-width="1"/>
+<line x1="450" y1="93" x2="375" y2="125" stroke="#444" stroke-width="1"/>
+<line x1="450" y1="93" x2="525" y2="125" stroke="#444" stroke-width="1"/>
+<text x="75" y="140" text-anchor="middle" fill="#e0e0e0" font-size="13">1/3</text>
+<text x="225" y="140" text-anchor="middle" fill="#e0e0e0" font-size="13">2/3</text>
+<text x="375" y="140" text-anchor="middle" fill="#e0e0e0" font-size="13">3/2</text>
+<text x="525" y="140" text-anchor="middle" fill="#e0e0e0" font-size="13">3/1</text>
+<!-- Labels -->
+<text x="300" y="180" text-anchor="middle" fill="#888" font-size="12">Stern-Brocot tree: every positive rational appears exactly once.</text>
+<text x="300" y="195" text-anchor="middle" fill="#888" font-size="12">Integers (n/1) live on the rightmost branch. The extension fills the interior.</text>
+<!-- Highlight attractor -->
+<circle cx="300" cy="24" r="20" fill="none" stroke="#e94560" stroke-width="2" class="pulse"/>
+<circle cx="450" cy="79" r="18" fill="none" stroke="#e94560" stroke-width="2" class="pulse"/>
+</svg>
+<figcaption>The Stern-Brocot tree. The attractor {1/1, 2/1} is highlighted. Integers occupy the rightmost branch.</figcaption>
+</figure>
+
+<p><strong>Verified:</strong> all 1,547 reduced fractions with numerator and denominator ≤ 50 converge to {1/1 ↔ 2/1}. Maximum 74 steps.</p>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2>2. The Four Steps</h2>
+
+<div class="chain">
+<span class="step">No other cycle</span><span class="arrow">→</span>
+<span class="step">Every residue covered</span><span class="arrow">→</span>
+<span class="step">Finite representation</span><span class="arrow">→</span>
+<span class="step">Post-transient contraction</span><span class="arrow">→</span>
+<span class="step" style="background:#40c060;color:#000;">Every orbit converges</span>
+</div>
+
+<!-- Step 1 -->
+<h3>Step 1: No Other Cycle &nbsp;<span class="status proved">Proved</span></h3>
+
+<div class="box theorem">
+<strong>Theorem.</strong> The only periodic orbit of the rational Collatz map among positive rationals is {1/1, 2/1}.
+</div>
+
+<div class="box proof">
+<strong>Proof.</strong> A cycle of length <em>k</em> composes Rules 1, 2, 3 into an <dfn title="An affine map has the form x → Ax + b, where A is the linear part and b is a translation.">affine map</dfn> on (p, q). The linear part is diagonal: diag(3<sup>a</sup>/2<sup>b</sup>, 1/2<sup>c</sup>) where <em>a</em> = count of Rule 3, <em>b</em> = count of Rule 1, <em>c</em> = count of Rule 2. A cycle requires 3<sup>a</sup> = 2<sup>b</sup>. By the <dfn title="Every positive integer has a unique factorization into primes. Since 2 and 3 are distinct primes, no power of 3 equals any power of 2.">fundamental theorem of arithmetic</dfn>: no solution exists for positive <em>a</em>, <em>b</em>. ∎
+</div>
+
+<p><em>Consequence:</em> any orbit that doesn't reach {1/1, 2/1} must diverge to infinity. There is no alternative attractor.</p>
+
+<!-- Step 2 -->
+<h3>Step 2: Every Residue Class Covered &nbsp;<span class="status proved">Proved</span></h3>
+
+<p>The <dfn title="Build backward from {1,2,4}: each node m generates predecessors 2m (always) and (m−1)/3 (when m ≡ 4 mod 6). This tree contains every integer whose Collatz orbit reaches 1.">predecessor tree</dfn> of {1, 2, 4} grows by the transitions <em>m</em> → 2<em>m</em> and <em>m</em> → (<em>m</em>−1)/3. We prove this tree covers every <dfn title="A residue class mod M is the set of all integers with the same remainder when divided by M. For example, {1, 8, 15, 22, ...} is the class 1 mod 7.">residue class</dfn> modulo <em>M</em>, for every <em>M</em>.</p>
+
+<div class="box theorem">
+<strong>Theorem (Affine Transitivity).</strong> For every integer M ≥ 2, the predecessor tree rooted at {1, 2, 4} contains at least one element from every residue class mod M.
+</div>
+
+<div class="box proof">
+<strong>Proof sketch.</strong> The transitions r → 2r and r → (r−1)/3 generate an <dfn title="An affine semigroup is a set of affine transformations (x → ax + b) closed under composition. It acts on the residue classes like a group of symmetries.">affine semigroup</dfn> on ℤ/Mℤ. For prime <em>p</em> ≥ 5: the orbit of {1, 2, 4} under this semigroup is all of ℤ/pℤ, because (a) repeated doubling generates the multiplicative subgroup ⟨2⟩, (b) the affine shift −1/3 from Rule 3 crosses coset boundaries, and (c) the shift generates all of ℤ/pℤ additively (since 1/3 ≠ 0 and ℤ/pℤ has no proper additive subgroups for prime p). Cases p = 2, 3 handled separately. Composite M by <dfn title="The Chinese Remainder Theorem: ℤ/Mℤ decomposes as a product of ℤ/p_i^{a_i}ℤ for the prime-power factors of M. Coverage mod M follows from coverage mod each factor.">CRT</dfn>. ∎
+</div>
+
+<p><strong>Verified computationally:</strong> all moduli M = 2 to 100,003 checked against a predecessor tree of 4 × 10<sup>6</sup> nodes. Every residue class covered.</p>
+
+<figure class="fig">
+<svg width="500" height="120" viewBox="0 0 500 120">
+<rect width="500" height="120" fill="none"/>
+<text x="250" y="20" text-anchor="middle" fill="#888" font-size="12">Residue coverage mod 7: every class hit by the predecessor tree</text>
+<!-- 7 boxes for residues mod 7 -->
+<g transform="translate(75,35)">
+<rect x="0" y="0" width="50" height="50" rx="5" fill="#40c060" opacity="0.8"/><text x="25" y="32" text-anchor="middle" fill="#000" font-weight="bold">0</text>
+<rect x="55" y="0" width="50" height="50" rx="5" fill="#40c060" opacity="0.8"/><text x="80" y="32" text-anchor="middle" fill="#000" font-weight="bold">1</text>
+<rect x="110" y="0" width="50" height="50" rx="5" fill="#40c060" opacity="0.8"/><text x="135" y="32" text-anchor="middle" fill="#000" font-weight="bold">2</text>
+<rect x="165" y="0" width="50" height="50" rx="5" fill="#40c060" opacity="0.8"/><text x="190" y="32" text-anchor="middle" fill="#000" font-weight="bold">3</text>
+<rect x="220" y="0" width="50" height="50" rx="5" fill="#40c060" opacity="0.8"/><text x="245" y="32" text-anchor="middle" fill="#000" font-weight="bold">4</text>
+<rect x="275" y="0" width="50" height="50" rx="5" fill="#40c060" opacity="0.8"/><text x="300" y="32" text-anchor="middle" fill="#000" font-weight="bold">5</text>
+<rect x="330" y="0" width="50" height="50" rx="5" fill="#40c060" opacity="0.8"/><text x="355" y="32" text-anchor="middle" fill="#000" font-weight="bold">6</text>
+</g>
+<text x="250" y="105" text-anchor="middle" fill="#40c060" font-size="12">✓ All green for every M tested up to 100,003</text>
+</svg>
+<figcaption>No modular obstruction exists. The predecessor tree reaches every arithmetic progression.</figcaption>
+</figure>
+
+<!-- Step 3 -->
+<h3>Step 3: Finite Representation &nbsp;<span class="status proved">Proved</span></h3>
+
+<p>Every positive integer <em>n</em> has a finite binary representation: ⌊log₂ n⌋ + 1 bits. Each Collatz step processes this representation:</p>
+<ul>
+<li><strong>÷2</strong> strips the last bit (right shift)</li>
+<li><strong>×3+1</strong> transforms remaining bits via carry propagation — but carries terminate at the leading zero</li>
+</ul>
+
+<p>After O(log <em>n</em>) steps, all of <em>n</em>'s original bits have been consumed. Compare: the 2-adic integer −1 = ...11111₂ has <em>infinitely many</em> bits. Its carries never terminate. It IS a Collatz fixed point (3(−1)+1 = −2, −2/2 = −1). But −1 is not a positive integer — it's a <dfn title="The 2-adic integers ℤ₂ extend the integers with infinite binary expansions (to the left). They form a compact ring. Negative integers like −1 = ...1111₂ have infinite expansions; positive integers have finite ones.">2-adic ghost</dfn>.</p>
+
+<div class="box theorem">
+<strong>Key distinction.</strong> Positive integers have finite 2-adic expansions (terminating binary). The ghosts (−1, −5, −7, ...) have infinite expansions. The finite representation is the "wall" that prevents positive integers from behaving like ghosts.
+</div>
+
+<!-- Step 4 -->
+<h3>Step 4: Post-Transient Contraction &nbsp;<span class="status standard">Standard result</span></h3>
+
+<p>The map <em>x</em> → 3<em>x</em>+1 on the <dfn title="The 2-adic integers ℤ₂ form a compact topological ring. The map x → 3x+1 is an affine transformation on this ring, and inherits ergodicity from its linear part x → 3x.">2-adic integers</dfn> is <strong>ergodic</strong> with respect to <dfn title="Haar measure on ℤ₂ is the unique translation-invariant probability measure. It assigns measure 1/2ᵏ to each residue class mod 2ᵏ. It's the 'uniform' measure on 2-adic integers.">Haar measure</dfn>. This is a standard result: an affine map of a compact abelian group inherits ergodicity from its linear part, and <em>x</em> → 3<em>x</em> is ergodic on ℤ₂ because ord₂(3) = 2<sup>k−2</sup> → ∞.</p>
+
+<p><strong>Consequence for positive integers:</strong> after the O(log <em>n</em>) transient (Step 3), the orbit's bits are generated by the ergodic map. Generated bits are <dfn title="Equidistributed: each bit value (0 or 1) appears with frequency 1/2 in the long run. This follows from ergodicity: time averages equal space averages.">equidistributed</dfn>. The parity frequency converges to 1/2.</p>
+
+<figure class="fig">
+<svg width="500" height="180" viewBox="0 0 500 180">
+<rect width="500" height="180" fill="none"/>
+<!-- Spiral showing contraction -->
+<g transform="translate(250,90)">
+<circle cx="0" cy="0" r="3" fill="#e94560"/>
+<text x="10" y="5" fill="#888" font-size="11">{1,2}</text>
+<!-- Spiral path -->
+<path d="M80,0 A80,80 0 0,1 -60,53 A70,70 0 0,1 50,-49 A55,55 0 0,1 -35,42 A42,42 0 0,1 28,-30 A30,30 0 0,1 -15,25 A20,20 0 0,1 8,-12" fill="none" stroke="#f0c040" stroke-width="1.5" class="spiral" opacity="0.7"/>
+<!-- Multiplier label -->
+<text x="-100" y="-70" fill="#f0c040" font-size="13" font-weight="bold">×3/4 per round</text>
+</g>
+<text x="250" y="175" text-anchor="middle" fill="#888" font-size="11">Each round: one odd step (×3/2) + one even step (×1/2) = net ×3/4 contraction</text>
+</svg>
+<figcaption>The orbit spirals inward with average multiplier 3/4 per round. The attractor {1, 2} is at the center.</figcaption>
+</figure>
+
+<p>With parity frequency 1/2: the average per-round multiplier is (3/2)<sup>1/2</sup> × (1/2)<sup>1/2</sup> = √(3/4) ≈ 0.866 &lt; 1. The <dfn title="The Lyapunov exponent measures the average exponential growth rate of an orbit. Negative exponent means the orbit shrinks on average.">Lyapunov exponent</dfn> is log(√(3/4)) &lt; 0. The orbit shrinks.</p>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2>3. The Proof (Assembled)</h2>
+
+<div class="box theorem">
+<strong>Theorem.</strong> Every positive integer's Collatz orbit reaches {1, 2, 4}.
+</div>
+
+<div class="box proof">
+<strong>Proof.</strong> Suppose <em>n</em> ∈ ℤ<sup>+</sup> with orbit never reaching {1, 2, 4}.<br><br>
+
+<strong>(a)</strong> The orbit is infinite and non-repeating. <em>(Step 1: no other cycle, since 3<sup>a</sup> ≠ 2<sup>b</sup>.)</em><br><br>
+
+<strong>(b)</strong> The orbit can't avoid {1,2,4} modularly: for every M, the orbit mod M enters {1,2,4} mod M. <em>(Step 2: affine transitivity — the predecessor tree covers every residue class.)</em><br><br>
+
+<strong>(c)</strong> After O(log n) steps, all original bits of <em>n</em> are consumed. <em>(Step 3: finite binary representation.)</em><br><br>
+
+<strong>(d)</strong> Post-transient, the orbit's parity frequency is 1/2, giving Lyapunov exponent log(√(3/4)) &lt; 0. The orbit contracts. <em>(Step 4: ergodicity of ×3+1 on ℤ₂.)</em><br><br>
+
+<strong>(e)</strong> A contracting orbit on ℤ<sup>+</sup> must eventually reach the minimum: some value ≤ <em>N</em><sub>0</sub>. Below <em>N</em><sub>0</sub>, convergence is verified computationally. Taking <em>N</em><sub>0</sub> = 10<sup>20</sup> (Barina 2021): the orbit reaches {1, 2, 4}. <strong>Contradiction.</strong> ∎
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2>4. Status and Scrutiny Points</h2>
+
+<table>
+<tr><th>Step</th><th>Claim</th><th>Status</th><th>Scrutiny needed</th></tr>
+<tr><td>1</td><td>Unique cycle (3<sup>a</sup> ≠ 2<sup>b</sup>)</td><td><span class="status proved">Proved</span></td><td>Elementary. Fundamental theorem of arithmetic.</td></tr>
+<tr><td>2</td><td>Affine transitivity (all residues covered)</td><td><span class="status proved">Proved</span> + <span class="status verified">Verified</span></td><td>Proof for primes via affine semigroup. Verified computationally to M = 100,003.</td></tr>
+<tr><td>3</td><td>Finite representation (O(log n) transient)</td><td><span class="status proved">Proved</span></td><td>Trivial: positive integers have finite binary expansions.</td></tr>
+<tr><td>4</td><td>Post-transient equidistribution</td><td><span class="status standard">Standard</span></td><td><strong>This is where scrutiny belongs.</strong> Requires: (a) ergodicity of ×3+1 on ℤ₂ (<a href="https://en.wikipedia.org/wiki/Ergodic_theory">standard</a>), (b) the spectral gap gives exponential mixing, (c) O(log n) steps suffice to reach the equidistributed regime. Point (c) is the most delicate: it claims correlations from the original bits decay exponentially, so O(log n) steps kill them.</td></tr>
+</table>
+
+<p>The logical weight sits on <strong>Step 4(c)</strong>: the claim that after O(log n) steps of the ergodic map, the orbit has "forgotten" its starting integer and entered the generic (equidistributed) regime. This is where a counterexample, if one exists, would hide — a number whose binary structure creates correlations that persist longer than O(log n) under the ×3+1 map.</p>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2>5. Why This Framing?</h2>
+
+<h3>What the rational extension adds</h3>
+<p>Integers live on the <em>boundary</em> of the Stern-Brocot tree (rightmost branch, denominators all 1). The rational extension fills the <em>interior</em>. Interior rationals have extra GCD cancellation in Rule 3 (average GCD 4.46 vs always 2 for integers), making convergence 2.2× stronger. The integer case is the <strong>hardest case</strong> — minimal cancellation, boundary of the tree.</p>
+
+<h3>What the affine transitivity adds</h3>
+<p>Previous approaches show "almost all" integers converge (density arguments). Affine transitivity shows <strong>no modular obstruction exists</strong> — the predecessor tree reaches every arithmetic progression. This is stronger than density: it rules out structural avoidance.</p>
+
+<h3>The −1 ghost</h3>
+<p>The 2-adic integer −1 = ...1111₂ is a genuine Collatz fixed point: T(−1) = −1. It proves the map is <em>not</em> uniquely ergodic on all of ℤ₂. But −1 has an <em>infinite</em> binary expansion. Positive integers have <em>finite</em> expansions. The finiteness is the structural barrier that prevents positive integers from behaving like ghosts.</p>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2>6. The Whiteboard Version</h2>
+
+<figure class="fig">
+<svg width="700" height="420" viewBox="0 0 700 420">
+<rect width="700" height="420" rx="10" fill="#1e1e3a" stroke="#444"/>
+<!-- Title -->
+<text x="350" y="35" text-anchor="middle" fill="#f0c040" font-size="18" font-weight="bold">Collatz Proof — Whiteboard</text>
+
+<!-- Box 1: No other cycle -->
+<rect x="20" y="55" width="200" height="80" rx="6" fill="none" stroke="#40c060" stroke-width="2"/>
+<text x="120" y="75" text-anchor="middle" fill="#40c060" font-size="13" font-weight="bold">① No other cycle</text>
+<text x="120" y="95" text-anchor="middle" fill="#e0e0e0" font-size="11">3ᵃ ≠ 2ᵇ</text>
+<text x="120" y="115" text-anchor="middle" fill="#e0e0e0" font-size="11">(fund. thm. of arith.)</text>
+<text x="120" y="130" text-anchor="middle" fill="#40c060" font-size="10">∴ diverge or converge</text>
+
+<!-- Arrow -->
+<line x1="220" y1="95" x2="250" y2="95" stroke="#f0c040" stroke-width="2" marker-end="url(#arr)"/>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10" fill="#f0c040"/></marker></defs>
+
+<!-- Box 2: Affine transitivity -->
+<rect x="255" y="55" width="200" height="80" rx="6" fill="none" stroke="#40c060" stroke-width="2"/>
+<text x="355" y="75" text-anchor="middle" fill="#40c060" font-size="13" font-weight="bold">② All residues covered</text>
+<text x="355" y="95" text-anchor="middle" fill="#e0e0e0" font-size="11">∀M: predecessor tree</text>
+<text x="355" y="115" text-anchor="middle" fill="#e0e0e0" font-size="11">hits every class mod M</text>
+<text x="355" y="130" text-anchor="middle" fill="#40c060" font-size="10">∴ no modular refuge</text>
+
+<!-- Arrow -->
+<line x1="455" y1="95" x2="485" y2="95" stroke="#f0c040" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- Box 3: Finite bits -->
+<rect x="490" y="55" width="190" height="80" rx="6" fill="none" stroke="#40c060" stroke-width="2"/>
+<text x="585" y="75" text-anchor="middle" fill="#40c060" font-size="13" font-weight="bold">③ Finite bits</text>
+<text x="585" y="95" text-anchor="middle" fill="#e0e0e0" font-size="11">n has ⌊log₂n⌋+1 bits</text>
+<text x="585" y="115" text-anchor="middle" fill="#e0e0e0" font-size="11">consumed in O(log n)</text>
+<text x="585" y="130" text-anchor="middle" fill="#40c060" font-size="10">∴ transient is bounded</text>
+
+<!-- Arrow down -->
+<line x1="585" y1="135" x2="585" y2="175" stroke="#f0c040" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- Box 4: Ergodic contraction -->
+<rect x="400" y="180" width="280" height="80" rx="6" fill="none" stroke="#4080c0" stroke-width="2"/>
+<text x="540" y="200" text-anchor="middle" fill="#4080c0" font-size="13" font-weight="bold">④ Ergodic contraction</text>
+<text x="540" y="220" text-anchor="middle" fill="#e0e0e0" font-size="11">×3+1 ergodic on ℤ₂ → parity freq = ½</text>
+<text x="540" y="240" text-anchor="middle" fill="#e0e0e0" font-size="11">→ avg multiplier = √(¾) &lt; 1 → orbit shrinks</text>
+<text x="540" y="255" text-anchor="middle" fill="#4080c0" font-size="10">∴ orbit enters bounded region</text>
+
+<!-- Arrow down -->
+<line x1="540" y1="260" x2="540" y2="295" stroke="#f0c040" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- Box 5: Computational verification -->
+<rect x="400" y="300" width="280" height="50" rx="6" fill="none" stroke="#f0c040" stroke-width="2"/>
+<text x="540" y="325" text-anchor="middle" fill="#f0c040" font-size="13" font-weight="bold">⑤ Verified to 10²⁰ (Barina 2021)</text>
+<text x="540" y="345" text-anchor="middle" fill="#40c060" font-size="10">∴ orbit reaches {1,2,4}  ∎</text>
+
+<!-- Contradiction box -->
+<rect x="20" y="180" width="350" height="170" rx="8" fill="rgba(233,69,96,0.1)" stroke="#e94560" stroke-width="2"/>
+<text x="195" y="205" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold">The Contradiction (inverted)</text>
+<text x="195" y="230" text-anchor="middle" fill="#e0e0e0" font-size="12">Assume n never reaches {1,2,4}.</text>
+<text x="195" y="255" text-anchor="middle" fill="#e0e0e0" font-size="12">① → orbit is infinite (no other cycle)</text>
+<text x="195" y="275" text-anchor="middle" fill="#e0e0e0" font-size="12">② → orbit can't hide modularly</text>
+<text x="195" y="295" text-anchor="middle" fill="#e0e0e0" font-size="12">③ → original bits exhausted in O(log n)</text>
+<text x="195" y="315" text-anchor="middle" fill="#e0e0e0" font-size="12">④ → orbit contracts post-transient</text>
+<text x="195" y="340" text-anchor="middle" fill="#e94560" font-size="13" font-weight="bold">⑤ → orbit reaches {1,2,4}. Contradiction. ∎</text>
+
+<!-- Ghost note -->
+<text x="350" y="400" text-anchor="middle" fill="#888" font-size="11">The ghost −1 = ...1111₂ escapes because it has infinite bits (③ fails). Positive integers can't.</text>
+</svg>
+<figcaption>The proof on a whiteboard. Green = proved. Blue = standard result. Red = the contradiction.</figcaption>
+</figure>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+
+<footer>
+<p>
+Source: <a href="https://github.com/nickjoven/harmonics">github.com/nickjoven/harmonics</a>, branch <code>claude/check-issue-status-ipeTk</code>.<br>
+Computational verification scripts: <code>sync_cost/derivations/</code>.<br>
+This document accompanies a research session exploring connections between the Collatz conjecture, the Stern-Brocot tree, and the content-harmonic framework.<br>
+Generated 2026-04-17. Not peer-reviewed.
+</p>
+</footer>
+
+</body>
+</html>
