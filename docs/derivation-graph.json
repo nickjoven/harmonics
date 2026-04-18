@@ -1,5 +1,5 @@
 {
-  "generated": "a899ed932fa30407048be41b8c2f5d65a900ddad",
+  "generated": "28b71c92ab1473252bb78cf0137943e7be43a89a",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -758,6 +758,21 @@
       ]
     },
     {
+      "id": "gap2_spatialization_decomposition",
+      "path": "sync_cost/derivations/gap2_spatialization_decomposition.md",
+      "title": "Gap 2 Break 1: Spatialization Decomposition and Status",
+      "summary": "| | Sub-problem | Status | Result |\n|---|---|---|---|\n| A | RFE forces Q \u2192 R completion | **Closed** | Phase sum in the self-consistency equation produces irrational |r| from rational inputs. The field exists because the equation demands it. (`rfe_irrational_fixed_points.py`) |\n| B | Mori\u2013Zwanzig coarse-graining | **Closed** (Markovian level) | Standard projection with inputs from C (decorrelation rate) and D (continuum manifold). Markovian limit valid for \u03c4_coarse \u226b 1/\u03bb_unlock. |\n| C | Lyapunov",
+      "depends_on": [
+        "gap2_step4_farey_laplacian",
+        "gap2_theorem_attempt",
+        "gap_2_spatial_diffusion",
+        "rational_field_equation",
+        "second_law_topological"
+      ],
+      "depended_on_by": [],
+      "git": []
+    },
+    {
       "id": "gap2_step4_farey_laplacian",
       "path": "sync_cost/derivations/gap2_step4_farey_laplacian.md",
       "title": "Gap 2, Step 4: The Stern-Brocot Tree IS the Spatial Lattice",
@@ -769,10 +784,16 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "gap2_spatialization_decomposition",
         "gap2_theorem_attempt",
         "gap_2_spatial_diffusion"
       ],
       "git": [
+        {
+          "hash": "826574d",
+          "date": "2026-04-18",
+          "subject": "Clean derivation docs: remove inline history, state current truth"
+        },
         {
           "hash": "c0b93ee",
           "date": "2026-04-18",
@@ -795,10 +816,16 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "gap2_spatialization_decomposition",
         "gap2_step4_farey_laplacian",
         "gap_2_spatial_diffusion"
       ],
       "git": [
+        {
+          "hash": "826574d",
+          "date": "2026-04-18",
+          "subject": "Clean derivation docs: remove inline history, state current truth"
+        },
         {
           "hash": "1b9cd9e",
           "date": "2026-04-18",
@@ -821,6 +848,11 @@
         "gap1_theorem"
       ],
       "git": [
+        {
+          "hash": "826574d",
+          "date": "2026-04-18",
+          "subject": "Clean derivation docs: remove inline history, state current truth"
+        },
         {
           "hash": "fc1e525",
           "date": "2026-04-18",
@@ -846,10 +878,16 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "gap2_spatialization_decomposition",
         "gap2_step4_farey_laplacian",
         "gap2_theorem_attempt"
       ],
       "git": [
+        {
+          "hash": "826574d",
+          "date": "2026-04-18",
+          "subject": "Clean derivation docs: remove inline history, state current truth"
+        },
         {
           "hash": "1b9cd9e",
           "date": "2026-04-18",
@@ -1530,6 +1568,7 @@
       "depends_on": [],
       "depended_on_by": [
         "gap1_theorem",
+        "gap2_spatialization_decomposition",
         "gap_1_christoffel"
       ],
       "git": [
@@ -1610,6 +1649,7 @@
         "klein_connection"
       ],
       "depended_on_by": [
+        "gap2_spatialization_decomposition",
         "gap2_theorem_attempt"
       ],
       "git": [
@@ -1676,6 +1716,11 @@
       ],
       "git": [
         {
+          "hash": "826574d",
+          "date": "2026-04-18",
+          "subject": "Clean derivation docs: remove inline history, state current truth"
+        },
+        {
           "hash": "a899ed9",
           "date": "2026-04-18",
           "subject": "Derive sin\u00b2\u03b8_W = 2^(80/27) / (2^(80/27) + 3^(80/27)) = 0.23123"
@@ -1697,6 +1742,11 @@
         "sinw_effective_dimension"
       ],
       "git": [
+        {
+          "hash": "826574d",
+          "date": "2026-04-18",
+          "subject": "Clean derivation docs: remove inline history, state current truth"
+        },
         {
           "hash": "e387fe3",
           "date": "2026-04-14",
