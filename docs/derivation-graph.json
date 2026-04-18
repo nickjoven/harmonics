@@ -1,5 +1,5 @@
 {
-  "generated": "fc1e525c61cdcb89c05c6bbd691ff08a800f7b89",
+  "generated": "1b9cd9e8abeb05ed6d19280fdf8cb0a626aa4969",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -308,6 +308,7 @@
       ],
       "depended_on_by": [
         "gap1_theorem",
+        "gap2_step4_farey_laplacian",
         "gap2_theorem_attempt",
         "gap_1_christoffel",
         "gap_2_spatial_diffusion"
@@ -757,6 +758,20 @@
       ]
     },
     {
+      "id": "gap2_step4_farey_laplacian",
+      "path": "sync_cost/derivations/gap2_step4_farey_laplacian.md",
+      "title": "Gap 2, Step 4: The Stern-Brocot Tree IS the Spatial Lattice",
+      "summary": "**Verified.** The spatial diffusion term D\u00b7\u2207\u00b2\u03b8 in the Kuramoto\nequation is not added by hand. It is the continuum limit of nearest-\nneighbor coupling on the Stern-Brocot tree, which tessellates the\nhyperbolic plane H\u00b2 = SL(2,\u211d)/SO(2) via Ford circles.",
+      "depends_on": [
+        "continuum_limits",
+        "gap2_theorem_attempt",
+        "gap_2_spatial_diffusion",
+        "three_dimensions"
+      ],
+      "depended_on_by": [],
+      "git": []
+    },
+    {
       "id": "gap2_theorem_attempt",
       "path": "sync_cost/derivations/gap2_theorem_attempt.md",
       "title": "Gap 2 Attempted Closure: Spatial Diffusion from Non-Orientability",
@@ -770,9 +785,16 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "gap2_step4_farey_laplacian",
         "gap_2_spatial_diffusion"
       ],
-      "git": []
+      "git": [
+        {
+          "hash": "1b9cd9e",
+          "date": "2026-04-18",
+          "subject": "Gap 2 Break 1 attempted closure: diffusion from non-orientability"
+        }
+      ]
     },
     {
       "id": "gap_1_christoffel",
@@ -814,9 +836,15 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "gap2_step4_farey_laplacian",
         "gap2_theorem_attempt"
       ],
       "git": [
+        {
+          "hash": "1b9cd9e",
+          "date": "2026-04-18",
+          "subject": "Gap 2 Break 1 attempted closure: diffusion from non-orientability"
+        },
         {
           "hash": "d185308",
           "date": "2026-04-08",
@@ -1770,6 +1798,7 @@
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "duty_cycle_dictionary",
+        "gap2_step4_farey_laplacian",
         "gap2_theorem_attempt",
         "gap_2_spatial_diffusion",
         "isotropy_lemma",
