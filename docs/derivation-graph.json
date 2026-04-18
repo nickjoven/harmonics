@@ -1,5 +1,5 @@
 {
-  "generated": "1b9cd9e8abeb05ed6d19280fdf8cb0a626aa4969",
+  "generated": "c47be658fccedb92aeb0d45b7ac6825af6fd6c70",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -470,6 +470,7 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "sinw_effective_dimension",
         "sinw_fixed_point"
       ],
       "git": [
@@ -769,7 +770,13 @@
         "three_dimensions"
       ],
       "depended_on_by": [],
-      "git": []
+      "git": [
+        {
+          "hash": "c0b93ee",
+          "date": "2026-04-18",
+          "subject": "Gap 2 Step 4: Stern-Brocot tree IS the spatial lattice"
+        }
+      ]
     },
     {
       "id": "gap2_theorem_attempt",
@@ -865,7 +872,9 @@
         "klein_connection",
         "sinw_fixed_point"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "sinw_effective_dimension"
+      ],
       "git": [
         {
           "hash": "977a737",
@@ -911,6 +920,7 @@
         "gauge_factorization",
         "klein_connection",
         "mass_sector_closure",
+        "sinw_effective_dimension",
         "sinw_fixed_point"
       ],
       "git": [
@@ -1259,7 +1269,8 @@
       "depended_on_by": [
         "gap2_theorem_attempt",
         "gauge_factorization",
-        "second_law_topological"
+        "second_law_topological",
+        "sinw_effective_dimension"
       ],
       "git": [
         {
@@ -1647,6 +1658,22 @@
       ]
     },
     {
+      "id": "sinw_effective_dimension",
+      "path": "sync_cost/derivations/sinw_effective_dimension.md",
+      "title": "Weak Mixing Angle: sin\u00b2\u03b8_W from Effective Dimension Reduction",
+      "summary": "**Derived, conditionally.** The electroweak mixing angle is",
+      "depends_on": [
+        "duty_cycle_dictionary",
+        "gauge_dictionary",
+        "gauge_sector_lovelock",
+        "klein_bottle_derivation",
+        "sinw_fixed_point",
+        "three_dimensions"
+      ],
+      "depended_on_by": [],
+      "git": []
+    },
+    {
       "id": "sinw_fixed_point",
       "path": "sync_cost/derivations/sinw_fixed_point.md",
       "title": "sin\u00b2\u03b8_W Fixed-Point Hypothesis \u2014 Negative Result",
@@ -1658,7 +1685,8 @@
       "depended_on_by": [
         "gauge_dictionary",
         "gauge_sector_lovelock",
-        "klein_connection"
+        "klein_connection",
+        "sinw_effective_dimension"
       ],
       "git": [
         {
@@ -1802,7 +1830,8 @@
         "gap2_theorem_attempt",
         "gap_2_spatial_diffusion",
         "isotropy_lemma",
-        "klein_bottle_derivation"
+        "klein_bottle_derivation",
+        "sinw_effective_dimension"
       ],
       "git": [
         {
