@@ -1,5 +1,5 @@
 {
-  "generated": "30420ad96a2923504a9fd856faec5e162fe2f223",
+  "generated": "fc1e525c61cdcb89c05c6bbd691ff08a800f7b89",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -308,6 +308,7 @@
       ],
       "depended_on_by": [
         "gap1_theorem",
+        "gap2_theorem_attempt",
         "gap_1_christoffel",
         "gap_2_spatial_diffusion"
       ],
@@ -725,7 +726,13 @@
       "depended_on_by": [
         "gap_1_christoffel"
       ],
-      "git": []
+      "git": [
+        {
+          "hash": "fc1e525",
+          "date": "2026-04-18",
+          "subject": "Gap 1 theorem: continuum-limit closure, conditional on CLT regime"
+        }
+      ]
     },
     {
       "id": "gap2_analytic_proof",
@@ -750,6 +757,24 @@
       ]
     },
     {
+      "id": "gap2_theorem_attempt",
+      "path": "sync_cost/derivations/gap2_theorem_attempt.md",
+      "title": "Gap 2 Attempted Closure: Spatial Diffusion from Non-Orientability",
+      "summary": "**Break 1 (spatialization) attempted via topological route; Break 2\n(D\u2080 numerical value) remains open.**",
+      "depends_on": [
+        "continuum_limits",
+        "gap_2_spatial_diffusion",
+        "half_twist_dynamics",
+        "klein_bottle_derivation",
+        "second_law_topological",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "gap_2_spatial_diffusion"
+      ],
+      "git": []
+    },
+    {
       "id": "gap_1_christoffel",
       "path": "sync_cost/derivations/gap_1_christoffel.md",
       "title": "Gap 1: The Christoffel Connection from Kuramoto Ensemble Averages",
@@ -765,6 +790,11 @@
       ],
       "git": [
         {
+          "hash": "fc1e525",
+          "date": "2026-04-18",
+          "subject": "Gap 1 theorem: continuum-limit closure, conditional on CLT regime"
+        },
+        {
           "hash": "d185308",
           "date": "2026-04-08",
           "subject": "Document three open gaps in Kuramoto-to-gravity derivation (#57)"
@@ -775,13 +805,17 @@
       "id": "gap_2_spatial_diffusion",
       "path": "sync_cost/derivations/gap_2_spatial_diffusion.md",
       "title": "Gap 2: Spatial Diffusion and the Bare Coupling D\u2080",
-      "summary": "**Open.** The structural form of Schr\u00f6dinger's equation is derived\n(quantum potential shape from Ito calculus + CLT on tree levels).\nThe numerical value of \u210f is identified, not derived \u2014 it depends on\nthe bare diffusion constant D\u2080, which is an input parameter.",
+      "summary": "**Break 1 attempted via topological route; Break 2 remains open.**\nSee `gap2_theorem_attempt.md` for the attempted closure.",
       "depends_on": [
         "continuum_limits",
+        "gap2_theorem_attempt",
         "minimum_alphabet",
+        "second_law_topological",
         "three_dimensions"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "gap2_theorem_attempt"
+      ],
       "git": [
         {
           "hash": "d185308",
@@ -974,7 +1008,9 @@
       "title": "The Half-Twist as a Dynamical Object",
       "summary": "**Exploratory.** The twist-as-frustrated-tension picture is physically\nclear. The conjugacy with diffusion (\u03c9 \u00d7 \u03c3\u00b2 = const) connects the\ntwist to the quantum sector through the same \u03c6\u2074 scaling. The\ncosmological constant as regulated twist zero-point energy is\nstructurally correct (\u039b \u221d \u03a9_\u039b \u00d7 H\u2080\u00b2) but needs the full field\nequation calculation to produce the exact coefficient.",
       "depends_on": [],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "gap2_theorem_attempt"
+      ],
       "git": [
         {
           "hash": "d185308",
@@ -1193,6 +1229,7 @@
         "xor_derivation"
       ],
       "depended_on_by": [
+        "gap2_theorem_attempt",
         "gauge_factorization",
         "second_law_topological"
       ],
@@ -1531,7 +1568,10 @@
         "klein_bottle_derivation",
         "klein_connection"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "gap2_theorem_attempt",
+        "gap_2_spatial_diffusion"
+      ],
       "git": [
         {
           "hash": "e77e531",
@@ -1730,6 +1770,7 @@
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "duty_cycle_dictionary",
+        "gap2_theorem_attempt",
         "gap_2_spatial_diffusion",
         "isotropy_lemma",
         "klein_bottle_derivation"
