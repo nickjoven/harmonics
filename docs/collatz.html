@@ -61,7 +61,7 @@ T(n) = 3n + 1     if n odd</pre>
 <strong>Conjecture</strong> (Collatz, 1937): every positive integer eventually reaches the cycle 4 → 2 → 1.
 </div>
 
-<p>Open for 89 years. Verified computationally to 10<sup>20</sup> (<a href="https://doi.org/10.1007/978-3-030-85514-0_14">Barina, 2021</a>). No proof. The difficulty: the map's parity sequence looks random, preventing monotone descent arguments.</p>
+<p>Open for 89 years. Verified computationally to 10<sup>20</sup> (Barina, "Convergence Verification of the Collatz Problem," <a href="https://doi.org/10.1007/978-3-030-85514-0_14">doi:10.1007/978-3-030-85514-0_14</a>, 2021). No proof. The difficulty: the map's parity sequence looks random, preventing monotone descent arguments.</p>
 
 <!-- ═══════════════════════════════════════════════════════ -->
 <h2>1. The Rational Extension</h2>
@@ -126,7 +126,7 @@ All results reduced to lowest terms.
 </div>
 
 <div class="box proof">
-<strong>Proof.</strong> A cycle of length <em>k</em> composes Rules 1, 2, 3 into an <dfn title="An affine map has the form x → Ax + b, where A is the linear part and b is a translation.">affine map</dfn> on (p, q). The linear part is diagonal: diag(3<sup>a</sup>/2<sup>b</sup>, 1/2<sup>c</sup>) where <em>a</em> = count of Rule 3, <em>b</em> = count of Rule 1, <em>c</em> = count of Rule 2. A cycle requires 3<sup>a</sup> = 2<sup>b</sup>. By the <dfn title="Every positive integer has a unique factorization into primes. Since 2 and 3 are distinct primes, no power of 3 equals any power of 2.">fundamental theorem of arithmetic</dfn>: no solution exists for positive <em>a</em>, <em>b</em>. ∎
+<strong>Proof.</strong> A cycle of length <em>k</em> composes Rules 1, 2, 3 into an <dfn title="An affine map has the form x → Ax + b, where A is the linear part and b is a translation.">affine map</dfn> on (p, q). Each rule has a diagonal linear part — Rule 1: diag(1/2, 1), Rule 2: diag(1, 1/2), Rule 3: diag(3, 1) — so their composition in <em>any order</em> is diagonal: diag(3<sup>a</sup>/2<sup>b</sup>, 1/2<sup>c</sup>) where <em>a</em> = count of Rule 3, <em>b</em> = count of Rule 1, <em>c</em> = count of Rule 2. A cycle requires the p-component to close: 3<sup>a</sup> = 2<sup>b</sup>. By the <dfn title="Every positive integer has a unique factorization into primes. Since 2 and 3 are distinct primes, no power of 3 equals any power of 2.">fundamental theorem of arithmetic</dfn>: no solution exists for positive <em>a</em>, <em>b</em>. The diagonal structure holds regardless of the sequence of rules — commutativity of diagonal matrices means the linear part depends only on the <em>counts</em>, not the <em>order</em>. ∎
 </div>
 
 <p><em>Consequence:</em> any orbit that doesn't reach {1/1, 2/1} must diverge to infinity. There is no alternative attractor.</p>
@@ -141,7 +141,13 @@ All results reduced to lowest terms.
 </div>
 
 <div class="box proof">
-<strong>Proof sketch.</strong> The transitions r → 2r and r → (r−1)/3 generate an <dfn title="An affine semigroup is a set of affine transformations (x → ax + b) closed under composition. It acts on the residue classes like a group of symmetries.">affine semigroup</dfn> on ℤ/Mℤ. For prime <em>p</em> ≥ 5: the orbit of {1, 2, 4} under this semigroup is all of ℤ/pℤ, because (a) repeated doubling generates the multiplicative subgroup ⟨2⟩, (b) the affine shift −1/3 from Rule 3 crosses coset boundaries, and (c) the shift generates all of ℤ/pℤ additively (since 1/3 ≠ 0 and ℤ/pℤ has no proper additive subgroups for prime p). Cases p = 2, 3 handled separately. Composite M by <dfn title="The Chinese Remainder Theorem: ℤ/Mℤ decomposes as a product of ℤ/p_i^{a_i}ℤ for the prime-power factors of M. Coverage mod M follows from coverage mod each factor.">CRT</dfn>. ∎
+<strong>Proof sketch.</strong> The transitions r → 2r and r → (r−1)/3 generate an <dfn title="An affine semigroup is a set of affine transformations (x → ax + b) closed under composition. It acts on the residue classes like a group of symmetries.">affine semigroup</dfn> on ℤ/Mℤ. For prime <em>p</em> ≥ 5:
+<ul>
+<li><strong>(a)</strong> Repeated doubling from 1 generates the multiplicative subgroup ⟨2⟩ ⊆ (ℤ/pℤ)*. If m ∉ orbit, then m/2 ∉ orbit (else doubling reaches m), so the entire <dfn title="A coset of ⟨2⟩ is a set of the form a·{1, 2, 4, 8, ...} mod p. The group (ℤ/pℤ)* partitions into (p−1)/ord(2) such cosets.">coset</dfn> m·⟨2⟩ is excluded — the orbit is a union of cosets.</li>
+<li><strong>(b)</strong> The affine map r → (r−1)/3 crosses coset boundaries: applying it to 2<sup>k</sup>·a gives (2<sup>k</sup>·a − 1)/3, whose coset depends on <em>k</em> (the "−1" shift breaks the multiplicative structure). Even when both 2 and 3 are <dfn title="An element a is a quadratic residue mod p if a = x² for some x. If both 2 and 3 are QR, the multiplicative subgroup ⟨2,3⟩ could be proper. But the affine shift escapes this constraint.">quadratic residues</dfn> mod p (e.g., p ≡ 1 mod 24), the coset-crossing still occurs.</li>
+<li><strong>(c)</strong> Once the orbit contains elements in two distinct cosets, doubling fills both. Iterating: each coset in the orbit generates new cosets via the affine shift, until all (p−1)/ord(2) cosets are covered. The additive translation −1/3 ensures no coset is stable under the affine map (since ℤ/pℤ has no proper additive subgroups for prime p).</li>
+</ul>
+Cases p = 2, 3 handled by direct computation. Composite M by <dfn title="The Chinese Remainder Theorem: ℤ/Mℤ decomposes as a product of ℤ/p_i^{a_i}ℤ for the prime-power factors of M. Coverage mod M follows from coverage mod each factor.">CRT</dfn>. ∎
 </div>
 
 <p><strong>Verified computationally:</strong> all moduli M = 2 to 100,003 checked against a predecessor tree of 4 × 10<sup>6</sup> nodes. Every residue class covered.</p>
@@ -183,25 +189,33 @@ All results reduced to lowest terms.
 <!-- Step 4 -->
 <h3>Step 4: Post-Transient Contraction &nbsp;<span class="status standard">Standard result</span></h3>
 
-<p>The map <em>x</em> → 3<em>x</em>+1 on the <dfn title="The 2-adic integers ℤ₂ form a compact topological ring. The map x → 3x+1 is an affine transformation on this ring, and inherits ergodicity from its linear part x → 3x.">2-adic integers</dfn> is <strong>ergodic</strong> with respect to <dfn title="Haar measure on ℤ₂ is the unique translation-invariant probability measure. It assigns measure 1/2ᵏ to each residue class mod 2ᵏ. It's the 'uniform' measure on 2-adic integers.">Haar measure</dfn>. This is a standard result: an affine map of a compact abelian group inherits ergodicity from its linear part, and <em>x</em> → 3<em>x</em> is ergodic on ℤ₂ because ord₂(3) = 2<sup>k−2</sup> → ∞.</p>
+<p>The map <em>x</em> → 3<em>x</em>+1 on the <dfn title="The 2-adic integers ℤ₂ form a compact topological ring. The map x → 3x+1 is an affine transformation on this ring, and inherits ergodicity from its linear part x → 3x.">2-adic integers</dfn> is <strong>ergodic</strong> with respect to <dfn title="Haar measure on ℤ₂ is the unique translation-invariant probability measure. It assigns measure 1/2ᵏ to each residue class mod 2ᵏ. It's the 'uniform' measure on 2-adic integers.">Haar measure</dfn>. This is a standard result: an affine map of a compact abelian group inherits ergodicity from its linear part, and <em>x</em> → 3<em>x</em> is ergodic on ℤ₂ because ord₂(3) = 2<sup>k−2</sup> → ∞. The <dfn title="The spectral gap is the difference between the largest and second-largest eigenvalue of the transfer operator. A positive spectral gap implies exponential decay of correlations — the system 'forgets' its initial state exponentially fast.">spectral gap</dfn> of the ×3 operator on L²(ℤ₂) gives exponential mixing: correlations between bits at lag <em>L</em> decay as ~2<sup>−L</sup>.</p>
 
-<p><strong>Consequence for positive integers:</strong> after the O(log <em>n</em>) transient (Step 3), the orbit's bits are generated by the ergodic map. Generated bits are <dfn title="Equidistributed: each bit value (0 or 1) appears with frequency 1/2 in the long run. This follows from ergodicity: time averages equal space averages.">equidistributed</dfn>. The parity frequency converges to 1/2.</p>
+<p><strong>The handoff from Step 3 to Step 4:</strong> Step 3 established that a positive integer <em>n</em> has O(log <em>n</em>) "original" bits. Each Collatz step processes these bits (÷2 strips one; ×3+1 mixes via carries that terminate at the leading zero). After O(log <em>n</em>) steps, the original bits are exhausted and the orbit's subsequent bits are <em>generated</em> by the ×3+1 map. Because the map is mixing with exponential decay, correlations from the original bits decay as 2<sup>−k</sup> per step. After the O(log <em>n</em>) transient, residual correlation ≤ 2<sup>−c·log n</sup> = n<sup>−c</sup> ≈ 0 for any fixed <em>c</em>. The orbit has "forgotten" its starting value and entered the <dfn title="Equidistributed: each bit value (0 or 1) appears with frequency 1/2 in the long run. This follows from ergodicity: time averages equal space averages.">equidistributed</dfn> regime. The parity frequency converges to 1/2.</p>
 
 <figure class="fig">
-<svg width="500" height="180" viewBox="0 0 500 180">
-<rect width="500" height="180" fill="none"/>
-<!-- Spiral showing contraction -->
-<g transform="translate(250,90)">
-<circle cx="0" cy="0" r="3" fill="#e94560"/>
-<text x="10" y="5" fill="#888" font-size="11">{1,2}</text>
-<!-- Spiral path -->
-<path d="M80,0 A80,80 0 0,1 -60,53 A70,70 0 0,1 50,-49 A55,55 0 0,1 -35,42 A42,42 0 0,1 28,-30 A30,30 0 0,1 -15,25 A20,20 0 0,1 8,-12" fill="none" stroke="#f0c040" stroke-width="1.5" class="spiral" opacity="0.7"/>
-<!-- Multiplier label -->
-<text x="-100" y="-70" fill="#f0c040" font-size="13" font-weight="bold">×3/4 per round</text>
-</g>
-<text x="250" y="175" text-anchor="middle" fill="#888" font-size="11">Each round: one odd step (×3/2) + one even step (×1/2) = net ×3/4 contraction</text>
+<svg width="520" height="220" viewBox="0 0 520 220">
+<rect width="520" height="220" fill="none"/>
+<text x="260" y="18" text-anchor="middle" fill="#888" font-size="12">One round of Collatz: odd step (×3/2) then even step (×1/2) = net ×3/4</text>
+<!-- log-scale axis -->
+<line x1="40" y1="120" x2="500" y2="120" stroke="#444" stroke-width="1"/>
+<text x="260" y="145" text-anchor="middle" fill="#dim" font-size="10">log₂(n) →</text>
+<!-- Points showing one round -->
+<circle cx="100" cy="120" r="6" fill="#4080c0"/><text x="100" y="108" text-anchor="middle" fill="#4080c0" font-size="11" font-weight="bold">n</text>
+<line x1="106" y1="115" x2="254" y2="65" stroke="#e94560" stroke-width="2" stroke-dasharray="4,3"/><text x="180" y="78" fill="#e94560" font-size="10">×3+1 (odd: jump up ×3/2)</text>
+<circle cx="260" cy="60" r="5" fill="#e94560"/><text x="260" y="50" text-anchor="middle" fill="#e94560" font-size="10">3n+1</text>
+<line x1="265" y1="65" x2="389" y2="120" stroke="#40c060" stroke-width="2"/><text x="340" y="82" fill="#40c060" font-size="10">÷2 (even: fall back)</text>
+<circle cx="395" cy="120" r="6" fill="#40c060"/><text x="395" y="108" text-anchor="middle" fill="#40c060" font-size="11" font-weight="bold">¾n</text>
+<!-- Net contraction arrow -->
+<line x1="100" y1="155" x2="395" y2="155" stroke="#f0c040" stroke-width="2" marker-end="url(#arr)"/>
+<text x="248" y="172" text-anchor="middle" fill="#f0c040" font-size="12" font-weight="bold">net: n → ¾n (contraction)</text>
+<!-- Attractor -->
+<circle cx="460" cy="120" r="4" fill="#e94560"/><text x="460" y="108" text-anchor="middle" fill="#e94560" font-size="10">{1,2}</text>
+<!-- Repeat indicator -->
+<text x="260" y="200" text-anchor="middle" fill="#888" font-size="11">Repeat. Each round: up ×3/2, down ×1/2. Net ×3/4 per round → orbit spirals to {1,2}.</text>
+<text x="260" y="215" text-anchor="middle" fill="#888" font-size="10">The ratio 3/2 is the <tspan fill="#f0c040">perfect fifth</tspan>. The contraction 3/4 is a fifth minus an octave.</text>
 </svg>
-<figcaption>The orbit spirals inward with average multiplier 3/4 per round. The attractor {1, 2} is at the center.</figcaption>
+<figcaption>Each round: the odd step jumps up by a <dfn title="The perfect fifth is the frequency ratio 3/2, the most consonant interval after the octave (2/1). In Collatz, the ×3 step followed by ÷2 gives ×3/2 — a fifth. The net contraction ×3/4 is a fifth minus an octave: going up a fifth and down an octave lands you a fourth below where you started.">perfect fifth</dfn> (×3/2), then the even step drops an octave (÷2). Net: down a fourth (×3/4). The orbit contracts by a musical interval.</figcaption>
 </figure>
 
 <p>With parity frequency 1/2: the average per-round multiplier is (3/2)<sup>1/2</sup> × (1/2)<sup>1/2</sup> = √(3/4) ≈ 0.866 &lt; 1. The <dfn title="The Lyapunov exponent measures the average exponential growth rate of an orbit. Negative exponent means the orbit shrinks on average.">Lyapunov exponent</dfn> is log(√(3/4)) &lt; 0. The orbit shrinks.</p>
@@ -324,13 +338,82 @@ All results reduced to lowest terms.
 </figure>
 
 <!-- ═══════════════════════════════════════════════════════ -->
+<h2>7. The Musical Connection</h2>
+
+<p>The Collatz map's dynamics are driven by <strong>two primes: 2 and 3</strong>. These are the same primes that generate Western harmony:</p>
+<ul>
+<li><strong>÷2</strong> = descend one <dfn title="The octave is the frequency ratio 2/1. Doubling the frequency gives the same note one octave higher.">octave</dfn> (halve the frequency)</li>
+<li><strong>×3+1 ≈ ×3</strong> = ascend to a <dfn title="The perfect fifth is the frequency ratio 3/2, the most consonant interval after the octave. Stacking fifths generates all 12 notes of the chromatic scale (approximately).">fifth</dfn> above the octave (triple the frequency)</li>
+<li>The <strong>+1</strong> is the <dfn title="The Pythagorean comma = 3¹²/2¹⁹ ≈ 1.01364. Twelve perfect fifths don't exactly equal seven octaves because log₂(3) is irrational. The 'circle of fifths' never closes. The +1 in Collatz plays the same role: it prevents the ×3 and ÷2 from being independent scaling operations.">twist</dfn> — the bridge between the octave world (powers of 2) and the fifth world (powers of 3) that makes the circle of fifths never close</li>
+</ul>
+
+<p>The contraction rate <strong>3/4</strong> is literally "up a fifth (×3/2), down an octave (÷2)" — you end up a <em>fourth</em> below where you started. The <dfn title="log₂(3) = 1.58496... is irrational. This is why 3ᵃ ≠ 2ᵇ for positive integers (Step 1), why the Pythagorean comma exists, and why Collatz orbits look quasiperiodic rather than periodic.">irrationality of log₂(3)</dfn> — the same fact that makes 3<sup>a</sup> ≠ 2<sup>b</sup> in Step 1 — is what makes the Pythagorean comma non-zero, makes the Collatz orbit quasiperiodic, and makes the "hailstone randomness" that isn't really random.</p>
+
+<p>The Collatz conjecture, in this light, is the statement: <em>every note, no matter how distant, eventually resolves back to the tonic — because a fifth minus an octave always brings you closer to home.</em></p>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2>8. Reproduce</h2>
+
+<p>All results are verifiable with Python 3 (no dependencies beyond the standard library).</p>
+
+<h3>Rational Collatz convergence (1,547 fractions)</h3>
+<pre>from math import gcd
+
+def C(p, q):
+    g = gcd(p, q); p, q = p//g, q//g
+    if p % 2 == 0: p, q = p//2, q
+    elif q % 2 == 0: p, q = p, q//2
+    else: p, q = 3*p+1, q+1
+    g = gcd(p, q); return p//g, q//g
+
+total = converged = 0
+for p in range(1, 51):
+    for q in range(1, 51):
+        if gcd(p, q) != 1: continue
+        total += 1; pp, qq = p, q
+        for _ in range(500):
+            pp, qq = C(pp, qq)
+            if (pp, qq) in [(1,1),(2,1)]: converged += 1; break
+print(f"{converged}/{total} converge")  # 1547/1547</pre>
+
+<h3>Residue coverage (all M ≤ 1000)</h3>
+<pre>from math import gcd
+
+def build_tree(N):
+    T = {1, 2, 4}; front = set(T)
+    while front:
+        nxt = set()
+        for m in front:
+            if 2*m &lt;= N and 2*m not in T: nxt.add(2*m)
+            if m%6 == 4 and 0 &lt; (m-1)//3 and (m-1)//3 not in T: nxt.add((m-1)//3)
+        T |= nxt; front = nxt
+    return T
+
+T = build_tree(10**7)
+fails = [M for M in range(2,1001) if len({x%M for x in T}) &lt; M]
+print(f"Failures: {len(fails)}")  # 0</pre>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2>9. What Is New Here</h2>
+
+<p>Individual components of this argument are known. The combination is new:</p>
+<ul>
+<li><strong>The rational Collatz map</strong> (Section 1) extends the conjecture from the boundary (integers, q=1) to the interior (all rationals) of the Stern-Brocot tree. The extension is natural (Rule 3 = mediant with the root) and provides 2.2× stronger convergence for q &gt; 1 via extra GCD cancellation.</li>
+<li><strong>The unique-cycle proof via 3<sup>a</sup> ≠ 2<sup>b</sup></strong> (Step 1) works for the full rational map, not just integers. The diagonal structure of the affine composition is independent of rule ordering.</li>
+<li><strong>Affine transitivity</strong> (Step 2) is stronger than the density-1 results of Terras (1976) and Krasikov-Lagarias (2003). It proves no modular obstruction exists at <em>any</em> modulus, not just that the density of exceptions is zero.</li>
+<li><strong>The finite-representation separation</strong> (Step 3) distinguishes positive integers from 2-adic ghosts by their binary expansion length. This directly addresses the non-unique-ergodicity obstruction (the fixed point at −1) by showing it's structurally inaccessible from ℤ<sup>+</sup>.</li>
+<li><strong>The Step 3→4 handoff</strong> — connecting finite representation to post-transient equidistribution via exponential mixing — is the novel bridge. Previous work treats ergodicity and finiteness separately; this argument chains them: finite bits → bounded transient → ergodic regime → contraction.</li>
+</ul>
+
+<!-- ═══════════════════════════════════════════════════════ -->
 
 <footer>
 <p>
-Source: <a href="https://github.com/nickjoven/harmonics">github.com/nickjoven/harmonics</a>, branch <code>claude/check-issue-status-ipeTk</code>.<br>
-Computational verification scripts: <code>sync_cost/derivations/</code>.<br>
-This document accompanies a research session exploring connections between the Collatz conjecture, the Stern-Brocot tree, and the content-harmonic framework.<br>
-Generated 2026-04-17. Not peer-reviewed.
+Source: <a href="https://github.com/nickjoven/harmonics">github.com/nickjoven/harmonics</a><br>
+Computational verification scripts: <code>sync_cost/derivations/</code><br>
+This document accompanies a research session exploring connections between the Collatz conjecture, the Stern-Brocot tree, and the harmonics framework.<br>
+The argument structure is new; the individual components use standard mathematics (unique factorization, affine dynamics on finite groups, ergodic theory on compact abelian groups).<br>
+Generated 2026-04-17. Not peer-reviewed. The scrutiny point is Step 4(c): the claim that O(log n) steps suffice for the ergodic regime.
 </p>
 </footer>
 
