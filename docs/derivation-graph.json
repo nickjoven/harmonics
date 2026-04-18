@@ -1,5 +1,5 @@
 {
-  "generated": "28b71c92ab1473252bb78cf0137943e7be43a89a",
+  "generated": "57fc3198fe36c45997783d683c6f74d9ec0cb3fe",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -769,8 +769,16 @@
         "rational_field_equation",
         "second_law_topological"
       ],
-      "depended_on_by": [],
-      "git": []
+      "depended_on_by": [
+        "hierarchy_gaussian_lattice"
+      ],
+      "git": [
+        {
+          "hash": "57fc319",
+          "date": "2026-04-18",
+          "subject": "Spatialization decomposition: A-D closed, E open"
+        }
+      ]
     },
     {
       "id": "gap2_step4_farey_laplacian",
@@ -914,6 +922,7 @@
         "sinw_fixed_point"
       ],
       "depended_on_by": [
+        "hierarchy_gaussian_lattice",
         "sinw_effective_dimension"
       ],
       "git": [
@@ -937,6 +946,7 @@
       ],
       "depended_on_by": [
         "gauge_dictionary",
+        "hierarchy_gaussian_lattice",
         "klein_connection",
         "second_law_topological"
       ],
@@ -1118,6 +1128,22 @@
           "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
         }
       ]
+    },
+    {
+      "id": "hierarchy_gaussian_lattice",
+      "path": "sync_cost/derivations/hierarchy_gaussian_lattice.md",
+      "title": "The Planck\u2013Hubble Hierarchy from Gaussian Lattice Index",
+      "summary": "The Planck/Hubble hierarchy R is derived from the framework's\nthree quantities (q\u2082 = 2, q\u2083 = 3, d = 3) with zero free parameters:",
+      "depends_on": [
+        "gap2_spatialization_decomposition",
+        "gauge_dictionary",
+        "gauge_factorization",
+        "klein_bottle_derivation",
+        "sinw_effective_dimension",
+        "three_dimensions"
+      ],
+      "depended_on_by": [],
+      "git": []
     },
     {
       "id": "higgs_from_tongue_boundary",
@@ -1309,6 +1335,7 @@
       "depended_on_by": [
         "gap2_theorem_attempt",
         "gauge_factorization",
+        "hierarchy_gaussian_lattice",
         "second_law_topological",
         "sinw_effective_dimension"
       ],
@@ -1712,6 +1739,7 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "hierarchy_gaussian_lattice",
         "sinw_fixed_point"
       ],
       "git": [
@@ -1887,6 +1915,7 @@
         "gap2_step4_farey_laplacian",
         "gap2_theorem_attempt",
         "gap_2_spatial_diffusion",
+        "hierarchy_gaussian_lattice",
         "isotropy_lemma",
         "klein_bottle_derivation",
         "sinw_effective_dimension"
