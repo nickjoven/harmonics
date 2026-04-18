@@ -1,0 +1,2097 @@
+{
+  "generated": "17d51d44d8cc531ecda96765f013f4721872eb95",
+  "nodes": [
+    {
+      "id": "CHAIN_KSTAR",
+      "path": "sync_cost/derivations/CHAIN_KSTAR.md",
+      "title": "K_STAR closed form",
+      "summary": "`K_STAR` is the matter-sector's coupling \u2014 the value that makes\nthe three sector ladders (charged leptons, up-type quarks,\ndown-type quarks) simultaneously self-consistent under the\ngeneration law `m_{g+1}/m_g = b_1^{d \u00b7 a_1}`. Its canonical\ndetermination is the joint inverse-variance fit of the three\nsectors against PDG 2024 mass ratios:",
+      "depends_on": [
+        "FRAMEWORK_TOPOLOGY",
+        "klein_bottle",
+        "mass_sector_closure"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "a9319dc",
+          "date": "2026-04-15",
+          "subject": "Claude/docs kstar klein chain (#64)"
+        }
+      ]
+    },
+    {
+      "id": "FRAMEWORK_TOPOLOGY",
+      "path": "sync_cost/derivations/FRAMEWORK_TOPOLOGY.md",
+      "title": "Framework topology",
+      "summary": "```\nA\n\u251c\u2500\u2500 depends on\n\u2502   \u2514\u2500\u2500 B\n\u2514\u2500\u2500 depends on\n    \u2514\u2500\u2500 C\n```",
+      "depends_on": [
+        "boundary_weight",
+        "farey_partition",
+        "hierarchy",
+        "higgs_from_tongue_boundary",
+        "item12_C_from_K_star",
+        "klein_bottle",
+        "lie_group_characterization",
+        "mass_sector_closure",
+        "minkowski_signature",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "CHAIN_KSTAR"
+      ],
+      "git": [
+        {
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "610a4a8",
+          "date": "2026-04-13",
+          "subject": "Topology, not chronology: FRAMEWORK_TOPOLOGY.md + CLAUDE.md update (#59)"
+        }
+      ]
+    },
+    {
+      "id": "PROOF_A_gravity",
+      "path": "sync_cost/derivations/PROOF_A_gravity.md",
+      "title": "Proof Chain A: Polynomial \u2192 General Relativity",
+      "summary": "From two physical properties of coupled oscillators \u2014 energy conservation\nand stability \u2014 the Einstein field equations follow uniquely. Each\nproposition uses only the previous ones. No proposition uses the\ncontinuum, coordinates, or any physics beyond oscillator coupling.",
+      "depends_on": [],
+      "depended_on_by": [
+        "PROOF_B_quantum",
+        "boundary_weight",
+        "conservation_computability",
+        "continuum_limits",
+        "cosmological_cycle",
+        "einstein_from_kuramoto",
+        "figure_eight",
+        "generation_mechanism",
+        "mediant_derivation",
+        "minimum_alphabet",
+        "minkowski_signature",
+        "speed_of_light",
+        "stribeck_vortex",
+        "three_dimensions"
+      ],
+      "git": [
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "PROOF_B_quantum",
+      "path": "sync_cost/derivations/PROOF_B_quantum.md",
+      "title": "Proof Chain B: Polynomial \u2192 Quantum Mechanics",
+      "summary": "From the same two physical properties \u2014 energy conservation and\nstability \u2014 the Schr\u00f6dinger equation and the Born rule follow uniquely\nat subcritical coupling. The first five propositions are shared with\nProof Chain A. The paths diverge at the coupling parameter K.",
+      "depends_on": [
+        "PROOF_A_gravity"
+      ],
+      "depended_on_by": [
+        "born_rule",
+        "boundary_weight",
+        "conservation_computability",
+        "continuum_limits",
+        "cosmological_cycle",
+        "figure_eight",
+        "generation_mechanism",
+        "mediant_derivation",
+        "minimum_alphabet",
+        "minkowski_signature",
+        "speed_of_light",
+        "stribeck_vortex",
+        "three_dimensions"
+      ],
+      "git": [
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "a0_threshold",
+      "path": "sync_cost/derivations/a0_threshold.md",
+      "title": "a\u2080 from Synchronization Cost Threshold",
+      "summary": "The MOND acceleration scale a\u2080 \u2248 1.2 \u00d7 10\u207b\u00b9\u2070 m/s\u00b2 is the point where\nlocal gravitational synchronization cost equals the cosmological mean\nfield maintenance cost. This gives a mechanistic derivation of the\ndimensional relation a\u2080 = cH\u2080/2\u03c0 already established in proslambenomenos (a companion repository deriving cosmological dimensional relations from the Hubble frequency),\nand connects it to the Stribeck lattice bifurcation threshold.",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "a1_from_saddle_node",
+      "path": "sync_cost/derivations/a1_from_saddle_node.md",
+      "title": "`a_1 = 1 / \u221aw`: the lepton identity as stick-slip",
+      "summary": "The lepton-sector generation exponent equals the saddle-node\nrelaxation time at the Arnold tongue of its primary base rational,\nevaluated at the self-consistent coupling `K*`:",
+      "depends_on": [
+        "born_rule",
+        "item12_C_from_K_star",
+        "item12_cross_sector_ratios",
+        "seismic_eigenstate_dictionary",
+        "stribeck_vortex"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "address_and_quantity",
+      "path": "sync_cost/derivations/address_and_quantity.md",
+      "title": "Address and Quantity",
+      "summary": "A ratio has two components. The numerator counts displacement.\nThe denominator counts period. One says how far; the other says\nhow long. These are not the same kind of information.",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "adm_dictionary",
+      "path": "sync_cost/derivations/adm_dictionary.md",
+      "title": "The ADM Dictionary",
+      "summary": "The mapping from Kuramoto variables to ADM variables is the unique\nidentification consistent with the symmetries of the locked-state\nKuramoto system at K=1. Each entry is forced by a uniqueness argument.",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "cc11b2e",
+          "date": "2026-04-07",
+          "subject": "Strip changelog prose from D41-47 and walkthrough"
+        },
+        {
+          "hash": "79c20d4",
+          "date": "2026-04-07",
+          "subject": "Prune changelog prose from D41-D47 and walkthrough"
+        },
+        {
+          "hash": "bab48f4",
+          "date": "2026-04-07",
+          "subject": "D46-47: ADM dictionary derived, baryon fraction \u03a9_b = 1/19"
+        }
+      ]
+    },
+    {
+      "id": "baryon_fraction",
+      "path": "sync_cost/derivations/baryon_fraction.md",
+      "title": "The Baryon Fraction",
+      "summary": "The cosmic energy budget partitions into three sectors from the\nsingle number 19 (the Klein bottle's total budget from D25):",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "bab48f4",
+          "date": "2026-04-07",
+          "subject": "D46-47: ADM dictionary derived, baryon fraction \u03a9_b = 1/19"
+        }
+      ]
+    },
+    {
+      "id": "born_rule",
+      "path": "sync_cost/derivations/born_rule.md",
+      "title": "Born Rule from Basin Measure",
+      "summary": "The Born rule (P = |\u03c8|\u00b2) is the basin measure of the synchronization\ncost landscape under dissipative convergence. It is not axiomatic \u2014 it\nis the generic outcome of dissipative dynamics on a cost landscape with\nquadratic structure near attractors.",
+      "depends_on": [
+        "PROOF_B_quantum"
+      ],
+      "depended_on_by": [
+        "a1_from_saddle_node",
+        "seismic_eigenstate_dictionary",
+        "stribeck_vortex"
+      ],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "boundary_weight",
+      "path": "sync_cost/derivations/boundary_weight.md",
+      "title": "The Boundary Weight",
+      "summary": "The n=5 vs n=6 question dissolves. The Farey depth is not an\ninteger. The boundary modes (q=6) are partially locked at a\nfractional weight w* determined by self-consistency. The dark\nenergy fraction Omega_Lambda is a continuous, monotone function\nof this weight, and the observed value uniquely determines w*.",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum"
+      ],
+      "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY",
+        "item12_C_from_K_star"
+      ],
+      "git": [
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "conservation_computability",
+      "path": "sync_cost/derivations/conservation_computability.md",
+      "title": "Conservation as Computability",
+      "summary": "Conservation of energy and matter is the compactness of S^1.\nCompactness is computability. The chain is deductive:",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum"
+      ],
+      "depended_on_by": [
+        "rationality_descent"
+      ],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "continuum_limits",
+      "path": "sync_cost/derivations/continuum_limits.md",
+      "title": "The Two Continuum Limits",
+      "summary": "The rational field equation (Derivation 11) reproduces known physics\nin two limits:",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum"
+      ],
+      "depended_on_by": [
+        "gap1_theorem",
+        "gap2_step4_farey_laplacian",
+        "gap2_theorem_attempt",
+        "gap_1_christoffel",
+        "gap_2_spatial_diffusion"
+      ],
+      "git": [
+        {
+          "hash": "f11fb70",
+          "date": "2026-04-08",
+          "subject": "Verify single \u03c3\u00b2=1/4 produces all ADM prefactors (16\u03c0G and 8\u03c0G)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "cosmological_cycle",
+      "path": "sync_cost/derivations/cosmological_cycle.md",
+      "title": "The Cosmological Cycle",
+      "summary": "The universe does not end. It passes the baton. The stick-slip\nboundary between locked modes (our physics) and the gap (the twin)\nsweeps through the frequency axis as K evolves. The roles reverse.\nThe Klein bottle's half-twist means each handoff swaps the\norientation. The cycle has period 2 (two half-twists = full twist\n= return to original).",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "coupling_scales",
+      "path": "sync_cost/derivations/coupling_scales.md",
+      "title": "The Coupling Scales and the Bare Diffusion Constant",
+      "summary": "**Derived (partial).** D_0 = 1/2 is determined by the tree geometry.\nAll dimensionless ratios are determined. The absolute coupling scales\nreduce to one dimensionful input (the root oscillator frequency),\nwhich no mathematical framework can produce.",
+      "depends_on": [],
+      "depended_on_by": [
+        "gap2_analytic_proof"
+      ],
+      "git": [
+        {
+          "hash": "79c20d4",
+          "date": "2026-04-07",
+          "subject": "Prune changelog prose from D41-D47 and walkthrough"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "4e5c009",
+          "date": "2026-04-07",
+          "subject": "Update D44, D45: reference D33 duty cycle results \u2014 gap is narrower"
+        },
+        {
+          "hash": "cf6da52",
+          "date": "2026-04-07",
+          "subject": "Derivations 43-45: GNN relation, Higgs mechanism, coupling scales"
+        }
+      ]
+    },
+    {
+      "id": "denomination_boundary",
+      "path": "sync_cost/derivations/denomination_boundary.md",
+      "title": "The Denomination Boundary",
+      "summary": "The three open questions from FRAMEWORK.md \u2014",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "discrete_gauge",
+      "path": "sync_cost/derivations/discrete_gauge.md",
+      "title": "The Two Open Paths",
+      "summary": "**Proposed.** Five computations specified. Three are immediate\n(anomaly, depth sweep, Jacobian). All have binary outcomes with\nclear interpretations. The conjectural status of D19's particle\nphysics identification resolves or falls based on these results.",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "discrete_gauge_resolution",
+      "path": "sync_cost/derivations/discrete_gauge_resolution.md",
+      "title": "The Discrete Gauge Resolution",
+      "summary": "**Resolved (partial).** The five D21 computations are complete.\nPath 2 (gauge from mean-field F) is closed \u2014 the self-consistency\nfunctional cannot carry gauge degrees of freedom. Path 1 (discrete\nis physical) is partially confirmed: the topology determines charges,\ncenter, and confinement, but not the gauge dynamics.",
+      "depends_on": [],
+      "depended_on_by": [
+        "klein_connection"
+      ],
+      "git": [
+        {
+          "hash": "79c20d4",
+          "date": "2026-04-07",
+          "subject": "Prune changelog prose from D41-D47 and walkthrough"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "9cebe1a",
+          "date": "2026-04-07",
+          "subject": "Derivation 42: Yang-Mills uniqueness from Klein bottle (gauge-sector Lovelock)"
+        },
+        {
+          "hash": "ff199a0",
+          "date": "2026-04-07",
+          "subject": "Derivation 41: resolve XOR continuum limit \u2014 gauge structure is discrete"
+        }
+      ]
+    },
+    {
+      "id": "duty_cycle_dictionary",
+      "path": "sync_cost/derivations/duty_cycle_dictionary.md",
+      "title": "The Duty Cycle Dictionary",
+      "summary": "The gauge coupling constants of the Standard Model are the gate duty\ncycles of the Stern-Brocot tree at critical coupling. The coupling of\neach sector is the duty cycle of its *partner* sector. All ratios,\nmixing angles, and the Higgs mass follow from integer arithmetic on the\ndenominators q = 2 and q = 3. The residuals (1-3%) are the decoherence\ntax: the fraction of gate availability consumed by unlocked modes at\nK < 1.",
+      "depends_on": [
+        "duty_dimension_proof",
+        "klein_bottle",
+        "speed_of_light",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "sinw_effective_dimension"
+      ],
+      "git": [
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "duty_dimension_proof",
+      "path": "sync_cost/derivations/duty_dimension_proof.md",
+      "title": "Proof: The Duty Cycle Exponent Equals the Group Dimension",
+      "summary": "For the standard circle map with SL(2,Z) Farey structure, the duty\ncycle of the mode-locked tongue at p/q scales as",
+      "depends_on": [],
+      "depended_on_by": [
+        "duty_cycle_dictionary"
+      ],
+      "git": [
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "einstein_from_kuramoto",
+      "path": "sync_cost/derivations/einstein_from_kuramoto.md",
+      "title": "Einstein Field Equations from the Rational Field Equation",
+      "summary": "The self-consistency equation N(p/q) = N_total \u00d7 g(p/q) \u00d7 w(p/q, K\u2080F[N])\non the Stern-Brocot tree, at critical coupling K = 1 in the continuum\nlimit, produces the Einstein field equations as its unique output:",
+      "depends_on": [
+        "PROOF_A_gravity"
+      ],
+      "depended_on_by": [
+        "gap1_analytic_proof",
+        "gap1_theorem",
+        "gap_1_christoffel",
+        "gauge_dictionary",
+        "klein_connection",
+        "three_dimensions"
+      ],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "engineering_targets",
+      "path": "sync_cost/derivations/engineering_targets.md",
+      "title": "Engineering Targets",
+      "summary": "**Proposed.** All four targets are specified in terms of established\nresults (D18-D19 simulations). None depend on the conjectural particle\nphysics identification. The N=3 M\u00f6bius ring is immediately buildable.",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "exponent",
+      "path": "sync_cost/derivations/exponent.md",
+      "title": "Why the Exponent Is q\u2082q\u2083\u00b3",
+      "summary": "**Derived**: the exponent q\u2082q\u2083^d = 54 follows from three established\nresults:\n1. The Klein bottle assigns q\u2083 to spatial, q\u2082 to temporal (D19)\n2. The spatial direction maps to d = 3 independent dimensions (D23)\n3. Independent dimensions multiply their resolutions (standard\n   mode counting)",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "farey_partition",
+      "path": "sync_cost/derivations/farey_partition.md",
+      "title": "The Farey Partition",
+      "summary": "**Computed**:\n- \u03a9_\u039b = 13/19 = 0.6842 vs observed 0.6847 \u00b1 0.0073 (0.07\u03c3)\n- The operator is the Farey count at the interaction scale q\u2082q\u2083 = 6\n- All inputs are from the Klein bottle topology",
+      "depends_on": [],
+      "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY",
+        "vacuum_energy"
+      ],
+      "git": [
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "farey_proof",
+      "path": "sync_cost/derivations/farey_proof.md",
+      "title": "Why the Farey Partition",
+      "summary": "**Theorem proved** conditional on D10's axiom that the mediant is\nprimitive. The proof has four steps, each referencing an established\nresult. The uniqueness follows from the mediant being the only\ncombining operation in the framework's alphabet that produces a\nnontrivial partition.",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "fidelity_bound",
+      "path": "sync_cost/derivations/fidelity_bound.md",
+      "title": "The Self-Referential Fidelity Bound",
+      "summary": "The MOND transition and wavefunction collapse are instances of the\nsame structure: a system measuring which attractor it belongs to,\nusing dynamics constituted by the same process being measured. The\nfidelity of this self-measurement is bounded, and the bound determines:",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "figure_eight",
+      "path": "sync_cost/derivations/figure_eight.md",
+      "title": "The Figure-Eight Topology",
+      "summary": "The Klein bottle's self-intersection in 3D embedding is a figure-8\n(lemniscate). Two loops sharing one crossing point. This is the\nphysical topology of the four Klein bottle modes (D19).",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "fourth_generation_revisited",
+      "path": "sync_cost/derivations/fourth_generation_revisited.md",
+      "title": "Fourth Generation Revisited Under the Integer Conservation Law",
+      "summary": "| Question | Old answer | New answer |\n|----------|-----------|-----------|\n| Is there a 4th lepton? | \"Below 7.3 GeV, predicted absent\" | **Forbidden at any mass** |\n| Where would it sit? | Backbone mode 13/8, depth 5 | Integer law forces depth 3, no slot left |\n| What rule is operative? | Exponent law a\u2083 = (3/2)a\u2082 | depth \u00d7 \\|3Q\\| = 9 |\n| Can LHC/future colliders falsify? | Yes, if found below ~45 GeV | Yes, if found at **any** mass |\n| Does the mass prediction still apply? | ~7.3 GeV | N/A; t",
+      "depends_on": [
+        "gell_mann_nishijima",
+        "generation_mechanism",
+        "mass_sector_closure"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "gap1_analytic_proof",
+      "path": "sync_cost/derivations/gap1_analytic_proof.md",
+      "title": "Analytic Proof: Levi-Civita from Kuramoto at K=1",
+      "summary": "In the continuum limit (N \u2192 \u221e) of the globally coupled Kuramoto model at K=1, the effective connection \u0393\u0303 defined by the ensemble averages in the ADM evolution equation equals the Levi-Civita connection \u0393 of the coherence metric \u03b3_ij. The correction at finite N is O(N^{-1/2}).",
+      "depends_on": [
+        "einstein_from_kuramoto"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "028c355",
+          "date": "2026-04-14",
+          "subject": "Claude/cross parabola audit (#63)"
+        },
+        {
+          "hash": "d185308",
+          "date": "2026-04-08",
+          "subject": "Document three open gaps in Kuramoto-to-gravity derivation (#57)"
+        }
+      ]
+    },
+    {
+      "id": "gap1_theorem",
+      "path": "sync_cost/derivations/gap1_theorem.md",
+      "title": "Gap 1 Theorem: Christoffel Connection from Kuramoto in the Continuum Limit",
+      "summary": "**Proved, conditionally.** Lifts the numerical results of\n`gap1_step1_tautology.py`, `gap1_step2_kuramoto.py`, and\n`gap1_step3_factorization.py` to a theorem about the continuum limit.\nThe theorem is conditional on the Kuramoto locked state lying in the\nsupercritical regime where the Strogatz\u2013Mirollo 1991 central limit\ntheorem applies; at criticality (K = K_c exactly), critical slowing\ninvalidates the fluctuation expansion and the argument does not carry\nthrough unchanged.",
+      "depends_on": [
+        "continuum_limits",
+        "einstein_from_kuramoto",
+        "gap_1_christoffel",
+        "rational_field_equation"
+      ],
+      "depended_on_by": [
+        "gap_1_christoffel"
+      ],
+      "git": [
+        {
+          "hash": "fc1e525",
+          "date": "2026-04-18",
+          "subject": "Gap 1 theorem: continuum-limit closure, conditional on CLT regime"
+        }
+      ]
+    },
+    {
+      "id": "gap2_analytic_proof",
+      "path": "sync_cost/derivations/gap2_analytic_proof.md",
+      "title": "Analytic Proof: Farey Graph Laplacian \u2192 Laplace-Beltrami",
+      "summary": "The tongue-width-weighted graph Laplacian on the Farey graph at depth d converges to the Laplace-Beltrami operator on the hyperbolic plane H\u00b2 as d \u2192 \u221e (equivalently, K \u2192 1). The effective diffusion constant is D\u2080 = 1/2, giving D_eff = D\u2080/(1 - \u03c6\u207b\u2074) = (5 + 3\u221a5)/20.",
+      "depends_on": [
+        "coupling_scales"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "028c355",
+          "date": "2026-04-14",
+          "subject": "Claude/cross parabola audit (#63)"
+        },
+        {
+          "hash": "d185308",
+          "date": "2026-04-08",
+          "subject": "Document three open gaps in Kuramoto-to-gravity derivation (#57)"
+        }
+      ]
+    },
+    {
+      "id": "gap2_spatialization_decomposition",
+      "path": "sync_cost/derivations/gap2_spatialization_decomposition.md",
+      "title": "Gap 2 Break 1: Spatialization Decomposition and Status",
+      "summary": "| | Sub-problem | Status | Result |\n|---|---|---|---|\n| A | RFE forces Q \u2192 R completion | **Closed** | Phase sum in the self-consistency equation produces irrational |r| from rational inputs. The field exists because the equation demands it. (`rfe_irrational_fixed_points.py`) |\n| B | Mori\u2013Zwanzig coarse-graining | **Closed** (Markovian level) | Standard projection with inputs from C (decorrelation rate) and D (continuum manifold). Markovian limit valid for \u03c4_coarse \u226b 1/\u03bb_unlock. |\n| C | Lyapunov",
+      "depends_on": [
+        "gap2_step4_farey_laplacian",
+        "gap2_theorem_attempt",
+        "gap_2_spatial_diffusion",
+        "rational_field_equation",
+        "second_law_topological"
+      ],
+      "depended_on_by": [
+        "hierarchy_gaussian_lattice"
+      ],
+      "git": [
+        {
+          "hash": "57fc319",
+          "date": "2026-04-18",
+          "subject": "Spatialization decomposition: A-D closed, E open"
+        }
+      ]
+    },
+    {
+      "id": "gap2_step4_farey_laplacian",
+      "path": "sync_cost/derivations/gap2_step4_farey_laplacian.md",
+      "title": "Gap 2, Step 4: The Stern-Brocot Tree IS the Spatial Lattice",
+      "summary": "**Verified.** The spatial diffusion term D\u00b7\u2207\u00b2\u03b8 is not added by hand.\nThe Stern-Brocot tree tessellates H\u00b2 = SL(2,\u211d)/SO(2) via Ford circles\n(tangency exact to machine precision). Spatial coupling IS the tree's\nnearest-neighbor structure.",
+      "depends_on": [
+        "continuum_limits",
+        "gap2_theorem_attempt",
+        "gap_2_spatial_diffusion",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "gap2_spatialization_decomposition",
+        "gap2_theorem_attempt",
+        "gap_2_spatial_diffusion"
+      ],
+      "git": [
+        {
+          "hash": "826574d",
+          "date": "2026-04-18",
+          "subject": "Clean derivation docs: remove inline history, state current truth"
+        },
+        {
+          "hash": "c0b93ee",
+          "date": "2026-04-18",
+          "subject": "Gap 2 Step 4: Stern-Brocot tree IS the spatial lattice"
+        }
+      ]
+    },
+    {
+      "id": "gap2_theorem_attempt",
+      "path": "sync_cost/derivations/gap2_theorem_attempt.md",
+      "title": "Gap 2 Attempted Closure: Spatial Diffusion from Non-Orientability",
+      "summary": "**Break 1 (spatialization): topological route.** The diffusion term\nD\u00b7\u2207\u00b2\u03b8 is forced by the Klein bottle's non-orientability via the\nsame chain that gives the second law (`second_law_topological.md`).",
+      "depends_on": [
+        "continuum_limits",
+        "gap2_step4_farey_laplacian",
+        "gap_2_spatial_diffusion",
+        "half_twist_dynamics",
+        "klein_bottle_derivation",
+        "second_law_topological",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "gap2_spatialization_decomposition",
+        "gap2_step4_farey_laplacian",
+        "gap_2_spatial_diffusion"
+      ],
+      "git": [
+        {
+          "hash": "826574d",
+          "date": "2026-04-18",
+          "subject": "Clean derivation docs: remove inline history, state current truth"
+        },
+        {
+          "hash": "1b9cd9e",
+          "date": "2026-04-18",
+          "subject": "Gap 2 Break 1 attempted closure: diffusion from non-orientability"
+        }
+      ]
+    },
+    {
+      "id": "gap_1_christoffel",
+      "path": "sync_cost/derivations/gap_1_christoffel.md",
+      "title": "Gap 1: The Christoffel Connection from Kuramoto Ensemble Averages",
+      "summary": "**Closed in the continuum limit**, conditionally. See\n`gap1_theorem.md` for the theorem statement and proof combining the\nStep 1\u20133 numerical results with Strogatz\u2013Mirollo 1991 (CLT for the\nKuramoto locked state) and the fundamental theorem of Riemannian\ngeometry. Result:",
+      "depends_on": [
+        "continuum_limits",
+        "einstein_from_kuramoto",
+        "gap1_theorem",
+        "rational_field_equation"
+      ],
+      "depended_on_by": [
+        "gap1_theorem"
+      ],
+      "git": [
+        {
+          "hash": "826574d",
+          "date": "2026-04-18",
+          "subject": "Clean derivation docs: remove inline history, state current truth"
+        },
+        {
+          "hash": "fc1e525",
+          "date": "2026-04-18",
+          "subject": "Gap 1 theorem: continuum-limit closure, conditional on CLT regime"
+        },
+        {
+          "hash": "d185308",
+          "date": "2026-04-08",
+          "subject": "Document three open gaps in Kuramoto-to-gravity derivation (#57)"
+        }
+      ]
+    },
+    {
+      "id": "gap_2_spatial_diffusion",
+      "path": "sync_cost/derivations/gap_2_spatial_diffusion.md",
+      "title": "Gap 2: Spatial Diffusion and the Bare Coupling D\u2080",
+      "summary": "**Break 1 addressed; Break 2 remains open.**",
+      "depends_on": [
+        "continuum_limits",
+        "gap2_step4_farey_laplacian",
+        "gap2_theorem_attempt",
+        "minimum_alphabet",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "gap2_spatialization_decomposition",
+        "gap2_step4_farey_laplacian",
+        "gap2_theorem_attempt"
+      ],
+      "git": [
+        {
+          "hash": "826574d",
+          "date": "2026-04-18",
+          "subject": "Clean derivation docs: remove inline history, state current truth"
+        },
+        {
+          "hash": "1b9cd9e",
+          "date": "2026-04-18",
+          "subject": "Gap 2 Break 1 attempted closure: diffusion from non-orientability"
+        },
+        {
+          "hash": "d185308",
+          "date": "2026-04-08",
+          "subject": "Document three open gaps in Kuramoto-to-gravity derivation (#57)"
+        }
+      ]
+    },
+    {
+      "id": "gauge_dictionary",
+      "path": "sync_cost/derivations/gauge_dictionary.md",
+      "title": "Gauge-Sector Dictionary Promotion",
+      "summary": "The three identifications isolated in `klein_connection.md` for the\nKlein-bottle gauge structure \u2014 `Z\u2082 \u21aa U(1)`, `Z\u2083 \u21aa Z(SU(3))`, and\n12 mode transitions \u2194 12 gauge generators \u2014 reduce to a single\nirreducible dictionary entry under the same promotion moves that\n`operator_to_curvature.py` applies to the gravity chain. Two of the\nthree are demoted from IDENTIFIED to DEFINITION or FORCED; the third\nfactors, with one factor FORCED and the other merging with the\nremaining identification.",
+      "depends_on": [
+        "einstein_from_kuramoto",
+        "gauge_factorization",
+        "gauge_sector_lovelock",
+        "klein_bottle",
+        "klein_connection",
+        "sinw_fixed_point"
+      ],
+      "depended_on_by": [
+        "hierarchy_gaussian_lattice",
+        "sinw_effective_dimension",
+        "three_formalizations"
+      ],
+      "git": [
+        {
+          "hash": "977a737",
+          "date": "2026-04-16",
+          "subject": "Gauge-sector dictionary promotion: 3 identifications \u2192 1 irreducible"
+        }
+      ]
+    },
+    {
+      "id": "gauge_factorization",
+      "path": "sync_cost/derivations/gauge_factorization.md",
+      "title": "Direct-Product Structure of the Gauge Algebra from Klein Bottle Topology",
+      "summary": "Let P \u2192 K\u00b2 be a principal G-bundle whose structure group G has a\nLie algebra g that acts on mode fibers compatibly with the Klein\nbottle's topological coordinate decomposition. Then g admits a\ndirect-sum decomposition",
+      "depends_on": [
+        "gauge_sector_lovelock",
+        "klein_bottle",
+        "klein_bottle_derivation",
+        "xor_derivation"
+      ],
+      "depended_on_by": [
+        "gauge_dictionary",
+        "hierarchy_gaussian_lattice",
+        "klein_connection",
+        "second_law_topological"
+      ],
+      "git": [
+        {
+          "hash": "e8a3450",
+          "date": "2026-04-16",
+          "subject": "Derive direct-product gauge algebra from Klein bottle topology"
+        }
+      ]
+    },
+    {
+      "id": "gauge_sector_lovelock",
+      "path": "sync_cost/derivations/gauge_sector_lovelock.md",
+      "title": "Yang-Mills from the Klein Bottle (Gauge-Sector Lovelock)",
+      "summary": "The Klein bottle's kinematic constraints \u2014 structure group center,\nspacetime dimension, signature, and confinement pattern \u2014 together\nwith the requirement of second-order gauge-invariant dynamics,\nuniquely produce the Yang-Mills equations:",
+      "depends_on": [
+        "sinw_fixed_point"
+      ],
+      "depended_on_by": [
+        "gauge_dictionary",
+        "gauge_factorization",
+        "klein_connection",
+        "mass_sector_closure",
+        "sinw_effective_dimension"
+      ],
+      "git": [
+        {
+          "hash": "e8a3450",
+          "date": "2026-04-16",
+          "subject": "Derive direct-product gauge algebra from Klein bottle topology"
+        },
+        {
+          "hash": "4d024a9",
+          "date": "2026-04-16",
+          "subject": "Formalize Tier 1 Gap 3: gauge center promotion and bundle construction"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        },
+        {
+          "hash": "79c20d4",
+          "date": "2026-04-07",
+          "subject": "Prune changelog prose from D41-D47 and walkthrough"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "24695ee",
+          "date": "2026-04-07",
+          "subject": "Update scorecards: 19 predictions, gauge sector resolved"
+        },
+        {
+          "hash": "9cebe1a",
+          "date": "2026-04-07",
+          "subject": "Derivation 42: Yang-Mills uniqueness from Klein bottle (gauge-sector Lovelock)"
+        }
+      ]
+    },
+    {
+      "id": "gell_mann_nishijima",
+      "path": "sync_cost/derivations/gell_mann_nishijima.md",
+      "title": "The Gell-Mann-Nishijima Relation from Klein Bottle Geometry",
+      "summary": "The relation Q = T_3 + Y/2 between electric charge Q, weak isospin\nT_3, and hypercharge Y is not a postulate. It is the charge\ncomposition law at the Klein bottle's identification boundary, where\nthe antiperiodic (twisted) and periodic (untwisted) directions meet.",
+      "depends_on": [],
+      "depended_on_by": [
+        "fourth_generation_revisited",
+        "mass_sector_closure",
+        "sector_constants_structure"
+      ],
+      "git": [
+        {
+          "hash": "cc11b2e",
+          "date": "2026-04-07",
+          "subject": "Strip changelog prose from D41-47 and walkthrough"
+        },
+        {
+          "hash": "79c20d4",
+          "date": "2026-04-07",
+          "subject": "Prune changelog prose from D41-D47 and walkthrough"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "cf6da52",
+          "date": "2026-04-07",
+          "subject": "Derivations 43-45: GNN relation, Higgs mechanism, coupling scales"
+        }
+      ]
+    },
+    {
+      "id": "generation_mechanism",
+      "path": "sync_cost/derivations/generation_mechanism.md",
+      "title": "The Generation Mechanism",
+      "summary": "Three generations of fermions are not free parameters. They are the\nthree observable phase states of the {locked, unlocked}\u00b2 classification,\neach realized as a topologically distinct chain type in the Stern-Brocot\ntree. The mass hierarchy, sector exponents, mixing angles, and the\nabsence of a fourth generation all follow from the same structure.",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum"
+      ],
+      "depended_on_by": [
+        "fourth_generation_revisited"
+      ],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "half_mobius_boundary",
+      "path": "sync_cost/derivations/half_mobius_boundary.md",
+      "title": "The Half-Mobius Boundary Condition (Z4)",
+      "summary": "The Mobius boundary condition (Derivation 18) imposes a Z2 twist:\nafter one traversal, the phase shifts by pi. The half-Mobius boundary\ncondition generalizes this to Z4: after one traversal, the phase\nshifts by pi/2. The wavefunction requires four full circuits to\nreturn to its starting phase.",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "fa83443",
+          "date": "2026-04-01",
+          "subject": "Add half-Mobius (Z4) boundary condition \u2014 Derivation 39 (#50)"
+        }
+      ]
+    },
+    {
+      "id": "half_twist_dynamics",
+      "path": "sync_cost/derivations/half_twist_dynamics.md",
+      "title": "The Half-Twist as a Dynamical Object",
+      "summary": "**Exploratory.** The twist-as-frustrated-tension picture is physically\nclear. The conjugacy with diffusion (\u03c9 \u00d7 \u03c3\u00b2 = const) connects the\ntwist to the quantum sector through the same \u03c6\u2074 scaling. The\ncosmological constant as regulated twist zero-point energy is\nstructurally correct (\u039b \u221d \u03a9_\u039b \u00d7 H\u2080\u00b2) but needs the full field\nequation calculation to produce the exact coefficient.",
+      "depends_on": [],
+      "depended_on_by": [
+        "gap2_theorem_attempt"
+      ],
+      "git": [
+        {
+          "hash": "d185308",
+          "date": "2026-04-08",
+          "subject": "Document three open gaps in Kuramoto-to-gravity derivation (#57)"
+        }
+      ]
+    },
+    {
+      "id": "hierarchy",
+      "path": "sync_cost/derivations/hierarchy.md",
+      "title": "The Hierarchy",
+      "summary": "**Computed**: R = 6 \u00d7 13\u2075\u2074 matches observation to 0.48%. The\ncosmological constant \u039bl_P\u00b2 = 13\u207b\u00b9\u2070\u2078/12 matches to 0.1% in the\nexponent. Combined with \u03a9_\u039b = 13/19 (D25), the entire cosmological\nparameter set is determined.",
+      "depends_on": [],
+      "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY"
+      ],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "hierarchy_gaussian_lattice",
+      "path": "sync_cost/derivations/hierarchy_gaussian_lattice.md",
+      "title": "The Planck\u2013Hubble Hierarchy from Gaussian Lattice Index",
+      "summary": "The Planck/Hubble hierarchy R is derived from the framework's\nthree quantities (q\u2082 = 2, q\u2083 = 3, d = 3) with zero free parameters:",
+      "depends_on": [
+        "gap2_spatialization_decomposition",
+        "gauge_dictionary",
+        "gauge_factorization",
+        "klein_bottle_derivation",
+        "sinw_effective_dimension",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "three_formalizations"
+      ],
+      "git": [
+        {
+          "hash": "17d51d4",
+          "date": "2026-04-18",
+          "subject": "Derive the Planck/Hubble hierarchy: R = 6 \u00d7 13^54, zero inputs"
+        }
+      ]
+    },
+    {
+      "id": "higgs_from_tongue_boundary",
+      "path": "sync_cost/derivations/higgs_from_tongue_boundary.md",
+      "title": "Electroweak Symmetry Breaking from the Tongue Boundary",
+      "summary": "The Higgs mechanism \u2014 the spontaneous breaking of SU(2) x U(1)_Y\nto U(1)_em \u2014 is the tongue boundary dynamics of the Klein bottle's\nopen q=2 fiber. The scalar doublet, the quartic potential, the\ntachyonic mass, and the vacuum expectation value all have geometric\norigins in the circle map's saddle-node bifurcation.",
+      "depends_on": [],
+      "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY"
+      ],
+      "git": [
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        },
+        {
+          "hash": "79c20d4",
+          "date": "2026-04-07",
+          "subject": "Prune changelog prose from D41-D47 and walkthrough"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "4e5c009",
+          "date": "2026-04-07",
+          "subject": "Update D44, D45: reference D33 duty cycle results \u2014 gap is narrower"
+        },
+        {
+          "hash": "cf6da52",
+          "date": "2026-04-07",
+          "subject": "Derivations 43-45: GNN relation, Higgs mechanism, coupling scales"
+        }
+      ]
+    },
+    {
+      "id": "higgs_reframing",
+      "path": "sync_cost/derivations/higgs_reframing.md",
+      "title": "The Higgs' Role in the Framework: A Reframing",
+      "summary": "**Reframing.** The substance of the framework's Higgs predictions\n(`m_H = v / q_2`, `\u03bb = 1/q_2^3`) is retained. The narrative role\nof the Higgs is changed from \"the particle that gives mass\" to\n\"one locked mode at a specific Stern-Brocot position.\" The\nderivations that previously used Higgs-centric language should be\nupdated to use locked-mode language.",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "high_z_mond",
+      "path": "sync_cost/derivations/high_z_mond.md",
+      "title": "High-Redshift Test of a\u2080(z) = cH(z)/(2\u03c0)",
+      "summary": "**Prediction**: Concrete, parameter-free, and falsifiable.  a\u2080(z) is fully\ndetermined by H\u2080, \u03a9_m, and \u03a9_\u039b \u2014 all independently measured.",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "isotropy_lemma",
+      "path": "sync_cost/derivations/isotropy_lemma.md",
+      "title": "Isotropy Lemma: Trivial Stabilizer in the Kuramoto Model at K=1",
+      "summary": "Formally: let $G = \\mathrm{SL}(2,\\mathbb{R})$ act on the spatial\nmanifold $\\mathcal{M} = G/H$ by left multiplication. Then $H = \\{e\\}$,\nso $\\mathcal{M} = G$ and $d = \\dim \\mathcal{M} = \\dim G = 3$.",
+      "depends_on": [
+        "lie_group_characterization",
+        "planck_scale",
+        "three_dimensions"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "item12_C_from_K_star",
+      "path": "sync_cost/derivations/item12_C_from_K_star.md",
+      "title": "Item 12: `C = q_2\u00b2 / K*\u00b2` from the tongue-width identity",
+      "summary": "The last remaining mass-sector constant, `C = a_1(leptons)\u00b2`, admits\na closed-form reading in terms of the framework's self-consistent\ncoupling `K*` and the Klein-bottle integer `q_2 = 2`:",
+      "depends_on": [
+        "boundary_weight",
+        "item12_cross_sector_ratios"
+      ],
+      "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY",
+        "a1_from_saddle_node",
+        "rationality_descent"
+      ],
+      "git": [
+        {
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "item12_cross_sector_ratios",
+      "path": "sync_cost/derivations/item12_cross_sector_ratios.md",
+      "title": "Item 12: cross-sector `a_1\u00b2` ratios",
+      "summary": "The three per-sector continuous exponents `a_1(leptons)`,\n`a_1(up)`, `a_1(down)` in the generation exponent law satisfy",
+      "depends_on": [],
+      "depended_on_by": [
+        "a1_from_saddle_node",
+        "item12_C_from_K_star"
+      ],
+      "git": [
+        {
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "klein_bottle",
+      "path": "sync_cost/derivations/klein_bottle.md",
+      "title": "The Klein Bottle",
+      "summary": "The M\u00f6bius strip (Derivation 18) has one boundary. Excitations reflect\noff that boundary, which is why the container works \u2014 but the boundary\nis a degree of freedom the geometry doesn't determine. The Klein bottle\nis the compact, non-orientable surface with **no boundary**. Nothing\nenters, nothing exits, nothing reflects \u2014 everything circulates. It is\nthe fully closed variant of the M\u00f6bius container.",
+      "depends_on": [],
+      "depended_on_by": [
+        "CHAIN_KSTAR",
+        "FRAMEWORK_TOPOLOGY",
+        "duty_cycle_dictionary",
+        "gauge_dictionary",
+        "gauge_factorization",
+        "klein_connection",
+        "second_law_topological",
+        "vacuum_energy"
+      ],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "klein_bottle_derivation",
+      "path": "sync_cost/derivations/klein_bottle_derivation.md",
+      "title": "The Klein Bottle from Self-Consistency",
+      "summary": "The Klein bottle is not assumed. It is the unique compact surface\ncompatible with the four primitives, the phase-state structure, and\nthe arrow of time. The torus and real projective plane are both\nexcluded by self-consistency arguments.",
+      "depends_on": [
+        "minimum_alphabet",
+        "minkowski_signature",
+        "rank1_temporal_causation",
+        "three_dimensions",
+        "xor_derivation"
+      ],
+      "depended_on_by": [
+        "gap2_theorem_attempt",
+        "gauge_factorization",
+        "hierarchy_gaussian_lattice",
+        "second_law_topological",
+        "sinw_effective_dimension",
+        "three_formalizations"
+      ],
+      "git": [
+        {
+          "hash": "d185308",
+          "date": "2026-04-08",
+          "subject": "Document three open gaps in Kuramoto-to-gravity derivation (#57)"
+        }
+      ]
+    },
+    {
+      "id": "klein_connection",
+      "path": "sync_cost/derivations/klein_connection.md",
+      "title": "The Klein Bottle Connection 1-Form",
+      "summary": "The Klein bottle's antiperiodic identification is a connection-form\nspecification in the differential-geometric sense. The identification",
+      "depends_on": [
+        "discrete_gauge_resolution",
+        "einstein_from_kuramoto",
+        "gauge_factorization",
+        "gauge_sector_lovelock",
+        "klein_bottle",
+        "sinw_fixed_point",
+        "xor_continuum_limit"
+      ],
+      "depended_on_by": [
+        "gauge_dictionary",
+        "second_law_topological"
+      ],
+      "git": [
+        {
+          "hash": "63ab4ba",
+          "date": "2026-04-16",
+          "subject": "Construct Klein bottle connection 1-form as partial Level A closure"
+        }
+      ]
+    },
+    {
+      "id": "lie_group_characterization",
+      "path": "sync_cost/derivations/lie_group_characterization.md",
+      "title": "Lie Group Characterization Theorem",
+      "summary": "$\\mathrm{SL}(2,\\mathbb{R})$ is the unique connected real Lie group that can\nserve as the continuum substrate of the synchronization framework. This is\nnot merely \"a 3D Lie group works.\" It is a characterization: any candidate\nsubstrate satisfying the framework's structural requirements is isomorphic\nto $\\mathrm{SL}(2,\\mathbb{R})$ (up to the $\\mathbb{Z}_2$ quotient\n$\\mathrm{PSL}(2,\\mathbb{R})$).",
+      "depends_on": [],
+      "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY",
+        "isotropy_lemma"
+      ],
+      "git": [
+        {
+          "hash": "22bb584",
+          "date": "2026-04-08",
+          "subject": "Prove SL(2,R) rigidity lemma, close last open gap in Lie group characterization"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "mass_sector_closure",
+      "path": "sync_cost/derivations/mass_sector_closure.md",
+      "title": "The Mass Sector Closure: Integer Conservation and Gauge Adjoints",
+      "summary": "The integer conservation law governing fermion mass hierarchies:",
+      "depends_on": [
+        "gauge_sector_lovelock",
+        "gell_mann_nishijima"
+      ],
+      "depended_on_by": [
+        "CHAIN_KSTAR",
+        "FRAMEWORK_TOPOLOGY",
+        "fourth_generation_revisited"
+      ],
+      "git": [
+        {
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "measurement_collapse",
+      "path": "sync_cost/derivations/measurement_collapse.md",
+      "title": "Measurement Collapse from Tongue Traversal",
+      "summary": "Wavefunction collapse is the transient of a driven nonlinear\noscillator crossing an Arnold tongue boundary. It has physical\nduration, follows from the same geometry that produces the Born\nrule, and connects to the quantum Zeno effect.",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "mediant_derivation",
+      "path": "sync_cost/derivations/mediant_derivation.md",
+      "title": "The Mediant Is Not an Axiom",
+      "summary": "**Derived.** The mediant is the unique operation satisfying\nbetweenness (energy conservation) and minimality (widest Arnold\ntongue). The Stern-Brocot theorem (1858/1860) proves this.\nThe framework's primitive (2) is replaced by a physical property\n(2') that is experimentally verifiable.",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "minimum_alphabet",
+      "path": "sync_cost/derivations/minimum_alphabet.md",
+      "title": "The Minimum Alphabet",
+      "summary": "The framework's entire structure \u2014 the circle, the devil's staircase,\nArnold tongues, the Born rule, the RAR, and the uncertainty relation \u2014\nfollows from compositions of exactly four irreducible primitives:",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum"
+      ],
+      "depended_on_by": [
+        "gap_2_spatial_diffusion",
+        "klein_bottle_derivation"
+      ],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "minkowski_signature",
+      "path": "sync_cost/derivations/minkowski_signature.md",
+      "title": "The Minkowski Signature from Phase State Observability",
+      "summary": "The spacetime signature (3,1) is not assumed. It is the observability\nstructure of the four phase states on a non-orientable surface. Three\nstates are observable. One is dark. The observable states are spatial.\nThe dark state is temporal. The minus sign in ds\u00b2 = dx\u00b2 + dy\u00b2 + dz\u00b2 \u2212 c\u00b2dt\u00b2\nis the statement that the dark state contributes negatively to the\nobservable norm.",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum"
+      ],
+      "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY",
+        "klein_bottle_derivation"
+      ],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "mobius_container",
+      "path": "sync_cost/derivations/mobius_container.md",
+      "title": "The M\u00f6bius Container",
+      "summary": "A bounded, compact, non-orientable surface changes the Kuramoto\nself-consistency equation from an open dissipative system to a closed\nresonator. On such a surface, excitations cannot escape \u2014 they reflect,\ninterfere, and accumulate until standing waves form at rational phase\ndivisions. The rational divisions are not approximate. They are exact,\nforced by boundary conditions, and stable enough to persist for\narbitrarily many cycles.",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "planck_scale",
+      "path": "sync_cost/derivations/planck_scale.md",
+      "title": "Planck Scale from Self-Sustaining Threshold",
+      "summary": "The Planck scale is not an imposed cutoff. It is the minimum domain\nwhere the synchronization substrate can sustain itself \u2014 the N = 3\nthreshold of the coupling loop.",
+      "depends_on": [],
+      "depended_on_by": [
+        "isotropy_lemma"
+      ],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "rank1_temporal_causation",
+      "path": "sync_cost/derivations/rank1_temporal_causation.md",
+      "title": "The Rank-1 Fr\u00e9chet Derivative as Temporal Causation",
+      "summary": "For an SO(2)-equivariant Markovian synchronization operator at a\ncodimension-1 transition, the dynamically relevant present is the\ncenter-manifold coordinate |r|. All other degrees of freedom are\neither gauge/representation structure or exponentially decaying\nhistory. The rank-1 Fr\u00e9chet derivative is therefore not merely an\nalgebraic property of U, but the linearized expression of temporal\ncausation through a single active channel.",
+      "depends_on": [],
+      "depended_on_by": [
+        "klein_bottle_derivation"
+      ],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "rational_field_equation",
+      "path": "sync_cost/derivations/rational_field_equation.md",
+      "title": "The Rational Field Equation",
+      "summary": "The field equation of the synchronization framework is a\nself-consistency condition on the Stern-Brocot tree, written in\nexact rational arithmetic using the four primitives of Derivation 10.\nThe continuum (PDE) form is a limit, not the primary object. The\nequation operates on rationals constructed by mediants because the\nphysical states it describes \u2014 mode-locked orbits \u2014 are rational.",
+      "depends_on": [],
+      "depended_on_by": [
+        "gap1_theorem",
+        "gap2_spatialization_decomposition",
+        "gap_1_christoffel"
+      ],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "rationality_descent",
+      "path": "sync_cost/derivations/rationality_descent.md",
+      "title": "Rationality descent: is the hidden algorithm real?",
+      "summary": "The framework's \"consistency-stipulated resolutions\" are Stern-Brocot\ndescent from the root `1/1` toward observables, under a finite\nvocabulary of primitive transformations. Every closed item has a\nfinite depth in the tree. Open items either have a candidate at\nreasonable depth (near closure) or fail (structurally hard).",
+      "depends_on": [
+        "conservation_computability",
+        "item12_C_from_K_star"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "readings_compatibility_check",
+      "path": "sync_cost/derivations/readings_compatibility_check.md",
+      "title": "Reading Compatibility: R and \u03a9_\u039b",
+      "summary": "**Resolved.** The hierarchy formula is correctly using |F\u2086| = 13\nas an integer state count. The \u03a9_\u039b formula is correctly using\nN_eff(w) as a continuous energy partition. Both are valid readings\nof the same Klein bottle. No parameter tuning, no inconsistency.",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "readings_not_constants",
+      "path": "sync_cost/derivations/readings_not_constants.md",
+      "title": "Readings, Not Constants",
+      "summary": "**Conjectured.** The reading framework is clearer than the constant\nframework but needs concrete demonstration. The lepton generation\nexponent law works. The quark extension (with effective dimension\nd_eff determined by color coupling) is the next computation.",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "second_law_topological",
+      "path": "sync_cost/derivations/second_law_topological.md",
+      "title": "The Second Law from Non-Orientability",
+      "summary": "The second law of thermodynamics \u2014 the monotone increase of entropy\nin isolated systems \u2014 is derived here as a consequence of the\nnon-orientability of the configuration manifold. The argument does\nnot invoke statistical ensembles, coarse-graining, or\ninformation-theoretic axioms. It uses one topological fact: on a\nnon-orientable closed manifold, no globally consistent time-reversal\noperator exists.",
+      "depends_on": [
+        "gauge_factorization",
+        "klein_bottle",
+        "klein_bottle_derivation",
+        "klein_connection"
+      ],
+      "depended_on_by": [
+        "gap2_spatialization_decomposition",
+        "gap2_theorem_attempt"
+      ],
+      "git": [
+        {
+          "hash": "e77e531",
+          "date": "2026-04-18",
+          "subject": "Derive the second law of thermodynamics from non-orientability"
+        }
+      ]
+    },
+    {
+      "id": "sector_constants_structure",
+      "path": "sync_cost/derivations/sector_constants_structure.md",
+      "title": "The Sector Constants: q\u2083\u00b2 and q\u2082\u00b3",
+      "summary": "The sector constants in the integer conservation law\n  depth \u00d7 |3Q| = sector_constant",
+      "depends_on": [
+        "gell_mann_nishijima"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "seismic_eigenstate_dictionary",
+      "path": "sync_cost/derivations/seismic_eigenstate_dictionary.md",
+      "title": "Seismic Eigenstate Dictionary",
+      "summary": "The empirical precursor methods that drive modern seismic gap\nassessments (Iquique, Nankai, Cascadia) are already *reading* the\nframework's tongue-locking structure \u2014 they just call the modes by\ntheir seismological names. This document states the vocabulary\nmapping without adding a new tool, and explains what the framework\ndoes and does not contribute.",
+      "depends_on": [
+        "born_rule",
+        "stribeck_vortex"
+      ],
+      "depended_on_by": [
+        "a1_from_saddle_node",
+        "stribeck_vortex"
+      ],
+      "git": [
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "sinw_effective_dimension",
+      "path": "sync_cost/derivations/sinw_effective_dimension.md",
+      "title": "Weak Mixing Angle: sin\u00b2\u03b8_W from Effective Dimension Reduction",
+      "summary": "**Derived, conditionally.** The electroweak mixing angle is",
+      "depends_on": [
+        "duty_cycle_dictionary",
+        "gauge_dictionary",
+        "gauge_sector_lovelock",
+        "klein_bottle_derivation",
+        "sinw_fixed_point",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "hierarchy_gaussian_lattice",
+        "sinw_fixed_point",
+        "three_formalizations"
+      ],
+      "git": [
+        {
+          "hash": "826574d",
+          "date": "2026-04-18",
+          "subject": "Clean derivation docs: remove inline history, state current truth"
+        },
+        {
+          "hash": "a899ed9",
+          "date": "2026-04-18",
+          "subject": "Derive sin\u00b2\u03b8_W = 2^(80/27) / (2^(80/27) + 3^(80/27)) = 0.23123"
+        }
+      ]
+    },
+    {
+      "id": "sinw_fixed_point",
+      "path": "sync_cost/derivations/sinw_fixed_point.md",
+      "title": "sin\u00b2\u03b8_W Fixed-Point Hypothesis \u2014 Ruled Out",
+      "summary": "**Ruled out.** The K-scanning hypothesis (that there exists a K*\nreproducing both \u03b1_s/\u03b1_2 and sin\u00b2\u03b8_W at M_Z via the framework's\nduty-cycle dynamics) fails numerically: no K in [0.93, 0.99]\nreproduces either constraint.",
+      "depends_on": [
+        "sinw_effective_dimension"
+      ],
+      "depended_on_by": [
+        "gauge_dictionary",
+        "gauge_sector_lovelock",
+        "klein_connection",
+        "sinw_effective_dimension"
+      ],
+      "git": [
+        {
+          "hash": "826574d",
+          "date": "2026-04-18",
+          "subject": "Clean derivation docs: remove inline history, state current truth"
+        },
+        {
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "spectral_tilt",
+      "path": "sync_cost/derivations/spectral_tilt.md",
+      "title": "Spectral Tilt from Synchronization Cost Gradient",
+      "summary": "The CMB spectral tilt n_s \u2248 0.965 encodes the curvature of the\nsynchronization cost function across scales. The 3.5% deviation from\nperfect scale-invariance is the slope of the cost gradient: larger\nscales had longer to synchronize and therefore lower net cost, producing\nmore power.",
+      "depends_on": [
+        "spectral_tilt_reframed"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "spectral_tilt_reframed",
+      "path": "sync_cost/derivations/spectral_tilt_reframed.md",
+      "title": "Spectral Tilt from Mode-Locking Structure",
+      "summary": "> Strip away \"cost.\" What remains is phase, frequency, coupling,\n> and the rational numbers.",
+      "depends_on": [],
+      "depended_on_by": [
+        "spectral_tilt"
+      ],
+      "git": [
+        {
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "speed_of_light",
+      "path": "sync_cost/derivations/speed_of_light.md",
+      "title": "The Speed of Light as Gate Propagation",
+      "summary": "The speed of light is the rate at which the gate of observability\npropagates through a coherent medium. It has not been derived within\nthe framework \u2014 it appears in Derivation 6 as one of three Planck\nconstants, identified with the parabolic (detuning) direction of\nSL(2,R) via the Iwasawa decomposition. This derivation gives c its\nphysical mechanism.",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum"
+      ],
+      "depended_on_by": [
+        "duty_cycle_dictionary"
+      ],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "stribeck_vortex",
+      "path": "sync_cost/derivations/stribeck_vortex.md",
+      "title": "The Stribeck Vortex Regime Map",
+      "summary": "A vortex in a coupled medium has a velocity field v(r) that varies\nwith distance from the core. The Stribeck curve gives velocity-dependent\ncoupling K(v). Composing these yields a radial regime map K(r) with a\ncritical radius r_c where K(r_c) = 1, separating an overcritical core\nfrom a subcritical exterior.",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum",
+        "born_rule",
+        "seismic_eigenstate_dictionary"
+      ],
+      "depended_on_by": [
+        "a1_from_saddle_node",
+        "seismic_eigenstate_dictionary"
+      ],
+      "git": [
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "845f80b",
+          "date": "2026-04-04",
+          "subject": "Add Derivation 40: Bragg circle map and Stribeck vortex regime analysis (#55)"
+        }
+      ]
+    },
+    {
+      "id": "three_dimensions",
+      "path": "sync_cost/derivations/three_dimensions.md",
+      "title": "Three Dimensions from the Mediant",
+      "summary": "$$\\text{mediant} \\to \\mathrm{SL}(2,\\mathbb{Z})\n  \\xrightarrow{K \\to 1} \\mathrm{SL}(2,\\mathbb{R})\n  \\xrightarrow{\\text{self-consistency}} \\mathcal{M} = \\mathrm{SL}(2,\\mathbb{R})\n  \\implies d = 3$$",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum",
+        "einstein_from_kuramoto"
+      ],
+      "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY",
+        "duty_cycle_dictionary",
+        "gap2_step4_farey_laplacian",
+        "gap2_theorem_attempt",
+        "gap_2_spatial_diffusion",
+        "hierarchy_gaussian_lattice",
+        "isotropy_lemma",
+        "klein_bottle_derivation",
+        "sinw_effective_dimension",
+        "three_formalizations"
+      ],
+      "git": [
+        {
+          "hash": "1cf530a",
+          "date": "2026-04-08",
+          "subject": "Verify HKT hypersurface deformation algebra from SL(2,C) complexification"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "three_formalizations",
+      "path": "sync_cost/derivations/three_formalizations.md",
+      "title": "Three Formalizations",
+      "summary": "The exponent 54 in R = 6 \u00d7 13^54 decomposes as:",
+      "depends_on": [
+        "gauge_dictionary",
+        "hierarchy_gaussian_lattice",
+        "klein_bottle_derivation",
+        "sinw_effective_dimension",
+        "three_dimensions"
+      ],
+      "depended_on_by": [],
+      "git": []
+    },
+    {
+      "id": "three_zeros",
+      "path": "sync_cost/derivations/three_zeros.md",
+      "title": "Three Zeros and the 1+3 Decomposition",
+      "summary": "**Established**:\n- Three distinct zeros identified and separated\n- The traceless projection J\u2080 = J on the Klein bottle (the identity\n  component is the forbidden (0,0) mode)\n- The 1+3 eigenvalue decomposition: {3/4, \u22121/4, \u22121/4, \u22121/4}\n- The 3-dimensional redistribution space = n\u00b2 \u2212 1 = dim SL(2,\u211d) = d\n- Connection to D17 rank-1 temporal causation: 1 temporal + 3 spatial",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "two_forces",
+      "path": "sync_cost/derivations/two_forces.md",
+      "title": "Two Forces \u2014 Coherence and Decoherence",
+      "summary": "The numerical exploration (coherence_decoherence.py) confirms the\nqualitative picture:\n- K_eff peaks near 1/\u03c6 due to Fibonacci pile-up\n- Setting D critical for 1/\u03c6 makes it the last frequency to lock\n- n_s \u2248 0.965 with negative running appears in the parameter space",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "vacuum_energy",
+      "path": "sync_cost/derivations/vacuum_energy.md",
+      "title": "Cosmological Constant in the Framework",
+      "summary": "The cosmological constant problem in this framework is not a\nsuppression mechanism. It is a change of configuration space:\nfrom the torus (\u221e modes, 10\u2077\u2074 GeV\u2074) to the Klein bottle (4 modes,\n10\u207b\u2074\u2077 GeV\u2074). The 121 orders of magnitude are the counting\ndifference between the two. Whether this is the physical\nconfiguration space is open; if it is, the problem dissolves into\na statement about which modes are functions on the surface.",
+      "depends_on": [
+        "farey_partition",
+        "klein_bottle"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "variable_denominator",
+      "path": "sync_cost/derivations/variable_denominator.md",
+      "title": "The Variable Denominator",
+      "summary": "Hz \u2014 cycles per second \u2014 assumes the denominator is fixed. In a\nuniverse where time is synchronization rate (not background parameter),\nthe denominator changes between cycles. This breaks the factorization\n\"total operations = rate \u00d7 duration\" and replaces it with accumulated\nphase against a self-referential reference. The resulting bound on\ndistinguishable operations is:",
+      "depends_on": [],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "xor_continuum_limit",
+      "path": "sync_cost/derivations/xor_continuum_limit.md",
+      "title": "The XOR-Filtered Continuum Limit",
+      "summary": "**Established**:\n- The continuum Klein bottle has structure group O(3), pin cover\n  Pin\u207a(3) \u2245 SU(2) \u00d7 Z\u2082.\n- Lovelock still applies locally: Einstein equations are the unique\n  output of the K=1 limit.\n- The Z\u2082 holonomy adds topological constraints but not new field\n  equations.\n- The XOR denominator-parity filter does not survive the continuum\n  limit as a smooth structure \u2014 it is a property of the discrete\n  (finite-depth) description.",
+      "depends_on": [],
+      "depended_on_by": [
+        "klein_connection"
+      ],
+      "git": [
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    },
+    {
+      "id": "xor_derivation",
+      "path": "sync_cost/derivations/xor_derivation.md",
+      "title": "Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions",
+      "summary": "This derivation closes gap #5 in `PROOFREADER_RESPONSE.md`: the XOR parity\nrule `q_1 % 2 != q_2 % 2` was previously confirmed by simulation\n(`klein_bottle_kuramoto.py`) and argued heuristically, but not derived from\nfirst principles. Here we carry out the Fourier analysis explicitly.",
+      "depends_on": [],
+      "depended_on_by": [
+        "gauge_factorization",
+        "klein_bottle_derivation"
+      ],
+      "git": [
+        {
+          "hash": "3006f0c",
+          "date": "2026-03-28",
+          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+        }
+      ]
+    }
+  ]
+}

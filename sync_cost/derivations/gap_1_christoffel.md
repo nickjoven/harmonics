@@ -2,20 +2,20 @@
 
 ## Status
 
-**Partially resolved, partially confused.** Two documents in the repo
-make conflicting claims about this gap:
+**Closed in the continuum limit**, conditionally. See
+`gap1_theorem.md` for the theorem statement and proof combining the
+Step 1–3 numerical results with Strogatz–Mirollo 1991 (CLT for the
+Kuramoto locked state) and the fundamental theorem of Riemannian
+geometry. Result:
 
-- `continuum_limits.md` (§4, line 105): "The passage to exact Christoffel
-  symbols requires proving that the Kuramoto ensemble averages generate
-  the Levi-Civita connection of γᵢⱼ." — **Gap open.**
+  Γ̃ᵏ_ij = Γᵏ_ij + O(1/N)
 
-- `einstein_from_kuramoto.md` (Part I, line 36): "This is a tautology
-  of Riemannian geometry: given any smooth positive-definite symmetric
-  tensor field, its Levi-Civita connection exists and is unique." —
-  **Gap closed by construction.**
+in the supercritical continuum limit (a → 0, N → ∞, L fixed, K > K_c).
 
-Both cannot be right as stated. This document resolves the confusion
-by identifying what is actually at stake.
+The O(1/N) finite-N correction is a prediction, not a residual gap.
+What is not proved: K = K_c (critical) case, non-uniform locking,
+and the exact correspondence between the framework's "K = 1" and the
+Kuramoto criterion K > K_c.
 
 ---
 

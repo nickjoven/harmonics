@@ -46,9 +46,10 @@ footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #333; font-s
 
 <h1>The Collatz Conjecture via Rational Extension</h1>
 <p class="meta">
-A proof attempt reducing the conjecture to four established results.<br>
-Status: <span class="status proved">3 of 4 steps proved</span> &middot;
-<span class="status standard">1 step uses standard ergodic theory</span>
+A reduction isolating the hard part of the conjecture into one specific claim.<br>
+Status: <span class="status proved">3 steps established</span> &middot;
+<span class="status" style="background:#e94560;color:#fff;">1 step is the conjecture restated</span><br>
+<em>This is a reduction sketch, not a completed proof.</em>
 </p>
 
 <!-- ═══════════════════════════════════════════════════════ -->
@@ -152,6 +153,10 @@ Cases p = 2, 3 handled by direct computation. Composite M by <dfn title="The Chi
 
 <p><strong>Verified computationally:</strong> all moduli M = 2 to 100,003 checked against a predecessor tree of 4 × 10<sup>6</sup> nodes. Every residue class covered.</p>
 
+<div class="box def" style="border-color: #e94560;">
+<strong>Honest scope of Step 2.</strong> This theorem proves the <em>predecessor tree</em> (backward from {1,2,4}) hits every residue class. It does <strong>not</strong> directly prove that a given <em>forward orbit</em> enters the tree. "Every congruence class contains some convergent number" is weaker than "this particular number converges." The assembled proof (Section 3) uses Step 2 to rule out modular obstructions — a necessary condition for convergence, not a sufficient one. The sufficiency requires Steps 3+4.
+</div>
+
 <figure class="fig">
 <svg width="500" height="120" viewBox="0 0 500 120">
 <rect width="500" height="120" fill="none"/>
@@ -186,8 +191,12 @@ Cases p = 2, 3 handled by direct computation. Composite M by <dfn title="The Chi
 <strong>Key distinction.</strong> Positive integers have finite 2-adic expansions (terminating binary). The ghosts (−1, −5, −7, ...) have infinite expansions. The finite representation is the "wall" that prevents positive integers from behaving like ghosts.
 </div>
 
+<div class="box def" style="border-color: #e94560;">
+<strong>Honest scope of Step 3.</strong> Finite binary expansion is a <em>necessary</em> structural distinction — it's why positive integers aren't ghosts. But "n has O(log n) bits" does <strong>not</strong> by itself prove "after O(log n) Collatz steps the orbit has forgotten its starting value." Finite input length doesn't imply rapid decorrelation under nonlinear dynamics. The ×3+1 map's carry propagation can CREATE bit-level correlations that persist longer than the original representation. Step 3 establishes the structural separation from ghosts; it does not discharge the decorrelation claim. That burden falls entirely on Step 4.
+</div>
+
 <!-- Step 4 -->
-<h3>Step 4: Post-Transient Contraction &nbsp;<span class="status standard">Standard result</span></h3>
+<h3>Step 4: Post-Transient Contraction &nbsp;<span class="status" style="background:#e94560;color:#fff;">Unresolved — this is the hard part</span></h3>
 
 <p>The map <em>x</em> → 3<em>x</em>+1 on the <dfn title="The 2-adic integers ℤ₂ form a compact topological ring. The map x → 3x+1 is an affine transformation on this ring, and inherits ergodicity from its linear part x → 3x.">2-adic integers</dfn> is <strong>ergodic</strong> with respect to <dfn title="Haar measure on ℤ₂ is the unique translation-invariant probability measure. It assigns measure 1/2ᵏ to each residue class mod 2ᵏ. It's the 'uniform' measure on 2-adic integers.">Haar measure</dfn>. This is a standard result: an affine map of a compact abelian group inherits ergodicity from its linear part, and <em>x</em> → 3<em>x</em> is ergodic on ℤ₂ because ord₂(3) = 2<sup>k−2</sup> → ∞. The <dfn title="The spectral gap is the difference between the largest and second-largest eigenvalue of the transfer operator. A positive spectral gap implies exponential decay of correlations — the system 'forgets' its initial state exponentially fast.">spectral gap</dfn> of the ×3 operator on L²(ℤ₂) gives exponential mixing: correlations between bits at lag <em>L</em> decay as ~2<sup>−L</sup>.</p>
 
@@ -220,39 +229,49 @@ Cases p = 2, 3 handled by direct computation. Composite M by <dfn title="The Chi
 
 <p>With parity frequency 1/2: the average per-round multiplier is (3/2)<sup>1/2</sup> × (1/2)<sup>1/2</sup> = √(3/4) ≈ 0.866 &lt; 1. The <dfn title="The Lyapunov exponent measures the average exponential growth rate of an orbit. Negative exponent means the orbit shrinks on average.">Lyapunov exponent</dfn> is log(√(3/4)) &lt; 0. The orbit shrinks.</p>
 
+<div class="box def" style="border-color: #e94560;">
+<strong>Honest scope of Step 4.</strong> This is where the reduction <em>relocates</em> the conjecture, not where it <em>resolves</em> it. The ergodicity of ×3+1 on ℤ₂ is a measure-theoretic statement: <em>almost every</em> 2-adic orbit equidistributes. "Almost every" is with respect to Haar measure. It does <strong>not</strong> automatically imply <em>every named integer</em> equidistributes. Tao's 2019 result (<a href="https://arxiv.org/abs/1909.03562">arXiv:1909.03562</a>) is the state of the art — it proves "almost all" integers satisfy Collatz in a strong logarithmic-density sense — and explicitly notes that upgrading "almost all" to "all" remains open because specific iterates can land in the exceptional set.<br><br>
+
+The Step 3→4 handoff claims that finite binary representation + exponential mixing implies the decorrelation needed for equidistribution of each integer orbit. This is the specific claim that has not been proven, and it is essentially the Collatz conjecture restated in ergodic-theoretic language: "no positive integer's orbit can sustain a parity bias above 63.1% indefinitely." If this claim were established, Collatz would follow. But establishing it IS the problem.
+</div>
+
 <!-- ═══════════════════════════════════════════════════════ -->
 <h2>3. The Proof (Assembled)</h2>
 
 <div class="box theorem">
-<strong>Theorem.</strong> Every positive integer's Collatz orbit reaches {1, 2, 4}.
+<strong>Conditional theorem.</strong> IF Step 4 holds (every positive integer's orbit eventually equidistributes in parity), THEN every positive integer's Collatz orbit reaches {1, 2, 4}.
 </div>
 
 <div class="box proof">
-<strong>Proof.</strong> Suppose <em>n</em> ∈ ℤ<sup>+</sup> with orbit never reaching {1, 2, 4}.<br><br>
+<strong>Argument (conditional on Step 4).</strong> Suppose <em>n</em> ∈ ℤ<sup>+</sup> with orbit never reaching {1, 2, 4}.<br><br>
 
-<strong>(a)</strong> The orbit is infinite and non-repeating. <em>(Step 1: no other cycle, since 3<sup>a</sup> ≠ 2<sup>b</sup>.)</em><br><br>
+<strong>(a)</strong> The orbit is infinite and non-repeating. <em>(Step 1: no other cycle, since 3<sup>a</sup> ≠ 2<sup>b</sup>. Proved.)</em><br><br>
 
-<strong>(b)</strong> The orbit can't avoid {1,2,4} modularly: for every M, the orbit mod M enters {1,2,4} mod M. <em>(Step 2: affine transitivity — the predecessor tree covers every residue class.)</em><br><br>
+<strong>(b)</strong> No modular obstruction prevents <em>n</em> from being in the predecessor tree: every residue class mod M contains a convergent integer. <em>(Step 2: affine transitivity. Proved. Note: this rules out structural avoidance but does not force convergence of the specific orbit of n.)</em><br><br>
 
-<strong>(c)</strong> After O(log n) steps, all original bits of <em>n</em> are consumed. <em>(Step 3: finite binary representation.)</em><br><br>
+<strong>(c)</strong> The integer <em>n</em> has finite binary representation, structurally distinguishing it from the 2-adic ghosts (−1, −5, ...) that are genuine fixed/periodic points. <em>(Step 3: finite representation. Proved. Note: this is a necessary distinction, not sufficient for decorrelation.)</em><br><br>
 
-<strong>(d)</strong> Post-transient, the orbit's parity frequency is 1/2, giving Lyapunov exponent log(√(3/4)) &lt; 0. The orbit contracts. <em>(Step 4: ergodicity of ×3+1 on ℤ₂.)</em><br><br>
+<strong>(d)</strong> <span style="color: var(--accent);">⚠</span> The orbit's parity frequency is 1/2, giving Lyapunov exponent log(√(3/4)) &lt; 0. The orbit contracts. <em>(Step 4: requires that finite representation + ergodic mixing → pointwise equidistribution for this specific orbit. <strong>This is the unresolved step.</strong>)</em><br><br>
 
-<strong>(e)</strong> A contracting orbit on ℤ<sup>+</sup> must eventually reach the minimum: some value ≤ <em>N</em><sub>0</sub>. Below <em>N</em><sub>0</sub>, convergence is verified computationally. Taking <em>N</em><sub>0</sub> = 10<sup>20</sup> (Barina 2021): the orbit reaches {1, 2, 4}. <strong>Contradiction.</strong> ∎
+<strong>(e)</strong> Given (d): a contracting orbit on ℤ<sup>+</sup> must eventually reach some value ≤ <em>N</em><sub>0</sub>. Below <em>N</em><sub>0</sub>, convergence is verified computationally. Taking <em>N</em><sub>0</sub> = 10<sup>20</sup> (Barina 2021): the orbit reaches {1, 2, 4}. <strong>Contradiction — conditional on (d).</strong>
+</div>
+
+<div class="box def" style="border-color: #e94560;">
+<strong>What this reduction achieves and does not achieve.</strong> Steps 1–3 are proved. They establish: no alternative cycle, no modular obstruction, structural separation from 2-adic ghosts. These are genuine constraints on any counterexample. Step 4 is where the Collatz conjecture lives. The reduction repackages the conjecture as: "every positive integer's Collatz orbit equidistributes in parity" — which is a more specific statement than the original, tied to ergodic theory on ℤ₂, but is NOT easier to prove. It is the conjecture restated, not resolved.
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
 <h2>4. Status and Scrutiny Points</h2>
 
 <table>
-<tr><th>Step</th><th>Claim</th><th>Status</th><th>Scrutiny needed</th></tr>
-<tr><td>1</td><td>Unique cycle (3<sup>a</sup> ≠ 2<sup>b</sup>)</td><td><span class="status proved">Proved</span></td><td>Elementary. Fundamental theorem of arithmetic.</td></tr>
-<tr><td>2</td><td>Affine transitivity (all residues covered)</td><td><span class="status proved">Proved</span> + <span class="status verified">Verified</span></td><td>Proof for primes via affine semigroup. Verified computationally to M = 100,003.</td></tr>
-<tr><td>3</td><td>Finite representation (O(log n) transient)</td><td><span class="status proved">Proved</span></td><td>Trivial: positive integers have finite binary expansions.</td></tr>
-<tr><td>4</td><td>Post-transient equidistribution</td><td><span class="status standard">Standard</span></td><td><strong>This is where scrutiny belongs.</strong> Requires: (a) ergodicity of ×3+1 on ℤ₂ (<a href="https://en.wikipedia.org/wiki/Ergodic_theory">standard</a>), (b) the spectral gap gives exponential mixing, (c) O(log n) steps suffice to reach the equidistributed regime. Point (c) is the most delicate: it claims correlations from the original bits decay exponentially, so O(log n) steps kill them.</td></tr>
+<tr><th>Step</th><th>Claim</th><th>Status</th><th>What it does / does not do</th></tr>
+<tr><td>1</td><td>Unique cycle (3<sup>a</sup> ≠ 2<sup>b</sup>)</td><td><span class="status proved">Proved</span></td><td>Eliminates alternative attractors. Any non-convergent orbit must diverge.</td></tr>
+<tr><td>2</td><td>Affine transitivity (all residues covered)</td><td><span class="status proved">Proved</span> + <span class="status verified">Verified</span></td><td>Rules out modular obstructions. Does <strong>not</strong> prove any specific forward orbit converges — only that no arithmetic progression is structurally avoided by the predecessor tree.</td></tr>
+<tr><td>3</td><td>Finite representation</td><td><span class="status proved">Proved</span></td><td>Separates positive integers from 2-adic ghosts. Does <strong>not</strong> prove decorrelation — only that positive integers have bounded initial information.</td></tr>
+<tr><td>4</td><td>Pointwise equidistribution for every positive integer orbit</td><td><span class="status" style="background:#e94560;color:#fff;">Open</span></td><td><strong>This IS the Collatz conjecture restated.</strong> Ergodicity of ×3+1 on ℤ₂ gives "almost every" orbit equidistributes (Haar measure). Upgrading to "every positive integer" is exactly the unsolved problem. Tao (2019) achieves "almost all" in logarithmic density; the gap to "all" remains.</td></tr>
 </table>
 
-<p>The logical weight sits on <strong>Step 4(c)</strong>: the claim that after O(log n) steps of the ergodic map, the orbit has "forgotten" its starting integer and entered the generic (equidistributed) regime. This is where a counterexample, if one exists, would hide — a number whose binary structure creates correlations that persist longer than O(log n) under the ×3+1 map.</p>
+<p><strong>Honest assessment:</strong> Steps 1–3 are genuine structural constraints on any counterexample. A divergent orbit would need to (1) avoid all finite cycles, (2) exist despite no modular obstruction, and (3) sustain parity bias indefinitely despite having finite initial information. These constraints narrow the space but do not eliminate it. Step 4 asks for the elimination — and that is the conjecture itself.</p>
 
 <!-- ═══════════════════════════════════════════════════════ -->
 <h2>5. Why This Framing?</h2>
@@ -321,20 +340,21 @@ Cases p = 2, 3 handled by direct computation. Composite M by <dfn title="The Chi
 <text x="540" y="325" text-anchor="middle" fill="#f0c040" font-size="13" font-weight="bold">⑤ Verified to 10²⁰ (Barina 2021)</text>
 <text x="540" y="345" text-anchor="middle" fill="#40c060" font-size="10">∴ orbit reaches {1,2,4}  ∎</text>
 
-<!-- Contradiction box -->
+<!-- Reduction box -->
 <rect x="20" y="180" width="350" height="170" rx="8" fill="rgba(233,69,96,0.1)" stroke="#e94560" stroke-width="2"/>
-<text x="195" y="205" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold">The Contradiction (inverted)</text>
+<text x="195" y="205" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold">The Reduction</text>
 <text x="195" y="230" text-anchor="middle" fill="#e0e0e0" font-size="12">Assume n never reaches {1,2,4}.</text>
-<text x="195" y="255" text-anchor="middle" fill="#e0e0e0" font-size="12">① → orbit is infinite (no other cycle)</text>
-<text x="195" y="275" text-anchor="middle" fill="#e0e0e0" font-size="12">② → orbit can't hide modularly</text>
-<text x="195" y="295" text-anchor="middle" fill="#e0e0e0" font-size="12">③ → original bits exhausted in O(log n)</text>
-<text x="195" y="315" text-anchor="middle" fill="#e0e0e0" font-size="12">④ → orbit contracts post-transient</text>
-<text x="195" y="340" text-anchor="middle" fill="#e94560" font-size="13" font-weight="bold">⑤ → orbit reaches {1,2,4}. Contradiction. ∎</text>
+<text x="195" y="250" text-anchor="middle" fill="#40c060" font-size="12">① → orbit is infinite (PROVED)</text>
+<text x="195" y="270" text-anchor="middle" fill="#40c060" font-size="12">② → no modular refuge (PROVED)</text>
+<text x="195" y="290" text-anchor="middle" fill="#40c060" font-size="12">③ → finite initial info (PROVED)</text>
+<text x="195" y="310" text-anchor="middle" fill="#e94560" font-size="12">④ → orbit equidistributes (OPEN)</text>
+<text x="195" y="335" text-anchor="middle" fill="#888" font-size="11">④ is the conjecture restated.</text>
+<text x="195" y="348" text-anchor="middle" fill="#888" font-size="11">If ④ holds → contradiction. ∎</text>
 
 <!-- Ghost note -->
 <text x="350" y="400" text-anchor="middle" fill="#888" font-size="11">The ghost −1 = ...1111₂ escapes because it has infinite bits (③ fails). Positive integers can't.</text>
 </svg>
-<figcaption>The proof on a whiteboard. Green = proved. Blue = standard result. Red = the contradiction.</figcaption>
+<figcaption>The reduction on a whiteboard. Green = proved. Blue = uses standard ergodic theory. Red = the open step (the conjecture restated).</figcaption>
 </figure>
 
 <!-- ═══════════════════════════════════════════════════════ -->
@@ -402,7 +422,7 @@ print(f"Failures: {len(fails)}")  # 0</pre>
 <li><strong>The unique-cycle proof via 3<sup>a</sup> ≠ 2<sup>b</sup></strong> (Step 1) works for the full rational map, not just integers. The diagonal structure of the affine composition is independent of rule ordering.</li>
 <li><strong>Affine transitivity</strong> (Step 2) is stronger than the density-1 results of Terras (1976) and Krasikov-Lagarias (2003). It proves no modular obstruction exists at <em>any</em> modulus, not just that the density of exceptions is zero.</li>
 <li><strong>The finite-representation separation</strong> (Step 3) distinguishes positive integers from 2-adic ghosts by their binary expansion length. This directly addresses the non-unique-ergodicity obstruction (the fixed point at −1) by showing it's structurally inaccessible from ℤ<sup>+</sup>.</li>
-<li><strong>The Step 3→4 handoff</strong> — connecting finite representation to post-transient equidistribution via exponential mixing — is the novel bridge. Previous work treats ergodicity and finiteness separately; this argument chains them: finite bits → bounded transient → ergodic regime → contraction.</li>
+<li><strong>The Step 3→4 handoff</strong> — connecting finite representation to post-transient equidistribution via exponential mixing — is the novel bridge, and also the unresolved one. Previous work treats ergodicity and finiteness separately; this argument chains them: finite bits → bounded transient → ergodic regime → contraction. The chain is heuristically compelling but the middle link (bounded transient → ergodic regime) is the Collatz conjecture restated, not discharged.</li>
 </ul>
 
 <!-- ═══════════════════════════════════════════════════════ -->

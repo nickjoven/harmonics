@@ -1,0 +1,1016 @@
+{
+  "nodes": [
+    {
+      "id": "00cedf07feed",
+      "full_cid": "00cedf07feedccbff956a27eb41d82a8edb48ac39f57c76c611a0058efb021c4",
+      "kind": "text",
+      "preview": "mass_sector_closure.md \u2014 integer conservation law depth*|3Q|=k_sector with k_lepton=q_3^2=9 (squared SU(2) adjoint) and k_quark=q_2^3=8 (dir",
+      "size": 441,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "02da17bfbc3f",
+      "full_cid": "02da17bfbc3f6f3170914385edc3f5b0bfe1c559450d3a7954b71a6b1fcd21e5",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.961852025+00:00",
+      "parents": [
+        "8a560f525695",
+        "2612b1b11d71"
+      ],
+      "output_cid": "50dce2502bcc",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695",
+        "2612b1b11d71"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "05c9135a72e4",
+      "full_cid": "05c9135a72e438aab72ace962bf74364f246f86ad180937263d7b7fe02433733",
+      "kind": "text",
+      "preview": "[C8] k_lepton = q_3^2 = 9 = (dim adj SU(2))^2; squaring from walker traversing adjoint twice (walk-before-repetition), not chiral doubling.",
+      "size": 139,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "0e3f6c93fa4e",
+      "full_cid": "0e3f6c93fa4e99a3123ad0839d70de133ae87b484d3f78b9b1f73ee999d70e22",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.540754264+00:00",
+      "parents": [
+        "8a560f525695"
+      ],
+      "output_cid": "fbbaa5cf256a",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "112b27bab676",
+      "full_cid": "112b27bab676e40002c4afb9f39919b2ca42e2160ccc587a279706946e74dfd3",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:28.001761106+00:00",
+      "parents": [
+        "8a560f525695"
+      ],
+      "output_cid": "82dce3397c42",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "1263962b243a",
+      "full_cid": "1263962b243a4cb9f7e9a03377a14713be9e5d23c7d95440417ac52fc50fa5db",
+      "kind": "text",
+      "preview": "[C17] Three-sector identities at L4: a_1(lep)*K*=2, a_1(up)*K*=3, a_1(dn)*K*=sqrt(24).",
+      "size": 86,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "1309c402becc",
+      "full_cid": "1309c402becc69bc4d9baa16144e6b2db2cb7b4c88bf75d0d00bd3340ca0e080",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:28.040065277+00:00",
+      "parents": [
+        "8a560f525695"
+      ],
+      "output_cid": "b418de86407a",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "19d89980634f",
+      "full_cid": "19d89980634fecb28116c5c504f524d1ed2ba3ce705559c0eb523a0961d30125",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:28.306049216+00:00",
+      "parents": [
+        "8a560f525695",
+        "b046f04975b2"
+      ],
+      "output_cid": "af9b0de14599",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695",
+        "b046f04975b2"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "1dcaca94802b",
+      "full_cid": "1dcaca94802bcd086a23464fadd83e8fdf42560e75fda7edfc9e893270975637",
+      "kind": "text",
+      "preview": "[C4] Spatial dimension d = 3 = q_3, from SL(2,R) continuum completion of rank-2 mediant (continuum dim = 2^2 - 1 = 3).",
+      "size": 118,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "220c9b7c2f87",
+      "full_cid": "220c9b7c2f8772db569af8a237995c32b80dbffb6455cb278e79be8d0c3fb387",
+      "kind": "text",
+      "preview": "[C1] L0 foundations: four primitives \u2014 integers (countability), mediant a/b + c/d = (a+c)/(b+d), fixed point x=f(x), saddle-node parabola dx",
+      "size": 157,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "23f7275ec28f",
+      "full_cid": "23f7275ec28fea313202e587289e653f608802ed39864e392daa25e669e890f2",
+      "kind": "text",
+      "preview": "[C3] (q_2, q_3)=(2,3) is the unique positive-integer solution to (a^2 - 1 = b) AND (b^2 - 1 = a^3); proof by factoring a^2(a-2)(a+1)=0.",
+      "size": 135,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "25cdb38c6d1b",
+      "full_cid": "25cdb38c6d1b534d770353b0c93b72420ababfa681d53ce8d3e2de37fe8cfb71",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.137668936+00:00",
+      "parents": [
+        "8a560f525695"
+      ],
+      "output_cid": "220c9b7c2f87",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "2612b1b11d71",
+      "full_cid": "2612b1b11d7116f9c44404f643f07cf748408a0e18c3324515d095613bde2329",
+      "kind": "memory",
+      "agent": "human",
+      "timestamp": "2026-04-14T20:23:51.678722088+00:00",
+      "parents": [],
+      "output_cid": "b7a4aeb796d6",
+      "meta": [],
+      "depends_on": [],
+      "depended_on_by": [
+        "02da17bfbc3f",
+        "661c2f62af07",
+        "4966c2ff0fd7",
+        "a66d4e34f4b7",
+        "c6696f3490c8",
+        "8550991bf39e",
+        "9a65fba46537",
+        "b561d862318b",
+        "c434e2404bc8",
+        "ead006977855",
+        "df80cbf889dd",
+        "4a1cf21b3413"
+      ]
+    },
+    {
+      "id": "2aac84ea02de",
+      "full_cid": "2aac84ea02dec9b8dc626d7d5744bdf7af5941fc257d8f17a4d54d3fb6fcb122",
+      "kind": "text",
+      "preview": "[C14] Per-sector base pairs: lepton (3/2, 5/3) = (F_4/F_3, F_5/F_4); up (8/5, 3/2) = (F_6/F_5, F_4/F_3); down (5/4, 9/8) unique Klein-parity",
+      "size": 151,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "2d41a79919dc",
+      "full_cid": "2d41a79919dc987d37b9ad194693a8986c23cc89345e15719fe7c9c3165eb702",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.842909607+00:00",
+      "parents": [
+        "8a560f525695"
+      ],
+      "output_cid": "30adf75f5f6b",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "30adf75f5f6b",
+      "full_cid": "30adf75f5f6b3f763439a5a7ced292eea8063e4cc1e32321cd982ff6f75b35fb",
+      "kind": "text",
+      "preview": "[C19] sin^2 theta_W = 8/35 (tree, = q_2^3/(q_2^3 + q_3^3)) + 8/F_10^2 Fibonacci-square correction; total 0.23122, matches PDG to ~2e-5.",
+      "size": 135,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "3289949b1e8b",
+      "full_cid": "3289949b1e8b21ac8dcc966aef1bfbec5c2f10ff7d0333eb9fdba4260ff6b50a",
+      "kind": "text",
+      "preview": "[C13] Sector integers: N_lep = q_2^2 = 4, N_up = q_3^2 = 9, N_dn = q_2^3 * q_3 = 24 (Klein-parity double cover).",
+      "size": 112,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "3667772f3b05",
+      "full_cid": "3667772f3b05e80f1511f0cdc151ae20907560bbd46f0edc20b9321b3aa1f463",
+      "kind": "text",
+      "preview": "FRAMEWORK_TOPOLOGY.md \u2014 Framework topology (L0-L5 dep map). Canonical at BLAKE3 663f287bada22ff41cb062bf74ba215ec05ebb8bbde610dbc938090267d0",
+      "size": 222,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "39a5b7ea78c3",
+      "full_cid": "39a5b7ea78c314a97ad6b58236b6d5c5ed57cb3d0b8892dc20865f4dbeddc19f",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:28.193767180+00:00",
+      "parents": [
+        "8a560f525695",
+        "b046f04975b2"
+      ],
+      "output_cid": "8c36be1b23ef",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695",
+        "b046f04975b2"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "3aaf84ff8507",
+      "full_cid": "3aaf84ff8507a53562dce3f009b692e493065177b54e6ab6afc3a0083d44a402",
+      "kind": "text",
+      "preview": "[R1] K_STAR = 0.8668 (A-2 walk-product formulation) is retracted. Canonical K_STAR = 0.86196052 via joint matter-sector closure. Retracted i",
+      "size": 252,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "41a80e6610be",
+      "full_cid": "41a80e6610beeedbffd47b7927ade29eb6a98bf0d9ae289d57f68986e377271e",
+      "kind": "text",
+      "preview": "[R4] Walk-product mass formulas are retracted. Canonical mass sector uses two-step Fibonacci formula with a_1 = sqrt(N_sector)/K_STAR (C17, ",
+      "size": 266,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "423042ac7f59",
+      "full_cid": "423042ac7f590d4fa8fd36161640c1882cd1bccf00b436aa8e8c9e6dca4e62cd",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.766205132+00:00",
+      "parents": [
+        "8a560f525695"
+      ],
+      "output_cid": "1263962b243a",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "4966c2ff0fd7",
+      "full_cid": "4966c2ff0fd753e4c68c82988d5e0047f883c592346ea937e986ed71ff8c3e54",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.503321406+00:00",
+      "parents": [
+        "2612b1b11d71"
+      ],
+      "output_cid": "651dca5a1517",
+      "meta": [],
+      "depends_on": [
+        "2612b1b11d71"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "4a1cf21b3413",
+      "full_cid": "4a1cf21b341360643cf9be5d2196f444e92bb4a51a295128f9b12afe3f15f4cf",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.726043360+00:00",
+      "parents": [
+        "2612b1b11d71"
+      ],
+      "output_cid": "6c89db0eb1fb",
+      "meta": [],
+      "depends_on": [
+        "2612b1b11d71"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "4e90a76af920",
+      "full_cid": "4e90a76af9205da514194b674c6d0dc02acf02f23625e0c504a7fea8d7ecd1ef",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.920230245+00:00",
+      "parents": [
+        "8a560f525695"
+      ],
+      "output_cid": "7d544a201c1a",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "5044679386ef",
+      "full_cid": "5044679386ef654786e93c94970437a9279016e92b66ce9eff4e7bbae4926dd4",
+      "kind": "text",
+      "preview": "[C5] Klein parity center = Z_2 x Z_3 = Z_6, from XOR filter on Stern-Brocot at (q_2, q_3) and GCD fiber as principal Z_6-bundle.",
+      "size": 128,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "50dce2502bcc",
+      "full_cid": "50dce2502bcce34793529e30b3c292458ac556555bd573f9279eba6bad361e01",
+      "kind": "text",
+      "preview": "[C22] Cosmology Omega partition: Omega_B = 1/19, Omega_DM = 5/19, Omega_Lambda = 13/19 = |F_6|/|F_7|, Omega_M = 6/19. Topological bound Omeg",
+      "size": 197,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "59b1807f546b",
+      "full_cid": "59b1807f546b598a9608c8eb023018511869b5b28966a113ac3828e3925e4ff9",
+      "kind": "text",
+      "preview": "[C2] L0 Klein bottle: ambient compact non-orientable closed surface; unique surface compatible with antiperiodic + periodic identifications.",
+      "size": 140,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "61e822aacd9b",
+      "full_cid": "61e822aacd9b8462bcbbaa02d5c8d7d112cc76c1736f317283051dcda4b42332",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.310318813+00:00",
+      "parents": [
+        "8a560f525695"
+      ],
+      "output_cid": "5044679386ef",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "651dca5a1517",
+      "full_cid": "651dca5a1517dd336c239a68b2867c057ac35a69fcfd433d4f816df272c8f823",
+      "kind": "text",
+      "preview": "[C10] |F_6| = q_2^2 + q_3^2 = 13 (Farey count at INTERACT); |F_7| = |F_6| + INTERACT = 19 (Omega_Lambda denominator).",
+      "size": 117,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "661c2f62af07",
+      "full_cid": "661c2f62af071eb3ce51470f10e7a9b5ecd3112b89b599f2f58ed6e0c2d2fa3d",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.389834352+00:00",
+      "parents": [
+        "2612b1b11d71"
+      ],
+      "output_cid": "ffb2eff02a49",
+      "meta": [],
+      "depends_on": [
+        "2612b1b11d71"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "663f287bada2",
+      "full_cid": "663f287bada22ff41cb062bf74ba215ec05ebb8bbde610dbc938090267d03bf5",
+      "kind": "text",
+      "preview": "# Framework topology",
+      "size": 10883,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "6797546ca424",
+      "full_cid": "6797546ca424049e9ee121caf42aac646ce7032dbb08c347b451d263f5bbc3fd",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.351872251+00:00",
+      "parents": [
+        "8a560f525695"
+      ],
+      "output_cid": "f412e76ba454",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "6c89db0eb1fb",
+      "full_cid": "6c89db0eb1fbf10548b48fb3684a8a65982b8860e08fc895156c6f630f70d07c",
+      "kind": "text",
+      "preview": "[C16] K_STAR uncertainty +/- 2.06e-5; lepton identity a_1(lep) * K_STAR = q_2 = 2 closes at residual ~1e-7 (machine precision).",
+      "size": 127,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "799e46cdd883",
+      "full_cid": "799e46cdd883747024f9dec712ac0075fbfe7b00a4804c959eb827922b7e8fa2",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.804508007+00:00",
+      "parents": [
+        "8a560f525695"
+      ],
+      "output_cid": "d876986de955",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "7b727b4db8a1",
+      "full_cid": "7b727b4db8a1be3ac7b57880aa52eb76c01121e9dbed1f367de922068d75b463",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:28.076867895+00:00",
+      "parents": [
+        "8a560f525695"
+      ],
+      "output_cid": "920df3820985",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "7d544a201c1a",
+      "full_cid": "7d544a201c1acb8cb444df93ea0884b3dd03175ab8712f66434eaaa8d207f80f",
+      "kind": "text",
+      "preview": "[C21] Higgs: lambda = 1/(2*q_2^2) + 1/228 = 1/8 + 1/(q_2^2 * q_3 * |F_7|) = 0.129 (matches PDG); m_H/v = 1/q_2 = 1/2 (matches PDG to 1.7%).",
+      "size": 139,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "822f5e9267a8",
+      "full_cid": "822f5e9267a8a04a557f01d31275cfc6d3d76210b36ae20e08ae70607089a2e2",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:28.231967258+00:00",
+      "parents": [
+        "8a560f525695",
+        "b046f04975b2"
+      ],
+      "output_cid": "41a80e6610be",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695",
+        "b046f04975b2"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "82dce3397c42",
+      "full_cid": "82dce3397c42d8344bde3bc4cf5a840ea75eca88a017aa28142ab65035b4227e",
+      "kind": "text",
+      "preview": "[C23] Hierarchy R = Planck/Hubble = 6 * 13^54 (matches observed at 0.48%) where 6=INTERACT, 13=|F_6|, 54=q_2*q_3^3. Lambda*l_P^2 = 13^(-108)",
+      "size": 158,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "8491c81a40d3",
+      "full_cid": "8491c81a40d3a6cbb13749dbe7b2e65e46bbf47362676b873f068965a0d03686",
+      "kind": "text",
+      "preview": "[C12] L3 integer conservation law: depth * |3Q| = k_sector; gives lepton depth 3, up-type 4, down-type 8 from |Q|=1, 2/3, 1/3.",
+      "size": 126,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "8550991bf39e",
+      "full_cid": "8550991bf39e851b8ef91f83d1455536895fd6cb4cf826dd24ae0b8d4d5d5ac4",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.224767795+00:00",
+      "parents": [
+        "b046f04975b2",
+        "2612b1b11d71"
+      ],
+      "output_cid": "23f7275ec28f",
+      "meta": [],
+      "depends_on": [
+        "b046f04975b2",
+        "2612b1b11d71"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "89a357adb110",
+      "full_cid": "89a357adb11068f23a5416b05f6d73b452ca870f75fd8f2683651437de3a9acf",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.882697318+00:00",
+      "parents": [
+        "8a560f525695"
+      ],
+      "output_cid": "dce330e5f73b",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "8a560f525695",
+      "full_cid": "8a560f525695dede1a1480da7e4835a1f10e30377dabfbbc516b57fc76bef28f",
+      "kind": "memory",
+      "agent": "human",
+      "timestamp": "2026-04-14T20:01:45.197822430+00:00",
+      "parents": [],
+      "output_cid": "3667772f3b05",
+      "meta": [],
+      "depends_on": [],
+      "depended_on_by": [
+        "799e46cdd883",
+        "822f5e9267a8",
+        "0e3f6c93fa4e",
+        "61e822aacd9b",
+        "02da17bfbc3f",
+        "4e90a76af920",
+        "39a5b7ea78c3",
+        "e16bc5fe9839",
+        "7b727b4db8a1",
+        "25cdb38c6d1b",
+        "89a357adb110",
+        "1309c402becc",
+        "c6696f3490c8",
+        "423042ac7f59",
+        "112b27bab676",
+        "2d41a79919dc",
+        "9a65fba46537",
+        "fe0f849b4a89",
+        "6797546ca424",
+        "c434e2404bc8",
+        "19d89980634f",
+        "ead006977855",
+        "df80cbf889dd",
+        "ae305aef4463"
+      ]
+    },
+    {
+      "id": "8c36be1b23ef",
+      "full_cid": "8c36be1b23efd88c34be204a6e3d351fc2516c2195b528c25c5b9f80dd5de905",
+      "kind": "text",
+      "preview": "[R3] Neutrino depth = 36 conjecture is retracted. Canonical depth = q_2^3 + q_3^3 = 35 (C11). Retracted in commit e387fe3: neutrino_mass_pre",
+      "size": 208,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "920df3820985",
+      "full_cid": "920df3820985cd52defe48321b94d34bf8ade50e21e575ee530fd859542143bd",
+      "kind": "text",
+      "preview": "[C25] 3 generations = 4 phase states - 1 dark; 4th charged lepton forbidden by 4*3 > k_lepton = 9 in the integer conservation law.",
+      "size": 130,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "974a5e77f55c",
+      "full_cid": "974a5e77f55c4e7ea476e57d05f96829f303c5497a38c76a88b29a402249abc9",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.579175363+00:00",
+      "parents": [
+        "b046f04975b2"
+      ],
+      "output_cid": "8491c81a40d3",
+      "meta": [],
+      "depends_on": [
+        "b046f04975b2"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "9a65fba46537",
+      "full_cid": "9a65fba46537ca1b5226691173706c9ced4585276bf2827ff00dc8fc5726e473",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.266849174+00:00",
+      "parents": [
+        "8a560f525695",
+        "2612b1b11d71"
+      ],
+      "output_cid": "1dcaca94802b",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695",
+        "2612b1b11d71"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "a66d4e34f4b7",
+      "full_cid": "a66d4e34f4b72a22cb43702e0d4b1b4106220efb01e113d74f26cb846613caf0",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.427175873+00:00",
+      "parents": [
+        "2612b1b11d71",
+        "b046f04975b2"
+      ],
+      "output_cid": "05c9135a72e4",
+      "meta": [],
+      "depends_on": [
+        "2612b1b11d71",
+        "b046f04975b2"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "ae305aef4463",
+      "full_cid": "ae305aef44634955b2b8c2ea26e4c55aae3f63841d1bf563922ddce5b4f176a3",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.651441467+00:00",
+      "parents": [
+        "8a560f525695"
+      ],
+      "output_cid": "2aac84ea02de",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "af9b0de14599",
+      "full_cid": "af9b0de14599c305ec34d1557874345af120d8a6ff1ecaf0b85b231ac090ec9c",
+      "kind": "text",
+      "preview": "[R6] N=54 neutrino conjecture is killed. Canonical neutrino depth is 35 (C11) and m_1/m_3 = 1/q_2^3 exact (C18). Retracted in commit e387fe3",
+      "size": 186,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "b046f04975b2",
+      "full_cid": "b046f04975b2ed8953075338decae2e4df9c06a3620c0f423c3092fb6db3fa63",
+      "kind": "memory",
+      "agent": "human",
+      "timestamp": "2026-04-14T20:23:51.725168931+00:00",
+      "parents": [],
+      "output_cid": "00cedf07feed",
+      "meta": [],
+      "depends_on": [],
+      "depended_on_by": [
+        "822f5e9267a8",
+        "974a5e77f55c",
+        "39a5b7ea78c3",
+        "a66d4e34f4b7",
+        "8550991bf39e",
+        "b561d862318b",
+        "c434e2404bc8",
+        "19d89980634f"
+      ]
+    },
+    {
+      "id": "b418de86407a",
+      "full_cid": "b418de86407a4b4a14c52f3917331716ede65abd79bc109506e6d0ecf75d471f",
+      "kind": "text",
+      "preview": "[C24] Spectral tilt n_s ~ 0.965 from eigenvalue separation of golden-ratio polynomial x^2 - x - 1 = 0.",
+      "size": 102,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "b561d862318b",
+      "full_cid": "b561d862318b6a60596a4aec07032234503e48f8de628653b80183e7139e12ba",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.466711491+00:00",
+      "parents": [
+        "2612b1b11d71",
+        "b046f04975b2"
+      ],
+      "output_cid": "caa21bfee589",
+      "meta": [],
+      "depends_on": [
+        "2612b1b11d71",
+        "b046f04975b2"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "b7a4aeb796d6",
+      "full_cid": "b7a4aeb796d6f54e87aa51c6431c683885dfb1867ed899e06c8c0b0d9df954b7",
+      "kind": "text",
+      "preview": "framework_constants.py \u2014 single source of truth for Q2, Q3, D, K_LEPTON, K_QUARK, MEDIANT, INTERACT, |F_6|=13, |F_7|=19, K_STAR=0.86196052, ",
+      "size": 353,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "ba9cdf126c77",
+      "full_cid": "ba9cdf126c774759db9390b4537ad7e3a80e7b8d57f784db2c8d262f5b6193e0",
+      "kind": "text",
+      "preview": "# The Mass Sector Closure: Integer Conservation and Gauge Adjoints",
+      "size": 7998,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "c434e2404bc8",
+      "full_cid": "c434e2404bc87ff0aa579c845860803fe82eb94e3067b8271f00ae3d434bb0cd",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:28.114967725+00:00",
+      "parents": [
+        "8a560f525695",
+        "2612b1b11d71",
+        "b046f04975b2"
+      ],
+      "output_cid": "3aaf84ff8507",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695",
+        "2612b1b11d71",
+        "b046f04975b2"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "c6696f3490c8",
+      "full_cid": "c6696f3490c8cda774a305d6037e899ce06ff17cef6d6b33c5976e4d46793184",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:28.155116800+00:00",
+      "parents": [
+        "8a560f525695",
+        "2612b1b11d71"
+      ],
+      "output_cid": "cd8085e47ba7",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695",
+        "2612b1b11d71"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "caa21bfee589",
+      "full_cid": "caa21bfee58942f7f55f9d9019f278426a1eadf9fd92adf9e6d2f5a8ee89eb92",
+      "kind": "text",
+      "preview": "[C9] k_quark = q_2^3 = 8 = dim adj SU(3); direct (unsquared) because colour interaction provides a single full path through the adjoint.",
+      "size": 136,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "ccbbdbf58211",
+      "full_cid": "ccbbdbf5821180bddd6762813d0fa84ec3346d2785a4ec89f9b19b2bd8086bde",
+      "kind": "text",
+      "preview": "[R5] Lepton compositional closure +2/F_12^2 is retracted. Canonical lepton identity is a_1(lep)*K_STAR = q_2 = 2 exactly (C16). Retracted in",
+      "size": 201,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "cd8085e47ba7",
+      "full_cid": "cd8085e47ba71b4340fc531117777a9ec2b4d559a7d889768f24d99dd15cacf5",
+      "kind": "text",
+      "preview": "[R2] K_STAR = 0.862 (3-digit rounded) is superseded by K_STAR = 0.86196052 (full precision). Retracted in commit e387fe3: hardcoded 0.862 st",
+      "size": 349,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "d876986de955",
+      "full_cid": "d876986de955dca58636194be7024396e00a022673ae5b144d5b383e4072fa2f",
+      "kind": "text",
+      "preview": "[C18] Neutrino sector: m_3 = v*(K*/2)^35 * cube_root(2); m_1 = m_3/q_2^3 = m_3/8 (exact); m_2 = m_1*(sqrt(3) - 1/(q_2*q_3)^2) = m_1*(sqrt(3)",
+      "size": 213,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "dce330e5f73b",
+      "full_cid": "dce330e5f73be720b08aaed81bb10987f1fbeb0f4f96867dd63be19ef78b879f",
+      "kind": "text",
+      "preview": "[C20] alpha_s / alpha_2 = 27/8 (tree, = q_3^3/q_2^3) + 1/q_3^2 = 1/9 gauge-integer correction; total 251/72 = 3.4861, matches PDG to 0.17%.",
+      "size": 139,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "df80cbf889dd",
+      "full_cid": "df80cbf889ddb4f312a3ef87d938982c013151da1ceca14b29fe730c0ea67344",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:28.269583420+00:00",
+      "parents": [
+        "8a560f525695",
+        "2612b1b11d71"
+      ],
+      "output_cid": "ccbbdbf58211",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695",
+        "2612b1b11d71"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "e16bc5fe9839",
+      "full_cid": "e16bc5fe98391f8f4f90227c54dc31a699ff81a197372abd7ce4cb1048e65fb3",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.615705673+00:00",
+      "parents": [
+        "8a560f525695"
+      ],
+      "output_cid": "3289949b1e8b",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "ead006977855",
+      "full_cid": "ead0069778551a902f1f66d12da4b8a23098820a2035cb39e788ed105c9d4a76",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.687753528+00:00",
+      "parents": [
+        "8a560f525695",
+        "2612b1b11d71"
+      ],
+      "output_cid": "f07d887a3b7d",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695",
+        "2612b1b11d71"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "f07d887a3b7d",
+      "full_cid": "f07d887a3b7d20ec5e8e877c66a20c8f64b27f9014249c4cdc3a64c1fc8fa0b0",
+      "kind": "text",
+      "preview": "[C15] L4 coupling K_STAR_PRECISE = 0.86196052 from joint matter-sector self-consistency: a_1(sector) * K_STAR = sqrt(N_sector) solved simult",
+      "size": 189,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "f412e76ba454",
+      "full_cid": "f412e76ba454368330be7f818df0f792b61cfb03b6f2514f1c56160e29fcf144",
+      "kind": "text",
+      "preview": "[C6] Signature (3,1) from phase states {locked, unlocked}^2 = 4 total: 3 observable (at least one channel locked) + 1 dark (both unlocked).",
+      "size": 139,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "fa3276d0c001",
+      "full_cid": "fa3276d0c00109e87784fb6528c272ab68d019ff474fb510f4749ae9746b4c9a",
+      "kind": "text",
+      "preview": "\"\"\"",
+      "size": 7651,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "fbbaa5cf256a",
+      "full_cid": "fbbaa5cf256a8e7b451b0723347f50692e0950771c956c183b437cb244036352",
+      "kind": "text",
+      "preview": "[C11] Neutrino depth = q_2^3 + q_3^3 = 35 (sum of cubes).",
+      "size": 57,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "fe0f849b4a89",
+      "full_cid": "fe0f849b4a89644af8a5738c6b08e4134d7ffa348bfb76c8768b46dcd607f6cd",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-14T20:29:27.185310940+00:00",
+      "parents": [
+        "8a560f525695"
+      ],
+      "output_cid": "59b1807f546b",
+      "meta": [],
+      "depends_on": [
+        "8a560f525695"
+      ],
+      "depended_on_by": []
+    },
+    {
+      "id": "ffb2eff02a49",
+      "full_cid": "ffb2eff02a4998a6afc3e9c27fa2cb15fcf5137456b46735279cb0e73b26f05a",
+      "kind": "text",
+      "preview": "[C7] L2 alphabet: MEDIANT = q_2 + q_3 = 5; INTERACT = q_2 * q_3 = 6.",
+      "size": 68,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    }
+  ]
+}

@@ -2,10 +2,25 @@
 
 ## Status
 
-**Open.** The structural form of Schrödinger's equation is derived
-(quantum potential shape from Ito calculus + CLT on tree levels).
-The numerical value of ℏ is identified, not derived — it depends on
-the bare diffusion constant D₀, which is an input parameter.
+**Break 1 addressed; Break 2 remains open.**
+
+The diffusion term D·∇²θ is forced by two complementary routes:
+
+- **Topological** (`gap2_theorem_attempt.md`): non-orientability →
+  no time-reversal → h_KS > 0 → decorrelation → Langevin → D·∇².
+  Tensor structure forced by Ad(SL(2,ℝ))-invariance. Coarse-graining
+  step (Mori–Zwanzig) is the main open technical piece.
+
+- **Graph-theoretic** (`gap2_step4_farey_laplacian.md`): the
+  Stern-Brocot tree tessellates H² = SL(2,ℝ)/SO(2) via Ford circles
+  (exact to machine precision). The spatial coupling IS the tree's
+  nearest-neighbor structure. Diffusion emerges from the irrational
+  (continuum) completion, not from the rational skeleton.
+
+Break 2: the scalar D₀ = ½·λ·ℓ_c² requires one microscopic length
+ℓ_c as input — the framework's irreducible Planck-scale dimensionful
+input, analogous to ω = √(4πGρ) in gravity. Gravity-parallel closure
+standard.
 
 ## What is derived
 
