@@ -17,22 +17,6 @@ What is not proved: K = K_c (critical) case, non-uniform locking,
 and the exact correspondence between the framework's "K = 1" and the
 Kuramoto criterion K > K_c.
 
-Original conflict resolution (kept below for history) — two documents
-previously made contradictory claims:
-
-- `continuum_limits.md` (§4, line 105): "The passage to exact Christoffel
-  symbols requires proving that the Kuramoto ensemble averages generate
-  the Levi-Civita connection of γᵢⱼ." — **Gap open.**
-
-- `einstein_from_kuramoto.md` (Part I, line 36): "This is a tautology
-  of Riemannian geometry: given any smooth positive-definite symmetric
-  tensor field, its Levi-Civita connection exists and is unique." —
-  **Gap closed by construction.**
-
-Both cannot be right as stated. This document resolved the confusion
-by identifying what was actually at stake; `gap1_theorem.md` then
-closed it.
-
 ---
 
 ## The tautology argument and why it's half-right

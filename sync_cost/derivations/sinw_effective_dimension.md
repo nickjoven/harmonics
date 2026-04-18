@@ -16,12 +16,10 @@ argument is principled but not yet a theorem; the connection
 between "occupied frequency interval" and "effective dimension"
 is formalized below at the heuristic level.
 
-Supersedes the negative result in `sinw_fixed_point.md`, which
-tested a different hypothesis (K-scanning for a fixed point)
-and correctly rejected it. The present derivation does not use
-K-scanning or running — it is a first-order perturbative
-correction to the bare formula, evaluated at the root (1/1)
-of the Stern-Brocot tree.
+The derivation does not use K-scanning or running (see
+`sinw_fixed_point.md` for why those fail). It is a first-order
+perturbative correction to the bare formula, evaluated at the
+root (1/1) of the Stern-Brocot tree.
 
 ---
 

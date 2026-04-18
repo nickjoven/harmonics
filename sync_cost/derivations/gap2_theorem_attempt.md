@@ -2,22 +2,15 @@
 
 ## Status
 
-**Break 1 (spatialization) attempted via topological route; Break 2
-(D₀ numerical value) remains open.**
+**Break 1 (spatialization): topological route.** The diffusion term
+D·∇²θ is forced by the Klein bottle's non-orientability via the
+same chain that gives the second law (`second_law_topological.md`).
 
-Supersedes nothing. Complements `gap_2_spatial_diffusion.md`, which
-states the two breaks. This document argues that Break 1 is not an
-ad-hoc continuum coupling but is forced by the same non-orientability
-that gives the second law (`second_law_topological.md`). The forcing
-chain is complete in form; the final coarse-graining step that
-converts fine-grained phase decorrelation into the coarse-grained
-Laplacian ∇² is sketched rather than proved. Break 2 remains:
-converting the forcing into a quantitative D₀ needs one microscopic
-length scale (ℓ_P-like) that is not itself topological.
-
-The closure is therefore at the same standard as Gap 3 and the
-K = 1 sector of Gap 1: one irreducible dimensionful input
-(ℓ_P or equivalent) plus forcing for everything else.
+The forcing chain is complete in form; the coarse-graining step
+(Step 4, Mori–Zwanzig) is sketched, not proved. See
+`gap2_step4_farey_laplacian.md` for the complementary graph-theoretic
+route. Break 2 (D₀) remains open — one irreducible dimensionful
+input at the gravity-parallel standard.
 
 ---
 

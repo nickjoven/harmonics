@@ -1,5 +1,5 @@
 {
-  "generated": "c47be658fccedb92aeb0d45b7ac6825af6fd6c70",
+  "generated": "a899ed932fa30407048be41b8c2f5d65a900ddad",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -470,8 +470,7 @@
         "three_dimensions"
       ],
       "depended_on_by": [
-        "sinw_effective_dimension",
-        "sinw_fixed_point"
+        "sinw_effective_dimension"
       ],
       "git": [
         {
@@ -762,14 +761,17 @@
       "id": "gap2_step4_farey_laplacian",
       "path": "sync_cost/derivations/gap2_step4_farey_laplacian.md",
       "title": "Gap 2, Step 4: The Stern-Brocot Tree IS the Spatial Lattice",
-      "summary": "**Verified.** The spatial diffusion term D\u00b7\u2207\u00b2\u03b8 in the Kuramoto\nequation is not added by hand. It is the continuum limit of nearest-\nneighbor coupling on the Stern-Brocot tree, which tessellates the\nhyperbolic plane H\u00b2 = SL(2,\u211d)/SO(2) via Ford circles.",
+      "summary": "**Verified.** The spatial diffusion term D\u00b7\u2207\u00b2\u03b8 is not added by hand.\nThe Stern-Brocot tree tessellates H\u00b2 = SL(2,\u211d)/SO(2) via Ford circles\n(tangency exact to machine precision). Spatial coupling IS the tree's\nnearest-neighbor structure.",
       "depends_on": [
         "continuum_limits",
         "gap2_theorem_attempt",
         "gap_2_spatial_diffusion",
         "three_dimensions"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "gap2_theorem_attempt",
+        "gap_2_spatial_diffusion"
+      ],
       "git": [
         {
           "hash": "c0b93ee",
@@ -782,9 +784,10 @@
       "id": "gap2_theorem_attempt",
       "path": "sync_cost/derivations/gap2_theorem_attempt.md",
       "title": "Gap 2 Attempted Closure: Spatial Diffusion from Non-Orientability",
-      "summary": "**Break 1 (spatialization) attempted via topological route; Break 2\n(D\u2080 numerical value) remains open.**",
+      "summary": "**Break 1 (spatialization): topological route.** The diffusion term\nD\u00b7\u2207\u00b2\u03b8 is forced by the Klein bottle's non-orientability via the\nsame chain that gives the second law (`second_law_topological.md`).",
       "depends_on": [
         "continuum_limits",
+        "gap2_step4_farey_laplacian",
         "gap_2_spatial_diffusion",
         "half_twist_dynamics",
         "klein_bottle_derivation",
@@ -834,12 +837,12 @@
       "id": "gap_2_spatial_diffusion",
       "path": "sync_cost/derivations/gap_2_spatial_diffusion.md",
       "title": "Gap 2: Spatial Diffusion and the Bare Coupling D\u2080",
-      "summary": "**Break 1 attempted via topological route; Break 2 remains open.**\nSee `gap2_theorem_attempt.md` for the attempted closure.",
+      "summary": "**Break 1 addressed; Break 2 remains open.**",
       "depends_on": [
         "continuum_limits",
+        "gap2_step4_farey_laplacian",
         "gap2_theorem_attempt",
         "minimum_alphabet",
-        "second_law_topological",
         "three_dimensions"
       ],
       "depended_on_by": [
@@ -920,8 +923,7 @@
         "gauge_factorization",
         "klein_connection",
         "mass_sector_closure",
-        "sinw_effective_dimension",
-        "sinw_fixed_point"
+        "sinw_effective_dimension"
       ],
       "git": [
         {
@@ -1608,8 +1610,7 @@
         "klein_connection"
       ],
       "depended_on_by": [
-        "gap2_theorem_attempt",
-        "gap_2_spatial_diffusion"
+        "gap2_theorem_attempt"
       ],
       "git": [
         {
@@ -1670,17 +1671,24 @@
         "sinw_fixed_point",
         "three_dimensions"
       ],
-      "depended_on_by": [],
-      "git": []
+      "depended_on_by": [
+        "sinw_fixed_point"
+      ],
+      "git": [
+        {
+          "hash": "a899ed9",
+          "date": "2026-04-18",
+          "subject": "Derive sin\u00b2\u03b8_W = 2^(80/27) / (2^(80/27) + 3^(80/27)) = 0.23123"
+        }
+      ]
     },
     {
       "id": "sinw_fixed_point",
       "path": "sync_cost/derivations/sinw_fixed_point.md",
-      "title": "sin\u00b2\u03b8_W Fixed-Point Hypothesis \u2014 Negative Result",
-      "summary": "**Hypothesis falsified numerically.** No fixed point exists where\nthe framework's K\u2192\u03bc dynamics reproduce both \u03b1_s/\u03b1_2 and sin\u00b2\u03b8_W\nat M_Z. The 1.1% agreement of 8/35 with observed sin\u00b2\u03b8_W is a\nnear-coincidence of a topological rational with an electroweak\nmeasurement, not a dynamical consequence of the framework.",
+      "title": "sin\u00b2\u03b8_W Fixed-Point Hypothesis \u2014 Ruled Out",
+      "summary": "**Ruled out.** The K-scanning hypothesis (that there exists a K*\nreproducing both \u03b1_s/\u03b1_2 and sin\u00b2\u03b8_W at M_Z via the framework's\nduty-cycle dynamics) fails numerically: no K in [0.93, 0.99]\nreproduces either constraint.",
       "depends_on": [
-        "duty_cycle_dictionary",
-        "gauge_sector_lovelock"
+        "sinw_effective_dimension"
       ],
       "depended_on_by": [
         "gauge_dictionary",

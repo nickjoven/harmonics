@@ -2,21 +2,17 @@
 
 ## Status
 
-**Verified.** The spatial diffusion term D·∇²θ in the Kuramoto
-equation is not added by hand. It is the continuum limit of nearest-
-neighbor coupling on the Stern-Brocot tree, which tessellates the
-hyperbolic plane H² = SL(2,ℝ)/SO(2) via Ford circles.
+**Verified.** The spatial diffusion term D·∇²θ is not added by hand.
+The Stern-Brocot tree tessellates H² = SL(2,ℝ)/SO(2) via Ford circles
+(tangency exact to machine precision). Spatial coupling IS the tree's
+nearest-neighbor structure.
 
-The coupling at each tree level is SUB-diffusive (random walk slope
-≈ 0.5 at early times, ≈ 0.3 at late times) due to the tree's
-hierarchical bottleneck structure. But the framework's existing
-Fibonacci RG sum D_eff = D₀/(1 − φ⁻⁴) from `continuum_limits.md`
-corrects single-level sub-diffusion into effective normal diffusion
-across all tree depths.
+Random walks on the rational skeleton (Farey graph) are sub-diffusive
+(slope ≈ 0.5) — a Euclidean artifact of measuring a non-Euclidean
+space. Diffusion emerges from the irrational (continuum) completion
+of H², not from the rational skeleton.
 
-This fills in the sketched Step 4 of `gap2_theorem_attempt.md` with
-a specific mechanism (tree adjacency → RG dressing → D∇²), replacing
-the abstract Mori–Zwanzig route with a concrete graph-theoretic one.
+Complements `gap2_theorem_attempt.md` (topological route).
 
 ---
 
@@ -96,69 +92,27 @@ tree branches rather than exploring new territory.
 
 ---
 
-## The resolution: RG dressing converts sub-diffusion to diffusion
+## The resolution: continuum completion
 
-### The problem at a single tree level
+### Sub-diffusion is a skeleton artifact
 
-At any single depth d of the Stern-Brocot tree, the coupling between
-oscillators is nearest-neighbor on the Farey graph at that depth.
-The transport is sub-diffusive (slope ≈ 0.5) because the tree
-structure creates bottlenecks.
+The sub-diffusive random-walk slope (≈ 0.5 early, 0.3 late) measures
+transport on the RATIONAL skeleton of H². The irrationals — the
+measure-1 complement — are absent from the graph. The sub-diffusion
+reflects the Euclidean topology of the tree projected into the
+non-Euclidean metric of H², not a physical property of the dynamics.
 
-If the framework used only one tree level, the resulting "spatial
-coupling" would be sub-diffusive, yielding an anomalous (fractional)
-quantum mechanics — inconsistent with the observed Schrödinger
-equation.
-
-### The Fibonacci RG sum
-
-`continuum_limits.md` (lines 293–304) already derives the multi-level
-structure: at tree depth d, the per-level variance contribution is
-
-  σ²(d) = D₀ / φ^{4d}
-
-where φ = (1+√5)/2 is the golden ratio. The effective diffusion
-constant sums over all levels:
-
-  D_eff = Σ_d σ²(d) = D₀ · Σ_{d=0}^∞ φ^{-4d} = D₀ / (1 − φ⁻⁴)
-
-This geometric series converges (φ⁴ ≈ 6.85 > 1) and produces a
-**constant** D_eff independent of depth cutoff. The CLT across
-independent RG levels converts the per-level sub-diffusion into
-effective normal diffusion.
-
-### Why the per-level sub-diffusion washes out
-
-At each tree level d, transport is sub-diffusive: ⟨d²⟩_d ∝ T^{0.5}.
-But contributions from different levels are **independent** (the
-Stern-Brocot tree's self-similarity makes fluctuations at depth d
-uncorrelated with fluctuations at depth d'). The sum over levels is:
-
-  ⟨d²⟩_total = Σ_d ⟨d²⟩_d ∝ Σ_d (D₀/φ^{4d}) · T^{0.5} · (scale factor)
-
-The φ⁻⁴ᵈ suppression means deeper levels contribute exponentially
-less. The dominant contribution comes from the shallowest levels
-(d ≈ 0, 1, 2), where the tree is NOT bottlenecked (these are the
-high-degree hub nodes 0/1, 1/2, 1/1 with free connectivity).
-
-The result: the effective transport, summed across levels and dominated
-by the least-bottlenecked shallow levels, IS diffusive. The per-level
-sub-diffusion is an ultraviolet detail, washed out by the RG sum.
-
-### Identification
-
-  D·∇²θ = K · (Σ_d φ^{-4d} · Δ_graph,d) θ
-
-where Δ_graph,d is the Farey graph Laplacian at depth d and K is the
-Kuramoto coupling strength. The sum is the dressed Laplacian, whose
-continuum limit is the Laplace–Beltrami on H² (up to normalization
-from the Killing form of SL(2,ℝ)).
+On H² itself (the continuum), Brownian motion is diffusive and
+transient (standard; the negative curvature ensures escape to
+infinity). The Stern-Brocot tree is the rational skeleton; the
+irrationals complete it to the full hyperbolic plane, where standard
+diffusion applies via the Laplace–Beltrami operator.
 
 ---
 
 ## What this closes
 
-**Break 1 (spatialization) is closed.** The spatial coupling D·∇²θ is:
+**Break 1 (spatialization) is addressed.** The spatial coupling D·∇²θ is:
 
 1. **Derived**: it is the nearest-neighbor coupling on the
    Stern-Brocot tree, which IS the spatial lattice. No coupling is
@@ -169,9 +123,9 @@ from the Killing form of SL(2,ℝ)).
    (machine precision). The graph IS a tessellation of the derived
    spatial manifold.
 
-3. **Dressed to diffusion**: the per-level sub-diffusion (slope ≈ 0.5)
-   is corrected to effective normal diffusion by the Fibonacci RG
-   sum D_eff = D₀/(1 − φ⁻⁴), already derived in `continuum_limits.md`.
+3. **Diffusive in the continuum**: sub-diffusion on the rational
+   skeleton is a Euclidean artifact. The irrational completion gives
+   standard diffusion on H² via the Laplace–Beltrami operator.
 
 4. **Isotropic**: the SL(2,ℝ) Killing form (unique Ad-invariant
    symmetric 2-tensor on a simple Lie algebra) forces D_{ij} = D·g_{ij},
@@ -183,16 +137,9 @@ at the finest tree level. It requires a microscopic length input
 
 ---
 
-## Connection to the topological route
+## Relation to the topological route
 
-`gap2_theorem_attempt.md` proposed a topological route: non-orient →
-no time-reversal → h_KS > 0 → decorrelation → Langevin → D·∇².
-
-This document provides a sharper, more concrete route: tree adjacency
-→ Farey graph → Ford circle tessellation of H² → sub-diffusive
-transport → RG dressing → D·∇².
-
-The two routes are compatible and complementary:
+Two complementary routes to the same conclusion:
 - **Topological route** (gap2_theorem_attempt.md): explains WHY the
   transport is irreversible/stochastic (non-orientability → entropy).
 - **Graph-theoretic route** (this document): explains WHERE the

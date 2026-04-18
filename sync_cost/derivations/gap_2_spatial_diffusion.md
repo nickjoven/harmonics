@@ -2,28 +2,25 @@
 
 ## Status
 
-**Break 1 attempted via topological route; Break 2 remains open.**
-See `gap2_theorem_attempt.md` for the attempted closure.
+**Break 1 addressed; Break 2 remains open.**
 
-Summary of the attempt: the diffusion term `D·∇²θ` is not independent
-of the rest of the framework. The Klein bottle's non-orientability
-(Step 1), the absence of global time-reversal it induces (Step 2, from
-`second_law_topological.md`), and the positive KS entropy that follows
-by Pesin (Step 2), produce fine-grained phase decorrelation (Step 3),
-which coarse-grains to a Langevin equation (Step 4, *sketched*) with
-a Laplacian term (Steps 5–6) whose tensor structure is forced by
-Ad(SL(2,ℝ))-invariance (uniqueness of the Killing form on a simple
-Lie algebra). The scalar coefficient D = ½·λ·ℓ_c² requires one
-microscopic length ℓ_c as input (Break 2 — the framework's irreducible
-Planck-scale dimensionful input, analogous to ω = √(4πGρ) in gravity).
+The diffusion term D·∇²θ is forced by two complementary routes:
 
-Closure standard: gravity-parallel. One irreducible dimensionful
-input + forcing for everything else. What remains to upgrade the
-attempt to a theorem: rigorous Mori–Zwanzig for Step 4 (the main
-open technical step).
+- **Topological** (`gap2_theorem_attempt.md`): non-orientability →
+  no time-reversal → h_KS > 0 → decorrelation → Langevin → D·∇².
+  Tensor structure forced by Ad(SL(2,ℝ))-invariance. Coarse-graining
+  step (Mori–Zwanzig) is the main open technical piece.
 
-Original "what is derived / what is not" content retained below for
-reference.
+- **Graph-theoretic** (`gap2_step4_farey_laplacian.md`): the
+  Stern-Brocot tree tessellates H² = SL(2,ℝ)/SO(2) via Ford circles
+  (exact to machine precision). The spatial coupling IS the tree's
+  nearest-neighbor structure. Diffusion emerges from the irrational
+  (continuum) completion, not from the rational skeleton.
+
+Break 2: the scalar D₀ = ½·λ·ℓ_c² requires one microscopic length
+ℓ_c as input — the framework's irreducible Planck-scale dimensionful
+input, analogous to ω = √(4πGρ) in gravity. Gravity-parallel closure
+standard.
 
 ## What is derived
 
