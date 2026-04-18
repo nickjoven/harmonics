@@ -1,5 +1,5 @@
 {
-  "generated": "e77e531eb946103db3c05d3fdf1bef4c4008f026",
+  "generated": "30420ad96a2923504a9fd856faec5e162fe2f223",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -307,6 +307,7 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
+        "gap1_theorem",
         "gap_1_christoffel",
         "gap_2_spatial_diffusion"
       ],
@@ -514,6 +515,7 @@
       ],
       "depended_on_by": [
         "gap1_analytic_proof",
+        "gap1_theorem",
         "gap_1_christoffel",
         "gauge_dictionary",
         "klein_connection",
@@ -710,6 +712,22 @@
       ]
     },
     {
+      "id": "gap1_theorem",
+      "path": "sync_cost/derivations/gap1_theorem.md",
+      "title": "Gap 1 Theorem: Christoffel Connection from Kuramoto in the Continuum Limit",
+      "summary": "**Proved, conditionally.** Lifts the numerical results of\n`gap1_step1_tautology.py`, `gap1_step2_kuramoto.py`, and\n`gap1_step3_factorization.py` to a theorem about the continuum limit.\nThe theorem is conditional on the Kuramoto locked state lying in the\nsupercritical regime where the Strogatz\u2013Mirollo 1991 central limit\ntheorem applies; at criticality (K = K_c exactly), critical slowing\ninvalidates the fluctuation expansion and the argument does not carry\nthrough unchanged.",
+      "depends_on": [
+        "continuum_limits",
+        "einstein_from_kuramoto",
+        "gap_1_christoffel",
+        "rational_field_equation"
+      ],
+      "depended_on_by": [
+        "gap_1_christoffel"
+      ],
+      "git": []
+    },
+    {
       "id": "gap2_analytic_proof",
       "path": "sync_cost/derivations/gap2_analytic_proof.md",
       "title": "Analytic Proof: Farey Graph Laplacian \u2192 Laplace-Beltrami",
@@ -735,13 +753,16 @@
       "id": "gap_1_christoffel",
       "path": "sync_cost/derivations/gap_1_christoffel.md",
       "title": "Gap 1: The Christoffel Connection from Kuramoto Ensemble Averages",
-      "summary": "**Partially resolved, partially confused.** Two documents in the repo\nmake conflicting claims about this gap:",
+      "summary": "**Closed in the continuum limit**, conditionally. See\n`gap1_theorem.md` for the theorem statement and proof combining the\nStep 1\u20133 numerical results with Strogatz\u2013Mirollo 1991 (CLT for the\nKuramoto locked state) and the fundamental theorem of Riemannian\ngeometry. Result:",
       "depends_on": [
         "continuum_limits",
         "einstein_from_kuramoto",
+        "gap1_theorem",
         "rational_field_equation"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "gap1_theorem"
+      ],
       "git": [
         {
           "hash": "d185308",
@@ -1430,6 +1451,7 @@
       "summary": "The field equation of the synchronization framework is a\nself-consistency condition on the Stern-Brocot tree, written in\nexact rational arithmetic using the four primitives of Derivation 10.\nThe continuum (PDE) form is a limit, not the primary object. The\nequation operates on rationals constructed by mediants because the\nphysical states it describes \u2014 mode-locked orbits \u2014 are rational.",
       "depends_on": [],
       "depended_on_by": [
+        "gap1_theorem",
         "gap_1_christoffel"
       ],
       "git": [
