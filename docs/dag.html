@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Derivation graph &mdash; Harmonics</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body { max-width: 100%; padding: 0; margin: 0; font-family: ui-sans-serif, system-ui, sans-serif; color: #e0e0e0; background: #101018; }
+  nav { padding: 1rem 2rem; background: #1a1a2e; border-bottom: 1px solid #333; }
+  nav a { color: #e0e0e0; margin-right: 1rem; text-decoration: none; }
+  nav a.active { color: #f0c040; border-bottom: 2px solid #f0c040; padding-bottom: 2px; }
+  .layout { display: grid; grid-template-columns: 1fr 420px; height: calc(100vh - 60px); gap: 0; }
+  .graph-pane { position: relative; overflow: hidden; background: #0a0a12; }
+  .graph-pane svg { width: 100%; height: 100%; cursor: grab; }
+  .graph-pane svg:active { cursor: grabbing; }
+  .detail-pane { background: #141424; padding: 1.5rem; overflow-y: auto; border-left: 1px solid #333; }
+  .detail-pane h1 { font-size: 1.3rem; color: #f0c040; margin: 0 0 0.5rem; }
+  .detail-pane h2 { font-size: 0.9rem; color: #e94560; margin: 1.5rem 0 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+  .detail-pane .meta { font-size: 0.85rem; color: #888; margin-bottom: 1rem; }
+  .detail-pane .summary { font-size: 0.95rem; line-height: 1.5; margin-bottom: 1rem; }
+  .detail-pane .summary code { background: #2a2a4e; padding: 1px 4px; border-radius: 3px; font-size: 0.85em; }
+  .detail-pane ul { margin: 0; padding-left: 1.2rem; font-size: 0.9rem; }
+  .detail-pane li { margin-bottom: 0.25rem; }
+  .detail-pane a { color: #f0c040; text-decoration: none; cursor: pointer; }
+  .detail-pane a:hover { text-decoration: underline; }
+  .detail-pane .git-entry { font-size: 0.8rem; color: #aaa; margin-bottom: 0.5rem; display: flex; gap: 0.5rem; }
+  .detail-pane .git-hash { color: #40c060; font-family: monospace; }
+  .detail-pane .git-date { color: #888; font-family: monospace; }
+  .search-box { padding: 0.5rem 1rem; background: #1a1a2e; border-bottom: 1px solid #333; }
+  .search-box input { width: 100%; padding: 0.4rem 0.6rem; font-size: 0.9rem; background: #0a0a12; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; }
+  .controls { padding: 0.5rem 1rem; font-size: 0.85rem; color: #aaa; background: #1a1a2e; border-bottom: 1px solid #333; }
+  .controls label { margin-right: 1rem; cursor: pointer; }
+  .node-circle { stroke-width: 1.5; cursor: pointer; transition: r 0.2s; }
+  .node-circle.selected { stroke: #f0c040; stroke-width: 3; }
+  .node-circle.ancestor { stroke: #e94560; }
+  .node-circle.descendant { stroke: #40c060; }
+  .node-circle.dimmed { opacity: 0.2; }
+  .node-label { font-size: 9px; fill: #aaa; pointer-events: none; font-family: monospace; }
+  .node-label.selected { fill: #f0c040; font-weight: bold; }
+  .edge { stroke: #444; stroke-width: 0.7; fill: none; }
+  .edge.ancestor { stroke: #e94560; stroke-width: 1.5; }
+  .edge.descendant { stroke: #40c060; stroke-width: 1.5; }
+  .edge.dimmed { opacity: 0.1; }
+  .legend { position: absolute; top: 10px; left: 10px; background: rgba(26,26,46,0.9); padding: 0.5rem; border-radius: 4px; font-size: 0.75rem; color: #aaa; }
+  .legend .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+  .empty-state { color: #666; font-style: italic; padding: 2rem 0; text-align: center; }
+  @media (max-width: 800px) {
+    .layout { grid-template-columns: 1fr; grid-template-rows: 50vh 1fr; }
+    .detail-pane { border-left: none; border-top: 1px solid #333; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Reference</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="derivations.html">Derivations</a>
+  <a href="dag.html" class="active">Graph</a>
+  <a href="collatz.html">Collatz</a>
+  <a href="cmb-s4.html">CMB-S4</a>
+</nav>
+
+<div class="search-box">
+  <input type="text" id="search" placeholder="Filter nodes by name... (e.g. klein, gauge, collatz)">
+</div>
+
+<div class="controls">
+  <label><input type="checkbox" id="toggle-labels" checked> labels</label>
+  <label><input type="checkbox" id="toggle-orphans" checked> orphans</label>
+  <span style="float:right">click a node to see its auditable inheritance</span>
+</div>
+
+<div class="layout">
+  <div class="graph-pane">
+    <div class="legend">
+      <div><span class="dot" style="background:#f0c040"></span> selected</div>
+      <div><span class="dot" style="background:#e94560"></span> ancestors (depends on)</div>
+      <div><span class="dot" style="background:#40c060"></span> descendants (depended on by)</div>
+      <div><span class="dot" style="background:#888"></span> root / leaf</div>
+    </div>
+    <svg id="graph"></svg>
+  </div>
+
+  <div class="detail-pane" id="detail">
+    <div class="empty-state">Click a node to view its lineage, summary, and git history.</div>
+  </div>
+</div>
+
+<script>
+(async function() {
+  const res = await fetch('derivation-graph.json');
+  const data = await res.json();
+  const nodes = data.nodes;
+  const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
+
+  // Compute topological depth (longest path from any root)
+  function computeDepth() {
+    const depth = {};
+    const visit = (id, seen) => {
+      if (id in depth) return depth[id];
+      if (seen.has(id)) return 0;
+      seen.add(id);
+      const node = byId[id];
+      if (!node || node.depends_on.length === 0) {
+        depth[id] = 0;
+      } else {
+        depth[id] = 1 + Math.max(...node.depends_on.map(d => visit(d, seen)));
+      }
+      seen.delete(id);
+      return depth[id];
+    };
+    nodes.forEach(n => visit(n.id, new Set()));
+    return depth;
+  }
+  const depth = computeDepth();
+  const maxDepth = Math.max(...Object.values(depth));
+
+  // Group nodes by depth
+  const byDepth = {};
+  nodes.forEach(n => {
+    (byDepth[depth[n.id]] ||= []).push(n);
+  });
+
+  // Layout: place by depth column, spread within column
+  const svg = document.getElementById('graph');
+  let width = svg.clientWidth || 800;
+  let height = svg.clientHeight || 600;
+  function layout() {
+    width = svg.clientWidth;
+    height = svg.clientHeight;
+    const colWidth = width / (maxDepth + 2);
+    const positions = {};
+    for (let d = 0; d <= maxDepth; d++) {
+      const col = (byDepth[d] || []).sort((a,b) => a.id.localeCompare(b.id));
+      col.forEach((n, i) => {
+        positions[n.id] = {
+          x: colWidth * (d + 1),
+          y: height * (i + 1) / (col.length + 1),
+        };
+      });
+    }
+    return positions;
+  }
+  let pos = layout();
+
+  // Zoom & pan state
+  let zoom = 1, panX = 0, panY = 0;
+  let isDragging = false, dragStartX, dragStartY, panStartX, panStartY;
+  let draggingNode = null;
+
+  function render() {
+    const showLabels = document.getElementById('toggle-labels').checked;
+    const showOrphans = document.getElementById('toggle-orphans').checked;
+    const filter = document.getElementById('search').value.toLowerCase();
+    const visible = new Set();
+    nodes.forEach(n => {
+      const hasEdge = n.depends_on.length > 0 || n.depended_on_by.length > 0;
+      if (!showOrphans && !hasEdge) return;
+      if (filter && !n.id.toLowerCase().includes(filter)) return;
+      visible.add(n.id);
+    });
+
+    let svgContent = `<g transform="translate(${panX},${panY}) scale(${zoom})">`;
+
+    // Edges
+    nodes.forEach(n => {
+      if (!visible.has(n.id)) return;
+      n.depends_on.forEach(dep => {
+        if (!visible.has(dep)) return;
+        const p1 = pos[dep], p2 = pos[n.id];
+        if (!p1 || !p2) return;
+        const cls = edgeClass(dep, n.id);
+        svgContent += `<path class="edge ${cls}" d="M${p1.x},${p1.y} C${(p1.x+p2.x)/2},${p1.y} ${(p1.x+p2.x)/2},${p2.y} ${p2.x},${p2.y}"/>`;
+      });
+    });
+
+    // Nodes
+    nodes.forEach(n => {
+      if (!visible.has(n.id)) return;
+      const p = pos[n.id];
+      if (!p) return;
+      const r = 3 + Math.min(7, n.depends_on.length + n.depended_on_by.length);
+      const color = nodeColor(n);
+      const cls = nodeClass(n.id);
+      svgContent += `<circle class="node-circle ${cls}" cx="${p.x}" cy="${p.y}" r="${r}" fill="${color}" stroke="${color}" data-id="${n.id}"/>`;
+      if (showLabels) {
+        const labelCls = (selectedId === n.id) ? 'node-label selected' : 'node-label';
+        svgContent += `<text class="${labelCls}" x="${p.x + r + 3}" y="${p.y + 3}">${n.id}</text>`;
+      }
+    });
+
+    svgContent += `</g>`;
+    svg.innerHTML = svgContent;
+
+    // Attach handlers
+    svg.querySelectorAll('.node-circle').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        selectNode(el.dataset.id);
+      });
+    });
+  }
+
+  function nodeColor(n) {
+    if (n.depends_on.length === 0 && n.depended_on_by.length === 0) return '#666';
+    if (n.depends_on.length === 0) return '#4080c0';  // root (blue)
+    if (n.depended_on_by.length === 0) return '#a060c0';  // leaf (purple)
+    return '#888';  // middle
+  }
+
+  let selectedId = null;
+  let ancestors = new Set(), descendants = new Set();
+
+  function collectAncestors(id, acc = new Set()) {
+    const n = byId[id];
+    if (!n) return acc;
+    n.depends_on.forEach(dep => {
+      if (!acc.has(dep)) {
+        acc.add(dep);
+        collectAncestors(dep, acc);
+      }
+    });
+    return acc;
+  }
+
+  function collectDescendants(id, acc = new Set()) {
+    const n = byId[id];
+    if (!n) return acc;
+    n.depended_on_by.forEach(dep => {
+      if (!acc.has(dep)) {
+        acc.add(dep);
+        collectDescendants(dep, acc);
+      }
+    });
+    return acc;
+  }
+
+  function nodeClass(id) {
+    if (selectedId === id) return 'selected';
+    if (ancestors.has(id)) return 'ancestor';
+    if (descendants.has(id)) return 'descendant';
+    if (selectedId !== null) return 'dimmed';
+    return '';
+  }
+
+  function edgeClass(from, to) {
+    if (selectedId === null) return '';
+    if (from === selectedId || to === selectedId) {
+      if (ancestors.has(from) || from === selectedId) return 'ancestor';
+      if (descendants.has(to) || to === selectedId) return 'descendant';
+    }
+    if (ancestors.has(from) && (ancestors.has(to) || to === selectedId)) return 'ancestor';
+    if (descendants.has(to) && (descendants.has(from) || from === selectedId)) return 'descendant';
+    return 'dimmed';
+  }
+
+  function selectNode(id) {
+    selectedId = id;
+    ancestors = collectAncestors(id);
+    descendants = collectDescendants(id);
+    render();
+    renderDetail(id);
+  }
+
+  function renderDetail(id) {
+    const n = byId[id];
+    if (!n) return;
+    const pane = document.getElementById('detail');
+    const repoBase = 'https://github.com/nickjoven/harmonics/blob/main/';
+    const commitBase = 'https://github.com/nickjoven/harmonics/commit/';
+    let html = `<h1>${n.id}</h1>`;
+    if (n.title && n.title !== n.id) html += `<div class="meta">${n.title}</div>`;
+    html += `<div class="meta"><a href="${repoBase}${n.path}" target="_blank">${n.path}</a></div>`;
+    if (n.summary) {
+      html += `<div class="summary">${escapeHtml(n.summary).replace(/\n/g, '<br>')}</div>`;
+    }
+    html += `<h2>Depends on (${n.depends_on.length})</h2>`;
+    if (n.depends_on.length) {
+      html += '<ul>' + n.depends_on.map(d => `<li><a data-id="${d}">${d}</a></li>`).join('') + '</ul>';
+    } else {
+      html += '<div class="empty-state" style="padding:0.5rem 0;">No prerequisites — root node</div>';
+    }
+    html += `<h2>Depended on by (${n.depended_on_by.length})</h2>`;
+    if (n.depended_on_by.length) {
+      html += '<ul>' + n.depended_on_by.map(d => `<li><a data-id="${d}">${d}</a></li>`).join('') + '</ul>';
+    } else {
+      html += '<div class="empty-state" style="padding:0.5rem 0;">No descendants — leaf node</div>';
+    }
+    html += `<h2>Audit trail (${n.git.length} commits)</h2>`;
+    if (n.git.length) {
+      html += n.git.slice(0, 20).map(c => `
+        <div class="git-entry">
+          <span class="git-date">${c.date}</span>
+          <a href="${commitBase}${c.hash}" target="_blank" class="git-hash">${c.hash}</a>
+          <span>${escapeHtml(c.subject)}</span>
+        </div>`).join('');
+      if (n.git.length > 20) {
+        html += `<div style="font-size:0.8rem;color:#888;margin-top:0.5rem;">...${n.git.length - 20} earlier commits</div>`;
+      }
+    } else {
+      html += '<div class="empty-state" style="padding:0.5rem 0;">No git history available</div>';
+    }
+    pane.innerHTML = html;
+    pane.querySelectorAll('a[data-id]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        selectNode(a.dataset.id);
+      });
+    });
+    pane.scrollTop = 0;
+  }
+
+  function escapeHtml(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  // Pan & zoom
+  svg.addEventListener('mousedown', (e) => {
+    if (e.target.classList.contains('node-circle')) return;
+    isDragging = true;
+    dragStartX = e.clientX;
+    dragStartY = e.clientY;
+    panStartX = panX;
+    panStartY = panY;
+  });
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    panX = panStartX + (e.clientX - dragStartX);
+    panY = panStartY + (e.clientY - dragStartY);
+    render();
+  });
+  window.addEventListener('mouseup', () => { isDragging = false; });
+  svg.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    const delta = e.deltaY < 0 ? 1.1 : 0.9;
+    const rect = svg.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+    panX = mx - (mx - panX) * delta;
+    panY = my - (my - panY) * delta;
+    zoom *= delta;
+    render();
+  });
+  svg.addEventListener('click', (e) => {
+    if (e.target === svg || e.target.tagName === 'g') {
+      selectedId = null;
+      ancestors = new Set();
+      descendants = new Set();
+      render();
+      document.getElementById('detail').innerHTML = '<div class="empty-state">Click a node to view its lineage, summary, and git history.</div>';
+    }
+  });
+
+  document.getElementById('toggle-labels').addEventListener('change', render);
+  document.getElementById('toggle-orphans').addEventListener('change', render);
+  document.getElementById('search').addEventListener('input', render);
+
+  window.addEventListener('resize', () => {
+    pos = layout();
+    render();
+  });
+
+  // Deep linking: ?node=klein_bottle
+  const params = new URLSearchParams(window.location.search);
+  const initialNode = params.get('node');
+
+  pos = layout();
+  render();
+  if (initialNode && byId[initialNode]) {
+    selectNode(initialNode);
+  }
+})();
+</script>
+
+</body>
+</html>
