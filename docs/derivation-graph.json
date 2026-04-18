@@ -1,5 +1,5 @@
 {
-  "generated": "57fc3198fe36c45997783d683c6f74d9ec0cb3fe",
+  "generated": "17d51d44d8cc531ecda96765f013f4721872eb95",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -923,7 +923,8 @@
       ],
       "depended_on_by": [
         "hierarchy_gaussian_lattice",
-        "sinw_effective_dimension"
+        "sinw_effective_dimension",
+        "three_formalizations"
       ],
       "git": [
         {
@@ -1142,8 +1143,16 @@
         "sinw_effective_dimension",
         "three_dimensions"
       ],
-      "depended_on_by": [],
-      "git": []
+      "depended_on_by": [
+        "three_formalizations"
+      ],
+      "git": [
+        {
+          "hash": "17d51d4",
+          "date": "2026-04-18",
+          "subject": "Derive the Planck/Hubble hierarchy: R = 6 \u00d7 13^54, zero inputs"
+        }
+      ]
     },
     {
       "id": "higgs_from_tongue_boundary",
@@ -1337,7 +1346,8 @@
         "gauge_factorization",
         "hierarchy_gaussian_lattice",
         "second_law_topological",
-        "sinw_effective_dimension"
+        "sinw_effective_dimension",
+        "three_formalizations"
       ],
       "git": [
         {
@@ -1740,7 +1750,8 @@
       ],
       "depended_on_by": [
         "hierarchy_gaussian_lattice",
-        "sinw_fixed_point"
+        "sinw_fixed_point",
+        "three_formalizations"
       ],
       "git": [
         {
@@ -1918,7 +1929,8 @@
         "hierarchy_gaussian_lattice",
         "isotropy_lemma",
         "klein_bottle_derivation",
-        "sinw_effective_dimension"
+        "sinw_effective_dimension",
+        "three_formalizations"
       ],
       "git": [
         {
@@ -1937,6 +1949,21 @@
           "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
         }
       ]
+    },
+    {
+      "id": "three_formalizations",
+      "path": "sync_cost/derivations/three_formalizations.md",
+      "title": "Three Formalizations",
+      "summary": "The exponent 54 in R = 6 \u00d7 13^54 decomposes as:",
+      "depends_on": [
+        "gauge_dictionary",
+        "hierarchy_gaussian_lattice",
+        "klein_bottle_derivation",
+        "sinw_effective_dimension",
+        "three_dimensions"
+      ],
+      "depended_on_by": [],
+      "git": []
     },
     {
       "id": "three_zeros",
