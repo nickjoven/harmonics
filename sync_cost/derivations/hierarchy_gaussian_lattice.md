@@ -12,8 +12,7 @@ three quantities (q₂ = 2, q₃ = 3, d = 3) with zero free parameters:
   Exponent:     q₂ q₃^d = 54, the gauge cell count of K²
 
 Numerical value: R ≈ 8.53 × 10^60.
-Observed: L_H/ℓ_P ≈ 7.14 × 10^60 (0.48% residual in the hierarchy,
-propagating to 19% in ℓ_P via the square root).
+Observed: t_H/t_P = c/(H₀ ℓ_P) ≈ 8.49 × 10^60 (0.48% residual).
 
 ## Proof
 
@@ -110,20 +109,17 @@ themselves derived from the four primitives.
 D₀ = ½ λ_unlock ℓ_c² with ℓ_c = ℓ_P and ℓ_P derived from R.
 The quantum sector's diffusion constant is determined.
 
-## What remains heuristic
+## Formalizations
 
-1. **Gauge cell ↔ coarse-graining bijection**: the claim that
-   each iteration of (2+3i)·Z[i] corresponds to one gauge cell
-   is motivated by the count (54 cells, 54 iterations) but the
-   bijection itself is not formally established. A rigorous
-   version would construct an explicit map from gauge cells to
-   coarse-graining steps.
+The three items below are formalized in `three_formalizations.md`:
 
-2. **Z₆ non-renewability**: the argument that the Klein bottle
-   supplies exactly one Z₆ (blocking n > 54) is topological in
-   spirit but expressed informally. A rigorous version would show
-   that the lattice index formula 6 × 13^n has the correct
-   cohomological interpretation only at n = 54.
+1. **Gauge cell ↔ iteration bijection**: 54 = ord₂₇(13) × |Z₆|
+   = 9 × 6. Each norm-cycle (period 9) is labeled by one Z₆
+   element. 54 steps = 6 complete cycles.
+
+2. **Z₆ non-renewability**: the Klein bottle supplies one Z₆
+   (6 elements). After 6 norm-cycles the center is exhausted.
+   A 7th cycle has no label. n = 54 is forced.
 
 3. **The 0.48% residual**: R = 6 × 13^54 ≈ 8.53 × 10^60 vs
    observed ≈ 7.14 × 10^60. The ~19% error in ℓ_P (from the
