@@ -95,19 +95,21 @@ None matches observation at the σ level. Closest is K_eff = 3/2 at
 **4.41× too small**. This is the precise numerical content of the
 "prefactor verification" gap.
 
-### Candidate factors for the missing 4.41
+### Candidate factors for the missing 4.415
 
-Numerology (not closures):
+See `a_s_prefactor_gap_formal.md` §7 for the formal comparison.
+Summary:
 
-- 4π/3 ≈ 4.19 — volume factor of unit 3-sphere; would arise if the
-  formula counts modes per 3-volume, not per k-interval
-- 4π/3 × 1.05 = 4.40 — the 5% residual could be the same order as
-  the PMNS %-only deviations (`mixing_angle_audit.md` pattern)
+| candidate | value | % from 4.415 | σ under Planck 2018 |
+|---|---|---|---|
+| e · φ | 4.3983 | 0.38% | ~0.25σ |
+| π √2 | 4.4429 | 0.64% | ~0.4σ |
+| 4π / 3 | 4.1888 | 5.40% | ~4σ (excluded) |
 
-Neither is a derivation. If the missing factor is 4π/3, the
-corrected formula would be `A_s = (4π/3) σ⁴ / (4π² q_pivot²)`
-= `σ⁴ / (3π q_pivot²)`. With σ² = 3/2 and q_pivot = F_21, this
-gives A_s ≈ 2.0e-9 — 5% below observed. Not verified.
+**None of these is a derivation.** `e · φ` and `π √2` both land
+within 1% of target — a red flag for numerological coincidence.
+A genuine closure must identify **one** of them unambiguously from
+the axioms.
 
 ### Sensitivity to pivot-level choice
 
@@ -177,7 +179,8 @@ well-scoped to a single missing factor.
 
 | File | Role |
 |---|---|
-| `sigma_squared.py` | Three-route σ² analysis; flags the prefactor gap at §7 |
+| `a_s_prefactor_gap_formal.md` | **Formal gap statement**: axioms, open quantity C_{A_s}, closure criterion |
+| `sigma_squared.py` | Three-route σ² analysis; corrected §7 misattribution |
 | `adm_prefactor_verification.py` | Closes σ²_kernel vs K_eff via 2d=6 coordination |
 | `alphabet_depth21.py` | Computes σ²(d) on the SB tree; claims "A_s = σ²(d_pivot)²" but missing the 1/(4π² q²) factor |
 | `spectral_tilt_reframed.md` | Derives n_s shape from mode-locking; doesn't derive A_s |
