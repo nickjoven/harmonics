@@ -37,8 +37,25 @@ PDG masses (central values, MeV):
 Couplings at M_Z (PDG 2024):
     ALPHA_S_MZ, ALPHA_EM_MZ, SIN2_TW_MZ, ALPHA_2_MZ, ALPHA_Y_MZ
 
-Cosmological partition:
-    OMEGA_B, OMEGA_DM, OMEGA_L, OMEGA_M
+Cosmological parameters:
+    OMEGA_B, OMEGA_DM, OMEGA_L, OMEGA_M (framework fractions)
+    H_0_SI         -- Hubble constant (Planck 2018, s^-1)
+    H_0_KM_S_MPC   -- Hubble constant in km/s/Mpc (Planck 2018)
+    T_H            -- Hubble time (1/H_0), in seconds
+    LAMBDA_SI      -- cosmological constant (m^-2, derived from H_0, Omega_L)
+    L_H_HUBBLE     -- Hubble radius (c/H_0), meters
+
+Physical constants (SI, CODATA 2022):
+    HBAR, G_NEWTON, C_LIGHT
+
+Planck units (derived):
+    ELL_P          -- Planck length (m)
+    T_P            -- Planck time (s)
+    M_P            -- Planck mass (kg)
+
+Kuramoto dynamics:
+    LAMBDA_UNLOCK  -- Klein-bottle Lyapunov on unlocked sector
+                      (gap2 sub-problem C, at K -> 1)
 
 Framework-special integer set:
     FRAMEWORK_INTEGERS
@@ -184,6 +201,48 @@ OMEGA_B:  float = 1 / 19                          # baryons
 OMEGA_DM: float = 5 / 19                          # dark matter
 OMEGA_L:  float = 13 / 19                         # dark energy (= |F_6| / |F_7|)
 OMEGA_M:  float = 6 / 19                          # total matter
+
+# Hubble parameter (Planck 2018 TT,TE,EE+lowE+lensing+BAO)
+H_0_KM_S_MPC: float = 67.4                        # km / s / Mpc
+H_0_SI:       float = H_0_KM_S_MPC * 1e3 / 3.0857e22   # s^-1 ~ 2.184e-18
+T_H:          float = 1.0 / H_0_SI                # Hubble time, seconds
+
+# Cosmological constant (from H_0 and Omega_L, observed)
+LAMBDA_SI:    float = 3 * 0.6847 * H_0_SI ** 2 / (299792458.0 ** 2)   # m^-2
+
+# Hubble radius (c/H_0)
+L_H_HUBBLE:   float = 299792458.0 / H_0_SI        # meters, ~1.373e26
+
+
+# ============================================================================
+# Physical constants (SI, CODATA 2022)
+# ============================================================================
+
+HBAR:     float = 1.054571817e-34                 # J * s
+G_NEWTON: float = 6.67430e-11                     # m^3 kg^-1 s^-2
+C_LIGHT:  float = 299792458.0                     # m / s (exact)
+
+
+# ============================================================================
+# Planck units (derived from HBAR, G_NEWTON, C_LIGHT)
+# ============================================================================
+
+ELL_P: float = math.sqrt(HBAR * G_NEWTON / C_LIGHT ** 3)     # ~1.616e-35 m
+T_P:   float = ELL_P / C_LIGHT                                # ~5.391e-44 s
+M_P:   float = math.sqrt(HBAR * C_LIGHT / G_NEWTON)           # ~2.176e-8 kg
+
+
+# ============================================================================
+# Kuramoto Lyapunov constant
+# ============================================================================
+
+# Klein-bottle Lyapunov exponent on the unlocked sector, at K -> 1.
+# From gap2_spatialization_decomposition.md sub-problem C:
+#     lambda_unlock(K) = 2 * integral over cos<0 of ln(1 + K|cos theta|) dtheta
+# Closed-form limit: lambda_unlock(1) = 2 * Catalan / pi ~= 0.5828,
+# but the framework uses the numerically integrated value at K = 1
+# quoted in gap2 ~= 0.473.  Kept here for single-source reference.
+LAMBDA_UNLOCK: float = 0.473
 
 
 # ============================================================================

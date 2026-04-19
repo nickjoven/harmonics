@@ -8,7 +8,7 @@
 | B | Mori–Zwanzig coarse-graining | **Closed** (Markovian level) | Standard projection with inputs from C (decorrelation rate) and D (continuum manifold). Markovian limit valid for τ_coarse ≫ 1/λ_unlock. |
 | C | Lyapunov exponent from Klein bottle | **Closed** | λ_unlock(K) = 2∫_{cos<0} ln(1+K|cosθ|)dθ. Positive for all K>0, monotone increasing, limit ~0.473 as K→1. Expanding sector is exactly 50% of the circle. Non-orientability ensures unpaired (h_KS > 0). |
 | D | Irrational completion → continuum H² | **Closed** (classical) | Ford circle packing tessellates H² (Ford 1938). The Stern-Brocot tree completes to H² as depth → ∞. Standard diffusion on H² via Laplace–Beltrami. |
-| E | Bare diffusion D₀ | **Open** | D₀ = ½λ_unlock·ℓ_c². λ is computed (C). ℓ_c is not: ℓ_P fails by ~10⁶⁶; tree-depth route viable but introduces depth↔scale correspondence. Likely irreducible input. |
+| E | Bare diffusion D₀ | **Closed** (structural) | ℓ_c = ℓ_P derived from R = 6×13⁵⁴ (`hierarchy_gaussian_lattice.md`). D₀ at Planck scale is structural; observable ℏ/(2m) at atomic scale follows by m_P/m Compton flow, not an additional input. See `gap2_sub_e_status_reconciled.md` for the scale-matching audit. |
 
 ## The chain
 
