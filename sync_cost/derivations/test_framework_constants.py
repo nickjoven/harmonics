@@ -294,6 +294,31 @@ def test_tongue_to_bracket_ratio_is_4_over_phi():
 
 
 # ============================================================
+# Madelung-derived field-theoretic mass m
+# (a_s_phase0.md Sec. 3; PROOF_B Q4 + gap2 sub-E)
+# ============================================================
+
+def test_m_from_madelung_phi_lambda():
+    """
+    The framework's Lagrangian kinetic coefficient m is derived from
+    the Madelung identification hbar = 2 m D_eff:
+
+        m / m_P = (1 - phi^{-4}) / lambda_unlock
+
+    Closed-form expression with no fit. Numerically m ~= 1.806 m_P
+    using the canonical lambda_unlock = 0.473.
+    """
+    phi = (1 + math.sqrt(5)) / 2
+    m_over_mP = (1 - 1 / phi ** 4) / LAMBDA_UNLOCK
+    expected = 1.8057
+    residual = abs(m_over_mP - expected) / expected
+    assert residual < 1e-3, (
+        f"m / m_P = {m_over_mP:.6f}, expected ~ {expected}, "
+        f"residual {residual*100:.4f}%"
+    )
+
+
+# ============================================================
 # Minimal runner for pytest-less environments
 # ============================================================
 
