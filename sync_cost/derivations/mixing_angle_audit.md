@@ -73,11 +73,30 @@ PMNS the tree-level predictions close θ_12 and θ_23 to within 5–10%.
 
 ## Candidate closure
 
-| PMNS angle | Tree-level | Gap | Framework status |
-|---|---|---|---|
-| θ_12 solar = 33.5° | 30° (q=3 elliptic) | 3.5° (12%) | **Close to closed** |
-| θ_23 atmospheric = 45° | 42.79° (weight ratio) | 2.2° (5%) | **Close to closed** |
-| θ_13 reactor = 8.6° | 28.1° (weight ratio) | 19.5° | **Open** (3.3× over) |
+| PMNS angle | Tree-level | Gap (relative) | σ vs NuFIT | Framework status |
+|---|---|---|---|---|
+| θ_12 solar = 33.5° ± ~0.7° | 30° (q=3 elliptic) | 10% | ~5 σ | **%-level only; σ-tension** |
+| θ_23 atmospheric = 45° ± ~1° | 42.79° (weight ratio) | 5% | ~2 σ | **%-level only; σ-tension** |
+| θ_13 reactor = 8.6° ± ~0.2° | 28.1° (weight ratio) | 230% | ~100 σ | **Open** |
+
+**Important caveat on σ-interpretation.** The "10%" and "5%"
+gaps cited above are **relative deviations**, not σ-z-scores.
+Modern PMNS measurements have small uncertainties (~0.7° on
+θ_12, ~1° on θ_23), so proper σ-z-scores are 5 σ and 2 σ
+respectively. These are NOT closed at the σ-level — they are
+closed at the few-percent-relative-deviation level, which is
+substantial agreement but does not pass a strict statistical
+test.
+
+The framework's tree-level predictions are best understood as
+**leading-order structural anchors** that match PMNS within
+5-10% relative — substantially better than the 2-140× gaps
+against CKM. They do not match within experimental
+uncertainties; closing the residual percent-level gaps requires
+either (a) higher-order Fritzsch-form corrections or (b) RG
+running for the neutrino sector. Neither is computed here.
+
+See `statistical_conventions.md` for the σ vs % distinction.
 
 ### θ_23 = 45° is particularly clean
 
@@ -124,15 +143,17 @@ structure.
 
 ## What this audit establishes
 
-**Closes at the "tree-level = observable" level:**
-- **θ_12 solar (PMNS) = 30°**: framework q=3 SL(2,Z) prediction,
-  close to observed 33.5° (12% gap, plausibly residual running).
+**Closes at the "tree-level matches observable within 5–10%
+relative deviation" level — NOT at the σ level:**
+- **θ_12 solar (PMNS) = 30°**: framework q=3 SL(2,Z) prediction;
+  10% relative gap vs observed 33.5°; but ~5 σ tension under
+  NuFIT 5.2 uncertainty.
 - **θ_23 atmospheric (PMNS) = 45°**: framework's weight-ratio
-  prediction is 42.79° (5% gap vs observed 45°). Speculatively,
-  the 45° might also be the SL(2,Z) tr=0 discrete elliptic
-  angle — but this would require showing the 2-3 generation
-  pair actually has tr(M) = 0, which is not computed here. What
-  is confirmed: tree-level prediction matches observed within 5%.
+  prediction is 42.79°; 5% relative gap vs observed 45°; but
+  ~2 σ tension under NuFIT 5.2 uncertainty. Speculatively, the
+  45° might also be the SL(2,Z) tr=0 discrete elliptic angle —
+  this would require showing the 2-3 generation pair actually
+  has tr(M) = 0, which is not computed here.
 
 **Does not close:**
 - θ_13 reactor (PMNS): framework predicts 28°, observed 8.6°;

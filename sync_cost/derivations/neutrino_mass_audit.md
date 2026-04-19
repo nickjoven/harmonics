@@ -33,6 +33,14 @@ Comparison to NuFIT 5.2 (PDG):
 
 Both well inside 1σ.
 
+**σ definition.** Observational z-score:
+`σ = |framework_prediction − NuFIT_central| / NuFIT_uncertainty`,
+treating the framework prediction as a point value (no
+propagated theory uncertainty). NuFIT 5.2 uncertainties on
+Δm²_31 and Δm²_21 are ~1% and ~3% relative, respectively, so the
+0.31 σ and 0.12 σ correspond to absolute matches at the 0.3%
+and 0.4% levels. See `statistical_conventions.md`.
+
 ## Structural reading
 
 The closure uses the same **finite-K correction** pattern as other
