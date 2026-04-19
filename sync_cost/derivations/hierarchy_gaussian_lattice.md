@@ -121,10 +121,13 @@ The three items below are formalized in `three_formalizations.md`:
    (6 elements). After 6 norm-cycles the center is exhausted.
    A 7th cycle has no label. n = 54 is forced.
 
-3. **The 0.48% residual**: R = 6 × 13^54 ≈ 8.53 × 10^60 vs
-   observed ≈ 7.14 × 10^60. The ~19% error in ℓ_P (from the
-   square root) may indicate a sub-leading correction or a
-   mismatch in the identification L_H = √(3/Λ).
+3. **The 0.48% residual**: R = 6 × 13⁵⁴ ≈ 8.53 × 10⁶⁰ vs.
+   observed t_H/t_P = c/(H₀ · ℓ_P) ≈ 8.49 × 10⁶⁰ (residual 0.48%,
+   consistent with the value quoted at line 15). The de Sitter
+   identification L_H = √(3/Λ) gives ~1.02 × 10⁶¹ (≈17% above R),
+   indicating the framework's R matches the Hubble-radius
+   identification rather than the de Sitter horizon. Verified in
+   `r_residual_audit.py`.
 
 ## References
 
