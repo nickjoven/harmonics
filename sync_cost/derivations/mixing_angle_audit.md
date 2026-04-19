@@ -5,9 +5,9 @@
 `ckm_from_sl2z.py` computes tree-level mixing angles from the
 framework's SL(2,Z) trace / weight-ratio structure and compares
 them to observed **CKM** (quark) angles. The comparison ratios are
-large (2–140×), and the script's honest assessment says "None of
-these is a clean rotation of a tree-level angle to the physical
-one."
+large (2–140×), and the script's §6 assessment ("HONEST
+ASSESSMENT") states: "None of these is a clean rotation of a
+tree-level angle to the physical one."
 
 This audit observes that the framework's tree-level predictions
 **are much closer to PMNS (neutrino) angles than to CKM**.

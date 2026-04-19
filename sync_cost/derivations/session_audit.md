@@ -106,21 +106,21 @@ edited directly — Issue #56 is a living status doc and edits
 should go through the issue body, not via framework derivation
 commits.
 
-## Claims that are honest but worth noting
+## Claims with explicit caveats in their docs
 
 ### D2 cascade saturation is structural, not rigorous
 
 `down_type_phase_d2_cascade.py` relies on the claim that q=3 is
 an "inner Stern-Brocot denominator" that fully locks at any K > 0.
 The numerical scan shows w(q=3)/w(q=6) ~ 25 at K*, consistent with
-this reading. But `boundary_weight.py`'s honest-summary flag
-(rigorous coherence-window definition doesn't close) applies here
-too: D2's saturation is a structural argument, not a rigorous
-dynamical proof.
+this reading. But `boundary_weight.py`'s `HONEST SUMMARY` docstring
+notes that the rigorous coherence-window definition does not
+close under current machinery; the same caveat applies here. D2's
+saturation is a structural argument, not a rigorous dynamical
+proof.
 
-This is **explicitly stated** in `down_type_double_cover_closed.md`
-§"Residual honest caveats" item 1. Not an overclaim; honestly
-labeled.
+This is stated in `down_type_double_cover_closed.md`
+§"Residual caveats" item 1 with the limitation labeled.
 
 ### Mass-sector q-scan noise
 
@@ -128,17 +128,14 @@ labeled.
 1.04 (not exactly 1). Finite-K measurements have numerical noise
 ~5%; the "exactly π" claim at q=2 is asymptotic (small K) and
 the finite-K measurement picks up next-order corrections. The doc
-notes this: "matches π (within measurement noise)".
-
-This is honest labeling.
+states this: "matches π (within measurement noise)".
 
 ### ℓ_c factor-9 residual
 
 Already addressed above. The reconciliation doc now says "within
-an order of magnitude, not fully derived." This honestly reflects
-that the ℓ_c closure is at the free-parameter-count level (S1),
-not at the precise-numerical-match level (S2 requires additional
-convention-fixing).
+an order of magnitude, not fully derived." The ℓ_c closure sits
+at the free-parameter-count level (S1), not at the precise-
+numerical-match level (S2 requires additional convention-fixing).
 
 ## Summary
 
@@ -146,8 +143,8 @@ Corrected two specific overclaims (ℓ_c factor, PMNS θ_23
 structural forcing). Kept historical artifacts (phase doc
 progressions) with forward cross-references. Flagged Issue #56
 body items for separate update. The remaining 5-7 closures hold
-up under critical review, with caveats honestly labeled in the
-respective docs.
+up under critical review; caveats are labeled in the respective
+docs.
 
 ## Cross-references
 
@@ -155,5 +152,5 @@ respective docs.
 |---|---|
 | `gap2_sub_e_status_reconciled.md` | Corrected in this audit |
 | `mixing_angle_audit.md` | Corrected in this audit |
-| `down_type_double_cover_closed.md` §"Residual caveats" | Honestly flags D2 limits |
-| `mass_sector_sqrt_w_phase_b.md` | Honestly notes finite-K noise |
+| `down_type_double_cover_closed.md` §"Residual caveats" | Labels D2 limits |
+| `mass_sector_sqrt_w_phase_b.md` | Labels finite-K noise |

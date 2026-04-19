@@ -116,15 +116,15 @@ After this session:
   1/√w prescription" Type C remains open (Issue #56 Tier 1 /
   Tier 2 split).
 
-## Residual honest caveats
+## Residual caveats
 
 1. **D2 uses a structural argument, not a rigorous dynamical
-   proof.** The framework's own `boundary_weight.py` honest-
-   summary docstring notes that the rigorous coherence-window
-   definition does not close under current machinery. The
-   closure here inherits that caveat: if a future rigorous
-   cascade model changes the inner/boundary split, the saturation
-   argument would need revisiting.
+   proof.** The framework's `boundary_weight.py` `HONEST SUMMARY`
+   docstring notes that the rigorous coherence-window definition
+   does not close under current machinery. The closure here
+   inherits that caveat: if a future rigorous cascade model
+   changes the inner/boundary split, the saturation argument
+   would need revisiting.
 
 2. **The linear interpolation is dimension-linear, not dynamics-
    linear.** D1 derives `K²_count(w) = 3 − 2w` as an interpolation

@@ -214,7 +214,8 @@ Patterns from the just-closed Type Cs that apply here:
   The reading `w_3 → 1` used `boundary_weight.md`'s template at
   an endpoint. Here we are at an **interior** w — closer to the
   Ω_Λ case. The template's interior-fixed-point version
-  (Section 6 of `boundary_weight.py`'s honest summary) applies.
+  (Section 6 of `boundary_weight.py`'s `HONEST SUMMARY`
+  docstring) applies.
 
 - **Mass-sector Phase B (q-specific closure).**
   A universal claim was found to hold only at the structurally-
@@ -259,7 +260,7 @@ observables.
 |---|---|
 | `baryon_fraction.md` | Source derivation of 13:5:1 partition, lists candidate corrections |
 | `boundary_weight.md` | Partial-locking weight `w`, interpolation formula |
-| `boundary_weight.py` | Algebraic inversion precedent, honest-summary caveat |
+| `boundary_weight.py` | Algebraic inversion precedent, `HONEST SUMMARY` docstring caveat |
 | `one_five_thirteen_readings.py` | Multiple independent readings of 1:5:13 |
 | `framework_constants.py` | K*, |r|, numerical constants |
 | `a0_high_z.py`, `a0_observable.py` | Candidate source of `a_0(z)` evolution (C5) |

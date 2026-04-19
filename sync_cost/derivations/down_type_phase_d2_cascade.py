@@ -145,11 +145,11 @@ def main():
     - There is NO K in the framework's operating range at which
       q = 3 is partially locked.
 
-  (Caveat inherited from boundary_weight.py's honest summary: the
-  "coverage fraction" here is a proxy, not the framework's rigorous
-  coherence-window definition.  The rigorous definition doesn't
-  close in the existing code base.  The STRUCTURAL argument in Part A
-  is the cleaner justification.)
+  (Caveat inherited from boundary_weight.py's HONEST SUMMARY
+  docstring: the "coverage fraction" here is a proxy, not the
+  framework's rigorous coherence-window definition.  The rigorous
+  definition doesn't close in the existing code base.  The
+  STRUCTURAL argument in Part A is the cleaner justification.)
 """)
 
     # ------------------------------------------------------------
@@ -190,7 +190,7 @@ def main():
 
   Open caveat:
     The rigorous coherence-window definition in boundary_weight.py
-    is flagged in its honest-summary docstring as not closing under
+    is flagged in its HONEST SUMMARY docstring as not closing under
     the framework's current tongue formula.  The structural
     argument carries the weight of D2's closure; the numerical
     check is consistent but not independently rigorous.
