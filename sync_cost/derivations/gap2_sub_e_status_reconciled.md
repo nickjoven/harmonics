@@ -98,7 +98,7 @@ That's a unit/scale problem, not a derivation gap.
 | Is ℓ_c a free input? | Closed (No — derived from R) |
 | Is D_0 at Planck scale structurally determined? | Closed (= ½ λ ℓ_P² / τ_P) |
 | Is D_0 at atomic scale related to Planck-scale D_0 by m_P/m? | Closed (standard ℏ/2m form) |
-| Does the framework's D_0^{atomic} exactly equal observed ℏ/2m_e? | Closed up to O(1) — factor ~2 from λ_unlock/2 prefactor |
+| Does the framework's D_0^{atomic} exactly equal observed ℏ/2m_e? | Closed within an order of magnitude — residual factor ~9 from λ_unlock/2 prefactor and mass-scale convention; not fully derived |
 
 The last row: observed / framework-predicted = 5.3×10²² /
 (2.4×10²² × 0.5 × 0.473) = 5.3/(2.4 · 0.236) = 9.3. Order O(1)

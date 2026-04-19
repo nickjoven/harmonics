@@ -127,9 +127,12 @@ structure.
 **Closes at the "tree-level = observable" level:**
 - **θ_12 solar (PMNS) = 30°**: framework q=3 SL(2,Z) prediction,
   close to observed 33.5° (12% gap, plausibly residual running).
-- **θ_23 atmospheric (PMNS) = 45°**: framework's tr=0 discrete
-  elliptic angle, matches observed 45° exactly (maximal mixing
-  is structurally forced).
+- **θ_23 atmospheric (PMNS) = 45°**: framework's weight-ratio
+  prediction is 42.79° (5% gap vs observed 45°). Speculatively,
+  the 45° might also be the SL(2,Z) tr=0 discrete elliptic
+  angle — but this would require showing the 2-3 generation
+  pair actually has tr(M) = 0, which is not computed here. What
+  is confirmed: tree-level prediction matches observed within 5%.
 
 **Does not close:**
 - θ_13 reactor (PMNS): framework predicts 28°, observed 8.6°;
