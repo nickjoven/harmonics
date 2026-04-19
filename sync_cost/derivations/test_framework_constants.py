@@ -257,6 +257,43 @@ def test_alpha_2_alpha_Y_identities_at_MZ():
 
 
 # ============================================================
+# Tongue-to-bracket ratio at K=1: 4/phi
+# (a_s_alpha2_phase_a.md Sec. 3; structural identity)
+# ============================================================
+
+def test_tongue_to_bracket_ratio_is_4_over_phi():
+    """
+    At K = 1 with sigma^2_kernel = 1/4, the Arnold tongue width at
+    the Fibonacci convergent F_n/F_{n+1} captures exactly phi/4 of
+    the Stern-Brocot bracket containing it.
+
+    Equivalently: bracket_width / tongue_width = 4/phi at all
+    sufficiently deep n. Verified via Binet.
+    """
+    phi = (1 + math.sqrt(5)) / 2
+
+    def fib(n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+
+    sigma_sq_kernel = 1 / 4
+    expected = 4 / phi
+
+    # Test at depths n = 15, 20: limit is reached to ~6 digits.
+    for n in (15, 20):
+        q = fib(n + 1)
+        qq = fib(n + 2)
+        w_bracket = 1.0 / (q * qq)
+        w_tongue = sigma_sq_kernel / (q * q)
+        ratio = w_bracket / w_tongue
+        assert abs(ratio - expected) / expected < 1e-4, (
+            f"At n={n}: bracket/tongue = {ratio:.6f}, expected 4/phi = {expected:.6f}"
+        )
+
+
+# ============================================================
 # Minimal runner for pytest-less environments
 # ============================================================
 
