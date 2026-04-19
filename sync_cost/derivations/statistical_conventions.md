@@ -107,7 +107,7 @@ Examples:
 | Neutrino Δm²_21 (solar) | C-numerical | 0.12 σ | NuFIT 5.2 | 3% rel. |
 | K = K_c residual | C-structural | n/a | n/a | identical-oscillator setup |
 | ℓ_c diffusion length (S1) | C-attribution / C-structural | n/a | n/a | free-parameter count |
-| ℓ_c at observable scale (S2) | NOT closed | — | — | residual factor ~9 unexplained |
+| ℓ_c at observable scale (S2) | C-structural | ratio = λ_unlock | Madelung form: `ℏ/(2m)` | framework-derived Lyapunov, not free parameter |
 | PMNS θ_12 | %-only | 10% rel. | NuFIT 5.2: 33.5° | uncertainty not propagated |
 | PMNS θ_23 | %-only | 5% rel. | NuFIT 5.2: 45° | uncertainty not propagated |
 | PMNS θ_13 | NOT closed | — | NuFIT 5.2: 8.6° | tree-level 28° off by 3.3× |
