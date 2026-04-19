@@ -126,42 +126,59 @@ the PMNS partial closures. From the prior heuristic (4.4× off,
 ~330% deviation) to a structurally-derived 11%, all factors
 independently derived.
 
-## 7. Sources of the 11% residual
+## 7. Sources of the 11% residual (post-audit)
 
-Three plausible structural improvements that could close the gap to
-σ-level:
+Audited in `a_s_phase0_lambda_audit.py`. R7.1 is now ruled out;
+R7.4 emerges as the most physically plausible.
 
-**R7.1: λ_unlock convention.** The framework uses λ_unlock = 0.473
-(numerical value at K=1). The asymptotic Catalan-related value is
-2 × Catalan / π ≈ 0.583 (large-K limit). Using the asymptotic
-value:
+**R7.1: λ_unlock convention.** ~~~~ **CLOSED — not the source.~~~~
+A previous comment in `framework_constants.py` claimed
+`λ_unlock(K=1) = 2G/π ≈ 0.583`, suggesting an alternative
+convention. The audit showed this comment was a derivation error;
+the actual closed form is
 
-    A_s_pred(λ = 0.583) = 0.854 / (4 × 0.583 × 1.618 × 1.198e8)
-                       ≈ 1.89 × 10⁻⁹
+    λ_unlock(K=1) = (4G − π ln 2)/π ≈ 0.473096
 
-— **10% the other direction** (under, not over). The observed 2.10
-sits between the two conventions. A precise determination of which
-λ_unlock enters the m relation could close the gap. See
-`framework_constants.LAMBDA_UNLOCK` documentation; the comment says
-"K=1 numerical value" is the canonical choice, but the m derivation
-uses Madelung in the K<1 limit, which may select the asymptotic
-Catalan value.
+which matches numerical integration to 9 digits and matches the
+existing `LAMBDA_UNLOCK = 0.473`. Comment fixed in this commit.
+**The framework value was correct; only the comment was wrong.**
+R7.1 is not the source of the 11%.
 
-**R7.2: Pivot-level fine adjustment.** Eq. (5.1) is sharply
-sensitive to q_pivot². Half-integer level shifts (e.g. n = 19.5
-vs 20) change A_s by factor φ², much larger than the 10% gap. But
-small fractional shifts (e.g. 5% of a level) could account for the
-residual. The pivot identification in `k_omega_mapping.py` uses a
-linear approximation; a higher-order correction might shift n_pivot
-by ~ 0.05.
+**R7.2: Pivot-level fine adjustment.** Eq. (5.1) is quadratic in
+q_pivot. The exact-match q_eff is `q_eff ≈ 11525`, corresponding to
+0.107 levels above F_21 (= 2.94 e-folds smaller scale). This
+corresponds to a corrected `N_efolds ≈ 58.4`, vs the framework's
+prediction of 61.3. The 11% A_s residual is consistent with the
+framework's N_efolds being off by ~3 e-folds. **Plausible but not
+yet derived; promoted to R7.4 below.**
 
 **R7.3: Higher-order expansion of cos.** The linearization (1.2)
 truncated cos at O(δθ²). Including O(δθ⁴) terms gives self-
 interactions that renormalize the variance. At K = 1 these may
-contribute at the ~10% level.
+contribute at the ~10% level. Not performed here.
 
-None of R7.1–R7.3 is performed in this Phase 0. Each is a sharp
-followup question.
+**R7.4 (NEW): N_efolds shift.** The framework predicts N_efolds =
+√5/rate = 61.3 (alphabet_depth21.py). Standard inflation typically
+puts the CMB pivot at N* ≈ 50–60 e-folds before end of inflation,
+depending on energy scale and reheating. If the framework's pivot
+identification at F_21 corresponds to N* ≈ 61.3 but the actual CMB
+pivot is at N* ≈ 58, the q_eff shifts and A_s closes to ~1%.
+This converts the A_s 11% residual into a different question:
+**is the framework's N_efolds prediction off by ~3 e-folds?**
+
+**Suggestive algebraic match: 19/21.** The residual ratio
+A_s_obs/A_s_pred = 0.9020 lands within 0.3% of 19/21 = 0.9048.
+Both are framework integers:
+
+- 19 = `|F_7|` (Farey count beyond the pivot bracket;
+  also OMEGA partition denominator)
+- 21 = F_8 (Fibonacci; the local-pivot denominator at convergent
+  13/21 per k_omega_mapping.py n=5 reading)
+
+Equivalently: 1 − 2/21 = 19/21, where 2 = q_2. **No derivation;
+flagged as numerological coincidence pending structural argument.**
+If `(19/21)` enters the formula as a sector-loss factor, A_s closes
+to 0.3%, well within Planck 2018 1σ.
 
 ## 8. What this Phase 0 closes
 

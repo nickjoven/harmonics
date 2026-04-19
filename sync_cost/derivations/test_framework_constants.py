@@ -294,6 +294,33 @@ def test_tongue_to_bracket_ratio_is_4_over_phi():
 
 
 # ============================================================
+# Lambda_unlock closed form: (4G - pi ln 2) / pi
+# (gap2_spatialization sub-C; framework_constants comment fix)
+# ============================================================
+
+def test_lambda_unlock_closed_form():
+    """
+    The Klein-bottle Lyapunov exponent on the unlocked sector at
+    K = 1 has the closed form
+
+        lambda_unlock(1) = (4 G - pi ln 2) / pi
+
+    where G = Catalan's constant ~= 0.9159655942.  This was
+    previously mis-quoted in framework_constants.py as 2G/pi.
+    The (4G - pi ln 2)/pi value matches numerical integration of
+        (1/pi) * integral over [pi/2, 3 pi/2] of ln(1 + |cos theta|) dtheta
+    to 9 digits.
+    """
+    catalan = 0.9159655941772190
+    closed_form = (4 * catalan - math.pi * math.log(2)) / math.pi
+    residual = abs(LAMBDA_UNLOCK - closed_form) / closed_form
+    assert residual < 1e-4, (
+        f"LAMBDA_UNLOCK = {LAMBDA_UNLOCK} vs (4G - pi ln 2)/pi = "
+        f"{closed_form:.6f}, residual {residual*100:.4f}%"
+    )
+
+
+# ============================================================
 # Madelung-derived field-theoretic mass m
 # (a_s_phase0.md Sec. 3; PROOF_B Q4 + gap2 sub-E)
 # ============================================================
