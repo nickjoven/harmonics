@@ -21,6 +21,13 @@ Usage:
 """
 
 import math
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import (
+    M_B, M_C, M_D, M_E, M_MU, M_S, M_T, M_TAU, M_U,
+)
 
 
 # ── Circle map ────────────────────────────────────────────────────────────────
@@ -290,10 +297,10 @@ def main():
     print("  4. COMPARISON WITH LEPTON AND QUARK MASSES")
     print(f"{'─' * 80}\n")
 
-    # SM mass ratios
-    m_e, m_mu, m_tau = 0.511, 105.66, 1776.86  # MeV
-    m_u, m_c, m_t = 2.16, 1270, 172760  # MeV
-    m_d, m_s, m_b = 4.67, 93.4, 4180  # MeV
+    # SM mass ratios (framework_constants)
+    m_e, m_mu, m_tau = M_E, M_MU, M_TAU  # MeV
+    m_u, m_c, m_t = M_U, M_C, M_T  # MeV
+    m_d, m_s, m_b = M_D, M_S, M_B  # MeV
 
     print(f"  Lepton mass ratios (to m_e):")
     print(f"    e : μ : τ = 1 : {m_mu/m_e:.1f} : {m_tau/m_e:.1f}")

@@ -15,6 +15,11 @@ small Fibonacci indices k. Report the cleanest match per observable.
 """
 
 import math
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import ALPHA_S_MZ, V_GEV
 
 PHI = (1 + math.sqrt(5)) / 2
 Q2, Q3 = 2, 3
@@ -31,14 +36,13 @@ def fib(k):
 # Observed values
 # ============================================================================
 
-# Higgs: m_H = 125.25 GeV, v = 246.22 GeV (PDG 2024)
+# Higgs: m_H = 125.25 GeV, v = 246.22 GeV (PDG 2024; framework_constants V_GEV)
 M_H = 125.25
-V_GEV = 246.22
 LAMBDA_OBS = M_H ** 2 / (2 * V_GEV ** 2)       # ~0.12936
 LAMBDA_TREE = 1 / (2 * Q2 ** 2)                 # 1/8 = 0.125
 
 # alpha_s(M_Z), alpha_2(M_Z) from PDG 2024
-ALPHA_S = 0.1179                                 # PDG 2024
+ALPHA_S = ALPHA_S_MZ                             # PDG 2024 (framework_constants)
 ALPHA_2_INV = 29.57                              # sqrt(1/alpha_em) = 137.04, alpha_2 from weak coupling
 ALPHA_2 = 1 / ALPHA_2_INV
 RATIO_OBS = ALPHA_S / ALPHA_2                    # ~3.487

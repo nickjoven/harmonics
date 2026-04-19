@@ -17,7 +17,12 @@ Usage:
 """
 
 import math
+import os
+import sys
 from fractions import Fraction
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import ALPHA_EM_MZ
 
 
 def main():
@@ -223,7 +228,7 @@ def main():
     # m_W/m_H = q₂ × m_W/v = known if we express m_W in terms of v
     # m_W = v×g/2, g = e/sin θ_W ≈ 0.653
     # From α_em and θ_W: g = √(4π/137.036)/sin θ_W
-    alpha_em = 1/127.95  # at M_Z
+    alpha_em = ALPHA_EM_MZ  # at M_Z (framework_constants)
     e = (4 * math.pi * alpha_em)**0.5
     g = e / float(sw2)**0.5
     m_W_pred = v * g / 2

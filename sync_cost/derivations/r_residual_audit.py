@@ -14,12 +14,17 @@ which against current cosmological constants.
 """
 
 import math
+import os
+import sys
 
-# Planck 2018 cosmological constants (consensus values)
-H_0 = 67.4 * 1e3 / (3.0857e22)   # 67.4 km/s/Mpc in s^-1  ≈ 2.184e-18
-c = 299792458                     # m/s
-G = 6.67430e-11                   # m^3 kg^-1 s^-2
-hbar = 1.0545718e-34              # J·s
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import C_LIGHT, G_NEWTON, H_0_SI, HBAR
+
+# Planck 2018 cosmological constants (consensus values; framework_constants)
+H_0 = H_0_SI                      # 67.4 km/s/Mpc in s^-1  ≈ 2.184e-18
+c = C_LIGHT                       # m/s
+G = G_NEWTON                      # m^3 kg^-1 s^-2
+hbar = HBAR                       # J·s
 Omega_Lambda = 0.6847             # Planck 2018
 
 # Planck-scale quantities

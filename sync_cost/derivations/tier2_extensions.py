@@ -4,7 +4,13 @@ Tier 2: Cosmological dynamics, A_s amplitude, measurement problem.
 Three derivations that extend the framework beyond the structural core.
 """
 
+import os
+import sys
+
 import numpy as np
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import H_0_KM_S_MPC, OMEGA_L, OMEGA_M
 
 phi = (1 + np.sqrt(5)) / 2
 
@@ -63,9 +69,9 @@ print()
 # The Friedmann equation emerges from the energy balance:
 # Total synchronization cost = matter cost + curvature cost + dark energy
 
-# At the self-consistent point with Ω_Λ = 13/19:
-omega_lambda = 13/19
-omega_m = 1 - omega_lambda  # = 6/19
+# At the self-consistent point with Ω_Λ = 13/19 (framework_constants):
+omega_lambda = OMEGA_L
+omega_m = OMEGA_M            # = 6/19
 
 print(f"Ω_Λ = 13/19 = {omega_lambda:.4f}")
 print(f"Ω_m = 6/19 = {omega_m:.4f}")
@@ -133,7 +139,7 @@ print()
 # This means it samples the staircase near level 2-3
 
 n_total = 145.8
-ratio_pivot_hubble = 1e26 / 67.4  # H₀ ≈ 67.4 km/s/Mpc in natural units ~ 10⁻²⁶ Hz
+ratio_pivot_hubble = 1e26 / H_0_KM_S_MPC  # H₀ in natural units ~ 10⁻²⁶ Hz
 # Actually: k* = 0.05 Mpc⁻¹, and the Hubble scale ~ 3000 Mpc
 # So k*/k_H ~ 0.05 × 3000 = 150
 

@@ -42,7 +42,7 @@ from framework_constants import (
     # Planck
     ELL_P, T_P, M_P,
     # Electroweak
-    SIN2_TW_MZ, ALPHA_S_MZ, ALPHA_EM_MZ,
+    SIN2_TW_MZ, ALPHA_S_MZ, ALPHA_EM_MZ, ALPHA_2_MZ, ALPHA_Y_MZ,
     # Masses
     M_E, M_MU, M_TAU,
     V_GEV,
@@ -209,6 +209,51 @@ def test_framework_diffusion_matches_Madelung_within_lambda():
     assert residual < 1e-10, (
         f"D_framework / D_SM = {ratio:.6f}, expected LAMBDA_UNLOCK={LAMBDA_UNLOCK}"
     )
+
+
+# ============================================================
+# Generation exponent law:  a_2 / a_1 = q_3 / q_2 = 3/2
+# (generation_exponent_law.py; appears in ~8 scripts)
+# ============================================================
+
+def test_generation_exponent_law_from_leptons():
+    """
+    Ratio of consecutive generation exponents equals q_3/q_2 = 3/2,
+    to better than 1% via PDG lepton mass ratios.
+
+        a_1 = log(m_tau / m_mu) / log((q_3/q_2)^D)
+        a_2 = log(m_mu  / m_e)  / log((q_2+q_3)/q_3)^D)
+        a_2 / a_1 ≈ q_3 / q_2 to 0.04% (Issue #56 recent results)
+    """
+    base_1 = (Q3 / Q2) ** D                      # = (3/2)^3 = 27/8
+    base_2 = ((Q2 + Q3) / Q3) ** D               # = (5/3)^3
+    a_1 = math.log(M_TAU / M_MU) / math.log(base_1)
+    a_2 = math.log(M_MU  / M_E)  / math.log(base_2)
+    ratio = a_2 / a_1
+    expected = Q3 / Q2                            # = 3/2
+    residual = abs(ratio - expected) / expected
+    assert residual < 0.01, (
+        f"a_2/a_1 = {ratio:.6f} vs q_3/q_2 = {expected}, "
+        f"residual {residual*100:.4f}%"
+    )
+
+
+# ============================================================
+# Electroweak derived identities: alpha_2 = alpha_em / sin^2 theta_W
+# ============================================================
+
+def test_alpha_2_alpha_Y_identities_at_MZ():
+    """
+    ALPHA_2_MZ and ALPHA_Y_MZ must follow from ALPHA_EM_MZ and
+    SIN2_TW_MZ via the textbook identities:
+
+        alpha_2 = alpha_em / sin^2 theta_W
+        alpha_Y = alpha_em / cos^2 theta_W = alpha_em / (1 - sin^2 theta_W)
+    """
+    a_2_expected = ALPHA_EM_MZ / SIN2_TW_MZ
+    a_Y_expected = ALPHA_EM_MZ / (1 - SIN2_TW_MZ)
+    assert abs(ALPHA_2_MZ - a_2_expected) / ALPHA_2_MZ < 1e-12
+    assert abs(ALPHA_Y_MZ - a_Y_expected) / ALPHA_Y_MZ < 1e-12
 
 
 # ============================================================

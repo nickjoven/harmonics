@@ -19,17 +19,23 @@ maps those uncertainties into the implied a₀, testing whether the
 half-rate discrepancy is physical or parametric.
 """
 
+import os
+import sys
+
 import numpy as np
 from scipy.special import i0, i1, k0, k1
 from load_rc100 import has_data, load_bins as load_rc100_bins
 
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import C_LIGHT, G_NEWTON, H_0_KM_S_MPC, H_0_SI
+
 # Constants
-c_m_s = 2.998e8
-H0_km_s_Mpc = 67.4
-Mpc_in_m = 3.0857e22
-H0_si = H0_km_s_Mpc * 1e3 / Mpc_in_m
+c_m_s = C_LIGHT
+H0_km_s_Mpc = H_0_KM_S_MPC
+H0_si = H_0_SI
+# Observed Planck 2018 (not framework's 6/19, 13/19).
 Omega_m, Omega_L = 0.315, 0.685
-G = 6.674e-11
+G = G_NEWTON
 M_sun = 1.989e30
 kpc_m = 3.086e19
 

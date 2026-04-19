@@ -28,18 +28,20 @@ Usage:
 """
 
 import math
+import os
 import sys
 from fractions import Fraction
 
-sys.path.insert(0, "sync_cost/derivations")
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import ALPHA_S_MZ, SIN2_TW_MZ
 from circle_map_utils import PHI, INV_PHI, winding_number, circle_map_step, tongue_width
 
 
 # ── Constants ─────────────────────────────────────────────────────────────────
 
-ALPHA_S = 0.1179
+ALPHA_S = ALPHA_S_MZ
 ALPHA_2 = 0.033803
-SIN2_TW = 0.23121
+SIN2_TW = SIN2_TW_MZ
 K_STAR = 0.891973
 
 

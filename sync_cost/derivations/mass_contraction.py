@@ -50,10 +50,8 @@ R_B = 216 / W_B   # 8.3077
 R_C = 216 / W_C   # 30.857
 R_A = 216 / W_A   # 216
 
-# Observed lepton masses (MeV, PDG 2024)
-M_TAU   = 1776.86
-M_MU    = 105.658
-M_E     = 0.51100
+# Observed lepton masses (MeV, PDG 2024; framework_constants)
+from framework_constants import M_E, M_MU, M_TAU  # noqa: E402
 
 # Observed lepton ratios
 RATIO_TAU_E = M_TAU / M_E    # 3477.4

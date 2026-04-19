@@ -38,6 +38,12 @@ Usage:
 """
 
 import math
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import H_0_SI
+
 from circle_map_utils import (circle_map_step, winding_number,
                               PHI, INV_PHI, PHI_SQ, LN_PHI_SQ,
                               fibonacci_sequence)
@@ -247,7 +253,7 @@ if __name__ == "__main__":
   frequency and the Hubble frequency?
 """)
 
-    H0 = 2.2e-18  # Hubble parameter (rad/s), ≈ 67.4 km/s/Mpc
+    H0 = H_0_SI   # Hubble parameter (rad/s), 67.4 km/s/Mpc; framework_constants
     freq_ratio = OMEGA_PLANCK / H0
 
     n_levels = math.log(freq_ratio) / LN_PHI_SQ

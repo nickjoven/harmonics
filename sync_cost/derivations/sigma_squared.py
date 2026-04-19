@@ -21,6 +21,11 @@ Usage:
 
 from fractions import Fraction
 import math
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import H_0_SI
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -33,7 +38,7 @@ PHI_SQ = PHI ** 2
 LN_PHI_SQ = math.log(PHI_SQ)
 
 # Physical constants (Planck 2018)
-H_0 = 2.18e-18          # rad/s
+H_0 = H_0_SI             # rad/s (framework_constants)
 C_LIGHT = 2.998e8        # m/s
 A_0 = C_LIGHT * H_0 / (2 * math.pi)  # ~ 1.04e-10 m/s²
 G_NEWTON = 6.674e-11     # m³/(kg·s²)

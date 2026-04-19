@@ -22,6 +22,11 @@ where q_tree = F₁₉ = 4181, then the vacuum energy is:
 """
 
 import math
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import H_0_SI
 
 c = 2.998e8
 G = 6.674e-11
@@ -29,7 +34,7 @@ hbar = 1.055e-34
 l_P = math.sqrt(hbar * G / c**3)
 t_P = l_P / c
 nu_P = 1 / t_P
-H0 = 67.4e3 / 3.086e22
+H0 = H_0_SI              # single source; framework_constants
 L_H = c / H0
 Lambda_obs = 1.1056e-52
 rho_Lambda_obs = Lambda_obs * c**2 / (8 * math.pi * G)

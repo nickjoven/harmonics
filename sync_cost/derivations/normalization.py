@@ -16,16 +16,21 @@ Solve for C. Check consistency.
 """
 
 import math
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import ALPHA_EM_MZ, ALPHA_S_MZ, SIN2_TW_MZ
 
 # ── SM parameters ─────────────────────────────────────────────────────────────
 
 M_Z = 91.1876        # GeV
 M_Pl = 1.221e19      # GeV
 
-# Measured (PDG 2024)
-ALPHA_EM_INV = 127.951  # α_em⁻¹ at M_Z
-SIN2_TH_W = 0.23122
-ALPHA_S = 0.1179
+# Measured (PDG 2024; framework_constants)
+ALPHA_EM_INV = 1 / ALPHA_EM_MZ          # α_em⁻¹ at M_Z
+SIN2_TH_W = SIN2_TW_MZ
+ALPHA_S = ALPHA_S_MZ
 
 # Derived measured values (GUT normalized)
 ALPHA_1_INV_MEAS = ALPHA_EM_INV * (1 - SIN2_TH_W) * 3 / 5

@@ -254,7 +254,10 @@ def main():
     # => 8 pi^2 S / R^2 = 3 * Omega_Lambda
     # => R^2 = 8 pi^2 S / (3 * Omega_Lambda)
 
-    Omega_L = 2/3  # framework's value
+    # This hypothesis tests the 4-mode topology reading Ω_Λ = 2/3
+    # specifically; kept separate from framework_constants.OMEGA_L = 13/19
+    # (the Farey-partition reading).
+    Omega_L = 2/3
 
     R_squared = 8 * math.pi**2 * S / (3 * Omega_L)
     R_pred = math.sqrt(R_squared)
