@@ -206,7 +206,7 @@ so
     1 = 2 m · λ_unlock / (2 (1 − φ⁻⁴))
     m / m_P = (1 − φ⁻⁴) / λ_unlock                              (L1)
 
-This is a definite number, no free parameter.
+This is a definite dimensionless ratio, derived from A5–A7.
 
 **Lemma 2 (the per-bracket variance).** At the pivot bracket of
 width given by A2.1, the kernel-induced phase variance is the
@@ -336,6 +336,14 @@ input).
 Status label: **A_s is %-only closed at 11%.** The 11% is the full
 discrepancy; not partitioned into "explained" and "residual" parts.
 No fits applied.
+
+**Claim-strength note.** Under `statistical_conventions.md` §"Zero
+free parameters", this prediction does **not** qualify for the
+"zero free parameters" phrasing (fails Z1: 11% is not ≤ 1σ;
+fails Z2: G1–G5 are un-derived O(1) structural gaps). Describe
+this result as "derived under the static, O(δθ²), r*=1,
+single-mode-per-bracket approximation; %-only at 11%." Reserve
+"zero free parameters" for predictions that pass all of Z1–Z3.
 
 ## What's missing, structurally
 
