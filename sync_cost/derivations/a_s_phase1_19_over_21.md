@@ -1,4 +1,21 @@
-# A_s Phase 0 + 1: 19/21 derivation attempt
+# A_s Phase 0 + 1: 19/21 derivation attempt (SUPERSEDED)
+
+> **SUPERSEDED.** This document attempted a numerological fit
+> (1 − q₂/F₈ = 19/21) against the 11% Phase 0 residual. The fit
+> was decomposed into three sub-claims (H.a, H.b, H.c); H.a was
+> weakened by direct enumeration. The doc is preserved as a
+> historical record.
+>
+> The canonical statement of A_s in the framework is now
+> `a_s_geometric_proof.md`, which works only from established
+> structural axioms (A1–A9) and reports the 11% discrepancy as a
+> single open quantity, without partitioning it into ad-hoc
+> corrections.
+>
+> Read this doc only if interested in why the 19/21 numerological
+> match did **not** survive structural scrutiny.
+
+---
 
 Continuation of `a_s_phase0.md` §7 suggestive match. Attempt a
 structural derivation of the factor **1 − q₂/F₈ = 19/21 ≈ 0.9048**
