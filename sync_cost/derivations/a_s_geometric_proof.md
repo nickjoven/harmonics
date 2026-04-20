@@ -29,6 +29,64 @@ Observed: A_s = (2.10 ± 0.03) × 10⁻⁹ (Planck 2018).
 
 **Relative deviation: 11%. The proof terminates here.**
 
+## Dependency graph
+
+```mermaid
+graph TD
+  P["P1–P4 primitives<br/>(minimum_alphabet.md)"]
+
+  A1["A1: Klein bottle<br/>(q₂, q₃) = (2, 3)"]
+  A2["A2: Stern-Brocot, Binet<br/>w_bracket → 1/(φ q²)"]
+  A3["A3: σ²_kernel = 1/4<br/>Gauss-Codazzi"]
+  A4["A4: Arnold tongue σ²_kernel/q²<br/>at K = 1"]
+  A5["A5: λ_unlock = (4G − π ln 2)/π"]
+  A6["A6: D_eff = D₀/(1 − φ⁻⁴)<br/>SB RG fixed point"]
+  A7["A7: ℏ = 2 m D_eff<br/>Madelung"]
+  A8["A8: R = √m · δθ<br/>canonical gauge"]
+  A9["A9: q_pivot = F₂₁<br/>CMB pivot"]
+
+  L1["L1: m/m_P = (1 − φ⁻⁴)/λ"]
+  L2["L2: ⟨δθ²⟩ = 1/(4 φ q²)"]
+  L3["L3: ⟨R²⟩ = m · ⟨δθ²⟩"]
+
+  T["Theorem: A_s = (1 − φ⁻⁴)/(4 λ φ q²)"]
+  C["Corollary: A_s_pred = 2.33 × 10⁻⁹"]
+  O["Observed: A_s = (2.10 ± 0.03) × 10⁻⁹"]
+
+  P --> A1
+  A1 --> A2
+
+  A5 --> L1
+  A6 --> L1
+  A7 --> L1
+
+  A2 --> L2
+  A3 --> L2
+  A4 --> L2
+
+  L1 --> L3
+  L2 --> L3
+  A8 --> L3
+
+  L3 --> T
+  T --> C
+  A9 --> C
+
+  O -.->|11% / 7.7σ| C
+```
+
+Each axiom (A1–A9) is rooted in one framework-native derivation
+named in §Axioms. Each lemma (L1–L3) combines a specific triple
+of axioms. The theorem T is L3 made explicit; the corollary C
+substitutes A9's numerical value. The dashed edge from O records
+observation as external input to the comparison, not to the
+derivation.
+
+**Interactive 3D view**: `docs/a_s_proof.html` renders the same
+graph as spatially-arranged spheres with derivation depth on the
+vertical axis (primitives at the bottom, observation at the top).
+Drag to rotate, click any node for its role.
+
 ## Axioms (the inputs the proof uses)
 
 Each axiom is an established result from a named prior derivation.

@@ -1,5 +1,5 @@
 {
-  "generated": "17d51d44d8cc531ecda96765f013f4721872eb95",
+  "generated": "90652c74e352e0c456d5697c45bddc9189cfa8e9",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -77,9 +77,9 @@
       ],
       "git": [
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -108,9 +108,9 @@
       ],
       "git": [
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -133,9 +133,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -151,12 +151,48 @@
         "seismic_eigenstate_dictionary",
         "stribeck_vortex"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "down_type_double_cover_phase_a",
+        "down_type_double_cover_phase_c",
+        "mass_sector_sqrt_w_phase_a",
+        "mass_sector_sqrt_w_phase_b"
+      ],
       "git": [
         {
           "hash": "e1e25da",
           "date": "2026-04-13",
           "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "a_s_geometric_proof",
+      "path": "sync_cost/derivations/a_s_geometric_proof.md",
+      "title": "A_s: a geometric proof from first principles",
+      "summary": "A derivation of the CMB scalar amplitude A_s in the framework,\nusing only what is established in prior derivations. Each\nmultiplicative factor comes from one named structural result.\nThe proof terminates at a specific numerical prediction; the\ndiscrepancy with observation is documented at the end as a single\nnumber, not partitioned into ad-hoc corrections.",
+      "depends_on": [
+        "boundary_weight",
+        "continuum_limits",
+        "gap2_spatialization_decomposition",
+        "klein_bottle_derivation",
+        "minimum_alphabet",
+        "mixing_angle_audit",
+        "sigma_squared_disambiguation",
+        "statistical_conventions"
+      ],
+      "depended_on_by": [
+        "sigma_squared_disambiguation"
+      ],
+      "git": [
+        {
+          "hash": "90652c7",
+          "date": "2026-04-20",
+          "subject": "Drop chronology from A_s presentation layer"
+        },
+        {
+          "hash": "5612171",
+          "date": "2026-04-20",
+          "subject": "A_s geometric proof: clean derivation from A1-A9, no fits"
         }
       ]
     },
@@ -206,7 +242,10 @@
       "title": "The Baryon Fraction",
       "summary": "The cosmic energy budget partitions into three sectors from the\nsingle number 19 (the Klein bottle's total budget from D25):",
       "depends_on": [],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "omega_b_residual_phase_a",
+        "omega_b_residual_phase_b"
+      ],
       "git": [
         {
           "hash": "bab48f4",
@@ -225,6 +264,8 @@
       ],
       "depended_on_by": [
         "a1_from_saddle_node",
+        "mass_sector_sqrt_w_phase_a",
+        "mass_sector_sqrt_w_phase_b",
         "seismic_eigenstate_dictionary",
         "stribeck_vortex"
       ],
@@ -235,9 +276,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -252,7 +293,16 @@
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
-        "item12_C_from_K_star"
+        "a_s_geometric_proof",
+        "down_type_double_cover_closed",
+        "down_type_double_cover_phase_c",
+        "down_type_double_cover_phase_d",
+        "item12_C_from_K_star",
+        "k_critical_phase_a",
+        "mass_sector_sqrt_w_phase_a",
+        "omega_b_residual_phase_a",
+        "omega_b_residual_phase_b",
+        "session_audit"
       ],
       "git": [
         {
@@ -266,9 +316,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -291,9 +341,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -307,11 +357,13 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
+        "a_s_geometric_proof",
         "gap1_theorem",
         "gap2_step4_farey_laplacian",
         "gap2_theorem_attempt",
         "gap_1_christoffel",
-        "gap_2_spatial_diffusion"
+        "gap_2_spatial_diffusion",
+        "sigma_squared_disambiguation"
       ],
       "git": [
         {
@@ -325,9 +377,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -348,9 +400,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -400,9 +452,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -420,9 +472,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -459,6 +511,163 @@
       ]
     },
     {
+      "id": "down_type_double_cover_closed",
+      "path": "sync_cost/derivations/down_type_double_cover_closed.md",
+      "title": "Down-type double cover \u2014 derivation summary",
+      "summary": "Combining the Phase A terminology, the Phase B-followup null\nresult, the Phase C DoF framing, the Phase C/monodromy extraction,\nand the Phase D self-consistent weight reading, the full\nderivation of",
+      "depends_on": [
+        "boundary_weight",
+        "down_type_double_cover_phase_a",
+        "down_type_double_cover_phase_b",
+        "down_type_double_cover_phase_b_followup",
+        "down_type_double_cover_phase_c",
+        "down_type_double_cover_phase_d",
+        "hierarchy_gaussian_lattice"
+      ],
+      "depended_on_by": [
+        "k_critical_phase_a",
+        "mass_sector_sqrt_w_phase_b",
+        "omega_b_residual_phase_a",
+        "omega_b_residual_phase_b",
+        "session_audit",
+        "statistical_conventions"
+      ],
+      "git": [
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        }
+      ]
+    },
+    {
+      "id": "down_type_double_cover_phase_a",
+      "path": "sync_cost/derivations/down_type_double_cover_phase_a.md",
+      "title": "Down-type double cover \u2014 Phase A: formalization",
+      "summary": "This document prepares the ground for a first-principles derivation\nof the claim",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "gap1_theorem",
+        "gauge_factorization",
+        "hierarchy_gaussian_lattice",
+        "item12_cross_sector_ratios",
+        "klein_bottle_derivation",
+        "klein_connection"
+      ],
+      "depended_on_by": [
+        "down_type_double_cover_closed",
+        "down_type_double_cover_phase_b",
+        "down_type_double_cover_phase_b_followup",
+        "down_type_double_cover_phase_c",
+        "session_audit"
+      ],
+      "git": [
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        }
+      ]
+    },
+    {
+      "id": "down_type_double_cover_phase_b",
+      "path": "sync_cost/derivations/down_type_double_cover_phase_b.md",
+      "title": "Down-type double cover \u2014 Phase B attempt (halts)",
+      "summary": "N_walk(T\u00b2; q_2, q_3) / N_walk(K\u00b2; q_2, q_3)  =?  q_2 q_3 = 6",
+      "depends_on": [
+        "down_type_double_cover_phase_a",
+        "gauge_factorization",
+        "hierarchy_gaussian_lattice",
+        "item12_cross_sector_ratios"
+      ],
+      "depended_on_by": [
+        "down_type_double_cover_closed",
+        "down_type_double_cover_phase_b_followup",
+        "down_type_double_cover_phase_c"
+      ],
+      "git": [
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        }
+      ]
+    },
+    {
+      "id": "down_type_double_cover_phase_b_followup",
+      "path": "sync_cost/derivations/down_type_double_cover_phase_b_followup.md",
+      "title": "Down-type double cover \u2014 Phase B follow-up: Route 1 null result",
+      "summary": "Phase B Attempt 5 reached the target factor 6 by positing that\nlepton orbits are Z_6-stabilized and down-type orbits have trivial\nstabilizer. Route 1 proposed validating this by acting the six\nelements of Z_6 = Z_2 \u00d7 Z_3 on the four XOR modes `{A, B, C, D}`\nfrom `gap3_principal_bundle.py` and reading off the stabilizers.",
+      "depends_on": [
+        "down_type_double_cover_phase_a",
+        "down_type_double_cover_phase_b",
+        "item12_C_from_K_star",
+        "item12_cross_sector_ratios"
+      ],
+      "depended_on_by": [
+        "down_type_double_cover_closed",
+        "down_type_double_cover_phase_c",
+        "session_audit"
+      ],
+      "git": [
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        }
+      ]
+    },
+    {
+      "id": "down_type_double_cover_phase_c",
+      "path": "sync_cost/derivations/down_type_double_cover_phase_c.md",
+      "title": "Down-type double cover \u2014 Phase C attempt: self-consistent DoF reading",
+      "summary": "Prior attempts (Phase B) looked for a count of cardinality 6 attached\nto bundle or base-mode data. Every candidate action on the base\nproduced either a free (trivial) stabilizer, a ratio of 2, or a\nreference-dependent number. Route 1 closed as a null result\n(`down_type_double_cover_phase_b_followup.md`).",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "boundary_weight",
+        "down_type_double_cover_phase_a",
+        "down_type_double_cover_phase_b",
+        "down_type_double_cover_phase_b_followup",
+        "item12_cross_sector_ratios",
+        "klein_bottle_derivation",
+        "klein_connection"
+      ],
+      "depended_on_by": [
+        "down_type_double_cover_closed",
+        "down_type_double_cover_phase_d",
+        "session_audit"
+      ],
+      "git": [
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        }
+      ]
+    },
+    {
+      "id": "down_type_double_cover_phase_d",
+      "path": "sync_cost/derivations/down_type_double_cover_phase_d.md",
+      "title": "Down-type double cover \u2014 Phase D attempt: boundary-weight self-consistency",
+      "summary": "Prior phases:\n- A: vocabulary; reframed target as `N_walk(T\u00b2)/N_walk(K\u00b2)`.\n- B: five candidate topological ratios; four give 2 or 3/2; Attempt 5\n  (stabilizer inversion) reaches 6 but imports the color assignment.\n- B-followup: scan confirms no natural Z_6-action on `{A,B,C,D}` gives\n  the 6:1 ratio; the hierarchy-`|Z_6|` and down-type-`6` are separate\n  integer appearances.\n- C: self-consistent DoF reading via abelianization rank; reaches 6\n  conditional on `DoF(K\u00b2) = 1`.\n- C/monodromy: the Z_2",
+      "depends_on": [
+        "boundary_weight",
+        "down_type_double_cover_phase_c",
+        "item12_cross_sector_ratios",
+        "klein_connection"
+      ],
+      "depended_on_by": [
+        "down_type_double_cover_closed"
+      ],
+      "git": [
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        }
+      ]
+    },
+    {
       "id": "duty_cycle_dictionary",
       "path": "sync_cost/derivations/duty_cycle_dictionary.md",
       "title": "The Duty Cycle Dictionary",
@@ -470,6 +679,7 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "omega_b_residual_phase_b",
         "sinw_effective_dimension"
       ],
       "git": [
@@ -484,9 +694,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -501,9 +711,9 @@
       ],
       "git": [
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -530,9 +740,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -550,9 +760,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -570,9 +780,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -598,9 +808,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -618,9 +828,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -638,9 +848,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -661,9 +871,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -725,13 +935,20 @@
         "rational_field_equation"
       ],
       "depended_on_by": [
-        "gap_1_christoffel"
+        "down_type_double_cover_phase_a",
+        "gap2_sub_e_status_reconciled",
+        "gap_1_christoffel",
+        "k_critical_phase_a",
+        "k_critical_phase_b",
+        "mass_sector_sqrt_w_phase_a",
+        "session_audit",
+        "statistical_conventions"
       ],
       "git": [
         {
-          "hash": "fc1e525",
+          "hash": "2ca0794",
           "date": "2026-04-18",
-          "subject": "Gap 1 theorem: continuum-limit closure, conditional on CLT regime"
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         }
       ]
     },
@@ -764,19 +981,29 @@
       "summary": "| | Sub-problem | Status | Result |\n|---|---|---|---|\n| A | RFE forces Q \u2192 R completion | **Closed** | Phase sum in the self-consistency equation produces irrational |r| from rational inputs. The field exists because the equation demands it. (`rfe_irrational_fixed_points.py`) |\n| B | Mori\u2013Zwanzig coarse-graining | **Closed** (Markovian level) | Standard projection with inputs from C (decorrelation rate) and D (continuum manifold). Markovian limit valid for \u03c4_coarse \u226b 1/\u03bb_unlock. |\n| C | Lyapunov",
       "depends_on": [
         "gap2_step4_farey_laplacian",
+        "gap2_sub_e_status_reconciled",
         "gap2_theorem_attempt",
         "gap_2_spatial_diffusion",
+        "hierarchy_gaussian_lattice",
         "rational_field_equation",
         "second_law_topological"
       ],
       "depended_on_by": [
-        "hierarchy_gaussian_lattice"
+        "a_s_geometric_proof",
+        "gap2_sub_e_status_reconciled",
+        "hierarchy_gaussian_lattice",
+        "neutrino_mass_audit"
       ],
       "git": [
         {
-          "hash": "57fc319",
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        },
+        {
+          "hash": "2ca0794",
           "date": "2026-04-18",
-          "subject": "Spatialization decomposition: A-D closed, E open"
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         }
       ]
     },
@@ -798,14 +1025,33 @@
       ],
       "git": [
         {
-          "hash": "826574d",
+          "hash": "2ca0794",
           "date": "2026-04-18",
-          "subject": "Clean derivation docs: remove inline history, state current truth"
-        },
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
+        }
+      ]
+    },
+    {
+      "id": "gap2_sub_e_status_reconciled",
+      "path": "sync_cost/derivations/gap2_sub_e_status_reconciled.md",
+      "title": "Gap 2 sub-problem E (\u2113_c) \u2014 status reconciliation",
+      "summary": "Two framework docs state different things about sub-problem E\n(bare diffusion length `\u2113_c` in `D_0 = \u00bd \u03bb_unlock \u00b7 \u2113_c\u00b2`):",
+      "depends_on": [
+        "gap1_theorem",
+        "gap2_spatialization_decomposition",
+        "gap2_theorem_attempt",
+        "hierarchy_gaussian_lattice"
+      ],
+      "depended_on_by": [
+        "gap2_spatialization_decomposition",
+        "session_audit",
+        "statistical_conventions"
+      ],
+      "git": [
         {
-          "hash": "c0b93ee",
-          "date": "2026-04-18",
-          "subject": "Gap 2 Step 4: Stern-Brocot tree IS the spatial lattice"
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -826,18 +1072,14 @@
       "depended_on_by": [
         "gap2_spatialization_decomposition",
         "gap2_step4_farey_laplacian",
+        "gap2_sub_e_status_reconciled",
         "gap_2_spatial_diffusion"
       ],
       "git": [
         {
-          "hash": "826574d",
+          "hash": "2ca0794",
           "date": "2026-04-18",
-          "subject": "Clean derivation docs: remove inline history, state current truth"
-        },
-        {
-          "hash": "1b9cd9e",
-          "date": "2026-04-18",
-          "subject": "Gap 2 Break 1 attempted closure: diffusion from non-orientability"
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         }
       ]
     },
@@ -857,14 +1099,9 @@
       ],
       "git": [
         {
-          "hash": "826574d",
+          "hash": "2ca0794",
           "date": "2026-04-18",
-          "subject": "Clean derivation docs: remove inline history, state current truth"
-        },
-        {
-          "hash": "fc1e525",
-          "date": "2026-04-18",
-          "subject": "Gap 1 theorem: continuum-limit closure, conditional on CLT regime"
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         },
         {
           "hash": "d185308",
@@ -892,14 +1129,9 @@
       ],
       "git": [
         {
-          "hash": "826574d",
+          "hash": "2ca0794",
           "date": "2026-04-18",
-          "subject": "Clean derivation docs: remove inline history, state current truth"
-        },
-        {
-          "hash": "1b9cd9e",
-          "date": "2026-04-18",
-          "subject": "Gap 2 Break 1 attempted closure: diffusion from non-orientability"
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         },
         {
           "hash": "d185308",
@@ -946,6 +1178,8 @@
         "xor_derivation"
       ],
       "depended_on_by": [
+        "down_type_double_cover_phase_a",
+        "down_type_double_cover_phase_b",
         "gauge_dictionary",
         "hierarchy_gaussian_lattice",
         "klein_connection",
@@ -1056,7 +1290,8 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
-        "fourth_generation_revisited"
+        "fourth_generation_revisited",
+        "mixing_angle_audit"
       ],
       "git": [
         {
@@ -1065,9 +1300,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -1124,9 +1359,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -1141,16 +1376,30 @@
         "gauge_factorization",
         "klein_bottle_derivation",
         "sinw_effective_dimension",
-        "three_dimensions"
+        "three_dimensions",
+        "three_formalizations"
       ],
       "depended_on_by": [
+        "down_type_double_cover_closed",
+        "down_type_double_cover_phase_a",
+        "down_type_double_cover_phase_b",
+        "gap2_spatialization_decomposition",
+        "gap2_sub_e_status_reconciled",
+        "neutrino_mass_audit",
+        "session_audit",
+        "statistical_conventions",
         "three_formalizations"
       ],
       "git": [
         {
-          "hash": "17d51d4",
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        },
+        {
+          "hash": "2ca0794",
           "date": "2026-04-18",
-          "subject": "Derive the Planck/Hubble hierarchy: R = 6 \u00d7 13^54, zero inputs"
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         }
       ]
     },
@@ -1220,9 +1469,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -1244,9 +1493,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -1262,6 +1511,9 @@
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "a1_from_saddle_node",
+        "down_type_double_cover_phase_b_followup",
+        "mass_sector_sqrt_w_phase_a",
+        "mass_sector_sqrt_w_phase_b",
         "rationality_descent"
       ],
       "git": [
@@ -1285,7 +1537,14 @@
       "depends_on": [],
       "depended_on_by": [
         "a1_from_saddle_node",
-        "item12_C_from_K_star"
+        "down_type_double_cover_phase_a",
+        "down_type_double_cover_phase_b",
+        "down_type_double_cover_phase_b_followup",
+        "down_type_double_cover_phase_c",
+        "down_type_double_cover_phase_d",
+        "item12_C_from_K_star",
+        "mass_sector_sqrt_w_phase_a",
+        "mass_sector_sqrt_w_phase_b"
       ],
       "git": [
         {
@@ -1297,6 +1556,49 @@
           "hash": "e1e25da",
           "date": "2026-04-13",
           "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "k_critical_phase_a",
+      "path": "sync_cost/derivations/k_critical_phase_a.md",
+      "title": "K = K_c criticality \u2014 Phase A: the K zoo and the concrete concern",
+      "summary": "Gap 1 (Christoffel from Kuramoto) is conditionally closed:\n`gap1_theorem.md` establishes \u0393\u0303 = \u0393 + O(1/N) in the continuum\nlimit, **conditional on K > K_c** (supercritical Strogatz-Mirollo\nCLT). The residual in Issue #56 Tier 1 is the K = K_c critical\ncase: whether the framework's operating point sits above, at, or\nbelow K_c.",
+      "depends_on": [
+        "boundary_weight",
+        "down_type_double_cover_closed",
+        "gap1_theorem",
+        "rational_field_equation"
+      ],
+      "depended_on_by": [
+        "k_critical_phase_b"
+      ],
+      "git": [
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        }
+      ]
+    },
+    {
+      "id": "k_critical_phase_b",
+      "path": "sync_cost/derivations/k_critical_phase_b.md",
+      "title": "K = K_c criticality \u2014 Phase B: the K_c concern dissolves",
+      "summary": "Phase A framed the concern: is the framework's operating point\nabove, at, or below K_c, where K_c is Gap 1's \"supercritical\"\nthreshold for the Strogatz-Mirollo CLT?",
+      "depends_on": [
+        "gap1_theorem",
+        "k_critical_phase_a",
+        "rational_field_equation"
+      ],
+      "depended_on_by": [
+        "statistical_conventions"
+      ],
+      "git": [
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -1323,9 +1625,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -1342,9 +1644,13 @@
         "xor_derivation"
       ],
       "depended_on_by": [
+        "a_s_geometric_proof",
+        "down_type_double_cover_phase_a",
+        "down_type_double_cover_phase_c",
         "gap2_theorem_attempt",
         "gauge_factorization",
         "hierarchy_gaussian_lattice",
+        "omega_b_residual_phase_a",
         "second_law_topological",
         "sinw_effective_dimension",
         "three_formalizations"
@@ -1372,6 +1678,9 @@
         "xor_continuum_limit"
       ],
       "depended_on_by": [
+        "down_type_double_cover_phase_a",
+        "down_type_double_cover_phase_c",
+        "down_type_double_cover_phase_d",
         "gauge_dictionary",
         "second_law_topological"
       ],
@@ -1405,9 +1714,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -1423,7 +1732,9 @@
       "depended_on_by": [
         "CHAIN_KSTAR",
         "FRAMEWORK_TOPOLOGY",
-        "fourth_generation_revisited"
+        "fourth_generation_revisited",
+        "mixing_angle_audit",
+        "neutrino_mass_audit"
       ],
       "git": [
         {
@@ -1435,6 +1746,52 @@
           "hash": "e1e25da",
           "date": "2026-04-13",
           "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "mass_sector_sqrt_w_phase_a",
+      "path": "sync_cost/derivations/mass_sector_sqrt_w_phase_a.md",
+      "title": "Mass-sector `1/\u221aw` prescription \u2014 Phase A: terminology discipline",
+      "summary": "The last remaining Type C in Issue #56 is the normalization\nconvention",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "born_rule",
+        "boundary_weight",
+        "gap1_theorem",
+        "item12_C_from_K_star",
+        "item12_cross_sector_ratios"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        }
+      ]
+    },
+    {
+      "id": "mass_sector_sqrt_w_phase_b",
+      "path": "sync_cost/derivations/mass_sector_sqrt_w_phase_b.md",
+      "title": "Mass-sector `1/\u221aw` prescription \u2014 Phase B: q-scan results",
+      "summary": "Computed `w_F(1/q, K) / w_\u03a9(1/q, K)` at multiple K values\nfor q \u2208 {2, 3, 4}, using:",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "born_rule",
+        "down_type_double_cover_closed",
+        "item12_C_from_K_star",
+        "item12_cross_sector_ratios"
+      ],
+      "depended_on_by": [
+        "session_audit",
+        "statistical_conventions"
+      ],
+      "git": [
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -1452,9 +1809,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -1475,9 +1832,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -1491,6 +1848,7 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
+        "a_s_geometric_proof",
         "gap_2_spatial_diffusion",
         "klein_bottle_derivation"
       ],
@@ -1501,9 +1859,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -1527,9 +1885,33 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+        }
+      ]
+    },
+    {
+      "id": "mixing_angle_audit",
+      "path": "sync_cost/derivations/mixing_angle_audit.md",
+      "title": "Mixing angle audit: the framework's tree-level predictions ARE PMNS",
+      "summary": "`ckm_from_sl2z.py` computes tree-level mixing angles from the\nframework's SL(2,Z) trace / weight-ratio structure and compares\nthem to observed **CKM** (quark) angles. The comparison ratios are\nlarge (2\u2013140\u00d7), and the script's \u00a76 assessment (\"HONEST\nASSESSMENT\") states: \"None of these is a clean rotation of a\ntree-level angle to the physical one.\"",
+      "depends_on": [
+        "generation_mechanism",
+        "mass_sector_closure",
+        "statistical_conventions"
+      ],
+      "depended_on_by": [
+        "a_s_geometric_proof",
+        "neutrino_mass_audit",
+        "session_audit",
+        "statistical_conventions"
+      ],
+      "git": [
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -1547,9 +1929,78 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+        }
+      ]
+    },
+    {
+      "id": "neutrino_mass_audit",
+      "path": "sync_cost/derivations/neutrino_mass_audit.md",
+      "title": "Neutrino mass audit: already closed, not a depth-limit problem",
+      "summary": "This is an **outdated attribution**. `item12_neutrino_solar_closure.py`\ncloses the full neutrino mass sector via a **finite-K\ninteraction-scale correction**, not a depth \u2192 \u221e limit.",
+      "depends_on": [
+        "gap2_spatialization_decomposition",
+        "hierarchy_gaussian_lattice",
+        "mass_sector_closure",
+        "mixing_angle_audit",
+        "sinw_effective_dimension",
+        "statistical_conventions"
+      ],
+      "depended_on_by": [
+        "statistical_conventions"
+      ],
+      "git": [
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        }
+      ]
+    },
+    {
+      "id": "omega_b_residual_phase_a",
+      "path": "sync_cost/derivations/omega_b_residual_phase_a.md",
+      "title": "\u03a9_b = 1/19 residual \u2014 Phase A: the three-way boundary-weight inconsistency",
+      "summary": "The cosmic partition `\u03a9_b : \u03a9_DM : \u03a9_\u039b = 1/19 : 5/19 : 13/19` is\nderived in `baryon_fraction.md` from the Farey partition and Z_6\nirreducibility. Against Planck 2018:",
+      "depends_on": [
+        "baryon_fraction",
+        "boundary_weight",
+        "down_type_double_cover_closed",
+        "klein_bottle_derivation"
+      ],
+      "depended_on_by": [
+        "omega_b_residual_phase_b"
+      ],
+      "git": [
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        }
+      ]
+    },
+    {
+      "id": "omega_b_residual_phase_b",
+      "path": "sync_cost/derivations/omega_b_residual_phase_b.md",
+      "title": "\u03a9_b = 1/19 residual \u2014 Phase B: cross-sector |r|\u00b2 tax closes it",
+      "summary": "The 6.7% \u03a9_b residual from Phase A, and its partner 7.5%\n\u03a9_DM/\u03a9_b residual, closed by a single structural correction\nusing an already-derived order parameter.",
+      "depends_on": [
+        "baryon_fraction",
+        "boundary_weight",
+        "down_type_double_cover_closed",
+        "duty_cycle_dictionary",
+        "omega_b_residual_phase_a"
+      ],
+      "depended_on_by": [
+        "statistical_conventions"
+      ],
+      "git": [
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -1569,9 +2020,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -1591,9 +2042,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -1606,7 +2057,9 @@
       "depended_on_by": [
         "gap1_theorem",
         "gap2_spatialization_decomposition",
-        "gap_1_christoffel"
+        "gap_1_christoffel",
+        "k_critical_phase_a",
+        "k_critical_phase_b"
       ],
       "git": [
         {
@@ -1615,9 +2068,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -1691,9 +2144,9 @@
       ],
       "git": [
         {
-          "hash": "e77e531",
+          "hash": "2ca0794",
           "date": "2026-04-18",
-          "subject": "Derive the second law of thermodynamics from non-orientability"
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         }
       ]
     },
@@ -1736,6 +2189,54 @@
       ]
     },
     {
+      "id": "session_audit",
+      "path": "sync_cost/derivations/session_audit.md",
+      "title": "Session audit: overclaims, revisions, and stale content",
+      "summary": "Corrected two specific overclaims (\u2113_c factor, PMNS \u03b8_23\nstructural forcing). Kept historical artifacts (phase doc\nprogressions) with forward cross-references. Flagged Issue #56\nbody items for separate update. The remaining 5-7 closures hold\nup under critical review; caveats are labeled in the respective\ndocs.",
+      "depends_on": [
+        "boundary_weight",
+        "down_type_double_cover_closed",
+        "down_type_double_cover_phase_a",
+        "down_type_double_cover_phase_b_followup",
+        "down_type_double_cover_phase_c",
+        "gap1_theorem",
+        "gap2_sub_e_status_reconciled",
+        "hierarchy_gaussian_lattice",
+        "mass_sector_sqrt_w_phase_b",
+        "mixing_angle_audit"
+      ],
+      "depended_on_by": [
+        "statistical_conventions"
+      ],
+      "git": [
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        }
+      ]
+    },
+    {
+      "id": "sigma_squared_disambiguation",
+      "path": "sync_cost/derivations/sigma_squared_disambiguation.md",
+      "title": "\u03c3\u00b2 disambiguation",
+      "summary": "The symbol \u03c3\u00b2 appears in three distinct framework quantities. This\ndocument defines each precisely and gives the reconciliation\nbetween them. Use this as the reference when reading any framework\nfile that mentions \"\u03c3\u00b2\".",
+      "depends_on": [
+        "a_s_geometric_proof",
+        "continuum_limits"
+      ],
+      "depended_on_by": [
+        "a_s_geometric_proof"
+      ],
+      "git": [
+        {
+          "hash": "90652c7",
+          "date": "2026-04-20",
+          "subject": "Drop chronology from A_s presentation layer"
+        }
+      ]
+    },
+    {
       "id": "sinw_effective_dimension",
       "path": "sync_cost/derivations/sinw_effective_dimension.md",
       "title": "Weak Mixing Angle: sin\u00b2\u03b8_W from Effective Dimension Reduction",
@@ -1750,19 +2251,15 @@
       ],
       "depended_on_by": [
         "hierarchy_gaussian_lattice",
+        "neutrino_mass_audit",
         "sinw_fixed_point",
         "three_formalizations"
       ],
       "git": [
         {
-          "hash": "826574d",
+          "hash": "2ca0794",
           "date": "2026-04-18",
-          "subject": "Clean derivation docs: remove inline history, state current truth"
-        },
-        {
-          "hash": "a899ed9",
-          "date": "2026-04-18",
-          "subject": "Derive sin\u00b2\u03b8_W = 2^(80/27) / (2^(80/27) + 3^(80/27)) = 0.23123"
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         }
       ]
     },
@@ -1782,9 +2279,9 @@
       ],
       "git": [
         {
-          "hash": "826574d",
+          "hash": "2ca0794",
           "date": "2026-04-18",
-          "subject": "Clean derivation docs: remove inline history, state current truth"
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         },
         {
           "hash": "e387fe3",
@@ -1819,9 +2316,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -1846,9 +2343,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -1871,9 +2368,39 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+        }
+      ]
+    },
+    {
+      "id": "statistical_conventions",
+      "path": "sync_cost/derivations/statistical_conventions.md",
+      "title": "Statistical conventions for session closure docs",
+      "summary": "This doc defines the operational meaning of \u03c3-statements,\n%-statements, and \"closed\" used in the seven session closure\ndocs. Where a doc's wording is loose, this defines the strict\nsense.",
+      "depends_on": [
+        "down_type_double_cover_closed",
+        "gap1_theorem",
+        "gap2_sub_e_status_reconciled",
+        "hierarchy_gaussian_lattice",
+        "k_critical_phase_b",
+        "mass_sector_sqrt_w_phase_b",
+        "mixing_angle_audit",
+        "neutrino_mass_audit",
+        "omega_b_residual_phase_b",
+        "session_audit"
+      ],
+      "depended_on_by": [
+        "a_s_geometric_proof",
+        "mixing_angle_audit",
+        "neutrino_mass_audit"
+      ],
+      "git": [
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -1944,9 +2471,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -1962,8 +2489,16 @@
         "sinw_effective_dimension",
         "three_dimensions"
       ],
-      "depended_on_by": [],
-      "git": []
+      "depended_on_by": [
+        "hierarchy_gaussian_lattice"
+      ],
+      "git": [
+        {
+          "hash": "2ca0794",
+          "date": "2026-04-18",
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
+        }
+      ]
     },
     {
       "id": "three_zeros",
@@ -1979,9 +2514,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -1999,9 +2534,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -2027,9 +2562,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -2047,9 +2582,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -2069,9 +2604,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     },
@@ -2087,9 +2622,9 @@
       ],
       "git": [
         {
-          "hash": "3006f0c",
-          "date": "2026-03-28",
-          "subject": "Derive universe age from Friedmann integration, add HTML visualization (#30)"
+          "hash": "b5a0742",
+          "date": "2026-03-29",
+          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
         }
       ]
     }
