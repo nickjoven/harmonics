@@ -51,10 +51,13 @@ OMEGA_DM_ERR     = 0.007
 OMEGA_B_OBS      = 0.0493
 OMEGA_B_ERR      = 0.0003
 
-# Framework integer-depth predictions (at w = 1, full locking)
-OMEGA_LAMBDA_PRED = 13/19
-OMEGA_DM_PRED     =  5/19
-OMEGA_B_PRED      =  1/19
+# Framework integer-depth predictions (at w = 1, full locking; framework_constants)
+import os as _os
+import sys as _sys
+_sys.path.insert(0, _os.path.dirname(__file__))
+from framework_constants import OMEGA_B as OMEGA_B_PRED
+from framework_constants import OMEGA_DM as OMEGA_DM_PRED
+from framework_constants import OMEGA_L as OMEGA_LAMBDA_PRED
 
 
 # ============================================================

@@ -13,16 +13,23 @@ Planck 2018 parameters:
     Omega_L = 0.685
 """
 
+import os
+import sys
+
 import numpy as np
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import C_LIGHT, H_0_KM_S_MPC, H_0_SI
 
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
-c_m_s = 2.998e8          # speed of light [m/s]
-H0_km_s_Mpc = 67.4       # Hubble constant [km/s/Mpc]
-Mpc_in_m = 3.0857e22     # 1 Mpc in metres
-H0_si = H0_km_s_Mpc * 1e3 / Mpc_in_m   # H0 in s^-1
+c_m_s = C_LIGHT                        # speed of light [m/s]
+H0_km_s_Mpc = H_0_KM_S_MPC             # Hubble constant [km/s/Mpc], Planck 2018
+H0_si = H_0_SI                         # H0 in s^-1
 
+# Observed Planck 2018 matter / Lambda fractions -- NOT the framework's
+# structural 6/19, 13/19 (see framework_constants.OMEGA_M/OMEGA_L).
 Omega_m = 0.315
 Omega_L = 0.685
 

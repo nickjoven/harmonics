@@ -5,6 +5,68 @@ This doc defines the operational meaning of σ-statements,
 docs. Where a doc's wording is loose, this defines the strict
 sense.
 
+## "Zero free parameters" — reserved phrase
+
+**Operational rule.** The phrases "zero free parameters", "no free
+parameters", "0 free parameters" (and equivalents) are reserved
+for claims that meet *all three* of the following conditions:
+
+**(Z1) C-numerical at ≤ 1σ.** The prediction matches observation
+under the σ-test above, with z-score ≤ 1. Predictions at %-only or
+with z > 1 are not "zero free parameters" claims; they are
+partially derived and should be labeled as such.
+
+**(Z2) No un-derived O(1) factors.** Every multiplicative and
+additive factor in the prediction has a named derivation in a
+framework file. Approximations (e.g. leading-order cos expansion,
+single-mode-per-bracket, r* = 1) that leave uncomputed O(1)
+corrections disqualify the claim.
+
+**(Z3) Observational inputs are anchoring and labeled.** One or
+more observational quantities may enter as dimensionful or
+scale-setting anchors (e.g. H_0 for the absolute Planck scale,
+n_s for pivot identification). These must be explicitly listed
+in the derivation as "anchor inputs" — not hidden. A claim with
+an unacknowledged anchor is not "zero free parameters".
+
+**If any of Z1–Z3 fails, use a narrower phrase:**
+
+| Status | Acceptable phrasing |
+|---|---|
+| C-numerical ≤ 1σ, no un-derived O(1), anchors labeled | "zero free parameters" (Z1∧Z2∧Z3) |
+| C-numerical, 1σ < z ≤ 3σ | "%-level match, partially derived" |
+| %-only (no σ-test) | "%-only, structural form derived" |
+| Structural form only | "C-structural, one observational anchor" or "derived up to O(1)" |
+| Approximation with un-derived factors | "derived under [explicit approximation list]" |
+
+**Examples applying the rule:**
+
+- **Acceptable**: Ω_Λ = 13/19 (0.07 σ under Planck 2018, no
+  un-derived O(1), n_s / H_0 as anchors). **C-numerical, Z1-Z3 all
+  met. "Zero free parameters" is acceptable.**
+- **Acceptable**: sin² θ_W = 2^(80/27)/(2^(80/27) + 3^(80/27))
+  (0.5 σ under PDG, structural derivation, no hidden factors).
+- **Not acceptable**: A_s geometric proof's prediction 2.33×10⁻⁹
+  vs observed 2.10×10⁻⁹ (11% / 7.7σ, with G1–G5 un-derived
+  structural gaps). Status: **"derived under the static, O(δθ²),
+  r*=1, single-mode-per-bracket approximation; %-only at 11%."**
+- **Not acceptable**: CKM/PMNS tree-level predictions (matching
+  observation at 5–10% relative but failing the σ-test; see
+  `mixing_angle_audit.md`). Status: **"%-only, NOT σ-closed."**
+
+**Motivation.** "Zero free parameters" is a strong claim about the
+completeness of a derivation. It implies the result is
+observation-independent up to scale-anchoring. Using it for
+partial or approximated derivations overstates the framework's
+closure status and makes real closures indistinguishable from
+suggestive near-matches. The rule above keeps the phrase reserved
+for when it is actually warranted.
+
+**When in doubt, use the status labels from the § "Per-closure σ
+table" above.** Those labels carry the necessary precision; the
+shorthand "zero free parameters" should be the *consequence* of a
+passing Z1-Z3 check, not an independent claim.
+
 ## σ — observational z-score, default
 
 **Operational definition.** Unless explicitly noted otherwise,

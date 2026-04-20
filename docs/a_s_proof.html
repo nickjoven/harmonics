@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A_s proof &mdash; 3D structure</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body { margin: 0; font-family: ui-sans-serif, system-ui, sans-serif;
+         background: #08080f; color: #e0e0e0; overflow: hidden; }
+  nav { padding: 0.75rem 1.5rem; background: #1a1a2e; border-bottom: 1px solid #333;
+        position: absolute; top: 0; left: 0; right: 0; z-index: 10; }
+  nav a { color: #e0e0e0; margin-right: 1rem; text-decoration: none; font-size: 0.9rem; }
+  nav a.active { color: #f0c040; border-bottom: 2px solid #f0c040; padding-bottom: 2px; }
+  nav .title { color: #f0c040; font-weight: bold; margin-right: 2rem; }
+  #graph { position: absolute; top: 48px; left: 0; right: 420px; bottom: 0; }
+  #detail { position: absolute; top: 48px; right: 0; width: 420px; bottom: 0;
+            background: #141424; padding: 1.5rem; overflow-y: auto;
+            border-left: 1px solid #333; box-sizing: border-box; }
+  #detail h1 { font-size: 1.2rem; color: #f0c040; margin: 0 0 0.25rem; }
+  #detail h2 { font-size: 0.8rem; color: #e94560; margin: 1.25rem 0 0.4rem;
+               text-transform: uppercase; letter-spacing: 1px; }
+  #detail .label { font-size: 0.8rem; color: #888; margin-bottom: 0.75rem; }
+  #detail .summary { font-size: 0.93rem; line-height: 1.55; margin-bottom: 1rem; }
+  #detail code { background: #2a2a4e; padding: 1px 4px; border-radius: 3px; font-size: 0.85em; }
+  #detail a { color: #f0c040; text-decoration: none; }
+  #detail a:hover { text-decoration: underline; }
+  .legend { position: absolute; bottom: 1rem; left: 1rem; background: rgba(20,20,36,0.8);
+            padding: 0.75rem 1rem; border-radius: 6px; font-size: 0.85rem;
+            border: 1px solid #333; }
+  .legend .row { display: flex; align-items: center; margin-bottom: 0.25rem; }
+  .legend .dot { width: 12px; height: 12px; border-radius: 50%; margin-right: 0.5rem; display: inline-block; }
+  .hint { position: absolute; bottom: 1rem; right: 440px; color: #888; font-size: 0.8rem; }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="title">A_s proof &mdash; 3D structure</span>
+  <a href="index.html">Overview</a>
+  <a href="dag.html">Full DAG</a>
+  <a href="a_s_proof.html" class="active">A_s proof (3D)</a>
+  <a href="glossary.html">Glossary</a>
+</nav>
+
+<div id="graph"></div>
+
+<div id="detail">
+  <h1 id="dName">Select a node</h1>
+  <div class="label" id="dLabel"></div>
+  <div class="summary" id="dSummary">
+    This is the proof structure for the theorem
+    <code>A_s = (1 − φ⁻⁴) / (4 λ_unlock · φ · q_pivot²)</code>
+    as stated in
+    <a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/a_s_geometric_proof.md"><code>a_s_geometric_proof.md</code></a>.
+    Each sphere is one axiom, lemma, theorem, or corollary. Position
+    along the vertical axis is derivation depth: primitives at the
+    bottom, the observational comparison at the top. Click a node
+    to see its role.
+  </div>
+  <div id="dRef"></div>
+</div>
+
+<div class="legend">
+  <div class="row"><span class="dot" style="background:#888"></span>Primitive</div>
+  <div class="row"><span class="dot" style="background:#4a7fb5"></span>Topology / SB geometry</div>
+  <div class="row"><span class="dot" style="background:#b54a4a"></span>ADM kernel / tongue</div>
+  <div class="row"><span class="dot" style="background:#4ab57f"></span>Kuramoto dynamics (λ, D, m)</div>
+  <div class="row"><span class="dot" style="background:#b58d4a"></span>Canonical gauge</div>
+  <div class="row"><span class="dot" style="background:#8d4ab5"></span>Pivot identification</div>
+  <div class="row"><span class="dot" style="background:#f0c040"></span>Theorem / corollary</div>
+  <div class="row"><span class="dot" style="background:#e94560"></span>Observation</div>
+  <div class="row"><span class="dot" style="background:#ff8c42"></span>Open gap (what's missing)</div>
+</div>
+
+<div class="hint">drag to rotate &middot; scroll to zoom &middot; click node for details</div>
+
+<script src="https://unpkg.com/three@0.149.0/build/three.min.js"></script>
+<script src="https://unpkg.com/3d-force-graph@1.73.0/dist/3d-force-graph.min.js"></script>
+<script>
+  fetch('a_s_proof_graph.json')
+    .then(r => r.json())
+    .then(data => {
+      // Vertical layering: y = layer × fixed spacing.
+      // 3d-force-graph uses (x, y, z); we pin y by layer and let the
+      // force simulation spread x and z.
+      const LAYER_SPACING = 80;
+      data.nodes.forEach(n => {
+        n.fy = n.layer * LAYER_SPACING;   // pinned y
+      });
+
+      const Graph = ForceGraph3D()
+        (document.getElementById('graph'))
+        .backgroundColor('#08080f')
+        .graphData(data)
+        .nodeLabel(n => `${n.id}: ${n.title}${n.open ? ' [OPEN]' : ''}`)
+        .nodeColor(n => n.color)
+        .nodeVal(n => (n.id === 'T' || n.id === 'C' || n.id === 'O') ? 8 : (n.open ? 5 : 4))
+        .nodeOpacity(n => n.open ? 0.55 : 0.9)
+        .nodeResolution(16)
+        .linkColor(l => l.external ? '#e94560' : (l.open ? '#ff8c42' : '#aaaaaa'))
+        .linkOpacity(l => l.open ? 0.55 : (l.external ? 0.55 : 0.55))
+        .linkWidth(l => l.external ? 1.5 : (l.open ? 0.9 : 0.7))
+        .linkDirectionalArrowLength(l => l.open ? 0 : 3.5)
+        .linkDirectionalArrowRelPos(1)
+        .linkDirectionalArrowColor(l => l.external ? '#e94560' : '#f0c040')
+        .linkCurvature(l => l.external ? 0.3 : (l.open ? 0.2 : 0))
+        .linkLabel(l => l.label || '')
+        .onNodeClick(n => {
+          document.getElementById('dName').textContent = n.title;
+          document.getElementById('dLabel').textContent = n.id + (n.external ? '  (external)' : '');
+          document.getElementById('dSummary').textContent = n.summary;
+          const refEl = document.getElementById('dRef');
+          if (n.ref) {
+            refEl.innerHTML = '<h2>Reference</h2><code>' + n.ref + '</code>';
+          } else {
+            refEl.innerHTML = '';
+          }
+          // Center on the node
+          const distance = 120;
+          const distRatio = 1 + distance / Math.hypot(n.x, n.y, n.z);
+          Graph.cameraPosition(
+            { x: n.x * distRatio, y: n.y * distRatio, z: n.z * distRatio },
+            n,
+            1200
+          );
+        });
+
+      // Weaker link force so y-pinning dominates vertical layout
+      Graph.d3Force('link').distance(60);
+      Graph.d3Force('charge').strength(-200);
+    });
+</script>
+
+</body>
+</html>

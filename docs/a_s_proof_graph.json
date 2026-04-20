@@ -1,0 +1,215 @@
+{
+  "nodes": [
+    {
+      "id": "P",
+      "label": "P1–P4",
+      "title": "Primitives",
+      "summary": "Z, mediant (a+c)/(b+d), fixed point x = f(x), parabola x² + μ = 0. The four irreducible primitives of the framework.",
+      "layer": 0,
+      "color": "#888888",
+      "ref": "minimum_alphabet.md"
+    },
+    {
+      "id": "A1",
+      "label": "A1",
+      "title": "Klein bottle topology",
+      "summary": "(q₂, q₃) = (2, 3). XOR filter on non-orientable S¹ × S¹ from P1+P3.",
+      "layer": 1,
+      "color": "#4a7fb5",
+      "ref": "klein_bottle_derivation.md"
+    },
+    {
+      "id": "A2",
+      "label": "A2",
+      "title": "Stern-Brocot bracket",
+      "summary": "w_bracket(n) = 1/(F_{n+1} · F_{n+2}) → 1/(φ q²). Binet asymptotic. From mediant primitive P3.",
+      "layer": 2,
+      "color": "#4a7fb5"
+    },
+    {
+      "id": "A3",
+      "label": "A3",
+      "title": "σ²_kernel = 1/4",
+      "summary": "Kernel normalization per coupling direction. Derived from ADM Gauss-Codazzi: requires Hamiltonian 16πG + momentum 8πG simultaneously.",
+      "layer": 2,
+      "color": "#b54a4a",
+      "ref": "continuum_limits.md §5a"
+    },
+    {
+      "id": "A4",
+      "label": "A4",
+      "title": "Arnold tongue at K=1",
+      "summary": "w_tongue(p/q) = σ²_kernel/q² at critical coupling. Standard circle map result; cross-verified by test_tongue_to_bracket_ratio_is_4_over_phi.",
+      "layer": 2,
+      "color": "#b54a4a"
+    },
+    {
+      "id": "A5",
+      "label": "A5",
+      "title": "λ_unlock closed form",
+      "summary": "λ_unlock(K=1) = (4G − π ln 2)/π ≈ 0.473096 where G = Catalan's constant. Integration by parts + ∫₀^{π/4} ln cos u du = G/2 − (π/4) ln 2.",
+      "layer": 2,
+      "color": "#4ab57f",
+      "ref": "lambda_unlock_closed_form.py"
+    },
+    {
+      "id": "A6",
+      "label": "A6",
+      "title": "SB diffusion fixed point",
+      "summary": "D_eff = D₀/(1 − φ⁻⁴) from Fibonacci-RG convergence sum. Each level contributes φ⁻⁴; geometric series.",
+      "layer": 2,
+      "color": "#4ab57f",
+      "ref": "gap2_spatialization_decomposition.md sub-E"
+    },
+    {
+      "id": "A7",
+      "label": "A7",
+      "title": "Madelung relation",
+      "summary": "ℏ = 2 m · D_eff. Identification of the Kuramoto K<1 linearization with the Schrödinger equation; PROOF_B Q4.",
+      "layer": 2,
+      "color": "#4ab57f",
+      "ref": "continuum_limits.md Part II §6"
+    },
+    {
+      "id": "A8",
+      "label": "A8",
+      "title": "Canonical scalar R = √m δθ",
+      "summary": "Canonical-action gauge of the linearized Lagrangian. The unique normalization that treats the kinetic coefficient as 1/2.",
+      "layer": 2,
+      "color": "#b58d4a",
+      "ref": "framework_lagrangian.py"
+    },
+    {
+      "id": "A9",
+      "label": "A9",
+      "title": "CMB pivot q = F₂₁",
+      "summary": "Pivot identification at Fibonacci index 21. From rate = (1 − n_s)/ln(φ²) and N_efolds = √5/rate = 61.3.",
+      "layer": 2,
+      "color": "#8d4ab5",
+      "ref": "k_omega_mapping.py"
+    },
+    {
+      "id": "L1",
+      "label": "L1",
+      "title": "Field-theoretic mass",
+      "summary": "m/m_P = (1 − φ⁻⁴)/λ_unlock ≈ 1.806. Combines A6 + A7 (Madelung at the SB fixed point) with A5 supplying λ numerically.",
+      "layer": 3,
+      "color": "#4ab57f"
+    },
+    {
+      "id": "L2",
+      "label": "L2",
+      "title": "Per-bracket variance",
+      "summary": "⟨δθ²⟩_bracket = σ²_kernel · w_bracket = 1/(4 φ q²). Kernel variance times bracket width.",
+      "layer": 3,
+      "color": "#b54a4a"
+    },
+    {
+      "id": "L3",
+      "label": "L3",
+      "title": "Canonical variance",
+      "summary": "⟨R²⟩_bracket = m · ⟨δθ²⟩_bracket = m/(4 φ q²). From canonical-gauge L1 + L2.",
+      "layer": 4,
+      "color": "#b58d4a"
+    },
+    {
+      "id": "T",
+      "label": "T",
+      "title": "Theorem",
+      "summary": "A_s = (1 − φ⁻⁴) / (4 λ_unlock · φ · q_pivot²). The assembled geometric prediction.",
+      "layer": 5,
+      "color": "#f0c040"
+    },
+    {
+      "id": "C",
+      "label": "C",
+      "title": "Corollary (numerical)",
+      "summary": "A_s_predicted = 2.33 × 10⁻⁹. Substitutes q_pivot = F_21 = 10946 and numerical values of φ, λ_unlock.",
+      "layer": 6,
+      "color": "#f0c040"
+    },
+    {
+      "id": "O",
+      "label": "O",
+      "title": "Observation",
+      "summary": "Planck 2018: A_s = (2.10 ± 0.03) × 10⁻⁹. External input to the comparison, not the derivation.",
+      "layer": 7,
+      "color": "#e94560",
+      "external": true
+    },
+    {
+      "id": "G1",
+      "label": "G1",
+      "title": "Gap: horizon-crossing amplification",
+      "summary": "Largest structural gap. L2+L3 compute the static zero-point fluctuation at K=1; A_s is the inflation-amplified curvature perturbation at horizon crossing. The de Sitter amplification factor is not in the proof.",
+      "layer": 5,
+      "color": "#ff8c42",
+      "open": true
+    },
+    {
+      "id": "G2",
+      "label": "G2",
+      "title": "Gap: sound speed × slow-roll",
+      "summary": "Canonical inflation: A_s ∝ 1/(ε · c_s). Framework has c_s = √(σ²_kernel/m) = 0.372 and a tilt n_s; neither appears in theorem T.",
+      "layer": 5,
+      "color": "#ff8c42",
+      "open": true
+    },
+    {
+      "id": "G3",
+      "label": "G3",
+      "title": "Gap: δθ⁴ correction to tongue",
+      "summary": "A4 uses the leading-order Arnold tongue. δθ⁴ cos-expansion terms are O(1) at K=1 and shift the tongue width. Not currently included.",
+      "layer": 2,
+      "color": "#ff8c42",
+      "open": true
+    },
+    {
+      "id": "G4",
+      "label": "G4",
+      "title": "Gap: r* finite-N",
+      "summary": "Proof uses r* = 1 at K = 1. Actual r*(K=1) has finite-N corrections ~1/log N from the order parameter self-consistency.",
+      "layer": 3,
+      "color": "#ff8c42",
+      "open": true
+    },
+    {
+      "id": "G5",
+      "label": "G5",
+      "title": "Gap: sub-bracket mode summation",
+      "summary": "L2 treats the pivot bracket as one mode. The bracket contains infinitely many sub-rationals (Stern-Brocot sub-tree). Per-bracket variance may be a sum, not a single term.",
+      "layer": 3,
+      "color": "#ff8c42",
+      "open": true
+    }
+  ],
+  "links": [
+    {"source": "P",  "target": "A1"},
+    {"source": "A1", "target": "A2"},
+
+    {"source": "A5", "target": "L1"},
+    {"source": "A6", "target": "L1"},
+    {"source": "A7", "target": "L1"},
+
+    {"source": "A2", "target": "L2"},
+    {"source": "A3", "target": "L2"},
+    {"source": "A4", "target": "L2"},
+
+    {"source": "L1", "target": "L3"},
+    {"source": "L2", "target": "L3"},
+    {"source": "A8", "target": "L3"},
+
+    {"source": "L3", "target": "T"},
+    {"source": "T",  "target": "C"},
+    {"source": "A9", "target": "C"},
+
+    {"source": "C",  "target": "O", "external": true, "label": "11% / 7.7σ"},
+
+    {"source": "G1", "target": "T",  "open": true, "label": "missing amplification"},
+    {"source": "G2", "target": "T",  "open": true, "label": "missing 1/(ε c_s)"},
+    {"source": "G3", "target": "A4", "open": true, "label": "δθ⁴ correction"},
+    {"source": "G4", "target": "L1", "open": true, "label": "r*(K=1) ≠ 1"},
+    {"source": "G4", "target": "A4", "open": true, "label": "r*(K=1) ≠ 1"},
+    {"source": "G5", "target": "L2", "open": true, "label": "sub-bracket sum"}
+  ]
+}

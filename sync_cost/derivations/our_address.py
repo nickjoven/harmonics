@@ -11,7 +11,7 @@ First principles (zero free parameters):
 
 Minimum observables (three measured numbers):
   - n_s = 0.9649 ± 0.0042  (Planck 2018, the spectral tilt)
-  - H₀ = 67.36 km/s/Mpc   (Planck 2018, the current tick rate)
+  - H₀ = 67.4 km/s/Mpc    (Planck 2018, the current tick rate)
   - ℏ, G, c               (the Planck units, defining the deepest level)
 
 Everything else is derived — including the age of the universe,
@@ -24,8 +24,12 @@ Usage:
 
 import json
 import math
+import os
 import sys
 from fractions import Fraction
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import H_0_KM_S_MPC
 
 
 # ═══════════════════════════════════════════════════════════════════════
@@ -80,7 +84,7 @@ rho = K_c
 n_s = 0.9649  # Planck 2018
 
 # Observable 2: the Hubble constant (the tick rate)
-H0_km_s_Mpc = 67.36  # km/s/Mpc
+H0_km_s_Mpc = H_0_KM_S_MPC    # km/s/Mpc, Planck 2018 (framework_constants)
 Mpc_in_m = 3.0857e22
 H0_per_s = H0_km_s_Mpc * 1e3 / Mpc_in_m  # in s⁻¹
 H0_per_yr = H0_per_s * 3.156e7  # in yr⁻¹

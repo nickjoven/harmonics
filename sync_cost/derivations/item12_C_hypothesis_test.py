@@ -23,6 +23,11 @@ the within-sector mass ratios, and compare to PDG with uncertainties.
 """
 
 import math
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import PDG_MASS
 
 
 # ============================================================================
@@ -36,18 +41,18 @@ INV_PHI_SQ = 1 / (PHI * PHI)            # 0.38197 = 2 - phi
 Q2, Q3 = 2, 3
 D = 3
 
-# PDG 2024 masses with uncertainties (MeV)
-m_e_val,   m_e_err   = 0.51099895, 0.0000000015
-m_mu_val,  m_mu_err  = 105.6583755, 0.0000023
-m_tau_val, m_tau_err = 1776.86, 0.12
+# PDG 2024 masses with uncertainties (MeV, framework_constants.PDG_MASS)
+m_e_val,   m_e_err   = PDG_MASS["e"]
+m_mu_val,  m_mu_err  = PDG_MASS["mu"]
+m_tau_val, m_tau_err = PDG_MASS["tau"]
 
-m_u_val,  m_u_err  = 2.16,    0.49     # larger uncertainty
-m_c_val,  m_c_err  = 1270.0,  20.0
-m_t_val,  m_t_err  = 172760.0, 400.0
+m_u_val,  m_u_err  = PDG_MASS["u"]     # larger uncertainty
+m_c_val,  m_c_err  = PDG_MASS["c"]
+m_t_val,  m_t_err  = PDG_MASS["t"]
 
-m_d_val,  m_d_err  = 4.67,    0.48
-m_s_val,  m_s_err  = 93.4,    8.0
-m_b_val,  m_b_err  = 4180.0,  30.0
+m_d_val,  m_d_err  = PDG_MASS["d"]
+m_s_val,  m_s_err  = PDG_MASS["s"]
+m_b_val,  m_b_err  = PDG_MASS["b"]
 
 
 # Observed a_1 per sector (from item12_characterize_a1.py)

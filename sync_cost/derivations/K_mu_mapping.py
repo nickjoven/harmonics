@@ -23,10 +23,12 @@ Usage:
 """
 
 import math
+import os
 import sys
 from fractions import Fraction
 
-sys.path.insert(0, "sync_cost/derivations")
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import ALPHA_EM_MZ, ALPHA_S_MZ, SIN2_TW_MZ
 from circle_map_utils import PHI, INV_PHI, PHI_SQ, LN_PHI_SQ, fibonacci_sequence, tongue_width
 
 
@@ -35,9 +37,7 @@ from circle_map_utils import PHI, INV_PHI, PHI_SQ, LN_PHI_SQ, fibonacci_sequence
 M_PL = 1.22e19      # GeV (Planck mass)
 M_Z = 91.1876        # GeV
 TOTAL_DEPTH = 146    # Fibonacci levels Planck → Hubble
-ALPHA_S_MZ = 0.1179
-ALPHA_EM_MZ = 1 / 127.95
-SIN2_TW = 0.23121
+SIN2_TW = SIN2_TW_MZ
 ALPHA_2_MZ = ALPHA_EM_MZ / SIN2_TW
 
 B3 = 7.0

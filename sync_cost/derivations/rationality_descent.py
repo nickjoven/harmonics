@@ -40,6 +40,7 @@ from framework_constants import (
     K_STAR,
     M_B,
     M_C,
+    M_E,
     M_MU,
     M_S,
     M_T,
@@ -158,7 +159,7 @@ def build_observables() -> list[tuple[str, float, float, str]]:
 
         # -- mass ratios (checking if they are directly rational)
         ("m_tau / m_mu",           M_TAU/M_MU,               1e-4,   "info"),
-        ("m_mu / m_e",             M_MU / 0.51099895,        1e-7,   "info"),
+        ("m_mu / m_e",             M_MU / M_E,               1e-7,   "info"),
         ("m_t / m_c",              M_T / M_C,                0.03,   "info"),
     ]
 

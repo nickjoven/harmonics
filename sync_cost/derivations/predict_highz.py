@@ -36,19 +36,25 @@ Each predicts a different V_obs for the same (M_bar, R_e, z).
 The survey measures V_obs. One model wins.
 """
 
+import os
+import sys
+
 import numpy as np
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import C_LIGHT, G_NEWTON, H_0_KM_S_MPC, H_0_SI
 
 # ---------------------------------------------------------------------------
 # Constants (Planck 2018)
 # ---------------------------------------------------------------------------
-G = 6.674e-11        # m³ kg⁻¹ s⁻²
+G = G_NEWTON         # m³ kg⁻¹ s⁻²
 M_sun = 1.989e30     # kg
 kpc_m = 3.086e19     # m
-c_m_s = 2.998e8      # m/s
+c_m_s = C_LIGHT      # m/s
 
-H0_km_s_Mpc = 67.4
-Mpc_in_m = 3.0857e22
-H0_si = H0_km_s_Mpc * 1e3 / Mpc_in_m
+H0_km_s_Mpc = H_0_KM_S_MPC
+H0_si = H_0_SI
+# Observed Planck 2018 (not framework's 6/19, 13/19).
 Omega_m, Omega_L = 0.315, 0.685
 
 

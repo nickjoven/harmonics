@@ -18,9 +18,11 @@ Usage:
 """
 
 import math
+import os
 import sys
 
-sys.path.insert(0, "sync_cost/derivations")
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import ALPHA_EM_MZ, ALPHA_S_MZ, SIN2_TW_MZ
 from circle_map_utils import tongue_width as _tongue_width_pqK
 
 
@@ -95,9 +97,7 @@ def tongue_width(p, q, K, n_trans=5000, n_meas=20000, n_bisect=40):
 # ── SM reference ──────────────────────────────────────────────────────────────
 
 MZ = 91.1876
-ALPHA_S_MZ = 0.1179
-ALPHA_EM_MZ = 1 / 127.95
-SIN2_TW = 0.23121
+SIN2_TW = SIN2_TW_MZ
 ALPHA_2_MZ = ALPHA_EM_MZ / SIN2_TW
 RATIO_MZ = ALPHA_S_MZ / ALPHA_2_MZ
 

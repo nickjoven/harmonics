@@ -42,6 +42,7 @@ from pathlib import Path
 
 # Make circle_map_utils importable
 sys.path.insert(0, str(Path(__file__).parent))
+from framework_constants import ALPHA_EM_MZ, ALPHA_S_MZ, SIN2_TW_MZ  # noqa: E402
 from circle_map_utils import tongue_width, tongue_width_numerical  # noqa: E402
 
 
@@ -50,9 +51,6 @@ from circle_map_utils import tongue_width, tongue_width_numerical  # noqa: E402
 # ============================================================================
 
 M_Z = 91.1876
-ALPHA_EM_MZ = 1 / 127.95
-SIN2_TW_MZ = 0.23121
-ALPHA_S_MZ = 0.1179
 ALPHA_2_MZ = ALPHA_EM_MZ / SIN2_TW_MZ       # ≈ 0.0338
 ALPHA_Y_MZ = ALPHA_EM_MZ / (1 - SIN2_TW_MZ)  # ≈ 0.0102
 

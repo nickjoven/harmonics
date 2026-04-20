@@ -19,6 +19,11 @@ Usage:
 """
 
 import math
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import H_0_SI
 
 
 # ── Standard Model parameters (PDG 2024) ─────────────────────────────────────
@@ -219,7 +224,7 @@ def main():
     # This is way below M_Z — the couplings are non-perturbative there.
 
     # The Hubble scale:
-    H0 = 67.4e3 / 3.086e22  # km/s/Mpc -> 1/s
+    H0 = H_0_SI           # km/s/Mpc -> 1/s (framework_constants)
     E_H = 6.582e-25 * H0  # GeV (ℏH₀)
     print(f"\n  Hubble energy scale: E_H = ℏH₀ ≈ {E_H:.2e} GeV")
     print(f"  log₁₀(E_H/GeV) = {math.log10(E_H):.1f}")

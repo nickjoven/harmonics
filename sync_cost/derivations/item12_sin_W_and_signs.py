@@ -15,6 +15,11 @@ residuals against Fibonacci convergent over/under behavior.
 """
 
 import math
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import SIN2_TW_MZ
 
 PHI = (1 + math.sqrt(5)) / 2
 INV_PHI_SQ = 1 / (PHI * PHI)
@@ -23,7 +28,7 @@ INV_PHI_SQ = 1 / (PHI * PHI)
 Q2, Q3 = 2, 3
 D = 3
 SIN2_TREE = (Q2 ** D) / (Q2 ** D + Q3 ** D)     # 8/35 = 0.22857
-SIN2_OBS  = 0.23121                              # PDG at M_Z
+SIN2_OBS  = SIN2_TW_MZ                           # PDG at M_Z (framework_constants)
 EPS_W = (SIN2_OBS - SIN2_TREE) / SIN2_TREE       # 0.01154
 
 # Lepton C residual from earlier

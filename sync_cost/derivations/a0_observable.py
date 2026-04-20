@@ -24,21 +24,27 @@ Extraction (deep-MOND limit, g_bar << a₀):
 No NFW halo profile, no f_DM, no model-fit M_baryon.
 """
 
+import os
+import sys
+
 import numpy as np
 from load_rc100 import has_data, load_galaxies, _read_csv
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import C_LIGHT, G_NEWTON, H_0_KM_S_MPC, H_0_SI
 
 # ---------------------------------------------------------------------------
 # Constants
 # ---------------------------------------------------------------------------
-G = 6.674e-11       # m³ kg⁻¹ s⁻²
+G = G_NEWTON        # m³ kg⁻¹ s⁻²
 M_sun = 1.989e30    # kg
 kpc_m = 3.086e19    # m
-c_m_s = 2.998e8     # m/s
+c_m_s = C_LIGHT     # m/s
 
 # Planck 2018
-H0_km_s_Mpc = 67.4
-Mpc_in_m = 3.0857e22
-H0_si = H0_km_s_Mpc * 1e3 / Mpc_in_m
+H0_km_s_Mpc = H_0_KM_S_MPC
+H0_si = H_0_SI
+# Observed Planck 2018 matter / Lambda (NOT framework's 6/19, 13/19).
 Omega_m, Omega_L = 0.315, 0.685
 
 a0_local = 1.2e-10  # m/s², observed RAR scale

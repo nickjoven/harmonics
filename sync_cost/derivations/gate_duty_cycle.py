@@ -27,19 +27,19 @@ Usage:
 """
 
 import math
+import os
 import sys
 from fractions import Fraction
 
-sys.path.insert(0, "sync_cost/derivations")
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import ALPHA_EM_MZ, ALPHA_S_MZ, SIN2_TW_MZ
 from circle_map_utils import PHI, INV_PHI, PHI_SQ, LN_PHI_SQ, tongue_width
 
 
 # ── Physical constants ────────────────────────────────────────────────────────
 
-ALPHA_S_MZ = 0.1179        # α_s at M_Z (PDG 2024)
 ALPHA_W_MZ = 1 / 29.587    # α₂ = g²/(4π), sin²θ_W = 0.2312
-ALPHA_EM_MZ = 1 / 127.95   # α_em at M_Z
-SIN2_TW = 0.23121          # sin²θ_W at M_Z
+SIN2_TW = SIN2_TW_MZ       # sin²θ_W at M_Z
 
 # Derived
 ALPHA_2_MZ = ALPHA_EM_MZ / SIN2_TW       # SU(2) coupling

@@ -12,8 +12,14 @@ boundary weight w*, the dark energy fraction Ω_Λ, and the generation
 exponent correction δ are three projections of this single fixed point.
 """
 
-import numpy as np
+import os
+import sys
 from fractions import Fraction
+
+import numpy as np
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import M_E, M_MU, M_TAU
 
 
 # ================================================================
@@ -103,10 +109,8 @@ print("THE GENERATION EXPONENT CORRECTION")
 print("=" * 70)
 print()
 
-# The observed ratio
-m_e = 0.51099895000
-m_mu = 105.6583755
-m_tau = 1776.86
+# The observed ratio (framework_constants)
+m_e, m_mu, m_tau = M_E, M_MU, M_TAU
 
 tau_mu = m_tau / m_mu
 mu_e = m_mu / m_e

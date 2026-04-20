@@ -42,7 +42,7 @@ from framework_constants import (
     # Planck
     ELL_P, T_P, M_P,
     # Electroweak
-    SIN2_TW_MZ, ALPHA_S_MZ, ALPHA_EM_MZ,
+    SIN2_TW_MZ, ALPHA_S_MZ, ALPHA_EM_MZ, ALPHA_2_MZ, ALPHA_Y_MZ,
     # Masses
     M_E, M_MU, M_TAU,
     V_GEV,
@@ -208,6 +208,140 @@ def test_framework_diffusion_matches_Madelung_within_lambda():
     residual = abs(ratio - LAMBDA_UNLOCK) / LAMBDA_UNLOCK
     assert residual < 1e-10, (
         f"D_framework / D_SM = {ratio:.6f}, expected LAMBDA_UNLOCK={LAMBDA_UNLOCK}"
+    )
+
+
+# ============================================================
+# Generation exponent law:  a_2 / a_1 = q_3 / q_2 = 3/2
+# (generation_exponent_law.py; appears in ~8 scripts)
+# ============================================================
+
+def test_generation_exponent_law_from_leptons():
+    """
+    Ratio of consecutive generation exponents equals q_3/q_2 = 3/2,
+    to better than 1% via PDG lepton mass ratios.
+
+        a_1 = log(m_tau / m_mu) / log((q_3/q_2)^D)
+        a_2 = log(m_mu  / m_e)  / log((q_2+q_3)/q_3)^D)
+        a_2 / a_1 ≈ q_3 / q_2 to 0.04% (Issue #56 recent results)
+    """
+    base_1 = (Q3 / Q2) ** D                      # = (3/2)^3 = 27/8
+    base_2 = ((Q2 + Q3) / Q3) ** D               # = (5/3)^3
+    a_1 = math.log(M_TAU / M_MU) / math.log(base_1)
+    a_2 = math.log(M_MU  / M_E)  / math.log(base_2)
+    ratio = a_2 / a_1
+    expected = Q3 / Q2                            # = 3/2
+    residual = abs(ratio - expected) / expected
+    assert residual < 0.01, (
+        f"a_2/a_1 = {ratio:.6f} vs q_3/q_2 = {expected}, "
+        f"residual {residual*100:.4f}%"
+    )
+
+
+# ============================================================
+# Electroweak derived identities: alpha_2 = alpha_em / sin^2 theta_W
+# ============================================================
+
+def test_alpha_2_alpha_Y_identities_at_MZ():
+    """
+    ALPHA_2_MZ and ALPHA_Y_MZ must follow from ALPHA_EM_MZ and
+    SIN2_TW_MZ via the textbook identities:
+
+        alpha_2 = alpha_em / sin^2 theta_W
+        alpha_Y = alpha_em / cos^2 theta_W = alpha_em / (1 - sin^2 theta_W)
+    """
+    a_2_expected = ALPHA_EM_MZ / SIN2_TW_MZ
+    a_Y_expected = ALPHA_EM_MZ / (1 - SIN2_TW_MZ)
+    assert abs(ALPHA_2_MZ - a_2_expected) / ALPHA_2_MZ < 1e-12
+    assert abs(ALPHA_Y_MZ - a_Y_expected) / ALPHA_Y_MZ < 1e-12
+
+
+# ============================================================
+# Tongue-to-bracket ratio at K=1: 4/phi
+# (a_s_geometric_proof.md axiom A2; Stern-Brocot/Binet identity)
+# ============================================================
+
+def test_tongue_to_bracket_ratio_is_4_over_phi():
+    """
+    At K = 1 with sigma^2_kernel = 1/4, the Arnold tongue width at
+    the Fibonacci convergent F_n/F_{n+1} captures exactly phi/4 of
+    the Stern-Brocot bracket containing it.
+
+    Equivalently: bracket_width / tongue_width = 4/phi at all
+    sufficiently deep n. Verified via Binet.
+    """
+    phi = (1 + math.sqrt(5)) / 2
+
+    def fib(n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+
+    sigma_sq_kernel = 1 / 4
+    expected = 4 / phi
+
+    # Test at depths n = 15, 20: limit is reached to ~6 digits.
+    for n in (15, 20):
+        q = fib(n + 1)
+        qq = fib(n + 2)
+        w_bracket = 1.0 / (q * qq)
+        w_tongue = sigma_sq_kernel / (q * q)
+        ratio = w_bracket / w_tongue
+        assert abs(ratio - expected) / expected < 1e-4, (
+            f"At n={n}: bracket/tongue = {ratio:.6f}, expected 4/phi = {expected:.6f}"
+        )
+
+
+# ============================================================
+# Lambda_unlock closed form: (4G - pi ln 2) / pi
+# (gap2_spatialization sub-C; framework_constants comment fix)
+# ============================================================
+
+def test_lambda_unlock_closed_form():
+    """
+    The Klein-bottle Lyapunov exponent on the unlocked sector at
+    K = 1 has the closed form
+
+        lambda_unlock(1) = (4 G - pi ln 2) / pi
+
+    where G = Catalan's constant ~= 0.9159655942.  This was
+    previously mis-quoted in framework_constants.py as 2G/pi.
+    The (4G - pi ln 2)/pi value matches numerical integration of
+        (1/pi) * integral over [pi/2, 3 pi/2] of ln(1 + |cos theta|) dtheta
+    to 9 digits.
+    """
+    catalan = 0.9159655941772190
+    closed_form = (4 * catalan - math.pi * math.log(2)) / math.pi
+    residual = abs(LAMBDA_UNLOCK - closed_form) / closed_form
+    assert residual < 1e-4, (
+        f"LAMBDA_UNLOCK = {LAMBDA_UNLOCK} vs (4G - pi ln 2)/pi = "
+        f"{closed_form:.6f}, residual {residual*100:.4f}%"
+    )
+
+
+# ============================================================
+# Madelung-derived field-theoretic mass m
+# (a_s_geometric_proof.md Lemma 1; PROOF_B Q4 + gap2 sub-E)
+# ============================================================
+
+def test_m_from_madelung_phi_lambda():
+    """
+    The framework's Lagrangian kinetic coefficient m is derived from
+    the Madelung identification hbar = 2 m D_eff:
+
+        m / m_P = (1 - phi^{-4}) / lambda_unlock
+
+    Closed-form expression with no fit. Numerically m ~= 1.806 m_P
+    using the canonical lambda_unlock = 0.473.
+    """
+    phi = (1 + math.sqrt(5)) / 2
+    m_over_mP = (1 - 1 / phi ** 4) / LAMBDA_UNLOCK
+    expected = 1.8057
+    residual = abs(m_over_mP - expected) / expected
+    assert residual < 1e-3, (
+        f"m / m_P = {m_over_mP:.6f}, expected ~ {expected}, "
+        f"residual {residual*100:.4f}%"
     )
 
 

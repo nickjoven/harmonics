@@ -32,6 +32,11 @@ Solving for Λ:
 """
 
 import math
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import H_0_SI
 
 # ── Physical constants (SI) ───────────────────────────────────────────────────
 
@@ -46,7 +51,7 @@ rho_P = E_P / l_P**3 # Planck energy density
 
 # Observed
 Lambda_obs = 1.1056e-52   # m⁻² (Planck 2018)
-H0 = 67.4e3 / 3.086e22   # 1/s (67.4 km/s/Mpc)
+H0 = H_0_SI              # 1/s (67.4 km/s/Mpc; single source, framework_constants)
 rho_Lambda_obs = Lambda_obs * c**2 / (8 * math.pi * G)  # J/m³
 
 # Proslambenomenos

@@ -48,7 +48,13 @@ Usage:
 """
 
 import math
+import os
+import sys
+
 from circle_map_utils import circle_map_step, winding_number, PHI, INV_PHI
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import H_0_SI
 
 
 # ---------------------------------------------------------------------------
@@ -56,7 +62,7 @@ from circle_map_utils import circle_map_step, winding_number, PHI, INV_PHI
 # ---------------------------------------------------------------------------
 
 C_LIGHT = 2.998e8           # m/s
-H_0 = 2.2e-18              # rad/s (Hubble parameter)
+H_0 = H_0_SI                # rad/s (Hubble parameter; framework_constants)
 A_0 = C_LIGHT * H_0 / (2 * math.pi)  # MOND acceleration ~ 1.05e-10 m/s^2
 T_HUBBLE = 2 * math.pi / H_0         # Hubble time ~ 2.86e18 s ~ 9.06e10 yr
 YR = 3.156e7                # seconds per year

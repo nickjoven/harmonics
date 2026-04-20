@@ -11,17 +11,15 @@ Usage:
 """
 
 import math
+import os
 import sys
 
-sys.path.insert(0, "sync_cost/derivations")
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import ALPHA_EM_MZ, ALPHA_S_MZ, SIN2_TW_MZ
 from circle_map_utils import PHI, INV_PHI, tongue_width
 
 
-# ── Observed values (PDG 2024) ────────────────────────────────────────────────
-
-ALPHA_S_MZ = 0.1179
-ALPHA_EM_MZ = 1 / 127.95
-SIN2_TW_MZ = 0.23121
+# ── Observed values (PDG 2024; framework_constants) ──────────────────────────
 
 ALPHA_2_MZ = ALPHA_EM_MZ / SIN2_TW_MZ
 ALPHA_1_MZ = ALPHA_EM_MZ / (1 - SIN2_TW_MZ)  # U(1)_Y, not GUT-normalized
@@ -31,7 +29,6 @@ RATIO_32_MZ = ALPHA_S_MZ / ALPHA_2_MZ
 
 # SM running: α_s at various scales (approximate, 2-loop)
 ALPHA_S_1GEV = 0.50
-ALPHA_S_MZ = 0.1179
 ALPHA_S_1TEV = 0.088
 ALPHA_S_GUT = 0.04  # approximate at ~2×10^16 GeV
 

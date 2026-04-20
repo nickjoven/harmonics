@@ -14,7 +14,13 @@ Test 3: Ω_Λ band [0.6842, 0.6875]
   - Forecast for Euclid/Rubin
 """
 
+import os
+import sys
+
 import numpy as np
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import M_E, M_MU, M_TAU, mass_err
 
 
 # ================================================================
@@ -26,15 +32,15 @@ print("TEST 1: Generation Exponent Law  a₂/a₁ = q₃/q₂ = 3/2")
 print("=" * 70)
 print()
 
-# PDG 2024 lepton masses (MeV)
-m_e = 0.51099895000  # ± 0.00000000015 (negligible)
-m_e_err = 0.00000000015
+# PDG 2024 lepton masses (MeV, framework_constants)
+m_e = M_E                         # ± 0.00000000015 (negligible)
+m_e_err = mass_err("e")
 
-m_mu = 105.6583755    # ± 0.0000023
-m_mu_err = 0.0000023
+m_mu = M_MU                       # ± 0.0000023
+m_mu_err = mass_err("mu")
 
-m_tau = 1776.86       # ± 0.12
-m_tau_err = 0.12
+m_tau = M_TAU                     # ± 0.12
+m_tau_err = mass_err("tau")
 
 # The ratios
 tau_mu = m_tau / m_mu
@@ -192,9 +198,11 @@ print("TEST 3: Dark Energy Fraction Ω_Λ ∈ [0.6842, 0.6875]")
 print("=" * 70)
 print()
 
-omega_low = 13/19  # = 0.684211...
-omega_high = 11/16  # = 0.6875
-omega_point = 0.6847  # self-consistent w* = 0.83
+from framework_constants import OMEGA_L  # noqa: E402
+
+omega_low = OMEGA_L          # = 0.684211... (framework_constants, 13/19)
+omega_high = 11/16           # = 0.6875
+omega_point = 0.6847         # self-consistent w* = 0.83 (Planck 2018 obs)
 band_width = omega_high - omega_low
 
 print(f"Framework prediction:")

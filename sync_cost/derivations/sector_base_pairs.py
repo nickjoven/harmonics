@@ -16,19 +16,24 @@ This script verifies the derivation and checks the precision against
 observed lepton and quark mass ratios.
 """
 
-import numpy as np
+import os
+import sys
 from fractions import Fraction
+
+import numpy as np
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import (
+    M_B, M_C, M_D, M_E, M_MU, M_S, M_T, M_TAU, M_U,
+)
 
 # Klein bottle integers
 q2, q3 = 2, 3
 
-# PDG masses (central values)
-m_e   = 0.51099895
-m_mu  = 105.6583755
-m_tau = 1776.86
-
-m_u = 2.16;   m_c = 1270;  m_t = 172760
-m_d = 4.67;   m_s = 93.4;  m_b = 4180
+# PDG masses (central values, framework_constants)
+m_e, m_mu, m_tau = M_E, M_MU, M_TAU
+m_u, m_c, m_t = M_U, M_C, M_T
+m_d, m_s, m_b = M_D, M_S, M_B
 
 # Define base pairs symbolically
 def F(p, q):

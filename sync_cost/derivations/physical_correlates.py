@@ -12,6 +12,11 @@ and non-matches honestly.
 """
 
 import math
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import M_D, M_U
 
 
 def print_section(title):
@@ -115,9 +120,9 @@ def main():
     # Exact 2/3
     compare("exact 2/3", pop_ratio_golden, 2 / 3)
 
-    # Quark mass ratios
-    m_u = 2.16  # MeV (PDG)
-    m_d = 4.67
+    # Quark mass ratios (framework_constants)
+    m_u = M_U  # MeV (PDG)
+    m_d = M_D
     compare("m_u/m_d", pop_ratio_golden, m_u / m_d)
 
     # Up quark charge

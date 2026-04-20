@@ -21,6 +21,11 @@ Usage:
 
 from fractions import Fraction
 import math
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import H_0_SI
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -33,7 +38,7 @@ PHI_SQ = PHI ** 2
 LN_PHI_SQ = math.log(PHI_SQ)
 
 # Physical constants (Planck 2018)
-H_0 = 2.18e-18          # rad/s
+H_0 = H_0_SI             # rad/s (framework_constants)
 C_LIGHT = 2.998e8        # m/s
 A_0 = C_LIGHT * H_0 / (2 * math.pi)  # ~ 1.04e-10 m/s²
 G_NEWTON = 6.674e-11     # m³/(kg·s²)
@@ -541,8 +546,13 @@ if __name__ == "__main__":
   This ratio is NOT 1 — the units need to be reconciled. The
   dimensionless A_s in cosmology is measured in different units
   than the tree's σ². The conversion factor involves the Hubble
-  volume and Planck units. This is the prefactor verification
-  identified in Derivation 12 Part I §7.
+  volume and Planck units. See `sigma_squared_disambiguation.md`:
+  the symbol σ² covers three distinct quantities here, and the
+  `Derivation 12 Part I §7` reference in this docstring goes to
+  `continuum_limits.md` §5a -- which closes the ADM prefactor
+  verification (σ²_kernel giving 16πG and 8πG via Gauss-Codazzi),
+  not the A_s amplitude. The canonical A_s derivation is
+  `a_s_geometric_proof.md`.
 """)
 
     # === 7. The n_s → N_efolds chain ===

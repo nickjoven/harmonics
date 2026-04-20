@@ -236,13 +236,21 @@ M_P:   float = math.sqrt(HBAR * C_LIGHT / G_NEWTON)           # ~2.176e-8 kg
 # Kuramoto Lyapunov constant
 # ============================================================================
 
-# Klein-bottle Lyapunov exponent on the unlocked sector, at K -> 1.
+# Klein-bottle Lyapunov exponent on the unlocked sector, at K = 1.
 # From gap2_spatialization_decomposition.md sub-problem C:
-#     lambda_unlock(K) = 2 * integral over cos<0 of ln(1 + K|cos theta|) dtheta
-# Closed-form limit: lambda_unlock(1) = 2 * Catalan / pi ~= 0.5828,
-# but the framework uses the numerically integrated value at K = 1
-# quoted in gap2 ~= 0.473.  Kept here for single-source reference.
-LAMBDA_UNLOCK: float = 0.473
+#     lambda_unlock(K) = (1/pi) * integral over [pi/2, 3pi/2] of
+#                        ln(1 + K|cos theta|) dtheta
+#
+# Closed-form K = 1 limit (derivation in lambda_unlock_closed_form.py):
+#     lambda_unlock(1) = (4G - pi ln 2) / pi
+#                      = 4 G/pi - ln 2
+#                      ~= 0.473096
+# where G = Catalan's constant ~= 0.915966.  An earlier comment here
+# claimed lambda_unlock(1) = 2 G / pi ~= 0.583; that was INCORRECT --
+# the 2 G / pi value does not match the numerical integration of the
+# defining integral.  The (4G - pi ln 2)/pi closed form matches
+# numerical integration to 9 digits.
+LAMBDA_UNLOCK: float = 0.473096
 
 
 # ============================================================================

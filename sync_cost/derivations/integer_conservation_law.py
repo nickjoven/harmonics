@@ -18,8 +18,16 @@ This script formalizes the integer conservation law and explores
 its consequences for particle emergence order.
 """
 
-import numpy as np
+import os
+import sys
 from fractions import Fraction
+
+import numpy as np
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import (
+    M_B, M_C, M_D, M_MU, M_S, M_T, M_TAU,
+)
 
 
 print("=" * 70)
@@ -155,13 +163,13 @@ print()
 
 # For each fermion, compute its tree depth and order them
 fermion_depths = [
-    ('top',     4, 172760),    # up-type gen 3 — approximate depth
-    ('bottom',  4, 4180),       # down-type gen 3
-    ('tau',     2, 1777),       # lepton gen 3
-    ('charm',   4, 1270),       # up-type gen 2
-    ('strange', 4, 93.4),       # down-type gen 2
-    ('muon',    3, 105.7),      # lepton gen 2
-    ('down',    4, 4.67),       # down-type gen 1 (uses q=4 side)
+    ('top',     4, M_T),        # up-type gen 3 — approximate depth
+    ('bottom',  4, M_B),        # down-type gen 3
+    ('tau',     2, M_TAU),      # lepton gen 3
+    ('charm',   4, M_C),        # up-type gen 2
+    ('strange', 4, M_S),        # down-type gen 2
+    ('muon',    3, M_MU),       # lepton gen 2
+    ('down',    4, M_D),        # down-type gen 1 (uses q=4 side)
     ('up',      5, 2.16),       # up-type gen 1 (uses q=5 from 8/5)
     ('electron', 3, 0.511),     # lepton gen 1
 ]

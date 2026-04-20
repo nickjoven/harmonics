@@ -11,6 +11,11 @@ observed data requires a float.
 
 from fractions import Fraction
 import math
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(__file__))
+from framework_constants import M_B, M_E, M_MU, M_TAU
 
 # ── golden ratio for Fibonacci-level analysis ──
 phi = (1 + math.sqrt(5)) / 2
@@ -246,9 +251,9 @@ print()
 
 # Observed masses (MeV)
 obs_masses = {
-    "charged leptons": {"heavy": 1776.86, "mid": 105.658, "light": 0.511,
+    "charged leptons": {"heavy": M_TAU, "mid": M_MU, "light": M_E,
                         "names": ("tau", "mu", "e")},
-    "down-type quarks": {"heavy": 4180.0, "mid": 93.0, "light": 4.7,
+    "down-type quarks": {"heavy": M_B, "mid": 93.0, "light": 4.7,
                          "names": ("b", "s", "d")},
     "up-type quarks": {"heavy": 172500.0, "mid": 1275.0, "light": 2.2,
                        "names": ("t", "c", "u")},
