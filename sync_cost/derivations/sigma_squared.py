@@ -546,11 +546,13 @@ if __name__ == "__main__":
   This ratio is NOT 1 — the units need to be reconciled. The
   dimensionless A_s in cosmology is measured in different units
   than the tree's σ². The conversion factor involves the Hubble
-  volume and Planck units. See `a_s_amplitude_audit.md`: the
-  A_s unit-conversion prefactor is **distinct** from the ADM
-  prefactor verification in `continuum_limits.md` §5a (formerly
-  referenced here as "Derivation 12 Part I §7"). The ADM side is
-  closed; the A_s side is not.
+  volume and Planck units. See `sigma_squared_disambiguation.md`:
+  the symbol σ² covers three distinct quantities here, and the
+  `Derivation 12 Part I §7` reference in this docstring goes to
+  `continuum_limits.md` §5a -- which closes the ADM prefactor
+  verification (σ²_kernel giving 16πG and 8πG via Gauss-Codazzi),
+  not the A_s amplitude. The canonical A_s derivation is
+  `a_s_geometric_proof.md`.
 """)
 
     # === 7. The n_s → N_efolds chain ===

@@ -1,15 +1,11 @@
 # A_s: a geometric proof from first principles
 
-A clean derivation of the CMB scalar amplitude A_s in the framework,
-using only what is established in prior derivations. No numerology,
-no fits, no algebraic guesses. Each multiplicative factor comes
-from one named structural result. The proof terminates at a
-specific numerical prediction; the discrepancy with observation
-is documented at the end as a single number, not partitioned into
-ad-hoc corrections.
-
-This document supersedes `a_s_phase1_19_over_21.md` (which
-attempted a numerological fit and failed under enumeration).
+A derivation of the CMB scalar amplitude A_s in the framework,
+using only what is established in prior derivations. Each
+multiplicative factor comes from one named structural result.
+The proof terminates at a specific numerical prediction; the
+discrepancy with observation is documented at the end as a single
+number, not partitioned into ad-hoc corrections.
 
 ## Theorem (A_s in the framework)
 
@@ -51,8 +47,10 @@ containing F_n/F_{n+1} has width
     w_bracket(n) = 1/(F_{n+1} · F_{n+2}) → 1/(φ · q²)            (A2.1)
 
 at large n, with q = F_{n+1}. The asymptotic is a consequence of
-Binet's formula: F_n/F_{n+1} − 1/φ = (−1)^{n+1} √5/φ^{2n+2}
-(Phase A, Eq. 2.1, verified in `a_s_alpha2_phase_a.py`).
+Binet's formula F_n = (φⁿ − ψⁿ)/√5 with ψ = −1/φ, giving
+F_n/F_{n+1} − 1/φ = (−1)^{n+1} √5/φ^{2n+2} (matched to √5 to 9
+digits at n = 22). The 4/φ tongue-to-bracket ratio (used in A4) is
+pinned by `test_tongue_to_bracket_ratio_is_4_over_phi`.
 
 **A3 (kernel normalization).** The ADM-Kuramoto dictionary
 (`continuum_limits.md` §5a) derives the per-direction kernel
@@ -80,8 +78,8 @@ Cross-verified by `test_tongue_to_bracket_ratio_is_4_over_phi`.
 
     λ_unlock(K) = (1/π) ∫_{cos<0} ln(1 + K|cos θ|) dθ          (A5.1)
 
-At K = 1 the closed-form value is (derived in
-`a_s_phase0_lambda_audit.py`, integration by parts plus
+At K = 1 the closed form is (derivation in
+`lambda_unlock_closed_form.py`: integration by parts plus
 ∫₀^{π/4} ln(cos u) du = G/2 − (π/4) ln 2):
 
     λ_unlock(1) = (4G − π ln 2)/π ≈ 0.473096                   (A5.2)
@@ -287,14 +285,14 @@ No fits applied.
 |---|---|
 | `klein_bottle_derivation.md` | A1 |
 | `minimum_alphabet.md` | P1–P4 primitives |
-| `a_s_alpha2_phase_a.md` + `.py` | A2 (Binet derivation, 4/φ identity) |
 | `continuum_limits.md` §5a | A3 (ADM σ²_kernel = 1/4) |
 | `adm_prefactor_verification.py` | A3 numerical |
 | `boundary_weight.py` | A4 |
-| `gap2_spatialization_decomposition.md` sub-C | A5 |
-| `a_s_phase0_lambda_audit.py` | A5 closed form derivation |
+| `gap2_spatialization_decomposition.md` sub-C | A5 statement |
+| `lambda_unlock_closed_form.py` | A5 closed form derivation |
 | `gap2_spatialization_decomposition.md` sub-E | A6 |
 | `continuum_limits.md` Part II §6 | A7 (PROOF_B Q4) |
 | `framework_lagrangian.py` | A8 |
 | `k_omega_mapping.py` + `alphabet_depth21.py` | A9 |
+| `sigma_squared_disambiguation.md` | the three meanings of σ² used in framework files |
 | `statistical_conventions.md` | status definitions |

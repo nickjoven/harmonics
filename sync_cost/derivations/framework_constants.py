@@ -241,7 +241,7 @@ M_P:   float = math.sqrt(HBAR * C_LIGHT / G_NEWTON)           # ~2.176e-8 kg
 #     lambda_unlock(K) = (1/pi) * integral over [pi/2, 3pi/2] of
 #                        ln(1 + K|cos theta|) dtheta
 #
-# Closed-form K = 1 limit (verified by a_s_phase0_lambda_audit.py):
+# Closed-form K = 1 limit (derivation in lambda_unlock_closed_form.py):
 #     lambda_unlock(1) = (4G - pi ln 2) / pi
 #                      = 4 G/pi - ln 2
 #                      ~= 0.473096

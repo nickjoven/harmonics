@@ -258,7 +258,7 @@ def test_alpha_2_alpha_Y_identities_at_MZ():
 
 # ============================================================
 # Tongue-to-bracket ratio at K=1: 4/phi
-# (a_s_alpha2_phase_a.md Sec. 3; structural identity)
+# (a_s_geometric_proof.md axiom A2; Stern-Brocot/Binet identity)
 # ============================================================
 
 def test_tongue_to_bracket_ratio_is_4_over_phi():
@@ -322,7 +322,7 @@ def test_lambda_unlock_closed_form():
 
 # ============================================================
 # Madelung-derived field-theoretic mass m
-# (a_s_phase0.md Sec. 3; PROOF_B Q4 + gap2 sub-E)
+# (a_s_geometric_proof.md Lemma 1; PROOF_B Q4 + gap2 sub-E)
 # ============================================================
 
 def test_m_from_madelung_phi_lambda():
