@@ -136,6 +136,51 @@
       "layer": 7,
       "color": "#e94560",
       "external": true
+    },
+    {
+      "id": "G1",
+      "label": "G1",
+      "title": "Gap: horizon-crossing amplification",
+      "summary": "Largest structural gap. L2+L3 compute the static zero-point fluctuation at K=1; A_s is the inflation-amplified curvature perturbation at horizon crossing. The de Sitter amplification factor is not in the proof.",
+      "layer": 5,
+      "color": "#ff8c42",
+      "open": true
+    },
+    {
+      "id": "G2",
+      "label": "G2",
+      "title": "Gap: sound speed × slow-roll",
+      "summary": "Canonical inflation: A_s ∝ 1/(ε · c_s). Framework has c_s = √(σ²_kernel/m) = 0.372 and a tilt n_s; neither appears in theorem T.",
+      "layer": 5,
+      "color": "#ff8c42",
+      "open": true
+    },
+    {
+      "id": "G3",
+      "label": "G3",
+      "title": "Gap: δθ⁴ correction to tongue",
+      "summary": "A4 uses the leading-order Arnold tongue. δθ⁴ cos-expansion terms are O(1) at K=1 and shift the tongue width. Not currently included.",
+      "layer": 2,
+      "color": "#ff8c42",
+      "open": true
+    },
+    {
+      "id": "G4",
+      "label": "G4",
+      "title": "Gap: r* finite-N",
+      "summary": "Proof uses r* = 1 at K = 1. Actual r*(K=1) has finite-N corrections ~1/log N from the order parameter self-consistency.",
+      "layer": 3,
+      "color": "#ff8c42",
+      "open": true
+    },
+    {
+      "id": "G5",
+      "label": "G5",
+      "title": "Gap: sub-bracket mode summation",
+      "summary": "L2 treats the pivot bracket as one mode. The bracket contains infinitely many sub-rationals (Stern-Brocot sub-tree). Per-bracket variance may be a sum, not a single term.",
+      "layer": 3,
+      "color": "#ff8c42",
+      "open": true
     }
   ],
   "links": [
@@ -158,6 +203,13 @@
     {"source": "T",  "target": "C"},
     {"source": "A9", "target": "C"},
 
-    {"source": "C",  "target": "O", "external": true, "label": "11% / 7.7σ"}
+    {"source": "C",  "target": "O", "external": true, "label": "11% / 7.7σ"},
+
+    {"source": "G1", "target": "T",  "open": true, "label": "missing amplification"},
+    {"source": "G2", "target": "T",  "open": true, "label": "missing 1/(ε c_s)"},
+    {"source": "G3", "target": "A4", "open": true, "label": "δθ⁴ correction"},
+    {"source": "G4", "target": "L1", "open": true, "label": "r*(K=1) ≠ 1"},
+    {"source": "G4", "target": "A4", "open": true, "label": "r*(K=1) ≠ 1"},
+    {"source": "G5", "target": "L2", "open": true, "label": "sub-bracket sum"}
   ]
 }

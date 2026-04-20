@@ -337,6 +337,126 @@ Status label: **A_s is %-only closed at 11%.** The 11% is the full
 discrepancy; not partitioned into "explained" and "residual" parts.
 No fits applied.
 
+## What's missing, structurally
+
+The 11% residual is not a numerical accident — it is the
+projection of ingredients the proof has not yet included. Ranked
+by likely size of effect.
+
+### G1: horizon-crossing amplification (largest structural gap)
+
+The proof's L2 + L3 computes the **static zero-point fluctuation**
+of δθ in the locked state at K = 1. A_s is, by definition, the
+amplitude of the **inflation-amplified curvature perturbation at
+horizon crossing**. These are two different objects.
+
+In standard inflation, each mode is amplified by a factor
+(H_inf/(2π))² when its wavelength crosses the Hubble radius. The
+amplification depends on the inflationary Hubble H_inf, which the
+geometric proof does not identify or substitute.
+
+In framework terms: during inflation, the "Hubble" during
+inflation H_inf should correspond to the pivot-bracket frequency
+ω_pivot. A mode at Fibonacci level n "crosses the horizon" when
+its physical wavelength equals 1/H_inf. The corresponding
+amplification factor is not in the proof.
+
+**Closure target**: derive the horizon-crossing amplification
+from the k-Ω map (A9) and the SB-tree time evolution. The
+amplification factor is the missing O(1) prefactor that makes
+A_s_predicted ≠ ⟨R²⟩_static.
+
+### G2: sound speed × inflation-dynamics factor
+
+Canonical single-field inflation gives
+
+    A_s = (1 / (8π²)) · (H²/M_P²) · (1 / (ε · c_s))             (G2.1)
+
+where ε is slow-roll and c_s is sound speed. The framework's
+linearized Lagrangian (1.2) has sound speed c_s² = σ²_kernel/m,
+which gives c_s = √(1/4)/√1.806 = 0.372. Neither c_s nor ε
+appears in theorem T.
+
+If A_s carries a factor of 1/c_s ≈ 2.69, and the proof is missing
+this while T already includes the equivalent static variance, the
+factors must cancel through some structural argument. That
+argument is not in the proof.
+
+**Closure target**: derive whether the framework-side ⟨R²⟩_bracket
+already absorbs the c_s and ε corrections, or whether theorem T
+needs an explicit (1/c_s · 1/(2ε)) factor.
+
+### G3: cos expansion higher order
+
+Axiom A4 uses the leading-order Arnold tongue width σ²_kernel/q²
+at K = 1. This is the result of the cos expansion to O(δθ²).
+Including O(δθ⁴) terms renormalizes the effective K and shifts
+the tongue width. At K = 1 (critical coupling), these corrections
+are O(1), not small.
+
+**Closure target**: compute the tongue-width correction from the
+δθ⁴ self-interaction at K = 1. If the correction has a clean
+closed form (in terms of φ, q, or a framework integer), it
+contributes a specific factor to theorem T.
+
+### G4: r* finite-N correction
+
+The proof uses r* = 1 at K = 1 implicitly (through the tongue
+width formula and the mass derivation). Numerically r*(K=1) is
+close to but not exactly 1 — there are finite-N corrections from
+the order parameter self-consistency. These are typically
+O(1/log N) for mean-field Kuramoto.
+
+**Closure target**: quantify the r* correction from the rational
+field equation's fixed-point solution.
+
+### G5: sub-bracket mode summation
+
+L2 computes ⟨δθ²⟩_bracket as `σ²_kernel × w_bracket`, treating
+the pivot bracket as one mode. The bracket contains infinitely
+many rationals (the Stern-Brocot sub-tree rooted at F_n/F_{n+1});
+each sub-rational contributes its own variance. The per-bracket
+variance is arguably a sum over sub-levels, not a single term.
+
+The convergence of this sum involves the same φ⁻⁴ factor as the
+D_eff RG (A6). It may already be absorbed; it may not.
+
+**Closure target**: show that the bracket-variance sum converges
+to L2 exactly, or identify the residual sub-sum factor.
+
+## Ranking and structural consequences
+
+| Gap | Likely impact | Effort to close |
+|---|---|---|
+| G1: horizon-crossing amplification | largest (could be the 11%) | medium-heavy, requires framework inflation derivation |
+| G2: sound speed / slow-roll factor | moderate (O(1)) | light, if G1 fixes the amplification convention |
+| G3: δθ⁴ correction | O(1) | medium |
+| G4: r* finite-N | %-level | light |
+| G5: sub-bracket summation | ambiguous | light, arithmetic |
+
+G1 is the most likely source of the 11%: adding the inflation
+amplification brings in an O(1) factor that the static proof
+cannot see. Closing G1 almost certainly requires deriving the
+framework's analog of the slow-roll / de Sitter amplification at
+the pivot bracket — a substantial structural addition.
+
+G2 and G5 could each contribute O(1) but would need joint
+treatment with G1 to avoid double-counting.
+
+G3 and G4 are %-level corrections; they can tighten the
+prediction once G1-G2 are in place.
+
+## The proof's current claim
+
+Given G1–G5 are open, the proof's claim is precisely:
+
+> In the static, O(δθ²), r* = 1, single-mode-per-bracket
+> approximation, A_s = (1 − φ⁻⁴)/(4 λ_unlock · φ · q_pivot²).
+
+The 11% discrepancy measures how much the actual A_s deviates
+from this approximation. Closing any of G1–G5 tightens the
+claim; closing G1 most directly addresses the gap.
+
 ## Cross-references
 
 | File | Role |

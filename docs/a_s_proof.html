@@ -70,6 +70,7 @@
   <div class="row"><span class="dot" style="background:#8d4ab5"></span>Pivot identification</div>
   <div class="row"><span class="dot" style="background:#f0c040"></span>Theorem / corollary</div>
   <div class="row"><span class="dot" style="background:#e94560"></span>Observation</div>
+  <div class="row"><span class="dot" style="background:#ff8c42"></span>Open gap (what's missing)</div>
 </div>
 
 <div class="hint">drag to rotate &middot; scroll to zoom &middot; click node for details</div>
@@ -92,17 +93,18 @@
         (document.getElementById('graph'))
         .backgroundColor('#08080f')
         .graphData(data)
-        .nodeLabel(n => `${n.id}: ${n.title}`)
+        .nodeLabel(n => `${n.id}: ${n.title}${n.open ? ' [OPEN]' : ''}`)
         .nodeColor(n => n.color)
-        .nodeVal(n => (n.id === 'T' || n.id === 'C' || n.id === 'O') ? 8 : 4)
+        .nodeVal(n => (n.id === 'T' || n.id === 'C' || n.id === 'O') ? 8 : (n.open ? 5 : 4))
+        .nodeOpacity(n => n.open ? 0.55 : 0.9)
         .nodeResolution(16)
-        .linkColor(l => l.external ? '#e94560' : '#aaaaaa')
-        .linkOpacity(0.55)
-        .linkWidth(l => l.external ? 1.5 : 0.7)
-        .linkDirectionalArrowLength(3.5)
+        .linkColor(l => l.external ? '#e94560' : (l.open ? '#ff8c42' : '#aaaaaa'))
+        .linkOpacity(l => l.open ? 0.55 : (l.external ? 0.55 : 0.55))
+        .linkWidth(l => l.external ? 1.5 : (l.open ? 0.9 : 0.7))
+        .linkDirectionalArrowLength(l => l.open ? 0 : 3.5)
         .linkDirectionalArrowRelPos(1)
         .linkDirectionalArrowColor(l => l.external ? '#e94560' : '#f0c040')
-        .linkCurvature(l => l.external ? 0.3 : 0)
+        .linkCurvature(l => l.external ? 0.3 : (l.open ? 0.2 : 0))
         .linkLabel(l => l.label || '')
         .onNodeClick(n => {
           document.getElementById('dName').textContent = n.title;
