@@ -100,9 +100,32 @@ Previously, the framework required one dimensionful input
 ℓ_P is determined by R and L_H (which depends on Λ, itself
 derived). The dimensionful input is eliminated.
 
-The framework now derives all dimensionless ratios AND the
-absolute scale from (q₂, q₃, d) = (2, 3, 3), which are
-themselves derived from the four primitives.
+The framework derives all dimensionless ratios from
+(q₂, q₃, d) = (2, 3, 3), which are themselves derived from the
+four primitives. Per the scale-free reframe (`h_inf_status.md`),
+absolute dimensional scales require observational anchors.
+
+Two anchors are currently needed (see `anchor_count_audit.md`):
+
+1. **Cosmological anchor** (H_0, equivalently Λ in SI, ℏG, or M_P):
+   sets ℓ_P, t_P, M_P, Λ, ρ_crit via the framework's R = 6·13⁵⁴
+   and Λℓ_P² = 13⁻¹⁰⁸/12 identities.
+
+2. **Particle-physics anchor** (v = 246 GeV, equivalently the root
+   oscillator frequency): sets absolute lepton/quark/gauge-boson
+   masses, ℏ·c·G in absolute units.
+
+The two sectors are structurally separate in the documented
+derivations: no dimensionless identity connecting v/M_P to framework
+integers has been proven. A suggestive near-match (v/M_P ≈ 13⁻¹⁵,
+3.1% off) is recorded in `anchor_count_audit.md` as numerology
+only — if it were derivable from framework structure, the anchor
+count would reduce to one. That derivation is an open item and
+would effectively solve the hierarchy problem in framework terms.
+
+The framework's "zero free parameters" language should be read as
+"zero free parameters beyond two observational anchors" — one per
+sector — until that link is proven.
 
 ### Sub-problem E (spatialization) is closed
 
