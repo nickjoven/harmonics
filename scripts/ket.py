@@ -1,7 +1,7 @@
 """
-ket.py — minimal k-stack reader/writer using filesystem CAS directly.
+ket.py — minimal k-stack reader using filesystem CAS directly.
 
-K-stack stores reasoning artifacts in .ket/cas/ as SHA-256-addressed
+K-stack stores reasoning artifacts in .ket/cas/ as BLAKE3-addressed
 files.  Each entry is either:
 
   - A text blob (observation, claim, derivation excerpt, etc.)
@@ -9,10 +9,18 @@ files.  Each entry is either:
     timestamp, meta}
 
 This script reads the CAS without needing the k-stack binary, rebuilds
-the manifest, and can append new entries.  It is designed to degrade
+the manifest, and can emit the graph.  It is designed to degrade
 gracefully when the k-stack MCP server is unavailable (cloud Claude
 Code environments, CI, etc.), while remaining compatible with k-stack
 when it is available.
+
+**Writes go through the `ket` binary.** A previous version of this
+script computed CIDs with SHA-256, which silently drifted from the
+canonical BLAKE3 used by the substrate: appended entries verified
+as CORRUPTED under `ket verify`. Writes (append, dag create) now
+shell out to the binary so the single source of hashing truth is the
+substrate itself. If the binary is unavailable, `append` raises a
+clear error instead of falling back to a wrong hash.
 
 Commands:
 
@@ -31,8 +39,10 @@ Integration with the derivation graph:
   layers and show derivations + reasoning artifacts together.
 """
 
-import hashlib
 import json
+import os
+import shutil
+import subprocess
 import sys
 from pathlib import Path
 from collections import defaultdict
@@ -42,9 +52,24 @@ KET_DIR = ROOT / ".ket"
 CAS_DIR = KET_DIR / "cas"
 MANIFEST_PATH = KET_DIR / "manifest"
 
+# The canonical substrate uses BLAKE3. We delegate hashing to the
+# `ket` binary so this script cannot silently produce wrong CIDs.
+# Resolution order: KET_BIN env var, then `ket` on PATH. No hardcoded
+# paths — this script lives inside a repo that gets cloned to different
+# machines and checkouts.
 
-def sha256(data: bytes) -> str:
-    return hashlib.sha256(data).hexdigest()
+
+def _ket_binary() -> str:
+    candidates = [os.environ.get("KET_BIN"), shutil.which("ket")]
+    for candidate in candidates:
+        if candidate and Path(candidate).is_file() and os.access(candidate, os.X_OK):
+            return candidate
+    raise RuntimeError(
+        "ket binary not found. Set KET_BIN to its absolute path or add "
+        "`ket` to PATH. This script refuses to compute CIDs locally to "
+        "avoid the SHA-256-vs-BLAKE3 drift that previously corrupted "
+        "CAS entries."
+    )
 
 
 def list_cas():
@@ -170,24 +195,51 @@ def rebuild_manifest():
 
 
 def append(kind: str):
-    """Read stdin, hash, write to CAS.  Print CID."""
+    """Read stdin and hand it to `ket put` so the CID is BLAKE3.
+
+    `kind` is retained for backward compatibility but is ignored for
+    text blobs; reasoning records should be created with
+    `ket dag create ... --parent ... --kind reasoning` instead of
+    being hand-rolled JSON to stdin, because `dag create` handles the
+    parent/output wiring and the log entry atomically.
+    """
     data = sys.stdin.buffer.read()
     if kind == "reasoning":
-        # Validate JSON structure
+        print(
+            "scripts/ket.py no longer accepts hand-rolled reasoning "
+            "records. Use: ket dag create <content> --kind reasoning "
+            "--parent <cid> [--parent <cid> ...] --agent <name>",
+            file=sys.stderr,
+        )
+        return 1
+    try:
+        binary = _ket_binary()
+    except RuntimeError as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 1
+    result = subprocess.run(
+        [binary, "--home", str(KET_DIR), "put", "-"],
+        input=data,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        # Older ket versions may not accept "-" for stdin; fall back
+        # to a temp file so behavior is robust across versions.
+        import tempfile
+        with tempfile.NamedTemporaryFile(delete=False) as tmp:
+            tmp.write(data)
+            tmp_path = tmp.name
         try:
-            obj = json.loads(data)
-            assert "parents" in obj and isinstance(obj["parents"], list)
-        except Exception as e:
-            print(f"Invalid reasoning record: {e}", file=sys.stderr)
-            return 1
-    cid = sha256(data)
-    out = CAS_DIR / cid
-    if out.exists():
-        print(f"{cid}  (already exists)", file=sys.stderr)
-    else:
-        CAS_DIR.mkdir(parents=True, exist_ok=True)
-        out.write_bytes(data)
-    print(cid)
+            result = subprocess.run(
+                [binary, "--home", str(KET_DIR), "put", tmp_path],
+                capture_output=True,
+                check=True,
+            )
+        finally:
+            os.unlink(tmp_path)
+    # `ket put` prints the CID on stdout
+    sys.stdout.write(result.stdout.decode())
 
 
 def stats():
