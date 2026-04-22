@@ -10,6 +10,16 @@ still points at something real — the connection topology between
 the 1/1 basin and its neighbors — but in different language. This
 file specifies the correctly-framed local study.
 
+## Simulation dynamics (mechanism note)
+
+The Farey-trap visualizer (`github.com/nickjoven/simulation`, `docs/7`)
+runs gradient descent on the static potential
+ψ_F = Σ K·G(p/q)/q², a sum of Gaussian bumps at Farey rationals.
+Update rule: `tmpP.addScaledVector(∇ψ_F, -σ · γ · dt)`. K is peak
+amplitude, γ is step size, σ is descent-direction sign. gain, STEPS,
+τ_max, bake N are visualization-only. See `klein_nodal_parity.md`
+for the full parameter-semantics table; the two studies share it.
+
 ## Motivation
 
 The 1/1 Farey peak (equivalently the 0/1 peak, modular wrap) is the
@@ -144,7 +154,6 @@ Same discipline as `klein_nodal_parity.md`:
 
 | File | Role |
 |---|---|
-| `simulation_dynamics_audit.md` | Parameter semantics clarification |
-| `klein_nodal_parity.md` | Topology of nodal set — related but distinct |
+| `klein_nodal_parity.md` | Full parameter-semantics table; topology-of-nodal-set sibling test |
 | `baryon_fraction.md` | Ω partition derivation; basin-map should see 1:5:13 |
-| `framework_status.md` | Logged under Proposed |
+| `framework_status.md` | Logged under Proposed; retracted twist-map framings under Eliminated |

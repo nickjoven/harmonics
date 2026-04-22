@@ -19,13 +19,27 @@ harmonic:
 for Re[Y_ℓ^ℓ] corresponds to the nodal set. σ = −1: seeds climb to
 maxima (the antinode belt). γ is step size; gain is cosmetic.
 
+Corrected parameter semantics (for this sim and the Farey-trap
+variant, which uses ψ_F = Σ Gaussian peaks at Farey angles weighted
+K/q²):
+
+| Parameter | Role |
+|---|---|
+| K | Amplitude weight on each peak/antinode (not a coupling constant) |
+| γ | Gradient-descent step size (numerical stride, not drive rate) |
+| σ | Sign of gradient (±1): seek min or max |
+| ω_rot | Potential-frame rotation rate |
+| σ_θ, σ_r, r_eq | Gaussian-envelope localization parameters |
+| gain | **Cosmetic only** — render-brightness multiplier |
+| STEPS | Ray-marching fragment-shader quality |
+| τ_max | Dwell-time colour/size encoding |
+| bake N | Potential pre-evaluation grid resolution |
+
 The claim below concerns the **topology of the nodal set itself**,
 not the dynamics that lands seeds on it. The (−1)^ℓ sign-flip rule
 is a property of Y_ℓ^ℓ under the Z₂ quotient, independent of whether
 the seeds arrive by gradient descent, by a twist-map iteration, or
-by any other mechanism that concentrates them on |ψ|² minima. See
-`simulation_dynamics_audit.md` for the full parameter-semantics
-clarification.
+by any other mechanism that concentrates them on |ψ|² minima.
 
 ## Claim (testable)
 
@@ -190,5 +204,6 @@ Discipline notes, to prevent drift:
 | `klein_bottle_derivation.md` | (q₂, q₃) = (2, 3) from Klein structure |
 | `fermion_spinors_from_z2.py` | (−1)^ℓ sign-flip in spinor sector |
 | `a1_klein_twist.py` | related twist structure |
+| `basin_11_connection_exploration.md` | sibling study on the ψ_F landscape |
 | `framework_status.md` | logged under Proposed with upgrade criterion |
 | `numerology_inventory.md` | Class-4 item pending audit |

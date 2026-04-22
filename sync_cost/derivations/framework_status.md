@@ -69,6 +69,7 @@ numerology ensemble, not structural.
 | 1/(Pythagorean comma)² ≈ K_Greene (0.17%) | `kam_bridge_synthesis.md` §6, no structural route |
 | H_inf from framework integers | `h_inf_status.md` (scale-free reframe: out of class) |
 | Mean-field Ψ Arnold-tongue structure | `klein_spectrum.py`, `kuramoto_induced_map.py` (Adler-only) |
+| Twist-map / KAM / cantorus / Lyapunov framings of the ψ_F visualizer | Source inspection confirms gradient descent on a static potential; category error. Mechanism notes in `klein_nodal_parity.md` and `basin_11_connection_exploration.md` |
 
 ## Proposed (needs audit or experimental input)
 
