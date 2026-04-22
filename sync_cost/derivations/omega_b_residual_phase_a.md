@@ -33,9 +33,9 @@ candidate correction sources. This Phase A:
 | Boundary weight `w` | Partial-locking fraction of the q = 6 modes, `w ∈ [0, 1]`; interpolates between F_5 (w=0) and F_6 (w=1) | `boundary_weight.md` |
 | Total budget `n_eff(w)` | Effective partition denominator: `\|F_eff\|(w) + (5 + w) = 16 + 3w` | `boundary_weight.md` |
 | Matter mode count | Elements of Z_{q_2 · q_3}, totalling 6 at w=1 | `baryon_fraction.md` |
-| Baryonic mode count | Coprime-to-6 matter modes, identified in pairs under the Klein antiperiodic identification: `φ(6)/2 = 1` at w=1 | `baryon_fraction.md` |
+| Baryonic mode count | Symmetric (Klein-singlet) combination of the coprime pair {1, 5}: one eigenmode ψ_+(1,5) passes both cross-sector (coprime-to-6) AND Klein-singlet criteria. Count = 1 at w=1 | `baryon_fraction.md`, `omega_partition_combinatorial.md` |
 | Decoherence tax `1 − \|r\|` | Reduction factor from the Kuramoto order parameter at observation scale | `baryon_fraction.md` |
-| Klein identification | Antiperiodic pairing `k ~ (q_2 q_3 − k) mod 6`; identifies {1, 5} as one mode | `klein_bottle_derivation.md` |
+| Klein-antipodal Z₂ rep | Antipodal action on swapped pair `{k, q_2q_3 − k}` is the non-trivial Z₂ representation on the spinor bundle (H₁(K²) = Z ⊕ Z₂). Decomposes each pair into sym (Klein-singlet) and antisym (sign-rep) eigenmodes. | `klein_bottle_derivation.md`, `fermion_spinors_from_z2.py` |
 
 ## 2. Partition formulas under boundary-weight interpolation
 
@@ -132,23 +132,25 @@ resolve the inconsistency. Applied **only to the baryonic modes**
 (the cross-sector coupled ones), it reduces Ω_b by `(1 − |r|) ≈
 3.2%` — gets part of the way but not the full 6.7%.
 
-**C2 — Klein identification asymmetry.**
+**C2 — Klein-eigenmode width asymmetry.**
 
-The identification {1} ~ {5} under Klein pairing assumes the two
-modes have equal tongue widths. At finite K the antiperiodic
-twist introduces an asymmetry: the two modes have slightly
-different `w_F`, so the pairing is not exact. This would
-modify Ω_b without touching Ω_Λ or Ω_DM — a selective correction.
+The Z₂ decomposition of the coprime pair into ψ_+(1,5) (baryonic)
+and ψ_−(1,5) (dark) assumes the two eigenmodes have equal tongue
+widths in the ideal limit. At finite K the antiperiodic twist
+introduces an asymmetry between sym and antisym combinations: the
+two eigenmodes have slightly different `w_F`, so the partition
+between "baryonic ψ_+" and "dark ψ_−" leaks. This would modify
+Ω_b without touching Ω_Λ or Ω_DM total — a selective correction.
 
 **C3 — Secondary sub-partition at fractional depth.**
 
-The baryonic mode count is `φ(6)/2 = 1` at w = 1 because there
-are 2 coprime modes identified in pairs. At fractional w, the
-coprime-mode count is `2w`, but the Klein identification may
-itself be w-dependent: perhaps at fractional depth, the pair
-{1, 5} is not fully identified, and the effective baryonic count
-is `f(w) · 2w / 2` with some `f(w)` that accounts for incomplete
-identification.
+The baryonic mode count is 1 at w = 1 because there's exactly
+one Klein-singlet × coprime-to-6 eigenmode (ψ_+(1,5)). At
+fractional w, the coprime-mode population is `2w` and the Z₂
+decomposition may itself be w-dependent: perhaps at fractional
+depth, the sym/antisym eigenmode separation is not sharp, and
+the effective baryonic count weights partially across both
+eigenmodes.
 
 If `f(w) = w` (the two boundary modes are both partially locked
 AND partially identified), then Ω_b(w) = 2w²/2 = w². At

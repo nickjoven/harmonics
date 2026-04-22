@@ -92,6 +92,21 @@ coincidences.
 - No structural argument attached.
 - Numerical coincidence only.
 
+### Klein nodal parity (single connected curve at (5, 5, 1) σ=+node)
+
+- In-session visual observation at (5, 5, 1), σ=+node, ω_rot=0.03,
+  γ=5: a single connected diagonal line of seeds.
+- Proposed (`klein_nodal_parity.md`) as the odd-m case of a parity
+  ladder predicting Möbius-connected nodal curves for odd ℓ and
+  disjoint arcs for even ℓ under the Z₂ quotient.
+- **Retracted 2026-04-22.** Simulator uses `U = Y²`, which is
+  Z₂-symmetric for all ℓ: the (−1)^ℓ sign flip on Y doesn't survive
+  squaring. Dynamics cannot discriminate parity. The observed
+  single curve is explained by gradient descent on a slowly-rotating
+  static landscape (ω_rot=0.03 ≠ 0) with seeds tracking one
+  meridional arc.
+- Status: numerical/visual coincidence, not a topological signature.
+
 ### Pythagorean comma vs K_Greene (0.17 % near-match)
 
 - `kam_bridge_synthesis.md` §6, recorded as:
@@ -211,20 +226,6 @@ for consistency with the sin²θ_W resolution.
 - Needs derivation check — if `228` is framework-derived, structural;
   if fitted to match observation, numerology.
 
-### Klein nodal parity (odd-m Möbius vs even-m disjoint circles)
-
-- Test specification in `klein_nodal_parity.md`.
-- Prediction: at σ=+node, ω_rot=0, n=1, (ℓ, ℓ, 1) seed distributions
-  show a single Möbius-connected nodal curve for odd m and disjoint
-  great circles for even m, under the antipodal Z₂ quotient.
-- Current data: 1/5 configurations run. Suggestive at (5, 5, 1) but
-  not discriminating alone.
-- Upgrade criterion: parity alternation across ℓ = 2..6 at matched
-  parameters, confirmed by rotation-animation connectivity trace.
-- Rejection criterion: no consistent parity pattern → single-curve
-  observation at (5, 5, 1) is a configurational coincidence.
-- Class 4 until the control ladder runs.
-
 ---
 
 ## Class 5 — Explicitly NOT numerology per repo evidence
@@ -258,10 +259,21 @@ for consistency with the sin²θ_W resolution.
 
 ### Ω partition 1:5:13/19
 
-- Derived in `baryon_fraction.md` via Farey partition + Z_6 residue
-  classes + antiperiodic identification. Structural (though the
-  internal Ω_b = 1/19 has the C2b floor at 11σ — that's a finite-
-  depth structural residual, not numerology).
+- Derived in two stages, both combinatorial, zero free parameters:
+  - 13:6 (Ω_Λ:Ω_m) from Farey count |F_6|, φ(7), |F_7|
+    (`farey_partition.md`)
+  - 1:5 (Ω_b:Ω_DM) from Z₂ representation theory on coprime-pair
+    antisym modes + EM cross-sector criterion
+    (`omega_partition_combinatorial.md`, `baryon_fraction.md`)
+- Structural. The prior "XOR-parity proof of 1:5:13 at depth 19"
+  Proposed item was the wrong target; the actual mechanisms are
+  Farey counting and Z₂-rep-theory eigenmode decomposition, not
+  the mode-pair XOR filter from `xor_derivation.md` (which is a
+  different Z₂ structure).
+- Ω_b = 1/19 has a 6.7% observational residual attributed to
+  Klein-eigenmode width asymmetry (sym/antisym tongue widths) and
+  the boundary-weight / decoherence corrections — finite-depth
+  structural residual, not numerology.
 
 ---
 

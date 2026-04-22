@@ -26,102 +26,137 @@ Omega_m = 6/19 (D25).
 
 ### The matter subdivision
 
-The 6 matter modes live at the product scale q_2 * q_3 = 6. They
-correspond to the 6 elements of Z_6, the residue group mod 6.
-These are:
+The 6 matter modes live at the product scale q_2 * q_3 = 6. Under
+the Farey reading they are the q=7 class {1/7, 2/7, 3/7, 4/7, 5/7,
+6/7} (= φ(7) new fractions at F_6 → F_7); under the residue reading
+they are Z_6 = {0, 1, 2, 3, 4, 5}. Either way, indexed by
+p ∈ {1, 2, 3, 4, 5, 6}.
 
-    {0, 1, 2, 3, 4, 5} mod 6
+Of these 6 modes, how many are electromagnetically coupled
+(baryonic) and how many are dark? The answer follows from two
+independent structural criteria applied jointly.
 
-Of these 6 modes, how many are electromagnetically coupled (baryonic)
-and how many are dark?
-
-### The EM coupling criterion
+### The EM coupling criterion (cross-sector)
 
 A mode is electromagnetically coupled if it participates in the
-gauge interaction — if it carries charge under SU(3) x SU(2) x U(1).
+gauge interaction — if it carries charge under SU(3) × SU(2) × U(1).
 In the Klein bottle framework (D41, D42), the gauge coupling is
 mediated by the GCD fiber structure. A mode at position k mod 6
 couples to the gauge fields if and only if it has a nontrivial
-projection onto the q=2 and q=3 sectors.
+projection onto BOTH the q=2 and q=3 sectors. From
+`gell_mann_nishijima.md`: α_em = α_2 · sin²θ_W requires cross-sector
+participation.
 
 The modes that are coprime to 6 — those with gcd(k, 6) = 1 — are
-the irreducible modes. They do not factor through any sub-denominator.
-These are the modes that interact with BOTH the q=2 and q=3 sectors
-simultaneously (they are not reducible to either sector alone).
+the cross-sector modes. These interact with BOTH the q=2 and q=3
+sectors simultaneously (they are not reducible to either sector
+alone):
 
-    Elements coprime to 6: {1, 5}     (count: phi(6) = 2)
+    Elements coprime to 6: {1, 5}     (count: φ(6) = 2)
 
 The modes that are NOT coprime to 6 — those with gcd(k, 6) > 1 —
 factor through either q=2, q=3, or both:
 
     gcd(k, 6) = 2: {2, 4}     (factor through q=2)
     gcd(k, 6) = 3: {3}        (factors through q=3)
-    gcd(k, 6) = 6: {0}        (factors through both = the identity)
+    gcd(k, 6) = 6: {0} (≡ {6}) (factors through both = the identity)
 
-### Baryonic = the irreducible unit
+### The Z₂ representation-theory criterion (Klein-singlet)
 
-A baryon is a bound state of three quarks — the irreducible
-composite at the q=3 confinement scale. In the Z_6 picture,
-a baryon occupies one irreducible unit of the product space.
+The Klein bottle has H₁(K²; Z) = Z ⊕ Z₂ (`fermion_spinors_from_z2.py`).
+The Z₂ torsion makes the antipodal action a non-trivial Z₂
+representation on the spinor bundle, not a simple identification.
+An antipodally-swapped pair of modes {ψ_p, ψ_{6−p}} does not merge
+into one mode; it decomposes into two irreducible Z₂ eigenmodes:
 
-The irreducible units are those coprime to 6. But the two
-coprime elements {1, 5} are related by the Klein bottle's
-antiperiodic identification: 5 = 6 - 1, and the twist
-identifies k with (q_2 q_3 - k) mod q_2 q_3. So {1, 5}
-form a single physical mode under the identification.
+    ψ_+ = ψ_p + ψ_{6−p}   (trivial Z₂ rep — Klein-singlet)
+    ψ_- = ψ_p − ψ_{6−p}   (sign Z₂ rep — monodromy −1)
 
-The count of distinct baryonic modes is:
+The symmetric mode ψ_+ has single-valued phase around the Klein
+loop. Definite EM charge is possible. The antisymmetric mode ψ_-
+has two-valued phase (monodromy −1 around the loop): its net EM
+coupling integrates to zero, though gravitational coupling
+(universal, energy-density only) persists.
 
-    phi(6) / 2 = 2 / 2 = 1
+Klein-antipodal pairing on Z_6 residues sends k ↔ 6−k:
 
-One baryonic mode out of 6 total matter modes. Therefore:
+| Pair | Structure | Eigenmodes |
+|---|---|---|
+| {1, 5} | antipodal pair | ψ_+(1,5), ψ_−(1,5) |
+| {2, 4} | antipodal pair | ψ_+(2,4), ψ_−(2,4) |
+| {3} | self-paired | ψ_3 (Klein-singlet) |
+| {0} (≡ {6}) | self-paired | ψ_0 (Klein-singlet) |
 
-    **Omega_b / Omega_m = 1/6**
+Six physical modes: four antipodal-pair eigenmodes (two pairs × two
+eigenmodes each) plus two self-paired modes.
 
-And:
+### Baryonic = Klein-singlet AND coprime-to-6
 
-    **Omega_b = (1/6) * (6/19) = 1/19**
+A mode carries net EM coupling iff it satisfies BOTH criteria: it
+must be a Klein-singlet (so its phase is well-defined around the
+Klein loop) AND coprime-to-6 (so it couples to both gauge sectors).
 
-### The dark matter remainder
+Combining:
 
-    Omega_DM = Omega_m - Omega_b = 6/19 - 1/19 = 5/19
+| Mode | Klein-singlet? | Coprime-to-6? | Baryonic? |
+|---|---|---|---|
+| ψ_+(1,5) = ψ_1 + ψ_5 | yes | yes | **YES** |
+| ψ_−(1,5) = ψ_1 − ψ_5 | no (sign rep) | yes | no (no EM via monodromy) |
+| ψ_+(2,4) = ψ_2 + ψ_4 | yes | no (gcd = 2) | no |
+| ψ_−(2,4) = ψ_2 − ψ_4 | no | no | no |
+| ψ_3 | yes (self-paired) | no (gcd = 3) | no |
+| ψ_0 | yes (self-paired) | no (gcd = 6) | no |
 
-The 5 dark modes are those that factor through q=2 or q=3:
+Exactly one baryonic mode: ψ_+(1,5), the symmetric combination of
+the coprime pair.
 
-| Mode k | gcd(k,6) | Factors through | Character |
-|--------|----------|-----------------|-----------|
-| 0 | 6 | q=2 and q=3 | The identity — trivial mode |
-| 2 | 2 | q=2 | SU(2) sector reducible |
-| 3 | 3 | q=3 | SU(3) sector reducible |
-| 4 | 2 | q=2 | SU(2) sector reducible |
+### Counts
 
-Plus the baryonic mode:
+The count of baryonic modes is the intersection of Klein-singlet
+and coprime-to-6:
 
-| 1 | 1 | irreducible | Baryonic |
-| 5 | 1 | irreducible | Baryonic (identified with 1) |
+    # baryonic = 1  (just ψ_+(1,5))
+    # dark     = 5  (the remaining five modes)
+    # matter   = 6  ✓
 
-The 5 dark modes gravitate (they contribute to Omega_m) but do
-not participate in the electromagnetic interaction as irreducible
-composites. They are reducible to individual sector modes — they
-couple within their own sector but not across sectors.
+Therefore:
+
+    **Ω_b = 1/19**
+    **Ω_DM = 5/19**
+    **Ω_b / Ω_m = 1/6**
+
+### The dark-matter remainder (detail)
+
+| Mode | gcd criterion | Klein character | Dark reason |
+|---|---|---|---|
+| ψ_0 | gcd(0,6)=6 | singlet (self-paired) | no cross-sector coupling |
+| ψ_+(2,4) | gcd(2,6)=2 | singlet (sym) | only q=2 sector |
+| ψ_−(2,4) | gcd(2,6)=2 | sign rep | only q=2 sector + no global phase |
+| ψ_3 | gcd(3,6)=3 | singlet (self-paired) | only q=3 sector |
+| ψ_−(1,5) | gcd(1,6)=1 | sign rep | cross-sector, but monodromy −1 kills net EM |
+
+Five dark modes. Note that ψ_−(1,5) is dark *despite* being
+coprime-to-6 — it has the cross-sector coupling but its
+antisymmetric character under Klein-antipodal means no globally
+single-valued phase, so no net EM charge. This is the
+Klein-rep-theory reason the baryonic count is 1, not 2.
 
 ### Why dark modes gravitate but don't radiate
 
 The gravitational coupling is universal — it depends on the
-energy density (omega^2, from D46), not on the gauge charge.
-All 6 matter modes contribute to the stress-energy tensor.
+energy density (ω², from D46), not on the gauge charge or phase
+structure. All 6 matter modes contribute to the stress-energy
+tensor.
 
-The electromagnetic coupling requires the cross-sector interaction:
-a mode must couple to both q=2 (SU(2)) and q=3 (SU(3)) sectors
-simultaneously to participate in the full gauge interaction that
-produces photons (D33: alpha_em = alpha_2 * sin^2 theta_W, which
-requires both sectors). The reducible modes (gcd(k,6) > 1)
-interact within one sector only. They are invisible to photons.
+The electromagnetic coupling requires BOTH cross-sector
+participation (α_em = α_2 · sin²θ_W) AND Klein-singlet status
+(single-valued phase). The unique intersection is ψ_+(1,5).
 
-This is not an ad hoc distinction. It is the definition of
-irreducibility in the Z_6 residue group: coprime to 6 means
-interacting with both prime factors; not coprime means reducible
-to one factor.
+This is not an ad hoc distinction. It is forced by the Klein
+bottle's topology: H₁(K²) = Z ⊕ Z₂ gives the antipodal Z₂
+representation on the spinor bundle, which in turn separates
+Klein-singlet from Klein-fermion eigenmodes on every antipodal
+pair.
 
 ---
 
@@ -157,11 +192,12 @@ predictions. Possible sources:
    (1 - |r|) = 3.2% from the tree-scale value. This accounts
    for part of the residual.
 
-3. **The Klein bottle identification**: the antiperiodic
-   identification pairs {1, 5} as one mode. If the pairing
-   is not exact (the two modes have slightly different tongue
-   widths due to the twist), the effective baryonic fraction
-   is slightly less than 1/6.
+3. **Klein-eigenmode width asymmetry**: the two eigenmodes
+   ψ_+(1,5) and ψ_−(1,5) sit on slightly different tongue widths
+   due to the twist's effect on sym vs antisym combinations. If
+   this asymmetry leaks between the EM-coupled and EM-decoupled
+   sides, the effective baryonic fraction is slightly less than
+   1/6.
 
 ---
 

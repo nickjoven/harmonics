@@ -21,8 +21,8 @@ Categories:
 |---|---|
 | R = 6·13⁵⁴ (Planck/Hubble hierarchy) | `hierarchy_gaussian_lattice.md` |
 | Λ·ℓ_P² = 13⁻¹⁰⁸/12 = 3/R² | `hierarchy_gaussian_lattice.md` |
-| Ω partition 1:5:13/19 (total counts) | `baryon_fraction.md` |
-| Ω_Λ = 13/19 (0.07σ), Ω_m = 6/19, Ω_c = 5/19 | `baryon_fraction.md` |
+| Ω_Λ : Ω_DM : Ω_b = 13 : 5 : 1 / 19 (combinatorial: Farey + Z₂ rep theory) | `omega_partition_combinatorial.md`, `farey_partition.md`, `baryon_fraction.md` |
+| Ω_Λ = 13/19 (0.07σ), Ω_m = 6/19, Ω_DM = 5/19, Ω_b = 1/19 | same |
 | Friedmann form at r = 1 | `k_of_t_friedmann.md` |
 | λ_unlock = (4G − π ln 2)/π (Arnold Lyapunov on Z₂ quotient) | `kam_bridge_synthesis.md` |
 | Born rule |ψ|² from saddle-node | `born_rule.md`, `a1_from_saddle_node.md` |
@@ -69,7 +69,8 @@ numerology ensemble, not structural.
 | 1/(Pythagorean comma)² ≈ K_Greene (0.17%) | `kam_bridge_synthesis.md` §6, no structural route |
 | H_inf from framework integers | `h_inf_status.md` (scale-free reframe: out of class) |
 | Mean-field Ψ Arnold-tongue structure | `klein_spectrum.py`, `kuramoto_induced_map.py` (Adler-only) |
-| Twist-map / KAM / cantorus / Lyapunov framings of the ψ_F visualizer | Source inspection confirms gradient descent on a static potential; category error. Mechanism notes in `klein_nodal_parity.md` and `basin_11_connection_exploration.md` |
+| Twist-map / KAM / cantorus / Lyapunov framings of the ψ_F visualizer | Source inspection confirms gradient descent on a static potential; category error. Mechanism note in `klein_nodal_parity.md` |
+| Klein nodal parity (odd-m Möbius vs even-m disjoint arcs at σ=+node) | `klein_nodal_parity.md`: simulator uses Y², which is Z₂-symmetric for all ℓ. The (−1)^ℓ sign flip on Y doesn't survive squaring; dynamics cannot discriminate parity. |
 
 ## Proposed (needs audit or experimental input)
 
@@ -80,10 +81,7 @@ numerology ensemble, not structural.
 | λ_H = 1/q_2³ + 1/228 correction | Framework origin for 228 = 12·19 |
 | N_efolds = √5 / rate ≈ 61.3 | Framework-internal derivation independent of observed n_s |
 | K_c(F_n/F_{n+1}) closed form | Explicit form beyond asymptotic δ⁻ⁿ scaling |
-| XOR-parity proof of 1:5:13 at depth 19 | Direct combinatorial proof on Klein quotient |
 | T2#7 measurement arc technical residuals | Iteration-to-time anchor, multi-tongue cascade, continuous K(t) |
-| Klein nodal parity (odd-m Möbius vs even-m disjoint circles) | Parity alternation across (ℓ, ℓ, 1) for ℓ = 2..6 at σ=+node, ω_rot=0 (`klein_nodal_parity.md`) |
-| Basin 1/1 connection topology at Q=19 | Basin map shows 1:5:13 tiering and Fibonacci neighbors as direct boundary partners (`basin_11_connection_exploration.md`) |
 
 ## Out of class (absolute scales, anchor-dependent)
 
