@@ -218,32 +218,44 @@ m_1, m_2, m_3
 
 Source: `item12_neutrino_solar_closure.py`.
 
-### Gauge sector
+### Gauge sector (bare K=1 identities; M_Z gap unresolved)
+
+Per the honest-null audit in `numerology_inventory.md` and the MANIFEST
+resolution: the following are K=1 reference identities recorded under
+`MANIFEST.yml:bare_k1_identities`, not predictions at M_Z. The previous
+fitted corrections (`+ 8/F_10²`, `+ 1/q_3²`) have been withdrawn — they
+were never derived in the repository.
 
 ```
 sin² θ_W
-├── tree: 8/35 = q_2³/(q_2³ + q_3³)
-└── + Fibonacci-square correction: 8/F_10² = 8/3025
-    └── total = 0.23122 (matches PDG to ~2×10⁻⁵)
+└── bare K=1: 8/35 = q_2³/(q_2³ + q_3³)
+    ├── M_Z gap: 1.1% vs PDG 0.23121
+    └── SM running ruled out (sinW_running_check.py);
+        K-scanning ruled out (sinw_fixed_point.md);
+        d_eff = 80/27 in sinw_effective_dimension.md is
+        conditional on 3 unformalized steps.
 
 α_s / α_2
-├── tree: 27/8 = q_3³/q_2³
-└── + gauge-integer correction: 1/q_3² = 1/9
-    └── total = 251/72 = 3.4861 (matches PDG to 0.17%)
+└── bare K=1: 27/8 = q_3³/q_2³
+    ├── M_Z gap: 3.2% vs PDG 3.488
+    └── No single K* jointly fits α_s/α_2 and sin²θ_W
+        (sinw_fixed_point.md).
 ```
 
-Source: `item12_sin_W_and_signs.py`, `item12_other_residuals.py`.
+Source: `duty_cycle_dictionary.md`, `duty_dimension_proof.md`.
 
-### Higgs
+### Higgs (bare K=1 identities; M_Z gap unresolved)
 
 ```
 λ
-├── tree: 1/(2 q_2²) = 1/8
-└── + boundary correction: 1/228 = 1/(q_2² q_3 |F_7|)
-    └── total = 0.129 (matches PDG)
+└── bare K=1: duty(q_2) = 1/q_2³ = 1/8
+    ├── M_Z gap: 3.4% vs PDG ~0.129
+    └── The previous + 1/228 correction has been withdrawn
+        (228 = q_2² q_3 |F_7|; not derived; fitted term).
 
 m_H / v
-└── 1/q_2 = 1/2 (matches PDG to 1.7%)
+└── bare K=1: 1/q_2 = 1/2
+    └── M_Z gap: 1.7% vs 0.5087; unresolved.
 ```
 
 Source: `higgs_from_tongue_boundary.md`, commit `fc677bc`.

@@ -405,16 +405,21 @@ def _all() -> list[Prediction]:
     # W/Z RATIO
     # ------------------------------------------------------------------
     preds.append(Prediction(
-        name="M_W / M_Z = cos(theta_W)",
+        name="M_W / M_Z = cos(theta_W) [bare K=1 identity, not a prediction at M_Z]",
         sector="gauge",
         tree_form="sqrt(q_3^3 / (q_2^3 + q_3^3)) = sqrt(27/35)",
         tree_value=sqrt(Q3**3 / (Q2**3 + Q3**3)),
-        correction_form="(inherits sin^2 correction)",
+        correction_form="-",
         correction_value=0.0,
         observed=PDG_MASS["W"][0] / M_Z,
         observed_err=0.0001,
-        source="duty_cycle_dictionary.md",
-        notes="from sin^2(theta_W) = 1 - cos^2",
+        source="duty_cycle_dictionary.md, numerology_inventory.md (derived from declined 8/35)",
+        notes=(
+            "Declined in lockstep with sin^2(theta_W): this is cos(theta_W) "
+            "computed from the same bare K=1 identity 8/35, so it inherits "
+            "the same honest-null status. Not a prediction at M_Z; recorded "
+            "here as a bare K=1 reference only."
+        ),
     ))
 
     return preds

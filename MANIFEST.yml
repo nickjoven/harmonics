@@ -22,8 +22,29 @@ primitives:
 
 free_parameters: 0
 free_functions: 0
-dimensionful_inputs: 1
-dimensionful_input_note: "Root oscillator frequency (equivalently v = 246 GeV). No mathematical framework can produce its own units."
+dimensionful_inputs: 2
+dimensionful_input_note: >
+  Two independent observational anchors per `anchor_count_audit.md`:
+  (1) the cosmological scale H_0 (equivalently Λ, ℓ_P, or M_P; these
+  are all interconverted by the framework integer R = 6 × 13^54 and
+  the identity Λℓ_P² = 13^-108 / 12), and (2) the particle-sector
+  scale v_EW = 246 GeV. Reducing to one anchor would require closing
+  the v/M_P gap via a framework-derived dimensionless identity; five
+  explicit obstructions to that reduction are catalogued in
+  `anchor_count_audit.md`. Previous MANIFEST language claiming a
+  single dimensionful input overstated the repo's actual derivation
+  state.
+dimensionful_inputs_detail:
+  cosmological:
+    anchor: "H_0 (equivalently Λ, ℓ_P, M_P via R)"
+    covers: ["Λ", "ℓ_P", "t_P", "M_P", "ρ_crit", "cosmic-timeline scales"]
+  particle:
+    anchor: "v_EW = 246 GeV"
+    covers: ["ℏ (absolute)", "c (absolute)", "G (absolute)", "absolute lepton/quark/gauge-boson masses", "m_H"]
+  v_over_MP_gap:
+    observed: "v/M_P ≈ 2.017e-17"
+    nearest_numerology: "13^-15 = 1.954e-17 (3.1% off, not derived)"
+    status: "open; see anchor_count_audit.md §Obstructions for five specific blockers"
 
 # --- Scorecard ---
 # Each prediction has: computed, observed, residual, source derivation(s)

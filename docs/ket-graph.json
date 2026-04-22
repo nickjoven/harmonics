@@ -177,18 +177,18 @@
       "meta": [],
       "depends_on": [],
       "depended_on_by": [
-        "02da17bfbc3f",
-        "661c2f62af07",
         "4966c2ff0fd7",
-        "a66d4e34f4b7",
+        "661c2f62af07",
+        "4a1cf21b3413",
+        "ead006977855",
+        "b561d862318b",
+        "02da17bfbc3f",
+        "c434e2404bc8",
+        "9a65fba46537",
+        "df80cbf889dd",
         "c6696f3490c8",
         "8550991bf39e",
-        "9a65fba46537",
-        "b561d862318b",
-        "c434e2404bc8",
-        "ead006977855",
-        "df80cbf889dd",
-        "4a1cf21b3413"
+        "a66d4e34f4b7"
       ]
     },
     {
@@ -227,7 +227,9 @@
       "parents": [],
       "output_cid": null,
       "depends_on": [],
-      "depended_on_by": []
+      "depended_on_by": [
+        "ba196964d683"
+      ]
     },
     {
       "id": "3289949b1e8b",
@@ -440,7 +442,9 @@
       "parents": [],
       "output_cid": null,
       "depends_on": [],
-      "depended_on_by": []
+      "depended_on_by": [
+        "ba196964d683"
+      ]
     },
     {
       "id": "6797546ca424",
@@ -597,30 +601,30 @@
       "meta": [],
       "depends_on": [],
       "depended_on_by": [
-        "799e46cdd883",
-        "822f5e9267a8",
         "0e3f6c93fa4e",
-        "61e822aacd9b",
-        "02da17bfbc3f",
-        "4e90a76af920",
-        "39a5b7ea78c3",
-        "e16bc5fe9839",
+        "19d89980634f",
         "7b727b4db8a1",
         "25cdb38c6d1b",
+        "e16bc5fe9839",
+        "4e90a76af920",
+        "799e46cdd883",
+        "39a5b7ea78c3",
+        "ead006977855",
         "89a357adb110",
-        "1309c402becc",
-        "c6696f3490c8",
+        "fe0f849b4a89",
         "423042ac7f59",
+        "61e822aacd9b",
+        "ae305aef4463",
         "112b27bab676",
         "2d41a79919dc",
-        "9a65fba46537",
-        "fe0f849b4a89",
-        "6797546ca424",
+        "02da17bfbc3f",
         "c434e2404bc8",
-        "19d89980634f",
-        "ead006977855",
+        "6797546ca424",
+        "9a65fba46537",
         "df80cbf889dd",
-        "ae305aef4463"
+        "1309c402becc",
+        "c6696f3490c8",
+        "822f5e9267a8"
       ]
     },
     {
@@ -629,6 +633,17 @@
       "kind": "text",
       "preview": "[R3] Neutrino depth = 36 conjecture is retracted. Canonical depth = q_2^3 + q_3^3 = 35 (C11). Retracted in commit e387fe3: neutrino_mass_pre",
       "size": 208,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "8e23247fd488",
+      "full_cid": "8e23247fd488725a27e119a209316ac2c06829742f59aa5384985837337d2941",
+      "kind": "text",
+      "preview": "[RETRACT-C19] Retraction of sin^2 theta_W = 8/35 + 8/F_10^2 claim (CID 30adf75f5f6b) and the related 'gauge sector' fitted corrections in th",
+      "size": 904,
       "parents": [],
       "output_cid": null,
       "depends_on": [],
@@ -735,14 +750,14 @@
       "meta": [],
       "depends_on": [],
       "depended_on_by": [
-        "822f5e9267a8",
-        "974a5e77f55c",
+        "19d89980634f",
         "39a5b7ea78c3",
-        "a66d4e34f4b7",
-        "8550991bf39e",
         "b561d862318b",
         "c434e2404bc8",
-        "19d89980634f"
+        "974a5e77f55c",
+        "8550991bf39e",
+        "822f5e9267a8",
+        "a66d4e34f4b7"
       ]
     },
     {
@@ -783,6 +798,38 @@
       "parents": [],
       "output_cid": null,
       "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "ba196964d683",
+      "full_cid": "ba196964d6835a3fa9dee79c9226551379b794de5122b303b5484e58dd1506a3",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-22T00:00:00.000000000+00:00",
+      "parents": [
+        "30adf75f5f6b",
+        "663f287bada2"
+      ],
+      "output_cid": "8e23247fd488",
+      "meta": [
+        {
+          "action": "retract",
+          "rationale": "honest-null audit",
+          "commit_chain": [
+            "208359f",
+            "0882991"
+          ],
+          "affected_claims": [
+            "sin^2 theta_W = 8/35 + 8/F_10^2",
+            "alpha_s/alpha_2 = 27/8 + 1/9",
+            "lambda = 1/8 + 1/228"
+          ]
+        }
+      ],
+      "depends_on": [
+        "30adf75f5f6b",
+        "663f287bada2"
+      ],
       "depended_on_by": []
     },
     {
