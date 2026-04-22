@@ -365,18 +365,22 @@ def section_failure_mode() -> None:
 
   2. The structural form q_3^d * |F_6|^2 does not correspond to a
      canonical closure format used elsewhere in the framework.
-     Compare to the established compositional closures:
-        sin^2 theta_W = q_2^d / (q_2^d + q_3^d) + q_2^d / |F_10|^2
-        alpha_s/alpha_2 = q_3^d / q_2^d + 1/q_3^2
-        Higgs lambda = 1/q_2^d + 1/(q_2^2 q_3 |F_7|)
-        m_2/m_1 = q_3^(1/q_2) - 1/(q_2 q_3)^2
-     Each of these has a SPECIFIC alphabet integer as the correction
-     denominator.  None uses q_3^d * |F_6|^2 as a single denominator.
-     The proposed subleading term for a_1(lep) has the right INDIVIDUAL
-     factors in the alphabet but the specific COMBINATION is novel.
-     That is weak evidence -- the combination could be correct (the
-     alphabet is consistent with it) but it has no independent
-     structural justification.
+     Compare to the previously-posited compositional closures
+     (ALL RETRACTED 2026-04-22, honest-null audit, commit 208359f +
+     0882991; see MANIFEST.yml:bare_k1_identities and
+     numerology_inventory.md Class 1/3):
+        sin^2 theta_W = q_2^d / (q_2^d + q_3^d) + q_2^d / |F_10|^2   [retracted]
+        alpha_s/alpha_2 = q_3^d / q_2^d + 1/q_3^2                    [retracted]
+        Higgs lambda = 1/q_2^d + 1/(q_2^2 q_3 |F_7|)                 [retracted]
+        m_2/m_1 = q_3^(1/q_2) - 1/(q_2 q_3)^2                        [unaudited; flag for review]
+     These "+ correction" terms were fitted rather than derived. The
+     bare K=1 forms (e.g. q_2^d / (q_2^d + q_3^d)) are reference
+     identities; the + correction terms are not framework predictions.
+     The precedent the paragraph above appeals to -- "each of these
+     has a specific alphabet integer as the correction denominator" --
+     no longer stands. The proposed q_3^d * |F_6|^2 subleading term
+     for a_1(lep) therefore lacks any analogous precedent; it is a
+     bare candidate without structural justification.
 
   3. The cross-sector pattern is informative.  Under the improved K,
      up-type misses by 0.35 sigma and down-type by 0.04 sigma.

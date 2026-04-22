@@ -100,6 +100,17 @@
       "depended_on_by": []
     },
     {
+      "id": "182467440699",
+      "full_cid": "1824674406991e5e277601ce594ec460da8f3b5679cfaddeb1f688da845c32a9",
+      "kind": "text",
+      "preview": "framework_constants.py updated since initial 2026-04-14 put (CID fa3276d0c001). This node records the superseding content CID and preserves ",
+      "size": 148,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
       "id": "19d89980634f",
       "full_cid": "19d89980634fecb28116c5c504f524d1ed2ba3ce705559c0eb523a0961d30125",
       "kind": "reasoning",
@@ -177,18 +188,18 @@
       "meta": [],
       "depends_on": [],
       "depended_on_by": [
-        "02da17bfbc3f",
-        "661c2f62af07",
-        "4966c2ff0fd7",
-        "a66d4e34f4b7",
-        "c6696f3490c8",
         "8550991bf39e",
-        "9a65fba46537",
-        "b561d862318b",
         "c434e2404bc8",
-        "ead006977855",
+        "02da17bfbc3f",
+        "b561d862318b",
+        "a66d4e34f4b7",
+        "661c2f62af07",
+        "c6696f3490c8",
+        "4966c2ff0fd7",
+        "9a65fba46537",
+        "4a1cf21b3413",
         "df80cbf889dd",
-        "4a1cf21b3413"
+        "ead006977855"
       ]
     },
     {
@@ -219,6 +230,20 @@
       "depended_on_by": []
     },
     {
+      "id": "2d4352e83568",
+      "full_cid": "2d4352e835681a96371dd524d450ec94ebcf65adfcba37c30fe18b77056810d5",
+      "kind": "code",
+      "agent": "claude",
+      "timestamp": "2026-04-22T21:36:49.987425689+00:00",
+      "parents": [
+        "fa3276d0c001"
+      ],
+      "output_cid": "182467440699",
+      "meta": [],
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
       "id": "30adf75f5f6b",
       "full_cid": "30adf75f5f6b3f763439a5a7ced292eea8063e4cc1e32321cd982ff6f75b35fb",
       "kind": "text",
@@ -227,7 +252,9 @@
       "parents": [],
       "output_cid": null,
       "depends_on": [],
-      "depended_on_by": []
+      "depended_on_by": [
+        "d71c150fd1c7"
+      ]
     },
     {
       "id": "3289949b1e8b",
@@ -281,6 +308,28 @@
       "depended_on_by": []
     },
     {
+      "id": "3dc6349ee532",
+      "full_cid": "3dc6349ee532dcbbaf7e3446f179f4b2ea0bad777bb2caffab5eaa0ec5e0ffbb",
+      "kind": "text",
+      "preview": "[RETRACT-C19 v2, BLAKE3] Retraction of sin^2 theta_W = 8/35 + 8/F_10^2 claim (CID 30adf75f5f6b) and the related 'gauge sector' / 'Higgs' fit",
+      "size": 1030,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "40ddbaa23a64",
+      "full_cid": "40ddbaa23a64d12f15e5656e1752b7b079f8e2eec1cac438b11c38ffbfd875be",
+      "kind": "text",
+      "preview": "# Framework topology",
+      "size": 11575,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
       "id": "41a80e6610be",
       "full_cid": "41a80e6610beeedbffd47b7927ade29eb6a98bf0d9ae289d57f68986e377271e",
       "kind": "text",
@@ -321,6 +370,17 @@
       "depends_on": [
         "2612b1b11d71"
       ],
+      "depended_on_by": []
+    },
+    {
+      "id": "49a8f94413a4",
+      "full_cid": "49a8f94413a4f0802497faf2807089f048cd0e187884b851593aa50f118b3f34",
+      "kind": "text",
+      "preview": "#!/usr/bin/env python3",
+      "size": 14954,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
       "depended_on_by": []
     },
     {
@@ -440,7 +500,9 @@
       "parents": [],
       "output_cid": null,
       "depends_on": [],
-      "depended_on_by": []
+      "depended_on_by": [
+        "d71c150fd1c7"
+      ]
     },
     {
       "id": "6797546ca424",
@@ -553,6 +615,17 @@
       "depended_on_by": []
     },
     {
+      "id": "850599b3c483",
+      "full_cid": "850599b3c4837660bb14bc0060542d562b9a3c80064d39aae3bc81f7d5989d93",
+      "kind": "text",
+      "preview": "\"\"\"",
+      "size": 10632,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
       "id": "8550991bf39e",
       "full_cid": "8550991bf39e851b8ef91f83d1455536895fd6cb4cf826dd24ae0b8d4d5d5ac4",
       "kind": "reasoning",
@@ -587,6 +660,17 @@
       "depended_on_by": []
     },
     {
+      "id": "89e3d7e89a9d",
+      "full_cid": "89e3d7e89a9da3cf1abe72ae46b1efee155238cf61d3db3c0c38c496a5c323f9",
+      "kind": "text",
+      "preview": "# Quantum Gravity from the Rational Field Equation at K \u2248 1",
+      "size": 16138,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
       "id": "8a560f525695",
       "full_cid": "8a560f525695dede1a1480da7e4835a1f10e30377dabfbbc516b57fc76bef28f",
       "kind": "memory",
@@ -597,30 +681,30 @@
       "meta": [],
       "depends_on": [],
       "depended_on_by": [
-        "799e46cdd883",
-        "822f5e9267a8",
-        "0e3f6c93fa4e",
-        "61e822aacd9b",
-        "02da17bfbc3f",
-        "4e90a76af920",
-        "39a5b7ea78c3",
-        "e16bc5fe9839",
         "7b727b4db8a1",
-        "25cdb38c6d1b",
-        "89a357adb110",
-        "1309c402becc",
-        "c6696f3490c8",
-        "423042ac7f59",
-        "112b27bab676",
-        "2d41a79919dc",
-        "9a65fba46537",
-        "fe0f849b4a89",
-        "6797546ca424",
         "c434e2404bc8",
+        "423042ac7f59",
+        "89a357adb110",
+        "02da17bfbc3f",
+        "39a5b7ea78c3",
+        "0e3f6c93fa4e",
+        "e16bc5fe9839",
+        "61e822aacd9b",
+        "799e46cdd883",
+        "c6696f3490c8",
+        "6797546ca424",
+        "4e90a76af920",
+        "2d41a79919dc",
+        "25cdb38c6d1b",
+        "9a65fba46537",
+        "1309c402becc",
+        "822f5e9267a8",
+        "df80cbf889dd",
         "19d89980634f",
         "ead006977855",
-        "df80cbf889dd",
-        "ae305aef4463"
+        "112b27bab676",
+        "ae305aef4463",
+        "fe0f849b4a89"
       ]
     },
     {
@@ -680,6 +764,17 @@
       "depended_on_by": []
     },
     {
+      "id": "9be43f0c8b1a",
+      "full_cid": "9be43f0c8b1a74089d9d4512c70bc35b2e92a8133183ad102f9c50f7a57eca2e",
+      "kind": "text",
+      "preview": "#!/usr/bin/env python3",
+      "size": 13864,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
       "id": "a66d4e34f4b7",
       "full_cid": "a66d4e34f4b72a22cb43702e0d4b1b4106220efb01e113d74f26cb846613caf0",
       "kind": "reasoning",
@@ -735,13 +830,13 @@
       "meta": [],
       "depends_on": [],
       "depended_on_by": [
+        "8550991bf39e",
+        "c434e2404bc8",
+        "39a5b7ea78c3",
+        "b561d862318b",
+        "a66d4e34f4b7",
         "822f5e9267a8",
         "974a5e77f55c",
-        "39a5b7ea78c3",
-        "a66d4e34f4b7",
-        "8550991bf39e",
-        "b561d862318b",
-        "c434e2404bc8",
         "19d89980634f"
       ]
     },
@@ -868,6 +963,35 @@
       "depended_on_by": []
     },
     {
+      "id": "cdcad905d740",
+      "full_cid": "cdcad905d740b9dc4099f2045c5ca43b6696a06d59bf0532910d33d7d4a12857",
+      "kind": "text",
+      "preview": "# Beta Functions from Tongue Widths",
+      "size": 14113,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "d71c150fd1c7",
+      "full_cid": "d71c150fd1c7a096291befc7402a4be3199f1204de4b592bae83a80daca0e846",
+      "kind": "reasoning",
+      "agent": "claude",
+      "timestamp": "2026-04-22T20:59:44.908726142+00:00",
+      "parents": [
+        "30adf75f5f6b",
+        "663f287bada2"
+      ],
+      "output_cid": "3dc6349ee532",
+      "meta": [],
+      "depends_on": [
+        "30adf75f5f6b",
+        "663f287bada2"
+      ],
+      "depended_on_by": []
+    },
+    {
       "id": "d876986de955",
       "full_cid": "d876986de955dca58636194be7024396e00a022673ae5b144d5b383e4072fa2f",
       "kind": "text",
@@ -942,6 +1066,17 @@
       "depended_on_by": []
     },
     {
+      "id": "ece574530cc2",
+      "full_cid": "ece574530cc25edfa2cb203e0043b784322725d496be71502362ee2ae62180d4",
+      "kind": "text",
+      "preview": "# Spatial Coupling Derived from Gate Propagation",
+      "size": 8733,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
       "id": "f07d887a3b7d",
       "full_cid": "f07d887a3b7d20ec5e8e877c66a20c8f64b27f9014249c4cdc3a64c1fc8fa0b0",
       "kind": "text",
@@ -980,6 +1115,17 @@
       "kind": "text",
       "preview": "[C11] Neutrino depth = q_2^3 + q_3^3 = 35 (sum of cubes).",
       "size": 57,
+      "parents": [],
+      "output_cid": null,
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "id": "fd40b0a224c3",
+      "full_cid": "fd40b0a224c3a56304a8e44c71feb370a33148abd0e13d4f588d58fadbeb2362",
+      "kind": "text",
+      "preview": "# Fermion Mass Running from the K \u2192 \u03bc Map",
+      "size": 10164,
       "parents": [],
       "output_cid": null,
       "depends_on": [],

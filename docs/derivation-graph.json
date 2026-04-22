@@ -1,5 +1,5 @@
 {
-  "generated": "90652c74e352e0c456d5697c45bddc9189cfa8e9",
+  "generated": "f29af9a75e36af6b8b1db27002d8b5c0f226663b",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -11,7 +11,9 @@
         "klein_bottle",
         "mass_sector_closure"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "numerology_inventory"
+      ],
       "git": [
         {
           "hash": "a9319dc",
@@ -27,6 +29,8 @@
       "summary": "```\nA\n\u251c\u2500\u2500 depends on\n\u2502   \u2514\u2500\u2500 B\n\u2514\u2500\u2500 depends on\n    \u2514\u2500\u2500 C\n```",
       "depends_on": [
         "boundary_weight",
+        "duty_cycle_dictionary",
+        "duty_dimension_proof",
         "farey_partition",
         "hierarchy",
         "higgs_from_tongue_boundary",
@@ -35,12 +39,20 @@
         "lie_group_characterization",
         "mass_sector_closure",
         "minkowski_signature",
+        "numerology_inventory",
+        "sinw_effective_dimension",
+        "sinw_fixed_point",
         "three_dimensions"
       ],
       "depended_on_by": [
         "CHAIN_KSTAR"
       ],
       "git": [
+        {
+          "hash": "eda8b60",
+          "date": "2026-04-22",
+          "subject": "Two-anchor correction, M_W/M_Z demotion, ket retraction of fitted corrections"
+        },
         {
           "hash": "e387fe3",
           "date": "2026-04-14",
@@ -71,15 +83,17 @@
         "mediant_derivation",
         "minimum_alphabet",
         "minkowski_signature",
+        "quantum_gravity_interpolation",
+        "spatial_coupling_derived",
         "speed_of_light",
         "stribeck_vortex",
         "three_dimensions"
       ],
       "git": [
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
         }
       ]
     },
@@ -102,15 +116,17 @@
         "mediant_derivation",
         "minimum_alphabet",
         "minkowski_signature",
+        "quantum_gravity_interpolation",
+        "spatial_coupling_derived",
         "speed_of_light",
         "stribeck_vortex",
         "three_dimensions"
       ],
       "git": [
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
         }
       ]
     },
@@ -120,7 +136,10 @@
       "title": "a\u2080 from Synchronization Cost Threshold",
       "summary": "The MOND acceleration scale a\u2080 \u2248 1.2 \u00d7 10\u207b\u00b9\u2070 m/s\u00b2 is the point where\nlocal gravitational synchronization cost equals the cosmological mean\nfield maintenance cost. This gives a mechanistic derivation of the\ndimensional relation a\u2080 = cH\u2080/2\u03c0 already established in proslambenomenos (a companion repository deriving cosmological dimensional relations from the Hubble frequency),\nand connects it to the Stribeck lattice bifurcation threshold.",
       "depends_on": [],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "framework_status",
+        "numerology_inventory"
+      ],
       "git": [
         {
           "hash": "e387fe3",
@@ -133,9 +152,44 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "cc6acf8",
+          "date": "2026-03-25",
+          "subject": "Propagate a0 corrected value to source derivation"
+        },
+        {
+          "hash": "ec25a22",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#5)"
+        },
+        {
+          "hash": "029ad2e",
+          "date": "2026-03-23",
+          "subject": "Reference kk-inference as early-exit analogue of MOND transition"
+        },
+        {
+          "hash": "08b3bd9",
+          "date": "2026-03-23",
+          "subject": "Add pendulum interpretation of a\u2080 = cH/(2\u03c0)"
+        },
+        {
+          "hash": "0a20b6c",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#3)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "57cb9c0",
+          "date": "2026-03-22",
+          "subject": "Reorient repo around sync cost framework; add three derivations"
         }
       ]
     },
@@ -154,8 +208,10 @@
       "depended_on_by": [
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_c",
+        "framework_status",
         "mass_sector_sqrt_w_phase_a",
-        "mass_sector_sqrt_w_phase_b"
+        "mass_sector_sqrt_w_phase_b",
+        "numerology_inventory"
       ],
       "git": [
         {
@@ -185,14 +241,9 @@
       ],
       "git": [
         {
-          "hash": "90652c7",
+          "hash": "cc58f06",
           "date": "2026-04-20",
-          "subject": "Drop chronology from A_s presentation layer"
-        },
-        {
-          "hash": "5612171",
-          "date": "2026-04-20",
-          "subject": "A_s geometric proof: clean derivation from A1-A9, no fits"
+          "subject": "DRY sweep + A_s geometric proof + Z1-Z3 convention (#68)"
         }
       ]
     },
@@ -202,7 +253,9 @@
       "title": "Address and Quantity",
       "summary": "A ratio has two components. The numerator counts displacement.\nThe denominator counts period. One says how far; the other says\nhow long. These are not the same kind of information.",
       "depends_on": [],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "anchor_count_audit"
+      ],
       "git": [
         {
           "hash": "e1e25da",
@@ -237,12 +290,43 @@
       ]
     },
     {
+      "id": "anchor_count_audit",
+      "path": "sync_cost/derivations/anchor_count_audit.md",
+      "title": "Anchor-count audit: single vs multiple observational anchors",
+      "summary": "The anchor-count audit concludes: the framework currently has **two**\nindependent observational anchors (H_0 and v_EW), with a suggestive\nbut underived numerical near-match at v/M_P \u2248 13\u207b\u00b9\u2075 (3.1% off). The\nT4 language should be softened accordingly, and the missing link is\na concrete structural open item \u2014 effectively the hierarchy problem\nposed framework-natively.",
+      "depends_on": [
+        "address_and_quantity",
+        "coupling_scales",
+        "gauge_sector_lovelock",
+        "hierarchy_gaussian_lattice",
+        "higgs_from_tongue_boundary",
+        "mass_sector_closure",
+        "numerology_inventory",
+        "planck_scale"
+      ],
+      "depended_on_by": [
+        "framework_status",
+        "hierarchy_gaussian_lattice",
+        "numerology_inventory"
+      ],
+      "git": [
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
+        }
+      ]
+    },
+    {
       "id": "baryon_fraction",
       "path": "sync_cost/derivations/baryon_fraction.md",
       "title": "The Baryon Fraction",
       "summary": "The cosmic energy budget partitions into three sectors from the\nsingle number 19 (the Klein bottle's total budget from D25):",
       "depends_on": [],
       "depended_on_by": [
+        "basin_11_connection_exploration",
+        "framework_status",
+        "numerology_inventory",
         "omega_b_residual_phase_a",
         "omega_b_residual_phase_b"
       ],
@@ -251,6 +335,53 @@
           "hash": "bab48f4",
           "date": "2026-04-07",
           "subject": "D46-47: ADM dictionary derived, baryon fraction \u03a9_b = 1/19"
+        }
+      ]
+    },
+    {
+      "id": "basin_11_connection_exploration",
+      "path": "sync_cost/derivations/basin_11_connection_exploration.md",
+      "title": "Basin 1/1 connection exploration",
+      "summary": "**Proposed.** Simulation specification, not a result. Motivated by\na session observation that the structures around the dominant 1/1\nFarey peak were mis-identified as \"cantori\" / \"island chains\" when\nthe actual mechanism is gradient descent on \u03c8_F. The observation\nstill points at something real \u2014 the connection topology between\nthe 1/1 basin and its neighbors \u2014 but in different language. This\nfile specifies the correctly-framed local study.",
+      "depends_on": [
+        "baryon_fraction",
+        "framework_status",
+        "klein_nodal_parity"
+      ],
+      "depended_on_by": [
+        "framework_status",
+        "klein_nodal_parity"
+      ],
+      "git": [
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
+        }
+      ]
+    },
+    {
+      "id": "beta_from_tongues",
+      "path": "sync_cost/derivations/beta_from_tongues.md",
+      "title": "Beta Functions from Tongue Widths",
+      "summary": "The one-loop beta function coefficients of the Standard Model\n(b\u2081 = 41/10, b\u2082 = \u221219/6, b\u2083 = \u22127) can be computed from the\nK-dependence of Arnold tongue widths, without using the SM\nbeta functions as a target. The running of coupling constants\nis a consequence of the circle map dynamics, not an independent\ninput.",
+      "depends_on": [
+        "duty_cycle_dictionary",
+        "gauge_sector_lovelock",
+        "gell_mann_nishijima",
+        "generation_mechanism",
+        "higgs_from_tongue_boundary",
+        "klein_bottle",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "fermion_mass_running"
+      ],
+      "git": [
+        {
+          "hash": "681a726",
+          "date": "2026-04-22",
+          "subject": "Fix BLAKE3/SHA-256 drift in CAS; put new derivations; harden scripts/ket.py"
         }
       ]
     },
@@ -264,8 +395,11 @@
       ],
       "depended_on_by": [
         "a1_from_saddle_node",
+        "framework_status",
+        "klein_nodal_parity",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
+        "numerology_inventory",
         "seismic_eigenstate_dictionary",
         "stribeck_vortex"
       ],
@@ -276,9 +410,34 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "0a20b6c",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#3)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "2909efc",
+          "date": "2026-03-22",
+          "subject": "Derive Born rule from Arnold tongue saddle-node geometry"
+        },
+        {
+          "hash": "57cb9c0",
+          "date": "2026-03-22",
+          "subject": "Reorient repo around sync cost framework; add three derivations"
         }
       ]
     },
@@ -316,9 +475,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "a9e2b09",
+          "date": "2026-03-27",
+          "subject": "Derivations 36-38: conservation as computability, figure-eight topology, boundary weight"
         }
       ]
     },
@@ -332,6 +491,7 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
+        "quantum_gravity_interpolation",
         "rationality_descent"
       ],
       "git": [
@@ -341,9 +501,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "c152786",
+          "date": "2026-03-27",
+          "subject": "D36 conservation_computability: partial (agent still running)"
         }
       ]
     },
@@ -363,7 +523,9 @@
         "gap2_theorem_attempt",
         "gap_1_christoffel",
         "gap_2_spatial_diffusion",
-        "sigma_squared_disambiguation"
+        "quantum_gravity_interpolation",
+        "sigma_squared_disambiguation",
+        "spatial_coupling_derived"
       ],
       "git": [
         {
@@ -377,9 +539,24 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "37aef34",
+          "date": "2026-03-25",
+          "subject": "Remove resolved open questions from living documents"
+        },
+        {
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "f0db15b",
+          "date": "2026-03-25",
+          "subject": "Cross-reference D12, D13, D19: the load-bearing computation"
+        },
+        {
+          "hash": "1252f4e",
+          "date": "2026-03-23",
+          "subject": "Derivations 10-12: alphabet, field equation, continuum limits, \u03c3\u00b2 running (#12)"
         }
       ]
     },
@@ -400,9 +577,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "2da044f",
+          "date": "2026-03-26",
+          "subject": "Derivation 35: The cosmological cycle \u2014 a two-voice round in 13/19"
         }
       ]
     },
@@ -413,7 +590,9 @@
       "summary": "**Derived (partial).** D_0 = 1/2 is determined by the tree geometry.\nAll dimensionless ratios are determined. The absolute coupling scales\nreduce to one dimensionful input (the root oscillator frequency),\nwhich no mathematical framework can produce.",
       "depends_on": [],
       "depended_on_by": [
-        "gap2_analytic_proof"
+        "anchor_count_audit",
+        "gap2_analytic_proof",
+        "spatial_coupling_derived"
       ],
       "git": [
         {
@@ -452,9 +631,19 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "ad562f3",
+          "date": "2026-03-25",
+          "subject": "D30: Pythagorean comma as Klein bottle's irreducible cost"
+        },
+        {
+          "hash": "74d836b",
+          "date": "2026-03-25",
+          "subject": "D30: Add variational principle \u2014 staircase as brachistochrone"
+        },
+        {
+          "hash": "9f9f000",
+          "date": "2026-03-25",
+          "subject": "D30: Denomination boundary \u2014 three open questions unified"
         }
       ]
     },
@@ -472,9 +661,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "5b447f8",
+          "date": "2026-03-25",
+          "subject": "D21: Two open paths formalized as five binary computations"
         }
       ]
     },
@@ -671,18 +860,37 @@
       "id": "duty_cycle_dictionary",
       "path": "sync_cost/derivations/duty_cycle_dictionary.md",
       "title": "The Duty Cycle Dictionary",
-      "summary": "The gauge coupling constants of the Standard Model are the gate duty\ncycles of the Stern-Brocot tree at critical coupling. The coupling of\neach sector is the duty cycle of its *partner* sector. All ratios,\nmixing angles, and the Higgs mass follow from integer arithmetic on the\ndenominators q = 2 and q = 3. The residuals (1-3%) are the decoherence\ntax: the fraction of gate availability consumed by unlocked modes at\nK < 1.",
+      "summary": "The K = 1 identities in this file are exact rational numbers derived\nfrom `duty_dimension_proof.md`. Numerical computations are in:\n- `gate_duty_cycle.py` (bare duty cycles, Klein bottle field equation)\n- `gate_duty_predictions.py` (single-observable K* fits; does not\n  supply joint multi-observable fits)\n- `decoherence_correction.py` (crossed dictionary, K = 1 reference)",
       "depends_on": [
         "duty_dimension_proof",
         "klein_bottle",
+        "numerology_inventory",
+        "sinw_effective_dimension",
+        "sinw_fixed_point",
         "speed_of_light",
         "three_dimensions"
       ],
       "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY",
+        "beta_from_tongues",
+        "fermion_mass_running",
+        "framework_status",
+        "numerology_inventory",
         "omega_b_residual_phase_b",
+        "quantum_gravity_interpolation",
         "sinw_effective_dimension"
       ],
       "git": [
+        {
+          "hash": "0882991",
+          "date": "2026-04-22",
+          "subject": "Duty-cycle-dictionary siblings: honest-null demotion (\u03b1_s/\u03b1_2, 1/\u03b1_em, m_H/v, \u03bb_H)"
+        },
+        {
+          "hash": "208359f",
+          "date": "2026-04-22",
+          "subject": "sin\u00b2\u03b8_W: honest-null demotion in MANIFEST and duty-cycle dictionary"
+        },
         {
           "hash": "e1e25da",
           "date": "2026-04-13",
@@ -694,9 +902,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "c152786",
+          "date": "2026-03-27",
+          "subject": "D36 conservation_computability: partial (agent still running)"
         }
       ]
     },
@@ -707,13 +915,15 @@
       "summary": "For the standard circle map with SL(2,Z) Farey structure, the duty\ncycle of the mode-locked tongue at p/q scales as",
       "depends_on": [],
       "depended_on_by": [
-        "duty_cycle_dictionary"
+        "FRAMEWORK_TOPOLOGY",
+        "duty_cycle_dictionary",
+        "numerology_inventory"
       ],
       "git": [
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "f9b1c32",
+          "date": "2026-03-26",
+          "subject": "Prove duty cycle exponent equals group dimension (gap #6)"
         }
       ]
     },
@@ -731,6 +941,7 @@
         "gap_1_christoffel",
         "gauge_dictionary",
         "klein_connection",
+        "quantum_gravity_interpolation",
         "three_dimensions"
       ],
       "git": [
@@ -740,9 +951,19 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "f0db15b",
+          "date": "2026-03-25",
+          "subject": "Cross-reference D12, D13, D19: the load-bearing computation"
+        },
+        {
+          "hash": "5ade160",
+          "date": "2026-03-23",
+          "subject": "Derivation 13: Einstein from Kuramoto (QED) + \u03c3\u00b2 running corrections (#14)"
         }
       ]
     },
@@ -760,9 +981,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "5feb237",
+          "date": "2026-03-25",
+          "subject": "D21 + D22: open paths + engineering targets"
         }
       ]
     },
@@ -780,9 +1001,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "9228c64",
+          "date": "2026-03-25",
+          "subject": "D27: The exponent q\u2082q\u2083\u00b3 = 54 derived from first principles"
         }
       ]
     },
@@ -808,9 +1029,14 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "97812bc",
+          "date": "2026-03-25",
+          "subject": "D25: Omega_Lambda = 13/19 \u2014 the Farey partition"
         }
       ]
     },
@@ -828,9 +1054,37 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "0be807b",
+          "date": "2026-03-25",
+          "subject": "D28 strengthened: SO(2) invariance \u2192 only two scalars \u2192 unique partition"
+        },
+        {
+          "hash": "508fb3e",
+          "date": "2026-03-25",
+          "subject": "D28: Why the Farey partition \u2014 the proof"
+        }
+      ]
+    },
+    {
+      "id": "fermion_mass_running",
+      "path": "sync_cost/derivations/fermion_mass_running.md",
+      "title": "Fermion Mass Running from the K \u2192 \u03bc Map",
+      "summary": "The tree-level fermion mass formula (D34) gives mass ratios as\n(W_heavy/W_light)^a with sector exponents a = d \u2212 1/2 + charge/2.\nThe \u03c4/e ratio at a = 5/2 matches to 0.9%, but the \u03bc/e ratio has\na 37% residual. This residual is the tree-to-physical running\ncorrection. This derivation computes the correction from the K \u2192\n\u03bc mapping, closing the fermion mass gap (\u00a78.2).",
+      "depends_on": [
+        "beta_from_tongues",
+        "duty_cycle_dictionary",
+        "gauge_sector_lovelock",
+        "gell_mann_nishijima",
+        "generation_mechanism",
+        "higgs_from_tongue_boundary",
+        "three_dimensions"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "681a726",
+          "date": "2026-04-22",
+          "subject": "Fix BLAKE3/SHA-256 drift in CAS; put new derivations; harden scripts/ket.py"
         }
       ]
     },
@@ -848,9 +1102,24 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "52d844f",
+          "date": "2026-03-23",
+          "subject": "Resolve fidelity bound open items: C=1 coefficient and iteration-to-time"
+        },
+        {
+          "hash": "9ccff03",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#6)"
+        },
+        {
+          "hash": "45f2440",
+          "date": "2026-03-23",
+          "subject": "Derive RAR interpolating function from tongue self-consistency"
+        },
+        {
+          "hash": "dce795f",
+          "date": "2026-03-23",
+          "subject": "Derivation 9: self-referential fidelity bound unifying MOND and collapse"
         }
       ]
     },
@@ -871,9 +1140,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "daa4301",
+          "date": "2026-03-27",
+          "subject": "D37 figure-eight topology (agent still completing D38)"
         }
       ]
     },
@@ -898,6 +1167,35 @@
           "hash": "e1e25da",
           "date": "2026-04-13",
           "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "framework_status",
+      "path": "sync_cost/derivations/framework_status.md",
+      "title": "Framework status map",
+      "summary": "At-a-glance inventory. One line per item. Full analysis lives in the\nreferenced files; this is the bird's-eye view to prevent duplicate\nwork and re-derivation of eliminated content.",
+      "depends_on": [
+        "a0_threshold",
+        "a1_from_saddle_node",
+        "anchor_count_audit",
+        "baryon_fraction",
+        "basin_11_connection_exploration",
+        "born_rule",
+        "duty_cycle_dictionary",
+        "hierarchy_gaussian_lattice",
+        "klein_nodal_parity",
+        "numerology_inventory"
+      ],
+      "depended_on_by": [
+        "basin_11_connection_exploration",
+        "klein_nodal_parity"
+      ],
+      "git": [
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
         }
       ]
     },
@@ -1155,6 +1453,7 @@
       ],
       "depended_on_by": [
         "hierarchy_gaussian_lattice",
+        "numerology_inventory",
         "sinw_effective_dimension",
         "three_formalizations"
       ],
@@ -1202,6 +1501,9 @@
         "sinw_fixed_point"
       ],
       "depended_on_by": [
+        "anchor_count_audit",
+        "beta_from_tongues",
+        "fermion_mass_running",
         "gauge_dictionary",
         "gauge_factorization",
         "klein_connection",
@@ -1253,6 +1555,8 @@
       "summary": "The relation Q = T_3 + Y/2 between electric charge Q, weak isospin\nT_3, and hypercharge Y is not a postulate. It is the charge\ncomposition law at the Klein bottle's identification boundary, where\nthe antiperiodic (twisted) and periodic (untwisted) directions meet.",
       "depends_on": [],
       "depended_on_by": [
+        "beta_from_tongues",
+        "fermion_mass_running",
         "fourth_generation_revisited",
         "mass_sector_closure",
         "sector_constants_structure"
@@ -1290,8 +1594,11 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
+        "beta_from_tongues",
+        "fermion_mass_running",
         "fourth_generation_revisited",
-        "mixing_angle_audit"
+        "mixing_angle_audit",
+        "numerology_inventory"
       ],
       "git": [
         {
@@ -1300,9 +1607,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "16cda78",
+          "date": "2026-03-27",
+          "subject": "Derivation 34: The Generation Mechanism \u2014 three generations from phase-state observability"
         }
       ]
     },
@@ -1359,9 +1666,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "37cce94",
+          "date": "2026-03-25",
+          "subject": "D25 + D26: the cosmological parameters from three numbers"
         }
       ]
     },
@@ -1371,6 +1678,7 @@
       "title": "The Planck\u2013Hubble Hierarchy from Gaussian Lattice Index",
       "summary": "The Planck/Hubble hierarchy R is derived from the framework's\nthree quantities (q\u2082 = 2, q\u2083 = 3, d = 3) with zero free parameters:",
       "depends_on": [
+        "anchor_count_audit",
         "gap2_spatialization_decomposition",
         "gauge_dictionary",
         "gauge_factorization",
@@ -1380,17 +1688,25 @@
         "three_formalizations"
       ],
       "depended_on_by": [
+        "anchor_count_audit",
         "down_type_double_cover_closed",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_b",
+        "framework_status",
         "gap2_spatialization_decomposition",
         "gap2_sub_e_status_reconciled",
         "neutrino_mass_audit",
+        "numerology_inventory",
         "session_audit",
         "statistical_conventions",
         "three_formalizations"
       ],
       "git": [
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
+        },
         {
           "hash": "c83e5d0",
           "date": "2026-04-19",
@@ -1410,7 +1726,10 @@
       "summary": "The Higgs mechanism \u2014 the spontaneous breaking of SU(2) x U(1)_Y\nto U(1)_em \u2014 is the tongue boundary dynamics of the Klein bottle's\nopen q=2 fiber. The scalar doublet, the quartic potential, the\ntachyonic mass, and the vacuum expectation value all have geometric\norigins in the circle map's saddle-node bifurcation.",
       "depends_on": [],
       "depended_on_by": [
-        "FRAMEWORK_TOPOLOGY"
+        "FRAMEWORK_TOPOLOGY",
+        "anchor_count_audit",
+        "beta_from_tongues",
+        "fermion_mass_running"
       ],
       "git": [
         {
@@ -1469,9 +1788,44 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "5a57955",
+          "date": "2026-03-22",
+          "subject": "Consistency is required. The threshold moves."
+        },
+        {
+          "hash": "c3fae26",
+          "date": "2026-03-22",
+          "subject": "Add resolved RAR test framework for RC100 galaxies"
+        },
+        {
+          "hash": "600106d",
+          "date": "2026-03-22",
+          "subject": "Note that resolved RAR at z > 0.5 has never been published"
+        },
+        {
+          "hash": "8798e7e",
+          "date": "2026-03-22",
+          "subject": "Sharpen derivation 08: empirical a\u2080(z) extraction from RC100"
+        },
+        {
+          "hash": "811589d",
+          "date": "2026-03-22",
+          "subject": "Add RAR knee shift as near-term test of a\u2080(z) = cH(z)/(2\u03c0)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "b4e4b81",
+          "date": "2026-03-23",
+          "subject": "Add high-z MOND prediction markdown (08_high_z_mond.md)"
+        },
+        {
+          "hash": "7c80593",
+          "date": "2026-03-22",
+          "subject": "Add high-z MOND prediction markdown (08_high_z_mond.md)"
         }
       ]
     },
@@ -1493,9 +1847,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "4f819f3",
+          "date": "2026-03-26",
+          "subject": "Formalize trivial isotropy argument (gap #4): Kuramoto completeness lemma"
         }
       ]
     },
@@ -1611,10 +1965,12 @@
       "depended_on_by": [
         "CHAIN_KSTAR",
         "FRAMEWORK_TOPOLOGY",
+        "beta_from_tongues",
         "duty_cycle_dictionary",
         "gauge_dictionary",
         "gauge_factorization",
         "klein_connection",
+        "klein_nodal_parity",
         "second_law_topological",
         "vacuum_energy"
       ],
@@ -1625,9 +1981,49 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "e8126a1",
+          "date": "2026-03-25",
+          "subject": "D19: anomaly cancellation upgrades from numerology to structural"
+        },
+        {
+          "hash": "f0db15b",
+          "date": "2026-03-25",
+          "subject": "Cross-reference D12, D13, D19: the load-bearing computation"
+        },
+        {
+          "hash": "e96a704",
+          "date": "2026-03-25",
+          "subject": "Separate established from conjectural in D19"
+        },
+        {
+          "hash": "e90f6fc",
+          "date": "2026-03-25",
+          "subject": "Full continuity update: D19 status + INDEX through Phase 14"
+        },
+        {
+          "hash": "1df25d4",
+          "date": "2026-03-25",
+          "subject": "Field equation result + Pythagorean connection in D19"
+        },
+        {
+          "hash": "f1d4ad5",
+          "date": "2026-03-25",
+          "subject": "Add structural safety section; revise status and open questions"
+        },
+        {
+          "hash": "5664deb",
+          "date": "2026-03-25",
+          "subject": "Add 'Where time lives' section to D19"
+        },
+        {
+          "hash": "84f6622",
+          "date": "2026-03-25",
+          "subject": "Update D19 status with simulation results"
+        },
+        {
+          "hash": "42c3816",
+          "date": "2026-03-25",
+          "subject": "Add Derivation 19: Klein bottle \u2014 fully closed non-orientable container"
         }
       ]
     },
@@ -1650,6 +2046,8 @@
         "gap2_theorem_attempt",
         "gauge_factorization",
         "hierarchy_gaussian_lattice",
+        "klein_nodal_parity",
+        "numerology_inventory",
         "omega_b_residual_phase_a",
         "second_law_topological",
         "sinw_effective_dimension",
@@ -1693,6 +2091,32 @@
       ]
     },
     {
+      "id": "klein_nodal_parity",
+      "path": "sync_cost/derivations/klein_nodal_parity.md",
+      "title": "Klein nodal parity: a direct test of substrate non-orientability",
+      "summary": "**Proposed.** One suggestive image at (\u2113, m, n) = (5, 5, 1). The\nparity-ladder control runs that would discriminate the topological\nprediction from a coincidence have not been collected. This file is\nthe test specification, not a result.",
+      "depends_on": [
+        "basin_11_connection_exploration",
+        "born_rule",
+        "framework_status",
+        "klein_bottle",
+        "klein_bottle_derivation",
+        "numerology_inventory"
+      ],
+      "depended_on_by": [
+        "basin_11_connection_exploration",
+        "framework_status",
+        "numerology_inventory"
+      ],
+      "git": [
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
+        }
+      ]
+    },
+    {
       "id": "lie_group_characterization",
       "path": "sync_cost/derivations/lie_group_characterization.md",
       "title": "Lie Group Characterization Theorem",
@@ -1714,9 +2138,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "c12a9bb",
+          "date": "2026-03-23",
+          "subject": "Add Derivation 15: Lie group characterization theorem (#20)"
         }
       ]
     },
@@ -1732,6 +2156,7 @@
       "depended_on_by": [
         "CHAIN_KSTAR",
         "FRAMEWORK_TOPOLOGY",
+        "anchor_count_audit",
         "fourth_generation_revisited",
         "mixing_angle_audit",
         "neutrino_mass_audit"
@@ -1809,9 +2234,19 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "b4e4b81",
+          "date": "2026-03-23",
+          "subject": "Add high-z MOND prediction markdown (08_high_z_mond.md)"
+        },
+        {
+          "hash": "ac257ed",
+          "date": "2026-03-22",
+          "subject": "Add Planck scale and measurement collapse formalizations"
         }
       ]
     },
@@ -1832,9 +2267,19 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "bcae94e",
+          "date": "2026-03-25",
+          "subject": "D29: Why Stern-Brocot and not continuum or other discretization"
+        },
+        {
+          "hash": "254654b",
+          "date": "2026-03-25",
+          "subject": "D29: The mediant is not an axiom \u2014 it is derived"
         }
       ]
     },
@@ -1859,9 +2304,29 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "5ade160",
+          "date": "2026-03-23",
+          "subject": "Derivation 13: Einstein from Kuramoto (QED) + \u03c3\u00b2 running corrections (#14)"
+        },
+        {
+          "hash": "1252f4e",
+          "date": "2026-03-23",
+          "subject": "Derivations 10-12: alphabet, field equation, continuum limits, \u03c3\u00b2 running (#12)"
+        },
+        {
+          "hash": "9196c8e",
+          "date": "2026-03-23",
+          "subject": "Formalize Derivation 10, add field equation, fix INDEX (#11)"
+        },
+        {
+          "hash": "75eb713",
+          "date": "2026-03-23",
+          "subject": "Derivations 10 11 (#10)"
         }
       ]
     },
@@ -1876,7 +2341,8 @@
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
-        "klein_bottle_derivation"
+        "klein_bottle_derivation",
+        "spatial_coupling_derived"
       ],
       "git": [
         {
@@ -1885,9 +2351,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "cc96938",
+          "date": "2026-03-26",
+          "subject": "Derivation 32: Minkowski signature (3,1) from phase-state observability"
         }
       ]
     },
@@ -1929,9 +2395,14 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "87448a3",
+          "date": "2026-03-25",
+          "subject": "Add coherence length analysis: arm formation on M\u00f6bius ring"
+        },
+        {
+          "hash": "4335790",
+          "date": "2026-03-25",
+          "subject": "Add Derivation 18: M\u00f6bius container simulation target"
         }
       ]
     },
@@ -1956,6 +2427,55 @@
           "hash": "c83e5d0",
           "date": "2026-04-19",
           "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        }
+      ]
+    },
+    {
+      "id": "numerology_inventory",
+      "path": "sync_cost/derivations/numerology_inventory.md",
+      "title": "Numerology inventory",
+      "summary": "Compilation of framework predictions / observations that are confirmed\nnumerology, noted coincidences, or suspects \u2014 so we know what to stop\nchasing as if it were structural.",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "a0_threshold",
+        "a1_from_saddle_node",
+        "anchor_count_audit",
+        "baryon_fraction",
+        "born_rule",
+        "duty_cycle_dictionary",
+        "duty_dimension_proof",
+        "gauge_dictionary",
+        "generation_mechanism",
+        "hierarchy_gaussian_lattice",
+        "klein_bottle_derivation",
+        "klein_nodal_parity",
+        "sinw_effective_dimension",
+        "sinw_fixed_point",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY",
+        "anchor_count_audit",
+        "duty_cycle_dictionary",
+        "framework_status",
+        "klein_nodal_parity",
+        "rationality_descent"
+      ],
+      "git": [
+        {
+          "hash": "0882991",
+          "date": "2026-04-22",
+          "subject": "Duty-cycle-dictionary siblings: honest-null demotion (\u03b1_s/\u03b1_2, 1/\u03b1_em, m_H/v, \u03bb_H)"
+        },
+        {
+          "hash": "208359f",
+          "date": "2026-04-22",
+          "subject": "sin\u00b2\u03b8_W: honest-null demotion in MANIFEST and duty-cycle dictionary"
+        },
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
         }
       ]
     },
@@ -2011,7 +2531,9 @@
       "summary": "The Planck scale is not an imposed cutoff. It is the minimum domain\nwhere the synchronization substrate can sustain itself \u2014 the N = 3\nthreshold of the coupling loop.",
       "depends_on": [],
       "depended_on_by": [
-        "isotropy_lemma"
+        "anchor_count_audit",
+        "isotropy_lemma",
+        "quantum_gravity_interpolation"
       ],
       "git": [
         {
@@ -2020,9 +2542,65 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "c12a9bb",
+          "date": "2026-03-23",
+          "subject": "Add Derivation 15: Lie group characterization theorem (#20)"
+        },
+        {
+          "hash": "df629cb",
+          "date": "2026-03-23",
+          "subject": "Merge upstream main, resolve conflicts in 06_planck_scale.md"
+        },
+        {
+          "hash": "dec8e05",
+          "date": "2026-03-23",
+          "subject": "Classify all SL(2,R) subgroups to prove trivial stabilizer (#18)"
+        },
+        {
+          "hash": "60f0f10",
+          "date": "2026-03-24",
+          "subject": "Address trivial stabilizer condition in dimensionality argument (#17)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "b4e4b81",
+          "date": "2026-03-23",
+          "subject": "Add high-z MOND prediction markdown (08_high_z_mond.md)"
+        },
+        {
+          "hash": "ac257ed",
+          "date": "2026-03-22",
+          "subject": "Add Planck scale and measurement collapse formalizations"
+        }
+      ]
+    },
+    {
+      "id": "quantum_gravity_interpolation",
+      "path": "sync_cost/derivations/quantum_gravity_interpolation.md",
+      "title": "Quantum Gravity from the Rational Field Equation at K \u2248 1",
+      "summary": "The rational field equation (D11) is exact at all values of the\ncoupling parameter K. The K = 1 limit gives Einstein's field\nequations (D12, D13). The K < 1 linearized limit gives the\nSchr\u00f6dinger equation (D12). The K \u2248 1 regime \u2014 where both\ngravitational and quantum effects are comparable \u2014 is the\nframework's quantum gravity. This derivation characterizes the\ninterpolating dynamics and extracts its physical predictions.",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum",
+        "conservation_computability",
+        "continuum_limits",
+        "duty_cycle_dictionary",
+        "einstein_from_kuramoto",
+        "planck_scale",
+        "rational_field_equation",
+        "spatial_coupling_derived",
+        "speed_of_light"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "681a726",
+          "date": "2026-04-22",
+          "subject": "Fix BLAKE3/SHA-256 drift in CAS; put new derivations; harden scripts/ket.py"
         }
       ]
     },
@@ -2042,9 +2620,19 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "49a3c8d",
+          "date": "2026-03-24",
+          "subject": "Tighten Part V: corollaries A (Born rule), B (Einstein), C (d=3)"
+        },
+        {
+          "hash": "f7dbe68",
+          "date": "2026-03-24",
+          "subject": "Derivation 17: rank-1 Fr\u00e9chet derivative as temporal causation (#25)"
+        },
+        {
+          "hash": "3cab1df",
+          "date": "2026-03-24",
+          "subject": "Derivation 17: rank-1 Fr\u00e9chet derivative as temporal causation"
         }
       ]
     },
@@ -2059,7 +2647,8 @@
         "gap2_spatialization_decomposition",
         "gap_1_christoffel",
         "k_critical_phase_a",
-        "k_critical_phase_b"
+        "k_critical_phase_b",
+        "quantum_gravity_interpolation"
       ],
       "git": [
         {
@@ -2068,9 +2657,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "75eb713",
+          "date": "2026-03-23",
+          "subject": "Derivations 10 11 (#10)"
         }
       ]
     },
@@ -2078,10 +2667,11 @@
       "id": "rationality_descent",
       "path": "sync_cost/derivations/rationality_descent.md",
       "title": "Rationality descent: is the hidden algorithm real?",
-      "summary": "The framework's \"consistency-stipulated resolutions\" are Stern-Brocot\ndescent from the root `1/1` toward observables, under a finite\nvocabulary of primitive transformations. Every closed item has a\nfinite depth in the tree. Open items either have a candidate at\nreasonable depth (near closure) or fail (structurally hard).",
+      "summary": "The two **Tree-level only** examples in \u00a7\"canonical closures split into\nthree regimes\" below \u2014 `sin\u00b2\u03b8_W = 8/35 + 8/F_10\u00b2` and\n`\u03b1_s/\u03b1_2 = 27/8 + 1/q_3\u00b2` \u2014 were retracted in commits 208359f, 0882991,\neda8b60 as **fitted corrections, not derived**. They are still quoted\nhere as part of the descent-algorithm argument; the \u00a7\"Two-step\nclosures\" claim that \"the framework's actual closure is two-step\"\nshould be read as **hypothesis**, not established result. A rigorous\ndescent that reaches those residua",
       "depends_on": [
         "conservation_computability",
-        "item12_C_from_K_star"
+        "item12_C_from_K_star",
+        "numerology_inventory"
       ],
       "depended_on_by": [],
       "git": [
@@ -2230,9 +2820,9 @@
       ],
       "git": [
         {
-          "hash": "90652c7",
+          "hash": "cc58f06",
           "date": "2026-04-20",
-          "subject": "Drop chronology from A_s presentation layer"
+          "subject": "DRY sweep + A_s geometric proof + Z1-Z3 convention (#68)"
         }
       ]
     },
@@ -2250,8 +2840,11 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY",
+        "duty_cycle_dictionary",
         "hierarchy_gaussian_lattice",
         "neutrino_mass_audit",
+        "numerology_inventory",
         "sinw_fixed_point",
         "three_formalizations"
       ],
@@ -2272,9 +2865,12 @@
         "sinw_effective_dimension"
       ],
       "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY",
+        "duty_cycle_dictionary",
         "gauge_dictionary",
         "gauge_sector_lovelock",
         "klein_connection",
+        "numerology_inventory",
         "sinw_effective_dimension"
       ],
       "git": [
@@ -2292,6 +2888,31 @@
           "hash": "e1e25da",
           "date": "2026-04-13",
           "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "spatial_coupling_derived",
+      "path": "sync_cost/derivations/spatial_coupling_derived.md",
+      "title": "Spatial Coupling Derived from Gate Propagation",
+      "summary": "The derivation chain:",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum",
+        "continuum_limits",
+        "coupling_scales",
+        "minkowski_signature",
+        "speed_of_light",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "quantum_gravity_interpolation"
+      ],
+      "git": [
+        {
+          "hash": "681a726",
+          "date": "2026-04-22",
+          "subject": "Fix BLAKE3/SHA-256 drift in CAS; put new derivations; harden scripts/ket.py"
         }
       ]
     },
@@ -2316,9 +2937,39 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "0a20b6c",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#3)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "25e708f",
+          "date": "2026-03-22",
+          "subject": "Refactor: shared utils, cross-references, superseded notes"
+        },
+        {
+          "hash": "20568de",
+          "date": "2026-03-22",
+          "subject": "Reframe spectral tilt: mode-locking replaces cost function"
+        },
+        {
+          "hash": "bfc6ef5",
+          "date": "2026-03-22",
+          "subject": "Add epigraph to spectral tilt derivation"
+        },
+        {
+          "hash": "57cb9c0",
+          "date": "2026-03-22",
+          "subject": "Reorient repo around sync cost framework; add three derivations"
         }
       ]
     },
@@ -2343,9 +2994,34 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "37aef34",
+          "date": "2026-03-25",
+          "subject": "Remove resolved open questions from living documents"
+        },
+        {
+          "hash": "0a20b6c",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#3)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "25e708f",
+          "date": "2026-03-22",
+          "subject": "Refactor: shared utils, cross-references, superseded notes"
+        },
+        {
+          "hash": "20568de",
+          "date": "2026-03-22",
+          "subject": "Reframe spectral tilt: mode-locking replaces cost function"
         }
       ]
     },
@@ -2359,7 +3035,9 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
-        "duty_cycle_dictionary"
+        "duty_cycle_dictionary",
+        "quantum_gravity_interpolation",
+        "spatial_coupling_derived"
       ],
       "git": [
         {
@@ -2368,9 +3046,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "0a5bcb8",
+          "date": "2026-03-26",
+          "subject": "Add Derivation 31: Speed of Light as Gate Propagation (#28)"
         }
       ]
     },
@@ -2397,6 +3075,11 @@
         "neutrino_mass_audit"
       ],
       "git": [
+        {
+          "hash": "cc58f06",
+          "date": "2026-04-20",
+          "subject": "DRY sweep + A_s geometric proof + Z1-Z3 convention (#68)"
+        },
         {
           "hash": "c83e5d0",
           "date": "2026-04-19",
@@ -2449,14 +3132,18 @@
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
+        "beta_from_tongues",
         "duty_cycle_dictionary",
+        "fermion_mass_running",
         "gap2_step4_farey_laplacian",
         "gap2_theorem_attempt",
         "gap_2_spatial_diffusion",
         "hierarchy_gaussian_lattice",
         "isotropy_lemma",
         "klein_bottle_derivation",
+        "numerology_inventory",
         "sinw_effective_dimension",
+        "spatial_coupling_derived",
         "three_formalizations"
       ],
       "git": [
@@ -2471,9 +3158,14 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "fc926a2",
+          "date": "2026-03-23",
+          "subject": "Derivation 14: Three Dimensions from the Mediant (#15)"
         }
       ]
     },
@@ -2514,9 +3206,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "3f60310",
+          "date": "2026-03-25",
+          "subject": "D23: Three zeros and the 1+3 decomposition"
         }
       ]
     },
@@ -2534,9 +3226,24 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "0a20b6c",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#3)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "028f87b",
+          "date": "2026-03-22",
+          "subject": "Add two-force model: coherence vs decoherence at the golden ratio"
         }
       ]
     },
@@ -2562,9 +3269,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "7fb3846",
+          "date": "2026-03-25",
+          "subject": "D24: The cosmological constant problem dissolves"
         }
       ]
     },
@@ -2582,9 +3289,29 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "f62c568",
+          "date": "2026-03-24",
+          "subject": "Add derivation 16 and computational validation of variable denominator (#21)"
+        },
+        {
+          "hash": "1dab7df",
+          "date": "2026-03-24",
+          "subject": "Add expansion as tree deepening, missing dimension, no pure equilibrium"
+        },
+        {
+          "hash": "d892a55",
+          "date": "2026-03-24",
+          "subject": "Add bowed string (Kawano 2025) as physical M\u00f6bius strip instance"
+        },
+        {
+          "hash": "bc307ec",
+          "date": "2026-03-24",
+          "subject": "Add M\u00f6bius spiral topology and derivable division threshold"
+        },
+        {
+          "hash": "c5e7f60",
+          "date": "2026-03-24",
+          "subject": "Add Derivation 16: variable denominator (Hz with changing reference)"
         }
       ]
     },
@@ -2604,9 +3331,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "0d0dc5b",
+          "date": "2026-03-25",
+          "subject": "D20: XOR continuum limit \u2014 honest negative result"
         }
       ]
     },
@@ -2622,9 +3349,9 @@
       ],
       "git": [
         {
-          "hash": "b5a0742",
-          "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "hash": "7190a9b",
+          "date": "2026-03-26",
+          "subject": "Derive XOR parity filter from Klein bottle BCs (gap #5)"
         }
       ]
     }
