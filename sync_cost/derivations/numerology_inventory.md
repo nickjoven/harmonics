@@ -164,6 +164,20 @@ share the same vulnerability.
 - Needs derivation check — if `228` is framework-derived, structural;
   if fitted to match observation, numerology.
 
+### Klein nodal parity (odd-m Möbius vs even-m disjoint circles)
+
+- Test specification in `klein_nodal_parity.md`.
+- Prediction: at σ=+node, ω_rot=0, n=1, (ℓ, ℓ, 1) seed distributions
+  show a single Möbius-connected nodal curve for odd m and disjoint
+  great circles for even m, under the antipodal Z₂ quotient.
+- Current data: 1/5 configurations run. Suggestive at (5, 5, 1) but
+  not discriminating alone.
+- Upgrade criterion: parity alternation across ℓ = 2..6 at matched
+  parameters, confirmed by rotation-animation connectivity trace.
+- Rejection criterion: no consistent parity pattern → single-curve
+  observation at (5, 5, 1) is a configurational coincidence.
+- Class 4 until the control ladder runs.
+
 ---
 
 ## Class 5 — Explicitly NOT numerology per repo evidence

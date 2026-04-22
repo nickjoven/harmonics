@@ -81,6 +81,7 @@ numerology ensemble, not structural.
 | K_c(F_n/F_{n+1}) closed form | Explicit form beyond asymptotic δ⁻ⁿ scaling |
 | XOR-parity proof of 1:5:13 at depth 19 | Direct combinatorial proof on Klein quotient |
 | T2#7 measurement arc technical residuals | Iteration-to-time anchor, multi-tongue cascade, continuous K(t) |
+| Klein nodal parity (odd-m Möbius vs even-m disjoint circles) | Parity alternation across (ℓ, ℓ, 1) for ℓ = 2..6 at σ=+node, ω_rot=0 (`klein_nodal_parity.md`) |
 
 ## Out of class (absolute scales, anchor-dependent)
 
