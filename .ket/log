@@ -36,3 +36,16 @@
 2026-04-14T20:29:28Z | dag:create | 822f5e9267a8a04a557f01d31275cfc6d3d76210b36ae20e08ae70607089a2e2
 2026-04-14T20:29:28Z | dag:create | df80cbf889ddb4f312a3ef87d938982c013151da1ceca14b29fe730c0ea67344
 2026-04-14T20:29:28Z | dag:create | 19d89980634fecb28116c5c504f524d1ed2ba3ce705559c0eb523a0961d30125
+2026-04-22T20:54:48Z | put | sync_cost/derivations/FRAMEWORK_TOPOLOGY.md -> 40ddbaa23a64d12f15e5656e1752b7b079f8e2eec1cac438b11c38ffbfd875be
+2026-04-22T20:55:57Z | put | .ket/cas/663f287bada22ff41cb062bf74ba215ec05ebb8bbde610dbc938090267d03bf5 -> 663f287bada22ff41cb062bf74ba215ec05ebb8bbde610dbc938090267d03bf5
+2026-04-22T20:59:45Z | dag:create | d71c150fd1c7a096291befc7402a4be3199f1204de4b592bae83a80daca0e846
+2026-04-22T20:59:54Z | put | sync_cost/derivations/beta_from_tongues.md -> cdcad905d740b9dc4099f2045c5ca43b6696a06d59bf0532910d33d7d4a12857
+2026-04-22T20:59:54Z | put | sync_cost/derivations/beta_from_tongues.py -> 9be43f0c8b1a74089d9d4512c70bc35b2e92a8133183ad102f9c50f7a57eca2e
+2026-04-22T20:59:54Z | put | sync_cost/derivations/fermion_mass_running.md -> fd40b0a224c3a56304a8e44c71feb370a33148abd0e13d4f588d58fadbeb2362
+2026-04-22T20:59:54Z | put | sync_cost/derivations/fermion_mass_running.py -> 49a8f94413a4f0802497faf2807089f048cd0e187884b851593aa50f118b3f34
+2026-04-22T20:59:54Z | put | sync_cost/derivations/quantum_gravity_interpolation.md -> 89e3d7e89a9da3cf1abe72ae46b1efee155238cf61d3db3c0c38c496a5c323f9
+2026-04-22T20:59:54Z | put | sync_cost/derivations/spatial_coupling_derived.md -> ece574530cc25edfa2cb203e0043b784322725d496be71502362ee2ae62180d4
+2026-04-22T21:02:13Z | put | - -> 8925373ac006b898c46d57070dc05701f75fe93cef3c0bb3c51b2a71c2ad903b
+2026-04-22T21:02:13Z | put | - -> 8925373ac006b898c46d57070dc05701f75fe93cef3c0bb3c51b2a71c2ad903b
+2026-04-22T21:36:49Z | put | sync_cost/derivations/framework_constants.py -> 850599b3c4837660bb14bc0060542d562b9a3c80064d39aae3bc81f7d5989d93
+2026-04-22T21:36:50Z | dag:create | 2d4352e835681a96371dd524d450ec94ebcf65adfcba37c30fe18b77056810d5

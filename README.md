@@ -20,8 +20,15 @@ $q_3^2 - 1 = q_2^3$, generate the Standard Model gauge group, three
 generations, and matter-sector mass ratios at PDG precision.
 
 The frequency density $g(\omega)$ is the fixed point of its own
-self-consistency, not a free function. The only dimensionful input is
-the electroweak scale $v = 246$ GeV.
+self-consistency, not a free function. The framework has **two
+independent observational anchors** per
+[`anchor_count_audit.md`](sync_cost/derivations/anchor_count_audit.md):
+the cosmological scale $H_0$ (equivalently $\Lambda$, $\ell_P$, or
+$M_P$) and the particle-sector scale $v_\mathrm{EW} = 246$ GeV.
+Reducing to one would require a framework-derived dimensionless
+identity for $v/M_P$; the nearest numerology, $13^{-15}$, misses by
+3.1% and is not derived. Five explicit obstructions to closing the
+gap are catalogued in the audit.
 
 | Prediction | Value | Observed | Residual |
 |---|---|---|---|

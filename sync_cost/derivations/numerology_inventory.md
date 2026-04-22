@@ -36,26 +36,39 @@ coincidences.
 
 ### `sin²θ_W = 8/35 = 0.22857`
 
-- Residual vs MS-bar 0.23122: −1.15 %.
-- Source: `duty_cycle_dictionary.md` §3, claimed derivation
-  `sin²θ_W = q_2³/(q_2³+q_3³) = 8/35`.
-- **Disproof-of-structural evidence:** `sinW_running_check.py` final
-  verdict: "The tree-scale value 8/35 is a number-theoretic identity
-  (q_2³/(q_2³+q_3³)), and its 1.1% agreement with M_Z observation is
-  an accidental near-coincidence at the electroweak scale, not a
-  consequence of running from a high energy scale." SM 1-loop running
-  from Planck gives sin²θ_W ≈ 0.47 at M_Pl, running to ≈ 0.21 at
-  1 GeV — the 8/35 value appears naturally at ~54 GeV (unstructured
-  scale), not at the framework's declared "tree = Planck."
+- Gap vs MS-bar 0.23121: −1.15 %.
+- **Status in MANIFEST.yml: declined.** The framework does not
+  predict sin²θ_W at M_Z. The bare K=1 identity 8/35 is recorded
+  under `bare_k1_identities`, not under `scorecard`.
+- Source of the bare identity: `duty_dimension_proof.md`
+  (theorem `duty(q) = 1/q^d` at K=1), `three_dimensions.md` (d=3),
+  `klein_bottle_derivation.md` (q₂=2, q₃=3),
+  `gauge_dictionary.md` (sector assignment).
+- **Why no prediction at M_Z is made:**
+  - `sinW_running_check.py` shows SM 1-loop running is incompatible
+    with the framework's "tree = Planck" identification — the sign
+    of dsin²θ_W/dlnμ is opposite to what the tree → M_Z gap requires.
+  - `sinw_fixed_point.md` shows no K* ∈ [0.93, 0.99] reproduces
+    either α_s/α₂ or sin²θ_W at M_Z via finite-K duty dynamics.
+  - `sinw_effective_dimension.md` proposes d_eff = 80/27 → 0.23123
+    (0.5σ from PDG), but is explicitly conditional on three
+    unformalized steps (`sinw_effective_dimension.md:179–200`): the
+    "occupied interval → dimension reduction" step, the "only q₃
+    correction matters" step, and the scheme identification with
+    MS-bar at M_Z. Pending formalization — see Class 4 below.
 
 ### `1/α_em (tree) = q_2³ + q_3³ = 35`
 
-- Claimed at tree scale, observed 1/α_em(M_Z) ≈ 127.95.
-- Same problem as sin²θ_W: if tree = Planck, SM running does NOT take
-  35 to 127.95 over the Planck-to-M_Z range (factor 3.7 off).
-- Type B by the same analysis as sin²θ_W. The "tree = 35" is a
-  number-theoretic identity (sum of two cubes of framework primes)
-  without a scale-consistent derivation to observation.
+- **Status in MANIFEST.yml: declined.** Moved from `scorecard` to
+  `bare_k1_identities.inv_alpha_em_tree`.
+- Source of the bare identity: `duty_cycle_dictionary.md` §9,
+  `duty_dimension_proof.md`, `three_dimensions.md`,
+  `klein_bottle_derivation.md`.
+- Observed 1/α_em(M_Z) ≈ 127.95. If tree = Planck, SM running does
+  NOT take 35 to 127.95 over the Planck-to-M_Z range (factor 3.7
+  off). The "tree = 35" is a number-theoretic identity (sum of two
+  cubes of framework primes) without a scale-consistent derivation
+  to observation.
 
 ---
 
@@ -93,36 +106,70 @@ coincidences.
 ## Class 3 — Suspect by association (duty-cycle dictionary)
 
 The duty-cycle dictionary (`duty_cycle_dictionary.md`) produces
-multiple particle-sector predictions from `(q_2, q_3)` at an
+multiple particle-sector identities from `(q_2, q_3)` at an
 unspecified scale. Since the key item (sin²θ_W = 8/35) from this
 dictionary is Class 1 numerology, the others from the same ansatz
-share the same vulnerability.
+share the same vulnerability. All four have been demoted from
+`MANIFEST.yml:scorecard` to `MANIFEST.yml:bare_k1_identities`
+for consistency with the sin²θ_W resolution.
 
 ### `m_H / v = 1/q_2 = 1/2`
 
-- Residual vs 0.5087: −1.71 %.
-- Same "tree scale" issue: at what specific physical scale does the
-  framework predict m_H/v = 1/2? If Planck, running takes m_H
-  relative to v; if at M_Z (observed), the 1.7 % residual is what's
-  actually seen, which is the C2a particle floor.
-- Pending: individual audit of whether a running-couplings argument
-  derives m_H/v at some specific framework-internal scale.
+- **Status in MANIFEST.yml: declined.** Moved to
+  `bare_k1_identities.m_H_over_v`.
+- Gap vs 0.5087: −1.71 %.
+- Source: `duty_cycle_dictionary.md` §8 — "m_H is the lowest
+  excitation of the q = 2 tongue; its mass is set by the tongue's
+  repetition period (q_2 = 2)". The framework does not supply a
+  derivation that connects this K=1 identity to the observed value
+  at M_Z.
 
-### `λ_Higgs = 1/(2 q_2²) = 1/8`
+### `λ_Higgs = 1/q_2³ = 1/8`
 
-- Residual vs 0.1294: −3.36 %.
-- Derived in `duty_cycle_dictionary.md` from same (q_2) structure.
-- Same status pending.
+- **Status in MANIFEST.yml: declined.** Moved to
+  `bare_k1_identities.lambda_higgs`.
+- Gap vs 0.1294: −3.36 %.
+- Source: `duty_cycle_dictionary.md` §8 — bare K=1 duty of the q=2
+  sector, `duty(q_2) = 1/q_2^3 = 1/8`. Previous `+1/228` correction
+  in `framework_predictions.py` has been flagged as a fitted term
+  (228 = 12·19 is not framework-native; see Class 4 below).
 
 ### `α_s / α_2 = q_3³ / q_2³ = 27/8`
 
-- Residual vs 3.488 at M_Z: −3.24 %.
-- Derived from same duty ratios.
-- Suspect same status; possibly running-coupling artifact.
+- **Status in MANIFEST.yml: declined.** Moved to
+  `bare_k1_identities.alpha_s_over_alpha_2`.
+- Gap vs 3.488 at M_Z: −3.24 %.
+- Source: `duty_cycle_dictionary.md` §2 — ratio of bare duty cycles
+  at K=1. Same K → μ mapping issue as sin²θ_W: SM RG cannot connect
+  27/8 at the tree scale to 3.488 at M_Z in a framework-consistent
+  way, and no other derivation is supplied.
 
 ---
 
 ## Class 4 — Needs individual audit
+
+### `sin²θ_W` via effective dimension d_eff = 80/27
+
+- Proposed in `sinw_effective_dimension.md`. Replaces d → d_eff
+  in the bare formula, giving
+  sin²θ_W = 2^(80/27) / (2^(80/27) + 3^(80/27)) = 0.23123,
+  0.5σ from PDG MS-bar at M_Z.
+- Uses only {q₂, q₃, d} — no new dimensional input or free parameter.
+- Currently conditional on three unformalized steps
+  (`sinw_effective_dimension.md:179–200`):
+  1. "Occupied frequency interval → effective dimension reduction"
+     is geometrically motivated but not derived from integrating the
+     coupling over the complement of the q₃ tongue.
+  2. The asymmetric choice "only q₃ correction, not q₂" is
+     heuristic — a systematic perturbative expansion including the
+     q₂ correction and cross-terms has not been performed.
+  3. The identification of the root-level formula with MS-bar at M_Z
+     is motivated but not mapped onto the MS-bar subtraction procedure.
+- If all three steps are formalized, sin²θ_W should be promoted back
+  into `MANIFEST.yml:scorecard` with source
+  `[sinw_effective_dimension, duty_dimension_proof, three_dimensions,
+  klein_bottle_derivation, gauge_dictionary]`. Until then, not a
+  framework prediction.
 
 ### Generation-mass hierarchy 26 : 7 : 1
 
