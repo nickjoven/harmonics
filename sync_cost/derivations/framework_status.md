@@ -70,6 +70,7 @@ numerology ensemble, not structural.
 | H_inf from framework integers | `h_inf_status.md` (scale-free reframe: out of class) |
 | Mean-field Ψ Arnold-tongue structure | `klein_spectrum.py`, `kuramoto_induced_map.py` (Adler-only) |
 | Twist-map / KAM / cantorus / Lyapunov framings of the ψ_F visualizer | Source inspection confirms gradient descent on a static potential; category error. Mechanism notes in `klein_nodal_parity.md` and `basin_11_connection_exploration.md` |
+| Klein nodal parity (odd-m Möbius vs even-m disjoint arcs at σ=+node) | `klein_nodal_parity.md`: simulator uses Y², which is Z₂-symmetric for all ℓ. The (−1)^ℓ sign flip on Y doesn't survive squaring; dynamics cannot discriminate parity. |
 
 ## Proposed (needs audit or experimental input)
 
@@ -82,7 +83,6 @@ numerology ensemble, not structural.
 | K_c(F_n/F_{n+1}) closed form | Explicit form beyond asymptotic δ⁻ⁿ scaling |
 | XOR-parity proof of 1:5:13 at depth 19 | Direct combinatorial proof on Klein quotient |
 | T2#7 measurement arc technical residuals | Iteration-to-time anchor, multi-tongue cascade, continuous K(t) |
-| Klein nodal parity (odd-m Möbius vs even-m disjoint circles) | Parity alternation across (ℓ, ℓ, 1) for ℓ = 2..6 at σ=+node, ω_rot=0 (`klein_nodal_parity.md`) |
 | Basin 1/1 connection topology at Q=19 | Basin map shows 1:5:13 tiering and Fibonacci neighbors as direct boundary partners (`basin_11_connection_exploration.md`) |
 
 ## Out of class (absolute scales, anchor-dependent)
