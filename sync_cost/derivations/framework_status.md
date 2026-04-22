@@ -71,6 +71,7 @@ numerology ensemble, not structural.
 | Mean-field Ψ Arnold-tongue structure | `klein_spectrum.py`, `kuramoto_induced_map.py` (Adler-only) |
 | Twist-map / KAM / cantorus / Lyapunov framings of the ψ_F visualizer | Source inspection confirms gradient descent on a static potential; category error. Mechanism note in `klein_nodal_parity.md` |
 | Klein nodal parity (odd-m Möbius vs even-m disjoint arcs at σ=+node) | `klein_nodal_parity.md`: simulator uses Y², which is Z₂-symmetric for all ℓ. The (−1)^ℓ sign flip on Y doesn't survive squaring; dynamics cannot discriminate parity. |
+| λ_H = 1/q_2³ + 1/228 correction | `framework_predictions.py:268` and `numerology_inventory.md` Class 1: 1/228 confirmed fitted (not framework-derived); correction removed. Bare identity λ_H = 1/q_2³ = 1/8 remains a declined `bare_k1_identities` entry with 3.4% residual. |
 
 ## Proposed (needs audit or experimental input)
 
@@ -78,7 +79,6 @@ numerology ensemble, not structural.
 |---|---|
 | K_STAR¹⁴ = 1/8 (τ-mass chain step 6) | σ(m_τ) < 0.03 MeV at Belle II / BESIII |
 | 26:7:1 generation hierarchy | Framework-derived rational exponent a matching observed m_μ/m_e and m_τ/m_μ simultaneously |
-| λ_H = 1/q_2³ + 1/228 correction | Framework origin for 228 = 12·19 |
 | N_efolds = √5 / rate ≈ 61.3 | Framework-internal derivation independent of observed n_s |
 | K_c(F_n/F_{n+1}) closed form | Explicit form beyond asymptotic δ⁻ⁿ scaling |
 | T2#7 measurement arc technical residuals | Iteration-to-time anchor, multi-tongue cascade, continuous K(t) |

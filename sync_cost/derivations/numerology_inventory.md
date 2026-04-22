@@ -70,6 +70,24 @@ coincidences.
   cubes of framework primes) without a scale-consistent derivation
   to observation.
 
+### `+1/228` correction to λ_H (removed as fitted)
+
+- Previously proposed in `framework_predictions.py`:
+  `lambda = 1/q_2^3 + 1/228`, giving a close match to observed
+  λ_H ≈ 0.1294 at M_Z.
+- 228 = 12·19 = q_2²·q_3·|F_7|. Although the prime factorization
+  uses only framework integers, no derivation of the additive
+  correction form `+1/(q_2²·q_3·|F_7|)` from tree-scale running,
+  loop-correction structure, or substrate combinatorics exists.
+- **Audited and removed** in `framework_predictions.py:268`:
+  "the prior `+ 1/228` correction was removed: it is a fitted
+  term, not derived." The bare K=1 identity `λ_H = 1/q_2³ = 1/8`
+  remains a `bare_k1_identities` entry with 3.4% residual to
+  observation, consistent with the other duty-cycle dictionary
+  items declined in Class 3.
+- Status: confirmed fitted / numerology. Framework-status row
+  moved from Proposed to Eliminated.
+
 ---
 
 ## Class 2 — Noted coincidences (no framework claim)
@@ -216,15 +234,6 @@ for consistency with the sin²θ_W resolution.
   predict N_efolds independently; it's inverted from n_s).
 - Borderline: structural math, but numerical match requires
   observational anchor.
-
-### Higgs self-coupling corrections (e.g. `1/q_2³ + 1/228`)
-
-- `framework_predictions.py` line 268: "m_H = sqrt(2 lambda v²),
-  lambda = 1/q_2³ + 1/228".
-- The `1/228` correction: 228 = 12·19 = 4·3·19. Not obviously
-  framework-native. Might be a fitted/post-hoc correction.
-- Needs derivation check — if `228` is framework-derived, structural;
-  if fitted to match observation, numerology.
 
 ---
 
