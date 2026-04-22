@@ -237,15 +237,24 @@ Based on this inventory:
 
 ## Implication for "zero free parameters"
 
-The framework's "zero free parameters" language should be qualified
-as **"zero free parameters beyond two observational anchors, with
-particle-sector numerology setting a ~3 % cloud of Class 1 and
-Class 3 items that have no structural derivation."**
+"Zero free parameters" is a legitimate claim about specific
+dimensionless predictions passing Z1–Z3. It is NOT a legitimate
+claim about the framework's overall dimensional input count, which
+is canonically **two observational anchors** (see
+`anchor_count_audit.md` for the obstructions preventing closure
+to one).
 
-The honest statement is more modest than "all predictions are
-framework-derived." Some are, and some are clean; the particle-
-sector dictionary predictions are partly numerology. That is an
-important distinction for the framework's credibility.
+Separately, the particle-sector predictions include a ~3%
+numerology cloud of Class 1 and Class 3 items with no structural
+derivation. These should not be invoked under "zero free
+parameters" language either — they are genuine numerical
+coincidences, not derived quantities.
+
+The honest statement is: specific predictions pass Z1–Z3 cleanly
+and may be called "zero free parameters" in isolation; the
+framework as a whole currently has two dimensional inputs and a
+~3% particle-sector numerology cloud alongside the structurally
+derived content.
 
 ## Cross-references
 

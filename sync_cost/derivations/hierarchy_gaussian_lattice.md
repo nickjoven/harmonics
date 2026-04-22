@@ -123,9 +123,13 @@ only — if it were derivable from framework structure, the anchor
 count would reduce to one. That derivation is an open item and
 would effectively solve the hierarchy problem in framework terms.
 
-The framework's "zero free parameters" language should be read as
-"zero free parameters beyond two observational anchors" — one per
-sector — until that link is proven.
+The current minimum dimensional input is **two observational anchors**
+(H_0 cosmological, v_EW particle-sector). The framework does not yet
+have a structural identity reducing them to one. "Zero free parameters"
+is a valid claim about specific dimensionless predictions passing Z1–Z3,
+but it is not a valid claim about the framework's overall dimensional
+input count. The obstructions preventing closure to one anchor are
+catalogued in `anchor_count_audit.md`.
 
 ### Sub-problem E (spatialization) is closed
 

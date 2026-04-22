@@ -86,16 +86,20 @@ numerology ensemble, not structural.
 
 | Item | Anchor required |
 |---|---|
-| H_inf in GeV | H_0 (or equivalent) |
+| H_inf in GeV | H_0 (cosmological anchor) |
 | τ_unlock(n) in seconds | H_0 |
 | Reheating temperature in K | H_0 |
 | Inflation-end time in seconds | H_0 |
 | Absolute M_Planck in kg | H_0 |
 | Tensor-to-scalar r (absolute) | H_0 + scale factor |
+| Absolute lepton/quark/gauge-boson masses | v_EW (particle-sector anchor) |
+| ℏ, c, G in absolute units | v_EW |
 
-Ratios among these are in class (MacKay-scaling on Z₂ quotient);
-absolute values require one observational anchor (see
-`anchor_count_audit.md` for the two-anchor status).
+Ratios within each sector are in class (MacKay-scaling on Z₂ quotient
+for cosmology; dimensionless couplings for particles). Absolute values
+require **two** observational anchors — one cosmological (H_0), one
+particle-sector (v_EW) — whose reduction to one is an open item; see
+`anchor_count_audit.md` for the five specific obstructions.
 
 ---
 

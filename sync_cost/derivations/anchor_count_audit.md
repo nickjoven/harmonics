@@ -119,28 +119,69 @@ The inclusion of v_EW here is incorrect given the current repo state.
 v_EW is *not* derived from H_0 or Λ via any documented dimensionless
 identity. The sentence should be softened or v_EW removed.
 
-Similarly, any claim that the framework has "zero free parameters
-except one anchor" should be restated as "zero free parameters
-except two anchors (one cosmological, one particle-sector)."
+Canonical statement: the current minimum dimensional input is **two
+observational anchors** — one cosmological (H_0 or equivalent), one
+particle-sector (v_EW or equivalent). "Zero free parameters" is a
+legitimate claim about specific dimensionless predictions that pass
+Z1–Z3, but it is not a legitimate claim about the framework's overall
+dimensional input count. The two-anchor minimum stands until one of
+the obstructions below is removed.
 
-## Path to closing the gap
+## Obstructions to reducing the second anchor
 
-The framework would reduce to a single anchor if one of:
+Reducing the dimensional input from two to one is blocked by five
+specific obstructions. They are not independent — lifting one may
+lift others — but each is distinct and requires its own argument.
 
-1. **A framework-derived dimensionless identity v/M_P = f(integers)**
-   is found. The 13⁻¹⁵ near-match at 3.1% is suggestive but not
-   derived; if someone can produce a combinatorial / topological
-   argument for v/M_P = 13⁻¹⁵ exactly (or with a structural
-   correction), that closes the anchor gap. This would be a
-   *hierarchy-problem solution* in framework terms.
+1. **No structural identity for v/M_P.** The dimensionless ratio
+   v_EW/M_P ≈ 2.02·10⁻¹⁷ is not expressed as a framework-integer
+   function. The nearest suggestive form, 13⁻¹⁵ = 1.954·10⁻¹⁷, is
+   off by 3.1% and has no combinatorial derivation
+   (`yukawa_mediant_cascade.py`, `z_30_substrate_check.py` both
+   null; logged Class 2 in `numerology_inventory.md`).
 
-2. **v_EW reinterpreted as a pure number (framework-native)** rather
-   than a separate scale. E.g., if the root oscillator frequency ω_0
-   = v_EW/ℏ is pinned by framework structure independently, then v
-   becomes a derived quantity. Not yet done.
+2. **No Fibonacci-depth count for the electroweak hierarchy.** The
+   cosmological hierarchy has 145.8 Fibonacci levels between Planck
+   and Hubble (`planck_scale.md`). No analogous depth count exists
+   Planck-to-EW. An identity of the form R_EW = f(framework integers)
+   analogous to R = 6·13⁵⁴ has not been constructed.
 
-3. **Framework restricts to one sector at a time.** Accept two-anchor
-   status as honest; re-state "zero free parameters" as sector-specific.
+3. **No framework-native definition of ω₀ = v_EW/ℏ.** If the
+   electroweak oscillator frequency were structurally pinned — e.g.,
+   as the tongue-boundary frequency of a fundamental locking on the
+   Klein substrate — v_EW would derive. Currently v_EW is put in by
+   hand as 246 GeV with no substrate-side mechanism identified.
+
+4. **Coordinate/frame decomposition not established.** Conceptually,
+   the two anchors might be a (coordinate, frame) pair: one the
+   structural scale given by the substrate's own geometry (frame,
+   not chosen), the other a free parameter selecting where on the
+   substrate the universe sits (coordinate, chosen). If that
+   decomposition holds, only one of the two is a genuine free
+   decision. But no derivation identifies which is which or shows
+   either is substrate-intrinsic rather than free.
+
+5. **Structural decoupling of the two sectors.** Cosmological
+   derivations (R, Λ, Ω partition) and particle derivations
+   (couplings, mass ratios, gauge group) currently close
+   *separately*. No cross-sector structural constraint — no shared
+   integer, no shared depth count, no shared tongue — forces them
+   to share an anchor. Finding such a constraint, even without
+   reducing the count, would be the first substantive step.
+
+### What each obstruction would unlock
+
+| Obstruction lifted | Effect |
+|---|---|
+| #1 | Anchor count closes to one directly (hierarchy problem framework-solved) |
+| #2 | Same as #1, via the analog-of-R route |
+| #3 | v_EW becomes derived, H_0 becomes the single remaining anchor |
+| #4 | Identifies which anchor is free and which is structural; may show count is already one conceptually |
+| #5 | Provides the structural scaffolding for #1–#4; necessary condition for their derivation |
+
+Until at least one of these obstructions is removed by explicit
+derivation, the dimensional input minimum is canonically **two**.
+The framework should not claim otherwise in any summary language.
 
 ## Status
 
