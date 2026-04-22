@@ -26,6 +26,19 @@
           }
         ]
       }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && python3 scripts/hooks/post_edit_regen.py || true",
+            "timeout": 30,
+            "statusMessage": "Regenerating Pages views..."
+          }
+        ]
+      }
     ]
   }
 }
