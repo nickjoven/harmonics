@@ -1,5 +1,5 @@
 {
-  "generated": "f29af9a75e36af6b8b1db27002d8b5c0f226663b",
+  "generated": "163513dc626e9e06f67ea9500c5b8af794b5b479",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -49,9 +49,9 @@
       ],
       "git": [
         {
-          "hash": "eda8b60",
+          "hash": "dffc200",
           "date": "2026-04-22",
-          "subject": "Two-anchor correction, M_W/M_Z demotion, ket retraction of fitted corrections"
+          "subject": "Claude/audit dependency chain zq3f2 (#70)"
         },
         {
           "hash": "e387fe3",
@@ -322,15 +322,23 @@
       "path": "sync_cost/derivations/baryon_fraction.md",
       "title": "The Baryon Fraction",
       "summary": "The cosmic energy budget partitions into three sectors from the\nsingle number 19 (the Klein bottle's total budget from D25):",
-      "depends_on": [],
+      "depends_on": [
+        "gell_mann_nishijima"
+      ],
       "depended_on_by": [
         "basin_11_connection_exploration",
         "framework_status",
         "numerology_inventory",
         "omega_b_residual_phase_a",
-        "omega_b_residual_phase_b"
+        "omega_b_residual_phase_b",
+        "omega_partition_combinatorial"
       ],
       "git": [
+        {
+          "hash": "dc466d8",
+          "date": "2026-04-22",
+          "subject": "Claude/vocabulary attribution audit 2j xt k (#71)"
+        },
         {
           "hash": "bab48f4",
           "date": "2026-04-07",
@@ -348,10 +356,7 @@
         "framework_status",
         "klein_nodal_parity"
       ],
-      "depended_on_by": [
-        "framework_status",
-        "klein_nodal_parity"
-      ],
+      "depended_on_by": [],
       "git": [
         {
           "hash": "2a285e4",
@@ -379,9 +384,9 @@
       ],
       "git": [
         {
-          "hash": "681a726",
+          "hash": "dffc200",
           "date": "2026-04-22",
-          "subject": "Fix BLAKE3/SHA-256 drift in CAS; put new derivations; harden scripts/ket.py"
+          "subject": "Claude/audit dependency chain zq3f2 (#70)"
         }
       ]
     },
@@ -396,7 +401,6 @@
       "depended_on_by": [
         "a1_from_saddle_node",
         "framework_status",
-        "klein_nodal_parity",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
         "numerology_inventory",
@@ -882,14 +886,9 @@
       ],
       "git": [
         {
-          "hash": "0882991",
+          "hash": "dffc200",
           "date": "2026-04-22",
-          "subject": "Duty-cycle-dictionary siblings: honest-null demotion (\u03b1_s/\u03b1_2, 1/\u03b1_em, m_H/v, \u03bb_H)"
-        },
-        {
-          "hash": "208359f",
-          "date": "2026-04-22",
-          "subject": "sin\u00b2\u03b8_W: honest-null demotion in MANIFEST and duty-cycle dictionary"
+          "subject": "Claude/audit dependency chain zq3f2 (#70)"
         },
         {
           "hash": "e1e25da",
@@ -1012,12 +1011,22 @@
       "path": "sync_cost/derivations/farey_partition.md",
       "title": "The Farey Partition",
       "summary": "**Computed**:\n- \u03a9_\u039b = 13/19 = 0.6842 vs observed 0.6847 \u00b1 0.0073 (0.07\u03c3)\n- The operator is the Farey count at the interaction scale q\u2082q\u2083 = 6\n- All inputs are from the Klein bottle topology",
-      "depends_on": [],
+      "depends_on": [
+        "omega_partition_combinatorial"
+      ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
+        "framework_status",
+        "numerology_inventory",
+        "omega_partition_combinatorial",
         "vacuum_energy"
       ],
       "git": [
+        {
+          "hash": "dc466d8",
+          "date": "2026-04-22",
+          "subject": "Claude/vocabulary attribution audit 2j xt k (#71)"
+        },
         {
           "hash": "e1e25da",
           "date": "2026-04-13",
@@ -1082,9 +1091,9 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "681a726",
+          "hash": "dffc200",
           "date": "2026-04-22",
-          "subject": "Fix BLAKE3/SHA-256 drift in CAS; put new derivations; harden scripts/ket.py"
+          "subject": "Claude/audit dependency chain zq3f2 (#70)"
         }
       ]
     },
@@ -1180,18 +1189,25 @@
         "a1_from_saddle_node",
         "anchor_count_audit",
         "baryon_fraction",
-        "basin_11_connection_exploration",
         "born_rule",
         "duty_cycle_dictionary",
+        "farey_partition",
         "hierarchy_gaussian_lattice",
         "klein_nodal_parity",
-        "numerology_inventory"
+        "numerology_inventory",
+        "omega_partition_combinatorial"
       ],
       "depended_on_by": [
         "basin_11_connection_exploration",
-        "klein_nodal_parity"
+        "klein_nodal_parity",
+        "omega_partition_combinatorial"
       ],
       "git": [
+        {
+          "hash": "dc466d8",
+          "date": "2026-04-22",
+          "subject": "Claude/vocabulary attribution audit 2j xt k (#71)"
+        },
         {
           "hash": "2a285e4",
           "date": "2026-04-22",
@@ -1555,10 +1571,12 @@
       "summary": "The relation Q = T_3 + Y/2 between electric charge Q, weak isospin\nT_3, and hypercharge Y is not a postulate. It is the charge\ncomposition law at the Klein bottle's identification boundary, where\nthe antiperiodic (twisted) and periodic (untwisted) directions meet.",
       "depends_on": [],
       "depended_on_by": [
+        "baryon_fraction",
         "beta_from_tongues",
         "fermion_mass_running",
         "fourth_generation_revisited",
         "mass_sector_closure",
+        "omega_partition_combinatorial",
         "sector_constants_structure"
       ],
       "git": [
@@ -2046,7 +2064,6 @@
         "gap2_theorem_attempt",
         "gauge_factorization",
         "hierarchy_gaussian_lattice",
-        "klein_nodal_parity",
         "numerology_inventory",
         "omega_b_residual_phase_a",
         "second_law_topological",
@@ -2094,13 +2111,10 @@
       "id": "klein_nodal_parity",
       "path": "sync_cost/derivations/klein_nodal_parity.md",
       "title": "Klein nodal parity: a direct test of substrate non-orientability",
-      "summary": "**Proposed.** One suggestive image at (\u2113, m, n) = (5, 5, 1). The\nparity-ladder control runs that would discriminate the topological\nprediction from a coincidence have not been collected. This file is\nthe test specification, not a result.",
+      "summary": "**Retracted (2026-04-22).** The test as formulated cannot discriminate\neven from odd \u2113, because the potential the simulator uses is Z\u2082-\nsymmetric for all \u2113. The derivation below shows why; the\nparity-ladder control runs would have been uninformative even if\ncollected. This file is kept as a record of the null result.",
       "depends_on": [
-        "basin_11_connection_exploration",
-        "born_rule",
         "framework_status",
         "klein_bottle",
-        "klein_bottle_derivation",
         "numerology_inventory"
       ],
       "depended_on_by": [
@@ -2109,6 +2123,11 @@
         "numerology_inventory"
       ],
       "git": [
+        {
+          "hash": "dc466d8",
+          "date": "2026-04-22",
+          "subject": "Claude/vocabulary attribution audit 2j xt k (#71)"
+        },
         {
           "hash": "2a285e4",
           "date": "2026-04-22",
@@ -2444,14 +2463,17 @@
         "born_rule",
         "duty_cycle_dictionary",
         "duty_dimension_proof",
+        "farey_partition",
         "gauge_dictionary",
         "generation_mechanism",
         "hierarchy_gaussian_lattice",
         "klein_bottle_derivation",
         "klein_nodal_parity",
+        "omega_partition_combinatorial",
         "sinw_effective_dimension",
         "sinw_fixed_point",
-        "three_dimensions"
+        "three_dimensions",
+        "xor_derivation"
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
@@ -2463,14 +2485,14 @@
       ],
       "git": [
         {
-          "hash": "0882991",
+          "hash": "dc466d8",
           "date": "2026-04-22",
-          "subject": "Duty-cycle-dictionary siblings: honest-null demotion (\u03b1_s/\u03b1_2, 1/\u03b1_em, m_H/v, \u03bb_H)"
+          "subject": "Claude/vocabulary attribution audit 2j xt k (#71)"
         },
         {
-          "hash": "208359f",
+          "hash": "dffc200",
           "date": "2026-04-22",
-          "subject": "sin\u00b2\u03b8_W: honest-null demotion in MANIFEST and duty-cycle dictionary"
+          "subject": "Claude/audit dependency chain zq3f2 (#70)"
         },
         {
           "hash": "2a285e4",
@@ -2488,12 +2510,18 @@
         "baryon_fraction",
         "boundary_weight",
         "down_type_double_cover_closed",
-        "klein_bottle_derivation"
+        "klein_bottle_derivation",
+        "omega_partition_combinatorial"
       ],
       "depended_on_by": [
         "omega_b_residual_phase_b"
       ],
       "git": [
+        {
+          "hash": "dc466d8",
+          "date": "2026-04-22",
+          "subject": "Claude/vocabulary attribution audit 2j xt k (#71)"
+        },
         {
           "hash": "c83e5d0",
           "date": "2026-04-19",
@@ -2521,6 +2549,32 @@
           "hash": "c83e5d0",
           "date": "2026-04-19",
           "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        }
+      ]
+    },
+    {
+      "id": "omega_partition_combinatorial",
+      "path": "sync_cost/derivations/omega_partition_combinatorial.md",
+      "title": "\u03a9 partition: combinatorial derivation at depth 19",
+      "summary": "**Derived.** Both halves of the \u03a9 partition follow from independent\ncombinatorial arguments rooted in the Klein bottle's Z\u2082 structure:",
+      "depends_on": [
+        "baryon_fraction",
+        "farey_partition",
+        "framework_status",
+        "gell_mann_nishijima",
+        "xor_derivation"
+      ],
+      "depended_on_by": [
+        "farey_partition",
+        "framework_status",
+        "numerology_inventory",
+        "omega_b_residual_phase_a"
+      ],
+      "git": [
+        {
+          "hash": "dc466d8",
+          "date": "2026-04-22",
+          "subject": "Claude/vocabulary attribution audit 2j xt k (#71)"
         }
       ]
     },
@@ -2598,9 +2652,9 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "681a726",
+          "hash": "dffc200",
           "date": "2026-04-22",
-          "subject": "Fix BLAKE3/SHA-256 drift in CAS; put new derivations; harden scripts/ket.py"
+          "subject": "Claude/audit dependency chain zq3f2 (#70)"
         }
       ]
     },
@@ -2675,6 +2729,11 @@
       ],
       "depended_on_by": [],
       "git": [
+        {
+          "hash": "dffc200",
+          "date": "2026-04-22",
+          "subject": "Claude/audit dependency chain zq3f2 (#70)"
+        },
         {
           "hash": "e387fe3",
           "date": "2026-04-14",
@@ -2910,9 +2969,9 @@
       ],
       "git": [
         {
-          "hash": "681a726",
+          "hash": "dffc200",
           "date": "2026-04-22",
-          "subject": "Fix BLAKE3/SHA-256 drift in CAS; put new derivations; harden scripts/ket.py"
+          "subject": "Claude/audit dependency chain zq3f2 (#70)"
         }
       ]
     },
@@ -3345,7 +3404,9 @@
       "depends_on": [],
       "depended_on_by": [
         "gauge_factorization",
-        "klein_bottle_derivation"
+        "klein_bottle_derivation",
+        "numerology_inventory",
+        "omega_partition_combinatorial"
       ],
       "git": [
         {

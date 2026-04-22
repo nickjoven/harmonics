@@ -14,7 +14,6 @@ Usage:
 
 import html
 import json
-import datetime
 from pathlib import Path
 
 import yaml
@@ -96,8 +95,6 @@ def render_bare_row(key, entry):
 
 
 def render(manifest: dict) -> str:
-    generated = datetime.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
-
     # --- Summary counts ---
     scorecard = manifest.get("scorecard", {})
     bare = manifest.get("bare_k1_identities", {})
@@ -107,11 +104,14 @@ def render(manifest: dict) -> str:
     proof_chains = manifest.get("proof_chains", {})
 
     # --- Header / summary ---
+    # Intentionally no generation timestamp: keeps this page idempotent
+    # so the regen hook produces empty diffs when MANIFEST is unchanged.
+    # The true "last updated" timestamp is `git log -1 MANIFEST.yml`.
     summary = (
         f"<p class=\"subtitle\">One canonical view of the claim chain, "
         f"generated from "
         f"<a href=\"https://github.com/nickjoven/harmonics/blob/main/MANIFEST.yml\">"
-        f"MANIFEST.yml</a> on {generated}. "
+        f"MANIFEST.yml</a>. "
         f"Scorecard: {len(scorecard)} predictions with explicit derivations. "
         f"Bare K=1 identities: {len(bare)} reference values the framework declines "
         f"to predict at M_Z. Two observational anchors "
