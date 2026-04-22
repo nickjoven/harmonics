@@ -193,6 +193,11 @@ determines the RATIO Ω_Λ/Ω_m but not the absolute energy density.
 The hierarchy (why Λ is small in Planck units) remains the open
 question from D24.
 
+**Further subdivision** (Ω_b : Ω_DM = 1 : 5) is derived separately
+in `omega_partition_combinatorial.md` via Z₂ representation theory
+on coprime-pair antisym eigenmodes + EM cross-sector criterion.
+Together, the full 13 : 5 : 1 / 19 partition is structural.
+
 **Conditional on**: the identification of the Klein bottle mode
 spectrum with the physical configuration space (D19, conjectural
 for the particle physics connection, but the cosmological partition

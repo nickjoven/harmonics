@@ -212,10 +212,21 @@ share the same vulnerability.
 
 ### Ω partition 1:5:13/19
 
-- Derived in `baryon_fraction.md` via Farey partition + Z_6 residue
-  classes + antiperiodic identification. Structural (though the
-  internal Ω_b = 1/19 has the C2b floor at 11σ — that's a finite-
-  depth structural residual, not numerology).
+- Derived in two stages, both combinatorial, zero free parameters:
+  - 13:6 (Ω_Λ:Ω_m) from Farey count |F_6|, φ(7), |F_7|
+    (`farey_partition.md`)
+  - 1:5 (Ω_b:Ω_DM) from Z₂ representation theory on coprime-pair
+    antisym modes + EM cross-sector criterion
+    (`omega_partition_combinatorial.md`, `baryon_fraction.md`)
+- Structural. The prior "XOR-parity proof of 1:5:13 at depth 19"
+  Proposed item was the wrong target; the actual mechanisms are
+  Farey counting and Z₂-rep-theory eigenmode decomposition, not
+  the mode-pair XOR filter from `xor_derivation.md` (which is a
+  different Z₂ structure).
+- Ω_b = 1/19 has a 6.7% observational residual attributed to
+  Klein-eigenmode width asymmetry (sym/antisym tongue widths) and
+  the boundary-weight / decoherence corrections — finite-depth
+  structural residual, not numerology.
 
 ---
 
