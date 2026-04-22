@@ -1,5 +1,5 @@
 {
-  "generated": "088299133e640d185bce33ade027782583c02f0d",
+  "generated": "f29af9a75e36af6b8b1db27002d8b5c0f226663b",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -49,6 +49,11 @@
       ],
       "git": [
         {
+          "hash": "eda8b60",
+          "date": "2026-04-22",
+          "subject": "Two-anchor correction, M_W/M_Z demotion, ket retraction of fitted corrections"
+        },
+        {
           "hash": "e387fe3",
           "date": "2026-04-14",
           "subject": "Archive stale derivations and consolidate framework constants (#61)"
@@ -78,15 +83,17 @@
         "mediant_derivation",
         "minimum_alphabet",
         "minkowski_signature",
+        "quantum_gravity_interpolation",
+        "spatial_coupling_derived",
         "speed_of_light",
         "stribeck_vortex",
         "three_dimensions"
       ],
       "git": [
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
         }
       ]
     },
@@ -109,15 +116,17 @@
         "mediant_derivation",
         "minimum_alphabet",
         "minkowski_signature",
+        "quantum_gravity_interpolation",
+        "spatial_coupling_derived",
         "speed_of_light",
         "stribeck_vortex",
         "three_dimensions"
       ],
       "git": [
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
         }
       ]
     },
@@ -143,9 +152,44 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "cc6acf8",
+          "date": "2026-03-25",
+          "subject": "Propagate a0 corrected value to source derivation"
+        },
+        {
+          "hash": "ec25a22",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#5)"
+        },
+        {
+          "hash": "029ad2e",
+          "date": "2026-03-23",
+          "subject": "Reference kk-inference as early-exit analogue of MOND transition"
+        },
+        {
+          "hash": "08b3bd9",
+          "date": "2026-03-23",
+          "subject": "Add pendulum interpretation of a\u2080 = cH/(2\u03c0)"
+        },
+        {
+          "hash": "0a20b6c",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#3)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "57cb9c0",
+          "date": "2026-03-22",
+          "subject": "Reorient repo around sync cost framework; add three derivations"
         }
       ]
     },
@@ -317,6 +361,31 @@
       ]
     },
     {
+      "id": "beta_from_tongues",
+      "path": "sync_cost/derivations/beta_from_tongues.md",
+      "title": "Beta Functions from Tongue Widths",
+      "summary": "The one-loop beta function coefficients of the Standard Model\n(b\u2081 = 41/10, b\u2082 = \u221219/6, b\u2083 = \u22127) can be computed from the\nK-dependence of Arnold tongue widths, without using the SM\nbeta functions as a target. The running of coupling constants\nis a consequence of the circle map dynamics, not an independent\ninput.",
+      "depends_on": [
+        "duty_cycle_dictionary",
+        "gauge_sector_lovelock",
+        "gell_mann_nishijima",
+        "generation_mechanism",
+        "higgs_from_tongue_boundary",
+        "klein_bottle",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "fermion_mass_running"
+      ],
+      "git": [
+        {
+          "hash": "681a726",
+          "date": "2026-04-22",
+          "subject": "Fix BLAKE3/SHA-256 drift in CAS; put new derivations; harden scripts/ket.py"
+        }
+      ]
+    },
+    {
       "id": "born_rule",
       "path": "sync_cost/derivations/born_rule.md",
       "title": "Born Rule from Basin Measure",
@@ -341,9 +410,34 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "0a20b6c",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#3)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "2909efc",
+          "date": "2026-03-22",
+          "subject": "Derive Born rule from Arnold tongue saddle-node geometry"
+        },
+        {
+          "hash": "57cb9c0",
+          "date": "2026-03-22",
+          "subject": "Reorient repo around sync cost framework; add three derivations"
         }
       ]
     },
@@ -381,9 +475,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "a9e2b09",
+          "date": "2026-03-27",
+          "subject": "Derivations 36-38: conservation as computability, figure-eight topology, boundary weight"
         }
       ]
     },
@@ -397,6 +491,7 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
+        "quantum_gravity_interpolation",
         "rationality_descent"
       ],
       "git": [
@@ -406,9 +501,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "c152786",
+          "date": "2026-03-27",
+          "subject": "D36 conservation_computability: partial (agent still running)"
         }
       ]
     },
@@ -428,7 +523,9 @@
         "gap2_theorem_attempt",
         "gap_1_christoffel",
         "gap_2_spatial_diffusion",
-        "sigma_squared_disambiguation"
+        "quantum_gravity_interpolation",
+        "sigma_squared_disambiguation",
+        "spatial_coupling_derived"
       ],
       "git": [
         {
@@ -442,9 +539,24 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "37aef34",
+          "date": "2026-03-25",
+          "subject": "Remove resolved open questions from living documents"
+        },
+        {
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "f0db15b",
+          "date": "2026-03-25",
+          "subject": "Cross-reference D12, D13, D19: the load-bearing computation"
+        },
+        {
+          "hash": "1252f4e",
+          "date": "2026-03-23",
+          "subject": "Derivations 10-12: alphabet, field equation, continuum limits, \u03c3\u00b2 running (#12)"
         }
       ]
     },
@@ -465,9 +577,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "2da044f",
+          "date": "2026-03-26",
+          "subject": "Derivation 35: The cosmological cycle \u2014 a two-voice round in 13/19"
         }
       ]
     },
@@ -479,7 +591,8 @@
       "depends_on": [],
       "depended_on_by": [
         "anchor_count_audit",
-        "gap2_analytic_proof"
+        "gap2_analytic_proof",
+        "spatial_coupling_derived"
       ],
       "git": [
         {
@@ -518,9 +631,19 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "ad562f3",
+          "date": "2026-03-25",
+          "subject": "D30: Pythagorean comma as Klein bottle's irreducible cost"
+        },
+        {
+          "hash": "74d836b",
+          "date": "2026-03-25",
+          "subject": "D30: Add variational principle \u2014 staircase as brachistochrone"
+        },
+        {
+          "hash": "9f9f000",
+          "date": "2026-03-25",
+          "subject": "D30: Denomination boundary \u2014 three open questions unified"
         }
       ]
     },
@@ -538,9 +661,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "5b447f8",
+          "date": "2026-03-25",
+          "subject": "D21: Two open paths formalized as five binary computations"
         }
       ]
     },
@@ -749,9 +872,12 @@
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
+        "beta_from_tongues",
+        "fermion_mass_running",
         "framework_status",
         "numerology_inventory",
         "omega_b_residual_phase_b",
+        "quantum_gravity_interpolation",
         "sinw_effective_dimension"
       ],
       "git": [
@@ -776,9 +902,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "c152786",
+          "date": "2026-03-27",
+          "subject": "D36 conservation_computability: partial (agent still running)"
         }
       ]
     },
@@ -795,9 +921,9 @@
       ],
       "git": [
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "f9b1c32",
+          "date": "2026-03-26",
+          "subject": "Prove duty cycle exponent equals group dimension (gap #6)"
         }
       ]
     },
@@ -815,6 +941,7 @@
         "gap_1_christoffel",
         "gauge_dictionary",
         "klein_connection",
+        "quantum_gravity_interpolation",
         "three_dimensions"
       ],
       "git": [
@@ -824,9 +951,19 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "f0db15b",
+          "date": "2026-03-25",
+          "subject": "Cross-reference D12, D13, D19: the load-bearing computation"
+        },
+        {
+          "hash": "5ade160",
+          "date": "2026-03-23",
+          "subject": "Derivation 13: Einstein from Kuramoto (QED) + \u03c3\u00b2 running corrections (#14)"
         }
       ]
     },
@@ -844,9 +981,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "5feb237",
+          "date": "2026-03-25",
+          "subject": "D21 + D22: open paths + engineering targets"
         }
       ]
     },
@@ -864,9 +1001,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "9228c64",
+          "date": "2026-03-25",
+          "subject": "D27: The exponent q\u2082q\u2083\u00b3 = 54 derived from first principles"
         }
       ]
     },
@@ -892,9 +1029,14 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "97812bc",
+          "date": "2026-03-25",
+          "subject": "D25: Omega_Lambda = 13/19 \u2014 the Farey partition"
         }
       ]
     },
@@ -912,9 +1054,37 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "0be807b",
+          "date": "2026-03-25",
+          "subject": "D28 strengthened: SO(2) invariance \u2192 only two scalars \u2192 unique partition"
+        },
+        {
+          "hash": "508fb3e",
+          "date": "2026-03-25",
+          "subject": "D28: Why the Farey partition \u2014 the proof"
+        }
+      ]
+    },
+    {
+      "id": "fermion_mass_running",
+      "path": "sync_cost/derivations/fermion_mass_running.md",
+      "title": "Fermion Mass Running from the K \u2192 \u03bc Map",
+      "summary": "The tree-level fermion mass formula (D34) gives mass ratios as\n(W_heavy/W_light)^a with sector exponents a = d \u2212 1/2 + charge/2.\nThe \u03c4/e ratio at a = 5/2 matches to 0.9%, but the \u03bc/e ratio has\na 37% residual. This residual is the tree-to-physical running\ncorrection. This derivation computes the correction from the K \u2192\n\u03bc mapping, closing the fermion mass gap (\u00a78.2).",
+      "depends_on": [
+        "beta_from_tongues",
+        "duty_cycle_dictionary",
+        "gauge_sector_lovelock",
+        "gell_mann_nishijima",
+        "generation_mechanism",
+        "higgs_from_tongue_boundary",
+        "three_dimensions"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "681a726",
+          "date": "2026-04-22",
+          "subject": "Fix BLAKE3/SHA-256 drift in CAS; put new derivations; harden scripts/ket.py"
         }
       ]
     },
@@ -932,9 +1102,24 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "52d844f",
+          "date": "2026-03-23",
+          "subject": "Resolve fidelity bound open items: C=1 coefficient and iteration-to-time"
+        },
+        {
+          "hash": "9ccff03",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#6)"
+        },
+        {
+          "hash": "45f2440",
+          "date": "2026-03-23",
+          "subject": "Derive RAR interpolating function from tongue self-consistency"
+        },
+        {
+          "hash": "dce795f",
+          "date": "2026-03-23",
+          "subject": "Derivation 9: self-referential fidelity bound unifying MOND and collapse"
         }
       ]
     },
@@ -955,9 +1140,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "daa4301",
+          "date": "2026-03-27",
+          "subject": "D37 figure-eight topology (agent still completing D38)"
         }
       ]
     },
@@ -1317,6 +1502,8 @@
       ],
       "depended_on_by": [
         "anchor_count_audit",
+        "beta_from_tongues",
+        "fermion_mass_running",
         "gauge_dictionary",
         "gauge_factorization",
         "klein_connection",
@@ -1368,6 +1555,8 @@
       "summary": "The relation Q = T_3 + Y/2 between electric charge Q, weak isospin\nT_3, and hypercharge Y is not a postulate. It is the charge\ncomposition law at the Klein bottle's identification boundary, where\nthe antiperiodic (twisted) and periodic (untwisted) directions meet.",
       "depends_on": [],
       "depended_on_by": [
+        "beta_from_tongues",
+        "fermion_mass_running",
         "fourth_generation_revisited",
         "mass_sector_closure",
         "sector_constants_structure"
@@ -1405,6 +1594,8 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
+        "beta_from_tongues",
+        "fermion_mass_running",
         "fourth_generation_revisited",
         "mixing_angle_audit",
         "numerology_inventory"
@@ -1416,9 +1607,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "16cda78",
+          "date": "2026-03-27",
+          "subject": "Derivation 34: The Generation Mechanism \u2014 three generations from phase-state observability"
         }
       ]
     },
@@ -1475,9 +1666,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "37cce94",
+          "date": "2026-03-25",
+          "subject": "D25 + D26: the cosmological parameters from three numbers"
         }
       ]
     },
@@ -1536,7 +1727,9 @@
       "depends_on": [],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
-        "anchor_count_audit"
+        "anchor_count_audit",
+        "beta_from_tongues",
+        "fermion_mass_running"
       ],
       "git": [
         {
@@ -1595,9 +1788,44 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "5a57955",
+          "date": "2026-03-22",
+          "subject": "Consistency is required. The threshold moves."
+        },
+        {
+          "hash": "c3fae26",
+          "date": "2026-03-22",
+          "subject": "Add resolved RAR test framework for RC100 galaxies"
+        },
+        {
+          "hash": "600106d",
+          "date": "2026-03-22",
+          "subject": "Note that resolved RAR at z > 0.5 has never been published"
+        },
+        {
+          "hash": "8798e7e",
+          "date": "2026-03-22",
+          "subject": "Sharpen derivation 08: empirical a\u2080(z) extraction from RC100"
+        },
+        {
+          "hash": "811589d",
+          "date": "2026-03-22",
+          "subject": "Add RAR knee shift as near-term test of a\u2080(z) = cH(z)/(2\u03c0)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "b4e4b81",
+          "date": "2026-03-23",
+          "subject": "Add high-z MOND prediction markdown (08_high_z_mond.md)"
+        },
+        {
+          "hash": "7c80593",
+          "date": "2026-03-22",
+          "subject": "Add high-z MOND prediction markdown (08_high_z_mond.md)"
         }
       ]
     },
@@ -1619,9 +1847,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "4f819f3",
+          "date": "2026-03-26",
+          "subject": "Formalize trivial isotropy argument (gap #4): Kuramoto completeness lemma"
         }
       ]
     },
@@ -1737,6 +1965,7 @@
       "depended_on_by": [
         "CHAIN_KSTAR",
         "FRAMEWORK_TOPOLOGY",
+        "beta_from_tongues",
         "duty_cycle_dictionary",
         "gauge_dictionary",
         "gauge_factorization",
@@ -1752,9 +1981,49 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "e8126a1",
+          "date": "2026-03-25",
+          "subject": "D19: anomaly cancellation upgrades from numerology to structural"
+        },
+        {
+          "hash": "f0db15b",
+          "date": "2026-03-25",
+          "subject": "Cross-reference D12, D13, D19: the load-bearing computation"
+        },
+        {
+          "hash": "e96a704",
+          "date": "2026-03-25",
+          "subject": "Separate established from conjectural in D19"
+        },
+        {
+          "hash": "e90f6fc",
+          "date": "2026-03-25",
+          "subject": "Full continuity update: D19 status + INDEX through Phase 14"
+        },
+        {
+          "hash": "1df25d4",
+          "date": "2026-03-25",
+          "subject": "Field equation result + Pythagorean connection in D19"
+        },
+        {
+          "hash": "f1d4ad5",
+          "date": "2026-03-25",
+          "subject": "Add structural safety section; revise status and open questions"
+        },
+        {
+          "hash": "5664deb",
+          "date": "2026-03-25",
+          "subject": "Add 'Where time lives' section to D19"
+        },
+        {
+          "hash": "84f6622",
+          "date": "2026-03-25",
+          "subject": "Update D19 status with simulation results"
+        },
+        {
+          "hash": "42c3816",
+          "date": "2026-03-25",
+          "subject": "Add Derivation 19: Klein bottle \u2014 fully closed non-orientable container"
         }
       ]
     },
@@ -1869,9 +2138,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "c12a9bb",
+          "date": "2026-03-23",
+          "subject": "Add Derivation 15: Lie group characterization theorem (#20)"
         }
       ]
     },
@@ -1965,9 +2234,19 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "b4e4b81",
+          "date": "2026-03-23",
+          "subject": "Add high-z MOND prediction markdown (08_high_z_mond.md)"
+        },
+        {
+          "hash": "ac257ed",
+          "date": "2026-03-22",
+          "subject": "Add Planck scale and measurement collapse formalizations"
         }
       ]
     },
@@ -1988,9 +2267,19 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "bcae94e",
+          "date": "2026-03-25",
+          "subject": "D29: Why Stern-Brocot and not continuum or other discretization"
+        },
+        {
+          "hash": "254654b",
+          "date": "2026-03-25",
+          "subject": "D29: The mediant is not an axiom \u2014 it is derived"
         }
       ]
     },
@@ -2015,9 +2304,29 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "5ade160",
+          "date": "2026-03-23",
+          "subject": "Derivation 13: Einstein from Kuramoto (QED) + \u03c3\u00b2 running corrections (#14)"
+        },
+        {
+          "hash": "1252f4e",
+          "date": "2026-03-23",
+          "subject": "Derivations 10-12: alphabet, field equation, continuum limits, \u03c3\u00b2 running (#12)"
+        },
+        {
+          "hash": "9196c8e",
+          "date": "2026-03-23",
+          "subject": "Formalize Derivation 10, add field equation, fix INDEX (#11)"
+        },
+        {
+          "hash": "75eb713",
+          "date": "2026-03-23",
+          "subject": "Derivations 10 11 (#10)"
         }
       ]
     },
@@ -2032,7 +2341,8 @@
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
-        "klein_bottle_derivation"
+        "klein_bottle_derivation",
+        "spatial_coupling_derived"
       ],
       "git": [
         {
@@ -2041,9 +2351,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "cc96938",
+          "date": "2026-03-26",
+          "subject": "Derivation 32: Minkowski signature (3,1) from phase-state observability"
         }
       ]
     },
@@ -2085,9 +2395,14 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "87448a3",
+          "date": "2026-03-25",
+          "subject": "Add coherence length analysis: arm formation on M\u00f6bius ring"
+        },
+        {
+          "hash": "4335790",
+          "date": "2026-03-25",
+          "subject": "Add Derivation 18: M\u00f6bius container simulation target"
         }
       ]
     },
@@ -2143,7 +2458,8 @@
         "anchor_count_audit",
         "duty_cycle_dictionary",
         "framework_status",
-        "klein_nodal_parity"
+        "klein_nodal_parity",
+        "rationality_descent"
       ],
       "git": [
         {
@@ -2216,7 +2532,8 @@
       "depends_on": [],
       "depended_on_by": [
         "anchor_count_audit",
-        "isotropy_lemma"
+        "isotropy_lemma",
+        "quantum_gravity_interpolation"
       ],
       "git": [
         {
@@ -2225,9 +2542,65 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "c12a9bb",
+          "date": "2026-03-23",
+          "subject": "Add Derivation 15: Lie group characterization theorem (#20)"
+        },
+        {
+          "hash": "df629cb",
+          "date": "2026-03-23",
+          "subject": "Merge upstream main, resolve conflicts in 06_planck_scale.md"
+        },
+        {
+          "hash": "dec8e05",
+          "date": "2026-03-23",
+          "subject": "Classify all SL(2,R) subgroups to prove trivial stabilizer (#18)"
+        },
+        {
+          "hash": "60f0f10",
+          "date": "2026-03-24",
+          "subject": "Address trivial stabilizer condition in dimensionality argument (#17)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "b4e4b81",
+          "date": "2026-03-23",
+          "subject": "Add high-z MOND prediction markdown (08_high_z_mond.md)"
+        },
+        {
+          "hash": "ac257ed",
+          "date": "2026-03-22",
+          "subject": "Add Planck scale and measurement collapse formalizations"
+        }
+      ]
+    },
+    {
+      "id": "quantum_gravity_interpolation",
+      "path": "sync_cost/derivations/quantum_gravity_interpolation.md",
+      "title": "Quantum Gravity from the Rational Field Equation at K \u2248 1",
+      "summary": "The rational field equation (D11) is exact at all values of the\ncoupling parameter K. The K = 1 limit gives Einstein's field\nequations (D12, D13). The K < 1 linearized limit gives the\nSchr\u00f6dinger equation (D12). The K \u2248 1 regime \u2014 where both\ngravitational and quantum effects are comparable \u2014 is the\nframework's quantum gravity. This derivation characterizes the\ninterpolating dynamics and extracts its physical predictions.",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum",
+        "conservation_computability",
+        "continuum_limits",
+        "duty_cycle_dictionary",
+        "einstein_from_kuramoto",
+        "planck_scale",
+        "rational_field_equation",
+        "spatial_coupling_derived",
+        "speed_of_light"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "681a726",
+          "date": "2026-04-22",
+          "subject": "Fix BLAKE3/SHA-256 drift in CAS; put new derivations; harden scripts/ket.py"
         }
       ]
     },
@@ -2247,9 +2620,19 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "49a3c8d",
+          "date": "2026-03-24",
+          "subject": "Tighten Part V: corollaries A (Born rule), B (Einstein), C (d=3)"
+        },
+        {
+          "hash": "f7dbe68",
+          "date": "2026-03-24",
+          "subject": "Derivation 17: rank-1 Fr\u00e9chet derivative as temporal causation (#25)"
+        },
+        {
+          "hash": "3cab1df",
+          "date": "2026-03-24",
+          "subject": "Derivation 17: rank-1 Fr\u00e9chet derivative as temporal causation"
         }
       ]
     },
@@ -2264,7 +2647,8 @@
         "gap2_spatialization_decomposition",
         "gap_1_christoffel",
         "k_critical_phase_a",
-        "k_critical_phase_b"
+        "k_critical_phase_b",
+        "quantum_gravity_interpolation"
       ],
       "git": [
         {
@@ -2273,9 +2657,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "75eb713",
+          "date": "2026-03-23",
+          "subject": "Derivations 10 11 (#10)"
         }
       ]
     },
@@ -2283,10 +2667,11 @@
       "id": "rationality_descent",
       "path": "sync_cost/derivations/rationality_descent.md",
       "title": "Rationality descent: is the hidden algorithm real?",
-      "summary": "The framework's \"consistency-stipulated resolutions\" are Stern-Brocot\ndescent from the root `1/1` toward observables, under a finite\nvocabulary of primitive transformations. Every closed item has a\nfinite depth in the tree. Open items either have a candidate at\nreasonable depth (near closure) or fail (structurally hard).",
+      "summary": "The two **Tree-level only** examples in \u00a7\"canonical closures split into\nthree regimes\" below \u2014 `sin\u00b2\u03b8_W = 8/35 + 8/F_10\u00b2` and\n`\u03b1_s/\u03b1_2 = 27/8 + 1/q_3\u00b2` \u2014 were retracted in commits 208359f, 0882991,\neda8b60 as **fitted corrections, not derived**. They are still quoted\nhere as part of the descent-algorithm argument; the \u00a7\"Two-step\nclosures\" claim that \"the framework's actual closure is two-step\"\nshould be read as **hypothesis**, not established result. A rigorous\ndescent that reaches those residua",
       "depends_on": [
         "conservation_computability",
-        "item12_C_from_K_star"
+        "item12_C_from_K_star",
+        "numerology_inventory"
       ],
       "depended_on_by": [],
       "git": [
@@ -2507,6 +2892,31 @@
       ]
     },
     {
+      "id": "spatial_coupling_derived",
+      "path": "sync_cost/derivations/spatial_coupling_derived.md",
+      "title": "Spatial Coupling Derived from Gate Propagation",
+      "summary": "The derivation chain:",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum",
+        "continuum_limits",
+        "coupling_scales",
+        "minkowski_signature",
+        "speed_of_light",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "quantum_gravity_interpolation"
+      ],
+      "git": [
+        {
+          "hash": "681a726",
+          "date": "2026-04-22",
+          "subject": "Fix BLAKE3/SHA-256 drift in CAS; put new derivations; harden scripts/ket.py"
+        }
+      ]
+    },
+    {
       "id": "spectral_tilt",
       "path": "sync_cost/derivations/spectral_tilt.md",
       "title": "Spectral Tilt from Synchronization Cost Gradient",
@@ -2527,9 +2937,39 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "0a20b6c",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#3)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "25e708f",
+          "date": "2026-03-22",
+          "subject": "Refactor: shared utils, cross-references, superseded notes"
+        },
+        {
+          "hash": "20568de",
+          "date": "2026-03-22",
+          "subject": "Reframe spectral tilt: mode-locking replaces cost function"
+        },
+        {
+          "hash": "bfc6ef5",
+          "date": "2026-03-22",
+          "subject": "Add epigraph to spectral tilt derivation"
+        },
+        {
+          "hash": "57cb9c0",
+          "date": "2026-03-22",
+          "subject": "Reorient repo around sync cost framework; add three derivations"
         }
       ]
     },
@@ -2554,9 +2994,34 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "37aef34",
+          "date": "2026-03-25",
+          "subject": "Remove resolved open questions from living documents"
+        },
+        {
+          "hash": "0a20b6c",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#3)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "25e708f",
+          "date": "2026-03-22",
+          "subject": "Refactor: shared utils, cross-references, superseded notes"
+        },
+        {
+          "hash": "20568de",
+          "date": "2026-03-22",
+          "subject": "Reframe spectral tilt: mode-locking replaces cost function"
         }
       ]
     },
@@ -2570,7 +3035,9 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
-        "duty_cycle_dictionary"
+        "duty_cycle_dictionary",
+        "quantum_gravity_interpolation",
+        "spatial_coupling_derived"
       ],
       "git": [
         {
@@ -2579,9 +3046,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "0a5bcb8",
+          "date": "2026-03-26",
+          "subject": "Add Derivation 31: Speed of Light as Gate Propagation (#28)"
         }
       ]
     },
@@ -2665,7 +3132,9 @@
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
+        "beta_from_tongues",
         "duty_cycle_dictionary",
+        "fermion_mass_running",
         "gap2_step4_farey_laplacian",
         "gap2_theorem_attempt",
         "gap_2_spatial_diffusion",
@@ -2674,6 +3143,7 @@
         "klein_bottle_derivation",
         "numerology_inventory",
         "sinw_effective_dimension",
+        "spatial_coupling_derived",
         "three_formalizations"
       ],
       "git": [
@@ -2688,9 +3158,14 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "fc926a2",
+          "date": "2026-03-23",
+          "subject": "Derivation 14: Three Dimensions from the Mediant (#15)"
         }
       ]
     },
@@ -2731,9 +3206,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "3f60310",
+          "date": "2026-03-25",
+          "subject": "D23: Three zeros and the 1+3 decomposition"
         }
       ]
     },
@@ -2751,9 +3226,24 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "0a20b6c",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#3)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "028f87b",
+          "date": "2026-03-22",
+          "subject": "Add two-force model: coherence vs decoherence at the golden ratio"
         }
       ]
     },
@@ -2779,9 +3269,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "7fb3846",
+          "date": "2026-03-25",
+          "subject": "D24: The cosmological constant problem dissolves"
         }
       ]
     },
@@ -2799,9 +3289,29 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "f62c568",
+          "date": "2026-03-24",
+          "subject": "Add derivation 16 and computational validation of variable denominator (#21)"
+        },
+        {
+          "hash": "1dab7df",
+          "date": "2026-03-24",
+          "subject": "Add expansion as tree deepening, missing dimension, no pure equilibrium"
+        },
+        {
+          "hash": "d892a55",
+          "date": "2026-03-24",
+          "subject": "Add bowed string (Kawano 2025) as physical M\u00f6bius strip instance"
+        },
+        {
+          "hash": "bc307ec",
+          "date": "2026-03-24",
+          "subject": "Add M\u00f6bius spiral topology and derivable division threshold"
+        },
+        {
+          "hash": "c5e7f60",
+          "date": "2026-03-24",
+          "subject": "Add Derivation 16: variable denominator (Hz with changing reference)"
         }
       ]
     },
@@ -2821,9 +3331,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "0d0dc5b",
+          "date": "2026-03-25",
+          "subject": "D20: XOR continuum limit \u2014 honest negative result"
         }
       ]
     },
@@ -2839,9 +3349,9 @@
       ],
       "git": [
         {
-          "hash": "b8eb66e",
-          "date": "2026-03-29",
-          "subject": "Add Makefile and CI workflow for building visual assets"
+          "hash": "7190a9b",
+          "date": "2026-03-26",
+          "subject": "Derive XOR parity filter from Klein bottle BCs (gap #5)"
         }
       ]
     }

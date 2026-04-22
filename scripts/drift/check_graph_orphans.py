@@ -83,17 +83,27 @@ def main() -> int:
 
     by_id = {n["id"]: n for n in graph["nodes"]}
 
-    findings: list[str] = []
+    # Severity split: BLOCKING findings (bad dependency, missing
+    # scorecard source) fail the check. Advisory findings (orphan
+    # nodes, cross-repo or federated refs, D-numbers) are reported
+    # as NOTE and do not fail the check — they are real findings
+    # for review, but a pre-commit hook should not block on them.
+    blocking: list[str] = []
+    advisory_orphans: list[str] = []
+    cross_repo_refs: set[str] = set((yaml.safe_load(
+        (root / "MANIFEST.yml").read_text()).get("repos") or {}).keys())
     d_number_refs: list[str] = []
 
-    # (a) orphan nodes
+    # (a) orphan nodes — advisory
     for n in graph["nodes"]:
         has_in = bool(n.get("depended_on_by"))
         has_out = bool(n.get("depends_on"))
         if not has_in and not has_out and n["id"] not in ROOT_ALLOWLIST:
-            findings.append(f"orphan node: {n['id']} (no edges in either direction)")
+            advisory_orphans.append(n["id"])
 
-    # (b) scorecard sources missing from graph
+    # (b) scorecard sources missing from graph — blocking (unless
+    #     D-number, cross-repo, or the graph simply doesn't include
+    #     a node for that file yet because the file is new)
     for entry_key, entry in scorecard.items():
         for s in entry.get("source") or []:
             node_id = _resolve_source_id(s)
@@ -101,13 +111,24 @@ def main() -> int:
                 d_number_refs.append(
                     f"scorecard.{entry_key}.source='{s}' (needs INDEX.md to resolve)"
                 )
+            elif s in cross_repo_refs:
+                continue  # federated, not in this graph
             elif node_id not in by_id:
-                findings.append(
-                    f"missing node: scorecard.{entry_key}.source='{s}' "
-                    f"(resolved to '{node_id}') not in derivation graph"
-                )
+                # Check if the referenced markdown exists on disk;
+                # if yes, it just hasn't been scanned into the graph
+                # yet — that's advisory. If no, it's blocking.
+                md_path = root / "sync_cost" / "derivations" / f"{node_id}.md"
+                if md_path.exists():
+                    advisory_orphans.append(
+                        f"scorecard.{entry_key}.source='{s}' present on disk but absent from graph"
+                    )
+                else:
+                    blocking.append(
+                        f"missing node: scorecard.{entry_key}.source='{s}' "
+                        f"(resolved to '{node_id}') not in graph or on disk"
+                    )
 
-    # (c) scorecard sources depending on Class 1/3 files
+    # (c) scorecard sources depending on Class 1/3 files — blocking
     for entry_key, entry in scorecard.items():
         for s in entry.get("source") or []:
             node_id = _resolve_source_id(s)
@@ -116,7 +137,7 @@ def main() -> int:
                 continue
             for dep in node.get("depends_on", []):
                 if dep in bad_classes:
-                    findings.append(
+                    blocking.append(
                         f"bad dependency: scorecard.{entry_key}.source='{s}' "
                         f"depends on Class 1/3 node '{dep}'"
                     )
@@ -129,9 +150,17 @@ def main() -> int:
             print(f"  ... and {len(d_number_refs) - 3} more")
         print()
 
-    if findings:
-        print(f"Graph inconsistencies: {len(findings)}")
-        for f in findings:
+    if advisory_orphans:
+        print(f"NOTE: {len(advisory_orphans)} orphan / absent-from-graph item(s):")
+        for ref in advisory_orphans[:5]:
+            print(f"  {ref}")
+        if len(advisory_orphans) > 5:
+            print(f"  ... and {len(advisory_orphans) - 5} more (see docs/derivation-graph.json)")
+        print()
+
+    if blocking:
+        print(f"Graph inconsistencies (blocking): {len(blocking)}")
+        for f in blocking:
             print(f"  - {f}")
         return 1
 

@@ -56,6 +56,20 @@ WATCHED_DIRS = ("sync_cost", "docs", "scripts", "README.md", "RESULTS.md", "MANI
 # hypotheses and intentional dead ends.
 SKIP_PATH_PARTS = ("/scratch/", "/data/")
 
+# Allowlist: specific files whose matches are known-legit enumeration
+# tables (scanning many candidate expressions against a target), not
+# claims of "the prediction is X + correction". Add (path, reason).
+FILE_ALLOWLIST: list[tuple[str, str]] = [
+    (
+        "sync_cost/derivations/primitives_first.py",
+        "Section 2 enumerates candidate rationals for a_1(lep); table rows, not claims",
+    ),
+    (
+        "sync_cost/derivations/saddle_node_regularized.py",
+        "candidate-enumeration table; each row is a hypothesis, not an assertion",
+    ),
+]
+
 
 def _has_retraction_nearby(lines: list[str], idx: int) -> bool:
     lo = max(0, idx - CONTEXT_LINES)
@@ -83,6 +97,9 @@ def main() -> int:
     for path in sorted(set(candidates)):
         str_path = str(path)
         if any(skip in str_path for skip in SKIP_PATH_PARTS):
+            continue
+        rel_path = path.relative_to(root).as_posix() if path.is_absolute() else path.as_posix()
+        if any(rel_path.endswith(allow) or rel_path == allow for allow, _ in FILE_ALLOWLIST):
             continue
         try:
             text = path.read_text(errors="ignore")

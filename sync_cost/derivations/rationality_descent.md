@@ -1,5 +1,22 @@
 # Rationality descent: is the hidden algorithm real?
 
+## Status (honest-null audit, 2026-04-22)
+
+The two **Tree-level only** examples in §"canonical closures split into
+three regimes" below — `sin²θ_W = 8/35 + 8/F_10²` and
+`α_s/α_2 = 27/8 + 1/q_3²` — were retracted in commits 208359f, 0882991,
+eda8b60 as **fitted corrections, not derived**. They are still quoted
+here as part of the descent-algorithm argument; the §"Two-step
+closures" claim that "the framework's actual closure is two-step"
+should be read as **hypothesis**, not established result. A rigorous
+descent that reaches those residuals from the framework's alphabet has
+not been exhibited in the repo.
+
+See `numerology_inventory.md` §Class 1/3 and
+`MANIFEST.yml:bare_k1_identities` for the current status of those
+claims. The other regimes (Clean, Tight) are unaffected; a_1(up),
+a_1(dn), Ω_Λ, a_1(lep) still descend cleanly at the depths reported.
+
 ## Claim tested
 
 The framework's "consistency-stipulated resolutions" are Stern-Brocot
@@ -59,16 +76,20 @@ Three regimes:
    needed.
 
 3. **Tree-level only** (15–22σ): the canonical rational is wildly
-   off by itself. But the framework's actual closure is **two-step**:
+   off by itself. The framework previously posited a **two-step**
+   closure (**retracted** 2026-04-22 per the honest-null audit; see
+   `numerology_inventory.md` Class 1/3):
 
-       sin²θ_W  = 8/35   +  8 / F_10²       (add a 1/F_10² correction)
-       α_s/α_2  = 27/8   +  1 / q_3²        (add a 1/q_3² correction)
+       sin²θ_W  = 8/35   +  8 / F_10²       (add a 1/F_10² correction)  [retracted]
+       α_s/α_2  = 27/8   +  1 / q_3²        (add a 1/q_3² correction)   [retracted]
 
-   The tree term is one rational; the correction is another
-   rational on the residual. Both use the framework's primitive
-   alphabet (Fibonacci denominators, gauge integers). A single
-   Stern-Brocot descent can't find these; a **recursive** descent
-   — one on the observable, one on the residual — can.
+   The "+ correction" terms were fitted, not derived. The tree terms
+   (8/35, 27/8) remain as bare K=1 identities in
+   `MANIFEST.yml:bare_k1_identities`; the corrections are not
+   framework predictions. With the two-step examples withdrawn, the
+   evidence that descent on the residual is a derivable framework
+   operation is also withdrawn — this regime currently has **no**
+   worked example supporting the recursive-descent claim.
 
 ### K* is NOT directly reachable
 

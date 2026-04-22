@@ -87,6 +87,11 @@ def main() -> int:
 
     manifest = yaml.safe_load(manifest_path.read_text())
     scorecard = manifest.get("scorecard", {})
+    # Cross-repo references are valid per the federation model
+    # (`CLAUDE.md` §Federation). Names listed under `repos:` resolve
+    # to sibling repositories, not files under this repo's
+    # sync_cost/derivations/.
+    known_repos = set((manifest.get("repos") or {}).keys())
 
     # Load numerology classifications so we can cross-check.
     numerology_text = numerology_path.read_text() if numerology_path.exists() else ""
@@ -103,6 +108,7 @@ def main() -> int:
 
     violations: list[str] = []
     d_number_refs: list[str] = []
+    cross_repo_refs: list[str] = []
     for entry_key, entry in scorecard.items():
         sources = entry.get("source") or []
         if not isinstance(sources, list):
@@ -112,6 +118,9 @@ def main() -> int:
             if re.match(r"^D\d+$", s):
                 d_number_refs.append(f"{entry_key}: '{s}'")
                 continue  # separate bucket; known-limitation
+            if s in known_repos:
+                cross_repo_refs.append(f"{entry_key}: '{s}' (federated repo)")
+                continue
             resolved = _resolve_source(s, deriv_dir)
             if resolved is None:
                 violations.append(f"{entry_key}: source '{s}' unresolved under {deriv_dir}")
@@ -133,12 +142,21 @@ def main() -> int:
         # files. Report separately, do not fail the check on these.
         print(
             f"NOTE: {len(d_number_refs)} scorecard source(s) use D-numbers "
-            f"but no INDEX.md exists to resolve them:"
+            f"but no INDEX.md exists to resolve them."
         )
-        for ref in d_number_refs:
+        # Keep output compact — only first few; full list is noisy.
+        for ref in d_number_refs[:3]:
             print(f"  {ref}")
+        if len(d_number_refs) > 3:
+            print(f"  ... and {len(d_number_refs) - 3} more")
         print("Consider creating sync_cost/derivations/INDEX.md with a")
         print("D-number → filename mapping, or replace D-numbers with filenames.")
+        print()
+
+    if cross_repo_refs:
+        print(f"NOTE: {len(cross_repo_refs)} cross-repo source(s) (federation):")
+        for ref in cross_repo_refs:
+            print(f"  {ref}")
         print()
 
     if violations:
