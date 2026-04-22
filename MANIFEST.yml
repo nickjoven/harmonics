@@ -107,33 +107,12 @@ scorecard:
   # correction in `sinw_effective_dimension.md` is conditional on three
   # unformalized steps and is not promoted to a prediction here.
 
-  higgs_mass_ratio:
-    name: "Higgs mass ratio m_H/v"
-    computed: "1/2"
-    observed: "0.508"
-    residual: "1.6%"
-    source: ["D33", "D44"]
-
-  higgs_quartic:
-    name: "Higgs quartic λ"
-    computed: "1/8 = 0.125"
-    observed: "~0.13"
-    residual: "4%"
-    source: ["D33"]
-
-  coupling_ratio:
-    name: "α_s/α_2"
-    computed: "27/8 = 3.375"
-    observed: "3.488"
-    residual: "3.2%"
-    source: ["D33"]
-
-  em_coupling_tree:
-    name: "1/α₀ (tree-level EM)"
-    computed: "35"
-    observed: "—"
-    residual: "—"
-    source: ["D33"]
+  # Higgs mass ratio m_H/v, Higgs quartic lambda, alpha_s/alpha_2, and
+  # 1/alpha_em (tree): declined — same honest-null treatment as
+  # weinberg_angle above. All four are bare K=1 identities from the
+  # duty-cycle dictionary (`duty_cycle_dictionary.md`) with no
+  # scale-consistent derivation to M_Z. Classified Class 1/Class 3 in
+  # `numerology_inventory.md`. Moved to `bare_k1_identities` below.
 
   gauge_group:
     name: "Gauge group"
@@ -190,6 +169,35 @@ bare_k1_identities:
     value: "8/35 = 0.22857..."
     source: ["duty_dimension_proof", "three_dimensions", "klein_bottle_derivation", "gauge_dictionary"]
     status: "bare reference only; not a prediction at M_Z"
+    m_z_gap: "1.1% vs PDG 0.23121; unresolved (sinW_running_check.py, sinw_fixed_point.md)"
+
+  alpha_s_over_alpha_2:
+    form: "q_3^3 / q_2^3"
+    value: "27/8 = 3.375"
+    source: ["duty_dimension_proof", "three_dimensions", "klein_bottle_derivation", "duty_cycle_dictionary"]
+    status: "bare reference only; not a prediction at M_Z"
+    m_z_gap: "3.2% vs PDG 3.488; unresolved (no derivation of the running)"
+
+  inv_alpha_em_tree:
+    form: "q_2^3 + q_3^3"
+    value: "35"
+    source: ["duty_dimension_proof", "three_dimensions", "klein_bottle_derivation", "duty_cycle_dictionary"]
+    status: "bare reference only; tree-scale identity, not comparable to 1/alpha_em(M_Z) = 127.95 without a derivation of the running"
+    m_z_gap: "factor ~3.7 vs PDG; unresolved"
+
+  m_H_over_v:
+    form: "1 / q_2"
+    value: "1/2 = 0.5"
+    source: ["klein_bottle_derivation", "duty_cycle_dictionary"]
+    status: "bare reference only; not a prediction at M_Z"
+    m_z_gap: "1.7% vs 0.5087; unresolved"
+
+  lambda_higgs:
+    form: "1 / q_2^3 = duty(q_2)"
+    value: "1/8 = 0.125"
+    source: ["duty_dimension_proof", "three_dimensions", "klein_bottle_derivation", "duty_cycle_dictionary"]
+    status: "bare reference only; not a prediction at M_Z"
+    m_z_gap: "3.4% vs ~0.129; unresolved"
 
 # --- Klein bottle constants ---
 # These are the integers from which the cosmological parameters follow.

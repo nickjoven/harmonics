@@ -218,16 +218,22 @@ def _all() -> list[Prediction]:
     ))
 
     preds.append(Prediction(
-        name="alpha_s / alpha_2",
+        name="alpha_s / alpha_2 [bare K=1 identity, not a prediction at M_Z]",
         sector="gauge",
         tree_form="q_3^3 / q_2^3 = 27/8",
         tree_value=Q3**3 / Q2**3,
-        correction_form="1 / q_3^2 = 1/9",
-        correction_value=1 / Q3**2,
+        correction_form="-",
+        correction_value=0.0,
         observed=ALPHA_S_MZ / (1/29.57),
         observed_err=0.05,
-        source="item12_other_residuals.py",
-        notes="correction = 1 / k_lepton, cross-sector inverse",
+        source="duty_cycle_dictionary.md, numerology_inventory.md (Class 3)",
+        notes=(
+            "Declined in MANIFEST.yml per honest-null audit. The bare K=1 "
+            "identity 27/8 is listed under MANIFEST.bare_k1_identities. The "
+            "prior `+ 1/q_3^2 = 1/9` correction was removed (not derived). "
+            "See sinw_fixed_point.md: no single K* jointly fits alpha_s/alpha_2 "
+            "and sin^2(theta_W)."
+        ),
     ))
 
     preds.append(Prediction(
@@ -246,33 +252,41 @@ def _all() -> list[Prediction]:
     # ------------------------------------------------------------------
     # HIGGS SECTOR
     # ------------------------------------------------------------------
-    HIGGS_CORR = 1 / (Q2**2 * Q3 * 19)             # 1/228
     preds.append(Prediction(
-        name="Higgs quartic lambda",
+        name="Higgs quartic lambda [bare K=1 identity, not a prediction at M_Z]",
         sector="higgs",
         tree_form="duty(q_2) = 1/q_2^3 = 1/8",
         tree_value=1 / Q2**3,
-        correction_form="1 / (q_2^2 q_3 |F_7|) = 1/228",
-        correction_value=HIGGS_CORR,
+        correction_form="-",
+        correction_value=0.0,
         observed=M_H ** 2 / (2 * (V_GEV * 1e3) ** 2),
         observed_err=0.00035,
-        source="item12_higgs_degeneracy.py, item12_higgs_residual.py",
-        notes="1/(2q_2^2) form retired; 1/q_2^3 is forced by sin^2(theta_W)",
+        source="duty_cycle_dictionary.md, numerology_inventory.md (Class 3)",
+        notes=(
+            "Declined in MANIFEST.yml per honest-null audit. The bare K=1 "
+            "identity 1/8 is listed under MANIFEST.bare_k1_identities. The "
+            "prior `+ 1/228` correction (228 = q_2^2 q_3 |F_7|) was removed: "
+            "it is a fitted term, not derived. See numerology_inventory.md "
+            "Class 4 for the 1/228 audit status."
+        ),
     ))
 
-    lambda_pred = 1/Q2**3 + HIGGS_CORR
-    mH_pred_gev = sqrt(2 * lambda_pred * V_GEV ** 2)
     preds.append(Prediction(
-        name="Higgs mass m_H",
+        name="Higgs mass m_H [bare K=1 identity via v/q_2, not a prediction at M_Z]",
         sector="higgs",
-        tree_form="sqrt(2 * lambda_tree) * v",
+        tree_form="sqrt(2 * lambda_tree) * v  with  lambda_tree = 1/q_2^3",
         tree_value=sqrt(2 * (1/Q2**3)) * V_GEV * 1e3,  # MeV
-        correction_form="derived from lambda correction",
-        correction_value=(mH_pred_gev * 1e3) - sqrt(2 * (1/Q2**3)) * V_GEV * 1e3,
+        correction_form="-",
+        correction_value=0.0,
         observed=M_H,
         observed_err=PDG_MASS["H"][1],
-        source="item12_higgs_residual.py",
-        notes="m_H = sqrt(2 lambda v^2), lambda = 1/q_2^3 + 1/228",
+        source="duty_cycle_dictionary.md, numerology_inventory.md (Class 3)",
+        notes=(
+            "Declined in MANIFEST.yml per honest-null audit. The bare K=1 "
+            "identity m_H = v/q_2 = 123.1 GeV (via sqrt(2 lambda_tree) v) is "
+            "listed as a reference only. The prior `lambda = 1/q_2^3 + 1/228` "
+            "correction was removed (1/228 is not derived)."
+        ),
     ))
 
     # ------------------------------------------------------------------

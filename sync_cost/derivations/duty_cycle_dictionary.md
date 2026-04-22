@@ -1,17 +1,40 @@
 # The Duty Cycle Dictionary
 
-## Claim
+## Status (honest-null resolution)
 
-The gauge coupling constants of the Standard Model are the gate duty
-cycles of the Stern-Brocot tree at critical coupling. The coupling of
-each sector is the duty cycle of its *partner* sector. All ratios,
-mixing angles, and the Higgs mass follow from integer arithmetic on the
-denominators q = 2 and q = 3. The residuals (1-3%) are the decoherence
-tax: the fraction of gate availability consumed by unlocked modes at
-K < 1.
+The bare K=1 identities in this file — sin²θ_W = 8/35, α_s/α_2 = 27/8,
+1/α_em = 35, m_H/v = 1/2, λ = 1/8 — have been **demoted from framework
+predictions to K=1 reference identities** in `MANIFEST.yml`. They now
+live under `bare_k1_identities` rather than `scorecard`. The framework
+does not supply a scale-consistent derivation connecting them to M_Z
+observations: the K → μ mapping (§7) does not jointly fit multiple
+observables with a single K*, and SM 1-loop running goes the wrong
+direction for sin²θ_W from any framework-internal tree scale
+(`sinW_running_check.py`, `sinw_fixed_point.md`,
+`numerology_inventory.md`). Section-level headings throughout this
+file have been updated accordingly.
 
-This derivation formalizes results computed in `gate_duty_cycle.py`,
-`gate_duty_predictions.py`, and `decoherence_correction.py`.
+The dictionary's mathematical content — duty(q) = 1/q^d at K = 1 — is
+unchanged and rigorous; it is a consequence of the Gauss-Kuzmin
+measure on Farey rationals (`duty_dimension_proof.md`).
+
+## Claim (original, at K = 1 only)
+
+At critical coupling K = 1, the gauge coupling constants of the
+Standard Model are numerically equal to specific gate duty cycles of
+the Stern-Brocot tree. The coupling of each sector is the duty cycle
+of its *partner* sector. All ratios, mixing angles, and the Higgs
+mass identities follow from integer arithmetic on the denominators
+q = 2 and q = 3.
+
+Originally, the 1-3% residuals to M_Z observations were attributed
+to a "decoherence tax" from unlocked modes at K < 1. That attribution
+has since been ruled out (§7 and cross-references above); the
+residuals are unresolved gaps, not derived corrections.
+
+This file formalizes the K = 1 identities computed in
+`gate_duty_cycle.py`, `gate_duty_predictions.py`, and
+`decoherence_correction.py`.
 
 ---
 
@@ -44,7 +67,12 @@ roots of A_1), and the period contributes n - 1 = 1 (the rank).
 
 ---
 
-## 2. The coupling ratio: alpha_s / alpha_2
+## 2. The coupling ratio: alpha_s / alpha_2 = 27/8 (bare K=1 identity)
+
+**Status: bare reference only, not a prediction at M_Z.** Same honest-
+null treatment as §3 (sin²θ_W): declined in `MANIFEST.yml` and recorded
+under `bare_k1_identities.alpha_s_over_alpha_2`. See
+`numerology_inventory.md` §Class 3.
 
 The two physical sectors of the Klein bottle (D19) have denominators
 q_2 = 2 and q_3 = 3. Their duty cycle ratio:
@@ -54,14 +82,11 @@ q_2 = 2 and q_3 = 3. Their duty cycle ratio:
                            = 27 / 8
                            = 3.375
 
-Observed at M_Z:
-
-    alpha_s / alpha_2 = 0.1179 / 0.03380 = 3.488
-
-Residual: |3.375 - 3.488| / 3.488 = **3.2%**.
-
-The bare (tree-scale) ratio is pure number theory: the cube of the
-ratio of the two smallest coprime integers greater than 1.
+Observed at M_Z: α_s/α_2 = 0.1179 / 0.03380 = 3.488. Gap 3.2%. The
+framework supplies no scale-consistent derivation connecting the bare
+K=1 ratio to the M_Z observation; same obstruction as sin²θ_W
+(SM 1-loop running does not close the gap from any framework-internal
+tree scale).
 
 ---
 
@@ -194,76 +219,85 @@ tree scale without specifying the coupling normalization.
 
 ---
 
-## 7. The K -> mu mapping
+## 7. The K -> mu mapping (does not close the tree-to-M_Z gap)
 
-The coupling constant K at energy scale mu is:
+**Status: a K* fit to a single observable exists, but a joint K* that
+reproduces multiple duty-dictionary identities at M_Z does not.** The
+K → μ mapping is therefore NOT the running mechanism that lifts the
+K=1 identities of §2, §3, §8, §9 to predictions at the electroweak
+scale.
+
+The coupling constant K at energy scale mu is nominally:
 
     K_eff(mu) = |r|(d(mu))
 
-where d is the Stern-Brocot depth at energy mu. This is derived from
-the rational field equation (D11) solved at each truncation depth:
-deeper truncation (higher energy resolution) means more modes survive,
-K_eff increases, and the tongue structure approaches K = 1.
+where d is the Stern-Brocot depth at energy mu. This comes from the
+rational field equation (D11) solved at each truncation depth.
 
 From `gate_duty_predictions.py`: fixing K* from the observed
-alpha_s/alpha_2 at M_Z gives K* = 0.892. The mapping from K to energy
-scale covers the full hierarchy:
+α_s/α_2 at M_Z gives K* ≈ 0.892. Fitting K* to sin²θ_W at M_Z
+requires a different value (`sinw_fixed_point.md`: no K* ∈ [0.93,
+0.99] reproduces both simultaneously, and the sin²θ_W curve over that
+range runs 0.2003–0.2145, never reaching 0.23121). The two
+single-observable fits are mutually inconsistent, so the mapping
+cannot be simultaneously supplying all M_Z-scale predictions.
 
-    K = 1.000  ->  Planck scale (tree root, all modes locked)
-    K = 0.892  ->  M_Z = 91 GeV (observation scale)
-    K -> 0     ->  IR (all tongues close, couplings unify)
+`sinW_running_check.py` also shows SM 1-loop running in the opposite
+direction from what "tree = Planck" would require for sin²θ_W, ruling
+out the alternative that the K → μ mapping is secretly ordinary SM
+running under a change of variables.
 
-The SM running of alpha_s(mu) maps onto the K-dependence of the duty
-ratio. RMS residual between the duty-cycle running and 2-loop SM
-running: **0.3%**.
-
----
-
-## 8. The Higgs mass
-
-The Higgs field lives in the q = 2 sector. Its mass is the vacuum
-expectation value divided by the period:
-
-    m_H = v / q_2 = 246.22 / 2 = 123.1 GeV
-
-Observed: 125.1 GeV. Residual: |123.1 - 125.1| / 125.1 = **1.6%**.
-
-The Higgs quartic coupling:
-
-    lambda = 1 / (2 q_2^2) = 1/8 = 0.125
-
-This is the duty cycle of the q = 2 sector itself (not crossed): the
-self-coupling of the Higgs is the fraction of time the q = 2 gate is
-open to its own sector. The observed value lambda ~ 0.13 matches to
-4%.
-
-The logic: the Higgs is the lowest excitation of the q = 2 tongue.
-Its mass is set by the tongue's repetition period (q_2 = 2 iterations
-of the circle map per orbit). The VEV v = 246.22 GeV is the energy
-scale at which the electroweak gate fully opens (K_eff = 1 for the
-q = 2 sector). The mass is then v/q_2: the energy per gate opening.
+Consequence: the tree-to-M_Z gaps listed in §2, §3, §8, §9 are
+unresolved by the K → μ mapping. Those identities remain bare K=1
+reference values in `MANIFEST.yml:bare_k1_identities`, not predictions.
 
 ---
 
-## 9. The electromagnetic coupling
+## 8. The Higgs mass and quartic (bare K=1 identities)
+
+**Status: bare reference only, not predictions at M_Z.** Same honest-
+null treatment as §3: declined in `MANIFEST.yml` and recorded under
+`bare_k1_identities.m_H_over_v` and `bare_k1_identities.lambda_higgs`.
+See `numerology_inventory.md` §Class 3.
+
+The Higgs field lives in the q = 2 sector. The bare K=1 identities:
+
+    m_H / v = 1 / q_2 = 1/2         (tongue period identity)
+    lambda  = 1 / q_2^3 = 1/8       (duty(q_2), self-coupling)
+
+Numerically: m_H = v/2 = 123.1 GeV (observed 125.25 GeV, gap 1.7%);
+lambda = 0.125 (observed ~0.129, gap 3.4%).
+
+Interpretation: the Higgs is the lowest excitation of the q = 2 tongue,
+with mass set by the tongue's repetition period; the quartic is the
+duty cycle of q = 2 for itself. The VEV v = 246.22 GeV is the
+framework's single declared dimensionful input (MANIFEST.yml). The
+framework does not supply a derivation connecting these K=1 identities
+to the observed values at M_Z.
+
+---
+
+## 9. The electromagnetic coupling (bare K=1 identity)
+
+**Status: bare reference only, not a prediction at M_Z.** Same honest-
+null treatment as §3: declined in `MANIFEST.yml` and recorded under
+`bare_k1_identities.inv_alpha_em_tree`. See `numerology_inventory.md`
+§Class 1.
 
 U(1)_em is not a separate mode on the Stern-Brocot tree. It is the
 cross-channel mixture of q = 2 and q = 3 via the Weinberg angle:
 
-    alpha_em = alpha_2 x sin^2(theta_W)
+    alpha_em = alpha_2 × sin^2(theta_W)
 
-At tree scale:
+At the K = 1 reference:
 
     1/alpha_0 = q_2^3 + q_3^3 = 8 + 27 = 35
 
-This gives alpha_0 = 1/35 = 0.02857, the tree-level electromagnetic
-coupling. The observed value at M_Z is 1/127.95 = 0.00782, reflecting
-the running from tree scale to M_Z via the K -> mu mapping (Section 7).
-
-The interpretation: U(1) electromagnetism is the interference pattern
-between the q = 2 and q = 3 gates. When both gates contribute to the
-same observable (photon exchange), the effective coupling is the
-product of the individual duty cycles summed over sectors.
+The observed value at M_Z is 1/127.95, roughly a factor 3.7 away.
+The K → μ mapping claimed in §7 does not close this gap — see
+`sinW_running_check.py` for the explicit demonstration that SM 1-loop
+running cannot connect K=1 identities at the Planck scale to the M_Z
+observations.
 
 ---
 
@@ -280,13 +314,14 @@ derivation in the framework (see `numerology_inventory.md` §Class 1/3).
 | m_H / v | 1/2 | 0.5087 | 1.7% | 1/q_2 |
 | lambda (Higgs quartic) | 1/8 = 0.125 | 0.129 | 3.4% | 1/q_2^3 = duty(q_2) |
 | 1/alpha_0 (tree EM) | 35 | — | — | q_2^3 + q_3^3 |
-| |r| at M_Z | 1.000 | 0.968 | 3.2% | decoherence tax |
 
 Previous fitted corrections (`+ 8/F_10^2`, `+ 1/q_3^2`, `+ 1/228`)
 have been removed from this table: they are not derived in the
 repository. The K=1 bare values are measure-theoretic consequences
 of the duty theorem (`duty_dimension_proof.md`); the gap to M_Z is
-unresolved.
+unresolved. The previous "decoherence tax" row identifying 1 − |r|
+with the residual has been dropped along with its derivation claim
+(§7).
 
 ---
 
@@ -325,12 +360,16 @@ denominators set by the Klein bottle topology.
 
 ## Status
 
-All results computed and verified numerically in:
+The K = 1 identities in this file are exact rational numbers derived
+from `duty_dimension_proof.md`. Numerical computations are in:
 - `gate_duty_cycle.py` (bare duty cycles, Klein bottle field equation)
-- `gate_duty_predictions.py` (K* fixed from alpha_s/alpha_2, zero-parameter predictions)
-- `decoherence_correction.py` (crossed dictionary, survival fraction, corrected couplings)
+- `gate_duty_predictions.py` (single-observable K* fits; does not
+  supply joint multi-observable fits)
+- `decoherence_correction.py` (crossed dictionary, K = 1 reference)
 
-The residuals (1-3%) come from the running (K -> mu mapping) from tree
-scale to observation scale. The tree-scale predictions are exact
-rational numbers. The running is computed from the tongue width's
-K-dependence and matches SM 2-loop running to 0.3% RMS.
+The M_Z-scale gaps (1-3%) are unresolved in the framework. Previously
+this file attributed them to a K → μ running mechanism; that
+attribution has been withdrawn (§7). The honest-null resolution is
+that these are bare K = 1 identities, moved to
+`MANIFEST.yml:bare_k1_identities`, not predictions at the
+electroweak scale.
