@@ -53,7 +53,33 @@ def _looks_retracted(md_path: Path, max_scan_lines: int = 80) -> list[str]:
     return [t for t in RETRACTION_TOKENS if t.lower() in head]
 
 
-def _resolve_source(name: str, deriv_dir: Path) -> Path | None:
+def _load_index(deriv_dir: Path) -> dict[str, str]:
+    """Parse sync_cost/derivations/INDEX.md for D-number → filename
+    mappings.  Matches table rows whose first column is a `Dn` token
+    and whose second column contains a `[file.md](file.md)` link.
+    Tolerant: any row that doesn't match is silently ignored.
+
+    Returns a dict like {"D25": "farey_partition.md", ...}."""
+    index_path = deriv_dir / "INDEX.md"
+    if not index_path.exists():
+        return {}
+    text = index_path.read_text()
+    mapping: dict[str, str] = {}
+    row_re = re.compile(
+        r"^\|\s*(D\d+)\s*\|\s*\[`?([a-z_0-9]+\.(?:md|py))`?\]",
+        re.MULTILINE,
+    )
+    for dnum, fname in row_re.findall(text):
+        # Last occurrence wins, in the rare case of duplicates.
+        mapping[dnum] = fname
+    return mapping
+
+
+def _resolve_source(
+    name: str,
+    deriv_dir: Path,
+    d_index: dict[str, str] | None = None,
+) -> Path | None:
     """Resolve a source string like 'D25' or 'farey_partition' or
     'farey_partition.md' to a concrete file under deriv_dir. Returns
     None if unresolvable (a violation)."""
@@ -65,9 +91,11 @@ def _resolve_source(name: str, deriv_dir: Path) -> Path | None:
         candidate = deriv_dir / f"{name}{ext}"
         if candidate.exists():
             return candidate
-    # D-numbers: D25, D33, etc. We'd need INDEX.md to resolve these.
-    # For now, flag as unresolved.
+    # D-numbers: resolve via INDEX.md if available.
     if re.match(r"^D\d+$", name):
+        if d_index and name in d_index:
+            candidate = deriv_dir / d_index[name]
+            return candidate if candidate.exists() else None
         return None
     return None
 
@@ -93,21 +121,33 @@ def main() -> int:
     # sync_cost/derivations/.
     known_repos = set((manifest.get("repos") or {}).keys())
 
-    # Load numerology classifications so we can cross-check.
+    # Load numerology classifications so we can cross-check.  Narrow
+    # sweep: we only flag a file as Class 1/3 if its name appears in
+    # an H3 title (`### ... `foo.md`` — rare but possible) OR in a
+    # line beginning with `- Source:` / `- **Primary` under a Class
+    # 1/3 section.  Upstream structural references (e.g. a `three_
+    # dimensions.md` mention inside a `- Source of the bare identity:`
+    # bullet) are intentionally not flagged — they cite dependencies
+    # of the demoted claim, not the claim's carrier file.
     numerology_text = numerology_path.read_text() if numerology_path.exists() else ""
     class_1_3_files: set[str] = set()
     current_class = None
+    _CARRIER_LINE = re.compile(
+        r"^(?:###\s|- \*\*Primary|- Source\s*:)",
+    )
     for line in numerology_text.splitlines():
         m = re.match(r"^## Class (\d)", line)
         if m:
             current_class = int(m.group(1))
             continue
-        if current_class in (1, 3):
+        if current_class in (1, 3) and _CARRIER_LINE.match(line):
             for fn in re.findall(r"`([a-z_0-9]+\.md)`", line):
                 class_1_3_files.add(fn)
 
+    d_index = _load_index(deriv_dir)
+
     violations: list[str] = []
-    d_number_refs: list[str] = []
+    unresolved_dnums: list[str] = []
     cross_repo_refs: list[str] = []
     for entry_key, entry in scorecard.items():
         sources = entry.get("source") or []
@@ -115,15 +155,15 @@ def main() -> int:
             violations.append(f"{entry_key}: source is not a list")
             continue
         for s in sources:
-            if re.match(r"^D\d+$", s):
-                d_number_refs.append(f"{entry_key}: '{s}'")
-                continue  # separate bucket; known-limitation
             if s in known_repos:
                 cross_repo_refs.append(f"{entry_key}: '{s}' (federated repo)")
                 continue
-            resolved = _resolve_source(s, deriv_dir)
+            resolved = _resolve_source(s, deriv_dir, d_index=d_index)
             if resolved is None:
-                violations.append(f"{entry_key}: source '{s}' unresolved under {deriv_dir}")
+                if re.match(r"^D\d+$", s):
+                    unresolved_dnums.append(f"{entry_key}: '{s}' (not in INDEX.md)")
+                else:
+                    violations.append(f"{entry_key}: source '{s}' unresolved under {deriv_dir}")
                 continue
             if resolved.name in class_1_3_files:
                 violations.append(
@@ -137,20 +177,16 @@ def main() -> int:
                     f"tokens near top: {tokens}"
                 )
 
-    if d_number_refs:
-        # Known limitation: no INDEX.md exists to map D-numbers to
-        # files. Report separately, do not fail the check on these.
+    if unresolved_dnums:
         print(
-            f"NOTE: {len(d_number_refs)} scorecard source(s) use D-numbers "
-            f"but no INDEX.md exists to resolve them."
+            f"NOTE: {len(unresolved_dnums)} scorecard D-number(s) not resolved "
+            f"by sync_cost/derivations/INDEX.md:"
         )
-        # Keep output compact — only first few; full list is noisy.
-        for ref in d_number_refs[:3]:
+        for ref in unresolved_dnums[:3]:
             print(f"  {ref}")
-        if len(d_number_refs) > 3:
-            print(f"  ... and {len(d_number_refs) - 3} more")
-        print("Consider creating sync_cost/derivations/INDEX.md with a")
-        print("D-number → filename mapping, or replace D-numbers with filenames.")
+        if len(unresolved_dnums) > 3:
+            print(f"  ... and {len(unresolved_dnums) - 3} more")
+        print("Add a row for each to INDEX.md's mapping table.")
         print()
 
     if cross_repo_refs:
