@@ -34,59 +34,49 @@ coincidences.
 
 ## Class 1 — Confirmed numerology
 
+Identities that the framework computes at the bare K=1 level but
+that do not connect to observation through any derivation in the
+repo. Each is a null finding: the match is a coincidence, not a
+structural prediction. `MANIFEST.yml` records these under
+`bare_k1_identities`, not `scorecard`.
+
 ### `sin²θ_W = 8/35 = 0.22857`
 
-- Gap vs MS-bar 0.23121: −1.15 %.
-- **Status in MANIFEST.yml: declined.** The framework does not
-  predict sin²θ_W at M_Z. The bare K=1 identity 8/35 is recorded
-  under `bare_k1_identities`, not under `scorecard`.
-- Source of the bare identity: `duty_dimension_proof.md`
-  (theorem `duty(q) = 1/q^d` at K=1), `three_dimensions.md` (d=3),
-  `klein_bottle_derivation.md` (q₂=2, q₃=3),
-  `gauge_dictionary.md` (sector assignment).
-- **Why no prediction at M_Z is made:**
-  - `sinW_running_check.py` shows SM 1-loop running is incompatible
-    with the framework's "tree = Planck" identification — the sign
-    of dsin²θ_W/dlnμ is opposite to what the tree → M_Z gap requires.
-  - `sinw_fixed_point.md` shows no K* ∈ [0.93, 0.99] reproduces
-    either α_s/α₂ or sin²θ_W at M_Z via finite-K duty dynamics.
-  - `sinw_effective_dimension.md` proposes d_eff = 80/27 → 0.23123
-    (0.5σ from PDG), but is explicitly conditional on three
-    unformalized steps (`sinw_effective_dimension.md:179–200`): the
-    "occupied interval → dimension reduction" step, the "only q₃
-    correction matters" step, and the scheme identification with
-    MS-bar at M_Z. Pending formalization — see Class 4 below.
+- Bare K=1 identity: `sin²θ_W = q_2³ / (q_2³ + q_3³) = 8/35`
+  from `duty_dimension_proof.md`, `three_dimensions.md`,
+  `klein_bottle_derivation.md`, `gauge_dictionary.md`.
+- Gap vs MS-bar 0.23121 at M_Z: −1.15 %.
+- **Null findings (no framework prediction at M_Z):**
+  - `sinW_running_check.py`: SM 1-loop running is incompatible with
+    the framework's "tree = Planck" identification — the sign of
+    `dsin²θ_W / dlnμ` is opposite to what the tree → M_Z gap requires.
+  - `sinw_fixed_point.md`: no K* ∈ [0.93, 0.99] reproduces sin²θ_W
+    at M_Z via finite-K duty dynamics.
+  - `sinw_effective_dimension.md`: the d_eff = 80/27 proposal is
+    conditional on three unformalized steps (see Class 4).
 
 ### `1/α_em (tree) = q_2³ + q_3³ = 35`
 
-- **Status in MANIFEST.yml: declined.** Moved from `scorecard` to
-  `bare_k1_identities.inv_alpha_em_tree`.
-- Source of the bare identity: `duty_cycle_dictionary.md` §9,
+- Bare K=1 identity from `duty_cycle_dictionary.md` §9,
   `duty_dimension_proof.md`, `three_dimensions.md`,
   `klein_bottle_derivation.md`.
-- Observed 1/α_em(M_Z) ≈ 127.95. If tree = Planck, SM running does
-  NOT take 35 to 127.95 over the Planck-to-M_Z range (factor 3.7
-  off). The "tree = 35" is a number-theoretic identity (sum of two
-  cubes of framework primes) without a scale-consistent derivation
-  to observation.
+- Observed 1/α_em(M_Z) ≈ 127.95.
+- **Null finding:** SM running from Planck does not take 35 to
+  127.95 over the Planck-to-M_Z range (factor 3.7 off). The
+  "tree = 35" is a number-theoretic identity (sum of two cubes of
+  framework primes) with no scale-consistent derivation to observation.
 
-### `+1/228` correction to λ_H (removed as fitted)
+### `+1/228` correction to λ_H
 
-- Previously proposed in `framework_predictions.py`:
-  `lambda = 1/q_2^3 + 1/228`, giving a close match to observed
-  λ_H ≈ 0.1294 at M_Z.
-- 228 = 12·19 = q_2²·q_3·|F_7|. Although the prime factorization
-  uses only framework integers, no derivation of the additive
-  correction form `+1/(q_2²·q_3·|F_7|)` from tree-scale running,
-  loop-correction structure, or substrate combinatorics exists.
-- **Audited and removed** in `framework_predictions.py:268`:
-  "the prior `+ 1/228` correction was removed: it is a fitted
-  term, not derived." The bare K=1 identity `λ_H = 1/q_2³ = 1/8`
-  remains a `bare_k1_identities` entry with 3.4% residual to
-  observation, consistent with the other duty-cycle dictionary
-  items declined in Class 3.
-- Status: confirmed fitted / numerology. Framework-status row
-  moved from Proposed to Eliminated.
+- Form: `λ_H = 1/q_2³ + 1/228`, with `228 = q_2²·q_3·|F_7| = 12·19`.
+  Gives close match to observed λ_H ≈ 0.1294 at M_Z.
+- **Null finding:** the prime factorization uses framework integers,
+  but no derivation of the *additive* correction form
+  `+1/(q_2²·q_3·|F_7|)` from tree-scale running, loop-correction
+  structure, or substrate combinatorics exists.
+  `framework_predictions.py:268` removes the correction with the
+  verdict "fitted term, not derived." The bare K=1 identity
+  `λ_H = 1/q_2³ = 1/8` stands (see Class 3).
 
 ---
 
@@ -112,18 +102,15 @@ coincidences.
 
 ### Klein nodal parity (single connected curve at (5, 5, 1) σ=+node)
 
-- In-session visual observation at (5, 5, 1), σ=+node, ω_rot=0.03,
-  γ=5: a single connected diagonal line of seeds.
-- Proposed (`klein_nodal_parity.md`) as the odd-m case of a parity
-  ladder predicting Möbius-connected nodal curves for odd ℓ and
-  disjoint arcs for even ℓ under the Z₂ quotient.
-- **Retracted 2026-04-22.** Simulator uses `U = Y²`, which is
-  Z₂-symmetric for all ℓ: the (−1)^ℓ sign flip on Y doesn't survive
-  squaring. Dynamics cannot discriminate parity. The observed
-  single curve is explained by gradient descent on a slowly-rotating
-  static landscape (ω_rot=0.03 ≠ 0) with seeds tracking one
-  meridional arc.
-- Status: numerical/visual coincidence, not a topological signature.
+- Observation at (5, 5, 1), σ=+node, ω_rot=0.03, γ=5: a single
+  connected diagonal line of seeds on the sphere.
+- **Null finding:** simulator uses `U = Y²`, which is Z₂-symmetric
+  for all ℓ — the (−1)^ℓ sign flip on Y doesn't survive squaring.
+  Dynamics cannot discriminate parity. The observed single curve
+  is gradient descent on a slowly-rotating static landscape
+  (ω_rot=0.03 ≠ 0) tracking one meridional arc; no topological
+  content. See `klein_nodal_parity.md` for the derivation.
+- Status: visual coincidence.
 
 ### Pythagorean comma vs K_Greene (0.17 % near-match)
 
@@ -140,42 +127,36 @@ coincidences.
 
 The duty-cycle dictionary (`duty_cycle_dictionary.md`) produces
 multiple particle-sector identities from `(q_2, q_3)` at an
-unspecified scale. Since the key item (sin²θ_W = 8/35) from this
-dictionary is Class 1 numerology, the others from the same ansatz
-share the same vulnerability. All four have been demoted from
-`MANIFEST.yml:scorecard` to `MANIFEST.yml:bare_k1_identities`
-for consistency with the sin²θ_W resolution.
+unspecified scale. Since the key item (sin²θ_W = 8/35) is Class 1
+numerology, the others share the same vulnerability — bare K=1
+identities without a scale-consistent derivation to M_Z.
+`MANIFEST.yml` records all four under `bare_k1_identities`.
 
 ### `m_H / v = 1/q_2 = 1/2`
 
-- **Status in MANIFEST.yml: declined.** Moved to
-  `bare_k1_identities.m_H_over_v`.
+- Bare K=1 identity from `duty_cycle_dictionary.md` §8: "m_H is
+  the lowest excitation of the q = 2 tongue."
 - Gap vs 0.5087: −1.71 %.
-- Source: `duty_cycle_dictionary.md` §8 — "m_H is the lowest
-  excitation of the q = 2 tongue; its mass is set by the tongue's
-  repetition period (q_2 = 2)". The framework does not supply a
-  derivation that connects this K=1 identity to the observed value
-  at M_Z.
+- **Null finding:** no derivation connects the K=1 identity to the
+  observed value at M_Z.
 
 ### `λ_Higgs = 1/q_2³ = 1/8`
 
-- **Status in MANIFEST.yml: declined.** Moved to
-  `bare_k1_identities.lambda_higgs`.
+- Bare K=1 identity: duty of the q=2 sector,
+  `duty(q_2) = 1/q_2^3 = 1/8` (`duty_cycle_dictionary.md` §8).
 - Gap vs 0.1294: −3.36 %.
-- Source: `duty_cycle_dictionary.md` §8 — bare K=1 duty of the q=2
-  sector, `duty(q_2) = 1/q_2^3 = 1/8`. Previous `+1/228` correction
-  in `framework_predictions.py` has been flagged as a fitted term
-  (228 = 12·19 is not framework-native; see Class 4 below).
+- **Null finding:** no derivation connects the K=1 identity to M_Z.
+  The `+1/228` correction that would close the gap is itself a
+  null (Class 1).
 
 ### `α_s / α_2 = q_3³ / q_2³ = 27/8`
 
-- **Status in MANIFEST.yml: declined.** Moved to
-  `bare_k1_identities.alpha_s_over_alpha_2`.
+- Bare K=1 identity: ratio of bare duty cycles at K=1
+  (`duty_cycle_dictionary.md` §2).
 - Gap vs 3.488 at M_Z: −3.24 %.
-- Source: `duty_cycle_dictionary.md` §2 — ratio of bare duty cycles
-  at K=1. Same K → μ mapping issue as sin²θ_W: SM RG cannot connect
-  27/8 at the tree scale to 3.488 at M_Z in a framework-consistent
-  way, and no other derivation is supplied.
+- **Null finding:** same K → μ mapping gap as sin²θ_W. SM RG
+  cannot connect 27/8 at tree scale to 3.488 at M_Z in a
+  framework-consistent way, and no alternative derivation exists.
 
 ---
 
@@ -274,14 +255,12 @@ for consistency with the sin²θ_W resolution.
   - 1:5 (Ω_b:Ω_DM) from Z₂ representation theory on coprime-pair
     antisym modes + EM cross-sector criterion
     (`omega_partition_combinatorial.md`, `baryon_fraction.md`)
-- Structural. The prior "XOR-parity proof of 1:5:13 at depth 19"
-  Proposed item was the wrong target; the actual mechanisms are
-  Farey counting and Z₂-rep-theory eigenmode decomposition, not
-  the mode-pair XOR filter from `xor_derivation.md` (which is a
-  different Z₂ structure).
+- The two mechanisms (Farey counting, Klein-antipodal Z₂ rep) are
+  distinct from the mode-pair XOR filter in `xor_derivation.md`,
+  which is a separate Z₂ structure.
 - Ω_b = 1/19 has a 6.7% observational residual attributed to
   Klein-eigenmode width asymmetry (sym/antisym tongue widths) and
-  the boundary-weight / decoherence corrections — finite-depth
+  boundary-weight / decoherence corrections — finite-depth
   structural residual, not numerology.
 
 ---
