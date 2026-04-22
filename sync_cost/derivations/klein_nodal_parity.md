@@ -85,4 +85,3 @@ of them is outside the scope of this repository.
 | `klein_bottle.md` | Z₂-quotient substrate; still-valid by other arguments |
 | `framework_status.md` | Eliminated entry with pointer here |
 | `numerology_inventory.md` | Class 2 entry |
-| `basin_11_connection_exploration.md` | Sibling study, unaffected — that test concerns basin-area tiering, not Z₂ parity |
