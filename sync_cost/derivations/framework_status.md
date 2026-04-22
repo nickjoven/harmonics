@@ -21,14 +21,13 @@ Categories:
 |---|---|
 | R = 6·13⁵⁴ (Planck/Hubble hierarchy) | `hierarchy_gaussian_lattice.md` |
 | Λ·ℓ_P² = 13⁻¹⁰⁸/12 = 3/R² | `hierarchy_gaussian_lattice.md` |
-| Ω partition 1:5:13/19 (total counts) | `baryon_fraction.md` |
-| Ω_Λ = 13/19 (0.07σ), Ω_m = 6/19, Ω_c = 5/19 | `baryon_fraction.md` |
+| Ω_Λ : Ω_DM : Ω_b = 13 : 5 : 1 / 19 (combinatorial: Farey + Z₂ rep theory) | `omega_partition_combinatorial.md`, `farey_partition.md`, `baryon_fraction.md` |
+| Ω_Λ = 13/19 (0.07σ), Ω_m = 6/19, Ω_DM = 5/19, Ω_b = 1/19 | same |
 | Friedmann form at r = 1 | `k_of_t_friedmann.md` |
 | λ_unlock = (4G − π ln 2)/π (Arnold Lyapunov on Z₂ quotient) | `kam_bridge_synthesis.md` |
 | Born rule |ψ|² from saddle-node | `born_rule.md`, `a1_from_saddle_node.md` |
 | a_0 = cH_0/(2π) from Λ (MOND scale) | `a0_threshold.md` |
 | Z₂-pair conservation theorem | `z2_pair_conservation.md` |
-| Ω_Λ : Ω_m = 13 : 6 at depth 19 (Farey combinatorics, 0.07σ) | `omega_partition_combinatorial_status.md`, `farey_partition.md` |
 
 ## Floor (structural residual at finite Fibonacci depth, 7–11%)
 
@@ -82,7 +81,6 @@ numerology ensemble, not structural.
 | λ_H = 1/q_2³ + 1/228 correction | Framework origin for 228 = 12·19 |
 | N_efolds = √5 / rate ≈ 61.3 | Framework-internal derivation independent of observed n_s |
 | K_c(F_n/F_{n+1}) closed form | Explicit form beyond asymptotic δ⁻ⁿ scaling |
-| Ω_b : Ω_DM = 1 : 5 subdivision | Structural derivation of Klein-antipodal coprime-pair split (not merge) — see `omega_partition_combinatorial_status.md` Candidates 1–4. The 13:6 half of the former "1:5:13 XOR-parity" proposal is now in Survives. |
 | T2#7 measurement arc technical residuals | Iteration-to-time anchor, multi-tongue cascade, continuous K(t) |
 
 ## Out of class (absolute scales, anchor-dependent)
