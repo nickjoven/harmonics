@@ -7,6 +7,26 @@ parity-ladder control runs that would discriminate the topological
 prediction from a coincidence have not been collected. This file is
 the test specification, not a result.
 
+## Simulation dynamics (mechanism note)
+
+The visualization simulator (`github.com/nickjoven/simulation`) runs
+gradient descent on a static potential built from the spherical
+harmonic:
+
+    tmpP.addScaledVector(∇ψ, -σ · γ · dt)
+
+σ = +1 ("+node" in the UI): seeds descend to minima of |ψ|², which
+for Re[Y_ℓ^ℓ] corresponds to the nodal set. σ = −1: seeds climb to
+maxima (the antinode belt). γ is step size; gain is cosmetic.
+
+The claim below concerns the **topology of the nodal set itself**,
+not the dynamics that lands seeds on it. The (−1)^ℓ sign-flip rule
+is a property of Y_ℓ^ℓ under the Z₂ quotient, independent of whether
+the seeds arrive by gradient descent, by a twist-map iteration, or
+by any other mechanism that concentrates them on |ψ|² minima. See
+`simulation_dynamics_audit.md` for the full parameter-semantics
+clarification.
+
 ## Claim (testable)
 
 At σ = +node, ω_rot = 0, n = 1, and (ℓ, m) = (ℓ, ℓ), the seed-visible

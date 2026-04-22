@@ -82,6 +82,7 @@ numerology ensemble, not structural.
 | XOR-parity proof of 1:5:13 at depth 19 | Direct combinatorial proof on Klein quotient |
 | T2#7 measurement arc technical residuals | Iteration-to-time anchor, multi-tongue cascade, continuous K(t) |
 | Klein nodal parity (odd-m Möbius vs even-m disjoint circles) | Parity alternation across (ℓ, ℓ, 1) for ℓ = 2..6 at σ=+node, ω_rot=0 (`klein_nodal_parity.md`) |
+| Basin 1/1 connection topology at Q=19 | Basin map shows 1:5:13 tiering and Fibonacci neighbors as direct boundary partners (`basin_11_connection_exploration.md`) |
 
 ## Out of class (absolute scales, anchor-dependent)
 
