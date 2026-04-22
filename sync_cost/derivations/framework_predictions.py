@@ -198,16 +198,23 @@ def _all() -> list[Prediction]:
     # GAUGE COUPLINGS
     # ------------------------------------------------------------------
     preds.append(Prediction(
-        name="sin^2(theta_W)",
+        name="sin^2(theta_W) [bare K=1 identity, not a prediction at M_Z]",
         sector="gauge",
         tree_form="q_2^3 / (q_2^3 + q_3^3) = 8/35",
         tree_value=Q2**3 / (Q2**3 + Q3**3),
-        correction_form="q_2^3 / F_10^2 = 8/3025",
-        correction_value=Q2**3 / (fib(10) ** 2),
+        correction_form="-",
+        correction_value=0.0,
         observed=SIN2_TW_MZ,
         observed_err=0.00004,
-        source="item12_sin_W_and_signs.py, item12_other_residuals.py",
-        notes="finite-K correction; F_10 appears also in lepton C",
+        source="duty_dimension_proof.md, numerology_inventory.md (Class 1)",
+        notes=(
+            "Declined in MANIFEST.yml per honest-null audit. The bare K=1 "
+            "identity 8/35 is listed under MANIFEST.bare_k1_identities. The "
+            "prior `+ 8/F_10^2` correction was removed (not derived). The "
+            "d_eff = 80/27 proposal in sinw_effective_dimension.md is "
+            "conditional on three unformalized steps and is not a prediction "
+            "here. See sinW_running_check.py and sinw_fixed_point.md."
+        ),
     ))
 
     preds.append(Prediction(

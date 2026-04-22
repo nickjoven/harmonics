@@ -99,12 +99,13 @@ scorecard:
     residual: "CMB-S4, ~2028"
     source: ["D10"]
 
-  weinberg_angle:
-    name: "Weinberg angle sin²θ_W"
-    computed: "8/35 = 0.2286"
-    observed: "0.2312"
-    residual: "1.1%"
-    source: ["D33", "D37"]
+  # Weinberg angle sin²θ_W: declined — the framework has no rigorous
+  # prediction at M_Z. The bare K=1 identity 8/35 is listed under
+  # `bare_k1_identities` below, not here. See `sinw_fixed_point.md`
+  # (K-scanning ruled out), `sinW_running_check.py` (SM running ruled
+  # out), and `numerology_inventory.md` (Class 1). The d_eff = 80/27
+  # correction in `sinw_effective_dimension.md` is conditional on three
+  # unformalized steps and is not promoted to a prediction here.
 
   higgs_mass_ratio:
     name: "Higgs mass ratio m_H/v"
@@ -175,6 +176,20 @@ scorecard:
     observed: "5.41"
     residual: "7.5%"
     source: ["D47"]
+
+# --- Bare K=1 identities ---
+# Measure-theoretic consequences of duty(q) = 1/q^d at critical coupling
+# (duty_dimension_proof.md). These are reference values at K=1, not
+# predictions at any observational scale. Moving from K=1 to M_Z requires
+# a running mechanism that the framework does not currently supply; see
+# `numerology_inventory.md` §Class 1/3 and `sinw_fixed_point.md`.
+
+bare_k1_identities:
+  sin2_theta_W:
+    form: "q_2^3 / (q_2^3 + q_3^3)"
+    value: "8/35 = 0.22857..."
+    source: ["duty_dimension_proof", "three_dimensions", "klein_bottle_derivation", "gauge_dictionary"]
+    status: "bare reference only; not a prediction at M_Z"
 
 # --- Klein bottle constants ---
 # These are the integers from which the cosmological parameters follow.

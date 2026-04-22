@@ -1,5 +1,5 @@
 {
-  "generated": "90652c74e352e0c456d5697c45bddc9189cfa8e9",
+  "generated": "2a285e403a3f3812654b32b7077c87957110f903",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -11,7 +11,9 @@
         "klein_bottle",
         "mass_sector_closure"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "numerology_inventory"
+      ],
       "git": [
         {
           "hash": "a9319dc",
@@ -77,9 +79,9 @@
       ],
       "git": [
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -108,9 +110,9 @@
       ],
       "git": [
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -120,7 +122,10 @@
       "title": "a\u2080 from Synchronization Cost Threshold",
       "summary": "The MOND acceleration scale a\u2080 \u2248 1.2 \u00d7 10\u207b\u00b9\u2070 m/s\u00b2 is the point where\nlocal gravitational synchronization cost equals the cosmological mean\nfield maintenance cost. This gives a mechanistic derivation of the\ndimensional relation a\u2080 = cH\u2080/2\u03c0 already established in proslambenomenos (a companion repository deriving cosmological dimensional relations from the Hubble frequency),\nand connects it to the Stribeck lattice bifurcation threshold.",
       "depends_on": [],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "framework_status",
+        "numerology_inventory"
+      ],
       "git": [
         {
           "hash": "e387fe3",
@@ -133,9 +138,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -154,8 +159,10 @@
       "depended_on_by": [
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_c",
+        "framework_status",
         "mass_sector_sqrt_w_phase_a",
-        "mass_sector_sqrt_w_phase_b"
+        "mass_sector_sqrt_w_phase_b",
+        "numerology_inventory"
       ],
       "git": [
         {
@@ -185,14 +192,9 @@
       ],
       "git": [
         {
-          "hash": "90652c7",
+          "hash": "cc58f06",
           "date": "2026-04-20",
-          "subject": "Drop chronology from A_s presentation layer"
-        },
-        {
-          "hash": "5612171",
-          "date": "2026-04-20",
-          "subject": "A_s geometric proof: clean derivation from A1-A9, no fits"
+          "subject": "DRY sweep + A_s geometric proof + Z1-Z3 convention (#68)"
         }
       ]
     },
@@ -202,7 +204,9 @@
       "title": "Address and Quantity",
       "summary": "A ratio has two components. The numerator counts displacement.\nThe denominator counts period. One says how far; the other says\nhow long. These are not the same kind of information.",
       "depends_on": [],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "anchor_count_audit"
+      ],
       "git": [
         {
           "hash": "e1e25da",
@@ -237,12 +241,43 @@
       ]
     },
     {
+      "id": "anchor_count_audit",
+      "path": "sync_cost/derivations/anchor_count_audit.md",
+      "title": "Anchor-count audit: single vs multiple observational anchors",
+      "summary": "The anchor-count audit concludes: the framework currently has **two**\nindependent observational anchors (H_0 and v_EW), with a suggestive\nbut underived numerical near-match at v/M_P \u2248 13\u207b\u00b9\u2075 (3.1% off). The\nT4 language should be softened accordingly, and the missing link is\na concrete structural open item \u2014 effectively the hierarchy problem\nposed framework-natively.",
+      "depends_on": [
+        "address_and_quantity",
+        "coupling_scales",
+        "gauge_sector_lovelock",
+        "hierarchy_gaussian_lattice",
+        "higgs_from_tongue_boundary",
+        "mass_sector_closure",
+        "numerology_inventory",
+        "planck_scale"
+      ],
+      "depended_on_by": [
+        "framework_status",
+        "hierarchy_gaussian_lattice",
+        "numerology_inventory"
+      ],
+      "git": [
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
+        }
+      ]
+    },
+    {
       "id": "baryon_fraction",
       "path": "sync_cost/derivations/baryon_fraction.md",
       "title": "The Baryon Fraction",
       "summary": "The cosmic energy budget partitions into three sectors from the\nsingle number 19 (the Klein bottle's total budget from D25):",
       "depends_on": [],
       "depended_on_by": [
+        "basin_11_connection_exploration",
+        "framework_status",
+        "numerology_inventory",
         "omega_b_residual_phase_a",
         "omega_b_residual_phase_b"
       ],
@@ -251,6 +286,28 @@
           "hash": "bab48f4",
           "date": "2026-04-07",
           "subject": "D46-47: ADM dictionary derived, baryon fraction \u03a9_b = 1/19"
+        }
+      ]
+    },
+    {
+      "id": "basin_11_connection_exploration",
+      "path": "sync_cost/derivations/basin_11_connection_exploration.md",
+      "title": "Basin 1/1 connection exploration",
+      "summary": "**Proposed.** Simulation specification, not a result. Motivated by\na session observation that the structures around the dominant 1/1\nFarey peak were mis-identified as \"cantori\" / \"island chains\" when\nthe actual mechanism is gradient descent on \u03c8_F. The observation\nstill points at something real \u2014 the connection topology between\nthe 1/1 basin and its neighbors \u2014 but in different language. This\nfile specifies the correctly-framed local study.",
+      "depends_on": [
+        "baryon_fraction",
+        "framework_status",
+        "klein_nodal_parity"
+      ],
+      "depended_on_by": [
+        "framework_status",
+        "klein_nodal_parity"
+      ],
+      "git": [
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
         }
       ]
     },
@@ -264,8 +321,11 @@
       ],
       "depended_on_by": [
         "a1_from_saddle_node",
+        "framework_status",
+        "klein_nodal_parity",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
+        "numerology_inventory",
         "seismic_eigenstate_dictionary",
         "stribeck_vortex"
       ],
@@ -276,9 +336,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -316,9 +376,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -341,9 +401,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -377,9 +437,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -400,9 +460,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -413,6 +473,7 @@
       "summary": "**Derived (partial).** D_0 = 1/2 is determined by the tree geometry.\nAll dimensionless ratios are determined. The absolute coupling scales\nreduce to one dimensionful input (the root oscillator frequency),\nwhich no mathematical framework can produce.",
       "depends_on": [],
       "depended_on_by": [
+        "anchor_count_audit",
         "gap2_analytic_proof"
       ],
       "git": [
@@ -452,9 +513,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -472,9 +533,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -675,10 +736,15 @@
       "depends_on": [
         "duty_dimension_proof",
         "klein_bottle",
+        "numerology_inventory",
+        "sinw_effective_dimension",
+        "sinw_fixed_point",
         "speed_of_light",
         "three_dimensions"
       ],
       "depended_on_by": [
+        "framework_status",
+        "numerology_inventory",
         "omega_b_residual_phase_b",
         "sinw_effective_dimension"
       ],
@@ -694,9 +760,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -707,13 +773,14 @@
       "summary": "For the standard circle map with SL(2,Z) Farey structure, the duty\ncycle of the mode-locked tongue at p/q scales as",
       "depends_on": [],
       "depended_on_by": [
-        "duty_cycle_dictionary"
+        "duty_cycle_dictionary",
+        "numerology_inventory"
       ],
       "git": [
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -740,9 +807,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -760,9 +827,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -780,9 +847,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -808,9 +875,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -828,9 +895,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -848,9 +915,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -871,9 +938,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -898,6 +965,35 @@
           "hash": "e1e25da",
           "date": "2026-04-13",
           "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "framework_status",
+      "path": "sync_cost/derivations/framework_status.md",
+      "title": "Framework status map",
+      "summary": "At-a-glance inventory. One line per item. Full analysis lives in the\nreferenced files; this is the bird's-eye view to prevent duplicate\nwork and re-derivation of eliminated content.",
+      "depends_on": [
+        "a0_threshold",
+        "a1_from_saddle_node",
+        "anchor_count_audit",
+        "baryon_fraction",
+        "basin_11_connection_exploration",
+        "born_rule",
+        "duty_cycle_dictionary",
+        "hierarchy_gaussian_lattice",
+        "klein_nodal_parity",
+        "numerology_inventory"
+      ],
+      "depended_on_by": [
+        "basin_11_connection_exploration",
+        "klein_nodal_parity"
+      ],
+      "git": [
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
         }
       ]
     },
@@ -1155,6 +1251,7 @@
       ],
       "depended_on_by": [
         "hierarchy_gaussian_lattice",
+        "numerology_inventory",
         "sinw_effective_dimension",
         "three_formalizations"
       ],
@@ -1202,6 +1299,7 @@
         "sinw_fixed_point"
       ],
       "depended_on_by": [
+        "anchor_count_audit",
         "gauge_dictionary",
         "gauge_factorization",
         "klein_connection",
@@ -1291,7 +1389,8 @@
       ],
       "depended_on_by": [
         "fourth_generation_revisited",
-        "mixing_angle_audit"
+        "mixing_angle_audit",
+        "numerology_inventory"
       ],
       "git": [
         {
@@ -1300,9 +1399,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -1359,9 +1458,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -1371,6 +1470,7 @@
       "title": "The Planck\u2013Hubble Hierarchy from Gaussian Lattice Index",
       "summary": "The Planck/Hubble hierarchy R is derived from the framework's\nthree quantities (q\u2082 = 2, q\u2083 = 3, d = 3) with zero free parameters:",
       "depends_on": [
+        "anchor_count_audit",
         "gap2_spatialization_decomposition",
         "gauge_dictionary",
         "gauge_factorization",
@@ -1380,17 +1480,25 @@
         "three_formalizations"
       ],
       "depended_on_by": [
+        "anchor_count_audit",
         "down_type_double_cover_closed",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_b",
+        "framework_status",
         "gap2_spatialization_decomposition",
         "gap2_sub_e_status_reconciled",
         "neutrino_mass_audit",
+        "numerology_inventory",
         "session_audit",
         "statistical_conventions",
         "three_formalizations"
       ],
       "git": [
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
+        },
         {
           "hash": "c83e5d0",
           "date": "2026-04-19",
@@ -1410,7 +1518,8 @@
       "summary": "The Higgs mechanism \u2014 the spontaneous breaking of SU(2) x U(1)_Y\nto U(1)_em \u2014 is the tongue boundary dynamics of the Klein bottle's\nopen q=2 fiber. The scalar doublet, the quartic potential, the\ntachyonic mass, and the vacuum expectation value all have geometric\norigins in the circle map's saddle-node bifurcation.",
       "depends_on": [],
       "depended_on_by": [
-        "FRAMEWORK_TOPOLOGY"
+        "FRAMEWORK_TOPOLOGY",
+        "anchor_count_audit"
       ],
       "git": [
         {
@@ -1469,9 +1578,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -1493,9 +1602,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -1615,6 +1724,7 @@
         "gauge_dictionary",
         "gauge_factorization",
         "klein_connection",
+        "klein_nodal_parity",
         "second_law_topological",
         "vacuum_energy"
       ],
@@ -1625,9 +1735,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -1650,6 +1760,8 @@
         "gap2_theorem_attempt",
         "gauge_factorization",
         "hierarchy_gaussian_lattice",
+        "klein_nodal_parity",
+        "numerology_inventory",
         "omega_b_residual_phase_a",
         "second_law_topological",
         "sinw_effective_dimension",
@@ -1693,6 +1805,32 @@
       ]
     },
     {
+      "id": "klein_nodal_parity",
+      "path": "sync_cost/derivations/klein_nodal_parity.md",
+      "title": "Klein nodal parity: a direct test of substrate non-orientability",
+      "summary": "**Proposed.** One suggestive image at (\u2113, m, n) = (5, 5, 1). The\nparity-ladder control runs that would discriminate the topological\nprediction from a coincidence have not been collected. This file is\nthe test specification, not a result.",
+      "depends_on": [
+        "basin_11_connection_exploration",
+        "born_rule",
+        "framework_status",
+        "klein_bottle",
+        "klein_bottle_derivation",
+        "numerology_inventory"
+      ],
+      "depended_on_by": [
+        "basin_11_connection_exploration",
+        "framework_status",
+        "numerology_inventory"
+      ],
+      "git": [
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
+        }
+      ]
+    },
+    {
       "id": "lie_group_characterization",
       "path": "sync_cost/derivations/lie_group_characterization.md",
       "title": "Lie Group Characterization Theorem",
@@ -1714,9 +1852,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -1732,6 +1870,7 @@
       "depended_on_by": [
         "CHAIN_KSTAR",
         "FRAMEWORK_TOPOLOGY",
+        "anchor_count_audit",
         "fourth_generation_revisited",
         "mixing_angle_audit",
         "neutrino_mass_audit"
@@ -1809,9 +1948,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -1832,9 +1971,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -1859,9 +1998,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -1885,9 +2024,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -1929,9 +2068,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -1956,6 +2095,43 @@
           "hash": "c83e5d0",
           "date": "2026-04-19",
           "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        }
+      ]
+    },
+    {
+      "id": "numerology_inventory",
+      "path": "sync_cost/derivations/numerology_inventory.md",
+      "title": "Numerology inventory",
+      "summary": "Compilation of framework predictions / observations that are confirmed\nnumerology, noted coincidences, or suspects \u2014 so we know what to stop\nchasing as if it were structural.",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "a0_threshold",
+        "a1_from_saddle_node",
+        "anchor_count_audit",
+        "baryon_fraction",
+        "born_rule",
+        "duty_cycle_dictionary",
+        "duty_dimension_proof",
+        "gauge_dictionary",
+        "generation_mechanism",
+        "hierarchy_gaussian_lattice",
+        "klein_bottle_derivation",
+        "klein_nodal_parity",
+        "sinw_effective_dimension",
+        "sinw_fixed_point",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "anchor_count_audit",
+        "duty_cycle_dictionary",
+        "framework_status",
+        "klein_nodal_parity"
+      ],
+      "git": [
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
         }
       ]
     },
@@ -2011,6 +2187,7 @@
       "summary": "The Planck scale is not an imposed cutoff. It is the minimum domain\nwhere the synchronization substrate can sustain itself \u2014 the N = 3\nthreshold of the coupling loop.",
       "depends_on": [],
       "depended_on_by": [
+        "anchor_count_audit",
         "isotropy_lemma"
       ],
       "git": [
@@ -2020,9 +2197,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -2042,9 +2219,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -2068,9 +2245,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -2230,9 +2407,9 @@
       ],
       "git": [
         {
-          "hash": "90652c7",
+          "hash": "cc58f06",
           "date": "2026-04-20",
-          "subject": "Drop chronology from A_s presentation layer"
+          "subject": "DRY sweep + A_s geometric proof + Z1-Z3 convention (#68)"
         }
       ]
     },
@@ -2250,8 +2427,10 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "duty_cycle_dictionary",
         "hierarchy_gaussian_lattice",
         "neutrino_mass_audit",
+        "numerology_inventory",
         "sinw_fixed_point",
         "three_formalizations"
       ],
@@ -2272,9 +2451,11 @@
         "sinw_effective_dimension"
       ],
       "depended_on_by": [
+        "duty_cycle_dictionary",
         "gauge_dictionary",
         "gauge_sector_lovelock",
         "klein_connection",
+        "numerology_inventory",
         "sinw_effective_dimension"
       ],
       "git": [
@@ -2316,9 +2497,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -2343,9 +2524,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -2368,9 +2549,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -2397,6 +2578,11 @@
         "neutrino_mass_audit"
       ],
       "git": [
+        {
+          "hash": "cc58f06",
+          "date": "2026-04-20",
+          "subject": "DRY sweep + A_s geometric proof + Z1-Z3 convention (#68)"
+        },
         {
           "hash": "c83e5d0",
           "date": "2026-04-19",
@@ -2456,6 +2642,7 @@
         "hierarchy_gaussian_lattice",
         "isotropy_lemma",
         "klein_bottle_derivation",
+        "numerology_inventory",
         "sinw_effective_dimension",
         "three_formalizations"
       ],
@@ -2471,9 +2658,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -2514,9 +2701,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -2534,9 +2721,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -2562,9 +2749,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -2582,9 +2769,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -2604,9 +2791,9 @@
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
         },
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     },
@@ -2622,9 +2809,9 @@
       ],
       "git": [
         {
-          "hash": "b5a0742",
+          "hash": "b8eb66e",
           "date": "2026-03-29",
-          "subject": "Dramatize spiral spacing and add pong afterimage with coupling (#36)"
+          "subject": "Add Makefile and CI workflow for building visual assets"
         }
       ]
     }

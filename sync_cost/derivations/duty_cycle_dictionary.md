@@ -65,10 +65,15 @@ ratio of the two smallest coprime integers greater than 1.
 
 ---
 
-## 3. The Weinberg angle: sin^2(theta_W) = 8/35
+## 3. The Weinberg angle: sin^2(theta_W) = 8/35 (bare K=1 identity)
 
-The Weinberg angle measures the mixture of the two sectors. In the
-duty cycle dictionary:
+**Status: bare reference only, not a prediction at M_Z.** The framework
+currently declines to predict sin²θ_W at the electroweak scale. See
+`sinw_fixed_point.md` (K-scanning ruled out), `sinW_running_check.py`
+(SM 1-loop running ruled out — the sign is wrong), and
+`numerology_inventory.md` §Class 1.
+
+The bare K=1 identity follows from the duty dictionary:
 
     sin^2(theta_W) = duty(q_3) / [duty(q_2) + duty(q_3)]
                    = (1/q_3^3) / (1/q_2^3 + 1/q_3^3)
@@ -77,17 +82,19 @@ duty cycle dictionary:
                    = 8 / 35
                    = 0.22857...
 
-Equivalently, at the K = 1 tree scale:
+Equivalently:
 
     sin^2(theta_W) = 1 / [1 + (q_3/q_2)^3]
                    = 1 / [1 + (3/2)^3]
                    = 8 / 35
 
-Observed at M_Z: 0.23121. Residual: |0.2286 - 0.2312| / 0.2312 = **1.1%**.
-
-This is the first independent prediction: the coupling ratio fixes
-one number (the 27/8), and sin^2(theta_W) is a different function of
-the same two integers. No parameter is adjusted.
+Observed at M_Z (MS-bar): 0.23121. The 1.1% gap to observation has no
+scale-consistent derivation in the framework: SM 1-loop running from
+Planck runs sin²θ_W in the *wrong direction*, K-scanning finds no
+K* ∈ [0.93, 0.99] reproducing either constraint, and the d_eff = 80/27
+correction in `sinw_effective_dimension.md` is conditional on three
+unformalized steps. The 8/35 value is recorded as a K=1 reference
+identity, not a prediction at M_Z.
 
 ---
 
@@ -262,17 +269,24 @@ product of the individual duty cycles summed over sectors.
 
 ## Summary table
 
-| Quantity | Tree value | Observed (M_Z) | Residual | Source |
-|----------|-----------|-----------------|----------|--------|
-| alpha_s / alpha_2 | 27/8 + 1/9 = 251/72 | 3.487 | 0.17% | q_3^3/q_2^3 + 1/q_3^2 |
-| sin^2(theta_W) | 8/35 + 8/F_10^2 | 0.23122 | ~2e-5 | q_2^3/(q_2^3+q_3^3) + q_2^3/F_10^2 |
-| m_H | v/2 = 123.1 GeV | 125.25 GeV | 1.7% | v/q_2 |
-| lambda (Higgs quartic) | 1/q_2^3 = 1/8 | 0.129 | 3.4% | duty(q_2) (forced by sin^2 theta_W, see item12_higgs_degeneracy.py) |
-| 1/alpha_0 (tree EM) | 35 | — | — | q_2^3 + q_3^3 |
-| |r| at M_Z | 1.000 (tree) | 0.968 | 3.2% | decoherence tax |
+Bare K=1 identities only. The "M_Z residual" column records the gap
+to observation for reference; it is **not** accounted for by any
+derivation in the framework (see `numerology_inventory.md` §Class 1/3).
 
-Free parameters: **0**. All entries are functions of q_2 = 2, q_3 = 3,
-and d = 3.
+| Quantity | K=1 bare value | Observed (M_Z) | M_Z gap | Bare source |
+|----------|----------------|-----------------|---------|-------------|
+| alpha_s / alpha_2 | 27/8 = 3.375 | 3.488 | 3.2% | q_3^3/q_2^3 |
+| sin^2(theta_W) | 8/35 = 0.22857 | 0.23121 | 1.1% | q_2^3/(q_2^3+q_3^3) |
+| m_H / v | 1/2 | 0.5087 | 1.7% | 1/q_2 |
+| lambda (Higgs quartic) | 1/8 = 0.125 | 0.129 | 3.4% | 1/q_2^3 = duty(q_2) |
+| 1/alpha_0 (tree EM) | 35 | — | — | q_2^3 + q_3^3 |
+| |r| at M_Z | 1.000 | 0.968 | 3.2% | decoherence tax |
+
+Previous fitted corrections (`+ 8/F_10^2`, `+ 1/q_3^2`, `+ 1/228`)
+have been removed from this table: they are not derived in the
+repository. The K=1 bare values are measure-theoretic consequences
+of the duty theorem (`duty_dimension_proof.md`); the gap to M_Z is
+unresolved.
 
 ---
 

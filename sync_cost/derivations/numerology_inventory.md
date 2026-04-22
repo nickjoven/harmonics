@@ -36,17 +36,26 @@ coincidences.
 
 ### `sin²θ_W = 8/35 = 0.22857`
 
-- Residual vs MS-bar 0.23122: −1.15 %.
-- Source: `duty_cycle_dictionary.md` §3, claimed derivation
-  `sin²θ_W = q_2³/(q_2³+q_3³) = 8/35`.
-- **Disproof-of-structural evidence:** `sinW_running_check.py` final
-  verdict: "The tree-scale value 8/35 is a number-theoretic identity
-  (q_2³/(q_2³+q_3³)), and its 1.1% agreement with M_Z observation is
-  an accidental near-coincidence at the electroweak scale, not a
-  consequence of running from a high energy scale." SM 1-loop running
-  from Planck gives sin²θ_W ≈ 0.47 at M_Pl, running to ≈ 0.21 at
-  1 GeV — the 8/35 value appears naturally at ~54 GeV (unstructured
-  scale), not at the framework's declared "tree = Planck."
+- Gap vs MS-bar 0.23121: −1.15 %.
+- **Status in MANIFEST.yml: declined.** The framework does not
+  predict sin²θ_W at M_Z. The bare K=1 identity 8/35 is recorded
+  under `bare_k1_identities`, not under `scorecard`.
+- Source of the bare identity: `duty_dimension_proof.md`
+  (theorem `duty(q) = 1/q^d` at K=1), `three_dimensions.md` (d=3),
+  `klein_bottle_derivation.md` (q₂=2, q₃=3),
+  `gauge_dictionary.md` (sector assignment).
+- **Why no prediction at M_Z is made:**
+  - `sinW_running_check.py` shows SM 1-loop running is incompatible
+    with the framework's "tree = Planck" identification — the sign
+    of dsin²θ_W/dlnμ is opposite to what the tree → M_Z gap requires.
+  - `sinw_fixed_point.md` shows no K* ∈ [0.93, 0.99] reproduces
+    either α_s/α₂ or sin²θ_W at M_Z via finite-K duty dynamics.
+  - `sinw_effective_dimension.md` proposes d_eff = 80/27 → 0.23123
+    (0.5σ from PDG), but is explicitly conditional on three
+    unformalized steps (`sinw_effective_dimension.md:179–200`): the
+    "occupied interval → dimension reduction" step, the "only q₃
+    correction matters" step, and the scheme identification with
+    MS-bar at M_Z. Pending formalization — see Class 4 below.
 
 ### `1/α_em (tree) = q_2³ + q_3³ = 35`
 
@@ -123,6 +132,29 @@ share the same vulnerability.
 ---
 
 ## Class 4 — Needs individual audit
+
+### `sin²θ_W` via effective dimension d_eff = 80/27
+
+- Proposed in `sinw_effective_dimension.md`. Replaces d → d_eff
+  in the bare formula, giving
+  sin²θ_W = 2^(80/27) / (2^(80/27) + 3^(80/27)) = 0.23123,
+  0.5σ from PDG MS-bar at M_Z.
+- Uses only {q₂, q₃, d} — no new dimensional input or free parameter.
+- Currently conditional on three unformalized steps
+  (`sinw_effective_dimension.md:179–200`):
+  1. "Occupied frequency interval → effective dimension reduction"
+     is geometrically motivated but not derived from integrating the
+     coupling over the complement of the q₃ tongue.
+  2. The asymmetric choice "only q₃ correction, not q₂" is
+     heuristic — a systematic perturbative expansion including the
+     q₂ correction and cross-terms has not been performed.
+  3. The identification of the root-level formula with MS-bar at M_Z
+     is motivated but not mapped onto the MS-bar subtraction procedure.
+- If all three steps are formalized, sin²θ_W should be promoted back
+  into `MANIFEST.yml:scorecard` with source
+  `[sinw_effective_dimension, duty_dimension_proof, three_dimensions,
+  klein_bottle_derivation, gauge_dictionary]`. Until then, not a
+  framework prediction.
 
 ### Generation-mass hierarchy 26 : 7 : 1
 
