@@ -3,7 +3,7 @@
 ## Result
 
 The Planck/Hubble hierarchy R is derived from the framework's
-three quantities (q₂ = 2, q₃ = 3, d = 3) with zero free parameters:
+three framework integers (q₂ = 2, q₃ = 3, d = 3); no fitted factors:
 
   R = q₂ q₃ × (q₂² + q₃²)^{q₂ q₃^d} = 6 × 13^54
 
@@ -125,10 +125,11 @@ would effectively solve the hierarchy problem in framework terms.
 
 The current minimum dimensional input is **two observational anchors**
 (H_0 cosmological, v_EW particle-sector). The framework does not yet
-have a structural identity reducing them to one. "Zero free parameters"
-is a valid claim about specific dimensionless predictions passing Z1–Z3,
-but it is not a valid claim about the framework's overall dimensional
-input count. The obstructions preventing closure to one anchor are
+have a structural identity reducing them to one. The phrase "zero
+free parameters" is retired across this repository — see
+`statistical_conventions.md`. Individual predictions are classified
+under Z1–Z3 directly; the framework-level input count is two, not
+zero. The obstructions preventing closure to one anchor are
 catalogued in `anchor_count_audit.md`.
 
 ### Sub-problem E (spatialization) is closed

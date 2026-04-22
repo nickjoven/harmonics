@@ -338,12 +338,12 @@ discrepancy; not partitioned into "explained" and "residual" parts.
 No fits applied.
 
 **Claim-strength note.** Under `statistical_conventions.md` §"Zero
-free parameters", this prediction does **not** qualify for the
-"zero free parameters" phrasing (fails Z1: 11% is not ≤ 1σ;
-fails Z2: G1–G5 are un-derived O(1) structural gaps). Describe
-this result as "derived under the static, O(δθ²), r*=1,
-single-mode-per-bracket approximation; %-only at 11%." Reserve
-"zero free parameters" for predictions that pass all of Z1–Z3.
+free parameters — retired phrase", this prediction does **not** pass
+Z1 (11% is not ≤ 1σ) nor Z2 (G1–G5 are un-derived O(1) structural
+gaps). Describe the result as "derived under the static, O(δθ²),
+r*=1, single-mode-per-bracket approximation; %-only at 11%." The
+"zero free parameters" phrasing is scrubbed across the repo; use
+Z1–Z3 status labels directly.
 
 ## What's missing, structurally
 

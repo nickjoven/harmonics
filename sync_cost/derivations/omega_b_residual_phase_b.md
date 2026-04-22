@@ -93,7 +93,7 @@ is |r|², and the identification fails by exactly that factor.
 | Ω_DM residual | 0.7% | 0.6% (0.2σ) |
 
 All three cosmic partition observables now match Planck 2018
-within 1σ with zero free parameters:
+within 1σ with no fitted factors (uses only framework integers):
 
 - **Three integers**: `13 : 5 : 1` from the Farey partition.
 - **One already-derived coherence**: `|r| = 0.968` from

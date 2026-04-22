@@ -201,7 +201,7 @@ def main():
             print(f"  The cosmological constant is determined by the")
             print(f"  4-mode vacuum energy at tree depth 19 with the")
             print(f"  Hubble frequency as the fundamental scale.")
-            print(f"  Zero free parameters.")
+            print(f"  No fitted factors.")
         else:
             print(f"\n  NOT EXACT: q_exact/F₁₉ = {q_exact/F19:.4f}")
             print(f"  Off by a factor of {q_exact/F19:.2f}")

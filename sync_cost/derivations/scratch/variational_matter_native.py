@@ -279,7 +279,7 @@ def section_interpret() -> None:
 
   If no such coupling is found, the honest stance is Option 1: K_STAR is
   accepted as a matter-sector calibration alongside v = 246 GeV, and the
-  framework's zero-parameter claim is adjusted accordingly.
+  framework's structural claim is adjusted accordingly.
 """)
 
 def main() -> None:

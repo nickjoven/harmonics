@@ -3,7 +3,7 @@ Exact computation of σ²(21) on the Stern-Brocot tree.
 
 This is the numerical closure of the derivation chain. The running
 of σ² with tree depth is the spectral tilt. Computing σ²(21) exactly
-gives A_s and n_s from the tree with zero free parameters.
+gives A_s and n_s from the tree with no fitted factors.
 
 The tree at depth 21 has ~2^21 - 1 ≈ 2 million nodes. All arithmetic
 is exact rational (Python's fractions.Fraction) for the tree
@@ -265,4 +265,4 @@ if __name__ == "__main__":
     print(f"  the same quantity: Σ(1/q²) evaluated at different depths.")
     print(f"  The spectral tilt is the logarithmic derivative of σ²(d).")
     print(f"  The amplitude A_s is σ²(d_pivot)².")
-    print(f"  Zero free parameters once the tree depth at the pivot is fixed.")
+    print(f"  No fitted factors once the tree depth at the pivot is fixed.")

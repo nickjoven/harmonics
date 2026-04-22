@@ -271,6 +271,6 @@ here than in D11 (the field equation), D14 (three dimensions), or
 D25 (the Farey count). If the axiom is accepted for those results,
 it must be accepted here — it is the same axiom.
 
-The prediction Ω_Λ = 13/19 is a zero-parameter consequence of this
+The prediction Ω_Λ = 13/19 is a structural consequence of this
 axiom applied at the Klein bottle's interaction scale. It matches
 Planck 2018 to 0.07σ. No other framework predicts this value.

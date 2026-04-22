@@ -75,7 +75,7 @@ structural principles.
 | 8 | **g(ω)** — self-consistent: g* = h(g*) | Resolved | [rfe](https://github.com/nickjoven/rfe) |
 | 9 | **Möbius container** — topology forces rational divisions | Resolved | [18](sync_cost/derivations/mobius_container.md) |
 | 10 | **Klein bottle** — 4 modes at {2,3}, XOR selection | Resolved | [19](sync_cost/derivations/klein_bottle.md) |
-| 11 | **Ω_Λ = 13/19** — Farey partition, zero parameters | Resolved (0.07σ) | [25](sync_cost/derivations/farey_partition.md)–[29](sync_cost/derivations/mediant_derivation.md) |
+| 11 | **Ω_Λ = 13/19** — Farey partition, structural (no fitted factors) | Resolved (0.07σ) | [25](sync_cost/derivations/farey_partition.md)–[29](sync_cost/derivations/mediant_derivation.md) |
 
 ### Key results
 
@@ -159,8 +159,9 @@ $1.25 \times 10^{-10}$ m/s² (4% from observed $1.2 \times 10^{-10}$).
 - **RC100** (Shachar et al. 2023): 100 high-z galaxies with resolved
   kinematics. Data in [`ascii`](ascii). Analysis shows $a_0$ is not
   constant and rises with $z$ (direction matches framework).
-- **Predictions**: zero-free-parameter $V_{\text{circ}}$ and $f_{\text{DM}}$
-  for KLASS, GEKO, CRISTAL surveys. Discriminating leverage at $z > 3$.
+- **Predictions**: structural $V_{\text{circ}}$ and $f_{\text{DM}}$ (derived
+  from the H_0 anchor) for KLASS, GEKO, CRISTAL surveys. Discriminating
+  leverage at $z > 3$.
 - **Scripts**: `predict_highz.py`, `a0_observable.py`, `fdm_redshift.py`,
   `rar_high_z.py` in [`sync_cost/derivations/`](sync_cost/derivations/).
 
@@ -179,7 +180,7 @@ pip install -e .        # or just: python -m rfe --observables
 | Repository | Role |
 |---|---|
 | [rfe](https://github.com/nickjoven/rfe) | Numerical engine — field equation solver, all observables |
-| [proslambenomenos](https://github.com/nickjoven/proslambenomenos) | $\Lambda \to a_0$: one frequency, zero free parameters |
+| [proslambenomenos](https://github.com/nickjoven/proslambenomenos) | $\Lambda \to a_0$: one frequency, structural (see `a0_threshold.md`) |
 | [201](https://github.com/nickjoven/201) | Gravity as synchronization in a frictional medium |
 | [intersections](https://github.com/nickjoven/intersections) | Stick-slip dynamics and dark matter |
 | [submediant-site](https://github.com/nickjoven/submediant-site) | Derivation chain site: polynomial → evidence |

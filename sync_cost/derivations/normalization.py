@@ -244,7 +244,7 @@ def main():
 
     print(f"\n{'=' * 70}")
     print(f"  ONE INPUT: α_s(M_Z) = {ALPHA_S}")
-    print(f"  ZERO FREE PARAMETERS (topology determines β-functions)")
+    print(f"  NO FITTED FACTORS (topology determines β-functions)")
     print(f"  BOUNDARY CONDITION: α_q⁻¹(M_Pl) = C × q² (tongue widths)")
     print(f"")
     print(f"  PREDICTIONS:")

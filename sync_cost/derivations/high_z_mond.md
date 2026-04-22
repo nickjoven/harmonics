@@ -64,7 +64,7 @@ a₀(z=2)/a₀(0) ratios (~3).  The discriminating lever arm is at z > 3,
 where the functional forms diverge.  The sync_cost prediction
 (a₀ ∝ H(z) ∝ √(Ω_m(1+z)³ + Ω_Λ)) grows faster than (1+z)^(3/4) at
 high z and has a specific functional form set by cosmological parameters
-with no free parameters.
+using only the H_0 anchor and framework integers.
 
 
 ## Observational Status (as of early 2026)

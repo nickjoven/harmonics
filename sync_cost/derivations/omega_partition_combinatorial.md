@@ -140,7 +140,8 @@ coprime pair {1, 5}. The remaining five are dark.
 3. EM coupling requires Klein-singlet (sym/self-paired) AND
    cross-sector coupling (coprime-to-6) — `gell_mann_nishijima.md`
 
-No free parameters; the partition is forced.
+No fitted factors; the partition is forced by the framework integers
+(q₂, q₃) plus the Farey and Z₂-rep-theory combinatorics.
 
 ## XOR-parity is not the 1:5 mechanism
 

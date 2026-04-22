@@ -561,7 +561,7 @@ if __name__ == "__main__":
     print(f"{'─' * 80}")
 
     print(f"""
-  The chain with zero free parameters:
+  The chain with no fitted factors:
 
   Step 1: σ² = 3/2 (gravitational K = 1 self-consistency)
   Step 2: density slope = -ln(φ²) = {-LN_PHI_SQ:.6f} per level

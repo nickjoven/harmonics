@@ -175,7 +175,8 @@ Every number in the chain is derived:
 - |F₆| from the Euler totient function
 - The partition from the ratio
 
-No free parameters. No fits. No external inputs.
+No fitted factors. No external inputs beyond the framework integers
+(q₂, q₃) and the Farey-count operator.
 
 ## Status
 
@@ -184,7 +185,7 @@ No free parameters. No fits. No external inputs.
 - The operator is the Farey count at the interaction scale q₂q₃ = 6
 - All inputs are from the Klein bottle topology
 
-**What this is**: a zero-parameter prediction of the dark energy
+**What this is**: a structural prediction of the dark energy
 fraction from the topological mode structure of the Klein bottle.
 The number 13/19 is not fitted — it is counted.
 

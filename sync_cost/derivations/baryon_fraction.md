@@ -8,7 +8,8 @@ single number 19 (the Klein bottle's total budget from D25):
     Lambda : dark matter : baryonic = 13 : 5 : 1
 
 All three fractions follow from the Farey partition and the Klein
-bottle's denominator structure. No free parameters.
+bottle's denominator structure. No fitted factors; uses only
+framework integers (q₂, q₃, d) plus the Farey count.
 
 ---
 
@@ -173,7 +174,7 @@ The partition 13 : 5 : 1 = 19 gives all three cosmic fractions
 from a single integer. The dark energy and dark matter fractions
 are within 1% of observation. The baryon fraction has a 6.7%
 residual — the largest in the framework's scorecard, but still
-a zero-parameter prediction from pure number theory.
+a structural prediction from the framework's combinatorial vocabulary (q_2, q_3, d) plus the Farey partition.
 
 ### The 6.7% residual
 
@@ -250,7 +251,7 @@ They are:
 
 **Derived.** Omega_b = 1/19, Omega_DM = 5/19 from the Farey
 partition and Z_6 irreducibility. The full cosmic energy budget
-13:5:1 follows from one integer (19) with zero free parameters.
+13:5:1 follows structurally from one integer (19) via the Farey count and the Klein-antipodal Z_2 rep; no fitted factors.
 
 **Dependencies**: D25 (Farey partition), D28 (partition derivation),
 D41 (gauge structure, Z_6 center), D42 (SU(3) x SU(2) x U(1)).

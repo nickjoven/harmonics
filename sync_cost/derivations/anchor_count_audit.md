@@ -121,11 +121,11 @@ identity. The sentence should be softened or v_EW removed.
 
 Canonical statement: the current minimum dimensional input is **two
 observational anchors** — one cosmological (H_0 or equivalent), one
-particle-sector (v_EW or equivalent). "Zero free parameters" is a
-legitimate claim about specific dimensionless predictions that pass
-Z1–Z3, but it is not a legitimate claim about the framework's overall
-dimensional input count. The two-anchor minimum stands until one of
-the obstructions below is removed.
+particle-sector (v_EW or equivalent). The phrase "zero free
+parameters" is retired across this repository (see
+`statistical_conventions.md`); individual predictions are classified
+under Z1–Z3 directly. The two-anchor minimum stands until one of the
+obstructions below is removed.
 
 ## Obstructions to reducing the second anchor
 

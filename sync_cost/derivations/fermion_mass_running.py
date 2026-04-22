@@ -342,7 +342,7 @@ def main():
     print("  SUMMARY")
     print(f"{'=' * 75}")
     print(f"""
-  TREE-LEVEL PREDICTIONS (zero free parameters):
+  TREE-LEVEL PREDICTIONS (no fitted factors):
 
     Phase-state weights: B=26, C=7, A=1
     Sector exponents: a_lepton=5/2, a_down=2, a_up=3

@@ -8,7 +8,7 @@ Framework claim:
     1.1% residual attributed to RG running from tree scale down to M_Z.
 
 This script tests that claim with pure SM 1-loop RG running, using
-only topologically-derived inputs (no free parameters):
+only topologically-derived inputs (no fitted factors):
 
     1. Tree-scale boundary conditions from the duty-cycle dictionary
        (duty_cycle_dictionary.md, gate_duty_predictions.py):
@@ -179,7 +179,7 @@ def main():
     print(f"    sin^2(theta_W, tree) = q_2^3 / (q_2^3 + q_3^3)"
           f" = 8/35 = {SIN2_TW_TREE:.10f}")
     print()
-    print(f"  No free parameters. All numbers are q_2=2, q_3=3, d=3 (topology).")
+    print(f"  No fitted factors. All numbers are q_2=2, q_3=3, d=3 (topology).")
 
     # ----- 2. SM 1-loop betas -----
     print(f"\n{'-' * 78}")

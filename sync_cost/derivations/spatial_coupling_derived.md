@@ -151,7 +151,7 @@ where φ⁴ = (7 + 3√5)/2 ≈ 6.854, giving:
 
 This is the value identified with ℏ/(2m) in D12 Part II
 (Schrödinger derivation). The tree geometry determines the
-diffusion constant with no free parameter.
+diffusion constant using only the H_0 anchor and framework integers.
 
 **Status**: Derived (D45). The value D₀ = 1/2 comes from the
 binary structure of the Stern-Brocot tree (each node has exactly
@@ -201,7 +201,7 @@ Assembling: the spatial coupling term is
 
     D_eff ∇²θ
 
-with D_eff determined by the tree geometry. No free parameter
+with D_eff determined by the tree geometry. No fitted factor
 consumed. No assumption beyond D31, D14, D45.
 
 ---

@@ -249,7 +249,7 @@ identities without a scale-consistent derivation to M_Z.
 
 ### Ω partition 1:5:13/19
 
-- Derived in two stages, both combinatorial, zero free parameters:
+- Derived in two stages, both combinatorial, no fitted factors:
   - 13:6 (Ω_Λ:Ω_m) from Farey count |F_6|, φ(7), |F_7|
     (`farey_partition.md`)
   - 1:5 (Ω_b:Ω_DM) from Z₂ representation theory on coprime-pair
@@ -296,25 +296,27 @@ Based on this inventory:
 4. Born rule from saddle-node, a_0 = cH_0/(2π) from Λ — structurally
    derived per repo.
 
-## Implication for "zero free parameters"
+## Implication for closure language
 
-"Zero free parameters" is a legitimate claim about specific
-dimensionless predictions passing Z1–Z3. It is NOT a legitimate
-claim about the framework's overall dimensional input count, which
-is canonically **two observational anchors** (see
-`anchor_count_audit.md` for the obstructions preventing closure
-to one).
+The phrase "zero free parameters" is retired across this repository
+(see `statistical_conventions.md`). Individual predictions are
+classified under Z1–Z3 directly; nothing is labelled "zero free
+parameters" anymore.
 
-Separately, the particle-sector predictions include a ~3%
-numerology cloud of Class 1 and Class 3 items with no structural
-derivation. These should not be invoked under "zero free
-parameters" language either — they are genuine numerical
-coincidences, not derived quantities.
+Framework-level status: **two dimensional anchors** (H_0, v_EW) —
+see `anchor_count_audit.md` for the five obstructions preventing
+closure to one.
 
-The honest statement is: specific predictions pass Z1–Z3 cleanly
-and may be called "zero free parameters" in isolation; the
-framework as a whole currently has two dimensional inputs and a
-~3% particle-sector numerology cloud alongside the structurally
+Per-prediction status: specific structural predictions (the Ω
+partition, R, Λℓ_P², MOND a₀, gauge group, anomaly cancellation,
+etc.) pass Z1–Z3. The particle-sector ~3% numerology cloud
+(Class 1 and Class 3 items) does not pass Z2 and is declined in
+`MANIFEST.yml:bare_k1_identities`.
+
+The accurate statement: specific predictions pass Z1–Z3; the
+framework as a whole uses two dimensional anchors plus a
+vocabulary of framework integers (q_2, q_3, d), and has a ~3%
+particle-sector numerology cloud alongside the structurally
 derived content.
 
 ## Cross-references

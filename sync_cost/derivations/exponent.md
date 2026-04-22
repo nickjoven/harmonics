@@ -185,4 +185,4 @@ bottle to the cosmological parameters is closed:
 
 Three inputs: q₂ = 2, q₃ = 3, |F₆| = 13.
 Three outputs: Ω_Λ, R, Λ.
-Zero free parameters.
+No fitted factors.

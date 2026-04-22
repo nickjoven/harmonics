@@ -5,16 +5,25 @@ This doc defines the operational meaning of σ-statements,
 docs. Where a doc's wording is loose, this defines the strict
 sense.
 
-## "Zero free parameters" — reserved phrase
+## "Zero free parameters" — retired phrase
 
-**Operational rule.** The phrases "zero free parameters", "no free
-parameters", "0 free parameters" (and equivalents) are reserved
-for claims that meet *all three* of the following conditions:
+**The phrase "zero free parameters" (and equivalents "no free
+parameters", "0 free parameters", "zero-parameter prediction") is
+not used in this repository.** The framework has two dimensional
+anchors (H_0, v_EW) and several Floor-level approximations with
+un-derived O(1) corrections, so a plain "zero free parameters"
+claim at the framework level was never accurate.
+
+Even for individual predictions, the phrase is scrubbed to avoid
+propagating framework-level overclaim by association. The same
+epistemic content is carried by the Z1–Z3 status labels below.
+
+**Z1–Z3 criteria** (used to classify individual predictions; the
+operational contents of what the old phrase was trying to gesture at):
 
 **(Z1) C-numerical at ≤ 1σ.** The prediction matches observation
 under the σ-test above, with z-score ≤ 1. Predictions at %-only or
-with z > 1 are not "zero free parameters" claims; they are
-partially derived and should be labeled as such.
+with z > 1 are partially derived and labeled as such.
 
 **(Z2) No un-derived O(1) factors.** Every multiplicative and
 additive factor in the prediction has a named derivation in a
@@ -26,14 +35,13 @@ corrections disqualify the claim.
 more observational quantities may enter as dimensionful or
 scale-setting anchors (e.g. H_0 for the absolute Planck scale,
 n_s for pivot identification). These must be explicitly listed
-in the derivation as "anchor inputs" — not hidden. A claim with
-an unacknowledged anchor is not "zero free parameters".
+in the derivation as "anchor inputs" — not hidden.
 
-**If any of Z1–Z3 fails, use a narrower phrase:**
+**Acceptable phrasings by status:**
 
 | Status | Acceptable phrasing |
 |---|---|
-| C-numerical ≤ 1σ, no un-derived O(1), anchors labeled | "zero free parameters" (Z1∧Z2∧Z3) |
+| Z1 ∧ Z2 ∧ Z3 | "structural, Z1–Z3", "derived against named anchors" |
 | C-numerical, 1σ < z ≤ 3σ | "%-level match, partially derived" |
 | %-only (no σ-test) | "%-only, structural form derived" |
 | Structural form only | "C-structural, one observational anchor" or "derived up to O(1)" |
@@ -42,8 +50,7 @@ an unacknowledged anchor is not "zero free parameters".
 **Examples applying the rule:**
 
 - **Acceptable**: Ω_Λ = 13/19 (0.07 σ under Planck 2018, no
-  un-derived O(1), n_s / H_0 as anchors). **C-numerical, Z1-Z3 all
-  met. "Zero free parameters" is acceptable.**
+  un-derived O(1), anchors labeled). **Z1–Z3 structural.**
 - **Acceptable**: sin² θ_W = 2^(80/27)/(2^(80/27) + 3^(80/27))
   (0.5 σ under PDG, structural derivation, no hidden factors).
 - **Not acceptable**: A_s geometric proof's prediction 2.33×10⁻⁹
@@ -54,18 +61,18 @@ an unacknowledged anchor is not "zero free parameters".
   observation at 5–10% relative but failing the σ-test; see
   `mixing_angle_audit.md`). Status: **"%-only, NOT σ-closed."**
 
-**Motivation.** "Zero free parameters" is a strong claim about the
-completeness of a derivation. It implies the result is
-observation-independent up to scale-anchoring. Using it for
-partial or approximated derivations overstates the framework's
-closure status and makes real closures indistinguishable from
-suggestive near-matches. The rule above keeps the phrase reserved
-for when it is actually warranted.
+**Motivation for retiring the phrase.** "Zero free parameters" at
+the framework level was always overclaim because the framework uses
+two dimensional anchors (H_0, v_EW) plus un-formalized O(1) factors
+in several derivations. At the individual-prediction level, the
+phrase was technically applicable to specific Z1∧Z2∧Z3-passing
+predictions — but in practice the phrase leaked upward into
+framework-level statements, making real closures indistinguishable
+from suggestive near-matches. Scrubbing the phrase and using the
+Z1–Z3 status labels directly prevents that leak.
 
 **When in doubt, use the status labels from the § "Per-closure σ
-table" above.** Those labels carry the necessary precision; the
-shorthand "zero free parameters" should be the *consequence* of a
-passing Z1-Z3 check, not an independent claim.
+table" below.** Those labels carry the necessary precision.
 
 ## σ — observational z-score, default
 

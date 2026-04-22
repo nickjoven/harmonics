@@ -19,7 +19,7 @@ All five are now complete. This derivation records the verdict.
 The Klein bottle fractions {1/3, 1/2, 2/3}, combined with doublet
 structure (T_3 = +/- 1/2) and the Gell-Mann-Nishijima relation
 (Q = T_3 + Y/2), uniquely determine all Standard Model hypercharges
-with zero free parameters:
+with no fitted factors (uses only q_2, q_3):
 
 | Field | SU(3) | SU(2) | Y    | Q         |
 |-------|-------|-------|------|-----------|

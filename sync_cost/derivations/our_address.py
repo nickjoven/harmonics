@@ -3,7 +3,7 @@
 Our address on the tree: computed from first principles
 plus the minimum required observables.
 
-First principles (zero free parameters):
+First principles (no fitted factors):
   - The four primitives (D10)
   - d = 3 (from mediant → SL(2,R))
   - φ = (1+√5)/2 (from x²-x-1=0)
@@ -33,7 +33,7 @@ from framework_constants import H_0_KM_S_MPC
 
 
 # ═══════════════════════════════════════════════════════════════════════
-# FIRST PRINCIPLES (from the four primitives, zero parameters)
+# FIRST PRINCIPLES (from the four primitives, no fitted factors)
 # ═══════════════════════════════════════════════════════════════════════
 
 PHI = (1 + math.sqrt(5)) / 2          # from x² - x - 1 = 0 (P4 on P1)

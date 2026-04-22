@@ -109,7 +109,7 @@ All inputs to the formula R = 6 × 13⁵⁴ come from the Klein bottle:
 | \|F₆\| | 13 | Farey count at q₂q₃ (D25) |
 | Exponent | q₂q₃³ = 54 | Built from denominator classes |
 
-No measured inputs. No free parameters. No fits.
+No measured inputs. No fitted factors. No fits.
 
 The output R = 8.533 × 10⁶⁰ determines:
 

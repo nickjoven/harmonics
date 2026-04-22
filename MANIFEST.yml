@@ -20,8 +20,15 @@ primitives:
     - "Fixed-point x = f(x) (self-reference)"
     - "Parabola x² + μ = 0 (bifurcation)"
 
-free_parameters: 0
-free_functions: 0
+free_parameters_note: >
+  The phrase "zero free parameters" is retired; see
+  sync_cost/derivations/statistical_conventions.md. The framework
+  requires two dimensional anchors (below) and contains finite-depth
+  predictions with un-derived O(1) factors. Individual predictions
+  are classified by Z1-Z3 in statistical_conventions.md; the overall
+  framework does not claim zero free parameters. See
+  numerology_inventory.md and framework_status.md for per-claim
+  classification.
 dimensionful_inputs: 2
 dimensionful_input_note: >
   Two independent observational anchors per `anchor_count_audit.md`:
@@ -263,7 +270,7 @@ repos:
     role: "Numerical engine — field equation solver, all observables"
   proslambenomenos:
     github: "nickjoven/proslambenomenos"
-    role: "Λ → a₀: one frequency, zero free parameters"
+    role: "Λ → a₀: one frequency, structural (see a0_threshold.md)"
   201:
     github: "nickjoven/201"
     role: "Gravity as synchronization in a frictional medium"

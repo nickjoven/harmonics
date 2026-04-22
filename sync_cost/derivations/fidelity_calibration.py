@@ -213,7 +213,7 @@ if __name__ == "__main__":
               f"{lam:8.4f}  {alpha:8.4f}  {g_obs_ratio:12.4f}  {regime:>12s}")
 
     print(f"\n  Verification: lambda from circle map = sqrt(g_bar/a_0)")
-    print(f"  The RAR emerges from tongue geometry with no free parameters.")
+    print(f"  The RAR emerges from tongue geometry with no fitted factors.")
 
     # === 3. ITERATION-TO-TIME MAPPING ===
     print(f"\n{'─'*85}")

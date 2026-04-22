@@ -367,7 +367,7 @@ def main():
     print("  and |r|(d) is the fixed point of the field equation")
     print("  truncated at depth d.")
     print()
-    print("  The mapping has ZERO free parameters:")
+    print("  The mapping has no fitted factors:")
     print("    - The depth-energy relation comes from the φ² scaling")
     print("    - |r|(d) comes from the self-consistent field equation")
     print("    - K₀ = 1 (critical coupling, the only scale)")
@@ -409,7 +409,7 @@ def main():
   mean field. The variation of |r| with depth IS the running of
   the coupling constants.
 
-  This mapping has zero free parameters. The only inputs are:
+  This mapping has no fitted factors. The only inputs are:
     - The four primitives (D10)
     - The Klein bottle topology (D19)
     - K₀ = 1 (critical coupling)

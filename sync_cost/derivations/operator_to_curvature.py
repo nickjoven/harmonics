@@ -224,7 +224,7 @@ def step6_lovelock():
 
       ω(x) = √(4πGρ(x))    ← matter IS the frequency distribution
 
-    G is determined by σ² from the tree (zero free parameters).
+    G is determined by σ² from the tree (no fitted factors).
     Λ is the uniform background frequency: Λ = 3(H₀/c)².
     """
     return {
