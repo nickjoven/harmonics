@@ -28,6 +28,7 @@ Categories:
 | Born rule |ψ|² from saddle-node | `born_rule.md`, `a1_from_saddle_node.md` |
 | a_0 = cH_0/(2π) from Λ (MOND scale) | `a0_threshold.md` |
 | Z₂-pair conservation theorem | `z2_pair_conservation.md` |
+| Ω_Λ : Ω_m = 13 : 6 at depth 19 (Farey combinatorics, 0.07σ) | `omega_partition_combinatorial_status.md`, `farey_partition.md` |
 
 ## Floor (structural residual at finite Fibonacci depth, 7–11%)
 
@@ -81,7 +82,7 @@ numerology ensemble, not structural.
 | λ_H = 1/q_2³ + 1/228 correction | Framework origin for 228 = 12·19 |
 | N_efolds = √5 / rate ≈ 61.3 | Framework-internal derivation independent of observed n_s |
 | K_c(F_n/F_{n+1}) closed form | Explicit form beyond asymptotic δ⁻ⁿ scaling |
-| XOR-parity proof of 1:5:13 at depth 19 | Direct combinatorial proof on Klein quotient |
+| Ω_b : Ω_DM = 1 : 5 subdivision | Structural derivation of Klein-antipodal coprime-pair split (not merge) — see `omega_partition_combinatorial_status.md` Candidates 1–4. The 13:6 half of the former "1:5:13 XOR-parity" proposal is now in Survives. |
 | T2#7 measurement arc technical residuals | Iteration-to-time anchor, multi-tongue cascade, continuous K(t) |
 
 ## Out of class (absolute scales, anchor-dependent)
