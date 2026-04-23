@@ -266,7 +266,45 @@ C. **Cross-sector register identity.** A theorem exhibiting a
 None of A, B, C are supplied by the register formalism alone.
 Each is a structural open item and sits as an obstruction.
 
-## 7. Cross-references
+## 7. Probes and null findings
+
+Interpolation between the hierarchy register (H-reg, §1-2) and
+the partition register (P-reg, 19 states at Farey depth 7 from
+`baryon_fraction.md`) was probed and marked **null (numerology)**:
+
+- **Continuous substrate-operation interpolation.** A parameter
+  `t ∈ [0, 1]` bridging Gaussian-norm multiplication (H-reg step)
+  and Farey-mediant insertion (P-reg step) has no canonical form.
+  Any `z(t)` constructed fits endpoints only.
+- **Shared 13 as structural invariant.** H-reg carries 13 as
+  `N(z₀) = q₂² + q₃²`; P-reg carries 13 as `|F_{q₂·q₃}| = |F_6|`.
+  The identity `|F_n| = q₂² + q₃²` with `n = q₂·q₃` holds at
+  `(q₂, q₃) = (2, 3)` but fails at `(1, 2)`, `(2, 5)`, `(3, 4)`.
+  Coincidence at framework-privileged values, not structural.
+- **Klein-antipodal decomposition of `z₀ = 2 + 3i`.**
+  `(sym, antisym) = (4, 6i)`. The 6 matches `|Z₆|`, the 4 = `q₂²`.
+  Clean at operator level; not load-bearing for interpolation.
+- **Moiré period between H-reg (54) and P-reg (19).** Coprime;
+  `lcm = 1026`. Arithmetic compatibility, no physical content.
+
+**Caveat on integer near-misses.** At the framework's privileged
+integers `(q₂, q₃, d) = (2, 3, 3)`, coincidences between
+independently-defined counts (Farey levels, Gaussian norms,
+gauge cells, mode partitions) are expected to occur at ~1-few %
+residuals by pigeonhole over small-integer combinations. Such
+near-misses are not diagnostic without a forcing theorem
+(per `ansatz_audit_policy.md`). Transcendental-constant
+identities (e.g., `4/φ` tongue-to-bracket ratio, `(4G − π ln 2)/π`
+for λ_unlock) are in a different category — they arise from
+fixed-point conditions and integrals, not from integer fits.
+
+**Remaining open candidates** (not falsified by this probe):
+
+- K-variation as unifying axis: whether H-reg and P-reg are
+  K-slices of a single register-structure, with a dynamic
+  equilibrium principle picking the K that produces each.
+
+## 8. Cross-references
 
 | File | Role |
 |---|---|
