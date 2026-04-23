@@ -55,6 +55,46 @@ cancel the linear depth count; what remains is the layer index
 `13^k` weighted by the gauge multiplicity 6. The number of
 *distinguishable states at exactly depth k* is `6 · 13^k`.
 
+### Traversal compatibility — registers are standing waves
+
+O1-O3 are *static* closure requirements. Once a traversal map
+`Φ: S → S` is added (the missing dynamics discussed in the
+probe log), a fourth requirement appears:
+
+- **(O4) Klein-antipodal equivariance.** For any register-admissible
+  traversal `Φ`, the composition `Φ ∘ ι = ι ∘ Φ` must hold. That
+  is: `Φ` commutes with the Klein antipode.
+
+*Consequence.* A register state must be a `ι`-eigenmode, else one
+application of the Klein quotient sends it out of the register.
+Register states decompose canonically as:
+
+- `ψ_+ = ψ + ι(ψ)` — symmetric (Klein-singlet), trivial Z₂ rep,
+  pure standing wave.
+- `ψ_− = ψ − ι(ψ)` — antisymmetric (sign-rep), monodromy `−1`
+  around the Klein loop, twist-modulated standing wave.
+
+Pure traveling waves `ψ(x − vt)` are *not* register-admissible:
+`ι` sends them to waves in the opposite direction, which would
+require the register to contain both the wave and its Klein-mirror
+— in which case what is actually registered is the standing-wave
+sym/antisym pair, not either traveling component alone. *The
+register is a mode-locked standing-wave structure on the Klein
+quotient, with every state having a definite Klein parity.*
+
+This is not new structural content — it is the register-level
+reading of the Klein-antipodal Z₂ rep machinery
+(`klein_antipodal_z2_rep_pattern.md`) that drives the Ω partition,
+down-type factor 6, up-type factor 9. It names what kind of
+mathematical object a register state is.
+
+Integer near-misses at `(q₂, q₃, d) = (2, 3, 3)` are numerology
+candidates; transcendental identities like `4/φ` (tongue-to-bracket
+ratio) and `(4G − π ln 2)/π` (λ_unlock Catalan integral) are
+structural — they arise from the standing-wave normalization
+and fixed-point conditions on the continuum limit, not from
+integer fits.
+
 ## 2. Derivation — R = 6 · 13⁵⁴ as register resolution
 
 **Lemma (exhaustion depth).** The maximal depth at which the
@@ -303,6 +343,40 @@ fixed-point conditions and integrals, not from integer fits.
 - K-variation as unifying axis: whether H-reg and P-reg are
   K-slices of a single register-structure, with a dynamic
   equilibrium principle picking the K that produces each.
+- Noble-torus minimum cardinality for self-sustaining resonance:
+  under KAM, the minimum set of noble tori closed under a
+  PSL(2,Z) subgroup is 2 (⟨S⟩) or 3 (⟨ST⟩) from the group's
+  finite torsion. Which of {2, 3} is *KAM-self-stabilizing*
+  (vs. merely group-closed) requires a Greene-residue
+  computation — not performed.
+
+### Dark-structure typology — cross-repo note
+
+A four-category dark-structure typology was probed:
+ontologically-absent (XOR-violators), dark-by-span
+(outside register's 54-refinement window),
+dark-by-channel (identification-map disconnection), dark-by-lock
+(register-phase-decoupled). Verification against the harmonics
+gauge-identification stack (`gauge_dictionary.md`:
+one global Z_6 torsor IS gauge bundle; no per-mode failures):
+
+- Dark-by-lock: **non-empty**, = 5 modes at q=7 → `Ω_DM = 5/19`
+  per `baryon_fraction.md`. The substrate-locked /
+  register-unlocked vocabulary is sorted in
+  `baryon_fraction.md` §"Vocabulary".
+- Dark-by-span: **empty** per gauge-cell exhaustion at depth 54
+  (`hierarchy_gaussian_lattice.md` §4, "n = 54 forced").
+- Dark-by-channel: **empty in harmonics** (global identification,
+  no per-mode failure) but **non-empty in the downstream textbook
+  repo** `nickjoven/derivation` where it corresponds to the
+  `baryon_sector_identification.md` open question (the {5,1}
+  cosmological sector assignment is flagged as a separate Type 4
+  identification not yet formally entered; three resolution
+  options listed). The typology category maps cleanly to a
+  tracked open question in the textbook even though it is empty
+  in harmonics's identification stack.
+- Ontologically-absent: **not dark, not on substrate**
+  (XOR-violators fail `xor_derivation.md` spectrum theorem).
 
 ## 8. Cross-references
 
