@@ -4,10 +4,11 @@ Compilation of framework predictions / observations that are confirmed
 numerology, noted coincidences, or suspects — so we know what to stop
 chasing as if it were structural.
 
-Motivated by the two-floor finding (`particle_sector_audit.py`) which
-separated cosmological-partition residuals (7–11 %, multiply-audited
-as structural) from particle-sector residuals (1–3 %, some already
-flagged in-repo as numerology).
+Motivated by the two-floor finding which separated cosmological-
+partition residuals (7–11 %, multiply-audited as structural —
+see `framework_status.md` Floor section) from particle-sector
+residuals (1–3 %, some already flagged in-repo as numerology via
+`duty_cycle_dictionary.md`).
 
 ## Classification
 
@@ -186,6 +187,47 @@ structural prediction. `MANIFEST.yml` records these under
 - **Status:** Class 2. Structural parts (√5, ln(φ²)) are genuine;
   the N_efolds match itself is a consistency check with an
   observational anchor.
+
+### `Ω_b = (1/19) · |r|²` (0.1σ hybrid closure)
+
+- `omega_b_residual_phase_b.md` proposed closure of the 6.7% Ω_b
+  Floor residual via `(1/19) · |r|²` with `|r| = 0.968` imported
+  from `duty_cycle_dictionary.md` (as `27 / (8 · α_s/α_2)`).
+- Numerical match: 0.03% (0.1σ). Ω_c/Ω_b closes to 0.5σ through
+  matter conservation as a derivative effect.
+- **Ansatz triage (`ansatz_audit_policy.md`):**
+  1. Alternative exponents `|r|^n` for `n ∈ {1, 2, 3, 4}` produce
+     residuals `{−3.3%, −0.03%, +3.2%, +6.3%}`; `n = 2` is
+     observation-selected.
+  2. No theorem forces the exponent. The "baryons are cross-sector,
+     joint coherence is the product" reading is a post-hoc story:
+     the Klein-singlet ψ_+(1, 5) in `baryon_fraction.md` already
+     fixes the baryonic mode without a sector product.
+  3. `|r|` is defined by `|r| = 27 / (8 · α_s/α_2_obs)`, i.e. from
+     an observational deviation, not from a framework-native
+     computation.
+  4. `duty_cycle_dictionary.md` §Status has ruled out the
+     decoherence-tax reading at the particle scale; Phase B
+     reintroduces it at the cosmological scale — structurally
+     inconsistent across sectors.
+- Status: **Class 2**. Near-match, not structural closure.
+- Source: `hybrid_strategy_audit.md`.
+
+### `A_s = 2.33 · |r|³ × 10⁻⁹` (< 1σ hybrid closure)
+
+- Same hybrid form as Ω_b with different exponent. `|r|^n` gives
+  residuals `{−7.4%, −4.0%, −0.6%, +2.6%}` for `n ∈ {1, 2, 3, 4}`;
+  `n = 3` matches.
+- Different exponent than Ω_b (`n = 2`) with no forcing argument.
+  A "scalar variance on d = 3 dimensions carries `|r|^d`" reading
+  would need a theorem, not just dimension counting.
+- A_s's acknowledged structural gap is G1 (horizon-crossing
+  amplification) per `a_s_geometric_proof.md` — an O(1) factor
+  the static proof cannot see. The `|r|³` match numerically
+  matches what G1 would need, but that is coincidence until a
+  derivation ties them.
+- Status: **Class 2**. Near-match.
+- Source: `hybrid_strategy_audit.md`.
 
 ### Pythagorean comma vs K_Greene (0.17 % near-match)
 
@@ -376,4 +418,5 @@ derived content.
 | `a1_from_saddle_node.md` | Class 5 structural counter-claim |
 | `hierarchy_gaussian_lattice.md` | Class 5 cell-counting derivations |
 | `anchor_count_audit.md` | Class 2 numerology + anchor analysis |
-| `particle_sector_audit.py` | particle-sector floor measurement |
+| `hybrid_strategy_audit.md` | Class 2 hybrid-closure triage (Ω_b, A_s) |
+| `ansatz_audit_policy.md` | triage procedure for Class 4 candidates |
