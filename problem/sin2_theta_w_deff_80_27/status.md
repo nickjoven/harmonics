@@ -2,79 +2,92 @@
 
 ## Overall
 
-**Proposed — 1 of 3 Z-conditions met, 3 of 3 gaps open.**
+**G1 returned null — 1 of 3 Z-conditions met, 2 of 3 gaps now
+structurally unlikely to close without a new mechanism.**
 
 - **Z1 (numerical match at ≤ 1σ):** ✓ Met. Prediction 0.23123
   vs PDG MS-bar at M_Z 0.23121 ± 0.00004 = 0.5σ.
-- **Z2 (no un-derived O(1) factors):** ✗ Not met. Two sub-gaps
-  open (G1, G2).
-- **Z3 (anchors labeled):** ✗ Not met. G3 open (scheme
-  identification).
+- **Z2 (no un-derived O(1) factors):** ✗ Not met — **G1 tested
+  three candidate mechanisms (box-counting dim, width/period
+  re-derivation, measure re-normalization) and all three fail
+  to produce `d → d_eff = d − 1/q₃^d` from framework
+  primitives.** See `attempts/g1_computation_result.md`.
+- **Z3 (anchors labeled):** ✗ Not met. G3 open.
 
-To promote from Class 4 (`numerology_inventory.md`) to Class 5
-(structural, `framework_status.md` Survives), all three gaps
-must close.
+**Implication.** The sin²θ_W = 2^(80/27)/(2^(80/27)+3^(80/27))
+proposal is a 0.5σ numerical match but **not a derivation**.
+Since G1 does not close, G2 (q₃ vs q₂ asymmetry) and G3 (scheme
+identification) no longer matter for promotion — they were
+conditional on G1.
+
+**Recommended reclassification.** Move
+sin²θ_W(d_eff = 80/27) from Class 4 (`numerology_inventory.md`
+audit candidate) to **Class 2** (noted coincidence, no framework
+claim of derivation) — analogous to the Pythagorean-comma vs
+K_Greene 0.17% coincidence.
 
 ## Gap-by-gap
 
 ### G1 — Occupied interval → effective dimension reduction
 
-**Status:** Open. No attempt in `../attempts/`.
+**Status:** **Null (2026-04-23).** `attempts/g1_computation_result.md`
+tests three candidate mechanisms — box-counting dimension of
+iterated complement, direct width/period re-derivation on `D`,
+measure re-normalization — and all three fail to produce the
+substitution `d → d_eff = d − 1/q₃^d` from framework primitives.
 
-**Target:** Derive `d_eff = d − 1/q₃^d` from an explicit integral
-over the mixing-angle observable on the tongue-excluded
-configuration space `(Ω ∖ tongue_{q₃}) × M^{d−1}`.
+The ansatz treats "surviving Lebesgue fraction `1 − 1/q₃^d`" as
+a "fractional dimension contribution" that enters as an
+exponent. Neither identification is standard: the Cantor-style
+box-counting gives d_H ≈ 0.948 not 26/27, and direct
+re-derivation of `w/period` on the complement leaves the duty
+unchanged at 1/q³.
 
-**Blocker:** The step from "tongue occupies 1/q₃^d of Ω" to
-"effective dimension enters as an exponent" is currently a
-hand-wave. Needs explicit Fubini-style computation.
+**The 80/27 value is a numerical ansatz, not a derivation.**
+Z2 sub-1 cannot close without a different mechanism not yet
+proposed.
 
 ### G2 — Why only q₃ correction, not q₂
 
-**Status:** Open. No attempt in `../attempts/`.
-
-**Target:** Show the q₂ correction is **structurally**
-sub-leading (not just numerically smaller), OR derive an
-asymmetric structural role for q₂ (numerator) vs q₃ (denominator)
-that exempts q₂ from the d_eff correction at this order.
-
-**Blocker:** Alternative formulas (symmetric correction, q₂-only
-correction, q₃-only correction) give different Z1 results.
-Only q₃-only hits 0.5σ. Picking q₃-only without structural
-derivation is fitting to the observation.
+**Status:** **Moot (conditional on G1).** Since G1 did not
+produce the `d → d_eff` substitution at all, the question of
+whether the correction comes from q₂ or q₃ does not arise.
+Would be reopened if a new G1 mechanism were proposed.
 
 ### G3 — Scheme identification (framework root ↔ MS-bar at M_Z)
 
-**Status:** Open. No attempt in `../attempts/`.
-
-**Target:** Show the framework's root-level formula maps
-uniquely onto MS-bar at M_Z, not to on-shell, effective Z-pole,
-or low-Q² schemes.
-
-**Blocker:** The claim "tree = Planck" in `hierarchy.md` appears
-to be in tension with "root = M_Z" here. The framework needs an
-internal mechanism (not SM RG, not K-scanning — both ruled out
-by Nulls 2 and 3) that identifies the Stern-Brocot root with
-the electroweak branching scale.
+**Status:** **Moot (conditional on G1).** G3 was to show the
+root-level d_eff formula maps to MS-bar at M_Z. No such formula
+derives from primitives (G1 null), so G3 has nothing to identify.
+Would be reopened if G1 re-opens.
 
 ## History
 
 | Date | Event |
 |---|---|
 | 2026-04-23 | Pilot problem scaffolded. Claim, nulls, context, gaps formalized. |
-| (future) | G1 attempt begins. |
-| (future) | G2 attempt begins. |
-| (future) | G3 attempt begins. |
-| (future) | Either all three close → promote to Survives, or any fails → Null 5 in sinw_fixed_point lineage. |
+| 2026-04-23 | G1 attempt run. Three candidate mechanisms tested; all three fail to derive `d → d_eff = d − 1/q₃^d` from framework primitives. See `attempts/g1_computation_result.md`. |
+| 2026-04-23 | G2 and G3 rendered moot by G1 null (they were conditional on G1). |
+
+## Outcome
+
+The pilot closes with a **negative verdict on the d_eff = 80/27
+proposal as a derivation**. The 0.5σ numerical match is real
+but reduces to a coincidence under Z1-Z3 accounting.
 
 ## Next action
 
-Pick one of G1, G2, G3 and attempt a derivation in the
-corresponding `../attempts/g{1,2,3}_*.md`. Suggested first attack:
-**G1**, because its integral framing likely constrains G2
-(whether q₂ contributes at the same order) and partially
-constrains G3 (the scheme may fall out of the integration
-measure).
+- **Reclassify** sin²θ_W(d_eff = 80/27) in
+  `../../sync_cost/derivations/numerology_inventory.md` from
+  Class 4 to Class 2 (noted coincidence, no framework
+  derivation).
+- **Update** `../../sync_cost/derivations/sinw_effective_dimension.md`
+  to note the G1 null finding (the occupied-interval → dimension
+  argument doesn't derive from any of box-counting, direct
+  re-derivation, or measure re-normalization).
+- **Optionally log** a possible fifth null in
+  `sinw_fixed_point.md`'s lineage: "d_eff = 80/27 ansatz as a
+  structural derivation — tested, null."
 
 ## Cross-references
 
