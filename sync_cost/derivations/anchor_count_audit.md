@@ -133,6 +133,12 @@ Reducing the dimensional input from two to one is blocked by five
 specific obstructions. They are not independent — lifting one may
 lift others — but each is distinct and requires its own argument.
 
+The register-intrinsic formalism in `observer_register_closure.md`
+re-expresses obstructions #1, #2, and #4 more sharply but does
+not resolve them: the canonical register supplies `R = 6·13⁵⁴`
+as a pure count, not as an absolute unit, and it does not force
+a specific depth label for v_EW.
+
 1. **No structural identity for v/M_P.** The dimensionless ratio
    v_EW/M_P ≈ 2.02·10⁻¹⁷ is not expressed as a framework-integer
    function. The nearest suggestive form, 13⁻¹⁵ = 1.954·10⁻¹⁷, is
@@ -203,3 +209,4 @@ posed framework-natively.
 | `mass_sector_closure.md` | same, restated |
 | `planck_scale.md` | 145.8 Planck-to-Hubble Fibonacci levels, but no Planck-to-EW count |
 | `h_inf_status.md` | scale-free reframe declares one anchor; this audit shows two |
+| `observer_register_closure.md` | register formalism for R; re-expresses obstructions #1, #2, #4 without resolving them |

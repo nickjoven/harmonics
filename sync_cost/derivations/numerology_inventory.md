@@ -118,6 +118,17 @@ structural prediction. `MANIFEST.yml` records these under
 
 ### `v/M_P ≈ 13⁻¹⁵` (3.13 % near-match)
 
+- Re-examined 2026-04-23 under the observer-register formalism in
+  `observer_register_closure.md` §4. The register has a 54-level
+  stratification (`k = 0, …, 54`), so the question "at what
+  level ℓ does v_EW sit?" is now well-posed. Numerically ℓ = 15
+  is the only viable integer. **Structurally it is not forced:**
+  multiple framework-integer expressions evaluate to 15
+  (`q₃(q₂+q₃)`, `q₂·q₃ + q₃²`, `(q₂²+q₃²) + q₂`), and no
+  Klein-antipodal Z₂ rep decomposition of the register
+  distinguishes depth 15. Ansatz pattern; Class 2 unchanged.
+
+
 - Explicitly tested in `v_over_mp_structural_attempt.md`.
 - Yukawa-mediant cascade (`yukawa_mediant_cascade.py`) found the
   SB subtree at depth 15 is binary (2¹⁵), not 13-adic — no structure
