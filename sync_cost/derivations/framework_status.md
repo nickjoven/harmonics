@@ -77,7 +77,6 @@ numerology ensemble, not structural.
 
 | Item | Upgrade criterion |
 |---|---|
-| 26:7:1 generation hierarchy | Framework-derived rational exponent a matching observed m_μ/m_e and m_τ/m_μ simultaneously |
 | N_efolds = √5 / rate ≈ 61.3 | Framework-internal derivation independent of observed n_s |
 | K_c(F_n/F_{n+1}) closed form | Explicit form beyond asymptotic δ⁻ⁿ scaling |
 | T2#7 measurement arc technical residuals | Iteration-to-time anchor, multi-tongue cascade, continuous K(t) |

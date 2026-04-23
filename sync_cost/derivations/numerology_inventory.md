@@ -81,6 +81,36 @@ structural prediction. `MANIFEST.yml` records these under
   verdict "fitted term, not derived." The bare K=1 identity
   `λ_H = 1/q_2³ = 1/8` stands (see Class 3).
 
+### Generation-mass hierarchy `26 : 7 : 1`
+
+- Form: `m_heavy/m_light = 26^a`, `m_mid/m_light = 7^a` with
+  exponent `a = d − 1/2 + charge/2 ∈ {2, 5/2, 3}` per sector.
+  Integers: `26 = q_3³ − 1 = q_2·|F_6|`, `7 = q_2³ − 1 = q_2² + q_3`.
+  Source: `generation_mechanism.md`.
+- **Null finding (2026-04-23):** the lepton-sector prediction
+  `(a = 5/2)` gives two ratios:
+
+  | Ratio | Prediction | Observed | Residual |
+  |---|---|---|---|
+  | m_τ / m_e | `26^(5/2) = 3446.9` | 3477 | 0.9% |
+  | m_μ / m_e | `7^(5/2) = 129.6` | 206.8 | **37%** |
+
+  The μ/e prediction fails Z1 by ~370000σ on PDG uncertainty.
+  The τ/e match sits at the 1-3% particle-sector coincidence
+  floor. `generation_mechanism.md §4` acknowledges the gap and
+  attributes it to "K → μ running correction" — but no such
+  derivation exists.
+- **Multiple constructions of the base integers** (7 as both
+  `q_2³ − 1` and `q_2² + q_3`; 26 as both `q_3³ − 1` and
+  `q_2·|F_6|`) weaken the "framework-native form" claim: no
+  single construction is forced.
+- **Exponent `a = d − 1/2 + charge/2`** is an aesthetically
+  appealing arithmetic sequence {2, 5/2, 3} but is not derived.
+- **Status:** Class 1 numerology. Z1 fails severely (μ/e at 37%),
+  Z2 fails (multiple equivalent integer constructions, no forced
+  `a`), and the invoked "running correction" is an undefined
+  post-hoc patch.
+
 ---
 
 ## Class 2 — Noted coincidences (no framework claim)
@@ -188,18 +218,6 @@ identities without a scale-consistent derivation to M_Z.
 ---
 
 ## Class 4 — Needs individual audit
-
-### Generation-mass hierarchy 26 : 7 : 1
-
-- `generation_mechanism.md` claims `26^a : 7^a : 1` with rational a
-  for m_e : m_μ : m_τ (or similar). Framework integers: 26 = q_2·|F_6|,
-  7 = q_2² + q_3.
-- Observed m_μ/m_e = 206.77; m_τ/m_μ = 16.82.
-- If `26^a = 206.77`, a ≈ ln(206.77)/ln(26) ≈ 1.635 (not clean).
-- If `7^a = 16.82`, a ≈ ln(16.82)/ln(7) ≈ 1.451 (not clean, and
-  different from 1.635).
-- Likely numerology unless a = exactly (q_2 + q_3)/q_3 or similar
-  framework-derived exponent; needs specific derivation check.
 
 ### `K_STAR^14 = 1/8` conjecture (τ-mass related)
 
