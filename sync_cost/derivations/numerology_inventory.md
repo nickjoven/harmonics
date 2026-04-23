@@ -169,6 +169,24 @@ structural prediction. `MANIFEST.yml` records these under
   content. See `klein_nodal_parity.md` for the derivation.
 - Status: visual coincidence.
 
+### `N_efolds = √5 / rate ≈ 61.3`
+
+- `alphabet_depth21.py` output. Formula:
+  `rate = (1 − n_s_obs) / ln(φ²)`, `N_efolds = √5 / rate`.
+- **Structural components** (Z2-compliant): `√5 = φ − ψ` from the
+  golden-mean fixed-point polynomial; `ln(φ²)` from the golden
+  scaling. Both are framework-derived.
+- **Anchor dependency (2026-04-23 audit):** the formula takes the
+  observed `n_s` as input. It is a **consistency relation**
+  between framework-native √5, ln(φ²), and observed n_s — not a
+  forward prediction of N_efolds independent of n_s. Shifting n_s
+  within PDG shifts N_efolds proportionally.
+- Upgrade criterion (from `framework_status.md`): "Framework-internal
+  derivation independent of observed n_s." That remains open.
+- **Status:** Class 2. Structural parts (√5, ln(φ²)) are genuine;
+  the N_efolds match itself is a consistency check with an
+  observational anchor.
+
 ### Pythagorean comma vs K_Greene (0.17 % near-match)
 
 - `kam_bridge_synthesis.md` §6, recorded as:
@@ -240,16 +258,6 @@ identities without a scale-consistent derivation to M_Z.
   d_eff = 80/27 (0.5σ, ansatz) and Pythagorean comma vs K_Greene
   (0.17%, no structural route).
 - Steps 1–5 remain structural and unaffected.
-
-### `N_efolds = √5 / rate ≈ 61.3`
-
-- `alphabet_depth21.py` output.
-- The appearance of √5 = φ − ψ from the fixed-point polynomial is
-  structural, BUT the matching to observed ~60 inflation e-folds
-  depends on the observed n_s tilt as input (framework didn't
-  predict N_efolds independently; it's inverted from n_s).
-- Borderline: structural math, but numerical match requires
-  observational anchor.
 
 ---
 
