@@ -52,8 +52,11 @@ structural prediction. `MANIFEST.yml` records these under
     `dsin²θ_W / dlnμ` is opposite to what the tree → M_Z gap requires.
   - `sinw_fixed_point.md`: no K* ∈ [0.93, 0.99] reproduces sin²θ_W
     at M_Z via finite-K duty dynamics.
-  - `sinw_effective_dimension.md`: the d_eff = 80/27 proposal is
-    conditional on three unformalized steps (see Class 4).
+  - `sinw_effective_dimension.md`: the `d_eff = 80/27` proposal
+    reproduces 0.23121 at 0.5σ but is an ansatz, not a derivation
+    — the `d → d_eff` substitution fails under all three tested
+    mechanisms (see Class 2 entry and
+    `../../problem/sin2_theta_w_deff_80_27/attempts/g1_computation_result.md`).
 
 ### `1/α_em (tree) = q_2³ + q_3³ = 35`
 
@@ -99,6 +102,30 @@ structural prediction. `MANIFEST.yml` records these under
 - Noted in `anchor_count_audit.md`.
 - No structural argument attached.
 - Numerical coincidence only.
+
+### `sin²θ_W = 2^(80/27) / (2^(80/27) + 3^(80/27))` (0.5σ near-match via d_eff ansatz)
+
+- Proposed in `sinw_effective_dimension.md`: replace `d → d_eff =
+  d − 1/q₃^d = 80/27` in the bare formula, giving 0.23123 vs PDG
+  MS-bar at M_Z 0.23121 (0.5σ).
+- **Null finding** (G1 computation in
+  `../../problem/sin2_theta_w_deff_80_27/attempts/g1_computation_result.md`):
+  three candidate mechanisms tested for deriving `d → d_eff`:
+  1. Hausdorff / box-counting dimension of iterated tongue
+     complement — gives `d_H = log(2)/log(27/13) ≈ 0.948`, not
+     `26/27 ≈ 0.963`. Fails.
+  2. Direct width/period re-derivation on the tongue-excluded
+     ambient — Ford-circle diameter and Cartan-rank period both
+     unchanged; duty remains `1/q³`. Fails.
+  3. Measure re-normalization — multiplicative factor cancels
+     in the mixing-angle ratio; returns the bare value. Fails.
+- The `d_eff = 80/27` substitution is an **ansatz**, not a
+  derivation from framework primitives. Z1 met (0.5σ); Z2
+  cannot close.
+- Status: noted coincidence, analogous to the Pythagorean-comma
+  vs K_Greene 0.17% near-match. A different structural reading
+  that actually derives `d_eff = 80/27` from primitives is not
+  in the repo.
 
 ### Klein nodal parity (single connected curve at (5, 5, 1) σ=+node)
 
@@ -161,29 +188,6 @@ identities without a scale-consistent derivation to M_Z.
 ---
 
 ## Class 4 — Needs individual audit
-
-### `sin²θ_W` via effective dimension d_eff = 80/27
-
-- Proposed in `sinw_effective_dimension.md`. Replaces d → d_eff
-  in the bare formula, giving
-  sin²θ_W = 2^(80/27) / (2^(80/27) + 3^(80/27)) = 0.23123,
-  0.5σ from PDG MS-bar at M_Z.
-- Uses only {q₂, q₃, d} — no new dimensional input or free parameter.
-- Currently conditional on three unformalized steps
-  (`sinw_effective_dimension.md:179–200`):
-  1. "Occupied frequency interval → effective dimension reduction"
-     is geometrically motivated but not derived from integrating the
-     coupling over the complement of the q₃ tongue.
-  2. The asymmetric choice "only q₃ correction, not q₂" is
-     heuristic — a systematic perturbative expansion including the
-     q₂ correction and cross-terms has not been performed.
-  3. The identification of the root-level formula with MS-bar at M_Z
-     is motivated but not mapped onto the MS-bar subtraction procedure.
-- If all three steps are formalized, sin²θ_W should be promoted back
-  into `MANIFEST.yml:scorecard` with source
-  `[sinw_effective_dimension, duty_dimension_proof, three_dimensions,
-  klein_bottle_derivation, gauge_dictionary]`. Until then, not a
-  framework prediction.
 
 ### Generation-mass hierarchy 26 : 7 : 1
 

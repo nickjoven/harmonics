@@ -2,19 +2,34 @@
 
 ## Status
 
-**Derived, conditionally.** The electroweak mixing angle is
+**Null (2026-04-23).** The `d → d_eff = d − 1/q₃^d = 80/27`
+substitution reproduces sin²θ_W = 0.23123 at 0.5σ from PDG
+MS-bar at M_Z, but does **not** derive from framework primitives.
 
-  sin²θ_W = 2^(80/27) / (2^(80/27) + 3^(80/27)) = 0.23123
+The G1 computation in
+`../../problem/sin2_theta_w_deff_80_27/attempts/g1_computation_result.md`
+tested three candidate mechanisms:
 
-compared with the PDG value sin²θ_W(M_Z)_MS = 0.23121 ± 0.00004
-(0.5σ, 0.009% residual).
+1. **Hausdorff / box-counting dimension** of the iterated
+   tongue complement: self-similar Cantor construction at
+   `p = 1/27`, `N = 2` gives `d_H ≈ 0.9483`, not `26/27 ≈ 0.963`.
+2. **Direct width / period re-derivation** on the excluded
+   ambient `D = (Ω ∖ T_{q₃}) × M^{d−1}`: Ford-circle diameter
+   `1/q²` and Cartan-rank period `q` are both unchanged;
+   `duty_D(q) = 1/q³`, not `1/q^{80/27}`.
+3. **Measure re-normalization** on `D`: the multiplicative
+   factor `27/26` cancels in the sin²θ_W ratio, returning the
+   bare value `8/35`, not 0.23123.
 
-The derivation chain uses three previously derived quantities
-(q₂ = 2, q₃ = 3, d = 3) and one structural argument (tongue
-strip geometry → effective dimension reduction). The structural
-argument is principled but not yet a theorem; the connection
-between "occupied frequency interval" and "effective dimension"
-is formalized below at the heuristic level.
+The substitution is an **ansatz**, not a theorem. Z1 is met
+(0.5σ); Z2 cannot close. The proposal is reclassified as
+**Class 2 (noted coincidence)** in `numerology_inventory.md`,
+analogous to the Pythagorean-comma vs K_Greene 0.17% near-match.
+
+The derivation below is retained as a record of the ansatz and
+its geometric motivation. The "What remains to formalize"
+section describes what would be needed to convert the ansatz
+into a theorem — none of which has been found.
 
 The derivation does not use K-scanning or running (see
 `sinw_fixed_point.md` for why those fail). It is a first-order
