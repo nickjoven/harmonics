@@ -203,12 +203,25 @@ identities without a scale-consistent derivation to M_Z.
 
 ### `K_STAR^14 = 1/8` conjecture (τ-mass related)
 
-- Flagged in `CHAIN_KSTAR.md` §Status as **conjectured, testable**.
-  Decision criteria stated: future m_τ precision of σ < 0.03 MeV
-  would confirm or refute.
-- Status explicit: "If refuted, the specific closed form `K^14 = 1/8`
-  is a high-precision coincidence; Steps 1–5 still hold."
-- Honest about numerology risk; awaiting experimental data.
+- Framework computes: K_STAR_lep = 0.8619605739 (PDG 2024,
+  τ-mass-limited), K_STAR_lep^14 = 0.1249751, vs 1/8 = 0.1250000.
+  **0.594σ** near-match.
+- Chain `CHAIN_KSTAR.md` Steps 1–5 derive the integer 14 =
+  q_2 · |F_4| from Klein topology (structural, no fitted
+  factors).
+- Step 6 asserts K_STAR sits at index −q_3 in the 14-EDO basis,
+  giving K^14 = q_2^(−q_3) = 1/8. `CHAIN_KSTAR.md:128` itself
+  flags Step 6 as *"the load-bearing conjecture. It is a
+  precision claim, not a structural one."*
+- **Audit (2026-04-23):** the specific combination q_2^(−q_3)
+  is one of several small framework-integer variants; only this
+  one matches observation, but no framework argument forces
+  *this* combination over alternatives like q_2^(−(q_3±1)),
+  q_3^(−q_2), etc. Z2 fails: the exponent choice is an ansatz.
+- **Status:** Class 2 coincidence. Analogous in structure to
+  d_eff = 80/27 (0.5σ, ansatz) and Pythagorean comma vs K_Greene
+  (0.17%, no structural route).
+- Steps 1–5 remain structural and unaffected.
 
 ### `N_efolds = √5 / rate ≈ 61.3`
 

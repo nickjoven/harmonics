@@ -177,35 +177,51 @@ than the current experimental precision on `m_τ` (68 ppm).
 
 ## Status and blockers
 
-**Derived from canonical L0/L1/L3 framework objects:**
+**Derived from canonical L0/L1/L3 framework objects (structural):**
 
 - Step 1 `q_2 = 2`
 - Step 2 `N_lep = 4`
 - Step 3 Framework Farey index = 4
 - Step 4 `|F_4| = 7`
-- Step 5 EDO basis = 14
+- Step 5 EDO basis = 14 = q_2 · |F_4|
 
-**Conjectured, testable:**
+These steps derive the *integer 14* from Klein topology. All
+five are structural; no fitted factors.
 
-- Step 6 `K_STAR^14 = 1/8` exactly
+**Class 2 coincidence (2026-04-23 audit):**
 
-**Blocker:** tau mass precision. Resolution requires
-`σ(m_τ) < 0.03 MeV` (about 4× tighter than current PDG), which
-is plausible at Belle II and BESIII upgrades within the coming
-years.
+- Step 6 `K_STAR^14 = 1/8 = q_2^{−q_3}` at 0.594σ vs PDG.
 
-**Decision criteria for the tau mass prediction:**
+**Audit finding.** Step 6 asserts K_STAR sits at index `−q_3`
+in the 14-EDO basis. By the framework's own description above,
+this is *"a precision claim, not a structural one"*. Testing
+candidate exponents built from framework integers:
 
-- Future central value converges to `1776.789 MeV` → Step 6
-  confirmed; the six-step chain becomes a first-principles
-  derivation of `K_STAR` from Klein topology.
-- Future central value converges to `1776.86 MeV` or higher →
-  Step 6 refuted; Steps 1–5 still hold as Klein-topology
-  structure, but the specific closed form `K^14 = 1/8` is a
-  high-precision coincidence and some other mechanism sets
-  the actual `K_STAR` value.
+| Candidate | Value | K^14 target |
+|---|---|---|
+| `q_2^{−q_3} = 1/8` | 0.125 | 0.12498 ✓ |
+| `q_3^{−q_2} = 1/9` | 0.111 | 0.854 ✗ |
+| `q_2^{−(q_3−1)} = 1/4` | 0.25 | 0.912 ✗ |
+| `q_2^{−(q_3+1)} = 1/16` | 0.0625 | 0.814 ✗ |
 
-Either outcome is decisive and informative.
+Only `q_2^{−q_3}` is within 1% of observation. No framework
+argument forces *this* combination over the alternatives, so
+Z2 does not close — the exponent choice is an ansatz.
+
+**Demoted** from Proposed (Class 4) to Class 2 coincidence in
+`numerology_inventory.md`, analogous in status to the d_eff =
+80/27 ansatz (0.5σ, null on three mechanisms) and to the
+Pythagorean comma vs K_Greene 0.17% near-match.
+
+**Observational disposition.** The 2028-horizon precision
+target `σ(m_τ) < 0.03 MeV` at Belle II / BESIII is no longer a
+scorecard-promotion gate (since Step 6 is now Class 2). A
+future central value agreeing with `1776.789 MeV` would tighten
+the coincidence but would not convert it to a derivation
+without closing Z2; a divergent central value would simply
+confirm the coincidence's disposition.
+
+Steps 1–5 are unaffected.
 
 ## Load-bearing files
 

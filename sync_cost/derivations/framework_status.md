@@ -77,7 +77,6 @@ numerology ensemble, not structural.
 
 | Item | Upgrade criterion |
 |---|---|
-| K_STAR¹⁴ = 1/8 (τ-mass chain step 6) | σ(m_τ) < 0.03 MeV at Belle II / BESIII |
 | 26:7:1 generation hierarchy | Framework-derived rational exponent a matching observed m_μ/m_e and m_τ/m_μ simultaneously |
 | N_efolds = √5 / rate ≈ 61.3 | Framework-internal derivation independent of observed n_s |
 | K_c(F_n/F_{n+1}) closed form | Explicit form beyond asymptotic δ⁻ⁿ scaling |
