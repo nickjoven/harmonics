@@ -49,3 +49,5 @@
 2026-04-22T21:02:13Z | put | - -> 8925373ac006b898c46d57070dc05701f75fe93cef3c0bb3c51b2a71c2ad903b
 2026-04-22T21:36:49Z | put | sync_cost/derivations/framework_constants.py -> 850599b3c4837660bb14bc0060542d562b9a3c80064d39aae3bc81f7d5989d93
 2026-04-22T21:36:50Z | dag:create | 2d4352e835681a96371dd524d450ec94ebcf65adfcba37c30fe18b77056810d5
+2026-04-23T18:14:35Z | put | sync_cost/derivations/fermion_mass_running.py -> 74ff153f0495dc0ed95657dc2683158e5d64f2b1a2ea7695940e4771fed56c3a
+2026-04-23T18:14:35Z | put | sync_cost/derivations/spatial_coupling_derived.md -> db09543e92e3b3cb027d24c502b39dc096af5c1808d103c0c58a2bf861362893
