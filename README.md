@@ -192,8 +192,10 @@ pip install -e .        # or just: python -m rfe --observables
 harmonics/
 ├── sync_cost/                 # synchronization cost framework
 │   ├── FRAMEWORK.md           # seed context, primitives, derivation targets
-│   └── derivations/           # 29 derivations (md) + computational scripts (py)
-│       └── INDEX.md           # reading order and dependency graph
+│   └── derivations/           # derivations (md) + computational scripts (py)
+│       ├── framework_status.md       # at-a-glance status map
+│       ├── numerology_inventory.md   # Class 1–5 classification
+│       └── statistical_conventions.md # Z1–Z3 operational criteria
 ├── driven_stribeck.py         # driven oscillator + coupled pair models
 ├── stribeck_lattice.py        # N-element Stribeck chain
 ├── bifurcation_sweep.py       # single + paired oscillator experiments

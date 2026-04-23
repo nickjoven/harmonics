@@ -120,8 +120,8 @@ committed derivation / audit.
 
 | File | Role |
 |---|---|
-| `numerology_inventory.md` | full classification analysis, Class 1-5 |
-| `retractions_index.md` | flat lookup by item |
+| `numerology_inventory.md` | Full Class 1–5 classification; also the retraction / coincidence lookup (replaces retired `retractions_index.md`) |
+| `MANIFEST.yml` | canonical quantitative-claim registry (scorecard + bare_k1_identities + anchors) |
 | `residual_audit.py` | cosmological C2b floor measurement |
 | `particle_sector_audit.py` | particle C2a floor measurement |
 | `negative_tests.py` | regression suite for structural claims |
