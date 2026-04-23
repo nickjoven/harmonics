@@ -246,6 +246,9 @@ standard.
 - `einstein_from_kuramoto.md`: the gravity chain in narrative form
 - `klein_connection.md`: the three original gauge-sector
   identifications (#1 Z₂, #2 Z₃, #3 mode transitions ↔ generators)
+- `gauge_high_scale_identification.md`: high-scale (unbroken-phase)
+  identification table; the broken-phase `Z₂ ↪ U(1)` here is the
+  scale-snapshot complement
 - `gauge_factorization.md`: direct-product Lie algebra theorem,
   used in #3a
 - `gap3_principal_bundle.py`: 4-mode graph, 12 edges, 8+2+2
