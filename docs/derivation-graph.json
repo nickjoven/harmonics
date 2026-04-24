@@ -1,5 +1,5 @@
 {
-  "generated": "163513dc626e9e06f67ea9500c5b8af794b5b479",
+  "generated": "9bed549c48446895eb4184df6e1ce2fc68b575d2",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -9,12 +9,20 @@
       "depends_on": [
         "FRAMEWORK_TOPOLOGY",
         "klein_bottle",
-        "mass_sector_closure"
+        "mass_sector_closure",
+        "numerology_inventory"
       ],
       "depended_on_by": [
+        "ansatz_audit_policy",
+        "klein_antipodal_z2_rep_pattern",
         "numerology_inventory"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "a9319dc",
           "date": "2026-04-15",
@@ -66,12 +74,282 @@
       ]
     },
     {
+      "id": "INDEX",
+      "path": "sync_cost/derivations/INDEX.md",
+      "title": "Derivation Index",
+      "summary": "Canonical map from derivation D-numbers to filenames under this directory.\n`MANIFEST.yml:scorecard.*.source` lists derivations as either D-numbers\n(e.g. `D25`) or bare filename stems (e.g. `farey_partition`).  Bare\nstems resolve directly via `{name}.md` or `{name}.py`; D-numbers\nresolve via this file.",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "a0_threshold",
+        "a1_from_saddle_node",
+        "address_and_quantity",
+        "baryon_fraction",
+        "beta_from_tongues",
+        "born_rule",
+        "conservation_computability",
+        "continuum_limits",
+        "coupling_scales",
+        "discrete_gauge_resolution",
+        "duty_cycle_dictionary",
+        "einstein_from_kuramoto",
+        "exponent",
+        "farey_partition",
+        "fermion_mass_running",
+        "gauge_sector_lovelock",
+        "gell_mann_nishijima",
+        "generation_mechanism",
+        "hierarchy_gaussian_lattice",
+        "higgs_from_tongue_boundary",
+        "klein_bottle",
+        "lie_group_characterization",
+        "mediant_derivation",
+        "minimum_alphabet",
+        "minkowski_signature",
+        "omega_partition_combinatorial",
+        "planck_scale",
+        "rational_field_equation",
+        "spatial_coupling_derived",
+        "spectral_tilt",
+        "speed_of_light",
+        "three_dimensions"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "3ccb5c3",
+          "date": "2026-04-23",
+          "subject": "Add D-number \u2192 filename INDEX.md; teach check_manifest.py to consume it (#73)"
+        },
+        {
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "bab48f4",
+          "date": "2026-04-07",
+          "subject": "D46-47: ADM dictionary derived, baryon fraction \u03a9_b = 1/19"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "24695ee",
+          "date": "2026-04-07",
+          "subject": "Update scorecards: 19 predictions, gauge sector resolved"
+        },
+        {
+          "hash": "cf6da52",
+          "date": "2026-04-07",
+          "subject": "Derivations 43-45: GNN relation, Higgs mechanism, coupling scales"
+        },
+        {
+          "hash": "9cebe1a",
+          "date": "2026-04-07",
+          "subject": "Derivation 42: Yang-Mills uniqueness from Klein bottle (gauge-sector Lovelock)"
+        },
+        {
+          "hash": "ff199a0",
+          "date": "2026-04-07",
+          "subject": "Derivation 41: resolve XOR continuum limit \u2014 gauge structure is discrete"
+        },
+        {
+          "hash": "845f80b",
+          "date": "2026-04-04",
+          "subject": "Add Derivation 40: Bragg circle map and Stribeck vortex regime analysis (#55)"
+        },
+        {
+          "hash": "a9e2b09",
+          "date": "2026-03-27",
+          "subject": "Derivations 36-38: conservation as computability, figure-eight topology, boundary weight"
+        },
+        {
+          "hash": "2da044f",
+          "date": "2026-03-26",
+          "subject": "Derivation 35: The cosmological cycle \u2014 a two-voice round in 13/19"
+        },
+        {
+          "hash": "cc96938",
+          "date": "2026-03-26",
+          "subject": "Derivation 32: Minkowski signature (3,1) from phase-state observability"
+        },
+        {
+          "hash": "0a5bcb8",
+          "date": "2026-03-26",
+          "subject": "Add Derivation 31: Speed of Light as Gate Propagation (#28)"
+        },
+        {
+          "hash": "257548d",
+          "date": "2026-03-25",
+          "subject": "Canonicalize INDEX.md: D30 + gauge exploration + slip structure"
+        },
+        {
+          "hash": "ad562f3",
+          "date": "2026-03-25",
+          "subject": "D30: Pythagorean comma as Klein bottle's irreducible cost"
+        },
+        {
+          "hash": "74d836b",
+          "date": "2026-03-25",
+          "subject": "D30: Add variational principle \u2014 staircase as brachistochrone"
+        },
+        {
+          "hash": "9f9f000",
+          "date": "2026-03-25",
+          "subject": "D30: Denomination boundary \u2014 three open questions unified"
+        },
+        {
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "64376ee",
+          "date": "2026-03-25",
+          "subject": "INDEX.md: full canonicalization through D29"
+        },
+        {
+          "hash": "5feb237",
+          "date": "2026-03-25",
+          "subject": "D21 + D22: open paths + engineering targets"
+        },
+        {
+          "hash": "5b447f8",
+          "date": "2026-03-25",
+          "subject": "D21: Two open paths formalized as five binary computations"
+        },
+        {
+          "hash": "0d0dc5b",
+          "date": "2026-03-25",
+          "subject": "D20: XOR continuum limit \u2014 honest negative result"
+        },
+        {
+          "hash": "e96a704",
+          "date": "2026-03-25",
+          "subject": "Separate established from conjectural in D19"
+        },
+        {
+          "hash": "e90f6fc",
+          "date": "2026-03-25",
+          "subject": "Full continuity update: D19 status + INDEX through Phase 14"
+        },
+        {
+          "hash": "42c3816",
+          "date": "2026-03-25",
+          "subject": "Add Derivation 19: Klein bottle \u2014 fully closed non-orientable container"
+        },
+        {
+          "hash": "4335790",
+          "date": "2026-03-25",
+          "subject": "Add Derivation 18: M\u00f6bius container simulation target"
+        },
+        {
+          "hash": "f7dbe68",
+          "date": "2026-03-24",
+          "subject": "Derivation 17: rank-1 Fr\u00e9chet derivative as temporal causation (#25)"
+        },
+        {
+          "hash": "3cab1df",
+          "date": "2026-03-24",
+          "subject": "Derivation 17: rank-1 Fr\u00e9chet derivative as temporal causation"
+        },
+        {
+          "hash": "f62c568",
+          "date": "2026-03-24",
+          "subject": "Add derivation 16 and computational validation of variable denominator (#21)"
+        },
+        {
+          "hash": "c5e7f60",
+          "date": "2026-03-24",
+          "subject": "Add Derivation 16: variable denominator (Hz with changing reference)"
+        },
+        {
+          "hash": "c12a9bb",
+          "date": "2026-03-23",
+          "subject": "Add Derivation 15: Lie group characterization theorem (#20)"
+        },
+        {
+          "hash": "d1c67d9",
+          "date": "2026-03-23",
+          "subject": "Narrative pruning (#16)"
+        },
+        {
+          "hash": "fc926a2",
+          "date": "2026-03-23",
+          "subject": "Derivation 14: Three Dimensions from the Mediant (#15)"
+        },
+        {
+          "hash": "1252f4e",
+          "date": "2026-03-23",
+          "subject": "Derivations 10-12: alphabet, field equation, continuum limits, \u03c3\u00b2 running (#12)"
+        },
+        {
+          "hash": "9196c8e",
+          "date": "2026-03-23",
+          "subject": "Formalize Derivation 10, add field equation, fix INDEX (#11)"
+        },
+        {
+          "hash": "75eb713",
+          "date": "2026-03-23",
+          "subject": "Derivations 10 11 (#10)"
+        },
+        {
+          "hash": "52d844f",
+          "date": "2026-03-23",
+          "subject": "Resolve fidelity bound open items: C=1 coefficient and iteration-to-time"
+        },
+        {
+          "hash": "9ccff03",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#6)"
+        },
+        {
+          "hash": "dce795f",
+          "date": "2026-03-23",
+          "subject": "Derivation 9: self-referential fidelity bound unifying MOND and collapse"
+        },
+        {
+          "hash": "b4e4b81",
+          "date": "2026-03-23",
+          "subject": "Add high-z MOND prediction markdown (08_high_z_mond.md)"
+        },
+        {
+          "hash": "ac257ed",
+          "date": "2026-03-22",
+          "subject": "Add Planck scale and measurement collapse formalizations"
+        },
+        {
+          "hash": "be28f89",
+          "date": "2026-03-22",
+          "subject": "Add Planck scale derivation from N=3 self-sustaining threshold"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "25e708f",
+          "date": "2026-03-22",
+          "subject": "Refactor: shared utils, cross-references, superseded notes"
+        },
+        {
+          "hash": "0ae85a6",
+          "date": "2026-03-22",
+          "subject": "Add INDEX.md with reading order and dependency graph"
+        }
+      ]
+    },
+    {
       "id": "PROOF_A_gravity",
       "path": "sync_cost/derivations/PROOF_A_gravity.md",
       "title": "Proof Chain A: Polynomial \u2192 General Relativity",
       "summary": "From two physical properties of coupled oscillators \u2014 energy conservation\nand stability \u2014 the Einstein field equations follow uniquely. Each\nproposition uses only the previous ones. No proposition uses the\ncontinuum, coordinates, or any physics beyond oscillator coupling.",
       "depends_on": [],
       "depended_on_by": [
+        "INDEX",
         "PROOF_B_quantum",
         "boundary_weight",
         "conservation_computability",
@@ -137,6 +415,7 @@
       "summary": "The MOND acceleration scale a\u2080 \u2248 1.2 \u00d7 10\u207b\u00b9\u2070 m/s\u00b2 is the point where\nlocal gravitational synchronization cost equals the cosmological mean\nfield maintenance cost. This gives a mechanistic derivation of the\ndimensional relation a\u2080 = cH\u2080/2\u03c0 already established in proslambenomenos (a companion repository deriving cosmological dimensional relations from the Hubble frequency),\nand connects it to the Stribeck lattice bifurcation threshold.",
       "depends_on": [],
       "depended_on_by": [
+        "INDEX",
         "framework_status",
         "numerology_inventory"
       ],
@@ -206,6 +485,7 @@
         "stribeck_vortex"
       ],
       "depended_on_by": [
+        "INDEX",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_c",
         "framework_status",
@@ -237,9 +517,17 @@
         "statistical_conventions"
       ],
       "depended_on_by": [
+        "framework_status",
+        "hybrid_strategy_audit",
+        "numerology_inventory",
         "sigma_squared_disambiguation"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "cc58f06",
           "date": "2026-04-20",
@@ -254,6 +542,7 @@
       "summary": "A ratio has two components. The numerator counts displacement.\nThe denominator counts period. One says how far; the other says\nhow long. These are not the same kind of information.",
       "depends_on": [],
       "depended_on_by": [
+        "INDEX",
         "anchor_count_audit"
       ],
       "git": [
@@ -302,18 +591,54 @@
         "higgs_from_tongue_boundary",
         "mass_sector_closure",
         "numerology_inventory",
-        "planck_scale"
+        "observer_register_closure",
+        "planck_scale",
+        "statistical_conventions"
       ],
       "depended_on_by": [
         "framework_status",
         "hierarchy_gaussian_lattice",
-        "numerology_inventory"
+        "numerology_inventory",
+        "observer_register_closure"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "2a285e4",
           "date": "2026-04-22",
           "subject": "Flatten simulation audit into existing clarifying documents"
+        }
+      ]
+    },
+    {
+      "id": "ansatz_audit_policy",
+      "path": "sync_cost/derivations/ansatz_audit_policy.md",
+      "title": "Ansatz audit policy \u2014 triaging Class 4 candidates",
+      "summary": "A short policy note derived from three consecutive Class 4 \u2192 Class 2\ndemotions in the 2026-04-23 session. The demotions all followed the\nsame structural pattern; future Class 4 candidates should be\ntriaged against this pattern directly rather than allowed to linger\nas \"pending audit.\"",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "framework_status",
+        "klein_antipodal_z2_rep_pattern",
+        "numerology_inventory",
+        "statistical_conventions"
+      ],
+      "depended_on_by": [
+        "framework_status",
+        "hybrid_strategy_audit",
+        "k_axis_uniqueness",
+        "k_scaling_scan",
+        "numerology_inventory",
+        "observer_register_closure"
+      ],
+      "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
         }
       ]
     },
@@ -326,14 +651,24 @@
         "gell_mann_nishijima"
       ],
       "depended_on_by": [
+        "INDEX",
         "basin_11_connection_exploration",
         "framework_status",
+        "hybrid_strategy_audit",
+        "k_axis_uniqueness",
+        "klein_antipodal_z2_rep_pattern",
         "numerology_inventory",
+        "observer_register_closure",
         "omega_b_residual_phase_a",
         "omega_b_residual_phase_b",
         "omega_partition_combinatorial"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "dc466d8",
           "date": "2026-04-22",
@@ -380,6 +715,7 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "INDEX",
         "fermion_mass_running"
       ],
       "git": [
@@ -399,6 +735,7 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
+        "INDEX",
         "a1_from_saddle_node",
         "framework_status",
         "mass_sector_sqrt_w_phase_a",
@@ -495,6 +832,7 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
+        "INDEX",
         "quantum_gravity_interpolation",
         "rationality_descent"
       ],
@@ -521,6 +859,7 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
+        "INDEX",
         "a_s_geometric_proof",
         "gap1_theorem",
         "gap2_step4_farey_laplacian",
@@ -594,11 +933,18 @@
       "summary": "**Derived (partial).** D_0 = 1/2 is determined by the tree geometry.\nAll dimensionless ratios are determined. The absolute coupling scales\nreduce to one dimensionful input (the root oscillator frequency),\nwhich no mathematical framework can produce.",
       "depends_on": [],
       "depended_on_by": [
+        "INDEX",
         "anchor_count_audit",
         "gap2_analytic_proof",
+        "observer_register_closure",
         "spatial_coupling_derived"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "79c20d4",
           "date": "2026-04-07",
@@ -678,9 +1024,16 @@
       "summary": "**Resolved (partial).** The five D21 computations are complete.\nPath 2 (gauge from mean-field F) is closed \u2014 the self-consistency\nfunctional cannot carry gauge degrees of freedom. Path 1 (discrete\nis physical) is partially confirmed: the topology determines charges,\ncenter, and confinement, but not the gauge dynamics.",
       "depends_on": [],
       "depended_on_by": [
+        "INDEX",
+        "gauge_high_scale_identification",
         "klein_connection"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "79c20d4",
           "date": "2026-04-07",
@@ -719,6 +1072,7 @@
       ],
       "depended_on_by": [
         "k_critical_phase_a",
+        "klein_antipodal_z2_rep_pattern",
         "mass_sector_sqrt_w_phase_b",
         "omega_b_residual_phase_a",
         "omega_b_residual_phase_b",
@@ -876,10 +1230,13 @@
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
+        "INDEX",
         "beta_from_tongues",
         "fermion_mass_running",
         "framework_status",
+        "hybrid_strategy_audit",
         "numerology_inventory",
+        "observer_register_closure",
         "omega_b_residual_phase_b",
         "quantum_gravity_interpolation",
         "sinw_effective_dimension"
@@ -935,6 +1292,7 @@
         "PROOF_A_gravity"
       ],
       "depended_on_by": [
+        "INDEX",
         "gap1_analytic_proof",
         "gap1_theorem",
         "gap_1_christoffel",
@@ -992,8 +1350,15 @@
       "title": "Why the Exponent Is q\u2082q\u2083\u00b3",
       "summary": "**Derived**: the exponent q\u2082q\u2083^d = 54 follows from three established\nresults:\n1. The Klein bottle assigns q\u2083 to spatial, q\u2082 to temporal (D19)\n2. The spatial direction maps to d = 3 independent dimensions (D23)\n3. Independent dimensions multiply their resolutions (standard\n   mode counting)",
       "depends_on": [],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "INDEX"
+      ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "b2deee7",
           "date": "2026-04-07",
@@ -1016,12 +1381,18 @@
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
+        "INDEX",
         "framework_status",
         "numerology_inventory",
         "omega_partition_combinatorial",
         "vacuum_energy"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "dc466d8",
           "date": "2026-04-22",
@@ -1058,6 +1429,11 @@
       "depended_on_by": [],
       "git": [
         {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
           "hash": "b2deee7",
           "date": "2026-04-07",
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
@@ -1088,7 +1464,9 @@
         "higgs_from_tongue_boundary",
         "three_dimensions"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "INDEX"
+      ],
       "git": [
         {
           "hash": "dffc200",
@@ -1105,6 +1483,11 @@
       "depends_on": [],
       "depended_on_by": [],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "b2deee7",
           "date": "2026-04-07",
@@ -1187,22 +1570,36 @@
       "depends_on": [
         "a0_threshold",
         "a1_from_saddle_node",
+        "a_s_geometric_proof",
         "anchor_count_audit",
+        "ansatz_audit_policy",
         "baryon_fraction",
         "born_rule",
         "duty_cycle_dictionary",
         "farey_partition",
         "hierarchy_gaussian_lattice",
+        "hybrid_strategy_audit",
+        "klein_nodal_parity",
+        "numerology_inventory",
+        "omega_b_residual_phase_a",
+        "omega_partition_combinatorial"
+      ],
+      "depended_on_by": [
+        "ansatz_audit_policy",
+        "basin_11_connection_exploration",
+        "hybrid_strategy_audit",
+        "k_scaling_scan",
+        "klein_antipodal_z2_rep_pattern",
         "klein_nodal_parity",
         "numerology_inventory",
         "omega_partition_combinatorial"
       ],
-      "depended_on_by": [
-        "basin_11_connection_exploration",
-        "klein_nodal_parity",
-        "omega_partition_combinatorial"
-      ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "dc466d8",
           "date": "2026-04-22",
@@ -1462,18 +1859,26 @@
       "depends_on": [
         "einstein_from_kuramoto",
         "gauge_factorization",
+        "gauge_high_scale_identification",
         "gauge_sector_lovelock",
         "klein_bottle",
         "klein_connection",
         "sinw_fixed_point"
       ],
       "depended_on_by": [
+        "gauge_high_scale_identification",
         "hierarchy_gaussian_lattice",
         "numerology_inventory",
+        "observer_register_closure",
         "sinw_effective_dimension",
         "three_formalizations"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "977a737",
           "date": "2026-04-16",
@@ -1496,6 +1901,7 @@
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_b",
         "gauge_dictionary",
+        "gauge_high_scale_identification",
         "hierarchy_gaussian_lattice",
         "klein_connection",
         "second_law_topological"
@@ -1509,6 +1915,32 @@
       ]
     },
     {
+      "id": "gauge_high_scale_identification",
+      "path": "sync_cost/derivations/gauge_high_scale_identification.md",
+      "title": "High-scale gauge identification",
+      "summary": "**Synthesis-derivation.** The substrate-feature-to-gauge-group\ncorrespondence is forced by the cited harmonics derivations, with\none remaining IDENTIFIED commitment (per `gauge_dictionary.md`)\nabout the physical-sector labeling. The high-scale assignment\ntable above is the single explicit reference for what the\nidentification commits to.",
+      "depends_on": [
+        "discrete_gauge_resolution",
+        "gauge_dictionary",
+        "gauge_factorization",
+        "gauge_sector_lovelock",
+        "gell_mann_nishijima",
+        "klein_bottle",
+        "klein_bottle_derivation",
+        "klein_connection"
+      ],
+      "depended_on_by": [
+        "gauge_dictionary"
+      ],
+      "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        }
+      ]
+    },
+    {
       "id": "gauge_sector_lovelock",
       "path": "sync_cost/derivations/gauge_sector_lovelock.md",
       "title": "Yang-Mills from the Klein Bottle (Gauge-Sector Lovelock)",
@@ -1517,11 +1949,13 @@
         "sinw_fixed_point"
       ],
       "depended_on_by": [
+        "INDEX",
         "anchor_count_audit",
         "beta_from_tongues",
         "fermion_mass_running",
         "gauge_dictionary",
         "gauge_factorization",
+        "gauge_high_scale_identification",
         "klein_connection",
         "mass_sector_closure",
         "sinw_effective_dimension"
@@ -1571,10 +2005,12 @@
       "summary": "The relation Q = T_3 + Y/2 between electric charge Q, weak isospin\nT_3, and hypercharge Y is not a postulate. It is the charge\ncomposition law at the Klein bottle's identification boundary, where\nthe antiperiodic (twisted) and periodic (untwisted) directions meet.",
       "depends_on": [],
       "depended_on_by": [
+        "INDEX",
         "baryon_fraction",
         "beta_from_tongues",
         "fermion_mass_running",
         "fourth_generation_revisited",
+        "gauge_high_scale_identification",
         "mass_sector_closure",
         "omega_partition_combinatorial",
         "sector_constants_structure"
@@ -1612,6 +2048,7 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
+        "INDEX",
         "beta_from_tongues",
         "fermion_mass_running",
         "fourth_generation_revisited",
@@ -1679,6 +2116,11 @@
       ],
       "git": [
         {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
           "hash": "b2deee7",
           "date": "2026-04-07",
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
@@ -1694,7 +2136,7 @@
       "id": "hierarchy_gaussian_lattice",
       "path": "sync_cost/derivations/hierarchy_gaussian_lattice.md",
       "title": "The Planck\u2013Hubble Hierarchy from Gaussian Lattice Index",
-      "summary": "The Planck/Hubble hierarchy R is derived from the framework's\nthree quantities (q\u2082 = 2, q\u2083 = 3, d = 3) with zero free parameters:",
+      "summary": "The Planck/Hubble hierarchy R is derived from the framework's\nthree framework integers (q\u2082 = 2, q\u2083 = 3, d = 3); no fitted factors:",
       "depends_on": [
         "anchor_count_audit",
         "gap2_spatialization_decomposition",
@@ -1702,10 +2144,12 @@
         "gauge_factorization",
         "klein_bottle_derivation",
         "sinw_effective_dimension",
+        "statistical_conventions",
         "three_dimensions",
         "three_formalizations"
       ],
       "depended_on_by": [
+        "INDEX",
         "anchor_count_audit",
         "down_type_double_cover_closed",
         "down_type_double_cover_phase_a",
@@ -1715,11 +2159,17 @@
         "gap2_sub_e_status_reconciled",
         "neutrino_mass_audit",
         "numerology_inventory",
+        "observer_register_closure",
         "session_audit",
         "statistical_conventions",
         "three_formalizations"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "2a285e4",
           "date": "2026-04-22",
@@ -1745,11 +2195,17 @@
       "depends_on": [],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
+        "INDEX",
         "anchor_count_audit",
         "beta_from_tongues",
         "fermion_mass_running"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "e1e25da",
           "date": "2026-04-13",
@@ -1801,6 +2257,11 @@
       "depended_on_by": [],
       "git": [
         {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
           "hash": "b2deee7",
           "date": "2026-04-07",
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
@@ -1844,6 +2305,35 @@
           "hash": "7c80593",
           "date": "2026-03-22",
           "subject": "Add high-z MOND prediction markdown (08_high_z_mond.md)"
+        }
+      ]
+    },
+    {
+      "id": "hybrid_strategy_audit",
+      "path": "sync_cost/derivations/hybrid_strategy_audit.md",
+      "title": "Hybrid strategy audit \u2014 Floor residuals against |r|^n closures",
+      "summary": "Parallel audit of the three Floor items against the hybrid\n(`discrete Farey count \u00d7 continuous decoherence tax`) closure\nstrategy proposed in `omega_b_residual_phase_b.md`. Applies the\ntriage in `ansatz_audit_policy.md`.",
+      "depends_on": [
+        "a_s_geometric_proof",
+        "ansatz_audit_policy",
+        "baryon_fraction",
+        "duty_cycle_dictionary",
+        "framework_status",
+        "klein_antipodal_z2_rep_pattern",
+        "numerology_inventory",
+        "omega_b_residual_phase_a",
+        "omega_b_residual_phase_b"
+      ],
+      "depended_on_by": [
+        "framework_status",
+        "numerology_inventory",
+        "omega_b_residual_phase_b"
+      ],
+      "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
         }
       ]
     },
@@ -1932,6 +2422,23 @@
       ]
     },
     {
+      "id": "k_axis_uniqueness",
+      "path": "sync_cost/derivations/k_axis_uniqueness.md",
+      "title": "K-axis uniqueness probe: composed Klein-antipodal + coprime-to-6",
+      "summary": "The bare K-scan (`k_scaling_scan.md`, PR #76) landed Class 2\nbecause the bare circle map *ranks* rationals by tongue width but\nnever *forbids* any \u2014 every `p/q` opens at some K. The writeup\nflagged the natural follow-up: compose the K-scan with one of the\nframework's existing forcing filters (Klein-antipodal Z\u2082-rep, XOR\non Stern-Brocot, anomaly cancellation) to see whether the\nsurviving tongue count at a canonical K equals a framework integer\nfor *structural* reasons.",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "baryon_fraction",
+        "k_scaling_scan",
+        "klein_antipodal_z2_rep_pattern",
+        "mass_sector_closure",
+        "observer_register_closure",
+        "omega_partition_combinatorial"
+      ],
+      "depended_on_by": [],
+      "git": []
+    },
+    {
       "id": "k_critical_phase_a",
       "path": "sync_cost/derivations/k_critical_phase_a.md",
       "title": "K = K_c criticality \u2014 Phase A: the K zoo and the concrete concern",
@@ -1975,6 +2482,59 @@
       ]
     },
     {
+      "id": "k_scaling_scan",
+      "path": "sync_cost/derivations/k_scaling_scan.md",
+      "title": "K-scaling scan: tongue spectrum from K = 0 to chaos",
+      "summary": "`observer_register_closure.md` \u00a77 logs an open candidate:",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "framework_status",
+        "klein_antipodal_z2_rep_pattern",
+        "mass_sector_closure",
+        "numerology_inventory",
+        "observer_register_closure"
+      ],
+      "depended_on_by": [
+        "k_axis_uniqueness",
+        "numerology_inventory"
+      ],
+      "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        }
+      ]
+    },
+    {
+      "id": "klein_antipodal_z2_rep_pattern",
+      "path": "sync_cost/derivations/klein_antipodal_z2_rep_pattern.md",
+      "title": "Klein-antipodal Z\u2082 representation theory: a recurring derivation",
+      "summary": "Point at three independent framework derivations that use the\nsame underlying machinery \u2014 Klein-antipodal Z\u2082 representation\ntheory on finite lattices built from framework integers. The\nmachinery is not one-off; it's a pattern.",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "baryon_fraction",
+        "down_type_double_cover_closed",
+        "framework_status",
+        "omega_partition_combinatorial",
+        "statistical_conventions"
+      ],
+      "depended_on_by": [
+        "ansatz_audit_policy",
+        "hybrid_strategy_audit",
+        "k_axis_uniqueness",
+        "k_scaling_scan",
+        "observer_register_closure"
+      ],
+      "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        }
+      ]
+    },
+    {
       "id": "klein_bottle",
       "path": "sync_cost/derivations/klein_bottle.md",
       "title": "The Klein Bottle",
@@ -1983,16 +2543,23 @@
       "depended_on_by": [
         "CHAIN_KSTAR",
         "FRAMEWORK_TOPOLOGY",
+        "INDEX",
         "beta_from_tongues",
         "duty_cycle_dictionary",
         "gauge_dictionary",
         "gauge_factorization",
+        "gauge_high_scale_identification",
         "klein_connection",
         "klein_nodal_parity",
         "second_law_topological",
         "vacuum_energy"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "b2deee7",
           "date": "2026-04-07",
@@ -2063,6 +2630,7 @@
         "down_type_double_cover_phase_c",
         "gap2_theorem_attempt",
         "gauge_factorization",
+        "gauge_high_scale_identification",
         "hierarchy_gaussian_lattice",
         "numerology_inventory",
         "omega_b_residual_phase_a",
@@ -2097,6 +2665,7 @@
         "down_type_double_cover_phase_c",
         "down_type_double_cover_phase_d",
         "gauge_dictionary",
+        "gauge_high_scale_identification",
         "second_law_topological"
       ],
       "git": [
@@ -2110,8 +2679,8 @@
     {
       "id": "klein_nodal_parity",
       "path": "sync_cost/derivations/klein_nodal_parity.md",
-      "title": "Klein nodal parity: a direct test of substrate non-orientability",
-      "summary": "**Retracted (2026-04-22).** The test as formulated cannot discriminate\neven from odd \u2113, because the potential the simulator uses is Z\u2082-\nsymmetric for all \u2113. The derivation below shows why; the\nparity-ladder control runs would have been uninformative even if\ncollected. This file is kept as a record of the null result.",
+      "title": "Klein nodal parity: null result",
+      "summary": "**Null.** Gradient descent on `U = Y\u00b2` is Z\u2082-symmetric for all \u2113,\nso the proposed parity ladder cannot discriminate even from odd \u2113.\n`framework_status.md` Eliminated; `numerology_inventory.md` Class 2.",
       "depends_on": [
         "framework_status",
         "klein_bottle",
@@ -2123,6 +2692,11 @@
         "numerology_inventory"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "dc466d8",
           "date": "2026-04-22",
@@ -2143,6 +2717,7 @@
       "depends_on": [],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
+        "INDEX",
         "isotropy_lemma"
       ],
       "git": [
@@ -2177,6 +2752,8 @@
         "FRAMEWORK_TOPOLOGY",
         "anchor_count_audit",
         "fourth_generation_revisited",
+        "k_axis_uniqueness",
+        "k_scaling_scan",
         "mixing_angle_audit",
         "neutrino_mass_audit"
       ],
@@ -2278,7 +2855,9 @@
         "PROOF_A_gravity",
         "PROOF_B_quantum"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "INDEX"
+      ],
       "git": [
         {
           "hash": "b2deee7",
@@ -2312,6 +2891,7 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
+        "INDEX",
         "a_s_geometric_proof",
         "gap_2_spatial_diffusion",
         "klein_bottle_derivation"
@@ -2360,6 +2940,7 @@
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
+        "INDEX",
         "klein_bottle_derivation",
         "spatial_coupling_derived"
       ],
@@ -2458,32 +3039,51 @@
         "CHAIN_KSTAR",
         "a0_threshold",
         "a1_from_saddle_node",
+        "a_s_geometric_proof",
         "anchor_count_audit",
+        "ansatz_audit_policy",
         "baryon_fraction",
         "born_rule",
         "duty_cycle_dictionary",
         "duty_dimension_proof",
         "farey_partition",
+        "framework_status",
         "gauge_dictionary",
         "generation_mechanism",
         "hierarchy_gaussian_lattice",
+        "hybrid_strategy_audit",
+        "k_scaling_scan",
         "klein_bottle_derivation",
         "klein_nodal_parity",
+        "observer_register_closure",
+        "omega_b_residual_phase_b",
         "omega_partition_combinatorial",
         "sinw_effective_dimension",
         "sinw_fixed_point",
+        "statistical_conventions",
         "three_dimensions",
         "xor_derivation"
       ],
       "depended_on_by": [
+        "CHAIN_KSTAR",
         "FRAMEWORK_TOPOLOGY",
         "anchor_count_audit",
+        "ansatz_audit_policy",
         "duty_cycle_dictionary",
         "framework_status",
+        "hybrid_strategy_audit",
+        "k_scaling_scan",
         "klein_nodal_parity",
-        "rationality_descent"
+        "observer_register_closure",
+        "rationality_descent",
+        "sinw_effective_dimension"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "dc466d8",
           "date": "2026-04-22",
@@ -2502,6 +3102,37 @@
       ]
     },
     {
+      "id": "observer_register_closure",
+      "path": "sync_cost/derivations/observer_register_closure.md",
+      "title": "Observer-register closure on the Klein-quotient substrate",
+      "summary": "Formalize the notion of an observer-register as a closure\ncondition on Farey-level subsets of the Klein-quotient substrate.\nRestate `R = 6\u00b713\u2075\u2074` as the resolution of the canonical register,\nthen test whether this demotes H_0 from a Type 1 observational\nanchor to a Type 2 ratio (register span \u00d7 Planck unit) and\nwhether it closes the v/M_P gap from the cosmological side.",
+      "depends_on": [
+        "anchor_count_audit",
+        "ansatz_audit_policy",
+        "baryon_fraction",
+        "coupling_scales",
+        "duty_cycle_dictionary",
+        "gauge_dictionary",
+        "hierarchy_gaussian_lattice",
+        "klein_antipodal_z2_rep_pattern",
+        "numerology_inventory",
+        "xor_derivation"
+      ],
+      "depended_on_by": [
+        "anchor_count_audit",
+        "k_axis_uniqueness",
+        "k_scaling_scan",
+        "numerology_inventory"
+      ],
+      "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        }
+      ]
+    },
+    {
       "id": "omega_b_residual_phase_a",
       "path": "sync_cost/derivations/omega_b_residual_phase_a.md",
       "title": "\u03a9_b = 1/19 residual \u2014 Phase A: the three-way boundary-weight inconsistency",
@@ -2514,6 +3145,8 @@
         "omega_partition_combinatorial"
       ],
       "depended_on_by": [
+        "framework_status",
+        "hybrid_strategy_audit",
         "omega_b_residual_phase_b"
       ],
       "git": [
@@ -2539,12 +3172,20 @@
         "boundary_weight",
         "down_type_double_cover_closed",
         "duty_cycle_dictionary",
+        "hybrid_strategy_audit",
         "omega_b_residual_phase_a"
       ],
       "depended_on_by": [
+        "hybrid_strategy_audit",
+        "numerology_inventory",
         "statistical_conventions"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "c83e5d0",
           "date": "2026-04-19",
@@ -2565,12 +3206,20 @@
         "xor_derivation"
       ],
       "depended_on_by": [
+        "INDEX",
         "farey_partition",
         "framework_status",
+        "k_axis_uniqueness",
+        "klein_antipodal_z2_rep_pattern",
         "numerology_inventory",
         "omega_b_residual_phase_a"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "dc466d8",
           "date": "2026-04-22",
@@ -2585,6 +3234,7 @@
       "summary": "The Planck scale is not an imposed cutoff. It is the minimum domain\nwhere the synchronization substrate can sustain itself \u2014 the N = 3\nthreshold of the coupling loop.",
       "depends_on": [],
       "depended_on_by": [
+        "INDEX",
         "anchor_count_audit",
         "isotropy_lemma",
         "quantum_gravity_interpolation"
@@ -2697,6 +3347,7 @@
       "summary": "The field equation of the synchronization framework is a\nself-consistency condition on the Stern-Brocot tree, written in\nexact rational arithmetic using the four primitives of Derivation 10.\nThe continuum (PDE) form is a limit, not the primary object. The\nequation operates on rationals constructed by mediants because the\nphysical states it describes \u2014 mode-locked orbits \u2014 are rational.",
       "depends_on": [],
       "depended_on_by": [
+        "INDEX",
         "gap1_theorem",
         "gap2_spatialization_decomposition",
         "gap_1_christoffel",
@@ -2754,6 +3405,11 @@
       "depends_on": [],
       "depended_on_by": [],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "e1e25da",
           "date": "2026-04-13",
@@ -2889,12 +3545,13 @@
       "id": "sinw_effective_dimension",
       "path": "sync_cost/derivations/sinw_effective_dimension.md",
       "title": "Weak Mixing Angle: sin\u00b2\u03b8_W from Effective Dimension Reduction",
-      "summary": "**Derived, conditionally.** The electroweak mixing angle is",
+      "summary": "**Null (2026-04-23).** The `d \u2192 d_eff = d \u2212 1/q\u2083^d = 80/27`\nsubstitution reproduces sin\u00b2\u03b8_W = 0.23123 at 0.5\u03c3 from PDG\nMS-bar at M_Z, but does **not** derive from framework primitives.",
       "depends_on": [
         "duty_cycle_dictionary",
         "gauge_dictionary",
         "gauge_sector_lovelock",
         "klein_bottle_derivation",
+        "numerology_inventory",
         "sinw_fixed_point",
         "three_dimensions"
       ],
@@ -2908,6 +3565,11 @@
         "three_formalizations"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "2ca0794",
           "date": "2026-04-18",
@@ -2965,9 +3627,15 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "INDEX",
         "quantum_gravity_interpolation"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "dffc200",
           "date": "2026-04-22",
@@ -2983,7 +3651,9 @@
       "depends_on": [
         "spectral_tilt_reframed"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "INDEX"
+      ],
       "git": [
         {
           "hash": "e387fe3",
@@ -3094,6 +3764,7 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
+        "INDEX",
         "duty_cycle_dictionary",
         "quantum_gravity_interpolation",
         "spatial_coupling_derived"
@@ -3130,10 +3801,20 @@
       ],
       "depended_on_by": [
         "a_s_geometric_proof",
+        "anchor_count_audit",
+        "ansatz_audit_policy",
+        "hierarchy_gaussian_lattice",
+        "klein_antipodal_z2_rep_pattern",
         "mixing_angle_audit",
-        "neutrino_mass_audit"
+        "neutrino_mass_audit",
+        "numerology_inventory"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "cc58f06",
           "date": "2026-04-20",
@@ -3191,6 +3872,7 @@
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
+        "INDEX",
         "beta_from_tongues",
         "duty_cycle_dictionary",
         "fermion_mass_running",
@@ -3206,6 +3888,11 @@
         "three_formalizations"
       ],
       "git": [
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
         {
           "hash": "1cf530a",
           "date": "2026-04-08",
@@ -3406,6 +4093,7 @@
         "gauge_factorization",
         "klein_bottle_derivation",
         "numerology_inventory",
+        "observer_register_closure",
         "omega_partition_combinatorial"
       ],
       "git": [

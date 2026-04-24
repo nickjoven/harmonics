@@ -61,3 +61,6 @@
 2026-04-24T05:09:18Z | put | sync_cost/derivations/k_scaling_scan.md -> 5abaeba377166c0acad71969596934e4281d24af467d9e63576e35e57b249b2d
 2026-04-24T05:09:18Z | put | sync_cost/derivations/numerology_inventory.md -> 0c39e93d16251ae1a279513fcf5b8aed0b796dcdcf3a34871c2c183447733a4f
 2026-04-24T05:09:29Z | dag:create | a07fdbf0b739c12cee3072fa3d289552f32ad6fb19961c8b6d0c4906a2f94811
+2026-04-24T21:03:12Z | put | sync_cost/derivations/k_axis_uniqueness.py -> 3991a04e20e76f4661577c93bd70422f8433ef0c345f42f9abf3c70e4d1d18f1
+2026-04-24T21:03:12Z | put | sync_cost/derivations/k_axis_uniqueness.md -> ac909b3dff250175f2c46e3711062d03da5ff0ff96041b9379844d7c61084e99
+2026-04-24T21:03:21Z | dag:create | d0290f8cf973e345d2fcd72c4b7556177b831e7f021c4004f10d396910e9b040
