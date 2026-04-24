@@ -1,0 +1,1 @@
+Drift cleared on FRAMEWORK_TOPOLOGY.md (663f→40dd) and framework_constants.py (fa32→8505): tracker held 2026-04-14 CIDs; main updated both via PRs #68/#70 and merge a907dec did not refresh tracker. New CIDs already in CAS; content reviewed on PRs and is consistent. Re-tracked both via 'ket track add'.
