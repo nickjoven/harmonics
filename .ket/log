@@ -64,3 +64,5 @@
 2026-04-24T21:03:12Z | put | sync_cost/derivations/k_axis_uniqueness.py -> 3991a04e20e76f4661577c93bd70422f8433ef0c345f42f9abf3c70e4d1d18f1
 2026-04-24T21:03:12Z | put | sync_cost/derivations/k_axis_uniqueness.md -> ac909b3dff250175f2c46e3711062d03da5ff0ff96041b9379844d7c61084e99
 2026-04-24T21:03:21Z | dag:create | d0290f8cf973e345d2fcd72c4b7556177b831e7f021c4004f10d396910e9b040
+2026-04-24T22:10:54Z | put | sync_cost/derivations/epsilon_substrate_decomposition.md -> 2375c1d1bca1bcf188ddd4d2ea07d8c76063bb3d9ccc9d14d8e1f04434479e9a
+2026-04-24T22:11:00Z | dag:create | b353541f1aecd9a8c27f0bd6507283a774bb5c41daf280f305af1e0fc1ab546b
