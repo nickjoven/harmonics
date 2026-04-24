@@ -66,3 +66,5 @@
 2026-04-24T21:03:21Z | dag:create | d0290f8cf973e345d2fcd72c4b7556177b831e7f021c4004f10d396910e9b040
 2026-04-24T22:10:54Z | put | sync_cost/derivations/epsilon_substrate_decomposition.md -> 2375c1d1bca1bcf188ddd4d2ea07d8c76063bb3d9ccc9d14d8e1f04434479e9a
 2026-04-24T22:11:00Z | dag:create | b353541f1aecd9a8c27f0bd6507283a774bb5c41daf280f305af1e0fc1ab546b
+2026-04-24T22:21:34Z | put | sync_cost/derivations/epsilon_physical_reading.md -> ca3c3ddfa054e7132a24aa5d42af325ca2b3b2376290ba5fb17c1806aa445ef5
+2026-04-24T22:21:45Z | dag:create | 7c1a9e19b0065c2c329e376dc7f90e22abb16338789da28947e723b8780fd1c8
