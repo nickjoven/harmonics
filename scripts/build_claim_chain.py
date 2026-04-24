@@ -255,6 +255,9 @@ def render(manifest: dict) -> str:
         f"<h2>Other views of the same graph</h2>\n"
         f"<table>\n"
         f"  <tr><th>View</th><th>What it shows</th></tr>\n"
+        f'  <tr><td><a href="claim-chain-views.html">Three views</a></td>'
+        f"<td>Max/MSP patch, pure-math expression tree, and syllogism "
+        f"rendering over the curated claim-chain subgraph.</td></tr>\n"
         f'  <tr><td><a href="dag.html">Interactive DAG</a></td>'
         f"<td>108 derivation nodes, 305 edges, with audit trail per file.</td></tr>\n"
         f'  <tr><td><a href="derivations.html">Derivation index</a></td>'
@@ -295,6 +298,7 @@ def render(manifest: dict) -> str:
   <a href="../index.html">Home</a>
   <a href="index.html">Reference</a>
   <a href="claim-chain.html" class="active">Claim chain</a>
+  <a href="claim-chain-views.html">Three views</a>
   <a href="glossary.html">Glossary</a>
   <a href="derivations.html">Derivations</a>
   <a href="dag.html">DAG</a>

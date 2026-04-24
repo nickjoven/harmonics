@@ -1,0 +1,164 @@
+{
+  "_comment": "Labels for docs/claim-chain-views.html. The 'subset' array picks the ~20 nodes to render; 'extra_edges' adds conceptual edges not present in the derivation graph (e.g. primitives feeding into composite objects). 'kinds' tags each node visually. The three view blocks (maxmsp, math, syllogism) override the default title/sub for that view.",
+
+  "subset": [
+    "prim_integers",
+    "prim_fixed_point",
+    "prim_parabola",
+    "anchor_cosmological",
+    "anchor_particle",
+    "mediant_derivation",
+    "rational_field_equation",
+    "three_dimensions",
+    "klein_bottle",
+    "farey_partition",
+    "hierarchy_gaussian_lattice",
+    "duty_cycle_dictionary",
+    "PROOF_A_gravity",
+    "PROOF_B_quantum",
+    "born_rule",
+    "einstein_from_kuramoto",
+    "gauge_sector_lovelock",
+    "spectral_tilt",
+    "sinw_fixed_point"
+  ],
+
+  "extra_edges": [
+    ["prim_integers", "mediant_derivation"],
+    ["prim_fixed_point", "mediant_derivation"],
+    ["prim_integers", "rational_field_equation"],
+    ["prim_fixed_point", "rational_field_equation"],
+    ["prim_parabola", "born_rule"],
+    ["mediant_derivation", "three_dimensions"],
+    ["rational_field_equation", "klein_bottle"],
+    ["three_dimensions", "klein_bottle"],
+    ["klein_bottle", "farey_partition"],
+    ["klein_bottle", "hierarchy_gaussian_lattice"],
+    ["klein_bottle", "duty_cycle_dictionary"],
+    ["klein_bottle", "gauge_sector_lovelock"],
+    ["rational_field_equation", "PROOF_A_gravity"],
+    ["rational_field_equation", "PROOF_B_quantum"],
+    ["three_dimensions", "PROOF_A_gravity"],
+    ["three_dimensions", "PROOF_B_quantum"],
+    ["PROOF_A_gravity", "einstein_from_kuramoto"],
+    ["PROOF_B_quantum", "born_rule"],
+    ["prim_parabola", "PROOF_B_quantum"],
+    ["hierarchy_gaussian_lattice", "spectral_tilt"],
+    ["anchor_particle", "duty_cycle_dictionary"],
+    ["anchor_cosmological", "hierarchy_gaussian_lattice"],
+    ["duty_cycle_dictionary", "sinw_fixed_point"]
+  ],
+
+  "kinds": {
+    "prim_integers": "primitive",
+    "prim_fixed_point": "primitive",
+    "prim_parabola": "primitive",
+    "anchor_cosmological": "anchor",
+    "anchor_particle": "anchor",
+    "duty_cycle_dictionary": "declined",
+    "sinw_fixed_point": "declined"
+  },
+
+  "descriptions": {
+    "maxmsp": {
+      "heading": "Max/MSP patch reading",
+      "body": "<p>The framework as a Max patch. Primitives are objects you plop in an empty patcher window: <code>[int]</code>, a feedback connection, <code>[expr x*x + $f1]</code>. Composition is cords. At K = 1 (critical coupling, hot inlet held at 1.0) the patch self-locks and runs the Einstein-equations subpatch; at K &lt; 1 (cold inlet dropped) it runs the Schrödinger subpatch. Yellow cords are audio-rate; for this view everything is treated as signal-rate. Not a real <code>.maxpat</code> export — Max's save format is also JSON and could be emitted on request — this is just the topology.</p>"
+    },
+    "math": {
+      "heading": "Pure-mathematics reading",
+      "body": "<p>Same nodes, each rewritten as an expression. The edges are lemma-uses. Reading top-down: <em>integers and fixed-points give the circle; the mediant gives Stern-Brocot; self-consistent adjacency forces $d = 3$; the Klein bottle selects denominator classes $q_2 = 2, q_3 = 3$; the Farey partition at $|F_6| = 13$ gives $\\Omega_\\Lambda = 13/19$; the saddle-node geometry of the parabola gives the Born-rule exponent.</em> The two observational anchors (<code>H_0</code>, <code>v_EW</code>) supply the single scale each sector needs; everything else is a dimensionless identity.</p>"
+    },
+    "syllogism": {
+      "heading": "Syllogism reading",
+      "body": "<p>Each node is a conclusion; each incoming edge is a premise it uses. Read as natural deduction:</p><ul><li>$\\text{integers} \\land \\text{fixed-point} \\vdash \\text{circle } S^1$</li><li>$\\text{energy conservation} \\land \\text{stability} \\vdash \\text{mediant}$</li><li>$\\text{circle} \\land \\text{mediant} \\vdash \\text{Stern-Brocot tree}$</li><li>$\\text{mediant-consistent adjacency} \\vdash d = 3$</li><li>$\\text{circle map} \\land K = 1 \\vdash$ Einstein equations</li><li>$\\text{circle map} \\land K &lt; 1 \\land \\text{saddle-node} \\vdash$ Born rule</li></ul><p>The two dashed nodes are proofs the framework attempted and explicitly declined (the duty-cycle dictionary's M_Z identities and the K-scanning hypothesis for $\\sin^2\\theta_W$): premises available, but no valid inference to observation.</p>"
+    }
+  },
+
+  "default": {
+    "prim_integers":      { "title": "Integers Z",           "sub": "primitive" },
+    "prim_fixed_point":   { "title": "Fixed-point x = f(x)", "sub": "primitive" },
+    "prim_parabola":      { "title": "Parabola x² + μ = 0",  "sub": "primitive" },
+    "anchor_cosmological":{ "title": "H₀ (cosmological)",      "sub": "observational anchor" },
+    "anchor_particle":    { "title": "v_EW = 246 GeV",        "sub": "observational anchor" },
+    "mediant_derivation": { "title": "Mediant",               "sub": "(a+c)/(b+d)" },
+    "rational_field_equation": { "title": "Circle map",       "sub": "rational field equation" },
+    "three_dimensions":   { "title": "d = 3",                  "sub": "from mediant → SL(2,R)" },
+    "klein_bottle":       { "title": "Klein bottle",           "sub": "q₂ = 2, q₃ = 3" },
+    "farey_partition":    { "title": "Ω_Λ = 13/19",       "sub": "|F₆| = 13" },
+    "hierarchy_gaussian_lattice": { "title": "R = 6·13⁵⁴",   "sub": "Planck/Hubble" },
+    "duty_cycle_dictionary": { "title": "Duty dictionary",     "sub": "declined at M_Z" },
+    "PROOF_A_gravity":    { "title": "Proof A: Gravity",       "sub": "K = 1 branch" },
+    "PROOF_B_quantum":    { "title": "Proof B: Quantum",       "sub": "K < 1 branch" },
+    "born_rule":          { "title": "Born rule",              "sub": "|ψ|² exponent = 2" },
+    "einstein_from_kuramoto": { "title": "Einstein eqs.",       "sub": "G_μν + Λ g_μν = 8πGT_μν" },
+    "gauge_sector_lovelock": { "title": "SU(3)×SU(2)×U(1)",     "sub": "Yang-Mills" },
+    "spectral_tilt":      { "title": "n_s = 0.965",            "sub": "CMB spectrum" },
+    "sinw_fixed_point":   { "title": "sin²θ_W K-scan",        "sub": "ruled out" }
+  },
+
+  "maxmsp": {
+    "prim_integers":      { "title": "[int]",                  "sub": "∫ counter" },
+    "prim_fixed_point":   { "title": "[expr x; x = f(x)]",    "sub": "feedback" },
+    "prim_parabola":      { "title": "[expr x*x + $f1]",      "sub": "saddle-node" },
+    "anchor_cosmological":{ "title": "[loadbang] H₀",         "sub": "freq.~ inlet" },
+    "anchor_particle":    { "title": "[loadbang] 246.",        "sub": "GeV constant" },
+    "mediant_derivation": { "title": "[p mediant]",            "sub": "(a+c)/(b+d)" },
+    "rational_field_equation": { "title": "[phasor~] ⊕ [sin~]", "sub": "circle map" },
+    "three_dimensions":   { "title": "[jit.matrix 3]",         "sub": "SL(2,R) rank" },
+    "klein_bottle":       { "title": "[s~ q2] ↔ [s~ q3]",     "sub": "antiperiodic" },
+    "farey_partition":    { "title": "[/ 13 19]",              "sub": "Ω_Λ ratio" },
+    "hierarchy_gaussian_lattice": { "title": "[pow 13 54]",   "sub": "×6 prefactor" },
+    "duty_cycle_dictionary": { "title": "[p duty.dict]",      "sub": "bypassed ∅" },
+    "PROOF_A_gravity":    { "title": "[subpatch A]",           "sub": "K = 1" },
+    "PROOF_B_quantum":    { "title": "[subpatch B]",           "sub": "K < 1" },
+    "born_rule":          { "title": "[expr x*x]",             "sub": "|ψ|²" },
+    "einstein_from_kuramoto": { "title": "[dac~ Einstein]",    "sub": "field eqs. out" },
+    "gauge_sector_lovelock": { "title": "[dac~ SU(3)×SU(2)×U(1)]", "sub": "gauge" },
+    "spectral_tilt":      { "title": "[dac~ n_s]",             "sub": "0.965" },
+    "sinw_fixed_point":   { "title": "[p sinw.scan] ∅",      "sub": "empty solution" }
+  },
+
+  "math": {
+    "prim_integers":      { "title": "ℤ",                       "sub": "countable set" },
+    "prim_fixed_point":   { "title": "x = f(x)",                 "sub": "self-map" },
+    "prim_parabola":      { "title": "x² + μ = 0",              "sub": "saddle-node NF" },
+    "anchor_cosmological":{ "title": "H₀ ∈ ℝ₊",              "sub": "dim. anchor" },
+    "anchor_particle":    { "title": "v ∈ ℝ₊",                 "sub": "dim. anchor" },
+    "mediant_derivation": { "title": "a/b ⊕ c/d := (a+c)/(b+d)","sub": "Stern-Brocot 1858" },
+    "rational_field_equation": { "title": "θₙ₊₁ = θₙ + Ω − (K/2π)sin(2πθₙ)", "sub": "circle map" },
+    "three_dimensions":   { "title": "dim SL(2,ℝ) = 3",         "sub": "spatial dim." },
+    "klein_bottle":       { "title": "K² = T² / Z₂",              "sub": "antiperiodic" },
+    "farey_partition":    { "title": "Ω_Λ = |F₆|/|F₇| = 13/19", "sub": "Farey count" },
+    "hierarchy_gaussian_lattice": { "title": "R = q₂q₃ · |F₆|^{q₂q₃^d}", "sub": "= 6·13⁵⁴" },
+    "duty_cycle_dictionary": { "title": "duty(q) = 1/q^d",      "sub": "K=1 only" },
+    "PROOF_A_gravity":    { "title": "P1–P8 ⊢ G_μν + Λ g = 8πGT", "sub": "gravity proof" },
+    "PROOF_B_quantum":    { "title": "Q1–Q6 ⊢ iħ∂ₜψ = Hψ","sub": "quantum proof" },
+    "born_rule":          { "title": "P = |ψ|²",              "sub": "exponent 2" },
+    "einstein_from_kuramoto": { "title": "G_μν + Λ g_μν = 8πGT_μν", "sub": "field eqs." },
+    "gauge_sector_lovelock": { "title": "SU(3) × SU(2) × U(1)", "sub": "Yang-Mills" },
+    "spectral_tilt":      { "title": "n_s = 1 − 1/φ²",          "sub": "≈ 0.965" },
+    "sinw_fixed_point":   { "title": "∄ K* ∈ [0.93, 0.99]",    "sub": "K-scan void" }
+  },
+
+  "syllogism": {
+    "prim_integers":      { "title": "⊢ ℤ",                     "sub": "axiom" },
+    "prim_fixed_point":   { "title": "⊢ ∃x: x = f(x)",        "sub": "axiom" },
+    "prim_parabola":      { "title": "⊢ x² + μ = 0",           "sub": "axiom (saddle-node)" },
+    "anchor_cosmological":{ "title": "⊢ ∃ H₀ ∈ ℝ₊",           "sub": "empirical" },
+    "anchor_particle":    { "title": "⊢ ∃ v ∈ ℝ₊",              "sub": "empirical" },
+    "mediant_derivation": { "title": "Z, fp ⊢ mediant",       "sub": "P2 of Proof A" },
+    "rational_field_equation": { "title": "Z, fp ⊢ circle map", "sub": "P4" },
+    "three_dimensions":   { "title": "mediant ⊢ d = 3",       "sub": "P5" },
+    "klein_bottle":       { "title": "circle map, d=3 ⊢ K²","sub": "topology" },
+    "farey_partition":    { "title": "K² ⊢ |F₆|=13",         "sub": "Euler totient" },
+    "hierarchy_gaussian_lattice": { "title": "K², H₀ ⊢ R = 6·13⁵⁴", "sub": "hierarchy" },
+    "duty_cycle_dictionary": { "title": "K², v ⊬ M_Z values", "sub": "premises → ∅" },
+    "PROOF_A_gravity":    { "title": "∏ Pᵢ ⊢ Einstein",     "sub": "8 steps" },
+    "PROOF_B_quantum":    { "title": "∏ Qᵢ ⊢ Schrödinger",  "sub": "6 steps" },
+    "born_rule":          { "title": "parabola ⊢ P = |ψ|²",  "sub": "Q3" },
+    "einstein_from_kuramoto": { "title": "Proof A ⊢ G_μν + Λ g = 8πGT", "sub": "P8 (Lovelock)" },
+    "gauge_sector_lovelock": { "title": "K² ⊢ SU(3)×SU(2)×U(1)", "sub": "Yang-Mills" },
+    "spectral_tilt":      { "title": "staircase ⊢ n_s ≈ 0.965",  "sub": "φ-self-similar" },
+    "sinw_fixed_point":   { "title": "K-scan ⊬ sin²θ_W(M_Z)",  "sub": "no K* valid" }
+  }
+}
