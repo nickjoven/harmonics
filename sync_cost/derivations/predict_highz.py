@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-predict_highz.py — Zero-free-parameter predictions for high-z kinematic surveys
+predict_highz.py — Structural predictions for high-z kinematic surveys
 
 Predictions from a₀(z) = c·H(z)/(2π) for galaxy samples matching
 KLASS, GEKO, and ALMA-CRISTAL survey parameters.
@@ -25,7 +25,7 @@ The prediction is:
 
   g_obs = g_bar / [1 - exp(-√(g_bar / a₀(z)))]
 
-with a₀(z) = c·H(z)/(2π) — no free parameters.
+with a₀(z) = c·H(z)/(2π) — no fitted factors.
 
 Three models make distinct predictions:
   (A) Standard MOND:  a₀ = 1.2×10⁻¹⁰ m/s²  (constant)
@@ -182,7 +182,7 @@ AZ9 = {
 # ---------------------------------------------------------------------------
 def main():
     print("=" * 78)
-    print("ZERO-FREE-PARAMETER PREDICTIONS FOR HIGH-z KINEMATIC SURVEYS")
+    print("STRUCTURAL PREDICTIONS FOR HIGH-z KINEMATIC SURVEYS")
     print("=" * 78)
     print()
     print("Framework: a₀(z) = c·H(z)/(2π)  [Planck 2018, no fitted parameters]")
@@ -340,7 +340,7 @@ def main():
     print("FALSIFIABILITY")
     print("=" * 78)
     print()
-    print("Each prediction above has ZERO free parameters.")
+    print("Each prediction above has no fitted factors.")
     print("The framework is falsified if:")
     print()
     print("  1. V_obs at fixed (M_bar, R_e, z) matches const_MOND, not sync_cost")

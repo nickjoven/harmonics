@@ -31,16 +31,23 @@ Categories:
 
 ## Floor (structural residual at finite Fibonacci depth, 7–11%)
 
-| Item | Residual | Confirmed by |
+| Item | Residual | Source |
 |---|---|---|
-| A_s | 11% / 7.6σ | `a_s_depth_scan.md` |
-| Ω_b | 6.8% / 11σ | `omega_b_enumeration.md` |
-| Ω_c / Ω_b | 6.9% / 3.1σ | `residual_audit.py` |
+| A_s | 11% / 7.7σ | `a_s_geometric_proof.md` |
+| Ω_b | 6.7% / 11σ | `baryon_fraction.md`, `omega_b_residual_phase_a.md` |
+| Ω_c / Ω_b | 7.5% | `baryon_fraction.md` (derivative of Ω_b) |
 
 Not a single-factor, not scale-import, not a non-integer-depth
 artifact; confirmed five ways. Closure requires either framework-
 native fractional-weight mechanism, observational revision, or a
 structural rule change.
+
+The hybrid strategy (`Ω_b = (1/19)·|r|²`, `A_s = 2.33·|r|³ × 10⁻⁹`)
+matches observation ≤ 1σ for Ω_b and A_s but with different
+exponents per observable, no forcing argument for either, and
+`|r|` observation-derived rather than framework-native. Per
+`hybrid_strategy_audit.md` it is Class 2 numerology, not a Floor
+closure.
 
 ## Floor (particle numerology cloud, 1–3%)
 
@@ -71,15 +78,12 @@ numerology ensemble, not structural.
 | Mean-field Ψ Arnold-tongue structure | `klein_spectrum.py`, `kuramoto_induced_map.py` (Adler-only) |
 | Twist-map / KAM / cantorus / Lyapunov framings of the ψ_F visualizer | Source inspection confirms gradient descent on a static potential; category error. Mechanism note in `klein_nodal_parity.md` |
 | Klein nodal parity (odd-m Möbius vs even-m disjoint arcs at σ=+node) | `klein_nodal_parity.md`: simulator uses Y², which is Z₂-symmetric for all ℓ. The (−1)^ℓ sign flip on Y doesn't survive squaring; dynamics cannot discriminate parity. |
+| λ_H = 1/q_2³ + 1/228 correction | `framework_predictions.py:268` and `numerology_inventory.md` Class 1: 1/228 confirmed fitted (not framework-derived); correction removed. Bare identity λ_H = 1/q_2³ = 1/8 remains a declined `bare_k1_identities` entry with 3.4% residual. |
 
 ## Proposed (needs audit or experimental input)
 
 | Item | Upgrade criterion |
 |---|---|
-| K_STAR¹⁴ = 1/8 (τ-mass chain step 6) | σ(m_τ) < 0.03 MeV at Belle II / BESIII |
-| 26:7:1 generation hierarchy | Framework-derived rational exponent a matching observed m_μ/m_e and m_τ/m_μ simultaneously |
-| λ_H = 1/q_2³ + 1/228 correction | Framework origin for 228 = 12·19 |
-| N_efolds = √5 / rate ≈ 61.3 | Framework-internal derivation independent of observed n_s |
 | K_c(F_n/F_{n+1}) closed form | Explicit form beyond asymptotic δ⁻ⁿ scaling |
 | T2#7 measurement arc technical residuals | Iteration-to-time anchor, multi-tongue cascade, continuous K(t) |
 
@@ -121,9 +125,8 @@ committed derivation / audit.
 
 | File | Role |
 |---|---|
-| `numerology_inventory.md` | full classification analysis, Class 1-5 |
-| `retractions_index.md` | flat lookup by item |
-| `residual_audit.py` | cosmological C2b floor measurement |
-| `particle_sector_audit.py` | particle C2a floor measurement |
-| `negative_tests.py` | regression suite for structural claims |
+| `numerology_inventory.md` | Full Class 1–5 classification; also the retraction / coincidence lookup (replaces retired `retractions_index.md`) |
+| `MANIFEST.yml` | canonical quantitative-claim registry (scorecard + bare_k1_identities + anchors) |
+| `hybrid_strategy_audit.md` | Floor residuals vs `|r|^n` closures (Class 2 verdict) |
+| `ansatz_audit_policy.md` | Triage policy applied to hybrid closures |
 | `anchor_count_audit.md` | two-anchor status and hierarchy-problem context |

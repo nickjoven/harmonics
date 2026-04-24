@@ -174,7 +174,7 @@ scales. The argument:
 
 ### The duty cycle dictionary
 
-D33 provides a complete, zero-parameter computation of all
+D33 provides a complete, no-fitted-factor computation of all
 dimensionless gauge quantities from q_2 = 2, q_3 = 3, and d = 3:
 
 The gate duty cycle is duty(q) = 1/q^d = 1/q^3. The coupling

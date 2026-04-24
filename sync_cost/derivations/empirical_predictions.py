@@ -320,5 +320,5 @@ for num, pred, when, current, status in tests:
     print(f"{num:>3d} {pred:>35} {when:>12} {current:>12} {status:>12}")
 
 print()
-print("Zero free parameters in any of these predictions.")
+print("No fitted factors in any of these predictions.")
 print("Every number traces to {2, 3, d=3, φ} from the Klein bottle.")

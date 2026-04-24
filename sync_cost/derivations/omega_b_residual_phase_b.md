@@ -1,5 +1,18 @@
 # Ω_b = 1/19 residual — Phase B: cross-sector |r|² tax closes it
 
+## Status (2026-04-23)
+
+**Demoted to Class 2 numerology cloud** in `hybrid_strategy_audit.md`.
+The `(1/19) · |r|²` closure matches observation to 0.1σ, but
+(i) the exponent `n = 2` is ansatz-selected against alternative
+`n ∈ {1, 2, 3, 4}`, (ii) `|r| = 0.968` is defined from the
+α_s/α_2 observational gap rather than derived, and (iii) the
+decoherence-tax reading is inconsistent with
+`duty_cycle_dictionary.md` §Status which rules it out at the
+particle scale. See `hybrid_strategy_audit.md` for the full
+triage. The sections below are retained as record of the
+analysis; they are no longer a structural closure claim.
+
 ## Target
 
 The 6.7% Ω_b residual from Phase A, and its partner 7.5%
@@ -93,7 +106,7 @@ is |r|², and the identification fails by exactly that factor.
 | Ω_DM residual | 0.7% | 0.6% (0.2σ) |
 
 All three cosmic partition observables now match Planck 2018
-within 1σ with zero free parameters:
+within 1σ with no fitted factors (uses only framework integers):
 
 - **Three integers**: `13 : 5 : 1` from the Farey partition.
 - **One already-derived coherence**: `|r| = 0.968` from

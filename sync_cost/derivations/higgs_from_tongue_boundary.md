@@ -339,7 +339,7 @@ D33 shows that the numerical predictions are already computed to
 1-4% accuracy from pure integer arithmetic. The only remaining
 input is one dimensionful scale (v or equivalently the root
 oscillator frequency). All mass RATIOS, mixing angles, and coupling
-RATIOS are zero-parameter predictions.
+RATIOS are structural predictions (no fitted factors beyond the vocabulary).
 
 ---
 

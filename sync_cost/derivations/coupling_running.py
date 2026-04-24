@@ -259,9 +259,9 @@ def main():
       Klein bottle population ratio
   """)
 
-    # ── 6. Zero-parameter predictions ─────────────────────────────────
+    # ── 6. Structural predictions (no fitted factors) ─────────────────────────────────
     print(f"{'─' * 75}")
-    print("  6. WHAT THE KLEIN BOTTLE PREDICTS WITH ZERO FREE PARAMETERS")
+    print("  6. WHAT THE KLEIN BOTTLE PREDICTS WITH NO FITTED FACTORS")
     print(f"{'─' * 75}")
 
     print(f"""

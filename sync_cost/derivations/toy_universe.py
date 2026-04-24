@@ -401,7 +401,7 @@ print(f"""
     4. Count phase states: 2²-1 observable       → signature (3,1)
     5. Compute duty cycles: 1/q³                 → coupling ratios
     6. Count directed transitions: 4×3           → 12 gauge bosons
-    7. Check self-consistency: x = f(x)          → zero free parameters
+    7. Check self-consistency: x = f(x)          → no fitted factors
 
   Total computation: {len(tree)} mediants, 7 algebraic steps.
   Total inputs: two fractions and four operations.

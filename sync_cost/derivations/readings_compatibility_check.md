@@ -74,7 +74,7 @@ the structure for other compatibility checks:
 
 Each reading has its own natural coordinate (integer or continuous)
 and extracts a specific physical observable from the same topology.
-The framework's "zero free parameters" claim is correct when properly
+The framework's "structural derivation" claim is correct when properly
 interpreted: **no parameters beyond topology** — but topology has
 multiple coordinate projections, each giving its own reading.
 

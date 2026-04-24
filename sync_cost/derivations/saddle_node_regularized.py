@@ -332,7 +332,7 @@ def section_conclusion() -> None:
 
     - Or K_STAR is fundamentally an observational anchor, like
       v = 246 GeV is the dimensionful scale, and the framework's
-      "zero parameters" claim should be sharpened to "zero
+      "no fitted factors" claim should be sharpened to "zero
       dimensionless parameters plus one dimensionless anchor
       K_STAR plus one dimensionful scale v".  This would be a
       weaker claim than the framework currently advertises but

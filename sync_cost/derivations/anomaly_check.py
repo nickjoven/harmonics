@@ -241,7 +241,7 @@ Step 3: Anomaly cancellation imposes 4 nontrivial equations on 5 unknowns
   bottle charges fix that normalization uniquely.
 
   Alternatively: the Klein bottle charges + GNN relation already fix
-  all 5 hypercharges with zero free parameters. Anomaly cancellation
+  all 5 hypercharges with no fitted factors. Anomaly cancellation
   is then a PREDICTION, not an input -- and it is satisfied exactly.
 
 Conclusion:

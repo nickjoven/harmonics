@@ -121,17 +121,23 @@ identity. The sentence should be softened or v_EW removed.
 
 Canonical statement: the current minimum dimensional input is **two
 observational anchors** — one cosmological (H_0 or equivalent), one
-particle-sector (v_EW or equivalent). "Zero free parameters" is a
-legitimate claim about specific dimensionless predictions that pass
-Z1–Z3, but it is not a legitimate claim about the framework's overall
-dimensional input count. The two-anchor minimum stands until one of
-the obstructions below is removed.
+particle-sector (v_EW or equivalent). The phrase "zero free
+parameters" is retired across this repository (see
+`statistical_conventions.md`); individual predictions are classified
+under Z1–Z3 directly. The two-anchor minimum stands until one of the
+obstructions below is removed.
 
 ## Obstructions to reducing the second anchor
 
 Reducing the dimensional input from two to one is blocked by five
 specific obstructions. They are not independent — lifting one may
 lift others — but each is distinct and requires its own argument.
+
+The register-intrinsic formalism in `observer_register_closure.md`
+re-expresses obstructions #1, #2, and #4 more sharply but does
+not resolve them: the canonical register supplies `R = 6·13⁵⁴`
+as a pure count, not as an absolute unit, and it does not force
+a specific depth label for v_EW.
 
 1. **No structural identity for v/M_P.** The dimensionless ratio
    v_EW/M_P ≈ 2.02·10⁻¹⁷ is not expressed as a framework-integer
@@ -203,3 +209,4 @@ posed framework-natively.
 | `mass_sector_closure.md` | same, restated |
 | `planck_scale.md` | 145.8 Planck-to-Hubble Fibonacci levels, but no Planck-to-EW count |
 | `h_inf_status.md` | scale-free reframe declares one anchor; this audit shows two |
+| `observer_register_closure.md` | register formalism for R; re-expresses obstructions #1, #2, #4 without resolving them |

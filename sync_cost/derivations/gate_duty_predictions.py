@@ -4,7 +4,7 @@ Fix K* from α_s/α₂, then predict everything else.
 
 The duty ratio duty(2)/duty(3) is a monotonic function of K.
 One measurement (α_s/α₂ = 3.488 at M_Z) pins K* exactly.
-Every other duty ratio at K* is then a zero-free-parameter prediction.
+Every other duty ratio at K* is then a structural prediction.
 
 Usage:
     python3 sync_cost/derivations/gate_duty_predictions.py
@@ -106,7 +106,7 @@ def main():
 
     # ── 2. Predictions at K* ─────────────────────────────────────────────
     print(f"\n{'─' * 75}")
-    print("  2. ZERO-PARAMETER PREDICTIONS AT K*")
+    print("  2. STRUCTURAL PREDICTIONS (no fitted factors) AT K*")
     print(f"{'─' * 75}\n")
 
     print(f"  All ratios evaluated at K* = {K_star:.6f}\n")
@@ -316,7 +316,7 @@ def main():
     print(f"""
   K* = {K_star:.6f} (fixed by α_s/α₂ at M_Z)
 
-  PREDICTIONS AT K* (zero free parameters after fixing K*):
+  PREDICTIONS AT K* (no fitted factors after fixing K*):
 
     α₂ (from duty(2) × norm):
       predicted = {norm * d2:.6f}  (1/α₂ = {1/(norm*d2):.1f})

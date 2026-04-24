@@ -15,13 +15,10 @@ Z ⊕ Z₂) plus the EM-coupling criterion of `gell_mann_nishijima.md`.
 | Ω_Λ : Ω_m = 13 : 6 | **Derived** | `|F_6|` vs `φ(7)` Farey count |
 | Ω_b : Ω_DM = 1 : 5 | **Derived** | Z₂ representation theory on coprime-pair antisym mode + EM-coupling criterion |
 
-The previous Proposed-item framing ("XOR-parity proof of 1:5:13 at
-depth 19") was wrong on two counts: XOR-parity (from
-`xor_derivation.md`) operates on mode pairs (q_1, q_2), not on
-single-fraction subdivision; and the actual 1:5 mechanism is Z₂
-representation theory on Klein-antipodal pairs, which is distinct
-from the mode-pair XOR filter. Both halves of the partition are
-now structurally derived.
+The 1:5 mechanism is the Klein-antipodal Z₂ representation on
+coprime pairs — a sign-rep eigenmode argument, distinct from the
+mode-pair XOR filter in `xor_derivation.md`. Both halves of the
+partition are structurally derived.
 
 ## Part I: Ω_Λ : Ω_m = 13 : 6 (Farey)
 
@@ -143,23 +140,22 @@ coprime pair {1, 5}. The remaining five are dark.
 3. EM coupling requires Klein-singlet (sym/self-paired) AND
    cross-sector coupling (coprime-to-6) — `gell_mann_nishijima.md`
 
-No free parameters; the partition is forced.
+No fitted factors; the partition is forced by the framework integers
+(q₂, q₃) plus the Farey and Z₂-rep-theory combinatorics.
 
-## Why the previous "Proposed" framing was wrong
+## XOR-parity is not the 1:5 mechanism
 
-The original target said "XOR-parity proof of 1:5:13." Two issues:
+Two distinct Z₂-torsion structures on the Klein bottle:
 
-1. **XOR-parity** (from `xor_derivation.md`) is a filter on mode
-   pairs (q_1, q_2): "exactly one of q_1, q_2 is even." It applies
-   to *which Klein-bottle modes survive at all*, not to which
-   q=7 matter mode is baryonic.
+1. **XOR-parity** (`xor_derivation.md`): a filter on mode pairs
+   (q_1, q_2) requiring "exactly one of q_1, q_2 is even." Applies
+   to which Klein-bottle modes survive at all.
 
-2. **The 1:5 split** comes from a different Z₂ structure: the
-   antipodal action's representation theory on coprime pairs.
-   This is a sign-rep eigenmode argument, not an XOR filter.
+2. **Antipodal Z₂ representation** on coprime pairs: decomposes
+   each pair into (sym, antisym) irreducible eigenmodes. Applies
+   to which surviving mode is EM-coupled.
 
-Both belong to the broader Z₂-torsion physics of the Klein bottle
-but are operationally distinct mechanisms.
+The 1:5 subdivision is the second, not the first.
 
 ## Status
 
@@ -176,10 +172,9 @@ to **Survives**.
 ## Connection to existing derivations
 
 - `farey_partition.md`: 13:6 Farey argument (existing).
-- `baryon_fraction.md`: 1:5 was previously argued via coprime-to-6
-  + Klein identification, with "merge vs split" ambiguity. The Z₂
-  representation theory argument here resolves the ambiguity:
-  Klein identification produces (sym, antisym) eigenmodes, not a
+- `baryon_fraction.md`: carries the 1:5 argument in (sym, antisym)
+  eigenmode language. Klein identification produces the eigenmode
+  decomposition, not a
   merge. The sym mode of the coprime pair is the unique baryonic
   mode. Update `baryon_fraction.md` to use this language.
 - `xor_derivation.md`: XOR-parity filter on mode pairs (separate

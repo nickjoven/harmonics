@@ -271,7 +271,7 @@ Each piece has a structural origin:
   is structurally stable — it cannot be perturbed away.
 
 The entire interpolating function is determined by the tongue geometry.
-No free parameters. No fitting. The function that McGaugh+2016
+No fitted factors. No fitting. The function that McGaugh+2016
 discovered empirically is the transfer function of a self-referential
 oscillator at a saddle-node bifurcation.
 

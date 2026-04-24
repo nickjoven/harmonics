@@ -565,7 +565,7 @@ The spatial dimension is three because:
 3. Self-consistent adjacency forces the manifold to be the group
 4. $\dim \mathrm{SL}(2) = 2^2 - 1 = 3$
 
-No free parameter is consumed. No additional primitive is needed. The
+No fitted factor is consumed. No additional primitive is needed. The
 mediant — already one of the four primitives — contains the adjacency
 structure. It was always there. The fifth primitive is the second
 reading of the second primitive.

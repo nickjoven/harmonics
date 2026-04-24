@@ -240,7 +240,7 @@ def main():
     print(f"    3 observable phase states (generations)")
     print(f"    2 denominator classes (q=2, q=3)")
     print(f"    1 order parameter (|r|)")
-    print(f"    0 free parameters")
+    print(f"    0 fitted factors")
     print()
 
     # The antinodes

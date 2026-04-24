@@ -1,5 +1,5 @@
 """
-Constants from the tree: zero-parameter predictions.
+Constants from the tree: structural predictions.
 
 This script demonstrates that the framework's two key constants --
 sigma^2 (the variance of g* weighted by frequency) and n_s (the
@@ -23,7 +23,7 @@ The RATIO sigma^2 / n_s is a pure number determined by the tree.
 
 No data is fit.  No parameters are tuned.  The tree at depth d
 gives specific numerical values.  The infinite-depth limits are
-the zero-parameter predictions.
+the structural predictions.
 
 Usage:
     python sync_cost/derivations/constants_from_tree.py
@@ -208,7 +208,7 @@ def richardson_extrapolate(depths, values, order=2):
 
 if __name__ == "__main__":
     print("=" * 78)
-    print("  CONSTANTS FROM THE TREE: ZERO-PARAMETER PREDICTIONS")
+    print("  CONSTANTS FROM THE TREE: STRUCTURAL PREDICTIONS (no fitted factors)")
     print("  sigma^2 and n_s emerge from the Stern-Brocot tree")
     print("  without external calibration")
     print("=" * 78)
@@ -427,14 +427,14 @@ if __name__ == "__main__":
         print(f"  the self-similar tilt along the Fibonacci backbone.")
 
     # ------------------------------------------------------------------
-    # Part 6: Zero-parameter statement
+    # Part 6: Structural statement
     # ------------------------------------------------------------------
     print(f"\n{'=' * 78}")
-    print("  PART 6: ZERO-PARAMETER PREDICTIONS")
+    print("  PART 6: STRUCTURAL PREDICTIONS (no fitted factors)")
     print(f"{'=' * 78}")
 
     print(f"""
-  These are ZERO-PARAMETER predictions.
+  These are STRUCTURAL (NO FITTED FACTORS) predictions.
 
   No external calibration is needed.  The Stern-Brocot tree at
   depth d gives specific numerical values for sigma^2 and n_s
@@ -523,5 +523,5 @@ if __name__ == "__main__":
     The constants sigma^2 and n_s are not inputs to the framework.
     They are OUTPUTS of the Stern-Brocot tree's structure.
     The tree at depth d gives definite numerical values.
-    As d -> infinity, these converge to the zero-parameter predictions.
+    As d -> infinity, these converge to the structural predictions.
 """)

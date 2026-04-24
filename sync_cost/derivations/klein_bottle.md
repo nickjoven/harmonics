@@ -780,7 +780,7 @@ structure at the fixed point.
   three of Y" is not a derivation.
 - ? β-functions from topology (`coupling_running.py`): IF the gauge
   group identification is accepted, then the β-functions follow with
-  zero free parameters. But the β-functions are consequences of the
+  no fitted factors. But the β-functions are consequences of the
   gauge groups and matter content, not independent evidence for the
   identification. The logic is: assume the identification → β-functions
   are determined → running is correct. The assumption does the work.

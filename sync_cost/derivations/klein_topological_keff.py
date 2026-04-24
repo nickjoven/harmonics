@@ -404,7 +404,7 @@ def main():
        near-symmetric at low K to a stable asymmetry at K ≥ 1.
 
     4. This is the first derivation of coupling constant asymmetry
-       from topology alone — no free parameters beyond the Klein
+       from topology alone — no fitted factors beyond the Klein
        bottle identification and the golden-peaked frequency
        distribution.
 """)

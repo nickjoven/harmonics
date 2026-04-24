@@ -8,7 +8,8 @@ single number 19 (the Klein bottle's total budget from D25):
     Lambda : dark matter : baryonic = 13 : 5 : 1
 
 All three fractions follow from the Farey partition and the Klein
-bottle's denominator structure. No free parameters.
+bottle's denominator structure. No fitted factors; uses only
+framework integers (q₂, q₃, d) plus the Farey count.
 
 ---
 
@@ -166,14 +167,44 @@ pair.
 |----------|----------|------------------------|----------|
 | Omega_Lambda | 13/19 = 0.6842 | 0.6847 +/- 0.0073 | **0.07 sigma** |
 | Omega_DM | 5/19 = 0.2632 | 0.265 +/- 0.007 | **0.7%** |
-| Omega_b | 1/19 = 0.0526 | 0.0493 +/- 0.0003 | **6.7%** |
+| Omega_b | 1/19 = 0.0526 | 0.0493 +/- 0.0003 | **6.7% (11σ)** |
 | Omega_DM / Omega_b | 5 | 5.41 | **7.5%** |
+
+The Ω_b error bar cited is from Ω_b·h² (Planck's directly
+measured combination, ≈ 0.02237 ± 0.00015), divided by Planck's
+h ≈ 0.6736. Since the framework's prediction `Ω_b = 1/19` is a
+structural ratio *independent* of the separate H_0 anchor, the
+Ω_b·h²-derived error (σ ≈ 0.0003) is the fairer comparison — not
+the looser H_0-propagated error (σ ≈ 0.0006) that would include
+the framework's own cosmological-anchor uncertainty. The 11σ
+residual is the honest framing.
 
 The partition 13 : 5 : 1 = 19 gives all three cosmic fractions
 from a single integer. The dark energy and dark matter fractions
 are within 1% of observation. The baryon fraction has a 6.7%
 residual — the largest in the framework's scorecard, but still
-a zero-parameter prediction from pure number theory.
+a structural prediction from the framework's combinatorial vocabulary (q_2, q_3, d) plus the Farey partition.
+
+### Vocabulary: "locked" vs "unlocked" — two senses
+
+The 6 matter modes at denominator 7 (residues mod 6 under Z_6
+identification) are described as *locked* in this file and as
+*unlocked* in the parallel textbook entry
+(`nickjoven/derivation/derivations/dark_matter_fraction.md`).
+Both readings are correct in different frames:
+
+- **Substrate-locked** (this file): each mode is on a definite
+  p/7 Arnold tongue with rotation number `p/q = p/7` — locked in
+  the tongue-interior sense.
+- **Register-unlocked** (textbook): each mode appears in F_7 ∖ F_6,
+  i.e. it is newly accessible at register depth 7 but was not in
+  the register's closure at depth 6. "Unlocked" means
+  "F_7-newly-accessible," not "outside any tongue."
+
+Both statements are true simultaneously. The mode count 6 and
+the 5+1 split are the same regardless of which reading; the
+Klein-antipodal Z_2 rep mechanism above is substrate-level and
+supplies the rigorous derivation.
 
 ### The 6.7% residual
 
@@ -250,10 +281,28 @@ They are:
 
 **Derived.** Omega_b = 1/19, Omega_DM = 5/19 from the Farey
 partition and Z_6 irreducibility. The full cosmic energy budget
-13:5:1 follows from one integer (19) with zero free parameters.
+13:5:1 follows structurally from one integer (19) via the Farey count and the Klein-antipodal Z_2 rep; no fitted factors.
 
 **Dependencies**: D25 (Farey partition), D28 (partition derivation),
 D41 (gauge structure, Z_6 center), D42 (SU(3) x SU(2) x U(1)).
+
+**Cross-repo.** The parallel textbook entry
+`nickjoven/derivation/derivations/baryon_fraction.md` carries the
+same 1/19 prediction with a hand-waved "Z_2 × Z_3 action" that
+does not derive the 5+1 split rigorously (Z_2 × Z_3 has order 6;
+orbit-stabilizer forbids a single 5-orbit on a 6-set). The
+Klein-antipodal Z_2 rep mechanism above — sym/antisym eigenmode
+decomposition on antipodal pairs {1,5}, {2,4}, {3}, {0}, with the
+EM-coupling criterion (Klein-singlet AND coprime-to-6) selecting
+exactly ψ_+(1,5) — is the substrate-level derivation that belongs
+in the textbook. Port pending.
+
+The textbook's companion open-question entry
+`baryon_sector_identification.md` tracks the residual Type 4
+freedom: whether the singleton ψ_+(1,5) is identified with
+baryons, or whether some alternative cosmological sector
+assignment is structurally preferred. The 11σ Ω_b residual is
+the load-bearing reason that open question is open.
 
 **Adds to scorecard**: Omega_b = 1/19 (6.7% residual),
 Omega_DM = 5/19 (0.7% residual), Omega_DM/Omega_b = 5 (7.5%).
