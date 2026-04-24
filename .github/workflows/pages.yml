@@ -80,6 +80,8 @@ jobs:
             _site/index.html \
             _site/colony.html \
             _site/docs/index.html \
+            _site/docs/claim-chain.html \
+            _site/docs/claim-chain-views.html \
             _site/docs/glossary.html \
             _site/docs/derivations.html \
             _site/docs/cmb-s4.html

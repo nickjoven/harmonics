@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claim Chain &mdash; Harmonics</title>
+<meta name="description" content="Canonical view of the harmonics
+ claim chain: anchors, primitives, scorecard, bare K=1 identities,
+ proof chains. Generated from MANIFEST.yml.">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[
+    {left:'$$',right:'$$',display:true},
+    {left:'$',right:'$',display:false}
+  ]});"></script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Reference</a>
+  <a href="claim-chain.html" class="active">Claim chain</a>
+  <a href="claim-chain-views.html">Three views</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="derivations.html">Derivations</a>
+  <a href="dag.html">DAG</a>
+  <a href="cmb-s4.html">CMB-S4</a>
+</nav>
+
+<h1>Claim chain</h1>
+<p class="subtitle">One canonical view of the claim chain, generated from <a href="https://github.com/nickjoven/harmonics/blob/main/MANIFEST.yml">MANIFEST.yml</a>. Scorecard: 16 predictions with explicit derivations. Bare K=1 identities: 5 reference values the framework declines to predict at M_Z. Two observational anchors (<code>H_0</code>, <code>v_EW</code>); see <a href="../sync_cost/derivations/anchor_count_audit.md">anchor_count_audit.md</a>.</p>
+
+<h2>Inputs</h2>
+<table>
+  <tr><th>Kind</th><th>Count</th><th>Note</th></tr>
+  <tr><td>Free parameters</td><td class="val">0</td><td>&mdash;</td></tr>
+  <tr><td>Free functions</td><td class="val">0</td><td>&mdash;</td></tr>
+  <tr><td>Dimensionful inputs</td><td class="val">2</td><td>Two independent observational anchors per `anchor_count_audit.md`: (1) the cosmological scale H_0 (equivalently Λ, ℓ_P, or M_P; these are all interconverted by the framework integer R = 6 × 13^54 and the identity Λℓ_P² = 13^-108 / 12), and (2) the particle-sector scale v_EW = 246 GeV. Reducing to one anchor would require closing the v/M_P gap via a framework-derived dimensionless identity; five explicit obstructions to that reduction are catalogued in `anchor_count_audit.md`. Previous MANIFEST language claiming a single dimensionful input overstated the repo&#x27;s actual derivation state.</td></tr>
+</table>
+<h3>Anchors</h3>
+<table>
+  <tr><th>Sector</th><th>Anchor</th><th>Covers</th></tr>
+  <tr><td>Cosmological</td><td class="val">H_0 (equivalently Λ, ℓ_P, M_P via R)</td><td class="val">Λ, ℓ_P, t_P, M_P, ρ_crit, cosmic-timeline scales</td></tr>
+  <tr><td>Particle</td><td class="val">v_EW = 246 GeV</td><td class="val">ℏ (absolute), c (absolute), G (absolute), absolute lepton/quark/gauge-boson masses, m_H</td></tr>
+</table>
+<p><strong>v / M_P open gap:</strong> observed <code>v/M_P ≈ 2.017e-17</code>; nearest numerology <code>13^-15 = 1.954e-17 (3.1% off, not derived)</code>. Status: open; see anchor_count_audit.md §Obstructions for five specific blockers.</p>
+
+<h2>Primitives (4)</h2>
+<p class="subtitle">3 irreducible + 1 derived (mediant, via D29)</p>
+<ul>
+  <li>Integers Z (counting)</li>
+  <li>Mediant (a+c)/(b+d) — derived from energy conservation + stability (D29)</li>
+  <li>Fixed-point x = f(x) (self-reference)</li>
+  <li>Parabola x² + μ = 0 (bifurcation)</li>
+</ul>
+
+<h2>Scorecard &mdash; 16 predictions</h2>
+<p class="subtitle">Each row has an explicit, scale-consistent derivation linked in the source column.</p>
+<table>
+  <tr><th>Observable</th><th>Computed</th><th>Observed</th><th>Residual</th><th>Source</th></tr>
+<tr>
+  <td>Spectral tilt n_s</td>
+  <td class="val">0.963–0.966</td>
+  <td class="val">0.9649 ± 0.0042</td>
+  <td class="val">&lt; 0.2%</td>
+  <td>D4, <a href="https://github.com/nickjoven/rfe">rfe</a></td>
+</tr>
+<tr>
+  <td>Born rule exponent</td>
+  <td class="val">2</td>
+  <td class="val">2</td>
+  <td class="val">exact</td>
+  <td>D1, D9</td>
+</tr>
+<tr>
+  <td>MOND scale a₀</td>
+  <td class="val">1.25 × 10⁻¹⁰ m/s²</td>
+  <td class="val">1.2 × 10⁻¹⁰</td>
+  <td class="val">4%</td>
+  <td>D3, D8, <a href="https://github.com/nickjoven/rfe">rfe</a></td>
+</tr>
+<tr>
+  <td>Spatial dimension</td>
+  <td class="val">3</td>
+  <td class="val">3</td>
+  <td class="val">exact</td>
+  <td>D14</td>
+</tr>
+<tr>
+  <td>Lorentz symmetry</td>
+  <td class="val">Spin(3,1)</td>
+  <td class="val">SO⁺(3,1)</td>
+  <td class="val">exact</td>
+  <td>D14, D15</td>
+</tr>
+<tr>
+  <td>Dark energy fraction Ω_Λ</td>
+  <td class="val">13/19 = 0.6842</td>
+  <td class="val">0.6847 ± 0.0073</td>
+  <td class="val">0.07σ</td>
+  <td>D25, D28</td>
+</tr>
+<tr>
+  <td>Planck/Hubble ratio R</td>
+  <td class="val">6 × 13⁵⁴ = 8.533 × 10⁶⁰</td>
+  <td class="val">8.492 × 10⁶⁰</td>
+  <td class="val">0.48%</td>
+  <td>D26</td>
+</tr>
+<tr>
+  <td>Λ l_P²</td>
+  <td class="val">13⁻¹⁰⁸/12</td>
+  <td class="val">~10⁻¹²¹·⁵</td>
+  <td class="val">0.1% in exponent</td>
+  <td>D27</td>
+</tr>
+<tr>
+  <td>τ × Δθ (uncertainty)</td>
+  <td class="val">1.000000</td>
+  <td class="val">—</td>
+  <td class="val">exact</td>
+  <td>D7, D9</td>
+</tr>
+<tr>
+  <td>N_efolds</td>
+  <td class="val">61.3 ± 0.7</td>
+  <td class="val">TBD</td>
+  <td class="val">CMB-S4, ~2028</td>
+  <td>D10</td>
+</tr>
+<tr>
+  <td>Gauge group</td>
+  <td class="val">SU(3) × SU(2) × U(1)</td>
+  <td class="val">SU(3) × SU(2) × U(1)</td>
+  <td class="val">exact</td>
+  <td>D41, D42</td>
+</tr>
+<tr>
+  <td>θ (strong CP)</td>
+  <td class="val">0</td>
+  <td class="val">&lt; 10⁻¹⁰</td>
+  <td class="val">exact</td>
+  <td>D45</td>
+</tr>
+<tr>
+  <td>SM anomaly cancellation</td>
+  <td class="val">all 6 conditions = 0</td>
+  <td class="val">all 6 conditions = 0</td>
+  <td class="val">exact</td>
+  <td>D41</td>
+</tr>
+<tr>
+  <td>Dark matter fraction Ω_DM</td>
+  <td class="val">5/19 = 0.2632</td>
+  <td class="val">0.265 ± 0.007</td>
+  <td class="val">0.7%</td>
+  <td>D47</td>
+</tr>
+<tr>
+  <td>Baryon fraction Ω_b</td>
+  <td class="val">1/19 = 0.0526</td>
+  <td class="val">0.0493 ± 0.0003</td>
+  <td class="val">6.7%</td>
+  <td>D47</td>
+</tr>
+<tr>
+  <td>Ω_DM/Ω_b</td>
+  <td class="val">5</td>
+  <td class="val">5.41</td>
+  <td class="val">7.5%</td>
+  <td>D47</td>
+</tr>
+</table>
+
+<h2>Bare K=1 identities &mdash; 5 declined</h2>
+<p class="subtitle">Measure-theoretic consequences of <code>duty(q) = 1/q^d</code> at critical coupling (<a href="../sync_cost/derivations/duty_dimension_proof.md">duty_dimension_proof.md</a>). These are reference values, <strong>not</strong> predictions at M_Z. The framework does not currently supply a running mechanism that closes the gap to the electroweak scale; see <a href="../sync_cost/derivations/numerology_inventory.md">numerology_inventory.md</a> and <a href="../sync_cost/derivations/sinw_fixed_point.md">sinw_fixed_point.md</a>.</p>
+<table>
+  <tr><th>Identity</th><th>Form</th><th>K=1 value</th><th>M_Z gap</th><th>Source</th></tr>
+<tr>
+  <td><code>sin2_theta_W</code></td>
+  <td class="val">q_2^3 / (q_2^3 + q_3^3)</td>
+  <td class="val">8/35 = 0.22857...</td>
+  <td class="val">1.1% vs PDG 0.23121; unresolved (sinW_running_check.py, sinw_fixed_point.md)</td>
+  <td><a href="../sync_cost/derivations/duty_dimension_proof.md">duty_dimension_proof</a>, <a href="../sync_cost/derivations/three_dimensions.md">three_dimensions</a>, <a href="../sync_cost/derivations/klein_bottle_derivation.md">klein_bottle_derivation</a>, <a href="../sync_cost/derivations/gauge_dictionary.md">gauge_dictionary</a></td>
+</tr>
+<tr>
+  <td><code>alpha_s_over_alpha_2</code></td>
+  <td class="val">q_3^3 / q_2^3</td>
+  <td class="val">27/8 = 3.375</td>
+  <td class="val">3.2% vs PDG 3.488; unresolved (no derivation of the running)</td>
+  <td><a href="../sync_cost/derivations/duty_dimension_proof.md">duty_dimension_proof</a>, <a href="../sync_cost/derivations/three_dimensions.md">three_dimensions</a>, <a href="../sync_cost/derivations/klein_bottle_derivation.md">klein_bottle_derivation</a>, <a href="../sync_cost/derivations/duty_cycle_dictionary.md">duty_cycle_dictionary</a></td>
+</tr>
+<tr>
+  <td><code>inv_alpha_em_tree</code></td>
+  <td class="val">q_2^3 + q_3^3</td>
+  <td class="val">35</td>
+  <td class="val">factor ~3.7 vs PDG; unresolved</td>
+  <td><a href="../sync_cost/derivations/duty_dimension_proof.md">duty_dimension_proof</a>, <a href="../sync_cost/derivations/three_dimensions.md">three_dimensions</a>, <a href="../sync_cost/derivations/klein_bottle_derivation.md">klein_bottle_derivation</a>, <a href="../sync_cost/derivations/duty_cycle_dictionary.md">duty_cycle_dictionary</a></td>
+</tr>
+<tr>
+  <td><code>m_H_over_v</code></td>
+  <td class="val">1 / q_2</td>
+  <td class="val">1/2 = 0.5</td>
+  <td class="val">1.7% vs 0.5087; unresolved</td>
+  <td><a href="../sync_cost/derivations/klein_bottle_derivation.md">klein_bottle_derivation</a>, <a href="../sync_cost/derivations/duty_cycle_dictionary.md">duty_cycle_dictionary</a></td>
+</tr>
+<tr>
+  <td><code>lambda_higgs</code></td>
+  <td class="val">1 / q_2^3 = duty(q_2)</td>
+  <td class="val">1/8 = 0.125</td>
+  <td class="val">3.4% vs ~0.129; unresolved</td>
+  <td><a href="../sync_cost/derivations/duty_dimension_proof.md">duty_dimension_proof</a>, <a href="../sync_cost/derivations/three_dimensions.md">three_dimensions</a>, <a href="../sync_cost/derivations/klein_bottle_derivation.md">klein_bottle_derivation</a>, <a href="../sync_cost/derivations/duty_cycle_dictionary.md">duty_cycle_dictionary</a></td>
+</tr>
+</table>
+
+<h2>Klein bottle constants</h2>
+<p class="subtitle">All cosmological and gauge-sector integer ratios derive from these.</p>
+<table>
+  <tr><th>Symbol</th><th>Value</th></tr>
+  <tr><td><code>q2</code></td><td class="val">2</td></tr>
+  <tr><td><code>q3</code></td><td class="val">3</td></tr>
+  <tr><td><code>product</code></td><td class="val">6</td></tr>
+  <tr><td><code>farey_count</code></td><td class="val">13</td></tr>
+  <tr><td><code>total_budget</code></td><td class="val">19</td></tr>
+  <tr><td><code>exponent</code></td><td class="val">54</td></tr>
+  <tr><td><code>double_exponent</code></td><td class="val">108</td></tr>
+</table>
+
+<h2>Proof chains (3)</h2>
+<table>
+  <tr><th>Chain</th><th>Name</th><th>Propositions</th><th>Source</th><th>Note</th></tr>
+<tr>
+  <td class="val">A</td>
+  <td>Polynomial → General Relativity</td>
+  <td class="val">8</td>
+  <td><a href="../sync_cost/derivations/PROOF_A_gravity.md">sync_cost/derivations/PROOF_A_gravity.md</a></td>
+  <td></td>
+</tr>
+<tr>
+  <td class="val">B</td>
+  <td>Polynomial → Quantum Mechanics</td>
+  <td class="val">11</td>
+  <td><a href="../sync_cost/derivations/PROOF_B_quantum.md">sync_cost/derivations/PROOF_B_quantum.md</a></td>
+  <td>5 shared with A + 6 quantum branch</td>
+</tr>
+<tr>
+  <td class="val">C</td>
+  <td>The Bridge</td>
+  <td class="val">7</td>
+  <td><a href="https://github.com/nickjoven/proslambenomenos/blob/main/PROOF_C_bridge.md">proslambenomenos/PROOF_C_bridge.md</a></td>
+  <td></td>
+</tr>
+</table>
+
+<h2>Other views of the same graph</h2>
+<table>
+  <tr><th>View</th><th>What it shows</th></tr>
+  <tr><td><a href="claim-chain-views.html">Three views</a></td><td>Max/MSP patch, pure-math expression tree, and syllogism rendering over the curated claim-chain subgraph.</td></tr>
+  <tr><td><a href="dag.html">Interactive DAG</a></td><td>108 derivation nodes, 305 edges, with audit trail per file.</td></tr>
+  <tr><td><a href="derivations.html">Derivation index</a></td><td>Narrative list of the 47 numbered derivations.</td></tr>
+  <tr><td><a href="glossary.html">Glossary</a></td><td>Symbol and term definitions used across the framework.</td></tr>
+  <tr><td><a href="index.html">Reference</a></td><td>Quick-reference scorecard and proof chains A/B.</td></tr>
+  <tr><td><a href="a_s_proof.html">A_s proof (3D)</a></td><td>Axioms &rarr; observation path for the spectral amplitude.</td></tr>
+  <tr><td><a href="cmb-s4.html">CMB-S4</a></td><td>Upcoming-experiment falsifiability notes.</td></tr>
+</table>
+
+<footer>
+  <p>Generated from
+  <a href="https://github.com/nickjoven/harmonics/blob/main/MANIFEST.yml">MANIFEST.yml</a>
+  by <code>scripts/build_claim_chain.py</code> &middot;
+  <a href="https://github.com/nickjoven/harmonics">source</a> &middot;
+  CC0 1.0 Universal.</p>
+</footer>
+
+</body>
+</html>
