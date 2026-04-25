@@ -104,3 +104,6 @@
 2026-04-25T22:35:38Z | put | sync_cost/derivations/klein_dynamics_roadmap.md -> c39f1b05c2034a9350cd3c010765d08090723a9227534509a9058c79040e6343
 2026-04-25T22:35:38Z | put | sync_cost/derivations/klein_dynamics_roadmap.md -> c39f1b05c2034a9350cd3c010765d08090723a9227534509a9058c79040e6343
 2026-04-25T22:35:38Z | dag:create | 8fa81600cdd901f2bdcb792dce440d76fa445a95c531c8de83975feecc768cc8
+2026-04-25T23:04:14Z | put | sync_cost/derivations/klein_bridge_audit_and_probe.md -> fd16b4ad9e654b3e546d300bbc8a6e76025cdd1e22b0c2745743bc2888bc9b93
+2026-04-25T23:04:14Z | put | sync_cost/derivations/klein_bridge_audit_and_probe.md -> fd16b4ad9e654b3e546d300bbc8a6e76025cdd1e22b0c2745743bc2888bc9b93
+2026-04-25T23:04:14Z | dag:create | fba792147c9dc63f0c300745e5943b525d8cff18c97ccf1b680c72bf36c912a0
