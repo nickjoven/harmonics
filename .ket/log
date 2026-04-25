@@ -101,3 +101,6 @@
 2026-04-25T21:15:27Z | put | sync_cost/derivations/omega_b_two_component_sketch.md -> f3ecf7b7d97178d45f86c31193fe86f6237d219ddd46229543da8c52db8848cb
 2026-04-25T21:15:27Z | put | sync_cost/derivations/omega_b_two_component_sketch.md -> f3ecf7b7d97178d45f86c31193fe86f6237d219ddd46229543da8c52db8848cb
 2026-04-25T21:15:27Z | dag:create | a31ba33a301153f2f508fa53451498a13d6ad47dbaaf936458cbfe2ae6a49a85
+2026-04-25T22:35:38Z | put | sync_cost/derivations/klein_dynamics_roadmap.md -> c39f1b05c2034a9350cd3c010765d08090723a9227534509a9058c79040e6343
+2026-04-25T22:35:38Z | put | sync_cost/derivations/klein_dynamics_roadmap.md -> c39f1b05c2034a9350cd3c010765d08090723a9227534509a9058c79040e6343
+2026-04-25T22:35:38Z | dag:create | 8fa81600cdd901f2bdcb792dce440d76fa445a95c531c8de83975feecc768cc8
