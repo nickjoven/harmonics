@@ -98,3 +98,6 @@
 2026-04-25T20:56:13Z | put | sync_cost/derivations/continuity_in_K_nulls.md -> f141c99a67cf6c18d1c2263f2799735d24cb3b404b3070b0a9d8a44c8bfe4b07
 2026-04-25T20:56:13Z | put | sync_cost/derivations/continuity_in_K_nulls.md -> f141c99a67cf6c18d1c2263f2799735d24cb3b404b3070b0a9d8a44c8bfe4b07
 2026-04-25T20:56:13Z | dag:create | 677f70ff5c3ff59c811725d6aa02157246f5abde0b91c542d1c6a29f1dff8319
+2026-04-25T21:15:27Z | put | sync_cost/derivations/omega_b_two_component_sketch.md -> f3ecf7b7d97178d45f86c31193fe86f6237d219ddd46229543da8c52db8848cb
+2026-04-25T21:15:27Z | put | sync_cost/derivations/omega_b_two_component_sketch.md -> f3ecf7b7d97178d45f86c31193fe86f6237d219ddd46229543da8c52db8848cb
+2026-04-25T21:15:27Z | dag:create | a31ba33a301153f2f508fa53451498a13d6ad47dbaaf936458cbfe2ae6a49a85
