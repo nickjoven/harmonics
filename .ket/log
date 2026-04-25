@@ -61,3 +61,22 @@
 2026-04-24T05:09:18Z | put | sync_cost/derivations/k_scaling_scan.md -> 5abaeba377166c0acad71969596934e4281d24af467d9e63576e35e57b249b2d
 2026-04-24T05:09:18Z | put | sync_cost/derivations/numerology_inventory.md -> 0c39e93d16251ae1a279513fcf5b8aed0b796dcdcf3a34871c2c183447733a4f
 2026-04-24T05:09:29Z | dag:create | a07fdbf0b739c12cee3072fa3d289552f32ad6fb19961c8b6d0c4906a2f94811
+2026-04-24T21:03:12Z | put | sync_cost/derivations/k_axis_uniqueness.py -> 3991a04e20e76f4661577c93bd70422f8433ef0c345f42f9abf3c70e4d1d18f1
+2026-04-24T21:03:12Z | put | sync_cost/derivations/k_axis_uniqueness.md -> ac909b3dff250175f2c46e3711062d03da5ff0ff96041b9379844d7c61084e99
+2026-04-24T21:03:21Z | dag:create | d0290f8cf973e345d2fcd72c4b7556177b831e7f021c4004f10d396910e9b040
+2026-04-24T22:10:54Z | put | sync_cost/derivations/epsilon_substrate_decomposition.md -> 2375c1d1bca1bcf188ddd4d2ea07d8c76063bb3d9ccc9d14d8e1f04434479e9a
+2026-04-24T22:11:00Z | dag:create | b353541f1aecd9a8c27f0bd6507283a774bb5c41daf280f305af1e0fc1ab546b
+2026-04-24T22:21:34Z | put | sync_cost/derivations/epsilon_physical_reading.md -> ca3c3ddfa054e7132a24aa5d42af325ca2b3b2376290ba5fb17c1806aa445ef5
+2026-04-24T22:21:45Z | dag:create | 7c1a9e19b0065c2c329e376dc7f90e22abb16338789da28947e723b8780fd1c8
+2026-04-24T22:53:46Z | put | sync_cost/derivations/dynamical_tool_audit.md -> 389cee2d35825714a3435873070b650663888d145e44b4a30d31ca395356ff55
+2026-04-24T22:53:55Z | dag:create | 8b7560f9bd569acaffd6dd5517fcf8c9c754ae3c94ad8528a51f67cf461dbf08
+2026-04-24T23:00:33Z | put | sync_cost/derivations/depth_connection_nulls.md -> 4bdb27fd3f10144628c151a387bd2a594c2349ca2d7fb5e331036b38b21aeb88
+2026-04-24T23:00:49Z | dag:create | 071f33a2726f9e9f35c053bb49d034bdadffe2bc405c6e4f830b4bfa8a52dfc9
+2026-04-24T23:26:18Z | put | sync_cost/derivations/path_a_walkthrough.md -> 335db512c31d33787b42f9d0198171ec7f6759778810826481ac8cd25a54079d
+2026-04-24T23:26:29Z | dag:create | f7ca68a9a3528ebe7f050bbbaec09597fb295f7485026c4d83ff7678b43b7abb
+2026-04-25T00:20:51Z | put | sync_cost/derivations/hierarchy_problem_translation.md -> 70dde6c9726a48338c96e9304a48832cc1a2a366e5c0afa3eb6a46c8be670862
+2026-04-25T00:21:00Z | dag:create | 55a7a63346a296db9d37f17aa6047dbbc25703e071312943681dcad805a6a40c
+2026-04-25T03:20:14Z | put | sync_cost/derivations/vocabulary_is_the_work_pattern.md -> 27bf2a3e9dbfe98c72b3e5e401253a93e48a6cf475f4835b3bfd9e2a886c36fa
+2026-04-25T03:20:14Z | put | sync_cost/derivations/framework_status.md -> 88ee95cc5f1ed81d0647ba4ef75021906d9f19c115cf5d9726fca976e8c826aa
+2026-04-25T03:20:14Z | put | sync_cost/derivations/anchor_count_audit.md -> 1299d65a7501f0d49221d73ea2c222f380b199f09c8754e3b8fcb3af1a5fed75
+2026-04-25T03:20:37Z | dag:create | 56646ebb4fe0910f6214379e17784f51561172f8514dde6c53704af7ee971d8c
