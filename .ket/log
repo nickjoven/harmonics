@@ -90,3 +90,5 @@
 2026-04-25T17:54:08Z | put | sync_cost/derivations/omega_b_substrate_side_audit.md -> 8446172ca4ae53413cf808bda6c54e54c5e1a2f9aa816d176fac22e19fb7155f
 2026-04-25T17:54:08Z | put | sync_cost/derivations/framework_status.md -> 1bfdc8391e13143569d08f67baab66c80887628d9eff9a6dc640e4f081171b51
 2026-04-25T17:54:19Z | dag:create | cbda3235293331493ced78d7e919130ca3a1efe65ad72a0b456cc47f9728a8bc
+2026-04-25T19:33:09Z | put | sync_cost/derivations/omega_b_c5_closure.md -> a839e172a185b73796bf741473f2cb850677d2c34d8be0763884748a8a53c131
+2026-04-25T19:33:25Z | dag:create | 3b66249e557bf6bb4f88da8f22bce4ee3e32ccbc746247c9232a4a7b20f432af
