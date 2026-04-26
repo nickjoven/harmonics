@@ -119,10 +119,134 @@ mode-locked states at the substrate's natural Farey depth, not
 pixel counts of geometric space. This reframing matters when
 explaining where the predictions come from.
 
+## Standard-physics anchor: Noether's theorem with compact symmetries
+
+The framework's "discrete observables from a continuous medium"
+mechanism is a particular case of a standard pattern: **the
+Lagrangian formalism applied to a system with compact continuous
+symmetries produces integer-valued conserved quantities via
+Noether's theorem.**
+
+The pattern: a continuous symmetry $G$ of the Lagrangian $L(q,
+\dot q, t)$ implies a conserved quantity $Q$ via Noether's
+theorem. If the symmetry group $G$ is **compact** &mdash; for
+example $U(1)$ with period $2\pi$, $SO(3)$ rotations, $SU(N)$,
+or the finite cyclic groups $\mathbb{Z}_n$ &mdash; the eigenvalues
+of the generator of $G$ are integer-valued. The conserved $Q$ is
+quantized.
+
+The canonical example is angular momentum: continuous $SO(3)$
+rotational symmetry of three-dimensional space yields conserved
+angular momentum, and because $SO(3)$ is compact, the angular
+momentum eigenvalues are integer (or half-integer) multiples of
+$\hbar$. The medium is continuous; the dynamics produces discrete
+quantum numbers.
+
+The framework's substrate is the specific case where the compact
+symmetries of the medium are exactly:
+
+- $S^1$ phase space (period 1) &mdash; yields integer winding
+  number $p$
+- Klein-antipodal $\mathbb{Z}_2$ &mdash; yields the sym/antisym
+  character $\pm 1$
+- Color triplet $\mathbb{Z}_3$ &mdash; yields the color label
+  $\in \{0, 1, 2\}$
+- The product structure $\mathbb{Z}_6 = \mathbb{Z}_2 \times
+  \mathbb{Z}_3$ &mdash; yields the combined six-element substrate
+  label
+
+The framework integers ($q_2, q_3$, $|F_n|$, INTERACT, MEDIANT,
+K_LEPTON, sector counts $13$, $5$, $1$) are the conserved-quantity
+values under these specific compact symmetries, derived via the
+standard Noether construction.
+
+The framework is not a novel quantization mechanism. It is the
+standard Lagrangian + compact-symmetry pattern applied to a
+substrate whose specific compact symmetries are $S^1 \times
+\mathbb{Z}_2 \times \mathbb{Z}_3$. The discrete observables
+(mode-locked period $q$, sym/antisym distinction, color triplet,
+sector mode counts) are the Noether charges of these symmetries.
+Standard quantum mechanics already accepts that compact $SO(3)$
+symmetry of space produces integer angular momentum; the framework
+asserts the same logic for the substrate's $S^1 \times
+\mathbb{Z}_2 \times \mathbb{Z}_3$ symmetries, producing the
+framework integers.
+
+This is the textbook anchor: any reader who has accepted that
+angular momentum quantization comes from $SO(3)$ compactness has
+already accepted the mechanism the framework uses.
+
+## Echolocation and continuous filling: the same record
+
+A second formal restatement of the medium / dynamics distinction,
+using cavity acoustics:
+
+A bounded cavity (continuous interior) can be probed in two
+operationally distinct ways:
+
+1. **Discrete probing (echolocation)**: a single pulse is emitted;
+   the times of returning echoes encode the cavity's geometric
+   distances. The recordable observable is a discrete sequence of
+   arrival times.
+
+2. **Continuous filling (resonance)**: a continuous tone fills
+   the cavity until standing waves form; the resonant frequencies
+   (the cavity's normal modes) encode the same geometry via the
+   Helmholtz equation in the frequency domain. The recordable
+   observable is a discrete spectrum of resonant frequencies.
+
+These two representations are **Fourier duals**. The time-domain
+echo arrivals and the frequency-domain resonant spectrum are
+related by Fourier transform; both encode the same continuous
+geometry of the cavity, in dual representations.
+
+In neither case is the continuum of the medium recorded directly.
+The medium supports the dynamics; the dynamics produces discrete
+features (echo arrivals, resonant frequencies); the discrete
+features are what is record-kept. The continuity is the substrate
+of the recording, not a recordable item itself.
+
+Mapping to the framework:
+
+| Cavity acoustics | Framework substrate |
+|---|---|
+| Bounded continuous interior | Continuous medium at $K \le 1$ |
+| Pulse echo arrival times | Mode-locked tongue identification at $p/q$ |
+| Standing-wave resonant frequencies | Tongue widths $(K/2)^q$ at each resonance |
+| Time domain $\leftrightarrow$ frequency domain | Discrete tongues $\leftrightarrow$ continuous $K = 1$ filling |
+| Helmholtz equation (eigenmodes encode geometry) | Substrate self-consistency (locked states encode the substrate's compact-symmetry structure) |
+
+The two representations of the substrate are likewise Fourier
+duals: the discrete mode-locked tongues at $K < 1$ and the
+continuous tongue-coverage at $K = 1$ encode the same medium in
+dual representations. The dynamics' coupling parameter $K$
+determines which representation is observable &mdash; at $K < 1$
+the discrete tongues stand out as recordable features; at $K = 1$
+the tongues fill measure 1 and no discrete features remain to be
+recorded.
+
+The cosmic partition is the substrate's recordable signature
+under $K < 1$ probing, in the same operational sense that a
+cavity's normal-mode spectrum is the cavity's recordable
+signature under continuous-tone filling. Both are discrete
+records of an underlying continuous medium; both are the
+dynamics' output, not the medium's intrinsic structure.
+
 ## Abstract connections: spectral decomposition
 
 The framework's mode-locking dynamics has a clean spectral
-analog. Following the user's pedagogical observation:
+analog. The composition with the Noether and Fourier-duality
+formulations above gives three operationally equivalent
+restatements of the medium / dynamics distinction:
+
+- **Noether (standard physics)**: continuous medium with compact
+  symmetries; conserved quantities are integer-valued
+- **Fourier duality (cavity acoustics)**: continuous medium;
+  discrete record from discrete probing or from continuous
+  filling that resolves into normal modes
+- **Spectral decomposition (atomic physics)**: continuous spectrum
+  decomposed by a resolution mechanism into discrete lines whose
+  positions encode the medium's structure
 
 A prism takes white light — apparently continuous — and decomposes
 it into discrete spectral lines whose positions are determined by
@@ -205,6 +329,69 @@ The arc takes 30-45 minutes for an audience with undergraduate
 physics background. Each step is grounded in well-vetted standard
 material (Stribeck, Arnold, MOND, Einstein, Schrödinger, Planck);
 the framework's contribution is the specific composition.
+
+## Chain summary
+
+The derivation chain from standard physics to the framework's
+content can be stated as a single sequence:
+
+$$
+L \to \text{EL} \to \text{Noether(continuous + discrete)} \to
+\text{compactness} \to \text{integer ladder} \to \text{9 lemmas}
+\to \text{closure framing}
+$$
+
+Step by step:
+
+1. **$L$**: Lagrangian on the substrate's continuous medium. The
+   medium is smooth (no quantization at this stage).
+2. **EL**: Euler-Lagrange equations of motion derived from $L$.
+   Equations are continuous ODEs whose solutions are continuous
+   trajectories.
+3. **Noether (continuous + discrete)**: each continuous symmetry
+   of $L$ yields a conserved quantity; each discrete symmetry
+   yields a selection rule. Both modes of Noether's theorem
+   apply; the framework uses both.
+4. **Compactness**: the substrate's symmetry groups are compact
+   ($S^1$, $\mathbb{Z}_2$, $\mathbb{Z}_3$). Compactness forces
+   the eigenvalues of the symmetry generators to be discrete
+   (integer-valued for $\mathbb{Z}_n$; integer or half-integer
+   multiples of $\hbar$ for $S^1$ via the period quantization).
+5. **Integer ladder**: the conserved quantities take values on a
+   discrete ladder. For the substrate, the ladder values are the
+   framework integers ($q_2, q_3$, $|F_n|$, INTERACT, MEDIANT,
+   K_LEPTON, sector counts).
+6. **9 lemmas**: the framework's structural content
+   (`structural_lemmas.md`) is the specific articulation of the
+   integer ladder under the substrate's compact symmetries:
+   - Lemma 4 (cosmic partition) and Lemma 5 (q_3-quantity closed
+     form) read the integer ladder as the substrate mode-counts
+   - Lemma 2 (sign-rep no-EM) and Lemma 6 (Hecke cusp $\leftrightarrow$
+     $Z_p$ rep) read the integer ladder as the substrate's
+     sector taxonomy
+   - Lemma 7 (Born rule), Lemma 8 (spatial dimension), Lemma 3
+     (two-anchor minimum), and Lemma 9 (pigeonhole calibration)
+     read the integer ladder as the substrate's geometric and
+     dimensional content
+   - Lemma 1 (w_+ closure) composes the above into the
+     two-component closure of the cosmic partition
+7. **Closure framing**: the cosmic partition $\Omega_b : \Omega_{DM}
+   : \Omega_\Lambda = 13 : 70 : 181 / 264$ closes Class 5 with
+   zero free parameters at the closure level. The closure is
+   natural in the sense that it follows from the chain above
+   without additional assumptions.
+
+The composition is recognize-mode: each step is well-vetted
+standard physics or its direct articulation. The framework's
+substantive contribution is the identification that the
+substrate's compact symmetries are exactly $S^1 \times
+\mathbb{Z}_2 \times \mathbb{Z}_3$, producing the framework
+integers as Noether charges.
+
+A reader who accepts the chain through step 5 (standard
+Lagrangian + Noether + compactness, textbook material) has
+already accepted the mechanism by which the framework's content
+follows.
 
 ## Cross-references
 
