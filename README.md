@@ -26,6 +26,32 @@ three generations, the cosmic partition $\Omega_\Lambda :
 \Omega_{DM} : \Omega_b = 13 : 5 : 1 / 19$, and matter-sector
 mass ratios at PDG precision.
 
+## A clarifying note before the entry points
+
+The framework's "discrete substrate" claim is sometimes misread
+as pixelated spacetime (loop quantum gravity, causal sets,
+cellular geometries). It is **not** that. The framework's
+position, in one line:
+
+> **The medium is continuous. The coupling between oscillators
+> in the medium produces discrete mode-locked tongues. Quantization
+> lives in the dynamics, not in the geometry.**
+
+Spacetime is smooth; Lorentz invariance is preserved; no minimum
+length is claimed. The discreteness is the dynamics — Arnold
+tongues at every rational $p/q$ with measurable period $q$. The
+framework integers (13, 5, 1, 19, $q_2$, $q_3$, etc.) count
+mode-locked states, not pixels. The cosmic partition $13:5:1/19$
+is the substrate's "spectral signature" at Farey depth 7, not a
+cell count.
+
+See [`dynamical_quantization.md`](sync_cost/derivations/dynamical_quantization.md)
+for the headline articulation, including the prism / spectral
+analogy: Stern-Brocot is the substrate's prism, decomposing the
+continuous coupling into discrete locked frequencies (tongues
+$\sim$ spectral lines, $(K/2)^q$ widths $\sim$ line widths,
+mode counts $\sim$ atomic structure constants).
+
 ## Entry points
 
 Each entry is a single intellectual move. Accept it and the
@@ -200,6 +226,7 @@ Together: framework's full claim set in citation-ready form.
 
 ### Methodological notes
 
+- [`dynamical_quantization.md`](sync_cost/derivations/dynamical_quantization.md) — medium / dynamics distinction; spectral / prism analogy
 - [`statistical_conventions.md`](sync_cost/derivations/statistical_conventions.md) — Z1-Z3 discipline
 - [`ansatz_audit_policy.md`](sync_cost/derivations/ansatz_audit_policy.md) — Class 4 → Class 2 triage
 - [`vocabulary_is_the_work_pattern.md`](sync_cost/derivations/vocabulary_is_the_work_pattern.md) — recurring closure pattern (9 instances)
