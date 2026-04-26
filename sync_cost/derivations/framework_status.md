@@ -81,6 +81,21 @@ closure. **Superseded for Ω_b by the two-component closure.**
 Same ansatz as confirmed-numerology items below. The 1-3% floor is
 numerology ensemble, not structural.
 
+> **Region C Phase B verdict (2026-04-26).** Per
+> `numerology_count_phase_b.md`, the 1-3% near-match cloud was
+> tested against a permutation null (10⁴ trials, log-uniform
+> sampling on the observable range). At all three thresholds
+> (0.1%, 1%, 3%), the framework's actual match count is
+> statistically consistent with the null at α = 0.05:
+> 13/26/31 of 33 observables match within 0.1%/1%/3%; null mean
+> 9.5/23.3/27.5; p = 0.13 / 0.20 / 0.07. **Cloud is PIGEONHOLE,
+> not signal.** The discriminator (`ansatz_audit_policy.md`
+> Step 4 Class 2 default) is calibrated correctly. Future
+> near-match closure attempts on these ratios are expected to
+> land Class 2 by construction; substrate-structural derivation
+> modes (group reps, modular Hecke structure, sign-rep
+> monodromy) remain the productive direction.
+
 ## Fails (confirmed numerology, do not use as building block)
 
 | Item | Disproof |
@@ -160,8 +175,13 @@ shifted to multi-session structural derivations.
 
 | Region | Phase A doc | Status |
 |---|---|---|
-| **C — Numerology count** | `numerology_count_phase_a.md` | Phase A complete; Phase B (the count) deferred. Now sharpened: Region C tests cloud density against PSL(2,ℤ) orbit-representative density per `cross_ratio_irrep_reframe.md`'s null distribution refinement, not uniform random. |
 | **Direction 4 Phase C — w_+ cusp representative** | `psl2z_subgroup_phase_b.md` (B3 open) | Substrate ground-state derivation forcing 13/14 within cusp 1/2 of X_0(6) as the canonical operating-point. Multi-session structural work; not yet scheduled. |
+
+### Closed in 2026-04-26 (Region C Phase B)
+
+| Region | Closure status | Outcome |
+|---|---|---|
+| **C — Numerology count** | **Closed: PIGEONHOLE** | Per `numerology_count_phase_b.md`: at α=0.05, framework's near-match cloud is statistically consistent with permutation null at all three thresholds (0.1%, 1%, 3%). Honest-landing-loop verdict confirmed. Discriminator is calibrated correctly; further near-match ansatz closure attempts will land Class 2 by construction. |
 
 ## Usage
 

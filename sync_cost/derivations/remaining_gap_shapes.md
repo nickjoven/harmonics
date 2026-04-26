@@ -208,7 +208,7 @@ drift and structural mistakes.
 | Shape | Type | Status |
 |---|---|---|
 | A. Floor residuals | Structural derivation | **Largely closed.** Ω_b → 0.044% via two-component closure + Γ_0(6) cusp identification; Ω_c/Ω_b inherits at 0.6%. A_s reframed as anchor-side (Instance 7). |
-| B. Particle numerology cloud | Saturation signal | Holding pattern; null distribution sharpened by `cross_ratio_irrep_reframe.md` (PSL(2,ℤ) orbit-representative density vs uniform random) |
+| B. Particle numerology cloud | Saturation signal | **Closed: PIGEONHOLE confirmed at α=0.05** across three thresholds (0.1%, 1%, 3%). Per `numerology_count_phase_b.md`: 13/26/31 of 33 observables match within 0.1%/1%/3%; null mean 9.5/23.3/27.5; p > 0.05 in all cases. Cloud is noise, not signal. Framework at quantitative completion on near-match ansatz mode. |
 | C. Anchor obstructions | Vocabulary disambiguation | **All five closed/reframed.** D.3 closes #5 structurally; #1-#4 reframed as features. Two-anchor minimum FULLY STRUCTURAL. |
 | D. Cross-sector unification (v/M_P) | Structural derivation OR framework principle | Reframed as structural feature per `path_a_walkthrough.md`; v/M_P ≈ 13⁻¹⁵ near-match is irreducible coincidence at Floor magnitude (3.1%) given prime-support {2,3} obstruction |
 | E. Predictive frontier | Observational frontier | Awaiting observation; Ω_b two-component closure adds new sharp predictions (w_+ at cusp 1/2 of X_0(6)) |
@@ -249,8 +249,9 @@ The work map after 2026-04:
 1. **Direction 4 Phase C** — substrate ground-state derivation
    for cusp-1/2 representative selection (only open item to
    Class 5 closure of w_+)
-2. **Region C Phase B** — combinatorial cloud-density count
-   against PSL(2,ℤ) orbit distribution
+2. ~~Region C Phase B~~ — **closed; PIGEONHOLE verdict** per
+   `numerology_count_phase_b.md`. Cloud is noise; further
+   near-match closure attempts will land Class 2 by construction.
 3. **A_s anchor-side acceptance OR substrate-inflation derivation**
    — choose between accepting the category statement or pursuing
    a deeper substrate derivation
