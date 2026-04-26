@@ -178,3 +178,26 @@ Each step produced a concrete artifact and a sharper halt. The
 final closure is structurally consistent with the framework's
 established methodological pattern (boundary_weight.md /
 sin²θ_W / hierarchy_gaussian_lattice.md).
+
+## Status
+
+**Class 5 / Survives.** Down-type quark factor 6 = q_2 · q_3
+derived from S_3 acting on Z_2 × Z_3 lattice. Orbit dimensions
+{1, 3} = {q_3-trivial, q_3-vector}; factor 6 emerges as
+|L| = q_2 · q_3 from orbit-counting.
+
+Numerical: matches PDG 2024 down-type quark masses to 0.04σ
+(five-digit match using only framework integers q_2 and q_3,
+no fitted parameters).
+
+Per `framework_status.md` Survives section. Source for: down-type
+factor 6 in `derivation_atlas.md` Part IX §9.4,
+`phenomenology_cross_reference.md` Section 7 (quark sector),
+`canonical_glossary.md` Section 7. Pattern reference: Instance 1
+of `vocabulary_is_the_work_pattern.md`.
+
+Z1: ✓ 0.04σ; Z2: ✓ no fitted factors; Z3: ✓ only structural
+inputs (q_2, q_3 framework primitives + S_3 orbit theory).
+
+Side: substrate-side (dimensionless ratio); absolute quark
+masses require v_EW anchor.

@@ -216,3 +216,23 @@ and quantum mechanics are its two continuum limits.
 | Q4 | D12 §II | Madelung (1927) |
 | Q5 | D12 §II | Schrödinger (1926) |
 | Q6 | D1, D9, D12 | Uniqueness |
+
+## Status
+
+**Canonical proof chain: polynomial → quantum mechanics.** 11
+propositions (5 shared with PROOF_A + 6 quantum branch).
+Establishes that QM (Schrödinger equation, Born rule) emerges as
+the small-ε linearized limit at K < 1 substrate per
+`continuum_limits.md` Part II.
+
+Per `framework_status.md` Survives section. Cited in
+`derivation_atlas.md` Part VI §6.3 (K = 1 ↔ K < 1 sector
+decoupling) and `MANIFEST.yml` proof_chains.B.
+
+Class: Survives (composed from individually Class 5 derivations,
+including the Born rule from saddle-node parabola per
+`a1_from_saddle_node.md`).
+
+Side: substrate-side (the K < 1 quantum substrate is the
+substrate's natural state; absolute scales of QM observables
+require v_EW anchor for masses, H_0 for cosmological observables).

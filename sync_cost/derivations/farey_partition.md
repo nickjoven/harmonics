@@ -1,5 +1,16 @@
 # The Farey Partition
 
+> **Forward-pointing note (2026-04-26)**: this doc establishes
+> the Farey-sequence machinery underlying the cosmic partition's
+> static (single-w = 1) prediction Ω_Λ : Ω_DM : Ω_b = 13 : 5 : 1
+> / 19. The 2026-04 closure round refined this to a two-component
+> closure with w_+ = 13/14 from the substrate's cusp-1/2 ground
+> state on X_0(6); see `omega_b_alpha_beta_closure.md` and
+> `L1_substrate_cusp_ground_state.md`. The Farey machinery in
+> this doc remains load-bearing under the refinement; the
+> two-component closure modifies the operating-point mode count
+> while preserving the Farey-depth structure.
+
 ## The operator at the resolution boundary
 
 Derivation 10 established: division is not primitive. The mediant

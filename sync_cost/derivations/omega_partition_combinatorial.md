@@ -1,5 +1,17 @@
 # Ω partition: combinatorial derivation at depth 19
 
+> **Forward-pointing note (2026-04-26)**: this doc derives the
+> static cosmic partition Ω_Λ : Ω_DM : Ω_b = 13 : 5 : 1 / 19
+> combinatorially at single-w = 1. The 2026-04 closure round
+> refined this to a two-component closure with w_+ = 13/14
+> (substrate cusp-1/2 ground state on X_0(6)); see
+> `omega_b_alpha_beta_closure.md`,
+> `L1_substrate_cusp_ground_state.md`, and `w_plus_formalization.md`
+> for the proof chain. Under the two-component closure: Ω_b =
+> 13/264, Ω_DM = 35/132, Ω_Λ = 181/264; residuals 0.12% / 0.06%
+> / 0.13% on Planck 2018 data. Both static and two-component
+> are framework Class 5 predictions.
+
 ## Scope
 
 Derive the cosmic energy partition Ω_Λ : Ω_DM : Ω_b = 13 : 5 : 1 at

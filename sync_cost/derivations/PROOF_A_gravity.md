@@ -194,3 +194,20 @@ P8 (Lovelock → Einstein)
 | P6 | D15 | Bianchi classification |
 | P7 | D12 §I | ADM from Kuramoto |
 | P8 | D13 | Lovelock (1971) |
+
+## Status
+
+**Canonical proof chain: polynomial → general relativity.** 8
+propositions composed from derivation chain D1-D15. Establishes
+that GR (Einstein equations) emerges as the K = 1 continuum limit
+of the substrate's discrete dynamics per `continuum_limits.md`
+Part I.
+
+Per `framework_status.md` Survives section. Cited in
+`derivation_atlas.md` Part VI §6.3 (K = 1 ↔ K < 1 sector
+decoupling) and `MANIFEST.yml` proof_chains.A.
+
+Class: Survives (composed from individually Class 5 derivations).
+
+Side: substrate-side construction (the K = 1 limit is anchor-
+free); GR's absolute observables require H_0 anchor.

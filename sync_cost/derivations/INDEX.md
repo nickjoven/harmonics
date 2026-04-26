@@ -76,3 +76,12 @@ mapping table (a `Dn` token) and the first `[…](file.md)` link in
 the second column.  The parse is tolerant — any D-row that does not
 match the pattern is ignored — so freeform commentary may be added
 without breaking the resolution.
+
+## Status
+
+**Navigation index for derivation chain.** Maps D-numbers
+(D1-D47 per `MANIFEST.yml` derivation_count) to filenames for
+machine-readable lookup. Maintained as derivations are added or
+renamed. Cross-checked by `check_manifest.py`.
+
+Side: navigation tooling, not prediction or derivation.

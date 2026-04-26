@@ -195,3 +195,20 @@ Eight specific candidate derivations of depth 15 from substrate
 structure have failed. Five identified open paths remain, of
 which (a) Klein-fold sub-action is structurally most natural and
 should be attempted next.
+
+## Status
+
+**Null-results registry for cross-sector depth-15 connection
+(v/M_P).** Eight failed candidate derivations + five open paths
+catalogued. Path (a) was attempted in `path_a_walkthrough.md`;
+result: closes against the same anchor-import barrier as A_s
+(Instance 7) and SM hierarchy (Instance 6). Path (a) closure
+established that the two-anchor minimum is structural per
+`anchor_count_audit.md` reframe.
+
+Net: v/M_P ≈ 13⁻¹⁵ near-match is a structural feature
+(prime-support obstruction), not a derivation gap. Per
+`framework_status.md` Eliminated section.
+
+Side: anchor-side (v/M_P is a cross-sector ratio whose absolute
+value requires both H_0 and v_EW anchors).
