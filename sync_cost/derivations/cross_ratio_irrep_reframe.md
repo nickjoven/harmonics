@@ -197,3 +197,23 @@ invariants the framework operates under.
 
 Region C interpretation sharpened with specific irrep-density
 null distribution.
+
+## Direction 4 follow-on (executed)
+
+- `psl2z_subgroup_identification_phase_a.md` — Phase A planning
+- `psl2z_subgroup_orbits.py` — orbit computation
+- `psl2z_subgroup_phase_a_results.md` — Phase A executed: **Γ_0(6)
+  identified** as smallest Hecke subgroup splitting all three
+  candidates; cusp index = gcd(denom, INTERACT) cleanly maps to
+  framework sectors (∞ ↔ 12/13 generic, 1/2 ↔ 13/14 q_2 sector,
+  1/3 ↔ 14/15 q_3 sector)
+- `psl2z_subgroup_phase_b.md` — Phase B executed: B1 (substrate
+  preserves Γ_0(6)) and B2 (w_+ ↔ cusp 1/2 independently of
+  EM-MOND) close in recognize mode; B3 (representative selection
+  within cusp) remains open
+
+w_+ closure status post-Direction-4: **Class 2 → Class 4+** at
+13/14. The cusp class is forced by group theory + framework's
+existing q_2/q_3 sector decomposition; only the specific
+representative within the cusp orbit lacks a substrate-derivation
+forcing argument.
