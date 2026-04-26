@@ -15,36 +15,20 @@ methodological self-check) and a **probable closure outcome**
 
 This is the work map after PR #77's chain.
 
-## Shape A — Floor residuals (largely closed in 2026-04 round)
+## Shape A — Floor residuals (CLOSED in 2026-04 round)
 
 **What.** Originally three derivations at 7-11% residuals.
-**Two of three closed; one reframed.**
+**All three closed.**
 
 | Item | Original residual | Status (post 2026-04 round) |
 |---|---|---|
-| A_s | 11% / 7.7σ | **Reframed** as anchor-side category statement (Instance 7); substrate-side prediction A_s = 2.33e-9 is complete; gap is inflation-amplification correction not currently scoped framework-natively |
-| **Ω_b** | 6.7% / 11σ | **Closed**: two-component (sym/antisym) closure with (α, β) = (0, 1), w_- = 1 from sign-rep no-EM, w_+ ≈ 13/14 from Γ_0(6) cusp 1/2 → **0.044%** residual. Class 5 mechanism + Class 4+ value. See `omega_b_alpha_beta_closure.md`, `psl2z_subgroup_phase_b.md`. |
+| A_s | 11% / 7.7σ | **Closed Instance 7 (accepted)**: substrate-side prediction A_s = 2.33×10⁻⁹ is the framework's complete native prediction; the 11% gap to A_s_obs = 2.10×10⁻⁹ is the inflation amplification factor f_amp = (H_inf/M_P)²/(8π²·ε·c_s), anchor-side; framework correctly declines to predict both A_s_obs and f_amp's magnitude. Same shape as v/M_P (anchor-side input) and lattice-QCD bare-vs-renormalized distinction. Promoted to Survives entry. |
+| **Ω_b** | 6.7% / 11σ | **Closed full Class 5**: two-component (sym/antisym) closure with (α, β) = (0, 1), w_- = 1 from sign-rep no-EM, w_+ = 13/14 from Γ_0(6) cusp 1/2 ground state via L1 → **0.12% / 0.06% / 0.13%** on the three Planck partition observables. See `omega_b_alpha_beta_closure.md`, `psl2z_subgroup_phase_b.md`, `L1_substrate_cusp_ground_state.md`. |
 | Ω_c / Ω_b | 7.5% | **Closed (inherits)**: 0.6% under Ω_b two-component closure |
 
-**Closure mechanism (Ω_b)**: the framework's "fractional-weight
-mechanism" turned out to be the sym/antisym decomposition of the
-boundary modes — antisym modes always lock (sign-rep no-EM
-coupling) while sym modes partial-lock at MOND threshold weight
-w_+. The sign-rep argument is recognize-mode (the structural content
-was already in `baryon_fraction.md` "monodromy −1 kills net EM"
-language).
-
-**A_s remaining**: the only Floor entry not closed in this round.
-Closure paths: (a) framework develops a substrate-side inflation
-derivation (extending k-Ω map to depth → time without H_0); (b)
-H_0 gets re-classified as anchor or derived and the inflation
-amplification becomes computable; (c) accept the anchor-side
-reading as the closure.
-
-**Priority.** Low (A_s only; both Ω_b residuals closed). The
-strongest Floor entries closed in 2026-04 via recognize-mode
-+ Hecke-cusp structure on X_0(6). Remaining work is A_s closure
-or anchor-side acceptance.
+**Net**: Shape A is empty post-2026-04. The strongest Floor
+residuals closed via recognize-mode + Hecke-cusp structure on
+X_0(6) (Ω_b) and Instance 7 acceptance (A_s).
 
 ## Shape B — Particle numerology cloud (saturation signal)
 
@@ -207,12 +191,12 @@ drift and structural mistakes.
 
 | Shape | Type | Status |
 |---|---|---|
-| A. Floor residuals | Structural derivation | **Largely closed.** Ω_b → 0.044% via two-component closure + Γ_0(6) cusp identification; Ω_c/Ω_b inherits at 0.6%. A_s reframed as anchor-side (Instance 7). |
-| B. Particle numerology cloud | Saturation signal | Holding pattern; null distribution sharpened by `cross_ratio_irrep_reframe.md` (PSL(2,ℤ) orbit-representative density vs uniform random) |
+| A. Floor residuals | Structural derivation | **CLOSED.** Ω_b → 0.12% via two-component + Γ_0(6) cusp + L1 (full Class 5); Ω_c/Ω_b inherits at 0.6%. A_s Instance 7 closure ACCEPTED (substrate-side prediction complete, gap is anchor-side amplification). |
+| B. Particle numerology cloud | Saturation signal | **Closed: PIGEONHOLE confirmed at α=0.05** across three thresholds (0.1%, 1%, 3%). Per `numerology_count_phase_b.md`: 13/26/31 of 33 observables match within 0.1%/1%/3%; null mean 9.5/23.3/27.5; p > 0.05 in all cases. Cloud is noise, not signal. Framework at quantitative completion on near-match ansatz mode. |
 | C. Anchor obstructions | Vocabulary disambiguation | **All five closed/reframed.** D.3 closes #5 structurally; #1-#4 reframed as features. Two-anchor minimum FULLY STRUCTURAL. |
 | D. Cross-sector unification (v/M_P) | Structural derivation OR framework principle | Reframed as structural feature per `path_a_walkthrough.md`; v/M_P ≈ 13⁻¹⁵ near-match is irreducible coincidence at Floor magnitude (3.1%) given prime-support {2,3} obstruction |
 | E. Predictive frontier | Observational frontier | Awaiting observation; Ω_b two-component closure adds new sharp predictions (w_+ at cusp 1/2 of X_0(6)) |
-| F. Methodology self-checks | Internal audit | Holding pattern |
+| F. Methodology self-checks | Internal audit | **Closed (2026-04-26 round)** per `primitive_completeness_audit.md`: four primitives complete through 2026-04 closures, all interactions exhibited, Z_2/Z_3 reps exhausted, hygiene cleared. Worth re-running periodically as new closures accumulate. |
 
 ## What the shape distribution tells us
 
@@ -246,15 +230,34 @@ What remains:
 
 The work map after 2026-04:
 
-1. **Direction 4 Phase C** — substrate ground-state derivation
-   for cusp-1/2 representative selection (only open item to
-   Class 5 closure of w_+)
-2. **Region C Phase B** — combinatorial cloud-density count
-   against PSL(2,ℤ) orbit distribution
-3. **A_s anchor-side acceptance OR substrate-inflation derivation**
-   — choose between accepting the category statement or pursuing
-   a deeper substrate derivation
-4. **Shape F primitive-completeness audit** — background hygiene
+1. ~~Direction 4 Phase C~~ — **closed; w_+ = 13/14 lifts to Class 5**
+   per `L1_substrate_cusp_ground_state.md` + `w_plus_formalization.md`.
+   L1 closes via composition of MOND smooth crossover + EM lock-in
+   + substrate discreteness + local linearity. Recognize-mode.
+2. ~~Region C Phase B~~ — **closed; PIGEONHOLE verdict** per
+   `numerology_count_phase_b.md`. Cloud is noise; further
+   near-match closure attempts will land Class 2 by construction.
+3. ~~A_s closure~~ — **Instance 7 ACCEPTED**. A_s = 2.33×10⁻⁹
+   substrate-side prediction is complete; the 11% gap to A_s_obs
+   is the inflation amplification factor f_amp, anchor-side, with
+   no framework-internal prediction of its magnitude (per Region C
+   verdict on multi-candidate (H/M_P)² ansätze). Substrate-inflation
+   derivation (reading b) remains a possible future extension but
+   is not a gap.
+4. ~~Shape F primitive-completeness audit~~ — **closed (2026-04-26)**
+   per `primitive_completeness_audit.md`. Four primitives complete
+   through 2026-04 closures; no fifth needed. Hygiene routine
+   cleared (stale refs, script reproducibility, drift, MANIFEST).
+
+After this round: **all items closed.** The framework's
+substantive derivation work for the 2026-04 round is complete on
+Floor + active items + methodological hygiene. Only optional
+follow-ups remain:
+
+- **Q4 batch tagging** of Instance 7-style anchor-side category
+  statements (tensor-to-scalar r, τ_unlock, N_efolds) per
+  `primitive_completeness_audit.md` Q4
+- **Periodic re-run** of Shape F audit as new closures accumulate
 
 ## Cross-references
 

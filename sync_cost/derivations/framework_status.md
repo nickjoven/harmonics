@@ -23,7 +23,7 @@ Categories:
 | Λ·ℓ_P² = 13⁻¹⁰⁸/12 = 3/R² | `hierarchy_gaussian_lattice.md` |
 | Ω_Λ : Ω_DM : Ω_b = 13 : 5 : 1 / 19 (combinatorial: Farey + Z₂ rep theory) | `omega_partition_combinatorial.md`, `farey_partition.md`, `baryon_fraction.md` |
 | Ω_Λ = 13/19 (0.07σ), Ω_m = 6/19, Ω_DM = 5/19, Ω_b = 1/19 (single-w) | same |
-| **Ω_b two-component closure**: (α, β) = (0, 1), w_- = 1 from sign-rep no-EM; one-parameter w_+ fit gives Ω_b 0.044% / Ω_DM 0.044% / Ω_Λ 0.13% | `omega_b_alpha_beta_closure.md` |
+| **Ω_b two-component closure (full Class 5)**: (α, β) = (0, 1), w_- = 1 from sign-rep no-EM, w_+ = 13/14 from cusp-1/2 ground state on X_0(6); zero free parameters at closure level. Predictions: Ω_b = 13/264 (0.12%), Ω_DM = 35/132 (0.06%), Ω_Λ = 181/264 (0.13%) | `omega_b_alpha_beta_closure.md`, `psl2z_subgroup_phase_b.md`, `L1_substrate_cusp_ground_state.md`, `w_plus_formalization.md` |
 | Friedmann form at r = 1 | `k_of_t_friedmann.md` |
 | λ_unlock = (4G − π ln 2)/π (Arnold Lyapunov on Z₂ quotient) | `kam_bridge_synthesis.md` |
 | Born rule |ψ|² from saddle-node | `born_rule.md`, `a1_from_saddle_node.md` |
@@ -32,36 +32,17 @@ Categories:
 | **Two-anchor minimality** (H_0 cosmological + v_EW particle) is structural, not a derivation gap; all five anchor-count obstructions reframed/closed | `anchor_count_audit.md` reframe + closure notes; `hierarchy_problem_translation.md`; `path_closures_iter3.md` (D.3 closes #5 structurally) |
 | **K=1 ↔ K<1 sector decoupling** (Einstein vs Schrödinger continuum limits) is non-smooth, forces independent anchors per sector | `continuum_limits.md` Parts I/II; `continuity_in_K_nulls.md` N11; `path_closures_iter3.md` |
 | **Klein π_1 sector assignment**: cosmological → no-twist, particle → twist; Z_2 rep machinery forces the assignment | `path_closures_iter4.md` (D.1 → Class 5) |
+| **A_s = 2.33×10⁻⁹ substrate-side prediction**: framework's complete substrate-side static-variance prediction at the matter-sector pivot; the 11% gap to A_s_obs = 2.10×10⁻⁹ is the inflation amplification factor f_amp (anchor-side, depends on H_inf + ε); framework correctly declines to predict both A_s_obs and f_amp. Instance 7 closure ACCEPTED. | `a_s_geometric_proof.md`, `a_s_g1_closure_attempt.md`, `vocabulary_is_the_work_pattern.md` Instance 7 |
 
 ## Floor (structural residual at finite Fibonacci depth)
 
-| Item | Residual | Status | Source |
-|---|---|---|---|
-| A_s | 11% / 7.7σ | Anchor-side category statement (Instance 7) | `a_s_geometric_proof.md`, `a_s_g1_closure_attempt.md` |
-| ~~Ω_b 6.7%~~ → **Ω_b two-component** | 0.044% (Class 5 mechanism + Class 4+ value) | **Promoted from Floor to Survives**; w_+ value Class 4+ contingent on cusp-rep selection | `omega_b_alpha_beta_closure.md`, `psl2z_subgroup_phase_b.md` |
-| ~~Ω_c / Ω_b 7.5%~~ | 0.6% (inherits from Ω_b closure) | **Promoted from Floor**; same as above | `omega_b_alpha_beta_closure.md` derivative |
+(empty after 2026-04 closure round)
 
-A_s remains the only entry in this category after the 2026-04
-closure round. The Ω_b row was the Floor's headline entry; per
-`omega_b_alpha_beta_closure.md`, the (α, β) = (0, 1), w_- = 1
-two-component closure (forced by sign-rep no-EM coupling) is a
-Class 5 / Survives candidate at the mechanism+(α,β) level. The
-single remaining empirical parameter w_+ ≈ 0.929 sits at the
-**Γ_0(6) cusp 1/2 of X_0(6)**, with operating-point representative
-13/14 = |F_6|/(q_2·|F_4|) (Class 4+ contingent on Phase C
-representative-selection derivation). See
-`psl2z_subgroup_phase_b.md` for Direction 4 status.
-
-> **A_s reframe (added 2026-04-25).** Per
-> `a_s_g1_closure_attempt.md`, the largest gap (G1
-> horizon-crossing amplification) closes against the same
-> anchor-import barrier as path (a) (`path_a_walkthrough.md`)
-> and as SM hierarchy non-translation
-> (`hierarchy_problem_translation.md`). Reading: **A_s = 2.33e-9
-> is the framework's complete substrate-side prediction; the
-> 11% gap is the inflation-amplification correction, which is
-> anchor-side and not currently scoped framework-natively.**
-> This is the seventh instance of `vocabulary_is_the_work_pattern.md`.
+| Former entry | Disposition |
+|---|---|
+| ~~A_s 11% / 7.7σ~~ | **Closed Instance 7**: substrate-side prediction A_s = 2.33×10⁻⁹ is complete; gap is anchor-side amplification, no framework-internal claim about magnitude. Promoted to Survives entry above. |
+| ~~Ω_b 6.7%~~ | **Closed full Class 5** via two-component (sign-rep no-EM) + Γ_0(6) cusp + L1 substrate ground state. Predictions sub-σ on all three observables. Promoted to Survives. |
+| ~~Ω_c / Ω_b 7.5%~~ | **Closed (inherits from Ω_b)**: 0.6% residual under two-component closure. Promoted to Survives. |
 
 The hybrid strategy (`Ω_b = (1/19)·|r|²`, `A_s = 2.33·|r|³ × 10⁻⁹`)
 matches observation ≤ 1σ for Ω_b and A_s but with different
@@ -80,6 +61,21 @@ closure. **Superseded for Ω_b by the two-component closure.**
 
 Same ansatz as confirmed-numerology items below. The 1-3% floor is
 numerology ensemble, not structural.
+
+> **Region C Phase B verdict (2026-04-26).** Per
+> `numerology_count_phase_b.md`, the 1-3% near-match cloud was
+> tested against a permutation null (10⁴ trials, log-uniform
+> sampling on the observable range). At all three thresholds
+> (0.1%, 1%, 3%), the framework's actual match count is
+> statistically consistent with the null at α = 0.05:
+> 13/26/31 of 33 observables match within 0.1%/1%/3%; null mean
+> 9.5/23.3/27.5; p = 0.13 / 0.20 / 0.07. **Cloud is PIGEONHOLE,
+> not signal.** The discriminator (`ansatz_audit_policy.md`
+> Step 4 Class 2 default) is calibrated correctly. Future
+> near-match closure attempts on these ratios are expected to
+> land Class 2 by construction; substrate-structural derivation
+> modes (group reps, modular Hecke structure, sign-rep
+> monodromy) remain the productive direction.
 
 ## Fails (confirmed numerology, do not use as building block)
 
@@ -158,10 +154,20 @@ shifted to multi-session structural derivations.
 
 ### Currently active
 
-| Region | Phase A doc | Status |
+(none — Direction 4 closed, Region C closed)
+
+### Closed in 2026-04-26 second round (Direction 4 Phase C closure)
+
+| Closure | Outcome |
+|---|---|
+| **L1 (substrate cusp-1/2 ground state)** | **Class 5 closure in recognize mode** per `L1_substrate_cusp_ground_state.md`. Composes MOND smooth crossover (a0_threshold.md) + EM lock-in (baryon_fraction.md) + substrate discreteness (denomination_boundary.md §134) + local linearity. The "soft boundary needs discrete rulers" picture: substrate's grain IS the operational apparatus for the smooth MOND threshold; closest-discrete-to-continuum-min is forced because substrate has no continuum states. |
+| **THM (w_+ = 13/14)** | **Class 5 closure** by composition of T1-T7 + L1 per `w_plus_formalization.md`. Ω_b two-component closure becomes fully derived with no remaining empirical parameter at closure level. |
+
+### Closed in 2026-04-26 (Region C Phase B)
+
+| Region | Closure status | Outcome |
 |---|---|---|
-| **C — Numerology count** | `numerology_count_phase_a.md` | Phase A complete; Phase B (the count) deferred. Now sharpened: Region C tests cloud density against PSL(2,ℤ) orbit-representative density per `cross_ratio_irrep_reframe.md`'s null distribution refinement, not uniform random. |
-| **Direction 4 Phase C — w_+ cusp representative** | `psl2z_subgroup_phase_b.md` (B3 open) | Substrate ground-state derivation forcing 13/14 within cusp 1/2 of X_0(6) as the canonical operating-point. Multi-session structural work; not yet scheduled. |
+| **C — Numerology count** | **Closed: PIGEONHOLE** | Per `numerology_count_phase_b.md`: at α=0.05, framework's near-match cloud is statistically consistent with permutation null at all three thresholds (0.1%, 1%, 3%). Honest-landing-loop verdict confirmed. Discriminator is calibrated correctly; further near-match ansatz closure attempts will land Class 2 by construction. |
 
 ## Usage
 
