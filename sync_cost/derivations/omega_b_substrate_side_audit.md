@@ -1,5 +1,30 @@
 # Ω_b residual audit: passes substrate-side test, does NOT dissolve
 
+> **Closure update (2026-04-26).** The "first remaining substrate-
+> side structural gap" identified by this audit has subsequently
+> closed:
+>
+> - **Tier 1 + Tier 2 closure** via `omega_b_alpha_beta_closure.md`:
+>   the corrected mode breakdown identifies the antisym Klein
+>   eigenmode ψ_-(1, 5) as always-locked (sign-rep no-EM), forcing
+>   w_- = 1 STRUCTURALLY and (α, β) = (0, 1). Single-parameter
+>   w_+ closure gives 0.044% on Ω_b, 0.044% on Ω_DM, 0.13% on Ω_Λ.
+>   This is a recognize-mode closure: the structural content was
+>   already in `baryon_fraction.md` "monodromy −1 kills net EM."
+>
+> - **w_+ value identification** via `psl2z_subgroup_phase_b.md`:
+>   Γ_0(6) cusp 1/2 of X_0(6) (the q_2-sector cusp matching the
+>   EM-coupled sym Klein-singlet boundary mode) selects w_+ = 13/14
+>   as operating-point representative. Class 4+ contingent on
+>   Phase C representative-selection derivation.
+>
+> The C5 probe recommended below was superseded by the two-component
+> decomposition + Γ_0(6) cusp identification path. The audit
+> conclusion ("does not dissolve") was correct: Ω_b was substrate-
+> side; the closure mechanism turned out to be recognize-mode +
+> modular-cusp identification, not the diffuse-Floor path the C5
+> probe represented.
+
 ## What this file is
 
 A focused audit of the Ω_b 6.7% / 11σ Floor residual under the

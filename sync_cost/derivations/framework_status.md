@@ -22,27 +22,37 @@ Categories:
 | R = 6·13⁵⁴ (Planck/Hubble hierarchy) | `hierarchy_gaussian_lattice.md` |
 | Λ·ℓ_P² = 13⁻¹⁰⁸/12 = 3/R² | `hierarchy_gaussian_lattice.md` |
 | Ω_Λ : Ω_DM : Ω_b = 13 : 5 : 1 / 19 (combinatorial: Farey + Z₂ rep theory) | `omega_partition_combinatorial.md`, `farey_partition.md`, `baryon_fraction.md` |
-| Ω_Λ = 13/19 (0.07σ), Ω_m = 6/19, Ω_DM = 5/19, Ω_b = 1/19 | same |
+| Ω_Λ = 13/19 (0.07σ), Ω_m = 6/19, Ω_DM = 5/19, Ω_b = 1/19 (single-w) | same |
+| **Ω_b two-component closure**: (α, β) = (0, 1), w_- = 1 from sign-rep no-EM; one-parameter w_+ fit gives Ω_b 0.044% / Ω_DM 0.044% / Ω_Λ 0.13% | `omega_b_alpha_beta_closure.md` |
 | Friedmann form at r = 1 | `k_of_t_friedmann.md` |
 | λ_unlock = (4G − π ln 2)/π (Arnold Lyapunov on Z₂ quotient) | `kam_bridge_synthesis.md` |
 | Born rule |ψ|² from saddle-node | `born_rule.md`, `a1_from_saddle_node.md` |
 | a_0 = cH_0/(2π) from Λ (MOND scale) | `a0_threshold.md` |
 | Z₂-pair conservation theorem | `z2_pair_conservation.md` |
+| **Two-anchor minimality** (H_0 cosmological + v_EW particle) is structural, not a derivation gap; all five anchor-count obstructions reframed/closed | `anchor_count_audit.md` reframe + closure notes; `hierarchy_problem_translation.md`; `path_closures_iter3.md` (D.3 closes #5 structurally) |
+| **K=1 ↔ K<1 sector decoupling** (Einstein vs Schrödinger continuum limits) is non-smooth, forces independent anchors per sector | `continuum_limits.md` Parts I/II; `continuity_in_K_nulls.md` N11; `path_closures_iter3.md` |
+| **Klein π_1 sector assignment**: cosmological → no-twist, particle → twist; Z_2 rep machinery forces the assignment | `path_closures_iter4.md` (D.1 → Class 5) |
 
-## Floor (structural residual at finite Fibonacci depth, 7–11%)
+## Floor (structural residual at finite Fibonacci depth)
 
-| Item | Residual | Source |
-|---|---|---|
-| A_s | 11% / 7.7σ | `a_s_geometric_proof.md` (G1 closure attempt: `a_s_g1_closure_attempt.md`) |
-| Ω_b | 6.7% / 11σ | `baryon_fraction.md`, `omega_b_residual_phase_a.md` |
-| Ω_c / Ω_b | 7.5% | `baryon_fraction.md` (derivative of Ω_b) |
+| Item | Residual | Status | Source |
+|---|---|---|---|
+| A_s | 11% / 7.7σ | Anchor-side category statement (Instance 7) | `a_s_geometric_proof.md`, `a_s_g1_closure_attempt.md` |
+| ~~Ω_b 6.7%~~ → **Ω_b two-component** | 0.044% (Class 5 mechanism + Class 4+ value) | **Promoted from Floor to Survives**; w_+ value Class 4+ contingent on cusp-rep selection | `omega_b_alpha_beta_closure.md`, `psl2z_subgroup_phase_b.md` |
+| ~~Ω_c / Ω_b 7.5%~~ | 0.6% (inherits from Ω_b closure) | **Promoted from Floor**; same as above | `omega_b_alpha_beta_closure.md` derivative |
 
-Not a single-factor, not scale-import, not a non-integer-depth
-artifact; confirmed five ways. Closure was originally framed as
-requiring a framework-native fractional-weight mechanism,
-observational revision, or a structural rule change.
+A_s remains the only entry in this category after the 2026-04
+closure round. The Ω_b row was the Floor's headline entry; per
+`omega_b_alpha_beta_closure.md`, the (α, β) = (0, 1), w_- = 1
+two-component closure (forced by sign-rep no-EM coupling) is a
+Class 5 / Survives candidate at the mechanism+(α,β) level. The
+single remaining empirical parameter w_+ ≈ 0.929 sits at the
+**Γ_0(6) cusp 1/2 of X_0(6)**, with operating-point representative
+13/14 = |F_6|/(q_2·|F_4|) (Class 4+ contingent on Phase C
+representative-selection derivation). See
+`psl2z_subgroup_phase_b.md` for Direction 4 status.
 
-> **Reframe note (added 2026-04-25, A_s only).** Per
+> **A_s reframe (added 2026-04-25).** Per
 > `a_s_g1_closure_attempt.md`, the largest gap (G1
 > horizon-crossing amplification) closes against the same
 > anchor-import barrier as path (a) (`path_a_walkthrough.md`)
@@ -52,41 +62,13 @@ observational revision, or a structural rule change.
 > 11% gap is the inflation-amplification correction, which is
 > anchor-side and not currently scoped framework-natively.**
 > This is the seventh instance of `vocabulary_is_the_work_pattern.md`.
->
-> **Audit note (added 2026-04-25, Ω_b).** Per
-> `omega_b_substrate_side_audit.md`, the Ω_b residual was tested
-> under the same disambiguation lens and **does NOT dissolve**.
-> Ω_b = 1/19 is a pure-integer combinatorial ratio (no φ, no
-> λ_unlock, no q_pivot, no anchor-derived input). The 6.7%
-> residual is genuinely substrate-side — the **first Floor entry
-> to remain as real structural work after the disambiguation
-> pattern was applied**.
->
-> **C5 closure attempt (`omega_b_c5_closure.md` +
-> `omega_b_c5_beta_audit.md`).** Tested z-dependent w from
-> framework-derived a_0(z) = c·H(z)/(2π). Functional form
-> w(z) = 1 − α·(H_0/H(z))^β with α = 1/INTERACT = 1/6 and
-> β ≈ 0.08 reduces Ω_b residual from 6.7% to **0.2%** (34×
-> reduction); Ω_Λ matches to 0.002% via exact rational 76/111;
-> Ω_DM to 0.28%. Two-tier verdict per ansatz_audit_policy:
-> **Tier 1 (mechanism, w runs with H via framework-derived
-> a_0(z)): Class 4 candidate**, substantive substrate-side
-> closure. **Tier 2 (specific β = 1/12 vs 1/(4π) vs
-> λ_unlock/INTERACT): Class 2** — three candidates within 4%
-> of required value, none uniquely forced; β-forcing audit
-> defaulted to Class 2 per policy. The 34× residual reduction
-> is real; the specific framework-integer β identification is
-> not yet structural. Forcing theorem for β remains the audit
-> work; until then, Ω_b sits as Class 4-qualitative / Class 2-
-> parameters. Ω_c/Ω_b inherits at 0.6% residual (vs original
-> 7.5%).
 
 The hybrid strategy (`Ω_b = (1/19)·|r|²`, `A_s = 2.33·|r|³ × 10⁻⁹`)
 matches observation ≤ 1σ for Ω_b and A_s but with different
 exponents per observable, no forcing argument for either, and
 `|r|` observation-derived rather than framework-native. Per
 `hybrid_strategy_audit.md` it is Class 2 numerology, not a Floor
-closure.
+closure. **Superseded for Ω_b by the two-component closure.**
 
 ## Floor (particle numerology cloud, 1–3%)
 
@@ -162,17 +144,24 @@ Consequence 1 is recommended.
 After the "honest landing loop" finding (`klein_bridge_audit_and_probe.md`)
 that single-session probes converge on Class 4-mechanism / Class 2-
 parameters by construction, the framework's active derivation work
-shifted to multi-session structural derivations:
+shifted to multi-session structural derivations.
+
+### Closed in 2026-04 round
+
+| Region | Closure status | Outcome |
+|---|---|---|
+| **D — Sector decoupling** | **Closed** (D.3 → Class 5; D.1 → Class 5) | Anchor obstruction #5 STRUCTURALLY CLOSED via K=1 vs K<1 non-smooth separation; Klein π_1 sector assignment forced by Z_2 rep machinery. See `path_closures_iter3.md`, `path_closures_iter4.md`. |
+| **Ω_b (α, β) closure** | **Closed (Tier 1+2)** | Sign-rep no-EM forces w_- = 1; (α, β) = (0, 1) structurally derived; one-parameter w_+ closure to 0.13%. See `omega_b_alpha_beta_closure.md`. |
+| **Partition logit form** | **Closed (vocabulary)** | Logit transformation exposes universal q_2 factor in all three sector complements; Λ:DM:b complement integers are 6, 14, 18 = q_2·{q_3, |F_4|, q_3²}. See `partition_logit_form.md`. |
+| **Cross-ratio irrep reframe** | **Closed (reframe)** | Multi-candidate ansatz pattern reframed as PSL(2,ℤ) irrep multiplicity; the three w_+ candidates 13/14, 12/13, 14/15 are distinct PSL(2,ℤ) orbits. See `cross_ratio_irrep_reframe.md`. |
+| **Direction 4 — PSL(2,ℤ)-subgroup** | **Phase A+B closed; Phase C open** | Γ_0(6) identified as the substrate-preserved subgroup; cusp index = gcd(denom, INTERACT) maps each w_+ candidate to a framework sector; w_+ inhabits cusp 1/2 (q_2 sector) → 13/14. Phase C representative-selection within cusp orbit remains open. See `psl2z_subgroup_phase_a_results.md`, `psl2z_subgroup_phase_b.md`. |
+
+### Currently active
 
 | Region | Phase A doc | Status |
 |---|---|---|
-| **C — Numerology count** | `numerology_count_phase_a.md` | Phase A complete; Phase B (the count) is the next-attempted multi-session work. Tests whether the framework's 1-3% near-match cloud is statistically expected (pigeonhole) or anomalously dense (signal). Binary outcome breaks the loop. |
-| **D — Sector decoupling** | `sector_decoupling_phase_a.md` | Phase A complete; Phase B deferred until Region C completes. Six candidate sources (Klein π_1 generators, q_2/q_3 prime split, K=1/K<1 regime, etc.). Anchor obstruction #5 — deepest open framework derivation. |
-
-Single-session audit work paused for these. New audit probes
-(further C5 β refinements, more Klein-bridge attempts, etc.)
-deferred until Region C produces its binary verdict, which
-informs Region D candidate selection.
+| **C — Numerology count** | `numerology_count_phase_a.md` | Phase A complete; Phase B (the count) deferred. Now sharpened: Region C tests cloud density against PSL(2,ℤ) orbit-representative density per `cross_ratio_irrep_reframe.md`'s null distribution refinement, not uniform random. |
+| **Direction 4 Phase C — w_+ cusp representative** | `psl2z_subgroup_phase_b.md` (B3 open) | Substrate ground-state derivation forcing 13/14 within cusp 1/2 of X_0(6) as the canonical operating-point. Multi-session structural work; not yet scheduled. |
 
 ## Usage
 

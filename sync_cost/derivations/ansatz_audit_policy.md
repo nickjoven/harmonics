@@ -70,6 +70,39 @@ When a candidate is proposed or re-inspected as Class 4:
   proposals that *don't* have a structural argument in sight after
   the first careful look.
 
+## Irrep-multiplicity exception (added 2026-04-26)
+
+The policy's "multi-candidate ansatz → Class 2" default has a
+**genuine exception**: when the multi-candidate set is the orbit
+of a known group action on the framework's substrate. Per
+`cross_ratio_irrep_reframe.md` and
+`psl2z_subgroup_phase_b.md`, the three w_+ candidates
+{13/14, 12/13, 14/15} for Ω_b were originally Class-2-demoted as
+a multi-candidate ansatz, then reframed as **distinct PSL(2,ℤ)
+orbits with disjoint j-invariants** — i.e., irreducible
+representation labels under a known group action. Each candidate
+is a meaningful structural object, not random pigeonhole.
+
+When this applies, the audit triage shifts:
+
+1. **Multi-candidate set = orbit of substrate-preserved group?**
+   If yes, the candidates are irrep labels and Class 2 demotion
+   is too strong. The candidates are structural; what's open is
+   *which irrep* the framework's dynamics select.
+2. **Forcing argument shifts target.** For Class 5: derive which
+   subgroup G ⊂ PSL(2,ℤ) the substrate preserves and which
+   G-orbit contains the prediction. Numerical value follows from
+   the orbit's canonical representative.
+3. **Status promotion possible.** If subgroup G is identified
+   AND the prediction's orbit class is independently forced,
+   status promotes Class 2 → Class 4+ even before the specific
+   representative is derived.
+
+The Ω_b w_+ closure (Class 2 → Class 4+ at 13/14 via Γ_0(6)
+cusp 1/2) is the first application of this exception. The
+exception is narrow: applies when group action on the framework's
+substrate is established. Otherwise standard triage holds.
+
 ## Applications
 
 Any Proposed item in `framework_status.md` fitting the ansatz

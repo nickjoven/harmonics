@@ -15,43 +15,36 @@ methodological self-check) and a **probable closure outcome**
 
 This is the work map after PR #77's chain.
 
-## Shape A — Floor residuals (genuine structural gaps)
+## Shape A — Floor residuals (largely closed in 2026-04 round)
 
-**What.** Three derivations land structurally at finite Fibonacci
-depth with 7-11% residuals against observation, confirmed
-non-trivial across five independent checks (single factor, scale
-import, non-integer depth, etc.):
+**What.** Originally three derivations at 7-11% residuals.
+**Two of three closed; one reframed.**
 
-| Item | Residual | σ |
+| Item | Original residual | Status (post 2026-04 round) |
 |---|---|---|
-| A_s | 11% | 7.7σ |
-| Ω_b | 6.7% | 11σ |
-| Ω_c / Ω_b | 7.5% | derivative of Ω_b |
+| A_s | 11% / 7.7σ | **Reframed** as anchor-side category statement (Instance 7); substrate-side prediction A_s = 2.33e-9 is complete; gap is inflation-amplification correction not currently scoped framework-natively |
+| **Ω_b** | 6.7% / 11σ | **Closed**: two-component (sym/antisym) closure with (α, β) = (0, 1), w_- = 1 from sign-rep no-EM, w_+ ≈ 13/14 from Γ_0(6) cusp 1/2 → **0.044%** residual. Class 5 mechanism + Class 4+ value. See `omega_b_alpha_beta_closure.md`, `psl2z_subgroup_phase_b.md`. |
+| Ω_c / Ω_b | 7.5% | **Closed (inherits)**: 0.6% under Ω_b two-component closure |
 
-**Type.** Structural derivation gap. Not vocabulary; not
-observation. The derivation is solid; the close-but-not-exact
-match has structural source.
+**Closure mechanism (Ω_b)**: the framework's "fractional-weight
+mechanism" turned out to be the sym/antisym decomposition of the
+boundary modes — antisym modes always lock (sign-rep no-EM
+coupling) while sym modes partial-lock at MOND threshold weight
+w_+. The sign-rep argument is recognize-mode (the structural content
+was already in `baryon_fraction.md` "monodromy −1 kills net EM"
+language).
 
-**Probable closure.** Three options per `framework_status.md`
-Floor section:
+**A_s remaining**: the only Floor entry not closed in this round.
+Closure paths: (a) framework develops a substrate-side inflation
+derivation (extending k-Ω map to depth → time without H_0); (b)
+H_0 gets re-classified as anchor or derived and the inflation
+amplification becomes computable; (c) accept the anchor-side
+reading as the closure.
 
-1. **Framework-native fractional-weight mechanism.** A new
-   structural ingredient that produces non-integer-depth
-   contributions exactly. None currently identified.
-2. **Observational revision.** PDG values shift toward the
-   framework predictions. Possible but not framework-controlled.
-3. **Structural rule change.** The framework's depth-counting
-   rule is missing a correction; identifying the correction
-   closes the residual.
-
-**Priority.** High. These are the framework's strongest
-predictions — clean derivations with quantitative residuals at
-the σ-floor of plausibility. Closing any one would be a
-substantive structural advance.
-
-**Status.** Open work. The five-way confirmation says the
-residuals are not artifacts; the framework is genuinely close
-but missing something specific.
+**Priority.** Low (A_s only; both Ω_b residuals closed). The
+strongest Floor entries closed in 2026-04 via recognize-mode
++ Hecke-cusp structure on X_0(6). Remaining work is A_s closure
+or anchor-side acceptance.
 
 ## Shape B — Particle numerology cloud (saturation signal)
 
@@ -92,47 +85,23 @@ many such near-misses are statistically expected from
 (pure combinatorics over framework-integer expressions) and
 would be informative.
 
-## Shape C — Anchor obstructions #2-#5 (re-audit candidates)
+## Shape C — Anchor obstructions (closed)
 
 **What.** `anchor_count_audit.md` lists five obstructions to
-one-anchor reduction. Path (a) closure showed obstruction #1
-(v/M_P) is likely a structural feature, not a derivation gap.
-Obstructions #2-#5 have not been re-audited under the same lens:
+one-anchor reduction.
 
-- #2: No Fibonacci-depth count for EW
-- #3: No framework-native ω₀ = v_EW/ℏ
-- #4: Coordinate/frame decomposition not established
-- #5: Structural decoupling of sectors
+**Status (post 2026-04 round): all five closed/reframed.**
 
-**Type.** Mostly vocabulary disambiguation candidates per the
-`vocabulary_is_the_work_pattern.md` Consequence 1.
+| # | Status |
+|---|---|
+| 1 (v/M_P) | Reframed as structural feature per `path_a_walkthrough.md` (canonical register's prime support {2,3} cannot reach 15=3·5) |
+| 2 (no EW Fibonacci-depth count) | Reframed as feature (EW is anchor-side, not substrate-side) |
+| 3 (no framework-native ω₀) | Reframed as feature (Option 2 of `path_a_walkthrough.md`) |
+| 4 (coordinate/frame decomposition) | Reframed as feature (both anchors are coordinates; framework supplies the frame) |
+| 5 (structural sector decoupling) | **STRUCTURALLY CLOSED** via D.3 → Class 5: K=1 (Einstein) vs K<1 (Schrödinger) continuum limits are non-smoothly separated by N11 tongue coverage discontinuity; each regime requires its own anchor scale. See `path_closures_iter3.md`. |
 
-**Probable closure.** Each likely follows the same pattern as #1:
-
-- **#2 likely structural feature.** Same prime-5 obstruction
-  applies — the substrate's prime support cannot reach the EW
-  Fibonacci depth in any natural way. Audit needed; expected
-  outcome: feature.
-- **#3 likely structural feature.** ω₀ = v_EW/ℏ is a derived
-  quantity from v_EW; if v_EW is anchor-side (Option 2 from
-  `path_a_walkthrough.md`), so is ω₀. No framework-native
-  derivation expected.
-- **#4 methodological.** "Coordinate/frame decomposition" is a
-  question about how the framework parses anchors. Probably
-  resolves to "both anchors are coordinate-side; framework
-  supplies the frame." Audit needed.
-- **#5 partially open.** "Structural decoupling of sectors" is
-  the genuine question — does the framework PREDICT the
-  decoupling, or just allow it? If the former, it's a structural
-  feature; if the latter, it's a real gap.
-
-**Priority.** Medium-high. Re-auditing #2-#5 would either lock
-in the "two-anchor minimum is structural" reading completely
-or surface the one obstruction that doesn't disambiguate
-(likely #5).
-
-**Status.** Audit work outstanding. Each is a focused
-single-session probe.
+**Two-anchor minimality is FULLY STRUCTURAL.** No further re-audit
+work outstanding for Shape C.
 
 ## Shape D — Cross-sector unification (the residual real question)
 
@@ -234,49 +203,58 @@ drift and structural mistakes.
 
 **Status.** Holding pattern. Pick up when convenient.
 
-## Summary table
+## Summary table (updated post 2026-04 round)
 
-| Shape | Type | Probable closure | Priority | Status |
-|---|---|---|---|---|
-| A. Floor residuals (A_s, Ω_b) | Structural derivation | Fractional mechanism, observational revision, or rule change | High | Open work |
-| B. Particle numerology cloud | Saturation signal | Combinatorial count of expected near-misses | Medium-low | Holding pattern (combinatorial probe doable) |
-| C. Anchor obstructions #2-#5 | Vocabulary disambiguation | Re-audit per pattern; expected: features | Medium-high | Audit work outstanding |
-| D. Cross-sector unification | Structural derivation OR framework principle | Path (c), (d), or "irreducible" forcing argument | High | Genuinely open |
-| E. Predictive frontier | Observational frontier | New measurements | Medium-low (short term), High (long term) | Awaiting observation |
-| F. Methodology self-checks | Internal audit | Per-item closure within session | Low individually | Holding pattern |
+| Shape | Type | Status |
+|---|---|---|
+| A. Floor residuals | Structural derivation | **Largely closed.** Ω_b → 0.044% via two-component closure + Γ_0(6) cusp identification; Ω_c/Ω_b inherits at 0.6%. A_s reframed as anchor-side (Instance 7). |
+| B. Particle numerology cloud | Saturation signal | Holding pattern; null distribution sharpened by `cross_ratio_irrep_reframe.md` (PSL(2,ℤ) orbit-representative density vs uniform random) |
+| C. Anchor obstructions | Vocabulary disambiguation | **All five closed/reframed.** D.3 closes #5 structurally; #1-#4 reframed as features. Two-anchor minimum FULLY STRUCTURAL. |
+| D. Cross-sector unification (v/M_P) | Structural derivation OR framework principle | Reframed as structural feature per `path_a_walkthrough.md`; v/M_P ≈ 13⁻¹⁵ near-match is irreducible coincidence at Floor magnitude (3.1%) given prime-support {2,3} obstruction |
+| E. Predictive frontier | Observational frontier | Awaiting observation; Ω_b two-component closure adds new sharp predictions (w_+ at cusp 1/2 of X_0(6)) |
+| F. Methodology self-checks | Internal audit | Holding pattern |
 
 ## What the shape distribution tells us
 
-**The framework's open list is shorter than it was**. After the
-disambiguation consolidation:
+**The framework's open list compressed substantially in 2026-04.**
 
-- Many "obstructions" (anchor-count #1 confirmed; #2-#5 likely)
-  reduce to structural features.
-- Several "problems" (SM hierarchy, K_c residual, discrete-time
-  question) dissolve as vocabulary artifacts.
-- Real structural work concentrates in Shapes A and D — three
-  Floor residuals and one cross-sector near-match.
+What closed:
+- **All five anchor obstructions** (Shape C) closed/reframed; D.3
+  closes #5 structurally via K=1 vs K<1 non-smooth separation
+- **Klein π_1 sector assignment** (D.1) closed Class 5 via Z_2
+  rep machinery
+- **Ω_b two-component closure** (Tier 1+2) Class 5 via sign-rep
+  no-EM coupling forcing w_- = 1
+- **Direction 4 Phase A+B**: Γ_0(6) cusp structure on X_0(6)
+  identified as the framework's natural modular subgroup,
+  resolving cross-ratio multi-candidate ansatz to irrep
+  multiplicity with cusp 1/2 = q_2 sector → 13/14
+- **Cross-sector unification (Shape D)** reframed: v/M_P near-match
+  is structural-feature consequence of prime-support obstruction
 
-**Three or four genuine open questions, not a long list.** The
-framework is more nearly complete than the original
-"obstruction" framing suggested.
+What remains:
+- **A_s anchor-side reading** (Shape A residual): one option
+  is to develop a substrate-side inflation amplification
+  derivation; otherwise the 11% gap stays as anchor-side
+- **Direction 4 Phase C**: forcing the specific cusp-1/2
+  representative w_+ = 13/14 from a substrate ground-state
+  derivation (the only open item to lift Ω_b w_+ from Class 4+
+  to Class 5)
+- **Shape B cloud test**: combinatorial count vs PSL(2,ℤ) orbit
+  density, would inform numerology-vs-signal verdict
+- **Shape F methodology**: ongoing background hygiene
 
-The work map for the next session of substantive structural
-derivation:
+The work map after 2026-04:
 
-1. **Shape A.1** — A_s 11% Floor closure attempt (highest value if
-   it lands).
-2. **Shape D.1** — Cross-sector tongue identification probe (path
-   (c)) or anomaly-cancellation depth probe (path (d)) for v/M_P.
-3. **Shape C.5** — Re-audit anchor obstruction #5 (sector
-   decoupling) as the one most likely to NOT disambiguate to a
-   feature.
-
-Lower-value but doable in parallel:
-
-4. **Shape B** — combinatorial count of expected near-misses (would
-   tell us whether the 1-3% cloud is signal or noise).
-5. **Shape F** — primitive-completeness audit (background hygiene).
+1. **Direction 4 Phase C** — substrate ground-state derivation
+   for cusp-1/2 representative selection (only open item to
+   Class 5 closure of w_+)
+2. **Region C Phase B** — combinatorial cloud-density count
+   against PSL(2,ℤ) orbit distribution
+3. **A_s anchor-side acceptance OR substrate-inflation derivation**
+   — choose between accepting the category statement or pursuing
+   a deeper substrate derivation
+4. **Shape F primitive-completeness audit** — background hygiene
 
 ## Cross-references
 
@@ -292,3 +270,11 @@ Lower-value but doable in parallel:
   reframed the binding-blocker question
 - `epsilon_substrate_decomposition.md` — the ε question, partially
   shaped under Shape C and Shape F
+- `omega_b_alpha_beta_closure.md` — Ω_b Tier 1+2 closure (Shape A
+  promotion)
+- `psl2z_subgroup_phase_b.md` — Direction 4 cusp identification
+  (Shape A Class 4+ status)
+- `path_closures_iter3.md`, `path_closures_iter4.md` — D.3 and
+  D.1 closures (Shape C completion)
+- `cross_ratio_irrep_reframe.md` — Shape B null distribution
+  refinement

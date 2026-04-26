@@ -15,10 +15,18 @@ The pattern was named in commit `9d251df` (Gap 1 K_c residual):
 [...] each 'open problem' dissolved once the correct object was
 named."*
 
-The current finding (`hierarchy_problem_translation.md`) is the
-sixth recorded instance. This file collects them, articulates
-the pattern, and records the test for whether a candidate
-obstruction is a real obstruction or a vocabulary artifact.
+The current count is **nine recorded instances**, with Instance 6
+(`hierarchy_problem_translation.md`) the original consolidation
+trigger. This file collects them, articulates the pattern, and
+records the test for whether a candidate obstruction is a real
+obstruction or a vocabulary artifact.
+
+The most recent additions (Instances 8 and 9) extend the pattern
+into two new modes per `cross_ratio_irrep_reframe.md`'s
+Methodological note: **existing-content articulation** (Instance 8:
+Ω_b α/β closure recognized sign-rep no-EM as already-derived
+content) and **structural multiplicity recognition** (Instance 9:
+multi-candidate ansatz IS Hecke-cusp inhabitation on X_0(6)).
 
 ## The pattern
 
@@ -191,6 +199,88 @@ non-translation. Reopens only if framework develops a substrate-
 side inflation derivation (extending the k-Ω map to a "depth →
 time" map without H_0).
 
+### Instance 8 — Ω_b two-component (α, β) parameters
+(`omega_b_alpha_beta_closure.md`, 2026-04)
+
+**Apparent problem.** "The Ω_b two-component closure introduces
+two parameters (α, β) governing how sym vs antisym boundary
+modes contribute to the partition. Forcing Class 5 needs a
+derivation of (α, β) = (0, 1) and w_- = 1."
+
+**Disambiguation.** The framework already states (per
+`baryon_fraction.md`) that the antisym Klein eigenmode ψ_-(1, 5)
+has Klein-monodromy −1, so its net EM coupling is zero — it
+gravitates only, like dark matter. The MOND-threshold partial-
+locking weight w applies only to modes that have EM coupling
+(see MOND threshold). Antisym modes don't have EM coupling →
+don't see the threshold → are always fully locked.
+**w_- = 1 STRUCTURALLY**, not a free parameter.
+
+**Resolution.** With w_- = 1 forced, (α, β) = (0, 1) follows
+from the corrected mode breakdown (the missing +1 in
+`omega_b_residual_phase_a.md` §2 = the always-locked antisym
+ψ_-(1, 5)). The two-component closure becomes a one-parameter
+fit (only w_+) with all three Planck observables matched to
+0.13%.
+
+**Status.** Class 5 / Survives candidate at the (α, β) +
+mechanism level. The w_+ value subsequently closes via Direction 4
+(see Instance 9). This is a recognize-mode closure: the structural
+content was already in `baryon_fraction.md`; the §2 demotion
+language was a confused restatement.
+
+### Instance 9 — Modular-forms vocabulary for q_2 × q_3 sector taxonomy
+(`psl2z_subgroup_phase_b.md`, 2026-04)
+
+**Apparent problem.** "Multiple framework-integer w_+ candidates
+(13/14, 12/13, 14/15) sit within 1% of observation. No specific
+candidate is uniquely forced; the multi-candidate ansatz pattern
+defaults to Class 2 per `ansatz_audit_policy.md`."
+
+**Disambiguation.** The three candidates are not "noise from
+small-integer pigeonhole." They are distinct PSL(2,ℤ) orbits
+on P¹(ℚ) with disjoint j-invariants
+(`cross_ratio_irrep_reframe.md`). Each candidate labels a
+specific irrep class. The "multi-candidate ansatz" pattern
+IS irrep multiplicity.
+
+Furthermore, the framework's existing q_2 × q_3 = Z_6 mode
+decomposition (per `klein_antipodal_z2_rep_pattern.md`) is
+exactly the cusp structure of X_0(6) at Hecke level
+INTERACT = 6:
+
+- cusp ∞ (denom coprime to 6) ↔ generic (12/13)
+- cusp 1/2 (denom carries q_2 factor) ↔ q_2 sector (13/14)
+- cusp 1/3 (denom carries q_3 factor) ↔ q_3 sector (14/15)
+
+The framework's "sector" vocabulary translates directly to
+"modular cusp" vocabulary. Hecke operators T_2 and T_3 preserve
+the substrate's eigendecomposition because the substrate
+preserves Klein-antipodal Z_2 and color Z_3 separately;
+Γ_0(2) ∩ Γ_0(3) = Γ_0(6) follows by group theory.
+
+**Resolution.** w_+ inhabits cusp 1/2 of X_0(6) (the q_2 cusp
+matching the EM-coupled sym Klein-singlet boundary mode), with
+operating-point representative 13/14. Status promoted from
+Class 2 to **Class 4+**. Single open item to Class 5: derive
+the substrate ground-state representative selection within the
+cusp orbit.
+
+**Status.** Direction 4 Phase A+B closed. The "ansatz" pattern
+was hiding genuine modular structure: each candidate is a
+canonical orbit representative, not a numerological near-miss.
+The framework's Hecke-cusp content was already in the q_2 × q_3
+sector taxonomy but not articulated as such. This is both:
+- a vocabulary disambiguation (multi-candidate ansatz → irrep
+  multiplicity → cusp-class inhabitation), AND
+- an existing-content articulation (q_2 × q_3 = Γ_0(2) ∩ Γ_0(3)
+  cusp structure on X_0(INTERACT))
+
+Cross-references the third recognize-mode pattern named in
+`cross_ratio_irrep_reframe.md` Methodological note: structural
+multiplicity recognition, alongside (1) vocabulary disambiguation
+and (2) existing-content articulation.
+
 ## The disambiguation test
 
 When a candidate obstruction is recorded, run the test:
@@ -310,15 +400,29 @@ When the pattern repeats:
 - `dynamical_tool_audit.md` — Instance 5 (discrete time)
 - `path_a_walkthrough.md` — supporting evidence for Instance 6
 - `klein_antipodal_z2_rep_pattern.md` — canonical positive example
-  (Instance 1 origin)
+  (Instance 1 origin); also the substrate-side derivation
+  underlying Instances 8 and 9
 - `a1_from_saddle_node.md` — Instance 2 origin
 - `omega_b_residual_phase_b.md`, `hybrid_strategy_audit.md` —
   Instance 3 history
 - commit `9d251df` — Instance 4 origin and pattern naming
-- `anchor_count_audit.md` — primary doc requiring re-audit per
-  Consequence 1
-- `framework_status.md` — primary doc requiring update per
-  Consequence 2
+- `a_s_g1_closure_attempt.md` — Instance 7 origin
+- `omega_b_alpha_beta_closure.md` — Instance 8 origin (sign-rep
+  no-EM forces w_- = 1)
+- `baryon_fraction.md` — sign-rep monodromy −1 source content
+  (Instance 8 substrate)
+- `cross_ratio_irrep_reframe.md` — bridge from Instance 8 to
+  Instance 9 (multi-candidate ansatz reframed as irrep
+  multiplicity); names the three recognize-mode patterns
+- `psl2z_subgroup_phase_a_results.md`,
+  `psl2z_subgroup_phase_b.md` — Instance 9 origin (Γ_0(6) cusp
+  identification)
+- `partition_logit_form.md` — q_2 × q_3-sector factorization
+  exposed (parent of Instance 9's modular-cusp reading)
+- `anchor_count_audit.md` — Consequence 1 re-audit; obstructions
+  reframed/closed
+- `framework_status.md` — Consequence 2 update; Survives section
+  carries the two-anchor minimality structural feature
 - `statistical_conventions.md` — Z1-Z3 discipline (one of two
   safeguards against rationalization)
 - `numerology_inventory.md` — audit-trail discipline (the

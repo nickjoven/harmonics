@@ -131,3 +131,15 @@
 2026-04-26T01:44:00Z | put | sync_cost/derivations/omega_b_alpha_beta_closure.md -> fb366d3af850f05972f816adf12120fc0fe6341a4cdb2c6143350eb4b4b26d57
 2026-04-26T01:44:00Z | put | sync_cost/derivations/omega_b_alpha_beta_closure.md -> fb366d3af850f05972f816adf12120fc0fe6341a4cdb2c6143350eb4b4b26d57
 2026-04-26T01:44:00Z | dag:create | 516e19eaa2307d846061da8fcda8b1079f35030b1864f76f4d3d2e5820598b2a
+2026-04-26T02:23:39Z | put | sync_cost/derivations/partition_logit_form.md -> b5217bc7d3960e2a56da643a43173ee67cb6efd351744d4ae5e2ced535412013
+2026-04-26T02:23:39Z | put | sync_cost/derivations/partition_logit_form.md -> b5217bc7d3960e2a56da643a43173ee67cb6efd351744d4ae5e2ced535412013
+2026-04-26T02:23:39Z | dag:create | 9e6532e21c1d8d3b19169c108a528607ebc65aa461092903e793695e62d8a942
+2026-04-26T02:51:45Z | put | sync_cost/derivations/omega_b_w_plus_candidate.md -> 0ba01f67df53f1cb05e968ab241f3e225baeb498a46556afc2df8e47aec7243f
+2026-04-26T02:51:45Z | put | sync_cost/derivations/omega_b_w_plus_candidate.md -> 0ba01f67df53f1cb05e968ab241f3e225baeb498a46556afc2df8e47aec7243f
+2026-04-26T02:51:46Z | dag:create | b44ebdbac1fc451ad2a35aad52cbe2968582169d23c631c8a9a8acb1a1fbc1e5
+2026-04-26T03:12:38Z | put | sync_cost/derivations/omega_b_w_plus_cross_ratio_search.md -> 1b73f54243f034c4360bb7803e500d262d996a2b37011d476531d4a4da42f634
+2026-04-26T03:12:38Z | put | sync_cost/derivations/omega_b_w_plus_cross_ratio_search.md -> 1b73f54243f034c4360bb7803e500d262d996a2b37011d476531d4a4da42f634
+2026-04-26T03:12:38Z | dag:create | 0cac6eb646eb4b5c40cb0760b0cb17db5f2ff558f4b7c8c496508641cb3c4a78
+2026-04-26T03:18:12Z | put | sync_cost/derivations/cross_ratio_irrep_reframe.md -> 033726c44b7a7e70470f21f0bd59f4403f83802996b9f033198d7ee2ffb23d9a
+2026-04-26T03:18:12Z | put | sync_cost/derivations/cross_ratio_irrep_reframe.md -> 033726c44b7a7e70470f21f0bd59f4403f83802996b9f033198d7ee2ffb23d9a
+2026-04-26T03:18:12Z | dag:create | b83f1fecf58d9c779f65afab49cee156564e03df11798fa5a739f860047da0a0
