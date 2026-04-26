@@ -266,3 +266,21 @@ agreement is consistent with that reading.
 | `item12_C_from_K_star.py` | Numerical verification of `a_1(lep) · K* = q_2` at 4 decimal digits |
 | `item12_C_from_K_star.md` | Companion doc: the identity and its PDG status |
 | `item12_cross_sector_ratios.md` | Fibonacci shift (up) and Klein-parity (down) scalings |
+
+## Status
+
+**Class 5 / Survives.** Born rule exponent = 2 derived from the
+saddle-node parabola's universal codimension-1 form. Result is
+exact (no fitted parameters); no other generic exponent on S¹ is
+structurally stable.
+
+Per `framework_status.md` Survives section. Source for: Born rule
+in `derivation_atlas.md` Part V §5.3,
+`phenomenology_cross_reference.md` Section 5 (geometric /
+topological), `canonical_glossary.md` Section 1 (parabola
+primitive).
+
+Z1: ✓ exact; Z2: ✓ no fitted factors; Z3: ✓ only structural
+inputs.
+
+Side: substrate-side.

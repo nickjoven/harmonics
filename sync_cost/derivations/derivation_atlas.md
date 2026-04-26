@@ -1941,3 +1941,26 @@ phenomenological comparison, and end-to-end derivation chain.
 The framework's substantive derivation work is complete on its
 declared scope; the homework that remains is communication, not
 derivation.
+
+## Status
+
+**Atlas v1, 2026-04-26.** End-to-end derivation chain from four
+primitives to ~15 substrate-side Class 5 / Survives predictions
+(Ω partition, R, Λ·ℓ_P², n_s, A_s_substrate, MOND a_0, Born
+rule, gauge group, anomaly cancellation, strong CP, down-type
+factor 6, up-type factor 9, spatial dimension, Lorentz, two-
+anchor minimum, sector decoupling) with explicit substrate-side
+vs anchor-side classification and Z1-Z3 status.
+
+Companion to `canonical_glossary.md` (vocabulary translation)
+and `phenomenology_cross_reference.md` (observation/prediction
+comparison).
+
+Maintenance: update when new closures land, observed values
+shift significantly, or the underlying derivation chain
+extends. The atlas's structure (11 parts) is stable; section-
+level updates as substrate work progresses.
+
+Side: presentation doc; no new derivation content. All
+derivations cited live in their original source files and are
+referenced here.

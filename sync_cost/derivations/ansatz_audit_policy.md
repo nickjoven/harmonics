@@ -134,3 +134,20 @@ derivations from Klein-antipodal Z₂ rep theory):
   pilot audit (G1 null)
 - `CHAIN_KSTAR.md` — worked example of an inline audit (Step 6
   demoted, Steps 1–5 retained)
+
+## Status
+
+**Active methodology document.** The Step 4 default (Class 4 →
+Class 2 if no forcing mechanism within one sitting) is
+calibrated correctly per Region C Phase B
+(`numerology_count_phase_b.md`) PIGEONHOLE verdict at α = 0.05.
+
+Irrep-multiplicity exception (added 2026-04-26) extends the
+policy: when the multi-candidate set is the orbit of a substrate-
+preserved group (per `cross_ratio_irrep_reframe.md` and
+`psl2z_subgroup_phase_b.md`), the standard Class 2 default is
+too strong; status promotes to Class 4+ via subgroup
+identification + orbit-class forcing. Applied to Ω_b w_+
+closure (Class 2 → Class 4+ → Class 5 via L1 closure).
+
+Side: methodology, not prediction.

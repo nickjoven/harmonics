@@ -330,3 +330,19 @@ mechanism, Tier 2 ansatz) is the framework's best landing
   precedent for distinguishing K's
 - `ansatz_audit_policy.md` — pattern recurring across these
   nulls
+
+## Status
+
+**Active null-results registry for K-axis continuity questions.**
+Catalogues N1-N15+ null findings on continuity / smoothness
+across K. N11 (tongue coverage discontinuity at K = 1) is
+load-bearing for the D.3 closure (K = 1 ↔ K < 1 sector
+decoupling) per `path_closures_iter3.md`; cited in
+`derivation_atlas.md` Part VI §6.3.
+
+Side: methodology + null catalog. Individual nulls are not
+predictions; collectively they constrain what continuity
+arguments the framework can support.
+
+Maintenance: append new nulls as they are identified during
+substrate audits.

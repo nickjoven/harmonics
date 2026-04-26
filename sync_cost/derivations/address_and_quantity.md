@@ -61,3 +61,12 @@ else — the circle, the tree, the Klein bottle, the three dimensions,
 the gauge groups, the mass hierarchy, the cosmological constant —
 is the self-consistent address book of a universe that can describe
 itself.
+
+## Status
+
+**Conceptual orientation document.** Articulates the address /
+quantity distinction underlying the framework's two-anchor
+minimum (per `anchor_count_audit.md` and D.3 closure). Cited as
+context in `coupling_scales.md` and `mass_sector_closure.md`.
+
+Side: conceptual / methodological, not prediction.

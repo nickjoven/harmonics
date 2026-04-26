@@ -1,5 +1,19 @@
 # The Baryon Fraction
 
+> **Forward-pointing note (2026-04-26)**: this doc establishes
+> the framework's static (single-w, w = 1) cosmic partition
+> prediction Ω_Λ : Ω_DM : Ω_b = 13 : 5 : 1 / 19. The 2026-04
+> closure round refined this to a **two-component closure** with
+> w_+ = 13/14 from the substrate's cusp-1/2 ground state on
+> X_0(6); see `omega_b_alpha_beta_closure.md` for the (α, β) =
+> (0, 1) two-component partition formulas and
+> `L1_substrate_cusp_ground_state.md` for the L1 closure that
+> derives w_+ = 13/14 in recognize mode. Under the two-component
+> closure: Ω_b = 13/264 (0.12% off observed), Ω_DM = 35/132
+> (0.06%), Ω_Λ = 181/264 (0.13%). Both single-w and two-component
+> are framework Class 5 predictions; the single-w is the static
+> limit, the two-component is the operating-point refinement.
+
 ## Claim
 
 The cosmic energy budget partitions into three sectors from the

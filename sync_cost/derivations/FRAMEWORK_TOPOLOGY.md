@@ -381,3 +381,17 @@ structural item. The most robust point is the cross-link uniqueness
 read. If it grows, split it by sector (mass, gauge, cosmology,
 gravity, QM) rather than by depth, and let each sector point back
 at its L0/L1 inputs.*
+
+## Status
+
+**Canonical structural map of the framework's derivation
+topology.** Maps L0 (primitives) → L1 (substrate primitives) →
+L2 (sector quantities) → L3+ (predictions). Maintained as
+derivations are added or restructured.
+
+Cross-checks: `INDEX.md` for D-number → filename mapping;
+`MANIFEST.yml` for canonical predictions; `framework_status.md`
+for closure status.
+
+Side: structural map, not prediction. Used by both human and
+LLM readers to navigate the derivation chain.

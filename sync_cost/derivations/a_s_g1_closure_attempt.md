@@ -1,5 +1,28 @@
 # A_s Floor closure attempt G1: anchor-import barrier
 
+> **Closure update (2026-04-26)**: the reframe identified by
+> this doc was formally **ACCEPTED** as Instance 7 of
+> `vocabulary_is_the_work_pattern.md`. A_s = 2.33×10⁻⁹ is the
+> framework's complete substrate-side prediction; the 11% gap
+> to A_s_obs = 2.10×10⁻⁹ is the inflation amplification factor
+> f_amp = (H_inf/M_P)²/(8π²·ε·c_s), anchor-side; the framework
+> correctly declines to predict both A_s_obs and f_amp's
+> magnitude. Per Region C Phase B (`numerology_count_phase_b.md`),
+> the multi-candidate framework-integer expressions matching
+> f_amp ≈ 0.9 are pigeonhole at α = 0.05; no framework-internal
+> claim about the 11% magnitude.
+>
+> Status promoted: this Floor entry is now CLOSED via Instance 7
+> acceptance. The substrate-side prediction A_s_substrate =
+> 2.33×10⁻⁹ moves to Survives in `framework_status.md`. See
+> `vocabulary_is_the_work_pattern.md` Instance 7 for the
+> formal closure verification.
+>
+> Same structural shape as v/M_P closure (Path (a),
+> `path_a_walkthrough.md`) and lattice-QCD bare-versus-
+> renormalized distinction. Original closure attempt below
+> retained as audit-trail for the reframe path.
+
 ## What this file is
 
 A focused record of attempting Shape A.1 from
@@ -257,3 +280,24 @@ statement, not a closeable gap.
   (consistency relation, n_s-dependent)
 - `epsilon_substrate_decomposition.md` C2 — the "if substrate
   forces ε" path that would also unlock this
+
+## Status
+
+**A_s closure: ACCEPTED as Instance 7 of
+`vocabulary_is_the_work_pattern.md` (2026-04-26).** The
+substrate-side prediction A_s_substrate = 2.33×10⁻⁹ is the
+framework's complete native claim; the 11% gap to A_s_obs =
+2.10×10⁻⁹ is the inflation amplification factor f_amp,
+anchor-side (depends on H_inf + ε). Framework correctly declines
+to predict both A_s_obs and f_amp magnitude.
+
+Class: Survives (substrate-side prediction; promoted from Floor
+to Survives in `framework_status.md`).
+
+Side: substrate-side (A_s_substrate); anchor-side (A_s_obs and
+f_amp).
+
+Same structural shape as v/M_P closure (Path (a)) and
+lattice-QCD bare-vs-renormalized distinction. Reopens only if
+the framework develops a substrate-side inflation derivation
+(reading b: extension, not gap closure).
