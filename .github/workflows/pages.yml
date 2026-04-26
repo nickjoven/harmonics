@@ -84,7 +84,8 @@ jobs:
             _site/docs/claim-chain-views.html \
             _site/docs/glossary.html \
             _site/docs/derivations.html \
-            _site/docs/cmb-s4.html
+            _site/docs/cmb-s4.html \
+            _site/docs/preprint.html
 
   # Runs only on push to main, gated on validate.  Real Pages deploy.
   deploy:
