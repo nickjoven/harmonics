@@ -330,6 +330,63 @@ physics background. Each step is grounded in well-vetted standard
 material (Stribeck, Arnold, MOND, Einstein, Schrödinger, Planck);
 the framework's contribution is the specific composition.
 
+## The constraint in one equation
+
+The framework's medium / dynamics distinction admits a compact
+formal statement in one line. For a continuous map $f$ on a
+phase space, the simultaneous fixed-point and integer-winding
+conditions read:
+
+$$f^{\,q}(x) = x + p, \qquad p, q \in \mathbb{Z}.$$
+
+This is the periodic-orbit condition for a winding number $p/q$.
+What it encodes, item by item:
+
+- **The phase space is forced to be $S^1 = \mathbb{R}/\mathbb{Z}$.**
+  The condition $f^q(x) = x$ in the phase space combined with
+  $f^q(x) = x + p$ in the unfolded space forces $p \equiv 0$ in
+  the phase space. Since $p \in \mathbb{Z}$ is arbitrary, the
+  phase space must quotient by $\mathbb{Z}$. The circle topology
+  is derived, not postulated.
+- **Discreteness is the joint constraint, not a separate postulate.**
+  The continuous map $f$ is constrained to satisfy two conditions
+  at once. The output is integer-valued labels $(p, q)$; the input
+  is continuous dynamics. No quantization is added; the discreteness
+  emerges from the simultaneous constraint.
+- **All four primitives are present operationally.** Integers
+  ($p, q$). Fixed-point ($f^q(x) = x$ at $p \equiv 0$). Parabola
+  (the saddle-node universality at every tongue boundary, where
+  $f^q(x) - x$ acquires a double root). Mediant (the rationals
+  $p/q$ generate $\mathbb{Q}$ via Stern-Brocot enumeration; the
+  set of locked states inherits this enumeration).
+- **Self-consistency follows when $f$ depends on the orbit
+  structure it generates.** $K = K[N(K)]$ is the same equation
+  written at the population level rather than the orbit level: a
+  continuous coupling whose value depends on which locked states
+  are populated, populated according to which states are stable
+  at that coupling. The fixed-point structure is identical.
+- **The framework integers are admissible $(p, q)$ pairs under
+  the substrate's compact symmetries.** Restricting to $S^1
+  \times \mathbb{Z}_2 \times \mathbb{Z}_3$ (the substrate's
+  specific compact symmetries) selects $\{q_2, q_3, |F_n|, ...\}$
+  as the admissible periods. The cosmic partition counts these
+  admissible $(p, q)$ at Farey depth 7 under the framework's
+  filters.
+- **The two regimes are visible in the equation.** At $K = 1$
+  every rational $(p, q)$ admits a stable orbit (continuum
+  filling, Einstein limit). At $K < 1$ only specific rationals
+  admit stable orbits (discrete record, Schrödinger substrate).
+  The same equation governs both; the coupling parameter
+  determines which regime the dynamics sits in.
+
+The equation does not require text to interpret for a reader
+who knows dynamical systems. It is the single visual focal point
+for the framework's constraint inversion: the medium is continuous,
+the dynamics is constrained, the discreteness is what is record-kept.
+
+The verbal articulation of the same content is the chain summary
+below.
+
 ## Chain summary
 
 The derivation chain from standard physics to the framework's
