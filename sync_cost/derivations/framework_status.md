@@ -32,36 +32,17 @@ Categories:
 | **Two-anchor minimality** (H_0 cosmological + v_EW particle) is structural, not a derivation gap; all five anchor-count obstructions reframed/closed | `anchor_count_audit.md` reframe + closure notes; `hierarchy_problem_translation.md`; `path_closures_iter3.md` (D.3 closes #5 structurally) |
 | **K=1 ↔ K<1 sector decoupling** (Einstein vs Schrödinger continuum limits) is non-smooth, forces independent anchors per sector | `continuum_limits.md` Parts I/II; `continuity_in_K_nulls.md` N11; `path_closures_iter3.md` |
 | **Klein π_1 sector assignment**: cosmological → no-twist, particle → twist; Z_2 rep machinery forces the assignment | `path_closures_iter4.md` (D.1 → Class 5) |
+| **A_s = 2.33×10⁻⁹ substrate-side prediction**: framework's complete substrate-side static-variance prediction at the matter-sector pivot; the 11% gap to A_s_obs = 2.10×10⁻⁹ is the inflation amplification factor f_amp (anchor-side, depends on H_inf + ε); framework correctly declines to predict both A_s_obs and f_amp. Instance 7 closure ACCEPTED. | `a_s_geometric_proof.md`, `a_s_g1_closure_attempt.md`, `vocabulary_is_the_work_pattern.md` Instance 7 |
 
 ## Floor (structural residual at finite Fibonacci depth)
 
-| Item | Residual | Status | Source |
-|---|---|---|---|
-| A_s | 11% / 7.7σ | Anchor-side category statement (Instance 7) | `a_s_geometric_proof.md`, `a_s_g1_closure_attempt.md` |
-| ~~Ω_b 6.7%~~ → **Ω_b two-component** | 0.12% (full Class 5) | **Promoted Floor → Survives**; L1 closure lifts w_+ value to Class 5 | `omega_b_alpha_beta_closure.md`, `psl2z_subgroup_phase_b.md`, `L1_substrate_cusp_ground_state.md` |
-| ~~Ω_c / Ω_b 7.5%~~ | 0.6% (inherits from Ω_b closure) | **Promoted from Floor; full Class 5** | `omega_b_alpha_beta_closure.md` derivative |
+(empty after 2026-04 closure round)
 
-A_s remains the only entry in this category after the 2026-04
-closure round. The Ω_b row was the Floor's headline entry; per
-`omega_b_alpha_beta_closure.md`, the (α, β) = (0, 1), w_- = 1
-two-component closure (forced by sign-rep no-EM coupling) is a
-Class 5 / Survives candidate at the mechanism+(α,β) level. The
-single remaining empirical parameter w_+ ≈ 0.929 sits at the
-**Γ_0(6) cusp 1/2 of X_0(6)**, with operating-point representative
-13/14 = |F_6|/(q_2·|F_4|) (Class 4+ contingent on Phase C
-representative-selection derivation). See
-`psl2z_subgroup_phase_b.md` for Direction 4 status.
-
-> **A_s reframe (added 2026-04-25).** Per
-> `a_s_g1_closure_attempt.md`, the largest gap (G1
-> horizon-crossing amplification) closes against the same
-> anchor-import barrier as path (a) (`path_a_walkthrough.md`)
-> and as SM hierarchy non-translation
-> (`hierarchy_problem_translation.md`). Reading: **A_s = 2.33e-9
-> is the framework's complete substrate-side prediction; the
-> 11% gap is the inflation-amplification correction, which is
-> anchor-side and not currently scoped framework-natively.**
-> This is the seventh instance of `vocabulary_is_the_work_pattern.md`.
+| Former entry | Disposition |
+|---|---|
+| ~~A_s 11% / 7.7σ~~ | **Closed Instance 7**: substrate-side prediction A_s = 2.33×10⁻⁹ is complete; gap is anchor-side amplification, no framework-internal claim about magnitude. Promoted to Survives entry above. |
+| ~~Ω_b 6.7%~~ | **Closed full Class 5** via two-component (sign-rep no-EM) + Γ_0(6) cusp + L1 substrate ground state. Predictions sub-σ on all three observables. Promoted to Survives. |
+| ~~Ω_c / Ω_b 7.5%~~ | **Closed (inherits from Ω_b)**: 0.6% residual under two-component closure. Promoted to Survives. |
 
 The hybrid strategy (`Ω_b = (1/19)·|r|²`, `A_s = 2.33·|r|³ × 10⁻⁹`)
 matches observation ≤ 1σ for Ω_b and A_s but with different

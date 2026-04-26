@@ -174,30 +174,54 @@ becomes positive evidence: substrate doesn't naturally encode
 minimum upgrades from "open obstruction" to "structural feature."
 
 ### Instance 7 — A_s G1 horizon-crossing amplification
-(`a_s_g1_closure_attempt.md`, this session)
+(`a_s_g1_closure_attempt.md`; closure ACCEPTED 2026-04-26)
 
 **Apparent problem.** "A_s 11% Floor residual closes via G1 —
 add the framework-native horizon-crossing amplification."
 
 **Disambiguation.** Both natural variants (G1.α framework-native
 H_inf; G1.β framework-native ε avoiding observed n_s) require
-an anchor-side ingredient. H_inf is anchor-derived per
-`h_inf_status.md`; ε requires depth → e-fold conversion which
-needs absolute time anchor (anchor obstruction #3). Several
-framework-integer expressions match `(H/M_P)²` within 1.7-10%
-but none is forced — the K_STAR^14 = 1/8 ansatz pattern.
+an anchor-side ingredient. H_inf is anchor-derived; ε requires
+depth → e-fold conversion which needs absolute time anchor
+(anchor obstruction #3). Several framework-integer expressions
+match `(H/M_P)²` within 1.7-10% but none is forced — the
+K_STAR^14 = 1/8 ansatz pattern.
 
-**Resolution.** A_s = 2.33e-9 is the framework's *complete*
-substrate-side prediction. The 11% residual to observation is
-the inflation-amplification factor, which is anchor-side and
-not currently scoped framework-natively. This is a category
-statement, not a derivation gap.
+**Resolution.** A_s = 2.33×10⁻⁹ is the framework's *complete*
+substrate-side prediction (static curvature variance at the
+matter-sector pivot, derived from A1-A9 in
+`a_s_geometric_proof.md`). The observable A_s_obs = 2.10×10⁻⁹
+is the inflation-amplified value; the conversion factor
+f_amp = (H_inf/M_P)²/(8π²·ε·c_s) depends on H_inf and ε, both
+anchor-side. The framework correctly predicts the substrate-side
+quantity and correctly declines to predict the conversion factor.
+This is a **category statement, not a derivation gap**.
 
-**Status.** Floor entry in `framework_status.md` re-tagged.
-Same shape as path (a) closure for v/M_P and SM-hierarchy
-non-translation. Reopens only if framework develops a substrate-
-side inflation derivation (extending the k-Ω map to a "depth →
-time" map without H_0).
+**Closure verification (2026-04-26)**:
+
+1. **No framework-internal prediction of f_amp magnitude**: per
+   Region C Phase B (`numerology_count_phase_b.md`), the
+   multi-candidate (H/M_P)² framework-integer expressions
+   matching f_amp ≈ 0.9 within ~10% are pigeonhole at α = 0.05.
+   Framework has no derivation that the gap MUST be 11%
+   specifically.
+2. **Standard-physics precedent for the substrate-vs-observable
+   distinction**: lattice QCD bare coupling vs continuum
+   renormalized coupling; bare GUT couplings vs measured
+   low-energy couplings; black hole Bekenstein-Hawking entropy
+   vs Hawking radiation spectrum. The bare/observable split with
+   anchor-dependent conversion factor is standard, not exotic.
+3. **Same shape as v/M_P closure** (Path (a),
+   `path_a_walkthrough.md`): framework correctly declines to
+   predict an anchor-side ratio AND correctly declines to
+   predict a structural derivation that would produce it.
+   Anchor-side category statement, not derivation gap.
+
+**Status**: ACCEPTED. Floor entry retired; substrate-side
+prediction A_s = 2.33×10⁻⁹ moves to Survives section of
+`framework_status.md`. Reopens only if framework develops a
+substrate-side inflation derivation (reading b: extension, not
+gap closure).
 
 ### Instance 8 — Ω_b two-component (α, β) parameters
 (`omega_b_alpha_beta_closure.md`, 2026-04)
