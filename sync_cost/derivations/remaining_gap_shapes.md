@@ -246,9 +246,10 @@ What remains:
 
 The work map after 2026-04:
 
-1. **Direction 4 Phase C** — substrate ground-state derivation
-   for cusp-1/2 representative selection (only open item to
-   Class 5 closure of w_+)
+1. ~~Direction 4 Phase C~~ — **closed; w_+ = 13/14 lifts to Class 5**
+   per `L1_substrate_cusp_ground_state.md` + `w_plus_formalization.md`.
+   L1 closes via composition of MOND smooth crossover + EM lock-in
+   + substrate discreteness + local linearity. Recognize-mode.
 2. ~~Region C Phase B~~ — **closed; PIGEONHOLE verdict** per
    `numerology_count_phase_b.md`. Cloud is noise; further
    near-match closure attempts will land Class 2 by construction.
@@ -256,6 +257,11 @@ The work map after 2026-04:
    — choose between accepting the category statement or pursuing
    a deeper substrate derivation
 4. **Shape F primitive-completeness audit** — background hygiene
+
+After this round: items 3 and 4 are the only outstanding
+items. Item 3 is largely a status decision; item 4 is hygiene.
+The framework's substantive derivation work is complete on the
+2026-04 round's headline targets.
 
 ## Cross-references
 

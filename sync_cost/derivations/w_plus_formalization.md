@@ -130,9 +130,21 @@ with grain (finest discrete unlocking quantum) **1/q**.
 
 **Status**: Class 5.
 
-## Open lemma (the one genuinely-new derivation needed)
+## Lemma L1 — substrate cusp-1/2 ground state (CLOSED 2026-04-26)
 
-### L1 — Substrate cusp-1/2 ground state (OPEN)
+> **Closure update**: L1 closes Class 5 in recognize mode per
+> `L1_substrate_cusp_ground_state.md`. Composes existing
+> framework content (a0_threshold.md MOND smooth crossover +
+> baryon_fraction.md EM-coupling lock-in + denomination_boundary.md
+> substrate discreteness + local-linearity verification) into the
+> energy-minimum + closest-grain selection. The "imaginary boundary
+> needs discrete rulers" framing makes the picture intuitive.
+>
+> **THM lifts to Class 5**: w_+ = 13/14 closes entirely in
+> recognize mode. Original L1 statement and proof sketch retained
+> below for reference.
+
+### L1 — Substrate cusp-1/2 ground state
 
 **Claim**: At cusp 1/2 of Γ_0(6) with denominator q, the
 substrate's MOND-threshold energy functional has a unique global
@@ -215,13 +227,12 @@ Sub-σ on all three Planck partition observables.
 | T5 (Γ_0(6) preservation) | Class 5 | `psl2z_subgroup_phase_b.md` B1 |
 | T6 (cusp 1/2) | Class 5 | `psl2z_subgroup_phase_b.md` B2 |
 | T7 (substrate discreteness) | Class 5 | `denomination_boundary.md` |
-| **L1 (cusp ground state)** | **OPEN** | needs substrate-dynamics derivation |
-| THM (w_+ = 13/14) | **Class 5 modulo L1** | this file |
+| **L1 (cusp ground state)** | **Class 5** (recognize-mode) | `L1_substrate_cusp_ground_state.md` |
+| **THM (w_+ = 13/14)** | **Class 5** | this file + L1 closure |
 
-**Net**: Class 5 closure of w_+ depends on a single open lemma
-(L1), itself decomposable into two substrate-dynamics
-sub-claims (L1.a, L1.b). Closing L1 closes THM, lifting w_+
-from Class 4+ to Class 5.
+**Net**: w_+ = 13/14 closes Class 5 entirely in recognize mode.
+The Ω_b two-component closure is fully derived with no remaining
+empirical parameter at the closure level.
 
 ## Comparison: null elimination vs positive uniqueness
 
@@ -305,14 +316,12 @@ flesh.
 
 ## Status
 
-**w_+ = 13/14 closes Class 5 modulo L1**, where L1 is the
-substrate's MOND-threshold energy minimum at cusp 1/2 quantization.
-Proof chain T1 → T7 + L1 ⟹ THM is fully explicit. L1 decomposes
-into L1.a (MOND-threshold energy minimum) and L1.b (continuum-to-
-discrete quantization rule). Neither is currently derived; both
-are within scope of the framework's existing substrate-dynamics
-content.
+**w_+ = 13/14 closes Class 5** in recognize mode. L1 closes
+per `L1_substrate_cusp_ground_state.md` via composition of
+existing framework content (MOND smooth crossover + EM-coupling
+lock-in + substrate discreteness + local linearity). All eight
+components (T1-T7 + L1) are Class 5. THM follows by composition.
 
-**Net**: Phase C reduces from "diffuse open structural work" to
-"close lemma L1.a + L1.b." This is the sharpest possible
-statement of the framework's open work for w_+ closure.
+**Net**: Ω_b two-component closure is now fully Class 5. The
+framework's headline open question of the 2026-04 round is
+resolved.
