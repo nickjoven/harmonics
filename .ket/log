@@ -134,3 +134,6 @@
 2026-04-26T02:23:39Z | put | sync_cost/derivations/partition_logit_form.md -> b5217bc7d3960e2a56da643a43173ee67cb6efd351744d4ae5e2ced535412013
 2026-04-26T02:23:39Z | put | sync_cost/derivations/partition_logit_form.md -> b5217bc7d3960e2a56da643a43173ee67cb6efd351744d4ae5e2ced535412013
 2026-04-26T02:23:39Z | dag:create | 9e6532e21c1d8d3b19169c108a528607ebc65aa461092903e793695e62d8a942
+2026-04-26T02:51:45Z | put | sync_cost/derivations/omega_b_w_plus_candidate.md -> 0ba01f67df53f1cb05e968ab241f3e225baeb498a46556afc2df8e47aec7243f
+2026-04-26T02:51:45Z | put | sync_cost/derivations/omega_b_w_plus_candidate.md -> 0ba01f67df53f1cb05e968ab241f3e225baeb498a46556afc2df8e47aec7243f
+2026-04-26T02:51:46Z | dag:create | b44ebdbac1fc451ad2a35aad52cbe2968582169d23c631c8a9a8acb1a1fbc1e5
