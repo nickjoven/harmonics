@@ -80,3 +80,54 @@
 2026-04-25T03:20:14Z | put | sync_cost/derivations/framework_status.md -> 88ee95cc5f1ed81d0647ba4ef75021906d9f19c115cf5d9726fca976e8c826aa
 2026-04-25T03:20:14Z | put | sync_cost/derivations/anchor_count_audit.md -> 1299d65a7501f0d49221d73ea2c222f380b199f09c8754e3b8fcb3af1a5fed75
 2026-04-25T03:20:37Z | dag:create | 56646ebb4fe0910f6214379e17784f51561172f8514dde6c53704af7ee971d8c
+2026-04-25T04:08:59Z | put | sync_cost/derivations/remaining_gap_shapes.md -> b33e13048dcbd2d675f4f60eaef4ffd792555da4ebf1786d94f4bffabec1b7c5
+2026-04-25T04:08:59Z | put | sync_cost/derivations/remaining_gap_shapes.md -> b33e13048dcbd2d675f4f60eaef4ffd792555da4ebf1786d94f4bffabec1b7c5
+2026-04-25T04:08:59Z | dag:create | 7d2ee1fa1363f7ef948da11d1b3ada070b334abac5c9bba79a21dc64f8bb593f
+2026-04-25T17:42:57Z | put | sync_cost/derivations/a_s_g1_closure_attempt.md -> 204f42fbf8353bb236e43e9356406fb781fc51d3697e49cbcd5bf6df546e936d
+2026-04-25T17:42:57Z | put | sync_cost/derivations/framework_status.md -> 0887fe5b9b0b7b42c838a915ca435e7fc9bee44dcea0e7ff8d276ebc850e5dce
+2026-04-25T17:42:57Z | put | sync_cost/derivations/vocabulary_is_the_work_pattern.md -> 01e35b23b4d24fbc4b057feaa8b9372ad9b7b5ae29c23e6ae7055e0746aaeba8
+2026-04-25T17:43:16Z | dag:create | b66de0e5f388ab477bd61926228e89499e57eac6f083afe7e39060de36a98806
+2026-04-25T17:54:08Z | put | sync_cost/derivations/omega_b_substrate_side_audit.md -> 8446172ca4ae53413cf808bda6c54e54c5e1a2f9aa816d176fac22e19fb7155f
+2026-04-25T17:54:08Z | put | sync_cost/derivations/framework_status.md -> 1bfdc8391e13143569d08f67baab66c80887628d9eff9a6dc640e4f081171b51
+2026-04-25T17:54:19Z | dag:create | cbda3235293331493ced78d7e919130ca3a1efe65ad72a0b456cc47f9728a8bc
+2026-04-25T19:33:09Z | put | sync_cost/derivations/omega_b_c5_closure.md -> a839e172a185b73796bf741473f2cb850677d2c34d8be0763884748a8a53c131
+2026-04-25T19:33:25Z | dag:create | 3b66249e557bf6bb4f88da8f22bce4ee3e32ccbc746247c9232a4a7b20f432af
+2026-04-25T20:32:40Z | put | sync_cost/derivations/omega_b_c5_beta_audit.md -> 2c839eddc04210a134f9e90545549f043fd3907a4cedfa7d1c7b230b530fd147
+2026-04-25T20:32:40Z | put | sync_cost/derivations/framework_status.md -> 804db3806ea051afd1664173fe268b2702177d521e9beff8b9b115905809bd24
+2026-04-25T20:32:54Z | dag:create | 93c69466a2d0db40932a124402a9d304070798981e6833e49ec8581f8fb316eb
+2026-04-25T20:56:13Z | put | sync_cost/derivations/continuity_in_K_nulls.md -> f141c99a67cf6c18d1c2263f2799735d24cb3b404b3070b0a9d8a44c8bfe4b07
+2026-04-25T20:56:13Z | put | sync_cost/derivations/continuity_in_K_nulls.md -> f141c99a67cf6c18d1c2263f2799735d24cb3b404b3070b0a9d8a44c8bfe4b07
+2026-04-25T20:56:13Z | dag:create | 677f70ff5c3ff59c811725d6aa02157246f5abde0b91c542d1c6a29f1dff8319
+2026-04-25T21:15:27Z | put | sync_cost/derivations/omega_b_two_component_sketch.md -> f3ecf7b7d97178d45f86c31193fe86f6237d219ddd46229543da8c52db8848cb
+2026-04-25T21:15:27Z | put | sync_cost/derivations/omega_b_two_component_sketch.md -> f3ecf7b7d97178d45f86c31193fe86f6237d219ddd46229543da8c52db8848cb
+2026-04-25T21:15:27Z | dag:create | a31ba33a301153f2f508fa53451498a13d6ad47dbaaf936458cbfe2ae6a49a85
+2026-04-25T22:35:38Z | put | sync_cost/derivations/klein_dynamics_roadmap.md -> c39f1b05c2034a9350cd3c010765d08090723a9227534509a9058c79040e6343
+2026-04-25T22:35:38Z | put | sync_cost/derivations/klein_dynamics_roadmap.md -> c39f1b05c2034a9350cd3c010765d08090723a9227534509a9058c79040e6343
+2026-04-25T22:35:38Z | dag:create | 8fa81600cdd901f2bdcb792dce440d76fa445a95c531c8de83975feecc768cc8
+2026-04-25T23:04:14Z | put | sync_cost/derivations/klein_bridge_audit_and_probe.md -> fd16b4ad9e654b3e546d300bbc8a6e76025cdd1e22b0c2745743bc2888bc9b93
+2026-04-25T23:04:14Z | put | sync_cost/derivations/klein_bridge_audit_and_probe.md -> fd16b4ad9e654b3e546d300bbc8a6e76025cdd1e22b0c2745743bc2888bc9b93
+2026-04-25T23:04:14Z | dag:create | fba792147c9dc63f0c300745e5943b525d8cff18c97ccf1b680c72bf36c912a0
+2026-04-25T23:46:56Z | put | sync_cost/derivations/numerology_count_phase_a.md -> 2d6a979f944f1aad57abe05bf249e797480225fde6bec397694b10d6f665edb0
+2026-04-25T23:46:56Z | put | sync_cost/derivations/sector_decoupling_phase_a.md -> 30b363c1a095ef582d10e494b5c50aad4b1b884b930eacf2844a2cb836ea0cef
+2026-04-25T23:46:56Z | put | sync_cost/derivations/framework_status.md -> 5abedf021f27f32aaf29c2aded13fba4b0216995b5e1342d148f4d120999a40b
+2026-04-25T23:47:09Z | dag:create | 3f50170354c72cbca19a88186f2beadbc4f4368339a97ed9e53f3e3697996892
+2026-04-25T23:56:15Z | put | sync_cost/derivations/path_closures_iter1.md -> 0736ce3e22f353aa79e5f541a30b5cc8c973f6e00d0a173b0e5d27e348a8f5d6
+2026-04-25T23:56:15Z | put | sync_cost/derivations/path_closures_iter1.md -> 0736ce3e22f353aa79e5f541a30b5cc8c973f6e00d0a173b0e5d27e348a8f5d6
+2026-04-25T23:56:15Z | dag:create | dc2fdac4d48f6e5721fa773c5e525e39acce8234494f0008f90aec7edd4612f9
+2026-04-26T00:05:41Z | put | sync_cost/derivations/path_closures_iter2.md -> 6586bebf9bc0737a62834dbca4a1188178efe7b25ac213958dfea9469a1ff4c2
+2026-04-26T00:05:41Z | put | sync_cost/derivations/path_closures_iter2.md -> 6586bebf9bc0737a62834dbca4a1188178efe7b25ac213958dfea9469a1ff4c2
+2026-04-26T00:05:42Z | dag:create | 784e0af54edb954dfdde64439efbaa136b89ada372a3cc5f92daf5f76a7772e4
+2026-04-26T00:19:59Z | put | sync_cost/derivations/path_closures_iter3.md -> dfca9cd15aa4fc77a28e2d42e4d5f6f168bddaa1a7348c465e8daa62bf1cfa65
+2026-04-26T00:19:59Z | put | sync_cost/derivations/anchor_count_audit.md -> bbca8ac4f804a3f5b9216e4b13a52f28184a1a47f66af62add1a4996749bb7af
+2026-04-26T00:19:59Z | put | sync_cost/derivations/path_closures_iter3.md -> dfca9cd15aa4fc77a28e2d42e4d5f6f168bddaa1a7348c465e8daa62bf1cfa65
+2026-04-26T00:19:59Z | put | sync_cost/derivations/anchor_count_audit.md -> bbca8ac4f804a3f5b9216e4b13a52f28184a1a47f66af62add1a4996749bb7af
+2026-04-26T00:19:59Z | dag:create | 25b727bca791f2080a2375ab9dad78d7f911eaea5b04d4326372615234eeb471
+2026-04-26T00:54:05Z | put | sync_cost/derivations/path_closures_iter4.md -> d98226d8906e8edcc992b2d728ed205c9deabdaff3452480b797cb2ebb77697e
+2026-04-26T00:54:05Z | put | sync_cost/derivations/path_closures_iter4.md -> d98226d8906e8edcc992b2d728ed205c9deabdaff3452480b797cb2ebb77697e
+2026-04-26T00:54:05Z | dag:create | e3f853a75809bf9177d16ed2476dcf66b79afb569b2b5629c5e25066abddf4f5
+2026-04-26T01:34:44Z | put | sync_cost/derivations/omega_b_alpha_beta_phase_b.md -> 00897f62a48645ce82cd2f0af79c8c00014cb7a0897535fb790092d02160ca70
+2026-04-26T01:34:44Z | put | sync_cost/derivations/omega_b_alpha_beta_phase_b.md -> 00897f62a48645ce82cd2f0af79c8c00014cb7a0897535fb790092d02160ca70
+2026-04-26T01:34:45Z | dag:create | e3f641077a21c0acc0cd4755766fd4671f1f7784f3d6eca04c382eafe7cd3770
+2026-04-26T01:44:00Z | put | sync_cost/derivations/omega_b_alpha_beta_closure.md -> fb366d3af850f05972f816adf12120fc0fe6341a4cdb2c6143350eb4b4b26d57
+2026-04-26T01:44:00Z | put | sync_cost/derivations/omega_b_alpha_beta_closure.md -> fb366d3af850f05972f816adf12120fc0fe6341a4cdb2c6143350eb4b4b26d57
+2026-04-26T01:44:00Z | dag:create | 516e19eaa2307d846061da8fcda8b1079f35030b1864f76f4d3d2e5820598b2a

@@ -157,23 +157,6 @@ Consequence 1 is recommended.
 
 ---
 
-## Active multi-session derivations (2026-04-25)
-
-After the "honest landing loop" finding (`klein_bridge_audit_and_probe.md`)
-that single-session probes converge on Class 4-mechanism / Class 2-
-parameters by construction, the framework's active derivation work
-shifted to multi-session structural derivations:
-
-| Region | Phase A doc | Status |
-|---|---|---|
-| **C — Numerology count** | `numerology_count_phase_a.md` | Phase A complete; Phase B (the count) is the next-attempted multi-session work. Tests whether the framework's 1-3% near-match cloud is statistically expected (pigeonhole) or anomalously dense (signal). Binary outcome breaks the loop. |
-| **D — Sector decoupling** | `sector_decoupling_phase_a.md` | Phase A complete; Phase B deferred until Region C completes. Six candidate sources (Klein π_1 generators, q_2/q_3 prime split, K=1/K<1 regime, etc.). Anchor obstruction #5 — deepest open framework derivation. |
-
-Single-session audit work paused for these. New audit probes
-(further C5 β refinements, more Klein-bridge attempts, etc.)
-deferred until Region C produces its binary verdict, which
-informs Region D candidate selection.
-
 ## Usage
 
 Adding a new framework prediction? Check this map first. If the

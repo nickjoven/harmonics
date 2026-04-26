@@ -60,26 +60,9 @@ observational revision, or a structural rule change.
 > λ_unlock, no q_pivot, no anchor-derived input). The 6.7%
 > residual is genuinely substrate-side — the **first Floor entry
 > to remain as real structural work after the disambiguation
-> pattern was applied**.
->
-> **C5 closure attempt (`omega_b_c5_closure.md` +
-> `omega_b_c5_beta_audit.md`).** Tested z-dependent w from
-> framework-derived a_0(z) = c·H(z)/(2π). Functional form
-> w(z) = 1 − α·(H_0/H(z))^β with α = 1/INTERACT = 1/6 and
-> β ≈ 0.08 reduces Ω_b residual from 6.7% to **0.2%** (34×
-> reduction); Ω_Λ matches to 0.002% via exact rational 76/111;
-> Ω_DM to 0.28%. Two-tier verdict per ansatz_audit_policy:
-> **Tier 1 (mechanism, w runs with H via framework-derived
-> a_0(z)): Class 4 candidate**, substantive substrate-side
-> closure. **Tier 2 (specific β = 1/12 vs 1/(4π) vs
-> λ_unlock/INTERACT): Class 2** — three candidates within 4%
-> of required value, none uniquely forced; β-forcing audit
-> defaulted to Class 2 per policy. The 34× residual reduction
-> is real; the specific framework-integer β identification is
-> not yet structural. Forcing theorem for β remains the audit
-> work; until then, Ω_b sits as Class 4-qualitative / Class 2-
-> parameters. Ω_c/Ω_b inherits at 0.6% residual (vs original
-> 7.5%).
+> pattern was applied**. Recommended next probe: C5 z-dependent
+> w from a_0(z) (framework-internal). Ω_c/Ω_b inherits as
+> derivative of Ω_b.
 
 The hybrid strategy (`Ω_b = (1/19)·|r|²`, `A_s = 2.33·|r|³ × 10⁻⁹`)
 matches observation ≤ 1σ for Ω_b and A_s but with different
@@ -156,23 +139,6 @@ of the five obstructions per `vocabulary_is_the_work_pattern.md`
 Consequence 1 is recommended.
 
 ---
-
-## Active multi-session derivations (2026-04-25)
-
-After the "honest landing loop" finding (`klein_bridge_audit_and_probe.md`)
-that single-session probes converge on Class 4-mechanism / Class 2-
-parameters by construction, the framework's active derivation work
-shifted to multi-session structural derivations:
-
-| Region | Phase A doc | Status |
-|---|---|---|
-| **C — Numerology count** | `numerology_count_phase_a.md` | Phase A complete; Phase B (the count) is the next-attempted multi-session work. Tests whether the framework's 1-3% near-match cloud is statistically expected (pigeonhole) or anomalously dense (signal). Binary outcome breaks the loop. |
-| **D — Sector decoupling** | `sector_decoupling_phase_a.md` | Phase A complete; Phase B deferred until Region C completes. Six candidate sources (Klein π_1 generators, q_2/q_3 prime split, K=1/K<1 regime, etc.). Anchor obstruction #5 — deepest open framework derivation. |
-
-Single-session audit work paused for these. New audit probes
-(further C5 β refinements, more Klein-bridge attempts, etc.)
-deferred until Region C produces its binary verdict, which
-informs Region D candidate selection.
 
 ## Usage
 
