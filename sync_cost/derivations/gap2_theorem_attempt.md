@@ -232,7 +232,7 @@ To make this attempt a theorem:
    bundle dynamics at K = K_c (or the framework's identified value)
    should be computable from the Klein-bottle's monodromy
    representation. A candidate: λ = log(√(4/3)) from Collatz/
-   4-2-1-loop analogy (see `collatz.html`).
+   4-2-1-loop analogy (see `docs/archive/collatz.html`).
 3. **Address ℓ_c.** Either derive ℓ_c from the Fibonacci cutoff
    (option ii above) or concede Break 2 as the framework's
    irreducible Planck-scale input (option iii).

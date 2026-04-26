@@ -30,13 +30,13 @@
 </nav>
 
 <h1>Claim chain</h1>
-<p class="subtitle">One canonical view of the claim chain, generated from <a href="https://github.com/nickjoven/harmonics/blob/main/MANIFEST.yml">MANIFEST.yml</a>. Scorecard: 16 predictions with explicit derivations. Bare K=1 identities: 5 reference values the framework declines to predict at M_Z. Two observational anchors (<code>H_0</code>, <code>v_EW</code>); see <a href="../sync_cost/derivations/anchor_count_audit.md">anchor_count_audit.md</a>.</p>
+<p class="subtitle">One canonical view of the claim chain, generated from <a href="https://github.com/nickjoven/harmonics/blob/main/MANIFEST.yml">MANIFEST.yml</a>. Scorecard: 17 predictions with explicit derivations. Bare K=1 identities: 5 reference values the framework declines to predict at M_Z. Two observational anchors (<code>H_0</code>, <code>v_EW</code>); see <a href="../sync_cost/derivations/anchor_count_audit.md">anchor_count_audit.md</a>.</p>
 
 <h2>Inputs</h2>
 <table>
   <tr><th>Kind</th><th>Count</th><th>Note</th></tr>
-  <tr><td>Free parameters</td><td class="val">0</td><td>&mdash;</td></tr>
-  <tr><td>Free functions</td><td class="val">0</td><td>&mdash;</td></tr>
+  <tr><td>Free parameters</td><td class="val">?</td><td>&mdash;</td></tr>
+  <tr><td>Free functions</td><td class="val">?</td><td>&mdash;</td></tr>
   <tr><td>Dimensionful inputs</td><td class="val">2</td><td>Two independent observational anchors per `anchor_count_audit.md`: (1) the cosmological scale H_0 (equivalently Λ, ℓ_P, or M_P; these are all interconverted by the framework integer R = 6 × 13^54 and the identity Λℓ_P² = 13^-108 / 12), and (2) the particle-sector scale v_EW = 246 GeV. Reducing to one anchor would require closing the v/M_P gap via a framework-derived dimensionless identity; five explicit obstructions to that reduction are catalogued in `anchor_count_audit.md`. Previous MANIFEST language claiming a single dimensionful input overstated the repo&#x27;s actual derivation state.</td></tr>
 </table>
 <h3>Anchors</h3>
@@ -56,7 +56,7 @@
   <li>Parabola x² + μ = 0 (bifurcation)</li>
 </ul>
 
-<h2>Scorecard &mdash; 16 predictions</h2>
+<h2>Scorecard &mdash; 17 predictions</h2>
 <p class="subtitle">Each row has an explicit, scale-consistent derivation linked in the source column.</p>
 <table>
   <tr><th>Observable</th><th>Computed</th><th>Observed</th><th>Residual</th><th>Source</th></tr>
@@ -127,7 +127,7 @@
   <td>N_efolds</td>
   <td class="val">61.3 ± 0.7</td>
   <td class="val">TBD</td>
-  <td class="val">CMB-S4, ~2028</td>
+  <td class="val">CMB-S4, ~2030</td>
   <td>D10</td>
 </tr>
 <tr>
@@ -153,24 +153,31 @@
 </tr>
 <tr>
   <td>Dark matter fraction Ω_DM</td>
-  <td class="val">5/19 = 0.2632</td>
+  <td class="val">35/132 = 0.26515 (two-component closure, w_+ = 13/14)</td>
   <td class="val">0.265 ± 0.007</td>
-  <td class="val">0.7%</td>
-  <td>D47</td>
+  <td class="val">0.06%</td>
+  <td>D47, <a href="../sync_cost/derivations/omega_b_alpha_beta_closure.md">omega_b_alpha_beta_closure</a>, <a href="../sync_cost/derivations/psl2z_subgroup_phase_b.md">psl2z_subgroup_phase_b</a>, <a href="../sync_cost/derivations/L1_substrate_cusp_ground_state.md">L1_substrate_cusp_ground_state</a></td>
 </tr>
 <tr>
   <td>Baryon fraction Ω_b</td>
-  <td class="val">1/19 = 0.0526</td>
+  <td class="val">13/264 = 0.04924 (two-component closure, w_+ = 13/14)</td>
   <td class="val">0.0493 ± 0.0003</td>
-  <td class="val">6.7%</td>
-  <td>D47</td>
+  <td class="val">0.12%</td>
+  <td>D47, <a href="../sync_cost/derivations/omega_b_alpha_beta_closure.md">omega_b_alpha_beta_closure</a>, <a href="../sync_cost/derivations/psl2z_subgroup_phase_b.md">psl2z_subgroup_phase_b</a>, <a href="../sync_cost/derivations/L1_substrate_cusp_ground_state.md">L1_substrate_cusp_ground_state</a></td>
 </tr>
 <tr>
   <td>Ω_DM/Ω_b</td>
-  <td class="val">5</td>
+  <td class="val">70/13 ≈ 5.385 (two-component closure)</td>
   <td class="val">5.41</td>
-  <td class="val">7.5%</td>
-  <td>D47</td>
+  <td class="val">0.6%</td>
+  <td>D47, <a href="../sync_cost/derivations/omega_b_alpha_beta_closure.md">omega_b_alpha_beta_closure</a></td>
+</tr>
+<tr>
+  <td>Dark energy fraction Ω_Λ (two-component closure)</td>
+  <td class="val">181/264 = 0.68561 (two-component closure, w_+ = 13/14)</td>
+  <td class="val">0.6847 ± 0.0073</td>
+  <td class="val">0.13%</td>
+  <td><a href="../sync_cost/derivations/omega_b_alpha_beta_closure.md">omega_b_alpha_beta_closure</a>, <a href="../sync_cost/derivations/psl2z_subgroup_phase_b.md">psl2z_subgroup_phase_b</a></td>
 </tr>
 </table>
 

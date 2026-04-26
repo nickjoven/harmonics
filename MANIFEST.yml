@@ -129,7 +129,7 @@ scorecard:
     name: "N_efolds"
     computed: "61.3 ± 0.7"
     observed: "TBD"
-    residual: "CMB-S4, ~2028"
+    residual: "CMB-S4, ~2030"
     source: ["D10"]
 
   # Weinberg angle sin²θ_W: declined — the framework has no rigorous

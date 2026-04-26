@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preprint &mdash; Harmonics</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[
+    {left:'$$',right:'$$',display:true},
+    {left:'$',right:'$',display:false}
+  ]});"></script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Reference</a>
+  <a href="claim-chain.html">Claim chain</a>
+  <a href="claim-chain-views.html">Three views</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="derivations.html">Derivations</a>
+  <a href="cmb-s4.html">CMB-S4</a>
+  <a href="preprint.html" class="active">Preprint</a>
+</nav>
+
+<h1>Preprint-ready presentation</h1>
+
+<p class="subtitle">After the 2026-04 closure round, the framework's
+external presentation is organized into four companion documents.
+Together they provide vocabulary translation, observation/prediction
+comparison, end-to-end derivation chain, and the formal lemma core,
+in approximately 80 pages compiled. Each document is intended to be
+readable independently; collectively they constitute the framework's
+first dissertation-ready external presentation.</p>
+
+<div class="callout" style="background: #f0f4ff; border-left: 4px solid #4a6cf7; padding: 0.6em 1em; margin: 1em 0;">
+  <strong>Reading paths.</strong>
+  <ul style="margin: 0.4em 0 0 0;">
+    <li><strong>One-minute skim</strong>: this page + the
+      <a href="index.html">Reference</a> predictions table.</li>
+    <li><strong>Ten-minute orientation</strong>: structural lemmas
+      &rarr; canonical glossary &rarr; phenomenology cross-reference
+      (links below).</li>
+    <li><strong>Dissertation reading</strong>: the derivation atlas
+      end-to-end (~50 pages, link below).</li>
+  </ul>
+</div>
+
+<h2>The four deliverables</h2>
+
+<div class="card">
+  <h3>1. Structural lemmas
+    (<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/structural_lemmas.md">structural_lemmas.md</a>)</h3>
+  <p><strong>~10 pages.</strong> Nine load-bearing structural lemmas
+  catalogued for citation. Each lemma is independently statable with
+  proof source, Z1-Z3 status, and substrate / anchor classification.</p>
+  <ol style="margin: 0.4em 0 0 1.2em;">
+    <li><strong>w<sub>+</sub> closure (headline)</strong>:
+      $Z_6$ + $\Gamma_0(6)$ cusp 1/2 + $(q-1)/q$ ground state
+      $\Rightarrow$ $w_+ = 13/14$, partition $\Omega_b : \Omega_{DM}
+      : \Omega_\Lambda = 13 : 70 : 181$.</li>
+    <li><strong>Sign-rep no-EM</strong>: antisym Klein eigenmode has
+      Klein-monodromy $-1$, no EM coupling, locks at $w_- = 1$;
+      forces $(\alpha, \beta) = (0, 1)$.</li>
+    <li><strong>Two-anchor minimum (D.3)</strong>: $K = 1 \leftrightarrow
+      K < 1$ non-smooth separation forces $(H_0, v_{EW})$ as minimum
+      dimensional input.</li>
+    <li><strong>Cosmic partition (single-w)</strong>: $Z_6$ mode
+      counting + Klein-singlet + coprime-to-6 + inner/boundary gives
+      $13 : 5 : 1 / 19$.</li>
+    <li><strong>$q_3$-quantity closed form</strong>: $M_i =
+      (|F_7| - N_i) / q_2$ forces matter sector $M_{DM} = 7$ from
+      existing partition.</li>
+    <li><strong>Hecke cusp $\leftrightarrow$ $Z_p$ rep</strong>:
+      substrate $\Gamma_0(6)$ preservation maps $Z_p$ reps to $X_0(6)$
+      cusps; $\psi_+(1, 5)$ trivial $Z_2$ &rarr; cusp 1/2.</li>
+    <li><strong>Born rule exponent $= 2$</strong> from saddle-node
+      parabola universality.</li>
+    <li><strong>Spatial dimension $= q_3 = 3$</strong>: substrate's
+      $Z_3$ sector forces three independent extension directions.</li>
+    <li><strong>Pigeonhole calibration (Region C)</strong>: at
+      $\alpha = 0.05$, multi-candidate framework-integer ansatz is
+      statistically consistent with permutation null.</li>
+  </ol>
+  <p>Composition graph: lemmas 4 &rarr; 5 &rarr; 6 + 2 &rarr; 1 produces
+  the cosmic partition two-component closure with zero free parameters
+  at the closure level. Lemmas 3, 7, 8 are independent structural
+  results; lemma 9 is methodological.</p>
+</div>
+
+<div class="card">
+  <h3>2. Canonical glossary
+    (<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/canonical_glossary.md">canonical_glossary.md</a>)</h3>
+  <p><strong>~10 pages.</strong> Translation table between the
+  framework's internal vocabulary and standard physics / mathematics
+  terminology. Approximately 70 framework terms across 10 thematic
+  sections, each with operational definition and source-doc
+  cross-reference. Intended to be readable end-to-end in 30 minutes
+  by a working physicist with no prior framework exposure.</p>
+  <p><strong>Sections</strong>: primitives; substrate structure; mode
+  representation theory; coupling regimes (K-zoo, MOND threshold);
+  modular and number-theoretic structure (Stern-Brocot, $PSL(2, \mathbb{Z})$,
+  $\Gamma_0(N)$, $X_0(N)$ cusps); cosmological observables; particle
+  observables; methodology; cross-domain unifying terms; <em>imported
+  framings explicitly NOT translated</em> (hierarchy problem,
+  naturalness, $K_c$, cutoff &mdash; with reasons each doesn't apply).</p>
+</div>
+
+<div class="card">
+  <h3>3. Phenomenology cross-reference
+    (<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/phenomenology_cross_reference.md">phenomenology_cross_reference.md</a>)</h3>
+  <p><strong>~12 pages.</strong> Observation vs framework prediction
+  comparison for ~40 well-documented phenomena across 11 thematic
+  sections, with explicit Z1-Z3 status, closure class, and
+  substrate-side / anchor-side classification.</p>
+  <p><strong>Headline</strong>: ~15 Survives entries (zero free
+  parameters at closure level), 1 Instance 7 acceptance ($A_s$),
+  ~3-5 Floor / pigeonhole, large Class 2 population for flavor /
+  mass / CKM matches, explicit out-of-class for anchor-dependent
+  absolutes. Includes a "standard physics open problems addressed"
+  section mapping the cosmological constant, hierarchy, GR-QM
+  unification, MOND, EPR, etc. to framework status.</p>
+</div>
+
+<div class="card">
+  <h3>4. Derivation atlas
+    (<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/derivation_atlas.md">derivation_atlas.md</a>)</h3>
+  <p><strong>~50 pages, 1943 lines.</strong> Single linear walkthrough
+  of the framework's derivation chain, from the four primitives to
+  approximately 15 substrate-side Class 5 / Survives predictions, in
+  11 parts plus prelude / postlude.</p>
+  <p><strong>Parts</strong>: I. Four primitives (irreducibility +
+  sufficiency); II. Derived objects (circle, $\mathbb{Q}$, continuum,
+  circle map); III. Dynamical content (Arnold tongues, devil's
+  staircase, K-regimes); IV. Substrate structure ($Z_6$ mode lattice
+  + Klein-antipodal $Z_2$ + color $Z_3$); V. Geometric / topological
+  derivations (spatial dim, Lorentz, Born rule); VI. Coupling regimes
+  ($K$-zoo, MOND threshold, substrate discreteness); VII. Cosmological
+  derivations (partition, $R$, $\Lambda$, two-component closure,
+  $n_s$, $A_s$); VIII. Modular structure and $\Gamma_0(6)$ closure
+  (Hecke cusps, L1, $w_+ = 13/14$); IX. Particle physics derivations
+  (gauge group, anomalies, strong CP, quark factors); X. Methodological
+  framework (Z1-Z3, anchor-side, modes, pigeonhole, vocabulary
+  pattern); XI. Synthesis and non-claims.</p>
+  <p>Verbose by design: each derivation step explicitly stated,
+  mathematical content separated from physical interpretation. The
+  document does not lend itself to skimming.</p>
+</div>
+
+<h2>Status snapshot (2026-04 closure round)</h2>
+
+<p>The framework completed a substantial closure round in 2026-04.
+Headline results:</p>
+
+<ul>
+  <li><strong>$\Omega_b$ two-component closure</strong> to full
+    Class 5 &mdash; zero free parameters at closure level. $w_+ = 13/14$
+    derived in recognize mode via Hecke modular structure on $X_0(6)$
+    (<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/L1_substrate_cusp_ground_state.md">L1
+    closure</a>). Predictions: $\Omega_b = 13/264$ at 0.12%,
+    $\Omega_{DM} = 35/132$ at 0.06%, $\Omega_\Lambda = 181/264$
+    at 0.13%; all sub-$\sigma$ on Planck 2018.</li>
+  <li><strong>D.3 sector decoupling</strong> to Class 5 &mdash; anchor
+    obstruction #5 closed structurally via $K = 1 \leftrightarrow K < 1$
+    non-smooth separation.</li>
+  <li><strong>D.1 Klein $\pi_1$ sector assignment</strong> to Class 5.</li>
+  <li><strong>$A_s$ Instance 7 closure ACCEPTED</strong> &mdash;
+    substrate-side prediction $A_s = 2.33 \times 10^{-9}$ is complete;
+    gap to observed $A_s = 2.10 \times 10^{-9}$ is anchor-side
+    inflation amplification factor $f_{amp}$, which the framework
+    correctly declines to predict.</li>
+  <li><strong>Region C pigeonhole verdict</strong> at $\alpha = 0.05$ &mdash;
+    multi-candidate framework-integer ansatz patterns calibrated as
+    statistical pigeonhole, not signal; substrate-structural
+    derivation modes remain the productive direction.</li>
+  <li><strong>Shape F primitive-completeness audit</strong> &mdash; four
+    primitives verified sufficient through the round's closures.</li>
+</ul>
+
+<p>After the round: the Floor section is empty; all five anchor-count
+obstructions are reframed / closed; the framework's open list contains
+only optional Q4 follow-ups (Instance 7-style status tagging for
+tensor-to-scalar $r$, $\tau_{unlock}$, etc.) and periodic audit
+re-runs. See
+<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/framework_status.md">framework_status.md</a>
+for the current at-a-glance map.</p>
+
+<h2>Audit findings</h2>
+
+<p>A three-axis audit of the framework's docs (cross-references,
+numerical consistency, status tags) was executed before the
+preprint-readiness phase. Results:</p>
+
+<table>
+<tr><th>Axis</th><th>Result</th></tr>
+<tr>
+  <td>Cross-reference resolution</td>
+  <td class="match">CLEAN (298/298 references resolve)</td>
+</tr>
+<tr>
+  <td>Numerical consistency</td>
+  <td class="match">SUBSTANTIVELY CLEAN (load-bearing values consistent; intermediate values preserved as audit-trail)</td>
+</tr>
+<tr>
+  <td>Status tags</td>
+  <td class="match">CONSISTENT (post-standardization pass added <code>## Status</code> sections to 11 load-bearing docs)</td>
+</tr>
+</table>
+
+<p>Findings recorded in
+<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/audit_punch_list_2026-04.md">audit_punch_list_2026-04.md</a>;
+remediation in the standardization commit
+(<a href="https://github.com/nickjoven/harmonics/pull/82">PR #82</a>).</p>
+
+<h2>Methodological notes</h2>
+
+<ul>
+  <li><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/statistical_conventions.md">statistical_conventions.md</a>
+    &mdash; Z1-Z3 discipline (criteria for distinguishing structural
+    derivations from numerology)</li>
+  <li><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/ansatz_audit_policy.md">ansatz_audit_policy.md</a>
+    &mdash; Class 4 &rarr; Class 2 triage with irrep-multiplicity
+    exception</li>
+  <li><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/vocabulary_is_the_work_pattern.md">vocabulary_is_the_work_pattern.md</a>
+    &mdash; recurring closure pattern (9 instances; the framework's
+    most-leveraged unblocking move)</li>
+  <li><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/numerology_count_phase_b.md">numerology_count_phase_b.md</a>
+    &mdash; Region C pigeonhole calibration; permutation null with
+    explicit $p$-values</li>
+  <li><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/primitive_completeness_audit.md">primitive_completeness_audit.md</a>
+    &mdash; Shape F audit verifying the four primitives suffice
+    through 2026-04 closures</li>
+</ul>
+
+<h2>Source repository</h2>
+
+<p>All four deliverables and the supporting derivation chain live in
+<a href="https://github.com/nickjoven/harmonics">nickjoven/harmonics</a>
+under <code>sync_cost/derivations/</code>. The deployed Pages site
+(this page included) mirrors the repository state at the most recent
+push to <code>main</code>.</p>
+
+<p>For contribution discipline (Z1-Z3, recognize / derive / eliminate
+modes, audit-trail preservation), see the methodological notes above.</p>
+
+<hr>
+
+<p class="footer-note">
+Page generated 2026-04-26 as part of Phase B1 (deployed-assets
+reorganization) following the 2026-04 closure round. Linked from
+the predictions table on <a href="index.html">Reference</a>.
+</p>
+
+</body>
+</html>
