@@ -170,24 +170,43 @@ scorecard:
 
   dark_matter_fraction:
     name: "Dark matter fraction Ω_DM"
-    computed: "5/19 = 0.2632"
+    computed: "35/132 = 0.26515 (two-component closure, w_+ = 13/14)"
+    computed_single_w: "5/19 = 0.2632"
     observed: "0.265 ± 0.007"
-    residual: "0.7%"
-    source: ["D47"]
+    residual: "0.06%"
+    residual_single_w: "0.7%"
+    source: ["D47", "omega_b_alpha_beta_closure", "psl2z_subgroup_phase_b", "L1_substrate_cusp_ground_state"]
+    closure_status: "Class 5 (full) — two-component (sym/antisym) + w_- = 1 from sign-rep no-EM + w_+ = 13/14 from Γ_0(6) cusp 1/2 ground state"
 
   baryon_fraction:
     name: "Baryon fraction Ω_b"
-    computed: "1/19 = 0.0526"
+    computed: "13/264 = 0.04924 (two-component closure, w_+ = 13/14)"
+    computed_single_w: "1/19 = 0.0526"
     observed: "0.0493 ± 0.0003"
-    residual: "6.7%"
-    source: ["D47"]
+    residual: "0.12%"
+    residual_single_w: "6.7%"
+    source: ["D47", "omega_b_alpha_beta_closure", "psl2z_subgroup_phase_b", "L1_substrate_cusp_ground_state"]
+    closure_status: "Class 5 (full) — see dark_matter_fraction"
 
   dm_baryon_ratio:
     name: "Ω_DM/Ω_b"
-    computed: "5"
+    computed: "70/13 ≈ 5.385 (two-component closure)"
+    computed_single_w: "5"
     observed: "5.41"
-    residual: "7.5%"
-    source: ["D47"]
+    residual: "0.6%"
+    residual_single_w: "7.5%"
+    source: ["D47", "omega_b_alpha_beta_closure"]
+    closure_status: "Class 5 (inherits from baryon_fraction)"
+
+  dark_energy_fraction_two_component:
+    name: "Dark energy fraction Ω_Λ (two-component closure)"
+    computed: "181/264 = 0.68561 (two-component closure, w_+ = 13/14)"
+    computed_single_w: "13/19 = 0.6842"
+    observed: "0.6847 ± 0.0073"
+    residual: "0.13%"
+    residual_single_w: "0.07σ"
+    source: ["omega_b_alpha_beta_closure", "psl2z_subgroup_phase_b"]
+    closure_status: "Class 5 (full) — refined under two-component closure"
 
 # --- Bare K=1 identities ---
 # Measure-theoretic consequences of duty(q) = 1/q^d at critical coupling

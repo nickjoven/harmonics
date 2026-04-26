@@ -196,7 +196,7 @@ drift and structural mistakes.
 | C. Anchor obstructions | Vocabulary disambiguation | **All five closed/reframed.** D.3 closes #5 structurally; #1-#4 reframed as features. Two-anchor minimum FULLY STRUCTURAL. |
 | D. Cross-sector unification (v/M_P) | Structural derivation OR framework principle | Reframed as structural feature per `path_a_walkthrough.md`; v/M_P ≈ 13⁻¹⁵ near-match is irreducible coincidence at Floor magnitude (3.1%) given prime-support {2,3} obstruction |
 | E. Predictive frontier | Observational frontier | Awaiting observation; Ω_b two-component closure adds new sharp predictions (w_+ at cusp 1/2 of X_0(6)) |
-| F. Methodology self-checks | Internal audit | Holding pattern |
+| F. Methodology self-checks | Internal audit | **Closed (2026-04-26 round)** per `primitive_completeness_audit.md`: four primitives complete through 2026-04 closures, all interactions exhibited, Z_2/Z_3 reps exhausted, hygiene cleared. Worth re-running periodically as new closures accumulate. |
 
 ## What the shape distribution tells us
 
@@ -244,11 +244,20 @@ The work map after 2026-04:
    verdict on multi-candidate (H/M_P)² ansätze). Substrate-inflation
    derivation (reading b) remains a possible future extension but
    is not a gap.
-4. **Shape F primitive-completeness audit** — background hygiene
+4. ~~Shape F primitive-completeness audit~~ — **closed (2026-04-26)**
+   per `primitive_completeness_audit.md`. Four primitives complete
+   through 2026-04 closures; no fifth needed. Hygiene routine
+   cleared (stale refs, script reproducibility, drift, MANIFEST).
 
-After this round: only Shape F (background hygiene) remains.
-The framework's substantive derivation work for Floor and active
-multi-session items is complete.
+After this round: **all items closed.** The framework's
+substantive derivation work for the 2026-04 round is complete on
+Floor + active items + methodological hygiene. Only optional
+follow-ups remain:
+
+- **Q4 batch tagging** of Instance 7-style anchor-side category
+  statements (tensor-to-scalar r, τ_unlock, N_efolds) per
+  `primitive_completeness_audit.md` Q4
+- **Periodic re-run** of Shape F audit as new closures accumulate
 
 ## Cross-references
 
