@@ -1,5 +1,13 @@
 # Status
 
+> **CLOSED (2026-04-26).** Subsumed under Shape B pigeonhole closure
+> in `../../sync_cost/derivations/remaining_gap_shapes.md` (Region C
+> Phase B, `numerology_count_phase_b.md`). The 0.5σ numerical match
+> is Class 2 by construction; further mechanism searches will land
+> Class 2 by construction. Reframed as anchor-side amplification per
+> Instance 7 (`vocabulary_is_the_work_pattern.md`). Reclassification
+> recorded in `numerology_inventory.md` §Class 2.
+
 ## Overall
 
 **G1 returned null — 1 of 3 Z-conditions met, 2 of 3 gaps now
