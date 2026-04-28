@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>knobs · stage 3 · frames</title>
+<link rel="stylesheet" href="knobs.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[
+    {left:'$$',right:'$$',display:true},
+    {left:'$',right:'$',display:false}
+  ]});"></script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">harmonics</a>
+  <span class="sep">/</span>
+  <a href="phase.html">phase</a>
+  <span class="sep">·</span>
+  <a href="coupling.html">coupling</a>
+  <span class="sep">·</span>
+  <a href="frames.html" class="active">frames</a>
+</nav>
+
+<main>
+  <header>
+    <div class="stage">stage 3</div>
+    <h1>frames</h1>
+    <p class="hint">spin the carousel. find a rotation that holds the picture still.</p>
+  </header>
+
+  <div class="panel" role="region" aria-label="Rotating-frame view of two coupled oscillators">
+
+    <div class="state" id="state-badge" role="status" aria-live="polite">
+      <span class="state-dot" id="state-dot" aria-hidden="true"></span>
+      <span class="state-label" id="state-label">drifting in this frame</span>
+      <span class="state-detail" id="state-detail">no frame holds both dots still until the system locks</span>
+    </div>
+
+    <p class="alt-text" id="alt-text-circle">Same two oscillators as stage 2, but viewed from a rotating frame. Each dot is drawn at its phase minus the carousel's phase. When you find a rotation rate that matches the joint rotation of a locked state, both dots stand still.</p>
+    <canvas id="circle" class="viz" width="440" height="300"
+            role="img" aria-labelledby="alt-text-circle"></canvas>
+
+    <div class="presets" role="group" aria-label="Frame presets">
+      <button class="chip" data-frame="lab">lab</button>
+      <button class="chip" data-frame="o1">rotate with ω₁</button>
+      <button class="chip" data-frame="o2">rotate with ω₂</button>
+      <button class="chip" data-frame="avg">rotate with the lock</button>
+    </div>
+
+    <div class="controls">
+      <div class="knob">
+        <label class="label" for="omega1">ω₁</label>
+        <input type="range" id="omega1" min="0.4" max="3.5" value="1.000" step="0.001"
+               aria-label="natural angular velocity of oscillator 1">
+        <span class="readout" id="omega1-readout">1.000</span>
+      </div>
+      <div class="knob">
+        <label class="label" for="omega2">ω₂</label>
+        <input type="range" id="omega2" min="0.4" max="3.5" value="1.500" step="0.001"
+               aria-label="natural angular velocity of oscillator 2">
+        <span class="readout" id="omega2-readout">1.500</span>
+      </div>
+      <div class="knob">
+        <label class="label" for="kcoup">K</label>
+        <input type="range" id="kcoup" min="0.0" max="0.5" value="0.0" step="0.0005"
+               aria-label="coupling strength K">
+        <span class="readout" id="k-readout">0.000</span>
+      </div>
+      <div class="knob frame">
+        <label class="label" for="omegav">Ω<sub>view</sub></label>
+        <input type="range" id="omegav" min="0.0" max="3.5" value="0.0" step="0.001"
+               aria-label="carousel rotation rate (the rotating frame's angular velocity)">
+        <span class="readout" id="omegav-readout">0.000</span>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="translations" aria-label="Explanation and translations">
+    <h2>what "rational" means here</h2>
+    <p>A rational ratio $p/q$ is a state where two oscillators rotate together in a fixed relationship. From the lab frame this looks like motion. From a frame rotating at the joint rate, both oscillators stand still — the picture is <em>aligned</em>, <em>agreeing</em>, <em>harmonious</em>. The English word "rational" carries all of these meanings, and they collapse to one substrate-level fact:</p>
+    <p class="equation">$$\text{rational} \iff \text{exists a rotating frame in which the configuration is stationary.}$$</p>
+    <p>An <em>irrational</em> ratio has no such frame. Spin the carousel however you want; you can hold one dot still, but never both. The drift is intrinsic to the relationship between the two oscillators, not removable by changing how you watch them.</p>
+
+    <h2>decoherence is a perspective</h2>
+    <p>The same configuration that looks <strong>coherent</strong> (still, locked, harmonious) from one frame can look <strong>decoherent</strong> (drifting, swirling) from another. Coherence is not an absolute property of the state — it is a relationship between the state and the frame.</p>
+    <p>This is why the framework's substrate is "discrete in the dynamics, continuous in the medium" (`dynamical_quantization.md`): the medium itself is a continuum of possible viewing rotations, and the discrete locked states are exactly those for which some viewing rotation holds the picture still. The "discreteness" lives in the alignment relation, not in pixels of spacetime.</p>
+
+    <h2>the dynamics, with the frame subtracted</h2>
+    <p>In the lab frame, the oscillators obey</p>
+    <p class="equation">$$\frac{d\varphi_1}{dt} = \omega_1 + K\sin(\varphi_2 - \varphi_1), \qquad \frac{d\varphi_2}{dt} = \omega_2 - K\sin(\varphi_2 - \varphi_1).$$</p>
+    <p>From a frame rotating at $\Omega_{\text{view}}$, the apparent positions are $\tilde\varphi_i = \varphi_i - \Omega_{\text{view}}\,t$, and the apparent angular velocities are</p>
+    <p class="equation">$$\frac{d\tilde\varphi_i}{dt} = \frac{d\varphi_i}{dt} - \Omega_{\text{view}}.$$</p>
+    <p>The relative phase $\Delta\varphi$ is invariant — what changes between frames is whether each individual oscillator looks stationary or drifting. The lock condition is unchanged ($|\omega_2 - \omega_1| \le 2K$); the carousel just changes <em>what you see</em>.</p>
+
+    <h2>presets, in words</h2>
+    <ul>
+      <li><strong>lab</strong> — $\Omega_{\text{view}} = 0$. Raw dynamics, both dots rotating.</li>
+      <li><strong>rotate with ω₁</strong> — $\Omega_{\text{view}} = \omega_1$. Dot 1 stands almost still; dot 2 shows the entire dynamics relative to it.</li>
+      <li><strong>rotate with ω₂</strong> — $\Omega_{\text{view}} = \omega_2$. Symmetric.</li>
+      <li><strong>rotate with the lock</strong> — $\Omega_{\text{view}} = (\omega_1 + \omega_2)/2$. The candidate locking rate. <em>If</em> the system is locked, both dots stand still in this frame. If not, they drift symmetrically — the carousel can't fix what the coupling hasn't.</li>
+    </ul>
+  </section>
+
+  <footer>
+    prev · <a href="coupling.html">coupling</a> &nbsp;·&nbsp; next · staircase (forthcoming)
+  </footer>
+</main>
+
+<script>
+(() => {
+  // ── DOM ────────────────────────────────────────────────
+  const circ = document.getElementById('circle');
+  const cctx = circ.getContext('2d');
+  const cw = circ.width, ch = circ.height;
+  const cx = cw / 2, cy = ch / 2;
+  const r = 110;
+
+  const o1 = document.getElementById('omega1');
+  const o2 = document.getElementById('omega2');
+  const kk = document.getElementById('kcoup');
+  const ov = document.getElementById('omegav');
+  const o1r = document.getElementById('omega1-readout');
+  const o2r = document.getElementById('omega2-readout');
+  const kr  = document.getElementById('k-readout');
+  const ovr = document.getElementById('omegav-readout');
+
+  const stateBadge = document.getElementById('state-badge');
+  const stateLabel = document.getElementById('state-label');
+  const stateDetail = document.getElementById('state-detail');
+
+  // ── State ──────────────────────────────────────────────
+  let omega1 = parseFloat(o1.value);
+  let omega2 = parseFloat(o2.value);
+  let K = parseFloat(kk.value);
+  let omegaView = parseFloat(ov.value);
+
+  let phi1 = 0.0;
+  let phi2 = 0.0;
+  let phiView = 0.0;
+  let lastTime = performance.now();
+
+  // For "stationary in this frame" detection: track each dot's apparent
+  // angular speed averaged over a short window (~0.6 s).
+  const SLOW_WINDOW = 36;  // frames
+  const apparent1 = new Float32Array(SLOW_WINDOW);
+  const apparent2 = new Float32Array(SLOW_WINDOW);
+  let apparentIdx = 0;
+  let apparentFilled = 0;
+
+  // Trails for the visual stroboscope effect.
+  const TRAIL = 28;
+  const trail1 = [];
+  const trail2 = [];
+
+  let prevState = null;
+  let lastDetailUpdate = 0;
+
+  // ── Bind sliders ───────────────────────────────────────
+  function bind(input, readout, set) {
+    input.addEventListener('input', () => {
+      const v = parseFloat(input.value);
+      set(v);
+      readout.textContent = v.toFixed(3);
+    });
+  }
+  bind(o1, o1r, v => omega1 = v);
+  bind(o2, o2r, v => omega2 = v);
+  bind(kk, kr, v => K = v);
+  bind(ov, ovr, v => omegaView = v);
+
+  // ── Preset chips ───────────────────────────────────────
+  document.querySelectorAll('.chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const which = btn.dataset.frame;
+      let target = 0;
+      switch (which) {
+        case 'lab': target = 0; break;
+        case 'o1':  target = omega1; break;
+        case 'o2':  target = omega2; break;
+        case 'avg': target = (omega1 + omega2) / 2; break;
+      }
+      // clamp to slider range
+      target = Math.max(parseFloat(ov.min), Math.min(parseFloat(ov.max), target));
+      omegaView = target;
+      ov.value = String(target);
+      ovr.textContent = target.toFixed(3);
+
+      document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // ── Dynamics ───────────────────────────────────────────
+  function step(dt) {
+    const sub = 4;
+    const h = dt / sub;
+    for (let s = 0; s < sub; s++) {
+      const d = phi2 - phi1;
+      const sd = Math.sin(d);
+      phi1 += (omega1 + K * sd) * h;
+      phi2 += (omega2 - K * sd) * h;
+    }
+    phiView += omegaView * dt;
+  }
+
+  // ── Drawing ────────────────────────────────────────────
+  function drawScene(stationary) {
+    cctx.fillStyle = '#060608';
+    cctx.fillRect(0, 0, cw, ch);
+
+    // outer circle
+    cctx.strokeStyle = '#3a3a45';
+    cctx.lineWidth = 1;
+    cctx.beginPath();
+    cctx.arc(cx, cy, r, 0, Math.PI * 2);
+    cctx.stroke();
+
+    // a faint reference tick at angle 0 — lets the eye gauge whether
+    // the picture is rotating relative to the frame
+    cctx.strokeStyle = '#1a1a20';
+    cctx.beginPath();
+    cctx.moveTo(cx + r - 6, cy); cctx.lineTo(cx + r + 6, cy);
+    cctx.stroke();
+
+    // apparent positions
+    const a1 = phi1 - phiView;
+    const a2 = phi2 - phiView;
+
+    // trails (stroboscope)
+    const trailColor1 = (k) => `rgba(232, 194, 100, ${k})`;
+    const trailColor2 = (k) => `rgba(154, 179, 207, ${k})`;
+    drawTrail(trail1, trailColor1);
+    drawTrail(trail2, trailColor2);
+
+    // chord
+    const x1 = cx + r * Math.cos(a1), y1 = cy + r * Math.sin(a1);
+    const x2 = cx + r * Math.cos(a2), y2 = cy + r * Math.sin(a2);
+    cctx.strokeStyle = stationary ? 'rgba(106, 154, 106, 0.6)' : 'rgba(123, 147, 175, 0.3)';
+    cctx.lineWidth = stationary ? 2 : 1;
+    cctx.beginPath();
+    cctx.moveTo(x1, y1); cctx.lineTo(x2, y2);
+    cctx.stroke();
+
+    // dots
+    cctx.shadowColor = 'rgba(232, 194, 100, 0.7)';
+    cctx.shadowBlur = 10;
+    cctx.fillStyle = '#e8c264';
+    cctx.beginPath();
+    cctx.arc(x1, y1, 7, 0, Math.PI * 2);
+    cctx.fill();
+
+    cctx.shadowColor = 'rgba(154, 179, 207, 0.7)';
+    cctx.fillStyle = '#9ab3cf';
+    cctx.beginPath();
+    cctx.arc(x2, y2, 7, 0, Math.PI * 2);
+    cctx.fill();
+    cctx.shadowBlur = 0;
+  }
+
+  function drawTrail(trail, colorFn) {
+    for (let i = 0; i < trail.length; i++) {
+      const age = (trail.length - i) / trail.length;  // 1 = oldest
+      const alpha = (1 - age) * 0.32;
+      const t = trail[i];
+      const tx = cx + r * Math.cos(t);
+      const ty = cy + r * Math.sin(t);
+      cctx.fillStyle = colorFn(alpha);
+      cctx.beginPath();
+      cctx.arc(tx, ty, 4, 0, Math.PI * 2);
+      cctx.fill();
+    }
+  }
+
+  // ── Stationarity detection ─────────────────────────────
+  // "Stationary in this frame" = both dots' apparent angular velocity is
+  // small for ~0.6 s. Threshold tuned to ignore numerical jitter and
+  // very slow residual drift but flag anything visibly moving.
+  function recordApparent(dt) {
+    const sd = Math.sin(phi2 - phi1);
+    const v1 = (omega1 + K * sd) - omegaView;
+    const v2 = (omega2 - K * sd) - omegaView;
+    apparent1[apparentIdx] = v1;
+    apparent2[apparentIdx] = v2;
+    apparentIdx = (apparentIdx + 1) % SLOW_WINDOW;
+    if (apparentFilled < SLOW_WINDOW) apparentFilled++;
+  }
+
+  function checkStationary() {
+    if (apparentFilled < SLOW_WINDOW) return false;
+    let mean1 = 0, mean2 = 0;
+    for (let i = 0; i < SLOW_WINDOW; i++) {
+      mean1 += apparent1[i];
+      mean2 += apparent2[i];
+    }
+    mean1 /= SLOW_WINDOW;
+    mean2 /= SLOW_WINDOW;
+    const THRESH = 0.05;  // rad/s
+    return Math.abs(mean1) < THRESH && Math.abs(mean2) < THRESH;
+  }
+
+  function updateStateBadge(now, stationary) {
+    if (stationary !== prevState) {
+      stateLabel.textContent = stationary ? 'still in this frame' : 'drifting in this frame';
+      stateBadge.classList.toggle('locked', stationary);
+      prevState = stationary;
+    }
+    if (now - lastDetailUpdate > 200) {
+      const dOmega = Math.abs(omega2 - omega1);
+      const twoK = 2 * K;
+      const couplingLocked = twoK >= dOmega;
+      const lockRate = (omega1 + omega2) / 2;
+      const detail = stationary
+        ? `picture aligned · this frame holds it still`
+        : (couplingLocked
+            ? `system is locked at Ω = ${lockRate.toFixed(3)} · try that frame`
+            : `no frame can hold both still until 2K ≥ |Δω| (${twoK.toFixed(3)} vs ${dOmega.toFixed(3)})`);
+      stateDetail.textContent = detail;
+      lastDetailUpdate = now;
+    }
+  }
+
+  // ── Trail update ──────────────────────────────────────
+  function pushTrail() {
+    trail1.push(phi1 - phiView);
+    trail2.push(phi2 - phiView);
+    if (trail1.length > TRAIL) trail1.shift();
+    if (trail2.length > TRAIL) trail2.shift();
+  }
+
+  // ── Main loop ─────────────────────────────────────────
+  function frame() {
+    const now = performance.now();
+    const dt = Math.min((now - lastTime) / 1000, 0.05);
+    lastTime = now;
+
+    step(dt);
+    recordApparent(dt);
+    pushTrail();
+
+    const stationary = checkStationary();
+    updateStateBadge(now, stationary);
+    drawScene(stationary);
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

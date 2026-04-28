@@ -233,6 +233,44 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: 0 0 6px rgba(232, 194, 100, 0.4);
 }
 
+/* ── Preset chips (carousel frames, etc.) ──────────────── */
+
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45em;
+  padding: 0.2em 0;
+}
+.chip {
+  background: transparent;
+  border: 1px solid var(--border-bright);
+  color: var(--text-dim);
+  font-family: inherit;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  padding: 0.4em 0.8em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.chip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.chip.active {
+  border-color: var(--accent-bright);
+  color: var(--accent-bright);
+  background: rgba(232, 194, 100, 0.06);
+}
+
+.knob.frame .label {
+  color: var(--cool-bright);
+}
+
 /* ── Audio (demoted) ───────────────────────────────────── */
 
 .audio-details {
