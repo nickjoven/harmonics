@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>knobs · stage 2 · coupling</title>
+<link rel="stylesheet" href="knobs.css">
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">harmonics</a>
+  <span class="sep">/</span>
+  <a href="phase.html">phase</a>
+  <span class="sep">·</span>
+  <a href="coupling.html" class="active">coupling</a>
+</nav>
+
+<main>
+  <header>
+    <div class="stage">stage 2</div>
+    <h1>coupling</h1>
+    <p class="hint">two oscillators. push K up. listen for the beat to die.</p>
+  </header>
+
+  <div class="panel">
+    <canvas id="circle" class="viz" width="400" height="240"></canvas>
+    <canvas id="strip" class="viz" width="400" height="120"></canvas>
+    <div class="controls">
+      <div class="knob">
+        <span class="label">ω₁</span>
+        <input type="range" id="omega1" min="0.4" max="3.5" value="1.000" step="0.001">
+        <span class="readout" id="omega1-readout">1.000</span>
+      </div>
+      <div class="knob">
+        <span class="label">ω₂</span>
+        <input type="range" id="omega2" min="0.4" max="3.5" value="1.050" step="0.001">
+        <span class="readout" id="omega2-readout">1.050</span>
+      </div>
+      <div class="knob">
+        <span class="label">K</span>
+        <input type="range" id="kcoup" min="0.0" max="0.5" value="0.0" step="0.0005">
+        <span class="readout" id="k-readout">0.000</span>
+      </div>
+      <button class="audio" id="audio-toggle">click to enable audio</button>
+    </div>
+  </div>
+
+  <footer>
+    Δφ flat = locked, sloped = drifting. no preset interval — find lock by hand.
+  </footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+<script>
+(() => {
+  // ── Layout ─────────────────────────────────────────────
+  const circ = document.getElementById('circle');
+  const cctx = circ.getContext('2d');
+  const cw = circ.width, ch = circ.height;
+  const cx = cw / 2, cy = ch / 2;
+  const r = 90;
+
+  const strip = document.getElementById('strip');
+  const sctx = strip.getContext('2d');
+  const sw = strip.width, sh = strip.height;
+
+  // ── State ──────────────────────────────────────────────
+  const o1 = document.getElementById('omega1');
+  const o2 = document.getElementById('omega2');
+  const kk = document.getElementById('kcoup');
+  const o1r = document.getElementById('omega1-readout');
+  const o2r = document.getElementById('omega2-readout');
+  const kr  = document.getElementById('k-readout');
+  const audioBtn = document.getElementById('audio-toggle');
+
+  let omega1 = parseFloat(o1.value);
+  let omega2 = parseFloat(o2.value);
+  let K = parseFloat(kk.value);
+
+  let phi1 = 0.0;
+  let phi2 = 0.0;
+  let lastTime = performance.now();
+
+  // Δφ history for the strip chart (unwrapped). Sampled each frame.
+  const HISTORY = 320;
+  const dphiHist = new Float32Array(HISTORY);
+  let histIdx = 0;
+  let histFilled = 0;
+
+  // ── Audio ──────────────────────────────────────────────
+  const AUDIO_CARRIER = 220;  // ω = 1 → A3 (220 Hz); ratio drives the interval
+  let osc1 = null, osc2 = null;
+  let audioOn = false;
+
+  function bind(input, readout, set) {
+    input.addEventListener('input', () => {
+      const v = parseFloat(input.value);
+      set(v);
+      readout.textContent = v.toFixed(3);
+    });
+  }
+  bind(o1, o1r, v => omega1 = v);
+  bind(o2, o2r, v => omega2 = v);
+  bind(kk, kr, v => K = v);
+
+  audioBtn.addEventListener('click', async () => {
+    await Tone.start();
+    if (!osc1) {
+      osc1 = new Tone.Oscillator(AUDIO_CARRIER * omega1, 'sine').toDestination();
+      osc2 = new Tone.Oscillator(AUDIO_CARRIER * omega2, 'sine').toDestination();
+      osc1.volume.value = -24;
+      osc2.volume.value = -24;
+      osc1.start();
+      osc2.start();
+    }
+    audioOn = !audioOn;
+    if (audioOn) {
+      osc1.volume.rampTo(-24, 0.15);
+      osc2.volume.rampTo(-24, 0.15);
+      audioBtn.textContent = 'audio on · click to mute';
+      audioBtn.classList.add('live');
+    } else {
+      osc1.volume.rampTo(-Infinity, 0.15);
+      osc2.volume.rampTo(-Infinity, 0.15);
+      audioBtn.textContent = 'click to enable audio';
+      audioBtn.classList.remove('live');
+    }
+  });
+
+  // ── Drawing ────────────────────────────────────────────
+  function drawCircle() {
+    cctx.fillStyle = '#060608';
+    cctx.fillRect(0, 0, cw, ch);
+
+    cctx.strokeStyle = '#3a3a45';
+    cctx.lineWidth = 1;
+    cctx.beginPath();
+    cctx.arc(cx, cy, r, 0, Math.PI * 2);
+    cctx.stroke();
+
+    // chord between the two phase points — visual locking cue
+    const x1 = cx + r * Math.cos(phi1), y1 = cy + r * Math.sin(phi1);
+    const x2 = cx + r * Math.cos(phi2), y2 = cy + r * Math.sin(phi2);
+    cctx.strokeStyle = 'rgba(123, 147, 175, 0.35)';
+    cctx.lineWidth = 1;
+    cctx.beginPath();
+    cctx.moveTo(x1, y1); cctx.lineTo(x2, y2);
+    cctx.stroke();
+
+    // dot 1 — gold
+    cctx.shadowColor = 'rgba(232, 194, 100, 0.7)';
+    cctx.shadowBlur = 10;
+    cctx.fillStyle = '#e8c264';
+    cctx.beginPath();
+    cctx.arc(x1, y1, 7, 0, Math.PI * 2);
+    cctx.fill();
+
+    // dot 2 — cool blue
+    cctx.shadowColor = 'rgba(123, 147, 175, 0.7)';
+    cctx.fillStyle = '#9ab3cf';
+    cctx.beginPath();
+    cctx.arc(x2, y2, 7, 0, Math.PI * 2);
+    cctx.fill();
+    cctx.shadowBlur = 0;
+  }
+
+  function drawStrip() {
+    sctx.fillStyle = '#060608';
+    sctx.fillRect(0, 0, sw, sh);
+
+    // baseline (Δφ = 0)
+    sctx.strokeStyle = '#1a1a20';
+    sctx.beginPath();
+    sctx.moveTo(0, sh / 2);
+    sctx.lineTo(sw, sh / 2);
+    sctx.stroke();
+
+    if (histFilled < 2) return;
+
+    // rescale: find min/max in the window, fit to canvas with margin
+    let mn = Infinity, mx = -Infinity;
+    for (let i = 0; i < histFilled; i++) {
+      const v = dphiHist[i];
+      if (v < mn) mn = v;
+      if (v > mx) mx = v;
+    }
+    const span = Math.max(mx - mn, 0.5);  // floor so flat lines have room
+    const pad = span * 0.15;
+    const lo = mn - pad, hi = mx + pad;
+
+    sctx.strokeStyle = '#c0a060';
+    sctx.lineWidth = 1.5;
+    sctx.beginPath();
+    const start = histIdx - histFilled;
+    for (let i = 0; i < histFilled; i++) {
+      const idx = (start + i + HISTORY) % HISTORY;
+      const v = dphiHist[idx];
+      const x = (i / (HISTORY - 1)) * sw;
+      const y = sh - ((v - lo) / (hi - lo)) * sh;
+      if (i === 0) sctx.moveTo(x, y); else sctx.lineTo(x, y);
+    }
+    sctx.stroke();
+  }
+
+  // ── Dynamics tick ──────────────────────────────────────
+  // Sub-step the integrator to keep ODEs stable when ω or K is large.
+  function step(dt) {
+    const sub = 4;
+    const h = dt / sub;
+    for (let s = 0; s < sub; s++) {
+      const d = phi2 - phi1;
+      const sd = Math.sin(d);
+      const dphi1 = omega1 + K * sd;
+      const dphi2 = omega2 - K * sd;
+      phi1 += dphi1 * h;
+      phi2 += dphi2 * h;
+    }
+  }
+
+  // unwrap-aware Δφ for the strip chart: we keep a continuous record so
+  // a locked line stays flat and a drifting line slopes through 2π without
+  // wrapping. Achieved by tracking phi2 - phi1 directly (both unbounded).
+  let lastDphi = 0.0;
+  function recordDphi() {
+    const d = phi2 - phi1;
+    dphiHist[histIdx] = d;
+    histIdx = (histIdx + 1) % HISTORY;
+    if (histFilled < HISTORY) histFilled++;
+    lastDphi = d;
+  }
+
+  // ── Audio update ───────────────────────────────────────
+  function updateAudio() {
+    if (!audioOn || !osc1) return;
+    const sd = Math.sin(phi2 - phi1);
+    const f1 = AUDIO_CARRIER * (omega1 + K * sd);
+    const f2 = AUDIO_CARRIER * (omega2 - K * sd);
+    osc1.frequency.rampTo(Math.max(f1, 20), 0.02);
+    osc2.frequency.rampTo(Math.max(f2, 20), 0.02);
+  }
+
+  // ── Main loop ──────────────────────────────────────────
+  function frame() {
+    const now = performance.now();
+    const dt = Math.min((now - lastTime) / 1000, 0.05);
+    lastTime = now;
+
+    step(dt);
+    recordDphi();
+    updateAudio();
+
+    drawCircle();
+    drawStrip();
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

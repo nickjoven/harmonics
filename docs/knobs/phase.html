@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>knobs · stage 1 · phase</title>
+<link rel="stylesheet" href="knobs.css">
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">harmonics</a>
+  <span class="sep">/</span>
+  <a href="phase.html" class="active">phase</a>
+  <span class="sep">·</span>
+  <a href="coupling.html">coupling</a>
+</nav>
+
+<main>
+  <header>
+    <div class="stage">stage 1</div>
+    <h1>phase</h1>
+    <p class="hint">drag the knob. nothing is named yet. find what's there.</p>
+  </header>
+
+  <div class="panel">
+    <canvas id="circle" class="viz" width="400" height="400"></canvas>
+    <div class="controls">
+      <div class="knob">
+        <span class="label">ω</span>
+        <input type="range" id="omega" min="0.4" max="4.0" value="1.0" step="0.001">
+        <span class="readout" id="omega-readout">1.000</span>
+      </div>
+      <button class="audio" id="audio-toggle">click to enable audio</button>
+    </div>
+  </div>
+
+  <footer>
+    one phase variable, one knob, one tone. the substrate is made of these.
+  </footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+<script>
+(() => {
+  const canvas = document.getElementById('circle');
+  const ctx = canvas.getContext('2d');
+  const cx = canvas.width / 2;
+  const cy = canvas.height / 2;
+  const r = 150;
+
+  const omegaInput = document.getElementById('omega');
+  const omegaReadout = document.getElementById('omega-readout');
+  const audioBtn = document.getElementById('audio-toggle');
+
+  let omega = parseFloat(omegaInput.value);
+  let phi = 0.0;
+  let lastTime = performance.now();
+  let osc = null;
+  let audioOn = false;
+
+  // Audio carrier: when ω = 1, the tone sits at A3 (220 Hz). The slider
+  // scales linearly so the user hears pitch tracking the dot's speed.
+  const AUDIO_CARRIER = 220;
+
+  omegaInput.addEventListener('input', () => {
+    omega = parseFloat(omegaInput.value);
+    omegaReadout.textContent = omega.toFixed(3);
+    if (osc && audioOn) {
+      osc.frequency.rampTo(AUDIO_CARRIER * omega, 0.04);
+    }
+  });
+
+  audioBtn.addEventListener('click', async () => {
+    await Tone.start();
+    if (!osc) {
+      osc = new Tone.Oscillator(AUDIO_CARRIER * omega, 'sine').toDestination();
+      osc.volume.value = -22;
+      osc.start();
+    }
+    audioOn = !audioOn;
+    if (audioOn) {
+      osc.volume.rampTo(-22, 0.15);
+      audioBtn.textContent = 'audio on · click to mute';
+      audioBtn.classList.add('live');
+    } else {
+      osc.volume.rampTo(-Infinity, 0.15);
+      audioBtn.textContent = 'click to enable audio';
+      audioBtn.classList.remove('live');
+    }
+  });
+
+  function draw() {
+    const now = performance.now();
+    const dt = Math.min((now - lastTime) / 1000, 0.1);
+    lastTime = now;
+
+    phi += omega * dt;
+    if (phi > Math.PI * 2) phi -= Math.PI * 2;
+
+    ctx.fillStyle = '#060608';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // unit circle
+    ctx.strokeStyle = '#3a3a45';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // hairline crosshair (subtle reference, no labels)
+    ctx.strokeStyle = '#1a1a20';
+    ctx.beginPath();
+    ctx.moveTo(cx - r - 8, cy); ctx.lineTo(cx + r + 8, cy);
+    ctx.moveTo(cx, cy - r - 8); ctx.lineTo(cx, cy + r + 8);
+    ctx.stroke();
+
+    // trail (faint, decaying)
+    const trailSteps = 18;
+    for (let i = 1; i <= trailSteps; i++) {
+      const tphi = phi - i * 0.04;
+      const tx = cx + r * Math.cos(tphi);
+      const ty = cy + r * Math.sin(tphi);
+      const alpha = (1 - i / trailSteps) * 0.25;
+      ctx.fillStyle = `rgba(232, 194, 100, ${alpha})`;
+      ctx.beginPath();
+      ctx.arc(tx, ty, 5, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // dot
+    const x = cx + r * Math.cos(phi);
+    const y = cy + r * Math.sin(phi);
+    ctx.shadowColor = 'rgba(232, 194, 100, 0.7)';
+    ctx.shadowBlur = 12;
+    ctx.fillStyle = '#e8c264';
+    ctx.beginPath();
+    ctx.arc(x, y, 8, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.shadowBlur = 0;
+
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+})();
+</script>
+</body>
+</html>
