@@ -1,5 +1,5 @@
 {
-  "generated": "9bed549c48446895eb4184df6e1ce2fc68b575d2",
+  "generated": "7aa21fb1e97b87e8b36016ad76c3f47db6a1e0a4",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -14,6 +14,7 @@
       ],
       "depended_on_by": [
         "ansatz_audit_policy",
+        "dynamical_tool_audit",
         "klein_antipodal_z2_rep_pattern",
         "numerology_inventory"
       ],
@@ -34,12 +35,14 @@
       "id": "FRAMEWORK_TOPOLOGY",
       "path": "sync_cost/derivations/FRAMEWORK_TOPOLOGY.md",
       "title": "Framework topology",
-      "summary": "```\nA\n\u251c\u2500\u2500 depends on\n\u2502   \u2514\u2500\u2500 B\n\u2514\u2500\u2500 depends on\n    \u2514\u2500\u2500 C\n```",
+      "summary": "**Canonical structural map of the framework's derivation\ntopology.** Maps L0 (primitives) \u2192 L1 (substrate primitives) \u2192\nL2 (sector quantities) \u2192 L3+ (predictions). Maintained as\nderivations are added or restructured.",
       "depends_on": [
+        "INDEX",
         "boundary_weight",
         "duty_cycle_dictionary",
         "duty_dimension_proof",
         "farey_partition",
+        "framework_status",
         "hierarchy",
         "higgs_from_tongue_boundary",
         "item12_C_from_K_star",
@@ -47,15 +50,22 @@
         "lie_group_characterization",
         "mass_sector_closure",
         "minkowski_signature",
-        "numerology_inventory",
-        "sinw_effective_dimension",
+        "numerology_count_phase_b",
+        "path_closures_iter3",
+        "remaining_gap_shapes",
         "sinw_fixed_point",
-        "three_dimensions"
+        "three_dimensions",
+        "vocabulary_is_the_work_pattern"
       ],
       "depended_on_by": [
         "CHAIN_KSTAR"
       ],
       "git": [
+        {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
         {
           "hash": "dffc200",
           "date": "2026-04-22",
@@ -77,7 +87,7 @@
       "id": "INDEX",
       "path": "sync_cost/derivations/INDEX.md",
       "title": "Derivation Index",
-      "summary": "Canonical map from derivation D-numbers to filenames under this directory.\n`MANIFEST.yml:scorecard.*.source` lists derivations as either D-numbers\n(e.g. `D25`) or bare filename stems (e.g. `farey_partition`).  Bare\nstems resolve directly via `{name}.md` or `{name}.py`; D-numbers\nresolve via this file.",
+      "summary": "**Navigation index for derivation chain.** Maps D-numbers\n(D1-D47 per `MANIFEST.yml` derivation_count) to filenames for\nmachine-readable lookup. Maintained as derivations are added or\nrenamed. Cross-checked by `check_manifest.py`.",
       "depends_on": [
         "PROOF_A_gravity",
         "a0_threshold",
@@ -113,8 +123,15 @@
         "speed_of_light",
         "three_dimensions"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY"
+      ],
       "git": [
+        {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
         {
           "hash": "3ccb5c3",
           "date": "2026-04-23",
@@ -343,11 +360,57 @@
       ]
     },
     {
+      "id": "L1_substrate_cusp_ground_state",
+      "path": "sync_cost/derivations/L1_substrate_cusp_ground_state.md",
+      "title": "L1 closure \u2014 substrate cusp-1/2 ground state from soft-boundary + discreteness",
+      "summary": "**L1 closes Class 5 in recognize mode.** THM (w_+ = 13/14) lifts\nto Class 5 by composition. \u03a9_b two-component closure is now a\n**fully-derived Class 5 prediction** with all three Planck partition\nobservables sub-\u03c3 (0.06% to 0.13% residuals).",
+      "depends_on": [
+        "a0_threshold",
+        "baryon_fraction",
+        "denomination_boundary",
+        "framework_status",
+        "mediant_derivation",
+        "numerology_count_phase_b",
+        "omega_b_alpha_beta_closure",
+        "partition_logit_form",
+        "psl2z_subgroup_phase_b",
+        "psl2z_subgroup_phase_c_inventory",
+        "remaining_gap_shapes",
+        "vocabulary_is_the_work_pattern",
+        "w_plus_formalization"
+      ],
+      "depended_on_by": [
+        "audit_punch_list_2026-04",
+        "baryon_fraction",
+        "canonical_glossary",
+        "derivation_atlas",
+        "farey_partition",
+        "framework_status",
+        "omega_partition_combinatorial",
+        "phenomenology_cross_reference",
+        "primitive_completeness_audit",
+        "remaining_gap_shapes",
+        "structural_lemmas",
+        "w_plus_formalization"
+      ],
+      "git": [
+        {
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
+        }
+      ]
+    },
+    {
       "id": "PROOF_A_gravity",
       "path": "sync_cost/derivations/PROOF_A_gravity.md",
       "title": "Proof Chain A: Polynomial \u2192 General Relativity",
-      "summary": "From two physical properties of coupled oscillators \u2014 energy conservation\nand stability \u2014 the Einstein field equations follow uniquely. Each\nproposition uses only the previous ones. No proposition uses the\ncontinuum, coordinates, or any physics beyond oscillator coupling.",
-      "depends_on": [],
+      "summary": "**Canonical proof chain: polynomial \u2192 general relativity.** 8\npropositions composed from derivation chain D1-D15. Establishes\nthat GR (Einstein equations) emerges as the K = 1 continuum limit\nof the substrate's discrete dynamics per `continuum_limits.md`\nPart I.",
+      "depends_on": [
+        "continuum_limits",
+        "derivation_atlas",
+        "framework_status"
+      ],
       "depended_on_by": [
         "INDEX",
         "PROOF_B_quantum",
@@ -369,6 +432,11 @@
       ],
       "git": [
         {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
           "hash": "40bc011",
           "date": "2026-03-25",
           "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
@@ -379,9 +447,13 @@
       "id": "PROOF_B_quantum",
       "path": "sync_cost/derivations/PROOF_B_quantum.md",
       "title": "Proof Chain B: Polynomial \u2192 Quantum Mechanics",
-      "summary": "From the same two physical properties \u2014 energy conservation and\nstability \u2014 the Schr\u00f6dinger equation and the Born rule follow uniquely\nat subcritical coupling. The first five propositions are shared with\nProof Chain A. The paths diverge at the coupling parameter K.",
+      "summary": "**Canonical proof chain: polynomial \u2192 quantum mechanics.** 11\npropositions (5 shared with PROOF_A + 6 quantum branch).\nEstablishes that QM (Schr\u00f6dinger equation, Born rule) emerges as\nthe small-\u03b5 linearized limit at K < 1 substrate per\n`continuum_limits.md` Part II.",
       "depends_on": [
-        "PROOF_A_gravity"
+        "PROOF_A_gravity",
+        "a1_from_saddle_node",
+        "continuum_limits",
+        "derivation_atlas",
+        "framework_status"
       ],
       "depended_on_by": [
         "born_rule",
@@ -402,6 +474,11 @@
       ],
       "git": [
         {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
           "hash": "40bc011",
           "date": "2026-03-25",
           "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
@@ -416,8 +493,17 @@
       "depends_on": [],
       "depended_on_by": [
         "INDEX",
+        "L1_substrate_cusp_ground_state",
+        "canonical_glossary",
+        "derivation_atlas",
+        "dynamical_quantization",
+        "dynamical_tool_audit",
         "framework_status",
-        "numerology_inventory"
+        "numerology_inventory",
+        "path_closures_iter1",
+        "phenomenology_cross_reference",
+        "primitive_completeness_audit",
+        "w_plus_formalization"
       ],
       "git": [
         {
@@ -479,25 +565,90 @@
       "summary": "The lepton-sector generation exponent equals the saddle-node\nrelaxation time at the Arnold tongue of its primary base rational,\nevaluated at the self-consistent coupling `K*`:",
       "depends_on": [
         "born_rule",
+        "canonical_glossary",
+        "derivation_atlas",
+        "framework_status",
         "item12_C_from_K_star",
         "item12_cross_sector_ratios",
+        "phenomenology_cross_reference",
         "seismic_eigenstate_dictionary",
         "stribeck_vortex"
       ],
       "depended_on_by": [
         "INDEX",
+        "PROOF_B_quantum",
+        "audit_punch_list_2026-04",
+        "canonical_glossary",
+        "continuity_in_K_nulls",
+        "depth_connection_nulls",
+        "derivation_atlas",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_c",
+        "dynamical_tool_audit",
         "framework_status",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
-        "numerology_inventory"
+        "numerology_inventory",
+        "phenomenology_cross_reference",
+        "primitive_completeness_audit",
+        "structural_lemmas",
+        "vocabulary_is_the_work_pattern"
       ],
       "git": [
+        {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
         {
           "hash": "e1e25da",
           "date": "2026-04-13",
           "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "a_s_g1_closure_attempt",
+      "path": "sync_cost/derivations/a_s_g1_closure_attempt.md",
+      "title": "A_s Floor closure attempt G1: anchor-import barrier",
+      "summary": "**A_s closure: ACCEPTED as Instance 7 of\n`vocabulary_is_the_work_pattern.md` (2026-04-26).** The\nsubstrate-side prediction A_s_substrate = 2.33\u00d710\u207b\u2079 is the\nframework's complete native claim; the 11% gap to A_s_obs =\n2.10\u00d710\u207b\u2079 is the inflation amplification factor f_amp,\nanchor-side (depends on H_inf + \u03b5). Framework correctly declines\nto predict both A_s_obs and f_amp magnitude.",
+      "depends_on": [
+        "a_s_geometric_proof",
+        "anchor_count_audit",
+        "ansatz_audit_policy",
+        "dynamical_tool_audit",
+        "epsilon_substrate_decomposition",
+        "framework_status",
+        "h_inf_status",
+        "hierarchy_problem_translation",
+        "numerology_count_phase_b",
+        "numerology_inventory",
+        "path_a_walkthrough",
+        "remaining_gap_shapes",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "audit_punch_list_2026-04",
+        "canonical_glossary",
+        "framework_status",
+        "h_inf_status",
+        "klein_dynamics_roadmap",
+        "omega_b_c5_beta_audit",
+        "omega_b_c5_closure",
+        "omega_b_substrate_side_audit",
+        "primitive_completeness_audit",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "git": [
+        {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -517,10 +668,17 @@
         "statistical_conventions"
       ],
       "depended_on_by": [
+        "a_s_g1_closure_attempt",
+        "canonical_glossary",
+        "derivation_atlas",
+        "dynamical_tool_audit",
         "framework_status",
         "hybrid_strategy_audit",
         "numerology_inventory",
-        "sigma_squared_disambiguation"
+        "path_closures_iter1",
+        "phenomenology_cross_reference",
+        "sigma_squared_disambiguation",
+        "vocabulary_is_the_work_pattern"
       ],
       "git": [
         {
@@ -539,13 +697,22 @@
       "id": "address_and_quantity",
       "path": "sync_cost/derivations/address_and_quantity.md",
       "title": "Address and Quantity",
-      "summary": "A ratio has two components. The numerator counts displacement.\nThe denominator counts period. One says how far; the other says\nhow long. These are not the same kind of information.",
-      "depends_on": [],
+      "summary": "**Conceptual orientation document.** Articulates the address /\nquantity distinction underlying the framework's two-anchor\nminimum (per `anchor_count_audit.md` and D.3 closure). Cited as\ncontext in `coupling_scales.md` and `mass_sector_closure.md`.",
+      "depends_on": [
+        "anchor_count_audit",
+        "coupling_scales",
+        "mass_sector_closure"
+      ],
       "depended_on_by": [
         "INDEX",
         "anchor_count_audit"
       ],
       "git": [
+        {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
         {
           "hash": "e1e25da",
           "date": "2026-04-13",
@@ -582,26 +749,62 @@
       "id": "anchor_count_audit",
       "path": "sync_cost/derivations/anchor_count_audit.md",
       "title": "Anchor-count audit: single vs multiple observational anchors",
-      "summary": "The anchor-count audit concludes: the framework currently has **two**\nindependent observational anchors (H_0 and v_EW), with a suggestive\nbut underived numerical near-match at v/M_P \u2248 13\u207b\u00b9\u2075 (3.1% off). The\nT4 language should be softened accordingly, and the missing link is\na concrete structural open item \u2014 effectively the hierarchy problem\nposed framework-natively.",
+      "summary": "The anchor-count audit concludes: the framework currently has **two**\nindependent observational anchors (H_0 and v_EW), with a suggestive\nbut underived numerical near-match at v/M_P \u2248 13\u207b\u00b9\u2075 (3.1% off). The\nT4 language was softened accordingly.",
       "depends_on": [
         "address_and_quantity",
+        "continuity_in_K_nulls",
+        "continuum_limits",
         "coupling_scales",
         "gauge_sector_lovelock",
+        "h_inf_status",
         "hierarchy_gaussian_lattice",
+        "hierarchy_problem_translation",
         "higgs_from_tongue_boundary",
         "mass_sector_closure",
         "numerology_inventory",
         "observer_register_closure",
+        "path_a_walkthrough",
+        "path_closures_iter3",
         "planck_scale",
-        "statistical_conventions"
+        "statistical_conventions",
+        "vocabulary_is_the_work_pattern"
       ],
       "depended_on_by": [
+        "a_s_g1_closure_attempt",
+        "address_and_quantity",
+        "canonical_glossary",
+        "depth_connection_nulls",
+        "derivation_atlas",
+        "dynamical_tool_audit",
+        "epsilon_physical_reading",
+        "epsilon_substrate_decomposition",
         "framework_status",
+        "h_inf_status",
         "hierarchy_gaussian_lattice",
+        "hierarchy_problem_translation",
         "numerology_inventory",
-        "observer_register_closure"
+        "observer_register_closure",
+        "path_a_walkthrough",
+        "path_closures_iter2",
+        "path_closures_iter3",
+        "path_closures_iter4",
+        "primitive_completeness_audit",
+        "remaining_gap_shapes",
+        "sector_decoupling_phase_a",
+        "structural_lemmas",
+        "vocabulary_is_the_work_pattern"
       ],
       "git": [
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        },
+        {
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -618,27 +821,95 @@
       "id": "ansatz_audit_policy",
       "path": "sync_cost/derivations/ansatz_audit_policy.md",
       "title": "Ansatz audit policy \u2014 triaging Class 4 candidates",
-      "summary": "A short policy note derived from three consecutive Class 4 \u2192 Class 2\ndemotions in the 2026-04-23 session. The demotions all followed the\nsame structural pattern; future Class 4 candidates should be\ntriaged against this pattern directly rather than allowed to linger\nas \"pending audit.\"",
+      "summary": "**Active methodology document.** The Step 4 default (Class 4 \u2192\nClass 2 if no forcing mechanism within one sitting) is\ncalibrated correctly per Region C Phase B\n(`numerology_count_phase_b.md`) PIGEONHOLE verdict at \u03b1 = 0.05.",
       "depends_on": [
         "CHAIN_KSTAR",
+        "cross_ratio_irrep_reframe",
         "framework_status",
         "klein_antipodal_z2_rep_pattern",
+        "numerology_count_phase_b",
         "numerology_inventory",
+        "psl2z_subgroup_phase_b",
         "statistical_conventions"
       ],
       "depended_on_by": [
+        "a_s_g1_closure_attempt",
+        "audit_punch_list_2026-04",
+        "canonical_glossary",
+        "continuity_in_K_nulls",
+        "depth_connection_nulls",
+        "derivation_atlas",
+        "epsilon_substrate_decomposition",
         "framework_status",
         "hybrid_strategy_audit",
         "k_axis_uniqueness",
         "k_scaling_scan",
+        "klein_bridge_audit_and_probe",
+        "numerology_count_phase_a",
+        "numerology_count_phase_b",
         "numerology_inventory",
-        "observer_register_closure"
+        "observer_register_closure",
+        "omega_b_c5_beta_audit",
+        "omega_b_c5_closure",
+        "omega_b_two_component_sketch",
+        "omega_b_w_plus_candidate",
+        "omega_b_w_plus_cross_ratio_search",
+        "phenomenology_cross_reference",
+        "sector_decoupling_phase_a",
+        "structural_lemmas",
+        "vocabulary_is_the_work_pattern"
       ],
       "git": [
+        {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
           "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        }
+      ]
+    },
+    {
+      "id": "audit_punch_list_2026-04",
+      "path": "sync_cost/derivations/audit_punch_list_2026-04.md",
+      "title": "Audit punch list \u2014 2026-04 round",
+      "summary": "Audit complete. Findings: P1 \u00d7 1, P2 \u00d7 3, P3 \u00d7 2. Cross-\nreferences CLEAN; numerical consistency SUBSTANTIVELY CLEAN;\nstatus tags MOSTLY CONSISTENT with stale-entry issues.",
+      "depends_on": [
+        "L1_substrate_cusp_ground_state",
+        "a1_from_saddle_node",
+        "a_s_g1_closure_attempt",
+        "ansatz_audit_policy",
+        "baryon_fraction",
+        "canonical_glossary",
+        "continuity_in_K_nulls",
+        "derivation_atlas",
+        "farey_partition",
+        "framework_status",
+        "numerology_count_phase_b",
+        "numerology_inventory",
+        "omega_b_alpha_beta_closure",
+        "omega_b_residual_phase_a",
+        "omega_b_substrate_side_audit",
+        "omega_partition_combinatorial",
+        "phenomenology_cross_reference",
+        "psl2z_subgroup_phase_b",
+        "remaining_gap_shapes",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
         }
       ]
     },
@@ -648,22 +919,52 @@
       "title": "The Baryon Fraction",
       "summary": "The cosmic energy budget partitions into three sectors from the\nsingle number 19 (the Klein bottle's total budget from D25):",
       "depends_on": [
-        "gell_mann_nishijima"
+        "L1_substrate_cusp_ground_state",
+        "gell_mann_nishijima",
+        "omega_b_alpha_beta_closure"
       ],
       "depended_on_by": [
         "INDEX",
+        "L1_substrate_cusp_ground_state",
+        "audit_punch_list_2026-04",
         "basin_11_connection_exploration",
+        "canonical_glossary",
+        "derivation_atlas",
         "framework_status",
         "hybrid_strategy_audit",
         "k_axis_uniqueness",
         "klein_antipodal_z2_rep_pattern",
+        "klein_bridge_audit_and_probe",
+        "klein_dynamics_roadmap",
         "numerology_inventory",
         "observer_register_closure",
+        "omega_b_alpha_beta_closure",
+        "omega_b_alpha_beta_phase_b",
+        "omega_b_c5_closure",
         "omega_b_residual_phase_a",
         "omega_b_residual_phase_b",
-        "omega_partition_combinatorial"
+        "omega_b_substrate_side_audit",
+        "omega_b_two_component_sketch",
+        "omega_partition_combinatorial",
+        "partition_logit_form",
+        "path_closures_iter1",
+        "path_closures_iter3",
+        "path_closures_iter4",
+        "psl2z_subgroup_identification_phase_a",
+        "psl2z_subgroup_phase_a_results",
+        "psl2z_subgroup_phase_b",
+        "psl2z_subgroup_phase_c_inventory",
+        "sector_decoupling_phase_a",
+        "structural_lemmas",
+        "vocabulary_is_the_work_pattern",
+        "w_plus_formalization"
       ],
       "git": [
+        {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -716,7 +1017,9 @@
       ],
       "depended_on_by": [
         "INDEX",
-        "fermion_mass_running"
+        "dynamical_tool_audit",
+        "fermion_mass_running",
+        "hierarchy_problem_translation"
       ],
       "git": [
         {
@@ -737,12 +1040,17 @@
       "depended_on_by": [
         "INDEX",
         "a1_from_saddle_node",
+        "derivation_atlas",
+        "dynamical_tool_audit",
         "framework_status",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
         "numerology_inventory",
+        "phenomenology_cross_reference",
+        "primitive_completeness_audit",
         "seismic_eigenstate_dictionary",
-        "stribeck_vortex"
+        "stribeck_vortex",
+        "structural_lemmas"
       ],
       "git": [
         {
@@ -794,14 +1102,20 @@
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "a_s_geometric_proof",
+        "canonical_glossary",
+        "continuity_in_K_nulls",
         "down_type_double_cover_closed",
         "down_type_double_cover_phase_c",
         "down_type_double_cover_phase_d",
         "item12_C_from_K_star",
         "k_critical_phase_a",
         "mass_sector_sqrt_w_phase_a",
+        "omega_b_alpha_beta_phase_b",
+        "omega_b_c5_closure",
         "omega_b_residual_phase_a",
         "omega_b_residual_phase_b",
+        "omega_b_substrate_side_audit",
+        "omega_b_two_component_sketch",
         "session_audit"
       ],
       "git": [
@@ -819,6 +1133,69 @@
           "hash": "a9e2b09",
           "date": "2026-03-27",
           "subject": "Derivations 36-38: conservation as computability, figure-eight topology, boundary weight"
+        }
+      ]
+    },
+    {
+      "id": "canonical_glossary",
+      "path": "sync_cost/derivations/canonical_glossary.md",
+      "title": "Canonical glossary \u2014 framework \u2194 standard physics vocabulary",
+      "summary": "Glossary v1, 2026-04-26. ~70 framework terms mapped to standard\nphysics / math equivalents across 10 thematic sections. Intended\nto be readable end-to-end in 30 minutes by a working physicist\nwith no prior framework exposure.",
+      "depends_on": [
+        "L1_substrate_cusp_ground_state",
+        "a0_threshold",
+        "a1_from_saddle_node",
+        "a_s_g1_closure_attempt",
+        "a_s_geometric_proof",
+        "anchor_count_audit",
+        "ansatz_audit_policy",
+        "baryon_fraction",
+        "boundary_weight",
+        "continuum_limits",
+        "cross_ratio_irrep_reframe",
+        "denomination_boundary",
+        "down_type_double_cover_closed",
+        "duty_cycle_dictionary",
+        "farey_partition",
+        "framework_status",
+        "h_inf_status",
+        "hierarchy_gaussian_lattice",
+        "k_axis_uniqueness",
+        "k_scaling_scan",
+        "klein_antipodal_z2_rep_pattern",
+        "klein_bridge_audit_and_probe",
+        "klein_nodal_parity",
+        "lie_group_characterization",
+        "mass_sector_closure",
+        "mediant_derivation",
+        "minimum_alphabet",
+        "numerology_count_phase_b",
+        "numerology_inventory",
+        "omega_b_alpha_beta_closure",
+        "omega_partition_combinatorial",
+        "partition_logit_form",
+        "path_a_walkthrough",
+        "path_closures_iter3",
+        "psl2z_subgroup_identification_phase_a",
+        "psl2z_subgroup_phase_a_results",
+        "psl2z_subgroup_phase_b",
+        "statistical_conventions",
+        "three_dimensions",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "a1_from_saddle_node",
+        "audit_punch_list_2026-04",
+        "derivation_atlas",
+        "down_type_double_cover_closed",
+        "phenomenology_cross_reference",
+        "structural_lemmas"
+      ],
+      "git": [
+        {
+          "hash": "2109a3b",
+          "date": "2026-04-26",
+          "subject": "Legitimacy homework: glossary + phenomenology + derivation atlas (#81)"
         }
       ]
     },
@@ -850,6 +1227,54 @@
       ]
     },
     {
+      "id": "continuity_in_K_nulls",
+      "path": "sync_cost/derivations/continuity_in_K_nulls.md",
+      "title": "Continuity-in-K derivation: prior null results",
+      "summary": "**Active null-results registry for K-axis continuity questions.**\nCatalogues N1-N15+ null findings on continuity / smoothness\nacross K. N11 (tongue coverage discontinuity at K = 1) is\nload-bearing for the D.3 closure (K = 1 \u2194 K < 1 sector\ndecoupling) per `path_closures_iter3.md`; cited in\n`derivation_atlas.md` Part VI \u00a76.3.",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "ansatz_audit_policy",
+        "boundary_weight",
+        "derivation_atlas",
+        "down_type_double_cover_phase_c",
+        "dynamical_tool_audit",
+        "omega_b_c5_beta_audit",
+        "omega_b_c5_closure",
+        "omega_b_residual_phase_a",
+        "path_closures_iter3",
+        "statistical_conventions",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "anchor_count_audit",
+        "audit_punch_list_2026-04",
+        "cross_ratio_irrep_reframe",
+        "derivation_atlas",
+        "framework_status",
+        "klein_bridge_audit_and_probe",
+        "klein_dynamics_roadmap",
+        "numerology_count_phase_a",
+        "omega_b_two_component_sketch",
+        "omega_b_w_plus_candidate",
+        "path_closures_iter2",
+        "path_closures_iter3",
+        "sector_decoupling_phase_a",
+        "structural_lemmas"
+      ],
+      "git": [
+        {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        }
+      ]
+    },
+    {
       "id": "continuum_limits",
       "path": "sync_cost/derivations/continuum_limits.md",
       "title": "The Two Continuum Limits",
@@ -860,15 +1285,35 @@
       ],
       "depended_on_by": [
         "INDEX",
+        "PROOF_A_gravity",
+        "PROOF_B_quantum",
         "a_s_geometric_proof",
+        "anchor_count_audit",
+        "canonical_glossary",
+        "cross_ratio_irrep_reframe",
+        "derivation_atlas",
+        "dynamical_quantization",
+        "dynamical_tool_audit",
+        "framework_status",
         "gap1_theorem",
         "gap2_step4_farey_laplacian",
         "gap2_theorem_attempt",
         "gap_1_christoffel",
         "gap_2_spatial_diffusion",
+        "hierarchy_problem_translation",
+        "omega_b_c5_beta_audit",
+        "path_closures_iter1",
+        "path_closures_iter2",
+        "path_closures_iter3",
+        "path_closures_iter4",
+        "phenomenology_cross_reference",
         "quantum_gravity_interpolation",
+        "sector_decoupling_phase_a",
         "sigma_squared_disambiguation",
-        "spatial_coupling_derived"
+        "spatial_coupling_derived",
+        "structural_lemmas",
+        "vocabulary_is_the_work_pattern",
+        "w_plus_formalization"
       ],
       "git": [
         {
@@ -934,10 +1379,14 @@
       "depends_on": [],
       "depended_on_by": [
         "INDEX",
+        "address_and_quantity",
         "anchor_count_audit",
         "gap2_analytic_proof",
+        "h_inf_status",
         "observer_register_closure",
-        "spatial_coupling_derived"
+        "sector_decoupling_phase_a",
+        "spatial_coupling_derived",
+        "structural_lemmas"
       ],
       "git": [
         {
@@ -968,12 +1417,59 @@
       ]
     },
     {
+      "id": "cross_ratio_irrep_reframe",
+      "path": "sync_cost/derivations/cross_ratio_irrep_reframe.md",
+      "title": "Cross-ratio multi-candidate pattern is irrep multiplicity",
+      "summary": "Cross-ratio findings reframed from \"multi-candidate ansatz\" to\n\"PSL(2,\u2124) irrep multiplicity.\" Class 2 floor reinterpreted as\nstructural irrep-class richness rather than pigeonhole noise.\nNew direction (#4) identified: find which subgroup's\ninvariants the framework operates under.",
+      "depends_on": [
+        "continuity_in_K_nulls",
+        "continuum_limits",
+        "klein_antipodal_z2_rep_pattern",
+        "lie_group_characterization",
+        "numerology_count_phase_a",
+        "omega_b_c5_beta_audit",
+        "omega_b_w_plus_cross_ratio_search",
+        "psl2z_subgroup_identification_phase_a",
+        "psl2z_subgroup_phase_a_results",
+        "psl2z_subgroup_phase_b",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "ansatz_audit_policy",
+        "canonical_glossary",
+        "framework_status",
+        "numerology_count_phase_b",
+        "psl2z_subgroup_identification_phase_a",
+        "psl2z_subgroup_phase_a_results",
+        "psl2z_subgroup_phase_b",
+        "remaining_gap_shapes",
+        "vocabulary_is_the_work_pattern",
+        "w_plus_formalization"
+      ],
+      "git": [
+        {
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        }
+      ]
+    },
+    {
       "id": "denomination_boundary",
       "path": "sync_cost/derivations/denomination_boundary.md",
       "title": "The Denomination Boundary",
       "summary": "The three open questions from FRAMEWORK.md \u2014",
       "depends_on": [],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "L1_substrate_cusp_ground_state",
+        "canonical_glossary",
+        "derivation_atlas",
+        "dynamical_quantization",
+        "framework_status",
+        "primitive_completeness_audit",
+        "psl2z_subgroup_phase_c_inventory",
+        "w_plus_formalization"
+      ],
       "git": [
         {
           "hash": "b2deee7",
@@ -994,6 +1490,112 @@
           "hash": "9f9f000",
           "date": "2026-03-25",
           "subject": "D30: Denomination boundary \u2014 three open questions unified"
+        }
+      ]
+    },
+    {
+      "id": "depth_connection_nulls",
+      "path": "sync_cost/derivations/depth_connection_nulls.md",
+      "title": "Null results: connecting cosmological depth 54 to EW depth ~15",
+      "summary": "| Status | Count |\n|---|---|\n| Null (specifically rules out a candidate) | 8 |\n| Class 2 (numerology, near-match without derivation) | 4 |\n| Wrong axis (not the right tool for the question) | 1 |\n| Unattempted (sketched but not implemented) | 1 \u2014 Klein-quotient second invariant |\n| Open paths (neither attempted nor refuted) | 5 \u2014 (a)-(e) above |",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "anchor_count_audit",
+        "ansatz_audit_policy",
+        "dynamical_tool_audit",
+        "epsilon_physical_reading",
+        "epsilon_substrate_decomposition",
+        "framework_status",
+        "hierarchy_gaussian_lattice",
+        "hybrid_strategy_audit",
+        "mass_sector_closure",
+        "numerology_inventory",
+        "observer_register_closure",
+        "path_a_walkthrough",
+        "statistical_conventions"
+      ],
+      "depended_on_by": [
+        "path_a_walkthrough",
+        "path_closures_iter1",
+        "path_closures_iter2",
+        "remaining_gap_shapes"
+      ],
+      "git": [
+        {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
+        }
+      ]
+    },
+    {
+      "id": "derivation_atlas",
+      "path": "sync_cost/derivations/derivation_atlas.md",
+      "title": "Derivation Atlas \u2014 from four primitives to physical predictions",
+      "summary": "**Atlas v1, 2026-04-26.** End-to-end derivation chain from four\nprimitives to ~15 substrate-side Class 5 / Survives predictions\n(\u03a9 partition, R, \u039b\u00b7\u2113_P\u00b2, n_s, A_s_substrate, MOND a_0, Born\nrule, gauge group, anomaly cancellation, strong CP, down-type\nfactor 6, up-type factor 9, spatial dimension, Lorentz, two-\nanchor minimum, sector decoupling) with explicit substrate-side\nvs anchor-side classification and Z1-Z3 status.",
+      "depends_on": [
+        "L1_substrate_cusp_ground_state",
+        "a0_threshold",
+        "a1_from_saddle_node",
+        "a_s_geometric_proof",
+        "anchor_count_audit",
+        "ansatz_audit_policy",
+        "baryon_fraction",
+        "born_rule",
+        "canonical_glossary",
+        "continuity_in_K_nulls",
+        "continuum_limits",
+        "denomination_boundary",
+        "down_type_double_cover_closed",
+        "h_inf_status",
+        "hierarchy_gaussian_lattice",
+        "hierarchy_problem_translation",
+        "k_axis_uniqueness",
+        "klein_antipodal_z2_rep_pattern",
+        "klein_bridge_audit_and_probe",
+        "klein_nodal_parity",
+        "lie_group_characterization",
+        "mass_sector_closure",
+        "mediant_derivation",
+        "minimum_alphabet",
+        "numerology_count_phase_b",
+        "omega_b_alpha_beta_closure",
+        "omega_b_w_plus_cross_ratio_search",
+        "partition_logit_form",
+        "path_closures_iter3",
+        "phenomenology_cross_reference",
+        "primitive_completeness_audit",
+        "psl2z_subgroup_phase_b",
+        "statistical_conventions",
+        "three_dimensions",
+        "vocabulary_is_the_work_pattern",
+        "w_plus_formalization"
+      ],
+      "depended_on_by": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum",
+        "a1_from_saddle_node",
+        "audit_punch_list_2026-04",
+        "continuity_in_K_nulls",
+        "down_type_double_cover_closed",
+        "dynamical_quantization",
+        "structural_lemmas"
+      ],
+      "git": [
+        {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "2109a3b",
+          "date": "2026-04-26",
+          "subject": "Legitimacy homework: glossary + phenomenology + derivation atlas (#81)"
         }
       ]
     },
@@ -1060,26 +1662,45 @@
       "id": "down_type_double_cover_closed",
       "path": "sync_cost/derivations/down_type_double_cover_closed.md",
       "title": "Down-type double cover \u2014 derivation summary",
-      "summary": "Combining the Phase A terminology, the Phase B-followup null\nresult, the Phase C DoF framing, the Phase C/monodromy extraction,\nand the Phase D self-consistent weight reading, the full\nderivation of",
+      "summary": "**Class 5 / Survives.** Down-type quark factor 6 = q_2 \u00b7 q_3\nderived from S_3 acting on Z_2 \u00d7 Z_3 lattice. Orbit dimensions\n{1, 3} = {q_3-trivial, q_3-vector}; factor 6 emerges as\n|L| = q_2 \u00b7 q_3 from orbit-counting.",
       "depends_on": [
         "boundary_weight",
+        "canonical_glossary",
+        "derivation_atlas",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_b",
         "down_type_double_cover_phase_b_followup",
         "down_type_double_cover_phase_c",
         "down_type_double_cover_phase_d",
-        "hierarchy_gaussian_lattice"
+        "framework_status",
+        "hierarchy_gaussian_lattice",
+        "phenomenology_cross_reference",
+        "vocabulary_is_the_work_pattern"
       ],
       "depended_on_by": [
+        "canonical_glossary",
+        "derivation_atlas",
         "k_critical_phase_a",
         "klein_antipodal_z2_rep_pattern",
         "mass_sector_sqrt_w_phase_b",
+        "omega_b_c5_beta_audit",
         "omega_b_residual_phase_a",
         "omega_b_residual_phase_b",
+        "omega_b_two_component_sketch",
+        "path_closures_iter3",
+        "path_closures_iter4",
+        "phenomenology_cross_reference",
+        "sector_decoupling_phase_a",
         "session_audit",
-        "statistical_conventions"
+        "statistical_conventions",
+        "vocabulary_is_the_work_pattern"
       ],
       "git": [
+        {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
         {
           "hash": "c83e5d0",
           "date": "2026-04-19",
@@ -1180,6 +1801,7 @@
         "klein_connection"
       ],
       "depended_on_by": [
+        "continuity_in_K_nulls",
         "down_type_double_cover_closed",
         "down_type_double_cover_phase_d",
         "session_audit"
@@ -1232,6 +1854,7 @@
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
         "beta_from_tongues",
+        "canonical_glossary",
         "fermion_mass_running",
         "framework_status",
         "hybrid_strategy_audit",
@@ -1284,6 +1907,73 @@
       ]
     },
     {
+      "id": "dynamical_quantization",
+      "path": "sync_cost/derivations/dynamical_quantization.md",
+      "title": "Dynamical quantization: the medium is continuous, the locking is discrete",
+      "summary": "**Pedagogical clarification doc.** Articulates the medium /\ndynamics distinction that is implicit across the framework's\nexisting content but not previously headlined. Intended for the\npreprint reader who has not internalized the distinction yet \u2014\nprevents the LQG misreading and sets up the spectral / prism\nanalogy as one productive abstract connection.",
+      "depends_on": [
+        "a0_threshold",
+        "continuum_limits",
+        "denomination_boundary",
+        "derivation_atlas",
+        "lie_group_characterization",
+        "mediant_derivation",
+        "minimum_alphabet",
+        "structural_lemmas",
+        "three_dimensions"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "7aa21fb",
+          "date": "2026-04-26",
+          "subject": "Dynamical quantization: medium / dynamics distinction + formalization (#84)"
+        }
+      ]
+    },
+    {
+      "id": "dynamical_tool_audit",
+      "path": "sync_cost/derivations/dynamical_tool_audit.md",
+      "title": "Dynamical-tool audit: circle maps vs Kuramoto, conceptual",
+      "summary": "A research note auditing the framework's choice of dynamical\nformalism. Triggered by recognizing that the hierarchy problem\n(anchor-count obstructions #2, #4, #5) is the binding blocker\nfor the substrate-forced \u03b5 question (`epsilon_physical_reading.md`)\nand likely for the framework's broader scale-bridging program.",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "a0_threshold",
+        "a1_from_saddle_node",
+        "a_s_geometric_proof",
+        "anchor_count_audit",
+        "beta_from_tongues",
+        "born_rule",
+        "continuum_limits",
+        "einstein_from_kuramoto",
+        "epsilon_physical_reading",
+        "epsilon_substrate_decomposition",
+        "framework_status",
+        "hierarchy_gaussian_lattice",
+        "higgs_from_tongue_boundary",
+        "k_axis_uniqueness",
+        "k_scaling_scan",
+        "klein_antipodal_z2_rep_pattern",
+        "klein_bottle",
+        "mediant_derivation",
+        "numerology_inventory",
+        "observer_register_closure"
+      ],
+      "depended_on_by": [
+        "a_s_g1_closure_attempt",
+        "continuity_in_K_nulls",
+        "depth_connection_nulls",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "git": [
+        {
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
+        }
+      ]
+    },
+    {
       "id": "einstein_from_kuramoto",
       "path": "sync_cost/derivations/einstein_from_kuramoto.md",
       "title": "Einstein Field Equations from the Rational Field Equation",
@@ -1293,6 +1983,7 @@
       ],
       "depended_on_by": [
         "INDEX",
+        "dynamical_tool_audit",
         "gap1_analytic_proof",
         "gap1_theorem",
         "gap_1_christoffel",
@@ -1345,6 +2036,67 @@
       ]
     },
     {
+      "id": "epsilon_physical_reading",
+      "path": "sync_cost/derivations/epsilon_physical_reading.md",
+      "title": "Substrate-forced \u03b5, sub-problem 1: physical reading",
+      "summary": "A focused dive on sub-problem 1 of\n`epsilon_substrate_decomposition.md`: what *is* \u03b5 physically, in\nframework-native vocabulary? Three candidate readings, each\nmapped to framework structures and tested against the K-axis\nwindow `\u03b5 \u2208 [1e-4, 1e-3]` that gives K_STAR \u2192 INTERACT.",
+      "depends_on": [
+        "anchor_count_audit",
+        "epsilon_substrate_decomposition",
+        "framework_status",
+        "k_axis_uniqueness",
+        "klein_antipodal_z2_rep_pattern",
+        "numerology_inventory",
+        "observer_register_closure"
+      ],
+      "depended_on_by": [
+        "depth_connection_nulls",
+        "dynamical_tool_audit",
+        "primitive_completeness_audit",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "git": [
+        {
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
+        }
+      ]
+    },
+    {
+      "id": "epsilon_substrate_decomposition",
+      "path": "sync_cost/derivations/epsilon_substrate_decomposition.md",
+      "title": "Substrate-forced \u03b5: problem decomposition and prior nulls",
+      "summary": "Open. This decomposition does not solve the substrate-forced \u03b5\nproblem. It records what's been ruled out and what hasn't been\ntried with clear forcing arguments.",
+      "depends_on": [
+        "anchor_count_audit",
+        "ansatz_audit_policy",
+        "hierarchy_gaussian_lattice",
+        "k_axis_uniqueness",
+        "numerology_inventory",
+        "observer_register_closure",
+        "statistical_conventions"
+      ],
+      "depended_on_by": [
+        "a_s_g1_closure_attempt",
+        "depth_connection_nulls",
+        "dynamical_tool_audit",
+        "epsilon_physical_reading",
+        "hierarchy_problem_translation",
+        "primitive_completeness_audit",
+        "remaining_gap_shapes",
+        "sector_decoupling_phase_a",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "git": [
+        {
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
+        }
+      ]
+    },
+    {
       "id": "exponent",
       "path": "sync_cost/derivations/exponent.md",
       "title": "Why the Exponent Is q\u2082q\u2083\u00b3",
@@ -1377,17 +2129,27 @@
       "title": "The Farey Partition",
       "summary": "**Computed**:\n- \u03a9_\u039b = 13/19 = 0.6842 vs observed 0.6847 \u00b1 0.0073 (0.07\u03c3)\n- The operator is the Farey count at the interaction scale q\u2082q\u2083 = 6\n- All inputs are from the Klein bottle topology",
       "depends_on": [
+        "L1_substrate_cusp_ground_state",
+        "omega_b_alpha_beta_closure",
         "omega_partition_combinatorial"
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
+        "audit_punch_list_2026-04",
+        "canonical_glossary",
         "framework_status",
         "numerology_inventory",
         "omega_partition_combinatorial",
+        "structural_lemmas",
         "vacuum_energy"
       ],
       "git": [
+        {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -1568,33 +2330,104 @@
       "title": "Framework status map",
       "summary": "At-a-glance inventory. One line per item. Full analysis lives in the\nreferenced files; this is the bird's-eye view to prevent duplicate\nwork and re-derivation of eliminated content.",
       "depends_on": [
+        "L1_substrate_cusp_ground_state",
         "a0_threshold",
         "a1_from_saddle_node",
+        "a_s_g1_closure_attempt",
         "a_s_geometric_proof",
         "anchor_count_audit",
         "ansatz_audit_policy",
         "baryon_fraction",
         "born_rule",
+        "continuity_in_K_nulls",
+        "continuum_limits",
+        "cross_ratio_irrep_reframe",
+        "denomination_boundary",
         "duty_cycle_dictionary",
         "farey_partition",
+        "h_inf_status",
         "hierarchy_gaussian_lattice",
+        "hierarchy_problem_translation",
         "hybrid_strategy_audit",
+        "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
+        "numerology_count_phase_b",
         "numerology_inventory",
-        "omega_b_residual_phase_a",
-        "omega_partition_combinatorial"
+        "omega_b_alpha_beta_closure",
+        "omega_partition_combinatorial",
+        "partition_logit_form",
+        "path_a_walkthrough",
+        "path_closures_iter3",
+        "path_closures_iter4",
+        "psl2z_subgroup_phase_a_results",
+        "psl2z_subgroup_phase_b",
+        "vocabulary_is_the_work_pattern",
+        "w_plus_formalization"
       ],
       "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY",
+        "L1_substrate_cusp_ground_state",
+        "PROOF_A_gravity",
+        "PROOF_B_quantum",
+        "a1_from_saddle_node",
+        "a_s_g1_closure_attempt",
         "ansatz_audit_policy",
+        "audit_punch_list_2026-04",
         "basin_11_connection_exploration",
+        "canonical_glossary",
+        "depth_connection_nulls",
+        "down_type_double_cover_closed",
+        "dynamical_tool_audit",
+        "epsilon_physical_reading",
+        "h_inf_status",
+        "hierarchy_problem_translation",
         "hybrid_strategy_audit",
         "k_scaling_scan",
         "klein_antipodal_z2_rep_pattern",
+        "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
+        "numerology_count_phase_a",
+        "numerology_count_phase_b",
         "numerology_inventory",
-        "omega_partition_combinatorial"
+        "omega_b_alpha_beta_closure",
+        "omega_b_c5_beta_audit",
+        "omega_b_c5_closure",
+        "omega_b_substrate_side_audit",
+        "omega_b_w_plus_candidate",
+        "omega_partition_combinatorial",
+        "path_a_walkthrough",
+        "path_closures_iter1",
+        "path_closures_iter2",
+        "path_closures_iter3",
+        "path_closures_iter4",
+        "phenomenology_cross_reference",
+        "primitive_completeness_audit",
+        "psl2z_subgroup_phase_c_inventory",
+        "remaining_gap_shapes",
+        "structural_lemmas",
+        "vocabulary_is_the_work_pattern"
       ],
       "git": [
+        {
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
+        },
+        {
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        },
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        },
+        {
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -1787,6 +2620,11 @@
         "gap_2_spatial_diffusion"
       ],
       "git": [
+        {
+          "hash": "3a5840b",
+          "date": "2026-04-26",
+          "subject": "Public-facing layer: README + deployed assets reorganization (#83)"
+        },
         {
           "hash": "2ca0794",
           "date": "2026-04-18",
@@ -2069,6 +2907,37 @@
       ]
     },
     {
+      "id": "h_inf_status",
+      "path": "sync_cost/derivations/h_inf_status.md",
+      "title": "H_inf status \u2014 anchor-side, scale-free in framework integers",
+      "summary": "**H_inf is anchor-side.** The framework computes H_inf in\nframework-integer units (scale-free), but the absolute value\nrequires the cosmological H_0 anchor for conversion to physical\nunits (GeV, kg, etc.).",
+      "depends_on": [
+        "a_s_g1_closure_attempt",
+        "anchor_count_audit",
+        "coupling_scales",
+        "framework_status",
+        "hierarchy_gaussian_lattice",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "a_s_g1_closure_attempt",
+        "anchor_count_audit",
+        "canonical_glossary",
+        "derivation_atlas",
+        "framework_status",
+        "hierarchy_gaussian_lattice",
+        "phenomenology_cross_reference",
+        "primitive_completeness_audit"
+      ],
+      "git": [
+        {
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
+        }
+      ]
+    },
+    {
       "id": "half_mobius_boundary",
       "path": "sync_cost/derivations/half_mobius_boundary.md",
       "title": "The Half-Mobius Boundary Condition (Z4)",
@@ -2142,6 +3011,7 @@
         "gap2_spatialization_decomposition",
         "gauge_dictionary",
         "gauge_factorization",
+        "h_inf_status",
         "klein_bottle_derivation",
         "sinw_effective_dimension",
         "statistical_conventions",
@@ -2151,15 +3021,25 @@
       "depended_on_by": [
         "INDEX",
         "anchor_count_audit",
+        "canonical_glossary",
+        "depth_connection_nulls",
+        "derivation_atlas",
         "down_type_double_cover_closed",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_b",
+        "dynamical_tool_audit",
+        "epsilon_substrate_decomposition",
         "framework_status",
         "gap2_spatialization_decomposition",
         "gap2_sub_e_status_reconciled",
+        "h_inf_status",
         "neutrino_mass_audit",
         "numerology_inventory",
         "observer_register_closure",
+        "path_a_walkthrough",
+        "path_closures_iter1",
+        "phenomenology_cross_reference",
+        "primitive_completeness_audit",
         "session_audit",
         "statistical_conventions",
         "three_formalizations"
@@ -2188,6 +3068,41 @@
       ]
     },
     {
+      "id": "hierarchy_problem_translation",
+      "path": "sync_cost/derivations/hierarchy_problem_translation.md",
+      "title": "Does the SM hierarchy problem translate to the framework?",
+      "summary": "A focused analytical note answering a methodological question\nraised after the path (a) closure (`path_a_walkthrough.md`):",
+      "depends_on": [
+        "anchor_count_audit",
+        "beta_from_tongues",
+        "continuum_limits",
+        "epsilon_substrate_decomposition",
+        "framework_status",
+        "k_axis_uniqueness",
+        "numerology_inventory",
+        "path_a_walkthrough",
+        "statistical_conventions"
+      ],
+      "depended_on_by": [
+        "a_s_g1_closure_attempt",
+        "anchor_count_audit",
+        "derivation_atlas",
+        "framework_status",
+        "path_closures_iter3",
+        "phenomenology_cross_reference",
+        "remaining_gap_shapes",
+        "sector_decoupling_phase_a",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "git": [
+        {
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
+        }
+      ]
+    },
+    {
       "id": "higgs_from_tongue_boundary",
       "path": "sync_cost/derivations/higgs_from_tongue_boundary.md",
       "title": "Electroweak Symmetry Breaking from the Tongue Boundary",
@@ -2198,6 +3113,7 @@
         "INDEX",
         "anchor_count_audit",
         "beta_from_tongues",
+        "dynamical_tool_audit",
         "fermion_mass_running"
       ],
       "git": [
@@ -2325,9 +3241,11 @@
         "omega_b_residual_phase_b"
       ],
       "depended_on_by": [
+        "depth_connection_nulls",
         "framework_status",
         "numerology_inventory",
-        "omega_b_residual_phase_b"
+        "omega_b_residual_phase_b",
+        "vocabulary_is_the_work_pattern"
       ],
       "git": [
         {
@@ -2435,8 +3353,24 @@
         "observer_register_closure",
         "omega_partition_combinatorial"
       ],
-      "depended_on_by": [],
-      "git": []
+      "depended_on_by": [
+        "canonical_glossary",
+        "derivation_atlas",
+        "dynamical_tool_audit",
+        "epsilon_physical_reading",
+        "epsilon_substrate_decomposition",
+        "hierarchy_problem_translation",
+        "path_a_walkthrough",
+        "path_closures_iter1",
+        "primitive_completeness_audit"
+      ],
+      "git": [
+        {
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
+        }
+      ]
     },
     {
       "id": "k_critical_phase_a",
@@ -2495,6 +3429,8 @@
         "observer_register_closure"
       ],
       "depended_on_by": [
+        "canonical_glossary",
+        "dynamical_tool_audit",
         "k_axis_uniqueness",
         "numerology_inventory"
       ],
@@ -2521,10 +3457,30 @@
       ],
       "depended_on_by": [
         "ansatz_audit_policy",
+        "canonical_glossary",
+        "cross_ratio_irrep_reframe",
+        "derivation_atlas",
+        "dynamical_tool_audit",
+        "epsilon_physical_reading",
         "hybrid_strategy_audit",
         "k_axis_uniqueness",
         "k_scaling_scan",
-        "observer_register_closure"
+        "observer_register_closure",
+        "omega_b_alpha_beta_closure",
+        "omega_b_alpha_beta_phase_b",
+        "omega_b_c5_beta_audit",
+        "omega_b_c5_closure",
+        "omega_b_two_component_sketch",
+        "omega_b_w_plus_candidate",
+        "partition_logit_form",
+        "path_closures_iter4",
+        "primitive_completeness_audit",
+        "psl2z_subgroup_identification_phase_a",
+        "psl2z_subgroup_phase_a_results",
+        "psl2z_subgroup_phase_b",
+        "structural_lemmas",
+        "vocabulary_is_the_work_pattern",
+        "w_plus_formalization"
       ],
       "git": [
         {
@@ -2546,6 +3502,7 @@
         "INDEX",
         "beta_from_tongues",
         "duty_cycle_dictionary",
+        "dynamical_tool_audit",
         "gauge_dictionary",
         "gauge_factorization",
         "gauge_high_scale_identification",
@@ -2632,9 +3589,11 @@
         "gauge_factorization",
         "gauge_high_scale_identification",
         "hierarchy_gaussian_lattice",
+        "klein_dynamics_roadmap",
         "numerology_inventory",
         "omega_b_residual_phase_a",
         "second_law_topological",
+        "sector_decoupling_phase_a",
         "sinw_effective_dimension",
         "three_formalizations"
       ],
@@ -2643,6 +3602,42 @@
           "hash": "d185308",
           "date": "2026-04-08",
           "subject": "Document three open gaps in Kuramoto-to-gravity derivation (#57)"
+        }
+      ]
+    },
+    {
+      "id": "klein_bridge_audit_and_probe",
+      "path": "sync_cost/derivations/klein_bridge_audit_and_probe.md",
+      "title": "Klein-bottle bridge: audit + minimal probe",
+      "summary": "Audit + minimal probe complete. Honest landing: C2 closure is\npossible in principle, requires two well-scoped but non-trivial\nderivations not completable in single session. \u03a9_b residual\nremains substrate-side genuine open work.",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "baryon_fraction",
+        "continuity_in_K_nulls",
+        "framework_status",
+        "klein_connection",
+        "klein_dynamics_roadmap",
+        "omega_b_c5_beta_audit",
+        "omega_b_c5_closure",
+        "omega_b_residual_phase_a",
+        "omega_b_two_component_sketch",
+        "remaining_gap_shapes",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "canonical_glossary",
+        "derivation_atlas",
+        "framework_status",
+        "numerology_count_phase_a",
+        "numerology_count_phase_b",
+        "omega_b_alpha_beta_phase_b",
+        "sector_decoupling_phase_a"
+      ],
+      "git": [
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -2666,13 +3661,46 @@
         "down_type_double_cover_phase_d",
         "gauge_dictionary",
         "gauge_high_scale_identification",
-        "second_law_topological"
+        "klein_bridge_audit_and_probe",
+        "klein_dynamics_roadmap",
+        "second_law_topological",
+        "sector_decoupling_phase_a"
       ],
       "git": [
         {
           "hash": "63ab4ba",
           "date": "2026-04-16",
           "subject": "Construct Klein bottle connection 1-form as partial Level A closure"
+        }
+      ]
+    },
+    {
+      "id": "klein_dynamics_roadmap",
+      "path": "sync_cost/derivations/klein_dynamics_roadmap.md",
+      "title": "Klein-bottle dynamics roadmap for \u03a9_b C2 closure",
+      "summary": "Roadmap complete. Implementation deferred per user request.\nBridge layer is well-scoped (~200-400 lines). Decisive\noutcome expected.",
+      "depends_on": [
+        "a_s_g1_closure_attempt",
+        "baryon_fraction",
+        "continuity_in_K_nulls",
+        "klein_bottle_derivation",
+        "klein_connection",
+        "omega_b_c5_beta_audit",
+        "omega_b_c5_closure",
+        "omega_b_residual_phase_a",
+        "omega_b_substrate_side_audit",
+        "omega_b_two_component_sketch",
+        "path_a_walkthrough",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "klein_bridge_audit_and_probe"
+      ],
+      "git": [
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -2688,6 +3716,8 @@
       ],
       "depended_on_by": [
         "basin_11_connection_exploration",
+        "canonical_glossary",
+        "derivation_atlas",
         "framework_status",
         "numerology_inventory"
       ],
@@ -2718,7 +3748,15 @@
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
-        "isotropy_lemma"
+        "canonical_glossary",
+        "cross_ratio_irrep_reframe",
+        "derivation_atlas",
+        "dynamical_quantization",
+        "isotropy_lemma",
+        "omega_b_w_plus_cross_ratio_search",
+        "primitive_completeness_audit",
+        "psl2z_subgroup_identification_phase_a",
+        "psl2z_subgroup_phase_a_results"
       ],
       "git": [
         {
@@ -2750,12 +3788,19 @@
       "depended_on_by": [
         "CHAIN_KSTAR",
         "FRAMEWORK_TOPOLOGY",
+        "address_and_quantity",
         "anchor_count_audit",
+        "canonical_glossary",
+        "depth_connection_nulls",
+        "derivation_atlas",
         "fourth_generation_revisited",
         "k_axis_uniqueness",
         "k_scaling_scan",
         "mixing_angle_audit",
-        "neutrino_mass_audit"
+        "neutrino_mass_audit",
+        "path_a_walkthrough",
+        "phenomenology_cross_reference",
+        "sector_decoupling_phase_a"
       ],
       "git": [
         {
@@ -2856,7 +3901,15 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
-        "INDEX"
+        "INDEX",
+        "L1_substrate_cusp_ground_state",
+        "canonical_glossary",
+        "derivation_atlas",
+        "dynamical_quantization",
+        "dynamical_tool_audit",
+        "primitive_completeness_audit",
+        "psl2z_subgroup_phase_b",
+        "w_plus_formalization"
       ],
       "git": [
         {
@@ -2893,8 +3946,13 @@
       "depended_on_by": [
         "INDEX",
         "a_s_geometric_proof",
+        "canonical_glossary",
+        "derivation_atlas",
+        "dynamical_quantization",
         "gap_2_spatial_diffusion",
-        "klein_bottle_derivation"
+        "klein_bottle_derivation",
+        "primitive_completeness_audit",
+        "structural_lemmas"
       ],
       "git": [
         {
@@ -3031,6 +4089,79 @@
       ]
     },
     {
+      "id": "numerology_count_phase_a",
+      "path": "sync_cost/derivations/numerology_count_phase_a.md",
+      "title": "Numerology count (Region C, Shape B) \u2014 Phase A: scope and design",
+      "summary": "Phase A complete. Region C scope, null hypothesis, test design,\nand verdict shapes specified. Phase B (the count itself)\ndeferred but well-defined.",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "continuity_in_K_nulls",
+        "framework_status",
+        "klein_bridge_audit_and_probe",
+        "numerology_inventory",
+        "omega_b_c5_beta_audit",
+        "remaining_gap_shapes",
+        "statistical_conventions",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "cross_ratio_irrep_reframe",
+        "numerology_count_phase_b",
+        "omega_b_w_plus_candidate",
+        "omega_b_w_plus_cross_ratio_search",
+        "path_closures_iter1",
+        "path_closures_iter3",
+        "psl2z_subgroup_identification_phase_a",
+        "sector_decoupling_phase_a"
+      ],
+      "git": [
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        }
+      ]
+    },
+    {
+      "id": "numerology_count_phase_b",
+      "path": "sync_cost/derivations/numerology_count_phase_b.md",
+      "title": "Region C Phase B \u2014 numerology count: results",
+      "summary": "Region C Phase B complete. **Verdict: PIGEONHOLE at all three\nthresholds (0.1%, 1%, 3%)**, p > 0.05 in all cases. Honest-\nlanding-loop verdict confirmed. Framework's Class 2 floor is\npigeonhole noise; substrate-structural derivation modes\nremain the productive direction.",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "cross_ratio_irrep_reframe",
+        "framework_status",
+        "klein_bridge_audit_and_probe",
+        "numerology_count_phase_a",
+        "remaining_gap_shapes",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY",
+        "L1_substrate_cusp_ground_state",
+        "a_s_g1_closure_attempt",
+        "ansatz_audit_policy",
+        "audit_punch_list_2026-04",
+        "canonical_glossary",
+        "derivation_atlas",
+        "framework_status",
+        "phenomenology_cross_reference",
+        "primitive_completeness_audit",
+        "psl2z_subgroup_phase_c_inventory",
+        "remaining_gap_shapes",
+        "structural_lemmas",
+        "vocabulary_is_the_work_pattern",
+        "w_plus_formalization"
+      ],
+      "git": [
+        {
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
+        }
+      ]
+    },
+    {
       "id": "numerology_inventory",
       "path": "sync_cost/derivations/numerology_inventory.md",
       "title": "Numerology inventory",
@@ -3066,17 +4197,32 @@
       ],
       "depended_on_by": [
         "CHAIN_KSTAR",
-        "FRAMEWORK_TOPOLOGY",
+        "a_s_g1_closure_attempt",
         "anchor_count_audit",
         "ansatz_audit_policy",
+        "audit_punch_list_2026-04",
+        "canonical_glossary",
+        "depth_connection_nulls",
         "duty_cycle_dictionary",
+        "dynamical_tool_audit",
+        "epsilon_physical_reading",
+        "epsilon_substrate_decomposition",
         "framework_status",
+        "hierarchy_problem_translation",
         "hybrid_strategy_audit",
         "k_scaling_scan",
         "klein_nodal_parity",
+        "numerology_count_phase_a",
         "observer_register_closure",
+        "partition_logit_form",
+        "path_a_walkthrough",
+        "path_closures_iter2",
+        "phenomenology_cross_reference",
+        "primitive_completeness_audit",
         "rationality_descent",
-        "sinw_effective_dimension"
+        "remaining_gap_shapes",
+        "sinw_effective_dimension",
+        "vocabulary_is_the_work_pattern"
       ],
       "git": [
         {
@@ -3120,15 +4266,162 @@
       ],
       "depended_on_by": [
         "anchor_count_audit",
+        "depth_connection_nulls",
+        "dynamical_tool_audit",
+        "epsilon_physical_reading",
+        "epsilon_substrate_decomposition",
         "k_axis_uniqueness",
         "k_scaling_scan",
-        "numerology_inventory"
+        "numerology_inventory",
+        "path_a_walkthrough",
+        "path_closures_iter1"
       ],
       "git": [
         {
           "hash": "9bed549",
           "date": "2026-04-24",
           "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        }
+      ]
+    },
+    {
+      "id": "omega_b_alpha_beta_closure",
+      "path": "sync_cost/derivations/omega_b_alpha_beta_closure.md",
+      "title": "\u03a9_b (\u03b1, \u03b2) execution Phase B \u2014 closure via sign-rep no-EM-coupling",
+      "summary": "**(\u03b1, \u03b2) = (0, 1) closure complete.** \u03a9_b residual closes at\nTier 1 (mechanism) + Tier 2 (parameters), both structurally\nderived. Class 5 / Survives candidate pending consistency check\non \u00a72 language.",
+      "depends_on": [
+        "baryon_fraction",
+        "framework_status",
+        "klein_antipodal_z2_rep_pattern",
+        "omega_b_alpha_beta_phase_b",
+        "omega_b_c5_beta_audit",
+        "omega_b_c5_closure",
+        "omega_b_residual_phase_a",
+        "omega_b_substrate_side_audit",
+        "omega_b_two_component_sketch",
+        "path_closures_iter3",
+        "remaining_gap_shapes",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "L1_substrate_cusp_ground_state",
+        "audit_punch_list_2026-04",
+        "baryon_fraction",
+        "canonical_glossary",
+        "derivation_atlas",
+        "farey_partition",
+        "framework_status",
+        "omega_b_substrate_side_audit",
+        "omega_b_w_plus_candidate",
+        "omega_b_w_plus_cross_ratio_search",
+        "omega_partition_combinatorial",
+        "partition_logit_form",
+        "phenomenology_cross_reference",
+        "psl2z_subgroup_phase_a_results",
+        "psl2z_subgroup_phase_b",
+        "remaining_gap_shapes",
+        "structural_lemmas",
+        "vocabulary_is_the_work_pattern",
+        "w_plus_formalization"
+      ],
+      "git": [
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        }
+      ]
+    },
+    {
+      "id": "omega_b_alpha_beta_phase_b",
+      "path": "sync_cost/derivations/omega_b_alpha_beta_phase_b.md",
+      "title": "\u03a9_b (\u03b1, \u03b2) execution \u2014 Phase B initial pass",
+      "summary": "Phase B initial pass complete. Two structural candidates\nidentified ((\u03b1, \u03b2) = (0, 1) or (1, 1)) distinguished by\ntreatment of the {3} mode. Both pass Z1-Z3 cleanly. Closing\nrequires single-session reconciliation of the framework's\nexisting formula derivation (3 specific tasks listed). The\n(\u03b1, \u03b2) execution is **not closed** but is **substantially\nsharper** than entering Phase B as a \"needs derivation\"\ncandidate.",
+      "depends_on": [
+        "baryon_fraction",
+        "boundary_weight",
+        "klein_antipodal_z2_rep_pattern",
+        "klein_bridge_audit_and_probe",
+        "omega_b_residual_phase_a",
+        "omega_b_two_component_sketch",
+        "path_closures_iter4"
+      ],
+      "depended_on_by": [
+        "omega_b_alpha_beta_closure"
+      ],
+      "git": [
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        }
+      ]
+    },
+    {
+      "id": "omega_b_c5_beta_audit",
+      "path": "sync_cost/derivations/omega_b_c5_beta_audit.md",
+      "title": "\u03a9_b C5 closure: \u03b2-forcing audit",
+      "summary": "A direct audit of the exponent \u03b2 in the C5 closure\n(`omega_b_c5_closure.md`), per `ansatz_audit_policy.md`. The\nquestion: is \u03b2 = 1/12 forced framework-natively, or does the\nclosure default to Class 2 because multiple candidate \u03b2 values\nmatch observation within precision?",
+      "depends_on": [
+        "a_s_g1_closure_attempt",
+        "ansatz_audit_policy",
+        "continuum_limits",
+        "down_type_double_cover_closed",
+        "framework_status",
+        "klein_antipodal_z2_rep_pattern",
+        "omega_b_c5_closure",
+        "omega_b_substrate_side_audit"
+      ],
+      "depended_on_by": [
+        "continuity_in_K_nulls",
+        "cross_ratio_irrep_reframe",
+        "klein_bridge_audit_and_probe",
+        "klein_dynamics_roadmap",
+        "numerology_count_phase_a",
+        "omega_b_alpha_beta_closure",
+        "omega_b_two_component_sketch",
+        "omega_b_w_plus_candidate",
+        "sector_decoupling_phase_a"
+      ],
+      "git": [
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        }
+      ]
+    },
+    {
+      "id": "omega_b_c5_closure",
+      "path": "sync_cost/derivations/omega_b_c5_closure.md",
+      "title": "\u03a9_b Floor closure: C5 z-dependent w with framework-integer parameters",
+      "summary": "A focused calculation of `omega_b_residual_phase_a.md` candidate\nC5 (z-dependent boundary weight w from a_0(z) = c\u00b7H(z)/(2\u03c0)),\napplied to the three-way inconsistency in (\u03a9_\u039b, \u03a9_b, \u03a9_DM).",
+      "depends_on": [
+        "a_s_g1_closure_attempt",
+        "ansatz_audit_policy",
+        "baryon_fraction",
+        "boundary_weight",
+        "framework_status",
+        "klein_antipodal_z2_rep_pattern",
+        "omega_b_residual_phase_a",
+        "omega_b_substrate_side_audit",
+        "remaining_gap_shapes",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "continuity_in_K_nulls",
+        "klein_bridge_audit_and_probe",
+        "klein_dynamics_roadmap",
+        "omega_b_alpha_beta_closure",
+        "omega_b_c5_beta_audit",
+        "omega_b_two_component_sketch",
+        "path_closures_iter4"
+      ],
+      "git": [
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -3145,9 +4438,19 @@
         "omega_partition_combinatorial"
       ],
       "depended_on_by": [
-        "framework_status",
+        "audit_punch_list_2026-04",
+        "continuity_in_K_nulls",
         "hybrid_strategy_audit",
-        "omega_b_residual_phase_b"
+        "klein_bridge_audit_and_probe",
+        "klein_dynamics_roadmap",
+        "omega_b_alpha_beta_closure",
+        "omega_b_alpha_beta_phase_b",
+        "omega_b_c5_closure",
+        "omega_b_residual_phase_b",
+        "omega_b_substrate_side_audit",
+        "omega_b_two_component_sketch",
+        "partition_logit_form",
+        "vocabulary_is_the_work_pattern"
       ],
       "git": [
         {
@@ -3178,7 +4481,9 @@
       "depended_on_by": [
         "hybrid_strategy_audit",
         "numerology_inventory",
-        "statistical_conventions"
+        "omega_b_substrate_side_audit",
+        "statistical_conventions",
+        "vocabulary_is_the_work_pattern"
       ],
       "git": [
         {
@@ -3194,27 +4499,168 @@
       ]
     },
     {
+      "id": "omega_b_substrate_side_audit",
+      "path": "sync_cost/derivations/omega_b_substrate_side_audit.md",
+      "title": "\u03a9_b residual audit: passes substrate-side test, does NOT dissolve",
+      "summary": "> **Closure update (2026-04-26).** The \"first remaining substrate-\n> side structural gap\" identified by this audit has subsequently\n> closed:\n>\n> - **Tier 1 + Tier 2 closure** via `omega_b_alpha_beta_closure.md`:\n>   the corrected mode breakdown identifies the antisym Klein\n>   eigenmode \u03c8_-(1, 5) as always-locked (sign-rep no-EM), forcing\n>   w_- = 1 STRUCTURALLY and (\u03b1, \u03b2) = (0, 1). Single-parameter\n>   w_+ closure gives 0.044% on \u03a9_b, 0.044% on \u03a9_DM, 0.13% on \u03a9_\u039b.\n>   This is a recognize-mode",
+      "depends_on": [
+        "a_s_g1_closure_attempt",
+        "baryon_fraction",
+        "boundary_weight",
+        "framework_status",
+        "omega_b_alpha_beta_closure",
+        "omega_b_residual_phase_a",
+        "omega_b_residual_phase_b",
+        "omega_partition_combinatorial",
+        "psl2z_subgroup_phase_b",
+        "remaining_gap_shapes",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "audit_punch_list_2026-04",
+        "klein_dynamics_roadmap",
+        "omega_b_alpha_beta_closure",
+        "omega_b_c5_beta_audit",
+        "omega_b_c5_closure",
+        "path_closures_iter4"
+      ],
+      "git": [
+        {
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        },
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        }
+      ]
+    },
+    {
+      "id": "omega_b_two_component_sketch",
+      "path": "sync_cost/derivations/omega_b_two_component_sketch.md",
+      "title": "\u03a9_b two-component sketch: the C2 mechanism mechanically traced",
+      "summary": "A direct sketch of the two-component reading of the \u03a9_b residual,\nprompted by the user's reframing question (\"are we insisting on\nanything structural that can be trivialized?\"). The sketch maps\nKlein-antipodal Z\u2082-rep eigenmode decomposition onto the partition\nformula and tests whether the resulting (w_+, w_-) reading dissolves\nthe C5 continuity-in-K requirement.",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "baryon_fraction",
+        "boundary_weight",
+        "continuity_in_K_nulls",
+        "down_type_double_cover_closed",
+        "klein_antipodal_z2_rep_pattern",
+        "omega_b_c5_beta_audit",
+        "omega_b_c5_closure",
+        "omega_b_residual_phase_a"
+      ],
+      "depended_on_by": [
+        "klein_bridge_audit_and_probe",
+        "klein_dynamics_roadmap",
+        "omega_b_alpha_beta_closure",
+        "omega_b_alpha_beta_phase_b",
+        "partition_logit_form",
+        "path_closures_iter4"
+      ],
+      "git": [
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        }
+      ]
+    },
+    {
+      "id": "omega_b_w_plus_candidate",
+      "path": "sync_cost/derivations/omega_b_w_plus_candidate.md",
+      "title": "\u03a9_b w_+ structural derivation: candidate found, ansatz audit applied",
+      "summary": "Direction 2 produces partial result: framework-integer\ncandidate **w_+ = 13/14** identified with 0.13% match across\nthree observables. **Class 2 per audit discipline** (multi-\ncandidate ansatz pattern, no unique forcing argument).",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "continuity_in_K_nulls",
+        "framework_status",
+        "klein_antipodal_z2_rep_pattern",
+        "numerology_count_phase_a",
+        "omega_b_alpha_beta_closure",
+        "omega_b_c5_beta_audit",
+        "partition_logit_form"
+      ],
+      "depended_on_by": [
+        "omega_b_w_plus_cross_ratio_search",
+        "psl2z_subgroup_phase_a_results",
+        "psl2z_subgroup_phase_b",
+        "psl2z_subgroup_phase_c_inventory"
+      ],
+      "git": [
+        {
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        }
+      ]
+    },
+    {
+      "id": "omega_b_w_plus_cross_ratio_search",
+      "path": "sync_cost/derivations/omega_b_w_plus_cross_ratio_search.md",
+      "title": "Cross-ratio search for w_+ forcing argument",
+      "summary": "Path 1 recognize-mode probe complete. Cross-ratio machinery\nsurfaces multiple structural readings but no unique forcing.\n\u03a9_b Tier 3 (w_+) stays Class 2. Closure status unchanged\noverall, but the Class 2 entry now has explicit structural\ninterpretation (cross-ratio invariants of Farey 4-tuples\ninvolving framework prediction points).",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "lie_group_characterization",
+        "numerology_count_phase_a",
+        "omega_b_alpha_beta_closure",
+        "omega_b_w_plus_candidate",
+        "partition_logit_form"
+      ],
+      "depended_on_by": [
+        "cross_ratio_irrep_reframe",
+        "derivation_atlas",
+        "psl2z_subgroup_identification_phase_a",
+        "psl2z_subgroup_phase_a_results",
+        "psl2z_subgroup_phase_b"
+      ],
+      "git": [
+        {
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        }
+      ]
+    },
+    {
       "id": "omega_partition_combinatorial",
       "path": "sync_cost/derivations/omega_partition_combinatorial.md",
       "title": "\u03a9 partition: combinatorial derivation at depth 19",
       "summary": "**Derived.** Both halves of the \u03a9 partition follow from independent\ncombinatorial arguments rooted in the Klein bottle's Z\u2082 structure:",
       "depends_on": [
+        "L1_substrate_cusp_ground_state",
         "baryon_fraction",
         "farey_partition",
         "framework_status",
         "gell_mann_nishijima",
+        "omega_b_alpha_beta_closure",
+        "w_plus_formalization",
         "xor_derivation"
       ],
       "depended_on_by": [
         "INDEX",
+        "audit_punch_list_2026-04",
+        "canonical_glossary",
         "farey_partition",
         "framework_status",
         "k_axis_uniqueness",
         "klein_antipodal_z2_rep_pattern",
         "numerology_inventory",
-        "omega_b_residual_phase_a"
+        "omega_b_residual_phase_a",
+        "omega_b_substrate_side_audit",
+        "path_closures_iter1",
+        "structural_lemmas"
       ],
       "git": [
+        {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -3224,6 +4670,251 @@
           "hash": "dc466d8",
           "date": "2026-04-22",
           "subject": "Claude/vocabulary attribution audit 2j xt k (#71)"
+        }
+      ]
+    },
+    {
+      "id": "partition_logit_form",
+      "path": "sync_cost/derivations/partition_logit_form.md",
+      "title": "Cosmic partition prediction in logit form",
+      "summary": "The logit form is now formally stated. Three follow-on\ncandidates:",
+      "depends_on": [
+        "baryon_fraction",
+        "klein_antipodal_z2_rep_pattern",
+        "numerology_inventory",
+        "omega_b_alpha_beta_closure",
+        "omega_b_residual_phase_a",
+        "omega_b_two_component_sketch",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "L1_substrate_cusp_ground_state",
+        "canonical_glossary",
+        "derivation_atlas",
+        "framework_status",
+        "omega_b_w_plus_candidate",
+        "omega_b_w_plus_cross_ratio_search",
+        "psl2z_subgroup_identification_phase_a",
+        "psl2z_subgroup_phase_a_results",
+        "psl2z_subgroup_phase_b",
+        "psl2z_subgroup_phase_c_inventory",
+        "structural_lemmas",
+        "vocabulary_is_the_work_pattern",
+        "w_plus_formalization"
+      ],
+      "git": [
+        {
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        }
+      ]
+    },
+    {
+      "id": "path_a_walkthrough",
+      "path": "sync_cost/derivations/path_a_walkthrough.md",
+      "title": "Path (a) walkthrough: Klein-fold sub-action of |Z_6| \u00d7 \u27e8z\u2080\u27e9\u2085\u2084 \u00d7 \u27e8\u03b9\u27e9",
+      "summary": "A direct walkthrough of path (a) from `depth_connection_nulls.md`\n\u2014 the most-recommended open path for connecting cosmological\ndepth 54 to EW depth ~15. The walkthrough shows that path (a) in\nall three of its natural interpretations runs into a structural\nobstruction: **the canonical register has prime support {2, 3},\nand 15 = 3\u00b75 cannot be reached without an external source of\nthe prime 5.**",
+      "depends_on": [
+        "anchor_count_audit",
+        "depth_connection_nulls",
+        "framework_status",
+        "hierarchy_gaussian_lattice",
+        "k_axis_uniqueness",
+        "mass_sector_closure",
+        "numerology_inventory",
+        "observer_register_closure"
+      ],
+      "depended_on_by": [
+        "a_s_g1_closure_attempt",
+        "anchor_count_audit",
+        "canonical_glossary",
+        "depth_connection_nulls",
+        "framework_status",
+        "hierarchy_problem_translation",
+        "klein_dynamics_roadmap",
+        "path_closures_iter3",
+        "path_closures_iter4",
+        "remaining_gap_shapes",
+        "sector_decoupling_phase_a",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "git": [
+        {
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
+        }
+      ]
+    },
+    {
+      "id": "path_closures_iter1",
+      "path": "sync_cost/derivations/path_closures_iter1.md",
+      "title": "Path closures \u2014 iteration 1",
+      "summary": "Iteration 1 of \"close paths\" mode complete. Four candidates\nclosed (3 NULL, 1 BLOCKED). Region D narrowed 6\u21923. Region B\nnarrowed 4\u21923. Subtractive progress. Loop pattern broken for\nthis iteration.",
+      "depends_on": [
+        "a0_threshold",
+        "a_s_geometric_proof",
+        "baryon_fraction",
+        "continuum_limits",
+        "depth_connection_nulls",
+        "framework_status",
+        "hierarchy_gaussian_lattice",
+        "k_axis_uniqueness",
+        "numerology_count_phase_a",
+        "observer_register_closure",
+        "omega_partition_combinatorial",
+        "sector_decoupling_phase_a"
+      ],
+      "depended_on_by": [
+        "path_closures_iter2",
+        "path_closures_iter3",
+        "path_closures_iter4"
+      ],
+      "git": [
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        }
+      ]
+    },
+    {
+      "id": "path_closures_iter2",
+      "path": "sync_cost/derivations/path_closures_iter2.md",
+      "title": "Path closures \u2014 iteration 2",
+      "summary": "Iteration 2 complete. 4 candidates closed/promoted. Open list\nnarrowed to 3 substantive candidates total across Regions B/C/D.\nLoop pattern still broken: definite verdicts, not multi-candidate\nansatz outputs.",
+      "depends_on": [
+        "anchor_count_audit",
+        "continuity_in_K_nulls",
+        "continuum_limits",
+        "depth_connection_nulls",
+        "framework_status",
+        "numerology_inventory",
+        "path_closures_iter1",
+        "sector_decoupling_phase_a"
+      ],
+      "depended_on_by": [
+        "path_closures_iter3"
+      ],
+      "git": [
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        }
+      ]
+    },
+    {
+      "id": "path_closures_iter3",
+      "path": "sync_cost/derivations/path_closures_iter3.md",
+      "title": "Path closures \u2014 iteration 3",
+      "summary": "Iteration 3 complete. **D.3 closes Class 5 (anchor obstruction\n#5).** D.1 partial; Path (c) reduced; Region C still empirical.\nOpen list now: D.1 closure derivation + Region C empirical count.\nThe framework's anchor-count question is structurally resolved.",
+      "depends_on": [
+        "anchor_count_audit",
+        "baryon_fraction",
+        "continuity_in_K_nulls",
+        "continuum_limits",
+        "down_type_double_cover_closed",
+        "framework_status",
+        "hierarchy_problem_translation",
+        "numerology_count_phase_a",
+        "path_a_walkthrough",
+        "path_closures_iter1",
+        "path_closures_iter2",
+        "sector_decoupling_phase_a",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY",
+        "anchor_count_audit",
+        "canonical_glossary",
+        "continuity_in_K_nulls",
+        "derivation_atlas",
+        "framework_status",
+        "omega_b_alpha_beta_closure",
+        "remaining_gap_shapes",
+        "structural_lemmas"
+      ],
+      "git": [
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        }
+      ]
+    },
+    {
+      "id": "path_closures_iter4",
+      "path": "sync_cost/derivations/path_closures_iter4.md",
+      "title": "Path closures \u2014 iteration 4 (breadth-first)",
+      "summary": "Iteration 4 complete. **D.1 promotes to Class 5 (Klein \u03c0_1 sector\nassignment fully forced).** Combined with D.3 (iter 3), sector\ndecoupling derivation is COMPLETE in the framework. Open list\nshrinks to 3 substantive items: (\u03b1, \u03b2) execution, Region C\nempirical count, framework_status mechanical update.",
+      "depends_on": [
+        "anchor_count_audit",
+        "baryon_fraction",
+        "continuum_limits",
+        "down_type_double_cover_closed",
+        "framework_status",
+        "klein_antipodal_z2_rep_pattern",
+        "omega_b_c5_closure",
+        "omega_b_substrate_side_audit",
+        "omega_b_two_component_sketch",
+        "path_a_walkthrough",
+        "path_closures_iter1",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "framework_status",
+        "omega_b_alpha_beta_phase_b",
+        "remaining_gap_shapes"
+      ],
+      "git": [
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        }
+      ]
+    },
+    {
+      "id": "phenomenology_cross_reference",
+      "path": "sync_cost/derivations/phenomenology_cross_reference.md",
+      "title": "Phenomenology cross-reference \u2014 observation vs framework prediction",
+      "summary": "Phenomenology cross-reference v1, 2026-04-26. Maps 11 thematic\nsections of physical phenomena to framework predictions with\nexplicit Z1-Z3 status, closure class, and substrate/anchor side.\nCompanion to `canonical_glossary.md`.",
+      "depends_on": [
+        "L1_substrate_cusp_ground_state",
+        "a0_threshold",
+        "a1_from_saddle_node",
+        "a_s_geometric_proof",
+        "ansatz_audit_policy",
+        "born_rule",
+        "canonical_glossary",
+        "continuum_limits",
+        "down_type_double_cover_closed",
+        "framework_status",
+        "h_inf_status",
+        "hierarchy_gaussian_lattice",
+        "hierarchy_problem_translation",
+        "mass_sector_closure",
+        "numerology_count_phase_b",
+        "numerology_inventory",
+        "omega_b_alpha_beta_closure",
+        "psl2z_subgroup_phase_b",
+        "statistical_conventions",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "a1_from_saddle_node",
+        "audit_punch_list_2026-04",
+        "derivation_atlas",
+        "down_type_double_cover_closed",
+        "structural_lemmas"
+      ],
+      "git": [
+        {
+          "hash": "2109a3b",
+          "date": "2026-04-26",
+          "subject": "Legitimacy homework: glossary + phenomenology + derivation atlas (#81)"
         }
       ]
     },
@@ -3279,6 +4970,176 @@
           "hash": "ac257ed",
           "date": "2026-03-22",
           "subject": "Add Planck scale and measurement collapse formalizations"
+        }
+      ]
+    },
+    {
+      "id": "primitive_completeness_audit",
+      "path": "sync_cost/derivations/primitive_completeness_audit.md",
+      "title": "Shape F primitive-completeness audit (2026-04-26)",
+      "summary": "Shape F audit complete. Framework is primitive-complete through\nthe 2026-04 closure round. Hygiene routine completed: stale\nrefs cleared, scripts reproduced, substrate drift-free,\nMANIFEST updated. The framework's open list now contains only\noptional Instance 7-style status updates (Q4) and ongoing\nmethodological hygiene (this audit's recommended periodic\nre-run).",
+      "depends_on": [
+        "L1_substrate_cusp_ground_state",
+        "a0_threshold",
+        "a1_from_saddle_node",
+        "a_s_g1_closure_attempt",
+        "anchor_count_audit",
+        "born_rule",
+        "denomination_boundary",
+        "epsilon_physical_reading",
+        "epsilon_substrate_decomposition",
+        "framework_status",
+        "h_inf_status",
+        "hierarchy_gaussian_lattice",
+        "k_axis_uniqueness",
+        "klein_antipodal_z2_rep_pattern",
+        "lie_group_characterization",
+        "mediant_derivation",
+        "minimum_alphabet",
+        "numerology_count_phase_b",
+        "numerology_inventory",
+        "psl2z_subgroup_phase_b",
+        "remaining_gap_shapes",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "derivation_atlas",
+        "remaining_gap_shapes"
+      ],
+      "git": [
+        {
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
+        }
+      ]
+    },
+    {
+      "id": "psl2z_subgroup_identification_phase_a",
+      "path": "sync_cost/derivations/psl2z_subgroup_identification_phase_a.md",
+      "title": "PSL(2,\u2124)-subgroup identification \u2014 Phase A",
+      "summary": "Phase A planning document. Direction 4 queued as multi-session\nstructural work. The four candidate subgroups (\u0393(2), \u0393_0(2),\n\u0393_0(3), \u0393_0(6)) identified; \u0393_0(6) flagged as suggestive given\nthe framework's q_2\u00b7q_3 = 6 = INTERACT structure.",
+      "depends_on": [
+        "baryon_fraction",
+        "cross_ratio_irrep_reframe",
+        "klein_antipodal_z2_rep_pattern",
+        "lie_group_characterization",
+        "numerology_count_phase_a",
+        "omega_b_w_plus_cross_ratio_search",
+        "partition_logit_form"
+      ],
+      "depended_on_by": [
+        "canonical_glossary",
+        "cross_ratio_irrep_reframe",
+        "psl2z_subgroup_phase_a_results"
+      ],
+      "git": [
+        {
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        }
+      ]
+    },
+    {
+      "id": "psl2z_subgroup_phase_a_results",
+      "path": "sync_cost/derivations/psl2z_subgroup_phase_a_results.md",
+      "title": "PSL(2,\u2124)-subgroup Phase A \u2014 orbit enumeration results",
+      "summary": "Phase A executed. **\u0393_0(6) identified as the framework-natural\nPSL(2,\u2124)-subgroup**: smallest Hecke level that splits {13/14,\n12/13, 14/15} into distinct cusps, with level matching INTERACT\n= q_2 \u00b7 q_3.",
+      "depends_on": [
+        "baryon_fraction",
+        "cross_ratio_irrep_reframe",
+        "klein_antipodal_z2_rep_pattern",
+        "lie_group_characterization",
+        "omega_b_alpha_beta_closure",
+        "omega_b_w_plus_candidate",
+        "omega_b_w_plus_cross_ratio_search",
+        "partition_logit_form",
+        "psl2z_subgroup_identification_phase_a"
+      ],
+      "depended_on_by": [
+        "canonical_glossary",
+        "cross_ratio_irrep_reframe",
+        "framework_status",
+        "psl2z_subgroup_phase_b",
+        "structural_lemmas",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "git": [
+        {
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        }
+      ]
+    },
+    {
+      "id": "psl2z_subgroup_phase_b",
+      "path": "sync_cost/derivations/psl2z_subgroup_phase_b.md",
+      "title": "PSL(2,\u2124)-subgroup Phase B \u2014 substrate-side \u0393_0(6) derivation",
+      "summary": "**Phase B B1 and B2 close in recognize mode.** Substrate \u0393_0(6)\npreservation derives from existing q_2 \u00d7 q_3 sector decomposition.\nw_+ \u2194 cusp 1/2 derives from trivial Klein Z_2 rep \u2194 q_2-cusp\ncorrespondence, independently of EM-MOND reading.",
+      "depends_on": [
+        "baryon_fraction",
+        "cross_ratio_irrep_reframe",
+        "klein_antipodal_z2_rep_pattern",
+        "mediant_derivation",
+        "omega_b_alpha_beta_closure",
+        "omega_b_w_plus_candidate",
+        "omega_b_w_plus_cross_ratio_search",
+        "partition_logit_form",
+        "psl2z_subgroup_phase_a_results",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "L1_substrate_cusp_ground_state",
+        "ansatz_audit_policy",
+        "audit_punch_list_2026-04",
+        "canonical_glossary",
+        "cross_ratio_irrep_reframe",
+        "derivation_atlas",
+        "framework_status",
+        "omega_b_substrate_side_audit",
+        "phenomenology_cross_reference",
+        "primitive_completeness_audit",
+        "psl2z_subgroup_phase_c_inventory",
+        "remaining_gap_shapes",
+        "structural_lemmas",
+        "vocabulary_is_the_work_pattern",
+        "w_plus_formalization"
+      ],
+      "git": [
+        {
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        }
+      ]
+    },
+    {
+      "id": "psl2z_subgroup_phase_c_inventory",
+      "path": "sync_cost/derivations/psl2z_subgroup_phase_c_inventory.md",
+      "title": "Direction 4 Phase C \u2014 what remains for Class 5 closure",
+      "summary": "Direction 4 Phase C inventoried. **Reduces to the q_3-sector\nquantity pattern question** already flagged in\n`partition_logit_form.md`. No new open structure introduced.",
+      "depends_on": [
+        "baryon_fraction",
+        "denomination_boundary",
+        "framework_status",
+        "numerology_count_phase_b",
+        "omega_b_w_plus_candidate",
+        "partition_logit_form",
+        "psl2z_subgroup_phase_b",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "L1_substrate_cusp_ground_state",
+        "structural_lemmas",
+        "w_plus_formalization"
+      ],
+      "git": [
+        {
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
         }
       ]
     },
@@ -3433,6 +5294,62 @@
       ]
     },
     {
+      "id": "remaining_gap_shapes",
+      "path": "sync_cost/derivations/remaining_gap_shapes.md",
+      "title": "Remaining gap shapes after the disambiguation pattern",
+      "summary": "A forward-looking inventory of what's genuinely open in the\nframework after the `vocabulary_is_the_work_pattern.md`\nconsolidation has cleared the surface. Five distinct shapes,\ncharacterized by what kind of work they need and what kind of\nresult would close them.",
+      "depends_on": [
+        "L1_substrate_cusp_ground_state",
+        "anchor_count_audit",
+        "cross_ratio_irrep_reframe",
+        "depth_connection_nulls",
+        "epsilon_substrate_decomposition",
+        "framework_status",
+        "hierarchy_problem_translation",
+        "numerology_count_phase_b",
+        "numerology_inventory",
+        "omega_b_alpha_beta_closure",
+        "path_a_walkthrough",
+        "path_closures_iter3",
+        "path_closures_iter4",
+        "primitive_completeness_audit",
+        "psl2z_subgroup_phase_b",
+        "vocabulary_is_the_work_pattern",
+        "w_plus_formalization"
+      ],
+      "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY",
+        "L1_substrate_cusp_ground_state",
+        "a_s_g1_closure_attempt",
+        "audit_punch_list_2026-04",
+        "klein_bridge_audit_and_probe",
+        "numerology_count_phase_a",
+        "numerology_count_phase_b",
+        "omega_b_alpha_beta_closure",
+        "omega_b_c5_closure",
+        "omega_b_substrate_side_audit",
+        "primitive_completeness_audit",
+        "sector_decoupling_phase_a"
+      ],
+      "git": [
+        {
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
+        },
+        {
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        },
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        }
+      ]
+    },
+    {
       "id": "second_law_topological",
       "path": "sync_cost/derivations/second_law_topological.md",
       "title": "The Second Law from Non-Orientability",
@@ -3469,6 +5386,45 @@
           "hash": "e1e25da",
           "date": "2026-04-13",
           "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "sector_decoupling_phase_a",
+      "path": "sync_cost/derivations/sector_decoupling_phase_a.md",
+      "title": "Sector decoupling derivation (Region D, Anchor obstruction #5) \u2014 Phase A",
+      "summary": "Phase A complete. Region D scope, candidates, prior nulls,\nsequencing with Region C specified. Phase B (the actual sector-\ndecoupling derivation) deferred until Region C resolves and\ncandidate is chosen.",
+      "depends_on": [
+        "anchor_count_audit",
+        "ansatz_audit_policy",
+        "baryon_fraction",
+        "continuity_in_K_nulls",
+        "continuum_limits",
+        "coupling_scales",
+        "down_type_double_cover_closed",
+        "epsilon_substrate_decomposition",
+        "hierarchy_problem_translation",
+        "klein_bottle_derivation",
+        "klein_bridge_audit_and_probe",
+        "klein_connection",
+        "mass_sector_closure",
+        "numerology_count_phase_a",
+        "omega_b_c5_beta_audit",
+        "path_a_walkthrough",
+        "remaining_gap_shapes",
+        "statistical_conventions",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "path_closures_iter1",
+        "path_closures_iter2",
+        "path_closures_iter3"
+      ],
+      "git": [
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -3556,7 +5512,6 @@
         "three_dimensions"
       ],
       "depended_on_by": [
-        "FRAMEWORK_TOPOLOGY",
         "duty_cycle_dictionary",
         "hierarchy_gaussian_lattice",
         "neutrino_mass_audit",
@@ -3803,11 +5758,22 @@
         "a_s_geometric_proof",
         "anchor_count_audit",
         "ansatz_audit_policy",
+        "canonical_glossary",
+        "continuity_in_K_nulls",
+        "depth_connection_nulls",
+        "derivation_atlas",
+        "epsilon_substrate_decomposition",
         "hierarchy_gaussian_lattice",
+        "hierarchy_problem_translation",
         "klein_antipodal_z2_rep_pattern",
         "mixing_angle_audit",
         "neutrino_mass_audit",
-        "numerology_inventory"
+        "numerology_count_phase_a",
+        "numerology_inventory",
+        "phenomenology_cross_reference",
+        "sector_decoupling_phase_a",
+        "structural_lemmas",
+        "vocabulary_is_the_work_pattern"
       ],
       "git": [
         {
@@ -3861,6 +5827,51 @@
       ]
     },
     {
+      "id": "structural_lemmas",
+      "path": "sync_cost/derivations/structural_lemmas.md",
+      "title": "Structural lemmas",
+      "summary": "**Structural lemmas v1, 2026-04-26.** Nine load-bearing lemmas\ncatalogued for preprint citation. Each lemma is independently\nstatable with proof source, Z1-Z3 status, and substrate /\nanchor classification. Composition graph identifies headline\nchain (Lemmas 4 \u2192 5 \u2192 6 + 2 \u2192 1) producing the cosmic partition\ntwo-component closure with zero free parameters at the closure\nlevel.",
+      "depends_on": [
+        "L1_substrate_cusp_ground_state",
+        "a1_from_saddle_node",
+        "anchor_count_audit",
+        "ansatz_audit_policy",
+        "baryon_fraction",
+        "born_rule",
+        "canonical_glossary",
+        "continuity_in_K_nulls",
+        "continuum_limits",
+        "coupling_scales",
+        "derivation_atlas",
+        "farey_partition",
+        "framework_status",
+        "klein_antipodal_z2_rep_pattern",
+        "minimum_alphabet",
+        "numerology_count_phase_b",
+        "omega_b_alpha_beta_closure",
+        "omega_partition_combinatorial",
+        "partition_logit_form",
+        "path_closures_iter3",
+        "phenomenology_cross_reference",
+        "psl2z_subgroup_phase_a_results",
+        "psl2z_subgroup_phase_b",
+        "psl2z_subgroup_phase_c_inventory",
+        "statistical_conventions",
+        "three_dimensions",
+        "w_plus_formalization"
+      ],
+      "depended_on_by": [
+        "dynamical_quantization"
+      ],
+      "git": [
+        {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        }
+      ]
+    },
+    {
       "id": "three_dimensions",
       "path": "sync_cost/derivations/three_dimensions.md",
       "title": "Three Dimensions from the Mediant",
@@ -3874,7 +5885,10 @@
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
         "beta_from_tongues",
+        "canonical_glossary",
+        "derivation_atlas",
         "duty_cycle_dictionary",
+        "dynamical_quantization",
         "fermion_mass_running",
         "gap2_step4_farey_laplacian",
         "gap2_theorem_attempt",
@@ -3883,8 +5897,10 @@
         "isotropy_lemma",
         "klein_bottle_derivation",
         "numerology_inventory",
+        "phenomenology_cross_reference",
         "sinw_effective_dimension",
         "spatial_coupling_derived",
+        "structural_lemmas",
         "three_formalizations"
       ],
       "git": [
@@ -4058,6 +6074,127 @@
           "hash": "c5e7f60",
           "date": "2026-03-24",
           "subject": "Add Derivation 16: variable denominator (Hz with changing reference)"
+        }
+      ]
+    },
+    {
+      "id": "vocabulary_is_the_work_pattern",
+      "path": "sync_cost/derivations/vocabulary_is_the_work_pattern.md",
+      "title": "The \"vocabulary-is-the-work\" pattern: a recurring framework",
+      "summary": "A consolidation of a recurring pattern in the framework's\ndevelopment: an apparent open obstruction dissolves when the\ncorrect framework-internal vocabulary is identified. Each\ninstance is a **disambiguation**, not a derivation: the\n\"problem\" was an externally-imported framing applied to a\nframework object that doesn't carry the same content.",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "a_s_g1_closure_attempt",
+        "a_s_geometric_proof",
+        "anchor_count_audit",
+        "ansatz_audit_policy",
+        "baryon_fraction",
+        "continuum_limits",
+        "cross_ratio_irrep_reframe",
+        "down_type_double_cover_closed",
+        "dynamical_tool_audit",
+        "epsilon_physical_reading",
+        "epsilon_substrate_decomposition",
+        "framework_status",
+        "hierarchy_problem_translation",
+        "hybrid_strategy_audit",
+        "klein_antipodal_z2_rep_pattern",
+        "numerology_count_phase_b",
+        "numerology_inventory",
+        "omega_b_alpha_beta_closure",
+        "omega_b_residual_phase_a",
+        "omega_b_residual_phase_b",
+        "partition_logit_form",
+        "path_a_walkthrough",
+        "psl2z_subgroup_phase_a_results",
+        "psl2z_subgroup_phase_b",
+        "statistical_conventions"
+      ],
+      "depended_on_by": [
+        "FRAMEWORK_TOPOLOGY",
+        "L1_substrate_cusp_ground_state",
+        "a_s_g1_closure_attempt",
+        "anchor_count_audit",
+        "audit_punch_list_2026-04",
+        "canonical_glossary",
+        "continuity_in_K_nulls",
+        "cross_ratio_irrep_reframe",
+        "derivation_atlas",
+        "down_type_double_cover_closed",
+        "framework_status",
+        "h_inf_status",
+        "klein_bridge_audit_and_probe",
+        "klein_dynamics_roadmap",
+        "numerology_count_phase_a",
+        "numerology_count_phase_b",
+        "omega_b_alpha_beta_closure",
+        "omega_b_c5_closure",
+        "omega_b_substrate_side_audit",
+        "partition_logit_form",
+        "path_closures_iter3",
+        "path_closures_iter4",
+        "primitive_completeness_audit",
+        "psl2z_subgroup_phase_b",
+        "psl2z_subgroup_phase_c_inventory",
+        "remaining_gap_shapes",
+        "sector_decoupling_phase_a"
+      ],
+      "git": [
+        {
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
+        },
+        {
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        },
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        },
+        {
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
+        }
+      ]
+    },
+    {
+      "id": "w_plus_formalization",
+      "path": "sync_cost/derivations/w_plus_formalization.md",
+      "title": "Formal closure of w_+ = 13/14 \u2014 proposition-level chain",
+      "summary": "**w_+ = 13/14 closes Class 5** in recognize mode. L1 closes\nper `L1_substrate_cusp_ground_state.md` via composition of\nexisting framework content (MOND smooth crossover + EM-coupling\nlock-in + substrate discreteness + local linearity). All eight\ncomponents (T1-T7 + L1) are Class 5. THM follows by composition.",
+      "depends_on": [
+        "L1_substrate_cusp_ground_state",
+        "a0_threshold",
+        "baryon_fraction",
+        "continuum_limits",
+        "cross_ratio_irrep_reframe",
+        "denomination_boundary",
+        "klein_antipodal_z2_rep_pattern",
+        "mediant_derivation",
+        "numerology_count_phase_b",
+        "omega_b_alpha_beta_closure",
+        "partition_logit_form",
+        "psl2z_subgroup_phase_b",
+        "psl2z_subgroup_phase_c_inventory"
+      ],
+      "depended_on_by": [
+        "L1_substrate_cusp_ground_state",
+        "derivation_atlas",
+        "framework_status",
+        "omega_partition_combinatorial",
+        "remaining_gap_shapes",
+        "structural_lemmas"
+      ],
+      "git": [
+        {
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
         }
       ]
     },

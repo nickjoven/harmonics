@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>knobs · stage 1 · phase</title>
+<link rel="stylesheet" href="knobs.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[
+    {left:'$$',right:'$$',display:true},
+    {left:'$',right:'$',display:false}
+  ]});"></script>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">harmonics</a>
+  <span class="sep">/</span>
+  <a href="phase.html" class="active">phase</a>
+  <span class="sep">·</span>
+  <a href="coupling.html">coupling</a>
+  <span class="sep">·</span>
+  <a href="frames.html">frames</a>
+</nav>
+
+<main>
+  <header>
+    <div class="stage">stage 1</div>
+    <h1>phase</h1>
+    <p class="hint">drag the knob. one variable, one rotation.</p>
+  </header>
+
+  <div class="panel" role="region" aria-label="Single phase oscillator">
+    <p class="alt-text" id="alt-text">A single dot orbits a circle. Its angular speed equals ω.</p>
+
+    <canvas id="circle" class="viz" width="440" height="320"
+            role="img" aria-labelledby="alt-text"></canvas>
+
+    <div class="controls">
+      <div class="knob">
+        <label class="label" for="omega">ω</label>
+        <input type="range" id="omega" min="0.4" max="4.0" value="1.0" step="0.001"
+               aria-label="angular velocity omega">
+        <span class="readout" id="omega-readout">1.000</span>
+      </div>
+    </div>
+
+    <details class="audio-details">
+      <summary>optional · also hear it as a tone</summary>
+      <button class="audio" id="audio-toggle">click to enable audio</button>
+      <p class="optional-hint">A sine tone glides with ω. Visual is the lesson; audio is a second view.</p>
+    </details>
+  </div>
+
+  <section class="translations" aria-label="Translations and explanation">
+    <h2>what's on screen</h2>
+    <p>One phase variable $\varphi(t)$ rotating around a circle. The knob sets its angular velocity:</p>
+    <p class="equation">$$\frac{d\varphi}{dt} = \omega$$</p>
+    <p>The dot's position is $(\cos\varphi, \sin\varphi)$. Doubling ω doubles the rotation rate. There is nothing else here — that's the point. The substrate is built out of variables exactly like this one.</p>
+
+    <h2>numerical view</h2>
+    <p>Current ω: <span id="num-omega" class="num">1.000</span> rad/s &nbsp;·&nbsp; period: <span id="num-period" class="num">6.283</span> s &nbsp;·&nbsp; revolutions completed: <span id="num-revs" class="num">0</span></p>
+  </section>
+
+  <footer>
+    next · <a href="coupling.html">coupling</a> — what happens when two of these meet.
+  </footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+<script>
+(() => {
+  const canvas = document.getElementById('circle');
+  const ctx = canvas.getContext('2d');
+  const cx = canvas.width / 2;
+  const cy = canvas.height / 2;
+  const r = 130;
+
+  const omegaInput = document.getElementById('omega');
+  const omegaReadout = document.getElementById('omega-readout');
+  const numOmega = document.getElementById('num-omega');
+  const numPeriod = document.getElementById('num-period');
+  const numRevs = document.getElementById('num-revs');
+  const audioBtn = document.getElementById('audio-toggle');
+
+  let omega = parseFloat(omegaInput.value);
+  let phi = -Math.PI / 2;  // start at top — feels less arbitrary
+  let totalPhase = 0;
+  let lastTime = performance.now();
+  let osc = null;
+  let audioOn = false;
+
+  const AUDIO_CARRIER = 220;
+
+  // Throttle the numerical translation to ~5 Hz so screen readers and
+  // human eyes have time to settle. Visual canvas updates every frame.
+  let lastNumUpdate = 0;
+
+  omegaInput.addEventListener('input', () => {
+    omega = parseFloat(omegaInput.value);
+    omegaReadout.textContent = omega.toFixed(3);
+    if (osc && audioOn) osc.frequency.rampTo(AUDIO_CARRIER * omega, 0.04);
+  });
+
+  audioBtn.addEventListener('click', async () => {
+    await Tone.start();
+    if (!osc) {
+      osc = new Tone.Oscillator(AUDIO_CARRIER * omega, 'sine').toDestination();
+      osc.volume.value = -22;
+      osc.start();
+    }
+    audioOn = !audioOn;
+    if (audioOn) {
+      osc.volume.rampTo(-22, 0.15);
+      audioBtn.textContent = 'audio on · click to mute';
+      audioBtn.classList.add('live');
+    } else {
+      osc.volume.rampTo(-Infinity, 0.15);
+      audioBtn.textContent = 'click to enable audio';
+      audioBtn.classList.remove('live');
+    }
+  });
+
+  function draw() {
+    const now = performance.now();
+    const dt = Math.min((now - lastTime) / 1000, 0.1);
+    lastTime = now;
+
+    phi += omega * dt;
+    totalPhase += omega * dt;
+    if (phi > Math.PI * 2) phi -= Math.PI * 2;
+
+    ctx.fillStyle = '#060608';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // unit circle
+    ctx.strokeStyle = '#3a3a45';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // hairline crosshair
+    ctx.strokeStyle = '#1a1a20';
+    ctx.beginPath();
+    ctx.moveTo(cx - r - 8, cy); ctx.lineTo(cx + r + 8, cy);
+    ctx.moveTo(cx, cy - r - 8); ctx.lineTo(cx, cy + r + 8);
+    ctx.stroke();
+
+    // angle wedge from center to dot — visual translation of φ as an angle
+    const x = cx + r * Math.cos(phi);
+    const y = cy + r * Math.sin(phi);
+    ctx.strokeStyle = 'rgba(123, 147, 175, 0.4)';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.lineTo(x, y);
+    ctx.stroke();
+
+    // trail
+    const trailSteps = 18;
+    for (let i = 1; i <= trailSteps; i++) {
+      const tphi = phi - i * 0.04;
+      const tx = cx + r * Math.cos(tphi);
+      const ty = cy + r * Math.sin(tphi);
+      const alpha = (1 - i / trailSteps) * 0.25;
+      ctx.fillStyle = `rgba(232, 194, 100, ${alpha})`;
+      ctx.beginPath();
+      ctx.arc(tx, ty, 5, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // dot
+    ctx.shadowColor = 'rgba(232, 194, 100, 0.7)';
+    ctx.shadowBlur = 12;
+    ctx.fillStyle = '#e8c264';
+    ctx.beginPath();
+    ctx.arc(x, y, 8, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.shadowBlur = 0;
+
+    // numerical translations (throttled)
+    if (now - lastNumUpdate > 200) {
+      numOmega.textContent = omega.toFixed(3);
+      numPeriod.textContent = (2 * Math.PI / omega).toFixed(3);
+      numRevs.textContent = Math.floor(totalPhase / (2 * Math.PI)).toString();
+      lastNumUpdate = now;
+    }
+
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+})();
+</script>
+</body>
+</html>

@@ -1,5 +1,25 @@
 # Problem: sin²θ_W via d_eff = 80/27
 
+> **CLOSED (2026-04-26).** G1 returned null on 2026-04-23 — three
+> candidate mechanisms (box-counting dimension, direct width/period
+> re-derivation, measure re-normalization) all fail to derive
+> `d → d_eff = d − 1/q₃^d` from framework primitives. See
+> `attempts/g1_computation_result.md` and `status.md`.
+>
+> Subsumed under Shape B closure (`../../sync_cost/derivations/remaining_gap_shapes.md`):
+> the Region C Phase B pigeonhole verdict
+> (`../../sync_cost/derivations/numerology_count_phase_b.md`)
+> establishes Class 2 by construction for all bare-K=1 near-match
+> ansätze, including this one. The 0.5σ numerical match is
+> statistically expected from the framework-integer alphabet, not
+> evidence of a structural derivation route. Reframed as anchor-side
+> amplification per Instance 7 of `vocabulary_is_the_work_pattern.md`.
+>
+> Reclassification recorded in
+> `../../sync_cost/derivations/numerology_inventory.md` §Class 2.
+> Directory retained as audit trail; matches the pattern for other
+> retired single-instance closure attempts.
+
 ## What this directory is
 
 A single-problem, textbook-structured attempt to promote
