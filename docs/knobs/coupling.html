@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>knobs · stage 2 · coupling</title>
 <link rel="stylesheet" href="knobs.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[
+    {left:'$$',right:'$$',display:true},
+    {left:'$',right:'$',display:false}
+  ]});"></script>
 </head>
 <body>
 
@@ -20,34 +27,72 @@
   <header>
     <div class="stage">stage 2</div>
     <h1>coupling</h1>
-    <p class="hint">two oscillators. push K up. listen for the beat to die.</p>
+    <p class="hint">push K up until the lower chart goes flat. that's lock.</p>
   </header>
 
-  <div class="panel">
-    <canvas id="circle" class="viz" width="400" height="240"></canvas>
-    <canvas id="strip" class="viz" width="400" height="120"></canvas>
+  <div class="panel" role="region" aria-label="Two-oscillator coupling">
+
+    <!-- State badge: visual + text + screen-reader live region.
+         Color is secondary; the label and dot shape carry the same info. -->
+    <div class="state" id="state-badge" role="status" aria-live="polite">
+      <span class="state-dot" id="state-dot" aria-hidden="true"></span>
+      <span class="state-label" id="state-label">drifting</span>
+      <span class="state-detail" id="state-detail">|Δω| = 0.050 &nbsp;·&nbsp; 2K = 0.000 &nbsp;·&nbsp; lock when 2K ≥ |Δω|</span>
+    </div>
+
+    <p class="alt-text" id="alt-text-circle">Two dots on a circle, one gold (oscillator 1) and one blue (oscillator 2). A faint chord connects them. When the system is locked, the chord rotates rigidly; when drifting, the chord sweeps.</p>
+    <canvas id="circle" class="viz" width="440" height="240"
+            role="img" aria-labelledby="alt-text-circle"></canvas>
+
+    <p class="alt-text" id="alt-text-strip">Lower chart: phase difference Δφ over time. Flat line = locked. Sloped or wavy line = drifting.</p>
+    <canvas id="strip" class="viz" width="440" height="160"
+            role="img" aria-labelledby="alt-text-strip"></canvas>
+
     <div class="controls">
       <div class="knob">
-        <span class="label">ω₁</span>
-        <input type="range" id="omega1" min="0.4" max="3.5" value="1.000" step="0.001">
+        <label class="label" for="omega1">ω₁</label>
+        <input type="range" id="omega1" min="0.4" max="3.5" value="1.000" step="0.001"
+               aria-label="natural angular velocity of oscillator 1">
         <span class="readout" id="omega1-readout">1.000</span>
       </div>
       <div class="knob">
-        <span class="label">ω₂</span>
-        <input type="range" id="omega2" min="0.4" max="3.5" value="1.050" step="0.001">
+        <label class="label" for="omega2">ω₂</label>
+        <input type="range" id="omega2" min="0.4" max="3.5" value="1.050" step="0.001"
+               aria-label="natural angular velocity of oscillator 2">
         <span class="readout" id="omega2-readout">1.050</span>
       </div>
       <div class="knob">
-        <span class="label">K</span>
-        <input type="range" id="kcoup" min="0.0" max="0.5" value="0.0" step="0.0005">
+        <label class="label" for="kcoup">K</label>
+        <input type="range" id="kcoup" min="0.0" max="0.5" value="0.0" step="0.0005"
+               aria-label="coupling strength K">
         <span class="readout" id="k-readout">0.000</span>
       </div>
-      <button class="audio" id="audio-toggle">click to enable audio</button>
     </div>
+
+    <details class="audio-details">
+      <summary>optional · also hear it</summary>
+      <button class="audio" id="audio-toggle">click to enable audio</button>
+      <p class="optional-hint">Two sine tones at the oscillators' instantaneous frequencies. When they lock, the beating dies. The visual is sufficient for the lesson — audio is a second view, not the load-bearing channel.</p>
+    </details>
   </div>
 
+  <section class="translations" aria-label="Explanation and translations">
+    <h2>what's on screen</h2>
+    <p>Two phase oscillators on the same unit circle. Each one has its own natural angular velocity ($\omega_1$, $\omega_2$). The coupling $K$ pulls them toward each other:</p>
+    <p class="equation">$$\frac{d\varphi_1}{dt} = \omega_1 + K\sin(\varphi_2 - \varphi_1), \qquad \frac{d\varphi_2}{dt} = \omega_2 - K\sin(\varphi_2 - \varphi_1)$$</p>
+    <p>The phase difference $\Delta\varphi = \varphi_2 - \varphi_1$ obeys</p>
+    <p class="equation">$$\frac{d\Delta\varphi}{dt} = (\omega_2 - \omega_1) - 2K\sin(\Delta\varphi).$$</p>
+    <p><strong>Locking condition:</strong> $|\omega_2 - \omega_1| \le 2K$. When the inequality is met, $\Delta\varphi$ stops changing — the lower chart goes flat — and both oscillators rotate at the same instantaneous frequency $(\omega_1 + \omega_2)/2$.</p>
+
+    <h2>what the chart says, in words</h2>
+    <p>If you can't see the chart, the state badge above tells you whether the system is locked or drifting along with the live numbers. <strong>Drifting</strong> means $\Delta\varphi$ grows or oscillates without settling; <strong>locked</strong> means $\Delta\varphi$ converges to a fixed offset and stays there.</p>
+
+    <h2>where this lives in the framework</h2>
+    <p>This is the simplest case of the substrate's mode-locking dynamics. Stern-Brocot enumeration, Arnold tongue widths $\sim (K/2)^q$, and the devil's staircase all sit on top of this single mechanism — what changes in later stages is which $(p, q)$ ratios are accessible, not the underlying lock-or-drift behavior.</p>
+  </section>
+
   <footer>
-    Δφ flat = locked, sloped = drifting. no preset interval — find lock by hand.
+    prev · <a href="phase.html">phase</a> &nbsp;·&nbsp; next · staircase (forthcoming)
   </footer>
 </main>
 
@@ -65,7 +110,7 @@
   const sctx = strip.getContext('2d');
   const sw = strip.width, sh = strip.height;
 
-  // ── State ──────────────────────────────────────────────
+  // ── State / DOM refs ───────────────────────────────────
   const o1 = document.getElementById('omega1');
   const o2 = document.getElementById('omega2');
   const kk = document.getElementById('kcoup');
@@ -73,6 +118,10 @@
   const o2r = document.getElementById('omega2-readout');
   const kr  = document.getElementById('k-readout');
   const audioBtn = document.getElementById('audio-toggle');
+
+  const stateBadge = document.getElementById('state-badge');
+  const stateLabel = document.getElementById('state-label');
+  const stateDetail = document.getElementById('state-detail');
 
   let omega1 = parseFloat(o1.value);
   let omega2 = parseFloat(o2.value);
@@ -82,14 +131,16 @@
   let phi2 = 0.0;
   let lastTime = performance.now();
 
-  // Δφ history for the strip chart (unwrapped). Sampled each frame.
-  const HISTORY = 320;
+  const HISTORY = 360;
   const dphiHist = new Float32Array(HISTORY);
   let histIdx = 0;
   let histFilled = 0;
 
-  // ── Audio ──────────────────────────────────────────────
-  const AUDIO_CARRIER = 220;  // ω = 1 → A3 (220 Hz); ratio drives the interval
+  let prevLocked = null;       // last-announced lock state
+  let lastDetailUpdate = 0;    // throttle for screen-reader detail text
+
+  // ── Audio (optional, off by default) ───────────────────
+  const AUDIO_CARRIER = 220;
   let osc1 = null, osc2 = null;
   let audioOn = false;
 
@@ -111,8 +162,7 @@
       osc2 = new Tone.Oscillator(AUDIO_CARRIER * omega2, 'sine').toDestination();
       osc1.volume.value = -24;
       osc2.volume.value = -24;
-      osc1.start();
-      osc2.start();
+      osc1.start(); osc2.start();
     }
     audioOn = !audioOn;
     if (audioOn) {
@@ -129,7 +179,7 @@
   });
 
   // ── Drawing ────────────────────────────────────────────
-  function drawCircle() {
+  function drawCircle(isLocked) {
     cctx.fillStyle = '#060608';
     cctx.fillRect(0, 0, cw, ch);
 
@@ -139,11 +189,12 @@
     cctx.arc(cx, cy, r, 0, Math.PI * 2);
     cctx.stroke();
 
-    // chord between the two phase points — visual locking cue
     const x1 = cx + r * Math.cos(phi1), y1 = cy + r * Math.sin(phi1);
     const x2 = cx + r * Math.cos(phi2), y2 = cy + r * Math.sin(phi2);
-    cctx.strokeStyle = 'rgba(123, 147, 175, 0.35)';
-    cctx.lineWidth = 1;
+
+    // chord between the two phase points — locked → green tint, drifting → cool gray
+    cctx.strokeStyle = isLocked ? 'rgba(106, 154, 106, 0.6)' : 'rgba(123, 147, 175, 0.35)';
+    cctx.lineWidth = isLocked ? 2 : 1;
     cctx.beginPath();
     cctx.moveTo(x1, y1); cctx.lineTo(x2, y2);
     cctx.stroke();
@@ -157,7 +208,7 @@
     cctx.fill();
 
     // dot 2 — cool blue
-    cctx.shadowColor = 'rgba(123, 147, 175, 0.7)';
+    cctx.shadowColor = 'rgba(154, 179, 207, 0.7)';
     cctx.fillStyle = '#9ab3cf';
     cctx.beginPath();
     cctx.arc(x2, y2, 7, 0, Math.PI * 2);
@@ -165,32 +216,33 @@
     cctx.shadowBlur = 0;
   }
 
-  function drawStrip() {
+  function drawStrip(isLocked) {
     sctx.fillStyle = '#060608';
     sctx.fillRect(0, 0, sw, sh);
 
-    // baseline (Δφ = 0)
-    sctx.strokeStyle = '#1a1a20';
-    sctx.beginPath();
-    sctx.moveTo(0, sh / 2);
-    sctx.lineTo(sw, sh / 2);
-    sctx.stroke();
-
     if (histFilled < 2) return;
 
-    // rescale: find min/max in the window, fit to canvas with margin
     let mn = Infinity, mx = -Infinity;
     for (let i = 0; i < histFilled; i++) {
       const v = dphiHist[i];
       if (v < mn) mn = v;
       if (v > mx) mx = v;
     }
-    const span = Math.max(mx - mn, 0.5);  // floor so flat lines have room
+    const span = Math.max(mx - mn, 0.5);
     const pad = span * 0.15;
     const lo = mn - pad, hi = mx + pad;
 
-    sctx.strokeStyle = '#c0a060';
-    sctx.lineWidth = 1.5;
+    // axis baseline at the visible mid (visual reference, not Δφ=0)
+    sctx.strokeStyle = '#1a1a20';
+    sctx.lineWidth = 1;
+    sctx.beginPath();
+    sctx.moveTo(0, sh / 2);
+    sctx.lineTo(sw, sh / 2);
+    sctx.stroke();
+
+    // line color is a secondary cue for state — primary cue is the badge above
+    sctx.strokeStyle = isLocked ? '#6a9a6a' : '#c0a060';
+    sctx.lineWidth = 1.8;
     sctx.beginPath();
     const start = histIdx - histFilled;
     for (let i = 0; i < histFilled; i++) {
@@ -204,33 +256,23 @@
   }
 
   // ── Dynamics tick ──────────────────────────────────────
-  // Sub-step the integrator to keep ODEs stable when ω or K is large.
   function step(dt) {
     const sub = 4;
     const h = dt / sub;
     for (let s = 0; s < sub; s++) {
       const d = phi2 - phi1;
       const sd = Math.sin(d);
-      const dphi1 = omega1 + K * sd;
-      const dphi2 = omega2 - K * sd;
-      phi1 += dphi1 * h;
-      phi2 += dphi2 * h;
+      phi1 += (omega1 + K * sd) * h;
+      phi2 += (omega2 - K * sd) * h;
     }
   }
 
-  // unwrap-aware Δφ for the strip chart: we keep a continuous record so
-  // a locked line stays flat and a drifting line slopes through 2π without
-  // wrapping. Achieved by tracking phi2 - phi1 directly (both unbounded).
-  let lastDphi = 0.0;
   function recordDphi() {
-    const d = phi2 - phi1;
-    dphiHist[histIdx] = d;
+    dphiHist[histIdx] = phi2 - phi1;
     histIdx = (histIdx + 1) % HISTORY;
     if (histFilled < HISTORY) histFilled++;
-    lastDphi = d;
   }
 
-  // ── Audio update ───────────────────────────────────────
   function updateAudio() {
     if (!audioOn || !osc1) return;
     const sd = Math.sin(phi2 - phi1);
@@ -238,6 +280,34 @@
     const f2 = AUDIO_CARRIER * (omega2 - K * sd);
     osc1.frequency.rampTo(Math.max(f1, 20), 0.02);
     osc2.frequency.rampTo(Math.max(f2, 20), 0.02);
+  }
+
+  // ── State badge ────────────────────────────────────────
+  // Strict mathematical lock condition: |Δω| ≤ 2K. Announced to screen
+  // readers only when the boolean state changes; numeric detail throttled
+  // to ~5 Hz so polite live regions don't get flooded.
+  function updateStateBadge(now) {
+    const dOmega = Math.abs(omega2 - omega1);
+    const twoK = 2 * K;
+    const isLocked = twoK >= dOmega;
+
+    if (isLocked !== prevLocked) {
+      stateLabel.textContent = isLocked ? 'locked' : 'drifting';
+      stateBadge.classList.toggle('locked', isLocked);
+      prevLocked = isLocked;
+    }
+
+    if (now - lastDetailUpdate > 200) {
+      const margin = twoK - dOmega;
+      const marginText = margin >= 0
+        ? `headroom ${margin.toFixed(3)}`
+        : `short by ${(-margin).toFixed(3)}`;
+      stateDetail.innerHTML =
+        `|Δω| = ${dOmega.toFixed(3)} &nbsp;·&nbsp; 2K = ${twoK.toFixed(3)} &nbsp;·&nbsp; ${marginText}`;
+      lastDetailUpdate = now;
+    }
+
+    return isLocked;
   }
 
   // ── Main loop ──────────────────────────────────────────
@@ -250,8 +320,9 @@
     recordDphi();
     updateAudio();
 
-    drawCircle();
-    drawStrip();
+    const isLocked = updateStateBadge(now);
+    drawCircle(isLocked);
+    drawStrip(isLocked);
 
     requestAnimationFrame(frame);
   }

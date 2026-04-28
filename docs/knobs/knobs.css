@@ -1,6 +1,7 @@
 /* Synth-panel aesthetic for the knob-tuning-waves teaching app.
-   Shares the harmonics palette but breaks the serif convention —
-   monospace + tighter rhythm signals "instrument, not paper." */
+   Visual is the load-bearing channel. Audio is opt-in, off by default.
+   Translations (text alt, equation, numeric, ARIA live) carry the same
+   information for users who can't or don't want to use the canvas. */
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -8,6 +9,7 @@
   --bg: #0a0a0c;
   --bg-panel: #111114;
   --bg-deep: #060608;
+  --bg-soft: #16161a;
   --border: #222228;
   --border-bright: #3a3a45;
   --text: #c8c8cc;
@@ -16,8 +18,10 @@
   --accent: #c0a060;
   --accent-bright: #e8c264;
   --cool: #7b93af;
+  --cool-bright: #9ab3cf;
   --warn: #b87060;
   --green: #6a9a6a;
+  --green-bright: #8ab68a;
 }
 
 body {
@@ -25,7 +29,7 @@ body {
   color: var(--text);
   font-family: 'Menlo', 'Consolas', 'DejaVu Sans Mono', monospace;
   font-size: 13px;
-  line-height: 1.55;
+  line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,17 +39,19 @@ body {
 
 main {
   width: 100%;
-  max-width: 540px;
+  max-width: 580px;
   display: flex;
   flex-direction: column;
   gap: 1.5em;
 }
 
+/* ── Nav ───────────────────────────────────────────────── */
+
 nav {
   width: 100%;
-  max-width: 540px;
+  max-width: 580px;
   display: flex;
-  gap: 1em;
+  gap: 0.7em;
   margin-bottom: 0.5em;
   font-size: 0.85em;
   color: var(--text-dim);
@@ -59,6 +65,8 @@ nav a {
 nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 nav a.active { color: var(--text-bright); }
 nav .sep { color: var(--border-bright); }
+
+/* ── Header ────────────────────────────────────────────── */
 
 header h1 {
   font-size: 1em;
@@ -81,6 +89,8 @@ header .hint {
   font-size: 0.85em;
 }
 
+/* ── Panel ─────────────────────────────────────────────── */
+
 .panel {
   background: var(--bg-panel);
   border: 1px solid var(--border);
@@ -88,7 +98,7 @@ header .hint {
   padding: 1.2em;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 0.9em;
 }
 
 .viz {
@@ -96,13 +106,78 @@ header .hint {
   border: 1px solid var(--border);
   border-radius: 2px;
   display: block;
-  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
+
+/* alt-text accompanies each canvas — read by everyone, not just SR.
+   Frames the visual before the user looks at it. */
+.alt-text {
+  color: var(--text-dim);
+  font-size: 0.78em;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+/* ── State badge ───────────────────────────────────────── */
+
+.state {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  padding: 0.7em 0.9em;
+  background: var(--bg-soft);
+  border: 1px solid var(--border-bright);
+  border-radius: 3px;
+  font-size: 0.82em;
+  flex-wrap: wrap;
+  transition: border-color 0.3s, background 0.3s;
+}
+.state-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent);
+  background: transparent;
+  flex-shrink: 0;
+  transition: background 0.3s, border-color 0.3s;
+}
+.state-label {
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.state-detail {
+  color: var(--text-dim);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.92em;
+  margin-left: auto;
+}
+
+.state.locked {
+  border-color: var(--green);
+  background: rgba(106, 154, 106, 0.06);
+}
+.state.locked .state-dot {
+  background: var(--green-bright);
+  border-color: var(--green-bright);
+  box-shadow: 0 0 6px rgba(138, 182, 138, 0.5);
+}
+.state.locked .state-label {
+  color: var(--green-bright);
+}
+
+/* ── Knobs / sliders ───────────────────────────────────── */
 
 .controls {
   display: flex;
   flex-direction: column;
   gap: 0.9em;
+  padding-top: 0.4em;
 }
 
 .knob {
@@ -110,7 +185,7 @@ header .hint {
   grid-template-columns: 3em 1fr 5em;
   align-items: center;
   gap: 0.8em;
-  font-size: 0.8em;
+  font-size: 0.82em;
 }
 .knob .label {
   color: var(--accent);
@@ -133,6 +208,10 @@ input[type="range"] {
   outline: none;
   cursor: ew-resize;
 }
+input[type="range"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -154,13 +233,37 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: 0 0 6px rgba(232, 194, 100, 0.4);
 }
 
+/* ── Audio (demoted) ───────────────────────────────────── */
+
+.audio-details {
+  margin-top: 0.5em;
+  padding-top: 0.7em;
+  border-top: 1px dashed var(--border);
+}
+.audio-details summary {
+  color: var(--text-dim);
+  font-size: 0.78em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  list-style: none;
+  padding: 0.3em 0;
+}
+.audio-details summary::-webkit-details-marker { display: none; }
+.audio-details summary::before {
+  content: '▸ ';
+  color: var(--border-bright);
+}
+.audio-details[open] summary::before { content: '▾ '; }
+.audio-details summary:hover { color: var(--text); }
+
 button.audio {
   background: transparent;
   border: 1px solid var(--border-bright);
   color: var(--text-dim);
-  padding: 0.6em 1em;
+  padding: 0.5em 0.9em;
+  margin-top: 0.5em;
   font-family: inherit;
-  font-size: 0.8em;
+  font-size: 0.75em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
@@ -168,15 +271,66 @@ button.audio {
   transition: border-color 0.2s, color 0.2s;
 }
 button.audio:hover { border-color: var(--accent); color: var(--accent); }
+button.audio:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 button.audio.live {
   border-color: var(--green);
-  color: var(--green);
+  color: var(--green-bright);
   box-shadow: 0 0 8px rgba(106, 154, 106, 0.3);
 }
+.optional-hint {
+  color: var(--text-dim);
+  font-size: 0.75em;
+  font-style: italic;
+  margin-top: 0.6em;
+  line-height: 1.55;
+}
+
+/* ── Translations section (text/symbolic translation of the demo) ── */
+
+.translations {
+  margin-top: 0.5em;
+  padding: 1.2em 1.4em;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.translations h2 {
+  font-family: 'Menlo', 'Consolas', monospace;
+  font-size: 0.78em;
+  font-weight: normal;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 1.4em;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border);
+}
+.translations h2:first-child { margin-top: 0; }
+.translations p { margin-bottom: 0.7em; color: var(--text); }
+.translations p:last-child { margin-bottom: 0; }
+.translations strong { color: var(--text-bright); font-weight: 600; }
+.translations .equation {
+  margin: 0.8em 0;
+  padding: 0.4em 0;
+  text-align: center;
+  overflow-x: auto;
+}
+.translations .num {
+  font-family: 'Menlo', 'Consolas', monospace;
+  font-size: 0.92em;
+  color: var(--accent-bright);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Footer ────────────────────────────────────────────── */
 
 footer {
   color: var(--text-dim);
-  font-size: 0.75em;
+  font-size: 0.78em;
   text-align: center;
   margin-top: 1em;
   letter-spacing: 0.05em;
@@ -187,3 +341,13 @@ footer a {
   border-bottom: 1px solid transparent;
 }
 footer a:hover { border-bottom-color: var(--cool); }
+
+/* ── Reduced motion ────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
