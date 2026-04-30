@@ -17,8 +17,12 @@ Usage:
     python3 sync_cost/derivations/tongue_widths_exact.py
 """
 
+import argparse
+import datetime
+import json
 import math
 import os
+import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
@@ -115,6 +119,62 @@ def ratio_sm(mu):
 
 def tongue_analytical(q, K):
     return _tongue_width_pqK(1, q, K)
+
+
+# ── JSON reference output (for downstream JS validation harness) ─────────────
+
+def compute_width_matrix(K_vals, pq_vals):
+    """Compute tongue widths for every (K, p/q) cell. Returns nested dict."""
+    matrix = {}
+    for K in K_vals:
+        K_key = repr(K)
+        matrix[K_key] = {}
+        for (p, q) in pq_vals:
+            label = f"{p}/{q}"
+            matrix[K_key][label] = tongue_width(p, q, K)
+    return matrix
+
+
+def get_git_commit():
+    """Return the current git HEAD SHA for traceability, or None if unavailable."""
+    try:
+        return subprocess.check_output(
+            ["git", "rev-parse", "HEAD"],
+            cwd=os.path.dirname(os.path.abspath(__file__)),
+            stderr=subprocess.DEVNULL,
+        ).decode().strip()
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return None
+
+
+def dump_json(path, K_vals, pq_vals):
+    """Write tongue width reference matrix to JSON for the validation harness."""
+    print(f"Computing tongue widths for {len(K_vals)} × {len(pq_vals)} = "
+          f"{len(K_vals) * len(pq_vals)} cells...")
+    matrix = compute_width_matrix(K_vals, pq_vals)
+    payload = {
+        "metadata": {
+            "generated": datetime.datetime.utcnow().isoformat() + "Z",
+            "script": "tongue_widths_exact.py",
+            "git_commit": get_git_commit(),
+            "n_trans_default": 5000,
+            "n_meas_default": 20000,
+            "n_bisect": 40,
+            "tolerance_winding": 5e-4,
+        },
+        "K_values": K_vals,
+        "pq_values": [[p, q] for (p, q) in pq_vals],
+        "widths": matrix,
+        "tolerances": {
+            "relative": 0.10,
+            "absolute_below": 0.01,
+            "absolute": 0.001,
+        },
+    }
+    os.makedirs(os.path.dirname(os.path.abspath(path)), exist_ok=True)
+    with open(path, "w") as f:
+        json.dump(payload, f, indent=2)
+    print(f"Wrote tongue width reference to {path}")
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
@@ -337,5 +397,44 @@ def main():
 """)
 
 
+def parse_pq_list(s):
+    out = []
+    for token in s.split(","):
+        token = token.strip()
+        if not token:
+            continue
+        p, q = token.split("/")
+        out.append((int(p), int(q)))
+    return out
+
+
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(
+        description="Exact tongue widths from the circle map. "
+                    "Default behavior prints a human-readable report; "
+                    "use --dump-json to emit a reference matrix for "
+                    "downstream validation."
+    )
+    parser.add_argument(
+        "--dump-json",
+        metavar="PATH",
+        help="Write reference tongue widths to JSON at PATH and exit.",
+    )
+    parser.add_argument(
+        "--K-values",
+        default="0.3,0.5,0.7,0.9,0.99",
+        help="Comma-separated K values for --dump-json (default: %(default)s).",
+    )
+    parser.add_argument(
+        "--pq-values",
+        default="1/2,1/3,2/3,1/4,3/4,1/5,2/5,3/5,4/5,1/6",
+        help="Comma-separated p/q tongues for --dump-json (default: %(default)s).",
+    )
+    args = parser.parse_args()
+
+    if args.dump_json:
+        K_vals = [float(x) for x in args.K_values.split(",")]
+        pq_vals = parse_pq_list(args.pq_values)
+        dump_json(args.dump_json, K_vals, pq_vals)
+    else:
+        main()
