@@ -1,0 +1,85 @@
+name: Update visual-regression baselines
+
+# Manual trigger only. Captures fresh PNG baselines for the visual.spec.js
+# tests, commits them to a branch, and opens a PR for review. Run when
+# the prototype's rendering is intentionally changed (new layout, new
+# colors, new staircase reference lines, etc.).
+
+on:
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: "Why baselines are being regenerated"
+        required: false
+        default: "Manual baseline refresh"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-baselines:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: prototype/package-lock.json
+
+      - name: Install Node dependencies
+        working-directory: prototype
+        run: npm ci
+
+      - name: Install Playwright browsers
+        working-directory: prototype
+        run: npx playwright install --with-deps chromium
+
+      - name: Capture baselines
+        working-directory: prototype
+        env:
+          FORCE_VISUAL: "1"
+        run: npx playwright test e2e/visual.spec.js --update-snapshots
+
+      - name: Check for changes
+        id: diff
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet prototype/e2e/visual.spec.js-snapshots/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and open PR
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REASON: ${{ inputs.reason }}
+        run: |
+          BRANCH="bot/visual-baselines-$(date +%Y%m%d-%H%M%S)"
+          git checkout -b "$BRANCH"
+          git add prototype/e2e/visual.spec.js-snapshots/
+          git commit -m "bot: refresh visual-regression baselines
+
+          Reason: $REASON
+
+          Captured by .github/workflows/update-visual-baselines.yml on
+          $(date -u '+%Y-%m-%d %H:%M:%S UTC')."
+          git push origin "$BRANCH"
+          gh pr create \
+            --title "bot: refresh visual-regression baselines" \
+            --body "Automated baseline refresh. Reason: $REASON. Review the new PNGs before merging." \
+            --base main \
+            --head "$BRANCH" \
+            --draft
+
+      - name: Report no-op
+        if: steps.diff.outputs.changed == 'false'
+        run: |
+          echo "::notice::Baselines unchanged; no PR opened."
