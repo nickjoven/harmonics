@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Validation: tongue widths vs Python reference</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body { font-family: ui-sans-serif, system-ui, sans-serif; max-width: 980px; margin: 24px auto; padding: 0 16px; }
+    h1 { font-size: 1.35rem; }
+    table { border-collapse: collapse; margin: 12px 0; font-size: 0.9rem; }
+    th, td { border: 1px solid #ccc; padding: 4px 8px; text-align: right; font-variant-numeric: tabular-nums; }
+    th { background: #f4f4f4; }
+    .pass { background: #e8f7e8; }
+    .fail { background: #fbe7e7; }
+    .trivial { color: #888; }
+    #summary { font-weight: 600; padding: 8px 12px; border-radius: 4px; display: inline-block; }
+    .summary-pass { background: #d6f0d6; color: #234; }
+    .summary-fail { background: #f5cccc; color: #5a1010; }
+    code { background: #f4f4f4; padding: 1px 4px; }
+  </style>
+</head>
+<body>
+  <h1>Tongue-width validation harness</h1>
+  <p>
+    Compares <code>CircleMapEngine.tongueWidth</code> in <code>engine.js</code>
+    against the reference matrix produced by
+    <code>sync_cost/derivations/tongue_widths_exact.py --dump-json</code>.
+  </p>
+  <p id="status">Loading reference&hellip;</p>
+  <div id="summary"></div>
+  <div id="results"></div>
+
+  <script type="module">
+    import { CircleMapEngine } from "../src/engine.js";
+
+    const status = document.getElementById("status");
+    const results = document.getElementById("results");
+    const summary = document.getElementById("summary");
+
+    async function run() {
+      const ref = await (await fetch("./reference_widths.json")).json();
+      status.textContent =
+        `Reference: ${ref.K_values.length} K × ${ref.pq_values.length} p/q ` +
+        `= ${ref.K_values.length * ref.pq_values.length} cells. ` +
+        `Generated ${ref.metadata.generated} ` +
+        `(git ${ref.metadata.git_commit?.slice(0, 8) ?? "unknown"}). ` +
+        `Running JS engine — this takes 30–90 s on a typical laptop.`;
+
+      // Build header.
+      const table = document.createElement("table");
+      let html = "<thead><tr><th>p / q</th>";
+      for (const K of ref.K_values) html += `<th>K=${K}</th>`;
+      html += "</tr></thead><tbody>";
+
+      let pass = 0, fail = 0, trivial = 0;
+
+      for (const [p, q] of ref.pq_values) {
+        const label = `${p}/${q}`;
+        html += `<tr><th>${label}</th>`;
+        for (const K of ref.K_values) {
+          await new Promise(r => setTimeout(r, 0)); // yield to UI
+          const expected = ref.widths[String(K)][label];
+          const measured = CircleMapEngine.tongueWidth(p, q, K);
+          const verdict = classify(expected, measured, ref.tolerances);
+          if (verdict === "pass") pass++;
+          else if (verdict === "fail") fail++;
+          else trivial++;
+          html += cell(expected, measured, verdict);
+        }
+        html += "</tr>";
+      }
+
+      html += "</tbody>";
+      table.innerHTML = html;
+      results.appendChild(table);
+
+      const total = pass + fail + trivial;
+      summary.className = fail === 0 ? "summary-pass" : "summary-fail";
+      summary.textContent =
+        `${pass} non-trivial pass · ${trivial} trivial pass · ` +
+        `${fail} fail · ${total} total`;
+      status.textContent =
+        fail === 0
+          ? "Engine matches reference within stated tolerances."
+          : `Engine deviates from reference in ${fail} cell${fail === 1 ? "" : "s"}.`;
+    }
+
+    function classify(expected, measured, tol) {
+      // Trivial pass: reference is below resolution and engine is too.
+      if (expected === 0) {
+        return measured <= tol.absolute_below ? "trivial" : "fail";
+      }
+      // Small reference: absolute tolerance.
+      if (expected < tol.absolute_below) {
+        return Math.abs(measured - expected) <= tol.absolute ? "pass" : "fail";
+      }
+      // Larger reference: relative tolerance.
+      const relErr = Math.abs(measured - expected) / expected;
+      return relErr <= tol.relative ? "pass" : "fail";
+    }
+
+    function cell(expected, measured, verdict) {
+      const cls =
+        verdict === "pass" ? "pass" :
+        verdict === "fail" ? "fail" : "trivial";
+      const expStr = expected.toFixed(5);
+      const measStr = measured.toFixed(5);
+      return `<td class="${cls}" title="ref ${expStr} · js ${measStr}">${measStr}<br><small>${expStr}</small></td>`;
+    }
+
+    run().catch(err => {
+      status.textContent = "Error: " + err.message;
+      console.error(err);
+    });
+  </script>
+</body>
+</html>
