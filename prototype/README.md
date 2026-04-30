@@ -43,6 +43,22 @@ npm run lighthouse             # perf + a11y budgets
 CI runs all three on every PR touching `prototype/**` via
 `.github/workflows/prototype-validate.yml`.
 
+### Visual-regression baselines
+
+`e2e/visual.spec.js` captures pixel-stable screenshots of the staircase and
+wall canvases at four canonical K values (K = 0, 0.3, K_c = 2/π, K = 1) and
+asserts against committed baselines stored in
+`e2e/visual.spec.js-snapshots/`.
+
+To regenerate baselines after an intentional rendering change, trigger the
+**Update visual-regression baselines** workflow on GitHub Actions
+(workflow_dispatch). It captures fresh PNGs in headless Chromium on
+`ubuntu-latest`, opens a draft PR with the new snapshots, and lets you
+review the diff before merging.
+
+Baselines are platform-specific. Do not commit baselines captured on macOS
+or Windows — the CI runner's renderings will differ.
+
 ## Files
 
 ```
