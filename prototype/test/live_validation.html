@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Live validation: Python vs JS, in the browser</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    body { font-family: ui-sans-serif, system-ui, sans-serif; max-width: 1080px; margin: 24px auto; padding: 0 16px; color: #e8e8ea; background: #0e0f12; }
+    h1 { font-size: 1.35rem; }
+    p { line-height: 1.45; }
+    .panel { background: #1a1c20; border: 1px solid #2c2f35; border-radius: 4px; padding: 16px; margin: 16px 0; }
+    .controls { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+    .controls label { color: #888; font-size: 0.9rem; display: flex; align-items: center; gap: 6px; }
+    select, button {
+      background: #0e0f12; color: #e8e8ea; border: 1px solid #2c2f35;
+      border-radius: 3px; padding: 6px 10px; font-size: 0.9rem;
+    }
+    button { font-weight: 600; }
+    button:hover:not(:disabled) { border-color: #6cf; cursor: pointer; }
+    button:disabled { opacity: 0.4; cursor: wait; }
+    table { border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; width: 100%; }
+    th, td { border: 1px solid #2c2f35; padding: 8px 12px; text-align: right; font-variant-numeric: tabular-nums; }
+    th { background: #14161a; color: #aaa; }
+    th:first-child, td:first-child { text-align: left; }
+    .pass { color: #6f6; }
+    .fail { color: #f88; }
+    code { background: #14161a; padding: 1px 4px; border-radius: 2px; }
+    #status { color: #f9a825; font-style: italic; }
+    #pyodide-progress { display: inline-block; min-width: 240px; }
+    a { color: #6cf; }
+  </style>
+</head>
+<body>
+  <h1>Live validation: Python vs JS, in the browser</h1>
+  <p>
+    This page loads <a href="https://pyodide.org">Pyodide</a> (CPython compiled
+    to WebAssembly) and runs the framework's authoritative tongue-width
+    routine — the same Python code that lives at
+    <code>sync_cost/derivations/tongue_widths_exact.py</code> — alongside
+    the JavaScript engine in <code>src/engine.js</code>.
+  </p>
+  <p>
+    Pick a K and a p/q below, then click <em>Run both</em>. You'll see the
+    Python result, the JS result, and the difference. The two engines should
+    agree within the validation tolerances stated in the README.
+  </p>
+
+  <div class="panel">
+    <div id="status"><span id="pyodide-progress">Loading Pyodide (~10 MB on first visit)…</span></div>
+    <div class="controls" style="margin-top: 12px;">
+      <label>
+        K
+        <select id="K-select">
+          <option value="0.3">0.3</option>
+          <option value="0.5">0.5</option>
+          <option value="0.7">0.7</option>
+          <option value="0.85">0.85</option>
+          <option value="0.9">0.9</option>
+          <option value="0.99" selected>0.99</option>
+          <option value="1.0">1.0</option>
+        </select>
+      </label>
+      <label>
+        p/q
+        <select id="pq-select">
+          <option value="1/2" selected>1/2</option>
+          <option value="1/3">1/3</option>
+          <option value="2/3">2/3</option>
+          <option value="1/4">1/4</option>
+          <option value="3/4">3/4</option>
+          <option value="1/5">1/5</option>
+          <option value="2/5">2/5</option>
+          <option value="3/5">3/5</option>
+          <option value="4/5">4/5</option>
+        </select>
+      </label>
+      <button id="run-btn" disabled>Run both</button>
+      <span id="timing" style="color: #888; font-size: 0.85rem;"></span>
+    </div>
+  </div>
+
+  <table id="results">
+    <thead>
+      <tr><th>Run</th><th>K</th><th>p/q</th><th>tongue width</th><th>note</th></tr>
+    </thead>
+    <tbody id="results-body"></tbody>
+  </table>
+
+  <p style="color: #888; font-size: 0.85rem;">
+    The Python routine is embedded inline below as the canonical
+    implementation. It is the same algorithm Pyodide actually runs.
+  </p>
+
+  <pre id="python-source" style="background: #14161a; padding: 12px; border-radius: 4px; overflow-x: auto; font-size: 0.8rem; color: #ccc;"></pre>
+
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.26.4/full/pyodide.js"></script>
+  <script type="module">
+    import { CircleMapEngine } from "../src/engine.js";
+
+    const PYTHON_SOURCE = `
+import math
+
+def circle_map_step(theta, omega, K):
+    return theta + omega - K / (2 * math.pi) * math.sin(2 * math.pi * theta)
+
+def winding_number(omega, K, n_trans=5000, n_meas=20000):
+    theta = 0.0
+    for _ in range(n_trans):
+        theta = circle_map_step(theta, omega, K)
+    theta_start = theta
+    for _ in range(n_meas):
+        theta = circle_map_step(theta, omega, K)
+    return (theta - theta_start) / n_meas
+
+def tongue_width(p, q, K, n_trans=5000, n_meas=20000, n_bisect=40):
+    target = p / q
+    if K > 0.8:
+        nt, nm = max(n_trans, 20000), max(n_meas, 50000)
+    elif K > 0.5:
+        nt, nm = max(n_trans, 10000), max(n_meas, 30000)
+    else:
+        nt, nm = n_trans, n_meas
+    W_center = winding_number(target, K, nt, nm)
+    if abs(W_center - target) > 5e-4:
+        return 0.0
+    half_window = max(4.0 / (q * q), 0.02)
+    lo, hi = max(target - half_window, 0.001), target
+    for _ in range(n_bisect):
+        mid = (lo + hi) / 2
+        W = winding_number(mid, K, nt, nm)
+        if abs(W - target) < 5e-4:
+            hi = mid
+        else:
+            lo = mid
+    left = (lo + hi) / 2
+    lo, hi = target, min(target + half_window, 0.999)
+    for _ in range(n_bisect):
+        mid = (lo + hi) / 2
+        W = winding_number(mid, K, nt, nm)
+        if abs(W - target) < 5e-4:
+            lo = mid
+        else:
+            hi = mid
+    right = (lo + hi) / 2
+    return max(right - left, 0.0)
+`;
+
+    document.getElementById("python-source").textContent = PYTHON_SOURCE.trim();
+
+    const status = document.getElementById("status");
+    const runBtn = document.getElementById("run-btn");
+    const resultsBody = document.getElementById("results-body");
+    const timingSpan = document.getElementById("timing");
+
+    let pyodide = null;
+
+    async function init() {
+      try {
+        pyodide = await loadPyodide();
+        await pyodide.runPythonAsync(PYTHON_SOURCE);
+        status.innerHTML =
+          '<span style="color: #6f6;">Pyodide ready.</span> ' +
+          '<span style="color: #888; font-size: 0.85rem;">Each Python run takes ~5–30 s depending on K and q.</span>';
+        runBtn.disabled = false;
+      } catch (err) {
+        status.innerHTML = `<span class="fail">Pyodide failed to load: ${err.message}</span>`;
+        console.error(err);
+      }
+    }
+
+    function appendRow({ engine, K, pq, value, note, klass }) {
+      const tr = document.createElement("tr");
+      tr.innerHTML =
+        `<td>${engine}</td>` +
+        `<td>${K}</td>` +
+        `<td>${pq}</td>` +
+        `<td class="${klass ?? ""}">${value}</td>` +
+        `<td style="color: #888; font-size: 0.85rem;">${note ?? ""}</td>`;
+      resultsBody.prepend(tr);
+    }
+
+    function classify(py, js) {
+      if (py === 0) {
+        if (js <= 0.01) return { ok: true, note: "both below resolution" };
+        return { ok: false, note: "JS resolved a tongue Python did not" };
+      }
+      if (py < 0.01) {
+        const ok = Math.abs(js - py) <= 0.001;
+        return { ok, note: ok ? "within absolute tolerance" : "outside abs tol" };
+      }
+      const rel = Math.abs(js - py) / py;
+      const ok = rel <= 0.10;
+      return { ok, note: `relative diff ${(rel * 100).toFixed(2)}%` };
+    }
+
+    runBtn.addEventListener("click", async () => {
+      runBtn.disabled = true;
+      timingSpan.textContent = "running…";
+
+      const K = parseFloat(document.getElementById("K-select").value);
+      const pq = document.getElementById("pq-select").value;
+      const [p, q] = pq.split("/").map(Number);
+
+      // JS first — fast.
+      const tJS0 = performance.now();
+      const jsValue = CircleMapEngine.tongueWidth(p, q, K);
+      const tJS = performance.now() - tJS0;
+
+      // Python next — slow.
+      const tPy0 = performance.now();
+      const pyValue = await pyodide.runPythonAsync(`tongue_width(${p}, ${q}, ${K})`);
+      const tPy = performance.now() - tPy0;
+
+      const verdict = classify(pyValue, jsValue);
+      const klass = verdict.ok ? "pass" : "fail";
+
+      appendRow({
+        engine: "Python (Pyodide)",
+        K,
+        pq,
+        value: pyValue.toFixed(6),
+        note: `${tPy.toFixed(0)} ms`,
+      });
+      appendRow({
+        engine: "JS (engine.js)",
+        K,
+        pq,
+        value: jsValue.toFixed(6),
+        note: `${tJS.toFixed(0)} ms · ${verdict.note}`,
+        klass,
+      });
+
+      timingSpan.textContent = `Python ${tPy.toFixed(0)} ms · JS ${tJS.toFixed(0)} ms · ${verdict.ok ? "pass" : "FAIL"}`;
+      runBtn.disabled = false;
+    });
+
+    init();
+  </script>
+</body>
+</html>
