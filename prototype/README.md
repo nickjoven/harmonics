@@ -30,6 +30,19 @@ python3 -m http.server 8080
 
 ES module imports require a real HTTP server; opening `index.html` directly via `file://` will fail.
 
+## Test commands
+
+```
+npm install                    # one time, installs Playwright + LHCI
+npm run smoke                  # node-side engine vs. reference (≈ 1 s)
+npm test                       # headless Playwright e2e (≈ 30 s)
+npm run test:headed            # same, with browser visible
+npm run lighthouse             # perf + a11y budgets
+```
+
+CI runs all three on every PR touching `prototype/**` via
+`.github/workflows/prototype-validate.yml`.
+
 ## Files
 
 ```
