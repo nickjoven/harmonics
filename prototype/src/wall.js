@@ -102,9 +102,9 @@ export class Wall {
       const cy = y0 + h / 2;
       const radius = Math.min(w, h) / 2 - dotR - 2;
 
-      // Tile background: hue from locked frequency mod 1.
+      // Tile background: hue from locked frequency.
       const lockedF = this.engine.getLockedFrequency(i);
-      const hue = ((lockedF % 1) + 1) % 1; // 0..1
+      const hue = (((lockedF * 0.8) % 1) + 1) % 1; // 0..1
       ctx.fillStyle = `hsl(${hue * 360}, 35%, 18%)`;
       ctx.fillRect(x0, y0, w, h);
 
@@ -137,8 +137,14 @@ export class Wall {
     const i = this.hoverIndex;
     const omega = this.engine.omegas[i];
     const lockedF = this.engine.getLockedFrequency(i);
-    const normalized = lockedF / (2 * Math.PI);
-    const [p, q, err] = bestRational(normalized, 50);
+
+    // Best p/q approximation of locked-to-dominant ratio.
+    let sum = 0;
+    for (let j = 0; j < this.engine.N; j++) sum += this.engine.getLockedFrequency(j);
+    const dominant = sum / this.engine.N;
+    const ratio = dominant !== 0 ? lockedF / dominant : 0;
+    const [p, q, err] = bestRational(ratio, 12);
+
     return {
       index: i,
       omega,

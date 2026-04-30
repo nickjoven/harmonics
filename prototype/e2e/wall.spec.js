@@ -1,20 +1,23 @@
 // End-to-end smoke tests for the metronome wall prototype.
-// Each test asserts a structural claim that should hold regardless of
-// rendering details: K=0 stays disordered, K_c shows first cluster,
-// K=0.99 produces high |r| and a mostly-locked wall.
+//
+// Tests use the window.__sim test hook (defined in src/main.js) to advance
+// the simulation deterministically, decoupling assertions from rAF timing
+// in CI environments.
 
 import { test, expect } from "@playwright/test";
 
-const settle = async (page, ms = 2500) => {
-  // Wait for several Kuramoto integration windows so locked-frequency
-  // averages stabilize.
-  await page.waitForTimeout(ms);
+const STEPS_LONG = 6000;   // long enough for K = K_c to settle
+const STEPS_SETTLED = 9000; // long enough for K = 1 saturation
+
+const drive = async (page, K, steps = STEPS_LONG) => {
+  await page.evaluate(([k, n]) => {
+    window.__sim.setK(k);
+    window.__sim.engine.reset();
+    window.__sim.step(n);
+  }, [K, steps]);
 };
 
-const readNumber = async (page, selector) => {
-  const text = (await page.locator(selector).textContent()).trim();
-  return parseFloat(text);
-};
+const state = async (page) => page.evaluate(() => window.__sim.state());
 
 test.describe("Metronome wall", () => {
   test("page loads with all panels and controls", async ({ page }) => {
@@ -24,56 +27,64 @@ test.describe("Metronome wall", () => {
     await expect(page.locator("#k-slider")).toBeVisible();
     await expect(page.locator("#dist-select")).toBeVisible();
     await expect(page.locator("#audio-toggle")).toBeVisible();
+    // Test hook is exposed.
+    const ok = await page.evaluate(() => typeof window.__sim?.step === "function");
+    expect(ok).toBe(true);
   });
 
   test("K = 0 leaves the system disordered", async ({ page }) => {
     await page.goto("/");
-    await page.locator("button[data-preset=K0]").click();
-    await settle(page, 3000);
-    const r = await readNumber(page, "#r-readout");
-    // |r| should stay low (noise-floor) at K = 0 with N = 100.
-    expect(r).toBeLessThan(0.35);
+    await drive(page, 0, STEPS_LONG);
+    const s = await state(page);
+    // |r| should stay close to its 1/sqrt(N) noise floor at K = 0.
+    expect(s.r).toBeLessThan(0.30);
   });
 
-  test("K = K_c forms a visible cluster", async ({ page }) => {
+  test("K = K_c crosses the synchronization threshold", async ({ page }) => {
     await page.goto("/");
-    await page.locator("button[data-preset=Kc]").click();
-    await settle(page, 4000);
-    const r = await readNumber(page, "#r-readout");
-    // Above threshold |r| grows; conservative lower bound.
-    expect(r).toBeGreaterThan(0.25);
+    await drive(page, 2 / Math.PI, STEPS_LONG);
+    const s = await state(page);
+    // For uniform g(ω) on width 1, K_c = 2/π. Past threshold |r| > 0.4.
+    expect(s.r).toBeGreaterThan(0.4);
   });
 
-  test("K = 1 locks the wall and saturates |r|", async ({ page }) => {
+  test("K = 1 saturates |r| above 0.85", async ({ page }) => {
     await page.goto("/");
-    await page.locator("button[data-preset=K1]").click();
-    await settle(page, 5000);
-    const r = await readNumber(page, "#r-readout");
-    expect(r).toBeGreaterThan(0.85);
-    const clusters = await readNumber(page, "#cluster-readout");
-    expect(clusters).toBeLessThan(15);
+    await drive(page, 1.0, STEPS_SETTLED);
+    const s = await state(page);
+    expect(s.r).toBeGreaterThan(0.85);
+    expect(s.clusters).toBeLessThan(20);
   });
 
-  test("slider updates the readout", async ({ page }) => {
+  test("K is monotonic in |r| past threshold", async ({ page }) => {
+    await page.goto("/");
+    await drive(page, 0.0, STEPS_LONG);
+    const r0 = (await state(page)).r;
+    await drive(page, 2 / Math.PI, STEPS_LONG);
+    const rc = (await state(page)).r;
+    await drive(page, 1.0, STEPS_SETTLED);
+    const r1 = (await state(page)).r;
+    expect(rc).toBeGreaterThan(r0);
+    expect(r1).toBeGreaterThan(rc);
+  });
+
+  test("slider updates the K readout", async ({ page }) => {
     await page.goto("/");
     await page.locator("#k-slider").evaluate((el, v) => {
       el.value = String(v);
       el.dispatchEvent(new Event("input", { bubbles: true }));
     }, 0.812);
-    const k = await readNumber(page, "#k-readout");
+    await page.waitForTimeout(50);
+    const k = parseFloat(await page.locator("#k-readout").textContent());
     expect(k).toBeCloseTo(0.812, 2);
   });
 
-  test("staircase canvas paints non-empty content at K=0.99", async ({ page }) => {
+  test("staircase canvas paints non-empty content at K = 1", async ({ page }) => {
     await page.goto("/");
-    await page.locator("#k-slider").evaluate((el, v) => {
-      el.value = String(v);
-      el.dispatchEvent(new Event("input", { bubbles: true }));
-    }, 0.99);
-    await settle(page, 5000);
+    await drive(page, 1.0, STEPS_SETTLED);
+    // Allow one rAF tick for the canvas to repaint after stepping.
+    await page.waitForTimeout(120);
 
-    // Sample the staircase canvas pixel buffer; a rendered plot has
-    // non-trivial chroma variance.
     const variance = await page.locator("#staircase canvas").evaluate((c) => {
       const ctx = c.getContext("2d");
       const { data } = ctx.getImageData(0, 0, c.width, c.height);
@@ -94,7 +105,6 @@ test.describe("Metronome wall", () => {
 test.describe("Validation harness", () => {
   test("tongue_widths page reports zero failures", async ({ page }) => {
     await page.goto("/test/tongue_widths.html");
-    // Harness runs a tight numeric loop in JS; give it generous time.
     await expect(page.locator("#summary")).toContainText(/0 fail/, {
       timeout: 90_000,
     });

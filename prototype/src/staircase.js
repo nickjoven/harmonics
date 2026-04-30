@@ -12,7 +12,7 @@ export class Staircase {
     this.engine = engine;
     this.opts = {
       lo: opts.lo ?? 0,
-      hi: opts.hi ?? 1,
+      hi: opts.hi ?? 1.2,
       ...opts,
     };
     this.resize();
@@ -43,13 +43,19 @@ export class Staircase {
     const xScale = (x) => margin.l + ((x - lo) / (hi - lo)) * plotW;
     const yScale = (y) => margin.t + (1 - (y - lo) / (hi - lo)) * plotH;
 
-    // Reference rationals.
+    // Reference rationals (× the dominant locked frequency, when one exists).
+    const meanLocked = (() => {
+      let sum = 0;
+      for (let i = 0; i < this.engine.N; i++) sum += this.engine.getLockedFrequency(i);
+      return sum / this.engine.N;
+    })();
     ctx.strokeStyle = "#2e313a";
     ctx.lineWidth = 1;
     const refs = [1/2, 1/3, 2/3, 1/4, 3/4, 1/5, 2/5, 3/5, 4/5];
     ctx.setLineDash([2, 4]);
     for (const r of refs) {
-      const yy = yScale(r);
+      const yy = yScale(r * meanLocked);
+      if (yy < margin.t || yy > margin.t + plotH) continue;
       ctx.beginPath();
       ctx.moveTo(margin.l, yy);
       ctx.lineTo(margin.l + plotW, yy);
@@ -82,22 +88,14 @@ export class Staircase {
     ctx.fillText("W (locked)", -32, 0);
     ctx.restore();
 
-    // Tick labels for special rationals on y-axis.
-    ctx.fillStyle = "#666";
-    ctx.font = "9px ui-sans-serif";
-    for (const [r, label] of [[1/3, "1/3"], [1/2, "1/2"], [2/3, "2/3"]]) {
-      ctx.fillText(label, margin.l - 24, yScale(r) + 3);
-    }
-
-    // Data points.
+    // Data points: bare ω vs. locked ω in native engine units.
     const N = this.engine.N;
     for (let i = 0; i < N; i++) {
       const omega = this.engine.omegas[i];
       const lockedF = this.engine.getLockedFrequency(i);
-      const normalized = lockedF / (2 * Math.PI);
-      const x = xScale(omega / (2 * Math.PI));
-      const y = yScale(normalized);
-      ctx.fillStyle = `hsla(${(((normalized % 1) + 1) % 1) * 360}, 70%, 60%, 0.7)`;
+      const x = xScale(omega);
+      const y = yScale(lockedF);
+      ctx.fillStyle = `hsla(${(((lockedF % 1) + 1) % 1) * 360}, 70%, 60%, 0.7)`;
       ctx.beginPath();
       ctx.arc(x, y, 2, 0, Math.PI * 2);
       ctx.fill();
