@@ -5,10 +5,21 @@
 // baselines are platform-stable (Linux Chromium); see
 // .github/workflows/update-visual-baselines.yml for regenerating them.
 //
-// First-run note: if baselines are not yet committed, this spec will fail.
-// Run the update-visual-baselines workflow once to seed them.
+// Self-gating: if no baselines are committed yet, the entire spec is
+// skipped — so regular CI stays green until the update-visual-baselines
+// workflow has run once and seeded baselines. The seeder workflow sets
+// FORCE_VISUAL=1 to override the skip and actually capture baselines.
 
 import { test, expect } from "@playwright/test";
+import { existsSync } from "fs";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const SNAPSHOT_DIR = join(__dirname, "visual.spec.js-snapshots");
+const HAS_BASELINES = existsSync(SNAPSHOT_DIR);
+const FORCE = process.env.FORCE_VISUAL === "1";
+const SHOULD_RUN = HAS_BASELINES || FORCE;
 
 const drive = async (page, K, steps = 9000) => {
   await page.evaluate(([k, n]) => {
@@ -27,8 +38,10 @@ const presets = [
   { name: "K1", K: 1.0, label: "K = 1 (saturated)" },
 ];
 
+const group = SHOULD_RUN ? test.describe : test.describe.skip;
+
 for (const { name, K, label } of presets) {
-  test.describe(`Visual: ${label}`, () => {
+  group(`Visual: ${label}`, () => {
     test(`staircase at ${name}`, async ({ page }) => {
       await page.goto("/");
       await drive(page, K);

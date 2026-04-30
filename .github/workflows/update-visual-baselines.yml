@@ -41,6 +41,8 @@ jobs:
 
       - name: Capture baselines
         working-directory: prototype
+        env:
+          FORCE_VISUAL: "1"
         run: npx playwright test e2e/visual.spec.js --update-snapshots
 
       - name: Check for changes
