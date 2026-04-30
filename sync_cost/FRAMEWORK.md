@@ -1,9 +1,18 @@
 # Synchronization Cost Framework
 
-A cost accounting framework for physical dynamics. Not a theory of
-everything. Systems converge to lowest-cost attractors — not "preferred"
-states (which implies an external selector), but endogenously cheapest
-configurations.
+A cost accounting framework for physical dynamics. Systems converge to
+lowest-cost attractors — not "preferred" states (which implies an
+external selector), but endogenously cheapest configurations.
+
+The framework belongs in the unification class: programs (GUTs, string
+theory, loop quantum gravity, causal set theory, asymptotic safety,
+Wolfram's hypergraph program, Geometric Unity) that claim the Standard
+Model's parameters should not be free. It is not in competition with
+the Standard Model on QED's home turf — the Standard Model is a
+catalog plus a calculus, silent on the questions this framework
+addresses. For methodological orientation see
+`derivations/comparison_class.md`. For the unit-system invariance of
+every dimensionless prediction see `derivations/unitless_check.md`.
 
 ## Core Primitives
 
