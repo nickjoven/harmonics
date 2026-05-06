@@ -1,5 +1,5 @@
 {
-  "generated": "caf9149e9914ce9067dff2c5aa20bf7e03593078",
+  "generated": "494d91355b7489961988b1027b4733325e5c9214",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -711,7 +711,8 @@
       ],
       "depended_on_by": [
         "INDEX",
-        "anchor_count_audit"
+        "anchor_count_audit",
+        "medium_change_demo"
       ],
       "git": [
         {
@@ -1213,7 +1214,8 @@
       "summary": "Conceptual and methodological orientation. Cited from FRAMEWORK.md as context for any reader who asks whether the framework is competing with the Standard Model. The answer is no \u2014 it is in a different conversation. The Standard Model deferred a class of questions. The framework answers them. Whether the answers are correct is a separate matter, decided by the empirical record on dimensionless ratios the Standard Model only catalogs.",
       "depends_on": [],
       "depended_on_by": [
-        "high_school_syllabus"
+        "high_school_syllabus",
+        "medium_change_demo"
       ],
       "git": [
         {
@@ -3983,6 +3985,25 @@
       ]
     },
     {
+      "id": "medium_change_demo",
+      "path": "sync_cost/derivations/medium_change_demo.md",
+      "title": "Medium-change demo: address vs. structure",
+      "summary": "Pedagogical / methodological orientation. Cited from the README's\nsecond clarifying note. No new derivations; this document is the\naudience-facing analogue of the address-vs-structure split that\nalready lives in the framework's foundational documents.",
+      "depends_on": [
+        "address_and_quantity",
+        "comparison_class",
+        "unitless_check"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "494d913",
+          "date": "2026-05-06",
+          "subject": "Pedagogical: rewrite README opener (result-first, forced-defined) (#95)"
+        }
+      ]
+    },
+    {
       "id": "minimum_alphabet",
       "path": "sync_cost/derivations/minimum_alphabet.md",
       "title": "The Minimum Alphabet",
@@ -6072,7 +6093,8 @@
         "vacuum_energy"
       ],
       "depended_on_by": [
-        "high_school_syllabus"
+        "high_school_syllabus",
+        "medium_change_demo"
       ],
       "git": [
         {
