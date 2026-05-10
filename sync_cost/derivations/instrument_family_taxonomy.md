@@ -7,12 +7,16 @@ predictions cluster.
 
 ## The four voices
 
-| Sector | Instrument | K regime | Spectrum | Predicts |
-|---|---|---|---|---|
-| Gravitational K = 1 | string | K = 1 | linear, sustained | Press–Schechter α = -2 |
-| Inflation near-K = 1 | flute | K ≈ 0.976 | fundamental + weak overtones | n_s = 0.965 |
-| Baryonic q_2-cascade | bowed string | K = 2^(-1/3) | sawtooth, all-Farey | Salpeter α = -7/3 |
-| q_3-cascade | clarinet | K = 3^(-1/2) | square, odd-Farey | predicted α = -5/2 |
+| Sector | Instrument | K regime | Spectrum | Fragmentation slope | Kink mass / M_k(K=1) |
+|---|---|---|---|---|---|
+| Gravitational K = 1 | string | K = 1 | linear, sustained | -2 (Press–Schechter) | 1.000 |
+| Inflation near-K = 1 | flute | K ≈ 0.976 | fundamental + weak overtones | n_s = 0.965 (tilt) | ≈ 0.988 |
+| Baryonic q_2-cascade | bowed string | K = 2^(-1/3) | sawtooth, all-Farey | -7/3 (Salpeter) | 0.891 |
+| q_3-cascade | clarinet | K = 3^(-1/2) | square, odd-Farey | -5/2 (predicted) | 0.760 |
+
+The two rightmost columns are independent predictions on the same
+K-zoo: the fragmentation slope from `mass_function_family.md`, the
+kink mass from `sine_gordon_substrate.md`. Each voice carries both.
 
 ## Why two reed-instrument families
 
@@ -49,7 +53,9 @@ substrate" is the commitment to a fermionic universe.
 ## Cross-links
 
 - `master_cascade_identity.md` — the four-voice formal structure
-- `mass_function_family.md` — each voice predicts a slope
+- `mass_function_family.md` — each voice predicts a fragmentation slope
+- `sine_gordon_substrate.md` — each voice also predicts a kink mass
+  via `M_k ∝ √K` (soliton sector)
 - `klein_bottle.md` — substrate commitment = clarinet substrate
 - `medium_change_demo.md` — bowed-string vs. flute physical instance
   of the lambda / EML split
