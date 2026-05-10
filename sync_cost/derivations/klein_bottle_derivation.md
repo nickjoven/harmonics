@@ -178,6 +178,15 @@ postulate.
 
 ### The arrow-of-time argument (secondary, independent)
 
+> **See `time_axis_split.md`.** This section's "antiperiodic = temporal"
+> conclusion refers specifically to the *arrow-of-time* aspect of time:
+> irreversibility, the rank-1 Fréchet derivative direction (D46), the
+> CPT-T direction. The clock-time aspect (cyclic counter for cosmic age,
+> Friedmann time, etc.) lives on the periodic axis per `klein_bottle.md`'s
+> "Where time lives" section. Both readings are correct; they are about
+> different aspects of time that on the Klein bottle live on different
+> axes.
+
 ### The torus is time-reversible
 
 On the torus, both directions are periodic. The identification
