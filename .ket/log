@@ -148,3 +148,19 @@
 2026-04-26T23:12:11Z | dag:create | 0ec4c572a021d3f450f144a024dcbe062558a8b5d7dfbfe93c02880185ebc93f
 2026-04-27T23:06:52Z | put | sync_cost/derivations/FRAMEWORK_TOPOLOGY.md -> 74fab4b863eb7d006713962e0141a401cad554d890107b8cb1c3b62d9d531780
 2026-04-27T23:06:52Z | dag:create | 09b59ee0f06f00ca773bd47bbfd7bc350ff932143f97d530f6158e429ceb58c5
+2026-05-10T06:23:25Z | put | sync_cost/derivations/a_s_g1_closure_attempt.md -> 600761863fd0e9e06ae19ed1172d7b4102156cfcd8f4bf8153ece872cda910f7
+2026-05-10T06:23:25Z | dag:create | 98e64d17bca3ba3008e4eaf6a71916ebec033d604059b7134f662f2024fa215c
+2026-05-10T06:23:25Z | put | sync_cost/derivations/continuity_in_K_nulls.md -> fa16ffbb611bd23d578dfdc7860d2e05854f7b428f0c2ad47198174cc66d4653
+2026-05-10T06:23:25Z | dag:create | d204ce0a624aa38d537f588b5a40b77698c73abccda4c2e65f04aa2d5a686092
+2026-05-10T06:23:25Z | put | sync_cost/derivations/cross_ratio_irrep_reframe.md -> 653912d3416553afeb85ac2edd5adb442036fcf6b2c553bf8a686321aa6257bc
+2026-05-10T06:23:25Z | dag:create | 98c94c153f6b9ae5e53e1271273b43167c39ffef8678a74bb9c657f9c50f073a
+2026-05-10T06:23:25Z | put | sync_cost/derivations/depth_connection_nulls.md -> 9852955aedbdf0a325ce9652bc1e95547e33f9e85c17b1aba40091c016f74fed
+2026-05-10T06:23:25Z | dag:create | 4b6dbcb49edda033d28ce634ad43333c44e3ad8a07b668afbb2b85a53564f9c9
+2026-05-10T06:23:25Z | put | sync_cost/derivations/framework_status.md -> a0a9cf7c91dee7a4b5df193190c0dd1b47cb394fbd2d5de918df9cb5d564e6a8
+2026-05-10T06:23:25Z | dag:create | 0f9b6a07f2b86c9b4ce2b52bc5ad2f83fe3887230f6c2707da791cb7aae24100
+2026-05-10T06:23:25Z | put | sync_cost/derivations/omega_b_substrate_side_audit.md -> ea0b16918cd79ab438d3f7f23b66968f40e0d4e571dd1aa86eeedc97f5193061
+2026-05-10T06:23:25Z | dag:create | 8c5d1b2cbb6e3b045bb62673c4933783e26c9159f7c1a7638299baa2770b16d0
+2026-05-10T06:23:25Z | put | sync_cost/derivations/remaining_gap_shapes.md -> 891eef5f19bed2ac44d47365fa6dcafa2c8c4559a75cdddff0ef3967e518d240
+2026-05-10T06:23:25Z | dag:create | caf775a251a028a7c386c51fad71cce57771cc5c309183ccd6983a06b7e8b0a2
+2026-05-10T06:23:25Z | put | sync_cost/derivations/vocabulary_is_the_work_pattern.md -> 6c8d14955dbd6a0dd8ae38c520cc2bca29cbf184ee196c11096d9790697e529c
+2026-05-10T06:23:25Z | dag:create | 451e2ffed501a797cba23694117071ab3d849ef148239de20a1253c64dcae333
