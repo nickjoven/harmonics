@@ -33,6 +33,8 @@ Categories:
 | **K=1 ↔ K<1 sector decoupling** (Einstein vs Schrödinger continuum limits) is non-smooth, forces independent anchors per sector | `continuum_limits.md` Parts I/II; `continuity_in_K_nulls.md` N11; `path_closures_iter3.md` |
 | **Klein π_1 sector assignment**: cosmological → no-twist, particle → twist; Z_2 rep machinery forces the assignment | `path_closures_iter4.md` (D.1 → Class 5) |
 | **A_s = 2.33×10⁻⁹ substrate-side prediction**: framework's complete substrate-side static-variance prediction at the matter-sector pivot; the 11% gap to A_s_obs = 2.10×10⁻⁹ is the inflation amplification factor f_amp (anchor-side, depends on H_inf + ε); framework correctly declines to predict both A_s_obs and f_amp. Instance 7 closure ACCEPTED. | `a_s_geometric_proof.md`, `a_s_g1_closure_attempt.md`, `vocabulary_is_the_work_pattern.md` Instance 7 |
+| **Sine-Gordon emergence at K = 1**: locked-state expansion of the framework Lagrangian gives `∂²_t φ − c² ∂²_x φ + ω₀² sin(φ) = 0` for fluctuations φ = θ − ψ around the locked mean phase, with `c² = σ²/m`, `ω₀² = K r / m`. No new primitives. | `sine_gordon_substrate.md`, building on `framework_lagrangian.py`, `einstein_from_kuramoto.md` |
+| **Z₂-graded soliton charge from Klein antiperiodicity**: kink ↔ antikink under traversal of the antiperiodic spatial loop is forced by `f(x+L_x, y) = −f(x, L_y−y)`. Distinct from the field half-twist `θ → θ + π` (which gives spin-statistics). | `sine_gordon_substrate.md`, `klein_bottle.md` (Soliton sector consequence section) |
 
 ## Floor (structural residual at finite Fibonacci depth)
 
@@ -103,6 +105,7 @@ numerology ensemble, not structural.
 |---|---|
 | K_c(F_n/F_{n+1}) closed form | Explicit form beyond asymptotic δ⁻ⁿ scaling |
 | T2#7 measurement arc technical residuals | Iteration-to-time anchor, multi-tongue cascade, continuous K(t) |
+| Kink-mass ratios across the K-zoo: `M_k(d, n, b) / M_k(K=1) = b^(-n/(2d))` | Identification of soliton-sector observables in each cascade sector (gravitational geons at K=1, stellar-scale kinks in the bowed sector, etc.); `sine_gordon_substrate.md` flags this as conjectural at K<1 — depends on each cascade sector hosting an analogous sine-Gordon reduction |
 
 ## Out of class (absolute scales, anchor-dependent)
 

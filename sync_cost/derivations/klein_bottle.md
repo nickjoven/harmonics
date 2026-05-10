@@ -822,6 +822,36 @@ This is one computation on known equations. The Stern-Brocot tree,
 the continuum limit procedure, and the XOR filter are all specified.
 The output is either gauge field equations or not.
 
+## Soliton sector consequence: Z₂-graded topological charge
+
+A separate downstream consequence of the antiperiodic identification,
+worked out in `sine_gordon_substrate.md`: the antiperiodic spatial
+loop forces topological charge to be Z₂-graded for any localized
+nonlinear excitation on this surface.
+
+The mechanism: for a 1D field configuration `φ(x)` independent of y,
+the antiperiodic identification `f(x + L_x, y) = − f(x, L_y − y)`
+reduces to `φ(x + L_x) = − φ(x)`. A kink profile with topological
+charge `Q = +1` (the field rising from 0 to 2π) becomes a configuration
+with the field rising from 0 to −2π — that is, a `Q = −1` antikink.
+
+So `Q ∈ Z` on the orientable cover but `Q mod 2` on the Klein bottle.
+A region dominated by kinks can convert to antikink-dominated through
+global antiperiodic-loop transit, with characteristic time set by the
+loop length.
+
+This is the soliton-sector reading of the same antiperiodic
+identification that produces the XOR selection rule and the four-mode
+spectrum above. It is structurally distinct from the field half-twist
+`θ → θ + π` (which gives spin-statistics in `framework_lagrangian.py`
+Part 6) — both are Klein-bottle Z₂ structures but they act on
+different objects (coordinate vs. field value) and produce different
+consequences.
+
+Predictions inheriting from this: kink masses across the K-zoo are
+in fixed `√K` ratios (`sine_gordon_substrate.md`); kink ↔ antikink
+oscillation periods are substrate-geometry observables (#97 H1–H3).
+
 ## The two Klein bottle scales (conjectural)
 
 *This section assumes the gauge group identification. If that

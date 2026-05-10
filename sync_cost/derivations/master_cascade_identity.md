@@ -57,6 +57,22 @@ The Stribeck cascade (octave-base) and the van der Pol cascade
 drive ratio, cascade-depth = the other prime. Numerics in
 `clarinet_lattice.py`, results in `RESULTS.md` (Experiment 3).
 
+## Soliton-sector implication
+
+The same K-zoo also fixes a **soliton-mass spectrum** through a
+different mechanism. `sine_gordon_substrate.md` derives sine-Gordon
+as the substrate's effective theory by expanding around the locked
+mean phase, with kink mass `M_k = 8 σ √(K r)` in framework natural
+units. The kink mass scales as `√K`, so cross-sector ratios
+
+    M_k(d, n, b) / M_k(K=1) = b^(-n/(2d))
+
+are fixed by the same `(d, n, b)` triples that define the master
+identity. This is structurally distinct from the fragmentation-slope
+family (`mass_function_family.md`) but uses the same K-zoo as the
+substrate-side input — two different mass relations on one set of
+cascade fixed points.
+
 ## Open
 
 1. Pigeonhole audit on the 3-instance family — joint false-positive
@@ -71,5 +87,7 @@ drive ratio, cascade-depth = the other prime. Numerics in
 
 - `CHAIN_KSTAR.md` — matter-equilibrium derivation, the original instance
 - `imf_bowed_cascade.md` — bowed instance, Phase II
-- `mass_function_family.md` — slope family across observables
+- `mass_function_family.md` — fragmentation-slope family across observables
+- `sine_gordon_substrate.md` — soliton-mass spectrum (`M_k ∝ √K`) on the
+  same K-zoo
 - `down_type_double_cover_phase_d.md` — companion structural piece
