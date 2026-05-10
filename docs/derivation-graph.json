@@ -1,5 +1,5 @@
 {
-  "generated": "494d91355b7489961988b1027b4733325e5c9214",
+  "generated": "30931c300326896dd8cdcd692ff877096d4440d3",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -16,6 +16,7 @@
         "ansatz_audit_policy",
         "dynamical_tool_audit",
         "klein_antipodal_z2_rep_pattern",
+        "master_cascade_identity",
         "numerology_inventory"
       ],
       "git": [
@@ -712,6 +713,7 @@
       "depended_on_by": [
         "INDEX",
         "anchor_count_audit",
+        "expressibility_split",
         "medium_change_demo"
       ],
       "git": [
@@ -943,6 +945,7 @@
         "klein_antipodal_z2_rep_pattern",
         "klein_bridge_audit_and_probe",
         "klein_dynamics_roadmap",
+        "mass_function_family",
         "numerology_inventory",
         "observer_register_closure",
         "omega_b_alpha_beta_closure",
@@ -1056,6 +1059,7 @@
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
         "seismic_eigenstate_dictionary",
+        "sine_gordon_substrate",
         "stribeck_vortex",
         "structural_lemmas"
       ],
@@ -1214,6 +1218,7 @@
       "summary": "Conceptual and methodological orientation. Cited from FRAMEWORK.md as context for any reader who asks whether the framework is competing with the Standard Model. The answer is no \u2014 it is in a different conversation. The Standard Model deferred a class of questions. The framework answers them. Whether the answers are correct is a separate matter, decided by the empirical record on dimensionless ratios the Standard Model only catalogs.",
       "depends_on": [],
       "depended_on_by": [
+        "expressibility_split",
         "high_school_syllabus",
         "medium_change_demo"
       ],
@@ -1852,7 +1857,8 @@
         "klein_connection"
       ],
       "depended_on_by": [
-        "down_type_double_cover_closed"
+        "down_type_double_cover_closed",
+        "master_cascade_identity"
       ],
       "git": [
         {
@@ -2016,6 +2022,7 @@
         "gauge_dictionary",
         "klein_connection",
         "quantum_gravity_interpolation",
+        "sine_gordon_substrate",
         "three_dimensions"
       ],
       "git": [
@@ -2146,6 +2153,28 @@
           "hash": "9228c64",
           "date": "2026-03-25",
           "subject": "D27: The exponent q\u2082q\u2083\u00b3 = 54 derived from first principles"
+        }
+      ]
+    },
+    {
+      "id": "expressibility_split",
+      "path": "sync_cost/derivations/expressibility_split.md",
+      "title": "Expressibility split \u2014 the lambda / EML divide",
+      "summary": "Methodological orientation, parallel to `comparison_class.md` and\n`unitless_check.md`. The framework's notational invariance claim:\ntwo distinct universal generators (mediant for discrete content,\nEML for continuous content) are needed to express the framework's\npredictions. No single generator suffices.",
+      "depends_on": [
+        "address_and_quantity",
+        "comparison_class",
+        "medium_change_demo",
+        "unitless_check"
+      ],
+      "depended_on_by": [
+        "medium_change_demo"
+      ],
+      "git": [
+        {
+          "hash": "9a97408",
+          "date": "2026-05-10",
+          "subject": "Pedagogical: link EML/lambda split to bowed-string/clarinet/flute trio (#96)"
         }
       ]
     },
@@ -3305,6 +3334,49 @@
       ]
     },
     {
+      "id": "imf_bowed_cascade",
+      "path": "sync_cost/derivations/imf_bowed_cascade.md",
+      "title": "IMF Salpeter slope from the bowed cascade",
+      "summary": "Class 2 (gated). Promotes to full Class 2 when:",
+      "depends_on": [
+        "mass_function_family",
+        "master_cascade_identity"
+      ],
+      "depended_on_by": [
+        "mass_function_family",
+        "master_cascade_identity"
+      ],
+      "git": [
+        {
+          "hash": "30931c3",
+          "date": "2026-05-10",
+          "subject": "Salvage Tier 1: master cascade-lock identity family (closes #97 A/B/C/E/F) (#98)"
+        }
+      ]
+    },
+    {
+      "id": "instrument_family_taxonomy",
+      "path": "sync_cost/derivations/instrument_family_taxonomy.md",
+      "title": "Instrument-family taxonomy of the framework",
+      "summary": "The framework's substrate sectors map cleanly onto four classical\ninstrument families. This is a teaching frame, not a derivation \u2014 but\nthe mapping is structurally tight enough to organize how the framework's\npredictions cluster.",
+      "depends_on": [
+        "klein_bottle",
+        "mass_function_family",
+        "master_cascade_identity",
+        "medium_change_demo"
+      ],
+      "depended_on_by": [
+        "sine_gordon_substrate"
+      ],
+      "git": [
+        {
+          "hash": "30931c3",
+          "date": "2026-05-10",
+          "subject": "Salvage Tier 1: master cascade-lock identity family (closes #97 A/B/C/E/F) (#98)"
+        }
+      ]
+    },
+    {
       "id": "isotropy_lemma",
       "path": "sync_cost/derivations/isotropy_lemma.md",
       "title": "Isotropy Lemma: Trivial Stabilizer in the Kuramoto Model at K=1",
@@ -3555,9 +3627,11 @@
         "gauge_dictionary",
         "gauge_factorization",
         "gauge_high_scale_identification",
+        "instrument_family_taxonomy",
         "klein_connection",
         "klein_nodal_parity",
         "second_law_topological",
+        "sine_gordon_substrate",
         "vacuum_energy"
       ],
       "git": [
@@ -3643,6 +3717,7 @@
         "omega_b_residual_phase_a",
         "second_law_topological",
         "sector_decoupling_phase_a",
+        "sine_gordon_substrate",
         "sinw_effective_dimension",
         "three_formalizations"
       ],
@@ -3826,6 +3901,29 @@
       ]
     },
     {
+      "id": "mass_function_family",
+      "path": "sync_cost/derivations/mass_function_family.md",
+      "title": "Mass-function family across cascade depths",
+      "summary": "The master cascade-lock identity gives a one-parameter slope family:",
+      "depends_on": [
+        "baryon_fraction",
+        "imf_bowed_cascade",
+        "master_cascade_identity"
+      ],
+      "depended_on_by": [
+        "imf_bowed_cascade",
+        "instrument_family_taxonomy",
+        "master_cascade_identity"
+      ],
+      "git": [
+        {
+          "hash": "30931c3",
+          "date": "2026-05-10",
+          "subject": "Salvage Tier 1: master cascade-lock identity family (closes #97 A/B/C/E/F) (#98)"
+        }
+      ]
+    },
+    {
       "id": "mass_sector_closure",
       "path": "sync_cost/derivations/mass_sector_closure.md",
       "title": "The Mass Sector Closure: Integer Conservation and Gauge Adjoints",
@@ -3911,6 +4009,32 @@
       ]
     },
     {
+      "id": "master_cascade_identity",
+      "path": "sync_cost/derivations/master_cascade_identity.md",
+      "title": "Master cascade-lock identity",
+      "summary": "The framework's K-values across multiple sectors satisfy a single\nparameterized identity:",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "down_type_double_cover_phase_d",
+        "imf_bowed_cascade",
+        "mass_function_family",
+        "quantum_gravity_interpolation"
+      ],
+      "depended_on_by": [
+        "imf_bowed_cascade",
+        "instrument_family_taxonomy",
+        "mass_function_family",
+        "sine_gordon_substrate"
+      ],
+      "git": [
+        {
+          "hash": "30931c3",
+          "date": "2026-05-10",
+          "subject": "Salvage Tier 1: master cascade-lock identity family (closes #97 A/B/C/E/F) (#98)"
+        }
+      ]
+    },
+    {
       "id": "measurement_collapse",
       "path": "sync_cost/derivations/measurement_collapse.md",
       "title": "Measurement Collapse from Tongue Traversal",
@@ -3992,10 +4116,19 @@
       "depends_on": [
         "address_and_quantity",
         "comparison_class",
+        "expressibility_split",
         "unitless_check"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "expressibility_split",
+        "instrument_family_taxonomy"
+      ],
       "git": [
+        {
+          "hash": "9a97408",
+          "date": "2026-05-10",
+          "subject": "Pedagogical: link EML/lambda split to bowed-string/clarinet/flute trio (#96)"
+        },
         {
           "hash": "494d913",
           "date": "2026-05-06",
@@ -5229,7 +5362,9 @@
         "spatial_coupling_derived",
         "speed_of_light"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "master_cascade_identity"
+      ],
       "git": [
         {
           "hash": "dffc200",
@@ -5563,6 +5698,28 @@
           "hash": "cc58f06",
           "date": "2026-04-20",
           "subject": "DRY sweep + A_s geometric proof + Z1-Z3 convention (#68)"
+        }
+      ]
+    },
+    {
+      "id": "sine_gordon_substrate",
+      "path": "sync_cost/derivations/sine_gordon_substrate.md",
+      "title": "Sine-Gordon as the framework's substrate effective theory",
+      "summary": "Class 3 (derivation grade). The reduction from the framework Lagrangian\nto sine-Gordon is exact in the local mean-field limit; the kink mass\nformula `M_k = 8 \u03c3 \u221a(K r)` is the standard sine-Gordon result with\nframework primitives substituted. No new primitives.",
+      "depends_on": [
+        "born_rule",
+        "einstein_from_kuramoto",
+        "instrument_family_taxonomy",
+        "klein_bottle",
+        "klein_bottle_derivation",
+        "master_cascade_identity"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "0f604ee",
+          "date": "2026-05-10",
+          "subject": "Derive sine-Gordon from substrate Lagrangian + soliton kink-mass spectrum (refs #97 H) (#99)"
         }
       ]
     },
@@ -6093,6 +6250,7 @@
         "vacuum_energy"
       ],
       "depended_on_by": [
+        "expressibility_split",
         "high_school_syllabus",
         "medium_change_demo"
       ],
