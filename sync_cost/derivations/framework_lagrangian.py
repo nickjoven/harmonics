@@ -44,8 +44,11 @@ print()
 print("The action:")
 print("   S[θ] = ∫∫ ℓ[θ] dx dt")
 print()
-print("with integration over the Klein bottle (antiperiodic in temporal")
-print("direction, periodic in spatial) and time.")
+print("with integration over the Klein bottle (antiperiodic in arrow")
+print("direction, periodic in clock direction) and time.")
+print("(See sine_gordon_substrate.md cross-ref to time_axis_split.md:")
+print(" 'temporal' on the Klein bottle splits into clock-time on the")
+print(" periodic axis and arrow-time on the antiperiodic axis.)")
 print()
 
 

@@ -268,6 +268,15 @@ population ratios that match anything physical.
 
 ## Where time lives
 
+> **See `time_axis_split.md`.** This section identifies the periodic
+> axis as the clock direction (cyclic counter, unambiguous count). The
+> framework also has an *arrow-of-time* direction — separate aspect —
+> which lives on the antiperiodic axis (`klein_bottle_derivation.md`
+> Part IV, `D46`). The two aspects are bundled in conventional physics;
+> the Klein bottle splits them. Treat this section as the clock-time
+> argument; do not read "time = periodic" as a claim about
+> irreversibility, which lives on the antiperiodic axis.
+
 ### The two directions are not equivalent
 
 The Klein bottle has two directions: x (antiperiodic, twisted) and
