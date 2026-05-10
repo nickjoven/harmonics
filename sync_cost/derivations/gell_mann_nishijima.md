@@ -29,31 +29,36 @@ The Klein bottle fractions {1/3, 1/2, 2/3} give |Q| = {1/3, 1/2, 2/3}
 directly. The sign comes from the direction of winding relative to
 the detector's reference phase.
 
-### Weak isospin T_3: the twist charge
+### Weak isospin T_3: the half-integer x-wavenumber spectrum
 
 The x-direction of the Klein bottle is antiperiodic: traversing the
-x-loop returns with reversed orientation. The half-twist shifts
-phase by pi. Modes on the x-loop split into two classes based on
-their behavior under this half-twist:
+x-loop returns the field with sign flip via `f(x + L_x, y) = -f(x, L_y - y)`
+(`klein_bottle.md` line 104; coordinate-Z_2 monodromy). For a
+1D mode separable in x and y, this collapses to `f(x + L_x) = -f(x)`,
+which forces **half-integer x-wavenumbers** `m = (2k+1)/2`
+(`klein_bottle.md` line 118–121, also `xor_derivation.md` Section 4
+Case 1).
 
-- **T_3 = +1/2**: the mode acquires phase +pi/2 per half-twist
-  (transforms as the "up" component of the doublet)
-- **T_3 = -1/2**: the mode acquires phase -pi/2 per half-twist
-  (transforms as the "down" component)
+The smallest half-integer is 1/2. The fundamental representation of
+the SU(2) gauge group acting on the antiperiodic-x sector is the
+doublet, with components labeled by `T_3 = ±1/2`. Singlet modes
+(`T_3 = 0`) do not transform under the antiperiodic identification —
+they live in the integer-wavenumber sector forbidden in this
+direction by the BC, so they appear as fixed points of the Z_2 action
+rather than as carriers of T_3.
 
-Why +/- 1/2? The half-twist is an element of order 2 in the
-fundamental group pi_1(Klein bottle). The irreducible representations
-of Z_2 acting on a complex doublet assign eigenvalues e^{+i pi/2}
-and e^{-i pi/2} to the two components, giving T_3 = +/- 1/2.
-
-Alternatively: the antiperiodic boundary condition forces half-integer
-x-wavenumbers (D19, mode analysis). The smallest half-integer is 1/2.
-The doublet structure (two components with T_3 = +/- 1/2) is the
-fundamental representation of the SU(2) that covers the Z_2 twist.
-
-Singlet modes (T_3 = 0) are those that are symmetric under the
-half-twist — they do not transform under the x-direction
-identification.
+> **On mechanism.** Earlier framings of this section (preserved in
+> the surrounding paragraphs of the prior version) read `T_3 = ±1/2`
+> as eigenvalues of "the half-twist `θ → θ + π`" acting on a complex
+> doublet — that is, eigenvalues of the field-half-twist Z_2 from
+> `framework_lagrangian.py` Part 6. The numerical answer is the same,
+> but the cleaner mechanism is the coordinate-side wavenumber
+> argument above, since the field-Z_2 only labels representations
+> after the coordinate-Z_2 has fixed the wavenumber spectrum. The
+> two Z_2s are structurally distinct (see `sine_gordon_substrate.md`
+> "Distinct from the field half-twist" subsection); attributing T_3
+> to either alone is incomplete, but the wavenumber argument is the
+> load-bearing one.
 
 ### Hypercharge Y: the periodic charge
 

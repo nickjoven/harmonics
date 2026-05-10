@@ -328,6 +328,42 @@ completely different — and observationally excluded — mode count.
 
 ## Part VII: Connection to fermions
 
+> **Note on the two Z₂ structures.** The phrase "antiperiodic
+> identification θ → θ + π" used throughout this section actually
+> bundles two structurally distinct Z₂ actions that travel together
+> on the Kuramoto field:
+>
+> - **Coordinate antiperiodicity**: the manifold gluing
+>   `(x + L_1, y) ~ (x, L_2 - y)`. Acts on locations on the surface,
+>   independent of any field. This is the Z₂ of the Klein bottle as
+>   a topological space.
+> - **Field-bundle lift / half-twist**: `θ → θ + π` on the phase
+>   value. Acts on the field's target. This is the Z₂ that
+>   distinguishes the trivial bundle (bosons) from the sign bundle
+>   (fermions) on the same coordinate manifold.
+>
+> The structural results below use both:
+>
+> - The half-integer wavenumber spectrum (m = k + 1/2 in x) follows
+>   from the *coordinate*-Z₂ applied to a Fourier mode:
+>   `f(x + L_x) = -f(x)` requires `e^{i k L_x} = -1`. This is
+>   independent of field-Z₂ choice.
+> - The fermion / boson representation split (parity of f under
+>   `θ → θ + π`) is the *field*-Z₂ choice: trivial bundle = boson,
+>   sign bundle = fermion. The choice of bundle determines which
+>   parity sector a field lives in.
+> - Pauli sign on two-fermion exchange uses both: the exchange path
+>   traverses the coordinate loop twice (round trip), and the field
+>   in the sign bundle picks up `(-1)² = +1` per pair / `-1` per
+>   particle.
+>
+> The two Z₂s are correlated (the bundle structure is determined by
+> the gluing, but choosing a *lift* is independent of the manifold).
+> Earlier formulations of this section did not distinguish them; the
+> derivation below survives the distinction with the read-out above.
+> See `sine_gordon_substrate.md` "Distinct from the field half-twist"
+> for the soliton-sector consequence of the same split.
+
 The Klein bottle's antiperiodic identification θ → θ + π upon
 traversal of the x-loop is a Z₂ action on the phase. This Z₂
 naturally divides representations into:
