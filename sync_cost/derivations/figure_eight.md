@@ -1,5 +1,30 @@
 # The Figure-Eight Topology
 
+> **Disposition note (added 2026-05).** Two derivations in this doc
+> need flagging:
+>
+> 1. **`sin²θ_W = 8/35`** (Section "The branching ratio", lines ~63–94)
+>    is listed under **Fails** in `framework_status.md` per
+>    `sinW_running_check.py` (SM running rules out a Planck-scale
+>    structural origin). The derivation here is preserved as a
+>    structural-argument record but the numerical match is
+>    coincidence, not a framework prediction. The derived
+>    `M_W/M_Z = sqrt(27/35)` (Section "The gauge bosons as crossing
+>    events") inherits the same status.
+>
+> 2. **The "i² = -1 from the double half-twist"** section (line ~129)
+>    asserts the Klein bottle has "a half-twist in **each**
+>    antiperiodic direction." The Klein bottle has only **one**
+>    antiperiodic direction (x); the y-direction is periodic. See
+>    `klein_bottle.md` lines 38–47 and `klein_bottle_derivation.md`
+>    Part II. The `J² = -I` identification therefore needs to be
+>    re-derived under the correct topology before being relied on;
+>    the section is provisional.
+>
+> Both flags do not invalidate the figure-8 mode picture itself
+> (Loop 1 ∪ Loop 2 with one crossing, four modes). They concern
+> downstream identifications built on top of that picture.
+
 ## Claim
 
 The Klein bottle's self-intersection in 3D embedding is a figure-8
@@ -127,6 +152,15 @@ mass ratio:
 follows from the crossing geometry.
 
 ## i^2 = -1 from the double half-twist
+
+> **Provisional — see top-of-doc disposition note.** The premise
+> below ("a half-twist in each antiperiodic direction") is incorrect
+> for the Klein bottle, which has only one antiperiodic direction.
+> The `J² = -I` conclusion may still hold via a different route
+> (e.g., from the figure-8's two-sheet structure at the crossing
+> point combined with the single x-loop's half-twist), but the
+> derivation as stated rests on a wrong topology claim and needs
+> redoing.
 
 The Klein bottle has a half-twist in each antiperiodic direction
 (D19). Traversing the D state once applies one half-twist.

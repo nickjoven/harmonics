@@ -73,6 +73,16 @@ family (`mass_function_family.md`) but uses the same K-zoo as the
 substrate-side input — two different mass relations on one set of
 cascade fixed points.
 
+> **Validity scope.** The sine-Gordon reduction that gives
+> `M_k = 8 σ √(K r)` is rigorous only at K ≈ 1 (the locked-state
+> condition in `einstein_from_kuramoto.md`). Propagation of the
+> kink-mass formula to K_IMF, K_clarinet, K* matter equilibrium, etc.
+> is conjectural — it assumes each cascade-locked sector hosts an
+> analogous sine-Gordon reduction around its own mean phase ψ_n with
+> order parameter r_n < 1. See `sine_gordon_substrate.md` "Validity
+> scope" subsection. The `√K` ratio inherits this conjectural status
+> at K < 1; only the K = 1 ↔ near-K = 1 comparison is rigorous.
+
 ## Open
 
 1. Pigeonhole audit on the 3-instance family — joint false-positive

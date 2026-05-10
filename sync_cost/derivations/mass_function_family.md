@@ -68,6 +68,14 @@ that hosts a fragmentation cascade may not host stable kinks.
 | Bowed (d=3, n=1) | -7/3 ≈ -2.333 | 2^(-1/6) ≈ 0.891 |
 | Clarinet (d=2, n=1) | -5/2 | 3^(-1/4) ≈ 0.760 |
 
+> **Validity scope (soliton column only).** The kink-mass formula
+> `M_k = 8 σ √(K r)` is rigorous only at K ≈ 1 per
+> `sine_gordon_substrate.md` "Validity scope" subsection. Propagation
+> across the K-zoo assumes each cascade-locked sector hosts an
+> analogous sine-Gordon reduction around its own locked sub-state.
+> The fragmentation-slope column is independent and not affected by
+> this caveat.
+
 ## Cross-links
 
 - `master_cascade_identity.md`

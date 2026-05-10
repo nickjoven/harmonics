@@ -35,6 +35,25 @@ Section 4 (Case 2: n != 0). For the purpose of deriving the mode selection
 rule, we first treat the separable case and then handle the non-separable
 corrections, showing they do not alter the parity constraint.
 
+**Remark on the two Z₂ structures bundled in BC1.** BC1 combines two
+structurally distinct Z₂ actions that travel together on the Kuramoto
+field but are conceptually separable:
+
+- *Coordinate antiperiodicity*: the manifold gluing
+  `(x + L_1, y) ~ (x, L_2 - y)` — a Z₂ on locations.
+- *Field-bundle lift*: `+ π` on the phase value θ — a Z₂ on the field's
+  target. Equivalent to the sign-bundle lift `f → -f` for Fourier-mode
+  amplitudes.
+
+For the XOR selection rule derived below, both aspects contribute: the
+half-integer wavenumbers come from the coordinate side, while the
+parity classification (allowed even/odd combinations) reads off the
+bundle-lift side. Downstream uses that invoke "the antiperiodic
+identification" should specify which aspect they need. See
+`sine_gordon_substrate.md` "Distinct from the field half-twist"
+subsection for the soliton-sector reading and `klein_bottle.md` line
+104 for the operational Fourier-mode form.
+
 ---
 
 ## 2. Fourier expansion of the phase field

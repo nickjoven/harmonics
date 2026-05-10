@@ -18,12 +18,37 @@ symmetry breaking).
 
 | Klein-substrate feature | Physical sector | Status |
 |---|---|---|
-| Antiperiodic x-direction (half-twist, Z_2 monodromy) | Weak isospin `SU(2)_L` gauge group | FORCED at substrate level + free physical labeling |
+| Antiperiodic x-direction (coordinate Z_2 monodromy) | Weak isospin `SU(2)_L` gauge group | FORCED at substrate level + free physical labeling |
 | Periodic y-direction (continuous U(1) loop isometry) | Hypercharge `U(1)_Y` gauge group | FORCED at substrate level + free physical labeling |
 | Denominator class q_3 = 3 in periodic direction (Z_3 fiber scaling) | Color `SU(3)_C` gauge group | FORCED at substrate level + free physical labeling |
-| Half-twist eigenvalues `±1/2` | Weak isospin `T_3 = ±1/2` doublet | FORCED |
+| Half-integer x-wavenumbers (from antiperiodic BC on coordinate Z_2) | Weak isospin `T_3 = ±1/2` doublet | FORCED |
 | Reflection `y ↦ 1 − y` (order 2) | Generates `Y/2` at the identification boundary | FORCED |
 | Surviving fractions `{1/3, 1/2, 2/3}` from XOR filter | Electric-charge magnitudes | FORCED |
+
+> **Note on the two Z_2 structures.** Earlier versions of this table
+> labelled the SU(2)_L source as "half-twist, Z_2 monodromy" and the
+> T_3 source as "Half-twist eigenvalues ±1/2", bundling two
+> structurally distinct Z_2 actions:
+>
+> - *Coordinate antiperiodicity*: the manifold gluing
+>   `(x + L_1, y) ~ (x, L_2 - y)`. Lives on the manifold, independent
+>   of any field. This is the source of the half-integer x-wavenumber
+>   spectrum and (via XOR) the SU(2)_L center.
+> - *Field half-twist*: `θ → θ + π` on the phase value (the bundle lift
+>   used by spinor / fermionic representations,
+>   `framework_lagrangian.py` Part 6).
+>
+> The T_3 = ±1/2 doublet structure comes from coordinate-Z_2 (the
+> antiperiodic BC selects half-integer wavenumbers; the smallest is
+> 1/2). The field-half-twist eigenvalue framing in earlier docs
+> (e.g. `gell_mann_nishijima.md` §"Weak isospin T_3: the twist
+> charge", lines 39–47) reads off the same numerical 1/2 from a
+> different Z_2 — but the cleaner mechanism for T_3 is the
+> coordinate-side wavenumber argument, since the field-Z_2 only
+> labels representations after the wavenumber spectrum is fixed.
+> The numerical answer ±1/2 is unaffected; the citation chain is
+> tightened. See `sine_gordon_substrate.md` "Distinct from the field
+> half-twist" subsection.
 
 ## What's forced
 
