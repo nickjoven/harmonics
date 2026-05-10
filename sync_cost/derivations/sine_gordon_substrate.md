@@ -65,6 +65,25 @@ primitive beyond the framework's existing Lagrangian. The "sin
 potential" comes directly from the Kuramoto cos-coupling restricted to
 deviations from the locked mean phase.
 
+### Validity scope
+
+The locked-state expansion is rigorous at K close to 1 (the
+string-boundary regime — `einstein_from_kuramoto.md`'s "locked state
+K ≈ 1" condition). At lower K, the substrate is not in a single
+locked configuration but in a cascade-locked state at one of the
+master-identity K-values (`master_cascade_identity.md`).
+
+At each cascade K_n, the framework treats the sector as a structural
+fixed point with its own coherent sub-state. The conjecture used here
+is that each such sector hosts an analogous sine-Gordon reduction
+around its own mean phase ψ_n, with order parameter r_n < 1. The
+kink-mass formula then has the same structural form `M_k = 8 σ √(K r)`
+in each sector but with K = K_n.
+
+This is not yet proven; it is the working assumption that propagates
+the kink-mass-ratio prediction across the K-zoo. The K = 1 case is
+rigorous; K < 1 cases inherit conjectural status from this assumption.
+
 ## Kink solutions
 
 Sine-Gordon admits the standard Lorentz-boosted kink:
@@ -122,29 +141,51 @@ reduction.
 
 ## Z_2-graded topological charge from Klein topology
 
-The framework's substrate is the Klein bottle (`klein_bottle.md`) — the
-temporal direction is antiperiodic. Under a single traversal of the
-antiperiodic loop (loop length L, period T):
+The framework's substrate is the Klein bottle (`klein_bottle.md`). Per
+the convention in that doc, the antiperiodic direction is spatial and
+the periodic direction is temporal, with the antiperiodic identification
+acting on functions on the surface as
 
-    θ(x + L, t) = − θ(x, t)        (spatial antiperiodicity)
-    θ(x, t + T) = θ(x, t) + π      (temporal Z_2 half-twist;
-                                    framework_lagrangian.py Part 6)
+    f(x + L_x, y) = − f(x, L_y − y)
 
-Apply to the kink profile. A kink with `φ → 0` as `x → −∞` and
-`φ → 2π` as `x → +∞`, after one traversal of the antiperiodic spatial
-loop, returns as a configuration with `φ → 0` at `x = −∞` and
-`φ → −2π` at `x = +∞`. That is an **antikink**.
+(combined antiperiodic + reflection; `klein_bottle.md` line 104). For
+a 1D kink configuration `φ(x)` independent of the y-coordinate, the
+y-reflection drops out and the relevant rule is
+
+    φ(x + L_x) = − φ(x)
+
+A kink profile with `φ → 0` as `x → −∞` and `φ → 2π` as `x → +∞`,
+under this identification, becomes a configuration with `φ → 0` at
+the left and `φ → −2π` at the right — an **antikink**.
 
 So `Q ∈ Z` on the orientable cover, but on the Klein bottle:
 
-    kink  ──[traverse antiperiodic loop]──>  antikink
+    kink  ──[traverse antiperiodic spatial loop]──>  antikink
 
 `Q mod 2` is conserved; `Q` itself is not. Topological charge becomes
 **Z_2-graded**.
 
-This is forced by Klein topology — no additional input. It is the
-soliton-sector consequence of the same Z_2 half-twist that gives
-spin-statistics and CPT in `framework_lagrangian.py` Part 6.
+This is forced by Klein topology — no additional input.
+
+### Distinct from the field half-twist
+
+The Z_2 here is the *coordinate* antiperiodicity of the Klein bottle
+manifold (the gluing rule that defines the surface). It is structurally
+distinct from the *field* Z_2 half-twist `θ → θ + π` discussed in
+`framework_lagrangian.py` Part 6, which acts on the value of θ rather
+than on the spatial coordinate, and which gives spin-statistics and
+CPT.
+
+The two Z_2 structures are independent:
+
+| Z_2 structure | Action | Consequence |
+|---|---|---|
+| Coordinate antiperiodicity | `f(x + L_x, y) = −f(x, L_y − y)` | Kink ↔ antikink under loop traversal (this doc) |
+| Field half-twist | `θ → θ + π` (target-space action) | Spin-statistics, CPT (framework_lagrangian.py Part 6) |
+
+Both are discrete, both are forced by the Klein-bottle commitment, but
+they are different Z_2 actions and produce different consequences. This
+doc relies only on the first.
 
 ### Consequences
 
