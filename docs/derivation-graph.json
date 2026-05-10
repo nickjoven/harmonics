@@ -1,5 +1,5 @@
 {
-  "generated": "c85e37914439f487078ddbd8bd55ffd3d91d3c45",
+  "generated": "b973b2c7c17addec8b7546c6d2d2796aed265830",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -3108,7 +3108,8 @@
         "primitive_completeness_audit",
         "session_audit",
         "statistical_conventions",
-        "three_formalizations"
+        "three_formalizations",
+        "time_axis_split"
       ],
       "git": [
         {
@@ -3632,7 +3633,9 @@
       "title": "The Klein Bottle",
       "summary": "The M\u00f6bius strip (Derivation 18) has one boundary. Excitations reflect\noff that boundary, which is why the container works \u2014 but the boundary\nis a degree of freedom the geometry doesn't determine. The Klein bottle\nis the compact, non-orientable surface with **no boundary**. Nothing\nenters, nothing exits, nothing reflects \u2014 everything circulates. It is\nthe fully closed variant of the M\u00f6bius container.",
       "depends_on": [
-        "sine_gordon_substrate"
+        "klein_bottle_derivation",
+        "sine_gordon_substrate",
+        "time_axis_split"
       ],
       "depended_on_by": [
         "CHAIN_KSTAR",
@@ -3646,13 +3649,20 @@
         "gauge_factorization",
         "gauge_high_scale_identification",
         "instrument_family_taxonomy",
+        "klein_bottle_derivation",
         "klein_connection",
         "klein_nodal_parity",
         "second_law_topological",
         "sine_gordon_substrate",
+        "time_axis_split",
         "vacuum_energy"
       ],
       "git": [
+        {
+          "hash": "b973b2c",
+          "date": "2026-05-10",
+          "subject": "Commit to the time-axis split: clock vs arrow on different axes (#101)"
+        },
         {
           "hash": "c85e379",
           "date": "2026-05-10",
@@ -3721,10 +3731,12 @@
       "title": "The Klein Bottle from Self-Consistency",
       "summary": "The Klein bottle is not assumed. It is the unique compact surface\ncompatible with the four primitives, the phase-state structure, and\nthe arrow of time. The torus and real projective plane are both\nexcluded by self-consistency arguments.",
       "depends_on": [
+        "klein_bottle",
         "minimum_alphabet",
         "minkowski_signature",
         "rank1_temporal_causation",
         "three_dimensions",
+        "time_axis_split",
         "xor_derivation"
       ],
       "depended_on_by": [
@@ -3735,6 +3747,7 @@
         "gauge_factorization",
         "gauge_high_scale_identification",
         "hierarchy_gaussian_lattice",
+        "klein_bottle",
         "klein_dynamics_roadmap",
         "numerology_inventory",
         "omega_b_residual_phase_a",
@@ -3742,9 +3755,15 @@
         "sector_decoupling_phase_a",
         "sine_gordon_substrate",
         "sinw_effective_dimension",
-        "three_formalizations"
+        "three_formalizations",
+        "time_axis_split"
       ],
       "git": [
+        {
+          "hash": "b973b2c",
+          "date": "2026-05-10",
+          "subject": "Commit to the time-axis split: clock vs arrow on different axes (#101)"
+        },
         {
           "hash": "d185308",
           "date": "2026-04-08",
@@ -5415,7 +5434,8 @@
       "summary": "For an SO(2)-equivariant Markovian synchronization operator at a\ncodimension-1 transition, the dynamically relevant present is the\ncenter-manifold coordinate |r|. All other degrees of freedom are\neither gauge/representation structure or exponentially decaying\nhistory. The rank-1 Fr\u00e9chet derivative is therefore not merely an\nalgebraic property of U, but the linearized expression of temporal\ncausation through a single active channel.",
       "depends_on": [],
       "depended_on_by": [
-        "klein_bottle_derivation"
+        "klein_bottle_derivation",
+        "time_axis_split"
       ],
       "git": [
         {
@@ -5754,7 +5774,8 @@
         "instrument_family_taxonomy",
         "klein_bottle",
         "mass_function_family",
-        "master_cascade_identity"
+        "master_cascade_identity",
+        "time_axis_split"
       ],
       "git": [
         {
@@ -6245,6 +6266,30 @@
           "hash": "3f60310",
           "date": "2026-03-25",
           "subject": "D23: Three zeros and the 1+3 decomposition"
+        }
+      ]
+    },
+    {
+      "id": "time_axis_split",
+      "path": "sync_cost/derivations/time_axis_split.md",
+      "title": "The time-axis split on the Klein bottle",
+      "summary": "On the Klein bottle, two aspects of \"time\" that conventional physics\nbundles together \u2014 a clock-like cyclic counter and a forward arrow \u2014\nlive on **different axes**. This is not a bug. It is a structural\nconsequence of one direction being orientable and the other not.",
+      "depends_on": [
+        "hierarchy_gaussian_lattice",
+        "klein_bottle",
+        "klein_bottle_derivation",
+        "rank1_temporal_causation",
+        "sine_gordon_substrate"
+      ],
+      "depended_on_by": [
+        "klein_bottle",
+        "klein_bottle_derivation"
+      ],
+      "git": [
+        {
+          "hash": "b973b2c",
+          "date": "2026-05-10",
+          "subject": "Commit to the time-axis split: clock vs arrow on different axes (#101)"
         }
       ]
     },
