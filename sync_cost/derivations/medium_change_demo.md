@@ -29,7 +29,7 @@ pitch of each source:
 
 | Source | Pitch in air | Pitch in helium | Change | Why |
 |---|---|---|---|---|
-| Tuba (low E) | ≈ 41 Hz | ≈ 116 Hz | jumps up ~3 semitones × 12 ≈ 1.7 octaves | Resonance frequency of the air column inside the instrument is c/(2L); changing c changes the pitch. |
+| Tuba (low E) | ≈ 41 Hz | ≈ 116 Hz | jumps up by a factor of ~2.83 (about 1.5 octaves, or 18 semitones) | Resonance frequency of the air column inside the instrument is `c/(2L)`; changing `c` changes the pitch. |
 | Contrabass (low E) | ≈ 41 Hz | ≈ 41 Hz | unchanged | Resonance frequency of the string is (1/2L)·√(T/μ); depends on string tension and density, not on the surrounding medium. |
 | Loudspeaker (driven at 41 Hz) | 41 Hz at the cone | 41 Hz at the cone | unchanged at the source; transmission is faster | The cone's velocity is dictated by the input voltage waveform, not by any internal resonance. |
 
@@ -85,24 +85,110 @@ disguise (medium-dependent, observer-dependent at cosmic scale) and
 others are contrabass-pitches (structural, observer-independent).
 Disentangling them is the framework's main empirical move.
 
+## A second trio: bowed string vs. clarinet vs. flute
+
+The tuba/contrabass/speaker comparison establishes address-vs-structure.
+A second trio — three real orchestral instruments — sharpens the same
+distinction in a different direction and ties it to the framework's
+two universal generators (`mediant` for discrete structure, `eml` for
+continuous dynamics).
+
+The fundamental frequency formulas:
+
+| Instrument | Formula | What sets the pitch |
+|---|---|---|
+| Bowed string (violin, cello, contrabass) | `f = (n / 2L) · √(T/μ)` | string tension `T`, linear density `μ`, length `L` — all mechanical, all internal |
+| B♭ clarinet (closed cylinder approximation) | `f = (n / 4L) · c_medium` | air column length `L` × the speed of sound `c_medium` |
+| Concert flute (open tube) | `f = (n / 2L) · c_medium` | same, plus an aero-acoustic edge tone that's also `c`-dependent |
+
+The integer `n = 1, 2, 3, …` is the mode number — how many half-
+wavelengths fit in the resonator. **It is the same in all three
+formulas.** That integer is the discrete, structural part of every
+acoustic resonator; it is forced by the boundary conditions and is
+medium-independent.
+
+What differs is the *dimensional anchor* multiplied against `n`:
+
+- the bowed string's anchor is `√(T/μ) / 2L` — entirely properties of
+  the string;
+- the clarinet's and flute's anchors are proportional to `c_medium`
+  — properties of the surrounding gas.
+
+In a helium chamber, with `c_helium ≈ 970` m/s versus
+`c_air ≈ 343` m/s (ratio ≈ 2.83), play concert A4 = 440 Hz on each:
+
+| Instrument | Pitch in air | Pitch in helium | Why |
+|---|---|---|---|
+| Violin | 440 Hz | **440 Hz** | structural anchor; `c` does not appear in the formula |
+| B♭ clarinet | 440 Hz | ≈ 1245 Hz (D♯6) | `c`-anchor scales with medium; same fingering would now resonate above the instrument's intended range |
+| Concert flute | 440 Hz | ≈ 1245 Hz (D♯6) | same — both column resonance and edge tone scale with `c` |
+
+The bowed string is the structural outlier. Its pitch lives in the
+*discrete-counter × structural-anchor* form, and the anchor itself
+is medium-independent. The clarinet and flute have the same discrete
+counter `n`, but their anchors live in the *medium*.
+
+## The lambda / EML split, made audible
+
+The framework's claim, articulated formally elsewhere in this repo,
+is that physics requires two distinct universal generators:
+
+| Generator | Algebra it covers | Framework primitive |
+|---|---|---|
+| Mediant `(a+c)/(b+d)` | discrete combinatorics: integer mode counts, Farey arithmetic, Stern-Brocot enumeration | integers + mediant |
+| EML `eml(x,y) = exp(x) − ln(y)` | continuous transcendentals: Boltzmann weights, partition functions, saddle-node passage | parabola |
+
+The bowed-string / clarinet / flute trio maps onto this split
+literally:
+
+- The integer mode number `n` is mediant-side (lambda-side):
+  discrete, structure-fixed, the same in any medium.
+- The dimensional anchor is EML-side (continuous-side): exponential
+  in temperature for partition functions, polynomial in `c` for air
+  columns, polynomial in `T/μ` for strings. Continuous, dynamical,
+  set by the medium or the material.
+
+The bowed string is the instrument whose anchor is *also* on the
+structural side (mechanical properties of the string). The clarinet
+and flute have anchors on the dynamical side (medium properties).
+
+Two of the three are EML-anchored; one is mediant-anchored. That ratio
+is roughly the framework's claim about physics: most observable
+quantities (Hubble rate, masses, couplings) are EML-anchored — they
+move under medium swap. A small set of quantities (the dimensionless
+ratios `Ω_Λ`, `sin²θ_W`, `α_s/α_2`, `K_c`) are mediant-anchored — they
+do not move.
+
+The bowed string is what the framework's predictions look like.
+The flute is what the Standard Model has historically taken every
+parameter to be.
+
+For the formal articulation of the lambda / EML split as a notational-
+invariance claim parallel to `comparison_class.md` and
+`unitless_check.md`, see [`expressibility_split.md`](expressibility_split.md).
+
 ## The pedagogical sequence
 
 For classroom use, the recommended sequence is:
 
-1. **Audio demo first.** Play recordings of all three sources in air.
-   Ask the audience to identify the pitch (they will say "low E"
-   for all three).
-2. **Helium demo.** Play the same three recordings in helium.
-   The tuba shifts dramatically; the contrabass does not. The
-   loudspeaker does not, but for a different reason.
-3. **Write the table** above on the board. Establish that *three
-   categorically different physical phenomena* are at play.
-4. **Then make the framework move.** Introduce H₀ as a tuba-pitch
-   and Ω_Λ = 13/19 as a contrabass-pitch. The audience now has the
-   right intuition for *what kind of claim* the framework's
-   predictions are.
+1. **Audio demo first.** Play recordings of all six sources in air
+   (tuba, contrabass, loudspeaker, violin, clarinet, flute). Ask the
+   audience to identify which family each belongs to.
+2. **Helium demo.** Play the same recordings in helium.
+   - Tuba and clarinet and flute shift dramatically — air-column
+     resonators.
+   - Contrabass and violin do not shift — string resonators.
+   - Loudspeaker does not shift, but for a different reason —
+     externally driven, no internal resonance.
+3. **Write the two tables** above on the board. Establish that
+   *categorically different physical phenomena* produce acoustically
+   similar outputs; the medium swap separates them.
+4. **Then make the framework move.** Introduce `H_0` as a tuba- or
+   flute-pitch and `Ω_Λ = 13/19` as a contrabass- or violin-pitch.
+   The audience now has the right intuition for *what kind of claim*
+   each framework prediction is.
 
-The whole demonstration takes ~10 minutes and primes the audience for
+The whole demonstration takes ~15 minutes and primes the audience for
 why "the same in any unit system" and "the same at any cosmic epoch"
 are non-trivial commitments rather than empty claims.
 
@@ -117,6 +203,9 @@ are non-trivial commitments rather than empty claims.
 - [`address_and_quantity.md`](address_and_quantity.md) — the
   conceptual articulation of the address-vs-quantity distinction
   underlying this demo.
+- [`expressibility_split.md`](expressibility_split.md) — the formal
+  articulation of the lambda / EML split as notational invariance,
+  using the bowed-string vs. flute pair as opening intuition.
 
 ## Status
 
