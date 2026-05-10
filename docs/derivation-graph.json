@@ -1,5 +1,5 @@
 {
-  "generated": "30931c300326896dd8cdcd692ff877096d4440d3",
+  "generated": "c85e37914439f487078ddbd8bd55ffd3d91d3c45",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -2016,6 +2016,7 @@
       "depended_on_by": [
         "INDEX",
         "dynamical_tool_audit",
+        "framework_status",
         "gap1_analytic_proof",
         "gap1_theorem",
         "gap_1_christoffel",
@@ -2401,11 +2402,13 @@
         "cross_ratio_irrep_reframe",
         "denomination_boundary",
         "duty_cycle_dictionary",
+        "einstein_from_kuramoto",
         "farey_partition",
         "h_inf_status",
         "hierarchy_gaussian_lattice",
         "hierarchy_problem_translation",
         "hybrid_strategy_audit",
+        "klein_bottle",
         "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
         "numerology_count_phase_b",
@@ -2418,6 +2421,7 @@
         "path_closures_iter4",
         "psl2z_subgroup_phase_a_results",
         "psl2z_subgroup_phase_b",
+        "sine_gordon_substrate",
         "vocabulary_is_the_work_pattern",
         "w_plus_formalization"
       ],
@@ -2465,6 +2469,11 @@
         "vocabulary_is_the_work_pattern"
       ],
       "git": [
+        {
+          "hash": "c85e379",
+          "date": "2026-05-10",
+          "subject": "Soliton continuity follow-up: tighten sine-Gordon doc + cross-link K-zoo + re-remove JWST notes (#10"
+        },
         {
           "hash": "5f41c24",
           "date": "2026-04-26",
@@ -3363,12 +3372,18 @@
         "klein_bottle",
         "mass_function_family",
         "master_cascade_identity",
-        "medium_change_demo"
+        "medium_change_demo",
+        "sine_gordon_substrate"
       ],
       "depended_on_by": [
         "sine_gordon_substrate"
       ],
       "git": [
+        {
+          "hash": "c85e379",
+          "date": "2026-05-10",
+          "subject": "Soliton continuity follow-up: tighten sine-Gordon doc + cross-link K-zoo + re-remove JWST notes (#10"
+        },
         {
           "hash": "30931c3",
           "date": "2026-05-10",
@@ -3616,7 +3631,9 @@
       "path": "sync_cost/derivations/klein_bottle.md",
       "title": "The Klein Bottle",
       "summary": "The M\u00f6bius strip (Derivation 18) has one boundary. Excitations reflect\noff that boundary, which is why the container works \u2014 but the boundary\nis a degree of freedom the geometry doesn't determine. The Klein bottle\nis the compact, non-orientable surface with **no boundary**. Nothing\nenters, nothing exits, nothing reflects \u2014 everything circulates. It is\nthe fully closed variant of the M\u00f6bius container.",
-      "depends_on": [],
+      "depends_on": [
+        "sine_gordon_substrate"
+      ],
       "depended_on_by": [
         "CHAIN_KSTAR",
         "FRAMEWORK_TOPOLOGY",
@@ -3624,6 +3641,7 @@
         "beta_from_tongues",
         "duty_cycle_dictionary",
         "dynamical_tool_audit",
+        "framework_status",
         "gauge_dictionary",
         "gauge_factorization",
         "gauge_high_scale_identification",
@@ -3635,6 +3653,11 @@
         "vacuum_energy"
       ],
       "git": [
+        {
+          "hash": "c85e379",
+          "date": "2026-05-10",
+          "subject": "Soliton continuity follow-up: tighten sine-Gordon doc + cross-link K-zoo + re-remove JWST notes (#10"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -3908,7 +3931,8 @@
       "depends_on": [
         "baryon_fraction",
         "imf_bowed_cascade",
-        "master_cascade_identity"
+        "master_cascade_identity",
+        "sine_gordon_substrate"
       ],
       "depended_on_by": [
         "imf_bowed_cascade",
@@ -3916,6 +3940,11 @@
         "master_cascade_identity"
       ],
       "git": [
+        {
+          "hash": "c85e379",
+          "date": "2026-05-10",
+          "subject": "Soliton continuity follow-up: tighten sine-Gordon doc + cross-link K-zoo + re-remove JWST notes (#10"
+        },
         {
           "hash": "30931c3",
           "date": "2026-05-10",
@@ -4018,7 +4047,8 @@
         "down_type_double_cover_phase_d",
         "imf_bowed_cascade",
         "mass_function_family",
-        "quantum_gravity_interpolation"
+        "quantum_gravity_interpolation",
+        "sine_gordon_substrate"
       ],
       "depended_on_by": [
         "imf_bowed_cascade",
@@ -4027,6 +4057,11 @@
         "sine_gordon_substrate"
       ],
       "git": [
+        {
+          "hash": "c85e379",
+          "date": "2026-05-10",
+          "subject": "Soliton continuity follow-up: tighten sine-Gordon doc + cross-link K-zoo + re-remove JWST notes (#10"
+        },
         {
           "hash": "30931c3",
           "date": "2026-05-10",
@@ -5714,8 +5749,19 @@
         "klein_bottle_derivation",
         "master_cascade_identity"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "framework_status",
+        "instrument_family_taxonomy",
+        "klein_bottle",
+        "mass_function_family",
+        "master_cascade_identity"
+      ],
       "git": [
+        {
+          "hash": "c85e379",
+          "date": "2026-05-10",
+          "subject": "Soliton continuity follow-up: tighten sine-Gordon doc + cross-link K-zoo + re-remove JWST notes (#10"
+        },
         {
           "hash": "0f604ee",
           "date": "2026-05-10",
