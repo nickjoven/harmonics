@@ -1,5 +1,5 @@
 {
-  "generated": "b973b2c7c17addec8b7546c6d2d2796aed265830",
+  "generated": "e27106f6e79d0b69ce81d9c1419426c78a023410",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -2022,6 +2022,7 @@
         "gap_1_christoffel",
         "gauge_dictionary",
         "klein_connection",
+        "master_cascade_identity",
         "quantum_gravity_interpolation",
         "sine_gordon_substrate",
         "three_dimensions"
@@ -2342,10 +2343,18 @@
       "summary": "The Klein bottle's self-intersection in 3D embedding is a figure-8\n(lemniscate). Two loops sharing one crossing point. This is the\nphysical topology of the four Klein bottle modes (D19).",
       "depends_on": [
         "PROOF_A_gravity",
-        "PROOF_B_quantum"
+        "PROOF_B_quantum",
+        "framework_status",
+        "klein_bottle",
+        "klein_bottle_derivation"
       ],
       "depended_on_by": [],
       "git": [
+        {
+          "hash": "e27106f",
+          "date": "2026-05-10",
+          "subject": "Audit cleanup: 7 conflation / scope / retraction fixes (#102)"
+        },
         {
           "hash": "b2deee7",
           "date": "2026-04-07",
@@ -2440,6 +2449,7 @@
         "down_type_double_cover_closed",
         "dynamical_tool_audit",
         "epsilon_physical_reading",
+        "figure_eight",
         "h_inf_status",
         "hierarchy_problem_translation",
         "hybrid_strategy_audit",
@@ -2831,12 +2841,18 @@
         "gell_mann_nishijima",
         "klein_bottle",
         "klein_bottle_derivation",
-        "klein_connection"
+        "klein_connection",
+        "sine_gordon_substrate"
       ],
       "depended_on_by": [
         "gauge_dictionary"
       ],
       "git": [
+        {
+          "hash": "e27106f",
+          "date": "2026-05-10",
+          "subject": "Audit cleanup: 7 conflation / scope / retraction fixes (#102)"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -2907,7 +2923,11 @@
       "path": "sync_cost/derivations/gell_mann_nishijima.md",
       "title": "The Gell-Mann-Nishijima Relation from Klein Bottle Geometry",
       "summary": "The relation Q = T_3 + Y/2 between electric charge Q, weak isospin\nT_3, and hypercharge Y is not a postulate. It is the charge\ncomposition law at the Klein bottle's identification boundary, where\nthe antiperiodic (twisted) and periodic (untwisted) directions meet.",
-      "depends_on": [],
+      "depends_on": [
+        "klein_bottle",
+        "sine_gordon_substrate",
+        "xor_derivation"
+      ],
       "depended_on_by": [
         "INDEX",
         "baryon_fraction",
@@ -2920,6 +2940,11 @@
         "sector_constants_structure"
       ],
       "git": [
+        {
+          "hash": "e27106f",
+          "date": "2026-05-10",
+          "subject": "Audit cleanup: 7 conflation / scope / retraction fixes (#102)"
+        },
         {
           "hash": "cc11b2e",
           "date": "2026-04-07",
@@ -3644,10 +3669,12 @@
         "beta_from_tongues",
         "duty_cycle_dictionary",
         "dynamical_tool_audit",
+        "figure_eight",
         "framework_status",
         "gauge_dictionary",
         "gauge_factorization",
         "gauge_high_scale_identification",
+        "gell_mann_nishijima",
         "instrument_family_taxonomy",
         "klein_bottle_derivation",
         "klein_connection",
@@ -3655,7 +3682,8 @@
         "second_law_topological",
         "sine_gordon_substrate",
         "time_axis_split",
-        "vacuum_energy"
+        "vacuum_energy",
+        "xor_derivation"
       ],
       "git": [
         {
@@ -3735,6 +3763,7 @@
         "minimum_alphabet",
         "minkowski_signature",
         "rank1_temporal_causation",
+        "sine_gordon_substrate",
         "three_dimensions",
         "time_axis_split",
         "xor_derivation"
@@ -3743,6 +3772,7 @@
         "a_s_geometric_proof",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_c",
+        "figure_eight",
         "gap2_theorem_attempt",
         "gauge_factorization",
         "gauge_high_scale_identification",
@@ -3759,6 +3789,11 @@
         "time_axis_split"
       ],
       "git": [
+        {
+          "hash": "e27106f",
+          "date": "2026-05-10",
+          "subject": "Audit cleanup: 7 conflation / scope / retraction fixes (#102)"
+        },
         {
           "hash": "b973b2c",
           "date": "2026-05-10",
@@ -3960,6 +3995,11 @@
       ],
       "git": [
         {
+          "hash": "e27106f",
+          "date": "2026-05-10",
+          "subject": "Audit cleanup: 7 conflation / scope / retraction fixes (#102)"
+        },
+        {
           "hash": "c85e379",
           "date": "2026-05-10",
           "subject": "Soliton continuity follow-up: tighten sine-Gordon doc + cross-link K-zoo + re-remove JWST notes (#10"
@@ -4064,6 +4104,7 @@
       "depends_on": [
         "CHAIN_KSTAR",
         "down_type_double_cover_phase_d",
+        "einstein_from_kuramoto",
         "imf_bowed_cascade",
         "mass_function_family",
         "quantum_gravity_interpolation",
@@ -4076,6 +4117,11 @@
         "sine_gordon_substrate"
       ],
       "git": [
+        {
+          "hash": "e27106f",
+          "date": "2026-05-10",
+          "subject": "Audit cleanup: 7 conflation / scope / retraction fixes (#102)"
+        },
         {
           "hash": "c85e379",
           "date": "2026-05-10",
@@ -5771,11 +5817,15 @@
       ],
       "depended_on_by": [
         "framework_status",
+        "gauge_high_scale_identification",
+        "gell_mann_nishijima",
         "instrument_family_taxonomy",
         "klein_bottle",
+        "klein_bottle_derivation",
         "mass_function_family",
         "master_cascade_identity",
-        "time_axis_split"
+        "time_axis_split",
+        "xor_derivation"
       ],
       "git": [
         {
@@ -6571,15 +6621,24 @@
       "path": "sync_cost/derivations/xor_derivation.md",
       "title": "Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions",
       "summary": "This derivation closes gap #5 in `PROOFREADER_RESPONSE.md`: the XOR parity\nrule `q_1 % 2 != q_2 % 2` was previously confirmed by simulation\n(`klein_bottle_kuramoto.py`) and argued heuristically, but not derived from\nfirst principles. Here we carry out the Fourier analysis explicitly.",
-      "depends_on": [],
+      "depends_on": [
+        "klein_bottle",
+        "sine_gordon_substrate"
+      ],
       "depended_on_by": [
         "gauge_factorization",
+        "gell_mann_nishijima",
         "klein_bottle_derivation",
         "numerology_inventory",
         "observer_register_closure",
         "omega_partition_combinatorial"
       ],
       "git": [
+        {
+          "hash": "e27106f",
+          "date": "2026-05-10",
+          "subject": "Audit cleanup: 7 conflation / scope / retraction fixes (#102)"
+        },
         {
           "hash": "7190a9b",
           "date": "2026-03-26",
