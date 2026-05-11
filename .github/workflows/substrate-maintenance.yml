@@ -1,0 +1,144 @@
+name: Substrate maintenance
+
+# Owns substrate-side reconciliation. After any push to main that
+# touches a tracked derivation file, this workflow:
+#
+#   1. Detects drift via scripts/drift/session_status.py (parses
+#      .ket/log for last `put` per path, compares against current
+#      BLAKE3 on disk).
+#   2. If drift > 0, re-hashes each drifted file and adds a
+#      reconciliation reasoning DAG node parented on the most
+#      recent dag:create in the log.
+#   3. Runs the broader scorecard / manifest / orphan / verify
+#      checks via scripts/drift/run_all.py.
+#   4. Commits any .ket/ changes back to main with a `bot:` prefix.
+#
+# This was set up after PR #102's substrate commit was dropped by
+# GitHub's squash-merge UI (.ket/ commits filtered out when mixed
+# with .md work). Substrate maintenance is now CI-owned and runs as
+# its own commit, separately from derivation PRs.
+#
+# Triggers only on push to main with derivation-relevant paths. PRs
+# do not trigger reconciliation because (a) doing so would race with
+# concurrent merges, and (b) bot commits are direct-to-main per the
+# same pattern as the existing regen-derivation-graph.yml workflow.
+#
+# The bot does not modify .md / .py / MANIFEST.yml content. It only
+# writes .ket/cas/* and appends to .ket/log. If run_all.py reports
+# non-drift issues (e.g., manifest inconsistency), the workflow
+# fails to alert maintainers; the bot will not attempt to fix
+# anything that requires judgment.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "sync_cost/derivations/**.md"
+      - "sync_cost/derivations/**.py"
+      - "RESULTS.md"
+      - "MANIFEST.yml"
+      - "scripts/maintenance/**"
+      - ".github/workflows/substrate-maintenance.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: substrate-maintenance
+  cancel-in-progress: false
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install blake3 pyyaml
+
+      - name: Cache ket binary
+        id: ket-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/bin/ket
+          key: ket-binary-${{ runner.os }}-v1
+
+      - name: Install Rust toolchain
+        if: steps.ket-cache.outputs.cache-hit != 'true'
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache cargo build
+        if: steps.ket-cache.outputs.cache-hit != 'true'
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            /tmp/ket-src/target
+          key: ket-cargo-${{ runner.os }}-v1
+
+      - name: Build ket binary
+        if: steps.ket-cache.outputs.cache-hit != 'true'
+        run: |
+          git clone --depth 1 https://github.com/nickjoven/ket.git /tmp/ket-src
+          cd /tmp/ket-src
+          cargo build --release -p ket-cli
+          mkdir -p ~/.local/bin
+          cp target/release/ket ~/.local/bin/ket
+
+      - name: Export KET_BIN
+        run: echo "KET_BIN=$HOME/.local/bin/ket" >> $GITHUB_ENV
+
+      - name: Verify ket binary
+        run: |
+          ls -l $KET_BIN
+          $KET_BIN --home .ket dag ls | head -3 || true
+
+      - name: Initial drift status
+        id: drift_before
+        run: |
+          OUT=$(python3 scripts/drift/session_status.py || true)
+          echo "$OUT"
+          DRIFT=$(echo "$OUT" | grep -oE 'drift [0-9]+' | head -1 | awk '{print $2}')
+          echo "drift=$DRIFT" >> $GITHUB_OUTPUT
+
+      - name: Reconcile drift
+        if: steps.drift_before.outputs.drift != '0'
+        run: python3 scripts/maintenance/reconcile_substrate.py
+
+      - name: Verify drift resolved
+        if: steps.drift_before.outputs.drift != '0'
+        run: |
+          OUT=$(python3 scripts/drift/session_status.py)
+          echo "$OUT"
+          if echo "$OUT" | grep -q 'drift 0'; then
+            echo "drift resolved"
+          else
+            echo "::error::drift still nonzero after reconciliation"
+            exit 1
+          fi
+
+      - name: Run all consistency checks
+        run: python3 scripts/drift/run_all.py
+        continue-on-error: false
+
+      - name: Commit reconciliation
+        run: |
+          if [[ -n "$(git status -s .ket/)" ]]; then
+            git config user.name "harmonics-bot"
+            git config user.email "harmonics-bot@users.noreply.github.com"
+            git add .ket/
+            COUNT=$(git diff --cached --numstat .ket/ | wc -l)
+            git commit -m "bot: reconcile substrate drift ($COUNT entries)"
+            git push
+            echo "Pushed reconciliation commit"
+          else
+            echo "Nothing to reconcile"
+          fi
