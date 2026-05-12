@@ -1,7 +1,7 @@
 # The Figure-Eight Topology
 
-> **Disposition note (added 2026-05).** Two derivations in this doc
-> need flagging:
+> **Disposition note (added 2026-05).** One open flag and one
+> resolved flag for this doc:
 >
 > 1. **`sin²θ_W = 8/35`** (Section "The branching ratio", lines ~63–94)
 >    is listed under **Fails** in `framework_status.md` per
@@ -10,20 +10,23 @@
 >    structural-argument record but the numerical match is
 >    coincidence, not a framework prediction. The derived
 >    `M_W/M_Z = sqrt(27/35)` (Section "The gauge bosons as crossing
->    events") inherits the same status.
+>    events") inherits the same status. **Open.**
 >
-> 2. **The "i² = -1 from the double half-twist"** section (line ~129)
->    asserts the Klein bottle has "a half-twist in **each**
->    antiperiodic direction." The Klein bottle has only **one**
->    antiperiodic direction (x); the y-direction is periodic. See
->    `klein_bottle.md` lines 38–47 and `klein_bottle_derivation.md`
->    Part II. The `J² = -I` identification therefore needs to be
->    re-derived under the correct topology before being relied on;
->    the section is provisional.
+> 2. **`J² = −I`** was previously derived from an incorrect premise
+>    ("a half-twist in each antiperiodic direction"). The Klein
+>    bottle has only **one** antiperiodic direction (x); the
+>    y-direction is periodic. The section "i² = −1 from the
+>    figure-8 crossing" has been rewritten to use the single
+>    antiperiodic direction together with the figure-8's geometric
+>    placement of D at the antipodal mid-point. The result
+>    `J² = −I` survives, restricted to the half-integer (fermion /
+>    spinor) sector; on the integer (boson) sector `J² = +I`.
+>    **Resolved (2026-05).**
 >
-> Both flags do not invalidate the figure-8 mode picture itself
-> (Loop 1 ∪ Loop 2 with one crossing, four modes). They concern
-> downstream identifications built on top of that picture.
+> Neither flag affects the figure-8 mode picture itself (Loop 1 ∪ Loop 2
+> with one crossing, four modes). Flag 1 concerns a downstream
+> numerical identification; flag 2 concerned the algebra of the
+> crossing operator and is now resolved.
 
 ## Claim
 
@@ -151,53 +154,104 @@ mass ratio:
 
 follows from the crossing geometry.
 
-## i^2 = -1 from the double half-twist
+## i^2 = -1 from the figure-8 crossing (corrected derivation)
 
-> **Provisional — see top-of-doc disposition note.** The premise
-> below ("a half-twist in each antiperiodic direction") is incorrect
-> for the Klein bottle, which has only one antiperiodic direction.
-> The `J² = -I` conclusion may still hold via a different route
-> (e.g., from the figure-8's two-sheet structure at the crossing
-> point combined with the single x-loop's half-twist), but the
-> derivation as stated rests on a wrong topology claim and needs
-> redoing.
+> **Disposition resolved (2026-05).** An earlier version of this
+> section asserted "a half-twist in each antiperiodic direction"
+> of the Klein bottle. That premise was incorrect — the Klein
+> bottle has only one antiperiodic direction (`klein_bottle.md`
+> lines 38–47, `klein_bottle_derivation.md` Part II). The `J² = −I`
+> conclusion does survive, via a route that uses the single
+> antiperiodic direction together with the figure-8's geometric
+> placement of the D-crossing. The corrected derivation is below.
+> Top-of-doc flag (item 2) is now resolved.
 
-The Klein bottle has a half-twist in each antiperiodic direction
-(D19). Traversing the D state once applies one half-twist.
-Traversing it twice applies two half-twists = one full twist.
+### Setup: one antiperiodic direction
 
-Define the twist operator J as the linear map induced by one
-traversal of the D state (one crossing of the figure-8):
+The Klein bottle's identifications are (`klein_bottle.md` lines 27–35,
+`klein_bottle_derivation.md` lines 86–88):
 
-    J: phase state -> phase state
-    J maps (locked, unlocked) -> (unlocked, locked)
-    J swaps the two sector labels
+    (x, 0)   ~ (x, L_y)             periodic in y
+    (0, y)   ~ (L_x, L_y − y)       antiperiodic in x, with y-reflection
 
-Then:
+For configurations whose y-dependence is trivial (1-D kink profiles,
+or sector states whose internal structure does not vary along the
+periodic axis), the y-reflection drops out and the x-identification
+reduces to the half-twist on the field
 
-    J^2 maps (locked, unlocked) -> (unlocked, locked) -> (locked, unlocked)
+    φ(x + L_x) = − φ(x)
 
-But J^2 also applies the Klein bottle's orientation reversal
-twice. Two orientation reversals on a non-orientable surface
-do NOT return to the identity — they return with a **sign flip**
-in the antiperiodic direction:
+Equivalently, half-integer x-wavenumbers `k_x = (2k+1) / (2 L_x)` (the
+fermion / spinor sector — `klein_bottle_derivation.md` Part IV) pick
+up the factor `e^{i k_x L_x} = e^{i(2k+1)π/2}` after a half-period
+translation, and a full `−1` after a full antiperiodic-loop traversal.
 
-    J^2 = -I
+### Geometric placement of the D-crossing
 
-where I is the identity operator. This is because the Klein
-bottle's fundamental group is:
+The figure-8 is the immersion of the Klein bottle into R³, with the
+D-state (both sectors unlocked) at the self-intersection point. The
+two loops {Loop 1, Loop 2} sit on either side of D; trajectories on
+the Klein bottle that pass through D switch loops.
 
-    pi_1(Klein bottle) = <a, b | abab^{-1} = 1>
+In framework coordinates, the two loops are placed **at antipodal
+positions on the antiperiodic x-loop**. The D-crossing sits at the
+mid-point. Concretely: a sector-swap (Loop 1 ↔ Loop 2) is the same
+operation as translation by `L_x / 2` along the antiperiodic direction.
+This placement is forced by the figure-8's symmetric self-intersection
+(`figure_eight.md` "The two loops" section) — the crossing partitions
+the antiperiodic fundamental domain into two equal halves, one per
+loop.
 
-The relation abab^{-1} = 1 means that traversing a (one
-antiperiodic direction) then b (the other) then a again gives
-b^{-1} — the reverse of b. The double traversal through D
-(which crosses both a and b) picks up this sign.
+### The twist operator J
 
-**J^2 = -I is the definition of i.** The imaginary unit is the
-square root of the double half-twist operator. Complex numbers
-arise not as an abstract algebraic extension of R, but as the
-operator algebra of the figure-8's crossing.
+Define `J` as the action induced by one D-crossing:
+
+    J:  phase state → phase state
+        Loop 1, half-integer x-mode at x   ↦   Loop 2, same mode at x + L_x/2
+
+Applied twice:
+
+    J²:  Loop 1, mode at x   →   Loop 2, mode at x + L_x/2   →
+         Loop 1, mode at x + L_x
+
+The full antiperiodic-loop translation `x → x + L_x` acts on
+half-integer x-mode amplitudes as `e^{i k_x L_x} = e^{i(2k+1)π} = −1`,
+by the field-level antiperiodic identification above. Therefore
+
+    J² = −I    on the half-integer (fermion / spinor) sector.
+
+On the integer-wavenumber (boson) sector, `e^{i k_x L_x} = +1` and
+`J² = +I`. The Z₂-graded statement is:
+
+| Sector | x-wavenumber | J²  |
+|---|---|---|
+| Boson | integer | +I |
+| Fermion / spinor | half-integer | −I |
+
+This is the **field-level Z₂** of `klein_bottle_derivation.md` Part IV,
+read through the figure-8's geometric placement of D rather than
+through abstract loop traversals.
+
+### Why this is the operator algebra of complex amplitudes
+
+On the fermion sector, `J² = −I` says that the figure-8 crossing
+operator, acting on the substrate's spinor-class wavefunctions, is a
+square root of `−I`. That is the *defining* property of the imaginary
+unit. Complex amplitudes arise as the operator algebra of D-crossings
+acting on the half-integer Klein-bottle sector — they are not an
+abstract algebraic extension imported from outside, and they live
+specifically on the sector the framework already commits to as the
+fermion / spinor sector.
+
+> **Distinct from the coordinate-antiperiodicity Z₂.** The Z₂ here
+> is the *field-level* half-twist `θ → θ + π` of
+> `framework_lagrangian.py` Part 6, acting on the value of θ. The
+> kink-antikink global Z₂ of `sine_gordon_substrate.md` "Z_2-graded
+> topological charge" is the *coordinate-level* identification
+> `f(x + L_x, y) = − f(x, L_y − y)` acting on the manifold. Both are
+> forced by the one antiperiodic direction; they act on different
+> objects and produce different consequences — spin-statistics / CPT
+> from the first, kink↔antikink loop conversion from the second.
 
 ## The fixed point IS the figure-8
 
@@ -282,8 +336,12 @@ is the topology of the universe's self-computation.
 - The Klein bottle's 4-mode structure (D19)
 - The phase-state classification {A, B, C, D} (D32)
 - The self-intersection of non-orientable surfaces in 3D (topology)
-- The crossing probability sin^2(theta_W) = 8/35 (D25, D28)
-- The twist operator J^2 = -I (Klein bottle fundamental group)
+- The crossing probability sin^2(theta_W) = 8/35 (D25, D28) —
+  **disposition flag 1**, see top of doc
+- The twist operator `J² = −I` on the half-integer sector
+  (single antiperiodic direction + figure-8's antipodal D-placement;
+  derivation rewritten under correct topology, see top of doc
+  disposition flag 2 — now resolved)
 - CPT as the full symmetry of the figure-8 (Luders-Pauli)
 
 No new primitives. The figure-8 is the Klein bottle seen from

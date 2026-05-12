@@ -249,6 +249,11 @@ What this **does not** yet establish (open):
 
 ## Cross-links
 
+- `soliton_dynamics.md` — dynamics companion: linear-wave dispersion
+  and meson gap, breather tower, kink–antikink S-matrix in framework
+  primitives, and the medium-class assignment (kink as contrabass-pitch).
+  Closes Opens 2, 3, 4 of this doc structurally; tightens Open 1 into
+  a sharper falsifier.
 - `framework_lagrangian.py` — source Lagrangian (Part 1) and its
   Euler–Lagrange equation (Part 2)
 - `klein_bottle.md`, `klein_bottle_derivation.md` — the substrate
