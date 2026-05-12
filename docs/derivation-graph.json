@@ -1,5 +1,5 @@
 {
-  "generated": "8ad1d2c1a1940a16dab81225ed45ad15bc558637",
+  "generated": "46ed36160ef2a3fb27b33d0859f40d5b4e6fce6c",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -586,6 +586,7 @@
         "PROOF_B_quantum",
         "audit_punch_list_2026-04",
         "canonical_glossary",
+        "cone_twist_substrate",
         "continuity_in_K_nulls",
         "depth_connection_nulls",
         "derivation_atlas",
@@ -1227,6 +1228,38 @@
           "hash": "10fbbc2",
           "date": "2026-04-30",
           "subject": "Pedagogical: comparison_class.md methodological orientation (#87)"
+        }
+      ]
+    },
+    {
+      "id": "cone_twist_substrate",
+      "path": "sync_cost/derivations/cone_twist_substrate.md",
+      "title": "Cone-twist substrate: bicone target, Z\u2082 vortex dynamics, quantum structure",
+      "summary": "The K = 1 \u2194 K < 1 separation is one of the framework's standing\npieces of non-smooth substrate geometry (`framework_status.md`\nRegion D anchor obstruction #5: \"K = 1 vs K < 1 non-smooth\nseparation\"). This doc reads it as a single geometric object \u2014 a\n**Z\u2082-twisted bicone** whose two apex topologies are the spatial\nconcretization of the lambda / EML split\n(`expressibility_split.md`).",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "einstein_from_kuramoto",
+        "expressibility_split",
+        "figure_eight",
+        "framework_status",
+        "half_twist_dynamics",
+        "klein_bottle",
+        "klein_bottle_derivation",
+        "master_cascade_identity",
+        "medium_change_demo",
+        "sine_gordon_substrate",
+        "soliton_dynamics",
+        "unitless_check"
+      ],
+      "depended_on_by": [
+        "expressibility_split",
+        "soliton_dynamics"
+      ],
+      "git": [
+        {
+          "hash": "46ed361",
+          "date": "2026-05-12",
+          "subject": "Cone-twist substrate: bicone target manifold + Z\u2082 vortex dynamics (#108)"
         }
       ]
     },
@@ -2015,6 +2048,7 @@
       ],
       "depended_on_by": [
         "INDEX",
+        "cone_twist_substrate",
         "dynamical_tool_audit",
         "framework_status",
         "gap1_analytic_proof",
@@ -2167,13 +2201,20 @@
       "depends_on": [
         "address_and_quantity",
         "comparison_class",
+        "cone_twist_substrate",
         "medium_change_demo",
         "unitless_check"
       ],
       "depended_on_by": [
+        "cone_twist_substrate",
         "medium_change_demo"
       ],
       "git": [
+        {
+          "hash": "46ed361",
+          "date": "2026-05-12",
+          "subject": "Cone-twist substrate: bicone target manifold + Z\u2082 vortex dynamics (#108)"
+        },
         {
           "hash": "9a97408",
           "date": "2026-05-10",
@@ -2351,6 +2392,7 @@
         "sine_gordon_substrate"
       ],
       "depended_on_by": [
+        "cone_twist_substrate",
         "soliton_dynamics"
       ],
       "git": [
@@ -2454,6 +2496,7 @@
         "audit_punch_list_2026-04",
         "basin_11_connection_exploration",
         "canonical_glossary",
+        "cone_twist_substrate",
         "depth_connection_nulls",
         "down_type_double_cover_closed",
         "dynamical_tool_audit",
@@ -3064,6 +3107,7 @@
       "summary": "**Exploratory.** The twist-as-frustrated-tension picture is physically\nclear. The conjugacy with diffusion (\u03c9 \u00d7 \u03c3\u00b2 = const) connects the\ntwist to the quantum sector through the same \u03c6\u2074 scaling. The\ncosmological constant as regulated twist zero-point energy is\nstructurally correct (\u039b \u221d \u03a9_\u039b \u00d7 H\u2080\u00b2) but needs the full field\nequation calculation to produce the exact coefficient.",
       "depends_on": [],
       "depended_on_by": [
+        "cone_twist_substrate",
         "gap2_theorem_attempt"
       ],
       "git": [
@@ -3676,6 +3720,7 @@
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
         "beta_from_tongues",
+        "cone_twist_substrate",
         "duty_cycle_dictionary",
         "dynamical_tool_audit",
         "figure_eight",
@@ -3780,6 +3825,7 @@
       ],
       "depended_on_by": [
         "a_s_geometric_proof",
+        "cone_twist_substrate",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_c",
         "figure_eight",
@@ -4122,6 +4168,7 @@
         "sine_gordon_substrate"
       ],
       "depended_on_by": [
+        "cone_twist_substrate",
         "imf_bowed_cascade",
         "instrument_family_taxonomy",
         "mass_function_family",
@@ -4232,6 +4279,7 @@
         "unitless_check"
       ],
       "depended_on_by": [
+        "cone_twist_substrate",
         "expressibility_split",
         "instrument_family_taxonomy",
         "soliton_dynamics"
@@ -5830,6 +5878,7 @@
         "soliton_dynamics"
       ],
       "depended_on_by": [
+        "cone_twist_substrate",
         "figure_eight",
         "framework_status",
         "gauge_high_scale_identification",
@@ -5937,6 +5986,7 @@
       "title": "Soliton dynamics: linear sector, breathers, S-matrix, medium class",
       "summary": "Class 3 (derivation grade) for sections 1, 3, and 4. The linear\ndispersion is exact under linearisation of the parent equation; the\nS-matrix structural-rigidity claim is a direct reading of\nZamolodchikov 1979 with framework primitives substituted; the medium-\nclass assignment is a direct reading of the primitives in\n`M_k = 8 \u03c3 \u221a(K r)`.",
       "depends_on": [
+        "cone_twist_substrate",
         "einstein_from_kuramoto",
         "figure_eight",
         "klein_bottle",
@@ -5947,9 +5997,15 @@
         "unitless_check"
       ],
       "depended_on_by": [
+        "cone_twist_substrate",
         "sine_gordon_substrate"
       ],
       "git": [
+        {
+          "hash": "46ed361",
+          "date": "2026-05-12",
+          "subject": "Cone-twist substrate: bicone target manifold + Z\u2082 vortex dynamics (#108)"
+        },
         {
           "hash": "8ad1d2c",
           "date": "2026-05-11",
@@ -6438,6 +6494,7 @@
         "vacuum_energy"
       ],
       "depended_on_by": [
+        "cone_twist_substrate",
         "expressibility_split",
         "high_school_syllabus",
         "medium_change_demo",
