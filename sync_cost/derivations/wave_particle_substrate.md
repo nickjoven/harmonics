@@ -206,6 +206,25 @@ fifth is required), the synthesis fails.
   split applied to three substrate sectors.
 - The framework's content is specified by **four objects**, full stop.
 
+**Observation is event-defined, not entity-defined.** A consequence
+of the four-object closure worth registering separately: nothing
+structural distinguishes "observers" from any other matter
+configuration. A granite block participates in the same kind of
+substrate event at every D-crossing in its region as a brain does
+in its own. The two differ in **record-integration density** —
+how many D-crossings the configuration coheres across, at what
+fidelity, with what persistence — not in what counts as observation.
+Brains record at scales relevant to brains; granite records at
+scales relevant to granite; neither is more fundamental. The
+framework's anthropic content reduces to "we are matter
+configurations of sufficient persistence and complexity to
+integrate sequences of D-crossings into self-referential records."
+This is a positive falsifier: any phenomenon requiring a
+consciousness postulate *at the substrate level* (rather than as
+emergent record-integration physics) falsifies the four-object
+closure. Wigner's friend, observer-collapse, and panpsychism are
+correspondingly excluded.
+
 ### What this does not establish (open)
 
 1. **K-axis-as-base formalisation.** The fiber-bundle reading — K-axis
