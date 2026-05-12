@@ -186,6 +186,11 @@ physical instance of this divide and the recommended opener.
   bowed-string / clarinet / flute trio in air vs helium.
 - [`address_and_quantity.md`](address_and_quantity.md) — the
   conceptual address-vs-quantity distinction.
+- [`cone_twist_substrate.md`](cone_twist_substrate.md) — geometric
+  concretization of the lambda / EML split as a Z₂-twisted bicone:
+  closed-apex cone for the mediant / lambda side (saddle-node
+  collision at K = 1), punctured-apex cone for the EML / exponent
+  side (cascade fixed points approached but never reached).
 
 ## Status
 
