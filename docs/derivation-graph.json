@@ -1,5 +1,5 @@
 {
-  "generated": "46ed36160ef2a3fb27b33d0859f40d5b4e6fce6c",
+  "generated": "81aff301ffe1f363429f2ca49a2bd4148a65079e",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1221,7 +1221,8 @@
       "depended_on_by": [
         "expressibility_split",
         "high_school_syllabus",
-        "medium_change_demo"
+        "medium_change_demo",
+        "wave_particle_substrate"
       ],
       "git": [
         {
@@ -1253,7 +1254,8 @@
       ],
       "depended_on_by": [
         "expressibility_split",
-        "soliton_dynamics"
+        "soliton_dynamics",
+        "wave_particle_substrate"
       ],
       "git": [
         {
@@ -2207,7 +2209,8 @@
       ],
       "depended_on_by": [
         "cone_twist_substrate",
-        "medium_change_demo"
+        "medium_change_demo",
+        "wave_particle_substrate"
       ],
       "git": [
         {
@@ -2528,7 +2531,8 @@
         "psl2z_subgroup_phase_c_inventory",
         "remaining_gap_shapes",
         "structural_lemmas",
-        "vocabulary_is_the_work_pattern"
+        "vocabulary_is_the_work_pattern",
+        "wave_particle_substrate"
       ],
       "git": [
         {
@@ -3108,7 +3112,8 @@
       "depends_on": [],
       "depended_on_by": [
         "cone_twist_substrate",
-        "gap2_theorem_attempt"
+        "gap2_theorem_attempt",
+        "wave_particle_substrate"
       ],
       "git": [
         {
@@ -3738,6 +3743,7 @@
         "soliton_dynamics",
         "time_axis_split",
         "vacuum_energy",
+        "wave_particle_substrate",
         "xor_derivation"
       ],
       "git": [
@@ -3843,7 +3849,8 @@
         "sinw_effective_dimension",
         "soliton_dynamics",
         "three_formalizations",
-        "time_axis_split"
+        "time_axis_split",
+        "wave_particle_substrate"
       ],
       "git": [
         {
@@ -3889,7 +3896,8 @@
         "numerology_count_phase_a",
         "numerology_count_phase_b",
         "omega_b_alpha_beta_phase_b",
-        "sector_decoupling_phase_a"
+        "sector_decoupling_phase_a",
+        "wave_particle_substrate"
       ],
       "git": [
         {
@@ -4173,7 +4181,8 @@
         "instrument_family_taxonomy",
         "mass_function_family",
         "sine_gordon_substrate",
-        "soliton_dynamics"
+        "soliton_dynamics",
+        "wave_particle_substrate"
       ],
       "git": [
         {
@@ -5890,6 +5899,7 @@
         "master_cascade_identity",
         "soliton_dynamics",
         "time_axis_split",
+        "wave_particle_substrate",
         "xor_derivation"
       ],
       "git": [
@@ -5998,7 +6008,8 @@
       ],
       "depended_on_by": [
         "cone_twist_substrate",
-        "sine_gordon_substrate"
+        "sine_gordon_substrate",
+        "wave_particle_substrate"
       ],
       "git": [
         {
@@ -6436,7 +6447,8 @@
       ],
       "depended_on_by": [
         "klein_bottle",
-        "klein_bottle_derivation"
+        "klein_bottle_derivation",
+        "wave_particle_substrate"
       ],
       "git": [
         {
@@ -6498,7 +6510,8 @@
         "expressibility_split",
         "high_school_syllabus",
         "medium_change_demo",
-        "soliton_dynamics"
+        "soliton_dynamics",
+        "wave_particle_substrate"
       ],
       "git": [
         {
@@ -6696,6 +6709,35 @@
           "hash": "5f41c24",
           "date": "2026-04-26",
           "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
+        }
+      ]
+    },
+    {
+      "id": "wave_particle_substrate",
+      "path": "sync_cost/derivations/wave_particle_substrate.md",
+      "title": "Wave\u2013particle substrate: the four-object framework synthesis",
+      "summary": "Four objects are sufficient to specify the framework's structural\ncontent:",
+      "depends_on": [
+        "comparison_class",
+        "cone_twist_substrate",
+        "expressibility_split",
+        "framework_status",
+        "half_twist_dynamics",
+        "klein_bottle",
+        "klein_bottle_derivation",
+        "klein_bridge_audit_and_probe",
+        "master_cascade_identity",
+        "sine_gordon_substrate",
+        "soliton_dynamics",
+        "time_axis_split",
+        "unitless_check"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "81aff30",
+          "date": "2026-05-12",
+          "subject": "Wave-particle substrate: four-object framework synthesis (#109)"
         }
       ]
     },
