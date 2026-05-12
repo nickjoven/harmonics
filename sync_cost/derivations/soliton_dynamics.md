@@ -307,6 +307,11 @@ end-to-end unit pinning per `unitless_check.md`.
 - `sine_gordon_substrate.md` — parent doc, source Lagrangian reduction
   and static kink. This doc adds the linear sector, breathers, S-matrix,
   and medium class.
+- `cone_twist_substrate.md` — sibling doc. Reads the same K = 1 ↔ K < 1
+  separation as a Z₂-twisted bicone target manifold; this doc's kinks
+  and S-matrix become saddle points and saddle-fluctuations of that
+  bicone σ-model. The Open 2 cross-sector tunnelling action `S_inst`
+  becomes the vortex worldline action across the bicone seam.
 - `master_cascade_identity.md` — K-zoo identity that supplies the
   cross-sector `√K` ratio inherited here by the meson, breather, and
   kink towers.
