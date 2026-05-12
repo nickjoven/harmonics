@@ -1,5 +1,5 @@
 {
-  "generated": "81aff301ffe1f363429f2ca49a2bd4148a65079e",
+  "generated": "3a57d3c6488ff8e079c52e5e425eb4c749e923a3",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -6734,6 +6734,11 @@
       ],
       "depended_on_by": [],
       "git": [
+        {
+          "hash": "3a57d3c",
+          "date": "2026-05-12",
+          "subject": "wave_particle_substrate: pin observation as event-defined not entity-defined (#110)"
+        },
         {
           "hash": "81aff30",
           "date": "2026-05-12",
