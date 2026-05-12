@@ -1,5 +1,5 @@
 {
-  "generated": "e27106f6e79d0b69ce81d9c1419426c78a023410",
+  "generated": "8ad1d2c1a1940a16dab81225ed45ad15bc558637",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -2025,6 +2025,7 @@
         "master_cascade_identity",
         "quantum_gravity_interpolation",
         "sine_gordon_substrate",
+        "soliton_dynamics",
         "three_dimensions"
       ],
       "git": [
@@ -2346,10 +2347,18 @@
         "PROOF_B_quantum",
         "framework_status",
         "klein_bottle",
-        "klein_bottle_derivation"
+        "klein_bottle_derivation",
+        "sine_gordon_substrate"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "soliton_dynamics"
+      ],
       "git": [
+        {
+          "hash": "8ad1d2c",
+          "date": "2026-05-11",
+          "subject": "Soliton dynamics companion + corrected J\u00b2 = \u2212I under right Klein topology (#107)"
+        },
         {
           "hash": "e27106f",
           "date": "2026-05-10",
@@ -3681,6 +3690,7 @@
         "klein_nodal_parity",
         "second_law_topological",
         "sine_gordon_substrate",
+        "soliton_dynamics",
         "time_axis_split",
         "vacuum_energy",
         "xor_derivation"
@@ -3785,6 +3795,7 @@
         "sector_decoupling_phase_a",
         "sine_gordon_substrate",
         "sinw_effective_dimension",
+        "soliton_dynamics",
         "three_formalizations",
         "time_axis_split"
       ],
@@ -4114,7 +4125,8 @@
         "imf_bowed_cascade",
         "instrument_family_taxonomy",
         "mass_function_family",
-        "sine_gordon_substrate"
+        "sine_gordon_substrate",
+        "soliton_dynamics"
       ],
       "git": [
         {
@@ -4221,7 +4233,8 @@
       ],
       "depended_on_by": [
         "expressibility_split",
-        "instrument_family_taxonomy"
+        "instrument_family_taxonomy",
+        "soliton_dynamics"
       ],
       "git": [
         {
@@ -5813,9 +5826,11 @@
         "instrument_family_taxonomy",
         "klein_bottle",
         "klein_bottle_derivation",
-        "master_cascade_identity"
+        "master_cascade_identity",
+        "soliton_dynamics"
       ],
       "depended_on_by": [
+        "figure_eight",
         "framework_status",
         "gauge_high_scale_identification",
         "gell_mann_nishijima",
@@ -5824,10 +5839,16 @@
         "klein_bottle_derivation",
         "mass_function_family",
         "master_cascade_identity",
+        "soliton_dynamics",
         "time_axis_split",
         "xor_derivation"
       ],
       "git": [
+        {
+          "hash": "8ad1d2c",
+          "date": "2026-05-11",
+          "subject": "Soliton dynamics companion + corrected J\u00b2 = \u2212I under right Klein topology (#107)"
+        },
         {
           "hash": "c85e379",
           "date": "2026-05-10",
@@ -5907,6 +5928,32 @@
           "hash": "e1e25da",
           "date": "2026-04-13",
           "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "soliton_dynamics",
+      "path": "sync_cost/derivations/soliton_dynamics.md",
+      "title": "Soliton dynamics: linear sector, breathers, S-matrix, medium class",
+      "summary": "Class 3 (derivation grade) for sections 1, 3, and 4. The linear\ndispersion is exact under linearisation of the parent equation; the\nS-matrix structural-rigidity claim is a direct reading of\nZamolodchikov 1979 with framework primitives substituted; the medium-\nclass assignment is a direct reading of the primitives in\n`M_k = 8 \u03c3 \u221a(K r)`.",
+      "depends_on": [
+        "einstein_from_kuramoto",
+        "figure_eight",
+        "klein_bottle",
+        "klein_bottle_derivation",
+        "master_cascade_identity",
+        "medium_change_demo",
+        "sine_gordon_substrate",
+        "unitless_check"
+      ],
+      "depended_on_by": [
+        "sine_gordon_substrate"
+      ],
+      "git": [
+        {
+          "hash": "8ad1d2c",
+          "date": "2026-05-11",
+          "subject": "Soliton dynamics companion + corrected J\u00b2 = \u2212I under right Klein topology (#107)"
         }
       ]
     },
@@ -6393,7 +6440,8 @@
       "depended_on_by": [
         "expressibility_split",
         "high_school_syllabus",
-        "medium_change_demo"
+        "medium_change_demo",
+        "soliton_dynamics"
       ],
       "git": [
         {
