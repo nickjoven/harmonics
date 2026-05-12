@@ -1,5 +1,5 @@
 {
-  "generated": "3a57d3c6488ff8e079c52e5e425eb4c749e923a3",
+  "generated": "8aeae48ca8dd328258b0edd0428c812f3aea4380",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1255,6 +1255,7 @@
       "depended_on_by": [
         "expressibility_split",
         "soliton_dynamics",
+        "time_axis_split",
         "wave_particle_substrate"
       ],
       "git": [
@@ -2531,6 +2532,7 @@
         "psl2z_subgroup_phase_c_inventory",
         "remaining_gap_shapes",
         "structural_lemmas",
+        "time_axis_split",
         "vocabulary_is_the_work_pattern",
         "wave_particle_substrate"
       ],
@@ -3113,6 +3115,7 @@
       "depended_on_by": [
         "cone_twist_substrate",
         "gap2_theorem_attempt",
+        "time_axis_split",
         "wave_particle_substrate"
       ],
       "git": [
@@ -4182,6 +4185,7 @@
         "mass_function_family",
         "sine_gordon_substrate",
         "soliton_dynamics",
+        "time_axis_split",
         "wave_particle_substrate"
       ],
       "git": [
@@ -4291,7 +4295,8 @@
         "cone_twist_substrate",
         "expressibility_split",
         "instrument_family_taxonomy",
-        "soliton_dynamics"
+        "soliton_dynamics",
+        "time_axis_split"
       ],
       "git": [
         {
@@ -6009,6 +6014,7 @@
       "depended_on_by": [
         "cone_twist_substrate",
         "sine_gordon_substrate",
+        "time_axis_split",
         "wave_particle_substrate"
       ],
       "git": [
@@ -6439,11 +6445,19 @@
       "title": "The time-axis split on the Klein bottle",
       "summary": "On the Klein bottle, two aspects of \"time\" that conventional physics\nbundles together \u2014 a clock-like cyclic counter and a forward arrow \u2014\nlive on **different axes**. This is not a bug. It is a structural\nconsequence of one direction being orientable and the other not.",
       "depends_on": [
+        "cone_twist_substrate",
+        "framework_status",
+        "half_twist_dynamics",
         "hierarchy_gaussian_lattice",
         "klein_bottle",
         "klein_bottle_derivation",
+        "master_cascade_identity",
+        "medium_change_demo",
         "rank1_temporal_causation",
-        "sine_gordon_substrate"
+        "sine_gordon_substrate",
+        "soliton_dynamics",
+        "unitless_check",
+        "wave_particle_substrate"
       ],
       "depended_on_by": [
         "klein_bottle",
@@ -6451,6 +6465,11 @@
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "8aeae48",
+          "date": "2026-05-12",
+          "subject": "time_axis_split: quantitative structure \u2014 arrow-axis is integer-counted (#111)"
+        },
         {
           "hash": "b973b2c",
           "date": "2026-05-10",
@@ -6511,6 +6530,7 @@
         "high_school_syllabus",
         "medium_change_demo",
         "soliton_dynamics",
+        "time_axis_split",
         "wave_particle_substrate"
       ],
       "git": [
@@ -6732,7 +6752,9 @@
         "time_axis_split",
         "unitless_check"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "time_axis_split"
+      ],
       "git": [
         {
           "hash": "3a57d3c",
