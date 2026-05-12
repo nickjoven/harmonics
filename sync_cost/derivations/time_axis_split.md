@@ -180,14 +180,109 @@ equilibrium channel-partition between K-gradient-driven activity
 side, matter). Both are repair events; the ratio is structural and
 matches the existing `half_twist_dynamics.md` derivation.
 
-### Status
+### The dimensionless prediction-shape
+
+`τ_tick` itself has units of time and is therefore **out-of-class**
+per `framework_status.md` — anchor-dependent on `H_0`, the Planck
+scale, or another absolute reference. The framework's headline
+prediction is not `τ_tick` in seconds; it is the **dimensionless
+ratio** the substrate time quantum forms with the cosmological clock
+scale:
+
+    R_arrow = H_0 × τ_tick = (number of substrate ticks per Hubble time)⁻¹
+
+This is dimensionless and **contrabass-class** under
+`medium_change_demo.md` — observer-independent, epoch-independent
+(at fixed cascade depth), in-class for the `MANIFEST.yml` scorecard.
+
+#### Expected structural form
+
+The framework's existing contrabass-class predictions at scales
+involving the cosmological clock are:
+
+- **`Ω_Λ = 13/19`** — channel-partition ratio (this doc, above).
+- **`R_Planck-to-Hubble = 6 × 13^54 ≈ 10^60.9`** — derived in D26
+  from Klein bottle arithmetic, cited in `half_twist_dynamics.md`.
+  Small-prime support `{2, 3, 13}`.
+- **146 Fibonacci levels from Planck to Hubble** — depth
+  parametrising the same hierarchy, cited in
+  `half_twist_dynamics.md` "The cosmological constant" section.
+
+If `τ_tick` is sub-Planckian (which it should be — it is the
+substrate's natural arrow-time quantum, and the substrate is the
+layer below Planck), then `R_arrow ≪ R_Planck-to-Hubble`. The
+framework's natural ladder for sub-Planckian scales is **Fibonacci
+quantisation**: each Fibonacci level deeper than Planck multiplies
+the ratio by `φ^2 = (1+√5)²/4`. The expected structural form is
+therefore:
+
+    R_arrow = R_Planck-to-Hubble × φ^(2k)
+            = (6 × 13^54) × φ^(2k)        [as a depth count, inverse direction]
+
+for some integer `k ≥ 0` set by the substrate's deepest natural
+scale relative to the Planck scale (k = 0 if `τ_tick = t_Planck`;
+k > 0 for sub-Planckian).
+
+The conjectural form is that `k` is one of the master-cascade
+`(d, n, b)` triples of `master_cascade_identity.md`, expressed as a
+Fibonacci-level depth. This would put the new ratio on the **same
+arithmetic ladder** as the rest of the framework's contrabass-class
+predictions — small-prime support `{2, 3, 13}` plus the Fibonacci
+factor `φ`.
+
+#### Over-determination
+
+The new ratio is **over-determined by three pre-existing structural
+constraints**:
+
+1. **Channel partition** must equal `13/19` (`half_twist_dynamics.md`).
+   Pair-production rate `Γ_pair` and phase-slip rate `Γ_slip` must
+   integrate to this ratio at cosmic equilibrium.
+2. **Klein arithmetic** of `R_Planck-to-Hubble = 6 × 13^54` must
+   extend consistently. The substrate-deeper scales must use the
+   same prime support.
+3. **Master cascade identity** `(d, n, b)` form must apply. `R_arrow`
+   should be expressible as `b^(−n/d)` (or a product of such factors)
+   times Klein-arithmetic integers.
+
+A genuine prediction sits in the *intersection* of these three
+constraints. Most arbitrary-looking ratios would fail at least one;
+a successful form satisfies all three.
+
+#### One calculation closes four predictions
+
+The same `unitless_check.md` end-to-end audit that pins the
+explicit coefficient in `β̃²(σ, K, r, m)` from
+`soliton_dynamics.md` Open 1 also pins:
+
+- `κ_pair` (the `H(t) = κ_pair × ⟨Γ_pair⟩` prefactor),
+- `E_slip(σ, K, r)` (phase-slip activation energy),
+- `S_v(σ, K, r, m)` (vortex-pair action),
+- and `k` in `R_arrow = R_Planck-to-Hubble × φ^(2k)`.
+
+Each of these depends only on the substrate primitives and the
+unit-convention pinning. **One bookkeeping audit closes all four.**
+
+Until then, the framework registers the prediction shape:
+
+    R_arrow ∈ { (6 × 13^54) × φ^(2k)  :  k ∈ Z, k ≥ 0,
+                  k expressible as a master-cascade (d, n, b) depth }
+
+The candidate values are a small discrete set; the calculation
+selects one.
+
+
 
 Class 3 (derivation grade) for the form `τ_tick = L_x/c`,
-`dτ_arrow / dt = τ_tick × Γ_repair`, and the channel decomposition.
-Conditional on `unitless_check.md` end-to-end for the numerical
-coefficient `κ_pair` and for `E_slip(σ, K, r)`,
-`S_v(σ, K, r, m)`. Same bookkeeping status as
-`soliton_dynamics.md` Open 1.
+`dτ_arrow / dt = τ_tick × Γ_repair`, the channel decomposition, and
+the dimensionless prediction-shape `R_arrow = R_Planck-to-Hubble ×
+φ^(2k)` with `k` ∈ master-cascade-depth set. Conditional on
+`unitless_check.md` end-to-end for the numerical coefficient
+`κ_pair`, the substrate activation energies `E_slip(σ, K, r)` and
+`S_v(σ, K, r, m)`, and the depth integer `k`. **One bookkeeping
+audit closes all four.** Same bookkeeping status as
+`soliton_dynamics.md` Open 1; this doc adds three further predictions
+to the same audit.
 
 The doc-internal claim added by this section: **arrow-time is
 discrete; clock-time is continuous; they are wave–particle dual to
@@ -218,6 +313,15 @@ split, not a new postulate.
    *negative* falsifier: existing atomic clocks show no such
    dependence to `Δτ/τ ≲ 10⁻¹⁸`, which constrains `E_slip >> k_B T_atomic`,
    consistent with `E_slip` being a substrate-fundamental scale.
+5. **`R_arrow` precision-cosmology mismatch.** Once `k` is pinned
+   from substrate primitives via `unitless_check.md`, the
+   dimensionless ratio `R_arrow = (6 × 13^54) × φ^(2k)` is
+   *uniquely predicted*. Any precision cosmological observation
+   deriving a different `R_arrow` (with `H_0` anchored
+   independently) falsifies the structural form. The candidate `k`
+   values are a small discrete set; a single observation that
+   matches no candidate falsifies the Klein-arithmetic-plus-Fibonacci
+   ladder.
 
 
 
