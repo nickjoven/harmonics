@@ -1,5 +1,5 @@
 {
-  "generated": "8aeae48ca8dd328258b0edd0428c812f3aea4380",
+  "generated": "ca4e229075154134390a23870e0401fb3d47defc",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1222,6 +1222,7 @@
         "expressibility_split",
         "high_school_syllabus",
         "medium_change_demo",
+        "no_rescaling",
         "wave_particle_substrate"
       ],
       "git": [
@@ -1256,6 +1257,7 @@
         "expressibility_split",
         "soliton_dynamics",
         "time_axis_split",
+        "unitless_audit",
         "wave_particle_substrate"
       ],
       "git": [
@@ -2211,6 +2213,7 @@
       "depended_on_by": [
         "cone_twist_substrate",
         "medium_change_demo",
+        "no_rescaling",
         "wave_particle_substrate"
       ],
       "git": [
@@ -2397,6 +2400,7 @@
       ],
       "depended_on_by": [
         "cone_twist_substrate",
+        "no_rescaling",
         "soliton_dynamics"
       ],
       "git": [
@@ -2513,6 +2517,7 @@
         "klein_antipodal_z2_rep_pattern",
         "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
+        "no_rescaling",
         "numerology_count_phase_a",
         "numerology_count_phase_b",
         "numerology_inventory",
@@ -2533,6 +2538,7 @@
         "remaining_gap_shapes",
         "structural_lemmas",
         "time_axis_split",
+        "unitless_audit",
         "vocabulary_is_the_work_pattern",
         "wave_particle_substrate"
       ],
@@ -3115,7 +3121,9 @@
       "depended_on_by": [
         "cone_twist_substrate",
         "gap2_theorem_attempt",
+        "no_rescaling",
         "time_axis_split",
+        "unitless_audit",
         "wave_particle_substrate"
       ],
       "git": [
@@ -4183,9 +4191,11 @@
         "imf_bowed_cascade",
         "instrument_family_taxonomy",
         "mass_function_family",
+        "no_rescaling",
         "sine_gordon_substrate",
         "soliton_dynamics",
         "time_axis_split",
+        "unitless_audit",
         "wave_particle_substrate"
       ],
       "git": [
@@ -4295,6 +4305,7 @@
         "cone_twist_substrate",
         "expressibility_split",
         "instrument_family_taxonomy",
+        "no_rescaling",
         "soliton_dynamics",
         "time_axis_split"
       ],
@@ -4462,6 +4473,33 @@
           "hash": "c83e5d0",
           "date": "2026-04-19",
           "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        }
+      ]
+    },
+    {
+      "id": "no_rescaling",
+      "path": "sync_cost/derivations/no_rescaling.md",
+      "title": "No-rescaling principle: cosmic = substrate, under natural units",
+      "summary": "Under the framework's natural unit convention (`\u03c3 = m = c = 1`,\n`L_x = \u2113_P`, `\u03c4_tick = t_P` \u2014 `unitless_audit.md`), every framework\nprediction relating a substrate-internal rate or ratio to a\ncosmological observable is an **identity**, not a proportionality.",
+      "depends_on": [
+        "comparison_class",
+        "expressibility_split",
+        "figure_eight",
+        "framework_status",
+        "half_twist_dynamics",
+        "master_cascade_identity",
+        "medium_change_demo",
+        "time_axis_split",
+        "unitless_audit",
+        "unitless_check",
+        "wave_particle_substrate"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "ca4e229",
+          "date": "2026-05-13",
+          "subject": "unitless_audit: end-to-end audit of substrate primitives in Planck units (#112)"
         }
       ]
     },
@@ -5904,6 +5942,7 @@
         "master_cascade_identity",
         "soliton_dynamics",
         "time_axis_split",
+        "unitless_audit",
         "wave_particle_substrate",
         "xor_derivation"
       ],
@@ -6015,6 +6054,7 @@
         "cone_twist_substrate",
         "sine_gordon_substrate",
         "time_axis_split",
+        "unitless_audit",
         "wave_particle_substrate"
       ],
       "git": [
@@ -6462,6 +6502,8 @@
       "depended_on_by": [
         "klein_bottle",
         "klein_bottle_derivation",
+        "no_rescaling",
+        "unitless_audit",
         "wave_particle_substrate"
       ],
       "git": [
@@ -6513,6 +6555,33 @@
       ]
     },
     {
+      "id": "unitless_audit",
+      "path": "sync_cost/derivations/unitless_audit.md",
+      "title": "Unitless audit: substrate primitives end-to-end",
+      "summary": "Class 3 (derivation grade). The audit's structural content \u2014 that\nsubstrate primitives in Planck units (`\u03c3 = m = c = 1, L_x = \u03c4_tick =\n1`) determine the listed quantities \u2014 follows directly from the\nexisting framework derivations with Planck-normalisation applied.",
+      "depends_on": [
+        "cone_twist_substrate",
+        "framework_status",
+        "half_twist_dynamics",
+        "master_cascade_identity",
+        "sine_gordon_substrate",
+        "soliton_dynamics",
+        "time_axis_split",
+        "unitless_check",
+        "wave_particle_substrate"
+      ],
+      "depended_on_by": [
+        "no_rescaling"
+      ],
+      "git": [
+        {
+          "hash": "ca4e229",
+          "date": "2026-05-13",
+          "subject": "unitless_audit: end-to-end audit of substrate primitives in Planck units (#112)"
+        }
+      ]
+    },
+    {
       "id": "unitless_check",
       "path": "sync_cost/derivations/unitless_check.md",
       "title": "Unitless Check: \u210f = G = c = 1",
@@ -6529,8 +6598,10 @@
         "expressibility_split",
         "high_school_syllabus",
         "medium_change_demo",
+        "no_rescaling",
         "soliton_dynamics",
         "time_axis_split",
+        "unitless_audit",
         "wave_particle_substrate"
       ],
       "git": [
@@ -6753,7 +6824,9 @@
         "unitless_check"
       ],
       "depended_on_by": [
-        "time_axis_split"
+        "no_rescaling",
+        "time_axis_split",
+        "unitless_audit"
       ],
       "git": [
         {
