@@ -1,5 +1,5 @@
 {
-  "generated": "ca4e229075154134390a23870e0401fb3d47defc",
+  "generated": "046d0c6d8f3331c50b9b8c9013c48ba3a49f39a4",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1255,6 +1255,7 @@
       ],
       "depended_on_by": [
         "expressibility_split",
+        "seam_profile",
         "soliton_dynamics",
         "time_axis_split",
         "unitless_audit",
@@ -2214,6 +2215,7 @@
         "cone_twist_substrate",
         "medium_change_demo",
         "no_rescaling",
+        "seam_profile",
         "wave_particle_substrate"
       ],
       "git": [
@@ -4192,6 +4194,7 @@
         "instrument_family_taxonomy",
         "mass_function_family",
         "no_rescaling",
+        "seam_profile",
         "sine_gordon_substrate",
         "soliton_dynamics",
         "time_axis_split",
@@ -4494,7 +4497,9 @@
         "unitless_check",
         "wave_particle_substrate"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "seam_profile"
+      ],
       "git": [
         {
           "hash": "ca4e229",
@@ -5768,6 +5773,28 @@
       ]
     },
     {
+      "id": "seam_profile",
+      "path": "sync_cost/derivations/seam_profile.md",
+      "title": "Seam K-gradient: independent derivation of `|\u2207K|_seam`",
+      "summary": "Class 3 (derivation grade). The geometric derivation uses only\nexisting substrate primitives (`\u2113_kink = 1/\u221aK`, the bicone target\nmanifold structure from `cone_twist_substrate.md`). No new primitive.",
+      "depends_on": [
+        "cone_twist_substrate",
+        "expressibility_split",
+        "master_cascade_identity",
+        "no_rescaling",
+        "soliton_dynamics",
+        "unitless_audit"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "046d0c6",
+          "date": "2026-05-13",
+          "subject": "seam_profile: independent derivation of |\u2207K|_seam confirms \u03ba_pair = 1 (#113)"
+        }
+      ]
+    },
+    {
       "id": "second_law_topological",
       "path": "sync_cost/derivations/second_law_topological.md",
       "title": "The Second Law from Non-Orientability",
@@ -6052,6 +6079,7 @@
       ],
       "depended_on_by": [
         "cone_twist_substrate",
+        "seam_profile",
         "sine_gordon_substrate",
         "time_axis_split",
         "unitless_audit",
@@ -6571,7 +6599,8 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
-        "no_rescaling"
+        "no_rescaling",
+        "seam_profile"
       ],
       "git": [
         {
