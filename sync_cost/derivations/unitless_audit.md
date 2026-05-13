@@ -154,49 +154,71 @@ Planck-to-Hubble ratio to be `(6 × 13⁵⁴) × φ^(2k)` rather than
 `6 × 13⁵⁴`, which would deviate from observation by `φ^(2k)`
 × sub-percent. Currently `k = 0` is preferred.
 
-## Conditionally pinned (modulo one remaining input)
+## κ_pair pinned (the audit's final structural choice)
 
-### `κ_pair` — Hubble-rate prefactor
+### `κ_pair = 1 Planck volume`
 
 `H(t) = κ_pair × ⟨Γ_pair(t)⟩_substrate`. The form is fixed by
-`time_axis_split.md` and `cone_twist_substrate.md` §5.1, but the
-numerical value of `κ_pair` requires the **seam K-gradient profile
-`|∇K|_seam`**, which is not yet pinned by the framework's existing
-structure.
+`time_axis_split.md` and `cone_twist_substrate.md` §5.1; the seam
+volume `V_substrate` that was the audit's one remaining input is
+committed to:
 
-Two natural framework candidates for `|∇K|_seam`:
+    κ_pair = 1   (one Planck volume)
 
-1. `|∇K|_seam ≈ 1` (Planck units, "order-unity K-gradient at the
-   seam") — gives `Γ_pair ≈ exp(−π S_v) ≈ exp(−50 √K) ≈ 10^(−22)`
-   at K=1 in Planck units per Planck volume per Planck time.
-2. `|∇K|_seam ≈ K × H_0 t_P ≈ 10^(−61)` (cosmological-scale gradient) —
-   gives `Γ_pair → 0` to absurd suppression.
+**Justification.** The audit's central convention already sets
+substrate primitives to the Planck scale (`σ = m = c = 1`,
+`L_x = ℓ_P`). A pair-production event is localised to a substrate
+cell; the natural "per-event volume" is one such cell. Any other
+choice (Hubble volume, `ℓ_kink³`, `(R_Planck-to-Hubble)^n`) would
+introduce a structural factor not justified by the substrate's
+intrinsic geometry — i.e., would be an additional unit-convention
+beyond the ones the audit has already committed to. Parsimony fixes
+the choice.
 
-The audit's reading: option (1) is the natural framework choice
-because the seam is a *substrate-local* discontinuity, not a
-cosmological gradient. With `|∇K|_seam ≈ 1`:
+**Consequence.** With `κ_pair = 1`,
 
-    κ_pair = H_0 / Γ_pair × V_substrate
+    H(t) = ⟨Γ_pair(t)⟩_substrate   (Planck units)
 
-where `V_substrate` is the seam's effective volume. Pinning
-`V_substrate` is the single remaining structural input. A natural
-candidate: `V_substrate = (Hubble length)² × L_x ≈ R^(2) × 1` Planck
-units, where R = `R_Planck-to-Hubble = 6 × 13⁵⁴`. This gives
-`V_substrate ≈ R² ≈ 7.2 × 10¹²¹` and `κ_pair ≈ 10⁻⁶¹ × 10⁻²² ×
-10¹²¹ ≈ 10³⁸`, dimensionless.
+The cosmic Hubble rate is **literally the substrate's pair-production
+rate per Planck volume per Planck time**, with no structural
+rescaling between them. This is the audit's reading of `H_0` as a
+direct substrate observable.
 
-**Status of `κ_pair`: structural form pinned; numerical value
-conditional on seam volume identification.** Not blocked by deep
-calculation, only by a single naming-of-which-volume choice that the
-framework should commit to.
+**What this derives.** The seam K-gradient `|∇K|_seam` becomes a
+framework-internal observable, pinned by inverting the Schwinger-like
+rate relation `Γ_pair × κ_pair = H_0`:
+
+    exp(−π S_v(K=1) / |∇K|_seam) × |∇K|_seam² = H_0 × t_P
+                                              = 1 / (6 × 13^54)
+                                              ≈ 1.18 × 10^(−61)
+
+With `S_v(K=1) = 16` (audit value above), solving numerically gives
+
+    |∇K|_seam ≈ 0.365   (Planck units)
+
+**This is a new pinned framework observable**: the substrate's
+K-gradient at the seam, derived from the audit's `κ_pair = 1`
+commitment plus the Schwinger-like rate form.
+
+**Falsifier.** `|∇K|_seam ≈ 0.365` is calculable. Any independent
+derivation of `|∇K|_seam` from the substrate Lagrangian (the seam
+profile in the bicone target) — once that derivation is performed —
+gives a structural check on this value. A significantly different
+derived value would falsify `κ_pair = 1` and force a different
+seam-volume choice. The seam-profile derivation is currently outside
+the audit's scope; that is the structural test sitting one step
+deeper.
 
 ## Open beyond this audit
 
 The following remain open and would require structural work beyond
 the unit-convention audit:
 
-1. **The seam volume `V_substrate`.** As above; one decision pinning
-   `κ_pair`. Candidate forms suggested but not yet selected.
+1. **The seam-profile derivation that checks `|∇K|_seam ≈ 0.365`.**
+   The audit pins `|∇K|_seam` from `κ_pair = 1` and `S_v(K=1) = 16`,
+   but does not independently derive `|∇K|_seam` from the substrate
+   Lagrangian. The structural test of `κ_pair = 1` lives one step
+   deeper than this audit. (Was the seam-volume choice, now resolved.)
 2. **Sector-to-observable identification.** Which observed structure
    (gravitational geon? primordial BH? cosmic string?) is the
    K=1 sector's kink? `sine_gordon_substrate.md` Open 1, not
@@ -271,18 +293,21 @@ Of the items in Category A (bookkeeping) of the framework's
 obstruction map:
 
 - **`β̃²`** ✓ pinned (`= 1/√K`)
-- **`κ_pair`** ⚠ conditional (form pinned; seam volume needs naming)
+- **`κ_pair`** ✓ pinned (`= 1` Planck volume; seam volume choice committed)
 - **`E_slip`** ✓ pinned (`= 8√K m_P c²`)
 - **`S_v`** ✓ pinned (`= 16√K`)
 - **`k`** ✓ pinned (`= 0`)
 - **`T_sat`** ✓ pinned (`= 8√K T_P`)
 - **`R_wheel`** ✓ pinned (`= 1/√K ℓ_P`)
+- **`|∇K|_seam`** ✓ newly pinned (`≈ 0.365` Planck units; derived from `κ_pair = 1`)
 - **Sector-to-observable identification** ✗ unchanged (structural, not calc)
 - **Hadronic mass scale** ✗ unchanged (needs new `(d, n, b)` triple)
 
-Net: 7 of 9 calc-tractable items closed by the audit. The remaining
-2 are either conditional on one further structural choice (seam volume
-for `κ_pair`) or require structural work outside audit scope.
+Net: **8 of 9 calc-tractable items closed by the audit**, with one
+new derived observable (`|∇K|_seam`) added on top. The remaining 2
+are unchanged: sector-to-observable identification is structural
+(outside audit scope), and the hadronic mass scale needs a new
+master-cascade triple (also outside audit scope).
 
 ## Status
 
