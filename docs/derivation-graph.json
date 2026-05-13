@@ -1,5 +1,5 @@
 {
-  "generated": "e1392bf46c72fa2573b0f07ff2cf171b5a9e74ff",
+  "generated": "144530340b2fe9eea802d9c9b15f746e6c7343a6",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1257,6 +1257,7 @@
       "depended_on_by": [
         "expressibility_split",
         "s_v_nlo",
+        "s_v_nlo_attempt",
         "seam_profile",
         "soliton_dynamics",
         "time_axis_split",
@@ -2541,6 +2542,7 @@
         "psl2z_subgroup_phase_c_inventory",
         "remaining_gap_shapes",
         "s_v_nlo",
+        "s_v_nlo_attempt",
         "structural_lemmas",
         "time_axis_split",
         "unitless_audit",
@@ -4502,6 +4504,7 @@
       ],
       "depended_on_by": [
         "s_v_nlo",
+        "s_v_nlo_attempt",
         "seam_profile"
       ],
       "git": [
@@ -5790,12 +5793,36 @@
         "soliton_dynamics",
         "unitless_audit"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "s_v_nlo_attempt"
+      ],
       "git": [
         {
           "hash": "e1392bf",
           "date": "2026-05-13",
           "subject": "s_v_nlo: NLO structure for S_v(K=1) \u2014 closes seam-profile's 5.7% gap (#114)"
+        }
+      ]
+    },
+    {
+      "id": "s_v_nlo_attempt",
+      "path": "sync_cost/derivations/s_v_nlo_attempt.md",
+      "title": "S_v(K=1) NLO calc attempt: a regime finding",
+      "summary": "Class 4 (calc attempt with substantive regime finding). The explicit\nNLO computation is not produced; instead the attempt reveals that\nthe audit's convention places the framework in a non-perturbative\nregime where the 5.7% gap is the natural precision floor. This is\nnot a failure of the calc \u2014 it is the calc's *honest substantive\noutput*.",
+      "depends_on": [
+        "cone_twist_substrate",
+        "framework_status",
+        "no_rescaling",
+        "s_v_nlo",
+        "seam_profile",
+        "unitless_audit"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "1445303",
+          "date": "2026-05-13",
+          "subject": "s_v_nlo_attempt: explicit NLO calc reveals non-perturbative regime (#115)"
         }
       ]
     },
@@ -5813,7 +5840,8 @@
         "unitless_audit"
       ],
       "depended_on_by": [
-        "s_v_nlo"
+        "s_v_nlo",
+        "s_v_nlo_attempt"
       ],
       "git": [
         {
@@ -6631,6 +6659,7 @@
       "depended_on_by": [
         "no_rescaling",
         "s_v_nlo",
+        "s_v_nlo_attempt",
         "seam_profile"
       ],
       "git": [
