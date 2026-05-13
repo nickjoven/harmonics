@@ -1,5 +1,5 @@
 {
-  "generated": "046d0c6d8f3331c50b9b8c9013c48ba3a49f39a4",
+  "generated": "e1392bf46c72fa2573b0f07ff2cf171b5a9e74ff",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -599,6 +599,7 @@
         "numerology_inventory",
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
+        "s_v_nlo",
         "structural_lemmas",
         "vocabulary_is_the_work_pattern"
       ],
@@ -1255,6 +1256,7 @@
       ],
       "depended_on_by": [
         "expressibility_split",
+        "s_v_nlo",
         "seam_profile",
         "soliton_dynamics",
         "time_axis_split",
@@ -2538,6 +2540,7 @@
         "primitive_completeness_audit",
         "psl2z_subgroup_phase_c_inventory",
         "remaining_gap_shapes",
+        "s_v_nlo",
         "structural_lemmas",
         "time_axis_split",
         "unitless_audit",
@@ -4498,6 +4501,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "s_v_nlo",
         "seam_profile"
       ],
       "git": [
@@ -5773,6 +5777,29 @@
       ]
     },
     {
+      "id": "s_v_nlo",
+      "path": "sync_cost/derivations/s_v_nlo.md",
+      "title": "S_v(K=1) at next-to-leading order",
+      "summary": "Class 4 (structural setup; computation pending). The contributions\nare identified, signs are framework-predicted, magnitudes are\nestimated within plausible ranges. The explicit substrate-Lagrangian\ncalc that pins `\u03b2 \u2248 0.264` is the natural next-step work.",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "cone_twist_substrate",
+        "framework_status",
+        "no_rescaling",
+        "seam_profile",
+        "soliton_dynamics",
+        "unitless_audit"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "e1392bf",
+          "date": "2026-05-13",
+          "subject": "s_v_nlo: NLO structure for S_v(K=1) \u2014 closes seam-profile's 5.7% gap (#114)"
+        }
+      ]
+    },
+    {
       "id": "seam_profile",
       "path": "sync_cost/derivations/seam_profile.md",
       "title": "Seam K-gradient: independent derivation of `|\u2207K|_seam`",
@@ -5785,7 +5812,9 @@
         "soliton_dynamics",
         "unitless_audit"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "s_v_nlo"
+      ],
       "git": [
         {
           "hash": "046d0c6",
@@ -6079,6 +6108,7 @@
       ],
       "depended_on_by": [
         "cone_twist_substrate",
+        "s_v_nlo",
         "seam_profile",
         "sine_gordon_substrate",
         "time_axis_split",
@@ -6600,6 +6630,7 @@
       ],
       "depended_on_by": [
         "no_rescaling",
+        "s_v_nlo",
         "seam_profile"
       ],
       "git": [
