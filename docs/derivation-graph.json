@@ -1,5 +1,5 @@
 {
-  "generated": "a91ad23a73bb22e63bc47d84e1a101c5717dcee7",
+  "generated": "84c4c2af43a71022052a503e5f6b0e03c3053841",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1256,8 +1256,10 @@
       ],
       "depended_on_by": [
         "expressibility_split",
+        "inflation_duration",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
+        "s_inst_inflation",
         "s_v_nlo",
         "s_v_nlo_attempt",
         "seam_profile",
@@ -3134,7 +3136,9 @@
       "depended_on_by": [
         "cone_twist_substrate",
         "gap2_theorem_attempt",
+        "inflation_duration",
         "no_rescaling",
+        "s_inst_inflation",
         "time_axis_split",
         "unitless_audit",
         "wave_particle_substrate"
@@ -3468,6 +3472,29 @@
           "hash": "30931c3",
           "date": "2026-05-10",
           "subject": "Salvage Tier 1: master cascade-lock identity family (closes #97 A/B/C/E/F) (#98)"
+        }
+      ]
+    },
+    {
+      "id": "inflation_duration",
+      "path": "sync_cost/derivations/inflation_duration.md",
+      "title": "Inflation duration from S_v = 16 and the universal Schwinger relation",
+      "summary": "`|\u2207K|_seam(t)` is now a derived framework function. Inflation\nduration follows from `S_v = 16` and `H_inflation`. The super-Earth\nanalogy (structural pattern only, not gravitational mechanics \u2014\nsee `s_inst_inflation.md` disclaimer) is conceptually confirmed\nbut operationally resolved: hard exit, many attempts, eventual\nsuccess \u2014 with \"hard\" meaning *Boltzmann-suppressed sampling\nprobability per attempt*, not *energetic escape from a potential\nwell*. The framework's no-rescaling principle is now ",
+      "depends_on": [
+        "cone_twist_substrate",
+        "half_twist_dynamics",
+        "no_rescaling",
+        "nonperturbative_phase2",
+        "s_inst_inflation",
+        "time_axis_split",
+        "unitless_audit"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "84c4c2a",
+          "date": "2026-05-14",
+          "subject": "s_inst_inflation: cross-sector tunneling refines super-Earth analogy (#119)"
         }
       ]
     },
@@ -4510,6 +4537,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "inflation_duration",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
         "s_v_nlo",
@@ -4570,7 +4598,9 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
-        "nonperturbative_phase3"
+        "inflation_duration",
+        "nonperturbative_phase3",
+        "s_inst_inflation"
       ],
       "git": [
         {
@@ -4594,7 +4624,9 @@
         "soliton_dynamics",
         "unitless_audit"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "s_inst_inflation"
+      ],
       "git": [
         {
           "hash": "a91ad23",
@@ -5868,6 +5900,31 @@
       ]
     },
     {
+      "id": "s_inst_inflation",
+      "path": "sync_cost/derivations/s_inst_inflation.md",
+      "title": "S_inst for inflation exit: does the super-Earth analogy hold?",
+      "summary": "Class 4 (structural estimate; numerical predictions conditional on\norder-of-magnitude assumptions). The framework's `S_inst` for\ninflation exit is in the range 8\u201350 in Planck units, depending on\nmechanism. The specific value `\u2248 25` that matches standard\ninflation duration requires `|\u2207K|_inflation \u2248 2` \u2014 a framework\nprediction not directly derived from the substrate Lagrangian but\nimplied by consistency with observed inflation.",
+      "depends_on": [
+        "cone_twist_substrate",
+        "half_twist_dynamics",
+        "nonperturbative_phase2",
+        "nonperturbative_phase3",
+        "soliton_dynamics",
+        "time_axis_split",
+        "unitless_audit"
+      ],
+      "depended_on_by": [
+        "inflation_duration"
+      ],
+      "git": [
+        {
+          "hash": "84c4c2a",
+          "date": "2026-05-14",
+          "subject": "s_inst_inflation: cross-sector tunneling refines super-Earth analogy (#119)"
+        }
+      ]
+    },
+    {
       "id": "s_v_nlo",
       "path": "sync_cost/derivations/s_v_nlo.md",
       "title": "S_v(K=1) at next-to-leading order",
@@ -6234,6 +6291,7 @@
         "nonperturbative_phase1",
         "nonperturbative_phase2",
         "nonperturbative_phase3",
+        "s_inst_inflation",
         "s_v_nlo",
         "seam_profile",
         "sine_gordon_substrate",
@@ -6684,9 +6742,11 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "inflation_duration",
         "klein_bottle",
         "klein_bottle_derivation",
         "no_rescaling",
+        "s_inst_inflation",
         "unitless_audit",
         "wave_particle_substrate"
       ],
@@ -6755,10 +6815,12 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "inflation_duration",
         "no_rescaling",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
         "nonperturbative_phase3",
+        "s_inst_inflation",
         "s_v_nlo",
         "s_v_nlo_attempt",
         "seam_profile"
