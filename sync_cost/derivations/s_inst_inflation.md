@@ -1,16 +1,35 @@
 # S_inst for inflation exit: does the super-Earth analogy hold?
 
 Order-of-magnitude estimate of cross-sector tunnelling action
-`S_inst` for inflation exit, in response to the structural question
-of whether deep-Fibonacci-level cosmic epochs are "gravitationally
-inescapable" without specific propulsion mechanisms.
+`S_inst` for inflation exit, in response to a structural analogy
+raised earlier: do deep-Fibonacci-level cosmic epochs resist exit
+in a manner *analogous* to how a super-Earth's gravity well
+resists escape without specific propulsion mechanisms.
 
-**Headline finding: the super-Earth analogy is structurally
-confirmed, with a quantitative twist.** The framework's natural
-mechanisms for inflation exit produce action estimates that
-*diverge from standard cosmology's inflation duration by 10⁷–10¹⁰
-in either direction* — qualitatively confirming the analogy and
-opening it as an empirical test, not ruling it out.
+> **A note on the analogy.** The super-Earth comparison is
+> **structural-only**. The framework's actual substrate physics
+> at K < 1 epochs is *statistical token sampling on a discrete
+> lattice with EML-weighted transition probabilities* — not
+> energetic escape from a gravitational potential well. What the
+> two share is the **conceptual pattern**: a deep configuration
+> from which exit requires a specific propulsion class with
+> exponentially-tuned probability per attempt. The mechanics
+> differ structurally — escape velocity is a deterministic energy
+> threshold; the framework's exit is a Boltzmann-suppressed
+> sampling rate. The analogy holds in *what is hard*, not in
+> *how it is hard*. This doc uses gravity-flavoured language
+> ("gravitational well", "propulsion class", "altitude") as
+> *labels for substrate-physics concepts*, not as claims that
+> the substrate is gravitationally constrained.
+
+**Headline finding: the super-Earth conceptual pattern is
+structurally confirmed at the framework level, with a quantitative
+twist.** The framework's natural substrate-transition mechanisms
+for inflation exit produce action estimates that *diverge from
+standard cosmology's inflation duration by 10⁷–10¹⁰ in either
+direction* under naïve readings — qualitatively confirming the
+pattern (exit is hard, requires specific mechanism) and opening
+it as an empirical test, not ruling it out.
 
 ## Setup: what `S_inst` controls
 

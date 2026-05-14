@@ -112,12 +112,17 @@ and earlier epochs had substantially higher `|∇K|_seam`.
    no additional substrate-Lagrangian-level derivation needed.
 2. **Inflation duration** is framework-derivable from `S_v` and
    `H_inflation`, no free parameters.
-3. **The super-Earth analogy** is structurally confirmed *and*
+3. **The super-Earth analogy** (introduced in the earlier
+   discussion as a structural-only comparison — see disclaimer in
+   `s_inst_inflation.md`) is conceptually confirmed *and*
    quantitatively resolved: inflation exit is hard (action `S_v =
    16` per attempt, exit fraction `~10⁻⁷`), but the substrate
    samples many tokens during inflation (`~10⁷`), so exit
-   eventually happens. The "hard climb" is matched by "many
-   attempts."
+   eventually happens. The pattern of "hard exit + many attempts"
+   matches the super-Earth pattern of "deep well + many trials";
+   the *mechanism* differs (Boltzmann-suppressed statistical
+   sampling, not deterministic energy threshold). The analogy
+   describes *what is hard*, not *how it is hard*.
 4. **The prior `s_inst_inflation.md` requirement** of `|∇K|_inflation
    ≈ 2` is superseded; the correct value is `≈ 3.55`, consistent
    with the universal Schwinger relation at inflation-era H.
@@ -235,10 +240,13 @@ cosmology calcs.
 
 `|∇K|_seam(t)` is now a derived framework function. Inflation
 duration follows from `S_v = 16` and `H_inflation`. The super-Earth
-analogy is structurally confirmed but operationally resolved: hard
-exit, many attempts, eventual success. The framework's
-no-rescaling principle is now demonstrated at cosmological scale
-with a single structural integer (`S_v = 16`) controlling both
-substrate-microphysics (vortex-pair action) and cosmic-macrophysics
-(inflation duration). One audit constant, two cosmological
-observables, exact identity.
+analogy (structural pattern only, not gravitational mechanics —
+see `s_inst_inflation.md` disclaimer) is conceptually confirmed
+but operationally resolved: hard exit, many attempts, eventual
+success — with "hard" meaning *Boltzmann-suppressed sampling
+probability per attempt*, not *energetic escape from a potential
+well*. The framework's no-rescaling principle is now demonstrated
+at cosmological scale with a single structural integer
+(`S_v = 16`) controlling both substrate-microphysics (vortex-pair
+action) and cosmic-macrophysics (inflation duration). One audit
+constant, two cosmological observables, exact identity.
