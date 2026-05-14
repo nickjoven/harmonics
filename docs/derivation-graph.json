@@ -1,5 +1,5 @@
 {
-  "generated": "3cd529f13d5aae820c7b8b6ef10f61f3369d0734",
+  "generated": "a91ad23a73bb22e63bc47d84e1a101c5717dcee7",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -2528,6 +2528,7 @@
         "klein_nodal_parity",
         "no_rescaling",
         "nonperturbative_phase2",
+        "nonperturbative_phase3",
         "numerology_count_phase_a",
         "numerology_count_phase_b",
         "numerology_inventory",
@@ -4204,6 +4205,7 @@
         "instrument_family_taxonomy",
         "mass_function_family",
         "no_rescaling",
+        "nonperturbative_phase3",
         "seam_profile",
         "sine_gordon_substrate",
         "soliton_dynamics",
@@ -4538,7 +4540,8 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
-        "nonperturbative_phase2"
+        "nonperturbative_phase2",
+        "nonperturbative_phase3"
       ],
       "git": [
         {
@@ -4566,12 +4569,37 @@
         "unitless_audit",
         "wave_particle_substrate"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "nonperturbative_phase3"
+      ],
       "git": [
         {
           "hash": "3cd529f",
           "date": "2026-05-14",
           "subject": "nonperturbative_phase2: explicit 4\u00d74 calc gives S_v(K=1) = 16 exactly (#117)"
+        }
+      ]
+    },
+    {
+      "id": "nonperturbative_phase3",
+      "path": "sync_cost/derivations/nonperturbative_phase3.md",
+      "title": "Non-perturbative Phase 3: K < 1 sectors and the lengthscale-regime question",
+      "summary": "Class 3 (setup and structural question). The Phase 3 calc was\nattempted and revealed that the substrate's lengthscale regime at\nK < 1 is a separate structural question the audit didn't address.\nBoth the audit (K = 1-specific) and the seam-profile derivation\n(continuum) were partial answers that don't extend mechanically to\nK < 1.",
+      "depends_on": [
+        "framework_status",
+        "master_cascade_identity",
+        "nonperturbative_phase1",
+        "nonperturbative_phase2",
+        "seam_profile",
+        "soliton_dynamics",
+        "unitless_audit"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "a91ad23",
+          "date": "2026-05-14",
+          "subject": "nonperturbative_phase3: K<1 regime question \u2014 L_x choice + compression (#118)"
         }
       ]
     },
@@ -5906,6 +5934,7 @@
       "depended_on_by": [
         "nonperturbative_phase1",
         "nonperturbative_phase2",
+        "nonperturbative_phase3",
         "s_v_nlo",
         "s_v_nlo_attempt"
       ],
@@ -6204,6 +6233,7 @@
         "cone_twist_substrate",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
+        "nonperturbative_phase3",
         "s_v_nlo",
         "seam_profile",
         "sine_gordon_substrate",
@@ -6728,6 +6758,7 @@
         "no_rescaling",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
+        "nonperturbative_phase3",
         "s_v_nlo",
         "s_v_nlo_attempt",
         "seam_profile"
