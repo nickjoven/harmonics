@@ -1,5 +1,5 @@
 {
-  "generated": "e703afaedf18b1f84053a5eb6ebd193f14a98589",
+  "generated": "3cd529f13d5aae820c7b8b6ef10f61f3369d0734",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1257,6 +1257,7 @@
       "depended_on_by": [
         "expressibility_split",
         "nonperturbative_phase1",
+        "nonperturbative_phase2",
         "s_v_nlo",
         "s_v_nlo_attempt",
         "seam_profile",
@@ -2408,6 +2409,7 @@
         "cone_twist_substrate",
         "no_rescaling",
         "nonperturbative_phase1",
+        "nonperturbative_phase2",
         "soliton_dynamics"
       ],
       "git": [
@@ -2525,6 +2527,7 @@
         "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
         "no_rescaling",
+        "nonperturbative_phase2",
         "numerology_count_phase_a",
         "numerology_count_phase_b",
         "numerology_inventory",
@@ -4506,6 +4509,7 @@
       ],
       "depended_on_by": [
         "nonperturbative_phase1",
+        "nonperturbative_phase2",
         "s_v_nlo",
         "s_v_nlo_attempt",
         "seam_profile"
@@ -4533,12 +4537,41 @@
         "unitless_audit",
         "wave_particle_substrate"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "nonperturbative_phase2"
+      ],
       "git": [
         {
           "hash": "e703afa",
           "date": "2026-05-13",
           "subject": "nonperturbative_phase1: DoF reduction makes S_v(K=1) finite-dim QM (#116)"
+        }
+      ]
+    },
+    {
+      "id": "nonperturbative_phase2",
+      "path": "sync_cost/derivations/nonperturbative_phase2.md",
+      "title": "Non-perturbative Phase 2: explicit 4\u00d74 calc gives S_v(K=1) = 16 exactly",
+      "summary": "Class 3 (derivation grade). The 4\u00d74 calc is exact in the\nfinite-mode regime. The result `S_v(K=1) = 16` follows from:",
+      "depends_on": [
+        "cone_twist_substrate",
+        "figure_eight",
+        "framework_status",
+        "no_rescaling",
+        "nonperturbative_phase1",
+        "s_v_nlo",
+        "s_v_nlo_attempt",
+        "seam_profile",
+        "soliton_dynamics",
+        "unitless_audit",
+        "wave_particle_substrate"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "3cd529f",
+          "date": "2026-05-14",
+          "subject": "nonperturbative_phase2: explicit 4\u00d74 calc gives S_v(K=1) = 16 exactly (#117)"
         }
       ]
     },
@@ -5821,6 +5854,7 @@
         "unitless_audit"
       ],
       "depended_on_by": [
+        "nonperturbative_phase2",
         "s_v_nlo_attempt"
       ],
       "git": [
@@ -5845,7 +5879,8 @@
         "unitless_audit"
       ],
       "depended_on_by": [
-        "nonperturbative_phase1"
+        "nonperturbative_phase1",
+        "nonperturbative_phase2"
       ],
       "git": [
         {
@@ -5870,6 +5905,7 @@
       ],
       "depended_on_by": [
         "nonperturbative_phase1",
+        "nonperturbative_phase2",
         "s_v_nlo",
         "s_v_nlo_attempt"
       ],
@@ -6167,6 +6203,7 @@
       "depended_on_by": [
         "cone_twist_substrate",
         "nonperturbative_phase1",
+        "nonperturbative_phase2",
         "s_v_nlo",
         "seam_profile",
         "sine_gordon_substrate",
@@ -6690,6 +6727,7 @@
       "depended_on_by": [
         "no_rescaling",
         "nonperturbative_phase1",
+        "nonperturbative_phase2",
         "s_v_nlo",
         "s_v_nlo_attempt",
         "seam_profile"
@@ -6947,6 +6985,7 @@
       "depended_on_by": [
         "no_rescaling",
         "nonperturbative_phase1",
+        "nonperturbative_phase2",
         "time_axis_split",
         "unitless_audit"
       ],
