@@ -1,5 +1,5 @@
 {
-  "generated": "144530340b2fe9eea802d9c9b15f746e6c7343a6",
+  "generated": "e703afaedf18b1f84053a5eb6ebd193f14a98589",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1256,6 +1256,7 @@
       ],
       "depended_on_by": [
         "expressibility_split",
+        "nonperturbative_phase1",
         "s_v_nlo",
         "s_v_nlo_attempt",
         "seam_profile",
@@ -2406,6 +2407,7 @@
       "depended_on_by": [
         "cone_twist_substrate",
         "no_rescaling",
+        "nonperturbative_phase1",
         "soliton_dynamics"
       ],
       "git": [
@@ -4503,6 +4505,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "nonperturbative_phase1",
         "s_v_nlo",
         "s_v_nlo_attempt",
         "seam_profile"
@@ -4512,6 +4515,30 @@
           "hash": "ca4e229",
           "date": "2026-05-13",
           "subject": "unitless_audit: end-to-end audit of substrate primitives in Planck units (#112)"
+        }
+      ]
+    },
+    {
+      "id": "nonperturbative_phase1",
+      "path": "sync_cost/derivations/nonperturbative_phase1.md",
+      "title": "Non-perturbative substrate: Phase 1 (the DoF reduction)",
+      "summary": "Class 3 (synthesis-and-roadmap). The DoF reduction is a\ndirect reading of `figure_eight.md` applied to the\naudit's regime; no new framework primitives. The Phase 2 calc\nthat would actually compute `S_v(K=1)` is now well-defined\n(specific 4\u00d74 matrix to diagonalise) and substrate-Lagrangian-\nlevel tractable.",
+      "depends_on": [
+        "cone_twist_substrate",
+        "figure_eight",
+        "no_rescaling",
+        "s_v_nlo_attempt",
+        "seam_profile",
+        "soliton_dynamics",
+        "unitless_audit",
+        "wave_particle_substrate"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "e703afa",
+          "date": "2026-05-13",
+          "subject": "nonperturbative_phase1: DoF reduction makes S_v(K=1) finite-dim QM (#116)"
         }
       ]
     },
@@ -5817,7 +5844,9 @@
         "seam_profile",
         "unitless_audit"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "nonperturbative_phase1"
+      ],
       "git": [
         {
           "hash": "1445303",
@@ -5840,6 +5869,7 @@
         "unitless_audit"
       ],
       "depended_on_by": [
+        "nonperturbative_phase1",
         "s_v_nlo",
         "s_v_nlo_attempt"
       ],
@@ -6136,6 +6166,7 @@
       ],
       "depended_on_by": [
         "cone_twist_substrate",
+        "nonperturbative_phase1",
         "s_v_nlo",
         "seam_profile",
         "sine_gordon_substrate",
@@ -6658,6 +6689,7 @@
       ],
       "depended_on_by": [
         "no_rescaling",
+        "nonperturbative_phase1",
         "s_v_nlo",
         "s_v_nlo_attempt",
         "seam_profile"
@@ -6914,6 +6946,7 @@
       ],
       "depended_on_by": [
         "no_rescaling",
+        "nonperturbative_phase1",
         "time_axis_split",
         "unitless_audit"
       ],
