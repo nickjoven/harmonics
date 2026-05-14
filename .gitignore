@@ -13,3 +13,6 @@ engine/
 # no thanks
 CLAUDE.md
 external/
+
+# Claude Code background-agent local worktrees
+.claude/worktrees/
