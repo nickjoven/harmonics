@@ -215,11 +215,14 @@ No new framework primitives.
 
 ## Open
 
-1. **Why `f_exit = exp(−S_v)` exactly.** The framework's structural
-   choice that exit fraction equals the Boltzmann factor at the
-   vortex-pair action is parsimonious but not derived from a
-   specific mechanism. Substrate-Lagrangian-level derivation would
-   confirm or refine.
+1. **Why `f_exit = exp(−S_v)` exactly.** **Closed by
+   `f_exit_natural.md`** (2026-05). The Boltzmann factor is the
+   natural specialization of the framework's already-committed
+   action-weighted path-integral sampling (`wave_particle_substrate.md`,
+   `cone_twist_substrate.md` §4, `nonperturbative_phase1.md`) to
+   exit-class tokens with action `S_v = 16`. Not a separate
+   parsimony commitment; forced by the framework's existing
+   path-integral form.
 
 2. **Inflation-era K_cosmic.** The framework's prediction of
    `|∇K|_inflation ≈ 3.55` does not directly give K_cosmic at
