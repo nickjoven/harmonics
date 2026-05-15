@@ -1,5 +1,16 @@
 # E_cross calculation: the textbook route gives a pathology
 
+> **SUPERSEDED (2026-05) by `e_cross_discrete_resolution.md`.**
+> This doc's continuum `E_cross = −2 M_k` pathology and its
+> `0 < S_v(K=1) < 16` bound are **representation errors**: they
+> compute a fundamental discrete substrate quantity through the
+> framework-foreign continuum shadow (infinite-domain integrals).
+> In the framework's native discrete 4-mode representation,
+> `E_cross ≈ −5×10⁻⁸` and `S_v(K=1) ≈ 16` to ~`10⁻⁸`. Read this
+> doc as the recorded continuum-route attempt; read
+> `e_cross_discrete_resolution.md` for the resolved result and the
+> (different, well-posed) residual open item.
+
 Item 1 of the remaining bounded work: compute `E_cross`, the
 crossed-sine-Gordon jog energy at the q₁/q₂ orthogonal kink
 intersection on the Klein bottle (`orthogonal_kink_interaction.md`).
