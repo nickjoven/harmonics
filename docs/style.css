@@ -266,6 +266,64 @@ footer a { color: var(--text-dim); }
 .katex { font-size: 1em; }
 .katex-display { margin: 1.2em 0; overflow-x: auto; }
 
+/* ── Chalkboard (interactive glossary) ──── */
+
+details.chalk {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--accent-dim);
+  border-radius: 4px;
+  padding: 0.7em 1em;
+  margin: 0.6em 0;
+}
+details.chalk[open] {
+  border-left-color: var(--accent);
+}
+details.chalk summary {
+  cursor: pointer;
+  color: var(--text-bright);
+  list-style: none;
+  font-size: 0.95em;
+}
+details.chalk summary::-webkit-details-marker { display: none; }
+details.chalk summary::before {
+  content: '▸ ';
+  color: var(--accent-dim);
+  font-size: 0.8em;
+}
+details.chalk[open] summary::before { content: '▾ '; }
+details.chalk summary .head-val {
+  color: var(--accent);
+  font-family: 'Menlo', monospace;
+  font-size: 0.88em;
+  margin-left: 0.6em;
+}
+details.chalk .board {
+  margin-top: 0.8em;
+  padding-top: 0.8em;
+  border-top: 1px dashed var(--border);
+  font-size: 0.92em;
+}
+details.chalk .board ol {
+  padding-left: 1.4em;
+  margin: 0.4em 0 0.6em;
+}
+details.chalk .board ol li { margin: 0.3em 0; }
+details.chalk .verdict {
+  margin-top: 0.6em;
+  font-size: 0.85em;
+  color: var(--text-dim);
+}
+details.chalk .verdict.match { color: var(--green); }
+details.chalk .verdict.exact { color: var(--green); }
+details.chalk .verdict.def { color: var(--text-dim); font-style: italic; }
+.chalk-section-note {
+  color: var(--text-dim);
+  font-size: 0.88em;
+  margin: 0.4em 0 1em;
+  font-style: italic;
+}
+
 /* ── Responsive ──────────────────────────── */
 
 @media (max-width: 640px) {
