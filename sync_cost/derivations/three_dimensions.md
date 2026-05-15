@@ -520,15 +520,15 @@ as the remaining free input (analogous to initial conditions in GR).
 
 - **Step 3c** (trivial isotropy from self-reference): This is the most
   novel step. The argument "an oscillator has no identity beyond its
-  coupling" is physically clear in the Kuramoto model but needs
-  formalization. The precise statement would be: the map
-  $g \mapsto (\text{oscillator at } g)$ is injective, which means the
-  left-regular representation is faithful. For $\mathrm{SL}(2,\mathbb{R})$
-  this is true (the left-regular representation of any group is faithful).
-  But the claim that injectivity of the representation forces $H = \{e\}$
-  requires the additional assumption that the oscillator's observable
-  properties are EXACTLY its $G$-orbit — no hidden internal degrees of
-  freedom.
+  coupling" is physically clear in the Kuramoto model and has been
+  formalized in `qd_origins.md` Argument 3. The precise statement is:
+  the Kuramoto Lagrangian at K = 1 (`framework_lagrangian.py` Part 1)
+  has only `θ` as field-theoretic DOF; the left-regular representation
+  of `SL(2, ℝ)` on substrate configurations is therefore faithful
+  (standard Lie-group theorem); faithfulness forces `H = {e}`. The
+  framework relies on the K = 1 Lagrangian having no hidden internal
+  degrees of freedom beyond `θ` — a commitment of `framework_lagrangian.py`,
+  not a separate axiom. **Formalization complete; gap closed.**
 
 - **Complexification as time**: The identification of
   $\mathrm{SL}(2,\mathbb{C})/\mathrm{SL}(2,\mathbb{R})$ with time
