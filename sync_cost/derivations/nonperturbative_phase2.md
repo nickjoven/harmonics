@@ -31,6 +31,18 @@ the explicit 4×4 calc:
 > The "first Category-A item closed at exact precision" framing is
 > downgraded to "closed at leading order; exact-precision pending
 > the orthogonal-kink-interaction calc."
+>
+> **Further superseded (2026-05) by `discrete_reduction_problem.md`.**
+> This doc's symmetric energies `(0, M_k, M_k, 2 M_k)` assumed
+> `E_B = E_C` "by sector-swap symmetry." The discrete reduction's
+> leading hand-attempt shows that symmetry is **broken at the
+> lattice level by the antiperiodic identification** (B's kink is
+> periodic-y, C's is antiperiodic-x; the sign-flip closing step has
+> no periodic analog). The discrete diagonal is `(0, E_B, E_C,
+> E_D)` with `E_B ≠ E_C`; `S_v(K=1)` is a finite, direction-
+> asymmetric sum, **not** the continuum-symmetric `16`. The `≈ 16`
+> here is a continuum-shadow value; the native discrete value is
+> superseded pending the full `H_CC` antiperiodic-BC calc.
 
 **Headline result:** `S_v(K=1) = 16` at leading order in the
 finite-mode (kink-fills-loop) regime. The seam-profile derivation's

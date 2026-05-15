@@ -111,6 +111,19 @@ reduction being the complete fundamental representation of the
 substrate at K=1.** That conditionality is the one genuinely
 remaining open item:
 
+> **Update (2026-05), `discrete_reduction_problem.md`.** The `≈ 16`
+> here used the *symmetric* discrete diagonal `(0, M_k, M_k,
+> 2 M_k)` (`E_B = E_C`). The discrete reduction's leading
+> hand-attempt shows `E_B ≠ E_C`: the half-twist (antiperiodic-x
+> vs periodic-y) breaks the sector-swap degeneracy at the lattice
+> level. So the discrete-native `S_v(K=1)` is `E_B + E_C +
+> E_cross^discrete` — finite, direction-asymmetric, **not** the
+> symmetric `16`. This doc's "`≈ 16`" was the symmetric-diagonal
+> simplification; the asymmetric value supersedes it, pending the
+> full `H_CC` antiperiodic-BC computation. The *representation*
+> point of this doc (discrete, not continuum integral) stands; it
+> is the symmetric-energy *value* that is superseded.
+
 > **Derive the explicit substrate-Lagrangian → 4-mode reduction
 > matrix** (the real Phase 2 deliverable, queued in
 > `nonperturbative_phase1.md`, never delivered). This is a *discrete*

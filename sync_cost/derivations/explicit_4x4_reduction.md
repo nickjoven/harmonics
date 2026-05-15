@@ -94,6 +94,18 @@ formula, not an assumption).
 8`. Derived (from the symmetry, which is itself a Klein-bottle
 structural fact).
 
+> **Superseded (2026-05) by `discrete_reduction_problem.md`.** The
+> `E_C = E_B` step here invokes a *continuum* sector-swap
+> symmetry. The discrete reduction's leading hand-attempt shows
+> that symmetry is **broken at the lattice level**: mode B's kink
+> is in the periodic-y direction, mode C's in the antiperiodic-x
+> direction, and the antiperiodic sign-flip closing step has no
+> periodic analog, so `E_B ≠ E_C`. The half-twist breaks the
+> degeneracy. The symmetric `(0, M_k, M_k, 2M_k)` is a continuum
+> artifact; the discrete diagonal is `(0, E_B, E_C, E_D)` with
+> `E_B ≠ E_C`. Magnitude of the asymmetry pending the full
+> antiperiodic-BC computation of `H_CC`.
+
 **E_D**: one kink each direction. At leading order (non-interacting
 kinks in orthogonal directions on the Klein bottle), energies add:
 **`E_D = 2 M_k = 16`**. The kink-kink interaction correction is
