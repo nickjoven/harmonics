@@ -1,5 +1,5 @@
 {
-  "generated": "252d8acfe9fbc38e4cfb893884a5dee3b2330071",
+  "generated": "f2f4e04f65dc272cfef38fb78215b7db0fe5bdea",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1256,6 +1256,7 @@
       ],
       "depended_on_by": [
         "expressibility_split",
+        "f_exit_natural",
         "inflation_duration",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
@@ -2238,6 +2239,31 @@
           "hash": "9a97408",
           "date": "2026-05-10",
           "subject": "Pedagogical: link EML/lambda split to bowed-string/clarinet/flute trio (#96)"
+        }
+      ]
+    },
+    {
+      "id": "f_exit_natural",
+      "path": "sync_cost/derivations/f_exit_natural.md",
+      "title": "f_exit = exp(\u2212S_v) as the natural action-weighted lens",
+      "summary": "Class 3 (derivation grade). The argument uses only:",
+      "depends_on": [
+        "cone_twist_substrate",
+        "inflation_duration",
+        "nonperturbative_phase1",
+        "nonperturbative_phase2",
+        "qd_origins",
+        "rectangle_perpendicularity",
+        "wave_particle_substrate"
+      ],
+      "depended_on_by": [
+        "inflation_duration"
+      ],
+      "git": [
+        {
+          "hash": "f2f4e04",
+          "date": "2026-05-15",
+          "subject": "f_exit_natural: close audit Finding 5 (f_exit = exp(-S_v) parsimony) (#123)"
         }
       ]
     },
@@ -3494,15 +3520,25 @@
       "summary": "`|\u2207K|_seam(t)` is now a derived framework function. Inflation\nduration follows from `S_v = 16` and `H_inflation`. The super-Earth\nanalogy (structural pattern only, not gravitational mechanics \u2014\nsee `s_inst_inflation.md` disclaimer) is conceptually confirmed\nbut operationally resolved: hard exit, many attempts, eventual\nsuccess \u2014 with \"hard\" meaning *Boltzmann-suppressed sampling\nprobability per attempt*, not *energetic escape from a potential\nwell*. The framework's no-rescaling principle is now ",
       "depends_on": [
         "cone_twist_substrate",
+        "f_exit_natural",
         "half_twist_dynamics",
         "no_rescaling",
+        "nonperturbative_phase1",
         "nonperturbative_phase2",
         "s_inst_inflation",
         "time_axis_split",
-        "unitless_audit"
+        "unitless_audit",
+        "wave_particle_substrate"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "f_exit_natural"
+      ],
       "git": [
+        {
+          "hash": "f2f4e04",
+          "date": "2026-05-15",
+          "subject": "f_exit_natural: close audit Finding 5 (f_exit = exp(-S_v) parsimony) (#123)"
+        },
         {
           "hash": "84c4c2a",
           "date": "2026-05-14",
@@ -4589,6 +4625,8 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "f_exit_natural",
+        "inflation_duration",
         "nonperturbative_phase2",
         "nonperturbative_phase3",
         "qd_origins"
@@ -4620,6 +4658,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "f_exit_natural",
         "inflation_duration",
         "nonperturbative_phase3",
         "s_inst_inflation"
@@ -5729,6 +5768,7 @@
         "xor_derivation"
       ],
       "depended_on_by": [
+        "f_exit_natural",
         "hierarchy_gaussian_lattice",
         "three_dimensions"
       ],
@@ -5905,8 +5945,10 @@
         "klein_bottle_derivation"
       ],
       "depended_on_by": [
+        "f_exit_natural",
         "klein_bottle_derivation",
-        "qd_origins"
+        "qd_origins",
+        "wave_particle_substrate"
       ],
       "git": [
         {
@@ -7138,8 +7180,8 @@
     {
       "id": "wave_particle_substrate",
       "path": "sync_cost/derivations/wave_particle_substrate.md",
-      "title": "Wave\u2013particle substrate: the four-object framework synthesis",
-      "summary": "Four objects are sufficient to specify the framework's structural\ncontent:",
+      "title": "Wave\u2013particle substrate: the two-primitive framework synthesis",
+      "summary": "The framework's structural content is specified by **two primitives\nplus their two derived consequences**:",
       "depends_on": [
         "comparison_class",
         "cone_twist_substrate",
@@ -7150,12 +7192,15 @@
         "klein_bottle_derivation",
         "klein_bridge_audit_and_probe",
         "master_cascade_identity",
+        "rectangle_perpendicularity",
         "sine_gordon_substrate",
         "soliton_dynamics",
         "time_axis_split",
         "unitless_check"
       ],
       "depended_on_by": [
+        "f_exit_natural",
+        "inflation_duration",
         "no_rescaling",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
@@ -7163,6 +7208,11 @@
         "unitless_audit"
       ],
       "git": [
+        {
+          "hash": "f2f4e04",
+          "date": "2026-05-15",
+          "subject": "f_exit_natural: close audit Finding 5 (f_exit = exp(-S_v) parsimony) (#123)"
+        },
         {
           "hash": "3a57d3c",
           "date": "2026-05-12",
