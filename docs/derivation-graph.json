@@ -1,5 +1,5 @@
 {
-  "generated": "84c4c2af43a71022052a503e5f6b0e03c3053841",
+  "generated": "bf0cf7e8d8fb2c8887f1a8104e15226d3046a90c",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -2222,6 +2222,7 @@
         "cone_twist_substrate",
         "medium_change_demo",
         "no_rescaling",
+        "rectangle_perpendicularity",
         "seam_profile",
         "wave_particle_substrate"
       ],
@@ -2548,6 +2549,7 @@
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
         "psl2z_subgroup_phase_c_inventory",
+        "rectangle_perpendicularity",
         "remaining_gap_shapes",
         "s_v_nlo",
         "s_v_nlo_attempt",
@@ -3789,6 +3791,7 @@
         "klein_bottle_derivation",
         "klein_connection",
         "klein_nodal_parity",
+        "rectangle_perpendicularity",
         "second_law_topological",
         "sine_gordon_substrate",
         "soliton_dynamics",
@@ -3875,6 +3878,7 @@
         "minimum_alphabet",
         "minkowski_signature",
         "rank1_temporal_causation",
+        "rectangle_perpendicularity",
         "sine_gordon_substrate",
         "three_dimensions",
         "time_axis_split",
@@ -3894,6 +3898,7 @@
         "klein_dynamics_roadmap",
         "numerology_inventory",
         "omega_b_residual_phase_a",
+        "rectangle_perpendicularity",
         "second_law_topological",
         "sector_decoupling_phase_a",
         "sine_gordon_substrate",
@@ -3904,6 +3909,11 @@
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "bf0cf7e",
+          "date": "2026-05-14",
+          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+        },
         {
           "hash": "e27106f",
           "date": "2026-05-10",
@@ -5840,6 +5850,28 @@
           "hash": "e1e25da",
           "date": "2026-04-13",
           "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        }
+      ]
+    },
+    {
+      "id": "rectangle_perpendicularity",
+      "path": "sync_cost/derivations/rectangle_perpendicularity.md",
+      "title": "Rectangle ansatz from perpendicularity and antiperiodic isometry",
+      "summary": "Class 3 (derivation grade). The argument uses only existing\nframework structure (mediant + 2-S\u00b9-factors from Part I, antiperiodic-\nwith-reflection identification from `klein_bottle.md`) and standard\n2D geometry (isometry of reflection requires perpendicularity).",
+      "depends_on": [
+        "expressibility_split",
+        "framework_status",
+        "klein_bottle",
+        "klein_bottle_derivation"
+      ],
+      "depended_on_by": [
+        "klein_bottle_derivation"
+      ],
+      "git": [
+        {
+          "hash": "bf0cf7e",
+          "date": "2026-05-14",
+          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
         }
       ]
     },
