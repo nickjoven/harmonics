@@ -1,5 +1,5 @@
 {
-  "generated": "bf0cf7e8d8fb2c8887f1a8104e15226d3046a90c",
+  "generated": "252d8acfe9fbc38e4cfb893884a5dee3b2330071",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -2070,6 +2070,7 @@
         "gauge_dictionary",
         "klein_connection",
         "master_cascade_identity",
+        "qd_origins",
         "quantum_gravity_interpolation",
         "sine_gordon_substrate",
         "soliton_dynamics",
@@ -2222,6 +2223,7 @@
         "cone_twist_substrate",
         "medium_change_demo",
         "no_rescaling",
+        "qd_origins",
         "rectangle_perpendicularity",
         "seam_profile",
         "wave_particle_substrate"
@@ -2549,6 +2551,7 @@
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
         "psl2z_subgroup_phase_c_inventory",
+        "qd_origins",
         "rectangle_perpendicularity",
         "remaining_gap_shapes",
         "s_v_nlo",
@@ -3192,6 +3195,7 @@
         "gauge_factorization",
         "h_inf_status",
         "klein_bottle_derivation",
+        "qd_origins",
         "sinw_effective_dimension",
         "statistical_conventions",
         "three_dimensions",
@@ -3219,12 +3223,18 @@
         "path_closures_iter1",
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
+        "qd_origins",
         "session_audit",
         "statistical_conventions",
         "three_formalizations",
         "time_axis_split"
       ],
       "git": [
+        {
+          "hash": "252d8ac",
+          "date": "2026-05-15",
+          "subject": "qd_origins: close audit Finding 2 (small primes + d = 3 \"smuggled in\") (#121)"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -3898,6 +3908,7 @@
         "klein_dynamics_roadmap",
         "numerology_inventory",
         "omega_b_residual_phase_a",
+        "qd_origins",
         "rectangle_perpendicularity",
         "second_law_topological",
         "sector_decoupling_phase_a",
@@ -4579,7 +4590,8 @@
       ],
       "depended_on_by": [
         "nonperturbative_phase2",
-        "nonperturbative_phase3"
+        "nonperturbative_phase3",
+        "qd_origins"
       ],
       "git": [
         {
@@ -5701,6 +5713,34 @@
       ]
     },
     {
+      "id": "qd_origins",
+      "path": "sync_cost/derivations/qd_origins.md",
+      "title": "Origins of (q\u2082, q\u2083, d) = (2, 3, 3) from the four objects",
+      "summary": "Class 3 (derivation grade). The three arguments use:",
+      "depends_on": [
+        "einstein_from_kuramoto",
+        "expressibility_split",
+        "framework_status",
+        "hierarchy_gaussian_lattice",
+        "klein_bottle_derivation",
+        "nonperturbative_phase1",
+        "rectangle_perpendicularity",
+        "three_dimensions",
+        "xor_derivation"
+      ],
+      "depended_on_by": [
+        "hierarchy_gaussian_lattice",
+        "three_dimensions"
+      ],
+      "git": [
+        {
+          "hash": "252d8ac",
+          "date": "2026-05-15",
+          "subject": "qd_origins: close audit Finding 2 (small primes + d = 3 \"smuggled in\") (#121)"
+        }
+      ]
+    },
+    {
       "id": "quantum_gravity_interpolation",
       "path": "sync_cost/derivations/quantum_gravity_interpolation.md",
       "title": "Quantum Gravity from the Rational Field Equation at K \u2248 1",
@@ -5865,7 +5905,8 @@
         "klein_bottle_derivation"
       ],
       "depended_on_by": [
-        "klein_bottle_derivation"
+        "klein_bottle_derivation",
+        "qd_origins"
       ],
       "git": [
         {
@@ -6657,7 +6698,8 @@
       "depends_on": [
         "PROOF_A_gravity",
         "PROOF_B_quantum",
-        "einstein_from_kuramoto"
+        "einstein_from_kuramoto",
+        "qd_origins"
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
@@ -6677,12 +6719,18 @@
         "klein_bottle_derivation",
         "numerology_inventory",
         "phenomenology_cross_reference",
+        "qd_origins",
         "sinw_effective_dimension",
         "spatial_coupling_derived",
         "structural_lemmas",
         "three_formalizations"
       ],
       "git": [
+        {
+          "hash": "252d8ac",
+          "date": "2026-05-15",
+          "subject": "qd_origins: close audit Finding 2 (small primes + d = 3 \"smuggled in\") (#121)"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -7164,7 +7212,8 @@
         "klein_bottle_derivation",
         "numerology_inventory",
         "observer_register_closure",
-        "omega_partition_combinatorial"
+        "omega_partition_combinatorial",
+        "qd_origins"
       ],
       "git": [
         {
