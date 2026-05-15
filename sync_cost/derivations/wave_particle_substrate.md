@@ -1,4 +1,4 @@
-# Wave–particle substrate: the four-object framework synthesis
+# Wave–particle substrate: the two-primitive framework synthesis
 
 Top-level synthesis doc, parallel in level to `expressibility_split.md`,
 `comparison_class.md`, and `unitless_check.md`. Names the framework's
@@ -6,30 +6,76 @@ structural ontology in full and reads its sectors (matter / dark
 energy, time-arrow / time-clock, experience / counterfactuals) as a
 single wave–particle duality enacted on the substrate.
 
+> **Revision note (2026-05).** This doc originally framed the
+> synthesis as "four objects": mediant + EML + half-twist + Klein
+> bottle. The reduction audit (`reduction_audit.md` on branch
+> `worktree-agent-a9ef1ddbbd73ce058`) found that **two of those
+> objects are derived consequences of the other two**: Klein bottle
+> is forced by `klein_bottle_derivation.md` from {no boundary +
+> non-orientable + parabola}; half-twist is the Z₂ structure forced
+> by Klein bottle's antiperiodic identification. The framework's
+> *actual* parsimony is **two primitives** (mediant + EML), with
+> the Klein bottle and half-twist as their structural consequences.
+>
+> The "four-object" framing was an over-count by including derived
+> consequences. The two-primitive framing is tighter and structurally
+> honest. The same reduction audit also showed the framework cannot
+> compress further (Sheffer-stroke reduction to NAND + counting is
+> independently blocked by three falsifiers: parabola
+> irreducibility, Wick-rotation continuous square root, EML's
+> function-level Sheffer-stroke universality).
+>
+> **The framework's true minimum information structure is two
+> primitives.** Not four. Not one. Two.
+
 No new primitives. Every claim in this doc is a rereading of pieces
 already in the framework. The contribution is **what the pieces add
 up to** when assembled.
 
 ## Claim
 
-Four objects are sufficient to specify the framework's structural
-content:
+The framework's structural content is specified by **two primitives
+plus their two derived consequences**:
 
-1. **Two universal generators** — `mediant` (discrete combinatorics)
-   and `eml` (continuous transcendentals); see `expressibility_split.md`.
-2. **One operator** — the half-twist `θ → θ + π` of
-   `klein_bottle.md`'s single antiperiodic direction; converts
-   particle-side configurations to wave-side amplitudes (Wick rotation).
-3. **One coordinate** — the K-axis (cascade-depth direction); the
-   stage on which the duality is parametrised.
-4. **One topology** — the Klein bottle; the rigidity that keeps the
-   composition consistent (unitarity).
+### Two primitives (genuinely independent)
+
+1. **Mediant** — `(a/b, c/d) → (a+c)/(b+d)`. Discrete combinatorics
+   generator; produces the Stern–Brocot tree, integer mode counts,
+   Farey arithmetic. The *particle-side* universal generator. See
+   `expressibility_split.md`.
+
+2. **EML** — `eml(x, y) = exp(x) − ln(y)` plus the constant 1.
+   Sheffer-stroke universal generator for elementary continuous
+   mathematics. The *wave-side* universal generator. See
+   `expressibility_split.md`.
+
+These two primitives are *not* reducible to one (reduction audit
+verdict: undermined; three independent blockers).
+
+### Two derived consequences (forced by the primitives)
+
+3. **Half-twist** `θ → θ + π` — Z₂ topological operation. **Derived**
+   from the Klein bottle's antiperiodic identification, which is
+   itself derived from the primitives. Converts particle-side
+   configurations to wave-side amplitudes (Wick rotation).
+
+4. **Klein bottle** — 2D non-orientable substrate topology.
+   **Derived** by `klein_bottle_derivation.md` (parabola two-roots +
+   no-boundary + non-orientable) plus `rectangle_perpendicularity.md`
+   (the rectangle ansatz is forced by mediant's 2-vector
+   non-reducibility + antiperiodic-with-reflection isometry).
+
+The Klein bottle and half-twist are structurally important — they
+provide the substrate's *rigidity container* — but they are
+*consequences* of {mediant + EML + substrate-existence commitment},
+not independent primitives.
 
 Everything else — matter, dark energy, time, experience, mass spectra,
 gauge bosons, kinks, vortices, breathers, the K-zoo, the seam — is a
-configuration of these four. The framework is **unusually parsimonious**
-for an ontology that touches this much physics; that parsimony is the
-synthesis worth committing.
+configuration of the two primitives, expressed through their
+derived consequences. The framework is **unusually parsimonious** —
+two primitives — for an ontology that touches this much physics; that
+parsimony is the synthesis worth committing.
 
 ## The two generators are wave–particle duality
 
@@ -137,7 +183,7 @@ sides of the same substrate.
 
 The half-twist is the operator; the Klein bottle is the **rigidity
 container** that keeps the operator topologically protected. Three
-properties of the Klein bottle make the four-object ontology consistent:
+properties of the Klein bottle make the two-primitive ontology consistent (the Klein bottle is itself derived; these properties are the structural payoffs of that derivation):
 
 1. **No boundary.** Nothing enters, nothing exits; the duality is
    self-contained.
@@ -189,10 +235,16 @@ counterfactuals.
 framework pieces, assembled into a single ontology. The contribution
 is **what the pieces add up to**; no new derivations are imported.
 
-The four-object ontology is unusually parsimonious — fewer objects
-than any comparable framework — and that parsimony is the synthesis's
-own falsifier: if any of the four objects can be removed (or if a
-fifth is required), the synthesis fails.
+The two-primitive ontology is unusually parsimonious — two
+primitives plus two derived consequences, after the reduction audit
+clarified that the previously-claimed four were really two + two —
+and that parsimony is the synthesis's own falsifier: if any of the
+two primitives can be removed (or if a third is required), the
+synthesis fails. (The reduction audit also confirms that the
+framework cannot compress *below* two primitives: Sheffer-stroke
+reduction to a single Boolean + counting system is blocked by
+parabola irreducibility, Wick-rotation continuous square root, and
+EML's function-level Sheffer-stroke universality.)
 
 ### What this does establish
 
@@ -204,10 +256,11 @@ fifth is required), the synthesis fails.
 - Matter / dark energy, time-arrow / time-clock, and experience /
   counterfactuals are three instances of the same particle / wave
   split applied to three substrate sectors.
-- The framework's content is specified by **four objects**, full stop.
+- The framework's content is specified by **two primitives** (with
+  two derived consequences), full stop.
 
 **Observation is event-defined, not entity-defined.** A consequence
-of the four-object closure worth registering separately: nothing
+of the two-primitive closure worth registering separately: nothing
 structural distinguishes "observers" from any other matter
 configuration. A granite block participates in the same kind of
 substrate event at every D-crossing in its region as a brain does
@@ -221,7 +274,7 @@ configurations of sufficient persistence and complexity to
 integrate sequences of D-crossings into self-referential records."
 This is a positive falsifier: any phenomenon requiring a
 consciousness postulate *at the substrate level* (rather than as
-emergent record-integration physics) falsifies the four-object
+emergent record-integration physics) falsifies the two-primitive
 closure. Wigner's friend, observer-collapse, and panpsychism are
 correspondingly excluded.
 
@@ -251,11 +304,16 @@ correspondingly excluded.
   Wick-rotation phase should all be **the same π** (mod 2π). Any
   measurement showing them numerically different falsifies the
   half-twist unification.
-- **A fifth object required.** If any prediction of the framework
-  cannot be expressed as a configuration of the four objects, the
-  synthesis fails. The most likely such "fifth" candidate would be a
-  new continuous symmetry generator (gauge, conformal) not reducible
-  to mediant / EML composition. None has yet been identified.
+- **A third primitive required.** If any prediction of the framework
+  cannot be expressed as a configuration of the two primitives
+  (mediant + EML) plus their derived consequences (Klein bottle +
+  half-twist), the synthesis fails. The most likely such "third
+  primitive" candidate would be a new continuous symmetry generator
+  (gauge, conformal) not reducible to mediant / EML composition.
+  None has yet been identified. Note: the reduction audit
+  (`reduction_audit.md`) also rules out reduction in the *other*
+  direction — the framework cannot compress to one Sheffer-stroke +
+  counting either. Two primitives is forced.
 - **Observer motion along the K-axis.** If matter-bound observers can
   be shown to move freely along the K-axis (not just along the Klein-
   bottle base), the particle-side localisation on single fibers fails
