@@ -7,6 +7,14 @@ three framework integers (q₂ = 2, q₃ = 3, d = 3); no fitted factors:
 
   R = q₂ q₃ × (q₂² + q₃²)^{q₂ q₃^d} = 6 × 13^54
 
+The three structural inputs (q₂, q₃, d) are themselves derived from
+the four objects (mediant + EML + half-twist + Klein bottle) in
+`qd_origins.md`: q₂ = 2 and q₃ = 3 are the smallest XOR-compatible
+denominators with both q > 1 (Stern–Brocot + Klein-bottle XOR
+constraint); d = 3 follows from the faithful left-regular
+representation of SL(2, ℝ) on the K = 1 substrate (Argument 3,
+formalization of `three_dimensions.md` Step 3c).
+
   Coefficient:  q₂ q₃ = 6 = |Z₆|, the gauge center order
   Base:         q₂² + q₃² = 13 = |q₂ + i q₃|², the Gaussian norm
   Exponent:     q₂ q₃^d = 54, the gauge cell count of K²
