@@ -1,5 +1,20 @@
 # The explicit 4×4 reduction matrix: real Phase 2
 
+> **CORRECTION NOTE (2026-05) — this doc over-corrected.**
+> `dark_twin_correction.md` withdraws this doc's `S_v ≈ 13`
+> retraction. Part A applied the **collinear** kink–antikink
+> attraction `M_k exp(−L/ℓ)` to mode D, but mode D is **orthogonal**
+> Klein-bottle kinks (q₁ antiperiodic/dark-coupled + q₂ periodic),
+> not a collinear pair — the formula does not apply. Part C's
+> "continuum contamination" was treating dark-sector wave-side
+> twins as independent matter modes. With the matter/dark Z₂
+> twinning, both concerns are withdrawn. **Corrected state:
+> `S_v(K=1) ≈ 16` at leading order** (not `≈ 13`); "exact" still
+> not claimable because the *orthogonal*-kink interaction is open
+> (but it is parametrically distinct from the spurious collinear
+> `≈ 3`). Read this doc as the recorded wrong turn; read
+> `dark_twin_correction.md` for the corrected result.
+
 The real Phase 2 deliverable, queued in `nonperturbative_phase1.md`
 and not delivered in `nonperturbative_phase2.md` (which *assumed*
 the 4-mode reduction and the energies `(0, M_k, M_k, 2 M_k)` rather
