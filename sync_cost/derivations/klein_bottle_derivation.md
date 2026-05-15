@@ -91,9 +91,17 @@ without boundary constructable from edge identifications are:
    - (x + L₁, y) ~ (x, L₂ − y) with half-twist
    - (x, y + L₂) ~ (L₁ − x, y) with half-twist
 
-(The sphere S² cannot be obtained from rectangle identifications. Higher-
-genus surfaces require additional handles, which have no motivation from
-the two-S¹ structure.)
+(The sphere S² cannot be obtained from rectangle identifications.
+Higher-genus surfaces are excluded by the perpendicularity argument
+of `rectangle_perpendicularity.md`: the framework's antiperiodic-
+with-reflection identification `f(x + L_x, y) = − f(x, L_y − y)`
+requires the reflection `y → L_y − y` to be a metric isometry,
+which forces 90° between x and y. Genus-N surfaces have
+4N-gon fundamental domains with interior angles incompatible with
+90° corners between every pair of identified edges. The rectangle
+is therefore *forced*, not assumed: two S¹ factors from the
+mediant's 2-vector structure [Part I] + 90°-corner antiperiodic-
+isometry requirement → unique rectangular fundamental domain.)
 
 ---
 
