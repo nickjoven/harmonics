@@ -209,6 +209,79 @@ Z₂), not hidden-variable — so Bell's theorem does not exclude it
 reading). This is the consistency condition the settling
 computation must respect.
 
+## The momentum-dissolution argument (the strongest case for B)
+
+A reframing that materially sharpens the prior for (B): **the
+substrate needs no momentum, because it is first-order
+autoregressive, not second-order Hamiltonian.**
+
+Pose the question operationally: given the *position* of everything
+(the full substrate configuration / realized token sequence), the
+*tilt* (the half-twist Z₂ conversion structure / seam orientation),
+and the *anchors* (the two observational scales `H₀`, `v_EW` plus
+the BOS initial condition) — **but not momentum** — can the next
+frame be computed?
+
+A second-order system (classical Hamiltonian) answers *no*:
+position alone underdetermines the trajectory; momentum is
+required. But the framework's substrate, read autoregressively, is
+**first-order discrete**: the next token depends on the prior token
+sequence within the context window `L_x`, not on a conjugate
+momentum. **In an autoregressive process, the realized history
+substitutes for momentum.** (This is the `nonperturbative_phase1.md`
+/ wave-particle "linear token generation" reading made rigorous: a
+language model has no momentum variable; the next token is fixed by
+prior tokens + weights. The substrate is structurally identical.)
+
+So the operational answer is **yes**: position + tilt + anchors +
+context (prior tokens within `L_x`) → next frame, deterministically,
+*with no momentum and no irreducible stochastic input* — which is
+exactly branch (B).
+
+### The apparent paradox, resolved
+
+The substrate Lagrangian *is* second-order (`(∂_t θ)²` →
+`m ∂²_t θ`). How is it also first-order autoregressive? **The
+second-order continuum Lagrangian is the coarse-grained shadow of
+the first-order discrete process.** Discretizing a first-order
+context-dependent update rule produces a continuum PDE that *looks*
+second-order: the context-dependence becomes the time-derivative
+term. The continuum "momentum" is an emergent artifact of
+coarse-graining the discrete context-dependence, not a fundamental
+conjugate variable. (Standard lattice→continuum: a discrete update
+with memory yields a continuum wave equation; the "velocity" is the
+coarse-grained memory.)
+
+The framework therefore needs no momentum at the fundamental level.
+Momentum is what the continuum approximation *invents* to summarize
+the discrete context the autoregressive process actually uses.
+"Position but not momentum, but the tilt and the anchors" is the
+operational statement of branch (B): the universe computes its next
+frame the way a language model computes its next token —
+deterministically given context + weights — and the apparent need
+for momentum is an artifact of the continuum description.
+
+### What this changes for the prior
+
+This is the strongest single argument for (B) so far. It does not
+*prove* (B) — the autoregressive reading is a framework commitment,
+and the settling computation (explicit token-sequence derivation)
+is still required — but it removes the classical objection that
+"position without momentum is underdetermined": that objection
+assumes second-order dynamics, which the framework's discrete
+substrate is not. The prior for (B) strengthens from "the audit
+keeps producing exact integers" to "the audit keeps producing
+exact integers *and* the dynamics are structurally first-order
+(context, not momentum), so determinism is the natural reading and
+the classical underdetermination objection does not apply."
+
+The nonlocality, under this reading, is precisely the **finite
+context window `L_x` being topologically structured** (Klein
+bottle) — not hidden variables. This is the same Bell-evasion
+condition as inviolable consistency above, now with a concrete
+mechanism: the context window *is* the substrate's memory, and its
+topology (not its contents) carries the nonlocal correlations.
+
 ## Status
 
 Class 3 (foundational framing). No new primitive. The doc:
