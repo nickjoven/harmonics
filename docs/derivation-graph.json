@@ -1,5 +1,5 @@
 {
-  "generated": "f2f4e04f65dc272cfef38fb78215b7db0fe5bdea",
+  "generated": "deb490f9ef4f91e2cdddd08d016abc9a8a4b69d5",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -889,6 +889,37 @@
       ]
     },
     {
+      "id": "audit_findings_3_4_disposition",
+      "path": "sync_cost/derivations/audit_findings_3_4_disposition.md",
+      "title": "Audit Findings 3 & 4: honest disposition (qualification, not closure)",
+      "summary": "Class 3 (disposition / honest qualification). No new framework\nprimitive. This doc does not close Findings 3 and 4 \u2014 it **records\ntheir honest disposition**: Finding 3 qualifies Phase 2's exactness\nclaim; Finding 4 retracts the inflation-duration's parameter-free\nadvertising. The framework's recent cosmological claims are\ncorrespondingly downgraded from \"exact / parameter-free\" to\n\"leading-order / conditional.\"",
+      "depends_on": [
+        "f_exit_natural",
+        "framework_status",
+        "inflation_duration",
+        "nonperturbative_phase1",
+        "nonperturbative_phase2",
+        "qd_origins",
+        "rectangle_perpendicularity",
+        "s_inst_inflation",
+        "unitless_audit",
+        "xor_continuum_limit"
+      ],
+      "depended_on_by": [
+        "dark_twin_correction",
+        "explicit_4x4_reduction",
+        "inflation_duration",
+        "nonperturbative_phase2"
+      ],
+      "git": [
+        {
+          "hash": "deb490f",
+          "date": "2026-05-15",
+          "subject": "audit_findings_3_4_disposition: honest qualification of major findings (#124)"
+        }
+      ]
+    },
+    {
       "id": "audit_punch_list_2026-04",
       "path": "sync_cost/derivations/audit_punch_list_2026-04.md",
       "title": "Audit punch list \u2014 2026-04 round",
@@ -1224,6 +1255,7 @@
         "high_school_syllabus",
         "medium_change_demo",
         "no_rescaling",
+        "substrate_determinism",
         "wave_particle_substrate"
       ],
       "git": [
@@ -1255,16 +1287,19 @@
         "unitless_check"
       ],
       "depended_on_by": [
+        "dark_twin_correction",
         "expressibility_split",
         "f_exit_natural",
         "inflation_duration",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
+        "orthogonal_kink_interaction",
         "s_inst_inflation",
         "s_v_nlo",
         "s_v_nlo_attempt",
         "seam_profile",
         "soliton_dynamics",
+        "substrate_determinism",
         "time_axis_split",
         "unitless_audit",
         "wave_particle_substrate"
@@ -1529,6 +1564,34 @@
           "hash": "f12eba4",
           "date": "2026-04-26",
           "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        }
+      ]
+    },
+    {
+      "id": "dark_twin_correction",
+      "path": "sync_cost/derivations/dark_twin_correction.md",
+      "title": "Dark-twin correction: the S_v \u2248 13 retraction was wrong",
+      "summary": "Class 3 (honest correction). No new primitive. This doc withdraws\n`explicit_4x4_reduction.md`'s `S_v \u2248 13` retraction (wrong\ninteraction model \u2014 collinear formula applied to orthogonal+dark-\ncoupled configuration) and restores `S_v(K=1) \u2248 16` as the leading\nvalue, while preserving the honest open status of the orthogonal-\nkink correction (so \"exact\" remains unclaimed).",
+      "depends_on": [
+        "audit_findings_3_4_disposition",
+        "cone_twist_substrate",
+        "explicit_4x4_reduction",
+        "figure_eight",
+        "inflation_duration",
+        "klein_bottle",
+        "nonperturbative_phase2",
+        "wave_particle_substrate"
+      ],
+      "depended_on_by": [
+        "explicit_4x4_reduction",
+        "nonperturbative_phase2",
+        "orthogonal_kink_interaction"
+      ],
+      "git": [
+        {
+          "hash": "deb490f",
+          "date": "2026-05-15",
+          "subject": "audit_findings_3_4_disposition: honest qualification of major findings (#124)"
         }
       ]
     },
@@ -2182,6 +2245,35 @@
       ]
     },
     {
+      "id": "explicit_4x4_reduction",
+      "path": "sync_cost/derivations/explicit_4x4_reduction.md",
+      "title": "The explicit 4\u00d74 reduction matrix: real Phase 2",
+      "summary": "Class 3 (honest derivation attempt). The derivation **partially\nvindicates Finding 3**: the kink-mode energies are derivable (Part\nA) and the 4\u00d74 gap is clean (Part B), but Phase 2 neglected the\nkink-fills-loop interaction (`E_D \u2248 13` not 16) and the interleaved\ncontinuum (Part C). The \"exact precision\" claim is **retracted**;\nhonest value `S_v(K=1) \u2248 13` with continuum corrections open.",
+      "depends_on": [
+        "audit_findings_3_4_disposition",
+        "dark_twin_correction",
+        "f_exit_natural",
+        "figure_eight",
+        "inflation_duration",
+        "nonperturbative_phase1",
+        "nonperturbative_phase2",
+        "sine_gordon_substrate",
+        "unitless_audit"
+      ],
+      "depended_on_by": [
+        "dark_twin_correction",
+        "nonperturbative_phase2",
+        "orthogonal_kink_interaction"
+      ],
+      "git": [
+        {
+          "hash": "deb490f",
+          "date": "2026-05-15",
+          "subject": "audit_findings_3_4_disposition: honest qualification of major findings (#124)"
+        }
+      ]
+    },
+    {
       "id": "exponent",
       "path": "sync_cost/derivations/exponent.md",
       "title": "Why the Exponent Is q\u2082q\u2083\u00b3",
@@ -2227,6 +2319,7 @@
         "qd_origins",
         "rectangle_perpendicularity",
         "seam_profile",
+        "substrate_determinism",
         "wave_particle_substrate"
       ],
       "git": [
@@ -2257,7 +2350,10 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
-        "inflation_duration"
+        "audit_findings_3_4_disposition",
+        "explicit_4x4_reduction",
+        "inflation_duration",
+        "substrate_determinism"
       ],
       "git": [
         {
@@ -2438,10 +2534,14 @@
       ],
       "depended_on_by": [
         "cone_twist_substrate",
+        "dark_twin_correction",
+        "explicit_4x4_reduction",
         "no_rescaling",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
-        "soliton_dynamics"
+        "orthogonal_kink_interaction",
+        "soliton_dynamics",
+        "substrate_determinism"
       ],
       "git": [
         {
@@ -2541,6 +2641,7 @@
         "a1_from_saddle_node",
         "a_s_g1_closure_attempt",
         "ansatz_audit_policy",
+        "audit_findings_3_4_disposition",
         "audit_punch_list_2026-04",
         "basin_11_connection_exploration",
         "canonical_glossary",
@@ -3252,6 +3353,7 @@
         "qd_origins",
         "session_audit",
         "statistical_conventions",
+        "substrate_determinism",
         "three_formalizations",
         "time_axis_split"
       ],
@@ -3519,6 +3621,7 @@
       "title": "Inflation duration from S_v = 16 and the universal Schwinger relation",
       "summary": "`|\u2207K|_seam(t)` is now a derived framework function. Inflation\nduration follows from `S_v = 16` and `H_inflation`. The super-Earth\nanalogy (structural pattern only, not gravitational mechanics \u2014\nsee `s_inst_inflation.md` disclaimer) is conceptually confirmed\nbut operationally resolved: hard exit, many attempts, eventual\nsuccess \u2014 with \"hard\" meaning *Boltzmann-suppressed sampling\nprobability per attempt*, not *energetic escape from a potential\nwell*. The framework's no-rescaling principle is now ",
       "depends_on": [
+        "audit_findings_3_4_disposition",
         "cone_twist_substrate",
         "f_exit_natural",
         "half_twist_dynamics",
@@ -3531,9 +3634,17 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "audit_findings_3_4_disposition",
+        "dark_twin_correction",
+        "explicit_4x4_reduction",
         "f_exit_natural"
       ],
       "git": [
+        {
+          "hash": "deb490f",
+          "date": "2026-05-15",
+          "subject": "audit_findings_3_4_disposition: honest qualification of major findings (#124)"
+        },
         {
           "hash": "f2f4e04",
           "date": "2026-05-15",
@@ -3825,6 +3936,7 @@
         "INDEX",
         "beta_from_tongues",
         "cone_twist_substrate",
+        "dark_twin_correction",
         "duty_cycle_dictionary",
         "dynamical_tool_audit",
         "figure_eight",
@@ -4599,7 +4711,8 @@
         "nonperturbative_phase2",
         "s_v_nlo",
         "s_v_nlo_attempt",
-        "seam_profile"
+        "seam_profile",
+        "substrate_determinism"
       ],
       "git": [
         {
@@ -4625,11 +4738,15 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "audit_findings_3_4_disposition",
+        "explicit_4x4_reduction",
         "f_exit_natural",
         "inflation_duration",
         "nonperturbative_phase2",
         "nonperturbative_phase3",
-        "qd_origins"
+        "orthogonal_kink_interaction",
+        "qd_origins",
+        "substrate_determinism"
       ],
       "git": [
         {
@@ -4645,7 +4762,10 @@
       "title": "Non-perturbative Phase 2: explicit 4\u00d74 calc gives S_v(K=1) = 16 exactly",
       "summary": "Class 3 (derivation grade). The 4\u00d74 calc is exact in the\nfinite-mode regime. The result `S_v(K=1) = 16` follows from:",
       "depends_on": [
+        "audit_findings_3_4_disposition",
         "cone_twist_substrate",
+        "dark_twin_correction",
+        "explicit_4x4_reduction",
         "figure_eight",
         "framework_status",
         "no_rescaling",
@@ -4658,12 +4778,21 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "audit_findings_3_4_disposition",
+        "dark_twin_correction",
+        "explicit_4x4_reduction",
         "f_exit_natural",
         "inflation_duration",
         "nonperturbative_phase3",
+        "orthogonal_kink_interaction",
         "s_inst_inflation"
       ],
       "git": [
+        {
+          "hash": "deb490f",
+          "date": "2026-05-15",
+          "subject": "audit_findings_3_4_disposition: honest qualification of major findings (#124)"
+        },
         {
           "hash": "3cd529f",
           "date": "2026-05-14",
@@ -5282,6 +5411,32 @@
       ]
     },
     {
+      "id": "orthogonal_kink_interaction",
+      "path": "sync_cost/derivations/orthogonal_kink_interaction.md",
+      "title": "Orthogonal-kink interaction: decomposition into AB-phase + jog energy",
+      "summary": "Class 3 (decomposition + narrowing). The orthogonal-kink\ninteraction is decomposed into:",
+      "depends_on": [
+        "cone_twist_substrate",
+        "dark_twin_correction",
+        "explicit_4x4_reduction",
+        "figure_eight",
+        "nonperturbative_phase1",
+        "nonperturbative_phase2",
+        "sine_gordon_substrate",
+        "wave_particle_substrate"
+      ],
+      "depended_on_by": [
+        "substrate_determinism"
+      ],
+      "git": [
+        {
+          "hash": "deb490f",
+          "date": "2026-05-15",
+          "subject": "audit_findings_3_4_disposition: honest qualification of major findings (#124)"
+        }
+      ]
+    },
+    {
       "id": "partition_logit_form",
       "path": "sync_cost/derivations/partition_logit_form.md",
       "title": "Cosmic partition prediction in logit form",
@@ -5768,8 +5923,10 @@
         "xor_derivation"
       ],
       "depended_on_by": [
+        "audit_findings_3_4_disposition",
         "f_exit_natural",
         "hierarchy_gaussian_lattice",
+        "substrate_determinism",
         "three_dimensions"
       ],
       "git": [
@@ -5945,6 +6102,7 @@
         "klein_bottle_derivation"
       ],
       "depended_on_by": [
+        "audit_findings_3_4_disposition",
         "f_exit_natural",
         "klein_bottle_derivation",
         "qd_origins",
@@ -6029,6 +6187,7 @@
         "unitless_audit"
       ],
       "depended_on_by": [
+        "audit_findings_3_4_disposition",
         "inflation_duration"
       ],
       "git": [
@@ -6282,6 +6441,7 @@
       ],
       "depended_on_by": [
         "cone_twist_substrate",
+        "explicit_4x4_reduction",
         "figure_eight",
         "framework_status",
         "gauge_high_scale_identification",
@@ -6291,7 +6451,9 @@
         "klein_bottle_derivation",
         "mass_function_family",
         "master_cascade_identity",
+        "orthogonal_kink_interaction",
         "soliton_dynamics",
+        "substrate_determinism",
         "time_axis_split",
         "unitless_audit",
         "wave_particle_substrate",
@@ -6733,6 +6895,35 @@
       ]
     },
     {
+      "id": "substrate_determinism",
+      "path": "sync_cost/derivations/substrate_determinism.md",
+      "title": "Substrate determinism: is probability fundamental or emergent?",
+      "summary": "Class 3 (foundational framing). No new primitive. The doc:",
+      "depends_on": [
+        "comparison_class",
+        "cone_twist_substrate",
+        "expressibility_split",
+        "f_exit_natural",
+        "figure_eight",
+        "hierarchy_gaussian_lattice",
+        "no_rescaling",
+        "nonperturbative_phase1",
+        "orthogonal_kink_interaction",
+        "qd_origins",
+        "sine_gordon_substrate",
+        "time_axis_split",
+        "wave_particle_substrate"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "deb490f",
+          "date": "2026-05-15",
+          "subject": "audit_findings_3_4_disposition: honest qualification of major findings (#124)"
+        }
+      ]
+    },
+    {
       "id": "three_dimensions",
       "path": "sync_cost/derivations/three_dimensions.md",
       "title": "Three Dimensions from the Mediant",
@@ -6869,6 +7060,7 @@
         "klein_bottle_derivation",
         "no_rescaling",
         "s_inst_inflation",
+        "substrate_determinism",
         "unitless_audit",
         "wave_particle_substrate"
       ],
@@ -6937,6 +7129,8 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "audit_findings_3_4_disposition",
+        "explicit_4x4_reduction",
         "inflation_duration",
         "no_rescaling",
         "nonperturbative_phase1",
@@ -7199,11 +7393,14 @@
         "unitless_check"
       ],
       "depended_on_by": [
+        "dark_twin_correction",
         "f_exit_natural",
         "inflation_duration",
         "no_rescaling",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
+        "orthogonal_kink_interaction",
+        "substrate_determinism",
         "time_axis_split",
         "unitless_audit"
       ],
@@ -7232,6 +7429,7 @@
       "summary": "**Established**:\n- The continuum Klein bottle has structure group O(3), pin cover\n  Pin\u207a(3) \u2245 SU(2) \u00d7 Z\u2082.\n- Lovelock still applies locally: Einstein equations are the unique\n  output of the K=1 limit.\n- The Z\u2082 holonomy adds topological constraints but not new field\n  equations.\n- The XOR denominator-parity filter does not survive the continuum\n  limit as a smooth structure \u2014 it is a property of the discrete\n  (finite-depth) description.",
       "depends_on": [],
       "depended_on_by": [
+        "audit_findings_3_4_disposition",
         "klein_connection"
       ],
       "git": [
