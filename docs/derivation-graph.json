@@ -1,5 +1,5 @@
 {
-  "generated": "27971966cce314efa98b4319c7819809b9cfe940",
+  "generated": "95a78c3a05a492514f761faa7bb62a807119234b",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1585,6 +1585,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "discrete_reduction_problem",
         "e_cross_calc",
         "e_cross_discrete_resolution",
         "explicit_4x4_reduction",
@@ -1800,6 +1801,33 @@
           "hash": "ff199a0",
           "date": "2026-04-07",
           "subject": "Derivation 41: resolve XOR continuum limit \u2014 gauge structure is discrete"
+        }
+      ]
+    },
+    {
+      "id": "discrete_reduction_problem",
+      "path": "sync_cost/derivations/discrete_reduction_problem.md",
+      "title": "The discrete 4-mode reduction: a hand-solvable problem statement",
+      "summary": "Class 3 (problem statement + leading hand-attempt with a\nqualitative finding). No new primitive.",
+      "depends_on": [
+        "dark_twin_correction",
+        "e_cross_discrete_resolution",
+        "figure_eight",
+        "klein_bottle",
+        "nonperturbative_phase1",
+        "nonperturbative_phase2",
+        "xor_derivation"
+      ],
+      "depended_on_by": [
+        "e_cross_discrete_resolution",
+        "explicit_4x4_reduction",
+        "nonperturbative_phase2"
+      ],
+      "git": [
+        {
+          "hash": "95a78c3",
+          "date": "2026-05-15",
+          "subject": "discrete_reduction_problem: hand-solvable statement + B\u2260C symmetry-breaking (#126)"
         }
       ]
     },
@@ -2155,6 +2183,7 @@
       "depends_on": [
         "audit_findings_3_4_disposition",
         "dark_twin_correction",
+        "discrete_reduction_problem",
         "e_cross_calc",
         "explicit_4x4_reduction",
         "no_rescaling",
@@ -2165,9 +2194,15 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "discrete_reduction_problem",
         "e_cross_calc"
       ],
       "git": [
+        {
+          "hash": "95a78c3",
+          "date": "2026-05-15",
+          "subject": "discrete_reduction_problem: hand-solvable statement + B\u2260C symmetry-breaking (#126)"
+        },
         {
           "hash": "2797196",
           "date": "2026-05-15",
@@ -2312,6 +2347,7 @@
       "depends_on": [
         "audit_findings_3_4_disposition",
         "dark_twin_correction",
+        "discrete_reduction_problem",
         "f_exit_natural",
         "figure_eight",
         "inflation_duration",
@@ -2328,6 +2364,11 @@
         "orthogonal_kink_interaction"
       ],
       "git": [
+        {
+          "hash": "95a78c3",
+          "date": "2026-05-15",
+          "subject": "discrete_reduction_problem: hand-solvable statement + B\u2260C symmetry-breaking (#126)"
+        },
         {
           "hash": "deb490f",
           "date": "2026-05-15",
@@ -2597,6 +2638,7 @@
       "depended_on_by": [
         "cone_twist_substrate",
         "dark_twin_correction",
+        "discrete_reduction_problem",
         "e_cross_calc",
         "explicit_4x4_reduction",
         "no_rescaling",
@@ -4000,6 +4042,7 @@
         "beta_from_tongues",
         "cone_twist_substrate",
         "dark_twin_correction",
+        "discrete_reduction_problem",
         "duty_cycle_dictionary",
         "dynamical_tool_audit",
         "figure_eight",
@@ -4803,6 +4846,7 @@
       ],
       "depended_on_by": [
         "audit_findings_3_4_disposition",
+        "discrete_reduction_problem",
         "e_cross_calc",
         "e_cross_discrete_resolution",
         "explicit_4x4_reduction",
@@ -4831,6 +4875,7 @@
         "audit_findings_3_4_disposition",
         "cone_twist_substrate",
         "dark_twin_correction",
+        "discrete_reduction_problem",
         "explicit_4x4_reduction",
         "figure_eight",
         "framework_status",
@@ -4846,6 +4891,7 @@
       "depended_on_by": [
         "audit_findings_3_4_disposition",
         "dark_twin_correction",
+        "discrete_reduction_problem",
         "e_cross_discrete_resolution",
         "explicit_4x4_reduction",
         "f_exit_natural",
@@ -4855,6 +4901,11 @@
         "s_inst_inflation"
       ],
       "git": [
+        {
+          "hash": "95a78c3",
+          "date": "2026-05-15",
+          "subject": "discrete_reduction_problem: hand-solvable statement + B\u2260C symmetry-breaking (#126)"
+        },
         {
           "hash": "deb490f",
           "date": "2026-05-15",
@@ -7530,6 +7581,7 @@
         "sine_gordon_substrate"
       ],
       "depended_on_by": [
+        "discrete_reduction_problem",
         "gauge_factorization",
         "gell_mann_nishijima",
         "klein_bottle_derivation",
