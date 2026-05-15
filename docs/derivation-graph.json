@@ -1,5 +1,5 @@
 {
-  "generated": "deb490f9ef4f91e2cdddd08d016abc9a8a4b69d5",
+  "generated": "27971966cce314efa98b4319c7819809b9cfe940",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -907,6 +907,8 @@
       ],
       "depended_on_by": [
         "dark_twin_correction",
+        "e_cross_calc",
+        "e_cross_discrete_resolution",
         "explicit_4x4_reduction",
         "inflation_duration",
         "nonperturbative_phase2"
@@ -1583,6 +1585,8 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "e_cross_calc",
+        "e_cross_discrete_resolution",
         "explicit_4x4_reduction",
         "nonperturbative_phase2",
         "orthogonal_kink_interaction"
@@ -2116,6 +2120,62 @@
       ]
     },
     {
+      "id": "e_cross_calc",
+      "path": "sync_cost/derivations/e_cross_calc.md",
+      "title": "E_cross calculation: the textbook route gives a pathology",
+      "summary": "Class 3 (calc attempt with informative negative result + a usable\nbound). No new primitive. The textbook crossed-soliton route was\nattempted honestly; it produces a pathological infinite-domain\n`\u22122 M_k`, which (i) confirms the kink-fills-loop regime invalidates\ninfinite-domain formulas (consistent with the recurring audit\nfinding) and (ii) yields the rigorous bound `0 < S_v(K=1) < 16`\nwith the crossing strictly attractive. The genuine value requires\nfinite-volume sine-Gordon (TBA or lattice) \u2014 t",
+      "depends_on": [
+        "audit_findings_3_4_disposition",
+        "dark_twin_correction",
+        "e_cross_discrete_resolution",
+        "explicit_4x4_reduction",
+        "figure_eight",
+        "nonperturbative_phase1",
+        "orthogonal_kink_interaction",
+        "s_v_nlo_attempt",
+        "sine_gordon_substrate",
+        "substrate_determinism"
+      ],
+      "depended_on_by": [
+        "e_cross_discrete_resolution"
+      ],
+      "git": [
+        {
+          "hash": "2797196",
+          "date": "2026-05-15",
+          "subject": "e_cross_calc: textbook route gives pathology, yields bound 0 < S_v < 16 (#125)"
+        }
+      ]
+    },
+    {
+      "id": "e_cross_discrete_resolution",
+      "path": "sync_cost/derivations/e_cross_discrete_resolution.md",
+      "title": "E_cross resolved: the continuum route was a representation error",
+      "summary": "Class 3 (resolution by representation correction). No new\nprimitive. The continuum `E_cross` pathology and bound are\nsuperseded as a representation error; the discrete-native value is\n`S_v(K=1) \u2248 16` to ~`10\u207b\u2078`. The single residual open item is the\nexplicit discrete 4-mode reduction matrix (the real Phase 2),\na well-posed finite-dimensional calculation \u2014 not the dissolved\ncontinuum `E_cross`.",
+      "depends_on": [
+        "audit_findings_3_4_disposition",
+        "dark_twin_correction",
+        "e_cross_calc",
+        "explicit_4x4_reduction",
+        "no_rescaling",
+        "nonperturbative_phase1",
+        "nonperturbative_phase2",
+        "orthogonal_kink_interaction",
+        "s_v_nlo_attempt",
+        "substrate_determinism"
+      ],
+      "depended_on_by": [
+        "e_cross_calc"
+      ],
+      "git": [
+        {
+          "hash": "2797196",
+          "date": "2026-05-15",
+          "subject": "e_cross_calc: textbook route gives pathology, yields bound 0 < S_v < 16 (#125)"
+        }
+      ]
+    },
+    {
       "id": "einstein_from_kuramoto",
       "path": "sync_cost/derivations/einstein_from_kuramoto.md",
       "title": "Einstein Field Equations from the Rational Field Equation",
@@ -2262,6 +2322,8 @@
       ],
       "depended_on_by": [
         "dark_twin_correction",
+        "e_cross_calc",
+        "e_cross_discrete_resolution",
         "nonperturbative_phase2",
         "orthogonal_kink_interaction"
       ],
@@ -2535,6 +2597,7 @@
       "depended_on_by": [
         "cone_twist_substrate",
         "dark_twin_correction",
+        "e_cross_calc",
         "explicit_4x4_reduction",
         "no_rescaling",
         "nonperturbative_phase1",
@@ -4706,6 +4769,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "e_cross_discrete_resolution",
         "inflation_duration",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
@@ -4739,6 +4803,8 @@
       ],
       "depended_on_by": [
         "audit_findings_3_4_disposition",
+        "e_cross_calc",
+        "e_cross_discrete_resolution",
         "explicit_4x4_reduction",
         "f_exit_natural",
         "inflation_duration",
@@ -4780,6 +4846,7 @@
       "depended_on_by": [
         "audit_findings_3_4_disposition",
         "dark_twin_correction",
+        "e_cross_discrete_resolution",
         "explicit_4x4_reduction",
         "f_exit_natural",
         "inflation_duration",
@@ -5426,6 +5493,8 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "e_cross_calc",
+        "e_cross_discrete_resolution",
         "substrate_determinism"
       ],
       "git": [
@@ -6238,6 +6307,8 @@
         "unitless_audit"
       ],
       "depended_on_by": [
+        "e_cross_calc",
+        "e_cross_discrete_resolution",
         "nonperturbative_phase1",
         "nonperturbative_phase2"
       ],
@@ -6441,6 +6512,7 @@
       ],
       "depended_on_by": [
         "cone_twist_substrate",
+        "e_cross_calc",
         "explicit_4x4_reduction",
         "figure_eight",
         "framework_status",
@@ -6914,7 +6986,10 @@
         "time_axis_split",
         "wave_particle_substrate"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "e_cross_calc",
+        "e_cross_discrete_resolution"
+      ],
       "git": [
         {
           "hash": "deb490f",
