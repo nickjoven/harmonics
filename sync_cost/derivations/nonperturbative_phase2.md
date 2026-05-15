@@ -12,12 +12,27 @@ the explicit 4×4 calc:
 - Shows the result resolves the audit-vs-seam-profile 5.7% gap
   (cleanly in favour of the audit)
 
-**Headline result:** `S_v(K=1) = 16 exactly` in the finite-mode
-regime. The seam-profile derivation's `≈ 16.92` was a continuum-
-approximation overestimate; the discrete-mode calc gives the
-audit's value as the true non-perturbative answer.
+> **Disposition note (2026-05, audit Finding 3).** The "exact"
+> claim below is **qualified** by `audit_findings_3_4_disposition.md`.
+> `S_v(K=1) = 16` is exact *conditional on* the kink-fills-loop DoF
+> reduction yielding a literally 4-dimensional Hilbert space with
+> energies `(0, M_k, M_k, 2 M_k)` — the explicit substrate-Lagrangian
+> reduction matrix (queued in `nonperturbative_phase1.md` as the real
+> Phase 2 deliverable) has *not* been computed. Read every "exactly"
+> in this doc as "exact at leading order in the kink-fills-loop
+> regime; exact pending the explicit reduction-matrix derivation."
+> The "first Category-A item closed at exact precision" framing is
+> downgraded accordingly.
 
-`κ_pair = 1` is now confirmed at **exact precision**, not 5.7%.
+**Headline result:** `S_v(K=1) = 16` at leading order in the
+finite-mode (kink-fills-loop) regime. The seam-profile derivation's
+`≈ 16.92` was a continuum-approximation overestimate; the discrete-
+mode calc gives the audit's value as the leading non-perturbative
+answer.
+
+`κ_pair = 1` is confirmed at this leading order (not at the
+previously-claimed unconditional exact precision — see disposition
+note).
 
 ## Setup: the 4-mode Hilbert space
 

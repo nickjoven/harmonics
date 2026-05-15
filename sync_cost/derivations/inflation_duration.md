@@ -6,16 +6,32 @@ Schwinger relation `H(t) = κ_pair × Γ_pair(t)` and `κ_pair = 1`
 (`unitless_audit.md`) to predict cosmic inflation duration without
 additional parameters.
 
-**Headline result:** inflation duration ≈ `10⁻³² s`, matching
-standard cosmology to better than an order of magnitude, **derived
-from `S_v = 16` and the inflation-era Hubble rate alone**.
+> **Disposition note (2026-05, audit Finding 4).** The
+> "parameter-free from `S_v = 16` alone" claim below is
+> **retracted** by `audit_findings_3_4_disposition.md`. `S_v` is
+> K-dependent (`S_v = 16√K`, `unitless_audit.md` line 117); this
+> doc used the K=1 value `S_v = 16` at the inflation epoch where
+> `K_inflation ≠ 1` under the framework's own deep-cascade
+> Fibonacci-ladder reading. The prediction is **conditional on
+> `K_inflation`**: `≈ 10⁻³² s` holds *only if* inflation occurred
+> near the K=1 lock boundary (`K_inflation ≈ 1`, `S_v ≈ 16`).
+> Under a deep-cascade inflation (`K_inflation ≪ 1`) the predicted
+> duration is much shorter (down to ~`1/H_inflation`). The
+> framework cannot currently pin `K_inflation` consistently (the
+> geometric seam form breaks down at the required `|∇K|`; see open
+> #2). Read "parameter-free" as "conditional on `K_inflation ≈ 1`."
+
+**Headline result:** inflation duration ≈ `10⁻³² s` *conditional
+on `K_inflation ≈ 1`*, matching standard cosmology to better than
+an order of magnitude, derived from `S_v(K_inflation)` and the
+inflation-era Hubble rate.
 
 The previous `s_inst_inflation.md` calc implied a tuneable
-`|∇K|_inflation ≈ 2` requirement. This doc shows that constraint
-was an artefact of mis-reading the Schwinger relation as the
-*exit-rate* rather than the *sampling-rate*. The correct reading
-gives inflation duration `∝ exp(S_v) / H_inflation`, parameter-free
-once `S_v` is pinned.
+`|∇K|_inflation ≈ 2` requirement. This doc's sampling-rate reading
+gives inflation duration `∝ exp(S_v(K)) / H_inflation`. Per audit
+Finding 4, the two docs' readings are an unresolved two-reading
+problem (neither `|∇K|_inflation` value is consistent with the
+geometric seam form), not a clean supersession.
 
 ## The universal Schwinger relation, re-read
 
