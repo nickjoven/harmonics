@@ -12,12 +12,35 @@ the explicit 4×4 calc:
 - Shows the result resolves the audit-vs-seam-profile 5.7% gap
   (cleanly in favour of the audit)
 
-**Headline result:** `S_v(K=1) = 16 exactly` in the finite-mode
-regime. The seam-profile derivation's `≈ 16.92` was a continuum-
-approximation overestimate; the discrete-mode calc gives the
-audit's value as the true non-perturbative answer.
+> **Disposition note (2026-05, audit Finding 3; updated).** The
+> "exact" claim below is **qualified, not retracted**. History:
+> `audit_findings_3_4_disposition.md` qualified "exact" → "leading
+> order pending the explicit reduction"; `explicit_4x4_reduction.md`
+> attempted the derivation and *over-corrected* to `S_v ≈ 13` using
+> a collinear kink-antikink formula that does not apply to mode D
+> (which is orthogonal q₁/q₂ kinks, q₁ dark-coupled);
+> `dark_twin_correction.md` caught the over-correction and restored
+> `S_v(K=1) ≈ 16` as the **leading-order** value. Net honest
+> status: `S_v(K=1) ≈ 16` at leading order; the energies
+> `(0, M_k, M_k, 2 M_k)` ARE derivable (sine-Gordon kink mass +
+> kink counting, `explicit_4x4_reduction.md` Part A); "exact"
+> is **not** claimable because the orthogonal-kink interaction
+> correction is genuinely open (parametrically distinct from the
+> spurious collinear `≈3`). Read every "exactly" in this doc as
+> "≈ 16 at leading order; orthogonal-interaction correction open."
+> The "first Category-A item closed at exact precision" framing is
+> downgraded to "closed at leading order; exact-precision pending
+> the orthogonal-kink-interaction calc."
 
-`κ_pair = 1` is now confirmed at **exact precision**, not 5.7%.
+**Headline result:** `S_v(K=1) = 16` at leading order in the
+finite-mode (kink-fills-loop) regime. The seam-profile derivation's
+`≈ 16.92` was a continuum-approximation overestimate; the discrete-
+mode calc gives the audit's value as the leading non-perturbative
+answer.
+
+`κ_pair = 1` is confirmed at this leading order (not at the
+previously-claimed unconditional exact precision — see disposition
+note).
 
 ## Setup: the 4-mode Hilbert space
 
