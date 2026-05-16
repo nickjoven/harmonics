@@ -7,14 +7,23 @@ left `0 < S_v(K=1) < 16` as a bound.
 
 **That diagnosis was too shallow. The deeper issue: the continuum
 infinite-domain integral is the framework-foreign *shadow* of the
-discrete substrate, not a valid representation of it. Computed in
-the framework's native discrete representation, `E_cross ≈ 0` and
-`S_v(K=1) ≈ 16` to ~`10⁻⁸`.**
+discrete substrate, not a valid representation of it. `E_cross` is
+a finite discrete matrix element, not a regularized integral.**
 
-The continuum `0 < S_v < 16` bound is **superseded** — it was
-derived in the wrong representation. This doc records the
-resolution and the residual honest open item (which is *not* the
-continuum `E_cross`).
+This doc's lasting contribution is that **representation
+correction** — the continuum→discrete diagnosis and its general
+methodological lesson. Its own *numeric* prediction
+(`S_v(K=1) ≈ 16` in the symmetric discrete diagonal) is **not**
+the final value.
+
+> **VALUE → CANONICAL DOC.** The discrete `E_cross` was
+> subsequently computed by hand: `E_cross = −4` exactly (finite,
+> bounded — exactly the "finite matrix element, not the continuum
+> `−2 M_k`" this doc predicted), giving `S_v(K=1) ≈ 11.515`. See
+> **`discrete_reduction_computed.md`** (canonical). This doc's
+> `≈ 16` was the symmetric-diagonal placeholder; the value is
+> superseded there. The continuum `0 < S_v < 16` bound remains
+> superseded as a representation error (the point of this doc).
 
 ## The representation error
 
@@ -77,83 +86,47 @@ Therefore:
 
     E_cross^discrete ≈ −4g²/M_k ≈ −4·10⁻⁷/8 ≈ −5×10⁻⁸
 
-**Negligible.** Hence:
+Treating it through the *symmetric* discrete diagonal
+`(0, M_k, M_k, 2 M_k)` gave, as a placeholder, `S_v(K=1) ≈ 16`.
+That symmetric figure is **not** the final value.
 
-    S_v(K=1) ≈ 2 M_k + E_cross^discrete ≈ 16 − 5×10⁻⁸ ≈ **16**
+## Value and the (now-closed) open item → canonical doc
 
-essentially exact to ~`10⁻⁸`, in the framework's native discrete
-representation.
+This doc named the right *open item* — "derive the explicit
+discrete substrate-Lagrangian → 4-mode reduction matrix; this is
+finite-dimensional linear algebra, not a continuum integral." That
+calculation has since been **done by hand**:
 
-## Why this is not a flip-flop
+> **`discrete_reduction_computed.md`** (canonical) computes
+> `E_cross = −4` exactly — a finite bounded matrix element,
+> precisely the "not the continuum `−2 M_k`" this doc predicted —
+> and the direction-asymmetric diagonal (`E_B ≠ E_C`, the
+> half-twist breaking sector-swap), giving `S_v(K=1) ≈ 11.515`.
+> The symmetric `≈ 16` here is superseded there; the residual open
+> item this doc flagged is **closed** there. The full prior-value
+> chronology lives once in that doc's "What this supersedes"
+> table.
 
-The S_v thread's full arc:
-
-| Stage | `S_v(K=1)` | What was wrong/right |
-|---|---|---|
-| `nonperturbative_phase2.md` | `= 16` exact | assumed the 4-mode reduction; didn't derive it |
-| `explicit_4x4_reduction.md` | `≈ 13` | over-corrected: collinear kink-antikink formula applied to orthogonal config |
-| `dark_twin_correction.md` | `≈ 16` | restored: mode D is orthogonal + dark-coupled, not collinear |
-| `e_cross_calc.md` | `0 < S_v < 16` | computed in the continuum shadow → pathology + a (representation-invalid) bound |
-| **this doc** | **`≈ 16` to ~`10⁻⁸`** | **discrete native representation; the continuum was the wrong language** |
-
-The endpoint `≈ 16` coincides with Phase 2's value but is reached
-for a *principled* reason the framework already committed to (the
-substrate is discrete; the continuum is the shadow —
-`substrate_determinism.md`), not by reverting. Every error in the
-chain is recorded: the assumed-not-derived Phase 2, the collinear
-mis-application, the continuum-shadow representation error. The
-honest result is `≈ 16` *with the full error path on the record*.
-
-## The residual honest open item (NOT the continuum E_cross)
-
-`S_v(K=1) ≈ 16` is essentially exact **conditional on the 4-mode
-reduction being the complete fundamental representation of the
-substrate at K=1.** That conditionality is the one genuinely
-remaining open item:
-
-> **Update (2026-05), `discrete_reduction_problem.md`.** The `≈ 16`
-> here used the *symmetric* discrete diagonal `(0, M_k, M_k,
-> 2 M_k)` (`E_B = E_C`). The discrete reduction's leading
-> hand-attempt shows `E_B ≠ E_C`: the half-twist (antiperiodic-x
-> vs periodic-y) breaks the sector-swap degeneracy at the lattice
-> level. So the discrete-native `S_v(K=1)` is `E_B + E_C +
-> E_cross^discrete` — finite, direction-asymmetric, **not** the
-> symmetric `16`. This doc's "`≈ 16`" was the symmetric-diagonal
-> simplification; the asymmetric value supersedes it, pending the
-> full `H_CC` antiperiodic-BC computation. The *representation*
-> point of this doc (discrete, not continuum integral) stands; it
-> is the symmetric-energy *value* that is superseded.
-
-> **Derive the explicit substrate-Lagrangian → 4-mode reduction
-> matrix** (the real Phase 2 deliverable, queued in
-> `nonperturbative_phase1.md`, never delivered). This is a *discrete*
-> derivation — projecting the substrate Lagrangian onto the finite
-> XOR-mode Hilbert space — not a continuum integral and not a
-> finite-volume regularization. If the discrete reduction yields
-> exactly the diagonal `(0, M_k, M_k, 2 M_k)` + Schwinger-suppressed
-> off-diagonal, `S_v(K=1) = 16` is established to ~`10⁻⁸`.
-
-The continuum `E_cross` calculation (and its `0 < S_v < 16` bound)
-is **dissolved**, not deferred: it was a representation error. The
-open item is the discrete reduction matrix, which is a different
-and well-posed calculation (finite-dimensional linear algebra on
-the substrate Lagrangian, not an integral over kink profiles).
+What stands here, unchanged, is the **representation correction**:
+the continuum `E_cross` (and its `0 < S_v < 16` bound) is
+*dissolved*, not deferred — it was a representation error. The
+discrete `E_cross` being finite and bounded (`= −4`) is the
+positive confirmation of exactly that point.
 
 ## What this changes
 
-| Item | `e_cross_calc.md` | This resolution |
+| Item | `e_cross_calc.md` (continuum) | Representation-corrected |
 |---|---|---|
-| `E_cross` | `−2 M_k` (continuum pathology) | `≈ −5×10⁻⁸` (discrete, negligible) |
-| `S_v(K=1)` | `0 < S_v < 16` (continuum bound) | `≈ 16` to ~`10⁻⁸` (discrete native) |
-| Open item | "finite-volume crossed-kink energy" | **"explicit discrete 4-mode reduction matrix"** (different, well-posed) |
-| Continuum bound | a result | **superseded — representation error** |
+| `E_cross` | `−2 M_k = −16` (continuum pathology) | finite, bounded discrete matrix element (`= −4`, computed in the canonical doc) |
+| Open item | "finite-volume crossed-kink energy" | **"explicit discrete 4-mode reduction matrix"** — well-posed, and now *closed* (canonical doc) |
+| Continuum bound `0 < S_v < 16` | a result | **superseded — representation error** |
 
-Downstream cosmology numbers: `f_exit ≈ exp(−16) ≈ 10⁻⁷`,
-inflation-duration estimates ≈ `10⁻³²` s restored as the discrete-
-native leading values. The Finding-4 disposition (inflation
-duration *conditional on `K_inflation`*; `S_v` K-dependent across
-epochs) **still stands** — it is a separate point about epoch
-dependence, untouched by this K=1-specific resolution.
+For the `S_v(K=1)` value itself and all downstream cosmology
+numbers, see `discrete_reduction_computed.md` (canonical):
+`S_v(K=1) ≈ 11.515`, `f_exit ≈ exp(−11.5) ≈ 10⁻⁵`. The Finding-4
+disposition (inflation duration *conditional on `K_inflation`*;
+`S_v` K-dependent across epochs) **still stands** — a separate
+epoch-dependence point, untouched here.
 
 ## The general lesson
 
@@ -179,12 +152,14 @@ shadows, not computational tools.
 ## Status
 
 Class 3 (resolution by representation correction). No new
-primitive. The continuum `E_cross` pathology and bound are
-superseded as a representation error; the discrete-native value is
-`S_v(K=1) ≈ 16` to ~`10⁻⁸`. The single residual open item is the
-explicit discrete 4-mode reduction matrix (the real Phase 2),
-a well-posed finite-dimensional calculation — not the dissolved
-continuum `E_cross`.
+primitive. **Lasting content: the representation correction** —
+the continuum `E_cross` pathology and `0 < S_v < 16` bound are
+superseded as a representation error; substrate quantities are
+finite discrete matrix elements, not continuum integrals. The
+residual open item this doc named (the explicit discrete 4-mode
+reduction matrix) is **closed** in `discrete_reduction_computed.md`
+(canonical), which supersedes this doc's symmetric `≈ 16`
+placeholder with the computed `S_v(K=1) ≈ 11.515`.
 
 ## Cross-links
 
@@ -194,10 +169,12 @@ continuum `E_cross`.
 - `orthogonal_kink_interaction.md` — proposed the textbook import;
   the discrete resolution shows the import's representation was
   framework-foreign.
-- `dark_twin_correction.md` — `S_v ≈ 16`; this doc gives the
-  principled discrete reason it holds (~`10⁻⁸`).
+- `discrete_reduction_computed.md` — **canonical**: computes the
+  discrete `E_cross = −4` and `S_v(K=1) ≈ 11.515`, closing the
+  open item this doc named and superseding its `≈ 16` placeholder.
 - `nonperturbative_phase1.md` — the discrete 4-mode structure;
-  the explicit reduction matrix is the residual open item.
+  the explicit reduction matrix was the residual open item (now
+  closed in the canonical doc).
 - `substrate_determinism.md` — the continuum-is-shadow commitment
   this resolution applies.
 - `no_rescaling.md` — the lattice-discreteness theme generalized
@@ -209,9 +186,9 @@ continuum `E_cross`.
 ## One-line summary
 
 You spied infinities and integrals; the intuition was exact — the
-borrowed continuum expression is the framework-foreign shadow, its
-`−2 M_k` pathology and `0 < S_v < 16` bound are representation
-artifacts, and in the framework's native discrete representation
-`S_v(K=1) ≈ 16` to ~`10⁻⁸`, with the sole residual open item being
-the explicit (discrete, finite-dimensional) 4-mode reduction
-matrix.
+borrowed continuum expression is the framework-foreign shadow, and
+its `−2 M_k` pathology and `0 < S_v < 16` bound are representation
+artifacts. Substrate quantities are finite discrete matrix
+elements, not continuum integrals. The discrete 4-mode reduction
+that confirms this (finite `E_cross = −4`, `S_v(K=1) ≈ 11.515`) is
+computed in `discrete_reduction_computed.md` (canonical).

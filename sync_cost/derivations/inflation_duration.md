@@ -1,10 +1,22 @@
-# Inflation duration from S_v = 16 and the universal Schwinger relation
+# Inflation duration from S_v(K) and the universal Schwinger relation
 
-Closure derivation: combines the audit's exact `S_v(K=1) = 16`
-(`nonperturbative_phase2.md`) with the framework's universal
-Schwinger relation `H(t) = κ_pair × Γ_pair(t)` and `κ_pair = 1`
-(`unitless_audit.md`) to predict cosmic inflation duration without
-additional parameters.
+Closure derivation: combines the framework's `S_v(K)` with the
+universal Schwinger relation `H(t) = κ_pair × Γ_pair(t)` and
+`κ_pair = 1` (`unitless_audit.md`) to predict cosmic inflation
+duration without additional parameters.
+
+> **`S_v(K=1)` VALUE → CANONICAL DOC.** This doc was written with
+> the symmetric `S_v(K=1) = 16`. The computed value is
+> `S_v(K=1) ≈ 11.515` (`discrete_reduction_computed.md`,
+> canonical). Read every `S_v = 16` / `exp(−16)` / `exp(16)` below
+> as the superseded symmetric figure; the corrected K=1 numbers
+> are `f_exit ≈ exp(−11.5) ≈ 10⁻⁵` and an inflation duration
+> shorter by `≈ exp(4.5) ≈ 90×`. **This does not change the
+> doc's actual conclusion**, which is the Finding-4 disposition
+> below: the prediction is *conditional on `K_inflation`* and
+> `S_v` is K-dependent — the precise K=1 number is not what the
+> result rests on. The prior-value chronology lives once in the
+> canonical doc's "What this supersedes" table.
 
 > **Disposition note (2026-05, audit Finding 4).** The
 > "parameter-free from `S_v = 16` alone" claim below is
@@ -202,9 +214,13 @@ This is the framework's "calculate the universe" methodology working at scale: s
 
 ## Status
 
-Class 3 (derivation grade). Inflation duration `≈ 10⁻³² s` is
-derived from:
-- `S_v = 16` (audit, exact from `nonperturbative_phase2.md`).
+Class 3 (derivation grade). **`S_v(K=1)` value → canonical
+`discrete_reduction_computed.md` (`≈ 11.515`, not `16`)**; the
+operative caveat is the Finding-4 K-dependence (top), which the
+precise K=1 number does not change. Inflation duration
+`≈ 10⁻³² s` (conditional on `K_inflation ≈ 1`) is derived from:
+- `S_v(K=1)` (canonical doc; the `= 16` here is the superseded
+  symmetric figure).
 - `κ_pair = 1` (audit commitment).
 - Universal Schwinger relation `H × t_P = exp(−π S_v / |∇K|) × |∇K|²`.
 - Exit fraction `f_exit = exp(−S_v)` (framework no-rescaling
@@ -215,9 +231,12 @@ No new framework primitives.
 
 ## Cross-links
 
-- `unitless_audit.md` — audit pinning `S_v = 16` and `κ_pair = 1`.
-- `nonperturbative_phase2.md` — exact 4-mode calc giving `S_v = 16`
-  as integer-counted.
+- `discrete_reduction_computed.md` — **canonical `S_v(K=1)`**:
+  computed `≈ 11.515`, superseding the symmetric `16` used here.
+- `unitless_audit.md` — audit pinning `κ_pair = 1` (and the
+  symmetric `S_v = 16`, superseded for the value).
+- `nonperturbative_phase2.md` — historical symmetric 4-mode calc
+  (`S_v = 16`); value superseded by the canonical doc.
 - `s_inst_inflation.md` — predecessor calc; this doc supersedes the
   `|∇K|_inflation ≈ 2` artefact.
 - `cone_twist_substrate.md` — bicone seam where the Schwinger

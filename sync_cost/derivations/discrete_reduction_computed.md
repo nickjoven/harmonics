@@ -1,5 +1,14 @@
 # The discrete 4-mode reduction: computed
 
+> **CANONICAL `S_v(K=1)` DOCUMENT.** This is the single source of
+> truth for `S_v(K=1)` and the full history of the thread. Every
+> prior value (`16`, `13`, `0<S_v<16`, `≈16`) is recorded once, in
+> the "What this supersedes" table below — *not* re-litigated
+> per-doc. Other docs (`nonperturbative_phase2.md`,
+> `e_cross_discrete_resolution.md`, `inflation_duration.md`,
+> `discrete_reduction_problem.md`) point here for the value rather
+> than carrying their own supersession arcs.
+
 The "real Phase 2" — the explicit discrete-lattice computation of
 the 4×4 reduction matrix at K=1, done by hand (and verified
 numerically). This delivers the long-queued calculation that
@@ -177,15 +186,15 @@ correct B/C asymmetry and finite crossing.
    staying above in the kink-fills-loop regime, the continuum
    `M_k`). So `S_v(K=1) ≲ 11.5`, with the true value somewhat
    lower if relaxation is allowed.
-2. **Half-twist vs full-kink assignment.** The B/C asymmetry rests
-   on: periodic-y minimal excitation = 2π kink; antiperiodic-x
-   minimal excitation = π half-twist. This is the framework's own
-   `xor_derivation.md` half-integer-wavenumber structure for the
-   antiperiodic direction. If instead the antiperiodic direction's
-   minimal excitation were a full 2π kink, `H_CC` would be larger
-   and `S_v` would shift up. The half-twist reading is the
-   framework-consistent one; this is the key structural input and
-   is flagged as such.
+2. **Half-twist vs full-kink assignment — RESOLVED.** The B/C
+   asymmetry rests on: periodic-y minimal excitation = 2π kink;
+   antiperiodic-x minimal excitation = π half-twist. This was
+   previously flagged as the key open structural input. It is now
+   **closed affirmatively** — see "The half-twist assignment,
+   resolved" below. The π-half-twist reading is forced by
+   `xor_derivation.md` §3.3's homotopy theorem; a 2π x-winding is
+   not the antiperiodic sector at all. `H_CC ≈ 3.645` and B≠C
+   stand on a derived basis, not an assumption.
 3. **Off-diagonal.** `∼ exp(−3.6)` for the C-flip; eigenvalue
    corrections `≲ 10⁻⁴`. Negligible for the leading value.
 4. **Lattice size.** The minimal lattice (3 sites antiperiodic-x,
@@ -193,6 +202,49 @@ correct B/C asymmetry and finite crossing.
    framework commits to. A different lattice convention would
    shift the numbers; the *structure* (B≠C, finite E_cross,
    S_v < 16) is robust to that.
+
+## The half-twist assignment, resolved (§3.3 homotopy theorem)
+
+Caveat 2 — whether mode C's `q₁=3` antiperiodic-x excitation is a
+π half-twist (`H_CC ≈ 3.645`) or a full 2π winding (`H_CC ≈
+9.580`, which would collapse B≠C back to symmetric) — is the one
+load-bearing structural input. It is **closed**, in favour of the
+π half-twist, by `xor_derivation.md` §3.3.
+
+§3.3 is a homotopy theorem about the physical field, not
+frame-dependent bookkeeping: every continuous field on the Klein
+bottle's antiperiodic-x direction decomposes as
+
+    θ(x, y) = πx/L₁ + φ(x, y),   φ periodic in x.
+
+The mandatory `πx/L₁` ramp accumulates exactly **π** traversing
+the x-loop; periodic φ adds 0 net. So **every** antiperiodic-x
+configuration accumulates net π (mod 2π) — the antiperiodic
+sector is *defined* by this. A "2π integer x-winding" accumulates
+0 (mod 2π): that is the trivial/periodic sector, **not the
+antiperiodic one at all**. Hence "mode C = `q₁=3` unlocked in the
+antiperiodic-x direction" *cannot* be a 2π kink; it must
+accumulate π, realized minimally on the 3-site structure as
+`φ_n = πn/3` (closure `φ₃ = π` ✓) — the π half-twist, `H_CC =
+π²/6 + 2 ≈ 3.645`.
+
+The apparent tension — `xor_derivation.md` §5.2's "odd `q₁` ⟺
+integer wavenumber" — is **explicitly reconciled by §6.3**:
+non-orientability lets the even denominator (`q₂=2`) carry the
+*parity bookkeeping* while the physical π ramp stays in x. The
+combinatorial label "`q₁=3` odd" indexes C's 3-fold Stern-Brocot
+modulation; it does not relocate or cancel the §3.3 physical π
+accumulation. The bookkeeping does not override the homotopy
+theorem.
+
+Therefore B≠C is grounded, not assumed: B is a net-2π kink in
+the *periodic* direction (`H_BB ≈ 9.580`), C is a net-π
+half-twist in the *antiperiodic* direction (`H_CC ≈ 3.645`); the
+asymmetry *is* the half-twist-vs-full-kink distinction, forced by
+§3.3. Mode D inherits the same resolution (its `q₁=3` component
+is π in antiperiodic-x; its `q₂=2` component is a 2π kink in
+*periodic*-y; `E_cross = −4`). `S_v(K=1) ≈ 11.515` stands on a
+derived structural basis.
 
 ## Downstream consequences (bounded)
 
@@ -225,10 +277,14 @@ primitive. The discrete 4-mode reduction is delivered:
 The single long-standing open computation of the `S_v` thread is
 **closed**: a finite, hand-computed, numerically-verified value in
 the framework's native discrete representation, with the full
-asymmetric decomposition explicit and all caveats stated. The
-continuum-symmetric `16` is decisively superseded; the framework's
-`S_v(K=1)` is `≈ 11.5`, an upper bound that relaxation would lower
-slightly.
+asymmetric decomposition explicit. The one load-bearing structural
+input (caveat 2, the half-twist assignment) is **resolved
+affirmatively** by `xor_derivation.md` §3.3's homotopy theorem —
+not merely flagged. The continuum-symmetric `16` is decisively
+superseded; the framework's `S_v(K=1)` is `≈ 11.5`, an upper bound
+that relaxation would lower slightly. This doc is the **canonical
+`S_v(K=1)` source**; dependent docs point here rather than
+carrying their own supersession arcs.
 
 ## Cross-links
 
