@@ -1,4 +1,18 @@
-# Non-perturbative Phase 2: explicit 4×4 calc gives S_v(K=1) = 16 exactly
+# Non-perturbative Phase 2: the 4×4 calc (historical; symmetric S_v(K=1)=16 superseded)
+
+> **SUPERSEDED — value only. See the canonical doc.** This doc's
+> `S_v(K=1) = 16` is the *assumed-symmetric* `(0, M_k, M_k, 2 M_k)`
+> diagonal. The value is superseded by the hand-computed,
+> direction-asymmetric discrete reduction in
+> **`discrete_reduction_computed.md`** (canonical):
+> `S_v(K=1) ≈ 11.515`, with `E_B ≠ E_C` (the antiperiodic
+> identification breaks the sector-swap symmetry this doc assumed).
+> The full prior-value history lives once, there, in its "What
+> this supersedes" table — not re-litigated here. What this doc
+> still contributes: the 4-mode-Hilbert-space construction, the
+> vortex-pair-as-path identification, and the seam-profile-gap
+> disposition. Read every "exactly"/"= 16" below as the historical
+> symmetric leading-order figure, superseded for the value.
 
 Phase 2 deliverable on the non-perturbative substrate program.
 Phase 1 (`nonperturbative_phase1.md`) reduced the framework's K=1
@@ -12,43 +26,19 @@ the explicit 4×4 calc:
 - Shows the result resolves the audit-vs-seam-profile 5.7% gap
   (cleanly in favour of the audit)
 
-> **Disposition note (2026-05, audit Finding 3; updated).** The
-> "exact" claim below is **qualified, not retracted**. History:
-> `audit_findings_3_4_disposition.md` qualified "exact" → "leading
-> order pending the explicit reduction"; `explicit_4x4_reduction.md`
-> attempted the derivation and *over-corrected* to `S_v ≈ 13` using
-> a collinear kink-antikink formula that does not apply to mode D
-> (which is orthogonal q₁/q₂ kinks, q₁ dark-coupled);
-> `dark_twin_correction.md` caught the over-correction and restored
-> `S_v(K=1) ≈ 16` as the **leading-order** value. Net honest
-> status: `S_v(K=1) ≈ 16` at leading order; the energies
-> `(0, M_k, M_k, 2 M_k)` ARE derivable (sine-Gordon kink mass +
-> kink counting, `explicit_4x4_reduction.md` Part A); "exact"
-> is **not** claimable because the orthogonal-kink interaction
-> correction is genuinely open (parametrically distinct from the
-> spurious collinear `≈3`). Read every "exactly" in this doc as
-> "≈ 16 at leading order; orthogonal-interaction correction open."
-> The "first Category-A item closed at exact precision" framing is
-> downgraded to "closed at leading order; exact-precision pending
-> the orthogonal-kink-interaction calc."
->
-> **Further superseded (2026-05) by `discrete_reduction_problem.md`.**
-> This doc's symmetric energies `(0, M_k, M_k, 2 M_k)` assumed
-> `E_B = E_C` "by sector-swap symmetry." The discrete reduction's
-> leading hand-attempt shows that symmetry is **broken at the
-> lattice level by the antiperiodic identification** (B's kink is
-> periodic-y, C's is antiperiodic-x; the sign-flip closing step has
-> no periodic analog). The discrete diagonal is `(0, E_B, E_C,
-> E_D)` with `E_B ≠ E_C`; `S_v(K=1)` is a finite, direction-
-> asymmetric sum, **not** the continuum-symmetric `16`. The `≈ 16`
-> here is a continuum-shadow value; the native discrete value is
-> superseded pending the full `H_CC` antiperiodic-BC calc.
+(The chronology by which this value was qualified and then
+superseded — audit Finding 3, the `≈13` collinear over-correction,
+the dark-twin restoration, the B≠C symmetry-breaking — is recorded
+once, in `discrete_reduction_computed.md`'s "What this supersedes"
+table. It is not reproduced here.)
 
-**Headline result:** `S_v(K=1) = 16` at leading order in the
-finite-mode (kink-fills-loop) regime. The seam-profile derivation's
-`≈ 16.92` was a continuum-approximation overestimate; the discrete-
-mode calc gives the audit's value as the leading non-perturbative
-answer.
+**Headline result (historical, symmetric):** this doc obtained
+`S_v(K=1) = 16` at leading order in the finite-mode
+(kink-fills-loop) regime under the assumed sector-swap-symmetric
+diagonal. The seam-profile derivation's `≈ 16.92` was a
+continuum-approximation overestimate. The current value is
+`S_v(K=1) ≈ 11.515` (`discrete_reduction_computed.md`, canonical);
+the `16` here is the superseded symmetric figure.
 
 `κ_pair = 1` is confirmed at this leading order (not at the
 previously-claimed unconditional exact precision — see disposition
@@ -278,8 +268,16 @@ estimates. **The framework operates at exact precision in the
 
 ## Status
 
-Class 3 (derivation grade). The 4×4 calc is exact in the
-finite-mode regime. The result `S_v(K=1) = 16` follows from:
+**Value superseded** → `discrete_reduction_computed.md` (canonical):
+`S_v(K=1) ≈ 11.515`, not the symmetric `16`. The "exact precision"
+framing in the sections above is the historical symmetric-diagonal
+claim; the structural construction (4-mode Hilbert space,
+vortex-pair path, near-diagonal Hamiltonian) is what this doc
+contributes and that stands.
+
+Class 3 (derivation grade), historical. The result `S_v(K=1) = 16`
+recorded here follows, *under the assumed symmetric diagonal*,
+from:
 
 - The 4-mode reduction (`figure_eight.md` D19, sharpened by
   `nonperturbative_phase1.md`).

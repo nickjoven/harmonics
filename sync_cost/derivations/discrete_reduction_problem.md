@@ -1,5 +1,12 @@
 # The discrete 4-mode reduction: a hand-solvable problem statement
 
+> **SOLVED.** This problem has been worked: see
+> **`discrete_reduction_computed.md`** (canonical) —
+> `S_v(K=1) ≈ 11.515`, with `H_BB ≠ H_CC` (this doc's predicted
+> `E_B ≠ E_C` structural finding, now numbers) and `E_cross = −4`.
+> This doc is retained as the *problem statement*; the value and
+> the prior-attempt chronology live once in the canonical doc.
+
 The sole remaining `S_v(K=1)` open item, posed as a problem a
 person can work by hand. This is the "real Phase 2" — the explicit
 substrate-Lagrangian → 4-mode projection that
@@ -168,14 +175,12 @@ integrals, `E_B ≠ E_C` symmetry-breaking) and `H_AA = 0`, `H_BB ≈
 
 ## The S_v thread after this
 
-| Stage | `S_v(K=1)` |
-|---|---|
-| Phase 2 | `= 16` exact (assumed) |
-| explicit_4x4 | `≈ 13` (collinear error) |
-| dark_twin | `≈ 16` (orthogonal) |
-| e_cross_calc | `0 < S_v < 16` (continuum shadow) |
-| e_cross_discrete_resolution | `≈ 16` (discrete, ~10⁻⁸; continuum dissolved) |
-| **this discrete reduction** | **`= E_B + E_C + E_cross^discrete`, finite, `E_B ≠ E_C`, not the symmetric 16** |
+The full prior-value chronology (Phase 2 `=16`, the `≈13`
+collinear error, the dark-twin restoration, the continuum-shadow
+bound, the symmetric `≈16`) is recorded once in
+`discrete_reduction_computed.md`'s "What this supersedes" table —
+not duplicated here. Endpoint: `S_v(K=1) ≈ 11.515`, finite,
+`E_B ≠ E_C`, **not** the symmetric `16`.
 
 The discrete reduction is the *correct* representation (per the
 methodological commitment). Its leading attempt shows the
