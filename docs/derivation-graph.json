@@ -1,5 +1,5 @@
 {
-  "generated": "95a78c3a05a492514f761faa7bb62a807119234b",
+  "generated": "dd6345024b44d673074fdbf1e937448340aadceb",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -910,8 +910,7 @@
         "e_cross_calc",
         "e_cross_discrete_resolution",
         "explicit_4x4_reduction",
-        "inflation_duration",
-        "nonperturbative_phase2"
+        "inflation_duration"
       ],
       "git": [
         {
@@ -1585,11 +1584,11 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "discrete_reduction_computed",
         "discrete_reduction_problem",
         "e_cross_calc",
         "e_cross_discrete_resolution",
         "explicit_4x4_reduction",
-        "nonperturbative_phase2",
         "orthogonal_kink_interaction"
       ],
       "git": [
@@ -1805,12 +1804,44 @@
       ]
     },
     {
+      "id": "discrete_reduction_computed",
+      "path": "sync_cost/derivations/discrete_reduction_computed.md",
+      "title": "The discrete 4-mode reduction: computed",
+      "summary": "Class 3 (computed, hand-derived, numerically verified). No new\nprimitive. The discrete 4-mode reduction is delivered:",
+      "depends_on": [
+        "dark_twin_correction",
+        "discrete_reduction_problem",
+        "e_cross_calc",
+        "e_cross_discrete_resolution",
+        "explicit_4x4_reduction",
+        "figure_eight",
+        "inflation_duration",
+        "nonperturbative_phase1",
+        "nonperturbative_phase2",
+        "xor_derivation"
+      ],
+      "depended_on_by": [
+        "discrete_reduction_problem",
+        "e_cross_discrete_resolution",
+        "inflation_duration",
+        "nonperturbative_phase2"
+      ],
+      "git": [
+        {
+          "hash": "dd63450",
+          "date": "2026-05-16",
+          "subject": "discrete_reduction_computed: hand-computed 4-mode reduction, S_v(K=1)\u224811.5 (#127)"
+        }
+      ]
+    },
+    {
       "id": "discrete_reduction_problem",
       "path": "sync_cost/derivations/discrete_reduction_problem.md",
       "title": "The discrete 4-mode reduction: a hand-solvable problem statement",
       "summary": "Class 3 (problem statement + leading hand-attempt with a\nqualitative finding). No new primitive.",
       "depends_on": [
         "dark_twin_correction",
+        "discrete_reduction_computed",
         "e_cross_discrete_resolution",
         "figure_eight",
         "klein_bottle",
@@ -1819,11 +1850,15 @@
         "xor_derivation"
       ],
       "depended_on_by": [
-        "e_cross_discrete_resolution",
-        "explicit_4x4_reduction",
-        "nonperturbative_phase2"
+        "discrete_reduction_computed",
+        "explicit_4x4_reduction"
       ],
       "git": [
+        {
+          "hash": "dd63450",
+          "date": "2026-05-16",
+          "subject": "discrete_reduction_computed: hand-computed 4-mode reduction, S_v(K=1)\u224811.5 (#127)"
+        },
         {
           "hash": "95a78c3",
           "date": "2026-05-15",
@@ -2165,6 +2200,7 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "discrete_reduction_computed",
         "e_cross_discrete_resolution"
       ],
       "git": [
@@ -2179,25 +2215,30 @@
       "id": "e_cross_discrete_resolution",
       "path": "sync_cost/derivations/e_cross_discrete_resolution.md",
       "title": "E_cross resolved: the continuum route was a representation error",
-      "summary": "Class 3 (resolution by representation correction). No new\nprimitive. The continuum `E_cross` pathology and bound are\nsuperseded as a representation error; the discrete-native value is\n`S_v(K=1) \u2248 16` to ~`10\u207b\u2078`. The single residual open item is the\nexplicit discrete 4-mode reduction matrix (the real Phase 2),\na well-posed finite-dimensional calculation \u2014 not the dissolved\ncontinuum `E_cross`.",
+      "summary": "Class 3 (resolution by representation correction). No new\nprimitive. **Lasting content: the representation correction** \u2014\nthe continuum `E_cross` pathology and `0 < S_v < 16` bound are\nsuperseded as a representation error; substrate quantities are\nfinite discrete matrix elements, not continuum integrals. The\nresidual open item this doc named (the explicit discrete 4-mode\nreduction matrix) is **closed** in `discrete_reduction_computed.md`\n(canonical), which supersedes this doc's symmetric `\u2248 16`\n",
       "depends_on": [
         "audit_findings_3_4_disposition",
         "dark_twin_correction",
-        "discrete_reduction_problem",
+        "discrete_reduction_computed",
         "e_cross_calc",
         "explicit_4x4_reduction",
         "no_rescaling",
         "nonperturbative_phase1",
-        "nonperturbative_phase2",
         "orthogonal_kink_interaction",
         "s_v_nlo_attempt",
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "discrete_reduction_computed",
         "discrete_reduction_problem",
         "e_cross_calc"
       ],
       "git": [
+        {
+          "hash": "dd63450",
+          "date": "2026-05-16",
+          "subject": "discrete_reduction_computed: hand-computed 4-mode reduction, S_v(K=1)\u224811.5 (#127)"
+        },
         {
           "hash": "95a78c3",
           "date": "2026-05-15",
@@ -2358,9 +2399,9 @@
       ],
       "depended_on_by": [
         "dark_twin_correction",
+        "discrete_reduction_computed",
         "e_cross_calc",
         "e_cross_discrete_resolution",
-        "nonperturbative_phase2",
         "orthogonal_kink_interaction"
       ],
       "git": [
@@ -2638,6 +2679,7 @@
       "depended_on_by": [
         "cone_twist_substrate",
         "dark_twin_correction",
+        "discrete_reduction_computed",
         "discrete_reduction_problem",
         "e_cross_calc",
         "explicit_4x4_reduction",
@@ -3723,11 +3765,12 @@
     {
       "id": "inflation_duration",
       "path": "sync_cost/derivations/inflation_duration.md",
-      "title": "Inflation duration from S_v = 16 and the universal Schwinger relation",
+      "title": "Inflation duration from S_v(K) and the universal Schwinger relation",
       "summary": "`|\u2207K|_seam(t)` is now a derived framework function. Inflation\nduration follows from `S_v = 16` and `H_inflation`. The super-Earth\nanalogy (structural pattern only, not gravitational mechanics \u2014\nsee `s_inst_inflation.md` disclaimer) is conceptually confirmed\nbut operationally resolved: hard exit, many attempts, eventual\nsuccess \u2014 with \"hard\" meaning *Boltzmann-suppressed sampling\nprobability per attempt*, not *energetic escape from a potential\nwell*. The framework's no-rescaling principle is now ",
       "depends_on": [
         "audit_findings_3_4_disposition",
         "cone_twist_substrate",
+        "discrete_reduction_computed",
         "f_exit_natural",
         "half_twist_dynamics",
         "no_rescaling",
@@ -3741,10 +3784,16 @@
       "depended_on_by": [
         "audit_findings_3_4_disposition",
         "dark_twin_correction",
+        "discrete_reduction_computed",
         "explicit_4x4_reduction",
         "f_exit_natural"
       ],
       "git": [
+        {
+          "hash": "dd63450",
+          "date": "2026-05-16",
+          "subject": "discrete_reduction_computed: hand-computed 4-mode reduction, S_v(K=1)\u224811.5 (#127)"
+        },
         {
           "hash": "deb490f",
           "date": "2026-05-15",
@@ -4846,6 +4895,7 @@
       ],
       "depended_on_by": [
         "audit_findings_3_4_disposition",
+        "discrete_reduction_computed",
         "discrete_reduction_problem",
         "e_cross_calc",
         "e_cross_discrete_resolution",
@@ -4869,14 +4919,11 @@
     {
       "id": "nonperturbative_phase2",
       "path": "sync_cost/derivations/nonperturbative_phase2.md",
-      "title": "Non-perturbative Phase 2: explicit 4\u00d74 calc gives S_v(K=1) = 16 exactly",
-      "summary": "Class 3 (derivation grade). The 4\u00d74 calc is exact in the\nfinite-mode regime. The result `S_v(K=1) = 16` follows from:",
+      "title": "Non-perturbative Phase 2: the 4\u00d74 calc (historical; symmetric S_v(K=1)=16 superseded)",
+      "summary": "**Value superseded** \u2192 `discrete_reduction_computed.md` (canonical):\n`S_v(K=1) \u2248 11.515`, not the symmetric `16`. The \"exact precision\"\nframing in the sections above is the historical symmetric-diagonal\nclaim; the structural construction (4-mode Hilbert space,\nvortex-pair path, near-diagonal Hamiltonian) is what this doc\ncontributes and that stands.",
       "depends_on": [
-        "audit_findings_3_4_disposition",
         "cone_twist_substrate",
-        "dark_twin_correction",
-        "discrete_reduction_problem",
-        "explicit_4x4_reduction",
+        "discrete_reduction_computed",
         "figure_eight",
         "framework_status",
         "no_rescaling",
@@ -4891,8 +4938,8 @@
       "depended_on_by": [
         "audit_findings_3_4_disposition",
         "dark_twin_correction",
+        "discrete_reduction_computed",
         "discrete_reduction_problem",
-        "e_cross_discrete_resolution",
         "explicit_4x4_reduction",
         "f_exit_natural",
         "inflation_duration",
@@ -4901,6 +4948,11 @@
         "s_inst_inflation"
       ],
       "git": [
+        {
+          "hash": "dd63450",
+          "date": "2026-05-16",
+          "subject": "discrete_reduction_computed: hand-computed 4-mode reduction, S_v(K=1)\u224811.5 (#127)"
+        },
         {
           "hash": "95a78c3",
           "date": "2026-05-15",
@@ -7581,6 +7633,7 @@
         "sine_gordon_substrate"
       ],
       "depended_on_by": [
+        "discrete_reduction_computed",
         "discrete_reduction_problem",
         "gauge_factorization",
         "gell_mann_nishijima",
