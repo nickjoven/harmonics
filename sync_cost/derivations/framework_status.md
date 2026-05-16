@@ -35,6 +35,23 @@ Categories:
 | **A_s = 2.33×10⁻⁹ substrate-side prediction**: framework's complete substrate-side static-variance prediction at the matter-sector pivot; the 11% gap to A_s_obs = 2.10×10⁻⁹ is the inflation amplification factor f_amp (anchor-side, depends on H_inf + ε); framework correctly declines to predict both A_s_obs and f_amp. Instance 7 closure ACCEPTED. | `a_s_geometric_proof.md`, `a_s_g1_closure_attempt.md`, `vocabulary_is_the_work_pattern.md` Instance 7 |
 | **Sine-Gordon emergence at K = 1**: locked-state expansion of the framework Lagrangian gives `∂²_t φ − c² ∂²_x φ + ω₀² sin(φ) = 0` for fluctuations φ = θ − ψ around the locked mean phase, with `c² = σ²/m`, `ω₀² = K r / m`. No new primitives. | `sine_gordon_substrate.md`, building on `framework_lagrangian.py`, `einstein_from_kuramoto.md` |
 | **Z₂-graded soliton charge from Klein antiperiodicity**: kink ↔ antikink under traversal of the antiperiodic spatial loop is forced by `f(x+L_x, y) = −f(x, L_y−y)`. Distinct from the field half-twist `θ → θ + π` (which gives spin-statistics). | `sine_gordon_substrate.md`, `klein_bottle.md` (Soliton sector consequence section) |
+| **S_v(K=1) ≈ 11.515 (discrete 4-mode reduction, computed)**: the "real Phase 2" delivered — hand-computed, numerically verified, native discrete representation. Supersedes the assumed-symmetric `S_v = 16` (Finding 3). Diagonal direction-asymmetric (`H_BB ≈ 9.580 ≠ H_CC ≈ 3.645`, half-twist breaking sector-swap); `E_cross = −4` exact. Caveat-2 (half-twist assignment) resolved via `xor_derivation.md` §3.3 homotopy theorem. Upper bound under uniform-winding ansatz. | `discrete_reduction_computed.md` (canonical) |
+
+> **Audit Findings 3 & 4 — disposition on the status map
+> (post-2026-05).** Finding 3 ("S_v=16 exact" overstated) is
+> **closed**: the explicit discrete reduction is delivered;
+> `S_v(K=1) ≈ 11.515` (canonical doc above), not 16. Finding 4
+> (inflation duration not parameter-free; S_v K-dependent) is
+> **sharpened, still conditional**: the `s_inst`/`inflation_duration`
+> two-reading problem is reconciled (artifact) to a single
+> `|∇K|_inflation ≈ 2.68`; `K_inflation` is proven *structurally
+> un-pinnable via the geometric seam form for any K* (the `√K`
+> cancels, leaving a K-independent ~10¹² shortfall). Inflation
+> duration remains **conditional** on one well-posed open item
+> (the inflation-era seam *structure*), not an un-pinnable
+> parameter. See `k_inflation_seam_obstruction.md`,
+> `audit_findings_3_4_disposition.md`. Do not re-assert
+> "S_v = 16 exact" or "inflation duration parameter-free".
 
 ## Floor (structural residual at finite Fibonacci depth)
 
