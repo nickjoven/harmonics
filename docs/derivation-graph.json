@@ -1,5 +1,5 @@
 {
-  "generated": "17b6140c75689623aa5260aecc88111a82c5a884",
+  "generated": "5e48003e2e4c5ceabbc17119066f809536b7a6b1",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -916,6 +916,7 @@
         "explicit_4x4_reduction",
         "framework_status",
         "inflation_duration",
+        "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
         "thread_chronology"
       ],
@@ -1872,6 +1873,7 @@
         "e_cross_discrete_resolution",
         "framework_status",
         "inflation_duration",
+        "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
         "nonperturbative_phase2",
         "thread_chronology"
@@ -2378,6 +2380,7 @@
         "tick_continuum_construction"
       ],
       "depended_on_by": [
+        "inflation_seam_anchor_closure",
         "mediant_derivation",
         "thread_chronology"
       ],
@@ -2901,6 +2904,7 @@
         "h_inf_status",
         "hierarchy_problem_translation",
         "hybrid_strategy_audit",
+        "inflation_seam_anchor_closure",
         "k_scaling_scan",
         "klein_antipodal_z2_rep_pattern",
         "klein_bridge_audit_and_probe",
@@ -3903,6 +3907,7 @@
         "empty_fork_cap",
         "explicit_4x4_reduction",
         "f_exit_natural",
+        "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
         "thread_chronology"
       ],
@@ -3931,6 +3936,33 @@
           "hash": "84c4c2a",
           "date": "2026-05-14",
           "subject": "s_inst_inflation: cross-sector tunneling refines super-Earth analogy (#119)"
+        }
+      ]
+    },
+    {
+      "id": "inflation_seam_anchor_closure",
+      "path": "sync_cost/derivations/inflation_seam_anchor_closure.md",
+      "title": "#INF closed: |\u2207K|_inflation is the Schwinger-image of an anchor \u2014 the framework correctly declines",
+      "summary": "Class 3 (closure by correct-classification; informative).\nNo new primitive. `#INF` resolved as the principled (b):\n`|\u2207K|_inflation` = Schwinger-image of the cosmological anchor \u2192\nout-of-class by the framework's own taxonomy; the geometric\nobstruction is the inviolables enforcing that classification;\nsame accepted shape as the A_s/Instance-7 closure; an instance of\ntwo-anchor minimality. Inflation duration stays anchor-conditional\n(Finding-4 disposition, now explained). Feeds `#ANCHOR`.",
+      "depends_on": [
+        "audit_findings_3_4_disposition",
+        "discrete_reduction_computed",
+        "empty_fork_cap",
+        "framework_status",
+        "inflation_duration",
+        "k_inflation_seam_obstruction",
+        "substrate_determinism",
+        "thread_chronology"
+      ],
+      "depended_on_by": [
+        "k_inflation_seam_obstruction",
+        "thread_chronology"
+      ],
+      "git": [
+        {
+          "hash": "5e48003",
+          "date": "2026-05-17",
+          "subject": "Close #INF: |\u2207K|_inflation is the Schwinger-image of an anchor \u2014 framework correctly declines (#136)"
         }
       ]
     },
@@ -4132,6 +4164,7 @@
         "discrete_reduction_computed",
         "f_exit_natural",
         "inflation_duration",
+        "inflation_seam_anchor_closure",
         "s_inst_inflation",
         "substrate_determinism",
         "thread_chronology",
@@ -4140,10 +4173,16 @@
       "depended_on_by": [
         "framework_status",
         "inflation_duration",
+        "inflation_seam_anchor_closure",
         "s_inst_inflation",
         "thread_chronology"
       ],
       "git": [
+        {
+          "hash": "5e48003",
+          "date": "2026-05-17",
+          "subject": "Close #INF: |\u2207K|_inflation is the Schwinger-image of an anchor \u2014 framework correctly declines (#136)"
+        },
         {
           "hash": "fd6201b",
           "date": "2026-05-16",
@@ -7330,6 +7369,7 @@
         "e_cross_discrete_resolution",
         "empty_fork_cap",
         "framework_status",
+        "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
         "mediant_vs_flow_problem",
         "thread_chronology",
@@ -7363,6 +7403,7 @@
         "figure_eight",
         "framework_status",
         "inflation_duration",
+        "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
         "mediant_derivation",
         "mediant_vs_flow_calc",
@@ -7383,6 +7424,7 @@
         "empty_fork_cap",
         "framework_status",
         "inflation_duration",
+        "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
@@ -7392,6 +7434,11 @@
         "tick_continuum_construction"
       ],
       "git": [
+        {
+          "hash": "5e48003",
+          "date": "2026-05-17",
+          "subject": "Close #INF: |\u2207K|_inflation is the Schwinger-image of an anchor \u2014 framework correctly declines (#136)"
+        },
         {
           "hash": "17b6140",
           "date": "2026-05-17",
