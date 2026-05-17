@@ -143,7 +143,18 @@ What is newly closed: the two-reading problem (artifact), and the
 unreachable via the geometric form — the residual open item is
 strictly the seam *structure*, `inflation_duration.md` open #2).
 
-## The single remaining open item
+## The single remaining open item — now CLOSED
+
+> **CLOSED (`inflation_seam_anchor_closure.md`).** Resolved as
+> the second bullet below (the principled one-input boundary):
+> `|∇K|_inflation` is the Schwinger-image of `H_inflation`, an
+> out-of-class anchor by the framework's own taxonomy — so the
+> geometric obstruction proved here is the framework *correctly
+> declining* to manufacture an anchor-side quantity from
+> substrate geometry (same accepted shape as the A_s/Instance-7
+> closure; an instance of two-anchor minimality). NOT a
+> prediction of 2.68. The text below stated the open fork; the
+> first bullet (a derived non-geometric seam) is foreclosed.
 
 `inflation_duration.md` open #2, now sharply posed: **the
 inflation-era seam cannot be the geometric `(1−K)√K` form** (it
