@@ -15,8 +15,10 @@ duration without additional parameters.
 > doc's actual conclusion**, which is the Finding-4 disposition
 > below: the prediction is *conditional on `K_inflation`* and
 > `S_v` is K-dependent — the precise K=1 number is not what the
-> result rests on. The prior-value chronology lives once in the
-> canonical doc's "What this supersedes" table.
+> result rests on. Current Finding-4 state (two-reading
+> reconciled; geometric `K_inflation` impossible ∀K):
+> `k_inflation_seam_obstruction.md`. Lineage:
+> **`thread_chronology.md`** (the ledger).
 
 > **Disposition note (2026-05, audit Finding 4).** The
 > "parameter-free from `S_v = 16` alone" claim below is

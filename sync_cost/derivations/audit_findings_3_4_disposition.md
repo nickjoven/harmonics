@@ -1,5 +1,11 @@
 # Audit Findings 3 & 4: honest disposition (qualification, not closure)
 
+> **ORIGIN RECORD — current state is in the ledger.** This doc
+> records the *historical* qualification. Authoritative current
+> state: **`thread_chronology.md`** (Finding 3 CLOSED,
+> `S_v(K=1) ≈ 11.515`; Finding 4 SHARPENED/conditional). The body
+> below is the unedited disposition as first written.
+
 The external structural audit (`audit_report.md` on branch
 `worktree-agent-aafbee5af7f80796d`) raised five findings on the
 framework's foundational claims. Findings 1, 2, and 5 (catastrophic)

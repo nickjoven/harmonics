@@ -49,9 +49,13 @@ Categories:
 > cancels, leaving a K-independent ~10¹² shortfall). Inflation
 > duration remains **conditional** on one well-posed open item
 > (the inflation-era seam *structure*), not an un-pinnable
-> parameter. See `k_inflation_seam_obstruction.md`,
-> `audit_findings_3_4_disposition.md`. Do not re-assert
-> "S_v = 16 exact" or "inflation duration parameter-free".
+> parameter. **Chronology home: `thread_chronology.md`** (the
+> single ledger — settled outcomes + paths; this catalog carries
+> settled state only). See also `k_inflation_seam_obstruction.md`,
+> `audit_findings_3_4_disposition.md` (origin record). Do not
+> re-assert "S_v = 16 exact" or "inflation duration
+> parameter-free"; do not add per-doc supersession arcs — extend
+> the ledger.
 
 ## Floor (structural residual at finite Fibonacci depth)
 
