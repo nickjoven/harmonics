@@ -1,5 +1,5 @@
 {
-  "generated": "c9729cb8e9b8b732d26a121757ffe4390b6ac19e",
+  "generated": "57a5e22841999bb072d7f4d04114efa3c12e278c",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -2868,6 +2868,7 @@
         "klein_antipodal_z2_rep_pattern",
         "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
+        "mediant_vs_flow_problem",
         "no_rescaling",
         "nonperturbative_phase2",
         "nonperturbative_phase3",
@@ -4770,6 +4771,28 @@
           "hash": "254654b",
           "date": "2026-03-25",
           "subject": "D29: The mediant is not an axiom \u2014 it is derived"
+        }
+      ]
+    },
+    {
+      "id": "mediant_vs_flow_problem",
+      "path": "sync_cost/derivations/mediant_vs_flow_problem.md",
+      "title": "Mediant vs. flow: is a continuous flow *required*? \u2014 a hand-decidable problem statement",
+      "summary": "Class 3 (problem statement, not a resolution). Poses competitor\n#1's discriminator as a hand-decidable question with a single\ndecisive numeric test. No new primitive. Anchored to the\nmechanics now resolved (`#TICK` closed, #2 eliminated): with the\ndeterministic discrete reading constructively complete, the live\nquestion is no longer \"discrete or stochastic\" (#2, settled) but\n\"is the discrete generator *sufficient*, or is a continuous flow\n*required*\" \u2014 this problem decides exactly that.",
+      "depends_on": [
+        "framework_status",
+        "substrate_determinism",
+        "thread_chronology",
+        "tick_continuum_construction"
+      ],
+      "depended_on_by": [
+        "thread_chronology"
+      ],
+      "git": [
+        {
+          "hash": "57a5e22",
+          "date": "2026-05-17",
+          "subject": "Pose competitor #1: the mediant-vs-flow discriminator (hand-decidable) (#133)"
         }
       ]
     },
@@ -7233,6 +7256,7 @@
         "e_cross_discrete_resolution",
         "framework_status",
         "k_inflation_seam_obstruction",
+        "mediant_vs_flow_problem",
         "thread_chronology",
         "tick_continuum_construction"
       ],
@@ -7263,6 +7287,7 @@
         "framework_status",
         "inflation_duration",
         "k_inflation_seam_obstruction",
+        "mediant_vs_flow_problem",
         "qd_origins",
         "rectangle_perpendicularity",
         "substrate_determinism",
@@ -7279,12 +7304,18 @@
         "framework_status",
         "inflation_duration",
         "k_inflation_seam_obstruction",
+        "mediant_vs_flow_problem",
         "nonperturbative_phase2",
         "s_inst_inflation",
         "substrate_determinism",
         "tick_continuum_construction"
       ],
       "git": [
+        {
+          "hash": "57a5e22",
+          "date": "2026-05-17",
+          "subject": "Pose competitor #1: the mediant-vs-flow discriminator (hand-decidable) (#133)"
+        },
         {
           "hash": "c9729cb",
           "date": "2026-05-17",
@@ -7430,6 +7461,7 @@
         "thread_chronology"
       ],
       "depended_on_by": [
+        "mediant_vs_flow_problem",
         "substrate_determinism",
         "thread_chronology"
       ],
