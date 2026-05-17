@@ -37,12 +37,13 @@ genuinely-open items (bottom section) stay loud.
 | **#ANCHOR — five anchor-count obstructions, formal re-audit** | **Closed: none open.** Re-audited under `vocabulary_is_the_work_pattern.md` Consequence 1 + the #INF discriminator (forced structural absence = Feature; merely-operational absence = open). **#5** = the one rigorous load-bearing closure (substrate self-consistency K=1 line forces sector decoupling, `path_closures_iter3.md` D.3); **#1=#2** closed as Feature (prime-5 absent from the {2,3} register, `path_a_walkthrough.md`); **#3** upgraded asserted→argued (an anchor cannot be self-derived — the #INF circularity); **#4** dissolved (subsumed by #5; existed only under the rejected "two anchors collapse to one" framing). Two-anchor minimality is an *established* structural feature, one instance of the multiply-verified "structurally-forced decline" pattern shared with #INF, A_s/Instance-7 and the R1/∅ cap. **Bright line: closure by verified structural feature, NOT a derivation of `v/M_P`, `v_EW`, or any anchor (deriving one would contradict the feature).** | `anchor_count_reaudit.md` ← `anchor_count_audit.md` (the 5) / `vocabulary_is_the_work_pattern.md` C1 / `path_closures_iter3.md` D.3 / `path_a_walkthrough.md` / `hierarchy_problem_translation.md`; unifies with `inflation_seam_anchor_closure.md`, `empty_fork_cap.md` | "all five reframed/closed" (asserted, imprecise) → formal per-obstruction re-audit → **#5 rigorous, #1=#2 Feature, #3 argued, #4 dissolved; none open; the decline-pattern triply instantiated** |
 
 | **The Basepoint Principle** (meta-pattern → named principle) | The "structurally-forced decline" regularity — verified at R1/∅, the dimensional anchors, #INF, the anchor obstructions, A_s/Instance-7 — **elevated to a first-class named principle** (peer to no-rescaling / the inviolables): the framework supplies torsorial structure, never the basepoints; a declined basepoint is a *feature* iff its missing selecting section is *structurally forced* (obstruction exhibited), else *open*. The dimensional inputs are the canonical scale instance (ℝ₊-torsor: nature/number sayable, value declined, dynamically inert by torsor-invariance). **Bright line: a consistency boundary with a discriminator — not a derivation, not a licence.** | `basepoint_principle.md`; `framework_status.md` (Survives); unifies `empty_fork_cap.md` / `inflation_seam_anchor_closure.md` / `anchor_count_reaudit.md` | meta-pattern observed across closures → proposed for elevation → **named: the Basepoint Principle (discriminator-centered)** |
+| **#PROPOSED disposition** (the three Proposed-tier items, triaged) | **A (K_c):** Gap-1 K_c **already closed** (`k_critical_phase_b.md`, deferred-to; provenance-corrected — scoping wrongly said "never run"); framework uses `K_map=1` exact; the finite-`n` Fibonacci closed-form is **known-hard external KAM math, out of scope, not a framework gap**; secondary RFE branch born first-order at `K_c^RFE≈1.56`, with `K_c^RFE=Σw(1)=1.5617` an **explicitly-flagged conjecture, NOT claimed**. **B (T2#7):** iteration-to-time anchor **Basepoint-closed** (#INF pattern). **C (K-zoo):** **Class-2 by construction** — K=1 formula Class-3 stands, K<1 mapping correctly not chased. Nothing overreached. | `proposed_items_disposition.md` ← `k_critical_phase_b.md` / `k_critical_phase_a.md` / `rational_field_equation.md`; `inflation_seam_anchor_closure.md`; `sine_gordon_substrate.md`; `ansatz_audit_policy.md` | began the Proposed work → caught the provenance error (Phase B *had* run) → A deferred+reframed, B Basepoint-closed, C Class-2-disposed |
 
 ## Genuinely open (minimized — only what is actually unsettled)
 
 | # | Open item | Where | What would close it |
 |---|---|---|---|
-| **#PROPOSED** | Proposed-tier (longer horizon): `K_c(F_n/F_{n+1})` closed form; T2#7 measurement-arc residuals; K-zoo kink-mass ratios (conjectural at K<1) | `framework_status.md` "Proposed" | the per-item upgrade criteria in `framework_status.md` |
+| **#PROPOSED residual** (reduced after disposition) | Only what genuinely remains after `proposed_items_disposition.md`: (i) T2#7's two *dynamical* sub-residuals — continuous K(t) during measurement, multi-tongue cascade — **operational, not forced** (so by the Basepoint discriminator: open, *not* declined); (ii) the K<1 K-zoo kink-mass mapping — a **standing Class-2-flagged conjecture**, correctly *not chased* per the framework's honest-landing discipline. Neither is consistency-forced; both are longer-horizon. | `proposed_items_disposition.md`; `sine_gordon_substrate.md` (C); measurement-arc docs (B) | (i) a derived collapse-dynamics for continuous K(t)/multi-tongue; (ii) a *structural forcing* for the K<1 sine-Gordon-per-sector reduction (absent which it stays Class-2, not pursued) |
 
 ## Status
 
@@ -68,7 +69,10 @@ docs' headlines/Status state settled values with the path here.
 ## One-line summary
 
 One ledger: every resolved thread's settled outcome + canonical
-doc + one-line path. After the #ANCHOR re-audit the only
-genuinely-open item is **#PROPOSED** (longer-horizon; #INF and
-#ANCHOR now closed → Resolved) — so no other doc needs its own
-supersession arc and no isolated chunk is wrong.
+doc + one-line path. After the #PROPOSED disposition the genuine
+residual is only the **#PROPOSED residual** row — T2#7's two
+dynamical sub-residuals and the Class-2-flagged K<1 K-zoo
+conjecture (both longer-horizon, neither consistency-forced;
+#INF, #ANCHOR, and the bulk of #PROPOSED closed/disposed) — so no
+other doc needs its own supersession arc and no isolated chunk is
+wrong.
