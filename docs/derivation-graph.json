@@ -1,5 +1,5 @@
 {
-  "generated": "dd6345024b44d673074fdbf1e937448340aadceb",
+  "generated": "712de6cb152f2c14a595edca4b56da301058e2d4",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -803,6 +803,7 @@
         "remaining_gap_shapes",
         "sector_decoupling_phase_a",
         "structural_lemmas",
+        "thread_chronology",
         "vocabulary_is_the_work_pattern"
       ],
       "git": [
@@ -902,6 +903,7 @@
         "qd_origins",
         "rectangle_perpendicularity",
         "s_inst_inflation",
+        "thread_chronology",
         "unitless_audit",
         "xor_continuum_limit"
       ],
@@ -910,9 +912,17 @@
         "e_cross_calc",
         "e_cross_discrete_resolution",
         "explicit_4x4_reduction",
-        "inflation_duration"
+        "framework_status",
+        "inflation_duration",
+        "k_inflation_seam_obstruction",
+        "thread_chronology"
       ],
       "git": [
+        {
+          "hash": "fd6201b",
+          "date": "2026-05-16",
+          "subject": "Chronology ledger + structural-link topology (not inline corrections) (#129)"
+        },
         {
           "hash": "deb490f",
           "date": "2026-05-15",
@@ -1095,7 +1105,8 @@
         "seismic_eigenstate_dictionary",
         "sine_gordon_substrate",
         "stribeck_vortex",
-        "structural_lemmas"
+        "structural_lemmas",
+        "thread_chronology"
       ],
       "git": [
         {
@@ -1584,7 +1595,6 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
-        "discrete_reduction_computed",
         "discrete_reduction_problem",
         "e_cross_calc",
         "e_cross_discrete_resolution",
@@ -1809,24 +1819,32 @@
       "title": "The discrete 4-mode reduction: computed",
       "summary": "Class 3 (computed, hand-derived, numerically verified). No new\nprimitive. The discrete 4-mode reduction is delivered:",
       "depends_on": [
-        "dark_twin_correction",
         "discrete_reduction_problem",
         "e_cross_calc",
         "e_cross_discrete_resolution",
-        "explicit_4x4_reduction",
         "figure_eight",
         "inflation_duration",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
+        "thread_chronology",
         "xor_derivation"
       ],
       "depended_on_by": [
         "discrete_reduction_problem",
+        "e_cross_calc",
         "e_cross_discrete_resolution",
+        "framework_status",
         "inflation_duration",
-        "nonperturbative_phase2"
+        "k_inflation_seam_obstruction",
+        "nonperturbative_phase2",
+        "thread_chronology"
       ],
       "git": [
+        {
+          "hash": "fd6201b",
+          "date": "2026-05-16",
+          "subject": "Chronology ledger + structural-link topology (not inline corrections) (#129)"
+        },
         {
           "hash": "dd63450",
           "date": "2026-05-16",
@@ -2190,20 +2208,26 @@
       "depends_on": [
         "audit_findings_3_4_disposition",
         "dark_twin_correction",
-        "e_cross_discrete_resolution",
+        "discrete_reduction_computed",
         "explicit_4x4_reduction",
         "figure_eight",
         "nonperturbative_phase1",
         "orthogonal_kink_interaction",
         "s_v_nlo_attempt",
         "sine_gordon_substrate",
-        "substrate_determinism"
+        "substrate_determinism",
+        "thread_chronology"
       ],
       "depended_on_by": [
         "discrete_reduction_computed",
         "e_cross_discrete_resolution"
       ],
       "git": [
+        {
+          "hash": "fd6201b",
+          "date": "2026-05-16",
+          "subject": "Chronology ledger + structural-link topology (not inline corrections) (#129)"
+        },
         {
           "hash": "2797196",
           "date": "2026-05-15",
@@ -2230,8 +2254,7 @@
       ],
       "depended_on_by": [
         "discrete_reduction_computed",
-        "discrete_reduction_problem",
-        "e_cross_calc"
+        "discrete_reduction_problem"
       ],
       "git": [
         {
@@ -2399,7 +2422,6 @@
       ],
       "depended_on_by": [
         "dark_twin_correction",
-        "discrete_reduction_computed",
         "e_cross_calc",
         "e_cross_discrete_resolution",
         "orthogonal_kink_interaction"
@@ -2497,7 +2519,9 @@
         "audit_findings_3_4_disposition",
         "explicit_4x4_reduction",
         "inflation_duration",
-        "substrate_determinism"
+        "k_inflation_seam_obstruction",
+        "substrate_determinism",
+        "thread_chronology"
       ],
       "git": [
         {
@@ -2750,12 +2774,14 @@
         "a_s_geometric_proof",
         "anchor_count_audit",
         "ansatz_audit_policy",
+        "audit_findings_3_4_disposition",
         "baryon_fraction",
         "born_rule",
         "continuity_in_K_nulls",
         "continuum_limits",
         "cross_ratio_irrep_reframe",
         "denomination_boundary",
+        "discrete_reduction_computed",
         "duty_cycle_dictionary",
         "einstein_from_kuramoto",
         "farey_partition",
@@ -2763,6 +2789,7 @@
         "hierarchy_gaussian_lattice",
         "hierarchy_problem_translation",
         "hybrid_strategy_audit",
+        "k_inflation_seam_obstruction",
         "klein_bottle",
         "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
@@ -2774,11 +2801,15 @@
         "path_a_walkthrough",
         "path_closures_iter3",
         "path_closures_iter4",
+        "phenomenology_cross_reference",
         "psl2z_subgroup_phase_a_results",
         "psl2z_subgroup_phase_b",
         "sine_gordon_substrate",
+        "substrate_determinism",
+        "thread_chronology",
         "vocabulary_is_the_work_pattern",
-        "w_plus_formalization"
+        "w_plus_formalization",
+        "xor_derivation"
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
@@ -2831,12 +2862,23 @@
         "s_v_nlo",
         "s_v_nlo_attempt",
         "structural_lemmas",
+        "thread_chronology",
         "time_axis_split",
         "unitless_audit",
         "vocabulary_is_the_work_pattern",
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "fd6201b",
+          "date": "2026-05-16",
+          "subject": "Chronology ledger + structural-link topology (not inline corrections) (#129)"
+        },
+        {
+          "hash": "8f09e47",
+          "date": "2026-05-16",
+          "subject": "K_inflation: prove the geometric-seam obstruction is structural; sharpen Finding 4 (#128)"
+        },
         {
           "hash": "c85e379",
           "date": "2026-05-10",
@@ -3773,10 +3815,12 @@
         "discrete_reduction_computed",
         "f_exit_natural",
         "half_twist_dynamics",
+        "k_inflation_seam_obstruction",
         "no_rescaling",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
         "s_inst_inflation",
+        "thread_chronology",
         "time_axis_split",
         "unitless_audit",
         "wave_particle_substrate"
@@ -3786,9 +3830,16 @@
         "dark_twin_correction",
         "discrete_reduction_computed",
         "explicit_4x4_reduction",
-        "f_exit_natural"
+        "f_exit_natural",
+        "k_inflation_seam_obstruction",
+        "thread_chronology"
       ],
       "git": [
+        {
+          "hash": "fd6201b",
+          "date": "2026-05-16",
+          "subject": "Chronology ledger + structural-link topology (not inline corrections) (#129)"
+        },
         {
           "hash": "dd63450",
           "date": "2026-05-16",
@@ -3996,6 +4047,40 @@
           "hash": "c83e5d0",
           "date": "2026-04-19",
           "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        }
+      ]
+    },
+    {
+      "id": "k_inflation_seam_obstruction",
+      "path": "sync_cost/derivations/k_inflation_seam_obstruction.md",
+      "title": "K_inflation: the obstruction is structural, not a missing calc",
+      "summary": "Class 3 (honest disposition + computed sharpening). No new\nprimitive. Reconciles Finding 4's two-reading problem (artifact);\nproves the geometric route to `K_inflation` is structurally closed\n\u2200K by a K-cancelling 12-order margin; reduces the residual open\nitem to one well-posed question (inflation-era seam structure)\nwith a single pinned target `|\u2207K|_inflation \u2248 2.68`. Downstream of\n`discrete_reduction_computed.md`'s canonical `S_v(K=1) \u2248 11.515`.",
+      "depends_on": [
+        "audit_findings_3_4_disposition",
+        "discrete_reduction_computed",
+        "f_exit_natural",
+        "inflation_duration",
+        "s_inst_inflation",
+        "substrate_determinism",
+        "thread_chronology",
+        "unitless_audit"
+      ],
+      "depended_on_by": [
+        "framework_status",
+        "inflation_duration",
+        "s_inst_inflation",
+        "thread_chronology"
+      ],
+      "git": [
+        {
+          "hash": "fd6201b",
+          "date": "2026-05-16",
+          "subject": "Chronology ledger + structural-link topology (not inline corrections) (#129)"
+        },
+        {
+          "hash": "8f09e47",
+          "date": "2026-05-16",
+          "subject": "K_inflation: prove the geometric-seam obstruction is structural; sharpen Finding 4 (#128)"
         }
       ]
     },
@@ -4932,6 +5017,7 @@
         "s_v_nlo_attempt",
         "seam_profile",
         "soliton_dynamics",
+        "thread_chronology",
         "unitless_audit",
         "wave_particle_substrate"
       ],
@@ -4948,6 +5034,11 @@
         "s_inst_inflation"
       ],
       "git": [
+        {
+          "hash": "fd6201b",
+          "date": "2026-05-16",
+          "subject": "Chronology ledger + structural-link topology (not inline corrections) (#129)"
+        },
         {
           "hash": "dd63450",
           "date": "2026-05-16",
@@ -5843,6 +5934,7 @@
         "audit_punch_list_2026-04",
         "derivation_atlas",
         "down_type_double_cover_closed",
+        "framework_status",
         "structural_lemmas"
       ],
       "git": [
@@ -6099,6 +6191,7 @@
         "f_exit_natural",
         "hierarchy_gaussian_lattice",
         "substrate_determinism",
+        "thread_chronology",
         "three_dimensions"
       ],
       "git": [
@@ -6278,6 +6371,7 @@
         "f_exit_natural",
         "klein_bottle_derivation",
         "qd_origins",
+        "thread_chronology",
         "wave_particle_substrate"
       ],
       "git": [
@@ -6352,17 +6446,25 @@
       "depends_on": [
         "cone_twist_substrate",
         "half_twist_dynamics",
+        "k_inflation_seam_obstruction",
         "nonperturbative_phase2",
         "nonperturbative_phase3",
         "soliton_dynamics",
+        "thread_chronology",
         "time_axis_split",
         "unitless_audit"
       ],
       "depended_on_by": [
         "audit_findings_3_4_disposition",
-        "inflation_duration"
+        "inflation_duration",
+        "k_inflation_seam_obstruction"
       ],
       "git": [
+        {
+          "hash": "fd6201b",
+          "date": "2026-05-16",
+          "subject": "Chronology ledger + structural-link topology (not inline corrections) (#129)"
+        },
         {
           "hash": "84c4c2a",
           "date": "2026-05-14",
@@ -7091,13 +7193,60 @@
       ],
       "depended_on_by": [
         "e_cross_calc",
-        "e_cross_discrete_resolution"
+        "e_cross_discrete_resolution",
+        "framework_status",
+        "k_inflation_seam_obstruction",
+        "thread_chronology"
       ],
       "git": [
         {
           "hash": "deb490f",
           "date": "2026-05-15",
           "subject": "audit_findings_3_4_disposition: honest qualification of major findings (#124)"
+        }
+      ]
+    },
+    {
+      "id": "thread_chronology",
+      "path": "sync_cost/derivations/thread_chronology.md",
+      "title": "Thread chronology \u2014 the single ledger",
+      "summary": "Class 3 (consolidation / record hygiene). No new primitive, no\nnew physics. This ledger is the single chronology home; the\ncatalog (`framework_status.md`) carries settled state only; other\ndocs' headlines/Status state settled values with the path here.",
+      "depends_on": [
+        "anchor_count_audit",
+        "audit_findings_3_4_disposition",
+        "born_rule",
+        "discrete_reduction_computed",
+        "f_exit_natural",
+        "framework_status",
+        "inflation_duration",
+        "k_inflation_seam_obstruction",
+        "qd_origins",
+        "rectangle_perpendicularity",
+        "substrate_determinism",
+        "vocabulary_is_the_work_pattern",
+        "wave_particle_substrate",
+        "xor_derivation"
+      ],
+      "depended_on_by": [
+        "audit_findings_3_4_disposition",
+        "discrete_reduction_computed",
+        "e_cross_calc",
+        "framework_status",
+        "inflation_duration",
+        "k_inflation_seam_obstruction",
+        "nonperturbative_phase2",
+        "s_inst_inflation"
+      ],
+      "git": [
+        {
+          "hash": "712de6c",
+          "date": "2026-05-17",
+          "subject": "ledger: add #TICK \u2014 minimal-tick rule not fully specified (genuinely open) (#130)"
+        },
+        {
+          "hash": "fd6201b",
+          "date": "2026-05-16",
+          "subject": "Chronology ledger + structural-link topology (not inline corrections) (#129)"
         }
       ]
     },
@@ -7310,6 +7459,7 @@
         "audit_findings_3_4_disposition",
         "explicit_4x4_reduction",
         "inflation_duration",
+        "k_inflation_seam_obstruction",
         "no_rescaling",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
@@ -7488,7 +7638,8 @@
         "psl2z_subgroup_phase_b",
         "psl2z_subgroup_phase_c_inventory",
         "remaining_gap_shapes",
-        "sector_decoupling_phase_a"
+        "sector_decoupling_phase_a",
+        "thread_chronology"
       ],
       "git": [
         {
@@ -7579,6 +7730,7 @@
         "nonperturbative_phase2",
         "orthogonal_kink_interaction",
         "substrate_determinism",
+        "thread_chronology",
         "time_axis_split",
         "unitless_audit"
       ],
@@ -7635,13 +7787,15 @@
       "depended_on_by": [
         "discrete_reduction_computed",
         "discrete_reduction_problem",
+        "framework_status",
         "gauge_factorization",
         "gell_mann_nishijima",
         "klein_bottle_derivation",
         "numerology_inventory",
         "observer_register_closure",
         "omega_partition_combinatorial",
-        "qd_origins"
+        "qd_origins",
+        "thread_chronology"
       ],
       "git": [
         {
