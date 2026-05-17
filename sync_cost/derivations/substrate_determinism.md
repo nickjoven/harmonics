@@ -261,6 +261,19 @@ frame the way a language model computes its next token —
 deterministically given context + weights — and the apparent need
 for momentum is an artifact of the continuum description.
 
+> **Now constructive (not asserted).** This subsection's claim —
+> "a discrete first-order context-dependent update yields a
+> continuum that looks second-order" — is realized explicitly in
+> `tick_continuum_construction.md`: the per-tick binary Z₂
+> winding-sign is a Goldstein–Kac process; eliminating the binary
+> index *manufactures* `∂²_t` by an exact identity (the
+> "momentum" = the eliminated two-valued context), a force-biased
+> flip supplies `+ω₀² sinφ`, giving sine-Gordon — conservative in
+> the `λ→0` limit, with the residual `2λ∂_tφ` being inviolable
+> #9's arrow surfacing. Momentum-dissolution + the arrow are
+> *jointly constructive*; the stochastic competitor is eliminated
+> (no `kT` enters). See `thread_chronology.md` #TICK.
+
 ### What this changes for the prior
 
 This is the strongest single argument for (B) so far. It does not
