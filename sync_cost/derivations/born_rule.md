@@ -175,11 +175,16 @@ produce |ψ|².
 **Resolved**: Quadratic basin structure follows from saddle-node
 universality at Arnold tongue boundaries. Not assumed — derived.
 
-**Open**: The uniform curvature condition (α_k = α) recovers the
-standard Born rule. Non-uniform curvature gives a modified rule.
-Are there physical systems where the modification is measurable?
-Candidates: systems near the quantum-classical boundary where the
-cost landscape is asymmetric.
+**Open (N > 2 only)**: The uniform curvature condition (α_k = α)
+recovers the standard Born rule. For the **fundamental binary**
+this is *closed* — forced by parity of the saddle-node normal form
+= the half-twist `J²=−I` Z₂-involution (`born_rule_parameter_free.md`,
+`substrate_determinism.md` #1/#7). Non-uniform curvature can only
+arise in the *derived* N > 2 regime; whether the modification is
+physically measurable there remains open. The parameter-free,
+noise-free status of the binary `|ψ|²` (the discriminator vs the
+stochastic-Kramers reading) is pressed in
+`born_rule_parameter_free.md`.
 
 ---
 
