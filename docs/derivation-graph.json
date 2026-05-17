@@ -1,5 +1,5 @@
 {
-  "generated": "712de6cb152f2c14a595edca4b56da301058e2d4",
+  "generated": "8b5dd3de3d5e6cf33c74a31cb5c5bc20cb6579fa",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -585,6 +585,7 @@
         "INDEX",
         "PROOF_B_quantum",
         "audit_punch_list_2026-04",
+        "born_rule_parameter_free",
         "canonical_glossary",
         "cone_twist_substrate",
         "continuity_in_K_nulls",
@@ -1089,11 +1090,14 @@
       "title": "Born Rule from Basin Measure",
       "summary": "The Born rule (P = |\u03c8|\u00b2) is the basin measure of the synchronization\ncost landscape under dissipative convergence. It is not axiomatic \u2014 it\nis the generic outcome of dissipative dynamics on a cost landscape with\nquadratic structure near attractors.",
       "depends_on": [
-        "PROOF_B_quantum"
+        "PROOF_B_quantum",
+        "born_rule_parameter_free",
+        "substrate_determinism"
       ],
       "depended_on_by": [
         "INDEX",
         "a1_from_saddle_node",
+        "born_rule_parameter_free",
         "derivation_atlas",
         "dynamical_tool_audit",
         "framework_status",
@@ -1105,10 +1109,14 @@
         "seismic_eigenstate_dictionary",
         "sine_gordon_substrate",
         "stribeck_vortex",
-        "structural_lemmas",
-        "thread_chronology"
+        "structural_lemmas"
       ],
       "git": [
+        {
+          "hash": "8b5dd3d",
+          "date": "2026-05-17",
+          "subject": "Press the |\u03c8|\u00b2 resolution: parameter-free at the binary; #TICK(a) closed, #2 discriminated (#131)"
+        },
         {
           "hash": "b2deee7",
           "date": "2026-04-07",
@@ -1143,6 +1151,29 @@
           "hash": "57cb9c0",
           "date": "2026-03-22",
           "subject": "Reorient repo around sync cost framework; add three derivations"
+        }
+      ]
+    },
+    {
+      "id": "born_rule_parameter_free",
+      "path": "sync_cost/derivations/born_rule_parameter_free.md",
+      "title": "Born rule |\u03c8|\u00b2 is parameter-free at the binary \u2014 pressed",
+      "summary": "Class 3 (resolution by structural identification + precisely\nlocated residual). No new primitive. Sharpens `born_rule.md`'s\n\"Open\" (uniform curvature) \u2014 closed for the binary by the\nhalf-twist Z\u2082-involution. Does **not** close `#TICK(b)`; it\nconcentrates the entire residual there.",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "born_rule",
+        "substrate_determinism",
+        "thread_chronology"
+      ],
+      "depended_on_by": [
+        "born_rule",
+        "thread_chronology"
+      ],
+      "git": [
+        {
+          "hash": "8b5dd3d",
+          "date": "2026-05-17",
+          "subject": "Press the |\u03c8|\u00b2 resolution: parameter-free at the binary; #TICK(a) closed, #2 discriminated (#131)"
         }
       ]
     },
@@ -7192,6 +7223,8 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "born_rule",
+        "born_rule_parameter_free",
         "e_cross_calc",
         "e_cross_discrete_resolution",
         "framework_status",
@@ -7214,7 +7247,7 @@
       "depends_on": [
         "anchor_count_audit",
         "audit_findings_3_4_disposition",
-        "born_rule",
+        "born_rule_parameter_free",
         "discrete_reduction_computed",
         "f_exit_natural",
         "framework_status",
@@ -7229,6 +7262,7 @@
       ],
       "depended_on_by": [
         "audit_findings_3_4_disposition",
+        "born_rule_parameter_free",
         "discrete_reduction_computed",
         "e_cross_calc",
         "framework_status",
@@ -7238,6 +7272,11 @@
         "s_inst_inflation"
       ],
       "git": [
+        {
+          "hash": "8b5dd3d",
+          "date": "2026-05-17",
+          "subject": "Press the |\u03c8|\u00b2 resolution: parameter-free at the binary; #TICK(a) closed, #2 discriminated (#131)"
+        },
         {
           "hash": "712de6c",
           "date": "2026-05-17",
