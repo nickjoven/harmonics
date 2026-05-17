@@ -1,5 +1,5 @@
 {
-  "generated": "5e48003e2e4c5ceabbc17119066f809536b7a6b1",
+  "generated": "67e3ca32e178f517e8f620bb886d417c05644344",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -785,6 +785,7 @@
       "depended_on_by": [
         "a_s_g1_closure_attempt",
         "address_and_quantity",
+        "anchor_count_reaudit",
         "canonical_glossary",
         "depth_connection_nulls",
         "derivation_atlas",
@@ -828,6 +829,35 @@
           "hash": "2a285e4",
           "date": "2026-04-22",
           "subject": "Flatten simulation audit into existing clarifying documents"
+        }
+      ]
+    },
+    {
+      "id": "anchor_count_reaudit",
+      "path": "sync_cost/derivations/anchor_count_reaudit.md",
+      "title": "#ANCHOR: formal re-audit of the five anchor-count obstructions",
+      "summary": "Class 3 (formal re-audit; closure by verified structural\nfeature). No new primitive. The five anchor-count obstructions\nre-audited under Consequence 1 + the #INF discriminator: #5\nrigorous/load-bearing, #1=#2 Feature (prime-5), #3 upgraded to\nargued, #4 dissolved \u2014 **none open**. `#ANCHOR` closed; the\ntwo-anchor-minimum-as-structural-feature is established and shown\nto be one instance of a multiply-verified decline pattern.",
+      "depends_on": [
+        "anchor_count_audit",
+        "continuity_in_K_nulls",
+        "continuum_limits",
+        "empty_fork_cap",
+        "framework_status",
+        "hierarchy_problem_translation",
+        "inflation_seam_anchor_closure",
+        "path_a_walkthrough",
+        "path_closures_iter3",
+        "thread_chronology",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "thread_chronology"
+      ],
+      "git": [
+        {
+          "hash": "67e3ca3",
+          "date": "2026-05-17",
+          "subject": "Close #ANCHOR: formal re-audit of the five anchor-count obstructions (#137)"
         }
       ]
     },
@@ -1410,6 +1440,7 @@
       ],
       "depended_on_by": [
         "anchor_count_audit",
+        "anchor_count_reaudit",
         "audit_punch_list_2026-04",
         "cross_ratio_irrep_reframe",
         "derivation_atlas",
@@ -1452,6 +1483,7 @@
         "PROOF_B_quantum",
         "a_s_geometric_proof",
         "anchor_count_audit",
+        "anchor_count_reaudit",
         "canonical_glossary",
         "cross_ratio_irrep_reframe",
         "derivation_atlas",
@@ -2380,6 +2412,7 @@
         "tick_continuum_construction"
       ],
       "depended_on_by": [
+        "anchor_count_reaudit",
         "inflation_seam_anchor_closure",
         "mediant_derivation",
         "thread_chronology"
@@ -2890,6 +2923,7 @@
         "PROOF_B_quantum",
         "a1_from_saddle_node",
         "a_s_g1_closure_attempt",
+        "anchor_count_reaudit",
         "ansatz_audit_policy",
         "audit_findings_3_4_disposition",
         "audit_punch_list_2026-04",
@@ -3668,12 +3702,14 @@
       "depended_on_by": [
         "a_s_g1_closure_attempt",
         "anchor_count_audit",
+        "anchor_count_reaudit",
         "derivation_atlas",
         "framework_status",
         "path_closures_iter3",
         "phenomenology_cross_reference",
         "remaining_gap_shapes",
         "sector_decoupling_phase_a",
+        "thread_chronology",
         "vocabulary_is_the_work_pattern"
       ],
       "git": [
@@ -3955,6 +3991,7 @@
         "thread_chronology"
       ],
       "depended_on_by": [
+        "anchor_count_reaudit",
         "k_inflation_seam_obstruction",
         "thread_chronology"
       ],
@@ -5921,6 +5958,7 @@
       "depended_on_by": [
         "a_s_g1_closure_attempt",
         "anchor_count_audit",
+        "anchor_count_reaudit",
         "canonical_glossary",
         "depth_connection_nulls",
         "framework_status",
@@ -5930,6 +5968,7 @@
         "path_closures_iter4",
         "remaining_gap_shapes",
         "sector_decoupling_phase_a",
+        "thread_chronology",
         "vocabulary_is_the_work_pattern"
       ],
       "git": [
@@ -6021,13 +6060,15 @@
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "anchor_count_audit",
+        "anchor_count_reaudit",
         "canonical_glossary",
         "continuity_in_K_nulls",
         "derivation_atlas",
         "framework_status",
         "omega_b_alpha_beta_closure",
         "remaining_gap_shapes",
-        "structural_lemmas"
+        "structural_lemmas",
+        "thread_chronology"
       ],
       "git": [
         {
@@ -7395,6 +7436,7 @@
       "summary": "Class 3 (consolidation / record hygiene). No new primitive, no\nnew physics. This ledger is the single chronology home; the\ncatalog (`framework_status.md`) carries settled state only; other\ndocs' headlines/Status state settled values with the path here.",
       "depends_on": [
         "anchor_count_audit",
+        "anchor_count_reaudit",
         "audit_findings_3_4_disposition",
         "born_rule_parameter_free",
         "discrete_reduction_computed",
@@ -7402,12 +7444,15 @@
         "f_exit_natural",
         "figure_eight",
         "framework_status",
+        "hierarchy_problem_translation",
         "inflation_duration",
         "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
         "mediant_derivation",
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
+        "path_a_walkthrough",
+        "path_closures_iter3",
         "qd_origins",
         "rectangle_perpendicularity",
         "substrate_determinism",
@@ -7417,6 +7462,7 @@
         "xor_derivation"
       ],
       "depended_on_by": [
+        "anchor_count_reaudit",
         "audit_findings_3_4_disposition",
         "born_rule_parameter_free",
         "discrete_reduction_computed",
@@ -7434,6 +7480,11 @@
         "tick_continuum_construction"
       ],
       "git": [
+        {
+          "hash": "67e3ca3",
+          "date": "2026-05-17",
+          "subject": "Close #ANCHOR: formal re-audit of the five anchor-count obstructions (#137)"
+        },
         {
           "hash": "5e48003",
           "date": "2026-05-17",
@@ -7868,6 +7919,7 @@
         "L1_substrate_cusp_ground_state",
         "a_s_g1_closure_attempt",
         "anchor_count_audit",
+        "anchor_count_reaudit",
         "audit_punch_list_2026-04",
         "canonical_glossary",
         "continuity_in_K_nulls",
