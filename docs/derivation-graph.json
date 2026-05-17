@@ -1,5 +1,5 @@
 {
-  "generated": "57a5e22841999bb072d7f4d04114efa3c12e278c",
+  "generated": "227a909f38af06edcf5a1f792be072a3eab8afb3",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -597,6 +597,7 @@
         "framework_status",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
+        "mediant_vs_flow_calc",
         "numerology_inventory",
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
@@ -1103,6 +1104,7 @@
         "framework_status",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
+        "mediant_vs_flow_calc",
         "numerology_inventory",
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
@@ -2868,6 +2870,7 @@
         "klein_antipodal_z2_rep_pattern",
         "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
+        "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
         "no_rescaling",
         "nonperturbative_phase2",
@@ -4775,6 +4778,30 @@
       ]
     },
     {
+      "id": "mediant_vs_flow_calc",
+      "path": "sync_cost/derivations/mediant_vs_flow_calc.md",
+      "title": "Mediant vs. flow: the calculation run \u2014 flow fingerprint absent at K=1",
+      "summary": "Class 3 (decisive measurement + honest scope). No new primitive.\nRuns the `mediant_vs_flow_problem.md` test; verdict is regime\n(complete-tree), corroborated by the framework's independent\nFinding-3 position and the recorded Adler-only/monotone\neliminations. `D \u2248 0.8700` is not a framework prediction.",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "born_rule",
+        "framework_status",
+        "mediant_vs_flow_problem",
+        "thread_chronology",
+        "tick_continuum_construction"
+      ],
+      "depended_on_by": [
+        "thread_chronology"
+      ],
+      "git": [
+        {
+          "hash": "227a909",
+          "date": "2026-05-17",
+          "subject": "Run the #FLOW calculation: flow fingerprint absent at K=1; competitor #1 falls (#134)"
+        }
+      ]
+    },
+    {
       "id": "mediant_vs_flow_problem",
       "path": "sync_cost/derivations/mediant_vs_flow_problem.md",
       "title": "Mediant vs. flow: is a continuous flow *required*? \u2014 a hand-decidable problem statement",
@@ -4786,6 +4813,7 @@
         "tick_continuum_construction"
       ],
       "depended_on_by": [
+        "mediant_vs_flow_calc",
         "thread_chronology"
       ],
       "git": [
@@ -7287,6 +7315,7 @@
         "framework_status",
         "inflation_duration",
         "k_inflation_seam_obstruction",
+        "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
         "qd_origins",
         "rectangle_perpendicularity",
@@ -7304,6 +7333,7 @@
         "framework_status",
         "inflation_duration",
         "k_inflation_seam_obstruction",
+        "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
         "nonperturbative_phase2",
         "s_inst_inflation",
@@ -7311,6 +7341,11 @@
         "tick_continuum_construction"
       ],
       "git": [
+        {
+          "hash": "227a909",
+          "date": "2026-05-17",
+          "subject": "Run the #FLOW calculation: flow fingerprint absent at K=1; competitor #1 falls (#134)"
+        },
         {
           "hash": "57a5e22",
           "date": "2026-05-17",
@@ -7461,6 +7496,7 @@
         "thread_chronology"
       ],
       "depended_on_by": [
+        "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
         "substrate_determinism",
         "thread_chronology"
