@@ -28,7 +28,7 @@ Categories:
 | λ_unlock = (4G − π ln 2)/π (Arnold Lyapunov on Z₂ quotient) | `kam_bridge_synthesis.md` |
 | Born rule |ψ|² from saddle-node | `born_rule.md`, `a1_from_saddle_node.md` |
 | a_0 = cH_0/(2π) from Λ (MOND scale) | `a0_threshold.md` |
-| Z₂-pair conservation theorem | `z2_pair_conservation.md` |
+| Z₂/winding topological-charge conservation (committed as **inviolable #1**, Klein-bottle topological rigidity; "no local process changes `Q mod 2`"). NB: held as a structural *inviolable*, not a closed standalone theorem — the explicit standalone theorem is *not yet articulated* (`phenomenology_cross_reference.md:439`). | `substrate_determinism.md` (inviolable #1) |
 | **Two-anchor minimality** (H_0 cosmological + v_EW particle) is structural, not a derivation gap; all five anchor-count obstructions reframed/closed | `anchor_count_audit.md` reframe + closure notes; `hierarchy_problem_translation.md`; `path_closures_iter3.md` (D.3 closes #5 structurally) |
 | **K=1 ↔ K<1 sector decoupling** (Einstein vs Schrödinger continuum limits) is non-smooth, forces independent anchors per sector | `continuum_limits.md` Parts I/II; `continuity_in_K_nulls.md` N11; `path_closures_iter3.md` |
 | **Klein π_1 sector assignment**: cosmological → no-twist, particle → twist; Z_2 rep machinery forces the assignment | `path_closures_iter4.md` (D.1 → Class 5) |
@@ -49,9 +49,13 @@ Categories:
 > cancels, leaving a K-independent ~10¹² shortfall). Inflation
 > duration remains **conditional** on one well-posed open item
 > (the inflation-era seam *structure*), not an un-pinnable
-> parameter. See `k_inflation_seam_obstruction.md`,
-> `audit_findings_3_4_disposition.md`. Do not re-assert
-> "S_v = 16 exact" or "inflation duration parameter-free".
+> parameter. **Chronology home: `thread_chronology.md`** (the
+> single ledger — settled outcomes + paths; this catalog carries
+> settled state only). See also `k_inflation_seam_obstruction.md`,
+> `audit_findings_3_4_disposition.md` (origin record). Do not
+> re-assert "S_v = 16 exact" or "inflation duration
+> parameter-free"; do not add per-doc supersession arcs — extend
+> the ledger.
 
 ## Floor (structural residual at finite Fibonacci depth)
 

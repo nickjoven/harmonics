@@ -101,6 +101,28 @@ seam form reproduces inflation-era `H`. K_inflation is not
 12-order margin that no choice of K can bridge (the K-dependence
 provably cancels in the binding exponent).
 
+### What the cancellation *is* (no new input — an existing inviolable)
+
+The `√K` cancellation is not an algebraic accident. `S_v ∝ M_k`
+(kink **mass**, `∝√K`) and `|∇K|_seam = (1−K)/ℓ_kink` with
+`ℓ_kink ∝ 1/√K` (kink **width**); their ratio carries
+`M_k·ℓ_kink = K-independent constant` — the sine-Gordon
+**mass–width invariant** (the kink's dimensionless action is
+coupling-independent, BPS-like). That invariant *is*
+`substrate_determinism.md` **inviolable #1** (Z₂/winding
+topological-charge conservation — "no local process changes `Q`";
+the kink's content is rigid) carried by **inviolable #9**
+(arrow-of-time monotonicity — the irreversible iteration cannot
+perform the inverse move that would dissolve a topological
+quantum). Conservation-of-(topological)-charge tied to
+irreversibility-of-iteration, expressed through the kink. So the
+obstruction is **structurally protected by inviolables the
+framework already declared — not a new structural input and not a
+numerical near-miss**. (Only the *exponent* carries the clean
+cancellation; the full Schwinger prefactor `|∇K|²` remains
+K-dependent but bounded — the structural claim is specifically
+that the binding exponent is floored at `π·S_v(K=1) ≈ 36.2 ∀K`.)
+
 ## Honest disposition (sharpens Finding 4)
 
 | Finding-4 item | Prior status | Now |
@@ -162,6 +184,13 @@ with a single pinned target `|∇K|_inflation ≈ 2.68`. Downstream of
   reading; reconciled here, not a competing physics value.
 - `unitless_audit.md` — `S_v ∝ √K`; the √K cancellation in the
   geometric-seam exponent is the structural core.
+- `substrate_determinism.md` — **inviolables #1 (Z₂/winding
+  topological-charge conservation) ∧ #9 (arrow irreversibility)**:
+  the `√K` cancellation *is* the kink-borne mass–width invariant,
+  i.e. these inviolables expressed through the soliton — the
+  obstruction's structural protection, no new input.
+- `thread_chronology.md` — ledger; #INF row links up to these
+  inviolables.
 
 ## One-line summary
 

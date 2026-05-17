@@ -155,25 +155,15 @@ with the explicit decomposition
 
 ## What this supersedes
 
-The full `S_v(K=1)` arc, now terminated by a computed value:
-
-| Stage | `S_v(K=1)` | Representation |
-|---|---|---|
-| `nonperturbative_phase2.md` | `= 16` exact | continuum, symmetric, assumed |
-| `explicit_4x4_reduction.md` | `≈ 13` | continuum, collinear error |
-| `dark_twin_correction.md` | `≈ 16` | continuum, orthogonal |
-| `e_cross_calc.md` | `0 < S_v < 16` | continuum shadow (pathology) |
-| `e_cross_discrete_resolution.md` | `≈ 16` | discrete, symmetric diagonal |
-| `discrete_reduction_problem.md` | finite, `E_B ≠ E_C` | discrete, asymmetric (structural) |
-| **this computation** | **`≈ 11.515`** | **discrete native, asymmetric, computed** |
-
-The endpoint is **not 16**. It is `≈ 11.5`, computed by hand in
+The endpoint is **not 16**. It is `≈ 11.515`, computed by hand in
 the framework's native discrete representation, with the full
-asymmetric decomposition and the finite `E_cross = −4`. Every prior
-value was either continuum (16, 13, 0<S_v<16) or used the
-superseded symmetric diagonal (≈16). This is the first value
-computed entirely in the native discrete representation with the
-correct B/C asymmetry and finite crossing.
+asymmetric decomposition and the finite `E_cross = −4`. This is
+the first value computed entirely in the native discrete
+representation with the correct B/C asymmetry and finite crossing.
+
+The full prior-value arc (16 → 13 → 16 → 0<S_v<16 → ≈16 →
+**11.515**) lives once, in the single chronology ledger:
+**`thread_chronology.md`**. It is not duplicated here.
 
 ## Honest caveats
 

@@ -1,5 +1,11 @@
 # S_inst for inflation exit: does the super-Earth analogy hold?
 
+> **HISTORICAL ESTIMATE — current state in the ledger.** The
+> `|∇K|_inflation ≈ 2` here is the prefactor-dropped reading;
+> reconciled to `≈ 2.68` with the rest of the Finding-4
+> disposition in `k_inflation_seam_obstruction.md`. Lineage:
+> **`thread_chronology.md`**. Body below unedited.
+
 Order-of-magnitude estimate of cross-sector tunnelling action
 `S_inst` for inflation exit, in response to a structural analogy
 raised earlier: do deep-Fibonacci-level cosmic epochs resist exit

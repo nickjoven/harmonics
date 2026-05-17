@@ -7,12 +7,12 @@
 > **`discrete_reduction_computed.md`** (canonical):
 > `S_v(K=1) ≈ 11.515`, with `E_B ≠ E_C` (the antiperiodic
 > identification breaks the sector-swap symmetry this doc assumed).
-> The full prior-value history lives once, there, in its "What
-> this supersedes" table — not re-litigated here. What this doc
-> still contributes: the 4-mode-Hilbert-space construction, the
-> vortex-pair-as-path identification, and the seam-profile-gap
-> disposition. Read every "exactly"/"= 16" below as the historical
-> symmetric leading-order figure, superseded for the value.
+> Lineage lives once, in **`thread_chronology.md`** (the ledger) —
+> not re-litigated here. What this doc still contributes: the
+> 4-mode-Hilbert-space construction, the vortex-pair-as-path
+> identification, and the seam-profile-gap disposition. The body
+> below is the historical record; its "= 16 / exactly" is the
+> superseded symmetric figure.
 
 Phase 2 deliverable on the non-perturbative substrate program.
 Phase 1 (`nonperturbative_phase1.md`) reduced the framework's K=1
