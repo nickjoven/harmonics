@@ -1,5 +1,5 @@
 {
-  "generated": "227a909f38af06edcf5a1f792be072a3eab8afb3",
+  "generated": "17b6140c75689623aa5260aecc88111a82c5a884",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1101,6 +1101,7 @@
         "born_rule_parameter_free",
         "derivation_atlas",
         "dynamical_tool_audit",
+        "empty_fork_cap",
         "framework_status",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
@@ -1169,6 +1170,7 @@
       ],
       "depended_on_by": [
         "born_rule",
+        "empty_fork_cap",
         "thread_chronology",
         "tick_continuum_construction"
       ],
@@ -1369,6 +1371,7 @@
       ],
       "depended_on_by": [
         "INDEX",
+        "empty_fork_cap",
         "quantum_gravity_interpolation",
         "rationality_descent"
       ],
@@ -2357,6 +2360,36 @@
       ]
     },
     {
+      "id": "empty_fork_cap",
+      "path": "sync_cost/derivations/empty_fork_cap.md",
+      "title": "The empty fork: \u2205 as the basepointless Z\u2082-torsor \u2014 R1 is \u2205-entailed unprovable",
+      "summary": "Class 3 (formalization + foundational cap; informative negative).\nNo new primitive. Internally consistent with and *predicted by*\ncommitted content: the \u03b4\u21920 = symmetric-apex fact is\n`figure_eight.md`'s 50/50 crossing and `born_rule.md`'s\ntongue-boundary saddle-node; the concrete origin node is\n`qd_origins.md`'s first mediant `K=1/2` from `(0/1,1/1)`; the\nposit-level stance (substrate posited, continuum = shadow,\n\"a reading of *what is*\") is `substrate_determinism.md`'s. The\nexplicit \u2205/\"nothing\" ",
+      "depends_on": [
+        "born_rule",
+        "born_rule_parameter_free",
+        "conservation_computability",
+        "figure_eight",
+        "inflation_duration",
+        "mediant_derivation",
+        "mediant_vs_flow_calc",
+        "qd_origins",
+        "substrate_determinism",
+        "thread_chronology",
+        "tick_continuum_construction"
+      ],
+      "depended_on_by": [
+        "mediant_derivation",
+        "thread_chronology"
+      ],
+      "git": [
+        {
+          "hash": "17b6140",
+          "date": "2026-05-17",
+          "subject": "Cap R1: \u2205 = basepointless Z\u2082-torsor; \"continuum requires discrete\" is \u2205-entailed unprovable (#135)"
+        }
+      ]
+    },
+    {
       "id": "engineering_targets",
       "path": "sync_cost/derivations/engineering_targets.md",
       "title": "Engineering Targets",
@@ -2740,13 +2773,15 @@
         "discrete_reduction_computed",
         "discrete_reduction_problem",
         "e_cross_calc",
+        "empty_fork_cap",
         "explicit_4x4_reduction",
         "no_rescaling",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
         "orthogonal_kink_interaction",
         "soliton_dynamics",
-        "substrate_determinism"
+        "substrate_determinism",
+        "thread_chronology"
       ],
       "git": [
         {
@@ -3865,6 +3900,7 @@
         "audit_findings_3_4_disposition",
         "dark_twin_correction",
         "discrete_reduction_computed",
+        "empty_fork_cap",
         "explicit_4x4_reduction",
         "f_exit_natural",
         "k_inflation_seam_obstruction",
@@ -4740,7 +4776,8 @@
       "summary": "**Derived.** The mediant is the unique operation satisfying\nbetweenness (energy conservation) and minimality (widest Arnold\ntongue). The Stern-Brocot theorem (1858/1860) proves this.\nThe framework's primitive (2) is replaced by a physical property\n(2') that is experimentally verifiable.",
       "depends_on": [
         "PROOF_A_gravity",
-        "PROOF_B_quantum"
+        "PROOF_B_quantum",
+        "empty_fork_cap"
       ],
       "depended_on_by": [
         "INDEX",
@@ -4749,12 +4786,19 @@
         "derivation_atlas",
         "dynamical_quantization",
         "dynamical_tool_audit",
+        "empty_fork_cap",
         "high_school_syllabus",
         "primitive_completeness_audit",
         "psl2z_subgroup_phase_b",
+        "thread_chronology",
         "w_plus_formalization"
       ],
       "git": [
+        {
+          "hash": "17b6140",
+          "date": "2026-05-17",
+          "subject": "Cap R1: \u2205 = basepointless Z\u2082-torsor; \"continuum requires discrete\" is \u2205-entailed unprovable (#135)"
+        },
         {
           "hash": "b2deee7",
           "date": "2026-04-07",
@@ -4791,6 +4835,7 @@
         "tick_continuum_construction"
       ],
       "depended_on_by": [
+        "empty_fork_cap",
         "thread_chronology"
       ],
       "git": [
@@ -6271,6 +6316,7 @@
       ],
       "depended_on_by": [
         "audit_findings_3_4_disposition",
+        "empty_fork_cap",
         "f_exit_natural",
         "hierarchy_gaussian_lattice",
         "substrate_determinism",
@@ -7282,6 +7328,7 @@
         "born_rule_parameter_free",
         "e_cross_calc",
         "e_cross_discrete_resolution",
+        "empty_fork_cap",
         "framework_status",
         "k_inflation_seam_obstruction",
         "mediant_vs_flow_problem",
@@ -7311,10 +7358,13 @@
         "audit_findings_3_4_disposition",
         "born_rule_parameter_free",
         "discrete_reduction_computed",
+        "empty_fork_cap",
         "f_exit_natural",
+        "figure_eight",
         "framework_status",
         "inflation_duration",
         "k_inflation_seam_obstruction",
+        "mediant_derivation",
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
         "qd_origins",
@@ -7330,6 +7380,7 @@
         "born_rule_parameter_free",
         "discrete_reduction_computed",
         "e_cross_calc",
+        "empty_fork_cap",
         "framework_status",
         "inflation_duration",
         "k_inflation_seam_obstruction",
@@ -7341,6 +7392,11 @@
         "tick_continuum_construction"
       ],
       "git": [
+        {
+          "hash": "17b6140",
+          "date": "2026-05-17",
+          "subject": "Cap R1: \u2205 = basepointless Z\u2082-torsor; \"continuum requires discrete\" is \u2205-entailed unprovable (#135)"
+        },
         {
           "hash": "227a909",
           "date": "2026-05-17",
@@ -7496,6 +7552,7 @@
         "thread_chronology"
       ],
       "depended_on_by": [
+        "empty_fork_cap",
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
         "substrate_determinism",
