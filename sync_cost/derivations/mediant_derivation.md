@@ -237,6 +237,18 @@ coupled oscillators on a circle. They are not choices — they are
 the definition of the physical system. The Stern-Brocot tree is
 their unique consequence.
 
+> **Scope note (do not over-read).** "They are the definition" is
+> exact and load-bearing: (1)-(3) are **posited**, not derived
+> (only S¹ is derived, and only *conditional on* the oscillator
+> posit). This is *why* "the continuum requires the discrete
+> generator" (R1) is **unprovable in principle** — the root is a
+> basepointless Z₂-torsor (∅), formalized and capped in
+> `empty_fork_cap.md`. This section is a *partial*
+> continuum-insufficiency ingredient at the combining-operation
+> layer; it is **not** a proof that a continuum field theory
+> cannot be fundamental. Discrete-fundamental is favored
+> abductively (`#TICK`, `#FLOW`, parsimony), not proven.
+
 ## Status
 
 **Derived.** The mediant is the unique operation satisfying
