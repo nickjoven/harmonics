@@ -352,7 +352,13 @@ before coherence is lost.
    propagating phase coincidence itself. A photon has zero mass
    because it is not an oscillator with a natural frequency; it is
    the correlation between oscillators. It travels at c because it
-   IS c — the sweep of the coherent wavefront.
+   IS c — the sweep of the coherent wavefront. This remark is made
+   precise and promoted to the framework's standing photon ontology
+   in `photon_reframing.md`: the photon is the Ø-mode (the nilpotent
+   radical `ℝ·N₊`), and "particle-wave at the ceiling speed" is the
+   three-fold shadow of that null direction. That reframing closes
+   this open question at the ontological level (masslessness = no
+   compact-`K` eigenfrequency in Ø); Open Question 1 stays open.
 
 ## Status
 
@@ -364,6 +370,8 @@ and connects to established framework results:
 - Derivation 11: rational field equation at K = 1 as gravity
 - Derivation 10: four primitives (gate structure requires all four)
 - Derivation 30: denomination boundary (gate width vs. gate cost)
+- `photon_reframing.md`: photon = the Ø-mode; sharpens this
+  derivation's photon ontology (Open Questions 1, 4)
 
 The pendulum picture gives physical content to what was previously
 a group-theoretic identification. The speed of light is not a
