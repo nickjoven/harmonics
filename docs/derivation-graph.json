@@ -1,5 +1,5 @@
 {
-  "generated": "67e3ca32e178f517e8f620bb886d417c05644344",
+  "generated": "206d5a44f7c5cc5f3b82ac90f764cddc05daaaee",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -851,6 +851,8 @@
         "vocabulary_is_the_work_pattern"
       ],
       "depended_on_by": [
+        "basepoint_principle",
+        "framework_status",
         "thread_chronology"
       ],
       "git": [
@@ -899,8 +901,10 @@
         "omega_b_w_plus_candidate",
         "omega_b_w_plus_cross_ratio_search",
         "phenomenology_cross_reference",
+        "proposed_items_disposition",
         "sector_decoupling_phase_a",
         "structural_lemmas",
+        "thread_chronology",
         "vocabulary_is_the_work_pattern"
       ],
       "git": [
@@ -1066,6 +1070,32 @@
           "hash": "bab48f4",
           "date": "2026-04-07",
           "subject": "D46-47: ADM dictionary derived, baryon fraction \u03a9_b = 1/19"
+        }
+      ]
+    },
+    {
+      "id": "basepoint_principle",
+      "path": "sync_cost/derivations/basepoint_principle.md",
+      "title": "The Basepoint Principle",
+      "summary": "Class 3 (named principle; elevation of a verified meta-pattern).\nNo new primitive. Records, as a first-class principle with an\noperative discriminator, the regularity already instantiated at\nR1/\u2205, the dimensional inputs, #INF, the anchor obstructions, and\nA_s/Instance-7. Peer to `no_rescaling.md` and the\n`substrate_determinism.md` inviolables.",
+      "depends_on": [
+        "anchor_count_reaudit",
+        "empty_fork_cap",
+        "framework_status",
+        "inflation_seam_anchor_closure",
+        "no_rescaling",
+        "substrate_determinism",
+        "thread_chronology"
+      ],
+      "depended_on_by": [
+        "framework_status",
+        "thread_chronology"
+      ],
+      "git": [
+        {
+          "hash": "4bf4f14",
+          "date": "2026-05-17",
+          "subject": "Elevate the structurally-forced-decline meta-pattern to a named principle: the Basepoint Principle ("
         }
       ]
     },
@@ -2413,8 +2443,10 @@
       ],
       "depended_on_by": [
         "anchor_count_reaudit",
+        "basepoint_principle",
         "inflation_seam_anchor_closure",
         "mediant_derivation",
+        "proposed_items_disposition",
         "thread_chronology"
       ],
       "git": [
@@ -2878,9 +2910,11 @@
         "a_s_g1_closure_attempt",
         "a_s_geometric_proof",
         "anchor_count_audit",
+        "anchor_count_reaudit",
         "ansatz_audit_policy",
         "audit_findings_3_4_disposition",
         "baryon_fraction",
+        "basepoint_principle",
         "born_rule",
         "continuity_in_K_nulls",
         "continuum_limits",
@@ -2927,6 +2961,7 @@
         "ansatz_audit_policy",
         "audit_findings_3_4_disposition",
         "audit_punch_list_2026-04",
+        "basepoint_principle",
         "basin_11_connection_exploration",
         "canonical_glossary",
         "cone_twist_substrate",
@@ -2964,6 +2999,7 @@
         "path_closures_iter4",
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
+        "proposed_items_disposition",
         "psl2z_subgroup_phase_c_inventory",
         "qd_origins",
         "rectangle_perpendicularity",
@@ -2978,6 +3014,11 @@
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "4bf4f14",
+          "date": "2026-05-17",
+          "subject": "Elevate the structurally-forced-decline meta-pattern to a named principle: the Basepoint Principle ("
+        },
         {
           "hash": "fd6201b",
           "date": "2026-05-16",
@@ -3992,7 +4033,9 @@
       ],
       "depended_on_by": [
         "anchor_count_reaudit",
+        "basepoint_principle",
         "k_inflation_seam_obstruction",
+        "proposed_items_disposition",
         "thread_chronology"
       ],
       "git": [
@@ -4160,7 +4203,9 @@
         "rational_field_equation"
       ],
       "depended_on_by": [
-        "k_critical_phase_b"
+        "k_critical_phase_b",
+        "proposed_items_disposition",
+        "thread_chronology"
       ],
       "git": [
         {
@@ -4181,7 +4226,9 @@
         "rational_field_equation"
       ],
       "depended_on_by": [
-        "statistical_conventions"
+        "proposed_items_disposition",
+        "statistical_conventions",
+        "thread_chronology"
       ],
       "git": [
         {
@@ -4912,6 +4959,7 @@
       ],
       "depended_on_by": [
         "empty_fork_cap",
+        "proposed_items_disposition",
         "thread_chronology"
       ],
       "git": [
@@ -5150,6 +5198,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "basepoint_principle",
         "e_cross_discrete_resolution",
         "inflation_duration",
         "nonperturbative_phase1",
@@ -5349,6 +5398,7 @@
         "framework_status",
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
+        "proposed_items_disposition",
         "psl2z_subgroup_phase_c_inventory",
         "remaining_gap_shapes",
         "structural_lemmas",
@@ -6250,6 +6300,35 @@
       ]
     },
     {
+      "id": "proposed_items_disposition",
+      "path": "sync_cost/derivations/proposed_items_disposition.md",
+      "title": "#PROPOSED: disposition of the three items",
+      "summary": "Class 3 (disposition). No new primitive. Item A: Gap-1 K_c\ndeferred to the authoritative `k_critical_phase_b.md`; the\nclosed-form criterion out of scope (framework uses `K_map=1`\nexact); secondary RFE-internal computation recorded with the\n`K_c=\u03a3w` proximity flagged as conjecture, not claimed. B\nBasepoint-partial; C Class-2-disposed \u2014 per the framework's own\ndiscipline. Nothing overreached.",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "empty_fork_cap",
+        "framework_status",
+        "inflation_seam_anchor_closure",
+        "k_critical_phase_a",
+        "k_critical_phase_b",
+        "mediant_vs_flow_calc",
+        "numerology_count_phase_b",
+        "rational_field_equation",
+        "sine_gordon_substrate",
+        "thread_chronology"
+      ],
+      "depended_on_by": [
+        "thread_chronology"
+      ],
+      "git": [
+        {
+          "hash": "206d5a4",
+          "date": "2026-05-17",
+          "subject": "Disposition the three #PROPOSED items (provenance-corrected; nothing overreached) (#139)"
+        }
+      ]
+    },
+    {
       "id": "psl2z_subgroup_identification_phase_a",
       "path": "sync_cost/derivations/psl2z_subgroup_identification_phase_a.md",
       "title": "PSL(2,\u2124)-subgroup identification \u2014 Phase A",
@@ -6485,7 +6564,9 @@
         "gap_1_christoffel",
         "k_critical_phase_a",
         "k_critical_phase_b",
-        "quantum_gravity_interpolation"
+        "proposed_items_disposition",
+        "quantum_gravity_interpolation",
+        "thread_chronology"
       ],
       "git": [
         {
@@ -6938,8 +7019,10 @@
         "mass_function_family",
         "master_cascade_identity",
         "orthogonal_kink_interaction",
+        "proposed_items_disposition",
         "soliton_dynamics",
         "substrate_determinism",
+        "thread_chronology",
         "tick_continuum_construction",
         "time_axis_split",
         "unitless_audit",
@@ -7404,6 +7487,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "basepoint_principle",
         "born_rule",
         "born_rule_parameter_free",
         "e_cross_calc",
@@ -7437,7 +7521,9 @@
       "depends_on": [
         "anchor_count_audit",
         "anchor_count_reaudit",
+        "ansatz_audit_policy",
         "audit_findings_3_4_disposition",
+        "basepoint_principle",
         "born_rule_parameter_free",
         "discrete_reduction_computed",
         "empty_fork_cap",
@@ -7447,14 +7533,19 @@
         "hierarchy_problem_translation",
         "inflation_duration",
         "inflation_seam_anchor_closure",
+        "k_critical_phase_a",
+        "k_critical_phase_b",
         "k_inflation_seam_obstruction",
         "mediant_derivation",
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
         "path_a_walkthrough",
         "path_closures_iter3",
+        "proposed_items_disposition",
         "qd_origins",
+        "rational_field_equation",
         "rectangle_perpendicularity",
+        "sine_gordon_substrate",
         "substrate_determinism",
         "tick_continuum_construction",
         "vocabulary_is_the_work_pattern",
@@ -7464,6 +7555,7 @@
       "depended_on_by": [
         "anchor_count_reaudit",
         "audit_findings_3_4_disposition",
+        "basepoint_principle",
         "born_rule_parameter_free",
         "discrete_reduction_computed",
         "e_cross_calc",
@@ -7475,11 +7567,22 @@
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
         "nonperturbative_phase2",
+        "proposed_items_disposition",
         "s_inst_inflation",
         "substrate_determinism",
         "tick_continuum_construction"
       ],
       "git": [
+        {
+          "hash": "206d5a4",
+          "date": "2026-05-17",
+          "subject": "Disposition the three #PROPOSED items (provenance-corrected; nothing overreached) (#139)"
+        },
+        {
+          "hash": "4bf4f14",
+          "date": "2026-05-17",
+          "subject": "Elevate the structurally-forced-decline meta-pattern to a named principle: the Basepoint Principle ("
+        },
         {
           "hash": "67e3ca3",
           "date": "2026-05-17",
