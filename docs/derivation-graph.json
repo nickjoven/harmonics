@@ -1,5 +1,5 @@
 {
-  "generated": "5d9c61150540ba745f07ac73c2c7df99a45663f8",
+  "generated": "83bd23910b26ce99808778d421476848549b82e4",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -21,9 +21,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "a9319dc",
+          "date": "2026-04-15",
+          "subject": "Claude/docs kstar klein chain (#64)"
         }
       ]
     },
@@ -58,9 +63,29 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a0ac4db",
+          "date": "2026-04-28",
+          "subject": "Knobs teaching app (stages 1-3) + Shape B status refresh (#85)"
+        },
+        {
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "dffc200",
+          "date": "2026-04-22",
+          "subject": "Claude/audit dependency chain zq3f2 (#70)"
+        },
+        {
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "610a4a8",
+          "date": "2026-04-13",
+          "subject": "Topology, not chronology: FRAMEWORK_TOPOLOGY.md + CLAUDE.md update (#59)"
         }
       ]
     },
@@ -109,9 +134,234 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "3ccb5c3",
+          "date": "2026-04-23",
+          "subject": "Add D-number \u2192 filename INDEX.md; teach check_manifest.py to consume it (#73)"
+        },
+        {
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "bab48f4",
+          "date": "2026-04-07",
+          "subject": "D46-47: ADM dictionary derived, baryon fraction \u03a9_b = 1/19"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "24695ee",
+          "date": "2026-04-07",
+          "subject": "Update scorecards: 19 predictions, gauge sector resolved"
+        },
+        {
+          "hash": "cf6da52",
+          "date": "2026-04-07",
+          "subject": "Derivations 43-45: GNN relation, Higgs mechanism, coupling scales"
+        },
+        {
+          "hash": "9cebe1a",
+          "date": "2026-04-07",
+          "subject": "Derivation 42: Yang-Mills uniqueness from Klein bottle (gauge-sector Lovelock)"
+        },
+        {
+          "hash": "ff199a0",
+          "date": "2026-04-07",
+          "subject": "Derivation 41: resolve XOR continuum limit \u2014 gauge structure is discrete"
+        },
+        {
+          "hash": "845f80b",
+          "date": "2026-04-04",
+          "subject": "Add Derivation 40: Bragg circle map and Stribeck vortex regime analysis (#55)"
+        },
+        {
+          "hash": "a9e2b09",
+          "date": "2026-03-27",
+          "subject": "Derivations 36-38: conservation as computability, figure-eight topology, boundary weight"
+        },
+        {
+          "hash": "2da044f",
+          "date": "2026-03-26",
+          "subject": "Derivation 35: The cosmological cycle \u2014 a two-voice round in 13/19"
+        },
+        {
+          "hash": "cc96938",
+          "date": "2026-03-26",
+          "subject": "Derivation 32: Minkowski signature (3,1) from phase-state observability"
+        },
+        {
+          "hash": "0a5bcb8",
+          "date": "2026-03-26",
+          "subject": "Add Derivation 31: Speed of Light as Gate Propagation (#28)"
+        },
+        {
+          "hash": "257548d",
+          "date": "2026-03-25",
+          "subject": "Canonicalize INDEX.md: D30 + gauge exploration + slip structure"
+        },
+        {
+          "hash": "ad562f3",
+          "date": "2026-03-25",
+          "subject": "D30: Pythagorean comma as Klein bottle's irreducible cost"
+        },
+        {
+          "hash": "74d836b",
+          "date": "2026-03-25",
+          "subject": "D30: Add variational principle \u2014 staircase as brachistochrone"
+        },
+        {
+          "hash": "9f9f000",
+          "date": "2026-03-25",
+          "subject": "D30: Denomination boundary \u2014 three open questions unified"
+        },
+        {
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "64376ee",
+          "date": "2026-03-25",
+          "subject": "INDEX.md: full canonicalization through D29"
+        },
+        {
+          "hash": "5feb237",
+          "date": "2026-03-25",
+          "subject": "D21 + D22: open paths + engineering targets"
+        },
+        {
+          "hash": "5b447f8",
+          "date": "2026-03-25",
+          "subject": "D21: Two open paths formalized as five binary computations"
+        },
+        {
+          "hash": "0d0dc5b",
+          "date": "2026-03-25",
+          "subject": "D20: XOR continuum limit \u2014 honest negative result"
+        },
+        {
+          "hash": "e96a704",
+          "date": "2026-03-25",
+          "subject": "Separate established from conjectural in D19"
+        },
+        {
+          "hash": "e90f6fc",
+          "date": "2026-03-25",
+          "subject": "Full continuity update: D19 status + INDEX through Phase 14"
+        },
+        {
+          "hash": "42c3816",
+          "date": "2026-03-25",
+          "subject": "Add Derivation 19: Klein bottle \u2014 fully closed non-orientable container"
+        },
+        {
+          "hash": "4335790",
+          "date": "2026-03-25",
+          "subject": "Add Derivation 18: M\u00f6bius container simulation target"
+        },
+        {
+          "hash": "f7dbe68",
+          "date": "2026-03-24",
+          "subject": "Derivation 17: rank-1 Fr\u00e9chet derivative as temporal causation (#25)"
+        },
+        {
+          "hash": "3cab1df",
+          "date": "2026-03-24",
+          "subject": "Derivation 17: rank-1 Fr\u00e9chet derivative as temporal causation"
+        },
+        {
+          "hash": "f62c568",
+          "date": "2026-03-24",
+          "subject": "Add derivation 16 and computational validation of variable denominator (#21)"
+        },
+        {
+          "hash": "c5e7f60",
+          "date": "2026-03-24",
+          "subject": "Add Derivation 16: variable denominator (Hz with changing reference)"
+        },
+        {
+          "hash": "c12a9bb",
+          "date": "2026-03-23",
+          "subject": "Add Derivation 15: Lie group characterization theorem (#20)"
+        },
+        {
+          "hash": "d1c67d9",
+          "date": "2026-03-23",
+          "subject": "Narrative pruning (#16)"
+        },
+        {
+          "hash": "fc926a2",
+          "date": "2026-03-23",
+          "subject": "Derivation 14: Three Dimensions from the Mediant (#15)"
+        },
+        {
+          "hash": "1252f4e",
+          "date": "2026-03-23",
+          "subject": "Derivations 10-12: alphabet, field equation, continuum limits, \u03c3\u00b2 running (#12)"
+        },
+        {
+          "hash": "9196c8e",
+          "date": "2026-03-23",
+          "subject": "Formalize Derivation 10, add field equation, fix INDEX (#11)"
+        },
+        {
+          "hash": "75eb713",
+          "date": "2026-03-23",
+          "subject": "Derivations 10 11 (#10)"
+        },
+        {
+          "hash": "52d844f",
+          "date": "2026-03-23",
+          "subject": "Resolve fidelity bound open items: C=1 coefficient and iteration-to-time"
+        },
+        {
+          "hash": "9ccff03",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#6)"
+        },
+        {
+          "hash": "dce795f",
+          "date": "2026-03-23",
+          "subject": "Derivation 9: self-referential fidelity bound unifying MOND and collapse"
+        },
+        {
+          "hash": "b4e4b81",
+          "date": "2026-03-23",
+          "subject": "Add high-z MOND prediction markdown (08_high_z_mond.md)"
+        },
+        {
+          "hash": "ac257ed",
+          "date": "2026-03-22",
+          "subject": "Add Planck scale and measurement collapse formalizations"
+        },
+        {
+          "hash": "be28f89",
+          "date": "2026-03-22",
+          "subject": "Add Planck scale derivation from N=3 self-sustaining threshold"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "25e708f",
+          "date": "2026-03-22",
+          "subject": "Refactor: shared utils, cross-references, superseded notes"
+        },
+        {
+          "hash": "0ae85a6",
+          "date": "2026-03-22",
+          "subject": "Add INDEX.md with reading order and dependency graph"
         }
       ]
     },
@@ -151,9 +401,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
         }
       ]
     },
@@ -188,9 +438,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
         }
       ]
     },
@@ -225,9 +480,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
         }
       ]
     },
@@ -254,9 +514,54 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "cc6acf8",
+          "date": "2026-03-25",
+          "subject": "Propagate a0 corrected value to source derivation"
+        },
+        {
+          "hash": "ec25a22",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#5)"
+        },
+        {
+          "hash": "029ad2e",
+          "date": "2026-03-23",
+          "subject": "Reference kk-inference as early-exit analogue of MOND transition"
+        },
+        {
+          "hash": "08b3bd9",
+          "date": "2026-03-23",
+          "subject": "Add pendulum interpretation of a\u2080 = cH/(2\u03c0)"
+        },
+        {
+          "hash": "0a20b6c",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#3)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "57cb9c0",
+          "date": "2026-03-22",
+          "subject": "Reorient repo around sync cost framework; add three derivations"
         }
       ]
     },
@@ -303,9 +608,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
         }
       ]
     },
@@ -343,9 +653,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -379,9 +694,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "cc58f06",
+          "date": "2026-04-20",
+          "subject": "DRY sweep + A_s geometric proof + Z1-Z3 convention (#68)"
         }
       ]
     },
@@ -403,9 +723,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
         }
       ]
     },
@@ -418,9 +743,19 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "cc11b2e",
+          "date": "2026-04-07",
+          "subject": "Strip changelog prose from D41-47 and walkthrough"
+        },
+        {
+          "hash": "79c20d4",
+          "date": "2026-04-07",
+          "subject": "Prune changelog prose from D41-D47 and walkthrough"
+        },
+        {
+          "hash": "bab48f4",
+          "date": "2026-04-07",
+          "subject": "D46-47: ADM dictionary derived, baryon fraction \u03a9_b = 1/19"
         }
       ]
     },
@@ -477,9 +812,24 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        },
+        {
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
+        },
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
         }
       ]
     },
@@ -504,7 +854,6 @@
       "depended_on_by": [
         "basepoint_principle",
         "framework_status",
-        "photon_reframing",
         "thread_chronology"
       ],
       "git": [
@@ -562,9 +911,19 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        },
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
         }
       ]
     },
@@ -646,9 +1005,9 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
         }
       ]
     },
@@ -701,9 +1060,24 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "dc466d8",
+          "date": "2026-04-22",
+          "subject": "Claude/vocabulary attribution audit 2j xt k (#71)"
+        },
+        {
+          "hash": "bab48f4",
+          "date": "2026-04-07",
+          "subject": "D46-47: ADM dictionary derived, baryon fraction \u03a9_b = 1/19"
         }
       ]
     },
@@ -746,9 +1120,9 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
         }
       ]
     },
@@ -774,9 +1148,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "dffc200",
+          "date": "2026-04-22",
+          "subject": "Claude/audit dependency chain zq3f2 (#70)"
         }
       ]
     },
@@ -817,9 +1191,39 @@
           "subject": "Press the |\u03c8|\u00b2 resolution: parameter-free at the binary; #TICK(a) closed, #2 discriminated (#131)"
         },
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "0a20b6c",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#3)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "2909efc",
+          "date": "2026-03-22",
+          "subject": "Derive Born rule from Arnold tongue saddle-node geometry"
+        },
+        {
+          "hash": "57cb9c0",
+          "date": "2026-03-22",
+          "subject": "Reorient repo around sync cost framework; add three derivations"
         }
       ]
     },
@@ -880,9 +1284,19 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "a9e2b09",
+          "date": "2026-03-27",
+          "subject": "Derivations 36-38: conservation as computability, figure-eight topology, boundary weight"
         }
       ]
     },
@@ -943,9 +1357,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "2109a3b",
+          "date": "2026-04-26",
+          "subject": "Legitimacy homework: glossary + phenomenology + derivation atlas (#81)"
         }
       ]
     },
@@ -965,9 +1379,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "10fbbc2",
+          "date": "2026-04-30",
+          "subject": "Pedagogical: comparison_class.md methodological orientation (#87)"
         }
       ]
     },
@@ -1011,9 +1425,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "46ed361",
+          "date": "2026-05-12",
+          "subject": "Cone-twist substrate: bicone target manifold + Z\u2082 vortex dynamics (#108)"
         }
       ]
     },
@@ -1034,9 +1448,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "c152786",
+          "date": "2026-03-27",
+          "subject": "D36 conservation_computability: partial (agent still running)"
         }
       ]
     },
@@ -1078,9 +1497,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -1128,9 +1552,34 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "f11fb70",
+          "date": "2026-04-08",
+          "subject": "Verify single \u03c3\u00b2=1/4 produces all ADM prefactors (16\u03c0G and 8\u03c0G)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "37aef34",
+          "date": "2026-03-25",
+          "subject": "Remove resolved open questions from living documents"
+        },
+        {
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "f0db15b",
+          "date": "2026-03-25",
+          "subject": "Cross-reference D12, D13, D19: the load-bearing computation"
+        },
+        {
+          "hash": "1252f4e",
+          "date": "2026-03-23",
+          "subject": "Derivations 10-12: alphabet, field equation, continuum limits, \u03c3\u00b2 running (#12)"
         }
       ]
     },
@@ -1146,9 +1595,14 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "2da044f",
+          "date": "2026-03-26",
+          "subject": "Derivation 35: The cosmological cycle \u2014 a two-voice round in 13/19"
         }
       ]
     },
@@ -1171,9 +1625,29 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "79c20d4",
+          "date": "2026-04-07",
+          "subject": "Prune changelog prose from D41-D47 and walkthrough"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "4e5c009",
+          "date": "2026-04-07",
+          "subject": "Update D44, D45: reference D33 duty cycle results \u2014 gap is narrower"
+        },
+        {
+          "hash": "cf6da52",
+          "date": "2026-04-07",
+          "subject": "Derivations 43-45: GNN relation, Higgs mechanism, coupling scales"
         }
       ]
     },
@@ -1209,9 +1683,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
         }
       ]
     },
@@ -1263,9 +1737,24 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "ad562f3",
+          "date": "2026-03-25",
+          "subject": "D30: Pythagorean comma as Klein bottle's irreducible cost"
+        },
+        {
+          "hash": "74d836b",
+          "date": "2026-03-25",
+          "subject": "D30: Add variational principle \u2014 staircase as brachistochrone"
+        },
+        {
+          "hash": "9f9f000",
+          "date": "2026-03-25",
+          "subject": "D30: Denomination boundary \u2014 three open questions unified"
         }
       ]
     },
@@ -1298,9 +1787,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
         }
       ]
     },
@@ -1359,9 +1853,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "2109a3b",
+          "date": "2026-04-26",
+          "subject": "Legitimacy homework: glossary + phenomenology + derivation atlas (#81)"
         }
       ]
     },
@@ -1374,9 +1873,14 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "5b447f8",
+          "date": "2026-03-25",
+          "subject": "D21: Two open paths formalized as five binary computations"
         }
       ]
     },
@@ -1393,9 +1897,29 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "79c20d4",
+          "date": "2026-04-07",
+          "subject": "Prune changelog prose from D41-D47 and walkthrough"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "9cebe1a",
+          "date": "2026-04-07",
+          "subject": "Derivation 42: Yang-Mills uniqueness from Klein bottle (gauge-sector Lovelock)"
+        },
+        {
+          "hash": "ff199a0",
+          "date": "2026-04-07",
+          "subject": "Derivation 41: resolve XOR continuum limit \u2014 gauge structure is discrete"
         }
       ]
     },
@@ -1511,9 +2035,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -1540,9 +2069,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -1564,9 +2093,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -1588,9 +2117,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -1617,9 +2146,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -1640,9 +2169,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -1676,9 +2205,24 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "dffc200",
+          "date": "2026-04-22",
+          "subject": "Claude/audit dependency chain zq3f2 (#70)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "c152786",
+          "date": "2026-03-27",
+          "subject": "D36 conservation_computability: partial (agent still running)"
         }
       ]
     },
@@ -1695,9 +2239,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "f9b1c32",
+          "date": "2026-03-26",
+          "subject": "Prove duty cycle exponent equals group dimension (gap #6)"
         }
       ]
     },
@@ -1720,9 +2264,9 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "7aa21fb",
+          "date": "2026-04-26",
+          "subject": "Dynamical quantization: medium / dynamics distinction + formalization (#84)"
         }
       ]
     },
@@ -1762,9 +2306,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
         }
       ]
     },
@@ -1869,9 +2413,24 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "f0db15b",
+          "date": "2026-03-25",
+          "subject": "Cross-reference D12, D13, D19: the load-bearing computation"
+        },
+        {
+          "hash": "5ade160",
+          "date": "2026-03-23",
+          "subject": "Derivation 13: Einstein from Kuramoto (QED) + \u03c3\u00b2 running corrections (#14)"
         }
       ]
     },
@@ -1918,9 +2477,14 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "5feb237",
+          "date": "2026-03-25",
+          "subject": "D21 + D22: open paths + engineering targets"
         }
       ]
     },
@@ -1946,9 +2510,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
         }
       ]
     },
@@ -1979,9 +2543,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
         }
       ]
     },
@@ -2032,9 +2596,19 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "9228c64",
+          "date": "2026-03-25",
+          "subject": "D27: The exponent q\u2082q\u2083\u00b3 = 54 derived from first principles"
         }
       ]
     },
@@ -2062,9 +2636,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "46ed361",
+          "date": "2026-05-12",
+          "subject": "Cone-twist substrate: bicone target manifold + Z\u2082 vortex dynamics (#108)"
+        },
+        {
+          "hash": "9a97408",
+          "date": "2026-05-10",
+          "subject": "Pedagogical: link EML/lambda split to bowed-string/clarinet/flute trio (#96)"
         }
       ]
     },
@@ -2131,9 +2710,39 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "dc466d8",
+          "date": "2026-04-22",
+          "subject": "Claude/vocabulary attribution audit 2j xt k (#71)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "97812bc",
+          "date": "2026-03-25",
+          "subject": "D25: Omega_Lambda = 13/19 \u2014 the Farey partition"
         }
       ]
     },
@@ -2146,9 +2755,24 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "0be807b",
+          "date": "2026-03-25",
+          "subject": "D28 strengthened: SO(2) invariance \u2192 only two scalars \u2192 unique partition"
+        },
+        {
+          "hash": "508fb3e",
+          "date": "2026-03-25",
+          "subject": "D28: Why the Farey partition \u2014 the proof"
         }
       ]
     },
@@ -2171,9 +2795,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "dffc200",
+          "date": "2026-04-22",
+          "subject": "Claude/audit dependency chain zq3f2 (#70)"
         }
       ]
     },
@@ -2186,9 +2810,34 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "52d844f",
+          "date": "2026-03-23",
+          "subject": "Resolve fidelity bound open items: C=1 coefficient and iteration-to-time"
+        },
+        {
+          "hash": "9ccff03",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#6)"
+        },
+        {
+          "hash": "45f2440",
+          "date": "2026-03-23",
+          "subject": "Derive RAR interpolating function from tongue self-consistency"
+        },
+        {
+          "hash": "dce795f",
+          "date": "2026-03-23",
+          "subject": "Derivation 9: self-referential fidelity bound unifying MOND and collapse"
         }
       ]
     },
@@ -2223,9 +2872,24 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "8ad1d2c",
+          "date": "2026-05-11",
+          "subject": "Soliton dynamics companion + corrected J\u00b2 = \u2212I under right Klein topology (#107)"
+        },
+        {
+          "hash": "e27106f",
+          "date": "2026-05-10",
+          "subject": "Audit cleanup: 7 conflation / scope / retraction fixes (#102)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "daa4301",
+          "date": "2026-03-27",
+          "subject": "D37 figure-eight topology (agent still completing D38)"
         }
       ]
     },
@@ -2242,9 +2906,14 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
         }
       ]
     },
@@ -2395,9 +3064,44 @@
           "subject": "K_inflation: prove the geometric-seam obstruction is structural; sharpen Finding 4 (#128)"
         },
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "c85e379",
+          "date": "2026-05-10",
+          "subject": "Soliton continuity follow-up: tighten sine-Gordon doc + cross-link K-zoo + re-remove JWST notes (#10"
+        },
+        {
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
+        },
+        {
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        },
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        },
+        {
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
+        },
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "dc466d8",
+          "date": "2026-04-22",
+          "subject": "Claude/vocabulary attribution audit 2j xt k (#71)"
+        },
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
         }
       ]
     },
@@ -2412,9 +3116,14 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "028c355",
+          "date": "2026-04-14",
+          "subject": "Claude/cross parabola audit (#63)"
+        },
+        {
+          "hash": "d185308",
+          "date": "2026-04-08",
+          "subject": "Document three open gaps in Kuramoto-to-gravity derivation (#57)"
         }
       ]
     },
@@ -2441,9 +3150,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "2ca0794",
+          "date": "2026-04-18",
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         }
       ]
     },
@@ -2458,9 +3167,14 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "028c355",
+          "date": "2026-04-14",
+          "subject": "Claude/cross parabola audit (#63)"
+        },
+        {
+          "hash": "d185308",
+          "date": "2026-04-08",
+          "subject": "Document three open gaps in Kuramoto-to-gravity derivation (#57)"
         }
       ]
     },
@@ -2486,9 +3200,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        },
+        {
+          "hash": "2ca0794",
+          "date": "2026-04-18",
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         }
       ]
     },
@@ -2510,9 +3229,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "2ca0794",
+          "date": "2026-04-18",
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         }
       ]
     },
@@ -2534,9 +3253,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -2562,9 +3281,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "3a5840b",
+          "date": "2026-04-26",
+          "subject": "Public-facing layer: README + deployed assets reorganization (#83)"
+        },
+        {
+          "hash": "2ca0794",
+          "date": "2026-04-18",
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         }
       ]
     },
@@ -2584,9 +3308,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "2ca0794",
+          "date": "2026-04-18",
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
+        },
+        {
+          "hash": "d185308",
+          "date": "2026-04-08",
+          "subject": "Document three open gaps in Kuramoto-to-gravity derivation (#57)"
         }
       ]
     },
@@ -2609,9 +3338,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "2ca0794",
+          "date": "2026-04-18",
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
+        },
+        {
+          "hash": "d185308",
+          "date": "2026-04-08",
+          "subject": "Document three open gaps in Kuramoto-to-gravity derivation (#57)"
         }
       ]
     },
@@ -2639,9 +3373,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "977a737",
+          "date": "2026-04-16",
+          "subject": "Gauge-sector dictionary promotion: 3 identifications \u2192 1 irreducible"
         }
       ]
     },
@@ -2667,9 +3406,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e8a3450",
+          "date": "2026-04-16",
+          "subject": "Derive direct-product gauge algebra from Klein bottle topology"
         }
       ]
     },
@@ -2694,9 +3433,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e27106f",
+          "date": "2026-05-10",
+          "subject": "Audit cleanup: 7 conflation / scope / retraction fixes (#102)"
+        },
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
         }
       ]
     },
@@ -2722,9 +3466,39 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e8a3450",
+          "date": "2026-04-16",
+          "subject": "Derive direct-product gauge algebra from Klein bottle topology"
+        },
+        {
+          "hash": "4d024a9",
+          "date": "2026-04-16",
+          "subject": "Formalize Tier 1 Gap 3: gauge center promotion and bundle construction"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        },
+        {
+          "hash": "79c20d4",
+          "date": "2026-04-07",
+          "subject": "Prune changelog prose from D41-D47 and walkthrough"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "24695ee",
+          "date": "2026-04-07",
+          "subject": "Update scorecards: 19 predictions, gauge sector resolved"
+        },
+        {
+          "hash": "9cebe1a",
+          "date": "2026-04-07",
+          "subject": "Derivation 42: Yang-Mills uniqueness from Klein bottle (gauge-sector Lovelock)"
         }
       ]
     },
@@ -2751,9 +3525,29 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e27106f",
+          "date": "2026-05-10",
+          "subject": "Audit cleanup: 7 conflation / scope / retraction fixes (#102)"
+        },
+        {
+          "hash": "cc11b2e",
+          "date": "2026-04-07",
+          "subject": "Strip changelog prose from D41-47 and walkthrough"
+        },
+        {
+          "hash": "79c20d4",
+          "date": "2026-04-07",
+          "subject": "Prune changelog prose from D41-D47 and walkthrough"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "cf6da52",
+          "date": "2026-04-07",
+          "subject": "Derivations 43-45: GNN relation, Higgs mechanism, coupling scales"
         }
       ]
     },
@@ -2776,9 +3570,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "16cda78",
+          "date": "2026-03-27",
+          "subject": "Derivation 34: The Generation Mechanism \u2014 three generations from phase-state observability"
         }
       ]
     },
@@ -2807,9 +3606,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
         }
       ]
     },
@@ -2822,9 +3621,14 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "fa83443",
+          "date": "2026-04-01",
+          "subject": "Add half-Mobius (Z4) boundary condition \u2014 Derivation 39 (#50)"
         }
       ]
     },
@@ -2846,9 +3650,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "d185308",
+          "date": "2026-04-08",
+          "subject": "Document three open gaps in Kuramoto-to-gravity derivation (#57)"
         }
       ]
     },
@@ -2863,9 +3667,19 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "37cce94",
+          "date": "2026-03-25",
+          "subject": "D25 + D26: the cosmological parameters from three numbers"
         }
       ]
     },
@@ -2923,9 +3737,24 @@
           "subject": "qd_origins: close audit Finding 2 (small primes + d = 3 \"smuggled in\") (#121)"
         },
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
+        },
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
+        },
+        {
+          "hash": "2ca0794",
+          "date": "2026-04-18",
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         }
       ]
     },
@@ -2960,9 +3789,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
         }
       ]
     },
@@ -2978,14 +3807,38 @@
         "anchor_count_audit",
         "beta_from_tongues",
         "dynamical_tool_audit",
-        "fermion_mass_running",
-        "photon_reframing"
+        "fermion_mass_running"
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        },
+        {
+          "hash": "79c20d4",
+          "date": "2026-04-07",
+          "subject": "Prune changelog prose from D41-D47 and walkthrough"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "4e5c009",
+          "date": "2026-04-07",
+          "subject": "Update D44, D45: reference D33 duty cycle results \u2014 gap is narrower"
+        },
+        {
+          "hash": "cf6da52",
+          "date": "2026-04-07",
+          "subject": "Derivations 43-45: GNN relation, Higgs mechanism, coupling scales"
         }
       ]
     },
@@ -2995,14 +3848,12 @@
       "title": "The Higgs' Role in the Framework: A Reframing",
       "summary": "**Reframing.** The substance of the framework's Higgs predictions\n(`m_H = v / q_2`, `\u03bb = 1/q_2^3`) is retained. The narrative role\nof the Higgs is changed from \"the particle that gives mass\" to\n\"one locked mode at a specific Stern-Brocot position.\" The\nderivations that previously used Higgs-centric language should be\nupdated to use locked-mode language.",
       "depends_on": [],
-      "depended_on_by": [
-        "photon_reframing"
-      ],
+      "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
         }
       ]
     },
@@ -3021,9 +3872,9 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "f235f6d",
+          "date": "2026-04-30",
+          "subject": "Pedagogical: high-school single-semester syllabus (#89)"
         }
       ]
     },
@@ -3036,9 +3887,54 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "5a57955",
+          "date": "2026-03-22",
+          "subject": "Consistency is required. The threshold moves."
+        },
+        {
+          "hash": "c3fae26",
+          "date": "2026-03-22",
+          "subject": "Add resolved RAR test framework for RC100 galaxies"
+        },
+        {
+          "hash": "600106d",
+          "date": "2026-03-22",
+          "subject": "Note that resolved RAR at z > 0.5 has never been published"
+        },
+        {
+          "hash": "8798e7e",
+          "date": "2026-03-22",
+          "subject": "Sharpen derivation 08: empirical a\u2080(z) extraction from RC100"
+        },
+        {
+          "hash": "811589d",
+          "date": "2026-03-22",
+          "subject": "Add RAR knee shift as near-term test of a\u2080(z) = cH(z)/(2\u03c0)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "b4e4b81",
+          "date": "2026-03-23",
+          "subject": "Add high-z MOND prediction markdown (08_high_z_mond.md)"
+        },
+        {
+          "hash": "7c80593",
+          "date": "2026-03-22",
+          "subject": "Add high-z MOND prediction markdown (08_high_z_mond.md)"
         }
       ]
     },
@@ -3067,9 +3963,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
         }
       ]
     },
@@ -3088,9 +3984,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "30931c3",
+          "date": "2026-05-10",
+          "subject": "Salvage Tier 1: master cascade-lock identity family (closes #97 A/B/C/E/F) (#98)"
         }
       ]
     },
@@ -3148,9 +4044,9 @@
           "subject": "f_exit_natural: close audit Finding 5 (f_exit = exp(-S_v) parsimony) (#123)"
         },
         {
-          "hash": "bf0cf7e",
+          "hash": "84c4c2a",
           "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "subject": "s_inst_inflation: cross-sector tunneling refines super-Earth analogy (#119)"
         }
       ]
     },
@@ -3203,9 +4099,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "c85e379",
+          "date": "2026-05-10",
+          "subject": "Soliton continuity follow-up: tighten sine-Gordon doc + cross-link K-zoo + re-remove JWST notes (#10"
+        },
+        {
+          "hash": "30931c3",
+          "date": "2026-05-10",
+          "subject": "Salvage Tier 1: master cascade-lock identity family (closes #97 A/B/C/E/F) (#98)"
         }
       ]
     },
@@ -3222,9 +4123,14 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "4f819f3",
+          "date": "2026-03-26",
+          "subject": "Formalize trivial isotropy argument (gap #4): Kuramoto completeness lemma"
         }
       ]
     },
@@ -3247,9 +4153,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
         }
       ]
     },
@@ -3272,9 +4183,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
         }
       ]
     },
@@ -3305,9 +4221,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
         }
       ]
     },
@@ -3329,9 +4245,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -3353,9 +4269,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -3421,9 +4337,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
         }
       ]
     },
@@ -3469,9 +4385,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
         }
       ]
     },
@@ -3516,9 +4432,69 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b973b2c",
+          "date": "2026-05-10",
+          "subject": "Commit to the time-axis split: clock vs arrow on different axes (#101)"
+        },
+        {
+          "hash": "c85e379",
+          "date": "2026-05-10",
+          "subject": "Soliton continuity follow-up: tighten sine-Gordon doc + cross-link K-zoo + re-remove JWST notes (#10"
+        },
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "e8126a1",
+          "date": "2026-03-25",
+          "subject": "D19: anomaly cancellation upgrades from numerology to structural"
+        },
+        {
+          "hash": "f0db15b",
+          "date": "2026-03-25",
+          "subject": "Cross-reference D12, D13, D19: the load-bearing computation"
+        },
+        {
+          "hash": "e96a704",
+          "date": "2026-03-25",
+          "subject": "Separate established from conjectural in D19"
+        },
+        {
+          "hash": "e90f6fc",
+          "date": "2026-03-25",
+          "subject": "Full continuity update: D19 status + INDEX through Phase 14"
+        },
+        {
+          "hash": "1df25d4",
+          "date": "2026-03-25",
+          "subject": "Field equation result + Pythagorean connection in D19"
+        },
+        {
+          "hash": "f1d4ad5",
+          "date": "2026-03-25",
+          "subject": "Add structural safety section; revise status and open questions"
+        },
+        {
+          "hash": "5664deb",
+          "date": "2026-03-25",
+          "subject": "Add 'Where time lives' section to D19"
+        },
+        {
+          "hash": "84f6622",
+          "date": "2026-03-25",
+          "subject": "Update D19 status with simulation results"
+        },
+        {
+          "hash": "42c3816",
+          "date": "2026-03-25",
+          "subject": "Add Derivation 19: Klein bottle \u2014 fully closed non-orientable container"
         }
       ]
     },
@@ -3569,6 +4545,21 @@
           "hash": "bf0cf7e",
           "date": "2026-05-14",
           "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+        },
+        {
+          "hash": "e27106f",
+          "date": "2026-05-10",
+          "subject": "Audit cleanup: 7 conflation / scope / retraction fixes (#102)"
+        },
+        {
+          "hash": "b973b2c",
+          "date": "2026-05-10",
+          "subject": "Commit to the time-axis split: clock vs arrow on different axes (#101)"
+        },
+        {
+          "hash": "d185308",
+          "date": "2026-04-08",
+          "subject": "Document three open gaps in Kuramoto-to-gravity derivation (#57)"
         }
       ]
     },
@@ -3603,9 +4594,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -3636,9 +4627,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "63ab4ba",
+          "date": "2026-04-16",
+          "subject": "Construct Klein bottle connection 1-form as partial Level A closure"
         }
       ]
     },
@@ -3666,9 +4657,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -3691,9 +4682,19 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "dc466d8",
+          "date": "2026-04-22",
+          "subject": "Claude/vocabulary attribution audit 2j xt k (#71)"
+        },
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
         }
       ]
     },
@@ -3718,9 +4719,19 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "22bb584",
+          "date": "2026-04-08",
+          "subject": "Prove SL(2,R) rigidity lemma, close last open gap in Lie group characterization"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "c12a9bb",
+          "date": "2026-03-23",
+          "subject": "Add Derivation 15: Lie group characterization theorem (#20)"
         }
       ]
     },
@@ -3742,9 +4753,19 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e27106f",
+          "date": "2026-05-10",
+          "subject": "Audit cleanup: 7 conflation / scope / retraction fixes (#102)"
+        },
+        {
+          "hash": "c85e379",
+          "date": "2026-05-10",
+          "subject": "Soliton continuity follow-up: tighten sine-Gordon doc + cross-link K-zoo + re-remove JWST notes (#10"
+        },
+        {
+          "hash": "30931c3",
+          "date": "2026-05-10",
+          "subject": "Salvage Tier 1: master cascade-lock identity family (closes #97 A/B/C/E/F) (#98)"
         }
       ]
     },
@@ -3776,9 +4797,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
         }
       ]
     },
@@ -3798,9 +4824,9 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -3822,9 +4848,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -3858,9 +4884,19 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e27106f",
+          "date": "2026-05-10",
+          "subject": "Audit cleanup: 7 conflation / scope / retraction fixes (#102)"
+        },
+        {
+          "hash": "c85e379",
+          "date": "2026-05-10",
+          "subject": "Soliton continuity follow-up: tighten sine-Gordon doc + cross-link K-zoo + re-remove JWST notes (#10"
+        },
+        {
+          "hash": "30931c3",
+          "date": "2026-05-10",
+          "subject": "Salvage Tier 1: master cascade-lock identity family (closes #97 A/B/C/E/F) (#98)"
         }
       ]
     },
@@ -3876,9 +4912,24 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "b4e4b81",
+          "date": "2026-03-23",
+          "subject": "Add high-z MOND prediction markdown (08_high_z_mond.md)"
+        },
+        {
+          "hash": "ac257ed",
+          "date": "2026-03-22",
+          "subject": "Add Planck scale and measurement collapse formalizations"
         }
       ]
     },
@@ -3913,9 +4964,24 @@
           "subject": "Cap R1: \u2205 = basepointless Z\u2082-torsor; \"continuum requires discrete\" is \u2205-entailed unprovable (#135)"
         },
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "bcae94e",
+          "date": "2026-03-25",
+          "subject": "D29: Why Stern-Brocot and not continuum or other discretization"
+        },
+        {
+          "hash": "254654b",
+          "date": "2026-03-25",
+          "subject": "D29: The mediant is not an axiom \u2014 it is derived"
         }
       ]
     },
@@ -3990,9 +5056,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9a97408",
+          "date": "2026-05-10",
+          "subject": "Pedagogical: link EML/lambda split to bowed-string/clarinet/flute trio (#96)"
+        },
+        {
+          "hash": "494d913",
+          "date": "2026-05-06",
+          "subject": "Pedagogical: rewrite README opener (result-first, forced-defined) (#95)"
         }
       ]
     },
@@ -4018,9 +5089,34 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "5ade160",
+          "date": "2026-03-23",
+          "subject": "Derivation 13: Einstein from Kuramoto (QED) + \u03c3\u00b2 running corrections (#14)"
+        },
+        {
+          "hash": "1252f4e",
+          "date": "2026-03-23",
+          "subject": "Derivations 10-12: alphabet, field equation, continuum limits, \u03c3\u00b2 running (#12)"
+        },
+        {
+          "hash": "9196c8e",
+          "date": "2026-03-23",
+          "subject": "Formalize Derivation 10, add field equation, fix INDEX (#11)"
+        },
+        {
+          "hash": "75eb713",
+          "date": "2026-03-23",
+          "subject": "Derivations 10 11 (#10)"
         }
       ]
     },
@@ -4041,9 +5137,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "cc96938",
+          "date": "2026-03-26",
+          "subject": "Derivation 32: Minkowski signature (3,1) from phase-state observability"
         }
       ]
     },
@@ -4065,9 +5166,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -4080,9 +5181,19 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "87448a3",
+          "date": "2026-03-25",
+          "subject": "Add coherence length analysis: arm formation on M\u00f6bius ring"
+        },
+        {
+          "hash": "4335790",
+          "date": "2026-03-25",
+          "subject": "Add Derivation 18: M\u00f6bius container simulation target"
         }
       ]
     },
@@ -4104,9 +5215,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -4141,9 +5252,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "ca4e229",
+          "date": "2026-05-13",
+          "subject": "unitless_audit: end-to-end audit of substrate primitives in Planck units (#112)"
         }
       ]
     },
@@ -4179,9 +5290,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e703afa",
+          "date": "2026-05-13",
+          "subject": "nonperturbative_phase1: DoF reduction makes S_v(K=1) finite-dim QM (#116)"
         }
       ]
     },
@@ -4239,9 +5350,9 @@
           "subject": "audit_findings_3_4_disposition: honest qualification of major findings (#124)"
         },
         {
-          "hash": "bf0cf7e",
+          "hash": "3cd529f",
           "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "subject": "nonperturbative_phase2: explicit 4\u00d74 calc gives S_v(K=1) = 16 exactly (#117)"
         }
       ]
     },
@@ -4264,9 +5375,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
+          "hash": "a91ad23",
           "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "subject": "nonperturbative_phase3: K<1 regime question \u2014 L_x choice + compression (#118)"
         }
       ]
     },
@@ -4298,9 +5409,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -4339,9 +5450,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
         }
       ]
     },
@@ -4410,9 +5521,24 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "dc466d8",
+          "date": "2026-04-22",
+          "subject": "Claude/vocabulary attribution audit 2j xt k (#71)"
+        },
+        {
+          "hash": "dffc200",
+          "date": "2026-04-22",
+          "subject": "Claude/audit dependency chain zq3f2 (#70)"
+        },
+        {
+          "hash": "2a285e4",
+          "date": "2026-04-22",
+          "subject": "Flatten simulation audit into existing clarifying documents"
         }
       ]
     },
@@ -4447,9 +5573,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
         }
       ]
     },
@@ -4495,9 +5621,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -4520,9 +5646,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -4554,9 +5680,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -4588,9 +5714,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -4623,9 +5749,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "dc466d8",
+          "date": "2026-04-22",
+          "subject": "Claude/vocabulary attribution audit 2j xt k (#71)"
+        },
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -4651,9 +5782,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -4685,9 +5821,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        },
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -4717,9 +5858,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -4746,9 +5887,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
         }
       ]
     },
@@ -4774,9 +5915,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
         }
       ]
     },
@@ -4811,9 +5952,19 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
+        },
+        {
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "dc466d8",
+          "date": "2026-04-22",
+          "subject": "Claude/vocabulary attribution audit 2j xt k (#71)"
         }
       ]
     },
@@ -4876,9 +6027,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
         }
       ]
     },
@@ -4915,9 +6066,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
         }
       ]
     },
@@ -4947,9 +6098,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -4973,9 +6124,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -5014,9 +6165,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -5046,9 +6197,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -5089,30 +6240,11 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "2109a3b",
+          "date": "2026-04-26",
+          "subject": "Legitimacy homework: glossary + phenomenology + derivation atlas (#81)"
         }
       ]
-    },
-    {
-      "id": "photon_reframing",
-      "path": "sync_cost/derivations/photon_reframing.md",
-      "title": "The Photon's Properties in Framework Terms: A Reframing",
-      "summary": "**Reframing.** Sibling of `higgs_reframing.md` and\n`spectral_tilt_reframed.md`: a structural/ontological sharpening\nthat retains all numerical content of its parent derivation\n(`speed_of_light.md`, D31) and changes only the language and the\nprimary object. C-structural per `statistical_conventions.md`; not\nC-numerical; not registered in the MANIFEST scorecard.",
-      "depends_on": [
-        "anchor_count_reaudit",
-        "higgs_from_tongue_boundary",
-        "higgs_reframing",
-        "spectral_tilt_reframed",
-        "speed_of_light",
-        "statistical_conventions",
-        "structural_lemmas"
-      ],
-      "depended_on_by": [
-        "speed_of_light"
-      ],
-      "git": []
     },
     {
       "id": "planck_scale",
@@ -5128,9 +6260,44 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "c12a9bb",
+          "date": "2026-03-23",
+          "subject": "Add Derivation 15: Lie group characterization theorem (#20)"
+        },
+        {
+          "hash": "df629cb",
+          "date": "2026-03-23",
+          "subject": "Merge upstream main, resolve conflicts in 06_planck_scale.md"
+        },
+        {
+          "hash": "dec8e05",
+          "date": "2026-03-23",
+          "subject": "Classify all SL(2,R) subgroups to prove trivial stabilizer (#18)"
+        },
+        {
+          "hash": "60f0f10",
+          "date": "2026-03-24",
+          "subject": "Address trivial stabilizer condition in dimensionality argument (#17)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "b4e4b81",
+          "date": "2026-03-23",
+          "subject": "Add high-z MOND prediction markdown (08_high_z_mond.md)"
+        },
+        {
+          "hash": "ac257ed",
+          "date": "2026-03-22",
+          "subject": "Add Planck scale and measurement collapse formalizations"
         }
       ]
     },
@@ -5169,9 +6336,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
         }
       ]
     },
@@ -5258,9 +6425,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
         }
       ]
     },
@@ -5290,9 +6457,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
         }
       ]
     },
@@ -5332,9 +6499,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
         }
       ]
     },
@@ -5360,9 +6527,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
         }
       ]
     },
@@ -5421,9 +6588,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "dffc200",
+          "date": "2026-04-22",
+          "subject": "Claude/audit dependency chain zq3f2 (#70)"
         }
       ]
     },
@@ -5439,9 +6606,24 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "49a3c8d",
+          "date": "2026-03-24",
+          "subject": "Tighten Part V: corollaries A (Born rule), B (Einstein), C (d=3)"
+        },
+        {
+          "hash": "f7dbe68",
+          "date": "2026-03-24",
+          "subject": "Derivation 17: rank-1 Fr\u00e9chet derivative as temporal causation (#25)"
+        },
+        {
+          "hash": "3cab1df",
+          "date": "2026-03-24",
+          "subject": "Derivation 17: rank-1 Fr\u00e9chet derivative as temporal causation"
         }
       ]
     },
@@ -5464,9 +6646,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "75eb713",
+          "date": "2026-03-23",
+          "subject": "Derivations 10 11 (#10)"
         }
       ]
     },
@@ -5483,9 +6670,19 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "dffc200",
+          "date": "2026-04-22",
+          "subject": "Claude/audit dependency chain zq3f2 (#70)"
+        },
+        {
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
         }
       ]
     },
@@ -5498,9 +6695,14 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
         }
       ]
     },
@@ -5513,9 +6715,9 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
         }
       ]
     },
@@ -5586,9 +6788,19 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
+        },
+        {
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        },
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -5620,9 +6832,9 @@
           "subject": "Chronology ledger + structural-link topology (not inline corrections) (#129)"
         },
         {
-          "hash": "bf0cf7e",
+          "hash": "84c4c2a",
           "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "subject": "s_inst_inflation: cross-sector tunneling refines super-Earth analogy (#119)"
         }
       ]
     },
@@ -5646,9 +6858,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e1392bf",
+          "date": "2026-05-13",
+          "subject": "s_v_nlo: NLO structure for S_v(K=1) \u2014 closes seam-profile's 5.7% gap (#114)"
         }
       ]
     },
@@ -5673,9 +6885,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "1445303",
+          "date": "2026-05-13",
+          "subject": "s_v_nlo_attempt: explicit NLO calc reveals non-perturbative regime (#115)"
         }
       ]
     },
@@ -5701,9 +6913,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "046d0c6",
+          "date": "2026-05-13",
+          "subject": "seam_profile: independent derivation of |\u2207K|_seam confirms \u03ba_pair = 1 (#113)"
         }
       ]
     },
@@ -5724,9 +6936,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "2ca0794",
+          "date": "2026-04-18",
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         }
       ]
     },
@@ -5741,9 +6953,9 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
         }
       ]
     },
@@ -5780,9 +6992,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
         }
       ]
     },
@@ -5801,9 +7013,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
         }
       ]
     },
@@ -5829,9 +7041,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -5849,9 +7061,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "cc58f06",
+          "date": "2026-04-20",
+          "subject": "DRY sweep + A_s geometric proof + Z1-Z3 convention (#68)"
         }
       ]
     },
@@ -5903,9 +7115,19 @@
           "subject": "Propagate this session's settled results into the framework status catalog (#141)"
         },
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "8ad1d2c",
+          "date": "2026-05-11",
+          "subject": "Soliton dynamics companion + corrected J\u00b2 = \u2212I under right Klein topology (#107)"
+        },
+        {
+          "hash": "c85e379",
+          "date": "2026-05-10",
+          "subject": "Soliton continuity follow-up: tighten sine-Gordon doc + cross-link K-zoo + re-remove JWST notes (#10"
+        },
+        {
+          "hash": "0f604ee",
+          "date": "2026-05-10",
+          "subject": "Derive sine-Gordon from substrate Lagrangian + soliton kink-mass spectrum (refs #97 H) (#99)"
         }
       ]
     },
@@ -5933,9 +7155,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "2ca0794",
+          "date": "2026-04-18",
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         }
       ]
     },
@@ -5958,9 +7185,19 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "2ca0794",
+          "date": "2026-04-18",
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
+        },
+        {
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
         }
       ]
     },
@@ -5995,9 +7232,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "46ed361",
+          "date": "2026-05-12",
+          "subject": "Cone-twist substrate: bicone target manifold + Z\u2082 vortex dynamics (#108)"
+        },
+        {
+          "hash": "8ad1d2c",
+          "date": "2026-05-11",
+          "subject": "Soliton dynamics companion + corrected J\u00b2 = \u2212I under right Klein topology (#107)"
         }
       ]
     },
@@ -6021,9 +7263,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "dffc200",
+          "date": "2026-04-22",
+          "subject": "Claude/audit dependency chain zq3f2 (#70)"
         }
       ]
     },
@@ -6040,9 +7287,49 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "0a20b6c",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#3)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "25e708f",
+          "date": "2026-03-22",
+          "subject": "Refactor: shared utils, cross-references, superseded notes"
+        },
+        {
+          "hash": "20568de",
+          "date": "2026-03-22",
+          "subject": "Reframe spectral tilt: mode-locking replaces cost function"
+        },
+        {
+          "hash": "bfc6ef5",
+          "date": "2026-03-22",
+          "subject": "Add epigraph to spectral tilt derivation"
+        },
+        {
+          "hash": "57cb9c0",
+          "date": "2026-03-22",
+          "subject": "Reorient repo around sync cost framework; add three derivations"
         }
       ]
     },
@@ -6053,15 +7340,49 @@
       "summary": "> Strip away \"cost.\" What remains is phase, frequency, coupling,\n> and the rational numbers.",
       "depends_on": [],
       "depended_on_by": [
-        "photon_reframing",
         "spectral_tilt",
         "unitless_check"
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e387fe3",
+          "date": "2026-04-14",
+          "subject": "Archive stale derivations and consolidate framework constants (#61)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "37aef34",
+          "date": "2026-03-25",
+          "subject": "Remove resolved open questions from living documents"
+        },
+        {
+          "hash": "0a20b6c",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#3)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "25e708f",
+          "date": "2026-03-22",
+          "subject": "Refactor: shared utils, cross-references, superseded notes"
+        },
+        {
+          "hash": "20568de",
+          "date": "2026-03-22",
+          "subject": "Reframe spectral tilt: mode-locking replaces cost function"
         }
       ]
     },
@@ -6072,21 +7393,24 @@
       "summary": "The speed of light is the rate at which the gate of observability\npropagates through a coherent medium. It has not been derived within\nthe framework \u2014 it appears in Derivation 6 as one of three Planck\nconstants, identified with the parabolic (detuning) direction of\nSL(2,R) via the Iwasawa decomposition. This derivation gives c its\nphysical mechanism.",
       "depends_on": [
         "PROOF_A_gravity",
-        "PROOF_B_quantum",
-        "photon_reframing"
+        "PROOF_B_quantum"
       ],
       "depended_on_by": [
         "INDEX",
         "duty_cycle_dictionary",
-        "photon_reframing",
         "quantum_gravity_interpolation",
         "spatial_coupling_derived"
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "0a5bcb8",
+          "date": "2026-03-26",
+          "subject": "Add Derivation 31: Speed of Light as Gate Propagation (#28)"
         }
       ]
     },
@@ -6124,16 +7448,25 @@
         "numerology_count_phase_a",
         "numerology_inventory",
         "phenomenology_cross_reference",
-        "photon_reframing",
         "sector_decoupling_phase_a",
         "structural_lemmas",
         "vocabulary_is_the_work_pattern"
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "cc58f06",
+          "date": "2026-04-20",
+          "subject": "DRY sweep + A_s geometric proof + Z1-Z3 convention (#68)"
+        },
+        {
+          "hash": "c83e5d0",
+          "date": "2026-04-19",
+          "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
         }
       ]
     },
@@ -6154,9 +7487,19 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "845f80b",
+          "date": "2026-04-04",
+          "subject": "Add Derivation 40: Bragg circle map and Stribeck vortex regime analysis (#55)"
         }
       ]
     },
@@ -6195,14 +7538,13 @@
         "w_plus_formalization"
       ],
       "depended_on_by": [
-        "dynamical_quantization",
-        "photon_reframing"
+        "dynamical_quantization"
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "a6a4f5d",
+          "date": "2026-04-26",
+          "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
         }
       ]
     },
@@ -6423,9 +7765,29 @@
           "subject": "qd_origins: close audit Finding 2 (small primes + d = 3 \"smuggled in\") (#121)"
         },
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "9bed549",
+          "date": "2026-04-24",
+          "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        },
+        {
+          "hash": "1cf530a",
+          "date": "2026-04-08",
+          "subject": "Verify HKT hypersurface deformation algebra from SL(2,C) complexification"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "40bc011",
+          "date": "2026-03-25",
+          "subject": "Add geometric proof chains A (gravity) and B (quantum) with cross-references"
+        },
+        {
+          "hash": "fc926a2",
+          "date": "2026-03-23",
+          "subject": "Derivation 14: Three Dimensions from the Mediant (#15)"
         }
       ]
     },
@@ -6446,9 +7808,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "2ca0794",
+          "date": "2026-04-18",
+          "subject": "Close Tier 1 gaps, derive sin\u00b2\u03b8_W (0.5\u03c3) and R = 6\u00d713\u2075\u2074 (z0) (#66)"
         }
       ]
     },
@@ -6461,9 +7823,14 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "3f60310",
+          "date": "2026-03-25",
+          "subject": "D23: Three zeros and the 1+3 decomposition"
         }
       ]
     },
@@ -6528,9 +7895,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "8aeae48",
+          "date": "2026-05-12",
+          "subject": "time_axis_split: quantitative structure \u2014 arrow-axis is integer-counted (#111)"
+        },
+        {
+          "hash": "b973b2c",
+          "date": "2026-05-10",
+          "subject": "Commit to the time-axis split: clock vs arrow on different axes (#101)"
         }
       ]
     },
@@ -6543,9 +7915,29 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "0a20b6c",
+          "date": "2026-03-23",
+          "subject": "Claude/add ket submodule n bg4d (#3)"
+        },
+        {
+          "hash": "8a894b0",
+          "date": "2026-03-22",
+          "subject": "Add inline definitions for single-document readability"
+        },
+        {
+          "hash": "00292b8",
+          "date": "2026-03-22",
+          "subject": "Add ket submodule and initialize knowledge substrate (#1)"
+        },
+        {
+          "hash": "028f87b",
+          "date": "2026-03-22",
+          "subject": "Add two-force model: coherence vs decoherence at the golden ratio"
         }
       ]
     },
@@ -6581,9 +7973,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "ca4e229",
+          "date": "2026-05-13",
+          "subject": "unitless_audit: end-to-end audit of substrate primitives in Planck units (#112)"
         }
       ]
     },
@@ -6612,9 +8004,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "aa8929e",
+          "date": "2026-04-30",
+          "subject": "Pedagogical: unitless check for \u210f = G = c = 1 invariance (#86)"
         }
       ]
     },
@@ -6632,9 +8024,19 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e1e25da",
+          "date": "2026-04-13",
+          "subject": "Mass sector closure, K_STAR_PRECISE, neutrino solar closure, and session reconciliation (#58)"
+        },
+        {
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "7fb3846",
+          "date": "2026-03-25",
+          "subject": "D24: The cosmological constant problem dissolves"
         }
       ]
     },
@@ -6647,9 +8049,34 @@
       "depended_on_by": [],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "f62c568",
+          "date": "2026-03-24",
+          "subject": "Add derivation 16 and computational validation of variable denominator (#21)"
+        },
+        {
+          "hash": "1dab7df",
+          "date": "2026-03-24",
+          "subject": "Add expansion as tree deepening, missing dimension, no pure equilibrium"
+        },
+        {
+          "hash": "d892a55",
+          "date": "2026-03-24",
+          "subject": "Add bowed string (Kawano 2025) as physical M\u00f6bius strip instance"
+        },
+        {
+          "hash": "bc307ec",
+          "date": "2026-03-24",
+          "subject": "Add M\u00f6bius spiral topology and derivable division threshold"
+        },
+        {
+          "hash": "c5e7f60",
+          "date": "2026-03-24",
+          "subject": "Add Derivation 16: variable denominator (Hz with changing reference)"
         }
       ]
     },
@@ -6719,9 +8146,24 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
+        },
+        {
+          "hash": "f12eba4",
+          "date": "2026-04-26",
+          "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        },
+        {
+          "hash": "400f558",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
+        },
+        {
+          "hash": "ebaf42e",
+          "date": "2026-04-25",
+          "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
         }
       ]
     },
@@ -6755,9 +8197,9 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "5f41c24",
+          "date": "2026-04-26",
+          "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
         }
       ]
     },
@@ -6802,9 +8244,14 @@
           "subject": "f_exit_natural: close audit Finding 5 (f_exit = exp(-S_v) parsimony) (#123)"
         },
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "3a57d3c",
+          "date": "2026-05-12",
+          "subject": "wave_particle_substrate: pin observation as event-defined not entity-defined (#110)"
+        },
+        {
+          "hash": "81aff30",
+          "date": "2026-05-12",
+          "subject": "Wave-particle substrate: four-object framework synthesis (#109)"
         }
       ]
     },
@@ -6820,9 +8267,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "b2deee7",
+          "date": "2026-04-07",
+          "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
+        },
+        {
+          "hash": "0d0dc5b",
+          "date": "2026-03-25",
+          "subject": "D20: XOR continuum limit \u2014 honest negative result"
         }
       ]
     },
@@ -6850,9 +8302,14 @@
       ],
       "git": [
         {
-          "hash": "bf0cf7e",
-          "date": "2026-05-14",
-          "subject": "rectangle_perpendicularity: close audit Finding 1 (rectangle ansatz) (#120)"
+          "hash": "e27106f",
+          "date": "2026-05-10",
+          "subject": "Audit cleanup: 7 conflation / scope / retraction fixes (#102)"
+        },
+        {
+          "hash": "7190a9b",
+          "date": "2026-03-26",
+          "subject": "Derive XOR parity filter from Klein bottle BCs (gap #5)"
         }
       ]
     }
