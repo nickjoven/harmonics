@@ -1,5 +1,5 @@
 {
-  "generated": "c1c42188e69255b5d398ab535dc6d252085f5a50",
+  "generated": "37f3095103046a637895e31d8122af6d568e4c88",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -936,6 +936,7 @@
         "f_exit_natural",
         "framework_status",
         "inflation_duration",
+        "klein_bottle_derivation",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
         "qd_origins",
@@ -957,6 +958,11 @@
         "thread_chronology"
       ],
       "git": [
+        {
+          "hash": "37f3095",
+          "date": "2026-05-18",
+          "subject": "Knowledge-graph fidelity repairs (background audit; verified before landing) (#142)"
+        },
         {
           "hash": "fd6201b",
           "date": "2026-05-16",
@@ -1937,6 +1943,7 @@
         "discrete_reduction_problem",
         "e_cross_calc",
         "e_cross_discrete_resolution",
+        "f_exit_natural",
         "framework_status",
         "inflation_duration",
         "inflation_seam_anchor_closure",
@@ -2647,11 +2654,14 @@
       "summary": "Class 3 (derivation grade). The argument uses only:",
       "depends_on": [
         "cone_twist_substrate",
+        "discrete_reduction_computed",
         "inflation_duration",
+        "inflation_seam_anchor_closure",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
         "qd_origins",
         "rectangle_perpendicularity",
+        "thread_chronology",
         "wave_particle_substrate"
       ],
       "depended_on_by": [
@@ -2663,6 +2673,11 @@
         "thread_chronology"
       ],
       "git": [
+        {
+          "hash": "37f3095",
+          "date": "2026-05-18",
+          "subject": "Knowledge-graph fidelity repairs (background audit; verified before landing) (#142)"
+        },
         {
           "hash": "f2f4e04",
           "date": "2026-05-15",
@@ -2932,6 +2947,8 @@
         "hierarchy_gaussian_lattice",
         "hierarchy_problem_translation",
         "hybrid_strategy_audit",
+        "inflation_seam_anchor_closure",
+        "k_critical_phase_b",
         "k_inflation_seam_obstruction",
         "klein_bottle",
         "klein_bridge_audit_and_probe",
@@ -2945,11 +2962,14 @@
         "path_closures_iter3",
         "path_closures_iter4",
         "phenomenology_cross_reference",
+        "proposed_items_disposition",
+        "proposed_residual_closure",
         "psl2z_subgroup_phase_a_results",
         "psl2z_subgroup_phase_b",
         "sine_gordon_substrate",
         "substrate_determinism",
         "thread_chronology",
+        "tick_continuum_construction",
         "vocabulary_is_the_work_pattern",
         "w_plus_formalization",
         "xor_derivation"
@@ -3018,6 +3038,11 @@
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "d5c90df",
+          "date": "2026-05-17",
+          "subject": "Propagate this session's settled results into the framework status catalog (#141)"
+        },
         {
           "hash": "4bf4f14",
           "date": "2026-05-17",
@@ -4038,6 +4063,8 @@
       "depended_on_by": [
         "anchor_count_reaudit",
         "basepoint_principle",
+        "f_exit_natural",
+        "framework_status",
         "k_inflation_seam_obstruction",
         "proposed_items_disposition",
         "thread_chronology"
@@ -4230,6 +4257,7 @@
         "rational_field_equation"
       ],
       "depended_on_by": [
+        "framework_status",
         "proposed_items_disposition",
         "statistical_conventions",
         "thread_chronology"
@@ -4483,6 +4511,7 @@
       ],
       "depended_on_by": [
         "a_s_geometric_proof",
+        "audit_findings_3_4_disposition",
         "cone_twist_substrate",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_c",
@@ -6327,6 +6356,7 @@
         "thread_chronology"
       ],
       "depended_on_by": [
+        "framework_status",
         "proposed_residual_closure",
         "thread_chronology"
       ],
@@ -6357,6 +6387,8 @@
         "tick_continuum_construction"
       ],
       "depended_on_by": [
+        "framework_status",
+        "sine_gordon_substrate",
         "thread_chronology"
       ],
       "git": [
@@ -7042,7 +7074,9 @@
         "klein_bottle",
         "klein_bottle_derivation",
         "master_cascade_identity",
-        "soliton_dynamics"
+        "proposed_residual_closure",
+        "soliton_dynamics",
+        "tick_continuum_construction"
       ],
       "depended_on_by": [
         "cone_twist_substrate",
@@ -7070,6 +7104,11 @@
         "xor_derivation"
       ],
       "git": [
+        {
+          "hash": "d5c90df",
+          "date": "2026-05-17",
+          "subject": "Propagate this session's settled results into the framework status catalog (#141)"
+        },
         {
           "hash": "8ad1d2c",
           "date": "2026-05-11",
@@ -7602,6 +7641,7 @@
         "discrete_reduction_computed",
         "e_cross_calc",
         "empty_fork_cap",
+        "f_exit_natural",
         "framework_status",
         "inflation_duration",
         "inflation_seam_anchor_closure",
@@ -7802,9 +7842,11 @@
       ],
       "depended_on_by": [
         "empty_fork_cap",
+        "framework_status",
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
         "proposed_residual_closure",
+        "sine_gordon_substrate",
         "substrate_determinism",
         "thread_chronology"
       ],
