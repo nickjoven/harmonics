@@ -24,8 +24,8 @@ Categories:
 | Ω_Λ : Ω_DM : Ω_b = 13 : 5 : 1 / 19 (combinatorial: Farey + Z₂ rep theory) | `omega_partition_combinatorial.md`, `farey_partition.md`, `baryon_fraction.md` |
 | Ω_Λ = 13/19 (0.07σ), Ω_m = 6/19, Ω_DM = 5/19, Ω_b = 1/19 (single-w) | same |
 | **Ω_b two-component closure (full Class 5)**: (α, β) = (0, 1), w_- = 1 from sign-rep no-EM, w_+ = 13/14 from cusp-1/2 ground state on X_0(6); zero free parameters at closure level. Predictions: Ω_b = 13/264 (0.12%), Ω_DM = 35/132 (0.06%), Ω_Λ = 181/264 (0.13%) | `omega_b_alpha_beta_closure.md`, `psl2z_subgroup_phase_b.md`, `L1_substrate_cusp_ground_state.md`, `w_plus_formalization.md` |
-| Friedmann form at r = 1 | `k_of_t_friedmann.md` |
-| λ_unlock = (4G − π ln 2)/π (Arnold Lyapunov on Z₂ quotient) | `kam_bridge_synthesis.md` |
+| Friedmann form at r = 1 — *canonically affirmed structural*; NB the named source `k_of_t_friedmann.md` was **never committed in any artifact** (exhaustive search: cloud + all local ket stores) — explicit derivation text unrecoverable; result affirmed alongside R, Λ·ℓ_P² | `numerology_inventory.md` "What remains genuinely structural" #1 |
+| λ_unlock = (4G − π ln 2)/π (Arnold Lyapunov on Z₂ quotient) — value airtight; derivation doc `kam_bridge_synthesis.md` was **net-rejected work** (Class-2 Pythagorean-comma recording), only this fragment salvaged | `lambda_unlock_closed_form.py` (numerical↔closed-form to 1e-15), `a_s_geometric_proof.md` A5.2 (value 0.473096), `numerology_inventory.md` §"λ_unlock = (4G − π ln 2)/π at K=1" |
 | Born rule |ψ|² from saddle-node | `born_rule.md`, `a1_from_saddle_node.md` |
 | a_0 = cH_0/(2π) from Λ (MOND scale) | `a0_threshold.md` |
 | Z₂/winding topological-charge conservation (committed as **inviolable #1**, Klein-bottle topological rigidity; "no local process changes `Q mod 2`"). NB: held as a structural *inviolable*, not a closed standalone theorem — the explicit standalone theorem is *not yet articulated* (`phenomenology_cross_reference.md:439`). | `substrate_determinism.md` (inviolable #1) |
@@ -121,12 +121,30 @@ numerology ensemble, not structural.
 |---|---|
 | v/M_P ≈ 13⁻¹⁵ (3.1%) | `yukawa_mediant_cascade.py` null; `z_30_substrate_check.py` dead end |
 | φ⁻⁸⁰ ≈ v/M_P (5.3%) | Numerical coincidence only |
-| 1/(Pythagorean comma)² ≈ K_Greene (0.17%) | `kam_bridge_synthesis.md` §6, no structural route |
+| 1/(Pythagorean comma)² ≈ K_Greene (0.17%) | `numerology_inventory.md` §"Pythagorean comma vs K_Greene" — preserves the rejected `kam_bridge_synthesis.md` §6 recording (Class 2, no structural route; source doc never committed) |
 | H_inf from framework integers | `h_inf_status.md` (scale-free reframe: out of class) |
 | Mean-field Ψ Arnold-tongue structure | `klein_spectrum.py`, `kuramoto_induced_map.py` (Adler-only) |
 | Twist-map / KAM / cantorus / Lyapunov framings of the ψ_F visualizer | Source inspection confirms gradient descent on a static potential; category error. Mechanism note in `klein_nodal_parity.md` |
 | Klein nodal parity (odd-m Möbius vs even-m disjoint arcs at σ=+node) | `klein_nodal_parity.md`: simulator uses Y², which is Z₂-symmetric for all ℓ. The (−1)^ℓ sign flip on Y doesn't survive squaring; dynamics cannot discriminate parity. |
 | λ_H = 1/q_2³ + 1/228 correction | `framework_predictions.py:268` and `numerology_inventory.md` Class 1: 1/228 confirmed fitted (not framework-derived); correction removed. Bare identity λ_H = 1/q_2³ = 1/8 remains a declined `bare_k1_identities` entry with 3.4% residual. |
+
+> **Cited-but-never-authored canonical names — class disposition.**
+> A class of ~15 particle-sector canonical-doc names is *referenced*
+> across the corpus but was **never committed in any artifact**
+> (exhaustive search, 2026-05: cloud + every local ket store —
+> repo, parallel `codex/harmonics` checkout, legacy federated
+> store, `derivation`, `disc-gap-tongues`, etc.). These are
+> rejected/aspirational work, not live sources; their surviving
+> fragments and dispositions (where any) live in
+> `numerology_inventory.md` ("What to stop chasing" + the Class-2
+> catalog). Do **not** treat them as canonical sources and do
+> **not** re-derive them (the framework's own honest-landing /
+> pigeonhole discipline says particle-sector near-match closure
+> lands Class-2 by construction). Cross-refs to such names should
+> point at the relevant `numerology_inventory.md` disposition
+> entry. The two structurally-load-bearing cases (`λ_unlock`,
+> Friedmann-r=1) are individually re-pointed in the Survives
+> table above; this note covers the residual class.
 
 ## Proposed (needs audit or experimental input)
 
