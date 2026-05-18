@@ -37,6 +37,7 @@ Categories:
 | **Z₂-graded soliton charge from Klein antiperiodicity**: kink ↔ antikink under traversal of the antiperiodic spatial loop is forced by `f(x+L_x, y) = −f(x, L_y−y)`. Distinct from the field half-twist `θ → θ + π` (which gives spin-statistics). | `sine_gordon_substrate.md`, `klein_bottle.md` (Soliton sector consequence section) |
 | **S_v(K=1) ≈ 11.515 (discrete 4-mode reduction, computed)**: the "real Phase 2" delivered — hand-computed, numerically verified, native discrete representation. Supersedes the assumed-symmetric `S_v = 16` (Finding 3). Diagonal direction-asymmetric (`H_BB ≈ 9.580 ≠ H_CC ≈ 3.645`, half-twist breaking sector-swap); `E_cross = −4` exact. Caveat-2 (half-twist assignment) resolved via `xor_derivation.md` §3.3 homotopy theorem. Upper bound under uniform-winding ansatz. | `discrete_reduction_computed.md` (canonical) |
 | **The Basepoint Principle** (named structural principle, peer to no-rescaling / the inviolables): the framework supplies torsorial structure and never the basepoints; a declined basepoint is a structural *feature* **iff** the missing selecting section is *structurally forced* (obstruction exhibited), else it stays *open*. Verified at R1/∅, the two ℝ₊ scale-anchors (nature/number sayable, value declined, dynamically inert by torsor-invariance), #INF, the anchor obstructions, A_s/Instance-7. A consistency boundary with a discriminator — NOT a derivation, NOT a licence to classify unsolved problems as features. | `basepoint_principle.md` |
+| **Per-sector sine-Gordon reduction at K<1 (structurally forced, Class-3)**: the Goldstein–Kac construction is **K-parameterized** (its only K-dependence is `ω₀²=Kr/m`; the binary-Z₂ tick, the flip, and `c²=σ²/m` are K-independent), so it runs identically at every cascade `K_n` — discharging the former "conjectural at K<1 / working assumption". Kink-mass ratio `M_k(d,n,b)/M_k(K=1) = b^(−n/(2d))·√(r_n)` (K-scaling forced; `√r_n` an honest flagged correction). The soliton-sector *observable-identification* stays Class-2, declined, not chased. | `proposed_residual_closure.md`, `tick_continuum_construction.md`; supersedes the K<1 "conjectural" flag in `sine_gordon_substrate.md` |
 
 > **Audit Findings 3 & 4 — disposition on the status map
 > (post-2026-05).** Finding 3 ("S_v=16 exact" overstated) is
@@ -50,7 +51,13 @@ Categories:
 > cancels, leaving a K-independent ~10¹² shortfall). Inflation
 > duration remains **conditional** on one well-posed open item
 > (the inflation-era seam *structure*), not an un-pinnable
-> parameter. **Chronology home: `thread_chronology.md`** (the
+> parameter. **That residual is now itself closed (#INF,
+> `inflation_seam_anchor_closure.md`):** `|∇K|_inflation` is the
+> Schwinger-image of an out-of-class anchor, so the framework
+> *correctly declines* it (a Basepoint-Principle instance, same
+> shape as A_s/Instance-7) — inflation duration stays
+> anchor-conditional, as the disposition always said, now with
+> the reason. **Chronology home: `thread_chronology.md`** (the
 > single ledger — settled outcomes + paths; this catalog carries
 > settled state only). See also `k_inflation_seam_obstruction.md`,
 > `audit_findings_3_4_disposition.md` (origin record). Do not
@@ -123,11 +130,20 @@ numerology ensemble, not structural.
 
 ## Proposed (needs audit or experimental input)
 
-| Item | Upgrade criterion |
+> **All three 2026-05 Proposed items dispositioned this session
+> (see `proposed_items_disposition.md`, `proposed_residual_closure.md`;
+> chronology: `thread_chronology.md`).** None remains an open
+> framework deliverable:
+
+| Item | Disposition |
 |---|---|
-| K_c(F_n/F_{n+1}) closed form | Explicit form beyond asymptotic δ⁻ⁿ scaling |
-| T2#7 measurement arc technical residuals | Iteration-to-time anchor, multi-tongue cascade, continuous K(t) |
-| Kink-mass ratios across the K-zoo: `M_k(d, n, b) / M_k(K=1) = b^(-n/(2d))` | Identification of soliton-sector observables in each cascade sector (gravitational geons at K=1, stellar-scale kinks in the bowed sector, etc.); `sine_gordon_substrate.md` flags this as conjectural at K<1 — depends on each cascade sector hosting an analogous sine-Gordon reduction |
+| ~~K_c(F_n/F_{n+1}) closed form~~ | **Out of scope, not a framework gap.** Gap-1 K_c closed (`k_critical_phase_b.md`); framework uses `K_map = 1` *exact*. The finite-`n` Fibonacci closed-form is a known-hard *external* KAM problem the framework neither has nor needs. (Secondary: RFE branch born first-order at `K_c^RFE≈1.56`; `K_c^RFE=Σw(1)` a **flagged conjecture, not claimed**.) |
+| ~~T2#7 measurement-arc residuals~~ | **Closed.** Iteration-to-time anchor = Basepoint-decline (#INF pattern); continuous-K(t) = dynamic saddle-node sweep (Born preserved, rate-independent); multi-tongue = direct collapse dominant, cascade `(K/2)^{Δq}`-suppressed. `proposed_residual_closure.md`. |
+| ~~K-zoo kink-mass ratios `M_k(d,n,b)/M_k(K=1)`~~ | **Reduction promoted to Survives (Class-3, structurally forced)** — see Survives entry below. Ratio `= b^(−n/(2d))·√(r_n)` (K-scaling forced; `√r_n` an honest flagged correction). Only the *observable-identification* (which object ↔ which kink per sector) stays **Class-2, declined, not chased**. |
+
+The Proposed tier is **empty of open framework deliverables**.
+What remains is one quantitative correction (`√r_n`) and one
+declined Class-2 disposition — neither an open problem.
 
 ## Out of class (absolute scales, anchor-dependent)
 
@@ -148,15 +164,18 @@ require **two** observational anchors — one cosmological (H_0), one
 particle-sector (v_EW). Reduction to one was treated as an open
 item in `anchor_count_audit.md` (five specific obstructions); per
 `hierarchy_problem_translation.md` and `path_a_walkthrough.md`,
-the two-anchor minimum is now read as a **structural feature**
-(not a defect to be lifted): the canonical register's prime
-support `{2, 3}` cannot reach `15 = 3·5` for the `v/M_P ≈ 13⁻¹⁵`
-target, and the SM hierarchy problem (the imported framing under
-which "two anchors" looked like a defect) does not translate to
-the framework — it lacks the naturalness criterion and quadratic
-divergences that make small ratios "problematic" in SM. Re-audit
-of the five obstructions per `vocabulary_is_the_work_pattern.md`
-Consequence 1 is recommended.
+the two-anchor minimum is a **structural feature** (not a defect
+to be lifted): the canonical register's prime support `{2, 3}`
+cannot reach `15 = 3·5` for the `v/M_P ≈ 13⁻¹⁵` target, and the
+SM hierarchy problem (the imported framing under which "two
+anchors" looked like a defect) does not translate to the
+framework — it lacks the naturalness criterion and quadratic
+divergences that make small ratios "problematic" in SM. The
+re-audit of the five obstructions per
+`vocabulary_is_the_work_pattern.md` Consequence 1 is **done**
+(`anchor_count_reaudit.md`): **none open** — #5 rigorous/load-
+bearing, #1=#2 Feature (prime-5 absence), #3 argued, #4
+dissolved; an instance of the Basepoint Principle.
 
 ---
 
