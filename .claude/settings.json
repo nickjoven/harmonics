@@ -19,7 +19,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cd \"$CLAUDE_PROJECT_DIR\" && python3 scripts/drift/run_all.py --stop-on-fail",
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && python3 scripts/hooks/precommit_drift_gate.py",
             "if": "Bash(git commit:*)",
             "timeout": 60,
             "statusMessage": "Running anti-drift checks before commit..."
