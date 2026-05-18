@@ -1,5 +1,5 @@
 {
-  "generated": "206d5a44f7c5cc5f3b82ac90f764cddc05daaaee",
+  "generated": "c1c42188e69255b5d398ab535dc6d252085f5a50",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -601,6 +601,7 @@
         "numerology_inventory",
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
+        "proposed_residual_closure",
         "s_v_nlo",
         "structural_lemmas",
         "vocabulary_is_the_work_pattern"
@@ -902,6 +903,7 @@
         "omega_b_w_plus_cross_ratio_search",
         "phenomenology_cross_reference",
         "proposed_items_disposition",
+        "proposed_residual_closure",
         "sector_decoupling_phase_a",
         "structural_lemmas",
         "thread_chronology",
@@ -1170,6 +1172,7 @@
         "numerology_inventory",
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
+        "proposed_residual_closure",
         "seismic_eigenstate_dictionary",
         "sine_gordon_substrate",
         "stribeck_vortex",
@@ -1232,6 +1235,7 @@
       "depended_on_by": [
         "born_rule",
         "empty_fork_cap",
+        "proposed_residual_closure",
         "thread_chronology",
         "tick_continuum_construction"
       ],
@@ -4868,7 +4872,10 @@
       "title": "Measurement Collapse from Tongue Traversal",
       "summary": "Wavefunction collapse is the transient of a driven nonlinear\noscillator crossing an Arnold tongue boundary. It has physical\nduration, follows from the same geometry that produces the Born\nrule, and connects to the quantum Zeno effect.",
       "depends_on": [],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "proposed_residual_closure",
+        "thread_chronology"
+      ],
       "git": [
         {
           "hash": "b2deee7",
@@ -4960,6 +4967,7 @@
       "depended_on_by": [
         "empty_fork_cap",
         "proposed_items_disposition",
+        "proposed_residual_closure",
         "thread_chronology"
       ],
       "git": [
@@ -5399,6 +5407,7 @@
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
         "proposed_items_disposition",
+        "proposed_residual_closure",
         "psl2z_subgroup_phase_c_inventory",
         "remaining_gap_shapes",
         "structural_lemmas",
@@ -6318,6 +6327,7 @@
         "thread_chronology"
       ],
       "depended_on_by": [
+        "proposed_residual_closure",
         "thread_chronology"
       ],
       "git": [
@@ -6325,6 +6335,35 @@
           "hash": "206d5a4",
           "date": "2026-05-17",
           "subject": "Disposition the three #PROPOSED items (provenance-corrected; nothing overreached) (#139)"
+        }
+      ]
+    },
+    {
+      "id": "proposed_residual_closure",
+      "path": "sync_cost/derivations/proposed_residual_closure.md",
+      "title": "#PROPOSED residual: closed",
+      "summary": "Class 3 (residual closure; consistency-forced). No new primitive.\nB closed by mechanism-identification from established machinery\n(saddle-node Born geometry, the `\u03c4\u221d1/\u221a\u03b5` slowing, the `(K/2)^q`\nhierarchy). C's K<1 reduction closed by structural forcing \u2014\n`tick_continuum_construction.md`'s K-parameterized Goldstein\u2013Kac\ndischarges `sine_gordon_substrate.md`'s working assumption; the\nbare ratio carries an honest `\u221ar_n` correction; the\nobservable-mapping remains correctly declined. The framework's\no",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "ansatz_audit_policy",
+        "born_rule",
+        "born_rule_parameter_free",
+        "measurement_collapse",
+        "mediant_vs_flow_calc",
+        "numerology_count_phase_b",
+        "proposed_items_disposition",
+        "sine_gordon_substrate",
+        "thread_chronology",
+        "tick_continuum_construction"
+      ],
+      "depended_on_by": [
+        "thread_chronology"
+      ],
+      "git": [
+        {
+          "hash": "c1c4218",
+          "date": "2026-05-17",
+          "subject": "Close the #PROPOSED residual \u2014 the arc is terminal (#140)"
         }
       ]
     },
@@ -7020,6 +7059,7 @@
         "master_cascade_identity",
         "orthogonal_kink_interaction",
         "proposed_items_disposition",
+        "proposed_residual_closure",
         "soliton_dynamics",
         "substrate_determinism",
         "thread_chronology",
@@ -7536,12 +7576,14 @@
         "k_critical_phase_a",
         "k_critical_phase_b",
         "k_inflation_seam_obstruction",
+        "measurement_collapse",
         "mediant_derivation",
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
         "path_a_walkthrough",
         "path_closures_iter3",
         "proposed_items_disposition",
+        "proposed_residual_closure",
         "qd_origins",
         "rational_field_equation",
         "rectangle_perpendicularity",
@@ -7568,11 +7610,17 @@
         "mediant_vs_flow_problem",
         "nonperturbative_phase2",
         "proposed_items_disposition",
+        "proposed_residual_closure",
         "s_inst_inflation",
         "substrate_determinism",
         "tick_continuum_construction"
       ],
       "git": [
+        {
+          "hash": "c1c4218",
+          "date": "2026-05-17",
+          "subject": "Close the #PROPOSED residual \u2014 the arc is terminal (#140)"
+        },
         {
           "hash": "206d5a4",
           "date": "2026-05-17",
@@ -7756,6 +7804,7 @@
         "empty_fork_cap",
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
+        "proposed_residual_closure",
         "substrate_determinism",
         "thread_chronology"
       ],
