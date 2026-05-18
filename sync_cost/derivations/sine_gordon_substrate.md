@@ -84,6 +84,21 @@ This is not yet proven; it is the working assumption that propagates
 the kink-mass-ratio prediction across the K-zoo. The K = 1 case is
 rigorous; K < 1 cases inherit conjectural status from this assumption.
 
+> **Net-state update — this working assumption is now discharged
+> (structurally forced; Class-3).** `tick_continuum_construction.md`'s
+> Goldstein–Kac construction is **K-parameterized** (its only
+> K-dependence is `ω₀² = K r/m`; the binary-Z₂ tick, the flip,
+> and `c² = σ²/m` are K-independent), so it runs identically at
+> every cascade `K_n` — forcing exactly "each sector hosts an
+> analogous sine-Gordon reduction." See `proposed_residual_closure.md`.
+> The kink-mass ratio is `M_k(d,n,b)/M_k(K=1) = b^(−n/(2d))·√(r_n)`
+> (the K-scaling forced; the `√r_n` sector-coherence factor an
+> honest correction this section's bare formula omitted). Only
+> the *observable-identification* (which object ↔ which kink per
+> sector) remains Class-2, declined, not chased. The "conjectural
+> at K<1" status above is superseded for the *reduction and the
+> K-scaling*; read it as historical.
+
 ## Kink solutions
 
 Sine-Gordon admits the standard Lorentz-boosted kink:
