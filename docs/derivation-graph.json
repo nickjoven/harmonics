@@ -1,5 +1,5 @@
 {
-  "generated": "a32c0e9eff05e42bd497306c94e775a2ab857658",
+  "generated": "83bd23910b26ce99808778d421476848549b82e4",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -3038,6 +3038,11 @@
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "c2bbc01",
+          "date": "2026-05-18",
+          "subject": "Re-point dangling canonical citations to salvaged/recorded homes (rejected-work resolution) (#144)"
+        },
         {
           "hash": "d5c90df",
           "date": "2026-05-17",
