@@ -64,11 +64,16 @@ The sum is over admissible cascade trajectories on the Stern–Brocot
 tree; the weight is the Boltzmann factor of the trajectory's action.
 **The path-integral form is already committed.**
 
-**(b) Exit-class tokens have action `S_v`.** From the audit and
-the Phase 2 calc (`nonperturbative_phase2.md`), the vortex-pair
+**(b) Exit-class tokens have action `S_v`.** The vortex-pair
 process — corresponding to a cosmic-epoch-crossing exit transition —
-has action exactly `S_v = 16` in Planck units at K = 1. This is
-substrate-derived, audit-pinned, integer-counted.
+has action `S_v(K=1) ≈ 11.515` in Planck units (canonical:
+`discrete_reduction_computed.md`, the computed discrete 4-mode
+reduction; supersedes the earlier assumed-symmetric `S_v = 16`).
+This is substrate-derived and finite-sum-computed. The argument of
+this doc (`f_exit = exp(−S_v)` is the natural action-weighted form)
+is **value-independent** — it holds for whatever `S_v(K=1)` the
+canonical reduction yields; only the numeric instantiation below
+uses the settled value.
 
 **(c) The exit fraction is therefore `exp(−S_v)`.** Combining (a)
 and (b): at each Planck tick, the substrate samples a token from
@@ -86,10 +91,10 @@ tokens is 1. The exit-class subset has fraction:
 
 where `Z_norm` is the normalisation across all admissible token
 classes. For the framework's regime where most tokens are
-intra-epoch transitions with action small relative to `S_v = 16`,
+intra-epoch transitions with action small relative to `S_v`,
 `Z_norm ≈ 1`, and:
 
-    f_exit ≈ exp(−S_v) = exp(−16) ≈ 1.13 × 10⁻⁷
+    f_exit ≈ exp(−S_v) = exp(−11.515) ≈ 1.0 × 10⁻⁵
 
 **`f_exit = exp(−S_v)` is forced by the framework's existing
 path-integral commitment.** Not a separate choice.
@@ -102,9 +107,9 @@ state has its own action; the substrate's sampling "lens"
 transmits each token type with weight proportional to its
 Boltzmann factor.
 
-`S_v = 16` is the lens's focal length for vortex-pair (exit-class)
-transitions; `exp(−16) ≈ 10⁻⁷` is the natural transmittance through
-that lens. The framework is not adjusting the lens or fitting the
+`S_v(K=1) ≈ 11.515` is the lens's focal length for vortex-pair
+(exit-class) transitions; `exp(−11.515) ≈ 10⁻⁵` is the natural
+transmittance through that lens. The framework is not adjusting the lens or fitting the
 transmittance — it is reading off what the path-integral form
 prescribes given the audit-pinned action.
 
@@ -160,8 +165,10 @@ framework's path-integral form already committed in
    path integral; the framework treats it as the natural form for
    any system with an action functional.
 
-2. **Why `S_v = 16` exactly.** This is the audit and Phase 2 calc
-   result (`nonperturbative_phase2.md`); separate derivation.
+2. **Why `S_v(K=1) ≈ 11.515`.** This is the computed discrete
+   4-mode reduction (`discrete_reduction_computed.md`, canonical;
+   supersedes the assumed-symmetric `S_v = 16`); separate
+   derivation. This doc's closure is value-independent.
 
 3. **The normalisation `Z_norm`.** For most substrate states the
    correction is negligible (`Z_norm ≈ 1`); for high-precision
@@ -174,7 +181,7 @@ framework's path-integral form already committed in
 |---|---|
 | Substrate sampling shown to be non-Boltzmann | If the substrate's sampling distribution at any epoch is shown to follow a different form (e.g., uniform-in-action, threshold-only, or any non-Boltzmann weighting), the `exp(−S_v)` derivation fails. The framework's path-integral commitment would have to be revised. |
 | `Z_norm` correction shown to be large | If for some substrate regime `Z_norm ≠ 1` by an order-of-magnitude factor, the `f_exit ≈ exp(−S_v)` simplification fails and inflation duration shifts proportionally. |
-| Inflation duration deviation > 10× | A precision-cosmology measurement showing inflation duration significantly different from `10⁻³² s` would falsify either `S_v = 16` (Phase 2 exact result) or the `exp(−S_v)` lens reading (this doc). Both are framework-structural; either falsification is a major hit. |
+| Inflation duration deviation > 10× | A precision-cosmology measurement showing inflation duration significantly different from the framework estimate would falsify either `S_v(K=1) ≈ 11.515` (the computed discrete reduction, `discrete_reduction_computed.md`) or the `exp(−S_v)` lens reading (this doc). Both are framework-structural; either falsification is a major hit. |
 
 ## Status
 
@@ -183,8 +190,9 @@ Class 3 (derivation grade). The argument uses only:
 - The framework's already-committed path-integral sampling structure
   (`wave_particle_substrate.md`, `cone_twist_substrate.md` §4,
   `nonperturbative_phase1.md` discrete-tree-sum form).
-- The audit + Phase 2 calc result `S_v(K=1) = 16` exactly
-  (`nonperturbative_phase2.md`).
+- The computed discrete 4-mode reduction `S_v(K=1) ≈ 11.515`
+  (`discrete_reduction_computed.md`, canonical; supersedes the
+  assumed-symmetric `S_v = 16`). The closure is value-independent.
 - Standard Boltzmann-factor specialization of action-weighted
   distribution to a specific token-class subset.
 
@@ -202,13 +210,16 @@ level.
 - `nonperturbative_phase1.md` — discrete tree-trajectory sum
   with EML weights; the substrate's native form of the
   path integral.
-- `nonperturbative_phase2.md` — Phase 2 calc giving `S_v = 16`
-  exactly at K = 1.
+- `discrete_reduction_computed.md` — **canonical `S_v(K=1)`**:
+  the computed discrete 4-mode reduction, `S_v(K=1) ≈ 11.515`
+  (supersedes the assumed-symmetric `S_v = 16` of
+  `nonperturbative_phase2.md`).
 - `rectangle_perpendicularity.md` — Finding 1 closure (same
   pattern: piece was implicit, articulation closes).
 - `qd_origins.md` — Finding 2 closure (same pattern).
-- `audit_report.md` (branch `worktree-agent-aafbee5af7f80796d`) —
-  Finding 5 source, now closed.
+- `thread_chronology.md` — the single ledger; Finding 5
+  (`f_exit = exp(−S_v)` parsimony) recorded **Closed**, this doc
+  canonical.
 
 ## Pattern observation (three times)
 
@@ -226,20 +237,23 @@ Each gap was real; each was closed by no new primitive, only by
 explicit assembly of existing pieces. The framework's parsimony
 continues to be a working asset.
 
-## What's left from the audit
+## Audit findings — settled state (chronology: `thread_chronology.md`)
 
-After this PR:
+Settled values only; the path lives once in the ledger.
 
-- Finding 1: **closed** (`rectangle_perpendicularity.md`)
-- Finding 2: **closed** (`qd_origins.md`)
-- Finding 5: **closed** (this doc)
-- Finding 3 (4-mode reduction "regime mismatch"): MAJOR; remains open.
-  The audit flagged the 4-mode result is most natural at sub-critical
-  K, not at K=1. Worth investigating.
-- Finding 4 (Schwinger universality across epochs): MAJOR; remains
-  open. The doc assumes the relation `H = κ_pair × Γ_pair` holds at
-  every epoch with the same `S_v = 16`; this isn't explicitly
-  derived.
+- Finding 1: **closed** (`rectangle_perpendicularity.md`).
+- Finding 2: **closed** (`qd_origins.md`).
+- Finding 5: **closed** (this doc).
+- Finding 3 (4-mode reduction): **closed** — the explicit discrete
+  reduction is delivered, `S_v(K=1) ≈ 11.515` (not 16),
+  `discrete_reduction_computed.md` (canonical).
+- Finding 4 (S_v K-dependent / inflation duration): **closed
+  disposition** — anchor-conditional, the geometric-seam route
+  structurally impossible ∀K; #INF closed (`|∇K|_inflation` =
+  Schwinger-image of an out-of-class anchor, correctly declined,
+  `inflation_seam_anchor_closure.md`). Inflation duration stays
+  anchor-conditional, as the disposition always said.
 
-After Findings 3 and 4 are addressed, the audit's reading of the
-framework's foundational claims is exhausted.
+All five audit findings are now closed (or closed-disposition);
+the audit's reading of the framework's foundational claims is
+exhausted. Chronology home: `thread_chronology.md`.

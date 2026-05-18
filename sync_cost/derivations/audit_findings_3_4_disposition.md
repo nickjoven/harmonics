@@ -36,9 +36,11 @@ the limit where only the smallest coprime denominators survive
 tongue-width truncation.
 
 **The crux:** at `K = 1`, all tongues fill the line (the framework's
-own `xor_continuum_limit.md`: "at K=1, all rationals are present —
-the tree is complete"). The 4-mode reduction is *most natural at
-sub-critical K* — the opposite regime from where
+own `klein_bottle_derivation.md`: "At K = 1, all rationals are
+present — the tree is complete"; corroborated by
+`xor_continuum_limit.md`, whose D12 takes the *full* Stern-Brocot
+tree at K=1 to the `d→∞` continuum limit). The 4-mode reduction is
+*most natural at sub-critical K* — the opposite regime from where
 `nonperturbative_phase2.md` applies it (K=1).
 
 ### Honest disposition
