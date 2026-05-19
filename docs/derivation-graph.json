@@ -1,5 +1,5 @@
 {
-  "generated": "83bd23910b26ce99808778d421476848549b82e4",
+  "generated": "feca724e934fa05edbb2892e07de0700b3523884",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -427,6 +427,7 @@
         "einstein_from_kuramoto",
         "figure_eight",
         "generation_mechanism",
+        "k_of_t_friedmann",
         "mediant_derivation",
         "minimum_alphabet",
         "minkowski_signature",
@@ -595,6 +596,7 @@
         "down_type_double_cover_phase_c",
         "dynamical_tool_audit",
         "framework_status",
+        "k_of_t_friedmann",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
         "mediant_vs_flow_calc",
@@ -740,7 +742,9 @@
       "title": "The ADM Dictionary",
       "summary": "The mapping from Kuramoto variables to ADM variables is the unique\nidentification consistent with the symmetries of the locked-state\nKuramoto system at K=1. Each entry is forced by a uniqueness argument.",
       "depends_on": [],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "k_of_t_friedmann"
+      ],
       "git": [
         {
           "hash": "cc11b2e",
@@ -1031,6 +1035,7 @@
         "framework_status",
         "hybrid_strategy_audit",
         "k_axis_uniqueness",
+        "k_of_t_friedmann",
         "klein_antipodal_z2_rep_pattern",
         "klein_bridge_audit_and_probe",
         "klein_dynamics_roadmap",
@@ -1097,6 +1102,7 @@
       ],
       "depended_on_by": [
         "framework_status",
+        "k_of_t_friedmann",
         "thread_chronology"
       ],
       "git": [
@@ -1272,6 +1278,7 @@
         "down_type_double_cover_phase_d",
         "item12_C_from_K_star",
         "k_critical_phase_a",
+        "k_of_t_friedmann",
         "mass_sector_sqrt_w_phase_a",
         "omega_b_alpha_beta_phase_b",
         "omega_b_c5_closure",
@@ -1471,6 +1478,7 @@
         "derivation_atlas",
         "down_type_double_cover_phase_c",
         "dynamical_tool_audit",
+        "k_of_t_friedmann",
         "omega_b_c5_beta_audit",
         "omega_b_c5_closure",
         "omega_b_residual_phase_a",
@@ -1485,6 +1493,7 @@
         "cross_ratio_irrep_reframe",
         "derivation_atlas",
         "framework_status",
+        "k_of_t_friedmann",
         "klein_bridge_audit_and_probe",
         "klein_dynamics_roadmap",
         "numerology_count_phase_a",
@@ -1592,7 +1601,9 @@
         "PROOF_A_gravity",
         "PROOF_B_quantum"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "k_of_t_friedmann"
+      ],
       "git": [
         {
           "hash": "b2deee7",
@@ -2403,6 +2414,7 @@
         "gap1_theorem",
         "gap_1_christoffel",
         "gauge_dictionary",
+        "k_of_t_friedmann",
         "klein_connection",
         "master_cascade_identity",
         "qd_origins",
@@ -2950,6 +2962,7 @@
         "inflation_seam_anchor_closure",
         "k_critical_phase_b",
         "k_inflation_seam_obstruction",
+        "k_of_t_friedmann",
         "klein_bottle",
         "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
@@ -2998,6 +3011,7 @@
         "hierarchy_problem_translation",
         "hybrid_strategy_audit",
         "inflation_seam_anchor_closure",
+        "k_of_t_friedmann",
         "k_scaling_scan",
         "klein_antipodal_z2_rep_pattern",
         "klein_bridge_audit_and_probe",
@@ -3038,6 +3052,11 @@
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "adc81a7",
+          "date": "2026-05-19",
+          "subject": "Friedmann piece (forward reconstruction) + substrate-maintenance antipattern fix (#146)"
+        },
         {
           "hash": "c2bbc01",
           "date": "2026-05-18",
@@ -3716,6 +3735,7 @@
         "gap2_spatialization_decomposition",
         "gap2_sub_e_status_reconciled",
         "h_inf_status",
+        "k_of_t_friedmann",
         "neutrino_mass_audit",
         "numerology_inventory",
         "observer_register_closure",
@@ -4071,6 +4091,7 @@
         "f_exit_natural",
         "framework_status",
         "k_inflation_seam_obstruction",
+        "k_of_t_friedmann",
         "proposed_items_disposition",
         "thread_chronology"
       ],
@@ -4313,6 +4334,43 @@
           "hash": "8f09e47",
           "date": "2026-05-16",
           "subject": "K_inflation: prove the geometric-seam obstruction is structural; sharpen Finding 4 (#128)"
+        }
+      ]
+    },
+    {
+      "id": "k_of_t_friedmann",
+      "path": "sync_cost/derivations/k_of_t_friedmann.md",
+      "title": "K(t) and the Friedmann equation at r = 1",
+      "summary": "| Step | Claim | Status |\n|---|---|---|\n| S0 | FLRW reduction of the dictionary (no-twist sector) | closed |\n| S1 | Hamiltonian constraint \u27f9 Friedmann eqn (+ acceleration, continuity inherited) | **closed at K = 1** |\n| S2 | `r(t) \u2261 1`: exact (\u03b4-frequency) + stable (`K_eff=3/2 > K_c=1`) | **closed at K = 1** |\n| S3 | `F_locked(K)` as `\u03a9_m(K)` | **open** (N10 + N11 obstruction, made explicit) |\n| S4 | `\u03c4_unlock(n)` horizon-crossing amplification | **open** (depends on S3) |\n| S5 | inflation\u2192matte",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "a1_from_saddle_node",
+        "adm_dictionary",
+        "baryon_fraction",
+        "basepoint_principle",
+        "boundary_weight",
+        "continuity_in_K_nulls",
+        "cosmological_cycle",
+        "einstein_from_kuramoto",
+        "framework_status",
+        "hierarchy_gaussian_lattice",
+        "inflation_seam_anchor_closure",
+        "numerology_inventory",
+        "omega_b_alpha_beta_closure",
+        "omega_partition_combinatorial",
+        "path_closures_iter4"
+      ],
+      "depended_on_by": [
+        "continuity_in_K_nulls",
+        "framework_status",
+        "klein_dynamics_roadmap",
+        "time_axis_split"
+      ],
+      "git": [
+        {
+          "hash": "adc81a7",
+          "date": "2026-05-19",
+          "subject": "Friedmann piece (forward reconstruction) + substrate-maintenance antipattern fix (#146)"
         }
       ]
     },
@@ -4642,6 +4700,7 @@
         "a_s_g1_closure_attempt",
         "baryon_fraction",
         "continuity_in_K_nulls",
+        "k_of_t_friedmann",
         "klein_bottle_derivation",
         "klein_connection",
         "omega_b_c5_beta_audit",
@@ -5505,6 +5564,7 @@
         "framework_status",
         "hierarchy_problem_translation",
         "hybrid_strategy_audit",
+        "k_of_t_friedmann",
         "k_scaling_scan",
         "klein_nodal_parity",
         "numerology_count_phase_a",
@@ -5606,6 +5666,7 @@
         "derivation_atlas",
         "farey_partition",
         "framework_status",
+        "k_of_t_friedmann",
         "omega_b_substrate_side_audit",
         "omega_b_w_plus_candidate",
         "omega_b_w_plus_cross_ratio_search",
@@ -5943,6 +6004,7 @@
         "farey_partition",
         "framework_status",
         "k_axis_uniqueness",
+        "k_of_t_friedmann",
         "klein_antipodal_z2_rep_pattern",
         "numerology_inventory",
         "omega_b_residual_phase_a",
@@ -6192,6 +6254,7 @@
       ],
       "depended_on_by": [
         "framework_status",
+        "k_of_t_friedmann",
         "omega_b_alpha_beta_phase_b",
         "remaining_gap_shapes"
       ],
@@ -7873,6 +7936,7 @@
         "framework_status",
         "half_twist_dynamics",
         "hierarchy_gaussian_lattice",
+        "k_of_t_friedmann",
         "klein_bottle",
         "klein_bottle_derivation",
         "master_cascade_identity",
