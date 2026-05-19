@@ -25,7 +25,8 @@ substantive open structural work.
 
 ### N9 — K(t) Friedmann dynamics: setup only, S3-S5 pending
 
-**Source**: commits `aba6a83`, `505c6aa`; `k_of_t_friedmann.md`.
+**Source**: commits `aba6a83`, `505c6aa`;
+`k_of_t_friedmann.md`.
 
 **Attempted**: Derive a cosmological-scale ODE for K(t) using
 the ADM-Kuramoto dictionary, recovering the Friedmann equation
@@ -318,7 +319,7 @@ mechanism, Tier 2 ansatz) is the framework's best landing
 - `boundary_weight.py` HONEST SUMMARY — N11 source
 - `cross_parabola_audit.py` — N10 source
 - `K_star_iteration.py` — N10 background; r=0 superstable
-- `k_of_t_friedmann.md` — N9: forward reconstruction (S1–S2 closed at K=1; S3–S5 = this null)
+- `k_of_t_friedmann.md` — N9 source
 - `a_s_alpha2_phase_b` — N12 source (commit `e06684a`)
 - `a_s_amplitude_audit.md` — N13 source
 - `tongue_formula_accuracy.py` — N14 source
