@@ -1,9 +1,32 @@
 #!/usr/bin/env python3
 """
-Convenience: run all drift checks, exit with the max of their codes.
+Convenience: run all drift checks.
 
-Order is cheapest-first; later checks are skipped if an earlier one
-fails fatally (rc >= 2 = environment error).
+Severity model (revised 2026-05-18):
+
+  - FATAL checks gate commits: hashlib linter, fitted-correction
+    linter, manifest consistency, graph orphans, CAS verification.
+    A nonzero rc contributes to the exit code and, under
+    --stop-on-fail, aborts immediately. These encode judgment or a
+    real integrity violation (e.g. CAS corruption).
+
+  - ADVISORY checks never gate: working-tree drift, and the
+    session-status snapshot. Substrate drift is a
+    mechanically-regenerable derived artifact (re-`ket put`), not a
+    policy violation. It self-heals on edit via
+    scripts/hooks/post_edit_regen.py and is reconciled in CI by
+    .github/workflows/substrate-maintenance.yml. Its rc is reported
+    but never blocks — which also stops a misfiring pre-commit hook
+    from wedging unrelated work just because drift is present.
+
+    session_status.py is advisory because its nonzero rc bundles
+    drift AND corruption; demoting it loses no integrity guarantee
+    since CAS corruption is independently and fatally gated by
+    verify_cas.py (which stays FATAL). The drift/corruption counts
+    still print for visibility; they just don't gate.
+
+Order is cheapest-first. Under --stop-on-fail a FATAL nonzero rc
+aborts; ADVISORY rc never aborts.
 
 Run:
   python3 scripts/drift/run_all.py
@@ -27,6 +50,11 @@ CHECKS = [
     ("CAS verification", "verify_cas.py"),
 ]
 
+# Nonzero rc is reported but never gates: never adds to the exit
+# code, never triggers --stop-on-fail. Drift is a derived artifact,
+# not a violation — see module docstring.
+ADVISORY = {"session_status.py", "check_working_tree.py"}
+
 
 def main() -> int:
     parser = argparse.ArgumentParser()
@@ -38,6 +66,13 @@ def main() -> int:
         path = SCRIPT_DIR / script
         print(f"\n=== {label} ===")
         r = subprocess.run([sys.executable, str(path)], check=False)
+        if script in ADVISORY:
+            if r.returncode != 0:
+                print(
+                    f"(advisory: {label} rc {r.returncode} — not gating; "
+                    f"self-heals on edit, reconciled in CI)"
+                )
+            continue
         worst = max(worst, r.returncode)
         if args.stop_on_fail and r.returncode != 0:
             print(f"\nstop-on-fail: aborting after {label} (rc {r.returncode})")
