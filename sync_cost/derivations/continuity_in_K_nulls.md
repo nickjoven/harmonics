@@ -25,12 +25,7 @@ substantive open structural work.
 
 ### N9 — K(t) Friedmann dynamics: setup only, S3-S5 pending
 
-**Source**: commits `aba6a83`, `505c6aa` (absent from this repo;
-original `k_of_t_friedmann.md` never committed). `k_of_t_friedmann.md`
-now exists as a **forward reconstruction** from live canonical
-dependencies: S1–S2 closed at K = 1; **S3–S5 remain this null,
-unchanged** — the reconstruction makes the obstruction structurally
-explicit (it is the N10 + N11 pair) but does not close it.
+**Source**: commits `aba6a83`, `505c6aa`; `k_of_t_friedmann.md`.
 
 **Attempted**: Derive a cosmological-scale ODE for K(t) using
 the ADM-Kuramoto dictionary, recovering the Friedmann equation
