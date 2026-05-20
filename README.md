@@ -434,6 +434,48 @@ Together: framework's full claim set in citation-ready form.
 - [`vocabulary_is_the_work_pattern.md`](sync_cost/derivations/vocabulary_is_the_work_pattern.md) — recurring closure pattern (9 instances)
 - [`numerology_count_phase_b.md`](sync_cost/derivations/numerology_count_phase_b.md) — Region C pigeonhole calibration
 
+## Interactive resources
+
+The deployed site under [`docs/`](docs/) and the supplementary
+directories [`prototype/`](prototype/) and
+[`sync_cost/applications/`](sync_cost/applications/) hold a number
+of interactive pages. Grouped by intent:
+
+### Pedagogy and reference
+
+- [`docs/index.html`](docs/index.html) — quick-reference supplement: predictions table, symbols, two-anchor minimum.
+- [`docs/glossary.html`](docs/glossary.html) — interactive chalkboard glossary: every numerical expression in the canonical glossary worked out on click.
+- [`docs/phenomenon-glossary.html`](docs/phenomenon-glossary.html) — description-first glossary by phenomenon, with literature names relegated to an *also called* tagline.
+- [`docs/derivations.html`](docs/derivations.html) — narrative index of the numbered derivations.
+- [`docs/preprint.html`](docs/preprint.html) — preprint-ready presentation aggregating the 2026-04 closure round.
+
+### Interactive graphs
+
+- [`docs/dag.html`](docs/dag.html) — full derivation dependency graph (~150 nodes), with selectable lineage and per-node git history.
+- [`docs/mastery-graph.html`](docs/mastery-graph.html) — pedagogical concept graph: 83 plain-language nodes across 13 clusters wired by prerequisite edges.
+- [`docs/claim-chain.html`](docs/claim-chain.html), [`docs/claim-chain-views.html`](docs/claim-chain-views.html) — canonical claim chain (one view + three filtered views) generated from `MANIFEST.yml`.
+- [`docs/a_s_proof.html`](docs/a_s_proof.html) — three-dimensional layout of the scalar-amplitude proof.
+- [`docs/cmb-s4.html`](docs/cmb-s4.html) — CMB-S4 forecast page for the framework's $n_s$ prediction.
+
+### Demos and explainers
+
+- [`prototype/index.html`](prototype/index.html) — Metronome wall: a live simulation of $N$ coupled oscillators on $S^1$, with the devil's-staircase order parameter $W(\Omega)$ plotted alongside.
+- [`docs/knobs/coupling.html`](docs/knobs/coupling.html), [`docs/knobs/frames.html`](docs/knobs/frames.html), [`docs/knobs/phase.html`](docs/knobs/phase.html) — single-knob explainer pages isolating coupling strength, reference frames, and phase respectively.
+
+### Applications
+
+- [`sync_cost/applications/stern_brocot_walk.html`](sync_cost/applications/stern_brocot_walk.html) — walk through the Stern-Brocot tree by mediant steps.
+- [`sync_cost/applications/mobius_projector.html`](sync_cost/applications/mobius_projector.html), [`mobius_views.html`](sync_cost/applications/mobius_views.html) — the modular-group action on the upper half plane, with selectable projections.
+- [`sync_cost/applications/ontology.html`](sync_cost/applications/ontology.html) — framework ontology browser.
+- [`sync_cost/applications/double_pendulum.html`](sync_cost/applications/double_pendulum.html) — driven double-pendulum dynamics: a chaotic-coupling reference.
+- [`sync_cost/applications/three_body_catalog.html`](sync_cost/applications/three_body_catalog.html) — catalogued periodic three-body orbits.
+- [`sync_cost/applications/index.html`](sync_cost/applications/index.html) — landing page for the applications directory.
+
+### Archive
+
+- [`docs/archive/colony.html`](docs/archive/colony.html) — a smooth zoom through the framework's closed state (parabola, Stern-Brocot fractal, Farey tongues, terminal lattice).
+- [`docs/archive/collatz.html`](docs/archive/collatz.html) — Collatz conjecture proof attempt via rational extension, with reproducible verification scripts.
+
 ## Two independent anchors (structural)
 
 The framework requires two independent observational anchors per
