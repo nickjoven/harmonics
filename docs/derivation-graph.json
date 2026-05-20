@@ -1,5 +1,5 @@
 {
-  "generated": "feca724e934fa05edbb2892e07de0700b3523884",
+  "generated": "3d538939ee03c69ed4975a88c8589da5b0226aa4",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1420,6 +1420,7 @@
         "nonperturbative_phase1",
         "nonperturbative_phase2",
         "orthogonal_kink_interaction",
+        "q_mod2_conservation_theorem",
         "s_inst_inflation",
         "s_v_nlo",
         "s_v_nlo_attempt",
@@ -1847,6 +1848,7 @@
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
         "psl2z_subgroup_phase_b",
+        "q_mod2_conservation_theorem",
         "statistical_conventions",
         "three_dimensions",
         "vocabulary_is_the_work_pattern",
@@ -1860,9 +1862,15 @@
         "continuity_in_K_nulls",
         "down_type_double_cover_closed",
         "dynamical_quantization",
-        "structural_lemmas"
+        "structural_lemmas",
+        "thread_chronology"
       ],
       "git": [
+        {
+          "hash": "4d41418",
+          "date": "2026-05-20",
+          "subject": "Articulate inviolable #1 as a standalone theorem (Q mod 2 conservation) (#147)"
+        },
         {
           "hash": "a6a4f5d",
           "date": "2026-04-26",
@@ -2974,11 +2982,11 @@
         "path_a_walkthrough",
         "path_closures_iter3",
         "path_closures_iter4",
-        "phenomenology_cross_reference",
         "proposed_items_disposition",
         "proposed_residual_closure",
         "psl2z_subgroup_phase_a_results",
         "psl2z_subgroup_phase_b",
+        "q_mod2_conservation_theorem",
         "sine_gordon_substrate",
         "substrate_determinism",
         "thread_chronology",
@@ -3039,6 +3047,7 @@
         "primitive_completeness_audit",
         "proposed_items_disposition",
         "psl2z_subgroup_phase_c_inventory",
+        "q_mod2_conservation_theorem",
         "qd_origins",
         "rectangle_perpendicularity",
         "remaining_gap_shapes",
@@ -3052,6 +3061,11 @@
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "4d41418",
+          "date": "2026-05-20",
+          "subject": "Articulate inviolable #1 as a standalone theorem (Q mod 2 conservation) (#147)"
+        },
         {
           "hash": "adc81a7",
           "date": "2026-05-19",
@@ -4316,6 +4330,7 @@
         "framework_status",
         "inflation_duration",
         "inflation_seam_anchor_closure",
+        "q_mod2_conservation_theorem",
         "s_inst_inflation",
         "thread_chronology"
       ],
@@ -4479,10 +4494,12 @@
         "klein_bottle_derivation",
         "klein_connection",
         "klein_nodal_parity",
+        "q_mod2_conservation_theorem",
         "rectangle_perpendicularity",
         "second_law_topological",
         "sine_gordon_substrate",
         "soliton_dynamics",
+        "thread_chronology",
         "time_axis_split",
         "vacuum_energy",
         "wave_particle_substrate",
@@ -6290,6 +6307,7 @@
         "numerology_inventory",
         "omega_b_alpha_beta_closure",
         "psl2z_subgroup_phase_b",
+        "q_mod2_conservation_theorem",
         "statistical_conventions",
         "three_dimensions"
       ],
@@ -6298,10 +6316,16 @@
         "audit_punch_list_2026-04",
         "derivation_atlas",
         "down_type_double_cover_closed",
-        "framework_status",
-        "structural_lemmas"
+        "q_mod2_conservation_theorem",
+        "structural_lemmas",
+        "thread_chronology"
       ],
       "git": [
+        {
+          "hash": "4d41418",
+          "date": "2026-05-20",
+          "subject": "Articulate inviolable #1 as a standalone theorem (Q mod 2 conservation) (#147)"
+        },
         {
           "hash": "2109a3b",
           "date": "2026-04-26",
@@ -6593,6 +6617,38 @@
           "hash": "5f41c24",
           "date": "2026-04-26",
           "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
+        }
+      ]
+    },
+    {
+      "id": "q_mod2_conservation_theorem",
+      "path": "sync_cost/derivations/q_mod2_conservation_theorem.md",
+      "title": "Q mod 2 conservation theorem",
+      "summary": "**Standalone theorem articulated** for substrate inviolable #1\n(`substrate_determinism.md` L166-167) \u2014 the Z\u2082 topological-charge\nconservation that had been committed as a structural inviolable\nbut was flagged \"not a closed standalone theorem \u2014 the explicit\nstandalone theorem is *not yet articulated*\"\n(`framework_status.md` L31; `phenomenology_cross_reference.md:439`).",
+      "depends_on": [
+        "cone_twist_substrate",
+        "framework_status",
+        "k_inflation_seam_obstruction",
+        "klein_bottle",
+        "phenomenology_cross_reference",
+        "sine_gordon_substrate",
+        "substrate_determinism",
+        "thread_chronology",
+        "tick_continuum_construction"
+      ],
+      "depended_on_by": [
+        "derivation_atlas",
+        "framework_status",
+        "phenomenology_cross_reference",
+        "sine_gordon_substrate",
+        "substrate_determinism",
+        "thread_chronology"
+      ],
+      "git": [
+        {
+          "hash": "4d41418",
+          "date": "2026-05-20",
+          "subject": "Articulate inviolable #1 as a standalone theorem (Q mod 2 conservation) (#147)"
         }
       ]
     },
@@ -7143,6 +7199,7 @@
         "klein_bottle_derivation",
         "master_cascade_identity",
         "proposed_residual_closure",
+        "q_mod2_conservation_theorem",
         "soliton_dynamics",
         "tick_continuum_construction"
       ],
@@ -7162,6 +7219,7 @@
         "orthogonal_kink_interaction",
         "proposed_items_disposition",
         "proposed_residual_closure",
+        "q_mod2_conservation_theorem",
         "soliton_dynamics",
         "substrate_determinism",
         "thread_chronology",
@@ -7172,6 +7230,11 @@
         "xor_derivation"
       ],
       "git": [
+        {
+          "hash": "4d41418",
+          "date": "2026-05-20",
+          "subject": "Articulate inviolable #1 as a standalone theorem (Q mod 2 conservation) (#147)"
+        },
         {
           "hash": "d5c90df",
           "date": "2026-05-17",
@@ -7626,6 +7689,7 @@
         "no_rescaling",
         "nonperturbative_phase1",
         "orthogonal_kink_interaction",
+        "q_mod2_conservation_theorem",
         "qd_origins",
         "sine_gordon_substrate",
         "thread_chronology",
@@ -7644,10 +7708,16 @@
         "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
         "mediant_vs_flow_problem",
+        "q_mod2_conservation_theorem",
         "thread_chronology",
         "tick_continuum_construction"
       ],
       "git": [
+        {
+          "hash": "4d41418",
+          "date": "2026-05-20",
+          "subject": "Articulate inviolable #1 as a standalone theorem (Q mod 2 conservation) (#147)"
+        },
         {
           "hash": "c9729cb",
           "date": "2026-05-17",
@@ -7672,6 +7742,7 @@
         "audit_findings_3_4_disposition",
         "basepoint_principle",
         "born_rule_parameter_free",
+        "derivation_atlas",
         "discrete_reduction_computed",
         "empty_fork_cap",
         "f_exit_natural",
@@ -7683,14 +7754,17 @@
         "k_critical_phase_a",
         "k_critical_phase_b",
         "k_inflation_seam_obstruction",
+        "klein_bottle",
         "measurement_collapse",
         "mediant_derivation",
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
         "path_a_walkthrough",
         "path_closures_iter3",
+        "phenomenology_cross_reference",
         "proposed_items_disposition",
         "proposed_residual_closure",
+        "q_mod2_conservation_theorem",
         "qd_origins",
         "rational_field_equation",
         "rectangle_perpendicularity",
@@ -7719,11 +7793,17 @@
         "nonperturbative_phase2",
         "proposed_items_disposition",
         "proposed_residual_closure",
+        "q_mod2_conservation_theorem",
         "s_inst_inflation",
         "substrate_determinism",
         "tick_continuum_construction"
       ],
       "git": [
+        {
+          "hash": "4d41418",
+          "date": "2026-05-20",
+          "subject": "Articulate inviolable #1 as a standalone theorem (Q mod 2 conservation) (#147)"
+        },
         {
           "hash": "c1c4218",
           "date": "2026-05-17",
@@ -7914,6 +7994,7 @@
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
         "proposed_residual_closure",
+        "q_mod2_conservation_theorem",
         "sine_gordon_substrate",
         "substrate_determinism",
         "thread_chronology"
