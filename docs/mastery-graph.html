@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mastery graph &mdash; Harmonics</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body { max-width: 100%; padding: 0; margin: 0; font-family: 'Georgia', 'Times New Roman', serif; color: var(--text); background: var(--bg); }
+  nav { padding: 1rem 2rem; background: var(--bg-card); border-bottom: 1px solid var(--border); }
+  nav a { margin-right: 1.5rem; }
+  .layout { display: grid; grid-template-columns: 1fr 460px; height: calc(100vh - 62px); gap: 0; }
+  .graph-pane { position: relative; overflow: hidden; background: var(--bg); }
+  .graph-pane svg { width: 100%; height: 100%; cursor: grab; }
+  .graph-pane svg:active { cursor: grabbing; }
+  .detail-pane { background: var(--bg-card); padding: 1.6rem 1.8rem; overflow-y: auto; border-left: 1px solid var(--border); }
+  .detail-pane h1 { font-size: 1.25rem; color: var(--text-bright); margin: 0 0 0.4rem; font-weight: normal; letter-spacing: 0.01em; }
+  .detail-pane h2 { font-size: 0.8rem; color: var(--accent); margin: 1.6rem 0 0.6rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: normal; }
+  .detail-pane .cluster-tag { display: inline-block; font-size: 0.8rem; padding: 0.15rem 0.6rem; border-radius: 10px; margin-bottom: 1.2rem; background: var(--bg); border: 1px solid var(--border); }
+  .detail-pane .description { font-size: 0.95rem; line-height: 1.65; margin-bottom: 1rem; }
+  .detail-pane ul { margin: 0; padding-left: 1.2rem; font-size: 0.92rem; line-height: 1.6; }
+  .detail-pane li { margin-bottom: 0.35rem; }
+  .detail-pane a { cursor: pointer; }
+  .controls { padding: 0.6rem 1.2rem; font-size: 0.85rem; color: var(--text-dim); background: var(--bg-card); border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; align-items: center; }
+  .controls input[type="text"] { padding: 0.3rem 0.6rem; font-size: 0.85rem; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 4px; width: 16rem; font-family: inherit; }
+  .controls label { cursor: pointer; }
+  .cluster-toggle { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.15rem 0.6rem; border-radius: 12px; border: 1px solid var(--border); font-size: 0.8rem; cursor: pointer; user-select: none; background: var(--bg); }
+  .cluster-toggle .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .cluster-toggle.off { opacity: 0.35; }
+  .node-circle { stroke-width: 1.5; cursor: pointer; transition: r 0.15s; }
+  .node-circle.selected { stroke: var(--text-bright); stroke-width: 3; }
+  .node-circle.prereq { stroke: #e0a060; stroke-width: 2; }
+  .node-circle.downstream { stroke: #60c0a0; stroke-width: 2; }
+  .node-circle.dimmed { opacity: 0.15; }
+  .node-label { font-size: 10px; fill: var(--text-dim); pointer-events: none; font-family: 'Georgia', serif; }
+  .node-label.selected { fill: var(--text-bright); }
+  .node-label.dimmed { opacity: 0.15; }
+  .edge { stroke: #555560; stroke-width: 0.7; fill: none; opacity: 0.6; }
+  .edge.prereq { stroke: #e0a060; stroke-width: 1.6; opacity: 1; }
+  .edge.downstream { stroke: #60c0a0; stroke-width: 1.6; opacity: 1; }
+  .edge.dimmed { opacity: 0.07; }
+  .empty-state { color: var(--text-dim); font-style: italic; padding: 1rem 0; }
+  .intro-box { padding: 1rem 0 1.4rem; border-bottom: 1px solid var(--border); margin-bottom: 1rem; font-size: 0.9rem; line-height: 1.6; color: var(--text); }
+  .intro-box p { margin-bottom: 0.6rem; }
+  .legend-cluster-row { padding: 0.5rem 1.2rem; background: var(--bg-card); border-bottom: 1px solid var(--border); display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  @media (max-width: 800px) {
+    .layout { grid-template-columns: 1fr; grid-template-rows: 55vh 1fr; }
+    .detail-pane { border-left: none; border-top: 1px solid var(--border); }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Reference</a>
+  <a href="claim-chain.html">Claim chain</a>
+  <a href="claim-chain-views.html">Three views</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="phenomenon-glossary.html">Phenomena</a>
+  <a href="derivations.html">Derivations</a>
+  <a href="mastery-graph.html" class="active">Mastery</a>
+  <a href="cmb-s4.html">CMB-S4</a>
+  <a href="preprint.html">Preprint</a>
+</nav>
+
+<div class="controls">
+  <input type="text" id="search" placeholder="Filter nodes (e.g. parabola, mediant, mond, gauge)">
+  <label><input type="checkbox" id="toggle-labels" checked> labels</label>
+  <span style="margin-left:auto; color: var(--text-dim);">Click a node to read its description; ancestors and descendants light up.</span>
+</div>
+
+<div class="legend-cluster-row" id="cluster-legend"></div>
+
+<div class="layout">
+  <div class="graph-pane">
+    <svg id="graph"></svg>
+  </div>
+  <div class="detail-pane" id="detail">
+    <div class="intro-box" id="intro-box">
+      <h1 id="intro-title" style="font-size:1.25rem;color:var(--text-bright);font-weight:normal;letter-spacing:0.01em;margin:0 0 0.5rem;">Mastery graph &mdash; concepts as a navigable network</h1>
+      <p>
+        Each node is one concept, described in plain language. Each
+        edge runs from a prerequisite concept to a concept that builds
+        on it. Traversing every connected node, in roughly the order
+        suggested by the prerequisite arrows, is intended to leave a
+        reader in possession of the framework's core dynamics.
+      </p>
+      <p>
+        Nodes are coloured by cluster (see the row of cluster labels
+        above the graph; click a cluster label to hide or show that
+        cluster). Clicking a node opens its description in this pane,
+        with links to its prerequisites and downstream concepts.
+      </p>
+      <p>
+        The descriptions are written without recourse to the
+        framework's eponymous vocabulary. For the literature names,
+        see the
+        <a href="phenomenon-glossary.html">phenomenon glossary</a>; for
+        the canonical scorecard, see the
+        <a href="claim-chain.html">claim chain</a>.
+      </p>
+      <p style="color:var(--text-dim);font-size:0.85rem;">
+        Source data:
+        <a href="https://github.com/nickjoven/harmonics/blob/main/docs/mastery-graph.json"><code>docs/mastery-graph.json</code></a>.
+      </p>
+    </div>
+    <div class="empty-state">Click a node in the graph to view its description.</div>
+  </div>
+</div>
+
+<script>
+(async function() {
+  const res = await fetch('mastery-graph.json');
+  const data = await res.json();
+  const clusters = data.clusters;
+  const clusterById = Object.fromEntries(clusters.map(c => [c.id, c]));
+  const nodes = data.nodes;
+  const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
+
+  // Build reverse-edge index (downstream / depended_on_by)
+  nodes.forEach(n => { n.downstream = []; });
+  nodes.forEach(n => {
+    (n.requires || []).forEach(p => {
+      if (byId[p]) byId[p].downstream.push(n.id);
+    });
+  });
+
+  // Cluster visibility
+  const visibleClusters = new Set(clusters.map(c => c.id));
+
+  // Render cluster legend
+  const legendEl = document.getElementById('cluster-legend');
+  legendEl.innerHTML = clusters.map(c =>
+    `<span class="cluster-toggle" data-cluster="${c.id}" title="${c.blurb}">
+       <span class="dot" style="background:${c.color}"></span>${c.label}
+     </span>`
+  ).join('');
+  legendEl.querySelectorAll('.cluster-toggle').forEach(el => {
+    el.addEventListener('click', () => {
+      const cid = el.dataset.cluster;
+      if (visibleClusters.has(cid)) {
+        visibleClusters.delete(cid);
+        el.classList.add('off');
+      } else {
+        visibleClusters.add(cid);
+        el.classList.remove('off');
+      }
+      render();
+    });
+  });
+
+  // Compute topological depth within cluster (rough vertical ordering)
+  function computeDepth() {
+    const depth = {};
+    function visit(id, seen) {
+      if (id in depth) return depth[id];
+      if (seen.has(id)) return 0;
+      seen.add(id);
+      const n = byId[id];
+      if (!n || !n.requires || n.requires.length === 0) {
+        depth[id] = 0;
+      } else {
+        depth[id] = 1 + Math.max(0, ...n.requires.map(p => visit(p, seen)));
+      }
+      seen.delete(id);
+      return depth[id];
+    }
+    nodes.forEach(n => visit(n.id, new Set()));
+    return depth;
+  }
+  const depth = computeDepth();
+
+  // Cluster column layout: assign each cluster a column band, distribute nodes by depth and id
+  const svg = document.getElementById('graph');
+  let width = svg.clientWidth || 1000;
+  let height = svg.clientHeight || 700;
+
+  function layout() {
+    width = svg.clientWidth;
+    height = svg.clientHeight;
+    const positions = {};
+    const clusterIds = clusters.map(c => c.id);
+    const ncl = clusterIds.length;
+    const cols = Math.ceil(Math.sqrt(ncl * (width / Math.max(height, 1))));
+    const rows = Math.ceil(ncl / cols);
+    const cellW = width / cols;
+    const cellH = height / rows;
+    const centers = {};
+    clusterIds.forEach((cid, i) => {
+      const cx = (i % cols) * cellW + cellW / 2;
+      const cy = Math.floor(i / cols) * cellH + cellH / 2;
+      centers[cid] = {x: cx, y: cy};
+    });
+    // Within each cluster, place nodes on a small ring sorted by depth then id
+    const byCluster = {};
+    nodes.forEach(n => {
+      (byCluster[n.cluster] ||= []).push(n);
+    });
+    Object.entries(byCluster).forEach(([cid, ns]) => {
+      ns.sort((a, b) => (depth[a.id] - depth[b.id]) || a.id.localeCompare(b.id));
+      const center = centers[cid];
+      const radius = Math.min(cellW, cellH) * 0.32;
+      ns.forEach((n, i) => {
+        const angle = (i / Math.max(ns.length, 1)) * Math.PI * 2 - Math.PI / 2;
+        positions[n.id] = {
+          x: center.x + radius * Math.cos(angle),
+          y: center.y + radius * Math.sin(angle),
+          clusterCenter: center
+        };
+      });
+    });
+    return {positions, centers};
+  }
+  let {positions: pos, centers} = layout();
+
+  // Pan & zoom
+  let zoom = 1, panX = 0, panY = 0;
+  let isDragging = false, dragStartX, dragStartY, panStartX, panStartY;
+
+  let selectedId = null;
+  let prereqs = new Set(), downstreams = new Set();
+
+  function collect(idField) {
+    return function(id, acc = new Set()) {
+      const n = byId[id];
+      if (!n) return acc;
+      (n[idField] || []).forEach(p => {
+        if (!acc.has(p)) {
+          acc.add(p);
+          collect(idField)(p, acc);
+        }
+      });
+      return acc;
+    };
+  }
+  const collectPrereqs = collect('requires');
+  const collectDownstream = collect('downstream');
+
+  function nodeVisible(n) {
+    if (!visibleClusters.has(n.cluster)) return false;
+    const filter = document.getElementById('search').value.toLowerCase().trim();
+    if (!filter) return true;
+    if (n.id.toLowerCase().includes(filter)) return true;
+    if (n.label.toLowerCase().includes(filter)) return true;
+    if ((n.description || '').toLowerCase().includes(filter)) return true;
+    return false;
+  }
+
+  function render() {
+    const showLabels = document.getElementById('toggle-labels').checked;
+    const visible = new Set(nodes.filter(nodeVisible).map(n => n.id));
+
+    let s = `<g transform="translate(${panX},${panY}) scale(${zoom})">`;
+
+    // Cluster background bubbles
+    clusters.forEach(c => {
+      if (!visibleClusters.has(c.id)) return;
+      const center = centers[c.id];
+      if (!center) return;
+      const r = Math.min(width, height) * 0.22;
+      s += `<circle cx="${center.x}" cy="${center.y}" r="${r}" fill="${c.color}" opacity="0.05" stroke="${c.color}" stroke-opacity="0.25" stroke-width="1"/>`;
+      s += `<text x="${center.x}" y="${center.y - r - 6}" text-anchor="middle" font-size="11" fill="${c.color}" font-family="Georgia, serif" letter-spacing="0.04em" opacity="0.85">${escapeHtml(c.label)}</text>`;
+    });
+
+    // Edges
+    nodes.forEach(n => {
+      if (!visible.has(n.id)) return;
+      (n.requires || []).forEach(p => {
+        if (!visible.has(p)) return;
+        const p1 = pos[p], p2 = pos[n.id];
+        if (!p1 || !p2) return;
+        const cls = edgeClass(p, n.id);
+        const cx1 = (p1.x + p2.x) / 2;
+        const cy1 = p1.y;
+        const cx2 = (p1.x + p2.x) / 2;
+        const cy2 = p2.y;
+        s += `<path class="edge ${cls}" d="M${p1.x},${p1.y} C${cx1},${cy1} ${cx2},${cy2} ${p2.x},${p2.y}"/>`;
+      });
+    });
+
+    // Nodes
+    nodes.forEach(n => {
+      if (!visible.has(n.id)) return;
+      const p = pos[n.id];
+      if (!p) return;
+      const c = clusterById[n.cluster];
+      const r = 5 + Math.min(7, (n.requires || []).length + (n.downstream || []).length);
+      const cls = nodeClass(n.id);
+      s += `<circle class="node-circle ${cls}" cx="${p.x}" cy="${p.y}" r="${r}" fill="${c.color}" stroke="${c.color}" data-id="${n.id}"/>`;
+      if (showLabels) {
+        const lcls = (selectedId === n.id) ? 'node-label selected' : (cls === 'dimmed' ? 'node-label dimmed' : 'node-label');
+        s += `<text class="${lcls}" x="${p.x + r + 3}" y="${p.y + 3}">${escapeHtml(n.label)}</text>`;
+      }
+    });
+
+    s += `</g>`;
+    svg.innerHTML = s;
+    svg.querySelectorAll('.node-circle').forEach(el => {
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        selectNode(el.dataset.id);
+      });
+    });
+  }
+
+  function nodeClass(id) {
+    if (selectedId === id) return 'selected';
+    if (prereqs.has(id)) return 'prereq';
+    if (downstreams.has(id)) return 'downstream';
+    if (selectedId !== null) return 'dimmed';
+    return '';
+  }
+
+  function edgeClass(from, to) {
+    if (selectedId === null) return '';
+    if (to === selectedId || prereqs.has(to)) {
+      if (from === selectedId || prereqs.has(from)) return 'prereq';
+    }
+    if (from === selectedId || downstreams.has(from)) {
+      if (to === selectedId || downstreams.has(to)) return 'downstream';
+    }
+    if ((prereqs.has(from) || from === selectedId) && (prereqs.has(to) || to === selectedId)) return 'prereq';
+    if ((downstreams.has(from) || from === selectedId) && (downstreams.has(to) || to === selectedId)) return 'downstream';
+    return 'dimmed';
+  }
+
+  function selectNode(id) {
+    selectedId = id;
+    prereqs = collectPrereqs(id);
+    downstreams = collectDownstream(id);
+    render();
+    renderDetail(id);
+    // Update URL hash
+    history.replaceState(null, '', '#' + id);
+  }
+
+  function renderDetail(id) {
+    const n = byId[id];
+    if (!n) return;
+    const c = clusterById[n.cluster];
+    const pane = document.getElementById('detail');
+    let html = '';
+    html += `<span class="cluster-tag" style="border-color:${c.color};color:${c.color};">${escapeHtml(c.label)}</span>`;
+    html += `<h1>${escapeHtml(n.label)}</h1>`;
+    html += `<div class="description">${escapeHtml(n.description)}</div>`;
+    html += `<h2>Prerequisites &mdash; understand these first (${(n.requires || []).length})</h2>`;
+    if ((n.requires || []).length) {
+      html += '<ul>' + n.requires.map(r => {
+        const rn = byId[r];
+        const rc = rn ? clusterById[rn.cluster] : null;
+        return `<li><a data-id="${r}" style="color:${rc ? rc.color : 'var(--link)'};">${rn ? escapeHtml(rn.label) : r}</a></li>`;
+      }).join('') + '</ul>';
+    } else {
+      html += '<div class="empty-state">No prerequisites &mdash; this is a starting concept.</div>';
+    }
+    html += `<h2>Builds toward &mdash; concepts that need this one (${n.downstream.length})</h2>`;
+    if (n.downstream.length) {
+      html += '<ul>' + n.downstream.map(d => {
+        const dn = byId[d];
+        const dc = dn ? clusterById[dn.cluster] : null;
+        return `<li><a data-id="${d}" style="color:${dc ? dc.color : 'var(--link)'};">${dn ? escapeHtml(dn.label) : d}</a></li>`;
+      }).join('') + '</ul>';
+    } else {
+      html += '<div class="empty-state">Nothing in the current graph requires this; it stands as a terminal concept.</div>';
+    }
+    pane.innerHTML = html;
+    pane.querySelectorAll('a[data-id]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        selectNode(a.dataset.id);
+      });
+    });
+    pane.scrollTop = 0;
+  }
+
+  function escapeHtml(s) {
+    return (s || '').toString()
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  // Pan & zoom handlers
+  svg.addEventListener('mousedown', (e) => {
+    if (e.target.classList.contains('node-circle')) return;
+    isDragging = true;
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    panStartX = panX; panStartY = panY;
+  });
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    panX = panStartX + (e.clientX - dragStartX);
+    panY = panStartY + (e.clientY - dragStartY);
+    render();
+  });
+  window.addEventListener('mouseup', () => { isDragging = false; });
+  svg.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    const delta = e.deltaY < 0 ? 1.1 : 0.9;
+    const rect = svg.getBoundingClientRect();
+    const mx = e.clientX - rect.left;
+    const my = e.clientY - rect.top;
+    panX = mx - (mx - panX) * delta;
+    panY = my - (my - panY) * delta;
+    zoom *= delta;
+    render();
+  });
+  svg.addEventListener('click', (e) => {
+    if (e.target === svg || e.target.tagName === 'g') {
+      selectedId = null;
+      prereqs = new Set();
+      downstreams = new Set();
+      render();
+      const pane = document.getElementById('detail');
+      pane.innerHTML = '';
+      // Re-attach intro
+      const intro = document.createElement('div');
+      intro.className = 'intro-box';
+      intro.innerHTML = `
+        <h1 style="font-size:1.25rem;color:var(--text-bright);font-weight:normal;letter-spacing:0.01em;margin:0 0 0.5rem;">Mastery graph &mdash; concepts as a navigable network</h1>
+        <p>Each node is one concept, described in plain language. Each edge runs from a prerequisite concept to a concept that builds on it. Traversing every connected node, in roughly the order suggested by the prerequisite arrows, is intended to leave a reader in possession of the framework's core dynamics.</p>
+        <p>Nodes are coloured by cluster; clicking a cluster label hides or shows that cluster. Clicking a node opens its description, with links to its prerequisites and downstream concepts.</p>
+        <p>Descriptions avoid the framework's eponymous vocabulary. For the literature names, see the <a href="phenomenon-glossary.html">phenomenon glossary</a>; for the canonical scorecard, see the <a href="claim-chain.html">claim chain</a>.</p>
+      `;
+      pane.appendChild(intro);
+      const empty = document.createElement('div');
+      empty.className = 'empty-state';
+      empty.textContent = 'Click a node in the graph to view its description.';
+      pane.appendChild(empty);
+      history.replaceState(null, '', window.location.pathname);
+    }
+  });
+
+  document.getElementById('toggle-labels').addEventListener('change', render);
+  document.getElementById('search').addEventListener('input', render);
+
+  window.addEventListener('resize', () => {
+    const out = layout();
+    pos = out.positions;
+    centers = out.centers;
+    render();
+  });
+
+  // Initial render
+  const out0 = layout();
+  pos = out0.positions;
+  centers = out0.centers;
+  render();
+
+  // Deep-link via hash
+  if (window.location.hash) {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (byId[id]) selectNode(id);
+  }
+})();
+</script>
+
+</body>
+</html>

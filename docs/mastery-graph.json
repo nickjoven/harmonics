@@ -1,0 +1,667 @@
+{
+  "title": "Mastery graph",
+  "description": "Concepts as nodes, prerequisite-and-related connections as edges. Traversing every connected node, in roughly the order indicated by the prerequisite arrows, is intended to leave a reader in possession of the framework's core dynamics. The descriptions are deliberately plain.",
+  "clusters": [
+    {
+      "id": "periodicity",
+      "label": "Periodicity",
+      "color": "#7fbf7f",
+      "blurb": "What it means for a quantity to repeat, and the bookkeeping that lets you ignore whole-period offsets."
+    },
+    {
+      "id": "waves",
+      "label": "Waves and resonance",
+      "color": "#7fbfbf",
+      "blurb": "Propagating and standing patterns, the energetic preference for matching frequencies, and the decomposition of a signal into frequency components."
+    },
+    {
+      "id": "coupled_oscillators",
+      "label": "Coupled oscillators",
+      "color": "#7f9fbf",
+      "blurb": "Two or more oscillators sharing energy, the conditions under which they synchronise to whole-number cycle ratios, and the regimes that result."
+    },
+    {
+      "id": "stick_slip",
+      "label": "Stick-slip and thresholds",
+      "color": "#bf7fbf",
+      "blurb": "Systems with two operating regimes separated by a threshold, where the response below the threshold differs qualitatively from the response above."
+    },
+    {
+      "id": "parabola",
+      "label": "Parabola and bifurcation",
+      "color": "#bf7f7f",
+      "blurb": "Why the equation x squared equals something keeps appearing as the simplest local model when a system's fixed-point structure changes."
+    },
+    {
+      "id": "squares",
+      "label": "Squares",
+      "color": "#bfa07f",
+      "blurb": "Why squares appear in identities, in probabilities, and in the leading-order behaviour of any smooth quantity near a zero."
+    },
+    {
+      "id": "least_action",
+      "label": "Least action",
+      "color": "#bfbf7f",
+      "blurb": "The procedure by which equations of motion are recovered from a single scalar functional, and the link between continuous symmetries and conservation laws."
+    },
+    {
+      "id": "quanta",
+      "label": "Quanta",
+      "color": "#bf7fa0",
+      "blurb": "Why some observables are restricted to whole-number values, and what topology has to do with it."
+    },
+    {
+      "id": "rationals",
+      "label": "Rationals and best approximation",
+      "color": "#9fbf7f",
+      "blurb": "The combinatorial structure of the fractions, and the operation that enumerates them in order of denominator size."
+    },
+    {
+      "id": "topology",
+      "label": "Topology",
+      "color": "#7fbfa0",
+      "blurb": "What can be deformed into what; which features survive deformation; which surfaces admit a consistent outward direction and which do not."
+    },
+    {
+      "id": "symmetry",
+      "label": "Symmetry and groups",
+      "color": "#7f7fbf",
+      "blurb": "Operations that leave structure invariant, the algebra those operations satisfy, and the way they organise solutions into orbits."
+    },
+    {
+      "id": "self_consistency",
+      "label": "Dimensional inputs and self-consistency",
+      "color": "#808088",
+      "blurb": "What counts as a free parameter; what counts as a forced output; and the discipline that distinguishes them."
+    },
+    {
+      "id": "predictions",
+      "label": "Framework predictions",
+      "color": "#6fa06f",
+      "blurb": "Specific observable consequences the framework produces from the structures in the other clusters."
+    }
+  ],
+  "nodes": [
+    {
+      "id": "recurrence",
+      "label": "Recurrence",
+      "cluster": "periodicity",
+      "description": "A pattern returns. Anything periodic in time is by definition recurrent in time; anything translation-symmetric in space is recurrent in space. The first step in describing any repeating phenomenon is to identify on which axis (time, space, internal phase) it recurs, and over what interval.",
+      "requires": []
+    },
+    {
+      "id": "phase_loop",
+      "label": "Phase as a coordinate on a closed loop",
+      "cluster": "periodicity",
+      "description": "When a quantity returns to its starting value after a full period, it is most naturally represented not as a number on a line but as a coordinate on a closed loop. Two values that differ by a whole period are then literally the same point. Time, angle, and any internal phase variable are naturally loop-valued.",
+      "requires": ["recurrence"]
+    },
+    {
+      "id": "mod_arithmetic",
+      "label": "Working modulo a period",
+      "cluster": "periodicity",
+      "description": "Arithmetic on a closed loop means reducing by the period: keeping only the leftover after subtracting whole periods. Two values that differ by a whole period are equivalent. For period two this is parity; for period twelve it is clock arithmetic; for period n it is the general case.",
+      "requires": ["phase_loop"]
+    },
+    {
+      "id": "winding_number",
+      "label": "Winding number",
+      "cluster": "periodicity",
+      "description": "When a process repeats but also creeps forward by exactly one full period over the course of its cycle, we say it has wound around once. A continuous map from a loop into a loop executes a whole-number net winding count; non-integer winding is topologically forbidden. This is the basic reason charges and similar topological quantum numbers are integers.",
+      "requires": ["phase_loop", "mod_arithmetic"]
+    },
+    {
+      "id": "traveling_wave",
+      "label": "Traveling wave",
+      "cluster": "waves",
+      "description": "A pattern that propagates without changing its shape. Its dependence on position and time is through a single combined argument, like position minus speed times time. Whatever value the pattern took at the origin at time zero, the same value appears at a later position at a proportionally later time.",
+      "requires": ["recurrence"]
+    },
+    {
+      "id": "standing_wave",
+      "label": "Standing wave",
+      "cluster": "waves",
+      "description": "Two equal travelling waves moving in opposite directions interfere to produce a pattern that is stationary in space. The amplitude varies with position but the locations of the spatial peaks (antinodes) and zeros (nodes) do not move. Music made on a bounded medium is made of standing waves.",
+      "requires": ["traveling_wave"]
+    },
+    {
+      "id": "normal_modes",
+      "label": "Normal modes",
+      "cluster": "waves",
+      "description": "A linearly coupled system has a finite list of basic oscillation patterns, each at its own characteristic frequency, into which any small motion can be decomposed. Knowing the normal modes is knowing the linear dynamics; arbitrary motion is a superposition of normal-mode oscillations with appropriate amplitudes and phases.",
+      "requires": ["standing_wave"]
+    },
+    {
+      "id": "harmonics_overtones",
+      "label": "Harmonics and overtones",
+      "cluster": "waves",
+      "description": "A nonlinear oscillator excited at a fundamental frequency produces motion at whole-number multiples of that frequency as well. The fundamental is the lowest of these; the overtones are the higher multiples. The relative weights of the overtones in a given oscillator are what give different instruments their distinctive timbres at the same pitch.",
+      "requires": ["normal_modes"]
+    },
+    {
+      "id": "resonance",
+      "label": "Resonance",
+      "cluster": "waves",
+      "description": "A driven oscillator absorbs energy from its drive most efficiently when the drive's frequency matches one of the oscillator's natural frequencies. Off-resonance, the drive does almost no work. The amplification at exact resonance is set by how much damping is present; in very weakly damped systems, even small drives can build up large response over time.",
+      "requires": ["normal_modes"]
+    },
+    {
+      "id": "power_spectrum",
+      "label": "Power spectrum",
+      "cluster": "waves",
+      "description": "The decomposition of a signal into its frequency components, plotted as energy per frequency bin. Where the signal has strong periodicity at some frequency, the spectrum has a peak there; where the signal is structureless, the spectrum is flat. The cosmic microwave background's temperature-fluctuation spectrum is a power spectrum, and the framework's cosmological predictions are predictions about features of it.",
+      "requires": ["resonance", "harmonics_overtones"]
+    },
+    {
+      "id": "single_oscillator_circle",
+      "label": "A single oscillator on a circle",
+      "cluster": "coupled_oscillators",
+      "description": "One oscillator with a fixed natural frequency advances its phase at a constant rate around a closed loop. Knowing the current phase and the natural frequency tells you everything you need to know about its future. The oscillator is, in effect, its own clock.",
+      "requires": ["phase_loop"]
+    },
+    {
+      "id": "two_oscillators",
+      "label": "Two oscillators in weak contact",
+      "cluster": "coupled_oscillators",
+      "description": "Two oscillators with slightly different natural frequencies, weakly coupled, exchange small amounts of energy. Their phases drift apart at a rate set by the mismatch in natural frequencies — unless the coupling becomes strong enough to outrun that drift.",
+      "requires": ["single_oscillator_circle"]
+    },
+    {
+      "id": "detuning",
+      "label": "Detuning",
+      "cluster": "coupled_oscillators",
+      "description": "The difference between the two natural frequencies. When detuning is small enough that the coupling can outrun it, the two oscillators synchronise; when detuning is large compared to the coupling, they drift independently.",
+      "requires": ["two_oscillators"]
+    },
+    {
+      "id": "coupling_strength_K",
+      "label": "Coupling strength K",
+      "cluster": "coupled_oscillators",
+      "description": "A single non-negative number measuring how strongly two oscillators pull on each other's phases. It is the principal control parameter for synchronisation: at zero coupling, each oscillator runs alone; as coupling rises, regions of locked behaviour open up in the space of detunings.",
+      "requires": ["two_oscillators"]
+    },
+    {
+      "id": "mode_lock",
+      "label": "Mode locking",
+      "cluster": "coupled_oscillators",
+      "description": "Once the coupling is strong enough relative to the detuning, two oscillators abandon their independent rhythms and settle into an exact whole-number ratio p to q of cycles. The locked state is robust against small further perturbations; it takes a finite shake to break it.",
+      "requires": ["coupling_strength_K", "detuning"]
+    },
+    {
+      "id": "arnold_tongue",
+      "label": "Tongue of locked ratios",
+      "cluster": "coupled_oscillators",
+      "description": "As coupling rises, the band of detunings over which a given ratio p:q remains locked widens into a region in the plane of (detuning, coupling). The region is broadest for the smallest denominator q and narrower for larger denominators. The framework's substrate is built from the locked rationals at small denominators.",
+      "requires": ["mode_lock"]
+    },
+    {
+      "id": "critical_coupling",
+      "label": "Critical coupling at K equals one",
+      "cluster": "coupled_oscillators",
+      "description": "There is a critical coupling strength at which the union of the lock regions covers the entire detuning axis save for a set of measure zero. The framework treats this critical strength as a limit: where the substrate's discrete lattice of rational lock-points dissolves into a continuum, and where general-relativistic geometry emerges. The actual physical regime sits below it.",
+      "requires": ["arnold_tongue"]
+    },
+    {
+      "id": "devils_staircase",
+      "label": "Staircase of locked frequencies",
+      "cluster": "coupled_oscillators",
+      "description": "At the critical coupling, the graph of locked-in cycle ratio against detuning is a staircase: flat on every rational ratio's plateau, with the rises concentrated on a Cantor-like fractal set. Below the critical coupling there are gaps in the staircase; at and above it the gaps shrink to zero measure.",
+      "requires": ["critical_coupling"]
+    },
+    {
+      "id": "quasi_periodic",
+      "label": "Quasi-periodic motion",
+      "cluster": "coupled_oscillators",
+      "description": "Motion that visits its entire orbit closure but never exactly repeats. Two coupled oscillators with an irrational frequency ratio trace out a quasi-periodic trajectory on the torus formed from their two phase loops; the trajectory winds densely without ever closing.",
+      "requires": ["two_oscillators"]
+    },
+    {
+      "id": "standard_circle_map",
+      "label": "The standard circle map",
+      "cluster": "coupled_oscillators",
+      "description": "A single discrete-time iteration that captures every entry in this cluster: the next phase equals the current phase plus the natural-frequency increment, minus a coupling-strength-times-sine correction. Plotted on a circle, this rule generates mode locking, tongues, the staircase, and quasi-periodic motion as its phenomenology.",
+      "requires": ["coupling_strength_K", "mode_lock", "arnold_tongue", "critical_coupling"]
+    },
+    {
+      "id": "static_vs_kinetic",
+      "label": "Static and kinetic friction",
+      "cluster": "stick_slip",
+      "description": "The force required to start an object moving is larger than the force required to keep it moving once already in motion. The system sticks while the applied force is below a static threshold, then slips once the threshold is exceeded. After motion begins, kinetic friction takes over.",
+      "requires": []
+    },
+    {
+      "id": "slip_event",
+      "label": "Slip event",
+      "cluster": "stick_slip",
+      "description": "A sudden burst of motion after a long period of building stress. Earthquakes are slip events on geological faults; the squeak of a chair leg on a floor is a slip event amplified; the steady tone of a bowed string is a regular sequence of slip events between bow and string.",
+      "requires": ["static_vs_kinetic"]
+    },
+    {
+      "id": "hysteresis",
+      "label": "Hysteresis",
+      "cluster": "stick_slip",
+      "description": "The state of a system depends on its history, not just on its current control parameter. Forward and reverse sweeps of the same control parameter visit different states, tracing a loop in the (control, state) plane rather than retracing each other. Stick-slip systems are generically hysteretic.",
+      "requires": ["static_vs_kinetic"]
+    },
+    {
+      "id": "partial_lock_weight",
+      "label": "Partial-locking weight",
+      "cluster": "stick_slip",
+      "description": "When a mode locks only partially, it contributes a fractional weight between zero and one. The framework's symmetric Klein-singlet boundary mode locks at exactly thirteen-fourteenths; the antisymmetric mode, having no electromagnetic coupling to threshold against, locks fully at weight one.",
+      "requires": ["mode_lock", "mond_threshold"]
+    },
+    {
+      "id": "mond_threshold",
+      "label": "Acceleration threshold for partial decoupling",
+      "cluster": "stick_slip",
+      "description": "Above a critical acceleration scale, mode-locking is essentially complete and dynamics is Newton-like. Below the threshold, the lock weakens and the unlocked fraction carries a smaller-than-Newtonian response to the curvature source. Galactic rotation curves in the low-acceleration regime show the signature: stars at the outskirts orbit faster than visible-matter Newtonian gravity would predict. The framework derives the threshold from the cosmological constant.",
+      "requires": ["slip_event", "static_vs_kinetic", "mode_lock"]
+    },
+    {
+      "id": "fixed_point",
+      "label": "Fixed point of a map",
+      "cluster": "parabola",
+      "description": "A state that the dynamics, once visiting, never leaves: applying the map sends the state to itself. Equivalently, for a continuous flow, a state at which the velocity vanishes. Fixed points are the skeleton of a dynamical system; everything else is described relative to them.",
+      "requires": []
+    },
+    {
+      "id": "stability_of_fp",
+      "label": "Stability of a fixed point",
+      "cluster": "parabola",
+      "description": "A fixed point is stable if small displacements from it decay back toward it under the dynamics, and unstable if small displacements grow away. The slope of the map at the fixed point decides which case applies: magnitude less than one means stable; magnitude greater than one means unstable.",
+      "requires": ["fixed_point"]
+    },
+    {
+      "id": "normal_form_general",
+      "label": "Normal form",
+      "cluster": "parabola",
+      "description": "A generic local model for some kind of event in a dynamical system, written after a coordinate change that removes inessential detail. Two systems that undergo the same kind of event near a particular point can be brought into the same normal form there; that is the sense in which a normal form is universal.",
+      "requires": ["fixed_point"]
+    },
+    {
+      "id": "saddle_node_parabola",
+      "label": "Saddle-node parabola",
+      "cluster": "parabola",
+      "description": "The simplest one-parameter way to create or destroy a pair of fixed points: the equation x squared plus mu equals zero. As mu passes through zero from negative to positive, the two solutions (one stable, one unstable) collide and annihilate. Every smooth one-parameter generic appearance or disappearance of fixed-point pairs in any dynamical system looks locally like this.",
+      "requires": ["stability_of_fp", "normal_form_general"]
+    },
+    {
+      "id": "codimension",
+      "label": "Codimension of a bifurcation",
+      "cluster": "parabola",
+      "description": "The number of parameters that must be tuned simultaneously to encounter a given kind of event. The saddle-node is codimension one: a single parameter sweep generically encounters it. More delicate events require more parameters tuned together and are correspondingly less generic.",
+      "requires": ["saddle_node_parabola"]
+    },
+    {
+      "id": "universality_local",
+      "label": "Local universality",
+      "cluster": "parabola",
+      "description": "Behaviour near a generic local event in a dynamical system depends only on the event's codimension, not on the specific system. This is what allows the same parabola to describe fixed-point creation in combustion, lasers, populations, and mode-locking — none of which look alike globally, all of which look the same near the event.",
+      "requires": ["codimension"]
+    },
+    {
+      "id": "pythagorean_identity",
+      "label": "Sine-squared plus cosine-squared",
+      "cluster": "squares",
+      "description": "The identity sine squared plus cosine squared equals one. A direct consequence of parametrising the unit circle by (cosine theta, sine theta). The framework treats this as definitional: it is the algebraic form of the circle topology and does not derive from anything more basic.",
+      "requires": ["phase_loop"]
+    },
+    {
+      "id": "quadratic_in_displacement",
+      "label": "Quadratic behaviour near a minimum",
+      "cluster": "squares",
+      "description": "Any smooth potential, expanded around a minimum, looks to leading order like a constant plus a quadratic term in the displacement, plus smaller higher-order corrections. The quadratic term is what produces Hooke's-law restoring forces and harmonic oscillation; small motion in any smooth potential is universally harmonic to leading order.",
+      "requires": ["fixed_point"]
+    },
+    {
+      "id": "born_rule_exponent_squares",
+      "label": "Probability as a squared amplitude",
+      "cluster": "squares",
+      "description": "Probability density in quantum mechanics is the squared magnitude of a complex amplitude — exponent two, not one and not three. The exponent two is forced by the requirement that probabilities sum to one and stay so under unitary evolution. The framework derives this exponent from the substrate's structure rather than postulating it.",
+      "requires": ["pythagorean_identity"]
+    },
+    {
+      "id": "catalan_sum",
+      "label": "Alternating odd-square sum",
+      "cluster": "squares",
+      "description": "The alternating-sign sum of reciprocal odd squares: one minus one-ninth plus one-twenty-fifth minus one-forty-ninth and so on, approximately zero point nine one six. Arises whenever the logarithm of one plus a cosine is integrated over half a period. The framework's analytic Lyapunov rate inherits this constant.",
+      "requires": ["pythagorean_identity"]
+    },
+    {
+      "id": "sum_reciprocal_squares",
+      "label": "Reciprocal squares sum to pi-squared-over-six",
+      "cluster": "squares",
+      "description": "The unsigned sum of reciprocal squares — one plus one-quarter plus one-ninth plus one-sixteenth and so on — equals pi squared divided by six. That a discrete number-theoretic sum equals a transcendental constant times the geometry of the circle is the kind of bridge the framework is built to exploit.",
+      "requires": ["pythagorean_identity"]
+    },
+    {
+      "id": "saddle_squares_link",
+      "label": "Why squares are everywhere",
+      "cluster": "squares",
+      "description": "The squared term in the saddle-node normal form, the squared term in the leading potential near a minimum, and the squared magnitude in the probability rule are all the same phenomenon: expansion near a zero is universally quadratic to leading order. A smooth function whose first derivative vanishes has a second derivative that does not, and squares appear inevitably.",
+      "requires": ["saddle_node_parabola", "quadratic_in_displacement", "born_rule_exponent_squares"]
+    },
+    {
+      "id": "action_functional",
+      "label": "Action functional",
+      "cluster": "least_action",
+      "description": "A single number assigned to each candidate path or field configuration. Among all candidates connecting given endpoints, the one the system actually realises is the one for which the action is stationary — often a minimum, but always a critical point. The action is built by integrating a scalar density over the trajectory or configuration.",
+      "requires": []
+    },
+    {
+      "id": "stationary_path",
+      "label": "Stationary path",
+      "cluster": "least_action",
+      "description": "The path on which infinitesimal variations leave the action unchanged. Stationarity is what the realised trajectory must satisfy; the condition can be written as a differential equation, the equation of motion in disguise.",
+      "requires": ["action_functional"]
+    },
+    {
+      "id": "lagrangian_principle",
+      "label": "Lagrangian",
+      "cluster": "least_action",
+      "description": "The integrand of the action — a scalar quantity built from positions, velocities, fields, and their derivatives. Specifying the Lagrangian specifies the system. The Standard Model is specified by such a Lagrangian; the question the framework addresses is why the coefficients in that Lagrangian have the values they do.",
+      "requires": ["action_functional"]
+    },
+    {
+      "id": "euler_lagrange",
+      "label": "Equations of motion from stationarity",
+      "cluster": "least_action",
+      "description": "The differential equations that follow from demanding the action be stationary: the rate of change of the momentum-like derivative equals the position-like derivative of the Lagrangian. These are the equations of motion in their cleanest form, free of choices of coordinates.",
+      "requires": ["stationary_path", "lagrangian_principle"]
+    },
+    {
+      "id": "symmetry_to_conservation",
+      "label": "Continuous symmetry gives conservation",
+      "cluster": "least_action",
+      "description": "Every continuous symmetry of the action implies a conserved quantity, and every conservation law has a corresponding continuous symmetry. Time-translation symmetry gives energy conservation; spatial-translation gives momentum; rotational symmetry gives angular momentum. The framework's energy-conservation constraint is one instance of this general correspondence.",
+      "requires": ["euler_lagrange"]
+    },
+    {
+      "id": "integer_charge_from_winding",
+      "label": "Integer charge as a winding number",
+      "cluster": "quanta",
+      "description": "Charge is a topological count: how many times a phase winds around a closed loop. Because winding numbers are forced to be whole numbers, charges are quantised in whole units. The integer character of charge is therefore not a separate postulate; it is forced by the topology of the underlying phase space.",
+      "requires": ["winding_number"]
+    },
+    {
+      "id": "discrete_spectrum",
+      "label": "Discrete energy levels",
+      "cluster": "quanta",
+      "description": "A bounded oscillator has a discrete list of allowed energies. The discreteness comes from a fitting requirement: a standing wave must complete a whole number of half-cycles between the walls of the confinement. Allowed energies are then labelled by a whole number, with no continuous adjustment available in between.",
+      "requires": ["standing_wave", "winding_number"]
+    },
+    {
+      "id": "zero_point_mode",
+      "label": "Zero-point energy",
+      "cluster": "quanta",
+      "description": "A bounded oscillator's lowest allowed energy is not zero. The naive sum of these zero-point energies, taken over every mode up to a high cutoff, is what makes the cosmological-constant problem look catastrophic in standard accounting. The framework's selection of the non-orientable mode surface dramatically restricts the modes that survive and so dramatically reduces the sum.",
+      "requires": ["discrete_spectrum", "normal_modes"]
+    },
+    {
+      "id": "topological_quantisation",
+      "label": "Topological quantisation",
+      "cluster": "quanta",
+      "description": "Quantities forced to be whole numbers because they count windings, intersections, or coverings of one space by another. Magnetic flux through a superconducting loop, electric charge, certain Hall conductances. The discreteness is a feature of topology rather than of the specific dynamics, and is correspondingly robust against local deformations.",
+      "requires": ["integer_charge_from_winding"]
+    },
+    {
+      "id": "ratios_integers",
+      "label": "Fractions in lowest terms",
+      "cluster": "rationals",
+      "description": "A rational number is a quotient of two integers. In lowest terms, the numerator and denominator share no common factor greater than one. The set of rationals is dense in the real line but has measure zero — there are 'as many' rationals as integers, even though they lie everywhere along the line.",
+      "requires": []
+    },
+    {
+      "id": "totient_phi",
+      "label": "Euler's count of units",
+      "cluster": "rationals",
+      "description": "Euler's totient function counts, for a given positive integer n, the number of integers from one to n that share no common factor with n. The totient is multiplicative for coprime arguments and equals n minus one whenever n is prime. The framework's mode counts |F_n| are running sums of totients.",
+      "requires": ["ratios_integers"]
+    },
+    {
+      "id": "adjacent_fractions",
+      "label": "Adjacent fractions",
+      "cluster": "rationals",
+      "description": "Two reduced fractions a over b and c over d are called adjacent when the cross product a-times-d minus b-times-c equals plus or minus one. Adjacency is the basic relation organising the rationals into a tree: adjacent fractions are neighbours; non-adjacent ones are separated by intermediates with smaller denominators.",
+      "requires": ["ratios_integers"]
+    },
+    {
+      "id": "mediant_operation",
+      "label": "The simplest fraction between two adjacent ones",
+      "cluster": "rationals",
+      "description": "Between two adjacent fractions a over b and c over d, the rational with the smallest denominator is (a plus c) over (b plus d). This combining operation is called the mediant. Iterating it starting from zero-over-one and one-over-zero generates every positive rational exactly once.",
+      "requires": ["adjacent_fractions"]
+    },
+    {
+      "id": "mediant_tree",
+      "label": "The mediant tree of all rationals",
+      "cluster": "rationals",
+      "description": "The binary tree built by repeatedly inserting mediants between adjacent fractions. Each positive rational appears at a finite depth equal to the number of mediant steps required to reach it from the parents zero-over-one and one-over-zero. The framework uses this tree as the configuration space of locked oscillator cycle ratios.",
+      "requires": ["mediant_operation"]
+    },
+    {
+      "id": "farey_count",
+      "label": "Counting fractions of bounded denominator",
+      "cluster": "rationals",
+      "description": "The total number of distinct reduced fractions in the unit interval with denominator at most n is one plus the sum of totients up to n. For depth six this count is thirteen; for depth seven it is nineteen. The framework's principal mode counts are these two numbers.",
+      "requires": ["mediant_tree", "totient_phi"]
+    },
+    {
+      "id": "best_rational_approximation",
+      "label": "Best rational approximation",
+      "cluster": "rationals",
+      "description": "To approximate an irrational by a rational with denominator at most n, the optimal choice is one of its neighbours at the relevant depth of the mediant tree. The mediant operation is the engine of best approximation; the deeper you go in the tree, the better the approximation becomes.",
+      "requires": ["mediant_tree"]
+    },
+    {
+      "id": "one_d_loop",
+      "label": "The closed one-dimensional loop",
+      "cluster": "topology",
+      "description": "The simplest closed one-dimensional space. Every continuous map from this loop into itself has a well-defined integer winding number. Many discrete-valued conservation laws and quantum numbers are inherited from this simple fact about closed loops.",
+      "requires": ["phase_loop"]
+    },
+    {
+      "id": "two_d_surface",
+      "label": "Closed two-dimensional surfaces",
+      "cluster": "topology",
+      "description": "A two-dimensional surface that closes onto itself. The simplest orientable examples are the sphere and the torus; the simplest non-orientable closed surface is the Klein bottle. Different closed surfaces support qualitatively different field content, including different counts of surviving zero-point modes.",
+      "requires": ["one_d_loop"]
+    },
+    {
+      "id": "orientability",
+      "label": "Orientability",
+      "cluster": "topology",
+      "description": "A surface is orientable if a consistent notion of 'which side is outward' or 'which way is counterclockwise' can be assigned globally. Walking around a closed path on an orientable surface returns you to your start with the same handedness; on a non-orientable surface, certain closed paths return you mirror-reversed.",
+      "requires": ["two_d_surface"]
+    },
+    {
+      "id": "klein_surface",
+      "label": "Non-orientable closed surface",
+      "cluster": "topology",
+      "description": "A closed two-dimensional surface formed by gluing the two ends of a cylinder with an orientation-reversing flip rather than cleanly. It cannot be embedded in three-dimensional space without self-intersection. The framework selects this surface as the unique mode topology consistent with self-consistency; on it, exactly four zero-point modes survive a parity filter.",
+      "requires": ["orientability"]
+    },
+    {
+      "id": "torus_surface",
+      "label": "Orientable closed surface (torus)",
+      "cluster": "topology",
+      "description": "The orientable counterpart of the non-orientable surface, formed by gluing the two ends of a cylinder cleanly without a flip. Many more modes survive any filter than on the non-orientable alternative. The standard quantum-field-theory estimate of the cosmological constant implicitly assumes this topology.",
+      "requires": ["orientability"]
+    },
+    {
+      "id": "cusps_of_quotient",
+      "label": "Cusps of a modular quotient surface",
+      "cluster": "topology",
+      "description": "When a discrete group of fractional moves on the rationals quotients a surface, the result can pinch off at certain boundary points where ordinary measure breaks down: the cusps. For the framework's Hecke level-six subgroup, there are exactly four cusps, one per divisor of six; the symmetric Klein-singlet boundary mode inhabits the cusp at one-half.",
+      "requires": ["two_d_surface", "congruence_subgroup_N"]
+    },
+    {
+      "id": "group_concept",
+      "label": "What a group is",
+      "cluster": "symmetry",
+      "description": "A set together with an operation that combines any two elements into a third, has an identity element, and provides an inverse for each element. Examples: integers under addition; rotations of a square under composition; permutations of a finite set. Groups encode the algebra of operations that leave some structure invariant.",
+      "requires": []
+    },
+    {
+      "id": "cyclic_group_Zn",
+      "label": "Cyclic group modulo n",
+      "cluster": "symmetry",
+      "description": "The integers from zero to n minus one under addition modulo n. A single generator reaches every element by repeated application. The simplest non-trivial groups; for n equal to two, this is the parity flip; for n equal to three, the three-fold cyclic rotation.",
+      "requires": ["group_concept", "mod_arithmetic"]
+    },
+    {
+      "id": "crt_decomposition",
+      "label": "Coprime decomposition of mod-n structure",
+      "cluster": "symmetry",
+      "description": "When n factors as a product of pairwise coprime numbers p and q, the cyclic group modulo n decomposes cleanly into the direct product of the cyclic groups modulo p and modulo q. Knowing a residue modulo n is the same as knowing residues modulo p and modulo q independently. Modulo six is the simplest interesting case: modulo two times modulo three.",
+      "requires": ["cyclic_group_Zn"]
+    },
+    {
+      "id": "parity_flip_involution",
+      "label": "Order-two parity flip",
+      "cluster": "symmetry",
+      "description": "An operation of order two: applying it twice returns the identity. Each mode of the substrate is either fixed by it with sign plus one (symmetric mode) or sign-flipped to its negative (antisymmetric mode). The framework's antipodal involution separates electromagnetically coupled modes from electromagnetically uncoupled ones in exactly this way.",
+      "requires": ["group_concept"]
+    },
+    {
+      "id": "modular_group",
+      "label": "Integer fractional moves on rationals",
+      "cluster": "symmetry",
+      "description": "The group of transformations z to (a-z-plus-b) over (c-z-plus-d), with integer entries and unit determinant (up to sign), matrices identified up to overall sign. Generated by the shift z to z plus one and the inversion z to negative-one-over-z. Acts on the rationals by rearranging them by best-approximation moves; acts on the upper half plane by tiling it with fundamental domains.",
+      "requires": ["mediant_operation"]
+    },
+    {
+      "id": "congruence_subgroup_N",
+      "label": "Subgroup preserving residues mod N",
+      "cluster": "symmetry",
+      "description": "The subgroup of the modular group consisting of those transformations whose lower-left entry is divisible by N. The result preserves residues modulo N under its action. For N equal to six this is the framework's natural substrate-preserved subgroup, compatible with both factor mode counts q_2 equal to two and q_3 equal to three.",
+      "requires": ["modular_group", "crt_decomposition"]
+    },
+    {
+      "id": "cross_ratio_S3",
+      "label": "Six-value cross-ratio symmetry",
+      "cluster": "symmetry",
+      "description": "Four points on a line, under the integer fractional moves, have one independent ratio between them: the cross-ratio. Permuting the four points produces six different expressions of the same underlying invariant. The six form one orbit under a symmetric group of size six. The framework's three candidate boundary weights form one such orbit.",
+      "requires": ["modular_group"]
+    },
+    {
+      "id": "gauge_group",
+      "label": "Continuous local symmetry",
+      "cluster": "symmetry",
+      "description": "A continuous group acting on fields whose action can vary smoothly from point to point in spacetime. Specifying the group and the field representations fixes the inventory of force carriers and the rules of coupling. The Standard Model's gauge group SU(3) times SU(2) times U(1) is taken as input there; the framework derives this product from the substrate's mode-lattice factorisation.",
+      "requires": ["group_concept", "crt_decomposition"]
+    },
+    {
+      "id": "representation_of_group",
+      "label": "Representation of a group",
+      "cluster": "symmetry",
+      "description": "A way the group can act on a vector space — that is, an assignment of a linear transformation to each group element, consistent with the group operation. The Standard Model's particle content is a list of representations of the gauge group; particles are labelled by which representation they sit in.",
+      "requires": ["gauge_group"]
+    },
+    {
+      "id": "degree_of_freedom",
+      "label": "Degree of freedom",
+      "cluster": "self_consistency",
+      "description": "An independent parameter whose value is not fixed by the structure of the theory. Each free parameter is something the theory must take as input from outside, typically from measurement. Counting free parameters versus forced values is the principal way to compare frameworks.",
+      "requires": []
+    },
+    {
+      "id": "forced_value",
+      "label": "Forced value",
+      "cluster": "self_consistency",
+      "description": "A value the framework's constraints admit no alternative to. A forced value is not a fit and not a choice; it is the unique number compatible with conservation, stability, and topological self-consistency. If a forced value disagrees with observation, the framework is falsified at that point.",
+      "requires": ["degree_of_freedom"]
+    },
+    {
+      "id": "conservation_constraint",
+      "label": "Conservation constraint",
+      "cluster": "self_consistency",
+      "description": "A requirement that some quantity be preserved by all admissible operations. In the framework, energy conservation requires that any combined frequency lie between the two parent frequencies. This is one of the two constraints whose intersection forces the mediant operation.",
+      "requires": ["symmetry_to_conservation"]
+    },
+    {
+      "id": "stability_constraint",
+      "label": "Stability constraint",
+      "cluster": "self_consistency",
+      "description": "A requirement that small perturbations not amplify. In the framework, stability forces a combined oscillator-ratio to be the rational with the smallest denominator in the interval, because that rational has the widest tongue of locked detunings. This is the second of the two constraints whose intersection forces the mediant.",
+      "requires": ["arnold_tongue", "stability_of_fp"]
+    },
+    {
+      "id": "fixed_point_self_consistency",
+      "label": "Self-consistency as a fixed point",
+      "cluster": "self_consistency",
+      "description": "A state in which the output of a procedure equals its input is a self-consistent state. The framework's matter-sector operating coupling K-star is a fixed-point closure of exactly this form: solving for the K that reproduces itself under the matter-sector identity gives a unique value of about zero point eight six.",
+      "requires": ["fixed_point", "forced_value"]
+    },
+    {
+      "id": "anchor_minimum",
+      "label": "Minimum number of dimensional anchors",
+      "cluster": "self_consistency",
+      "description": "An irreducible input of scale that no amount of dimensionless ratio derivation can avoid. The framework requires two anchors — the cosmic expansion rate H_zero and the electroweak scale v — and predicts only dimensionless ratios beyond them. The two-anchor minimum is a structural feature of the substrate's K-equals-one and K-less-than-one sector decoupling.",
+      "requires": ["degree_of_freedom"]
+    },
+    {
+      "id": "circular_input_avoidance",
+      "label": "Avoiding circular inputs",
+      "cluster": "self_consistency",
+      "description": "A theory that uses an observed value of X to derive a prediction about X is circular; it has no empirical content at that point. The framework's discipline (its Z1 to Z3 conventions) is constructed precisely to make such circularity visible and to disallow it: predictions must use only substrate inputs, never the observed value of the quantity being predicted.",
+      "requires": ["forced_value"]
+    },
+    {
+      "id": "density_fractions_partition",
+      "label": "Cosmic density-fraction partition",
+      "cluster": "predictions",
+      "description": "The framework predicts the rational partition Omega-Lambda to Omega-DM to Omega-b equal to thirteen to five to one (with denominator nineteen) at the single-weight closure, refined at two-component closure to one hundred eighty-one to seventy to thirteen (with denominator two hundred sixty-four). The denominator nineteen is the Farey count at depth seven; the numerator thirteen is the Farey count at depth six.",
+      "requires": ["farey_count", "forced_value", "klein_surface"]
+    },
+    {
+      "id": "scalar_tilt_ns",
+      "label": "Scalar spectral tilt",
+      "cluster": "predictions",
+      "description": "The departure of the primordial curvature power spectrum from perfect scale-invariance, measured by an exponent n_s. The framework predicts a value in the range zero point nine six three to zero point nine six six from the self-similarity of the mediant tree at the golden-ratio winding. The observed value is zero point nine six four nine plus or minus zero point zero zero four two.",
+      "requires": ["mediant_tree", "power_spectrum"]
+    },
+    {
+      "id": "mixing_angle_predicted",
+      "label": "Electroweak mixing angle",
+      "cluster": "predictions",
+      "description": "The fraction of the gauge structure carried by the hypercharge component, measured by sine-squared of the mixing angle. The framework's only admitted value is eight over thirty-five, approximately zero point two two eight six. The observed value is approximately zero point two three one two.",
+      "requires": ["gauge_group", "forced_value"]
+    },
+    {
+      "id": "gauge_factorisation",
+      "label": "Gauge group factorisation",
+      "cluster": "predictions",
+      "description": "The Standard Model's gauge group SU(3) times SU(2) times U(1) is derived in the framework from the substrate's six-element mode lattice — which factors as the coprime product of a parity-flip Z_2 (giving SU(2)) and a three-fold Z_3 (giving SU(3)) — and from the U(1) of phase rotations on the underlying loop.",
+      "requires": ["gauge_group", "crt_decomposition", "klein_surface"]
+    },
+    {
+      "id": "three_generations_prediction",
+      "label": "Three generations of fermions",
+      "cluster": "predictions",
+      "description": "The substrate's Z_3 (color) factor's orbit structure under the symmetric-group action gives exactly three families of fermions, with no room for a fourth. The Standard Model takes the generation count as input; the framework derives it from the substrate's combinatorics.",
+      "requires": ["gauge_factorisation", "crt_decomposition"]
+    },
+    {
+      "id": "vacuum_energy_prediction",
+      "label": "Vacuum energy from four surviving modes",
+      "cluster": "predictions",
+      "description": "On the non-orientable mode surface with a parity filter, exactly four zero-point modes survive — out of the order of ten to the one hundred eighty-three modes that would survive on the orientable alternative. The corresponding vacuum energy is of order ten-to-the-minus-forty-seven in natural units, without fine-tuning, against the standard estimate of order ten-to-the-seventy-four.",
+      "requires": ["zero_point_mode", "klein_surface", "parity_flip_involution"]
+    },
+    {
+      "id": "strong_weak_ratio_prediction",
+      "label": "Strong-to-weak coupling ratio",
+      "cluster": "predictions",
+      "description": "The framework's bare ratio of the strong-force coupling to the weak-isospin coupling at the critical-coupling limit is q_3-cubed over q_2-cubed equals twenty-seven over eight, or three point three seven five. At the Z-boson mass and after the standard energy-scale-tracking procedure, the observed ratio is about three.",
+      "requires": ["gauge_factorisation", "forced_value"]
+    },
+    {
+      "id": "planck_hubble_hierarchy_prediction",
+      "label": "Planck-to-Hubble mass hierarchy",
+      "cluster": "predictions",
+      "description": "The framework predicts the Planck-mass-to-Hubble-mass ratio as six times thirteen-to-the-fifty-fourth power, approximately eight and a half times ten-to-the-sixtieth. The observed ratio is approximately the same. The smallness of the cosmological constant in Planck units is then a structural feature of the multiplicative depth, not fine-tuning.",
+      "requires": ["forced_value", "vacuum_energy_prediction"]
+    }
+  ]
+}

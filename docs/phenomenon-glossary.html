@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phenomenon glossary &mdash; Harmonics</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters:[
+    {left:'$$',right:'$$',display:true},
+    {left:'$',right:'$',display:false}
+  ]});"></script>
+<style>
+  .phen { margin: 1.4em 0; padding-left: 1.2em; border-left: 1px solid var(--border); }
+  .phen h3 { color: var(--text-bright); text-transform: none; letter-spacing: 0.01em; font-size: 1em; margin-top: 0; margin-bottom: 0.4em; }
+  .phen p { margin-bottom: 0.7em; font-size: 0.93em; }
+  .phen .aka { color: var(--text-dim); font-size: 0.85em; font-style: italic; margin-top: 0.4em; }
+  .phen .aka strong { color: var(--accent); font-style: normal; font-weight: normal; }
+  .intro { color: var(--text-dim); font-size: 0.93em; margin-bottom: 2em; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Reference</a>
+  <a href="claim-chain.html">Claim chain</a>
+  <a href="claim-chain-views.html">Three views</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="phenomenon-glossary.html" class="active">Phenomena</a>
+  <a href="derivations.html">Derivations</a>
+  <a href="mastery-graph.html">Mastery</a>
+  <a href="cmb-s4.html">CMB-S4</a>
+  <a href="preprint.html">Preprint</a>
+</nav>
+
+<h1>Phenomenon glossary &mdash; dynamics first, names second</h1>
+<p class="subtitle">
+  A pedagogical glossary organised by phenomenon rather than by the
+  literature's eponymous tags. The framework articulates dynamics that
+  are history-agnostic; this page is the entry point if you would
+  rather commit the principles to memory than their many names.
+</p>
+
+<div class="intro">
+  <p>
+    Each entry has three parts: a <strong>description</strong> of what
+    the phenomenon is and does, a note on <strong>where it appears</strong>
+    in the framework, and an <em>also called</em> tagline pointing to
+    the literature's names for the same thing. The companion
+    <a href="glossary.html">interactive glossary</a> is the right
+    reference when you are working with the framework's internal
+    vocabulary and need numerical values; this one is the right
+    reference when you are trying to think about the dynamics.
+  </p>
+  <p>
+    Source-of-truth markdown:
+    <a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/phenomenon_glossary.md"><code>sync_cost/derivations/phenomenon_glossary.md</code></a>.
+  </p>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════ -->
+<h2>1 &mdash; Structures on the line of fractions</h2>
+
+<div class="phen">
+  <h3>Adjacent fractions, and the simplest fraction between them</h3>
+  <p>
+    Two reduced fractions $a/b$ and $c/d$ are <em>adjacent</em> when
+    $|ad - bc| = 1$. Between any two adjacent fractions there is a
+    unique fraction with smaller denominator than any other rational in
+    the open interval between them, namely $(a+c)/(b+d)$. Iterating
+    this combining operation from $0/1$ and $1/0$ generates every
+    positive rational exactly once, arranged as a binary tree ordered
+    by denominator. The operation is forced by two requirements: the
+    combined frequency must lie between its parents (energy
+    conservation), and it must be the smallest-denominator rational in
+    that interval (widest stability region under coupling).
+  </p>
+  <p class="aka"><strong>Also called:</strong> the mediant of two
+    fractions; the Stern&ndash;Brocot tree; the Farey tree. Restricted
+    to denominators $\le n$, the listing is the Farey sequence $F_n$.</p>
+</div>
+
+<div class="phen">
+  <h3>Counting the fractions added at each depth</h3>
+  <p>
+    The number of distinct reduced fractions in $[0, 1]$ with
+    denominator $\le n$ is
+    $|F_n| = 1 + \sum_{k=1}^{n} \varphi(k)$, where $\varphi(k)$ counts
+    the integers from $1$ to $k$ that share no common factor with $k$
+    (the count of "units" mod $k$). The framework uses $|F_6| = 13$ as
+    the count of mode-locked rationals at denominator depth $6$ and
+    $|F_7| = 19$ as the total once the next generation of unlocked
+    modes is added.
+  </p>
+  <p class="aka"><strong>Also called:</strong> $|F_n|$ is the Farey
+    count at depth $n$; $\varphi(k)$ is Euler's totient function.</p>
+</div>
+
+<div class="phen">
+  <h3>Invariant fingerprint of orbits under the natural fractional moves</h3>
+  <p>
+    Two configurations on the upper half-plane are equivalent under
+    the natural integer-coefficient fractional moves (see &sect;3) if
+    and only if a particular complex-analytic function of the
+    configuration takes the same value on both. That function labels
+    every orbit uniquely and so serves as a fingerprint distinguishing
+    inequivalent configurations.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the $j$-invariant.</p>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════ -->
+<h2>2 &mdash; Coupled oscillators and synchronisation</h2>
+
+<div class="phen">
+  <h3>Mode-locking: integer-ratio synchronisation of mismatched oscillators</h3>
+  <p>
+    Two oscillators with slightly different natural frequencies,
+    weakly coupled, will under certain conditions abandon their
+    independent rhythms and settle into an exact whole-number ratio
+    $p : q$ of cycles. As the coupling rises, the range of frequency
+    mismatch over which a given ratio $p:q$ remains locked widens into
+    a region; the region is broadest for smallest $q$ and narrower for
+    larger $q$. The framework's substrate consists of these locked
+    rationals as its only stable states.
+  </p>
+  <p class="aka"><strong>Also called:</strong> mode-locking; the lock
+    regions are Arnold tongues.</p>
+</div>
+
+<div class="phen">
+  <h3>Criticality: the coupling at which every rational locks</h3>
+  <p>
+    There is a critical coupling at which the union of lock regions
+    covers the entire frequency axis save for a set of measure zero
+    (only irrationals remain unlocked, on a fractal set). At this
+    critical strength the graph of locked frequency-ratio against
+    detuning becomes a staircase: flat on every rational interval,
+    with rises concentrated on a Cantor-like set. The framework treats
+    this critical strength as a <em>limit</em>: where the discrete
+    substrate dissolves into a continuum, and where
+    general-relativistic geometry emerges. The actual physical regime
+    sits strictly below it.
+  </p>
+  <p class="aka"><strong>Also called:</strong> $K = 1$ critical
+    coupling; the staircase is the devil's staircase of the standard
+    circle map.</p>
+</div>
+
+<div class="phen">
+  <h3>Exponential separation rate of nearby trajectories</h3>
+  <p>
+    The mean exponential rate at which two trajectories starting
+    infinitesimally close grow apart in time. Positive rate $\Rightarrow$
+    chaos / sensitivity to initial conditions; zero $\Rightarrow$
+    neutral or quasi-periodic; negative $\Rightarrow$ attraction onto
+    a limit set. The framework computes this rate analytically on the
+    substrate's unlocked sector and obtains
+    $\lambda_{\text{unlock}}(K=1) = (4G - \pi \ln 2) / \pi
+    \approx 0.473096$, where $G \approx 0.915966$ is the alternating
+    odd-square constant of &sect;6.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the Lyapunov exponent
+    (or Lyapunov rate) of the unlocked sector.</p>
+</div>
+
+<div class="phen">
+  <h3>Acceleration threshold below which the lock partially decouples</h3>
+  <p>
+    In ordinary regimes mode-locking is essentially complete: a test
+    mode tracks its source as if rigidly coupled. Below a particular
+    acceleration the lock weakens; the unlocked fraction of the
+    coupling carries a smaller-than-Newtonian response to the
+    curvature source, and rotation curves in that regime appear
+    flatter than Newton predicts. The crossover is smooth. The
+    framework derives the threshold from the cosmological constant as
+    $a_0 = c H_0 / (2\pi) \approx 1.04 \times 10^{-10}$ m/s$^2$.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the MOND acceleration
+    scale $a_0$.</p>
+</div>
+
+<div class="phen">
+  <h3>Universal one-parameter form for a fixed-point pair appearing or vanishing</h3>
+  <p>
+    As a single control parameter is varied, the simplest way a
+    dynamical system can create or destroy fixed points is for a
+    stable and an unstable one to collide and annihilate. Locally,
+    every smooth one-parameter such event looks like
+    $\dot{x} = \mu + x^2$, equivalently $x^2 + \mu = 0$ at
+    equilibrium. This parabola is the local form of every
+    codimension-1 appearance/disappearance of fixed-point pairs in any
+    smooth system. The framework uses this normal form to anchor its
+    sector-specific coupling parabolas.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the saddle-node
+    bifurcation; the fold catastrophe (Thom 1972).</p>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════ -->
+<h2>3 &mdash; Topology of the phase space</h2>
+
+<div class="phen">
+  <h3>A coordinate that returns to its start after one trip</h3>
+  <p>
+    A one-dimensional configuration space where the coordinate is
+    identified modulo a full period &mdash; the simplest closed
+    one-dimensional loop. Every continuous map of this loop into
+    itself has a well-defined integer winding number counting how
+    many times its image runs around. Whole-number winding is what
+    makes integer charge possible: once you have a closed loop as a
+    phase space, any covering map quantises the cover degree as an
+    integer.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the circle $S^1$;
+    $\mathbb{R}/\mathbb{Z}$; the unit circle group $U(1)$.</p>
+</div>
+
+<div class="phen">
+  <h3>A surface with no consistent "outward" side</h3>
+  <p>
+    A two-dimensional surface that closes onto itself but cannot be
+    oriented: walking around certain closed paths returns you to
+    your start mirror-reversed. It cannot be embedded in ordinary
+    three-dimensional space without self-intersection. The framework
+    selects this surface as the unique mode topology compatible with
+    its self-consistency requirements; on it, a parity filter admits
+    exactly four surviving zero-point modes, against the $\sim 10^{183}$
+    that the cleanly-orientable alternative would admit.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the Klein bottle. The
+    cleanly-orientable alternative is a torus.</p>
+</div>
+
+<div class="phen">
+  <h3>Surface with finitely many boundary degeneration points</h3>
+  <p>
+    When the natural fractional moves on the rationals are restricted
+    to those preserving divisibility mod $N$ (see &sect;4), the
+    resulting quotient surface has a small finite collection of
+    "cusps" &mdash; points where the geometry pinches off and ordinary
+    measure breaks down. For square-free $N$ the number of cusps
+    equals the number of divisors of $N$. For $N = 6$ the four cusps
+    are $\{\infty,\, 1/2,\, 1/3,\, 0\}$. The framework's symmetric
+    Klein-singlet boundary mode inhabits Cusp $1/2$.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the cusps of the
+    modular curve $X_0(N)$.</p>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════ -->
+<h2>4 &mdash; Symmetry and group action</h2>
+
+<div class="phen">
+  <h3>Integer-coefficient fractional moves on the line of rationals</h3>
+  <p>
+    Transformations $z \mapsto (az + b) / (cz + d)$ with integer
+    entries and $ad - bc = \pm 1$, matrices identified up to overall
+    sign. Generated by two basic moves: shift by an integer
+    ($z \mapsto z + 1$) and inversion-through-zero
+    ($z \mapsto -1/z$). On the rationals, this group rearranges them
+    by best-approximation moves and is generated by the mediant
+    operation. On the upper half plane it tiles by fundamental
+    domains. Its continuum closure is three-dimensional, which is the
+    framework's derivation of spatial $d = 3$.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the modular group;
+    $\mathrm{PSL}(2, \mathbb{Z})$; $\mathrm{SL}(2, \mathbb{Z})$
+    before quotienting by sign. The continuum closure is
+    $\mathrm{SL}(2, \mathbb{R})$.</p>
+</div>
+
+<div class="phen">
+  <h3>Subgroup of fractional moves preserving divisibility mod $N$</h3>
+  <p>
+    Restrict the integer-coefficient fractional moves to those whose
+    lower-left entry is divisible by $N$. The result preserves
+    residues mod $N$. For $N = 6 = 2 \cdot 3$, this is the natural
+    subgroup compatible with the substrate's two basic mode-counts
+    $q_2 = 2$ and $q_3 = 3$; it is also the intersection of the
+    analogous subgroups for $N = 2$ and $N = 3$ separately.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the Hecke congruence
+    subgroup of level $N$, written $\Gamma_0(N)$.</p>
+</div>
+
+<div class="phen">
+  <h3>Cyclic structure modulo $n$</h3>
+  <p>
+    The integers $\{0, 1, \dots, n-1\}$ with addition mod $n$. For
+    $n$ that factors as a product of pairwise coprime numbers, the
+    structure splits cleanly into the independent product of its
+    factor pieces. Mod $6$, for instance, knowing a residue is the
+    same as knowing the parity (mod $2$) <em>and</em> the third-
+    rotation (mod $3$) separately. The framework's basic mode lattice
+    is exactly this six-element structure.
+  </p>
+  <p class="aka"><strong>Also called:</strong> $\mathbb{Z}_n$ or
+    $\mathbb{Z}/n\mathbb{Z}$; the cleanly-factoring decomposition is
+    the Chinese remainder theorem.</p>
+</div>
+
+<div class="phen">
+  <h3>Parity-flip symmetry: each mode is either fixed or sign-flipped</h3>
+  <p>
+    A single order-2 transformation (an "involution"; doing it twice
+    is the identity) sends each mode either to itself with sign $+1$
+    or to itself with sign $-1$. The two kinds of mode are the
+    <em>symmetric</em> and the <em>antisymmetric</em> modes. In the
+    framework the symmetric modes carry electromagnetic coupling and
+    the antisymmetric ones do not, which distinguishes ordinary from
+    dark matter as a matter of group representation rather than as a
+    matter of postulated extra fields.
+  </p>
+  <p class="aka"><strong>Also called:</strong> a $\mathbb{Z}_2$
+    character decomposition / Klein-antipodal involution; the
+    eigenvalue is the Klein monodromy $\pm 1$.</p>
+</div>
+
+<div class="phen">
+  <h3>Six-fold permutation symmetry of four points on a line</h3>
+  <p>
+    Four points on a line, under the natural fractional moves, have
+    one independent ratio between them &mdash; the cross-ratio.
+    Permuting the four points permutes the six possible expressions
+    for this single ratio:
+    $\lambda$, $1 - \lambda$, $1/\lambda$, $1/(1 - \lambda)$,
+    $\lambda/(\lambda - 1)$, $(\lambda - 1)/\lambda$. The six form
+    one orbit under a symmetric group of size six. This is the
+    symmetry that organises the framework's three candidate boundary
+    weights as a single orbit and pins down which is realised.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the anharmonic group;
+    $S_3$ acting on $\mathbb{P}^1$; the cross-ratio symmetry.</p>
+</div>
+
+<div class="phen">
+  <h3>Continuous group of point-by-point transformations on fields</h3>
+  <p>
+    A continuous group whose action can vary smoothly from point to
+    point in spacetime. Specifying which continuous group, and which
+    representations the matter fields lie in, fixes the inventory of
+    force carriers and the rules for how they couple. The Standard
+    Model's choice &mdash; three independent components combined as
+    $\mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$
+    &mdash; is taken as input there. The framework derives this
+    combination from the substrate's six-element mode lattice and
+    its two basic mode-counts $q_2, q_3$.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the gauge group. Its
+    three pieces are colour $\mathrm{SU}(3)$, weak-isospin
+    $\mathrm{SU}(2)$, and hypercharge $\mathrm{U}(1)$.</p>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════ -->
+<h2>5 &mdash; Coupling strength as control parameter</h2>
+
+<div class="phen">
+  <h3>The single coupling number $K$</h3>
+  <p>
+    A non-negative number measuring the strength of coupling between
+    an oscillator and its neighbours. The standard circle map is
+    $\theta_{n+1} = \theta_n + \Omega - (K/2\pi)\sin(2\pi\theta_n)$.
+    At $K = 0$, every oscillator runs at its own pace and rationals
+    have measure zero. At $K = 1$, every rational is locked. Above
+    $K = 1$, trajectories overlap and the map is no longer a
+    homeomorphism.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the standard
+    circle-map coupling. The framework uses $K_\star \approx 0.86$
+    for its matter operating point, $K = 1$ for the critical /
+    continuum limit, and $K_0 \sim 3$ for a separate nucleation
+    threshold; these are distinct from the synchronisation-onset
+    coupling $K_c$ of disordered many-oscillator models (which for
+    identical oscillators is $K_c = 0$).</p>
+</div>
+
+<div class="phen">
+  <h3>The continuum limit: where general relativity emerges</h3>
+  <p>
+    At the critical coupling $K = 1$, the rationals densify into the
+    reals, the mediant tree dissolves into a continuum, and the
+    substrate's combinatorial structure becomes invisible. Smooth
+    manifold geometry is recovered at this limit, and Einstein's
+    field equations are the natural equations of motion. The
+    framework treats this as a <em>limit point</em> &mdash; useful
+    for matching to general relativity &mdash; not as the actual
+    physical regime.
+  </p>
+</div>
+
+<div class="phen">
+  <h3>The subcritical regime: where the substrate is discrete</h3>
+  <p>
+    For $K < 1$, gaps remain between lock regions: there exist
+    detunings on which no locked rational is reached. The substrate
+    remains discrete, and quantum mechanics emerges as the
+    small-$\varepsilon$ limit of substrate dynamics in this regime.
+    This is the framework's actual physical regime.
+  </p>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════ -->
+<h2>6 &mdash; Selected special numbers</h2>
+
+<div class="phen">
+  <h3>The alternating-reciprocal-odd-squares constant</h3>
+  <p>
+    $G = \sum_{n = 0}^{\infty} (-1)^n / (2n+1)^2 \approx 0.915966$.
+    Arises whenever one integrates $\ln|1 + K \cos\theta|$ over half a
+    period at unit coupling. The framework's analytic Lyapunov rate
+    $\lambda_{\text{unlock}}(K=1) = (4G - \pi \ln 2)/\pi$ inherits
+    this constant from such an integral.
+  </p>
+  <p class="aka"><strong>Also called:</strong> Catalan's constant.</p>
+</div>
+
+<div class="phen">
+  <h3>A sequence in which each term is the sum of the previous two</h3>
+  <p>
+    Starts $1, 1, 2, 3, 5, 8, 13, 21, \dots$. Successive ratios
+    approach the golden ratio. The framework uses these as labels for
+    shift operations on its mediant tree and as the source of its
+    golden-ratio-winding identification for the scalar spectral tilt
+    $n_s$.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the Fibonacci numbers.</p>
+</div>
+
+<div class="phen">
+  <h3>The identity expressing the unit-circle constraint</h3>
+  <p>
+    $\sin^2\theta + \cos^2\theta = 1$, a direct consequence of
+    parametrising the unit circle by $(\cos\theta, \sin\theta)$. The
+    framework treats this as a <em>definitional primitive</em>: it
+    carries no derivation content; it is the algebraic form of the
+    circle topology.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the Pythagorean
+    identity.</p>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════ -->
+<h2>7 &mdash; Cosmological and particle-physics observables</h2>
+
+<p class="chalk-section-note">
+  These are the observables the framework predicts. The descriptions
+  are phenomenon-first; the literature names are kept as
+  <em>also-called</em> taglines so that the predictions are matchable
+  to standard reporting.
+</p>
+
+<div class="phen">
+  <h3>The cosmic expansion rate today</h3>
+  <p>
+    The proportionality between a distant source's recession speed
+    and its present distance from us. Units: inverse time. The
+    substrate predicts dimensionless ratios involving this scale;
+    the absolute value sits on the framework's open-questions list
+    and requires an anchor.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the Hubble constant
+    $H_0$.</p>
+</div>
+
+<div class="phen">
+  <h3>The energy density of empty space</h3>
+  <p>
+    A constant energy density pervading the vacuum, with units of
+    GeV$^4$ in natural units, measured at roughly $10^{-47}$ GeV$^4$.
+    Naively estimating by summing zero-point oscillations on the
+    cleanly-orientable surface up to a quantum-gravitational cutoff
+    gives $\sim 10^{74}$ GeV$^4$ &mdash; an excess of $10^{121}$. On
+    the framework's selected non-orientable surface, a parity filter
+    admits exactly four surviving zero-point modes; the corresponding
+    vacuum energy is of order $10^{-47}$ GeV$^4$ without fine-tuning.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the cosmological
+    constant $\Lambda$; vacuum energy; dark-energy density.</p>
+</div>
+
+<div class="phen">
+  <h3>The fraction of cosmic energy density in component $X$</h3>
+  <p>
+    Density of component $X$ divided by the critical density required
+    for spatial flatness. The three principal cases are dark-energy
+    $\Omega_\Lambda$, dark-matter $\Omega_{\text{DM}}$, baryon
+    $\Omega_b$. The substrate predicts the three as the rational
+    partition $13 : 5 : 1$ (denominator $19 = |F_7|$) at single-
+    weight closure; the two-component closure refines this to
+    $181 : 70 : 13$ (denominator $264$).
+  </p>
+  <p class="aka"><strong>Also called:</strong> the density-fraction
+    parameters $\Omega_X$.</p>
+</div>
+
+<div class="phen">
+  <h3>The mixing angle between the electroweak gauge bosons</h3>
+  <p>
+    The angle that diagonalises the two electroweak gauge bosons
+    into the observed photon and Z. Equivalently the fraction
+    $\sin^2\theta_W$ of the gauge structure carried by the
+    hypercharge component. Measured at $\approx 0.2312$. The
+    substrate's only admitted value is $8/35 \approx 0.2286$.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the Weinberg mixing
+    angle; the weak mixing angle.</p>
+</div>
+
+<div class="phen">
+  <h3>Departure of the primordial spectrum from scale-invariance</h3>
+  <p>
+    The exponent $n_s$ measuring how the amplitude of curvature
+    fluctuations imprinted on the cosmic microwave background varies
+    with scale. A value of $1$ is perfect scale-invariance; the
+    observed $0.9649 \pm 0.0042$ shows a slight tilt to redder
+    scales. The substrate's value, set by the self-similarity of the
+    mediant tree at the golden-ratio winding, is $0.963$&ndash;$0.966$.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the scalar spectral
+    tilt $n_s$.</p>
+</div>
+
+<div class="phen">
+  <h3>The ratio of strong to weak-isospin couplings</h3>
+  <p>
+    At the Z-boson energy scale and after the standard
+    energy-scale-tracking procedure, the strong-force coupling is
+    roughly $3.05$ times the weak-isospin coupling. The substrate's
+    bare ratio is $q_3^3 / q_2^3 = 27/8 = 3.375$.
+  </p>
+  <p class="aka"><strong>Also called:</strong> $\alpha_s / \alpha_2$;
+    the strong-to-weak coupling ratio.</p>
+</div>
+
+<div class="phen">
+  <h3>The energy scale at which gravity and quantum effects meet</h3>
+  <p>
+    The energy at which the Compton wavelength of a quantum becomes
+    comparable to its Schwarzschild radius. Roughly $10^{19}$ GeV;
+    the corresponding length is roughly $10^{-35}$ m. Used as the
+    natural cutoff for naive estimates of the vacuum energy.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the Planck mass /
+    length / scale.</p>
+</div>
+
+<div class="phen">
+  <h3>The relic radiation from the recombination epoch</h3>
+  <p>
+    The thermal photon bath left over from the time at which the
+    universe first became transparent. Carries imprinted variations
+    in temperature and polarisation that record the universe's
+    matter content and geometry. Its temperature-fluctuation
+    spectrum is the principal empirical anchor for the framework's
+    $n_s$ and amplitude predictions.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the cosmic microwave
+    background; CMB.</p>
+</div>
+
+<div class="phen">
+  <h3>Functional whose stationary paths give the equations of motion</h3>
+  <p>
+    A single scalar quantity built from the fields and their
+    derivatives; varying the action over field configurations and
+    demanding stationarity gives the equations of motion. The
+    Standard Model is specified by such a functional, with a small
+    list of terms encoding gauge group, matter content, and
+    couplings. The values those couplings take is exactly the
+    question the framework addresses.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the Lagrangian /
+    action / principle of stationary action.</p>
+</div>
+
+<div class="phen">
+  <h3>Axiomatic framing of relativistic quantum field theory</h3>
+  <p>
+    A formalisation in which quantum fields are operator-valued
+    distributions on spacetime, with three structural requirements:
+    covariance under the symmetries of flat spacetime, commutativity
+    of operators at spacelike-separated points, and positive energy.
+    Under this framing the Lagrangian's parameters are inputs to be
+    measured, not outputs to be derived; the framework relaxes that
+    research-program choice without contradicting the framing itself.
+  </p>
+  <p class="aka"><strong>Also called:</strong> the Wightman axioms.</p>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════ -->
+<h2>8 &mdash; How to use this glossary</h2>
+
+<ol>
+  <li><strong>Reading framework docs.</strong> When a literature name
+    appears, use the <em>also-called</em> tagline to find the entry,
+    then read the description to recover the dynamics.</li>
+  <li><strong>Reading textbooks against the framework.</strong> Use
+    each description in reverse: identify the dynamics the textbook is
+    describing, then look up which framework entry it corresponds to.</li>
+  <li><strong>Reasoning about the framework.</strong> Forget the
+    names entirely. The framework's content is in the descriptions;
+    the names are wayfinding.</li>
+</ol>
+
+<p>
+  The <a href="glossary.html">canonical interactive glossary</a>
+  remains the right reference when the goal is to publish or to argue
+  with a physicist who reads in the literature's vocabulary. This page
+  is the right reference when the goal is to think clearly.
+</p>
+
+<footer>
+Source of truth:
+<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/phenomenon_glossary.md"><code>sync_cost/derivations/phenomenon_glossary.md</code></a>.
+Translation table to standard physics vocabulary:
+<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/canonical_glossary.md"><code>canonical_glossary.md</code></a>.
+</footer>
+
+</body>
+</html>
