@@ -134,12 +134,12 @@ across the K-zoo per `master_cascade_identity.md`.
 
 ## Kink mass ratios across the K-zoo (new prediction)
 
-Since `M_k ∝ √K`, soliton masses across the four voices of the
-instrument-family taxonomy are fixed ratios:
+Since `M_k ∝ √(K r)`, soliton masses across the four voices of the
+instrument-family taxonomy are bounded above by their `√K` ratios:
 
-| Sector | K | M_k / M_k(K=1) |
+| Sector | K | M_k / M_k(K=1) (upper bound) |
 |---|---|---|
-| String boundary K = 1 | 1 | 1.000 |
+| String boundary K = 1 | 1 | 1.000 (`r_1 = 1` exact) |
 | Z_6 cascade (conjectured) | 2^(-1/6) | 2^(-1/12) ≈ 0.944 |
 | Bowed cascade (IMF) | 2^(-1/3) | 2^(-1/6) ≈ 0.891 |
 | Clarinet cascade | 3^(-1/2) | 3^(-1/4) ≈ 0.760 |
@@ -147,12 +147,20 @@ instrument-family taxonomy are fixed ratios:
 
 The general form: for the master-identity instance `K^d = b^(-n)`,
 
-    M_k(d, n, b) / M_k(K=1) = K^(1/2) = b^(-n/(2d))
+    M_k(d, n, b) / M_k(K=1) = √(K_n r_n) = b^(-n/(2d)) · √r_n
+                            ≤ b^(-n/(2d))
+
+with equality only at `r_n = 1`. The K-scaling factor `b^(-n/(2d))`
+is **Class-3 structurally forced**; the `√r_n` sector-coherence
+factor is bounded `r_n ∈ (0, 1]` but **Class-2 absent structural
+input** (three candidate closure routes catalogued in
+`sqrt_r_n_correction.md`, none promoted to a prediction). The
+table above is correctly read as the structural upper bound.
 
 This is a falsifiable framework-internal relationship. Any observed
-soliton spectrum that crosses two cascade sectors with rates incompatible
-with `√(K_a / K_b)` falsifies the master identity *or* the sine-Gordon
-reduction.
+soliton spectrum that crosses two cascade sectors with a ratio
+*exceeding* the upper bound would require `r_n > 1` and so falsify
+either the master cascade identity or the sine-Gordon reduction.
 
 ## Z_2-graded topological charge from Klein topology
 
