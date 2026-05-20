@@ -1,5 +1,5 @@
 {
-  "generated": "3d538939ee03c69ed4975a88c8589da5b0226aa4",
+  "generated": "0a41063b7688738250be511447a1070beb34dedf",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1360,6 +1360,7 @@
         "derivation_atlas",
         "down_type_double_cover_closed",
         "phenomenology_cross_reference",
+        "phenomenon_glossary",
         "structural_lemmas"
       ],
       "git": [
@@ -6330,6 +6331,23 @@
           "hash": "2109a3b",
           "date": "2026-04-26",
           "subject": "Legitimacy homework: glossary + phenomenology + derivation atlas (#81)"
+        }
+      ]
+    },
+    {
+      "id": "phenomenon_glossary",
+      "path": "sync_cost/derivations/phenomenon_glossary.md",
+      "title": "Phenomenon glossary \u2014 dynamics first, names second",
+      "summary": "Phenomenon glossary v0.1. ~40 entries across 8 sections. Intended\nto be readable end-to-end in ~30 minutes by someone with general\nmathematical literacy and no exposure to the specific literature.",
+      "depends_on": [
+        "canonical_glossary"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "0a41063",
+          "date": "2026-05-20",
+          "subject": "Pedagogy: phenomenon glossary + mastery graph (#149)"
         }
       ]
     },
