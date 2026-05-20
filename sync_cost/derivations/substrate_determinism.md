@@ -165,6 +165,8 @@ otherwise:
 
 1. **Z₂ topological charge conservation (mod 2).** Klein-bottle
    topological rigidity. No local process changes `Q mod 2`.
+   Standalone theorem (statement, proof, locality definition,
+   falsifiers): `q_mod2_conservation_theorem.md`.
 2. **The no-rescaling identity.** Cosmic observable = substrate
    observable, *exact*, in Planck units (`no_rescaling.md`). Any
    resolution introducing a structural rescaling prefactor is

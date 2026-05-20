@@ -156,6 +156,16 @@ reduction.
 
 ## Z_2-graded topological charge from Klein topology
 
+> **Standalone form.** The statement-and-proof that this section
+> sketches is now in `q_mod2_conservation_theorem.md` as a
+> standalone theorem (with a precise definition of "local" =
+> support diameter `< L_x`, the explicit kink↔antikink Step
+> reproducing the lines below, and falsifiers). This section
+> remains the in-context narration of the kink↔antikink
+> identification used downstream; the theorem doc is the
+> reference for the inviolable.
+
+
 The framework's substrate is the Klein bottle (`klein_bottle.md`). Per
 the convention in that doc, the antiperiodic direction is spatial and
 the periodic direction is temporal, with the antiperiodic identification

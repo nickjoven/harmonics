@@ -1839,7 +1839,9 @@ in standard physics:
   counting + Klein-singlet ∩ coprime-to-6 selection (Class 5)
 - **EPR / Bell-inequality violation**: pieces present (Born
   rule + Z_2-pair conservation theorem + substrate non-locality
-  on Stern-Brocot tree); explicit theorem not yet articulated
+  on Stern-Brocot tree); the `Q mod 2` substrate-Z₂ piece is
+  now standalone (`q_mod2_conservation_theorem.md`); the
+  assembled EPR/Bell theorem still not articulated
 
 For each of these, the framework provides either a constructive
 derivation or a reframing that explains why the imported
