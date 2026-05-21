@@ -98,6 +98,18 @@ factor** (`r_n < 1`). State the forced part exactly; the `√r_n`
 is the honest residual correction (same shape as the S_v
 uniform-winding bound — flagged, not buried).
 
+> **Precise articulation.** The bare K-zoo ratio in
+> `sine_gordon_substrate.md` L142-146 and
+> `master_cascade_identity.md` L67-74 is correctly read as the
+> **upper bound** `M_k(n)/M_k(1) ≤ b^(−n/(2d))`, with the gap
+> to equality `(1 − √r_n)`. The K-scaling factor `b^(−n/(2d))`
+> is Class-3 forced (master cascade identity + the
+> K-parameterized GK reduction). The `√r_n` factor is bounded
+> (`0 < r_n ≤ 1`, `r_1 = 1`) but Class-2 absent structural
+> input — three candidate closure routes (mode-counting,
+> tongue-width, direct rfe measurement) catalogued in
+> `sqrt_r_n_correction.md`; none promoted to a prediction.
+
 **What stays Class-2, declined, unchanged.** The
 *observable-identification* — which observed object is a substrate
 kink in each sector (geons at K=1, stellar-scale kinks in the

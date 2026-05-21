@@ -63,15 +63,20 @@ The same K-zoo also fixes a **soliton-mass spectrum** through a
 different mechanism. `sine_gordon_substrate.md` derives sine-Gordon
 as the substrate's effective theory by expanding around the locked
 mean phase, with kink mass `M_k = 8 σ √(K r)` in framework natural
-units. The kink mass scales as `√K`, so cross-sector ratios
+units. The kink mass scales as `√(K r)`, so cross-sector ratios are
+bounded by the structural √K factor:
 
-    M_k(d, n, b) / M_k(K=1) = b^(-n/(2d))
+    M_k(d, n, b) / M_k(K=1) = b^(-n/(2d)) · √r_n  ≤  b^(-n/(2d))
 
-are fixed by the same `(d, n, b)` triples that define the master
-identity. This is structurally distinct from the fragmentation-slope
-family (`mass_function_family.md`) but uses the same K-zoo as the
-substrate-side input — two different mass relations on one set of
-cascade fixed points.
+with equality only at `r_n = 1`. The `(d, n, b)` triples are the
+same that define the master identity (Class-3 forced); the per-sector
+order parameter `r_n ∈ (0, 1]` is bounded but Class-2 absent
+structural input — see `sqrt_r_n_correction.md` for the precise
+articulation, three candidate closure routes, and bright lines. The
+soliton-sector relation is structurally distinct from the
+fragmentation-slope family (`mass_function_family.md`) but uses the
+same K-zoo as the substrate-side input — two different mass
+relations on one set of cascade fixed points.
 
 > **Validity scope.** The sine-Gordon reduction that gives
 > `M_k = 8 σ √(K r)` is rigorous only at K ≈ 1 (the locked-state
