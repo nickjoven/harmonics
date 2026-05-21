@@ -599,6 +599,134 @@ pip install -e .        # or: python -m rfe --observables
 | [submediant-site](https://github.com/nickjoven/submediant-site) | Derivation chain site: polynomial → evidence |
 | [proslambenomenos-site](https://github.com/nickjoven/proslambenomenos-site) | Full Jupyter Book aggregating all repositories |
 
+## Deployed assets (GitHub Pages)
+
+The repository deploys to GitHub Pages on every push to `main` via
+[`.github/workflows/pages.yml`](.github/workflows/pages.yml). The
+published site lives at `https://nickjoven.github.io/harmonics/`
+(default Pages URL for this repository; no custom CNAME). The
+`validate` job runs on every PR and is the required status check;
+the `deploy` job is gated on it and runs only on push to `main`.
+
+The `Assemble _site` step copies a strict allow-list into the deploy
+bundle:
+
+| Source | Served at |
+|---|---|
+| `index.html` | `/index.html` |
+| `docs/` | `/docs/` |
+| `sync_cost/` | `/sync_cost/` |
+| `LICENSE` | `/LICENSE` |
+
+Anything outside that allow-list will 404 in production; the link
+checker at [`.github/scripts/check_links.py`](.github/scripts/check_links.py)
+enforces this against a hand-curated list of entry-point HTML files.
+
+### What ships to Pages
+
+- **Root entry**: [`index.html`](index.html). The catalog under
+  [Interactive resources](#interactive-resources) enumerates the
+  per-section entry points.
+- **`docs/`** — rendered pedagogical surface:
+  - Top level: `index.html`, `glossary.html`, `phenomenon-glossary.html`,
+    `derivations.html`, `dag.html`, `mastery-graph.html`,
+    `claim-chain.html`, `claim-chain-views.html`, `a_s_proof.html`,
+    `cmb-s4.html`, `preprint.html`, plus shared `style.css` and the
+    `*.json` graph payloads (`derivation-graph.json`,
+    `mastery-graph.json`, `a_s_proof_graph.json`, `ket-graph.json`,
+    `view-labels.json`).
+  - [`docs/knobs/`](docs/knobs/) — three single-knob explainers
+    (`coupling.html`, `frames.html`, `phase.html`).
+  - [`docs/archive/`](docs/archive/) — `colony.html`, `collatz.html`.
+- **`sync_cost/`** — framework working tree, served verbatim:
+  - [`sync_cost/applications/`](sync_cost/applications/) — seven
+    interactive applications (`stern_brocot_walk.html`,
+    `mobius_projector.html`, `mobius_views.html`, `ontology.html`,
+    `double_pendulum.html`, `three_body_catalog.html`, plus the
+    `index.html` landing page) and the artifact-explorer JS bundle
+    with its supporting data.
+  - [`sync_cost/derivations/`](sync_cost/derivations/) — ~220 markdown
+    derivation notes and ~237 Python scripts. Pages serves both as
+    raw bytes: a browser will display the `.md` files as plain text
+    (or download them) and the `.py` files as source. The curated
+    reading order is [Reading paths](#reading-paths).
+  - [`sync_cost/FRAMEWORK.md`](sync_cost/FRAMEWORK.md),
+    [`sync_cost/MINIMUM_SELF_PREDICTING_UNIVERSE.md`](sync_cost/MINIMUM_SELF_PREDICTING_UNIVERSE.md),
+    `staircase_forming.svg`, `minimum_self_predicting_universe.svg`.
+- **`LICENSE`** — served at site root.
+
+### What is NOT deployed via Pages
+
+The following are in the repository but excluded from the deploy
+bundle. Each has either a separate deployment, a GitHub-only
+rendering path, or is deliberately out-of-band.
+
+- **[`prototype/`](prototype/)** — the metronome wall (interactive
+  $N$-oscillator simulation with live $W(\Omega)$ staircase). Validated
+  by its own workflow ([`prototype-validate.yml`](.github/workflows/prototype-validate.yml))
+  and configured for a separate Vercel deployment via
+  [`prototype/vercel.json`](prototype/vercel.json). It does **not**
+  appear under `nickjoven.github.io/harmonics/`. References from the
+  Pages site point to the GitHub tree; the README in
+  [`prototype/README.md`](prototype/README.md) explains how to run it
+  locally with `python3 -m http.server`.
+- **[`MANIFEST.yml`](MANIFEST.yml)** — canonical claim manifest
+  consumed by the claim-chain pages. The rendered chain ships; the
+  source yaml does not. The deployed site links to the GitHub blob
+  URL.
+- **Repository-root prose** — [`README.md`](README.md),
+  [`RESULTS.md`](RESULTS.md),
+  [`VISUAL_ONTOLOGY_PROMPT.md`](VISUAL_ONTOLOGY_PROMPT.md). Rendered
+  by GitHub itself, not republished under Pages.
+- **Root-level Python scripts** — `animate_genesis.py`,
+  `animate_mediants.py`, `bifurcation_sweep.py`, `clarinet_lattice.py`,
+  `driven_stribeck.py`, `lattice_sweep.py`. Source-only; reachable
+  through the GitHub tree.
+- **Root-level animations** — `genesis.gif`, `orbit.gif`. Tracked in
+  git but not in the deploy bundle.
+- **[`problem/`](problem/)** and **`ket/`** (empty placeholder) —
+  internal areas, not part of the published surface.
+- **`.ket/`** — local ket-substrate ledger (CAS, log, manifest).
+  Tracked partially per [`.gitignore`](.gitignore) and intentionally
+  not served.
+- **[`Makefile`](Makefile)** and `ascii` — build-side artifacts.
+
+### Gaps worth flagging
+
+Things that look like they ought to be reachable from the Pages site
+but aren't:
+
+- **The metronome wall has no Pages presence and no published URL
+  recorded.** Vercel hosting is configured (`prototype/vercel.json`),
+  but no deployment URL is checked into the repo, so the catalog
+  entry resolves only to source. Either record the Vercel URL next
+  to the catalog entry or extend the `Assemble _site` step to copy
+  `prototype/` and add it to the link allow-list.
+- **`MANIFEST.yml` is sourced externally from the deployed site.**
+  The claim-chain pages reach out to GitHub for the source-of-truth
+  manifest. Copying `MANIFEST.yml` into `_site/` (and adding it to
+  the link allow-list) would keep the chain self-contained.
+- **`RESULTS.md` is not surfaced from the Pages site.** Top-level
+  results live only on GitHub-rendered markdown; a dedicated rendered
+  page (or a copy into `docs/`) would make them discoverable to
+  Pages-only readers.
+- **Markdown under `sync_cost/derivations/` is served as raw text.**
+  Pages does not render `.md`. Readers arriving via a derivation link
+  see plain source. The narrative entry points
+  ([`docs/derivations.html`](docs/derivations.html), `preprint.html`)
+  partially mitigate this, but the underlying derivations themselves
+  do not render. A static `.md → .html` pass (e.g. Jekyll, mdBook,
+  or a small build step) would close this gap.
+- **Root-level animations (`genesis.gif`, `orbit.gif`) are not
+  referenced by any deployed page.** They are evidence assets that
+  could carry weight in the landing page or the preprint view if
+  surfaced.
+
+If something belongs on Pages but isn't, the change lives in the
+`Assemble _site` step of [`.github/workflows/pages.yml`](.github/workflows/pages.yml)
+and the entry-point list in
+[`.github/scripts/check_links.py`](.github/scripts/check_links.py).
+
 ## Structure
 
 ```
