@@ -436,7 +436,7 @@ candidates without a unique forcing argument (per
 | Born rule | Derived from saddle-node parabola (forced exponent 2) |
 | Spatial dimension = 3 | q_3 = 3 derived, not assumed |
 | Origin of cosmic Ω partition | 13:5:1/19 from Z_6 mode-counting + Klein-singlet ∩ coprime-to-6 selection (Class 5) |
-| EPR / Bell-inequality violation | Pieces present (Born rule + Z_2-pair conservation theorem + substrate non-locality on Stern-Brocot tree); the `Q mod 2` substrate-Z₂ piece is now standalone (`q_mod2_conservation_theorem.md`); the assembled EPR/Bell theorem still not articulated |
+| EPR / Bell-inequality violation | Assembled theorem (`epr_bell_assembly_theorem.md`): Born rule + `q_mod2_conservation_theorem.md` + topological non-locality compose to non-signaling Bell-violating joint statistics matching QM; Bell's no-go does not apply (framework is not a local hidden-variable theory — the conserved `Q_{AB} mod 2` is a global topological invariant, not a shared `λ`). |
 | Inflation dynamics, reheating, baryogenesis | Out of scope; anchor-side; framework doesn't claim |
 | Neutrino oscillations | Substantial framework content but not enumerated here |
 | Quark / lepton mass hierarchy | Some Class 5 (factors 6, 9), most Class 2 (per Region C pigeonhole) |
