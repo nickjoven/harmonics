@@ -1,5 +1,5 @@
 {
-  "generated": "0a41063b7688738250be511447a1070beb34dedf",
+  "generated": "de1f2dac701982a0a268133ad0585b927ddc5935",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -909,6 +909,7 @@
         "proposed_items_disposition",
         "proposed_residual_closure",
         "sector_decoupling_phase_a",
+        "sqrt_r_n_correction",
         "structural_lemmas",
         "thread_chronology",
         "vocabulary_is_the_work_pattern"
@@ -1150,7 +1151,8 @@
         "INDEX",
         "dynamical_tool_audit",
         "fermion_mass_running",
-        "hierarchy_problem_translation"
+        "hierarchy_problem_translation",
+        "sqrt_r_n_correction"
       ],
       "git": [
         {
@@ -1287,6 +1289,7 @@
         "omega_b_substrate_side_audit",
         "omega_b_two_component_sketch",
         "session_audit",
+        "sqrt_r_n_correction",
         "unitless_check"
       ],
       "git": [
@@ -1361,6 +1364,7 @@
         "down_type_double_cover_closed",
         "phenomenology_cross_reference",
         "phenomenon_glossary",
+        "sqrt_r_n_correction",
         "structural_lemmas"
       ],
       "git": [
@@ -1969,6 +1973,7 @@
         "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
         "nonperturbative_phase2",
+        "sqrt_r_n_correction",
         "thread_chronology"
       ],
       "git": [
@@ -2430,6 +2435,7 @@
         "quantum_gravity_interpolation",
         "sine_gordon_substrate",
         "soliton_dynamics",
+        "sqrt_r_n_correction",
         "three_dimensions"
       ],
       "git": [
@@ -2989,6 +2995,7 @@
         "psl2z_subgroup_phase_b",
         "q_mod2_conservation_theorem",
         "sine_gordon_substrate",
+        "sqrt_r_n_correction",
         "substrate_determinism",
         "thread_chronology",
         "tick_continuum_construction",
@@ -3054,6 +3061,7 @@
         "remaining_gap_shapes",
         "s_v_nlo",
         "s_v_nlo_attempt",
+        "sqrt_r_n_correction",
         "structural_lemmas",
         "thread_chronology",
         "time_axis_split",
@@ -3062,6 +3070,11 @@
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "0daab8a",
+          "date": "2026-05-20",
+          "subject": "Articulate the \u221ar_n K-zoo kink-mass correction precisely (#148)"
+        },
         {
           "hash": "4d41418",
           "date": "2026-05-20",
@@ -4943,7 +4956,8 @@
         "imf_bowed_cascade",
         "mass_function_family",
         "quantum_gravity_interpolation",
-        "sine_gordon_substrate"
+        "sine_gordon_substrate",
+        "sqrt_r_n_correction"
       ],
       "depended_on_by": [
         "cone_twist_substrate",
@@ -4952,14 +4966,22 @@
         "mass_function_family",
         "no_rescaling",
         "nonperturbative_phase3",
+        "proposed_residual_closure",
         "seam_profile",
         "sine_gordon_substrate",
         "soliton_dynamics",
+        "sqrt_r_n_correction",
+        "thread_chronology",
         "time_axis_split",
         "unitless_audit",
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "0daab8a",
+          "date": "2026-05-20",
+          "subject": "Articulate the \u221ar_n K-zoo kink-mass correction precisely (#148)"
+        },
         {
           "hash": "e27106f",
           "date": "2026-05-10",
@@ -5079,6 +5101,7 @@
         "empty_fork_cap",
         "proposed_items_disposition",
         "proposed_residual_closure",
+        "sqrt_r_n_correction",
         "thread_chronology"
       ],
       "git": [
@@ -5521,6 +5544,7 @@
         "proposed_residual_closure",
         "psl2z_subgroup_phase_c_inventory",
         "remaining_gap_shapes",
+        "sqrt_r_n_correction",
         "structural_lemmas",
         "vocabulary_is_the_work_pattern",
         "w_plus_formalization"
@@ -6488,20 +6512,28 @@
         "ansatz_audit_policy",
         "born_rule",
         "born_rule_parameter_free",
+        "master_cascade_identity",
         "measurement_collapse",
         "mediant_vs_flow_calc",
         "numerology_count_phase_b",
         "proposed_items_disposition",
         "sine_gordon_substrate",
+        "sqrt_r_n_correction",
         "thread_chronology",
         "tick_continuum_construction"
       ],
       "depended_on_by": [
         "framework_status",
         "sine_gordon_substrate",
+        "sqrt_r_n_correction",
         "thread_chronology"
       ],
       "git": [
+        {
+          "hash": "0daab8a",
+          "date": "2026-05-20",
+          "subject": "Articulate the \u221ar_n K-zoo kink-mass correction precisely (#148)"
+        },
         {
           "hash": "c1c4218",
           "date": "2026-05-17",
@@ -7219,6 +7251,7 @@
         "proposed_residual_closure",
         "q_mod2_conservation_theorem",
         "soliton_dynamics",
+        "sqrt_r_n_correction",
         "tick_continuum_construction"
       ],
       "depended_on_by": [
@@ -7239,6 +7272,7 @@
         "proposed_residual_closure",
         "q_mod2_conservation_theorem",
         "soliton_dynamics",
+        "sqrt_r_n_correction",
         "substrate_determinism",
         "thread_chronology",
         "tick_continuum_construction",
@@ -7248,6 +7282,11 @@
         "xor_derivation"
       ],
       "git": [
+        {
+          "hash": "0daab8a",
+          "date": "2026-05-20",
+          "subject": "Articulate the \u221ar_n K-zoo kink-mass correction precisely (#148)"
+        },
         {
           "hash": "4d41418",
           "date": "2026-05-20",
@@ -7559,6 +7598,42 @@
       ]
     },
     {
+      "id": "sqrt_r_n_correction",
+      "path": "sync_cost/derivations/sqrt_r_n_correction.md",
+      "title": "\u221ar_n correction: making the K-zoo kink-mass residual concrete",
+      "summary": "**Articulation of an existing flagged correction** \u2014\n`proposed_residual_closure.md` \u00a7C established that the K<1\nsine-Gordon reduction is structurally forced (K-parameterized\nGoldstein\u2013Kac) and that the kink-mass ratio carries an honest\n`\u221ar_n` correction the bare conjecture omitted. The status entry\nread \"what is left is a *quantitative correction* (`\u221ar_n`) and\na *declined disposition* (the observable-mapping) \u2014 neither is\nan open problem to chase.\" `framework_status.md` Survives row\nechoes this ",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "beta_from_tongues",
+        "boundary_weight",
+        "canonical_glossary",
+        "discrete_reduction_computed",
+        "einstein_from_kuramoto",
+        "framework_status",
+        "master_cascade_identity",
+        "mediant_vs_flow_calc",
+        "numerology_count_phase_b",
+        "proposed_residual_closure",
+        "sine_gordon_substrate",
+        "thread_chronology",
+        "tick_continuum_construction"
+      ],
+      "depended_on_by": [
+        "framework_status",
+        "master_cascade_identity",
+        "proposed_residual_closure",
+        "sine_gordon_substrate",
+        "thread_chronology"
+      ],
+      "git": [
+        {
+          "hash": "0daab8a",
+          "date": "2026-05-20",
+          "subject": "Articulate the \u221ar_n K-zoo kink-mass correction precisely (#148)"
+        }
+      ]
+    },
+    {
       "id": "statistical_conventions",
       "path": "sync_cost/derivations/statistical_conventions.md",
       "title": "Statistical conventions for session closure docs",
@@ -7773,6 +7848,7 @@
         "k_critical_phase_b",
         "k_inflation_seam_obstruction",
         "klein_bottle",
+        "master_cascade_identity",
         "measurement_collapse",
         "mediant_derivation",
         "mediant_vs_flow_calc",
@@ -7787,6 +7863,7 @@
         "rational_field_equation",
         "rectangle_perpendicularity",
         "sine_gordon_substrate",
+        "sqrt_r_n_correction",
         "substrate_determinism",
         "tick_continuum_construction",
         "vocabulary_is_the_work_pattern",
@@ -7813,10 +7890,16 @@
         "proposed_residual_closure",
         "q_mod2_conservation_theorem",
         "s_inst_inflation",
+        "sqrt_r_n_correction",
         "substrate_determinism",
         "tick_continuum_construction"
       ],
       "git": [
+        {
+          "hash": "0daab8a",
+          "date": "2026-05-20",
+          "subject": "Articulate the \u221ar_n K-zoo kink-mass correction precisely (#148)"
+        },
         {
           "hash": "4d41418",
           "date": "2026-05-20",
@@ -8014,6 +8097,7 @@
         "proposed_residual_closure",
         "q_mod2_conservation_theorem",
         "sine_gordon_substrate",
+        "sqrt_r_n_correction",
         "substrate_determinism",
         "thread_chronology"
       ],
