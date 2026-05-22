@@ -1,5 +1,5 @@
 {
-  "generated": "de1f2dac701982a0a268133ad0585b927ddc5935",
+  "generated": "e3d4d73a142d8f395fcbcbeefa62df9509d8c20f",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1179,6 +1179,7 @@
         "derivation_atlas",
         "dynamical_tool_audit",
         "empty_fork_cap",
+        "epr_bell_assembly_theorem",
         "framework_status",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
@@ -1544,6 +1545,7 @@
         "derivation_atlas",
         "dynamical_quantization",
         "dynamical_tool_audit",
+        "epr_bell_assembly_theorem",
         "framework_status",
         "gap1_theorem",
         "gap2_step4_farey_laplacian",
@@ -2516,6 +2518,35 @@
       ]
     },
     {
+      "id": "epr_bell_assembly_theorem",
+      "path": "sync_cost/derivations/epr_bell_assembly_theorem.md",
+      "title": "EPR/Bell assembly theorem",
+      "summary": "**Standalone assembly articulated** for the long-standing\nphenomenology pointer\n\"EPR / Bell-inequality violation: Pieces present (Born rule +\nZ_2-pair conservation theorem + substrate non-locality on\nStern-Brocot tree); \u2026 **the assembled EPR/Bell theorem still not\narticulated**\" (`phenomenology_cross_reference.md:439`).",
+      "depends_on": [
+        "born_rule",
+        "continuum_limits",
+        "framework_status",
+        "klein_bottle",
+        "phenomenology_cross_reference",
+        "q_mod2_conservation_theorem",
+        "sine_gordon_substrate",
+        "substrate_determinism",
+        "thread_chronology",
+        "wave_particle_substrate"
+      ],
+      "depended_on_by": [
+        "framework_status",
+        "phenomenology_cross_reference"
+      ],
+      "git": [
+        {
+          "hash": "a9195cd",
+          "date": "2026-05-21",
+          "subject": "Articulate the EPR/Bell assembly theorem (#152)"
+        }
+      ]
+    },
+    {
       "id": "epsilon_physical_reading",
       "path": "sync_cost/derivations/epsilon_physical_reading.md",
       "title": "Substrate-forced \u03b5, sub-problem 1: physical reading",
@@ -2969,6 +3000,7 @@
         "discrete_reduction_computed",
         "duty_cycle_dictionary",
         "einstein_from_kuramoto",
+        "epr_bell_assembly_theorem",
         "farey_partition",
         "h_inf_status",
         "hierarchy_gaussian_lattice",
@@ -3021,6 +3053,7 @@
         "depth_connection_nulls",
         "down_type_double_cover_closed",
         "dynamical_tool_audit",
+        "epr_bell_assembly_theorem",
         "epsilon_physical_reading",
         "figure_eight",
         "h_inf_status",
@@ -3070,6 +3103,11 @@
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "a9195cd",
+          "date": "2026-05-21",
+          "subject": "Articulate the EPR/Bell assembly theorem (#152)"
+        },
         {
           "hash": "0daab8a",
           "date": "2026-05-20",
@@ -4498,6 +4536,7 @@
         "discrete_reduction_problem",
         "duty_cycle_dictionary",
         "dynamical_tool_audit",
+        "epr_bell_assembly_theorem",
         "figure_eight",
         "framework_status",
         "gauge_dictionary",
@@ -6323,6 +6362,7 @@
         "canonical_glossary",
         "continuum_limits",
         "down_type_double_cover_closed",
+        "epr_bell_assembly_theorem",
         "framework_status",
         "h_inf_status",
         "hierarchy_gaussian_lattice",
@@ -6341,11 +6381,17 @@
         "audit_punch_list_2026-04",
         "derivation_atlas",
         "down_type_double_cover_closed",
+        "epr_bell_assembly_theorem",
         "q_mod2_conservation_theorem",
         "structural_lemmas",
         "thread_chronology"
       ],
       "git": [
+        {
+          "hash": "a9195cd",
+          "date": "2026-05-21",
+          "subject": "Articulate the EPR/Bell assembly theorem (#152)"
+        },
         {
           "hash": "4d41418",
           "date": "2026-05-20",
@@ -6688,6 +6734,7 @@
       ],
       "depended_on_by": [
         "derivation_atlas",
+        "epr_bell_assembly_theorem",
         "framework_status",
         "phenomenology_cross_reference",
         "sine_gordon_substrate",
@@ -7257,6 +7304,7 @@
       "depended_on_by": [
         "cone_twist_substrate",
         "e_cross_calc",
+        "epr_bell_assembly_theorem",
         "explicit_4x4_reduction",
         "figure_eight",
         "framework_status",
@@ -7797,6 +7845,7 @@
         "e_cross_calc",
         "e_cross_discrete_resolution",
         "empty_fork_cap",
+        "epr_bell_assembly_theorem",
         "framework_status",
         "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
@@ -7878,6 +7927,7 @@
         "discrete_reduction_computed",
         "e_cross_calc",
         "empty_fork_cap",
+        "epr_bell_assembly_theorem",
         "f_exit_natural",
         "framework_status",
         "inflation_duration",
@@ -8473,6 +8523,7 @@
       ],
       "depended_on_by": [
         "dark_twin_correction",
+        "epr_bell_assembly_theorem",
         "f_exit_natural",
         "inflation_duration",
         "no_rescaling",
