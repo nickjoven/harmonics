@@ -462,10 +462,11 @@ dispositions:
 ### Graviton — NOT a decline; promoted to P1 (drafted)
 
 The audit called this an "observable-identification decline." It
-is not. There is no "which graviton" question: the graviton in the
-framework is uniquely the spin-2 excitation of the coherence metric
-`γ_ij = C_ij/C_0` at K=1. Every textbook graviton property is
-structurally forced from the existing K=1 → Einstein derivation:
+is not. There is no "which mode" question: gravity's radiative
+degree of freedom is uniquely the classical spin-2 transverse-
+traceless tensor mode `h_ij` of the coherence metric `γ_ij =
+C_ij/C_0` at K=1. Every textbook graviton property is structurally
+forced from the existing K=1 → Einstein derivation:
 
 - **spin-2** ← rank-2 tensor structure of `γ_ij` (`adm_dictionary.md`
   Part I: `γ_ij` is the unique symmetric rank-2 tensor from the
@@ -479,12 +480,14 @@ structurally forced from the existing K=1 → Einstein derivation:
   structure of linearized Einstein equations
 
 The framework's reluctance reads as a *quantization* decline
-("we have classical Einstein from Kuramoto, not graviton
-scattering amplitudes"), **not** an identification decline. That is
-exactly the photon-reframing shape ("the photon IS c; we don't
-claim the SI value"). **Promoted to P1.6. Drafted as
-`graviton_reframing.md`** — articulates the ontology, flags the
-quantization gap as the honest residual.
+("we have classical Einstein from Kuramoto, not a quantized
+graviton"), **not** an identification decline. That is exactly the
+photon-reframing shape ("the photon's Ø-mode IS the object; we
+don't claim the quantum's SI scale"). **Promoted to P1.6. Drafted
+as `graviton_reframing.md`** — which centers the *classical* tensor
+mode as the framework object and explicitly declines "the graviton"
+as a quantized force-carrier (last-century baggage); the
+quantization is the honest residual, named not hidden.
 
 ### Gluon — NOT a decline; promoted to P1 with a refined bright line (drafted)
 
