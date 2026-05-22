@@ -434,6 +434,7 @@ candidates without a unique forcing argument (per
 | Origin of three generations | q_3 = 3 = color triplet, doubles as generation count in framework reading |
 | Origin of SM gauge group | Derived structurally from Z_6 substrate + Klein-antipodal Z_2 + color Z_3 |
 | Born rule | Derived from saddle-node parabola (forced exponent 2) |
+| Why complex amplitudes (ℂ, not real ℝ or quaternionic ℍ) | Forced (fermion sector) by antiperiodic-cycle count: Klein bottle has exactly one orientation-reversing cycle → exactly one complex structure `J²=−I` → ℂ (`complex_amplitude_uniqueness.md`). Frobenius-Schur/commutant trichotomy realized geometrically; predicts the Renou-2021 real-QM exclusion. Sector-universality (boson sector) is the one flagged Class-4 extension. |
 | Spatial dimension = 3 | q_3 = 3 derived, not assumed |
 | Origin of cosmic Ω partition | 13:5:1/19 from Z_6 mode-counting + Klein-singlet ∩ coprime-to-6 selection (Class 5) |
 | EPR / Bell-inequality violation | Assembled theorem (`epr_bell_assembly_theorem.md`): Born rule + `q_mod2_conservation_theorem.md` + topological non-locality compose to non-signaling Bell-violating joint statistics matching QM; Bell's no-go does not apply (framework is not a local hidden-variable theory — the conserved `Q_{AB} mod 2` is a global topological invariant, not a shared `λ`). |
