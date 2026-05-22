@@ -1,5 +1,5 @@
 {
-  "generated": "00dc7afce6a6a961d006cdcb02faa1878eb46560",
+  "generated": "b819d036058e9d6ff357a26d52c5e6ebc80f25f1",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -895,6 +895,7 @@
         "a_s_g1_closure_attempt",
         "audit_punch_list_2026-04",
         "canonical_glossary",
+        "complex_amplitude_uniqueness",
         "continuity_in_K_nulls",
         "depth_connection_nulls",
         "derivation_atlas",
@@ -1254,6 +1255,7 @@
         "a1_from_saddle_node",
         "articulation_audit_2026-05",
         "born_rule_parameter_free",
+        "complex_amplitude_uniqueness",
         "derivation_atlas",
         "dynamical_tool_audit",
         "empty_fork_cap",
@@ -1405,12 +1407,14 @@
         "ansatz_audit_policy",
         "baryon_fraction",
         "boundary_weight",
+        "complex_amplitude_uniqueness",
         "continuum_limits",
         "cross_ratio_irrep_reframe",
         "denomination_boundary",
         "down_type_double_cover_closed",
         "duty_cycle_dictionary",
         "farey_partition",
+        "figure_eight",
         "framework_status",
         "h_inf_status",
         "hierarchy_gaussian_lattice",
@@ -1440,6 +1444,7 @@
       "depended_on_by": [
         "a1_from_saddle_node",
         "audit_punch_list_2026-04",
+        "complex_amplitude_uniqueness",
         "derivation_atlas",
         "down_type_double_cover_closed",
         "phenomenology_cross_reference",
@@ -1448,6 +1453,11 @@
         "structural_lemmas"
       ],
       "git": [
+        {
+          "hash": "b819d03",
+          "date": "2026-05-21",
+          "subject": "Force complex amplitudes (\u2102) via antiperiodic-cycle count + glossary entries (#153)"
+        },
         {
           "hash": "2109a3b",
           "date": "2026-04-26",
@@ -1474,6 +1484,36 @@
           "hash": "10fbbc2",
           "date": "2026-04-30",
           "subject": "Pedagogical: comparison_class.md methodological orientation (#87)"
+        }
+      ]
+    },
+    {
+      "id": "complex_amplitude_uniqueness",
+      "path": "sync_cost/derivations/complex_amplitude_uniqueness.md",
+      "title": "Complex-amplitude uniqueness (\u211d/\u2102/\u210d from antiperiodic-cycle count)",
+      "summary": "**Forcing argument articulated** for the question the EPR/Bell\nassembly (`epr_bell_assembly_theorem.md`) flagged as its bright\nline and left open: *is the complex amplitude field \u2102 forced, or\nmerely consistent \u2014 i.e., why not real (\u211d) or quaternionic (\u210d)\nquantum mechanics?* The corpus had `J\u00b2=\u2212I` from the half-twist\n(`figure_eight.md`, `substrate_determinism.md:67-71`) but never\nasked whether that complex structure is **unique**.",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "born_rule",
+        "canonical_glossary",
+        "continuum_limits",
+        "epr_bell_assembly_theorem",
+        "figure_eight",
+        "klein_bottle",
+        "phenomenology_cross_reference",
+        "phenomenon_glossary",
+        "q_mod2_conservation_theorem",
+        "substrate_determinism"
+      ],
+      "depended_on_by": [
+        "canonical_glossary",
+        "phenomenology_cross_reference"
+      ],
+      "git": [
+        {
+          "hash": "b819d03",
+          "date": "2026-05-21",
+          "subject": "Force complex amplitudes (\u2102) via antiperiodic-cycle count + glossary entries (#153)"
         }
       ]
     },
@@ -1623,6 +1663,7 @@
         "anchor_count_reaudit",
         "articulation_audit_2026-05",
         "canonical_glossary",
+        "complex_amplitude_uniqueness",
         "cross_ratio_irrep_reframe",
         "derivation_atlas",
         "dynamical_quantization",
@@ -2630,6 +2671,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "complex_amplitude_uniqueness",
         "framework_status",
         "phenomenology_cross_reference"
       ],
@@ -3009,6 +3051,8 @@
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
+        "canonical_glossary",
+        "complex_amplitude_uniqueness",
         "cone_twist_substrate",
         "dark_twin_correction",
         "discrete_reduction_computed",
@@ -4710,6 +4754,7 @@
         "INDEX",
         "articulation_audit_2026-05",
         "beta_from_tongues",
+        "complex_amplitude_uniqueness",
         "cone_twist_substrate",
         "dark_twin_correction",
         "discrete_reduction_problem",
@@ -6547,6 +6592,7 @@
         "ansatz_audit_policy",
         "born_rule",
         "canonical_glossary",
+        "complex_amplitude_uniqueness",
         "continuum_limits",
         "down_type_double_cover_closed",
         "epr_bell_assembly_theorem",
@@ -6567,6 +6613,7 @@
         "a1_from_saddle_node",
         "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
+        "complex_amplitude_uniqueness",
         "derivation_atlas",
         "down_type_double_cover_closed",
         "epr_bell_assembly_theorem",
@@ -6575,6 +6622,11 @@
         "thread_chronology"
       ],
       "git": [
+        {
+          "hash": "b819d03",
+          "date": "2026-05-21",
+          "subject": "Force complex amplitudes (\u2102) via antiperiodic-cycle count + glossary entries (#153)"
+        },
         {
           "hash": "a9195cd",
           "date": "2026-05-21",
@@ -6600,8 +6652,15 @@
       "depends_on": [
         "canonical_glossary"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "complex_amplitude_uniqueness"
+      ],
       "git": [
+        {
+          "hash": "b819d03",
+          "date": "2026-05-21",
+          "subject": "Force complex amplitudes (\u2102) via antiperiodic-cycle count + glossary entries (#153)"
+        },
         {
           "hash": "0a41063",
           "date": "2026-05-20",
@@ -6923,6 +6982,7 @@
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
+        "complex_amplitude_uniqueness",
         "derivation_atlas",
         "epr_bell_assembly_theorem",
         "framework_status",
@@ -8041,6 +8101,7 @@
         "basepoint_principle",
         "born_rule",
         "born_rule_parameter_free",
+        "complex_amplitude_uniqueness",
         "e_cross_calc",
         "e_cross_discrete_resolution",
         "empty_fork_cap",
