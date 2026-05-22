@@ -1,5 +1,14 @@
 # Einstein Field Equations from the Rational Field Equation
 
+> **Gravity's radiative mode.** Gravity's radiative degree of
+> freedom is the classical spin-2 transverse-traceless tensor mode
+> `h_ij` of the coherence metric `γ_ij` derived here, articulated in
+> `graviton_reframing.md`. The mode's *identification* is forced (the
+> unique symmetric rank-2 fluctuation of the locked state); its
+> *quantization* — the "graviton" particle — is the honest open
+> residual, neither constructed nor required as a framework
+> primitive.
+
 ## Theorem
 
 The self-consistency equation N(p/q) = N_total × g(p/q) × w(p/q, K₀F[N])
