@@ -1,5 +1,5 @@
 {
-  "generated": "3d538939ee03c69ed4975a88c8589da5b0226aa4",
+  "generated": "e3d4d73a142d8f395fcbcbeefa62df9509d8c20f",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -909,6 +909,7 @@
         "proposed_items_disposition",
         "proposed_residual_closure",
         "sector_decoupling_phase_a",
+        "sqrt_r_n_correction",
         "structural_lemmas",
         "thread_chronology",
         "vocabulary_is_the_work_pattern"
@@ -1150,7 +1151,8 @@
         "INDEX",
         "dynamical_tool_audit",
         "fermion_mass_running",
-        "hierarchy_problem_translation"
+        "hierarchy_problem_translation",
+        "sqrt_r_n_correction"
       ],
       "git": [
         {
@@ -1177,6 +1179,7 @@
         "derivation_atlas",
         "dynamical_tool_audit",
         "empty_fork_cap",
+        "epr_bell_assembly_theorem",
         "framework_status",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
@@ -1287,6 +1290,7 @@
         "omega_b_substrate_side_audit",
         "omega_b_two_component_sketch",
         "session_audit",
+        "sqrt_r_n_correction",
         "unitless_check"
       ],
       "git": [
@@ -1360,6 +1364,8 @@
         "derivation_atlas",
         "down_type_double_cover_closed",
         "phenomenology_cross_reference",
+        "phenomenon_glossary",
+        "sqrt_r_n_correction",
         "structural_lemmas"
       ],
       "git": [
@@ -1539,6 +1545,7 @@
         "derivation_atlas",
         "dynamical_quantization",
         "dynamical_tool_audit",
+        "epr_bell_assembly_theorem",
         "framework_status",
         "gap1_theorem",
         "gap2_step4_farey_laplacian",
@@ -1968,6 +1975,7 @@
         "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
         "nonperturbative_phase2",
+        "sqrt_r_n_correction",
         "thread_chronology"
       ],
       "git": [
@@ -2429,6 +2437,7 @@
         "quantum_gravity_interpolation",
         "sine_gordon_substrate",
         "soliton_dynamics",
+        "sqrt_r_n_correction",
         "three_dimensions"
       ],
       "git": [
@@ -2505,6 +2514,35 @@
           "hash": "5feb237",
           "date": "2026-03-25",
           "subject": "D21 + D22: open paths + engineering targets"
+        }
+      ]
+    },
+    {
+      "id": "epr_bell_assembly_theorem",
+      "path": "sync_cost/derivations/epr_bell_assembly_theorem.md",
+      "title": "EPR/Bell assembly theorem",
+      "summary": "**Standalone assembly articulated** for the long-standing\nphenomenology pointer\n\"EPR / Bell-inequality violation: Pieces present (Born rule +\nZ_2-pair conservation theorem + substrate non-locality on\nStern-Brocot tree); \u2026 **the assembled EPR/Bell theorem still not\narticulated**\" (`phenomenology_cross_reference.md:439`).",
+      "depends_on": [
+        "born_rule",
+        "continuum_limits",
+        "framework_status",
+        "klein_bottle",
+        "phenomenology_cross_reference",
+        "q_mod2_conservation_theorem",
+        "sine_gordon_substrate",
+        "substrate_determinism",
+        "thread_chronology",
+        "wave_particle_substrate"
+      ],
+      "depended_on_by": [
+        "framework_status",
+        "phenomenology_cross_reference"
+      ],
+      "git": [
+        {
+          "hash": "a9195cd",
+          "date": "2026-05-21",
+          "subject": "Articulate the EPR/Bell assembly theorem (#152)"
         }
       ]
     },
@@ -2962,6 +3000,7 @@
         "discrete_reduction_computed",
         "duty_cycle_dictionary",
         "einstein_from_kuramoto",
+        "epr_bell_assembly_theorem",
         "farey_partition",
         "h_inf_status",
         "hierarchy_gaussian_lattice",
@@ -2988,6 +3027,7 @@
         "psl2z_subgroup_phase_b",
         "q_mod2_conservation_theorem",
         "sine_gordon_substrate",
+        "sqrt_r_n_correction",
         "substrate_determinism",
         "thread_chronology",
         "tick_continuum_construction",
@@ -3013,6 +3053,7 @@
         "depth_connection_nulls",
         "down_type_double_cover_closed",
         "dynamical_tool_audit",
+        "epr_bell_assembly_theorem",
         "epsilon_physical_reading",
         "figure_eight",
         "h_inf_status",
@@ -3053,6 +3094,7 @@
         "remaining_gap_shapes",
         "s_v_nlo",
         "s_v_nlo_attempt",
+        "sqrt_r_n_correction",
         "structural_lemmas",
         "thread_chronology",
         "time_axis_split",
@@ -3061,6 +3103,16 @@
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "a9195cd",
+          "date": "2026-05-21",
+          "subject": "Articulate the EPR/Bell assembly theorem (#152)"
+        },
+        {
+          "hash": "0daab8a",
+          "date": "2026-05-20",
+          "subject": "Articulate the \u221ar_n K-zoo kink-mass correction precisely (#148)"
+        },
         {
           "hash": "4d41418",
           "date": "2026-05-20",
@@ -4484,6 +4536,7 @@
         "discrete_reduction_problem",
         "duty_cycle_dictionary",
         "dynamical_tool_audit",
+        "epr_bell_assembly_theorem",
         "figure_eight",
         "framework_status",
         "gauge_dictionary",
@@ -4942,7 +4995,8 @@
         "imf_bowed_cascade",
         "mass_function_family",
         "quantum_gravity_interpolation",
-        "sine_gordon_substrate"
+        "sine_gordon_substrate",
+        "sqrt_r_n_correction"
       ],
       "depended_on_by": [
         "cone_twist_substrate",
@@ -4951,14 +5005,22 @@
         "mass_function_family",
         "no_rescaling",
         "nonperturbative_phase3",
+        "proposed_residual_closure",
         "seam_profile",
         "sine_gordon_substrate",
         "soliton_dynamics",
+        "sqrt_r_n_correction",
+        "thread_chronology",
         "time_axis_split",
         "unitless_audit",
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "0daab8a",
+          "date": "2026-05-20",
+          "subject": "Articulate the \u221ar_n K-zoo kink-mass correction precisely (#148)"
+        },
         {
           "hash": "e27106f",
           "date": "2026-05-10",
@@ -5078,6 +5140,7 @@
         "empty_fork_cap",
         "proposed_items_disposition",
         "proposed_residual_closure",
+        "sqrt_r_n_correction",
         "thread_chronology"
       ],
       "git": [
@@ -5520,6 +5583,7 @@
         "proposed_residual_closure",
         "psl2z_subgroup_phase_c_inventory",
         "remaining_gap_shapes",
+        "sqrt_r_n_correction",
         "structural_lemmas",
         "vocabulary_is_the_work_pattern",
         "w_plus_formalization"
@@ -6298,6 +6362,7 @@
         "canonical_glossary",
         "continuum_limits",
         "down_type_double_cover_closed",
+        "epr_bell_assembly_theorem",
         "framework_status",
         "h_inf_status",
         "hierarchy_gaussian_lattice",
@@ -6316,11 +6381,17 @@
         "audit_punch_list_2026-04",
         "derivation_atlas",
         "down_type_double_cover_closed",
+        "epr_bell_assembly_theorem",
         "q_mod2_conservation_theorem",
         "structural_lemmas",
         "thread_chronology"
       ],
       "git": [
+        {
+          "hash": "a9195cd",
+          "date": "2026-05-21",
+          "subject": "Articulate the EPR/Bell assembly theorem (#152)"
+        },
         {
           "hash": "4d41418",
           "date": "2026-05-20",
@@ -6330,6 +6401,23 @@
           "hash": "2109a3b",
           "date": "2026-04-26",
           "subject": "Legitimacy homework: glossary + phenomenology + derivation atlas (#81)"
+        }
+      ]
+    },
+    {
+      "id": "phenomenon_glossary",
+      "path": "sync_cost/derivations/phenomenon_glossary.md",
+      "title": "Phenomenon glossary \u2014 dynamics first, names second",
+      "summary": "Phenomenon glossary v0.1. ~40 entries across 8 sections. Intended\nto be readable end-to-end in ~30 minutes by someone with general\nmathematical literacy and no exposure to the specific literature.",
+      "depends_on": [
+        "canonical_glossary"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "0a41063",
+          "date": "2026-05-20",
+          "subject": "Pedagogy: phenomenon glossary + mastery graph (#149)"
         }
       ]
     },
@@ -6470,20 +6558,28 @@
         "ansatz_audit_policy",
         "born_rule",
         "born_rule_parameter_free",
+        "master_cascade_identity",
         "measurement_collapse",
         "mediant_vs_flow_calc",
         "numerology_count_phase_b",
         "proposed_items_disposition",
         "sine_gordon_substrate",
+        "sqrt_r_n_correction",
         "thread_chronology",
         "tick_continuum_construction"
       ],
       "depended_on_by": [
         "framework_status",
         "sine_gordon_substrate",
+        "sqrt_r_n_correction",
         "thread_chronology"
       ],
       "git": [
+        {
+          "hash": "0daab8a",
+          "date": "2026-05-20",
+          "subject": "Articulate the \u221ar_n K-zoo kink-mass correction precisely (#148)"
+        },
         {
           "hash": "c1c4218",
           "date": "2026-05-17",
@@ -6638,6 +6734,7 @@
       ],
       "depended_on_by": [
         "derivation_atlas",
+        "epr_bell_assembly_theorem",
         "framework_status",
         "phenomenology_cross_reference",
         "sine_gordon_substrate",
@@ -7201,11 +7298,13 @@
         "proposed_residual_closure",
         "q_mod2_conservation_theorem",
         "soliton_dynamics",
+        "sqrt_r_n_correction",
         "tick_continuum_construction"
       ],
       "depended_on_by": [
         "cone_twist_substrate",
         "e_cross_calc",
+        "epr_bell_assembly_theorem",
         "explicit_4x4_reduction",
         "figure_eight",
         "framework_status",
@@ -7221,6 +7320,7 @@
         "proposed_residual_closure",
         "q_mod2_conservation_theorem",
         "soliton_dynamics",
+        "sqrt_r_n_correction",
         "substrate_determinism",
         "thread_chronology",
         "tick_continuum_construction",
@@ -7230,6 +7330,11 @@
         "xor_derivation"
       ],
       "git": [
+        {
+          "hash": "0daab8a",
+          "date": "2026-05-20",
+          "subject": "Articulate the \u221ar_n K-zoo kink-mass correction precisely (#148)"
+        },
         {
           "hash": "4d41418",
           "date": "2026-05-20",
@@ -7541,6 +7646,42 @@
       ]
     },
     {
+      "id": "sqrt_r_n_correction",
+      "path": "sync_cost/derivations/sqrt_r_n_correction.md",
+      "title": "\u221ar_n correction: making the K-zoo kink-mass residual concrete",
+      "summary": "**Articulation of an existing flagged correction** \u2014\n`proposed_residual_closure.md` \u00a7C established that the K<1\nsine-Gordon reduction is structurally forced (K-parameterized\nGoldstein\u2013Kac) and that the kink-mass ratio carries an honest\n`\u221ar_n` correction the bare conjecture omitted. The status entry\nread \"what is left is a *quantitative correction* (`\u221ar_n`) and\na *declined disposition* (the observable-mapping) \u2014 neither is\nan open problem to chase.\" `framework_status.md` Survives row\nechoes this ",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "beta_from_tongues",
+        "boundary_weight",
+        "canonical_glossary",
+        "discrete_reduction_computed",
+        "einstein_from_kuramoto",
+        "framework_status",
+        "master_cascade_identity",
+        "mediant_vs_flow_calc",
+        "numerology_count_phase_b",
+        "proposed_residual_closure",
+        "sine_gordon_substrate",
+        "thread_chronology",
+        "tick_continuum_construction"
+      ],
+      "depended_on_by": [
+        "framework_status",
+        "master_cascade_identity",
+        "proposed_residual_closure",
+        "sine_gordon_substrate",
+        "thread_chronology"
+      ],
+      "git": [
+        {
+          "hash": "0daab8a",
+          "date": "2026-05-20",
+          "subject": "Articulate the \u221ar_n K-zoo kink-mass correction precisely (#148)"
+        }
+      ]
+    },
+    {
       "id": "statistical_conventions",
       "path": "sync_cost/derivations/statistical_conventions.md",
       "title": "Statistical conventions for session closure docs",
@@ -7704,6 +7845,7 @@
         "e_cross_calc",
         "e_cross_discrete_resolution",
         "empty_fork_cap",
+        "epr_bell_assembly_theorem",
         "framework_status",
         "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
@@ -7755,6 +7897,7 @@
         "k_critical_phase_b",
         "k_inflation_seam_obstruction",
         "klein_bottle",
+        "master_cascade_identity",
         "measurement_collapse",
         "mediant_derivation",
         "mediant_vs_flow_calc",
@@ -7769,6 +7912,7 @@
         "rational_field_equation",
         "rectangle_perpendicularity",
         "sine_gordon_substrate",
+        "sqrt_r_n_correction",
         "substrate_determinism",
         "tick_continuum_construction",
         "vocabulary_is_the_work_pattern",
@@ -7783,6 +7927,7 @@
         "discrete_reduction_computed",
         "e_cross_calc",
         "empty_fork_cap",
+        "epr_bell_assembly_theorem",
         "f_exit_natural",
         "framework_status",
         "inflation_duration",
@@ -7795,10 +7940,16 @@
         "proposed_residual_closure",
         "q_mod2_conservation_theorem",
         "s_inst_inflation",
+        "sqrt_r_n_correction",
         "substrate_determinism",
         "tick_continuum_construction"
       ],
       "git": [
+        {
+          "hash": "0daab8a",
+          "date": "2026-05-20",
+          "subject": "Articulate the \u221ar_n K-zoo kink-mass correction precisely (#148)"
+        },
         {
           "hash": "4d41418",
           "date": "2026-05-20",
@@ -7996,6 +8147,7 @@
         "proposed_residual_closure",
         "q_mod2_conservation_theorem",
         "sine_gordon_substrate",
+        "sqrt_r_n_correction",
         "substrate_determinism",
         "thread_chronology"
       ],
@@ -8371,6 +8523,7 @@
       ],
       "depended_on_by": [
         "dark_twin_correction",
+        "epr_bell_assembly_theorem",
         "f_exit_natural",
         "inflation_duration",
         "no_rescaling",
