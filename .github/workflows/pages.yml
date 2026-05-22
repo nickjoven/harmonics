@@ -6,6 +6,7 @@ on:
     paths:
       - "index.html"
       - "docs/**"
+      - "teaching/**"
       - "sync_cost/applications/**"
       - "sync_cost/derivations/**"
       - ".github/workflows/pages.yml"
@@ -14,6 +15,7 @@ on:
     paths:
       - "index.html"
       - "docs/**"
+      - "teaching/**"
       - "sync_cost/applications/**"
       - "sync_cost/derivations/**"
       - ".github/workflows/pages.yml"
@@ -48,6 +50,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html _site/
+          cp -r teaching _site/
           cp -r sync_cost _site/
           cp -r docs _site/
           cp LICENSE _site/
@@ -56,6 +59,7 @@ jobs:
         run: |
           test -f _site/index.html
           test -d _site/docs
+          test -d _site/teaching
           test -d _site/sync_cost
           # No symlinks (Pages does not follow them)
           if find _site -type l | grep -q .; then
@@ -75,6 +79,7 @@ jobs:
           python3 .github/scripts/check_links.py \
             _site/index.html \
             _site/docs/index.html \
+            _site/docs/questions.html \
             _site/docs/claim-chain.html \
             _site/docs/claim-chain-views.html \
             _site/docs/glossary.html \
@@ -101,6 +106,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html _site/
+          cp -r teaching _site/
           cp -r sync_cost _site/
           cp -r docs _site/
           cp LICENSE _site/

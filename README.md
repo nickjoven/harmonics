@@ -443,6 +443,7 @@ of interactive pages. Grouped by intent:
 
 ### Pedagogy and reference
 
+- [`docs/questions.html`](docs/questions.html) — searchable teaching-question views over entry prompts, concept mastery, derivation review, demos, falsifiers, transfer, and claim hygiene.
 - [`docs/index.html`](docs/index.html) — quick-reference supplement: predictions table, symbols, two-anchor minimum.
 - [`docs/glossary.html`](docs/glossary.html) — interactive chalkboard glossary: every numerical expression in the canonical glossary worked out on click.
 - [`docs/phenomenon-glossary.html`](docs/phenomenon-glossary.html) — description-first glossary by phenomenon, with literature names relegated to an *also called* tagline.
@@ -615,6 +616,7 @@ bundle:
 |---|---|
 | `index.html` | `/index.html` |
 | `docs/` | `/docs/` |
+| `teaching/` | `/teaching/` |
 | `sync_cost/` | `/sync_cost/` |
 | `LICENSE` | `/LICENSE` |
 
@@ -628,7 +630,7 @@ enforces this against a hand-curated list of entry-point HTML files.
   [Interactive resources](#interactive-resources) enumerates the
   per-section entry points.
 - **`docs/`** — rendered pedagogical surface:
-  - Top level: `index.html`, `glossary.html`, `phenomenon-glossary.html`,
+  - Top level: `index.html`, `questions.html`, `glossary.html`, `phenomenon-glossary.html`,
     `derivations.html`, `dag.html`, `mastery-graph.html`,
     `claim-chain.html`, `claim-chain-views.html`, `a_s_proof.html`,
     `cmb-s4.html`, `preprint.html`, plus shared `style.css` and the
@@ -638,6 +640,10 @@ enforces this against a hand-curated list of entry-point HTML files.
   - [`docs/knobs/`](docs/knobs/) — three single-knob explainers
     (`coupling.html`, `frames.html`, `phase.html`).
   - [`docs/archive/`](docs/archive/) — `colony.html`, `collatz.html`.
+- **`teaching/`** — source teaching artifacts served for Pages views:
+  `async-presentation-model.md`, `entrypoint-teaching-reference.md`, and
+  `question-atlas.md`. The deployed [`docs/questions.html`](docs/questions.html)
+  view parses `question-atlas.md` directly.
 - **`sync_cost/`** — framework working tree, served verbatim:
   - [`sync_cost/applications/`](sync_cost/applications/) — seven
     interactive applications (`stern_brocot_walk.html`,

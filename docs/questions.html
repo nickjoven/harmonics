@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Questions &mdash; Harmonics</title>
+<meta name="description" content="Searchable question atlas for the Harmonics teaching layer.">
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+  max-width: 78em;
+}
+
+.question-shell {
+  display: grid;
+  grid-template-columns: minmax(13rem, 18rem) 1fr;
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.toolbar {
+  display: grid;
+  grid-template-columns: 1.4fr minmax(11rem, 0.8fr) minmax(10rem, 0.7fr);
+  gap: 0.7rem;
+  margin: 1.4rem 0 1rem;
+}
+
+.toolbar label {
+  display: block;
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.toolbar input,
+.toolbar select {
+  width: 100%;
+  background: var(--bg-code);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-bright);
+  font: inherit;
+  padding: 0.55rem 0.65rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin: 1rem 0 1.2rem;
+}
+
+.stat {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem 0.8rem;
+}
+
+.stat strong {
+  display: block;
+  color: var(--text-bright);
+  font-family: Menlo, Consolas, monospace;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.stat span {
+  color: var(--text-dim);
+  font-size: 0.78rem;
+}
+
+.section-nav {
+  list-style: none;
+  margin: 0.7rem 0 0;
+  padding: 0;
+}
+
+.section-nav button,
+.draw-button,
+.clear-button {
+  width: 100%;
+  text-align: left;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 0.45rem 0.5rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.section-nav button:hover,
+.section-nav button.active,
+.draw-button:hover,
+.clear-button:hover {
+  background: var(--bg-code);
+  border-color: var(--border);
+  color: var(--text-bright);
+}
+
+.section-nav small {
+  float: right;
+  color: var(--text-dim);
+  font-family: Menlo, Consolas, monospace;
+}
+
+.deck-actions {
+  display: grid;
+  gap: 0.45rem;
+  margin-top: 0.9rem;
+}
+
+.draw-card {
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.92rem;
+}
+
+.draw-card .qtext {
+  color: var(--text-bright);
+  margin-top: 0.35rem;
+}
+
+.question-list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.question-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+}
+
+.question-card:hover {
+  border-color: var(--accent-dim);
+}
+
+.qmeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.45rem;
+}
+
+.pill {
+  color: var(--text-dim);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.08rem 0.45rem;
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.pill.kind {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+}
+
+.question-text {
+  color: var(--text-bright);
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+.empty-state {
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  padding: 2rem;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+.source-row {
+  margin-top: 1.4rem;
+  color: var(--text-dim);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 860px) {
+  body {
+    max-width: 52em;
+  }
+
+  .question-shell,
+  .toolbar,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Reference</a>
+  <a href="questions.html" class="active">Questions</a>
+  <a href="claim-chain.html">Claim chain</a>
+  <a href="claim-chain-views.html">Three views</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="phenomenon-glossary.html">Phenomena</a>
+  <a href="derivations.html">Derivations</a>
+  <a href="mastery-graph.html">Mastery</a>
+  <a href="cmb-s4.html">CMB-S4</a>
+  <a href="preprint.html">Preprint</a>
+</nav>
+
+<h1>Question Atlas</h1>
+<p class="subtitle">
+Searchable views over the teaching question list. The page parses
+<a href="../teaching/question-atlas.md">teaching/question-atlas.md</a>,
+so the deployable view stays tied to the source question deck.
+</p>
+
+<div class="toolbar" aria-label="Question filters">
+  <div>
+    <label for="search">Search questions</label>
+    <input id="search" type="search" placeholder="Try: anchor, mediant, falsify, MOND">
+  </div>
+  <div>
+    <label for="section-filter">Section</label>
+    <select id="section-filter"></select>
+  </div>
+  <div>
+    <label for="kind-filter">View</label>
+    <select id="kind-filter">
+      <option value="all">All askable moves</option>
+      <option value="minimal">Minimal first deck</option>
+      <option value="public">Public entry</option>
+      <option value="concept">Concept mastery</option>
+      <option value="derivation">Derivation</option>
+      <option value="status">Status and claim hygiene</option>
+      <option value="demo">Demo</option>
+      <option value="review">Hard review</option>
+      <option value="falsifier">Falsifier</option>
+      <option value="transfer">Transfer</option>
+      <option value="production">Production</option>
+    </select>
+  </div>
+</div>
+
+<div class="stats" aria-live="polite">
+  <div class="stat"><strong id="stat-total">0</strong><span>source questions</span></div>
+  <div class="stat"><strong id="stat-visible">0</strong><span>visible now</span></div>
+  <div class="stat"><strong id="stat-sections">0</strong><span>sections</span></div>
+  <div class="stat"><strong id="stat-minimal">0</strong><span>minimal deck</span></div>
+</div>
+
+<div class="question-shell">
+  <aside class="panel" aria-label="Sections">
+    <h2 style="margin-top:0;">Sections</h2>
+    <ul class="section-nav" id="section-list"></ul>
+    <div class="deck-actions">
+      <button class="draw-button" id="draw-question" type="button">Draw visible question</button>
+      <button class="clear-button" id="clear-filters" type="button">Clear filters</button>
+    </div>
+    <div class="draw-card" id="draw-card" hidden>
+      <span class="pill kind" id="draw-kind"></span>
+      <div class="qtext" id="draw-text"></div>
+    </div>
+  </aside>
+
+  <main>
+    <div id="question-list" class="question-list"></div>
+    <div id="empty-state" class="empty-state" hidden>No questions match the current filters.</div>
+  </main>
+</div>
+
+<p class="source-row">
+Companion docs:
+<a href="../teaching/async-presentation-model.md">async presentation model</a>,
+<a href="../teaching/entrypoint-teaching-reference.md">entry-point teaching reference</a>.
+</p>
+
+<script>
+const SOURCE_URL = "../teaching/question-atlas.md";
+
+const state = {
+  questions: [],
+  sections: [],
+  visible: [],
+  activeSection: "all",
+};
+
+const sectionFilter = document.getElementById("section-filter");
+const kindFilter = document.getElementById("kind-filter");
+const searchInput = document.getElementById("search");
+const questionList = document.getElementById("question-list");
+const emptyState = document.getElementById("empty-state");
+const sectionList = document.getElementById("section-list");
+const drawCard = document.getElementById("draw-card");
+
+function normalize(text) {
+  return text.toLowerCase().replace(/\s+/g, " ").trim();
+}
+
+function classify(section, subsection, text) {
+  const haystack = normalize(`${section} ${subsection} ${text}`);
+  if (section === "Minimal First Deck") return "minimal";
+  if (section.includes("Public Entry") || section.includes("Universal")) return "public";
+  if (section.includes("Mastery-Graph")) return "concept";
+  if (section.includes("Derivation-Atlas")) return "derivation";
+  if (section.includes("Scorecard") || section.includes("Declined") || section.includes("Null")) return "status";
+  if (section.includes("Demo")) return "demo";
+  if (section.includes("Hard Review")) return "review";
+  if (section.includes("Falsifier")) return "falsifier";
+  if (section.includes("Transfer")) return "transfer";
+  if (section.includes("Production")) return "production";
+  if (haystack.includes("anchor") || haystack.includes("declined") || haystack.includes("class 2") || haystack.includes("z1")) return "status";
+  return "concept";
+}
+
+function tagQuestion(question) {
+  const tags = [];
+  const text = normalize(question.text);
+  if (text.includes("anchor")) tags.push("anchor");
+  if (text.includes("declined") || text.includes("bare")) tags.push("claim hygiene");
+  if (text.includes("falsify") || text.includes("break")) tags.push("falsifier");
+  if (text.includes("demo") || question.kind === "demo") tags.push("demo");
+  if (text.includes("mediant")) tags.push("mediant");
+  if (text.includes("mond")) tags.push("MOND");
+  if (text.includes("lock")) tags.push("locking");
+  if (text.includes("topolog")) tags.push("topology");
+  return tags.slice(0, 3);
+}
+
+function parseAtlas(markdown) {
+  let section = "Front matter";
+  let subsection = "";
+  const questions = [];
+  const seenSections = new Map();
+  const lines = markdown.split(/\r?\n/);
+
+  for (const line of lines) {
+    const sectionMatch = line.match(/^##\s+(.+)$/);
+    if (sectionMatch) {
+      section = sectionMatch[1].trim();
+      subsection = "";
+      if (!seenSections.has(section)) seenSections.set(section, 0);
+      continue;
+    }
+
+    const subsectionMatch = line.match(/^###\s+(.+)$/);
+    if (subsectionMatch) {
+      subsection = subsectionMatch[1].trim();
+      continue;
+    }
+
+    const questionMatch = line.match(/^(\d+)\.\s+(.+\?)$/);
+    if (!questionMatch) continue;
+
+    const text = questionMatch[2].trim();
+    const kind = classify(section, subsection, text);
+    const question = {
+      id: questions.length + 1,
+      sourceNumber: questionMatch[1],
+      text,
+      section,
+      subsection,
+      kind,
+      tags: [],
+    };
+    question.tags = tagQuestion(question);
+    questions.push(question);
+    seenSections.set(section, (seenSections.get(section) || 0) + 1);
+  }
+
+  const sections = [...seenSections.entries()]
+    .filter(([, count]) => count > 0)
+    .map(([name, count]) => ({ name, count }));
+
+  return { questions, sections };
+}
+
+function populateFilters() {
+  sectionFilter.innerHTML = "";
+  const allOption = document.createElement("option");
+  allOption.value = "all";
+  allOption.textContent = "All sections";
+  sectionFilter.appendChild(allOption);
+
+  for (const section of state.sections) {
+    const option = document.createElement("option");
+    option.value = section.name;
+    option.textContent = `${section.name} (${section.count})`;
+    sectionFilter.appendChild(option);
+  }
+
+  sectionList.innerHTML = "";
+  const allItem = makeSectionButton("all", "All questions", state.questions.length);
+  sectionList.appendChild(allItem);
+  for (const section of state.sections) {
+    sectionList.appendChild(makeSectionButton(section.name, section.name, section.count));
+  }
+}
+
+function makeSectionButton(value, label, count) {
+  const li = document.createElement("li");
+  const button = document.createElement("button");
+  button.type = "button";
+  button.dataset.section = value;
+  button.innerHTML = `${escapeHtml(label)} <small>${count}</small>`;
+  button.addEventListener("click", () => {
+    state.activeSection = value;
+    sectionFilter.value = value;
+    render();
+  });
+  li.appendChild(button);
+  return li;
+}
+
+function escapeHtml(text) {
+  return text
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
+function matchesKind(question, kind) {
+  if (kind === "all") return true;
+  if (kind === "minimal") return question.section === "Minimal First Deck";
+  if (kind === "status") {
+    return question.kind === "status" || normalize(question.text).match(/anchor|declined|bare|z1|z2|z3|class 2|claim|status/);
+  }
+  return question.kind === kind;
+}
+
+function filteredQuestions() {
+  const query = normalize(searchInput.value);
+  const selectedSection = sectionFilter.value;
+  const selectedKind = kindFilter.value;
+
+  return state.questions.filter((question) => {
+    const sectionOk = selectedSection === "all" || question.section === selectedSection;
+    const kindOk = matchesKind(question, selectedKind);
+    const queryText = normalize(`${question.text} ${question.section} ${question.subsection} ${question.kind} ${question.tags.join(" ")}`);
+    const searchOk = !query || queryText.includes(query);
+    return sectionOk && kindOk && searchOk;
+  });
+}
+
+function render() {
+  state.visible = filteredQuestions();
+  questionList.innerHTML = "";
+
+  document.getElementById("stat-total").textContent = state.questions.length;
+  document.getElementById("stat-visible").textContent = state.visible.length;
+  document.getElementById("stat-sections").textContent = state.sections.length;
+  document.getElementById("stat-minimal").textContent = state.questions.filter((q) => q.section === "Minimal First Deck").length;
+
+  document.querySelectorAll(".section-nav button").forEach((button) => {
+    button.classList.toggle("active", button.dataset.section === sectionFilter.value);
+  });
+
+  emptyState.hidden = state.visible.length !== 0;
+
+  const fragment = document.createDocumentFragment();
+  for (const question of state.visible) {
+    fragment.appendChild(renderQuestion(question));
+  }
+  questionList.appendChild(fragment);
+}
+
+function renderQuestion(question) {
+  const card = document.createElement("article");
+  card.className = "question-card";
+  const subsection = question.subsection ? `<span class="pill">${escapeHtml(question.subsection)}</span>` : "";
+  const tags = question.tags.map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`).join("");
+  card.innerHTML = `
+    <div class="qmeta">
+      <span class="pill kind">${escapeHtml(question.kind)}</span>
+      <span class="pill">#${question.id}</span>
+      <span class="pill">${escapeHtml(question.section)}</span>
+      ${subsection}
+      ${tags}
+    </div>
+    <div class="question-text">${escapeHtml(question.text)}</div>
+  `;
+  return card;
+}
+
+function drawVisibleQuestion() {
+  if (!state.visible.length) return;
+  const question = state.visible[Math.floor(Math.random() * state.visible.length)];
+  document.getElementById("draw-kind").textContent = question.kind;
+  document.getElementById("draw-text").textContent = question.text;
+  drawCard.hidden = false;
+}
+
+function clearFilters() {
+  searchInput.value = "";
+  sectionFilter.value = "all";
+  kindFilter.value = "all";
+  drawCard.hidden = true;
+  render();
+}
+
+async function init() {
+  try {
+    const response = await fetch(SOURCE_URL, { cache: "no-store" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const markdown = await response.text();
+    const parsed = parseAtlas(markdown);
+    state.questions = parsed.questions;
+    state.sections = parsed.sections;
+    populateFilters();
+    render();
+  } catch (error) {
+    emptyState.hidden = false;
+    emptyState.textContent = `Could not load ${SOURCE_URL}. Serve the site through GitHub Pages or a local HTTP server.`;
+    console.error(error);
+  }
+}
+
+searchInput.addEventListener("input", render);
+sectionFilter.addEventListener("change", () => {
+  state.activeSection = sectionFilter.value;
+  render();
+});
+kindFilter.addEventListener("change", render);
+document.getElementById("draw-question").addEventListener("click", drawVisibleQuestion);
+document.getElementById("clear-filters").addEventListener("click", clearFilters);
+
+init();
+</script>
+
+</body>
+</html>
