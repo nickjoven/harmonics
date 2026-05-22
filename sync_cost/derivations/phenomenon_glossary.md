@@ -269,6 +269,37 @@ fields.
 **Klein-antipodal involution**; the eigenvalue is the
 **Klein monodromy** $\pm 1$.
 
+### How a symmetry acts on an amplitude space: the three-way split
+
+Ask what kinds of "square root of $-1$" a space of amplitudes can
+carry — an operator $J$ with $J^2 = -I$, which is exactly what lets
+you multiply amplitudes by $i$ and rotate them. There are only three
+possibilities, and which one you are in is fixed by counting the
+independent **orientation-reversing loops** of the underlying space:
+
+- **none** ($0$ such loops) → no $J$ → amplitudes are **real**;
+- **exactly one** ($1$ loop) → one $J$ → amplitudes are **complex**;
+- **a whole triple** ($3$ anticommuting structures) → amplitudes are
+  **quaternionic**.
+
+A loop you can walk around and come back *unflipped* contributes
+nothing; a loop you come back *sign-flipped* (a half-twist) supplies
+exactly one $J$. The framework's surface — the one with a single
+half-twisted direction (and one ordinary, unflipped one) — therefore
+sits at *exactly one*: its amplitudes are **complex, and forced to
+be so**, not real and not quaternionic. Walk around the half-twisted
+loop twice and you return flipped-and-flipped-back; that "$\times(-1)$
+per loop" is the $J^2 = -I$ that makes the amplitudes complex. A
+twist-free surface (a doughnut) would give real amplitudes; a surface
+with two independent half-twists would give quaternionic ones.
+
+*Also called:* the **Frobenius–Schur indicator** (its value $+1$,
+$0$, $-1$ names real/complex/quaternionic); the **commutant** or
+**endomorphism algebra** $\mathbb{R}/\mathbb{C}/\mathbb{H}$ of the
+representation; the real-vs-complex-vs-quaternionic-quantum-mechanics
+trichotomy. The complex outcome here predicts the experimental
+exclusion of real quantum mechanics (Renou et al. 2021).
+
 ### Six-fold permutation symmetry of four points on a line
 
 Four points on a line, under the natural fractional moves, have one

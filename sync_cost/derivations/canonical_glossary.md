@@ -66,6 +66,7 @@ forthcoming derivation atlas.
 | **Sym/antisym decomposition** | Z_2 character decomposition on Z_6 | The substrate's natural mode-rep decomposition; one Z_2-pair → (ψ_+, ψ_-) eigenvectors | `klein_antipodal_z2_rep_pattern.md` |
 | **Klein-monodromy ±1** | Z_2 character | Sign of Klein-antipodal action on a mode; determines EM coupling | `baryon_fraction.md` |
 | **Z_3 rep (color)** | SU(3) fundamental rep on triplet | Color sector quantum number | (gauge chain) |
+| **Antiperiodic-cycle count → amplitude field** | Frobenius-Schur indicator; commutant ℝ/ℂ/ℍ trichotomy | # independent antiperiodic (orientation-reversing) cycles = # complex structures J (J²=−I): 0→real, 1→complex, 3→quaternionic amplitudes. Klein bottle has exactly one → ℂ forced (fermion sector) | `complex_amplitude_uniqueness.md`, `figure_eight.md` |
 
 ## Section 4 — Coupling regimes and operating points
 
