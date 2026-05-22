@@ -43,10 +43,23 @@ Four parallel surveys:
 
 | Axis | Articulation candidates (P1/P2) | Decline-confirmed | Already-articulated |
 |---|---|---|---|
-| A — particles | W/Z (P1), gluons (P2, with bright line), electron (P3) | graviton OI, baryon OI, flavor assignments | photon (PR closed, see below), Higgs, quarks, neutrinos |
+| A — particles | W/Z (P1), **graviton (P1, see revision)**, gluons (P1 w/ refined bright line, see revision), baryon-charge discriminator (P2, see revision), electron (P3) | baryon→quark-substructure, flavor assignments (soft, see revision) | photon (PR closed, see below), Higgs, quarks, neutrinos |
 | B — twin pairs | K=1 vs K<1 continuum limits (P1), H_0 vs v_EW anchors (P1), 4 bright-line patterns (P2), 2 Z₂'s expanded (P2), Z_6/Z_2/Z_3 factor composition (P3) | — | mediant/EML primitives, mass-mechanism family |
 | C — inviolables | #2 no-rescaling (P1), #7 half-twist = π (P1), #5 Born rule = \|ψ\|² (P2) | #3, #4, #6, #8, #9, #10 (various reasons; see Axis C) | #1 Q mod 2 conservation (PR #147) |
 | D — declines | — | **all 7 reconfirmed or elevated** | — |
+
+> **Post-audit revision (same session) — see `## Post-audit revision`
+> below.** A re-examination of the four particle-ontology bright
+> lines found two were mis-classified: **graviton** and **gluon**
+> observable-identifications are *not* honest declines but
+> articulation candidates (the graviton "decline" was a
+> *quantization* decline, not an identification one; the gluon
+> "decline" is anchor-side α_s(M_Z), not an identification one).
+> **baryon** and **flavor** were over-rigidly declined — they carry
+> structural discriminators (charge; mass-ordering) that make them
+> candidate articulations, not closed declines. Graviton and gluon
+> reframings are drafted alongside this revision
+> (`graviton_reframing.md`, `gluon_reframing.md`).
 
 P1 = high-value, ready (existing pieces + low difficulty + zero risk)
 P2 = high-value, needs one formalization step or has a bright-line caveat
@@ -336,26 +349,52 @@ articulation work should respect these as locked, not as candidates.
 
 ## Particle ontology bright lines (do NOT articulate)
 
-The articulation audit explicitly identifies the following as
-**honest declines** that articulation work should not cross:
+> **Superseded in part by `## Post-audit revision` below.** The
+> first draft of this section listed four bright lines. The
+> revision found two of them mis-classified (graviton, gluon — not
+> declines at all) and two over-rigid (baryon, flavor — carry
+> structural discriminators). The genuinely-hard line that survives
+> is **baryon→quark-substructure** (QCD bound-state dynamics). The
+> entries below are kept as the audit-trail of the original
+> classification; read the revision for the corrected dispositions.
+
+The original audit identified the following as **honest declines**
+that articulation work should not cross:
 
 - **Baryon observable-identification** (proton vs neutron;
   specific quark substructure). Framework derives that baryons are
   kink composites and their mass spectrum; identification is
   Class-2 declined. See `framework_status.md` L40,
-  `proposed_residual_closure.md` §C.
+  `proposed_residual_closure.md` §C. **[Revised: the proton/neutron
+  split has a structural discriminator — charge via Klein-antipodal
+  Z₂ rep — making it a P2 candidate; only the deeper
+  quark-substructure / QCD-bound-state level stays declined.]**
 - **Flavor assignments** (electron vs μ vs τ; u vs d vs c vs s vs
   t vs b; ν_e vs ν_μ vs ν_τ). Framework derives generation count
   and mass ratios; flavor identification is Class-2 declined.
+  **[Revised: mass-ordering is a structural discriminator; flavor
+  labels follow conventionally from the framework's ordered
+  mass-state set — a P3 "convention-pinned-to-ordering" statement,
+  not a closed decline.]**
 - **Graviton observable-identification**. The Einstein-equation
   derivation (`einstein_from_kuramoto.md`) is structural; the
   graviton-as-substrate-mode identification is declined.
+  **[Revised: NOT an identification decline — the graviton is
+  uniquely the spin-2 excitation of γ_ij at K=1. The real decline
+  is *full quantization* (graviton scattering amplitudes), not
+  identification. Promoted to P1; drafted as `graviton_reframing.md`.]**
 - **Gluon observable-identification**. SU(3) and β-function derive;
   which mode-transition is *observed as* the gluon is declined.
+  **[Revised: NOT an identification decline — the 8 su(3)-sector
+  mode transitions ARE the 8 gluons (`gauge_dictionary.md` #3a,
+  FORCED). The real decline is anchor-side α_s(M_Z), same shape as
+  Instance 7. Promoted to P1 with refined bright line; drafted as
+  `gluon_reframing.md`.]**
 
-Any P1/P2/P3 articulation that touches these must list the bright
-line explicitly — the W/Z reframing (P1.5) and gluon reframing
-(P2.3) both flag this in their entries above.
+Any P1/P2/P3 articulation that touches a surviving bright line must
+list it explicitly — the W/Z reframing (P1.5), graviton reframing
+(P1.6), and gluon reframing (P1.7/refined P2.3) each flag the
+relevant line in their entries.
 
 ## Out-of-scope items
 
@@ -410,8 +449,108 @@ dependencies that would force sequential ordering), so they could be
 landed in any order or in parallel via subagents with synthesis on
 this end.
 
+## Post-audit revision — the four particle-ontology bright lines re-examined
+
+The original audit (Axis A) listed four particle-ontology
+observable-identifications as honest declines not to cross:
+baryon, flavor, graviton, gluon. A same-session re-examination
+asked the sharper question — *is each of these genuinely a missing
+forced selector, or did the audit mis-read the decline shape?* —
+and found two mis-classified and two over-rigid. The corrected
+dispositions:
+
+### Graviton — NOT a decline; promoted to P1 (drafted)
+
+The audit called this an "observable-identification decline." It
+is not. There is no "which graviton" question: the graviton in the
+framework is uniquely the spin-2 excitation of the coherence metric
+`γ_ij = C_ij/C_0` at K=1. Every textbook graviton property is
+structurally forced from the existing K=1 → Einstein derivation:
+
+- **spin-2** ← rank-2 tensor structure of `γ_ij` (`adm_dictionary.md`
+  Part I: `γ_ij` is the unique symmetric rank-2 tensor from the
+  phase field)
+- **masslessness** ← no compact-K eigenfrequency (the same
+  separatrix argument as the photon, `speed_of_light.md`)
+- **propagation at c** ← the K=1 continuum limit is exactly the
+  Einstein equations (`einstein_from_kuramoto.md`, Lovelock 1971)
+- **coupling to T_μν** ← Lovelock uniqueness
+- **two polarizations / transverse-traceless** ← the gauge
+  structure of linearized Einstein equations
+
+The framework's reluctance reads as a *quantization* decline
+("we have classical Einstein from Kuramoto, not graviton
+scattering amplitudes"), **not** an identification decline. That is
+exactly the photon-reframing shape ("the photon IS c; we don't
+claim the SI value"). **Promoted to P1.6. Drafted as
+`graviton_reframing.md`** — articulates the ontology, flags the
+quantization gap as the honest residual.
+
+### Gluon — NOT a decline; promoted to P1 with a refined bright line (drafted)
+
+The audit called this an "observable-identification decline."
+There are 8 gluons; they are the 8 generators of su(3); they are
+indistinguishable except by generator labels. There is no "which
+gluon" question. The framework's `gauge_dictionary.md` #3a
+**FORCES** the mapping: the 8 su(3)-sector mode transitions on the
+Klein 4-mode graph (6 cross-sector roots + 2 within-sector Cartan
+T₃, T₈) ARE the 8 gluons. The real bright line is **anchor-side
+α_s(M_Z)** — same shape as the bare K=1 identity α_s/α_2 = 27/8
+being Instance-7 declined (`MANIFEST.yml` `bare_k1_identities`),
+**not** an identification problem. **Promoted to P1.7 (refines the
+audit's P2.3). Drafted as `gluon_reframing.md`** — articulates
+SU(3)-from-Z₃, β-function K-running, masslessness, asymptotic
+freedom, color triplet; flags α_s(M_Z) as anchor-side.
+
+### Baryon — over-rigid; the proton/neutron split has a discriminator (P2)
+
+The audit declined "baryon observable-identification" wholesale.
+But proton and neutron differ by one unit of electric charge, and
+the framework HAS a charge mechanism (Klein-antipodal Z₂ rep:
+charged ±1 vs sign-rep no-EM). If the framework exhibits which
+baryon-mode carries the charged sign-rep, that is the proton —
+structural, not conventional. The work is not done, so this is a
+**candidate articulation (P2)**, not a closed decline. **The
+genuinely-hard line that survives is baryon→quark-substructure**:
+QCD bound-state dynamics (uud vs udd, confinement, magnetic
+moments) is deeper than charge discrimination and stays declined —
+the framework does not claim QCD bound-state dynamics and should
+not.
+
+### Flavor — over-rigid; mass-ordering is a structural discriminator (P3)
+
+The audit declined flavor assignments wholesale. But the framework
+derives a mass *ordering* (cascade depth / Stern-Brocot
+complexity), and the conventional flavor labels (lightest charged
+lepton = electron, etc.) follow from that ordering. This is weaker
+than structural identification (it is labeling) but stronger than a
+closed decline (the ordering is forced; only label-to-position is
+convention). **A P3 "convention-pinned-to-structural-ordering"
+statement**, not a closed decline.
+
+### Net revision
+
+| Bright line | Original | Revised |
+|---|---|---|
+| Graviton OI | declined | **P1 — not a decline (quantization gap is the residual); drafted** |
+| Gluon OI | declined (also P2.3) | **P1 — not a decline (anchor-side α_s is the residual); drafted** |
+| Baryon proton/neutron | declined | **P2 — charge discriminator candidate** |
+| Baryon→quark-substructure | (subsumed) | **declined (QCD bound-state; survives as the hard line)** |
+| Flavor assignment | declined | **P3 — convention pinned to structural mass-ordering** |
+
+**Discipline check.** This revision does *not* relax the framework's
+honest-landing discipline. It corrects two mis-classifications
+(graviton/gluon were never identification declines) and refines two
+over-broad ones (baryon/flavor carry discriminators for part, not
+all, of their content). The Axis D decline-lock (the seven
+*non-particle* declines) is untouched and stands. The one genuinely
+hard particle line — baryon→quark-substructure / QCD bound-state
+dynamics — is preserved.
+
 ## Cross-references
 
+- `graviton_reframing.md` — P1.6, drafted this session.
+- `gluon_reframing.md` — P1.7, drafted this session.
 - `audit_punch_list_2026-04.md` — prior audit (cross-reference /
   numerical / status-tag axes); this round's parallel.
 - `framework_status.md` — Survives / Floor / Fails / Eliminated /
@@ -426,15 +565,22 @@ this end.
 
 ## Status
 
-Audit complete. Findings: 5 × P1, 4 × P2, 3 × P3 articulation
-candidates; 7 declines reconfirmed or elevated (none shifted); 4
-particle-ontology bright lines explicitly listed as do-not-cross.
+Audit complete + post-audit revision. Findings: 7 × P1 (5 original +
+graviton P1.6 + gluon P1.7), 3 × P2 (P2.1, P2.2, P2.4 + new baryon-
+charge candidate), 3+ × P3 articulation candidates; 7 non-particle
+declines reconfirmed or elevated (none shifted); one genuinely-hard
+particle bright line preserved (baryon→quark-substructure / QCD
+bound-state dynamics).
 
 The framework's articulation surface is larger than the audit
-expected, and its decline-discipline is tighter than the audit
-expected. Both are healthy signs.
+expected — and the post-audit revision found it larger still: two of
+the four particle bright lines were mis-classified (graviton, gluon
+were never identification declines) and two were over-rigid (baryon,
+flavor carry partial discriminators). The non-particle
+decline-discipline is tight and untouched. Both are healthy signs.
 
-Recommended next step: execute P1.1 + P1.2 (the two side-by-side
-tables) as a single PR — they are the highest-value lowest-lift
-items and exercise no new physics. P1.3-P1.5 follow in sequence.
-P2 items can be parallelized once P1 lands.
+This session: graviton (P1.6) and gluon (P1.7) reframings drafted
+alongside this audit revision. Remaining ready items: P1.1 + P1.2
+(continuum-limit and two-anchor comparison tables), then P1.3-P1.5
+(no-rescaling theorem, half-twist theorem, W/Z reframing), then the
+P2 set.

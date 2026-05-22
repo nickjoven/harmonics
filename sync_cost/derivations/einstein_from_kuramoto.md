@@ -1,5 +1,11 @@
 # Einstein Field Equations from the Rational Field Equation
 
+> **Graviton ontology.** The graviton is the spin-2 tensor mode
+> `h_ij` of the coherence metric `γ_ij` derived here, articulated
+> in `graviton_reframing.md`. Its *identification* is forced (the
+> unique symmetric rank-2 mode of the locked state); its *full
+> quantization* is the honest open residual.
+
 ## Theorem
 
 The self-consistency equation N(p/q) = N_total × g(p/q) × w(p/q, K₀F[N])

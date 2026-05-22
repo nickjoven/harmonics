@@ -1,5 +1,12 @@
 # Gauge-Sector Dictionary Promotion
 
+> **Gluon ontology.** The 8 su(3)-sector mode transitions (6 roots +
+> 2 Cartan) ARE the 8 gluons — the correspondence is FORCED by #3a
+> below. Articulated in `gluon_reframing.md`; the W/Z (su(2) sector)
+> and photon (U(1) sector) partition the remaining edges. The gluon
+> *identification* is forced here; the honest residual is anchor-side
+> α_s(M_Z) (the 27/8 bare identity's Instance-7 amplification).
+
 ## Claim
 
 The three identifications isolated in `klein_connection.md` for the
