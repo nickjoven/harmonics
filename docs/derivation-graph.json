@@ -1,5 +1,5 @@
 {
-  "generated": "e3d4d73a142d8f395fcbcbeefa62df9509d8c20f",
+  "generated": "00dc7afce6a6a961d006cdcb02faa1878eb46560",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -420,6 +420,7 @@
       "depended_on_by": [
         "INDEX",
         "PROOF_B_quantum",
+        "articulation_audit_2026-05",
         "boundary_weight",
         "conservation_computability",
         "continuum_limits",
@@ -463,6 +464,7 @@
         "framework_status"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "born_rule",
         "boundary_weight",
         "conservation_computability",
@@ -585,6 +587,7 @@
       "depended_on_by": [
         "INDEX",
         "PROOF_B_quantum",
+        "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
         "born_rule_parameter_free",
         "canonical_glossary",
@@ -743,7 +746,10 @@
       "summary": "The mapping from Kuramoto variables to ADM variables is the unique\nidentification consistent with the symmetries of the locked-state\nKuramoto system at K=1. Each entry is forced by a uniqueness argument.",
       "depends_on": [],
       "depended_on_by": [
-        "k_of_t_friedmann"
+        "articulation_audit_2026-05",
+        "graviton_reframing",
+        "k_of_t_friedmann",
+        "thread_chronology"
       ],
       "git": [
         {
@@ -856,8 +862,10 @@
         "vocabulary_is_the_work_pattern"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "basepoint_principle",
         "framework_status",
+        "graviton_reframing",
         "thread_chronology"
       ],
       "git": [
@@ -929,6 +937,69 @@
           "hash": "9bed549",
           "date": "2026-04-24",
           "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        }
+      ]
+    },
+    {
+      "id": "articulation_audit_2026-05",
+      "path": "sync_cost/derivations/articulation_audit_2026-05.md",
+      "title": "Articulation audit \u2014 2026-05 round",
+      "summary": "Audit complete + post-audit revision. Findings: 7 \u00d7 P1 (5 original +\ngraviton P1.6 + gluon P1.7), 3 \u00d7 P2 (P2.1, P2.2, P2.4 + new baryon-\ncharge candidate), 3+ \u00d7 P3 articulation candidates; 7 non-particle\ndeclines reconfirmed or elevated (none shifted); one genuinely-hard\nparticle bright line preserved (baryon\u2192quark-substructure / QCD\nbound-state dynamics).",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "PROOF_B_quantum",
+        "a1_from_saddle_node",
+        "adm_dictionary",
+        "anchor_count_reaudit",
+        "audit_punch_list_2026-04",
+        "basepoint_principle",
+        "beta_from_tongues",
+        "born_rule",
+        "born_rule_parameter_free",
+        "cone_twist_substrate",
+        "continuity_in_K_nulls",
+        "continuum_limits",
+        "cosmological_cycle",
+        "duty_cycle_dictionary",
+        "einstein_from_kuramoto",
+        "figure_eight",
+        "framework_status",
+        "gauge_dictionary",
+        "gauge_factorization",
+        "gluon_reframing",
+        "graviton_reframing",
+        "hierarchy_problem_translation",
+        "higgs_from_tongue_boundary",
+        "higgs_reframing",
+        "inflation_seam_anchor_closure",
+        "klein_bottle",
+        "mass_function_family",
+        "no_rescaling",
+        "numerology_count_phase_b",
+        "numerology_inventory",
+        "orthogonal_kink_interaction",
+        "path_closures_iter3",
+        "path_closures_iter4",
+        "phenomenology_cross_reference",
+        "proposed_residual_closure",
+        "q_mod2_conservation_theorem",
+        "sine_gordon_substrate",
+        "speed_of_light",
+        "substrate_determinism",
+        "thread_chronology",
+        "vocabulary_is_the_work_pattern",
+        "wave_particle_substrate"
+      ],
+      "depended_on_by": [
+        "gluon_reframing",
+        "graviton_reframing",
+        "thread_chronology"
+      ],
+      "git": [
+        {
+          "hash": "00dc7af",
+          "date": "2026-05-21",
+          "subject": "Articulation audit (2026-05) + post-audit revision: graviton & gluon reframings (#151)"
         }
       ]
     },
@@ -1007,7 +1078,9 @@
         "remaining_gap_shapes",
         "vocabulary_is_the_work_pattern"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "articulation_audit_2026-05"
+      ],
       "git": [
         {
           "hash": "a6a4f5d",
@@ -1102,6 +1175,7 @@
         "thread_chronology"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "framework_status",
         "k_of_t_friedmann",
         "thread_chronology"
@@ -1149,10 +1223,13 @@
       ],
       "depended_on_by": [
         "INDEX",
+        "articulation_audit_2026-05",
         "dynamical_tool_audit",
         "fermion_mass_running",
+        "gluon_reframing",
         "hierarchy_problem_translation",
-        "sqrt_r_n_correction"
+        "sqrt_r_n_correction",
+        "thread_chronology"
       ],
       "git": [
         {
@@ -1175,6 +1252,7 @@
       "depended_on_by": [
         "INDEX",
         "a1_from_saddle_node",
+        "articulation_audit_2026-05",
         "born_rule_parameter_free",
         "derivation_atlas",
         "dynamical_tool_audit",
@@ -1248,6 +1326,7 @@
         "thread_chronology"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "born_rule",
         "empty_fork_cap",
         "proposed_residual_closure",
@@ -1419,6 +1498,7 @@
         "unitless_check"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "dark_twin_correction",
         "expressibility_split",
         "f_exit_natural",
@@ -1496,6 +1576,7 @@
       "depended_on_by": [
         "anchor_count_audit",
         "anchor_count_reaudit",
+        "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
         "cross_ratio_irrep_reframe",
         "derivation_atlas",
@@ -1540,6 +1621,7 @@
         "a_s_geometric_proof",
         "anchor_count_audit",
         "anchor_count_reaudit",
+        "articulation_audit_2026-05",
         "canonical_glossary",
         "cross_ratio_irrep_reframe",
         "derivation_atlas",
@@ -1610,6 +1692,7 @@
         "PROOF_B_quantum"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "k_of_t_friedmann"
       ],
       "git": [
@@ -2219,16 +2302,19 @@
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
+        "articulation_audit_2026-05",
         "beta_from_tongues",
         "canonical_glossary",
         "fermion_mass_running",
         "framework_status",
+        "gluon_reframing",
         "hybrid_strategy_audit",
         "numerology_inventory",
         "observer_register_closure",
         "omega_b_residual_phase_b",
         "quantum_gravity_interpolation",
-        "sinw_effective_dimension"
+        "sinw_effective_dimension",
+        "thread_chronology"
       ],
       "git": [
         {
@@ -2419,10 +2505,12 @@
       "title": "Einstein Field Equations from the Rational Field Equation",
       "summary": "The self-consistency equation N(p/q) = N_total \u00d7 g(p/q) \u00d7 w(p/q, K\u2080F[N])\non the Stern-Brocot tree, at critical coupling K = 1 in the continuum\nlimit, produces the Einstein field equations as its unique output:",
       "depends_on": [
-        "PROOF_A_gravity"
+        "PROOF_A_gravity",
+        "graviton_reframing"
       ],
       "depended_on_by": [
         "INDEX",
+        "articulation_audit_2026-05",
         "cone_twist_substrate",
         "dynamical_tool_audit",
         "framework_status",
@@ -2430,6 +2518,7 @@
         "gap1_theorem",
         "gap_1_christoffel",
         "gauge_dictionary",
+        "graviton_reframing",
         "k_of_t_friedmann",
         "klein_connection",
         "master_cascade_identity",
@@ -2438,9 +2527,15 @@
         "sine_gordon_substrate",
         "soliton_dynamics",
         "sqrt_r_n_correction",
+        "thread_chronology",
         "three_dimensions"
       ],
       "git": [
+        {
+          "hash": "00dc7af",
+          "date": "2026-05-21",
+          "subject": "Articulation audit (2026-05) + post-audit revision: graviton & gluon reframings (#151)"
+        },
         {
           "hash": "b2deee7",
           "date": "2026-04-07",
@@ -2913,6 +3008,7 @@
         "sine_gordon_substrate"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "cone_twist_substrate",
         "dark_twin_correction",
         "discrete_reduction_computed",
@@ -3044,6 +3140,7 @@
         "a_s_g1_closure_attempt",
         "anchor_count_reaudit",
         "ansatz_audit_policy",
+        "articulation_audit_2026-05",
         "audit_findings_3_4_disposition",
         "audit_punch_list_2026-04",
         "basepoint_principle",
@@ -3444,19 +3541,28 @@
         "gauge_factorization",
         "gauge_high_scale_identification",
         "gauge_sector_lovelock",
+        "gluon_reframing",
         "klein_bottle",
         "klein_connection",
         "sinw_fixed_point"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "gauge_high_scale_identification",
+        "gluon_reframing",
         "hierarchy_gaussian_lattice",
         "numerology_inventory",
         "observer_register_closure",
         "sinw_effective_dimension",
+        "thread_chronology",
         "three_formalizations"
       ],
       "git": [
+        {
+          "hash": "00dc7af",
+          "date": "2026-05-21",
+          "subject": "Articulation audit (2026-05) + post-audit revision: graviton & gluon reframings (#151)"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -3481,13 +3587,16 @@
         "xor_derivation"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_b",
         "gauge_dictionary",
         "gauge_high_scale_identification",
+        "gluon_reframing",
         "hierarchy_gaussian_lattice",
         "klein_connection",
-        "second_law_topological"
+        "second_law_topological",
+        "thread_chronology"
       ],
       "git": [
         {
@@ -3663,6 +3772,67 @@
           "hash": "16cda78",
           "date": "2026-03-27",
           "subject": "Derivation 34: The Generation Mechanism \u2014 three generations from phase-state observability"
+        }
+      ]
+    },
+    {
+      "id": "gluon_reframing",
+      "path": "sync_cost/derivations/gluon_reframing.md",
+      "title": "The gluon's properties in framework terms: a reframing",
+      "summary": "**Reframing.** Sibling of `photon_reframing.md`, `graviton_reframing.md`,\n`higgs_reframing.md`. Retains all numerical content of its parents\n(`gauge_dictionary.md`, `gauge_factorization.md`, `beta_from_tongues.md`,\n`duty_cycle_dictionary.md`); changes only the language and the\nprimary object. C-structural per `statistical_conventions.md`; not\nC-numerical; the only numerical content (\u03b1_s/\u03b1_2 = 27/8) is the\npre-existing bare K=1 identity, unchanged.",
+      "depends_on": [
+        "articulation_audit_2026-05",
+        "beta_from_tongues",
+        "duty_cycle_dictionary",
+        "gauge_dictionary",
+        "gauge_factorization",
+        "graviton_reframing",
+        "higgs_reframing",
+        "numerology_count_phase_b",
+        "speed_of_light",
+        "statistical_conventions",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "articulation_audit_2026-05",
+        "gauge_dictionary",
+        "thread_chronology"
+      ],
+      "git": [
+        {
+          "hash": "00dc7af",
+          "date": "2026-05-21",
+          "subject": "Articulation audit (2026-05) + post-audit revision: graviton & gluon reframings (#151)"
+        }
+      ]
+    },
+    {
+      "id": "graviton_reframing",
+      "path": "sync_cost/derivations/graviton_reframing.md",
+      "title": "Gravity's radiative mode in framework terms: a reframing",
+      "summary": "**Reframing.** Sibling of `photon_reframing.md`, `higgs_reframing.md`,\nand `spectral_tilt_reframed.md`: a structural/ontological sharpening\nthat retains all numerical content of its parent derivation\n(`einstein_from_kuramoto.md`, D13) and changes only the language and\nthe primary object. C-structural per `statistical_conventions.md`;\nnot C-numerical; not registered in the MANIFEST scorecard.",
+      "depends_on": [
+        "adm_dictionary",
+        "anchor_count_reaudit",
+        "articulation_audit_2026-05",
+        "einstein_from_kuramoto",
+        "higgs_reframing",
+        "spectral_tilt",
+        "spectral_tilt_reframed",
+        "speed_of_light",
+        "statistical_conventions"
+      ],
+      "depended_on_by": [
+        "articulation_audit_2026-05",
+        "einstein_from_kuramoto",
+        "gluon_reframing",
+        "thread_chronology"
+      ],
+      "git": [
+        {
+          "hash": "00dc7af",
+          "date": "2026-05-21",
+          "subject": "Articulation audit (2026-05) + post-audit revision: graviton & gluon reframings (#151)"
         }
       ]
     },
@@ -3864,6 +4034,7 @@
         "a_s_g1_closure_attempt",
         "anchor_count_audit",
         "anchor_count_reaudit",
+        "articulation_audit_2026-05",
         "derivation_atlas",
         "framework_status",
         "path_closures_iter3",
@@ -3891,6 +4062,7 @@
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
         "anchor_count_audit",
+        "articulation_audit_2026-05",
         "beta_from_tongues",
         "dynamical_tool_audit",
         "fermion_mass_running"
@@ -3934,7 +4106,12 @@
       "title": "The Higgs' Role in the Framework: A Reframing",
       "summary": "**Reframing.** The substance of the framework's Higgs predictions\n(`m_H = v / q_2`, `\u03bb = 1/q_2^3`) is retained. The narrative role\nof the Higgs is changed from \"the particle that gives mass\" to\n\"one locked mode at a specific Stern-Brocot position.\" The\nderivations that previously used Higgs-centric language should be\nupdated to use locked-mode language.",
       "depends_on": [],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "articulation_audit_2026-05",
+        "gluon_reframing",
+        "graviton_reframing",
+        "thread_chronology"
+      ],
       "git": [
         {
           "hash": "e1e25da",
@@ -4153,6 +4330,7 @@
       ],
       "depended_on_by": [
         "anchor_count_reaudit",
+        "articulation_audit_2026-05",
         "basepoint_principle",
         "f_exit_natural",
         "framework_status",
@@ -4530,6 +4708,7 @@
         "CHAIN_KSTAR",
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
+        "articulation_audit_2026-05",
         "beta_from_tongues",
         "cone_twist_substrate",
         "dark_twin_correction",
@@ -4876,6 +5055,7 @@
         "sine_gordon_substrate"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "imf_bowed_cascade",
         "instrument_family_taxonomy",
         "master_cascade_identity"
@@ -5379,6 +5559,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "basepoint_principle",
         "e_cross_discrete_resolution",
         "inflation_duration",
@@ -5573,10 +5754,12 @@
         "L1_substrate_cusp_ground_state",
         "a_s_g1_closure_attempt",
         "ansatz_audit_policy",
+        "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
         "canonical_glossary",
         "derivation_atlas",
         "framework_status",
+        "gluon_reframing",
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
         "proposed_items_disposition",
@@ -5635,6 +5818,7 @@
         "a_s_g1_closure_attempt",
         "anchor_count_audit",
         "ansatz_audit_policy",
+        "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
         "canonical_glossary",
         "depth_connection_nulls",
@@ -6127,6 +6311,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "e_cross_calc",
         "e_cross_discrete_resolution",
         "substrate_determinism"
@@ -6297,6 +6482,7 @@
         "FRAMEWORK_TOPOLOGY",
         "anchor_count_audit",
         "anchor_count_reaudit",
+        "articulation_audit_2026-05",
         "canonical_glossary",
         "continuity_in_K_nulls",
         "derivation_atlas",
@@ -6334,6 +6520,7 @@
         "vocabulary_is_the_work_pattern"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "framework_status",
         "k_of_t_friedmann",
         "omega_b_alpha_beta_phase_b",
@@ -6378,6 +6565,7 @@
       ],
       "depended_on_by": [
         "a1_from_saddle_node",
+        "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
         "derivation_atlas",
         "down_type_double_cover_closed",
@@ -6569,6 +6757,7 @@
         "tick_continuum_construction"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "framework_status",
         "sine_gordon_substrate",
         "sqrt_r_n_correction",
@@ -6733,6 +6922,7 @@
         "tick_continuum_construction"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "derivation_atlas",
         "epr_bell_assembly_theorem",
         "framework_status",
@@ -7302,6 +7492,7 @@
         "tick_continuum_construction"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "cone_twist_substrate",
         "e_cross_calc",
         "epr_bell_assembly_theorem",
@@ -7514,7 +7705,8 @@
         "spectral_tilt_reframed"
       ],
       "depended_on_by": [
-        "INDEX"
+        "INDEX",
+        "graviton_reframing"
       ],
       "git": [
         {
@@ -7571,6 +7763,7 @@
       "summary": "> Strip away \"cost.\" What remains is phase, frequency, coupling,\n> and the rational numbers.",
       "depends_on": [],
       "depended_on_by": [
+        "graviton_reframing",
         "spectral_tilt",
         "unitless_check"
       ],
@@ -7628,7 +7821,10 @@
       ],
       "depended_on_by": [
         "INDEX",
+        "articulation_audit_2026-05",
         "duty_cycle_dictionary",
+        "gluon_reframing",
+        "graviton_reframing",
         "quantum_gravity_interpolation",
         "spatial_coupling_derived"
       ],
@@ -7707,6 +7903,8 @@
         "depth_connection_nulls",
         "derivation_atlas",
         "epsilon_substrate_decomposition",
+        "gluon_reframing",
+        "graviton_reframing",
         "hierarchy_gaussian_lattice",
         "hierarchy_problem_translation",
         "klein_antipodal_z2_rep_pattern",
@@ -7839,6 +8037,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "basepoint_principle",
         "born_rule",
         "born_rule_parameter_free",
@@ -7878,19 +8077,29 @@
       "title": "Thread chronology \u2014 the single ledger",
       "summary": "Class 3 (consolidation / record hygiene). No new primitive, no\nnew physics. This ledger is the single chronology home; the\ncatalog (`framework_status.md`) carries settled state only; other\ndocs' headlines/Status state settled values with the path here.",
       "depends_on": [
+        "adm_dictionary",
         "anchor_count_audit",
         "anchor_count_reaudit",
         "ansatz_audit_policy",
+        "articulation_audit_2026-05",
         "audit_findings_3_4_disposition",
         "basepoint_principle",
+        "beta_from_tongues",
         "born_rule_parameter_free",
         "derivation_atlas",
         "discrete_reduction_computed",
+        "duty_cycle_dictionary",
+        "einstein_from_kuramoto",
         "empty_fork_cap",
         "f_exit_natural",
         "figure_eight",
         "framework_status",
+        "gauge_dictionary",
+        "gauge_factorization",
+        "gluon_reframing",
+        "graviton_reframing",
         "hierarchy_problem_translation",
+        "higgs_reframing",
         "inflation_duration",
         "inflation_seam_anchor_closure",
         "k_critical_phase_a",
@@ -7921,6 +8130,7 @@
       ],
       "depended_on_by": [
         "anchor_count_reaudit",
+        "articulation_audit_2026-05",
         "audit_findings_3_4_disposition",
         "basepoint_principle",
         "born_rule_parameter_free",
@@ -7945,6 +8155,11 @@
         "tick_continuum_construction"
       ],
       "git": [
+        {
+          "hash": "00dc7af",
+          "date": "2026-05-21",
+          "subject": "Articulation audit (2026-05) + post-audit revision: graviton & gluon reframings (#151)"
+        },
         {
           "hash": "0daab8a",
           "date": "2026-05-20",
@@ -8416,6 +8631,7 @@
         "a_s_g1_closure_attempt",
         "anchor_count_audit",
         "anchor_count_reaudit",
+        "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
         "canonical_glossary",
         "continuity_in_K_nulls",
@@ -8423,6 +8639,7 @@
         "derivation_atlas",
         "down_type_double_cover_closed",
         "framework_status",
+        "gluon_reframing",
         "h_inf_status",
         "klein_bridge_audit_and_probe",
         "klein_dynamics_roadmap",
@@ -8522,6 +8739,7 @@
         "unitless_check"
       ],
       "depended_on_by": [
+        "articulation_audit_2026-05",
         "dark_twin_correction",
         "epr_bell_assembly_theorem",
         "f_exit_natural",
