@@ -556,6 +556,12 @@ when the goal is to publish or to argue with a physicist who reads in
 the literature's vocabulary. This file is the right reference when
 the goal is to think clearly.
 
+For a **worked example** that exercises these phenomena end-to-end —
+and teaches the framework's keystone habit, telling a forced
+derivation from a numerical coincidence — see
+`lesson_8_35_vs_13_19.md` (the `sin²θ_W = 8/35` vs `Ω_Λ = 13/19`
+audit; the capstone of the minimum concept set).
+
 ---
 
 ## Status
