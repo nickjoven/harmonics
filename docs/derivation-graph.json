@@ -1,5 +1,5 @@
 {
-  "generated": "323afe98f89fb1ba43de8b0afd41179af36db91a",
+  "generated": "c9409430f5740554d881c4a01f08f49af318b046",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -602,6 +602,7 @@
         "dynamical_tool_audit",
         "framework_status",
         "k_of_t_friedmann",
+        "lesson_forced_basin_selection",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
         "mediant_vs_flow_calc",
@@ -1271,6 +1272,7 @@
         "epr_bell_assembly_theorem",
         "framework_status",
         "lesson_epr_gr_qm_unification",
+        "lesson_forced_basin_selection",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
         "mediant_vs_flow_calc",
@@ -1518,6 +1520,7 @@
       "depended_on_by": [
         "canonical_glossary",
         "lesson_epr_gr_qm_unification",
+        "lesson_forced_basin_selection",
         "phenomenology_cross_reference"
       ],
       "git": [
@@ -3087,6 +3090,7 @@
         "explicit_4x4_reduction",
         "lesson_8_35_vs_13_19",
         "lesson_epr_gr_qm_unification",
+        "lesson_forced_basin_selection",
         "no_rescaling",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
@@ -3235,6 +3239,7 @@
         "klein_nodal_parity",
         "lesson_8_35_vs_13_19",
         "lesson_cosmological_constant",
+        "lesson_forced_basin_selection",
         "lesson_proslambanomenos",
         "lesson_rotation_curves_a0",
         "mediant_vs_flow_calc",
@@ -5175,6 +5180,30 @@
       ]
     },
     {
+      "id": "lesson_forced_basin_selection",
+      "path": "sync_cost/derivations/lesson_forced_basin_selection.md",
+      "title": "Lesson \u2014 forced basin selection: the engine room of measurement",
+      "summary": "The **Tier-B lesson** (mechanism) \u2014 the curriculum's engine room.\nTier A (`lesson_proslambanomenos.md`) is the on-ramp; Tier C (the four\nreframing lessons) shows what the machine *buys you*. This lesson opens\nthe hood: **here is the actual mechanism by which an outcome gets\nselected** \u2014 the thing every Tier-C lesson quietly invokes when it says\n\"basin measure\" or \"Born rule from the saddle-node.\"",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "born_rule",
+        "complex_amplitude_uniqueness",
+        "figure_eight",
+        "framework_status",
+        "lesson_proslambanomenos",
+        "minimum_alphabet",
+        "substrate_determinism"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "c940943",
+          "date": "2026-05-23",
+          "subject": "Add Tier-B lesson: forced basin selection (the engine room of measurement) (#160)"
+        }
+      ]
+    },
+    {
       "id": "lesson_proslambanomenos",
       "path": "sync_cost/derivations/lesson_proslambanomenos.md",
       "title": "Lesson 0 \u2014 the proslambanomenos: the music you already know is the substrate",
@@ -5189,7 +5218,9 @@
         "numerology_inventory",
         "phenomenon_glossary"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "lesson_forced_basin_selection"
+      ],
       "git": [
         {
           "hash": "d365037",
@@ -5624,6 +5655,7 @@
         "dynamical_quantization",
         "gap_2_spatial_diffusion",
         "klein_bottle_derivation",
+        "lesson_forced_basin_selection",
         "primitive_completeness_audit",
         "structural_lemmas"
       ],
@@ -8363,6 +8395,7 @@
         "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
         "lesson_epr_gr_qm_unification",
+        "lesson_forced_basin_selection",
         "mediant_vs_flow_problem",
         "q_mod2_conservation_theorem",
         "thread_chronology",
