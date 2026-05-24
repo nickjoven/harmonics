@@ -60,25 +60,31 @@ def main() -> int:
     print("fold structure IS the r_1=0, r_3-coherent pattern.")
     print()
 
-    # Corrected kink-mass flow: with the sector's own r_b -> 1 (well-locked),
-    # the kink mass returns to the bare bound b^(-n/(2d)).
-    print("CORRECTED KINK-MASS FLOW (well-locked: r_b ~ 1):")
+    # The sector's own r_b is NOT ~1 -- it must be solved by
+    # self-consistency. cascade_kink_onset.py simulates the b-harmonic
+    # Kuramoto and finds the b-cluster onset is b-INDEPENDENT (= K_c = 2/pi),
+    # so the discriminator is just whether K_n exceeds 2/pi.
+    print("KINK-MASS FLOW (r_b from self-consistency; see cascade_kink_onset.py):")
     sectors = [
-        ("Z_6  (d,n,b)=(6,1,2)", 6, 1, 2),
-        ("K*   (d,n,b)=(14,3,2)", 14, 3, 2),
-        ("Bowed(d,n,b)=(3,1,2)", 3, 1, 2),
-        ("Clarinet (d,n,b)=(2,1,3)", 2, 1, 3),
+        ("Z_6  (d,n,b)=(6,1,2)", 6, 1, 2, 0.525),
+        ("K*   (d,n,b)=(14,3,2)", 14, 3, 2, 0.502),
+        ("Bowed(d,n,b)=(3,1,2)", 3, 1, 2, 0.433),
+        ("Clarinet (d,n,b)=(2,1,3)", 2, 1, 3, 0.013),
     ]
-    print(f"{'sector':<26}{'b^(-n/2d)':>12}{'r_1 (old, wrong)':>18}")
+    print(f"{'sector':<26}{'b^(-n/2d)':>11}{'r_b (sim)':>10}{'kink?':>20}")
     print("-" * 70)
-    for label, d, n, b in sectors:
+    for label, d, n, b, rb in sectors:
         bound = b ** (-n / (2 * d))
-        print(f"{label:<26}{bound:>12.4f}{'0 (symmetry)':>18}")
+        kink = "soft kink (square)" if rb > 0.05 else "NO kink (triangle)"
+        print(f"{label:<26}{bound:>11.4f}{rb:>10.3f}{kink:>20}")
     print("-" * 70)
-    print("The clarinet kink mass is ~0.760 (= 3^(-1/4)), NOT zero. The")
-    print("'below onset' result was an artifact of the single-cluster r_1.")
-    print("Remaining sector-coherence correction is the cluster-INTERNAL")
-    print("spread (r_b slightly < 1), a smaller effect than r_1 suggested.")
+    print("CORRECTION to an earlier reading: the clarinet kink does NOT exist")
+    print("at ~0.760. Clarinet K = 3^(-1/2) = 0.577 < K_c = 2/pi = 0.637, so")
+    print("r_3 ~ 0 (below the b-independent cluster onset) -> no coherent")
+    print("background -> no stable kink. The above-onset sectors host SOFT")
+    print("kinks (r_b ~ 0.43-0.53, not ~1); their kink-mass ratios are")
+    print("sqrt(K_n r_b)/sqrt(K_1 r_1) ~ 0.76-0.88, close to the original")
+    print("cascade_rn_compute numbers (which were right as r_b values).")
     print()
     print("Bridge to spin-statistics: under the field half-twist theta->theta+pi,")
     print("r_m -> (-1)^m r_m, so odd harmonics are the antisymmetric (fermionic)")
