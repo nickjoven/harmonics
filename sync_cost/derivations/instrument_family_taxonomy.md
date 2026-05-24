@@ -81,6 +81,28 @@ torus/boson counterfactual the framework declined; the framework's
 closed-cylinder commitment is the commitment to fermions, regardless of
 whether any given sector is driven sharply (reed/bow) or smoothly (flue).
 
+### Bore parity and kink charge are two distinct Z₂'s
+
+The boson/fermion label above is the harmonic-parity superselection of
+the *field* half-twist θ → θ + π (`framework_lagrangian.py` Symmetry 6):
+states split into even (bosonic) and odd (fermionic) representations,
+and a sector's bore parity says which representation its locked modes
+occupy. This is a separate Z₂ from the kink's topological charge
+Q mod 2, which is the *coordinate* antiperiodicity of the Klein gluing
+(`sine_gordon_substrate.md`'s "Distinct from the field half-twist").
+
+The consequence matters for the soliton sector: a kink's boson/fermion
+character is fixed by its own half-twist parity (the global
+superselection), not by the bore parity of the sector that hosts it.
+So kinks need not form in the odd-bore sector. The soft kinks of the
+above-onset all-harmonic sectors are legitimate fermions — a
+topologically charged soliton sitting in the odd half-twist
+representation, the Coleman sine-Gordon ↔ Thirring correspondence —
+even though their host bore is all-harmonic. "The odd-bore sector is
+fermionic" (its modes occupy the odd representation) and "the kinks are
+fermions" (Coleman, via the global half-twist) are two compatible facts
+about two different Z₂'s, not a contradiction.
+
 ## Why this is useful
 
 - Organizes the K-zoo: each K-value is one instrument's voice.
