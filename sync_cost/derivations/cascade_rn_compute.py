@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
 """Compute the sector order parameter r(K_n) and the kink-mass flow.
 
+SUPERSEDED FOR THE K<1 SECTORS — see cascade_cluster_order.py. This
+script uses the SINGLE-CLUSTER order parameter r_1 = sqrt(1 - K_c/K),
+which is correct only at the K=1 boundary (full lock). The mode-locked
+cascade sectors split into b symmetric phase clusters, where r_1 = 0
+identically by symmetry and the coherence lives in r_b. The clarinet
+"below onset, r=0" finding below is an ARTIFACT of measuring r_1 for a
+three-cluster state; with the correct r_b measure the clarinet kink
+exists (~0.760). Kept for the record and the boundary case.
+
 The sine-Gordon reduction falls out at every cascade-locked sector
 (structurally forced; sine_gordon_substrate.md "net-state update"),
 giving kink mass M_k = 8 sigma sqrt(K r). The only sector-dependent
