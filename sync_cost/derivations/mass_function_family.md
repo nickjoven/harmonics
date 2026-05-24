@@ -11,22 +11,40 @@ functions correspond to different cascade depths:
 |---|---|---|---|---|---|
 | Gravitational K = 1 (string) | — | 0 | -2.000 | Press–Schechter halo MF | exact |
 | Globular-cluster MF | — | 0 | -2.000 | universal GC MF | exact |
-| Z_6 cascade (conjectured) | 6 | 1 | -13/6 ≈ -2.167 | subhalo MF (-1.9 to -2.0) | within 5–10% |
+| Z_6 cascade (conjectured) | 6 | 1 | -13/6 ≈ -2.167 | subhalo MF (-1.9 to -2.0) | **2.67σ tension — out of band** |
 | Matter equilibrium K* | 14 | 3 | -31/14 ≈ -2.214 | (no fragmentation observable) | — |
 | Bowed cascade (Phase II) | 3 | 1 | -7/3 ≈ -2.333 | Salpeter IMF | 0.33σ |
 | Clarinet cascade (q_3-base) | 2 | 1 | -5/2 | predicted, untested | — |
 
 ## Structural reading
 
-The "spread" of observed mass-function slopes from -1.9 to -2.5 is
-not a zoo of unrelated phenomena — it is the slope formula evaluated
-at different cascade depths. As cascade depth `d` increases, α → -q_2 = -2
-(the K = 1 boundary). Shallower cascades give steeper slopes.
+Part of the observed mass-function spread aligns with the slope
+formula evaluated at different cascade depths: as cascade depth `d`
+increases, α → -q_2 = -2 (the K = 1 boundary), and shallower
+cascades give steeper slopes.
+
+**Range caveat (important).** The formula's image is
+`α = -q_2 - n/d ∈ (-2.5, -2.0]` for n ≥ 1 — it asymptotes to -2.0
+from below and **cannot produce any slope shallower than -2.0**.
+So the claim that "the spread from -1.9 to -2.5 IS the formula at
+different depths" is false at the shallow end: the observed subhalo
+slope (-1.9 to -2.0) lies *outside or at the edge* of the formula's
+range and is best matched by the **K = 1 boundary (-2.0)**, not by a
+deeper Z_6 rung (-2.167). See `cascade_slope_check.py`: the Z_6
+assignment is in 2.67σ tension and triggers this doc's own
+subhalo falsifier (below). The genuinely supported rung is the
+bowed/Salpeter one (-7/3 vs -2.35 ± 0.05 = 0.33σ); the K = 1
+boundary (-2.0) is consistent but observationally cheap; the
+clarinet (-5/2) and matter-K* (-31/14) rungs have no clean
+fragmentation observable and remain untested.
 
 ## Falsifiers
 
 - Subhalo MF measurement giving α < -2.05 or α > -2.30: the Z_6-cascade
-  prediction (-13/6 = -2.167) is out of band.
+  prediction (-13/6 = -2.167) is out of band. **This falsifier is
+  currently triggered**: the observed subhalo slope (-1.9 to -2.0)
+  has α > -2.05, so the Z_6/subhalo assignment is out of band. The
+  subhalo MF is matched by the K = 1 boundary (-2.0), not the Z_6 rung.
 - Salpeter IMF measured at α < -2.40 or α > -2.27: the Phase II bowed
   cascade prediction (-7/3 = -2.333) is out of band.
 - Discovery of a mass function with α < -2.50: forbidden by the master
