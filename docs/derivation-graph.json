@@ -1,5 +1,5 @@
 {
-  "generated": "b819d036058e9d6ff357a26d52c5e6ebc80f25f1",
+  "generated": "09a73e726e2d926f0f31408d87c60aca22795ce2",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -905,6 +905,7 @@
         "k_axis_uniqueness",
         "k_scaling_scan",
         "klein_bridge_audit_and_probe",
+        "lesson_8_35_vs_13_19",
         "numerology_count_phase_a",
         "numerology_count_phase_b",
         "numerology_inventory",
@@ -2897,6 +2898,7 @@
         "canonical_glossary",
         "framework_status",
         "high_school_syllabus",
+        "lesson_8_35_vs_13_19",
         "numerology_inventory",
         "omega_partition_combinatorial",
         "structural_lemmas",
@@ -3060,6 +3062,7 @@
         "e_cross_calc",
         "empty_fork_cap",
         "explicit_4x4_reduction",
+        "lesson_8_35_vs_13_19",
         "no_rescaling",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
@@ -3206,6 +3209,7 @@
         "klein_antipodal_z2_rep_pattern",
         "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
+        "lesson_8_35_vs_13_19",
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
         "no_rescaling",
@@ -5052,6 +5056,33 @@
       ]
     },
     {
+      "id": "lesson_8_35_vs_13_19",
+      "path": "sync_cost/derivations/lesson_8_35_vs_13_19.md",
+      "title": "Lesson \u2014 8/35 vs 13/19: telling a derivation from a coincidence",
+      "summary": "A one-hour worked lesson. Two small-integer rationals, each matching\na measured dimensionless number to ~1% or better. One is the\nframework's prized survivor (Class 5, **Survives**); the other is\nfiled under **Fails**. The lesson teaches the framework's keystone\ndiscipline \u2014 *forced, not fitted* \u2014 by auditing both side by side.",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "farey_partition",
+        "figure_eight",
+        "framework_status",
+        "numerology_count_phase_b",
+        "numerology_inventory",
+        "omega_partition_combinatorial",
+        "partition_logit_form",
+        "statistical_conventions"
+      ],
+      "depended_on_by": [
+        "phenomenon_glossary"
+      ],
+      "git": [
+        {
+          "hash": "09a73e7",
+          "date": "2026-05-23",
+          "subject": "Add worked lesson: 8/35 vs 13/19 (telling a derivation from a coincidence) (#154)"
+        }
+      ]
+    },
+    {
       "id": "lie_group_characterization",
       "path": "sync_cost/derivations/lie_group_characterization.md",
       "title": "Lie Group Characterization Theorem",
@@ -5805,6 +5836,7 @@
         "derivation_atlas",
         "framework_status",
         "gluon_reframing",
+        "lesson_8_35_vs_13_19",
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
         "proposed_items_disposition",
@@ -5877,6 +5909,7 @@
         "k_of_t_friedmann",
         "k_scaling_scan",
         "klein_nodal_parity",
+        "lesson_8_35_vs_13_19",
         "numerology_count_phase_a",
         "observer_register_closure",
         "partition_logit_form",
@@ -6316,6 +6349,7 @@
         "k_axis_uniqueness",
         "k_of_t_friedmann",
         "klein_antipodal_z2_rep_pattern",
+        "lesson_8_35_vs_13_19",
         "numerology_inventory",
         "omega_b_residual_phase_a",
         "omega_b_substrate_side_audit",
@@ -6388,6 +6422,7 @@
         "canonical_glossary",
         "derivation_atlas",
         "framework_status",
+        "lesson_8_35_vs_13_19",
         "omega_b_w_plus_candidate",
         "omega_b_w_plus_cross_ratio_search",
         "psl2z_subgroup_identification_phase_a",
@@ -6650,12 +6685,18 @@
       "title": "Phenomenon glossary \u2014 dynamics first, names second",
       "summary": "Phenomenon glossary v0.1. ~40 entries across 8 sections. Intended\nto be readable end-to-end in ~30 minutes by someone with general\nmathematical literacy and no exposure to the specific literature.",
       "depends_on": [
-        "canonical_glossary"
+        "canonical_glossary",
+        "lesson_8_35_vs_13_19"
       ],
       "depended_on_by": [
         "complex_amplitude_uniqueness"
       ],
       "git": [
+        {
+          "hash": "09a73e7",
+          "date": "2026-05-23",
+          "subject": "Add worked lesson: 8/35 vs 13/19 (telling a derivation from a coincidence) (#154)"
+        },
         {
           "hash": "b819d03",
           "date": "2026-05-21",
@@ -7968,6 +8009,7 @@
         "hierarchy_gaussian_lattice",
         "hierarchy_problem_translation",
         "klein_antipodal_z2_rep_pattern",
+        "lesson_8_35_vs_13_19",
         "mixing_angle_audit",
         "neutrino_mass_audit",
         "numerology_count_phase_a",
