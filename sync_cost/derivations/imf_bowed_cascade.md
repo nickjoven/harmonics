@@ -94,6 +94,7 @@ provide.
 - `master_cascade_identity.md` — the (d, n, b) family
 - `mass_function_family.md` — α across cascade depths
 - `farey_mass_baseline.py` — -q_2 baseline from the Farey mode-count measure
+- `mass_entrained_measure.md` — mass = entrained measure, from the cost functional
 - `imf_step2_klein_orbit.py` — Step-2 lemma: depth = Klein-orbit count
 - `cascade_slope_check.py` — slope vs. observed MF slopes + pigeonhole null
 - `RESULTS.md` — Stribeck N = 3 empirical anchor

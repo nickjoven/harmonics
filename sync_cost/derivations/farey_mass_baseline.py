@@ -94,8 +94,8 @@ def main() -> int:
     print("Scope: this is the K=1 baseline only. The K<1 cascade correction")
     print("-n/d = -1/q_3 (-> -7/3) is the separate, Step-2-grounded piece")
     print("(imf_step2_klein_orbit.py). The mass=tongue-width identification")
-    print("is the one load-bearing assumption, grounded in the framework's")
-    print("'energy = synchronization cost' primitive, not yet a theorem.")
+    print("is derived from the synchronization-cost functional in")
+    print("mass_entrained_measure.md (modulo a q-independent binding energy).")
     return 0
 
 
