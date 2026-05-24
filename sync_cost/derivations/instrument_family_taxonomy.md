@@ -18,6 +18,42 @@ The two rightmost columns are independent predictions on the same
 K-zoo: the fragmentation slope from `mass_function_family.md`, the
 kink mass from `sine_gordon_substrate.md`. Each voice carries both.
 
+## Vocabulary: two independent axes wear the word "square"
+
+The "Spectrum" column conflates two physically independent properties.
+Keeping them separate matters for reading the kink results:
+
+- **Bore geometry → *which* harmonics (structural).** A cylindrical
+  bore (clarinet) selects ODD harmonics; a conical bore (sax) admits
+  ALL. This is the q_3 vs q_2, antiperiodic vs periodic, Klein vs
+  torus, fermion vs boson axis — fixed by the substrate, independent
+  of coupling. "Square, odd-Farey" above means odd-harmonic *timbre*
+  in this sense, nothing more.
+- **Reed drive → *how sharp* (dynamical).** Whether the waveform has
+  hard jumps (kink-bearing, square/sawtooth) or is rounded (sinusoid)
+  is set by the excitation strength — i.e. whether the coupling K
+  clears the cluster-sync onset K_c = 2/pi. Above onset: sharp,
+  plateaued, hosts kinks. Below: smooth, no localized kink. See
+  `cascade_kink_onset.py`.
+
+A real clarinet is "square" on **both** axes: a cylindrical bore
+(odd harmonics) PLUS a stick-slip reed — a relaxation oscillator
+beating against the mouthpiece, which is the same stick-slip
+mechanism that seeds the framework (Stribeck/Kawano). The bore makes
+it odd; the reed makes it audibly sharp.
+
+**Caveat — the metaphor under-drives the clarinet sector.** The
+framework's clarinet cascade coupling K = 3^(-1/2) = 0.577 sits
+BELOW the onset K_c = 2/pi = 0.637, so the clarinet *sector* is
+odd-harmonic but *smooth* — no kink — which does NOT match the
+audibly-square (sharp, stick-slip) real clarinet. The reed's
+kink-bearing character lives in the above-onset sectors (bowed,
+Z_6, K*), not at the clarinet cascade coupling. So do not read
+"clarinet = square" as "the clarinet sector hosts sharp kinks":
+the bore axis (odd harmonics) and the drive axis (sharpness)
+decouple here. This is exactly why the instrument mapping is a
+teaching frame, not a derivation.
+
 ## Why two reed-instrument families
 
 The framework has two natural cascade bases (q_2, q_3). These map to
