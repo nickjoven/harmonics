@@ -1,19 +1,19 @@
 # Instrument-family taxonomy of the framework
 
-The framework's substrate sectors map cleanly onto four classical
-instrument families. This is a teaching frame, not a derivation — but
-the mapping is structurally tight enough to organize how the framework's
-predictions cluster.
+The framework's substrate sectors map onto classical instrument
+families along two independent axes. This is a teaching frame, not a
+derivation — but the mapping is structurally tight enough to organize
+how the framework's predictions cluster.
 
 ## The two independent axes
 
-Earlier versions collapsed two physically independent properties into
-single instrument names ("clarinet = square"). They must be separated.
-The trigger for the cleanup: a **triangle** wave is odd-harmonic too —
-it differs from a square wave only in *sharpness* (1/n² vs 1/n harmonic
-falloff), not in *which* harmonics are present. So "odd harmonics" does
-**not** pick out "clarinet"; it picks out a closed cylinder, which can
-be smooth (triangle-like) or sharp (square-like) depending on drive.
+Two physically independent properties must be kept separate, because a
+single instrument name conflates them. A **triangle** wave is
+odd-harmonic just as a square wave is — they differ only in *sharpness*
+(1/n² vs 1/n harmonic falloff), not in *which* harmonics are present.
+So "odd harmonics" does not pick out "clarinet"; it picks out a closed
+cylinder, which can be smooth (triangle-like) or sharp (square-like)
+depending on how it is driven.
 
 **Axis A — bore geometry → *which* harmonics (structural, set by the
 substrate, independent of coupling):**
@@ -54,23 +54,20 @@ The axes are orthogonal. Their 2×2 (harmonic content × sharpness):
 | Baryonic q_2-cascade | 2^(−1/3) | all (octave) | **sharp** (above onset) | bowed string | −7/3 | soft kink |
 | q_3-cascade | 3^(−1/2) | odd (twelfth) | **smooth** (below onset) | **stopped flue (Gedackt)** | −5/2 | none |
 
-The previous "clarinet" name for the q_3 sector was wrong on Axis B.
-The sector is odd-harmonic (closed-cylinder bore) but its coupling
+The q_3 sector is odd-harmonic (closed-cylinder bore) but its coupling
 K = 0.577 sits BELOW the onset, so it is *smooth* — a **stopped flue
 pipe** (the organ Gedackt / Bourdon / Stopped Diapason: a closed
 cylindrical, jet-excited rank that is odd-harmonic AND mellow). That
-is exactly odd-but-smooth, the triangle-not-square corner, NOT a reed
-clarinet.
+is exactly odd-but-smooth, the triangle-not-square corner — not a reed
+clarinet, whose audible squareness comes from its reed.
 
 **A true clarinet (odd + sharp) is a missing voice.** A real clarinet
 is a closed cylinder driven ABOVE onset by a stick-slip reed — the same
 relaxation/stick-slip mechanism that seeds the framework
 (Stribeck/Kawano). The current cascade has no such sector: its only
-odd-bore (b=3) rung, K = 3^(−1/2), is below the kink onset. So naming
-the smooth odd sector "clarinet" imported a sharpness it does not have,
-and the genuinely clarinet-like (odd + sharp, kink-bearing) voice would
-require an odd-bore sector above K_c — which the K-zoo does not yet
-supply.
+odd-bore (b=3) rung, K = 3^(−1/2), is below the kink onset. The
+genuinely clarinet-like (odd + sharp, kink-bearing) voice would require
+an odd-bore sector above K_c — which the K-zoo does not yet supply.
 
 ## Structural anchor (Axis A only)
 

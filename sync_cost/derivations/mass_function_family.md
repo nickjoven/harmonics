@@ -25,17 +25,16 @@ cascades give steeper slopes.
 
 **Range caveat (important).** The formula's image is
 `α = -q_2 - n/d ∈ (-2.5, -2.0]` for n ≥ 1 — it asymptotes to -2.0
-from below and **cannot produce any slope shallower than -2.0**.
-So the claim that "the spread from -1.9 to -2.5 IS the formula at
-different depths" is false at the shallow end: the observed subhalo
-slope (-1.9 to -2.0) lies *outside or at the edge* of the formula's
-range and is best matched by the **K = 1 boundary (-2.0)**, not by a
-deeper Z_6 rung (-2.167). See `cascade_slope_check.py`: the Z_6
-assignment is in 2.67σ tension and triggers this doc's own
-subhalo falsifier (below). The genuinely supported rung is the
-bowed/Salpeter one (-7/3 vs -2.35 ± 0.05 = 0.33σ); the K = 1
-boundary (-2.0) is consistent but observationally cheap; the
-clarinet (-5/2) and matter-K* (-31/14) rungs have no clean
+from below and **cannot produce any slope shallower than -2.0**. The
+spread of observed slopes therefore is *not* fully covered by the
+formula at the shallow end: the observed subhalo slope (-1.9 to -2.0)
+lies outside or at the edge of the formula's range and is matched by
+the **K = 1 boundary (-2.0)**, not by a deeper Z_6 rung (-2.167). See
+`cascade_slope_check.py`: the Z_6 assignment is in 2.67σ tension and
+triggers this doc's own subhalo falsifier (below). The genuinely
+supported rung is the bowed/Salpeter one (-7/3 vs -2.35 ± 0.05 =
+0.33σ); the K = 1 boundary (-2.0) is consistent but observationally
+cheap; the clarinet (-5/2) and matter-K* (-31/14) rungs have no clean
 fragmentation observable and remain untested.
 
 ## Falsifiers

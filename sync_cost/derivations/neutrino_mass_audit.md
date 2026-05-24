@@ -48,14 +48,13 @@ interaction-scale correction `−(q_2·q_3)^(−2) = −1/36` applied to
 the tree-level ratio, using framework-native alphabet rationals at
 the physical vacuum scale `v`. It is not a fit.
 
-**Caution — do not generalize this into a shared "finite-K
-correction closes the sector" pattern.** Earlier drafts cited
-`sin²θ_W = 8/35 + 8/F_10²` and `α_s/α_2 + 1/q_3²` as parallel
-"framework successes," but both of those electroweak corrections
-are **null / retracted**: the `+8/F_10²` Fibonacci term is
-retracted, the `d_eff = 80/27` route is a null ansatz, and SM
-running rules out `8/35` and `27/8` as M_Z predictions (Class 1;
-see `negative_results_ledger.md`). The neutrino closure stands on
+**Caution — this closure must not be generalized into a shared
+"finite-K correction closes the sector" pattern.** The analogous
+electroweak "corrections" `sin²θ_W = 8/35 + 8/F_10²` and
+`α_s/α_2 + 1/q_3²` are **null / retracted**: the `+8/F_10²`
+Fibonacci term is retracted, the `d_eff = 80/27` route is a null
+ansatz, and SM running rules out `8/35` and `27/8` as M_Z
+predictions (Class 1; see `negative_results_ledger.md`). The neutrino closure stands on
 its own structural footing and must **not** be presented as one
 instance of a winning EW pattern — it inherits no support from the
 electroweak sector.
