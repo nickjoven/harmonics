@@ -5,77 +5,84 @@ instrument families. This is a teaching frame, not a derivation — but
 the mapping is structurally tight enough to organize how the framework's
 predictions cluster.
 
-## The four voices
+## The two independent axes
 
-| Sector | Instrument | K regime | Spectrum | Fragmentation slope | Kink mass / M_k(K=1) |
-|---|---|---|---|---|---|
-| Gravitational K = 1 | string | K = 1 | linear, sustained | -2 (Press–Schechter) | 1.000 |
-| Inflation near-K = 1 | flute | K ≈ 0.976 | fundamental + weak overtones | n_s = 0.965 (tilt) | ≈ 0.988 |
-| Baryonic q_2-cascade | bowed string | K = 2^(-1/3) | sawtooth, all-Farey | -7/3 (Salpeter) | 0.891 |
-| q_3-cascade | clarinet | K = 3^(-1/2) | square, odd-Farey | -5/2 (predicted) | 0.760 |
+Earlier versions collapsed two physically independent properties into
+single instrument names ("clarinet = square"). They must be separated.
+The trigger for the cleanup: a **triangle** wave is odd-harmonic too —
+it differs from a square wave only in *sharpness* (1/n² vs 1/n harmonic
+falloff), not in *which* harmonics are present. So "odd harmonics" does
+**not** pick out "clarinet"; it picks out a closed cylinder, which can
+be smooth (triangle-like) or sharp (square-like) depending on drive.
 
-The two rightmost columns are independent predictions on the same
-K-zoo: the fragmentation slope from `mass_function_family.md`, the
-kink mass from `sine_gordon_substrate.md`. Each voice carries both.
+**Axis A — bore geometry → *which* harmonics (structural, set by the
+substrate, independent of coupling):**
 
-## Vocabulary: two independent axes wear the word "square"
+| Bore | Harmonics | Overblow | Substrate |
+|---|---|---|---|
+| open cylinder | all (1,2,3,…) | octave (×2 = q_2) | torus / periodic |
+| cone | all (1,2,3,…) | octave (×2 = q_2) | torus / periodic |
+| closed cylinder | odd (1,3,5,…) | twelfth (×3 = q_3) | Klein / antiperiodic |
 
-The "Spectrum" column conflates two physically independent properties.
-Keeping them separate matters for reading the kink results:
+Odd harmonics come ONLY from a closed cylinder; "all harmonics" comes
+from either an open cylinder or a cone. The framework's antiperiodic
+(odd / Klein / fermionic) commitment is specifically the closed
+cylinder — the cylinder-vs-cone choice, divorced from how it is driven.
 
-- **Bore geometry → *which* harmonics (structural).** A cylindrical
-  bore (clarinet) selects ODD harmonics; a conical bore (sax) admits
-  ALL. This is the q_3 vs q_2, antiperiodic vs periodic, Klein vs
-  torus, fermion vs boson axis — fixed by the substrate, independent
-  of coupling. "Square, odd-Farey" above means odd-harmonic *timbre*
-  in this sense, nothing more.
-- **Reed drive → *how sharp* (dynamical).** Whether the waveform has
-  hard jumps (kink-bearing, square/sawtooth) or is rounded (sinusoid)
-  is set by the excitation strength — i.e. whether the coupling K
-  clears the cluster-sync onset K_c = 2/pi. Above onset: sharp,
-  plateaued, hosts kinks. Below: smooth, no localized kink. See
-  `cascade_kink_onset.py`.
+**Axis B — excitation → *how sharp* (dynamical, set by K vs the
+cluster-sync onset K_c = 2/pi; see `cascade_kink_onset.py`):**
 
-A real clarinet is "square" on **both** axes: a cylindrical bore
-(odd harmonics) PLUS a stick-slip reed — a relaxation oscillator
-beating against the mouthpiece, which is the same stick-slip
-mechanism that seeds the framework (Stribeck/Kawano). The bore makes
-it odd; the reed makes it audibly sharp.
+| Excitation | Character | Waveform | Kink? |
+|---|---|---|---|
+| flue / air-jet | smooth, gentle | sinusoid / triangle | below onset: none |
+| reed | nonlinear pressure valve | square (sharp) | above onset: yes |
+| bow | stick-slip relaxation | sawtooth (sharp) | above onset: yes |
 
-**Caveat — the metaphor under-drives the clarinet sector.** The
-framework's clarinet cascade coupling K = 3^(-1/2) = 0.577 sits
-BELOW the onset K_c = 2/pi = 0.637, so the clarinet *sector* is
-odd-harmonic but *smooth* — no kink — which does NOT match the
-audibly-square (sharp, stick-slip) real clarinet. The reed's
-kink-bearing character lives in the above-onset sectors (bowed,
-Z_6, K*), not at the clarinet cascade coupling. So do not read
-"clarinet = square" as "the clarinet sector hosts sharp kinks":
-the bore axis (odd harmonics) and the drive axis (sharpness)
-decouple here. This is exactly why the instrument mapping is a
-teaching frame, not a derivation.
+The axes are orthogonal. Their 2×2 (harmonic content × sharpness):
 
-## Why two reed-instrument families
+| | smooth (flue, below onset) | sharp (reed/bow, above onset) |
+|---|---|---|
+| **all harmonics** | flute / open flue | bowed string, sax (sawtooth) |
+| **odd harmonics** | **stopped flue (Gedackt)** | clarinet (square reed) |
 
-The framework has two natural cascade bases (q_2, q_3). These map to
-the two reed-instrument overblow ratios:
+## The framework's voices, re-mapped
 
-- Sax / oboe / bowed string: overblow at the octave (factor 2 = q_2).
-- Clarinet: overblow at the twelfth (factor 3 = q_3).
+| Sector | K | bore (harmonics) | excitation | proper instrument | slope | kink |
+|---|---|---|---|---|---|---|
+| Gravitational K=1 | 1 | all (full lock) | sustained | string | −2 | M_k=1 |
+| Inflation near-K=1 | 0.976 | all | smooth | flute / open flue | n_s tilt | ≈ boundary |
+| Baryonic q_2-cascade | 2^(−1/3) | all (octave) | **sharp** (above onset) | bowed string | −7/3 | soft kink |
+| q_3-cascade | 3^(−1/2) | odd (twelfth) | **smooth** (below onset) | **stopped flue (Gedackt)** | −5/2 | none |
 
-The bowed–clarinet asymmetry in acoustics is exactly the q_2 / q_3
-asymmetry in the framework. Both come from the same algebraic
-structure (cylindrical vs. effective-conical resonance).
+The previous "clarinet" name for the q_3 sector was wrong on Axis B.
+The sector is odd-harmonic (closed-cylinder bore) but its coupling
+K = 0.577 sits BELOW the onset, so it is *smooth* — a **stopped flue
+pipe** (the organ Gedackt / Bourdon / Stopped Diapason: a closed
+cylindrical, jet-excited rank that is odd-harmonic AND mellow). That
+is exactly odd-but-smooth, the triangle-not-square corner, NOT a reed
+clarinet.
 
-## Saxophone counterfactual
+**A true clarinet (odd + sharp) is a missing voice.** A real clarinet
+is a closed cylinder driven ABOVE onset by a stick-slip reed — the same
+relaxation/stick-slip mechanism that seeds the framework
+(Stribeck/Kawano). The current cascade has no such sector: its only
+odd-bore (b=3) rung, K = 3^(−1/2), is below the kink onset. So naming
+the smooth odd sector "clarinet" imported a sharpness it does not have,
+and the genuinely clarinet-like (odd + sharp, kink-bearing) voice would
+require an odd-bore sector above K_c — which the K-zoo does not yet
+supply.
 
-The conical-bore, all-harmonic saxophone corresponds to a torus
-substrate (periodic identification, no Z_2 flip). The framework chose
-the Klein bottle (clarinet substrate) — non-orientable, antiperiodic.
+## Structural anchor (Axis A only)
 
-This choice is structurally forced: the Klein-bottle commitment is
-the same commitment as admitting fermions (spin structure). The torus
-admits only bosons. The framework's commitment to a "clarinet
-substrate" is the commitment to a fermionic universe.
+The substrate commitment lives entirely on Axis A: a CLOSED-CYLINDER
+(odd, antiperiodic) bore = the Klein bottle = a spin structure = a
+**fermionic** universe; an open-cylinder or conical (all-harmonic,
+periodic) bore = the torus = **bosonic**. This is independent of the
+excitation (reed vs flue vs bow) — which is the whole point of the
+decomposition. The conical, all-harmonic **saxophone** is the
+torus/boson counterfactual the framework declined; the framework's
+closed-cylinder commitment is the commitment to fermions, regardless of
+whether any given sector is driven sharply (reed/bow) or smoothly (flue).
 
 ## Why this is useful
 
@@ -92,6 +99,6 @@ substrate" is the commitment to a fermionic universe.
 - `mass_function_family.md` — each voice predicts a fragmentation slope
 - `sine_gordon_substrate.md` — each voice also predicts a kink mass
   via `M_k ∝ √K` (soliton sector)
-- `klein_bottle.md` — substrate commitment = clarinet substrate
+- `klein_bottle.md` — substrate commitment = closed-cylinder (odd, antiperiodic) bore
 - `medium_change_demo.md` — bowed-string vs. flute physical instance
   of the lambda / EML split
