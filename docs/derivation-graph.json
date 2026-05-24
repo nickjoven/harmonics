@@ -1,5 +1,5 @@
 {
-  "generated": "371833929471d5a7d6ce0264b47c1d8098d6f877",
+  "generated": "6a562144bb8c32d3e6f4271d6210372ab7080a52",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -17,6 +17,7 @@
         "dynamical_tool_audit",
         "klein_antipodal_z2_rep_pattern",
         "master_cascade_identity",
+        "negative_results_ledger",
         "numerology_inventory"
       ],
       "git": [
@@ -869,6 +870,7 @@
         "graviton_reframing",
         "lesson_cosmological_constant",
         "lesson_rotation_curves_a0",
+        "negative_results_ledger",
         "thread_chronology"
       ],
       "git": [
@@ -1268,6 +1270,7 @@
         "empty_fork_cap",
         "epr_bell_assembly_theorem",
         "framework_status",
+        "lesson_epr_gr_qm_unification",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
         "mediant_vs_flow_calc",
@@ -1514,6 +1517,7 @@
       ],
       "depended_on_by": [
         "canonical_glossary",
+        "lesson_epr_gr_qm_unification",
         "phenomenology_cross_reference"
       ],
       "git": [
@@ -1631,6 +1635,7 @@
         "k_of_t_friedmann",
         "klein_bridge_audit_and_probe",
         "klein_dynamics_roadmap",
+        "lesson_epr_gr_qm_unification",
         "numerology_count_phase_a",
         "omega_b_two_component_sketch",
         "omega_b_w_plus_candidate",
@@ -1683,6 +1688,7 @@
         "gap_1_christoffel",
         "gap_2_spatial_diffusion",
         "hierarchy_problem_translation",
+        "lesson_epr_gr_qm_unification",
         "omega_b_c5_beta_audit",
         "path_closures_iter1",
         "path_closures_iter2",
@@ -1742,6 +1748,7 @@
       "depended_on_by": [
         "articulation_audit_2026-05",
         "k_of_t_friedmann",
+        "lesson_epr_gr_qm_unification",
         "lesson_proslambanomenos"
       ],
       "git": [
@@ -2006,6 +2013,11 @@
       ],
       "git": [
         {
+          "hash": "2beb996",
+          "date": "2026-05-23",
+          "subject": "Audit: eliminate overstatements, archive failed/superseded claims (#158)"
+        },
+        {
           "hash": "4d41418",
           "date": "2026-05-20",
           "subject": "Articulate inviolable #1 as a standalone theorem (Q mod 2 conservation) (#147)"
@@ -2106,6 +2118,7 @@
         "inflation_duration",
         "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
+        "negative_results_ledger",
         "nonperturbative_phase2",
         "sqrt_r_n_correction",
         "thread_chronology"
@@ -2358,6 +2371,7 @@
         "framework_status",
         "gluon_reframing",
         "hybrid_strategy_audit",
+        "negative_results_ledger",
         "numerology_inventory",
         "observer_register_closure",
         "omega_b_residual_phase_b",
@@ -2570,6 +2584,7 @@
         "graviton_reframing",
         "k_of_t_friedmann",
         "klein_connection",
+        "lesson_epr_gr_qm_unification",
         "master_cascade_identity",
         "qd_origins",
         "quantum_gravity_interpolation",
@@ -2681,6 +2696,7 @@
       "depended_on_by": [
         "complex_amplitude_uniqueness",
         "framework_status",
+        "lesson_epr_gr_qm_unification",
         "phenomenology_cross_reference"
       ],
       "git": [
@@ -3070,6 +3086,7 @@
         "empty_fork_cap",
         "explicit_4x4_reduction",
         "lesson_8_35_vs_13_19",
+        "lesson_epr_gr_qm_unification",
         "no_rescaling",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
@@ -3222,6 +3239,7 @@
         "lesson_rotation_curves_a0",
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
+        "negative_results_ledger",
         "no_rescaling",
         "nonperturbative_phase2",
         "nonperturbative_phase3",
@@ -3818,6 +3836,7 @@
         "fermion_mass_running",
         "fourth_generation_revisited",
         "mixing_angle_audit",
+        "negative_results_ledger",
         "numerology_inventory"
       ],
       "git": [
@@ -3914,6 +3933,7 @@
         "derivation_atlas",
         "framework_status",
         "hierarchy_gaussian_lattice",
+        "negative_results_ledger",
         "phenomenology_cross_reference",
         "primitive_completeness_audit"
       ],
@@ -4395,6 +4415,7 @@
         "framework_status",
         "k_inflation_seam_obstruction",
         "k_of_t_friedmann",
+        "negative_results_ledger",
         "proposed_items_disposition",
         "thread_chronology"
       ],
@@ -4668,6 +4689,7 @@
         "continuity_in_K_nulls",
         "framework_status",
         "klein_dynamics_roadmap",
+        "lesson_epr_gr_qm_unification",
         "time_axis_split"
       ],
       "git": [
@@ -4695,6 +4717,7 @@
         "canonical_glossary",
         "dynamical_tool_audit",
         "k_axis_uniqueness",
+        "negative_results_ledger",
         "numerology_inventory"
       ],
       "git": [
@@ -5046,6 +5069,7 @@
         "canonical_glossary",
         "derivation_atlas",
         "framework_status",
+        "negative_results_ledger",
         "numerology_inventory"
       ],
       "git": [
@@ -5119,6 +5143,34 @@
           "hash": "3d80dde",
           "date": "2026-05-23",
           "subject": "Pedagogy trilogy (2/3, 3/3): rotation curves + cosmological constant (#155)"
+        }
+      ]
+    },
+    {
+      "id": "lesson_epr_gr_qm_unification",
+      "path": "sync_cost/derivations/lesson_epr_gr_qm_unification.md",
+      "title": "Lesson \u2014 EPR to GR\u2013QM unification: one substrate, two couplings",
+      "summary": "The **Tier-C capstone**. The framework's grandest \u2014 and most exposed \u2014\nclaim: general relativity and quantum mechanics are not two theories\nto be glued together, but **two continuum limits of one discrete\nsubstrate, taken at different coupling**. The move it teaches:\n**unification by reframing** \u2014 an \"incompatibility\" that was a\n*category error* (treating two limits of one object as two rival\nobjects).",
+      "depends_on": [
+        "born_rule",
+        "complex_amplitude_uniqueness",
+        "continuity_in_K_nulls",
+        "continuum_limits",
+        "cosmological_cycle",
+        "einstein_from_kuramoto",
+        "epr_bell_assembly_theorem",
+        "figure_eight",
+        "k_of_t_friedmann",
+        "phenomenology_cross_reference",
+        "q_mod2_conservation_theorem",
+        "substrate_determinism"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "6a56214",
+          "date": "2026-05-23",
+          "subject": "Add Tier-C capstone: EPR \u2192 GR-QM unification (one substrate, two couplings) (#159)"
         }
       ]
     },
@@ -5486,6 +5538,7 @@
       ],
       "depended_on_by": [
         "empty_fork_cap",
+        "negative_results_ledger",
         "proposed_items_disposition",
         "proposed_residual_closure",
         "sqrt_r_n_correction",
@@ -5685,6 +5738,42 @@
       ]
     },
     {
+      "id": "negative_results_ledger",
+      "path": "sync_cost/derivations/negative_results_ledger.md",
+      "title": "Negative-results ledger \u2014 the single archival home for failed, null, and superseded claims",
+      "summary": "- Public surfaces (README, `index.html`, the deployed glossaries)\n  must not present any of these as corroborated results. When a\n  claim here appears anywhere as a \"prediction,\" \"forced value,\"\n  or \"verified\" entry, that is an overstatement to fix.\n- The derivation corpus records these dispositions in scattered\n  places (`numerology_inventory.md` Class 1, `framework_status.md`\n  Eliminated/Fails, `thread_chronology.md`, `no_rescaling.md`).\n  This ledger consolidates the *negative* dispositions",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "anchor_count_reaudit",
+        "discrete_reduction_computed",
+        "duty_cycle_dictionary",
+        "framework_status",
+        "generation_mechanism",
+        "h_inf_status",
+        "inflation_seam_anchor_closure",
+        "k_scaling_scan",
+        "klein_nodal_parity",
+        "mediant_vs_flow_calc",
+        "no_rescaling",
+        "numerology_count_phase_b",
+        "numerology_inventory",
+        "sinw_fixed_point",
+        "statistical_conventions",
+        "thread_chronology"
+      ],
+      "depended_on_by": [
+        "phenomenon_glossary",
+        "sinw_fixed_point"
+      ],
+      "git": [
+        {
+          "hash": "2beb996",
+          "date": "2026-05-23",
+          "subject": "Audit: eliminate overstatements, archive failed/superseded claims (#158)"
+        }
+      ]
+    },
+    {
       "id": "neutrino_mass_audit",
       "path": "sync_cost/derivations/neutrino_mass_audit.md",
       "title": "Neutrino mass audit: already closed, not a depth-limit problem",
@@ -5731,6 +5820,7 @@
         "basepoint_principle",
         "e_cross_discrete_resolution",
         "inflation_duration",
+        "negative_results_ledger",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
         "s_v_nlo",
@@ -5929,6 +6019,7 @@
         "framework_status",
         "gluon_reframing",
         "lesson_8_35_vs_13_19",
+        "negative_results_ledger",
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
         "proposed_items_disposition",
@@ -6003,6 +6094,7 @@
         "klein_nodal_parity",
         "lesson_8_35_vs_13_19",
         "lesson_proslambanomenos",
+        "negative_results_ledger",
         "numerology_count_phase_a",
         "observer_register_closure",
         "partition_logit_form",
@@ -6013,6 +6105,7 @@
         "rationality_descent",
         "remaining_gap_shapes",
         "sinw_effective_dimension",
+        "sinw_fixed_point",
         "vocabulary_is_the_work_pattern"
       ],
       "git": [
@@ -6747,11 +6840,17 @@
         "down_type_double_cover_closed",
         "epr_bell_assembly_theorem",
         "lesson_cosmological_constant",
+        "lesson_epr_gr_qm_unification",
         "q_mod2_conservation_theorem",
         "structural_lemmas",
         "thread_chronology"
       ],
       "git": [
+        {
+          "hash": "2beb996",
+          "date": "2026-05-23",
+          "subject": "Audit: eliminate overstatements, archive failed/superseded claims (#158)"
+        },
         {
           "hash": "b819d03",
           "date": "2026-05-21",
@@ -6781,13 +6880,19 @@
       "summary": "Phenomenon glossary v0.1. ~40 entries across 8 sections. Intended\nto be readable end-to-end in ~30 minutes by someone with general\nmathematical literacy and no exposure to the specific literature.",
       "depends_on": [
         "canonical_glossary",
-        "lesson_8_35_vs_13_19"
+        "lesson_8_35_vs_13_19",
+        "negative_results_ledger"
       ],
       "depended_on_by": [
         "complex_amplitude_uniqueness",
         "lesson_proslambanomenos"
       ],
       "git": [
+        {
+          "hash": "2beb996",
+          "date": "2026-05-23",
+          "subject": "Audit: eliminate overstatements, archive failed/superseded claims (#158)"
+        },
         {
           "hash": "09a73e7",
           "date": "2026-05-23",
@@ -7123,6 +7228,7 @@
         "derivation_atlas",
         "epr_bell_assembly_theorem",
         "framework_status",
+        "lesson_epr_gr_qm_unification",
         "phenomenology_cross_reference",
         "sine_gordon_substrate",
         "substrate_determinism",
@@ -7791,6 +7897,8 @@
       "title": "sin\u00b2\u03b8_W Fixed-Point Hypothesis \u2014 Ruled Out",
       "summary": "**Ruled out.** The K-scanning hypothesis (that there exists a K*\nreproducing both \u03b1_s/\u03b1_2 and sin\u00b2\u03b8_W at M_Z via the framework's\nduty-cycle dynamics) fails numerically: no K in [0.93, 0.99]\nreproduces either constraint.",
       "depends_on": [
+        "negative_results_ledger",
+        "numerology_inventory",
         "sinw_effective_dimension"
       ],
       "depended_on_by": [
@@ -7799,10 +7907,16 @@
         "gauge_dictionary",
         "gauge_sector_lovelock",
         "klein_connection",
+        "negative_results_ledger",
         "numerology_inventory",
         "sinw_effective_dimension"
       ],
       "git": [
+        {
+          "hash": "2beb996",
+          "date": "2026-05-23",
+          "subject": "Audit: eliminate overstatements, archive failed/superseded claims (#158)"
+        },
         {
           "hash": "2ca0794",
           "date": "2026-04-18",
@@ -8107,6 +8221,7 @@
         "klein_antipodal_z2_rep_pattern",
         "lesson_8_35_vs_13_19",
         "mixing_angle_audit",
+        "negative_results_ledger",
         "neutrino_mass_audit",
         "numerology_count_phase_a",
         "numerology_inventory",
@@ -8247,6 +8362,7 @@
         "framework_status",
         "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
+        "lesson_epr_gr_qm_unification",
         "mediant_vs_flow_problem",
         "q_mod2_conservation_theorem",
         "thread_chronology",
@@ -8344,6 +8460,7 @@
         "k_inflation_seam_obstruction",
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
+        "negative_results_ledger",
         "nonperturbative_phase2",
         "proposed_items_disposition",
         "proposed_residual_closure",
