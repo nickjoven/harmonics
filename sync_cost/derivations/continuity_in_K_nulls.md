@@ -26,16 +26,21 @@
 > simply no longer *blockers*, because nothing landed depends on the
 > mechanism they failed to produce.
 >
-> **The one genuine residual** is the cosmological *era timeline*
-> (N9 S3–S5: inflation→matter→Λ ordering and durations). Its absolute
-> durations need `H_0` (out-of-class), so it is **plausibly
-> anchor-conditional** — the same Basepoint-decline shape as inflation
-> duration (`#INF`); its structural *ordering* may be derivable, its
-> quantitative *schedule* probably declined. That sub-question is
-> open and tracked separately; it is **not** the "continuous-K
-> blocker" this file was once read as. This note does not close the
-> era timeline and does not promote the cascade↔Salpeter datum
-> (Class-2-gated, `imf_bowed_cascade.md`).
+> **The one residual — the cosmological *era timeline* (N9 S5) — is
+> now settled into three tiers** (`era_timeline_disposition.md`):
+> (1) **ordering structural** — the inflation→matter→Λ sequence is a
+> forced discrete cascade between forced endpoints (`K=1 → Ω_Λ=13/19`)
+> along the forced arrow (inviolable #9), needing only the Farey
+> slip-order, *not* a continuous `w(K)`; (2) **absolute schedule
+> anchor-declined** — durations/times/temperatures are out-of-class
+> (need `H_0`); (3) the **K_eff↔epoch/energy mapping is the one genuine
+> Class-2 residual**, identical to the "K↔energy-map" question, whose
+> structural candidate is the discrete cascade `K_n^d = b^{−n}`
+> (`master_cascade_identity.md`; cascade↔Salpeter datum still
+> Class-2-gated, *not* promoted). So N9 S5 contributes **no open
+> *structural* gap**, and — with S1–S2 structural, S3 deflated, S4
+> anchor-declined — **N9 is fully dispositioned.** None of it is the
+> "continuous-K blocker" this file was once read as.
 
 ## What this file is
 

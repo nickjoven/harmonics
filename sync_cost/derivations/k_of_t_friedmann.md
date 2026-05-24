@@ -353,10 +353,15 @@ disposition, the continuity-in-K those nulls obstruct was the
 *superseded* Ω_b C5 closure's dependency; **no landed result
 requires it** (all Survives results are combinatorial or fixed-K;
 the matter sector runs by the discrete cascade `K_n^d = b^{−n}`).
-The only genuine residual is the cosmological *era timeline*
-(ordering possibly derivable; absolute durations plausibly
-anchor-conditional, `#INF` shape). So S3–S5 is an open *research*
-item, not a blocker on any landed prediction.
+The only residual, the cosmological *era timeline*, is now settled
+into three tiers (`era_timeline_disposition.md`): **ordering
+structural** (forced discrete cascade between forced endpoints),
+**absolute schedule anchor-declined** (out-of-class, needs `H_0`),
+and the **K_eff↔epoch/energy mapping the one Class-2 residual**
+(= the K↔energy-map question; structural candidate = the discrete
+cascade, not promoted). So S3–S5 contributes no open *structural*
+gap, and N9 is fully dispositioned — not a blocker on any landed
+prediction.
 
 ## Proof chain
 
