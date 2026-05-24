@@ -1,5 +1,5 @@
 {
-  "generated": "c9409430f5740554d881c4a01f08f49af318b046",
+  "generated": "99d8b05a0b9baf091a88c8ff6409429e1f384eb2",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1619,7 +1619,11 @@
         "derivation_atlas",
         "down_type_double_cover_phase_c",
         "dynamical_tool_audit",
+        "era_timeline_disposition",
+        "framework_status",
         "k_of_t_friedmann",
+        "master_cascade_identity",
+        "omega_b_alpha_beta_closure",
         "omega_b_c5_beta_audit",
         "omega_b_c5_closure",
         "omega_b_residual_phase_a",
@@ -1634,6 +1638,7 @@
         "audit_punch_list_2026-04",
         "cross_ratio_irrep_reframe",
         "derivation_atlas",
+        "era_timeline_disposition",
         "framework_status",
         "k_of_t_friedmann",
         "klein_bridge_audit_and_probe",
@@ -1648,6 +1653,11 @@
         "structural_lemmas"
       ],
       "git": [
+        {
+          "hash": "3c9ea73",
+          "date": "2026-05-23",
+          "subject": "Fully disposition N9: continuous-K not a blocker + era-timeline settled (#162)"
+        },
         {
           "hash": "a6a4f5d",
           "date": "2026-04-26",
@@ -1750,6 +1760,7 @@
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
+        "era_timeline_disposition",
         "k_of_t_friedmann",
         "lesson_epr_gr_qm_unification",
         "lesson_proslambanomenos"
@@ -2772,6 +2783,34 @@
       ]
     },
     {
+      "id": "era_timeline_disposition",
+      "path": "sync_cost/derivations/era_timeline_disposition.md",
+      "title": "Era-timeline disposition (settling N9 S5)",
+      "summary": "**Settles the last residual** left open by the continuity-in-K\ndisposition (`continuity_in_K_nulls.md`): the cosmological *era\ntimeline* (N9 S5 \u2014 inflation\u2192matter\u2192\u039b). It resolves into **three\ntiers** with different statuses; it is **not** a single vague \"open\nfrontier.\" No overclaim: one tier is structural, one is\nanchor-declined, and one stays Class-2 (and is explicitly *not*\npromoted here).",
+      "depends_on": [
+        "continuity_in_K_nulls",
+        "cosmological_cycle",
+        "framework_status",
+        "imf_bowed_cascade",
+        "k_of_t_friedmann",
+        "master_cascade_identity",
+        "substrate_determinism",
+        "time_axis_split"
+      ],
+      "depended_on_by": [
+        "continuity_in_K_nulls",
+        "framework_status",
+        "k_of_t_friedmann"
+      ],
+      "git": [
+        {
+          "hash": "3c9ea73",
+          "date": "2026-05-23",
+          "subject": "Fully disposition N9: continuous-K not a blocker + era-timeline settled (#162)"
+        }
+      ]
+    },
+    {
       "id": "explicit_4x4_reduction",
       "path": "sync_cost/derivations/explicit_4x4_reduction.md",
       "title": "The explicit 4\u00d74 reduction matrix: real Phase 2",
@@ -3172,6 +3211,7 @@
         "duty_cycle_dictionary",
         "einstein_from_kuramoto",
         "epr_bell_assembly_theorem",
+        "era_timeline_disposition",
         "farey_partition",
         "h_inf_status",
         "hierarchy_gaussian_lattice",
@@ -3222,11 +3262,13 @@
         "basin_11_connection_exploration",
         "canonical_glossary",
         "cone_twist_substrate",
+        "continuity_in_K_nulls",
         "depth_connection_nulls",
         "down_type_double_cover_closed",
         "dynamical_tool_audit",
         "epr_bell_assembly_theorem",
         "epsilon_physical_reading",
+        "era_timeline_disposition",
         "figure_eight",
         "h_inf_status",
         "hierarchy_problem_translation",
@@ -3281,6 +3323,11 @@
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "3c9ea73",
+          "date": "2026-05-23",
+          "subject": "Fully disposition N9: continuous-K not a blocker + era-timeline settled (#162)"
+        },
         {
           "hash": "a9195cd",
           "date": "2026-05-21",
@@ -4326,6 +4373,7 @@
         "master_cascade_identity"
       ],
       "depended_on_by": [
+        "era_timeline_disposition",
         "mass_function_family",
         "master_cascade_identity"
       ],
@@ -4682,6 +4730,7 @@
         "continuity_in_K_nulls",
         "cosmological_cycle",
         "einstein_from_kuramoto",
+        "era_timeline_disposition",
         "framework_status",
         "hierarchy_gaussian_lattice",
         "inflation_seam_anchor_closure",
@@ -4692,12 +4741,18 @@
       ],
       "depended_on_by": [
         "continuity_in_K_nulls",
+        "era_timeline_disposition",
         "framework_status",
         "klein_dynamics_roadmap",
         "lesson_epr_gr_qm_unification",
         "time_axis_split"
       ],
       "git": [
+        {
+          "hash": "3c9ea73",
+          "date": "2026-05-23",
+          "subject": "Fully disposition N9: continuous-K not a blocker + era-timeline settled (#162)"
+        },
         {
           "hash": "adc81a7",
           "date": "2026-05-19",
@@ -5173,6 +5228,11 @@
       "depended_on_by": [],
       "git": [
         {
+          "hash": "3c9ea73",
+          "date": "2026-05-23",
+          "subject": "Fully disposition N9: continuous-K not a blocker + era-timeline settled (#162)"
+        },
+        {
           "hash": "6a56214",
           "date": "2026-05-23",
           "subject": "Add Tier-C capstone: EPR \u2192 GR-QM unification (one substrate, two couplings) (#159)"
@@ -5430,6 +5490,8 @@
       ],
       "depended_on_by": [
         "cone_twist_substrate",
+        "continuity_in_K_nulls",
+        "era_timeline_disposition",
         "imf_bowed_cascade",
         "instrument_family_taxonomy",
         "mass_function_family",
@@ -6224,6 +6286,7 @@
         "audit_punch_list_2026-04",
         "baryon_fraction",
         "canonical_glossary",
+        "continuity_in_K_nulls",
         "derivation_atlas",
         "farey_partition",
         "framework_status",
@@ -8391,6 +8454,7 @@
         "e_cross_discrete_resolution",
         "empty_fork_cap",
         "epr_bell_assembly_theorem",
+        "era_timeline_disposition",
         "framework_status",
         "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
@@ -8745,6 +8809,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "era_timeline_disposition",
         "inflation_duration",
         "klein_bottle",
         "klein_bottle_derivation",
