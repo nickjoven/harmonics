@@ -16,7 +16,7 @@ identity at parameters `(d, n, b) = (q_3, 1, q_2)`:
     K_IMF^q_3 = q_2^(-1)
     K_IMF     = q_2^(-1/q_3) = 2^(-1/3) = 0.79370
 
-The slope formula (cascade with mass-halving per stratum):
+The slope formula:
 
     α = -1 - log_2(2/K)
       = -1 - log_2(2 · 2^(1/q_3))
@@ -25,6 +25,22 @@ The slope formula (cascade with mass-halving per stratum):
 Substituting q_2 = 2, q_3 = 3:
 
     α = -2 - 1/3 = -7/3
+
+The two pieces have distinct, framework-native provenance:
+
+- **Baseline -q_2 = -2** (the `-1 - log_2(2)`). Derived from the Farey
+  mode-counting measure (`farey_mass_baseline.py`): the mode count
+  |F_n| ~ (3/pi^2) n^2 gives density dN/dq ~ q, and a locked mode's mass
+  is its entrained tongue-width measure M ~ w(p/q) ~ 1/q^2 at K=1 (the
+  "energy = synchronization cost" primitive), giving dN/dM ~ M^(-2).
+  The "-1" is the dq/dM Jacobian, not an imported constant; the one
+  load-bearing identification is mass = entrained measure (this is a
+  third mass concept, distinct from the soliton kink mass ~ sqrt(Kr) and
+  the ADM gravitational mass ~ sqrt(rho), and the only one with the
+  measure-theoretic shape the slope needs).
+- **Correction -n/d = -1/q_3** (the K-dependent part). d = q_3 = Klein-
+  orbit count of F_3, n = 1 non-redundant antiperiodic flip
+  (`imf_step2_klein_orbit.py`).
 
 ## Cascade-depth interpretation
 
@@ -77,6 +93,7 @@ provide.
 
 - `master_cascade_identity.md` — the (d, n, b) family
 - `mass_function_family.md` — α across cascade depths
+- `farey_mass_baseline.py` — -q_2 baseline from the Farey mode-count measure
 - `imf_step2_klein_orbit.py` — Step-2 lemma: depth = Klein-orbit count
 - `cascade_slope_check.py` — slope vs. observed MF slopes + pigeonhole null
 - `RESULTS.md` — Stribeck N = 3 empirical anchor
