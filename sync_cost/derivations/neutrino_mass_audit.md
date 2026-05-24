@@ -43,20 +43,22 @@ and 0.4% levels. See `statistical_conventions.md`.
 
 ## Structural reading
 
-The closure uses the same **finite-K correction** pattern as other
-framework successes:
+The neutrino solar splitting closes via a single finite
+interaction-scale correction `−(q_2·q_3)^(−2) = −1/36` applied to
+the tree-level ratio, using framework-native alphabet rationals at
+the physical vacuum scale `v`. It is not a fit.
 
-- **sin²θ_W** closes via `+8/F_10²` Fibonacci correction
-  (`sinw_effective_dimension.md`)
-- **α_s / α_2** closes via `+1/q_3²` gauge-integer correction
-- **Neutrino solar** closes via `−(q_2·q_3)^(−2) = −1/36`
-  interaction-scale correction
-
-The neutrino sector's `−1/36 = −1/(q_2 q_3)²` is an
-**interaction-scale finite correction**, structurally parallel to
-the other two. All three are finite-K corrections to tree-level
-framework predictions, using the framework's alphabet rationals at
-the appropriate structural depth.
+**Caution — do not generalize this into a shared "finite-K
+correction closes the sector" pattern.** Earlier drafts cited
+`sin²θ_W = 8/35 + 8/F_10²` and `α_s/α_2 + 1/q_3²` as parallel
+"framework successes," but both of those electroweak corrections
+are **null / retracted**: the `+8/F_10²` Fibonacci term is
+retracted, the `d_eff = 80/27` route is a null ansatz, and SM
+running rules out `8/35` and `27/8` as M_Z predictions (Class 1;
+see `negative_results_ledger.md`). The neutrino closure stands on
+its own structural footing and must **not** be presented as one
+instance of a winning EW pattern — it inherits no support from the
+electroweak sector.
 
 ## "Depth → ∞ limit" is the wrong framing
 
