@@ -162,7 +162,7 @@ Z_2 rep theory, refined by two-component closure with w_+ = 13/14
 
 ### a_0 — MOND acceleration scale
 
-- **Framework prediction**: a_0 = c·H_0/(2π) = 1.25 × 10⁻¹⁰ m/s²
+- **Framework prediction**: a_0 = c·H_0/(2π√g*) = 1.25 × 10⁻¹⁰ m/s² (g*-corrected; the bare c·H_0/(2π) = 1.04 × 10⁻¹⁰)
 - **Derivation**: `a0_threshold.md` (substrate-derived from Λ)
 - **Observed**: 1.2 × 10⁻¹⁰ m/s² (Lelli et al. 2017 RAR)
 - **Residual**: 4%

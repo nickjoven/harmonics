@@ -30,22 +30,8 @@ fractions; the smallest even and smallest odd denominators combine
 into 2 × 3 = 6 unlocked modes; the configuration 13 / (13 + 6) =
 13/19 is the only ratio admitted.
 
-Three additional dimensionless parameters of the Standard Model
-are forced by the same machinery:
-
-  - The **Weinberg mixing angle** sin²θ_W — the parameter setting
-    how the electroweak gauge bosons (the photon and the Z boson)
-    mix in the Standard Model — is measured at 0.2312 (Particle
-    Data Group). The framework's only admitted value is 8/35 =
-    0.2286.
-
-  - The **strong-to-weak coupling ratio** α_s / α_2 — where α_s is
-    the strong-force (QCD) coupling and α_2 is the SU(2) electroweak
-    coupling — is measured at ≈ 3.05 at the Z-boson mass
-    M_Z ≈ 91 GeV after standard renormalization-group running (the
-    procedure that accounts for how coupling constants change with
-    energy scale). The framework's only admitted ratio at its
-    high-scale K = 1 limit is 27/8 = 3.375.
+One additional dimensionless parameter is forced by the same
+machinery:
 
   - The **scalar spectral tilt** n_s of the cosmic microwave
     background — the parameter quantifying how the CMB primordial
@@ -54,8 +40,22 @@ are forced by the same machinery:
     only admitted value, set by the Stern-Brocot staircase's self-
     similarity at the golden-ratio winding, is approximately 0.965.
 
-None of these were targets of fit. None could have been otherwise
-given the framework's constraints.
+n_s, like Ω_Λ above, was not a target of fit; it is fixed by the
+combinatorial structure with no remaining freedom.
+
+Two further small-integer ratios are commonly associated with the
+framework but are **not** corroborated predictions, and should not
+be presented as such. The Weinberg mixing angle as
+8/35 = q₂³/(q₂³ + q₃³) and the strong-to-weak coupling ratio as
+27/8 = q₃³/q₂³ are *bare K = 1 arithmetic identities*: each lands
+within ~1–3% of the measured electroweak-scale value, but the
+framework's own renormalization-group checks rule out a
+scale-consistent path from the K = 1 substrate scale to those
+measurements. For sin²θ_W the sign of the running is wrong; for
+α_s/α_2 no framework-consistent running connects 27/8 to the
+observed M_Z value. They are recorded as reference identities, not
+results — see
+[`negative_results_ledger.md`](sync_cost/derivations/negative_results_ledger.md).
 
 ## What this framework does not do
 
@@ -170,12 +170,17 @@ derived dimensionless ratios to agree with observation, or by
 demonstration that the forced structure admits an alternative not
 corresponding to the observed universe.
 
-At present the framework has four corroborated predictions (Ω_Λ,
-sin²θ_W, α_s/α_2, n_s), one derivation in progress (the proton-
-to-electron mass ratio), and several testable but unresolved
-questions including the precise predicted value of the **Hubble
-constant** H_0 — the present rate of cosmic expansion, with units
-of inverse time — within the framework's tree-depth accounting.
+At present the framework's corroborated dimensionless predictions
+are Ω_Λ and n_s (the bare-K=1 identities 8/35 and 27/8 are *not*
+corroborated — see above), alongside a set of structural results
+(spatial dimension, Lorentz signature, gauge group, strong CP,
+anomaly cancellation) and the cosmic-partition closure (Ω_b,
+Ω_DM), all catalogued in the Predictions table below. One
+derivation is in progress (the proton-to-electron mass ratio), and
+several questions are testable but unresolved, including the
+precise predicted value of the **Hubble constant** H_0 — the
+present rate of cosmic expansion, with units of inverse time —
+within the framework's tree-depth accounting.
 
 ## Comparison class
 
@@ -230,10 +235,10 @@ mode counts $\sim$ atomic structure constants).
 
 The framework predicts two categorically different kinds of
 constants, and conflating them is the most common reading error.
-*Dimensionless ratios* — Ω_Λ = 13/19, sin²θ_W = 8/35, α_s/α_2
-= 27/8, K_c = 2/π — are structural; they are forced by the
-combinatorial structure and would be the same for any observer at
-any cosmic epoch, in any unit system. *Dimensionful constants* —
+*Dimensionless ratios* — Ω_Λ = 13/19, n_s ≈ 0.965, K_c = 2/π —
+are structural; they are forced by the combinatorial structure and
+would be the same for any observer at any cosmic epoch, in any unit
+system. *Dimensionful constants* —
 H_0, ℏ, v_EW, the Planck mass — are addresses; they tell you
 where on the structure we are, not what the structure is.
 

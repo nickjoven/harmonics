@@ -8,9 +8,13 @@ duty-cycle dynamics) fails numerically: no K in [0.93, 0.99]
 reproduces either constraint.
 
 The 1.1% residual between 8/35 and the observed sin²θ_W = 0.23121
-is resolved by a different mechanism: the effective-dimension
-correction d_eff = 80/27 (see `sinw_effective_dimension.md`), which
-gives sin²θ_W = 0.23123, within 0.5σ of the PDG value.
+is **not resolved**. The effective-dimension proposal d_eff = 80/27
+(`sinw_effective_dimension.md`) reproduces 0.23123 at 0.5σ, but the
+d → d_eff substitution fails under all three tested derivation
+mechanisms — it is an ansatz fitted to the answer, not a derivation
+(`g1_computation_result.md`; `numerology_inventory.md` §Class 2).
+The 8/35 identity is a Class-1 near-coincidence at M_Z, not a
+prediction; see `negative_results_ledger.md`.
 
 ## The hypothesis tested
 
@@ -41,9 +45,12 @@ reproduces either value. The joint fixed-point question is moot.
 
 The identity sin²θ_W = 8/35 is measure-theoretic (Gauss-Kuzmin /
 Ford circle measure at K = 1), not dynamical (tongue width at
-finite K < 1). The 1.1% residual is not from running — it is
-corrected by the effective-dimension mechanism in
-`sinw_effective_dimension.md`.
+finite K < 1). It stands only as a bare K=1 reference identity. The
+1.1% residual is **not** closed: SM running has the wrong sign
+(`sinW_running_check.py`), the K-scan fixed point is ruled out
+(above), and the effective-dimension correction is a null ansatz
+(`sinw_effective_dimension.md`, `g1_computation_result.md`). See
+`negative_results_ledger.md`.
 
 ## Scripts
 
