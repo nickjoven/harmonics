@@ -1,5 +1,47 @@
 # Continuity-in-K derivation: prior null results
 
+> **Disposition (added 2026-05): continuous K in the cosmological
+> sector is NOT a blocker.** Every null below was collected as a
+> *"Constraint on C5"* — the Ω_b **C5 closure**, which assumed a
+> smooth running `w(z)`. **C5 was superseded** by the fixed-weight
+> two-component closure (`omega_b_alpha_beta_closure.md`; `w_- = 1`
+> sign-rep no-EM, `w_+ = 13/14` cusp-1/2 ground state, *zero free
+> parameters*; `framework_status.md` "Superseded for Ω_b by the
+> two-component closure"). The continuous-`w(z)` requirement
+> evaporated with the approach that needed it.
+>
+> Audit of the landed record (2026-05): **no Survives-class result
+> requires a continuous `w(z)`/`K(z)`.** They are all either
+> *combinatorial* (Ω partition `13:5:1/19`, `R = 6·13⁵⁴`,
+> `Λ·ℓ_P² = 3/R²` — Farey + Z₂ rep theory) or *fixed-K / ground-state*
+> (`w_± `, `K_STAR ≈ 0.862`, the `r=1` Friedmann branch, `a_0` at fixed
+> `H_0`). The matter sector's "running" is the **discrete cascade**
+> `K_n^d = b^{−n}` (`master_cascade_identity.md`), not continuous RG.
+> And the K=1↔K<1 non-smoothness is a **Class-5 feature** (it *forces*
+> two-anchor minimality; `path_closures_iter3.md` closes anchor
+> obstruction #5 through it) — not a gap to be smoothed.
+>
+> **The nulls N9–N16 stand as a true record of the superseded C5
+> path** — they remain correct as nulls of those attempts; they are
+> simply no longer *blockers*, because nothing landed depends on the
+> mechanism they failed to produce.
+>
+> **The one residual — the cosmological *era timeline* (N9 S5) — is
+> now settled into three tiers** (`era_timeline_disposition.md`):
+> (1) **ordering structural** — the inflation→matter→Λ sequence is a
+> forced discrete cascade between forced endpoints (`K=1 → Ω_Λ=13/19`)
+> along the forced arrow (inviolable #9), needing only the Farey
+> slip-order, *not* a continuous `w(K)`; (2) **absolute schedule
+> anchor-declined** — durations/times/temperatures are out-of-class
+> (need `H_0`); (3) the **K_eff↔epoch/energy mapping is the one genuine
+> Class-2 residual**, identical to the "K↔energy-map" question, whose
+> structural candidate is the discrete cascade `K_n^d = b^{−n}`
+> (`master_cascade_identity.md`; cascade↔Salpeter datum still
+> Class-2-gated, *not* promoted). So N9 S5 contributes **no open
+> *structural* gap**, and — with S1–S2 structural, S3 deflated, S4
+> anchor-declined — **N9 is fully dispositioned.** None of it is the
+> "continuous-K blocker" this file was once read as.
+
 ## What this file is
 
 A registry of prior null findings that constrain the
