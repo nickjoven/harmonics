@@ -1,5 +1,5 @@
 {
-  "generated": "09a73e726e2d926f0f31408d87c60aca22795ce2",
+  "generated": "d3650377fdb5490db20ffcf67aa7729bec54c074",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -508,6 +508,7 @@
         "dynamical_quantization",
         "dynamical_tool_audit",
         "framework_status",
+        "lesson_rotation_curves_a0",
         "numerology_inventory",
         "path_closures_iter1",
         "phenomenology_cross_reference",
@@ -866,6 +867,8 @@
         "basepoint_principle",
         "framework_status",
         "graviton_reframing",
+        "lesson_cosmological_constant",
+        "lesson_rotation_curves_a0",
         "thread_chronology"
       ],
       "git": [
@@ -1115,6 +1118,7 @@
         "klein_antipodal_z2_rep_pattern",
         "klein_bridge_audit_and_probe",
         "klein_dynamics_roadmap",
+        "lesson_rotation_curves_a0",
         "mass_function_family",
         "numerology_inventory",
         "observer_register_closure",
@@ -1180,6 +1184,8 @@
         "articulation_audit_2026-05",
         "framework_status",
         "k_of_t_friedmann",
+        "lesson_cosmological_constant",
+        "lesson_rotation_curves_a0",
         "thread_chronology"
       ],
       "git": [
@@ -1735,7 +1741,8 @@
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
-        "k_of_t_friedmann"
+        "k_of_t_friedmann",
+        "lesson_proslambanomenos"
       ],
       "git": [
         {
@@ -3210,6 +3217,9 @@
         "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
         "lesson_8_35_vs_13_19",
+        "lesson_cosmological_constant",
+        "lesson_proslambanomenos",
+        "lesson_rotation_curves_a0",
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
         "no_rescaling",
@@ -4020,6 +4030,7 @@
         "gap2_sub_e_status_reconciled",
         "h_inf_status",
         "k_of_t_friedmann",
+        "lesson_cosmological_constant",
         "neutrino_mass_audit",
         "numerology_inventory",
         "observer_register_closure",
@@ -5072,6 +5083,9 @@
         "statistical_conventions"
       ],
       "depended_on_by": [
+        "lesson_cosmological_constant",
+        "lesson_proslambanomenos",
+        "lesson_rotation_curves_a0",
         "phenomenon_glossary"
       ],
       "git": [
@@ -5079,6 +5093,83 @@
           "hash": "09a73e7",
           "date": "2026-05-23",
           "subject": "Add worked lesson: 8/35 vs 13/19 (telling a derivation from a coincidence) (#154)"
+        }
+      ]
+    },
+    {
+      "id": "lesson_cosmological_constant",
+      "path": "sync_cost/derivations/lesson_cosmological_constant.md",
+      "title": "Lesson \u2014 the cosmological constant: the worst prediction in physics, dissolved",
+      "summary": "The capstone of the three-lesson pedagogy arc\n(`lesson_8_35_vs_13_19.md` \u2192 `lesson_rotation_curves_a0.md` \u2192 this).\nIt takes on the single most famous quantitative failure in physics \u2014\nthe ~120-order-of-magnitude cosmological-constant catastrophe \u2014 and\nteaches the deepest of the three reframing moves: **a fine-tuning\n\"problem\" can be an artifact of the framework you're computing in.**",
+      "depends_on": [
+        "anchor_count_reaudit",
+        "basepoint_principle",
+        "framework_status",
+        "hierarchy_gaussian_lattice",
+        "lesson_8_35_vs_13_19",
+        "lesson_rotation_curves_a0",
+        "phenomenology_cross_reference"
+      ],
+      "depended_on_by": [
+        "lesson_proslambanomenos",
+        "lesson_rotation_curves_a0"
+      ],
+      "git": [
+        {
+          "hash": "3d80dde",
+          "date": "2026-05-23",
+          "subject": "Pedagogy trilogy (2/3, 3/3): rotation curves + cosmological constant (#155)"
+        }
+      ]
+    },
+    {
+      "id": "lesson_proslambanomenos",
+      "path": "sync_cost/derivations/lesson_proslambanomenos.md",
+      "title": "Lesson 0 \u2014 the proslambanomenos: the music you already know is the substrate",
+      "summary": "The **front door** of the curriculum (Tier A \u2014 the on-ramp). The\nthree problem-lessons (`lesson_8_35_vs_13_19.md`,\n`lesson_rotation_curves_a0.md`, `lesson_cosmological_constant.md`) are\nall *applications*; a newcomer needs somewhere to start. This is it.",
+      "depends_on": [
+        "cosmological_cycle",
+        "framework_status",
+        "lesson_8_35_vs_13_19",
+        "lesson_cosmological_constant",
+        "lesson_rotation_curves_a0",
+        "mediant_derivation",
+        "numerology_inventory",
+        "phenomenon_glossary"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "d365037",
+          "date": "2026-05-23",
+          "subject": "Add lesson 0 (Tier-A on-ramp): the proslambanomenos \u2014 music is the substrate (#156)"
+        }
+      ]
+    },
+    {
+      "id": "lesson_rotation_curves_a0",
+      "path": "sync_cost/derivations/lesson_rotation_curves_a0.md",
+      "title": "Lesson \u2014 stars at the spiral's edge: a\u2080 = cH\u2080/(2\u03c0) and a false dichotomy",
+      "summary": "The second of three pedagogy lessons (after `lesson_8_35_vs_13_19.md`).\nWhere lesson 1 was *cautionary* \u2014 kill your prettiest hit \u2014 this one\nis a clean **win**: the framework's single most satisfying napkin\nresult, `a\u2080 = cH\u2080/(2\u03c0)`, derived and defended. It teaches a different\nreframing move: **a decades-old false dichotomy can dissolve.**",
+      "depends_on": [
+        "a0_threshold",
+        "anchor_count_reaudit",
+        "baryon_fraction",
+        "basepoint_principle",
+        "framework_status",
+        "lesson_8_35_vs_13_19",
+        "lesson_cosmological_constant",
+        "omega_partition_combinatorial"
+      ],
+      "depended_on_by": [
+        "lesson_cosmological_constant",
+        "lesson_proslambanomenos"
+      ],
+      "git": [
+        {
+          "hash": "3d80dde",
+          "date": "2026-05-23",
+          "subject": "Pedagogy trilogy (2/3, 3/3): rotation curves + cosmological constant (#155)"
         }
       ]
     },
@@ -5346,6 +5437,7 @@
         "dynamical_tool_audit",
         "empty_fork_cap",
         "high_school_syllabus",
+        "lesson_proslambanomenos",
         "primitive_completeness_audit",
         "psl2z_subgroup_phase_b",
         "thread_chronology",
@@ -5910,6 +6002,7 @@
         "k_scaling_scan",
         "klein_nodal_parity",
         "lesson_8_35_vs_13_19",
+        "lesson_proslambanomenos",
         "numerology_count_phase_a",
         "observer_register_closure",
         "partition_logit_form",
@@ -6350,6 +6443,7 @@
         "k_of_t_friedmann",
         "klein_antipodal_z2_rep_pattern",
         "lesson_8_35_vs_13_19",
+        "lesson_rotation_curves_a0",
         "numerology_inventory",
         "omega_b_residual_phase_a",
         "omega_b_substrate_side_audit",
@@ -6652,6 +6746,7 @@
         "derivation_atlas",
         "down_type_double_cover_closed",
         "epr_bell_assembly_theorem",
+        "lesson_cosmological_constant",
         "q_mod2_conservation_theorem",
         "structural_lemmas",
         "thread_chronology"
@@ -6689,7 +6784,8 @@
         "lesson_8_35_vs_13_19"
       ],
       "depended_on_by": [
-        "complex_amplitude_uniqueness"
+        "complex_amplitude_uniqueness",
+        "lesson_proslambanomenos"
       ],
       "git": [
         {
