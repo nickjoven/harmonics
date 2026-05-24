@@ -159,14 +159,21 @@ rival theories.
   `K<1 → Schrödinger` (Madelung); the EPR resolution (topological
   nonlocality, ℂ forced). Each is a real structural result already on
   `main` (#146/#152/#153, D12/D13).
-- **OPEN — the bridge**: the *continuous interpolation* between the two
-  limits — how `K` runs from `1` (cosmological/gravity) down through
-  the matter era to `K<1` (quantum) — is **not derived**.
-  `continuity_in_K_nulls.md` documents the failures (N9–N16): the
-  K=1↔K<1 transition is **non-smooth**, `K_STAR` is a coordinate not a
-  running coupling, tongue-coverage `w(K)` is discontinuous. The
-  framework has the **two endpoints** (both limits structural) but the
-  **dynamical bridge between them is the open frontier** (N9 S3–S5).
+- **OPEN — but not a blocker — the bridge**: a *smooth continuous
+  interpolation* `K(z)` between the two limits is **not derived**, and
+  `continuity_in_K_nulls.md` documents why the natural attempts fail
+  (N9–N16: the K=1↔K<1 transition is **non-smooth**, `K_STAR` is a
+  coordinate not a running coupling, tongue-coverage `w(K)` is
+  discontinuous). **But per that file's disposition, this is not a
+  blocker on any landed prediction**: no Survives result needs a
+  continuous `w(z)`/`K(z)` (they are combinatorial or fixed-K), the
+  matter sector runs by the *discrete cascade* `K_n^d = b^{−n}`, and the
+  non-smoothness is itself a Class-5 feature (it forces two-anchor
+  minimality). The framework has the **two endpoints** (both limits
+  structural); the genuine residual is narrow — the cosmological *era
+  timeline* (N9 S3–S5), whose absolute schedule is plausibly
+  anchor-conditional (`#INF` shape). So the *unification's completeness
+  as a smooth interpolation* is open; *no prediction* is blocked by it.
 
 So this lesson does **not** say "quantum gravity is solved." It says:
 *the unification is reframed (two limits of one substrate), several
@@ -234,6 +241,9 @@ century-old EPR/locality blocker dissolves because the *same*
 Klein-bottle topology that yields gravity also makes QM's nonlocality
 *topological* (a global `Q mod 2`, not signal or hidden variable, so
 nonlocal-and-no-signaling coexist); the unification is real at the two
-endpoints but the **continuous K-bridge between them is the open
-frontier** (N9), so this reframes quantum gravity and resolves its
-sharpest tension without claiming to have finished it.
+endpoints, while the **smooth interpolation between them stays open
+but blocks no landed prediction** (N9; per the `continuity_in_K_nulls.md`
+disposition — nothing Survives needs continuous `w(z)`, the matter
+sector runs by the discrete cascade, the residual is the
+anchor-conditional era timeline), so this reframes quantum gravity and
+resolves its sharpest tension without claiming to have finished it.

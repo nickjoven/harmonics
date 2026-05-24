@@ -346,10 +346,17 @@ from live canonical dependencies; reproduces the affirmed
 `k_of_t_friedmann.md` citation a real home. Result classification
 unchanged (already affirmed structural).
 
-**S3–S5: open**, identical to the multiply-audited N9 null. This
-document does not override N9/N10/N11; it makes the obstruction
-structurally explicit. A genuine S3 closure still requires
-meeting all four clauses of the N9 acceptance criterion.
+**S3–S5: open but dispositioned not-a-blocker** (2026-05). The
+S3–S5 steps remain the multiply-audited N9 null and this document
+does not override N9/N10/N11. But per the `continuity_in_K_nulls.md`
+disposition, the continuity-in-K those nulls obstruct was the
+*superseded* Ω_b C5 closure's dependency; **no landed result
+requires it** (all Survives results are combinatorial or fixed-K;
+the matter sector runs by the discrete cascade `K_n^d = b^{−n}`).
+The only genuine residual is the cosmological *era timeline*
+(ordering possibly derivable; absolute durations plausibly
+anchor-conditional, `#INF` shape). So S3–S5 is an open *research*
+item, not a blocker on any landed prediction.
 
 ## Proof chain
 
