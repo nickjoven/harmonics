@@ -481,8 +481,12 @@ coupling
 
 At the Z-boson energy scale and after the standard
 energy-scale-tracking procedure, the strong-force coupling is
-roughly $3.05$ times the weak-isospin coupling. The substrate's
-bare ratio is $q_3^3 / q_2^3 = 27/8 = 3.375$.
+$\approx 3.488$ times the weak-isospin coupling
+($\alpha_s/\alpha_2 = 0.1179/0.0338$). The substrate's bare $K=1$
+arithmetic identity is $q_3^3 / q_2^3 = 27/8 = 3.375$ &mdash; a
+reference identity, not a prediction at $M_Z$ (no
+framework-consistent running connects it to the observed value;
+see `negative_results_ledger.md`).
 
 *Also called:* $\alpha_s / \alpha_2$; the **strong-to-weak coupling
 ratio**.

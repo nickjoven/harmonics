@@ -1748,8 +1748,8 @@ eliminated post-2026-04 round. The headline deliverables:
 - **Substrate-side scalar amplitude** A_s_substrate = 2.33 × 10⁻⁹
   (complete substrate-side prediction; observable requires
   anchor-side amplification per Instance 7)
-- **MOND scale** a_0 = c · H_0 / (2π) = 1.25 × 10⁻¹⁰ m/s² at
-  4% on Lelli et al. 2017 RAR
+- **MOND scale** a_0 = c · H_0 / (2π√g*) = 1.25 × 10⁻¹⁰ m/s² at
+  4% on Lelli et al. 2017 RAR (g*-corrected; bare c·H_0/(2π) = 1.04 × 10⁻¹⁰)
 - **Spatial dimension** = 3 (exact, from substrate q_3 sector)
 - **Lorentz symmetry** = Spin(3,1) (exact, double cover from
   substrate orientation)
