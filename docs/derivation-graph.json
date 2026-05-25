@@ -1,5 +1,5 @@
 {
-  "generated": "abd1b1db27c119b5f4d3b243a479240a84716390",
+  "generated": "b5f4304f659924a739ce29a155a840541bb91c04",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -4377,9 +4377,15 @@
         "era_timeline_disposition",
         "mass_entrained_measure",
         "mass_function_family",
-        "master_cascade_identity"
+        "master_cascade_identity",
+        "negative_results_ledger"
       ],
       "git": [
+        {
+          "hash": "b5f4304",
+          "date": "2026-05-25",
+          "subject": "-7/3 finishing work + audit: the mass-function baseline's width step is null (#165)"
+        },
         {
           "hash": "abd1b1d",
           "date": "2026-05-24",
@@ -5368,16 +5374,22 @@
     {
       "id": "mass_entrained_measure",
       "path": "sync_cost/derivations/mass_entrained_measure.md",
-      "title": "Mass = entrained tongue measure, from the synchronization-cost functional",
-      "summary": "M(p/q)  \u221d  w(p/q)  \u221d  1/q\u00b2     (at K = 1)",
+      "title": "Mass = entrained tongue width, from the synchronization-cost functional",
+      "summary": "M(p/q)  \u221d  w(p/q)          (physical tongue width)  -- SOUND\n    w(p/q)  \u221d  1/q\u00b2  => -2     -- NULL (1/q\u00b2 is the tree weight, not w)",
       "depends_on": [
         "imf_bowed_cascade",
         "sine_gordon_substrate"
       ],
       "depended_on_by": [
-        "imf_bowed_cascade"
+        "imf_bowed_cascade",
+        "negative_results_ledger"
       ],
       "git": [
+        {
+          "hash": "b5f4304",
+          "date": "2026-05-25",
+          "subject": "-7/3 finishing work + audit: the mass-function baseline's width step is null (#165)"
+        },
         {
           "hash": "abd1b1d",
           "date": "2026-05-24",
@@ -5881,9 +5893,11 @@
         "framework_status",
         "generation_mechanism",
         "h_inf_status",
+        "imf_bowed_cascade",
         "inflation_seam_anchor_closure",
         "k_scaling_scan",
         "klein_nodal_parity",
+        "mass_entrained_measure",
         "mediant_vs_flow_calc",
         "no_rescaling",
         "numerology_count_phase_b",
@@ -5898,6 +5912,11 @@
         "sinw_fixed_point"
       ],
       "git": [
+        {
+          "hash": "b5f4304",
+          "date": "2026-05-25",
+          "subject": "-7/3 finishing work + audit: the mass-function baseline's width step is null (#165)"
+        },
         {
           "hash": "2beb996",
           "date": "2026-05-23",
