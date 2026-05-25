@@ -74,7 +74,15 @@ Class 2, gated on the pigeonhole audit. The two promotion gates:
 1. **Pigeonhole audit on the slope identity — does not pass at α = 0.05.**
    `cascade_slope_check.py` gives p ≈ 0.10 for the Salpeter rung: a random
    slope in the permitted band [-2.5, -2.0] lands within 0.5σ of -2.35
-   about 10% of the time. Suggestive, not decisive.
+   about 10% of the time. The sharper held-out test (`held_out_slope_test.py`,
+   Region-C Phase C #3) confirms low power: of 10 independent control
+   slopes, none land within Salpeter's 0.017 gap of the informative -7/3
+   rung (the only control near a rung sits at the pigeonhole-rich -2.0,
+   matched by the initial-cluster MF). So the evidential weight is one
+   un-replicated match (Salpeter), N = 1 — suggestive of real targeting,
+   not statistically decisive. The ladder's range is too narrow and too
+   sparsely populated by independent controls for the statistics alone to
+   decide.
 2. **Step-2 lemma (cascade depth = Klein-orbit count) — satisfied.**
    `imf_step2_klein_orbit.py`: under the canonical Klein involution
    r → 1-r, the Farey set F_{q_3} = F_3 has orbit count 3 = q_3 (the
@@ -85,9 +93,14 @@ Class 2, gated on the pigeonhole audit. The two promotion gates:
    m ∈ {2,3,4}, selecting the small-denominator cascades and excluding the
    deeper Z_6 (d=6, orbit count 7) and K* (d=14) sectors.
 
-Net: the structural gate is closed; promotion now waits only on a tighter
-statistical case, which the p ≈ 0.10 pigeonhole result does not yet
-provide.
+Net: the structural derivation is complete and framework-native end-to-end
+— baseline -q_2 from the Farey mode-counting measure (`farey_mass_baseline.py`,
+`mass_entrained_measure.md`, with the q-independence of the binding closed
+in `epsilon_residual.py`) and correction -1/q_3 from the Step-2 Klein-orbit
+count. What distinguishes -7/3 from coincidence is that structural
+derivation; the statistics cannot be decisive with one rung and one
+observable, so the rung stays Class 2 (a confirmed structural prediction
+whose single empirical match is suggestive but not σ-decisive).
 
 ## Cross-links
 
@@ -95,7 +108,9 @@ provide.
 - `mass_function_family.md` — α across cascade depths
 - `farey_mass_baseline.py` — -q_2 baseline from the Farey mode-count measure
 - `mass_entrained_measure.md` — mass = entrained measure, from the cost functional
+- `epsilon_residual.py` — q-independence of the per-captured binding ε
 - `imf_step2_klein_orbit.py` — Step-2 lemma: depth = Klein-orbit count
+- `cascade_slope_check.py` / `held_out_slope_test.py` — pigeonhole + held-out null
 - `cascade_slope_check.py` — slope vs. observed MF slopes + pigeonhole null
 - `RESULTS.md` — Stribeck N = 3 empirical anchor
 - `step3_step5_klein_proof.py` — parallel Klein-orbit-counting argument
