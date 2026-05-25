@@ -1,5 +1,5 @@
 {
-  "generated": "b2e99ef7913960667ee81578866925cdc2cb0922",
+  "generated": "abd1b1db27c119b5f4d3b243a479240a84716390",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -4367,17 +4367,24 @@
       "id": "imf_bowed_cascade",
       "path": "sync_cost/derivations/imf_bowed_cascade.md",
       "title": "IMF Salpeter slope from the bowed cascade",
-      "summary": "Class 2 (gated). Promotes to full Class 2 when:",
+      "summary": "Class 2, gated on the pigeonhole audit. The two promotion gates:",
       "depends_on": [
+        "mass_entrained_measure",
         "mass_function_family",
         "master_cascade_identity"
       ],
       "depended_on_by": [
         "era_timeline_disposition",
+        "mass_entrained_measure",
         "mass_function_family",
         "master_cascade_identity"
       ],
       "git": [
+        {
+          "hash": "abd1b1d",
+          "date": "2026-05-24",
+          "subject": "Prove Step-2 lemma: bowed-cascade depth = Klein-orbit count (closes -7/3 structural gate) (#163)"
+        },
         {
           "hash": "30931c3",
           "date": "2026-05-10",
@@ -5355,6 +5362,26 @@
           "hash": "c12a9bb",
           "date": "2026-03-23",
           "subject": "Add Derivation 15: Lie group characterization theorem (#20)"
+        }
+      ]
+    },
+    {
+      "id": "mass_entrained_measure",
+      "path": "sync_cost/derivations/mass_entrained_measure.md",
+      "title": "Mass = entrained tongue measure, from the synchronization-cost functional",
+      "summary": "M(p/q)  \u221d  w(p/q)  \u221d  1/q\u00b2     (at K = 1)",
+      "depends_on": [
+        "imf_bowed_cascade",
+        "sine_gordon_substrate"
+      ],
+      "depended_on_by": [
+        "imf_bowed_cascade"
+      ],
+      "git": [
+        {
+          "hash": "abd1b1d",
+          "date": "2026-05-24",
+          "subject": "Prove Step-2 lemma: bowed-cascade depth = Klein-orbit count (closes -7/3 structural gate) (#163)"
         }
       ]
     },
@@ -7919,6 +7946,7 @@
         "instrument_family_taxonomy",
         "klein_bottle",
         "klein_bottle_derivation",
+        "mass_entrained_measure",
         "mass_function_family",
         "master_cascade_identity",
         "orthogonal_kink_interaction",
