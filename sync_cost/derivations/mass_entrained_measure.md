@@ -59,9 +59,21 @@ functional and the mode-counting measure.
   throughout the framework (Ω_Λ, n_s). So the baseline now stands on the
   **same foundation as Ω_Λ = 13/19** — the Farey measure — rather than
   on an extra imported cascade ingredient.
-- **Residual assumption.** `ε` (per-captured binding energy)
-  q-independent. Reasonable at K=1 (captured oscillators lock at order-1
-  coupling regardless of resonance order) but not separately proven.
+- **Residual, now closed.** `ε` (per-captured binding energy) is
+  q-independent — derived in `epsilon_residual.py`, not assumed. Every
+  Arnold tongue captures oscillators at the *same* density (the captured
+  count is `g·w(p/q)` over a band of width `w(p/q)`, so the captured
+  density `g` is q-independent at the uniform K=1 limit). The internal
+  synchronization that binds the captured band is a Kuramoto problem
+  whose onset `K_c = 2/(πg)` depends only on that density, so the binding
+  `ε = K√(1−K_c/K)` is the same for every mode. The naive objection —
+  that the binding inherits the q-th-order resonance depth `V_q ~ K^q` —
+  fails because the mass function lives at K=1, where perturbation theory
+  breaks down: the q-dependence is relocated entirely into the tongue
+  width (the capture), and the per-captured binding is the cluster
+  coherence, not the resonance depth. Modes with `q > q_max ~ √N` capture
+  < 1 oscillator and do not survive — a physical low-mass cutoff that
+  sets the small end of the range, not the slope.
 
 ## Status
 
@@ -72,12 +84,15 @@ as well-founded as the framework's headline dimensionless results
 borrowed fragmentation-cascade ingredient. The full bowed-cascade slope
 `-7/3 = -q_2 - 1/q_3` is thereby framework-native: baseline here,
 correction `-1/q_3` from the Step-2 Klein-orbit count
-(`imf_step2_klein_orbit.py`), modulo the one residual (q-independent ε)
-and the inherited Farey-measure idealization.
+(`imf_step2_klein_orbit.py`). With the q-independent ε now derived
+(`epsilon_residual.py`), the only thing the baseline still inherits is
+the Farey-measure idealization at K=1 — the same one Ω_Λ and n_s rest
+on. There is no slope-specific free assumption left.
 
 ## Cross-links
 
 - `farey_mass_baseline.py` — numerical verification dN/dM ~ M^(-2)
+- `epsilon_residual.py` — q-independence of the per-captured binding ε
 - `imf_bowed_cascade.md` — the full bowed-cascade slope -7/3
 - `imf_step2_klein_orbit.py` — the -1/q_3 correction (Klein-orbit count)
 - `sine_gordon_substrate.md` — the short-range mean-field coupling collapse
