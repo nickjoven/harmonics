@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
-"""K=1 baseline mass-function slope from the Farey mode-counting measure.
+"""K=1 baseline slope UNDER the combinatorial Farey 1/q^2 weight.
 
-Attempt to nativize the -2 baseline of the bowed-cascade slope
-alpha = -q_2 - n/d (imf_bowed_cascade.md). The -2 was previously imported
-as the standard fragmentation result -1 - log_2(2) and relabeled -q_2.
-Here it is derived from framework-native objects only:
+CAVEAT (the slope-2 result here is null as a DYNAMICAL claim). This
+computes the mass-function slope assuming a mode's mass equals the Farey
+TREE weight 1/q^2. That weight is NOT the physical critical Arnold-tongue
+width: a complete K=1 staircase forces the width exponent beta > 2 (else
+the tongues over-fill [0,1]), and measurement gives beta ~ 2.3, so the
+dynamical slope is -1 - 2/beta ~ -1.86, not -2. See
+farey_tongue_width_null.py. So -2 below holds only for the combinatorial
+weight, whose identification with physical mass is unestablished; it is
+kept as the combinatorial reference, not a dynamical derivation.
+
+Below the slope is built from framework-native objects:
 
   (1) Mode count. The locked modes are the Farey/Stern-Brocot fractions
       p/q; the count with denominator <= n is |F_n| ~ (3/pi^2) n^2, so the

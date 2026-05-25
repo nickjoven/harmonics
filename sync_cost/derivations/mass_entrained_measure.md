@@ -1,14 +1,18 @@
-# Mass = entrained tongue measure, from the synchronization-cost functional
+# Mass = entrained tongue width, from the synchronization-cost functional
 
-Closes the one load-bearing identification used in
-`farey_mass_baseline.py` — that a locked mode's mass is its entrained
-tongue-width measure, `M(p/q) ∝ w(p/q) ∝ 1/q²` at K=1 — by *deriving*
-it from the framework's "energy = synchronization cost" primitive
-rather than positing it.
+Derives that a locked mode's mass is proportional to its physical
+entrained Arnold-tongue width, `M(p/q) ∝ w(p/q)`, from the framework's
+"energy = synchronization cost" primitive. This part is sound. It does
+**NOT** establish the mass-function baseline slope −2: that step needs
+`w(p/q) ∝ 1/q²`, which is the combinatorial Farey *tree weight*, not the
+physical critical tongue width — and the physical width provably is not
+`1/q²` (`farey_tongue_width_null.py`). See "Status: the width step is
+null" below.
 
 ## Claim
 
-    M(p/q)  ∝  w(p/q)  ∝  1/q²     (at K = 1)
+    M(p/q)  ∝  w(p/q)          (physical tongue width)  -- SOUND
+    w(p/q)  ∝  1/q²  => -2     -- NULL (1/q² is the tree weight, not w)
 
 ## Derivation
 
@@ -38,28 +42,42 @@ rather than positing it.
 4. Hence
    `M(p/q) = E_sync = ε g · w(p/q) ∝ w(p/q)`.
 
-5. **w(p/q) ~ 1/q²** at K=1 — the Farey measure converging to Lebesgue,
-   the same measure the framework already uses for Ω_Λ and n_s.
+Steps 1–4 are sound: the cost functional gives **mass ∝ physical
+tongue width**, with a q-independent prefactor (the ε closure below).
 
-Therefore `M(p/q) ∝ 1/q²`. Combined with the Farey mode count
-`|F_n| ~ (3/π²) n²` (`farey_mass_baseline.py`), this gives
-`dN/dM ∝ M^(-2) = -q_2` — the baseline slope, end-to-end from the cost
-functional and the mode-counting measure.
+5. **The width is not 1/q² — this step is null.** Reaching slope −2
+   needs `w(p/q) ∝ 1/q²`. But at K=1 the staircase is complete, so the
+   tongues sum to 1, and `Σ φ(q) q^(−β)` converges only for `β > 2`
+   (`Σ φ(q)/q²` diverges). So `β = 2` over-fills `[0,1]` and is
+   impossible; the physical width must decay faster than `1/q²`.
+   Measurement gives `w(1/q) ~ q^(−2.3)` (`farey_tongue_width_null.py`).
+   The `1/q²` is the combinatorial Farey **tree weight** (exact on the
+   Stern–Brocot tree), not the physical critical tongue width.
 
-## What this closes, and what it inherits
+Therefore `M(p/q) ∝ w(p/q) ∝ q^(−β)` with `β ≈ 2.3`, and the dynamical
+mass-function slope is `−1 − 2/β ≈ −1.86`, **not −2**. The −2 baseline
+follows only if one takes mass to be the combinatorial tree weight
+rather than the physical entrained width — a substitution that is not
+justified. **The mass↔width step gives mass ∝ width (sound); the
+width = 1/q² step is null, so the −q_2 baseline is not dynamically
+grounded.**
 
-- **Closed.** "Mass = entrained measure" is no longer posited; it
+## What stands, and what is null
+
+- **Stands — mass ∝ physical tongue width.** "Mass = entrained measure"
   follows from *mass = synchronization cost* + short-range coupling +
-  uniform `g`. The `-1` that standard fragmentation theory imports as a
-  measure constant is, here, the `dq/dM` Jacobian of the tongue-width
-  mass map.
-- **Inherited.** The chain rests on the Farey `1/q²` measure at K=1.
-  That is a framework-established idealization of the critical circle
-  map (whose exact mode-locking spectrum is multifractal), adopted
-  throughout the framework (Ω_Λ, n_s). So the baseline now stands on the
-  **same foundation as Ω_Λ = 13/19** — the Farey measure — rather than
-  on an extra imported cascade ingredient.
-- **Residual, now closed.** `ε` (per-captured binding energy) is
+  uniform `g`: `M(p/q) ∝ w(p/q)`, with `w` the physical Arnold-tongue
+  width and a q-independent prefactor.
+- **Null — width = 1/q² (hence slope −2).** The `−2` needs the width to
+  equal the Farey weight `1/q²`. It does not: a complete K=1 staircase
+  forces `β > 2` (else the tongues over-fill `[0,1]`), and measurement
+  gives `β ≈ 2.3` (`farey_tongue_width_null.py`). The `1/q²` is the
+  combinatorial Stern–Brocot tree weight, not the physical width. So the
+  baseline does **not** stand on the same footing as `Ω_Λ = 13/19`:
+  `Ω_Λ` uses the Farey **count** `|F_n| ~ n²` (pure combinatorics,
+  robust), whereas the `−2` baseline needed the Farey **width law**
+  `1/q²`, which is false for the dynamics.
+- **Survives — ε = const.** `ε` (per-captured binding energy) is
   q-independent — derived in `epsilon_residual.py`, not assumed. Every
   Arnold tongue captures oscillators at the *same* density (the captured
   count is `g·w(p/q)` over a band of width `w(p/q)`, so the captured
@@ -75,24 +93,27 @@ functional and the mode-counting measure.
   < 1 oscillator and do not survive — a physical low-mass cutoff that
   sets the small end of the range, not the slope.
 
-## Status
+## Status: the width step is null
 
-The `-q_2` mass-function baseline is derived from the synchronization-
-cost primitive plus the Farey mode-counting measure. It is now exactly
-as well-founded as the framework's headline dimensionless results
-(Ω_Λ, n_s) — resting on the same measure — and no longer carries a
-borrowed fragmentation-cascade ingredient. The full bowed-cascade slope
-`-7/3 = -q_2 - 1/q_3` is thereby framework-native: baseline here,
-correction `-1/q_3` from the Step-2 Klein-orbit count
-(`imf_step2_klein_orbit.py`). With the q-independent ε now derived
-(`epsilon_residual.py`), the only thing the baseline still inherits is
-the Farey-measure idealization at K=1 — the same one Ω_Λ and n_s rest
-on. There is no slope-specific free assumption left.
+The cost functional gives mass ∝ physical tongue width (sound), and the
+ε prefactor is q-independent (sound). But the step that turns that into
+the `−q_2` slope — width = `1/q²` — is null: the physical critical
+tongue width is `q^(−β)` with `β > 2` (forced; ≈ 2.3 measured), giving a
+dynamical slope `≈ −1.86`, not `−2`. So the bowed-cascade slope
+`−7/3 = −q_2 − 1/q_3` is **not** framework-native end-to-end. What
+survives is the combinatorial skeleton — the Farey **count** `|F_n|`
+(also underwriting `Ω_Λ`) and the Step-2 Klein-orbit count for the
+`−1/q_3` correction — plus mass ∝ width. The `−q_2` baseline itself is
+open: it holds only under the combinatorial tree weight, whose
+identification with physical mass is unestablished. The `−7/3` vs
+Salpeter (0.33σ) match remains an empirical observation without a
+grounded dynamical baseline.
 
 ## Cross-links
 
-- `farey_mass_baseline.py` — numerical verification dN/dM ~ M^(-2)
-- `epsilon_residual.py` — q-independence of the per-captured binding ε
+- `farey_tongue_width_null.py` — the null: physical width ≠ Farey 1/q²
+- `farey_mass_baseline.py` — dN/dM ~ M^(-2) under the (combinatorial) 1/q² weight
+- `epsilon_residual.py` — q-independence of the per-captured binding ε (survives)
 - `imf_bowed_cascade.md` — the full bowed-cascade slope -7/3
 - `imf_step2_klein_orbit.py` — the -1/q_3 correction (Klein-orbit count)
 - `sine_gordon_substrate.md` — the short-range mean-field coupling collapse

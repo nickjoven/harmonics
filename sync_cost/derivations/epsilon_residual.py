@@ -76,10 +76,15 @@ def main() -> int:
         print(f"  N_total = {Ntot:.0e}:  q_max ~ sqrt(N) = {Ntot**0.5:.0f}"
               f"   (q>q_max captures <1 oscillator -> no structure)")
     print()
-    print("=> M(p/q) ~ 1/q^2 with a q-independent prefactor; with the Farey")
-    print("   mode count |F_n| ~ n^2, dN/dM ~ M^-2 = -q_2. The epsilon")
-    print("   residual is closed under the same uniform-g / Farey idealization")
-    print("   the baseline already uses -- no new free assumption.")
+    print("=> epsilon is q-independent: this result STANDS, and it is")
+    print("   width-independent (it needs only uniform capture density, which")
+    print("   holds whatever the tongue-width law). So M(p/q) ~ epsilon * w(p/q)")
+    print("   with a constant prefactor.")
+    print()
+    print("   NOTE: the further step M ~ 1/q^2 -> slope -2 is NULL -- the")
+    print("   physical width is w ~ q^(-beta), beta ~ 2.3 (> 2 forced by the")
+    print("   complete K=1 staircase), not 1/q^2. See farey_tongue_width_null.py.")
+    print("   So this closes the prefactor, not the -2 slope.")
     return 0
 
 

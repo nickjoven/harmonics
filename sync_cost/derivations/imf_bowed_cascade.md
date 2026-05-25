@@ -26,21 +26,23 @@ Substituting q_2 = 2, q_3 = 3:
 
     α = -2 - 1/3 = -7/3
 
-The two pieces have distinct, framework-native provenance:
+The two pieces have different status:
 
-- **Baseline -q_2 = -2** (the `-1 - log_2(2)`). Derived from the Farey
-  mode-counting measure (`farey_mass_baseline.py`): the mode count
-  |F_n| ~ (3/pi^2) n^2 gives density dN/dq ~ q, and a locked mode's mass
-  is its entrained tongue-width measure M ~ w(p/q) ~ 1/q^2 at K=1 (the
-  "energy = synchronization cost" primitive), giving dN/dM ~ M^(-2).
-  The "-1" is the dq/dM Jacobian, not an imported constant; the one
-  load-bearing identification is mass = entrained measure (this is a
-  third mass concept, distinct from the soliton kink mass ~ sqrt(Kr) and
-  the ADM gravitational mass ~ sqrt(rho), and the only one with the
-  measure-theoretic shape the slope needs).
+- **Baseline -q_2 = -2 — not dynamically grounded (null at the width step).**
+  The cost functional gives mass ∝ physical tongue width
+  (`mass_entrained_measure.md`), but reaching -2 needs that width to be the
+  Farey weight 1/q^2. It is not: a complete K=1 staircase forces the width
+  exponent β > 2 (else the tongues over-fill [0,1]), and measurement gives
+  β ≈ 2.3, so the dynamical slope is -1 - 2/β ≈ -1.86, not -2
+  (`farey_tongue_width_null.py`). The 1/q^2 that gives -2 is the
+  combinatorial Stern–Brocot tree weight, not the physical width;
+  `farey_mass_baseline.py` computes the slope under that combinatorial
+  weight as a reference, not a dynamical derivation. (This does NOT touch
+  the Farey **count** |F_n| ~ n^2 that underwrites Ω_Λ — that is pure
+  combinatorics.)
 - **Correction -n/d = -1/q_3** (the K-dependent part). d = q_3 = Klein-
   orbit count of F_3, n = 1 non-redundant antiperiodic flip
-  (`imf_step2_klein_orbit.py`).
+  (`imf_step2_klein_orbit.py`). This piece stands.
 
 ## Cascade-depth interpretation
 
@@ -93,14 +95,17 @@ Class 2, gated on the pigeonhole audit. The two promotion gates:
    m ∈ {2,3,4}, selecting the small-denominator cascades and excluding the
    deeper Z_6 (d=6, orbit count 7) and K* (d=14) sectors.
 
-Net: the structural derivation is complete and framework-native end-to-end
-— baseline -q_2 from the Farey mode-counting measure (`farey_mass_baseline.py`,
-`mass_entrained_measure.md`, with the q-independence of the binding closed
-in `epsilon_residual.py`) and correction -1/q_3 from the Step-2 Klein-orbit
-count. What distinguishes -7/3 from coincidence is that structural
-derivation; the statistics cannot be decisive with one rung and one
-observable, so the rung stays Class 2 (a confirmed structural prediction
-whose single empirical match is suggestive but not σ-decisive).
+Net: the structural derivation is **partial, not end-to-end**. What stands
+is the combinatorial skeleton — the Farey **count** |F_n| ~ n^2 and the
+Step-2 Klein-orbit count for the -1/q_3 correction — plus mass ∝ physical
+tongue width and the q-independent binding ε. What does **not** stand is
+the -q_2 baseline: it required the tongue width to be the Farey weight
+1/q^2, and the physical critical width decays faster (β ≈ 2.3 > 2, forced
+by the complete staircase; `farey_tongue_width_null.py`), giving a
+dynamical slope ≈ -1.86, not -2. So -7/3 is not derived end-to-end; the
+-7/3 vs Salpeter (0.33σ) match remains an empirical observation lacking a
+grounded dynamical baseline. The rung stays Class 2 — now for a structural
+reason (the baseline's mass↔width step is null), not only a statistical one.
 
 ## Cross-links
 
