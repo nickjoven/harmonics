@@ -134,6 +134,10 @@ derivations from Klein-antipodal Z₂ rep theory):
   pilot audit (G1 null)
 - `CHAIN_KSTAR.md` — worked example of an inline audit (Step 6
   demoted, Steps 1–5 retained)
+- `algebraic_forcing_partition.md` — where this policy's verdicts
+  structurally land: forcing requires over-determination, so it is
+  confined to the algebraic/combinatorial layer; metric/renormalization
+  quantities are single-sourced and stay at the Class-2 ceiling
 
 ## Status
 
