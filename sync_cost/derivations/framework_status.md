@@ -254,3 +254,4 @@ committed derivation / audit.
 | `hybrid_strategy_audit.md` | Floor residuals vs `|r|^n` closures (Class 2 verdict) |
 | `ansatz_audit_policy.md` | Triage policy applied to hybrid closures |
 | `anchor_count_audit.md` | two-anchor status and hierarchy-problem context |
+| `algebraic_forcing_partition.md` | Where forcing lives: forced ⟹ algebraic (over-determined); metric/renormalization quantities (δ_FKS, α_gold) single-sourced → Class-2 ceiling. Complementary to the Basepoint Principle. |
