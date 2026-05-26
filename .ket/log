@@ -188,3 +188,5 @@
 2026-05-24T03:12:04Z | dag:create | d907fb9e8526345b39384661833d7ed0834698a6b510967ccc7a7070cb6ea6f7
 2026-05-24T03:12:04Z | put | sync_cost/derivations/continuity_in_K_nulls.md -> 9dadf4d1c3e43bd28821ebacc52f987e5f5161f1fd174f7ff22ff9581bb537f5
 2026-05-24T03:12:04Z | dag:create | 54a52b7dc9b754c0556454686034366fb0d27e483a8adf9e88a4f25989ca1da8
+2026-05-26T14:43:00Z | put | sync_cost/derivations/continuity_in_K_nulls.md -> 1d545326497b9dcf9e2b8db39f914ee3cc9fdb0c3921ece37a7d1a04a9e16d5c
+2026-05-26T14:43:00Z | dag:create | 8c8e027325e0bbedd92a9600daf8bc1e8abf4eda0ee4c76091f5394f60ee5296
