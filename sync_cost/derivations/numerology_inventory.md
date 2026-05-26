@@ -111,6 +111,16 @@ structural prediction. `MANIFEST.yml` records these under
   Z2 fails (multiple equivalent integer constructions, no forced
   `a`), and the invoked "running correction" is an undefined
   post-hoc patch.
+- **Reconciliation (2026-05).** The Class-1 verdict above stands for
+  the *bare tree + running-correction* path. A *different* closure this
+  audit did not evaluate — the **Koide constraint `Q = 2/3`** (a
+  framework-derived Klein-bottle population ratio, `klein_bottle.md`)
+  with the tree τ/e — gives `μ/e ≈ 204.8` (**0.96%**). With it the
+  **lepton μ/e is Floor, not Class 1**: a structural mechanism reaching
+  the ~1% particle-sector coincidence floor, but with the Koide *form*
+  imported and the `26:7:1` base / `5/2` exponent un-forced. The
+  bare-tree null is retained; the lepton-sector status is promoted to
+  Floor (`fermion_mass_running.md`, `free_parameter_scorecard.md`).
 
 ---
 

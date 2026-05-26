@@ -51,25 +51,31 @@ forced; the sub-verdicts grade *how* unforced.
 |---|---|---|---|
 | **1/α_em** | tree = q₂³+q₃³ = 35 | **Class 1** — running 35→128 fails ~3.7×; value imported (1/137.036) | `numerology_inventory.md` §Class 1; `negative_results_ledger.md` |
 | sin²θ_W | 8/35 = 0.2286 | **Class 1** — SM running rules out Planck-scale origin | `framework_status.md` "Fails"; `sinW_running_check.py` |
-| Charged-fermion mass hierarchy | 26:7:1 seed + rational exponents | **⚠ Unreconciled** — see note below | `numerology_inventory.md` §C1 ↔ `fermion_mass_running.md` D50 |
 
-> **⚠ Conflict flagged (surfaced by this scorecard).** The 9 Yukawa
-> ratios are classified two ways: `numerology_inventory.md` (audit
-> 2026-04-24) calls 26:7:1 **Class 1** — the μ/e prediction `7^(5/2)=129.6`
-> misses observed 206.8 by **37%**, the "K→μ running correction" is an
-> undefined post-hoc patch, and the base integers have multiple
-> equivalent constructions (Z2 fails). `fermion_mass_running.md` (D50,
-> 2026-04-22) instead claims it **closed** via a Koide constraint
-> (Q=2/3 = Klein-bottle population ratio, `klein_bottle.md:674`),
-> "reducing 9 parameters to 1." **The Class-1 audit post-dates the D50
-> closure**, so the current honest verdict is Class 1 with the μ/e gap
-> open; the closure claim is not independently re-audited. This row is
-> **the catalog's first finding** and wants a dedicated reconciliation.
+> **Reconciled (this PR — the conflict this scorecard surfaced is now
+> closed, not left open).** The charged-fermion `26:7:1` hierarchy was
+> classified two ways: `numerology_inventory.md` (audit 2026-04-24)
+> **Class 1** (bare-tree μ/e `7^(5/2)=129.6` misses 206.8 by **37%**;
+> the "K→μ running correction" is an undefined patch) vs
+> `fermion_mass_running.md` D50 (2026-04-22) **"closed, 9→1"** via a
+> Koide constraint. Attempting the reconciliation rather than recording
+> "open": the two judged *different* closures. The bare tree + running-
+> correction **is** Class 1 (that null stands). But a *separate* closure
+> the audit never evaluated — the **Koide constraint `Q=2/3`** (a
+> framework-derived Klein-bottle population ratio, `klein_bottle.md`)
+> with the tree τ/e — gives `μ/e ≈ 204.8` (**0.96%**, verified). So the
+> honest verdict is **Floor** (row below): a structural mechanism
+> reaching the ~1% particle-sector coincidence floor — *but* the Koide
+> *form* is imported and the `26:7:1` base / `5/2` exponent are
+> un-forced, so not a forced closure and not "9→1" (retired phrasing).
+> `numerology_inventory.md` undercredited (→ Class 1), `fermion_mass_running.md`
+> overclaimed (→ "closed"); both updated to Floor.
 
 ### Class 2 / 3 — consistent or suspect, never forced
 
 | Input | Verdict | Canonical doc |
 |---|---|---|
+| Charged-fermion μ/e (26:7:1 + Koide Q=2/3) | **Floor** — bare tree Class 1 (μ/e 37%); Koide Q=2/3 closes μ/e to ~1% (coincidence floor; Koide form imported, base/exponent un-forced) | `fermion_mass_running.md`, `numerology_inventory.md` §C1, `generation_mechanism.md` |
 | CKM matrix (3 angles + phase) | Class 2 — pigeonhole over expression set (Region C) | `phenomenology_cross_reference.md` §7 |
 | PMNS / neutrino mixing | Class 2 | `phenomenology_cross_reference.md`; Region C |
 | Quark / lepton mass ratios (most) | Class 2 — 0.1–3% fits, pigeonhole | `phenomenology_cross_reference.md` §7–8 |
@@ -101,9 +107,10 @@ the continuous sector open** — the gauge couplings and the Yukawa/mixing
 parameters sit in Class 1/2, the same open class the SM measures and the
 landscape hands to selection. It **failed** outright on α_em and
 sin²θ_W (numerology killed by running), **declines** the dimensionful
-anchors by principle, and carries **one unreconciled internal conflict**
-(the 26:7:1 Yukawa hierarchy). No reduction is tallied; the value is the
-map, not a score.
+anchors by principle, and **reconciled the one internal conflict this
+index surfaced** (the 26:7:1 Yukawa hierarchy → Floor via Koide Q=2/3,
+not the open flag it was first recorded as). No reduction is tallied;
+the value is the map, not a score.
 
 ## What this confirms
 
@@ -128,5 +135,6 @@ Physics' dimensionless free parameters, indexed and graded: the framework
 **forces the discrete/combinatorial ones** (gauge structure, anomalies,
 θ=0, Ω_Λ=13/19) and **leaves the continuous couplings open** (α_em and
 sin²θ_W failed, Yukawa/mixing Class 1–2) — the same forced/free seam the
-Standard Model already has, with one internal conflict (26:7:1) flagged
-for reconciliation.
+Standard Model already has, with one internal conflict (26:7:1) surfaced
+by the index and reconciled to **Floor** (Koide Q=2/3 closes μ/e to ~1%;
+bare-tree Class-1 null retained).

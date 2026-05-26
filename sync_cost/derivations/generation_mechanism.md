@@ -102,10 +102,15 @@ For the muon:
 
     m_μ/m_e = 7^(5/2) = 49√7 = 49 × 2.6458... = 129.6
 
-Observed: m_μ/m_e = 206.8. The residual (37%) indicates the μ/e ratio
-requires the K → μ running correction — the exponent 5/2 applies at
-the tree-level scale, and renormalization group flow from the tree
-scale to the muon mass scale shifts the effective ratio.
+Observed: m_μ/m_e = 206.8 — the bare tree misses by 37%. The proposed
+`K → μ running correction` was **never derived** (an undefined patch;
+flagged Class 1 in `numerology_inventory.md`). The μ/e ratio instead
+closes via the **Koide constraint** `Q = 2/3` (the Klein-bottle
+population ratio, `klein_bottle.md`): imposing `Q = 2/3` with the tree
+τ/e gives `m_μ/m_e ≈ 204.8` (0.96%). This is **Floor**, not a forced
+closure — ~1% is the particle-sector coincidence floor and the Koide
+*form* is imported (`fermion_mass_running.md`,
+`free_parameter_scorecard.md`).
 
 ## 5. The path encoding
 
@@ -296,12 +301,14 @@ quickly a chain can attempt to bridge a D link (and fail).
 
 ## Status
 
-**Partially derived.** The lepton τ/e ratio works at 0.9%. The μ/e
-ratio and quark sectors need the K → μ running correction — the
-tree-level exponents give the right parametric form but the
-renormalization group flow from the tree scale to the physical mass
-scale has not yet been computed. The mixing angle calculation gives
-the right region (Cabibbo) but not the precise value.
+**Partially derived (Floor).** The lepton τ/e ratio works at 0.9%; the
+μ/e ratio closes to ~1% via the **Koide `Q = 2/3` constraint**
+(`fermion_mass_running.md`), **not** the never-derived `K → μ running
+correction` (a phantom patch, Class 1 in `numerology_inventory.md`).
+Both lepton ratios sit at the ~1% particle-sector coincidence floor —
+**Floor, not forced** (Koide form imported; 26:7:1 base / 5/2 exponent
+un-forced). Quark sectors remain open. The mixing angle calculation
+gives the right region (Cabibbo) but not the precise value.
 
 The generation mechanism itself — three from 4 − 1, the path as
 generation quantum number, the chain topology killing the 4th — is
