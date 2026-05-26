@@ -1,5 +1,5 @@
 {
-  "generated": "f749ad4dbf6a60f686942cf0f853e0e5adb4a40f",
+  "generated": "181c29fc814497539047263fc63ddc66bdf02393",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1655,6 +1655,11 @@
       ],
       "git": [
         {
+          "hash": "f808b59",
+          "date": "2026-05-26",
+          "subject": "Incorporate #163 into the N9 dispositions: cascade structural gate closed, K\u2194energy residual stays C"
+        },
+        {
           "hash": "3c9ea73",
           "date": "2026-05-23",
           "subject": "Fully disposition N9: continuous-K not a blocker + era-timeline settled (#162)"
@@ -2805,6 +2810,11 @@
         "k_of_t_problem_statement"
       ],
       "git": [
+        {
+          "hash": "f808b59",
+          "date": "2026-05-26",
+          "subject": "Incorporate #163 into the N9 dispositions: cascade structural gate closed, K\u2194energy residual stays C"
+        },
         {
           "hash": "3c9ea73",
           "date": "2026-05-23",
@@ -4384,6 +4394,11 @@
       ],
       "git": [
         {
+          "hash": "181c29f",
+          "date": "2026-05-26",
+          "subject": "Sharpen the tongue-width null: \u03b2 is multifractal; universal slope is \u03b4_FKS-set \u2248 \u22121.924, not \u22121.86 ("
+        },
+        {
           "hash": "b5f4304",
           "date": "2026-05-25",
           "subject": "-7/3 finishing work + audit: the mass-function baseline's width step is null (#165)"
@@ -5440,6 +5455,11 @@
         "master_cascade_identity"
       ],
       "git": [
+        {
+          "hash": "798d2d2",
+          "date": "2026-05-26",
+          "subject": "Category/ontology correction to the mass-function family: domain, not \"tension\" (#170)"
+        },
         {
           "hash": "b2e99ef",
           "date": "2026-05-24",
