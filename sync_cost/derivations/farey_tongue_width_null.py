@@ -24,13 +24,20 @@ K=1; widths by plateau bisection on the rotation number, see git history):
     w(1/q):   0.0740  0.0306  0.0159  0.0093  0.0059  0.0040
     w*q^2:    0.296   0.275   0.254   0.233   0.214   0.197   (falling: beta>2)
 
-Fitted w ~ q^(-2.3) (local exponent rises 2.2 -> 2.5 across the range; not
-even a clean power law). Stable from n=12k to n=80k iterations.
+The fit "w ~ q^(-2.3)" is a LOW-q ARTIFACT, not a universal exponent: the
+1/q local exponent drifts monotonically (2.18 at q=3 -> 2.88 at q=22, no
+limit). The width law is multifractal. The universal exponent is the
+golden-mean (Fibonacci) one, whose width ratios converge to the
+Feigenbaum-Kadanoff-Shenker constant delta_FKS = 2.83361, giving
+beta_gold = ln(delta_FKS)/ln(phi) = 2.164 -- governed by RENORMALIZATION,
+not by any Hausdorff dimension (`tongue_width_universality.py`).
 
-IMPLICATION. The dynamical mass-function slope is -1 - 2/beta ~ -1.86 (for
-beta ~ 2.3), NOT -2. So:
-  - mass = physical entrained tongue width  ->  baseline ~ -1.86, and the
-    -7/3 = baseline - 1/q_3 reconstruction misses Salpeter (-2.35).
+IMPLICATION. The dynamical mass-function slope is -1 - 2/beta, and beta is
+NOT a single number. The clean universal value is -1 - 2/2.164 = -1.92, NOT
+-2. So:
+  - mass = physical entrained tongue width  ->  no single dynamical baseline
+    (multifractal); the universal representative -1.92 makes the
+    -7/3 = baseline - 1/q_3 reconstruction WORSE (-2.26 vs Salpeter -2.35).
   - the -2 baseline holds only for the combinatorial Farey TREE weight
     1/q^2 (exact by definition), whose identification with physical mass
     is NOT established.
@@ -77,9 +84,9 @@ def main() -> int:
     sx, sy = sum(xs), sum(ys)
     beta = -(n * sum(x*y for x, y in zip(xs, ys)) - sx*sy) / \
            (n * sum(x*x for x in xs) - sx*sx)
-    print(f"  fitted w ~ q^(-{beta:.2f})  (Farey assumes 2; staircase forces >2)")
-    slope = -1.0 - 2.0 / beta
-    print(f"  => dynamical mass-function slope -1 - 2/beta = {slope:.2f}  (not -2)")
+    print(f"  fitted w ~ q^(-{beta:.2f}) over q=2..7  (LOW-q artifact; the 1/q")
+    print("  exponent drifts to ~2.88 by q=22 -- see tongue_width_universality.py)")
+    print(f"  universal (golden-mean) beta = 2.164 => slope -1 - 2/beta = -1.92  (not -2)")
     print()
     print("CONCLUSION: the mass<->width identification is NULL. The Farey 1/q^2")
     print("is the combinatorial tree weight, not the physical critical width.")
