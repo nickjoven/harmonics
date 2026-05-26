@@ -80,9 +80,27 @@ This is **Class 2** — and it is the **same object as the
 that is not yet forced (and cannot be cured by an anchor, since it's
 dimensionless). Its structural candidate is the **discrete cascade**
 `K_n^d = b^{−n}` (`master_cascade_identity.md`) — the matter-sector
-"running" — with the cascade↔observable links (e.g. the Salpeter IMF
-slope, `imf_bowed_cascade.md`) currently **Class-2-gated**. **This doc
-does not promote it.** It is the live residual, tracked with the
+"running."
+
+**Update (2026-05, #163): the cascade's *structural* gate is now
+closed; the residual stays Class 2 on the *statistical* gate.** For the
+first cascade↔observable link, the Salpeter IMF slope
+(`imf_bowed_cascade.md`):
+- **Structural gate — closed.** `α = −q₂ − n/d = −7/3` with the depth
+  lemma proven (`imf_step2_klein_orbit.py`: `d = 3 = q₃` = Klein-orbit
+  count of F₃, `n = 1` non-redundant flip), and — a genuine forcing —
+  `orbit_count(F_m) = m` holds *only* for `m ∈ {2,3,4}`, **selecting the
+  small-denominator cascades and excluding** the Z₆ (d=6) and K\* (d=14)
+  sectors. So the cascade is a *structurally-grounded* K↔scale candidate
+  with a *forced* depth, not a free fit.
+- **Statistical gate — open.** The pigeonhole audit
+  (`cascade_slope_check.py`) gives `p ≈ 0.10` for the Salpeter rung —
+  suggestive, not decisive; it does not clear `α = 0.05`.
+
+So the mapping is now a **structurally-forced candidate that remains
+Class 2 for lack of statistical decisiveness** — *not* promoted to
+structural. The live residual is now sharply localized: **the
+statistical case, not the structure.** Still tracked with the
 discrete-cascade work, not with "continuous K(z)."
 
 ---

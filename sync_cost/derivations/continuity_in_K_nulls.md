@@ -36,8 +36,14 @@
 > (need `H_0`); (3) the **K_eff↔epoch/energy mapping is the one genuine
 > Class-2 residual**, identical to the "K↔energy-map" question, whose
 > structural candidate is the discrete cascade `K_n^d = b^{−n}`
-> (`master_cascade_identity.md`; cascade↔Salpeter datum still
-> Class-2-gated, *not* promoted). So N9 S5 contributes **no open
+> (`master_cascade_identity.md`). **Update (#163): the cascade's
+> *structural* gate is closed** — the first link (Salpeter IMF slope
+> `−7/3`) has its depth lemma proven (`imf_step2_klein_orbit.py`:
+> `d=q₃`, `n=1`; `orbit_count(F_m)=m` only for `m∈{2,3,4}`, forcing the
+> small-denominator cascades) — **but the mapping stays Class 2 on the
+> *statistical* gate** (pigeonhole `p≈0.10`, `cascade_slope_check.py`;
+> not promoted). So the residual is now sharply localized to the
+> statistical case, not the structure. So N9 S5 contributes **no open
 > *structural* gap**, and — with S1–S2 structural, S3 deflated, S4
 > anchor-declined — **N9 is fully dispositioned.** None of it is the
 > "continuous-K blocker" this file was once read as.
