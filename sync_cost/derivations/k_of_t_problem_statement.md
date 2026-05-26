@@ -57,6 +57,17 @@ forced to be predictive.**
 - **N11:** the tongue-coverage proxy `w(K)` is discontinuous (caps at 0.138
   for `K<1`, jumps to 1 at `K=1`), non-monotone, never reaching target. The
   direct substrate `w(K)` proxy fails structurally. The map is not this.
+- **N17:** the map is **not forced by preserving the invariant `D ≈ 0.87`**.
+  An embedding relabels the scale axis `Ω → Ω^p`; box-counting dimension is
+  bi-Lipschitz-invariant, so `D ≈ 0.87` survives for *every* exponent (spread
+  0.017 across `p ∈ [0.6, 1.7]`; `geometric_forcing_null.py`). D-preservation
+  is **vacuous** — it discriminates nothing, so it cannot force the map. This
+  closes the "geometrically forced via the scale-relativistic invariant"
+  route. (What *would* constrain the map is metric/curvature matching, not a
+  topological invariant — but that carries one free rate, cascade-steps per
+  FRW-expansion; whether that rate *is* the `n_s` e-fold rate is an open
+  conjecture, not a result, and N12/S2 flags exactly this rate-conflation as
+  a 27× ambiguity. The map stays Class-2.)
 
 ## 4. Acceptance criterion (what a solution must satisfy) — N9
 
@@ -107,4 +118,5 @@ declines it, as it declines the schedule). Either outcome closes the frontier.
 - `era_timeline_disposition.md` — three-tier disposition (ordering/schedule/map)
 - `inflation_seam_anchor_closure.md` — #INF; schedule anchor-declined
 - `frw_staircase_transform.py` — slope localized to the station↔epoch map
+- `geometric_forcing_null.py` — N17: D-preservation is vacuous, does not force the map
 - `imf_step2_klein_orbit.py` — the depths `d` are Klein-orbit-grounded
