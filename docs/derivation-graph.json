@@ -1,5 +1,5 @@
 {
-  "generated": "2458e47081a7972b8927b7148b524cb7d2042641",
+  "generated": "ef4e4158294fcc8ca346377a638d8b0099149242",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -4811,6 +4811,11 @@
       ],
       "depended_on_by": [],
       "git": [
+        {
+          "hash": "ef4e415",
+          "date": "2026-05-26",
+          "subject": "N17: D-preservation is vacuous \u2014 the station\u2194epoch map is not geometrically forced (#169)"
+        },
         {
           "hash": "f749ad4",
           "date": "2026-05-25",
