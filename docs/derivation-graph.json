@@ -1,5 +1,5 @@
 {
-  "generated": "ef4e4158294fcc8ca346377a638d8b0099149242",
+  "generated": "3fdfe7646cac7e36aafe5326bae349eb87d26865",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -773,6 +773,34 @@
       ]
     },
     {
+      "id": "algebraic_forcing_partition",
+      "path": "sync_cost/derivations/algebraic_forcing_partition.md",
+      "title": "The forcing partition: forced \u27f9 algebraic",
+      "summary": "The framework's quantities split into two layers, and **forcing lives in\nexactly one of them**:",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "born_rule",
+        "farey_partition",
+        "framework_status",
+        "imf_bowed_cascade",
+        "lesson_forced_basin_selection",
+        "mass_function_family",
+        "omega_partition_combinatorial",
+        "spectral_tilt_reframed"
+      ],
+      "depended_on_by": [
+        "ansatz_audit_policy",
+        "framework_status"
+      ],
+      "git": [
+        {
+          "hash": "44c0090",
+          "date": "2026-05-26",
+          "subject": "Formalize the forcing partition: forced \u27f9 algebraic (#172)"
+        }
+      ]
+    },
+    {
       "id": "anchor_count_audit",
       "path": "sync_cost/derivations/anchor_count_audit.md",
       "title": "Anchor-count audit: single vs multiple observational anchors",
@@ -889,6 +917,7 @@
       "summary": "**Active methodology document.** The Step 4 default (Class 4 \u2192\nClass 2 if no forcing mechanism within one sitting) is\ncalibrated correctly per Region C Phase B\n(`numerology_count_phase_b.md`) PIGEONHOLE verdict at \u03b1 = 0.05.",
       "depends_on": [
         "CHAIN_KSTAR",
+        "algebraic_forcing_partition",
         "cross_ratio_irrep_reframe",
         "framework_status",
         "klein_antipodal_z2_rep_pattern",
@@ -899,6 +928,7 @@
       ],
       "depended_on_by": [
         "a_s_g1_closure_attempt",
+        "algebraic_forcing_partition",
         "audit_punch_list_2026-04",
         "canonical_glossary",
         "complex_amplitude_uniqueness",
@@ -931,6 +961,11 @@
         "vocabulary_is_the_work_pattern"
       ],
       "git": [
+        {
+          "hash": "44c0090",
+          "date": "2026-05-26",
+          "subject": "Formalize the forcing partition: forced \u27f9 algebraic (#172)"
+        },
         {
           "hash": "a6a4f5d",
           "date": "2026-04-26",
@@ -1263,6 +1298,7 @@
       "depended_on_by": [
         "INDEX",
         "a1_from_saddle_node",
+        "algebraic_forcing_partition",
         "articulation_audit_2026-05",
         "born_rule_parameter_free",
         "complex_amplitude_uniqueness",
@@ -2971,6 +3007,7 @@
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
+        "algebraic_forcing_partition",
         "audit_punch_list_2026-04",
         "canonical_glossary",
         "framework_status",
@@ -3208,6 +3245,7 @@
         "a1_from_saddle_node",
         "a_s_g1_closure_attempt",
         "a_s_geometric_proof",
+        "algebraic_forcing_partition",
         "anchor_count_audit",
         "anchor_count_reaudit",
         "ansatz_audit_policy",
@@ -3265,6 +3303,7 @@
         "PROOF_B_quantum",
         "a1_from_saddle_node",
         "a_s_g1_closure_attempt",
+        "algebraic_forcing_partition",
         "anchor_count_reaudit",
         "ansatz_audit_policy",
         "articulation_audit_2026-05",
@@ -3335,6 +3374,11 @@
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "44c0090",
+          "date": "2026-05-26",
+          "subject": "Formalize the forcing partition: forced \u27f9 algebraic (#172)"
+        },
         {
           "hash": "3c9ea73",
           "date": "2026-05-23",
@@ -4386,6 +4430,7 @@
         "master_cascade_identity"
       ],
       "depended_on_by": [
+        "algebraic_forcing_partition",
         "era_timeline_disposition",
         "mass_entrained_measure",
         "mass_function_family",
@@ -5317,7 +5362,9 @@
         "minimum_alphabet",
         "substrate_determinism"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "algebraic_forcing_partition"
+      ],
       "git": [
         {
           "hash": "c940943",
@@ -5454,6 +5501,7 @@
         "sine_gordon_substrate"
       ],
       "depended_on_by": [
+        "algebraic_forcing_partition",
         "articulation_audit_2026-05",
         "imf_bowed_cascade",
         "instrument_family_taxonomy",
@@ -6737,6 +6785,7 @@
       ],
       "depended_on_by": [
         "INDEX",
+        "algebraic_forcing_partition",
         "audit_punch_list_2026-04",
         "canonical_glossary",
         "farey_partition",
@@ -8284,6 +8333,7 @@
       "summary": "> Strip away \"cost.\" What remains is phase, frequency, coupling,\n> and the rational numbers.",
       "depends_on": [],
       "depended_on_by": [
+        "algebraic_forcing_partition",
         "graviton_reframing",
         "spectral_tilt",
         "unitless_check"
