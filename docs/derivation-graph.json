@@ -1,5 +1,5 @@
 {
-  "generated": "b5f4304f659924a739ce29a155a840541bb91c04",
+  "generated": "2458e47081a7972b8927b7148b524cb7d2042641",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1641,6 +1641,7 @@
         "era_timeline_disposition",
         "framework_status",
         "k_of_t_friedmann",
+        "k_of_t_problem_statement",
         "klein_bridge_audit_and_probe",
         "klein_dynamics_roadmap",
         "lesson_epr_gr_qm_unification",
@@ -1653,6 +1654,11 @@
         "structural_lemmas"
       ],
       "git": [
+        {
+          "hash": "f808b59",
+          "date": "2026-05-26",
+          "subject": "Incorporate #163 into the N9 dispositions: cascade structural gate closed, K\u2194energy residual stays C"
+        },
         {
           "hash": "3c9ea73",
           "date": "2026-05-23",
@@ -2800,9 +2806,15 @@
       "depended_on_by": [
         "continuity_in_K_nulls",
         "framework_status",
-        "k_of_t_friedmann"
+        "k_of_t_friedmann",
+        "k_of_t_problem_statement"
       ],
       "git": [
+        {
+          "hash": "f808b59",
+          "date": "2026-05-26",
+          "subject": "Incorporate #163 into the N9 dispositions: cascade structural gate closed, K\u2194energy residual stays C"
+        },
         {
           "hash": "3c9ea73",
           "date": "2026-05-23",
@@ -4382,6 +4394,11 @@
       ],
       "git": [
         {
+          "hash": "181c29f",
+          "date": "2026-05-26",
+          "subject": "Sharpen the tongue-width null: \u03b2 is multifractal; universal slope is \u03b4_FKS-set \u2248 \u22121.924, not \u22121.86 ("
+        },
+        {
           "hash": "b5f4304",
           "date": "2026-05-25",
           "subject": "-7/3 finishing work + audit: the mass-function baseline's width step is null (#165)"
@@ -4481,6 +4498,7 @@
         "framework_status",
         "k_inflation_seam_obstruction",
         "k_of_t_friedmann",
+        "k_of_t_problem_statement",
         "negative_results_ledger",
         "proposed_items_disposition",
         "thread_chronology"
@@ -4761,6 +4779,7 @@
         "continuity_in_K_nulls",
         "era_timeline_disposition",
         "framework_status",
+        "k_of_t_problem_statement",
         "klein_dynamics_roadmap",
         "lesson_epr_gr_qm_unification",
         "time_axis_split"
@@ -4775,6 +4794,27 @@
           "hash": "adc81a7",
           "date": "2026-05-19",
           "subject": "Friedmann piece (forward reconstruction) + substrate-maintenance antipattern fix (#146)"
+        }
+      ]
+    },
+    {
+      "id": "k_of_t_problem_statement",
+      "path": "sync_cost/derivations/k_of_t_problem_statement.md",
+      "title": "K(t): the table \u2014 problem statement for the cosmological coupling trajectory",
+      "summary": "Single entry point for the one remaining cosmological frontier. Consolidates\nthe scattered K(t) material (`k_of_t_friedmann.md`, `continuity_in_K_nulls.md`,\n`era_timeline_disposition.md`, `master_cascade_identity.md`,\n`inflation_seam_anchor_closure.md`) and integrates the FRW-transform\nlocalization (`frw_staircase_transform.py`). This is scaffolding, not a\nsolution.",
+      "depends_on": [
+        "continuity_in_K_nulls",
+        "era_timeline_disposition",
+        "inflation_seam_anchor_closure",
+        "k_of_t_friedmann",
+        "master_cascade_identity"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "f749ad4",
+          "date": "2026-05-25",
+          "subject": "Set the table for K(t): consolidated problem statement for the frontier (#168)"
         }
       ]
     },
@@ -5416,6 +5456,11 @@
       ],
       "git": [
         {
+          "hash": "798d2d2",
+          "date": "2026-05-26",
+          "subject": "Category/ontology correction to the mass-function family: domain, not \"tension\" (#170)"
+        },
+        {
           "hash": "b2e99ef",
           "date": "2026-05-24",
           "subject": "Audit: fix neutrino_mass_audit stale \"framework successes\" pattern (#161)"
@@ -5543,6 +5588,7 @@
         "era_timeline_disposition",
         "imf_bowed_cascade",
         "instrument_family_taxonomy",
+        "k_of_t_problem_statement",
         "mass_function_family",
         "no_rescaling",
         "nonperturbative_phase3",

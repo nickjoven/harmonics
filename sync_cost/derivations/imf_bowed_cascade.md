@@ -32,9 +32,15 @@ The two pieces have different status:
   The cost functional gives mass ∝ physical tongue width
   (`mass_entrained_measure.md`), but reaching -2 needs that width to be the
   Farey weight 1/q^2. It is not: a complete K=1 staircase forces the width
-  exponent β > 2 (else the tongues over-fill [0,1]), and measurement gives
-  β ≈ 2.3, so the dynamical slope is -1 - 2/β ≈ -1.86, not -2
-  (`farey_tongue_width_null.py`). The 1/q^2 that gives -2 is the
+  exponent β > 2 (else the tongues over-fill [0,1]). Moreover β is not a
+  single number — the width law is multifractal: the 1/q exponent drifts
+  (2.18→2.88, no limit; the quoted "β≈2.3" is a low-q artifact), while the
+  universal golden-mean exponent is β = ln(δ_FKS)/ln(φ) ≈ 2.164 (the
+  Feigenbaum–Kadanoff–Shenker renormalization constant δ_FKS, *not* a
+  Hausdorff dimension), giving a universal dynamical slope ≈ -1.924, not -2
+  (`farey_tongue_width_null.py`, `tongue_width_universality.py`).
+  Substituting that dynamical baseline worsens the fit (-1.924 - 1/q_3 =
+  -2.26 vs Salpeter -2.35). The 1/q^2 that gives -2 is the
   combinatorial Stern–Brocot tree weight, not the physical width;
   `farey_mass_baseline.py` computes the slope under that combinatorial
   weight as a reference, not a dynamical derivation. (This does NOT touch
