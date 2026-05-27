@@ -1,5 +1,5 @@
 {
-  "generated": "3fdfe7646cac7e36aafe5326bae349eb87d26865",
+  "generated": "f5e7c4c741cef37c7210de2ec0ee975940de7228",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -782,6 +782,7 @@
         "born_rule",
         "farey_partition",
         "framework_status",
+        "free_parameter_scorecard",
         "imf_bowed_cascade",
         "lesson_forced_basin_selection",
         "mass_function_family",
@@ -790,9 +791,15 @@
       ],
       "depended_on_by": [
         "ansatz_audit_policy",
-        "framework_status"
+        "framework_status",
+        "free_parameter_scorecard"
       ],
       "git": [
+        {
+          "hash": "543d8b6",
+          "date": "2026-05-27",
+          "subject": "Free-parameter scorecard + reconcile the 26:7:1 conflict it surfaces (\u2192 Floor) (#173)"
+        },
         {
           "hash": "44c0090",
           "date": "2026-05-26",
@@ -896,6 +903,7 @@
         "articulation_audit_2026-05",
         "basepoint_principle",
         "framework_status",
+        "free_parameter_scorecard",
         "graviton_reframing",
         "lesson_cosmological_constant",
         "lesson_rotation_curves_a0",
@@ -1307,6 +1315,7 @@
         "empty_fork_cap",
         "epr_bell_assembly_theorem",
         "framework_status",
+        "free_parameter_scorecard",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
         "mass_sector_sqrt_w_phase_a",
@@ -3011,6 +3020,7 @@
         "audit_punch_list_2026-04",
         "canonical_glossary",
         "framework_status",
+        "free_parameter_scorecard",
         "high_school_syllabus",
         "lesson_8_35_vs_13_19",
         "numerology_inventory",
@@ -3095,16 +3105,26 @@
       "depends_on": [
         "beta_from_tongues",
         "duty_cycle_dictionary",
+        "free_parameter_scorecard",
         "gauge_sector_lovelock",
         "gell_mann_nishijima",
         "generation_mechanism",
         "higgs_from_tongue_boundary",
+        "numerology_inventory",
         "three_dimensions"
       ],
       "depended_on_by": [
-        "INDEX"
+        "INDEX",
+        "free_parameter_scorecard",
+        "generation_mechanism",
+        "numerology_inventory"
       ],
       "git": [
+        {
+          "hash": "543d8b6",
+          "date": "2026-05-27",
+          "subject": "Free-parameter scorecard + reconcile the 26:7:1 conflict it surfaces (\u2192 Floor) (#173)"
+        },
         {
           "hash": "dffc200",
           "date": "2026-04-22",
@@ -3321,6 +3341,7 @@
         "epsilon_physical_reading",
         "era_timeline_disposition",
         "figure_eight",
+        "free_parameter_scorecard",
         "h_inf_status",
         "hierarchy_problem_translation",
         "hybrid_strategy_audit",
@@ -3468,6 +3489,42 @@
           "hash": "2a285e4",
           "date": "2026-04-22",
           "subject": "Flatten simulation audit into existing clarifying documents"
+        }
+      ]
+    },
+    {
+      "id": "free_parameter_scorecard",
+      "path": "sync_cost/derivations/free_parameter_scorecard.md",
+      "title": "Free-parameter scorecard \u2014 the forcing partition applied to physics' inputs",
+      "summary": "The free parameters of physics \u2014 the dimensionless inputs the Standard\nModel and \u039bCDM **measure rather than derive** \u2014 listed as the rows, with\nthe framework's verdict on each. It is the empirical roster of\n`algebraic_forcing_partition.md`: *forced \u27f9 discrete/combinatorial; the\ncontinuous couplings stay open.*",
+      "depends_on": [
+        "algebraic_forcing_partition",
+        "anchor_count_reaudit",
+        "born_rule",
+        "farey_partition",
+        "fermion_mass_running",
+        "framework_status",
+        "generation_mechanism",
+        "klein_bottle",
+        "lesson_forced_basin_selection",
+        "negative_results_ledger",
+        "numerology_inventory",
+        "omega_partition_combinatorial",
+        "phenomenology_cross_reference",
+        "spectral_tilt_reframed",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "algebraic_forcing_partition",
+        "fermion_mass_running",
+        "generation_mechanism",
+        "numerology_inventory"
+      ],
+      "git": [
+        {
+          "hash": "543d8b6",
+          "date": "2026-05-27",
+          "subject": "Free-parameter scorecard + reconcile the 26:7:1 conflict it surfaces (\u2192 Floor) (#173)"
         }
       ]
     },
@@ -3936,18 +3993,28 @@
       "summary": "Three generations of fermions are not free parameters. They are the\nthree observable phase states of the {locked, unlocked}\u00b2 classification,\neach realized as a topologically distinct chain type in the Stern-Brocot\ntree. The mass hierarchy, sector exponents, mixing angles, and the\nabsence of a fourth generation all follow from the same structure.",
       "depends_on": [
         "PROOF_A_gravity",
-        "PROOF_B_quantum"
+        "PROOF_B_quantum",
+        "fermion_mass_running",
+        "free_parameter_scorecard",
+        "klein_bottle",
+        "numerology_inventory"
       ],
       "depended_on_by": [
         "INDEX",
         "beta_from_tongues",
         "fermion_mass_running",
         "fourth_generation_revisited",
+        "free_parameter_scorecard",
         "mixing_angle_audit",
         "negative_results_ledger",
         "numerology_inventory"
       ],
       "git": [
+        {
+          "hash": "543d8b6",
+          "date": "2026-05-27",
+          "subject": "Free-parameter scorecard + reconcile the 26:7:1 conflict it surfaces (\u2192 Floor) (#173)"
+        },
         {
           "hash": "b2deee7",
           "date": "2026-04-07",
@@ -4969,14 +5036,17 @@
         "epr_bell_assembly_theorem",
         "figure_eight",
         "framework_status",
+        "free_parameter_scorecard",
         "gauge_dictionary",
         "gauge_factorization",
         "gauge_high_scale_identification",
         "gell_mann_nishijima",
+        "generation_mechanism",
         "instrument_family_taxonomy",
         "klein_bottle_derivation",
         "klein_connection",
         "klein_nodal_parity",
+        "numerology_inventory",
         "q_mod2_conservation_theorem",
         "rectangle_perpendicularity",
         "second_law_topological",
@@ -5363,7 +5433,8 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
-        "algebraic_forcing_partition"
+        "algebraic_forcing_partition",
+        "free_parameter_scorecard"
       ],
       "git": [
         {
@@ -6006,6 +6077,7 @@
         "thread_chronology"
       ],
       "depended_on_by": [
+        "free_parameter_scorecard",
         "neutrino_mass_audit",
         "phenomenon_glossary",
         "sinw_fixed_point"
@@ -6312,12 +6384,15 @@
         "duty_cycle_dictionary",
         "duty_dimension_proof",
         "farey_partition",
+        "fermion_mass_running",
         "framework_status",
+        "free_parameter_scorecard",
         "gauge_dictionary",
         "generation_mechanism",
         "hierarchy_gaussian_lattice",
         "hybrid_strategy_audit",
         "k_scaling_scan",
+        "klein_bottle",
         "klein_bottle_derivation",
         "klein_nodal_parity",
         "observer_register_closure",
@@ -6342,7 +6417,10 @@
         "dynamical_tool_audit",
         "epsilon_physical_reading",
         "epsilon_substrate_decomposition",
+        "fermion_mass_running",
         "framework_status",
+        "free_parameter_scorecard",
+        "generation_mechanism",
         "hierarchy_problem_translation",
         "hybrid_strategy_audit",
         "k_of_t_friedmann",
@@ -6365,6 +6443,11 @@
         "vocabulary_is_the_work_pattern"
       ],
       "git": [
+        {
+          "hash": "543d8b6",
+          "date": "2026-05-27",
+          "subject": "Free-parameter scorecard + reconcile the 26:7:1 conflict it surfaces (\u2192 Floor) (#173)"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -6790,6 +6873,7 @@
         "canonical_glossary",
         "farey_partition",
         "framework_status",
+        "free_parameter_scorecard",
         "k_axis_uniqueness",
         "k_of_t_friedmann",
         "klein_antipodal_z2_rep_pattern",
@@ -7097,6 +7181,7 @@
         "derivation_atlas",
         "down_type_double_cover_closed",
         "epr_bell_assembly_theorem",
+        "free_parameter_scorecard",
         "lesson_cosmological_constant",
         "lesson_epr_gr_qm_unification",
         "q_mod2_conservation_theorem",
@@ -8334,6 +8419,7 @@
       "depends_on": [],
       "depended_on_by": [
         "algebraic_forcing_partition",
+        "free_parameter_scorecard",
         "graviton_reframing",
         "spectral_tilt",
         "unitless_check"
@@ -8830,6 +8916,7 @@
         "duty_cycle_dictionary",
         "dynamical_quantization",
         "fermion_mass_running",
+        "free_parameter_scorecard",
         "gap2_step4_farey_laplacian",
         "gap2_theorem_attempt",
         "gap_2_spatial_diffusion",
