@@ -234,22 +234,32 @@ substantial.
 
 ## 7. What this closes
 
+> **Status correction (2026-05): Floor, not "closed."** The table below
+> overstated. The honest verdict (reconciled in `free_parameter_scorecard.md`,
+> `numerology_inventory.md`) is **Floor** — a structural mechanism reaching
+> the ~1% particle-sector coincidence floor, *not* a forced closure: the
+> Koide *form* is imported (only the value `Q=2/3` is framework-derived),
+> and the `26:7:1` base and `5/2` exponent are un-forced (multiple
+> constructions). The "reduces 9 to 1" line is the retired
+> "zero-free-parameters" framing and does **not** hold; the bare-tree
+> μ/e is Class 1 (`numerology_inventory.md`). Read the row as Floor.
+
 | Gap | Before D50 | After D50 |
 |-----|-----------|-----------|
-| Fermion mass structure | Free parameters (9 Yukawa) | **Derived**: 26:7:1 seed + rational exponents |
-| τ/e ratio | — | **Derived to 0.9%** (tree level) |
-| μ/e ratio | 37% open | **Closed to 1%** via Koide constraint (Q = 2/3 = Klein bottle population ratio) |
-| Koide formula | Phenomenological | **Identified**: Q = 2/3 is the Klein bottle population ratio |
-| Quark mass ratios | Not addressed | **Characterized**: tree values + QCD running |
-| §8.2 of gap analysis | Open | **Closed** for leptons; quark sector residuals traceable to QCD running |
+| Fermion mass structure | Free parameters (9 Yukawa) | 26:7:1 seed + rational exponents (base/exponent un-forced) |
+| τ/e ratio | — | **0.9%** (tree level) — Floor |
+| μ/e ratio | 37% open | **~1% via Koide `Q=2/3`** (Klein-bottle ratio) — Floor, coincidence-floor, form imported |
+| Koide formula | Phenomenological | `Q = 2/3` **value** identified as the Klein-bottle population ratio (form still imported) |
+| Quark mass ratios | Not addressed | tree values + QCD running (Class 2) |
+| §8.2 of gap analysis | Open | leptons at the ~1% floor; quark residuals traceable to QCD running |
 
-The Yukawa couplings are determined by:
-- 3 phase-state weights (26, 7, 1) from the Klein bottle
-- 3 sector exponents (2, 5/2, 3) from d = 3 + charge
-- Generation mixing Q = 2/3 from the Klein bottle
-- 1 overall scale (v = 246 GeV)
+The lepton ratios reach the ~1% floor from:
+- 3 phase-state weights (26, 7, 1) from the Klein bottle (un-forced base)
+- 3 sector exponents (2, 5/2, 3) from d = 3 + charge (un-forced)
+- Generation mixing `Q = 2/3` from the Klein bottle (value derived; Koide form imported)
+- 1 overall scale (v = 246 GeV, anchor)
 
-This reduces 9 free parameters to 1.
+This is **Floor**, not a forced reduction (retired "N → 1" framing removed).
 
 ---
 

@@ -127,6 +127,9 @@ known; the four candidates failed. Until one exists, forcing is algebraic.
 
 ## Cross-links
 
+- `free_parameter_scorecard.md` — **this partition's roster**: physics'
+  dimensionless free parameters indexed and graded (discrete → forced,
+  continuous → open).
 - `ansatz_audit_policy.md` — the discriminator / over-determination criterion.
 - `tongue_width_universality.py`, `farey_tongue_width_null.py` — `δ_FKS`,
   `α_gold`, the four failed routes, the width-bridge null.
