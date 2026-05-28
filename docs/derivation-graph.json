@@ -1,5 +1,5 @@
 {
-  "generated": "4da1d21da1cec176de27964fd0450b1f309c1329",
+  "generated": "2993e227df93f2a8883e220c008c0643ade15815",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1252,7 +1252,9 @@
         "framework_status",
         "klein_nodal_parity"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "collapse_dissolution"
+      ],
       "git": [
         {
           "hash": "2a285e4",
@@ -1519,6 +1521,32 @@
           "hash": "2109a3b",
           "date": "2026-04-26",
           "subject": "Legitimacy homework: glossary + phenomenology + derivation atlas (#81)"
+        }
+      ]
+    },
+    {
+      "id": "collapse_dissolution",
+      "path": "sync_cost/derivations/collapse_dissolution.md",
+      "title": "Collapse dissolution",
+      "summary": "**Inviolable-companion dissolution articulated** \u2014 apparent\nwavefunction collapse (the non-unitary projection step of textbook\nQM) reduces to fidelity-bounded self-measurement on the framework's\nsubstrate. The measurement problem \u2014 the apparent contradiction\nbetween unitary Schr\u00f6dinger evolution and non-unitary projection \u2014\ndissolves structurally: there is no projection postulate to\nreconcile, because the substrate carries no such postulate.",
+      "depends_on": [
+        "basin_11_connection_exploration",
+        "epr_bell_assembly_theorem",
+        "equivalence_dissolution",
+        "fidelity_bound",
+        "figure_eight",
+        "lesson_epr_gr_qm_unification",
+        "no_rescaling",
+        "q_mod2_conservation_theorem",
+        "substrate_determinism",
+        "wave_particle_substrate"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "2993e22",
+          "date": "2026-05-28",
+          "subject": "Add collapse dissolution doc (QM pillar of Tier-C capstone) (#177)"
         }
       ]
     },
@@ -2766,6 +2794,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "collapse_dissolution",
         "complex_amplitude_uniqueness",
         "equivalence_dissolution",
         "framework_status",
@@ -2859,7 +2888,9 @@
         "q_mod2_conservation_theorem",
         "substrate_determinism"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "collapse_dissolution"
+      ],
       "git": [
         {
           "hash": "4da1d21",
@@ -3174,6 +3205,7 @@
       "summary": "The MOND transition and wavefunction collapse are instances of the\nsame structure: a system measuring which attractor it belongs to,\nusing dynamics constituted by the same process being measured. The\nfidelity of this self-measurement is bounded, and the bound determines:",
       "depends_on": [],
       "depended_on_by": [
+        "collapse_dissolution",
         "equivalence_dissolution"
       ],
       "git": [
@@ -3225,6 +3257,7 @@
       "depended_on_by": [
         "articulation_audit_2026-05",
         "canonical_glossary",
+        "collapse_dissolution",
         "complex_amplitude_uniqueness",
         "cone_twist_substrate",
         "dark_twin_correction",
@@ -5452,6 +5485,7 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "collapse_dissolution",
         "equivalence_dissolution"
       ],
       "git": [
@@ -6208,6 +6242,7 @@
       "depended_on_by": [
         "articulation_audit_2026-05",
         "basepoint_principle",
+        "collapse_dissolution",
         "e_cross_discrete_resolution",
         "equivalence_dissolution",
         "inflation_duration",
@@ -7630,6 +7665,7 @@
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
+        "collapse_dissolution",
         "complex_amplitude_uniqueness",
         "derivation_atlas",
         "epr_bell_assembly_theorem",
@@ -8764,6 +8800,7 @@
         "basepoint_principle",
         "born_rule",
         "born_rule_parameter_free",
+        "collapse_dissolution",
         "complex_amplitude_uniqueness",
         "e_cross_calc",
         "e_cross_discrete_resolution",
@@ -9481,6 +9518,7 @@
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
+        "collapse_dissolution",
         "dark_twin_correction",
         "epr_bell_assembly_theorem",
         "f_exit_natural",
