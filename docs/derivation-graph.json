@@ -1,5 +1,5 @@
 {
-  "generated": "34fd61df03c8d039db9dec92c5d85153ec7c8dea",
+  "generated": "0600826058ab0b256c5ca46ef5c1b48d5c84dc52",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1296,6 +1296,34 @@
       ]
     },
     {
+      "id": "bicone_golden_z2_identification",
+      "path": "sync_cost/derivations/bicone_golden_z2_identification.md",
+      "title": "Bicone Z\u2082 \u2194 golden-algebra Z\u2082 identification",
+      "summary": "**Bridge theorem articulated.** The substrate's bicone Z\u2082 rigidity\n(inviolable #1 / #3) acts on cascade-dynamics-induced `\u211a[\u221a5]`-valued\nquantities as the Galois automorphism `\u03c3 : \u221a5 \u21a6 \u2212\u221a5` (equivalently\n`\u03c6 \u2194 \u03c8`). The identification is *forced* by three already-installed\nsubstrate facts plus a standard algebraic uniqueness:",
+      "depends_on": [
+        "collapse_dissolution",
+        "equivalence_dissolution",
+        "era_timeline_disposition",
+        "k_of_t_residual_disposition",
+        "master_cascade_identity",
+        "minimum_alphabet",
+        "q_mod2_conservation_theorem",
+        "q_mod2_mediant_projection",
+        "substrate_determinism",
+        "wave_particle_substrate"
+      ],
+      "depended_on_by": [
+        "k_of_t_residual_disposition"
+      ],
+      "git": [
+        {
+          "hash": "0600826",
+          "date": "2026-05-28",
+          "subject": "Close K(t) leaf via bicone-golden Z\u2082 bridge: cadence = 2/(q\u2083\u00b719_\u039b) (#179)"
+        }
+      ]
+    },
+    {
       "id": "born_rule",
       "path": "sync_cost/derivations/born_rule.md",
       "title": "Born Rule from Basin Measure",
@@ -1542,6 +1570,8 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "bicone_golden_z2_identification",
+        "k_of_t_residual_disposition",
         "q_mod2_mediant_projection"
       ],
       "git": [
@@ -1717,6 +1747,7 @@
         "framework_status",
         "k_of_t_friedmann",
         "k_of_t_problem_statement",
+        "k_of_t_residual_disposition",
         "klein_bridge_audit_and_probe",
         "klein_dynamics_roadmap",
         "lesson_epr_gr_qm_unification",
@@ -2892,7 +2923,9 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "bicone_golden_z2_identification",
         "collapse_dissolution",
+        "k_of_t_residual_disposition",
         "q_mod2_mediant_projection"
       ],
       "git": [
@@ -2919,10 +2952,12 @@
         "time_axis_split"
       ],
       "depended_on_by": [
+        "bicone_golden_z2_identification",
         "continuity_in_K_nulls",
         "framework_status",
         "k_of_t_friedmann",
-        "k_of_t_problem_statement"
+        "k_of_t_problem_statement",
+        "k_of_t_residual_disposition"
       ],
       "git": [
         {
@@ -3424,6 +3459,7 @@
         "hybrid_strategy_audit",
         "inflation_seam_anchor_closure",
         "k_of_t_friedmann",
+        "k_of_t_residual_disposition",
         "k_scaling_scan",
         "klein_antipodal_z2_rep_pattern",
         "klein_bridge_audit_and_probe",
@@ -5002,6 +5038,7 @@
         "variable_denominator"
       ],
       "depended_on_by": [
+        "k_of_t_residual_disposition",
         "minimum_alphabet",
         "q_mod2_mediant_projection"
       ],
@@ -5020,6 +5057,36 @@
           "hash": "f749ad4",
           "date": "2026-05-25",
           "subject": "Set the table for K(t): consolidated problem statement for the frontier (#168)"
+        }
+      ]
+    },
+    {
+      "id": "k_of_t_residual_disposition",
+      "path": "sync_cost/derivations/k_of_t_residual_disposition.md",
+      "title": "K(t) residual closure (joint sector resolved, cadence forced)",
+      "summary": "**Leaf structurally closed.** The K(t) frontier's joint\nQ-mod-2 sector residual is resolved by the bicone-Z\u2082 \u2194 golden-Z\u2082\nidentification (`bicone_golden_z2_identification.md`), which extends\nsubstrate Q-mod-2 from integer windings to the inflation rhythm's\n`\u221a5` winding by algebraic necessity. Combined with the Q-mod-2\nmediant projection (`q_mod2_mediant_projection.md`, PR #178) and the\nstructural-integers filter (inviolable #6), the inflation-segment\ncadence is **uniquely forced** by substrate pr",
+      "depends_on": [
+        "bicone_golden_z2_identification",
+        "collapse_dissolution",
+        "continuity_in_K_nulls",
+        "equivalence_dissolution",
+        "era_timeline_disposition",
+        "framework_status",
+        "k_of_t_problem_statement",
+        "master_cascade_identity",
+        "minimum_alphabet",
+        "q_mod2_conservation_theorem",
+        "q_mod2_mediant_projection",
+        "substrate_determinism"
+      ],
+      "depended_on_by": [
+        "bicone_golden_z2_identification"
+      ],
+      "git": [
+        {
+          "hash": "0600826",
+          "date": "2026-05-28",
+          "subject": "Close K(t) leaf via bicone-golden Z\u2082 bridge: cadence = 2/(q\u2083\u00b719_\u039b) (#179)"
         }
       ]
     },
@@ -5800,12 +5867,14 @@
         "sqrt_r_n_correction"
       ],
       "depended_on_by": [
+        "bicone_golden_z2_identification",
         "cone_twist_substrate",
         "continuity_in_K_nulls",
         "era_timeline_disposition",
         "imf_bowed_cascade",
         "instrument_family_taxonomy",
         "k_of_t_problem_statement",
+        "k_of_t_residual_disposition",
         "mass_function_family",
         "no_rescaling",
         "nonperturbative_phase3",
@@ -6027,11 +6096,13 @@
       "depended_on_by": [
         "INDEX",
         "a_s_geometric_proof",
+        "bicone_golden_z2_identification",
         "canonical_glossary",
         "derivation_atlas",
         "dynamical_quantization",
         "gap_2_spatial_diffusion",
         "k_of_t_problem_statement",
+        "k_of_t_residual_disposition",
         "klein_bottle_derivation",
         "lesson_forced_basin_selection",
         "primitive_completeness_audit",
@@ -7674,12 +7745,14 @@
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
+        "bicone_golden_z2_identification",
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
         "derivation_atlas",
         "epr_bell_assembly_theorem",
         "equivalence_dissolution",
         "framework_status",
+        "k_of_t_residual_disposition",
         "lesson_epr_gr_qm_unification",
         "phenomenology_cross_reference",
         "q_mod2_mediant_projection",
@@ -7713,7 +7786,10 @@
         "substrate_determinism",
         "wave_particle_substrate"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "bicone_golden_z2_identification",
+        "k_of_t_residual_disposition"
+      ],
       "git": [
         {
           "hash": "34fd61d",
@@ -8836,6 +8912,7 @@
       "depended_on_by": [
         "articulation_audit_2026-05",
         "basepoint_principle",
+        "bicone_golden_z2_identification",
         "born_rule",
         "born_rule_parameter_free",
         "collapse_dissolution",
@@ -8849,6 +8926,7 @@
         "framework_status",
         "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
+        "k_of_t_residual_disposition",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
         "mediant_vs_flow_problem",
@@ -9557,6 +9635,7 @@
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
+        "bicone_golden_z2_identification",
         "collapse_dissolution",
         "dark_twin_correction",
         "epr_bell_assembly_theorem",
