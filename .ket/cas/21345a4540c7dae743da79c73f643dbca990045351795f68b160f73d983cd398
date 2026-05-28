@@ -1,0 +1,120 @@
+# Mass = entrained tongue width, from the synchronization-cost functional
+
+Derives that a locked mode's mass is proportional to its physical
+entrained Arnold-tongue width, `M(p/q) ∝ w(p/q)`, from the framework's
+"energy = synchronization cost" primitive. This part is sound. It does
+**NOT** establish the mass-function baseline slope −2: that step needs
+`w(p/q) ∝ 1/q²`, which is the combinatorial Farey *tree weight*, not the
+physical critical tongue width — and the physical width provably is not
+`1/q²` (`farey_tongue_width_null.py`). See "Status: the width step is
+null" below.
+
+## Claim
+
+    M(p/q)  ∝  w(p/q)          (physical tongue width)  -- SOUND
+    w(p/q)  ∝  1/q²  => -2     -- NULL (1/q² is the tree weight, not w)
+
+## Derivation
+
+1. **Mass = synchronization cost** (primitive; `FRAMEWORK.md`). A locked
+   structure's mass is the synchronization energy invested in
+   maintaining its lock — the framework's primary quantity, denominated
+   in energy.
+
+2. **Captured oscillators.** A mode locked at p/q captures the
+   oscillators whose bare frequency lies inside its Arnold tongue. The
+   captured count is
+   `N_cap = ∫_tongue g(ω) dω = g · w(p/q)`
+   at the K=1 uniform (Lebesgue) limit, with `g` the (uniform)
+   bare-frequency density and `w(p/q)` the tongue width.
+
+3. **Energy is linear in the captured count.** Under the framework's
+   short-range / local-mean-field coupling — the same cos-integral
+   collapse `(1/2)∫K cos(θ−θ') → K r cos(θ−ψ)` used in
+   `sine_gordon_substrate.md` — the locked cluster's coupling energy is
+   linear (not quadratic) in its size:
+   `E_sync = ε · N_cap`, where `ε ~ K r` is the in-phase coupling energy
+   per captured oscillator. `ε` is order 1 at K=1 and **q-independent**:
+   the resonance order q sets how *wide* the capture range is (the
+   tongue width), not the per-captured binding — a captured oscillator
+   is locked at order-1 coupling regardless of q.
+
+4. Hence
+   `M(p/q) = E_sync = ε g · w(p/q) ∝ w(p/q)`.
+
+Steps 1–4 are sound: the cost functional gives **mass ∝ physical
+tongue width**, with a q-independent prefactor (the ε closure below).
+
+5. **The width is not 1/q² — this step is null.** Reaching slope −2
+   needs `w(p/q) ∝ 1/q²`. But at K=1 the staircase is complete, so the
+   tongues sum to 1, and `Σ φ(q) q^(−β)` converges only for `β > 2`
+   (`Σ φ(q)/q²` diverges). So `β = 2` over-fills `[0,1]` and is
+   impossible; the physical width must decay faster than `1/q²`.
+   Measurement gives `w(1/q) ~ q^(−2.3)` (`farey_tongue_width_null.py`).
+   The `1/q²` is the combinatorial Farey **tree weight** (exact on the
+   Stern–Brocot tree), not the physical critical tongue width.
+
+Therefore `M(p/q) ∝ w(p/q) ∝ q^(−β)` with `β ≈ 2.3`, and the dynamical
+mass-function slope is `−1 − 2/β ≈ −1.86`, **not −2**. The −2 baseline
+follows only if one takes mass to be the combinatorial tree weight
+rather than the physical entrained width — a substitution that is not
+justified. **The mass↔width step gives mass ∝ width (sound); the
+width = 1/q² step is null, so the −q_2 baseline is not dynamically
+grounded.**
+
+## What stands, and what is null
+
+- **Stands — mass ∝ physical tongue width.** "Mass = entrained measure"
+  follows from *mass = synchronization cost* + short-range coupling +
+  uniform `g`: `M(p/q) ∝ w(p/q)`, with `w` the physical Arnold-tongue
+  width and a q-independent prefactor.
+- **Null — width = 1/q² (hence slope −2).** The `−2` needs the width to
+  equal the Farey weight `1/q²`. It does not: a complete K=1 staircase
+  forces `β > 2` (else the tongues over-fill `[0,1]`), and measurement
+  gives `β ≈ 2.3` (`farey_tongue_width_null.py`). The `1/q²` is the
+  combinatorial Stern–Brocot tree weight, not the physical width. So the
+  baseline does **not** stand on the same footing as `Ω_Λ = 13/19`:
+  `Ω_Λ` uses the Farey **count** `|F_n| ~ n²` (pure combinatorics,
+  robust), whereas the `−2` baseline needed the Farey **width law**
+  `1/q²`, which is false for the dynamics.
+- **Survives — ε = const.** `ε` (per-captured binding energy) is
+  q-independent — derived in `epsilon_residual.py`, not assumed. Every
+  Arnold tongue captures oscillators at the *same* density (the captured
+  count is `g·w(p/q)` over a band of width `w(p/q)`, so the captured
+  density `g` is q-independent at the uniform K=1 limit). The internal
+  synchronization that binds the captured band is a Kuramoto problem
+  whose onset `K_c = 2/(πg)` depends only on that density, so the binding
+  `ε = K√(1−K_c/K)` is the same for every mode. The naive objection —
+  that the binding inherits the q-th-order resonance depth `V_q ~ K^q` —
+  fails because the mass function lives at K=1, where perturbation theory
+  breaks down: the q-dependence is relocated entirely into the tongue
+  width (the capture), and the per-captured binding is the cluster
+  coherence, not the resonance depth. Modes with `q > q_max ~ √N` capture
+  < 1 oscillator and do not survive — a physical low-mass cutoff that
+  sets the small end of the range, not the slope.
+
+## Status: the width step is null
+
+The cost functional gives mass ∝ physical tongue width (sound), and the
+ε prefactor is q-independent (sound). But the step that turns that into
+the `−q_2` slope — width = `1/q²` — is null: the physical critical
+tongue width is `q^(−β)` with `β > 2` (forced; ≈ 2.3 measured), giving a
+dynamical slope `≈ −1.86`, not `−2`. So the bowed-cascade slope
+`−7/3 = −q_2 − 1/q_3` is **not** framework-native end-to-end. What
+survives is the combinatorial skeleton — the Farey **count** `|F_n|`
+(also underwriting `Ω_Λ`) and the Step-2 Klein-orbit count for the
+`−1/q_3` correction — plus mass ∝ width. The `−q_2` baseline itself is
+open: it holds only under the combinatorial tree weight, whose
+identification with physical mass is unestablished. The `−7/3` vs
+Salpeter (0.33σ) match remains an empirical observation without a
+grounded dynamical baseline.
+
+## Cross-links
+
+- `farey_tongue_width_null.py` — the null: physical width ≠ Farey 1/q²
+- `farey_mass_baseline.py` — dN/dM ~ M^(-2) under the (combinatorial) 1/q² weight
+- `epsilon_residual.py` — q-independence of the per-captured binding ε (survives)
+- `imf_bowed_cascade.md` — the full bowed-cascade slope -7/3
+- `imf_step2_klein_orbit.py` — the -1/q_3 correction (Klein-orbit count)
+- `sine_gordon_substrate.md` — the short-range mean-field coupling collapse
+- `FRAMEWORK.md` — the "energy = synchronization cost" primitive

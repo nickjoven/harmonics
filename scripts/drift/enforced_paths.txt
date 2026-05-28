@@ -1,0 +1,52 @@
+# Drift-enforced spine — the curated paths the commit gate blocks on.
+# Edits to these must be re-`ket put` or the commit is refused.
+# Everything else in CAS is retrieval-tier (retrievable/verifiable,
+# not gated). Generated from .ket/log on 2026-05-27; add a path here
+# only to promote it into the enforced spine. See check_working_tree.py.
+
+.ket/cas/663f287bada22ff41cb062bf74ba215ec05ebb8bbde610dbc938090267d03bf5
+sync_cost/derivations/FRAMEWORK_TOPOLOGY.md
+sync_cost/derivations/a_s_g1_closure_attempt.md
+sync_cost/derivations/anchor_count_audit.md
+sync_cost/derivations/beta_from_tongues.md
+sync_cost/derivations/beta_from_tongues.py
+sync_cost/derivations/circle_map.py
+sync_cost/derivations/continuity_in_K_nulls.md
+sync_cost/derivations/cross_ratio_irrep_reframe.md
+sync_cost/derivations/depth_connection_nulls.md
+sync_cost/derivations/dynamical_tool_audit.md
+sync_cost/derivations/epsilon_physical_reading.md
+sync_cost/derivations/epsilon_substrate_decomposition.md
+sync_cost/derivations/fermion_mass_running.md
+sync_cost/derivations/fermion_mass_running.py
+sync_cost/derivations/framework_constants.py
+sync_cost/derivations/framework_status.md
+sync_cost/derivations/hierarchy_problem_translation.md
+sync_cost/derivations/k_axis_uniqueness.md
+sync_cost/derivations/k_axis_uniqueness.py
+sync_cost/derivations/k_scaling_scan.md
+sync_cost/derivations/k_scaling_scan.py
+sync_cost/derivations/klein_bridge_audit_and_probe.md
+sync_cost/derivations/klein_dynamics_roadmap.md
+sync_cost/derivations/mass_sector_closure.md
+sync_cost/derivations/numerology_count_phase_a.md
+sync_cost/derivations/numerology_inventory.md
+sync_cost/derivations/omega_b_alpha_beta_closure.md
+sync_cost/derivations/omega_b_alpha_beta_phase_b.md
+sync_cost/derivations/omega_b_c5_beta_audit.md
+sync_cost/derivations/omega_b_c5_closure.md
+sync_cost/derivations/omega_b_substrate_side_audit.md
+sync_cost/derivations/omega_b_two_component_sketch.md
+sync_cost/derivations/omega_b_w_plus_candidate.md
+sync_cost/derivations/omega_b_w_plus_cross_ratio_search.md
+sync_cost/derivations/partition_logit_form.md
+sync_cost/derivations/path_a_walkthrough.md
+sync_cost/derivations/path_closures_iter1.md
+sync_cost/derivations/path_closures_iter2.md
+sync_cost/derivations/path_closures_iter3.md
+sync_cost/derivations/path_closures_iter4.md
+sync_cost/derivations/quantum_gravity_interpolation.md
+sync_cost/derivations/remaining_gap_shapes.md
+sync_cost/derivations/sector_decoupling_phase_a.md
+sync_cost/derivations/spatial_coupling_derived.md
+sync_cost/derivations/vocabulary_is_the_work_pattern.md

@@ -34,7 +34,7 @@ specific binary; otherwise the tools fall back to `shutil.which("ket")`.
 | 1 | `verify_cas.py` | CAS entries whose filename disagrees with the BLAKE3 of their content (bit-rot or algorithm drift). |
 | 2 | `check_manifest.py` | Scorecard entries whose sources are unresolvable, Class 1/3 numerology, or marked retracted/declined. |
 | 3 | `lint_local_hashing.py` | `hashlib.sha256/sha1/md5` usage under `scripts/`, `.ket/`, `seed/` — the source of the 2026-04-22 corruption. |
-| 4 | `check_working_tree.py` | Tracked files whose current content no longer matches the last `put | <path> -> <cid>` entry in `.ket/log`. |
+| 4 | `check_working_tree.py` | **Enforced-spine** files whose current content no longer matches the last `put | <path> -> <cid>` entry in `.ket/log`. Only paths in `enforced_paths.txt` are gated; see *Enforced vs retrieval* below. |
 | 5 | `lint_fitted_corrections.py` | Un-audited additive corrections (`+ 8/F_10²`, `+ 1/228`, `+ 1/q_3²`, …) near bare K=1 identities without a retraction/derivation marker nearby. |
 | 6 | `check_graph_orphans.py` | Derivation-graph nodes with zero edges, scorecard sources absent from the graph, and scorecard sources depending on Class 1/3 files. |
 | 7 | `session_status.py` | One-line substrate snapshot: CAS count, corrupt count, scorecard/bare_k1 sizes, git dirtiness, drift count. Run at session start. |
@@ -54,6 +54,27 @@ python3 scripts/drift/run_all.py --stop-on-fail
 # Session start: one-liner
 python3 scripts/drift/session_status.py
 ```
+
+## Enforced spine vs retrieval tier
+
+`ket put` does two jobs: it makes content **retrievable/verifiable** (by
+CID) *and*, historically, enrolled the path in the drift gate. Those pull
+apart — retrieval wants breadth (seal the whole corpus so a session can
+`ket_get`/`ket_search` it with confidence); enforcement wants a tight,
+curated spine. Coupling them forced a false trade-off.
+
+They are now decoupled:
+
+- **`enforced_paths.txt`** lists the drift-enforced spine. Tool 4 gates
+  **only** these — an edit that isn't re-`put` blocks a commit.
+- Everything else put into CAS is **retrieval-tier**: retrievable and
+  integrity-checked by tool 1 (`verify_cas`), but its working-tree content
+  may move without blocking a commit.
+- Absent `enforced_paths.txt`, every put path is enforced (the original
+  behavior) — backward compatible.
+
+Promote a path into the spine by adding it to `enforced_paths.txt`. Seal
+broadly for retrieval without growing the enforcement burden.
 
 ## Wiring as hooks
 
