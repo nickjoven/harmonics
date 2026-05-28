@@ -248,3 +248,8 @@
 2026-05-28T19:29:51Z | put | sync_cost/derivations/q_mod2_mediant_projection.md -> 4e436ffd27ed2b98599a2da2c731339e9728ae0d99bc289a27636db418b09e94
 2026-05-28T20:15:31Z | put | sync_cost/derivations/bicone_golden_z2_identification.md -> 5b37bdf157b07095ee94e49ba80201e07a7b82dc541757a6f4f055cdd6b96aee
 2026-05-28T20:15:31Z | put | sync_cost/derivations/k_of_t_residual_disposition.md -> e787c1fbd14682187e633f58dcc14a185ef21b40725097eabe8148e8bdc82501
+2026-05-28T21:27:16Z | put | sync_cost/derivations/free_parameter_scorecard.md -> 28cd0fc30e2d78a0adf837266b41120d7ec5e4e4408c3508c897ca5ed7f545f7
+2026-05-28T21:27:16Z | dag:create | c88b1c3486f1d447731cce3afb667c295cc4957acbc69ae69d0c77884415f8c6
+2026-05-28T21:27:54Z | put | sync_cost/derivations/framework_status.md -> 833269456b2fcb97aaad314b456c1a000b4988dd2466b89ae808f38a3ecf7a88
+2026-05-28T21:27:54Z | dag:create | 33be2f704da4e38fcb35763f633917c7759cbda13bafbabadf6d3be4ba69767d
+2026-05-28T21:31:45Z | put | sync_cost/derivations/predictions_horizon_2026.md -> 4dc28f9e1eb6849b50d8f2b3c45fde28794d861aa8f88f585ef5ea2e1eeb62ca
