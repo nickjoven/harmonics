@@ -1,0 +1,29 @@
+K_c = 2/pi = 0.6366;  internal order parameter r = sqrt(1 - K_c/K) = 0.6028
+per-captured binding  epsilon = K r = 0.6028   (q-INDEPENDENT)
+
+   q    w~1/q^2  N_cap=g0*w   rho_cap  epsilon    M=eps*N
+---------------------------------------------------------
+   1     1.0000      1.0000    1.0000   0.6028    0.60281
+   2     0.2500      0.2500    1.0000   0.6028    0.15070
+   3     0.1111      0.1111    1.0000   0.6028    0.06698
+   4     0.0625      0.0625    1.0000   0.6028    0.03768
+   5     0.0400      0.0400    1.0000   0.6028    0.02411
+  10     0.0100      0.0100    1.0000   0.6028    0.00603
+  20     0.0025      0.0025    1.0000   0.6028    0.00151
+---------------------------------------------------------
+rho_cap is constant (= g0): every tongue captures at the uniform
+K=1 density, so epsilon is the same for all q.
+
+  N_total = 1e+04:  q_max ~ sqrt(N) = 100   (q>q_max captures <1 oscillator -> no structure)
+  N_total = 1e+06:  q_max ~ sqrt(N) = 1000   (q>q_max captures <1 oscillator -> no structure)
+  N_total = 1e+09:  q_max ~ sqrt(N) = 31623   (q>q_max captures <1 oscillator -> no structure)
+
+=> epsilon is q-independent: this result STANDS, and it is
+   width-independent (it needs only uniform capture density, which
+   holds whatever the tongue-width law). So M(p/q) ~ epsilon * w(p/q)
+   with a constant prefactor.
+
+   NOTE: the further step M ~ 1/q^2 -> slope -2 is NULL -- the
+   physical width is w ~ q^(-beta), beta ~ 2.3 (> 2 forced by the
+   complete K=1 staircase), not 1/q^2. See farey_tongue_width_null.py.
+   So this closes the prefactor, not the -2 slope.

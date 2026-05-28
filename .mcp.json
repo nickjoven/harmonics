@@ -5,6 +5,13 @@
       "env": {
         "KET_HOME": ".ket"
       }
+    },
+    "engines": {
+      "command": "python3",
+      "args": ["scripts/engines/engine_mcp.py"],
+      "env": {
+        "KET_HOME": ".ket"
+      }
     }
   }
 }

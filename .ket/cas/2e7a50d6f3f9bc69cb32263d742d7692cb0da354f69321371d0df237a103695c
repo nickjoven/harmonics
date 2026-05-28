@@ -1,0 +1,44 @@
+================================================================
+HELD-OUT TEST: forced ladder vs assigned vs control slopes
+================================================================
+Ladder rungs: {'K=1 boundary': -2.0, 'Z_6': -2.167, 'K*': -2.214, 'bowed': -2.333, 'clarinet': -2.5}
+
+ASSIGNED (framework's claimed pairings):
+  Salpeter IMF     -2.350  -> rung bowed         gap 0.017  (0.33 sigma)
+  GC / halo MF     -2.000  -> rung K=1 boundary  gap 0.000  (0.00 sigma)
+
+CONTROL (independent, unclaimed; nearest rung):
+  faint-end galaxy LF        -1.300  near K=1 boundary  gap 0.700
+  molecular cloud MF         -1.700  near K=1 boundary  gap 0.300
+  Kolmogorov turbulence      -1.670  near K=1 boundary  gap 0.330
+  solar flare energy         -1.800  near K=1 boundary  gap 0.200
+  cosmic-ray spectrum        -2.700  near clarinet      gap 0.200
+  asteroid size dist         -3.500  near clarinet      gap 1.000
+  debris collisional casc.   -3.500  near clarinet      gap 1.000
+  earthquake (G-R energy)    -1.670  near K=1 boundary  gap 0.330
+  initial cluster MF         -2.000  near K=1 boundary  gap 0.000  <- within Salpeter's gap
+  lunar crater size          -3.000  near clarinet      gap 0.500
+
+VERDICT
+----------------------------------------------------------------
+Controls landing within Salpeter's gap (0.017) of a rung: 1/10
+  - at the -2.0 rung (pigeonhole-rich; -2.0 is the canonical
+    self-similar value, common in nature): ['initial cluster MF']
+  - at any OTHER rung (informative): none
+
+Reading:
+  * GC/-2.0 assignment is uninformative: -2.0 is pigeonhole-rich,
+    matched by independent controls (e.g. initial cluster MF).
+  * bowed/Salpeter at the -7/3 = -2.333 rung: NO independent control
+    lands within Salpeter's 0.017 gap of that rung. The one non-
+    trivial rung is hit by the one observable, un-replicated.
+  * But the informative sample is N = 1 (one rung, one observable):
+    suggestive of real targeting, not statistically decisive.
+
+Conclusion: the held-out test does NOT upgrade -7/3 to a decisive
+statistical detection -- the ladder's range is narrow and sparsely
+populated by independent controls, so power is low. The evidential
+weight is one un-replicated match (Salpeter). What distinguishes
+-7/3 from coincidence is the STRUCTURAL derivation (Step-2 orbit
+count + Farey baseline + epsilon closure), now complete -- not the
+statistics, which cannot be decisive with one rung and one observable.
