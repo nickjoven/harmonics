@@ -245,3 +245,4 @@
 2026-05-28T17:20:19Z | dag:create | 8bcac497efb7a0275c1cad7bff54700b5093ca9f1d2b8f3ff83a4eba1b372bf0
 2026-05-28T18:47:36Z | put | sync_cost/derivations/equivalence_dissolution.md -> 45b2e69ee04566fdb8b30a7e01b3fa7d7587e5719eb01c6668c74defd4f73497
 2026-05-28T19:10:32Z | put | sync_cost/derivations/collapse_dissolution.md -> dca3ceae7d8c5441f2dbd735eb53ff696a8a3e1f6d39a10a202d7de787156578
+2026-05-28T19:29:51Z | put | sync_cost/derivations/q_mod2_mediant_projection.md -> 4e436ffd27ed2b98599a2da2c731339e9728ae0d99bc289a27636db418b09e94
