@@ -1,8 +1,7 @@
 {
   "mcpServers": {
     "k-stack": {
-      "command": "ket",
-      "args": ["mcp"],
+      "command": "k-stack",
       "env": {
         "KET_HOME": ".ket"
       }
