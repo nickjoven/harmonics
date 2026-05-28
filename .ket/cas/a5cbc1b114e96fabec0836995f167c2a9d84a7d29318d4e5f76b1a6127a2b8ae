@@ -1,0 +1,29 @@
+==================================================================
+STEP-2 LEMMA  (bowed / Salpeter cascade)
+Klein antiperiodic involution r -> 1-r on F_{q_3} = F_3
+==================================================================
+F_3 = {0, 1/3, 1/2, 2/3, 1}
+
+  pair  0 <-> 1    [boundary {0/1,1/1}: redundant with y-periodicity (0~1)]
+  pair  1/3 <-> 2/3    [interior: non-redundant antiperiodic flip]
+  fixed 1/2              [invariant: no flip]
+
+(a) orbit count = 3 = q_3            -> cascade depth d = q_3
+(b) non-redundant flips n = 1
+(c) alpha = -q_2 - n/d = -2 - 1/3 = -7/3 = -2.3333
+    (observed Salpeter high-mass IMF: -2.35 +/- 0.05; 0.33 sigma)
+
+(d) Selection: orbit_count(F_m) = m only for small m
+      m  orbit_count   = m ?
+      2            2   match
+      3            3   match
+      4            4   match
+      5            6      no
+      6            7      no
+      7           10      no
+
+    Holds for m in {2,3,4}; fails at m=5 (phi(5)=4). So depth =
+    orbit-count grounds the bowed (d=q_3=3) and clarinet (d=q_2=2)
+    cascades, and does NOT ground the deeper Z_6 (d=6, orbit_count
+    = 7) or K* (d=14) sectors -- consistent with those being the
+    unsupported rungs.

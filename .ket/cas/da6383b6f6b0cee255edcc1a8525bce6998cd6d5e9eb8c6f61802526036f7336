@@ -1,0 +1,15 @@
+A-PRIORI: complete K=1 staircase => sum_{p/q} w = 1 => beta > 2.
+  sum_q phi(q)/q^2 up to q=   10: 2.112   (beta=2 total diverges ~ log -> cannot equal 1)
+  sum_q phi(q)/q^2 up to q=  100: 3.497   (beta=2 total diverges ~ log -> cannot equal 1)
+  sum_q phi(q)/q^2 up to q= 1000: 4.897   (beta=2 total diverges ~ log -> cannot equal 1)
+  sum_q phi(q)/q^2 up to q=10000: 6.297   (beta=2 total diverges ~ log -> cannot equal 1)
+
+MEASURED critical tongue widths (recorded; see git history):
+  fitted w ~ q^(-2.33) over q=2..7  (LOW-q artifact; the 1/q
+  exponent drifts to ~2.88 by q=22 -- see tongue_width_universality.py)
+  universal (golden-mean) beta = 2.164 => slope -1 - 2/beta = -1.92  (not -2)
+
+CONCLUSION: the mass<->width identification is NULL. The Farey 1/q^2
+is the combinatorial tree weight, not the physical critical width.
+Unaffected: |F_n| ~ n^2 count (Omega_Lambda), Step-2 orbit count,
+epsilon = const (uniform capture density).

@@ -1,0 +1,9 @@
+observed Koide Q          = 0.66666  (= 2/3)
+bare tree μ/e = 7^(5/2)   = 129.6  vs obs 206.8  (-37%)  -> Class 1
+tree Koide Q (μ=129.6)    = 0.70777  (violates 2/3)
+
+Koide(2/3) + tree τ/e=3447 -> μ/e = 204.8  vs obs 206.8  (-0.96%)
+Koide(2/3) + obs  τ/e=3477 -> μ/e = 206.8  (sanity: ≈ observed)
+
+VERDICT: Floor. Closure works (~1%) but at the coincidence floor;
+Koide form imported, 26:7:1 base / 5/2 exponent un-forced. Not Class 1, not 'closed'.

@@ -1,0 +1,42 @@
+# Engine registry — deterministic derivation computations.
+#
+# Each engine is a pure, deterministic script whose stdout is a result to
+# be quoted from a real run (see run_engine.py). `cmd` is the whitelisted
+# command (run from repo root with PYTHONPATH=repo root). Canonical output
+# CIDs are pinned in engines.lock.json via `run_engine.py pin`.
+#
+# Only scripts listed here can be run by the runner. To add one: confirm
+# its stdout is deterministic (run twice, compare), add an entry, `pin` it.
+# `computes` must describe the result honestly — several of these are
+# NULL/decline results; that is the point, not a defect.
+
+engines:
+  koide_closure_check:
+    cmd: ["python3", "sync_cost/derivations/koide_closure_check.py"]
+    computes: "Charged-lepton Koide Q ratio closure check (μ/e hierarchy)."
+    timeout: 60
+
+  geometric_forcing_null:
+    cmd: ["python3", "sync_cost/derivations/geometric_forcing_null.py"]
+    computes: "N17: tests whether the station<->epoch (D-preservation) map is geometrically forced. Result: VACUOUS/null."
+    timeout: 60
+
+  farey_tongue_width_null:
+    cmd: ["python3", "sync_cost/derivations/farey_tongue_width_null.py"]
+    computes: "Arnold tongue-width scaling test; β is multifractal, no single universal slope. NULL."
+    timeout: 60
+
+  imf_step2_klein_orbit:
+    cmd: ["python3", "sync_cost/derivations/imf_step2_klein_orbit.py"]
+    computes: "Step-2 lemma: bowed-cascade depth = Klein-orbit count (closes the -7/3 structural gate)."
+    timeout: 60
+
+  held_out_slope_test:
+    cmd: ["python3", "sync_cost/derivations/held_out_slope_test.py"]
+    computes: "Held-out slope test for the mass-function baseline."
+    timeout: 60
+
+  epsilon_residual:
+    cmd: ["python3", "sync_cost/derivations/epsilon_residual.py"]
+    computes: "Epsilon residual decomposition for the substrate baseline."
+    timeout: 60
