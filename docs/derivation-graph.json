@@ -1,5 +1,5 @@
 {
-  "generated": "f5e7c4c741cef37c7210de2ec0ee975940de7228",
+  "generated": "350bb148a235916dc402816182c302d092f55f17",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1690,6 +1690,7 @@
         "klein_bridge_audit_and_probe",
         "klein_dynamics_roadmap",
         "lesson_epr_gr_qm_unification",
+        "minimum_alphabet",
         "numerology_count_phase_a",
         "omega_b_two_component_sketch",
         "omega_b_w_plus_candidate",
@@ -1699,6 +1700,11 @@
         "structural_lemmas"
       ],
       "git": [
+        {
+          "hash": "350bb14",
+          "date": "2026-05-28",
+          "subject": "Audit: downgrade Derivation 4 \u2192 Identification 4 + N13 cluster + dangling-source fix (#175)"
+        },
         {
           "hash": "f808b59",
           "date": "2026-05-26",
@@ -4919,10 +4925,19 @@
         "era_timeline_disposition",
         "inflation_seam_anchor_closure",
         "k_of_t_friedmann",
-        "master_cascade_identity"
+        "master_cascade_identity",
+        "minimum_alphabet",
+        "variable_denominator"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "minimum_alphabet"
+      ],
       "git": [
+        {
+          "hash": "350bb14",
+          "date": "2026-05-28",
+          "subject": "Audit: downgrade Derivation 4 \u2192 Identification 4 + N13 cluster + dangling-source fix (#175)"
+        },
         {
           "hash": "ef4e415",
           "date": "2026-05-26",
@@ -5926,7 +5941,10 @@
       "summary": "The framework's entire structure \u2014 the circle, the devil's staircase,\nArnold tongues, the Born rule, the RAR, and the uncertainty relation \u2014\nfollows from compositions of exactly four irreducible primitives:",
       "depends_on": [
         "PROOF_A_gravity",
-        "PROOF_B_quantum"
+        "PROOF_B_quantum",
+        "continuity_in_K_nulls",
+        "k_of_t_problem_statement",
+        "substrate_determinism"
       ],
       "depended_on_by": [
         "INDEX",
@@ -5935,12 +5953,19 @@
         "derivation_atlas",
         "dynamical_quantization",
         "gap_2_spatial_diffusion",
+        "k_of_t_problem_statement",
         "klein_bottle_derivation",
         "lesson_forced_basin_selection",
         "primitive_completeness_audit",
-        "structural_lemmas"
+        "structural_lemmas",
+        "variable_denominator"
       ],
       "git": [
+        {
+          "hash": "350bb14",
+          "date": "2026-05-28",
+          "subject": "Audit: downgrade Derivation 4 \u2192 Identification 4 + N13 cluster + dangling-source fix (#175)"
+        },
         {
           "hash": "b2deee7",
           "date": "2026-04-07",
@@ -8712,6 +8737,7 @@
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
         "mediant_vs_flow_problem",
+        "minimum_alphabet",
         "q_mod2_conservation_theorem",
         "thread_chronology",
         "tick_continuum_construction"
@@ -9223,9 +9249,18 @@
       "path": "sync_cost/derivations/variable_denominator.md",
       "title": "The Variable Denominator",
       "summary": "Hz \u2014 cycles per second \u2014 assumes the denominator is fixed. In a\nuniverse where time is synchronization rate (not background parameter),\nthe denominator changes between cycles. This breaks the factorization\n\"total operations = rate \u00d7 duration\" and replaces it with accumulated\nphase against a self-referential reference. The resulting bound on\ndistinguishable operations is:",
-      "depends_on": [],
-      "depended_on_by": [],
+      "depends_on": [
+        "minimum_alphabet"
+      ],
+      "depended_on_by": [
+        "k_of_t_problem_statement"
+      ],
       "git": [
+        {
+          "hash": "350bb14",
+          "date": "2026-05-28",
+          "subject": "Audit: downgrade Derivation 4 \u2192 Identification 4 + N13 cluster + dangling-source fix (#175)"
+        },
         {
           "hash": "b2deee7",
           "date": "2026-04-07",
