@@ -1,5 +1,5 @@
 {
-  "generated": "0600826058ab0b256c5ca46ef5c1b48d5c84dc52",
+  "generated": "ef29d3778a031c2f611911a71fba75460c6527e7",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -513,6 +513,7 @@
         "numerology_inventory",
         "path_closures_iter1",
         "phenomenology_cross_reference",
+        "predictions_horizon_2026",
         "primitive_completeness_audit",
         "unitless_check",
         "w_plus_formalization"
@@ -1180,6 +1181,7 @@
         "path_closures_iter1",
         "path_closures_iter3",
         "path_closures_iter4",
+        "predictions_horizon_2026",
         "psl2z_subgroup_identification_phase_a",
         "psl2z_subgroup_phase_a_results",
         "psl2z_subgroup_phase_b",
@@ -1313,7 +1315,10 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
-        "k_of_t_residual_disposition"
+        "framework_status",
+        "free_parameter_scorecard",
+        "k_of_t_residual_disposition",
+        "predictions_horizon_2026"
       ],
       "git": [
         {
@@ -1572,6 +1577,7 @@
       "depended_on_by": [
         "bicone_golden_z2_identification",
         "k_of_t_residual_disposition",
+        "predictions_horizon_2026",
         "q_mod2_mediant_projection"
       ],
       "git": [
@@ -1911,6 +1917,7 @@
         "gap2_analytic_proof",
         "h_inf_status",
         "observer_register_closure",
+        "predictions_horizon_2026",
         "sector_decoupling_phase_a",
         "spatial_coupling_derived",
         "structural_lemmas"
@@ -2926,6 +2933,7 @@
         "bicone_golden_z2_identification",
         "collapse_dissolution",
         "k_of_t_residual_disposition",
+        "predictions_horizon_2026",
         "q_mod2_mediant_projection"
       ],
       "git": [
@@ -3130,6 +3138,7 @@
         "lesson_8_35_vs_13_19",
         "numerology_inventory",
         "omega_partition_combinatorial",
+        "predictions_horizon_2026",
         "structural_lemmas",
         "unitless_check",
         "vacuum_energy"
@@ -3247,7 +3256,8 @@
       "depends_on": [],
       "depended_on_by": [
         "collapse_dissolution",
-        "equivalence_dissolution"
+        "equivalence_dissolution",
+        "predictions_horizon_2026"
       ],
       "git": [
         {
@@ -3384,6 +3394,7 @@
         "audit_findings_3_4_disposition",
         "baryon_fraction",
         "basepoint_principle",
+        "bicone_golden_z2_identification",
         "born_rule",
         "continuity_in_K_nulls",
         "continuum_limits",
@@ -3403,9 +3414,11 @@
         "k_critical_phase_b",
         "k_inflation_seam_obstruction",
         "k_of_t_friedmann",
+        "k_of_t_residual_disposition",
         "klein_bottle",
         "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
+        "master_cascade_identity",
         "numerology_count_phase_b",
         "numerology_inventory",
         "omega_b_alpha_beta_closure",
@@ -3414,11 +3427,13 @@
         "path_a_walkthrough",
         "path_closures_iter3",
         "path_closures_iter4",
+        "predictions_horizon_2026",
         "proposed_items_disposition",
         "proposed_residual_closure",
         "psl2z_subgroup_phase_a_results",
         "psl2z_subgroup_phase_b",
         "q_mod2_conservation_theorem",
+        "q_mod2_mediant_projection",
         "sine_gordon_substrate",
         "sqrt_r_n_correction",
         "substrate_determinism",
@@ -3490,6 +3505,7 @@
         "path_closures_iter3",
         "path_closures_iter4",
         "phenomenology_cross_reference",
+        "predictions_horizon_2026",
         "primitive_completeness_audit",
         "proposed_items_disposition",
         "psl2z_subgroup_phase_c_inventory",
@@ -3508,6 +3524,11 @@
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "ef29d37",
+          "date": "2026-05-28",
+          "subject": "Surface the K(t) closure: N_efolds prediction accessible across public surfaces (#180)"
+        },
         {
           "hash": "44c0090",
           "date": "2026-05-26",
@@ -3613,17 +3634,20 @@
       "depends_on": [
         "algebraic_forcing_partition",
         "anchor_count_reaudit",
+        "bicone_golden_z2_identification",
         "born_rule",
         "farey_partition",
         "fermion_mass_running",
         "framework_status",
         "generation_mechanism",
+        "k_of_t_residual_disposition",
         "klein_bottle",
         "lesson_forced_basin_selection",
         "negative_results_ledger",
         "numerology_inventory",
         "omega_partition_combinatorial",
         "phenomenology_cross_reference",
+        "predictions_horizon_2026",
         "spectral_tilt_reframed",
         "three_dimensions"
       ],
@@ -3632,9 +3656,15 @@
         "equivalence_dissolution",
         "fermion_mass_running",
         "generation_mechanism",
-        "numerology_inventory"
+        "numerology_inventory",
+        "predictions_horizon_2026"
       ],
       "git": [
+        {
+          "hash": "ef29d37",
+          "date": "2026-05-28",
+          "subject": "Surface the K(t) closure: N_efolds prediction accessible across public surfaces (#180)"
+        },
         {
           "hash": "543d8b6",
           "date": "2026-05-27",
@@ -4616,7 +4646,8 @@
         "mass_entrained_measure",
         "mass_function_family",
         "master_cascade_identity",
-        "negative_results_ledger"
+        "negative_results_ledger",
+        "predictions_horizon_2026"
       ],
       "git": [
         {
@@ -5080,7 +5111,10 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
-        "bicone_golden_z2_identification"
+        "bicone_golden_z2_identification",
+        "framework_status",
+        "free_parameter_scorecard",
+        "predictions_horizon_2026"
       ],
       "git": [
         {
@@ -5561,7 +5595,8 @@
       ],
       "depended_on_by": [
         "collapse_dissolution",
-        "equivalence_dissolution"
+        "equivalence_dissolution",
+        "predictions_horizon_2026"
       ],
       "git": [
         {
@@ -5871,6 +5906,7 @@
         "cone_twist_substrate",
         "continuity_in_K_nulls",
         "era_timeline_disposition",
+        "framework_status",
         "imf_bowed_cascade",
         "instrument_family_taxonomy",
         "k_of_t_problem_statement",
@@ -5878,6 +5914,7 @@
         "mass_function_family",
         "no_rescaling",
         "nonperturbative_phase3",
+        "predictions_horizon_2026",
         "proposed_residual_closure",
         "seam_profile",
         "sine_gordon_substrate",
@@ -6105,6 +6142,7 @@
         "k_of_t_residual_disposition",
         "klein_bottle_derivation",
         "lesson_forced_basin_selection",
+        "predictions_horizon_2026",
         "primitive_completeness_audit",
         "q_mod2_mediant_projection",
         "structural_lemmas",
@@ -7061,6 +7099,7 @@
         "omega_b_residual_phase_a",
         "omega_b_substrate_side_audit",
         "path_closures_iter1",
+        "predictions_horizon_2026",
         "structural_lemmas"
       ],
       "git": [
@@ -7487,6 +7526,44 @@
       ]
     },
     {
+      "id": "predictions_horizon_2026",
+      "path": "sync_cost/derivations/predictions_horizon_2026.md",
+      "title": "Predictions horizon \u2014 2026",
+      "summary": "General relativity was vindicated by three observations in three\ndistinct regimes within roughly forty years of its formulation:\nMercury's perihelion precession (1859 anomaly, 1915 explanation),\ngravitational lensing (1919 eclipse), and gravitational redshift\n(predicted 1907, measured precisely by Pound\u2013Rebka 1959). Each\naddressed a different observational channel; each used confounders\nthe others did not share; the *coherence* of the three confirmations\nwas what settled the question.",
+      "depends_on": [
+        "a0_threshold",
+        "baryon_fraction",
+        "bicone_golden_z2_identification",
+        "collapse_dissolution",
+        "coupling_scales",
+        "equivalence_dissolution",
+        "farey_partition",
+        "fidelity_bound",
+        "framework_status",
+        "free_parameter_scorecard",
+        "imf_bowed_cascade",
+        "k_of_t_residual_disposition",
+        "lesson_epr_gr_qm_unification",
+        "master_cascade_identity",
+        "minimum_alphabet",
+        "omega_partition_combinatorial",
+        "q_mod2_conservation_theorem",
+        "q_mod2_mediant_projection",
+        "substrate_determinism"
+      ],
+      "depended_on_by": [
+        "framework_status",
+        "free_parameter_scorecard"
+      ],
+      "git": [
+        {
+          "hash": "ef29d37",
+          "date": "2026-05-28",
+          "subject": "Surface the K(t) closure: N_efolds prediction accessible across public surfaces (#180)"
+        }
+      ]
+    },
+    {
       "id": "primitive_completeness_audit",
       "path": "sync_cost/derivations/primitive_completeness_audit.md",
       "title": "Shape F primitive-completeness audit (2026-04-26)",
@@ -7755,6 +7832,7 @@
         "k_of_t_residual_disposition",
         "lesson_epr_gr_qm_unification",
         "phenomenology_cross_reference",
+        "predictions_horizon_2026",
         "q_mod2_mediant_projection",
         "sine_gordon_substrate",
         "substrate_determinism",
@@ -7788,7 +7866,9 @@
       ],
       "depended_on_by": [
         "bicone_golden_z2_identification",
-        "k_of_t_residual_disposition"
+        "framework_status",
+        "k_of_t_residual_disposition",
+        "predictions_horizon_2026"
       ],
       "git": [
         {
@@ -8931,6 +9011,7 @@
         "lesson_forced_basin_selection",
         "mediant_vs_flow_problem",
         "minimum_alphabet",
+        "predictions_horizon_2026",
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
         "thread_chronology",
