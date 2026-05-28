@@ -1,5 +1,5 @@
 {
-  "generated": "350bb148a235916dc402816182c302d092f55f17",
+  "generated": "4da1d21da1cec176de27964fd0450b1f309c1329",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1845,6 +1845,7 @@
         "INDEX",
         "address_and_quantity",
         "anchor_count_audit",
+        "equivalence_dissolution",
         "gap2_analytic_proof",
         "h_inf_status",
         "observer_register_closure",
@@ -2766,6 +2767,7 @@
       ],
       "depended_on_by": [
         "complex_amplitude_uniqueness",
+        "equivalence_dissolution",
         "framework_status",
         "lesson_epr_gr_qm_unification",
         "phenomenology_cross_reference"
@@ -2836,6 +2838,33 @@
           "hash": "ebaf42e",
           "date": "2026-04-25",
           "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
+        }
+      ]
+    },
+    {
+      "id": "equivalence_dissolution",
+      "path": "sync_cost/derivations/equivalence_dissolution.md",
+      "title": "Equivalence dissolution",
+      "summary": "**Inviolable-companion dissolution articulated** \u2014 the equivalence\nprinciple (weak + strong) reduces to a substrate identity on the\nframework's apparatus. Not a new derivation; a synthesis of\ningredients already in the corpus.",
+      "depends_on": [
+        "coupling_scales",
+        "epr_bell_assembly_theorem",
+        "fidelity_bound",
+        "figure_eight",
+        "free_parameter_scorecard",
+        "lesson_epr_gr_qm_unification",
+        "mass_entrained_measure",
+        "minkowski_signature",
+        "no_rescaling",
+        "q_mod2_conservation_theorem",
+        "substrate_determinism"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "4da1d21",
+          "date": "2026-05-28",
+          "subject": "Add equivalence dissolution doc (#176)"
         }
       ]
     },
@@ -3144,7 +3173,9 @@
       "title": "The Self-Referential Fidelity Bound",
       "summary": "The MOND transition and wavefunction collapse are instances of the\nsame structure: a system measuring which attractor it belongs to,\nusing dynamics constituted by the same process being measured. The\nfidelity of this self-measurement is bounded, and the bound determines:",
       "depends_on": [],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "equivalence_dissolution"
+      ],
       "git": [
         {
           "hash": "9bed549",
@@ -3201,6 +3232,7 @@
         "discrete_reduction_problem",
         "e_cross_calc",
         "empty_fork_cap",
+        "equivalence_dissolution",
         "explicit_4x4_reduction",
         "lesson_8_35_vs_13_19",
         "lesson_epr_gr_qm_unification",
@@ -3522,6 +3554,7 @@
       ],
       "depended_on_by": [
         "algebraic_forcing_partition",
+        "equivalence_dissolution",
         "fermion_mass_running",
         "generation_mechanism",
         "numerology_inventory"
@@ -5418,7 +5451,9 @@
         "q_mod2_conservation_theorem",
         "substrate_determinism"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "equivalence_dissolution"
+      ],
       "git": [
         {
           "hash": "3c9ea73",
@@ -5559,6 +5594,7 @@
         "sine_gordon_substrate"
       ],
       "depended_on_by": [
+        "equivalence_dissolution",
         "imf_bowed_cascade",
         "negative_results_ledger"
       ],
@@ -6010,6 +6046,7 @@
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
+        "equivalence_dissolution",
         "klein_bottle_derivation",
         "spatial_coupling_derived"
       ],
@@ -6172,6 +6209,7 @@
         "articulation_audit_2026-05",
         "basepoint_principle",
         "e_cross_discrete_resolution",
+        "equivalence_dissolution",
         "inflation_duration",
         "negative_results_ledger",
         "nonperturbative_phase1",
@@ -7595,6 +7633,7 @@
         "complex_amplitude_uniqueness",
         "derivation_atlas",
         "epr_bell_assembly_theorem",
+        "equivalence_dissolution",
         "framework_status",
         "lesson_epr_gr_qm_unification",
         "phenomenology_cross_reference",
@@ -8730,6 +8769,7 @@
         "e_cross_discrete_resolution",
         "empty_fork_cap",
         "epr_bell_assembly_theorem",
+        "equivalence_dissolution",
         "era_timeline_disposition",
         "framework_status",
         "inflation_seam_anchor_closure",
