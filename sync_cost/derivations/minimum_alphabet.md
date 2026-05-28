@@ -347,7 +347,7 @@ decomposition F_n = (φⁿ - ψⁿ)/√5, this separation normalizes the
 modes. It is the distance between attractors in eigenvalue space.
 
 The observable universe samples ~2.2 Fibonacci levels of the
-staircase hierarchy (Derivation 4: 60 e-folds × 0.0365 levels/e-fold
+staircase hierarchy (Identification 4: 60 e-folds × 0.0365 levels/e-fold
 = 2.19). The eigenvalue separation is √5 ≈ 2.236. If these are
 the same quantity — if the number of sampled levels is set by the
 eigenvalue separation of the golden polynomial — then the number
@@ -356,10 +356,37 @@ of e-folds of inflation is determined by the algebra:
     N_levels = √5
     N_efolds = √5 / 0.0365 ≈ 61.2
 
-The observed value is 60 ± a few (not precisely known). If the
-framework predicts exactly √5/0.0365 ≈ 61.2 e-folds, that is a
-sharp prediction testable by future CMB polarization measurements
-of the tensor-to-scalar ratio r, which constrains N_efolds.
+The observed value is 60 ± a few (not precisely known). Conditional
+on Identification 4 (`cadence = (1−n_s)/ln(φ²)`), the framework's
+consequence is √5/0.0365 ≈ 61.2 e-folds — a sharp number to test
+against future CMB polarization measurements of the tensor-to-scalar
+ratio r. The prediction inherits the identification's status: the
+cadence is fixed by observed `n_s`, not derived from primitives, so
+the e-fold count is a consequence of the identification, not of the
+framework alone (see the cluster note below).
+
+**Identification cluster (N13 pattern, 2026-05-28 audit).** Within
+Planck's `n_s = 0.9649 ± 0.0042`, the cadence target is
+`0.0365 ± 0.004` (≈ 12% band). The substrate-only expression
+`1/q₃³ ≈ 0.0370` lies inside this band (≈ 1.5% off), at a tolerance
+comparable to `(1−n_s)/ln(φ²)`'s match against the observed centre.
+The two candidates cannot be distinguished from the cadence value
+alone — the N13 "multi-candidate ansatz" pattern of
+`continuity_in_K_nulls.md:175` applies.
+
+*Pedagogical analogy (not a derivation, not a new claim about the
+substrate).* A fixed-bit-depth z-buffer near its far plane: two
+algebraically distinct surfaces land in the same quantized depth
+slot — "z-fighting." The substrate's tongue-width hierarchy
+concentrates its resolving power at small denominators; deep
+mediants like this cadence sit near the framework's "far plane,"
+where its effective bit depth runs out. The cluster is what
+z-fighting looks like on this substrate. The discipline is the
+engineer's: flag, classify, decline to promote without a structural
+discriminator. A real selector would come from the inviolables of
+`substrate_determinism.md`, metric/curvature matching (N17's
+parenthetical in `k_of_t_problem_statement.md`), or sectoral grounds
+— none of which the cadence value supplies on its own.
 
 **Why the parabola is specifically x².**
 
@@ -454,9 +481,12 @@ in their frequency spectra that are not attributable to finite size.
 
 ### 3. The √5 prediction: e-folds of inflation from the golden polynomial
 
-**Claim.** The number of Fibonacci levels the observable universe
-samples is not approximately √5 — it is exactly √5. The number of
-e-folds of inflation is:
+**Conditional claim** (contingent on Identification 4 —
+`cadence = (1−n_s)/ln(φ²)`; see §"Identification cluster" above for
+the cluster ambiguity). If the cadence identification holds, the
+number of Fibonacci levels the observable universe samples is
+exactly √5 (not approximately), and the number of e-folds of
+inflation is:
 
     N_efolds = √5 / rate = √5 / [(n_s - 1) / (-ln φ²)]
 
