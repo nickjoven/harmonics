@@ -239,3 +239,7 @@
 2026-05-28T02:30:21Z | put | sync_cost/derivations/sqrt_r_n_correction.md -> 1e9fe7f79b31222af6c25d6fc8ce4cade27a7f9e47202537e5b5b1edb0ba0292
 2026-05-28T02:30:21Z | put | sync_cost/derivations/sqrt_r_n_correction.py -> e634d0cdc815ee2cc0d62fe8c5fcfc1d24071a9d3e1cc4b5700e4e3bc9f09302
 2026-05-28T02:30:21Z | put | sync_cost/derivations/tongue_width_universality.py -> c6876f848e83a37651ba0b666cb559d9e4b296b6c9c319e898d91ed81b96b015
+2026-05-28T17:19:49Z | put | sync_cost/derivations/continuity_in_K_nulls.md -> 3a3b4152e8e20e763304b78337ded8f3e09084ccaea502737905b9d288da1254
+2026-05-28T17:19:49Z | dag:create | a65bf8559ca47e12b800036fffea69f2b20071a7728f2eae55b0d0f498c4e32f
+2026-05-28T17:20:19Z | put | sync_cost/derivations/k_of_t_problem_statement.md -> 7e3b38d151346318d2fd710ae534683332153ac71f6e0eb6ce18b58bc7b76077
+2026-05-28T17:20:19Z | dag:create | 8bcac497efb7a0275c1cad7bff54700b5093ca9f1d2b8f3ff83a4eba1b372bf0

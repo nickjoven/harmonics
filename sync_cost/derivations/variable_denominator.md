@@ -497,7 +497,11 @@ Cosmological expansion in this framing:
 - **What drives it**: accumulation of Hubble cycles (denominator
   stability)
 - **The rate**: one new Fibonacci level per ~27.4 e-folds of expansion
-  (Derivation 4: rate = 0.0365 levels/e-fold)
+  (Identification 4: rate = 0.0365 levels/e-fold, contingent on
+  `cadence = (1−n_s)/ln(φ²)` — see `minimum_alphabet.md` "Identification
+  cluster" for the N13 cluster note flagging that `1/q₃³ ≈ 0.0370` is a
+  competing substrate-only candidate within tolerance; the identification
+  is *not* a derivation from primitives)
 
 The redshift of distant galaxies is not "space stretching" in this
 picture. It is the frequency ratio between emission and observation
