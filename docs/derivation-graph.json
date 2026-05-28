@@ -1,5 +1,5 @@
 {
-  "generated": "ef29d3778a031c2f611911a71fba75460c6527e7",
+  "generated": "dca0b20751fe62c39d9faece14f044f7df4c66e4",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1317,6 +1317,7 @@
       "depended_on_by": [
         "framework_status",
         "free_parameter_scorecard",
+        "gr_qm_unification_synthesis",
         "k_of_t_residual_disposition",
         "predictions_horizon_2026"
       ],
@@ -1576,6 +1577,7 @@
       ],
       "depended_on_by": [
         "bicone_golden_z2_identification",
+        "gr_qm_unification_synthesis",
         "k_of_t_residual_disposition",
         "predictions_horizon_2026",
         "q_mod2_mediant_projection"
@@ -1751,6 +1753,7 @@
         "derivation_atlas",
         "era_timeline_disposition",
         "framework_status",
+        "gr_qm_unification_synthesis",
         "k_of_t_friedmann",
         "k_of_t_problem_statement",
         "k_of_t_residual_disposition",
@@ -1825,6 +1828,7 @@
         "gap2_theorem_attempt",
         "gap_1_christoffel",
         "gap_2_spatial_diffusion",
+        "gr_qm_unification_synthesis",
         "hierarchy_problem_translation",
         "lesson_epr_gr_qm_unification",
         "omega_b_c5_beta_audit",
@@ -1915,6 +1919,7 @@
         "anchor_count_audit",
         "equivalence_dissolution",
         "gap2_analytic_proof",
+        "gr_qm_unification_synthesis",
         "h_inf_status",
         "observer_register_closure",
         "predictions_horizon_2026",
@@ -2722,6 +2727,7 @@
         "gap1_theorem",
         "gap_1_christoffel",
         "gauge_dictionary",
+        "gr_qm_unification_synthesis",
         "graviton_reframing",
         "k_of_t_friedmann",
         "klein_connection",
@@ -2839,6 +2845,7 @@
         "complex_amplitude_uniqueness",
         "equivalence_dissolution",
         "framework_status",
+        "gr_qm_unification_synthesis",
         "lesson_epr_gr_qm_unification",
         "phenomenology_cross_reference"
       ],
@@ -2932,6 +2939,7 @@
       "depended_on_by": [
         "bicone_golden_z2_identification",
         "collapse_dissolution",
+        "gr_qm_unification_synthesis",
         "k_of_t_residual_disposition",
         "predictions_horizon_2026",
         "q_mod2_mediant_projection"
@@ -2963,6 +2971,7 @@
         "bicone_golden_z2_identification",
         "continuity_in_K_nulls",
         "framework_status",
+        "gr_qm_unification_synthesis",
         "k_of_t_friedmann",
         "k_of_t_problem_statement",
         "k_of_t_residual_disposition"
@@ -3257,6 +3266,7 @@
       "depended_on_by": [
         "collapse_dissolution",
         "equivalence_dissolution",
+        "gr_qm_unification_synthesis",
         "predictions_horizon_2026"
       ],
       "git": [
@@ -3318,6 +3328,7 @@
         "empty_fork_cap",
         "equivalence_dissolution",
         "explicit_4x4_reduction",
+        "gr_qm_unification_synthesis",
         "lesson_8_35_vs_13_19",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
@@ -4203,6 +4214,41 @@
       ]
     },
     {
+      "id": "gr_qm_unification_synthesis",
+      "path": "sync_cost/derivations/gr_qm_unification_synthesis.md",
+      "title": "GR\u2013QM unification \u2014 Tier-C capstone synthesis",
+      "summary": "**Tier-C capstone synthesis articulated.** The framework's grandest\nclaim \u2014 that general relativity and quantum mechanics are not two\ntheories to be glued together but **two continuum limits of one\ndiscrete substrate, taken at two couplings** \u2014 now has its structural\nform complete at the load-bearing claim level. The pedagogical lesson\n`lesson_epr_gr_qm_unification.md` carries the teaching narrative; this\ndoc carries the structural composition: the apparatus now in place,\nhow the pieces compose,",
+      "depends_on": [
+        "bicone_golden_z2_identification",
+        "collapse_dissolution",
+        "continuity_in_K_nulls",
+        "continuum_limits",
+        "coupling_scales",
+        "einstein_from_kuramoto",
+        "epr_bell_assembly_theorem",
+        "equivalence_dissolution",
+        "era_timeline_disposition",
+        "fidelity_bound",
+        "figure_eight",
+        "k_of_t_friedmann",
+        "k_of_t_residual_disposition",
+        "lesson_epr_gr_qm_unification",
+        "master_cascade_identity",
+        "predictions_horizon_2026",
+        "q_mod2_conservation_theorem",
+        "q_mod2_mediant_projection",
+        "substrate_determinism"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "dca0b20",
+          "date": "2026-05-28",
+          "subject": "Add GR-QM unification synthesis (Tier-C capstone) (#181)"
+        }
+      ]
+    },
+    {
       "id": "graviton_reframing",
       "path": "sync_cost/derivations/graviton_reframing.md",
       "title": "Gravity's radiative mode in framework terms: a reframing",
@@ -5036,6 +5082,7 @@
         "continuity_in_K_nulls",
         "era_timeline_disposition",
         "framework_status",
+        "gr_qm_unification_synthesis",
         "k_of_t_problem_statement",
         "klein_dynamics_roadmap",
         "lesson_epr_gr_qm_unification",
@@ -5114,6 +5161,7 @@
         "bicone_golden_z2_identification",
         "framework_status",
         "free_parameter_scorecard",
+        "gr_qm_unification_synthesis",
         "predictions_horizon_2026"
       ],
       "git": [
@@ -5596,6 +5644,7 @@
       "depended_on_by": [
         "collapse_dissolution",
         "equivalence_dissolution",
+        "gr_qm_unification_synthesis",
         "predictions_horizon_2026"
       ],
       "git": [
@@ -5907,6 +5956,7 @@
         "continuity_in_K_nulls",
         "era_timeline_disposition",
         "framework_status",
+        "gr_qm_unification_synthesis",
         "imf_bowed_cascade",
         "instrument_family_taxonomy",
         "k_of_t_problem_statement",
@@ -7553,7 +7603,8 @@
       ],
       "depended_on_by": [
         "framework_status",
-        "free_parameter_scorecard"
+        "free_parameter_scorecard",
+        "gr_qm_unification_synthesis"
       ],
       "git": [
         {
@@ -7829,6 +7880,7 @@
         "epr_bell_assembly_theorem",
         "equivalence_dissolution",
         "framework_status",
+        "gr_qm_unification_synthesis",
         "k_of_t_residual_disposition",
         "lesson_epr_gr_qm_unification",
         "phenomenology_cross_reference",
@@ -7867,6 +7919,7 @@
       "depended_on_by": [
         "bicone_golden_z2_identification",
         "framework_status",
+        "gr_qm_unification_synthesis",
         "k_of_t_residual_disposition",
         "predictions_horizon_2026"
       ],
@@ -9004,6 +9057,7 @@
         "equivalence_dissolution",
         "era_timeline_disposition",
         "framework_status",
+        "gr_qm_unification_synthesis",
         "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
         "k_of_t_residual_disposition",
