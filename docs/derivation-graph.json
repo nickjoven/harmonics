@@ -1,5 +1,5 @@
 {
-  "generated": "2993e227df93f2a8883e220c008c0643ade15815",
+  "generated": "34fd61df03c8d039db9dec92c5d85153ec7c8dea",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1541,7 +1541,9 @@
         "substrate_determinism",
         "wave_particle_substrate"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "q_mod2_mediant_projection"
+      ],
       "git": [
         {
           "hash": "2993e22",
@@ -1724,6 +1726,7 @@
         "omega_b_w_plus_candidate",
         "path_closures_iter2",
         "path_closures_iter3",
+        "q_mod2_mediant_projection",
         "sector_decoupling_phase_a",
         "structural_lemmas"
       ],
@@ -2889,7 +2892,8 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
-        "collapse_dissolution"
+        "collapse_dissolution",
+        "q_mod2_mediant_projection"
       ],
       "git": [
         {
@@ -3139,7 +3143,9 @@
       "title": "Why the Farey Partition",
       "summary": "**Theorem proved** conditional on D10's axiom that the mediant is\nprimitive. The proof has four steps, each referencing an established\nresult. The uniqueness follows from the mediant being the only\ncombining operation in the framework's alphabet that produces a\nnontrivial partition.",
       "depends_on": [],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "q_mod2_mediant_projection"
+      ],
       "git": [
         {
           "hash": "9bed549",
@@ -4996,7 +5002,8 @@
         "variable_denominator"
       ],
       "depended_on_by": [
-        "minimum_alphabet"
+        "minimum_alphabet",
+        "q_mod2_mediant_projection"
       ],
       "git": [
         {
@@ -5129,6 +5136,7 @@
         "klein_nodal_parity",
         "numerology_inventory",
         "q_mod2_conservation_theorem",
+        "q_mod2_mediant_projection",
         "rectangle_perpendicularity",
         "second_law_topological",
         "sine_gordon_substrate",
@@ -6027,6 +6035,7 @@
         "klein_bottle_derivation",
         "lesson_forced_basin_selection",
         "primitive_completeness_audit",
+        "q_mod2_mediant_projection",
         "structural_lemmas",
         "variable_denominator"
       ],
@@ -7673,6 +7682,7 @@
         "framework_status",
         "lesson_epr_gr_qm_unification",
         "phenomenology_cross_reference",
+        "q_mod2_mediant_projection",
         "sine_gordon_substrate",
         "substrate_determinism",
         "thread_chronology"
@@ -7682,6 +7692,33 @@
           "hash": "4d41418",
           "date": "2026-05-20",
           "subject": "Articulate inviolable #1 as a standalone theorem (Q mod 2 conservation) (#147)"
+        }
+      ]
+    },
+    {
+      "id": "q_mod2_mediant_projection",
+      "path": "sync_cost/derivations/q_mod2_mediant_projection.md",
+      "title": "Q mod 2 mediant projection (state-axis dual of inviolable #1)",
+      "summary": "**State-axis projection articulated** for inviolable #1\n(`substrate_determinism.md` L166-167; `q_mod2_conservation_theorem.md`).\nThe conservation theorem's time-axis reading \u2014 \"no local process\nchanges `Q mod 2`\" \u2014 has a state-axis dual: a parity superselection\nrule on Farey mediants admissible as lock-ratios on the substrate.",
+      "depends_on": [
+        "collapse_dissolution",
+        "continuity_in_K_nulls",
+        "equivalence_dissolution",
+        "farey_proof",
+        "k_of_t_problem_statement",
+        "klein_bottle",
+        "minimum_alphabet",
+        "q_mod2_conservation_theorem",
+        "sine_gordon_substrate",
+        "substrate_determinism",
+        "wave_particle_substrate"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "34fd61d",
+          "date": "2026-05-28",
+          "subject": "Add Q-mod-2 mediant projection (state-axis dual of #1) (#178)"
         }
       ]
     },
@@ -8257,6 +8294,7 @@
         "proposed_items_disposition",
         "proposed_residual_closure",
         "q_mod2_conservation_theorem",
+        "q_mod2_mediant_projection",
         "soliton_dynamics",
         "sqrt_r_n_correction",
         "substrate_determinism",
@@ -8816,6 +8854,7 @@
         "mediant_vs_flow_problem",
         "minimum_alphabet",
         "q_mod2_conservation_theorem",
+        "q_mod2_mediant_projection",
         "thread_chronology",
         "tick_continuum_construction"
       ],
@@ -9527,6 +9566,7 @@
         "nonperturbative_phase1",
         "nonperturbative_phase2",
         "orthogonal_kink_interaction",
+        "q_mod2_mediant_projection",
         "substrate_determinism",
         "thread_chronology",
         "time_axis_split",
