@@ -1,5 +1,5 @@
 {
-  "generated": "a8b3817dbe7504f782570cb89b44b26913d7e0c3",
+  "generated": "7b70676dfd95c9194796296b2a00693529651d04",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -592,6 +592,7 @@
         "PROOF_B_quantum",
         "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
+        "bell_bounds_from_substrate",
         "born_rule_parameter_free",
         "canonical_glossary",
         "cone_twist_substrate",
@@ -1267,6 +1268,33 @@
       ]
     },
     {
+      "id": "bell_bounds_from_substrate",
+      "path": "sync_cost/derivations/bell_bounds_from_substrate.md",
+      "title": "Bell bounds substrate-natively \u2014 closing the substitution scope",
+      "summary": "**Substitution-scope tightening across `epr_bell_assembly_theorem.md`\n(#152), `ghz_from_substrate.md` (#184), and\n`w_state_from_substrate.md` (#187).** Demonstrates that the pair-wise\ncorrelation function `E(\u03b8_A, \u03b8_B) = \u2212cos(\u03b8_A \u2212 \u03b8_B)`, the Tsirelson\nbound `|S|_max = 2\u221a2`, and the GHZ Mermin bound `|M|_max = 4` are\nall derived substrate-internally from existing primitives \u2014\n*without* QM substitution at the multi-mode level.",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "born_rule",
+        "canonical_glossary",
+        "complex_amplitude_uniqueness",
+        "epr_bell_assembly_theorem",
+        "framework_status",
+        "ghz_from_substrate",
+        "lesson_forced_basin_selection",
+        "q_mod2_conservation_theorem",
+        "substrate_determinism",
+        "w_state_from_substrate"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "7b70676",
+          "date": "2026-05-29",
+          "subject": "Substrate-native Bell bounds: closing the substitution scope (D3) (#188)"
+        }
+      ]
+    },
+    {
       "id": "beta_from_tongues",
       "path": "sync_cost/derivations/beta_from_tongues.md",
       "title": "Beta Functions from Tongue Widths",
@@ -1345,6 +1373,7 @@
         "a1_from_saddle_node",
         "algebraic_forcing_partition",
         "articulation_audit_2026-05",
+        "bell_bounds_from_substrate",
         "born_rule_parameter_free",
         "complex_amplitude_uniqueness",
         "derivation_atlas",
@@ -1546,6 +1575,7 @@
       "depended_on_by": [
         "a1_from_saddle_node",
         "audit_punch_list_2026-04",
+        "bell_bounds_from_substrate",
         "complex_amplitude_uniqueness",
         "derivation_atlas",
         "down_type_double_cover_closed",
@@ -1647,6 +1677,7 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "bell_bounds_from_substrate",
         "canonical_glossary",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
@@ -2858,6 +2889,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "bell_bounds_from_substrate",
         "canonical_glossary",
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
@@ -3497,6 +3529,7 @@
         "audit_punch_list_2026-04",
         "basepoint_principle",
         "basin_11_connection_exploration",
+        "bell_bounds_from_substrate",
         "canonical_glossary",
         "cone_twist_substrate",
         "continuity_in_K_nulls",
@@ -4234,6 +4267,7 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "bell_bounds_from_substrate",
         "canonical_glossary",
         "framework_status",
         "w_state_from_substrate"
@@ -5748,6 +5782,7 @@
       ],
       "depended_on_by": [
         "algebraic_forcing_partition",
+        "bell_bounds_from_substrate",
         "free_parameter_scorecard",
         "ghz_from_substrate",
         "meaning_of_two_wip",
@@ -8019,6 +8054,7 @@
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
+        "bell_bounds_from_substrate",
         "bicone_golden_z2_identification",
         "canonical_glossary",
         "collapse_dissolution",
@@ -9223,6 +9259,7 @@
       "depended_on_by": [
         "articulation_audit_2026-05",
         "basepoint_principle",
+        "bell_bounds_from_substrate",
         "bicone_golden_z2_identification",
         "born_rule",
         "born_rule_parameter_free",
@@ -9946,6 +9983,7 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "bell_bounds_from_substrate",
         "canonical_glossary",
         "framework_status"
       ],
