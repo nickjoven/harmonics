@@ -282,3 +282,12 @@
 2026-05-29T12:13:46Z glossary-update Dicke primitive + GHZ #184 + W states T1a entries added
 2026-05-29T15:12:03Z | put | sync_cost/derivations/bell_bounds_from_substrate.md -> 3ec39265c14c0aad013bc13c67c19c8bcc7b29f645108a0d98b11bfc612b82b7
 2026-05-29T15:12:03Z doc-seal bell_bounds_from_substrate.md (D3 substitution-scope closure)
+2026-05-29T15:50:23Z | put | sync_cost/derivations/bell_bounds_from_substrate.md -> 3c578f5c222de6155b3e6aee7374ea358a21645b28d77d949a272eac115283de
+2026-05-29T15:50:23Z | dag:create | 27920149077b7f89b130a839d3161d13ca61a8c88ae6a6e4ae2584053329c50e
+2026-05-29T15:50:45Z | put | sync_cost/derivations/bell_bounds_from_substrate.md -> 215350bb690da2048a77274cd0ef9b962bd6ca69aad72bb073deb25063bc7129
+2026-05-29T15:50:45Z | dag:create | b58bb2394db84ede73f49cef9b3b472798dd496822e361aac7b4b00c03ed57ff
+2026-05-29T15:51:02Z | put | sync_cost/derivations/bell_bounds_from_substrate.md -> 9173aa1f94273ed48405702e18a25b235e0096e796ecba1c75ba6d32f4d07b98
+2026-05-29T15:51:02Z | dag:create | af719496ce1870a93cda5843cbb42d2e907e7e0eb741840c00f6220295e0fc1b
+2026-05-29T16:28:47Z | put | sync_cost/derivations/bell_bounds_from_substrate.md -> 9173aa1f94273ed48405702e18a25b235e0096e796ecba1c75ba6d32f4d07b98
+2026-05-29T16:43:39Z doc-reseal bell_bounds_from_substrate.md (audit: layered structure made explicit)
+2026-05-29T16:43:53Z | put | sync_cost/derivations/bell_bounds_from_substrate.md -> 9173aa1f94273ed48405702e18a25b235e0096e796ecba1c75ba6d32f4d07b98
