@@ -1,5 +1,5 @@
 {
-  "generated": "21ea760b1345000bfa91b472c9aa01c59fe34924",
+  "generated": "3c7bf651370f05b50ae0c448ee0521f81893e672",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1287,7 +1287,8 @@
         "w_state_from_substrate"
       ],
       "depended_on_by": [
-        "dicke_apparatus_theorem"
+        "dicke_apparatus_theorem",
+        "snmc_class_and_entanglement"
       ],
       "git": [
         {
@@ -1400,6 +1401,7 @@
         "proposed_residual_closure",
         "seismic_eigenstate_dictionary",
         "sine_gordon_substrate",
+        "snmc_class_and_entanglement",
         "stribeck_vortex",
         "structural_lemmas"
       ],
@@ -1586,6 +1588,7 @@
         "down_type_double_cover_closed",
         "phenomenology_cross_reference",
         "phenomenon_glossary",
+        "snmc_class_and_entanglement",
         "sqrt_r_n_correction",
         "structural_lemmas"
       ],
@@ -1687,7 +1690,8 @@
         "dicke_apparatus_theorem",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
-        "phenomenology_cross_reference"
+        "phenomenology_cross_reference",
+        "snmc_class_and_entanglement"
       ],
       "git": [
         {
@@ -2251,7 +2255,9 @@
         "substrate_determinism",
         "w_state_from_substrate"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "snmc_class_and_entanglement"
+      ],
       "git": [
         {
           "hash": "21ea760",
@@ -2934,6 +2940,7 @@
         "lesson_epr_gr_qm_unification",
         "phenomenology_cross_reference",
         "preferred_basis_dissolution",
+        "snmc_class_and_entanglement",
         "w_state_from_substrate"
       ],
       "git": [
@@ -3622,6 +3629,7 @@
         "remaining_gap_shapes",
         "s_v_nlo",
         "s_v_nlo_attempt",
+        "snmc_class_and_entanglement",
         "sqrt_r_n_correction",
         "structural_lemmas",
         "thread_chronology",
@@ -4306,6 +4314,7 @@
         "canonical_glossary",
         "dicke_apparatus_theorem",
         "framework_status",
+        "snmc_class_and_entanglement",
         "w_state_from_substrate"
       ],
       "git": [
@@ -8109,6 +8118,7 @@
         "predictions_horizon_2026",
         "q_mod2_mediant_projection",
         "sine_gordon_substrate",
+        "snmc_class_and_entanglement",
         "substrate_determinism",
         "thread_chronology",
         "w_state_from_substrate"
@@ -8877,6 +8887,33 @@
       ]
     },
     {
+      "id": "snmc_class_and_entanglement",
+      "path": "sync_cost/derivations/snmc_class_and_entanglement.md",
+      "title": "Substrate-Natural Multipartite Class (SNMC) and substrate-natural entanglement measures",
+      "summary": "**D2 formalization** of the substrate's natural multipartite QM\nreach as a named class with characterized closure properties, and\n**substrate-natural entanglement measure vocabulary** \u2014 translating\nstandard QM entanglement measures (Schmidt rank, Von Neumann\nentropy, concurrence, 3-tangle, stabilizer corank) into\nsubstrate-readable quantities computable directly from substrate\ndata.",
+      "depends_on": [
+        "bell_bounds_from_substrate",
+        "born_rule",
+        "canonical_glossary",
+        "complex_amplitude_uniqueness",
+        "dicke_apparatus_theorem",
+        "epr_bell_assembly_theorem",
+        "framework_status",
+        "ghz_from_substrate",
+        "q_mod2_conservation_theorem",
+        "substrate_determinism",
+        "w_state_from_substrate"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "3c7bf65",
+          "date": "2026-05-29",
+          "subject": "SNMC class + substrate-natural entanglement measures (D2) (#190)"
+        }
+      ]
+    },
+    {
       "id": "soliton_dynamics",
       "path": "sync_cost/derivations/soliton_dynamics.md",
       "title": "Soliton dynamics: linear sector, breathers, S-matrix, medium class",
@@ -9325,6 +9362,7 @@
         "preferred_basis_dissolution",
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
+        "snmc_class_and_entanglement",
         "thread_chronology",
         "tick_continuum_construction",
         "w_state_from_substrate"
@@ -10024,7 +10062,8 @@
         "bell_bounds_from_substrate",
         "canonical_glossary",
         "dicke_apparatus_theorem",
-        "framework_status"
+        "framework_status",
+        "snmc_class_and_entanglement"
       ],
       "git": [
         {
