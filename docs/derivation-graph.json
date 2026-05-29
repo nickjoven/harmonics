@@ -1,5 +1,5 @@
 {
-  "generated": "c9da1d5243ca4b04db7bbb9e775b65276b4e10e5",
+  "generated": "a8b3817dbe7504f782570cb89b44b26913d7e0c3",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1510,9 +1510,11 @@
         "denomination_boundary",
         "down_type_double_cover_closed",
         "duty_cycle_dictionary",
+        "epr_bell_assembly_theorem",
         "farey_partition",
         "figure_eight",
         "framework_status",
+        "ghz_from_substrate",
         "h_inf_status",
         "hierarchy_gaussian_lattice",
         "k_axis_uniqueness",
@@ -1534,9 +1536,12 @@
         "psl2z_subgroup_identification_phase_a",
         "psl2z_subgroup_phase_a_results",
         "psl2z_subgroup_phase_b",
+        "q_mod2_conservation_theorem",
         "statistical_conventions",
+        "substrate_determinism",
         "three_dimensions",
-        "vocabulary_is_the_work_pattern"
+        "vocabulary_is_the_work_pattern",
+        "w_state_from_substrate"
       ],
       "depended_on_by": [
         "a1_from_saddle_node",
@@ -1550,6 +1555,11 @@
         "structural_lemmas"
       ],
       "git": [
+        {
+          "hash": "a8b3817",
+          "date": "2026-05-29",
+          "subject": "W states from substrate: narrowing then Dicke (N,k) extension (T1a) (#187)"
+        },
         {
           "hash": "b819d03",
           "date": "2026-05-21",
@@ -2848,6 +2858,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "canonical_glossary",
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
         "equivalence_dissolution",
@@ -2856,7 +2867,8 @@
         "gr_qm_unification_synthesis",
         "lesson_epr_gr_qm_unification",
         "phenomenology_cross_reference",
-        "preferred_basis_dissolution"
+        "preferred_basis_dissolution",
+        "w_state_from_substrate"
       ],
       "git": [
         {
@@ -3431,6 +3443,7 @@
         "epr_bell_assembly_theorem",
         "era_timeline_disposition",
         "farey_partition",
+        "ghz_from_substrate",
         "h_inf_status",
         "hierarchy_gaussian_lattice",
         "hierarchy_problem_translation",
@@ -3466,6 +3479,7 @@
         "tick_continuum_construction",
         "vocabulary_is_the_work_pattern",
         "w_plus_formalization",
+        "w_state_from_substrate",
         "xor_derivation"
       ],
       "depended_on_by": [
@@ -3549,6 +3563,11 @@
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "a8b3817",
+          "date": "2026-05-29",
+          "subject": "W states from substrate: narrowing then Dicke (N,k) extension (T1a) (#187)"
+        },
         {
           "hash": "ef29d37",
           "date": "2026-05-28",
@@ -4214,7 +4233,11 @@
         "q_mod2_conservation_theorem",
         "substrate_determinism"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "canonical_glossary",
+        "framework_status",
+        "w_state_from_substrate"
+      ],
       "git": [
         {
           "hash": "c9da1d5",
@@ -4283,7 +4306,8 @@
       "depended_on_by": [
         "ghz_from_substrate",
         "preferred_basis_dissolution",
-        "salpeter_gate_disposition"
+        "salpeter_gate_disposition",
+        "w_state_from_substrate"
       ],
       "git": [
         {
@@ -5727,7 +5751,8 @@
         "free_parameter_scorecard",
         "ghz_from_substrate",
         "meaning_of_two_wip",
-        "preferred_basis_dissolution"
+        "preferred_basis_dissolution",
+        "w_state_from_substrate"
       ],
       "git": [
         {
@@ -6069,7 +6094,8 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
-        "ghz_from_substrate"
+        "ghz_from_substrate",
+        "w_state_from_substrate"
       ],
       "git": [
         {
@@ -7583,6 +7609,11 @@
       ],
       "git": [
         {
+          "hash": "a8b3817",
+          "date": "2026-05-29",
+          "subject": "W states from substrate: narrowing then Dicke (N,k) extension (T1a) (#187)"
+        },
+        {
           "hash": "2beb996",
           "date": "2026-05-23",
           "subject": "Audit: eliminate overstatements, archive failed/superseded claims (#158)"
@@ -7689,7 +7720,8 @@
         "framework_status",
         "free_parameter_scorecard",
         "ghz_from_substrate",
-        "gr_qm_unification_synthesis"
+        "gr_qm_unification_synthesis",
+        "w_state_from_substrate"
       ],
       "git": [
         {
@@ -7988,6 +8020,7 @@
       "depended_on_by": [
         "articulation_audit_2026-05",
         "bicone_golden_z2_identification",
+        "canonical_glossary",
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
         "derivation_atlas",
@@ -8004,7 +8037,8 @@
         "q_mod2_mediant_projection",
         "sine_gordon_substrate",
         "substrate_determinism",
-        "thread_chronology"
+        "thread_chronology",
+        "w_state_from_substrate"
       ],
       "git": [
         {
@@ -9192,6 +9226,7 @@
         "bicone_golden_z2_identification",
         "born_rule",
         "born_rule_parameter_free",
+        "canonical_glossary",
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
         "e_cross_calc",
@@ -9216,7 +9251,8 @@
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
         "thread_chronology",
-        "tick_continuum_construction"
+        "tick_continuum_construction",
+        "w_state_from_substrate"
       ],
       "git": [
         {
@@ -9891,6 +9927,33 @@
           "hash": "5f41c24",
           "date": "2026-04-26",
           "subject": "Closure round 2: Region C verdict, w_+ Class 5 closure, Shape F audit (#80)"
+        }
+      ]
+    },
+    {
+      "id": "w_state_from_substrate",
+      "path": "sync_cost/derivations/w_state_from_substrate.md",
+      "title": "W states from substrate \u2014 narrowing the apparatus, then extending it",
+      "summary": "**T1a worked example, with a two-sided finding: narrowing then\nextension.** Tests whether the substrate's `Q \u2208 \u2124/2\u2124`-invariant\napparatus from `ghz_from_substrate.md` (PR #184) generalizes\nnaturally to the W state \u2014 the canonical 3-mode entangled state\nLOCC-inequivalent to GHZ.",
+      "depends_on": [
+        "epr_bell_assembly_theorem",
+        "ghz_from_substrate",
+        "gr_qm_unification_synthesis",
+        "lesson_forced_basin_selection",
+        "meaning_of_two_wip",
+        "predictions_horizon_2026",
+        "q_mod2_conservation_theorem",
+        "substrate_determinism"
+      ],
+      "depended_on_by": [
+        "canonical_glossary",
+        "framework_status"
+      ],
+      "git": [
+        {
+          "hash": "a8b3817",
+          "date": "2026-05-29",
+          "subject": "W states from substrate: narrowing then Dicke (N,k) extension (T1a) (#187)"
         }
       ]
     },
