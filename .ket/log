@@ -272,3 +272,11 @@
 2026-05-29T05:24:34Z | dag:create | e6b0ab7fb472f2329db730d2fc3ebc603ec431d86803a86db7f265880c63dd97
 2026-05-29T11:47:32Z | put | sync_cost/derivations/w_state_from_substrate.md -> ecd5d44629f77bbe02910b6e414a0c319906055536c0fc4c4e1415c7871f3a5a
 2026-05-29T11:47:32Z doc-reseal w_state_from_substrate.md (T1a batch-2 boundary tests: T-states, MPS, Haar-random)
+2026-05-29T12:03:22Z | put | sync_cost/derivations/framework_status.md -> 7d1351d00e2a0101cf843d903aa4178f618c21e24baba478e6243c213b83442d
+2026-05-29T12:03:22Z | dag:create | c9a983a2d7009688e61f27b9fd5b9e3edd7838816d117b28648a2007b1c1513f
+2026-05-29T12:12:24Z | put | sync_cost/derivations/phenomenon_glossary.md -> d32315a7b8ae70dcbdadbb65aec5528fa81df7ba8fd5469206f555925a4bf9ef
+2026-05-29T12:12:24Z | dag:create | ed0c6d6f815569ae93f81776d2b4d70ec68e0a0bb9ae305580ae584479bcd9aa
+2026-05-29T12:13:46Z | put | sync_cost/derivations/canonical_glossary.md -> 010533eaca59cd1a6a99bae23c61f19a032b5be68f9ec035623c4f8e0924ade8
+2026-05-29T12:13:46Z | put | sync_cost/derivations/framework_status.md -> 7d1351d00e2a0101cf843d903aa4178f618c21e24baba478e6243c213b83442d
+2026-05-29T12:13:46Z | put | sync_cost/derivations/phenomenon_glossary.md -> d32315a7b8ae70dcbdadbb65aec5528fa81df7ba8fd5469206f555925a4bf9ef
+2026-05-29T12:13:46Z glossary-update Dicke primitive + GHZ #184 + W states T1a entries added
