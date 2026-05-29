@@ -260,3 +260,15 @@
 2026-05-29T03:54:19Z doc-seal w_state_from_substrate.md cid=50f408a201a13d13de2b379cbf2bae17c158d45109684cb32c9030671b9bbf33
 2026-05-29T05:02:33Z | put | sync_cost/derivations/w_state_from_substrate.md -> 0222dd52f0dc1f1dd31854a1b383f6d54e70c110ddef87fef96f3a031055ffaf
 2026-05-29T05:02:33Z doc-reseal w_state_from_substrate.md (T1a extension: Dicke primitive, boundary mapping)
+2026-05-29T05:23:28Z | put | sync_cost/derivations/w_state_from_substrate.md -> fdcce3b1976b7e565136058e894d2810e010eeed45fb9dc87493885457884dd3
+2026-05-29T05:23:28Z | dag:create | 12c10913b833f768885edc81e1201fce48a9d80ef70b5ec8afa2536e8fed3afb
+2026-05-29T05:23:45Z | put | sync_cost/derivations/w_state_from_substrate.md -> 1b623f1caec66604593c8213510fb2f869dd5a908246f35934d641a10a526d01
+2026-05-29T05:23:45Z | dag:create | 6a27d60bcafe8448d967332dc42afdacb24eb3644925029fdd8527fcb406ddc8
+2026-05-29T05:23:56Z | put | sync_cost/derivations/w_state_from_substrate.md -> ad217b03ec6d10376e407626d1538f94d65acf5718404e799f95d09f9525cd6c
+2026-05-29T05:23:56Z | dag:create | 0c83be8373d61e0764d24f0cc3e3eed2b41c272e846da84ddd27ea476a3065ce
+2026-05-29T05:24:14Z | put | sync_cost/derivations/w_state_from_substrate.md -> e1f72a9b81111c52f56659ddb768b40958a0e02f05b238f850bb58bb0139ab48
+2026-05-29T05:24:14Z | dag:create | bae18b21c824873069eff064acbfdbd5e5741e9961c907f80253a39ff0606dc4
+2026-05-29T05:24:34Z | put | sync_cost/derivations/w_state_from_substrate.md -> ecd5d44629f77bbe02910b6e414a0c319906055536c0fc4c4e1415c7871f3a5a
+2026-05-29T05:24:34Z | dag:create | e6b0ab7fb472f2329db730d2fc3ebc603ec431d86803a86db7f265880c63dd97
+2026-05-29T11:47:32Z | put | sync_cost/derivations/w_state_from_substrate.md -> ecd5d44629f77bbe02910b6e414a0c319906055536c0fc4c4e1415c7871f3a5a
+2026-05-29T11:47:32Z doc-reseal w_state_from_substrate.md (T1a batch-2 boundary tests: T-states, MPS, Haar-random)
