@@ -1,5 +1,5 @@
 {
-  "generated": "7b70676dfd95c9194796296b2a00693529651d04",
+  "generated": "21ea760b1345000bfa91b472c9aa01c59fe34924",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -599,6 +599,7 @@
         "continuity_in_K_nulls",
         "depth_connection_nulls",
         "derivation_atlas",
+        "dicke_apparatus_theorem",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_c",
         "dynamical_tool_audit",
@@ -1285,7 +1286,9 @@
         "substrate_determinism",
         "w_state_from_substrate"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "dicke_apparatus_theorem"
+      ],
       "git": [
         {
           "hash": "7b70676",
@@ -1377,6 +1380,7 @@
         "born_rule_parameter_free",
         "complex_amplitude_uniqueness",
         "derivation_atlas",
+        "dicke_apparatus_theorem",
         "dynamical_tool_audit",
         "empty_fork_cap",
         "epr_bell_assembly_theorem",
@@ -1578,6 +1582,7 @@
         "bell_bounds_from_substrate",
         "complex_amplitude_uniqueness",
         "derivation_atlas",
+        "dicke_apparatus_theorem",
         "down_type_double_cover_closed",
         "phenomenology_cross_reference",
         "phenomenon_glossary",
@@ -1679,6 +1684,7 @@
       "depended_on_by": [
         "bell_bounds_from_substrate",
         "canonical_glossary",
+        "dicke_apparatus_theorem",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
         "phenomenology_cross_reference"
@@ -2224,6 +2230,33 @@
           "hash": "2109a3b",
           "date": "2026-04-26",
           "subject": "Legitimacy homework: glossary + phenomenology + derivation atlas (#81)"
+        }
+      ]
+    },
+    {
+      "id": "dicke_apparatus_theorem",
+      "path": "sync_cost/derivations/dicke_apparatus_theorem.md",
+      "title": "Dicke apparatus theorem \u2014 substrate-internal computation of Pauli matrix elements on Dicke states",
+      "summary": "**Theorem-quality result rigorizing the T1a Dicke extension\n(`w_state_from_substrate.md`, #187).** The observation that\n\"substrate's Dicke `(N, k)` primitive + recursive Schmidt +\nconditional pair-wise apparatus reproduces W's correlations\nnumerically\" is upgraded to a theorem: *all Pauli matrix elements\non Dicke states are substrate-computable* via a finite recursion\nthat terminates in the foundational layer's single-mode Pauli\nentries.",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "bell_bounds_from_substrate",
+        "born_rule",
+        "canonical_glossary",
+        "complex_amplitude_uniqueness",
+        "epr_bell_assembly_theorem",
+        "framework_status",
+        "ghz_from_substrate",
+        "q_mod2_conservation_theorem",
+        "substrate_determinism",
+        "w_state_from_substrate"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "21ea760",
+          "date": "2026-05-29",
+          "subject": "Dicke apparatus theorem (D1): T1a theoremization (#189)"
         }
       ]
     },
@@ -2893,6 +2926,7 @@
         "canonical_glossary",
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
+        "dicke_apparatus_theorem",
         "equivalence_dissolution",
         "framework_status",
         "ghz_from_substrate",
@@ -3534,6 +3568,7 @@
         "cone_twist_substrate",
         "continuity_in_K_nulls",
         "depth_connection_nulls",
+        "dicke_apparatus_theorem",
         "down_type_double_cover_closed",
         "dynamical_tool_audit",
         "epr_bell_assembly_theorem",
@@ -4269,6 +4304,7 @@
       "depended_on_by": [
         "bell_bounds_from_substrate",
         "canonical_glossary",
+        "dicke_apparatus_theorem",
         "framework_status",
         "w_state_from_substrate"
       ],
@@ -8060,6 +8096,7 @@
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
         "derivation_atlas",
+        "dicke_apparatus_theorem",
         "epr_bell_assembly_theorem",
         "equivalence_dissolution",
         "framework_status",
@@ -9266,6 +9303,7 @@
         "canonical_glossary",
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
+        "dicke_apparatus_theorem",
         "e_cross_calc",
         "e_cross_discrete_resolution",
         "empty_fork_cap",
@@ -9985,6 +10023,7 @@
       "depended_on_by": [
         "bell_bounds_from_substrate",
         "canonical_glossary",
+        "dicke_apparatus_theorem",
         "framework_status"
       ],
       "git": [
