@@ -154,7 +154,7 @@ def dump_json(path, K_vals, pq_vals):
     matrix = compute_width_matrix(K_vals, pq_vals)
     payload = {
         "metadata": {
-            "generated": datetime.datetime.utcnow().isoformat() + "Z",
+            "generated": datetime.datetime.now(datetime.UTC).replace(tzinfo=None).isoformat() + "Z",
             "script": "tongue_widths_exact.py",
             "git_commit": get_git_commit(),
             "n_trans_default": 5000,
