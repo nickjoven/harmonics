@@ -293,3 +293,5 @@
 2026-05-29T16:43:53Z | put | sync_cost/derivations/bell_bounds_from_substrate.md -> 9173aa1f94273ed48405702e18a25b235e0096e796ecba1c75ba6d32f4d07b98
 2026-05-29T17:09:40Z | put | sync_cost/derivations/dicke_apparatus_theorem.md -> 4c78992deeb0581690f17393ec506c8a4503372898807e3da86820603d4f9468
 2026-05-29T17:21:56Z doc-seal dicke_apparatus_theorem.md (D1: T1a theoremization)
+2026-05-29T21:25:00Z | put | sync_cost/derivations/snmc_class_and_entanglement.md -> d3cea61496513deb5784f816f6ff950b7329aaa1ebf49498edc970d354c154a7
+2026-05-29T21:31:52Z doc-seal snmc_class_and_entanglement.md (D2: SNMC + entanglement vocabulary)
