@@ -280,3 +280,5 @@
 2026-05-29T12:13:46Z | put | sync_cost/derivations/framework_status.md -> 7d1351d00e2a0101cf843d903aa4178f618c21e24baba478e6243c213b83442d
 2026-05-29T12:13:46Z | put | sync_cost/derivations/phenomenon_glossary.md -> d32315a7b8ae70dcbdadbb65aec5528fa81df7ba8fd5469206f555925a4bf9ef
 2026-05-29T12:13:46Z glossary-update Dicke primitive + GHZ #184 + W states T1a entries added
+2026-05-29T15:12:03Z | put | sync_cost/derivations/bell_bounds_from_substrate.md -> 3ec39265c14c0aad013bc13c67c19c8bcc7b29f645108a0d98b11bfc612b82b7
+2026-05-29T15:12:03Z doc-seal bell_bounds_from_substrate.md (D3 substitution-scope closure)
