@@ -1,5 +1,5 @@
 {
-  "generated": "8dfac18b4759207a23f21909f29cf492f254dc2a",
+  "generated": "c9da1d5243ca4b04db7bbb9e775b65276b4e10e5",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1353,6 +1353,7 @@
         "epr_bell_assembly_theorem",
         "framework_status",
         "free_parameter_scorecard",
+        "ghz_from_substrate",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
         "mass_sector_sqrt_w_phase_a",
@@ -1580,6 +1581,7 @@
       ],
       "depended_on_by": [
         "bicone_golden_z2_identification",
+        "ghz_from_substrate",
         "gr_qm_unification_synthesis",
         "k_of_t_residual_disposition",
         "predictions_horizon_2026",
@@ -2850,6 +2852,7 @@
         "complex_amplitude_uniqueness",
         "equivalence_dissolution",
         "framework_status",
+        "ghz_from_substrate",
         "gr_qm_unification_synthesis",
         "lesson_epr_gr_qm_unification",
         "phenomenology_cross_reference",
@@ -3336,6 +3339,7 @@
         "empty_fork_cap",
         "equivalence_dissolution",
         "explicit_4x4_reduction",
+        "ghz_from_substrate",
         "gr_qm_unification_synthesis",
         "lesson_8_35_vs_13_19",
         "lesson_epr_gr_qm_unification",
@@ -4193,6 +4197,33 @@
       ]
     },
     {
+      "id": "ghz_from_substrate",
+      "path": "sync_cost/derivations/ghz_from_substrate.md",
+      "title": "GHZ correlations from the substrate event-log (worked example)",
+      "summary": "**Level-3 worked example for the QM-reframing thread.** Demonstrates\nthat the pair-wise EPR/Bell apparatus\n(`epr_bell_assembly_theorem.md`) generalizes naturally to N-mode\nsystems, with explicit calculation for the 3-mode GHZ case. The\nsubstrate's machinery reproduces:",
+      "depends_on": [
+        "born_rule",
+        "collapse_dissolution",
+        "epr_bell_assembly_theorem",
+        "figure_eight",
+        "gr_qm_unification_synthesis",
+        "lesson_forced_basin_selection",
+        "meaning_of_two_wip",
+        "predictions_horizon_2026",
+        "preferred_basis_dissolution",
+        "q_mod2_conservation_theorem",
+        "substrate_determinism"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "c9da1d5",
+          "date": "2026-05-28",
+          "subject": "GHZ correlations from substrate event-log (level-3 worked example) (#184)"
+        }
+      ]
+    },
+    {
       "id": "gluon_reframing",
       "path": "sync_cost/derivations/gluon_reframing.md",
       "title": "The gluon's properties in framework terms: a reframing",
@@ -4250,6 +4281,7 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "ghz_from_substrate",
         "preferred_basis_dissolution",
         "salpeter_gate_disposition"
       ],
@@ -5693,6 +5725,7 @@
       "depended_on_by": [
         "algebraic_forcing_partition",
         "free_parameter_scorecard",
+        "ghz_from_substrate",
         "meaning_of_two_wip",
         "preferred_basis_dissolution"
       ],
@@ -6035,7 +6068,9 @@
         "substrate_determinism",
         "wave_particle_substrate"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "ghz_from_substrate"
+      ],
       "git": [
         {
           "hash": "8dfac18",
@@ -7653,6 +7688,7 @@
       "depended_on_by": [
         "framework_status",
         "free_parameter_scorecard",
+        "ghz_from_substrate",
         "gr_qm_unification_synthesis"
       ],
       "git": [
@@ -7681,7 +7717,9 @@
         "salpeter_gate_disposition",
         "substrate_determinism"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "ghz_from_substrate"
+      ],
       "git": [
         {
           "hash": "f91c642",
@@ -7956,6 +7994,7 @@
         "epr_bell_assembly_theorem",
         "equivalence_dissolution",
         "framework_status",
+        "ghz_from_substrate",
         "gr_qm_unification_synthesis",
         "k_of_t_residual_disposition",
         "lesson_epr_gr_qm_unification",
@@ -9162,6 +9201,7 @@
         "equivalence_dissolution",
         "era_timeline_disposition",
         "framework_status",
+        "ghz_from_substrate",
         "gr_qm_unification_synthesis",
         "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
