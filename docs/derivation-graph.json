@@ -1,5 +1,5 @@
 {
-  "generated": "f91c642380f10478270bfa21f6c9326ebf0e3188",
+  "generated": "8dfac18b4759207a23f21909f29cf492f254dc2a",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1357,6 +1357,7 @@
         "lesson_forced_basin_selection",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
+        "meaning_of_two_wip",
         "mediant_vs_flow_calc",
         "numerology_inventory",
         "phenomenology_cross_reference",
@@ -2212,7 +2213,8 @@
       "depended_on_by": [
         "INDEX",
         "gauge_high_scale_identification",
-        "klein_connection"
+        "klein_connection",
+        "meaning_of_two_wip"
       ],
       "git": [
         {
@@ -3338,6 +3340,7 @@
         "lesson_8_35_vs_13_19",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
+        "meaning_of_two_wip",
         "no_rescaling",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
@@ -5690,6 +5693,7 @@
       "depended_on_by": [
         "algebraic_forcing_partition",
         "free_parameter_scorecard",
+        "meaning_of_two_wip",
         "preferred_basis_dissolution"
       ],
       "git": [
@@ -6015,6 +6019,32 @@
       ]
     },
     {
+      "id": "meaning_of_two_wip",
+      "path": "sync_cost/derivations/meaning_of_two_wip.md",
+      "title": "WIP \u2014 meaning of `2` in the framework",
+      "summary": "**WIP / staging note**, explicitly *not* a closure or consolidation\nclaim. This is an audit of what \"`2`\" means in the framework's\nsubstrate vocabulary \u2014 which identifications between the framework's\nmany `2`s are rigorously established in the existing corpus, which\nare related at the substrate-source level but distinct as\nmathematical objects, and which are claimed-but-not-derived.",
+      "depends_on": [
+        "born_rule",
+        "discrete_gauge_resolution",
+        "figure_eight",
+        "lesson_forced_basin_selection",
+        "minimum_alphabet",
+        "minkowski_signature",
+        "q_mod2_conservation_theorem",
+        "salpeter_gate_disposition",
+        "substrate_determinism",
+        "wave_particle_substrate"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "8dfac18",
+          "date": "2026-05-28",
+          "subject": "WIP / staging note: meaning of 2 in the framework (#183)"
+        }
+      ]
+    },
+    {
       "id": "measurement_collapse",
       "path": "sync_cost/derivations/measurement_collapse.md",
       "title": "Measurement Collapse from Tongue Traversal",
@@ -6208,6 +6238,7 @@
         "k_of_t_residual_disposition",
         "klein_bottle_derivation",
         "lesson_forced_basin_selection",
+        "meaning_of_two_wip",
         "predictions_horizon_2026",
         "primitive_completeness_audit",
         "q_mod2_mediant_projection",
@@ -6266,6 +6297,7 @@
         "INDEX",
         "equivalence_dissolution",
         "klein_bottle_derivation",
+        "meaning_of_two_wip",
         "spatial_coupling_derived"
       ],
       "git": [
@@ -7927,6 +7959,7 @@
         "gr_qm_unification_synthesis",
         "k_of_t_residual_disposition",
         "lesson_epr_gr_qm_unification",
+        "meaning_of_two_wip",
         "phenomenology_cross_reference",
         "predictions_horizon_2026",
         "q_mod2_mediant_projection",
@@ -8350,6 +8383,7 @@
         "q_mod2_mediant_projection"
       ],
       "depended_on_by": [
+        "meaning_of_two_wip",
         "preferred_basis_dissolution"
       ],
       "git": [
@@ -9134,6 +9168,7 @@
         "k_of_t_residual_disposition",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
+        "meaning_of_two_wip",
         "mediant_vs_flow_problem",
         "minimum_alphabet",
         "predictions_horizon_2026",
@@ -9848,6 +9883,7 @@
         "epr_bell_assembly_theorem",
         "f_exit_natural",
         "inflation_duration",
+        "meaning_of_two_wip",
         "no_rescaling",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
