@@ -1,5 +1,5 @@
 {
-  "generated": "dca0b20751fe62c39d9faece14f044f7df4c66e4",
+  "generated": "f91c642380f10478270bfa21f6c9326ebf0e3188",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -609,6 +609,7 @@
         "mediant_vs_flow_calc",
         "numerology_inventory",
         "phenomenology_cross_reference",
+        "preferred_basis_dissolution",
         "primitive_completeness_audit",
         "proposed_residual_closure",
         "s_v_nlo",
@@ -1359,6 +1360,7 @@
         "mediant_vs_flow_calc",
         "numerology_inventory",
         "phenomenology_cross_reference",
+        "preferred_basis_dissolution",
         "primitive_completeness_audit",
         "proposed_residual_closure",
         "seismic_eigenstate_dictionary",
@@ -1580,6 +1582,7 @@
         "gr_qm_unification_synthesis",
         "k_of_t_residual_disposition",
         "predictions_horizon_2026",
+        "preferred_basis_dissolution",
         "q_mod2_mediant_projection"
       ],
       "git": [
@@ -2847,7 +2850,8 @@
         "framework_status",
         "gr_qm_unification_synthesis",
         "lesson_epr_gr_qm_unification",
-        "phenomenology_cross_reference"
+        "phenomenology_cross_reference",
+        "preferred_basis_dissolution"
       ],
       "git": [
         {
@@ -2942,6 +2946,7 @@
         "gr_qm_unification_synthesis",
         "k_of_t_residual_disposition",
         "predictions_horizon_2026",
+        "preferred_basis_dissolution",
         "q_mod2_mediant_projection"
       ],
       "git": [
@@ -3267,7 +3272,8 @@
         "collapse_dissolution",
         "equivalence_dissolution",
         "gr_qm_unification_synthesis",
-        "predictions_horizon_2026"
+        "predictions_horizon_2026",
+        "preferred_basis_dissolution"
       ],
       "git": [
         {
@@ -3336,6 +3342,7 @@
         "nonperturbative_phase1",
         "nonperturbative_phase2",
         "orthogonal_kink_interaction",
+        "preferred_basis_dissolution",
         "soliton_dynamics",
         "substrate_determinism",
         "thread_chronology"
@@ -4239,7 +4246,10 @@
         "q_mod2_mediant_projection",
         "substrate_determinism"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "preferred_basis_dissolution",
+        "salpeter_gate_disposition"
+      ],
       "git": [
         {
           "hash": "dca0b20",
@@ -4693,7 +4703,8 @@
         "mass_function_family",
         "master_cascade_identity",
         "negative_results_ledger",
-        "predictions_horizon_2026"
+        "predictions_horizon_2026",
+        "salpeter_gate_disposition"
       ],
       "git": [
         {
@@ -5162,7 +5173,8 @@
         "framework_status",
         "free_parameter_scorecard",
         "gr_qm_unification_synthesis",
-        "predictions_horizon_2026"
+        "predictions_horizon_2026",
+        "salpeter_gate_disposition"
       ],
       "git": [
         {
@@ -5677,7 +5689,8 @@
       ],
       "depended_on_by": [
         "algebraic_forcing_partition",
-        "free_parameter_scorecard"
+        "free_parameter_scorecard",
+        "preferred_basis_dissolution"
       ],
       "git": [
         {
@@ -5789,7 +5802,8 @@
       "depended_on_by": [
         "equivalence_dissolution",
         "imf_bowed_cascade",
-        "negative_results_ledger"
+        "negative_results_ledger",
+        "salpeter_gate_disposition"
       ],
       "git": [
         {
@@ -5820,7 +5834,8 @@
         "articulation_audit_2026-05",
         "imf_bowed_cascade",
         "instrument_family_taxonomy",
-        "master_cascade_identity"
+        "master_cascade_identity",
+        "salpeter_gate_disposition"
       ],
       "git": [
         {
@@ -5966,6 +5981,7 @@
         "nonperturbative_phase3",
         "predictions_horizon_2026",
         "proposed_residual_closure",
+        "salpeter_gate_disposition",
         "seam_profile",
         "sine_gordon_substrate",
         "soliton_dynamics",
@@ -6344,6 +6360,7 @@
         "free_parameter_scorecard",
         "neutrino_mass_audit",
         "phenomenon_glossary",
+        "salpeter_gate_disposition",
         "sinw_fixed_point"
       ],
       "git": [
@@ -7615,6 +7632,33 @@
       ]
     },
     {
+      "id": "preferred_basis_dissolution",
+      "path": "sync_cost/derivations/preferred_basis_dissolution.md",
+      "title": "Preferred-basis dissolution",
+      "summary": "**Inviolable-companion dissolution articulated** \u2014 the QM\npreferred-basis problem (why measurement settles on position\neigenstates, or energy eigenstates, or any other specific basis\nrather than arbitrary superpositions) dissolves into **basin\nselection** on the framework's substrate. Each measurement is the\nsystem identifying which basin of attraction it sits in\n(`lesson_forced_basin_selection.md`); the basin's natural coordinates\n*are* the measurement's basis. No separate preferred-basis axiom",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "born_rule",
+        "collapse_dissolution",
+        "epr_bell_assembly_theorem",
+        "equivalence_dissolution",
+        "fidelity_bound",
+        "figure_eight",
+        "gr_qm_unification_synthesis",
+        "lesson_forced_basin_selection",
+        "salpeter_gate_disposition",
+        "substrate_determinism"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "f91c642",
+          "date": "2026-05-28",
+          "subject": "Address the two open items from the capstone synthesis (#182)"
+        }
+      ]
+    },
+    {
       "id": "primitive_completeness_audit",
       "path": "sync_cost/derivations/primitive_completeness_audit.md",
       "title": "Shape F primitive-completeness audit (2026-04-26)",
@@ -7921,7 +7965,8 @@
         "framework_status",
         "gr_qm_unification_synthesis",
         "k_of_t_residual_disposition",
-        "predictions_horizon_2026"
+        "predictions_horizon_2026",
+        "salpeter_gate_disposition"
       ],
       "git": [
         {
@@ -8286,6 +8331,32 @@
           "hash": "1445303",
           "date": "2026-05-13",
           "subject": "s_v_nlo_attempt: explicit NLO calc reveals non-perturbative regime (#115)"
+        }
+      ]
+    },
+    {
+      "id": "salpeter_gate_disposition",
+      "path": "sync_cost/derivations/salpeter_gate_disposition.md",
+      "title": "Cascade\u2194Salpeter slope: dual-gate disposition",
+      "summary": "**Disposition consolidated.** The cascade\u2194Salpeter slope is **Class-2\nwith a partial structural derivation and an open dual gate** \u2014\nstructural and statistical \u2014 both currently unmet. The doc names\nwhich piece is forced, which is null, and what each gate would need\nto clear.",
+      "depends_on": [
+        "gr_qm_unification_synthesis",
+        "imf_bowed_cascade",
+        "k_of_t_residual_disposition",
+        "mass_entrained_measure",
+        "mass_function_family",
+        "master_cascade_identity",
+        "negative_results_ledger",
+        "q_mod2_mediant_projection"
+      ],
+      "depended_on_by": [
+        "preferred_basis_dissolution"
+      ],
+      "git": [
+        {
+          "hash": "f91c642",
+          "date": "2026-05-28",
+          "subject": "Address the two open items from the capstone synthesis (#182)"
         }
       ]
     },
@@ -9066,6 +9137,7 @@
         "mediant_vs_flow_problem",
         "minimum_alphabet",
         "predictions_horizon_2026",
+        "preferred_basis_dissolution",
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
         "thread_chronology",
