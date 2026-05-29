@@ -257,3 +257,4 @@
 2026-05-28T22:35:48Z | put | sync_cost/derivations/salpeter_gate_disposition.md -> 3938ef6a4d14da56606de8f54fdd5893385a5db7864329659b51802da57682f3
 2026-05-28T22:35:48Z | put | sync_cost/derivations/preferred_basis_dissolution.md -> 4f24ed847e8f886ffa92748b72ae6e3199c441d9f6d81729afdaeaec5a61c7a5
 2026-05-28T23:39:37Z | put | sync_cost/derivations/meaning_of_two_wip.md -> 9fd04088f65d3a3ad0338c3237644c95d278a69f9958a8f34fd084e1bbb286ed2026-05-29T02:32:29Z | put | sync_cost/derivations/ghz_from_substrate.md -> 9406270a9fc6a6be0f9154b1fd1524b02dc8ea5f716ecf095a4fb69aab8b0db9
+2026-05-29T03:54:19Z doc-seal w_state_from_substrate.md cid=50f408a201a13d13de2b379cbf2bae17c158d45109684cb32c9030671b9bbf33
