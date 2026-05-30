@@ -1,0 +1,259 @@
+# Koide form substrate derivation — iteration 6
+
+## Status
+
+**Iteration 6.** Tests candidate mechanism 3 from iteration 5: the
+cube identity `q_2³ = q_2 + 2 q_3` (substrate-derived in
+`mass_sector_closure.md`) as the structural source for the V_4
+trivial-vs-non-trivial squared-norm ratio `q_3 : MEDIANT`.
+
+**Result: necessary but not sufficient.** The cube identity
+provides the right *counts* (`q_2³ = 8 = 3 + 5 = q_3 + MEDIANT`)
+but does not by itself *distinguish* which of its two `q_3` pieces
+corresponds to the V_4 trivial component. A residual degeneracy
+remains: the cube identity decomposes `8` as `(q_2, q_3, q_3)`,
+and the Koide ratio requires the substrate to identify *one* of
+the two `q_3` pieces as V_4-trivial.
+
+Without an additional substrate mechanism to break this degeneracy,
+the cube identity alone allows three structurally compatible Koide
+ratios:
+
+- `q_2 / q_2³ = 1/4` (would give a different `K`)
+- `q_3 / q_2³ = 3/8` (the observed Koide value)
+- `(q_2 + q_3) / q_2³ = 5/8` (would give yet another `K`)
+
+The substrate-derivation gap therefore reduces to: *which substrate
+mechanism distinguishes the two `q_3` pieces in the cube
+identity?* A candidate substrate mechanism is identified (chirality
+left/right; Cartan vs. raising/lowering in the SU(3) adjoint
+decomposition) but not yet substantiated.
+
+The iteration sharpens the gap and identifies the residual
+degeneracy explicitly. No new substrate primitive. Class-3
+iteration step 6.
+
+---
+
+## The cube identity in structural form
+
+The cube identity `q_2³ = q_2 + 2 q_3` (`mass_sector_closure.md`,
+Theorem) decomposes the SU(3) adjoint dimension as:
+
+    8  =  2 + 2(3)  =  q_2 + 2 q_3
+
+In structural form, this can be read as a partition of the SU(3)
+adjoint generators:
+
+| Piece | Count | SU(3) adjoint reading |
+|---|---|---|
+| First | `q_2 = 2` | Cartan subalgebra (diagonal generators) |
+| Second | `q_3 = 3` | Raising operators (one per color pair) |
+| Third | `q_3 = 3` | Lowering operators (one per color pair) |
+
+This is the standard `(Cartan) ⊕ (raising) ⊕ (lowering)`
+decomposition of `su(3)`. The two `q_3` pieces are *chirality-
+paired*: each raising operator has a corresponding lowering
+operator.
+
+### Match to Koide V_4 ratio
+
+The Koide ratio `|w_χ_0|² : |w_⊥V_4|² = q_3 : MEDIANT = 3 : 5`
+sums to `q_2³ = 8`. Three structurally compatible assignments of
+the cube-identity pieces to V_4 components:
+
+| Assignment | V_4 trivial gets | V_4 non-trivial gets | Trivial fraction | Koide `K` predicted |
+|---|---|---|---|---|
+| (a) | `q_2` (Cartan) | `q_3 + q_3` (raising + lowering) | `2/8 = 1/4` | `K = 1/3 · 4 = 4/3` (impossible — exceeds 1) |
+| (b) | `q_3` (raising) | `q_2 + q_3` (Cartan + lowering) | `3/8` | `K = 2/3` ✓ |
+| (c) | `q_3` (lowering) | `q_2 + q_3` (Cartan + raising) | `3/8` | `K = 2/3` ✓ |
+| (d) | `q_2 + q_3` (Cartan + one) | `q_3` (other) | `5/8` | `K = 8/15` ≠ 2/3 |
+
+Assignments (a) and (d) give Koide `K` values inconsistent with
+the constraint (a is geometrically impossible — `K ≤ 1` by
+Cauchy-Schwarz; d gives a wrong `K`). Assignments (b) and (c)
+both give `K = 2/3` and are equivalent up to a left ↔ right
+chirality flip.
+
+### The residual degeneracy
+
+Assignments (b) and (c) are *structurally degenerate*: both
+identify the V_4 trivial component with *one* of the two `q_3`
+pieces in the cube identity. The substrate's cube identity itself
+does not distinguish the two `q_3` pieces (they have equal counts
+and play symmetric roles in `q_2³ = q_2 + 2 q_3`).
+
+For the Koide constraint to be substrate-derived, the substrate
+must select either (b) or (c) — equivalently, must identify one
+specific `q_3` piece as V_4-trivial. The other `q_3` piece must
+then sit in the V_4 non-trivial sector along with `q_2`.
+
+---
+
+## Candidate substrate mechanism: chirality distinction
+
+The two `q_3` pieces in the cube identity correspond to raising
+and lowering operators in the SU(3) adjoint decomposition. These
+are *paired by Hermitian conjugation*: each raising operator is
+the conjugate of its corresponding lowering operator.
+
+A substrate-aligned mechanism distinguishing them would invoke
+either:
+
+1. **Chirality**: left-handed components vs right-handed
+   components. The substrate's Klein-bottle structure assigns
+   chirality via the antipodal involution `τ`. If `τ` flips
+   raising ↔ lowering, the two `q_3` pieces correspond to opposite
+   `τ`-eigenvalues. One ends up V_4-trivial; the other ends up
+   V_4-non-trivial.
+
+2. **Cascade depth ordering**: the two `q_3` pieces could
+   correspond to different cascade depths (the framework's cube
+   structure across depths). If V_4 trivial corresponds to one
+   specific depth's `q_3` piece and the other lives at a different
+   depth, the assignment is forced.
+
+3. **Klein-bottle `Z_2` grading on SU(3) adjoint**: the substrate
+   may grade the SU(3) adjoint generators by Klein-bottle `Z_2`
+   eigenvalue. The grading would distinguish the two `q_3` pieces
+   if they carry opposite Klein-bottle Z_2 eigenvalues.
+
+These three are not yet substrate-derivative. Each would require
+articulating the specific Klein-bottle / cascade / chirality
+structure that distinguishes raising from lowering in the lepton
+amplitude V_4 decomposition.
+
+---
+
+## What this iteration establishes
+
+### Necessary condition for substrate derivation
+
+The cube identity `q_2³ = q_2 + 2 q_3` is necessary for the Koide
+V_4 ratio `q_3 : MEDIANT` to have its specific arithmetic form.
+Without the cube identity, the framework primitives `q_3` and
+`MEDIANT` would not sum to a substrate-internal quantity (the
+SU(3) adjoint dimension); the ratio could be coincidence rather
+than structural.
+
+### Insufficient by itself
+
+The cube identity alone does not select the V_4-trivial
+assignment. A degeneracy between two structurally equivalent
+assignments remains. Without breaking this degeneracy, the
+substrate's cube structure is *consistent* with `K = 2/3` but
+does not *force* it.
+
+### The remaining gap is specific and tractable
+
+The residual gap is: *identify the substrate mechanism that breaks
+the (b)/(c) degeneracy between raising and lowering `q_3` pieces*.
+This is a concrete substrate-derivation target. Multi-iteration
+work likely; outcome uncertain.
+
+---
+
+## Status of the Koide derivation after six iterations
+
+| Component | Status |
+|---|---|
+| Iteration 1 geometric reformulation | Stands |
+| Iteration 2 candidate 4 ruled out (SL(2, ℤ)) | Stands |
+| Iteration 3 candidate 1 ruled out (Z_2 eigenspace) | Stands |
+| Iteration 4 substrate gives V_4 not S_3 | Stands |
+| Iteration 5 V_4 reformulation `q_3 : MEDIANT` | Stands |
+| Iteration 6 cube identity necessary but not sufficient | **Established** |
+| Substrate distinguishes the two `q_3` pieces of cube identity | **Open** — residual derivation target |
+| Floor → Survives upgrade | Pending |
+
+The trajectory across six iterations has narrowed the gap from
+"derive the Koide algebraic form" (iteration 1's starting point)
+to "identify which substrate mechanism distinguishes the two
+`q_3` pieces in the cube identity decomposition of `q_2³`"
+(iteration 6's residual target).
+
+This is a *substantively narrower* gap than the starting point.
+It is also a *concrete* gap with three named candidate mechanisms
+(chirality, cascade depth, Klein-bottle Z_2 grading on SU(3)
+adjoint). Each is a substrate-derivation target for further
+iteration.
+
+---
+
+## Falsifiers
+
+- **Substrate mechanism for distinguishing the two `q_3` pieces
+  produced**: would close the Koide gap and upgrade Floor →
+  Survives.
+- **All three candidate mechanisms ruled out**: would push the
+  Koide derivation toward DEP row 2 (structurally non-bridgeable
+  via the V_4 + cube-identity path) and force re-examination of
+  candidate 1-variant b (τ on complex amplitude) or new
+  candidates.
+- **A different cube-identity assignment** (not (b)/(c)) found to
+  match Koide `K = 2/3` consistently: would change the structural
+  framing; iteration 6's analysis would need revision.
+- **The cube identity is shown to be insufficient even with the
+  degeneracy broken**: the broken-degeneracy assignment doesn't
+  derive Koide; some additional structure is required.
+
+---
+
+## Recommended next iteration
+
+Test candidate mechanism 1: chirality distinction. Specifically,
+examine whether the substrate's Klein-bottle antipodal involution
+`τ` (which is the framework's natural source of chirality
+structure via `complex_amplitude_uniqueness.md`) acts on SU(3)
+adjoint generators in a way that distinguishes raising from
+lowering.
+
+If yes, the (b)/(c) degeneracy is broken substrate-natively, and
+the Koide V_4 ratio is forced.
+
+If no, iteration 8 tests candidate mechanism 2 (cascade depth).
+
+---
+
+## Cross-links
+
+- `koide_form_substrate_iteration_5.md` — V_4 reformulation in
+  substrate primitives.
+- `mass_sector_closure.md` — cube identity `q_2³ = q_2 + 2 q_3`
+  and Theorem; SU(3) adjoint dimension; lepton/quark cross-link.
+- `klein_bottle.md` (D19) — substrate's Z_2 × Z_3 structure;
+  Klein-antipodal involution τ.
+- `complex_amplitude_uniqueness.md` — Klein-bottle antiperiodic
+  direction → `ℂ`; source of chirality structure.
+- `gauge_sector_lovelock.md` — SU(3) gauge sector emergence from
+  Klein bottle.
+- `discrete_extension_principle.md` (PR #191) — methodology.
+
+---
+
+## One-line summary
+
+The cube identity `q_2³ = q_2 + 2 q_3 = 8 = 2 + 3 + 3` from
+`mass_sector_closure.md` is *necessary* for the iteration-5 V_4
+reformulation of Koide (`|w_χ_0|² : |w_⊥V_4|² = q_3 : MEDIANT =
+3 : 5`) to have its specific arithmetic form (numerator `q_3 = 3`,
+denominator `q_2³ = 8`), since the cube identity is what makes
+the substrate primitives in numerator and denominator sum to a
+substrate-internal quantity (the SU(3) adjoint dimension); but it
+is *not sufficient* by itself: the cube identity decomposes `q_2³`
+as `(q_2, q_3, q_3)` — three pieces, two of which are
+indistinguishable as `q_3 = 3` — and assigning V_4 trivial to one
+specific `q_3` piece (the Koide-correct assignments (b) and (c))
+versus to `q_2` (assignment a, impossible: `K > 1` violates
+Cauchy-Schwarz) or to `q_2 + q_3` (assignment d, wrong `K`) requires
+a substrate mechanism that breaks the (b)/(c) degeneracy between
+the two `q_3` pieces; the residual derivation target is therefore
+*identify which substrate mechanism distinguishes the raising and
+lowering operators of the SU(3) adjoint decomposition `8 = 2 +
+3 + 3`*, with three candidates named for further iteration —
+chirality (via Klein-bottle antipodal involution `τ` acting on the
+adjoint), cascade depth ordering, and Klein-bottle Z_2 grading on
+SU(3) adjoint generators; the substrate-derivation gap has
+narrowed from "derive Koide algebraic form" (iter 1) to
+"distinguish two `q_3` pieces in cube identity" (iter 6) — a
+substantively narrower and more concrete target, but still open.

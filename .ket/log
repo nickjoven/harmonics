@@ -326,3 +326,5 @@
 2026-05-30T18:54:05Z | put | sync_cost/derivations/koide_form_substrate_iteration_4.md -> d9463cb894d8345f2816052e9c33ab0d6824b0e160d644d8973c6dc7c42b8f88
 2026-05-30T18:54:05Z | put | sync_cost/derivations/koide_form_substrate_iteration_5.md -> ed0cb65a99449809a95e205e5479c34ae3ffc84361449d61f82bfd6b620df48d
 2026-05-30T18:54:05Z doc-seal koide_form_substrate_iteration_5.md (V_4 reformulation = q_3:MEDIANT)
+2026-05-30T20:22:37Z | put | sync_cost/derivations/koide_form_substrate_iteration_6.md -> d8e428c911d2306345cb623c3b7754b11f9e0bad1d9bb80e6afdf5329c384635
+2026-05-30T20:22:37Z doc-seal koide_form_substrate_iteration_6.md (cube identity necessary not sufficient)
