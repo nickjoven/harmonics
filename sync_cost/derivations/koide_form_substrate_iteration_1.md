@@ -1,0 +1,383 @@
+# Koide form substrate derivation — iteration 1
+
+## Status
+
+**Iterative formalization, step 1.** Sharpens the Koide-form gap
+identified in the Thread 2 roadblock and the existing
+`fermion_mass_running.md` Class-1 disposition: the value `Q = 2/3`
+in the Koide constraint is substrate-derived (Klein-bottle population
+ratio, `klein_bottle.md` D19); the specific algebraic form
+`K = Σm / (Σ√m)² = Q` is currently imported despite a claim in
+`fermion_mass_running.md` §4c that it follows from "SL(2,Z) trace
+structure (D34 §6)" — a claim whose actual derivation has not been
+written.
+
+This iteration reformulates the Koide algebraic form into a
+geometric statement that is sharper and more tractable for
+substrate derivation. The reformulation does not close the gap; it
+moves the gap from "explain the specific algebraic equation" to
+"explain a specific geometric equipartition in three-generation
+amplitude space."
+
+Class: foundational consolidation (Class 3, iteration). No new
+substrate primitive. The reformulation is mathematically equivalent
+to the original Koide form; what changes is the shape of the
+remaining substrate-derivation task.
+
+---
+
+## The original gap
+
+The Koide constraint (Koide 1982) for the three charged-lepton
+masses:
+
+    K(m_e, m_μ, m_τ)  =  (m_e + m_μ + m_τ) / (√m_e + √m_μ + √m_τ)²  =  2/3
+
+Holds at 10⁻⁵ precision against PDG masses (verified numerically:
+`K_PDG ≈ 0.666658` against `2/3 ≈ 0.666667`).
+
+The framework's existing analysis (`fermion_mass_running.md` §4c,
+`generation_mechanism.md` §4, `mass_sector_closure.md`):
+
+- The value `Q = 2/3` is substrate-derived: Klein-bottle population
+  ratio between the two surviving denominator-class families
+  (`(1/2, 2/3)` and `(1/3, 1/2)`), verified at 0.8% precision in
+  `klein_bottle.md` D19.
+- The bare-tree lepton mass formula `m_i = base_i^(5/2)` (with
+  `base = 26 : 7 : 1`) produces `m_τ/m_e = 26^(5/2) ≈ 3447` at 0.9%
+  match to observation, but `m_μ/m_e = 7^(5/2) ≈ 129.6` at 37% off.
+- Imposing the Koide constraint with substrate-forced `m_τ/m_e`
+  and `Q = 2/3` produces `m_μ/m_e ≈ 204.78` at 0.96% match to PDG
+  `206.77`.
+
+The closure is currently **Floor** in
+`mass_sector_closure.md`'s status framing because the algebraic
+form `K = Σm / (Σ√m)²` is imported even though the value `Q = 2/3`
+is substrate-derived. The claim in `fermion_mass_running.md` §4c
+that "the Koide constraint is not an external input — it is the
+generation-mixing constraint from the SL(2,Z) trace structure
+(D34 §6)" is unfulfilled: `generation_mechanism.md` §6 discusses
+mixing angles from SL(2,Z) traces but does not derive the Koide
+algebraic form.
+
+The substrate-derivation gap, stated precisely: **why this
+particular algebraic relation among the three lepton masses,
+rather than any other relation expressible in terms of `Q = 2/3`?**
+
+---
+
+## Geometric reformulation
+
+**Definition.** The *lepton amplitude vector* is
+
+    v  =  (√m_e, √m_μ, √m_τ)  ∈  ℝ³.
+
+The vector lies in the positive octant by construction.
+
+**Decomposition.** Three-generation space ℝ³ admits a canonical
+decomposition under the symmetric group `S_3` acting by permutation:
+
+- The *symmetric direction* `u = (1, 1, 1) / √3` spans a 1-dim
+  trivial representation. Projection: `v_sym = (v · u) u`.
+- The *orthogonal complement* spans a 2-dim standard representation
+  of `S_3`. Projection: `v_⊥ = v − v_sym`.
+
+By orthogonality:
+
+    |v|²  =  |v_sym|²  +  |v_⊥|².
+
+**Magnitudes.**
+
+    |v|²       =  Σ m_i                                  (squared L² norm of v)
+    |v_sym|²   =  (v · u)²  =  (Σ √m_i)² / 3
+    |v_⊥|²    =  Σ m_i  −  (Σ √m_i)² / 3
+
+**Substitution into Koide.**
+
+    K  =  Σ m_i / (Σ √m_i)²
+        =  |v|² / (3 |v_sym|²)
+        =  1 / (3 · |v_sym|² / |v|²)
+        =  1 / (3 cos² θ)
+
+where `θ` is the angle between `v` and `u`.
+
+**Equivalence.** The Koide constraint `K = 2/3` is equivalent to
+
+    cos² θ  =  1/2,    i.e.,    θ  =  π/4.
+
+By orthogonality `cos² θ + sin² θ = 1`, this is equivalent to
+
+    |v_sym|²  =  |v_⊥|²    (equipartition).
+
+That is: **the lepton amplitude vector lies at exactly π/4 from the
+symmetric direction**, equivalently, its squared norm splits equally
+between the trivial (symmetric) representation and the standard
+(orthogonal) representation of `S_3`.
+
+### Numerical verification
+
+With PDG masses:
+
+| Quantity | Value | Expected for `K = 2/3` |
+|---|---|---|
+| `K (PDG)` | `0.666658` | `0.666667` |
+| `cos² θ` | `0.500006` | `0.5` |
+| `θ` | `44.9996°` | `45°` |
+| `\|v_sym\|² / \|v_⊥\|²` | `1.000025` | `1.000000` |
+
+With substrate-bare-tree masses (`m_τ/m_e = 26^(5/2)`, `m_μ/m_e =
+7^(5/2)`):
+
+| Quantity | Value |
+|---|---|
+| `K (bare tree)` | `0.707768` (6.17% off `2/3`) |
+| `|v_sym|² / |v_⊥|²` | `≈ 0.890` |
+
+Bare tree does not satisfy equipartition. The Koide constraint
+imposed on the bare-tree `m_τ` with substrate-derived `Q = 2/3`
+returns `m_μ/m_e = 204.78` (0.96% off PDG), exactly the
+equipartition-imposing muon mass.
+
+---
+
+## What this reformulation changes
+
+The gap moves from algebraic to geometric:
+
+| Before (algebraic) | After (geometric) |
+|---|---|
+| Why does `K = Σm / (Σ√m)² = Q` specifically? | Why does the amplitude vector lie at `π/4` from the symmetric direction? |
+| Why this particular relation among `m_i` involving square roots? | Why equipartition `|v_sym|² = |v_⊥|²` for the lepton amplitude vector? |
+| Why `Q = 2/3` in this specific algebraic form? | Why `cos² θ = 1/(3Q)` = `1/2` for `Q = 2/3`? |
+
+The geometric form is sharper because it isolates the substantive
+content of Koide: equipartition between two `S_3`-invariant
+subspaces. The `Q = 2/3` factor already substrate-derived as the
+Klein-bottle population ratio; the equipartition is the remaining
+content that requires substrate-derivation.
+
+### A sharper formulation
+
+The substrate must derive: **the lepton amplitude vector
+`v = (√m_e, √m_μ, √m_τ)` satisfies `|v_sym|² = |v_⊥|²` under the
+canonical `S_3` decomposition of three-generation space.**
+
+This is one numerical equation among three lepton masses, fixing
+one mass given the other two. Combined with the substrate's
+`m_τ/m_e = 26^(5/2)` derivation, it determines `m_μ`.
+
+---
+
+## Candidate substrate-aligned primitives for the equipartition
+
+Following the Discrete Extension Principle, candidates must be
+substrate-aligned discrete primitives derivable from existing
+inviolables. Enumerated for testing:
+
+### Candidate 1 — Klein-bottle Z₂ antipodal balance
+
+The Klein-bottle antipodal involution `τ` (Klein-antipodal Z₂)
+acts on three-generation space. As a `Z_2` involution, `τ`
+decomposes ℝ³ into:
+
+- A `+1` eigenspace
+- A `−1` eigenspace
+
+For a generic `Z_2` action on a 3-dim space, dimensions of the
+two eigenspaces can be `(3, 0), (2, 1)`, or `(1, 2)` (the case
+`(0, 3)` is the negation map, which is not the antipodal
+structure of the Klein bottle).
+
+**Claim under test:** the lepton amplitude vector has equal squared
+norms in the two `τ`-eigenspaces (regardless of their dimensions):
+`|v_+|² = |v_-|²`.
+
+**Status:** the action of `τ` on three-generation space is not
+explicitly characterized in existing framework docs. `klein_bottle.md`
+defines `τ` on the Z_6 mode lattice (`k → −k mod 6`) but its
+restriction to the three observable lepton generations would need
+to be derived. This is the first concrete substrate-derivation
+target for the next iteration.
+
+### Candidate 2 — Phase-state observability constraint
+
+The four phase states `{A, B, C, D}` (`generation_mechanism.md` §1)
+have weights:
+
+    A = 1/18,  B = 7/36,  C = 1/6,  D = 7/12.
+
+Three are observable; `D` is dark. The constraint
+`w_A + w_B + w_C + w_D = 1` is automatic. The substrate-aligned
+question: does the dark state `D` impose a *geometric* constraint
+on the three-observable amplitude subspace?
+
+**Claim under test:** the dark state `D`'s invisibility (no
+coupling accumulates, per `generation_mechanism.md` §1) reflects in
+a constraint on the observable amplitude vector's component along
+the symmetric direction — specifically, equal weight on the
+symmetric direction (associated with `D`'s zero-coupling structure)
+and the standard subspace.
+
+**Status:** the structural mechanism for how `D`'s invisibility
+constrains the `(A, B, C)` amplitude vector geometrically is not
+written. Multi-session work.
+
+### Candidate 3 — Sector exponent and Cauchy-Schwarz tightness
+
+The lepton sector exponent `a = 5/2` (`generation_mechanism.md` §3)
+relates substrate weights to masses: `m_i = base_i^(5/2)`. The
+amplitude vector then has components `√m_i = base_i^(5/4)`.
+
+The Cauchy-Schwarz inequality `(Σ √m_i)² ≤ 3 (Σ m_i)` is saturated
+(equality) when all `m_i` are equal, and weakest when one mass
+dominates. For the specific lepton mass hierarchy with `base = 26 :
+7 : 1` and exponent `5/2`, the Cauchy-Schwarz ratio takes a
+specific value that does not give `K = 2/3` directly (as the
+bare-tree check shows: `K_bare = 0.708`).
+
+**Claim under test:** the sector exponent `5/2` is not the operative
+substrate primitive for Koide; instead, the exponent `5/2` reflects
+the bare-tree hierarchy structure and Koide imposes an *additional*
+substrate-aligned constraint via Klein-bottle topology that fixes
+the muon mass independently.
+
+**Status:** consistent with framework's existing analysis. The
+bare-tree exponent `5/2` is structurally derived; the Koide
+constraint is structurally additional. This candidate identifies
+where Koide is *not* derivable from `(base, exponent)` alone and
+points toward Klein-bottle topology as the remaining substrate
+mechanism.
+
+### Candidate 4 — SL(2,Z) trace structure
+
+Referenced in `fermion_mass_running.md` §4c as the claimed source
+of the Koide form. `generation_mechanism.md` §6 derives mixing
+angles from the trace classification of `SL(2, ℤ)` matrices
+associated with paths in the Stern-Brocot tree.
+
+**Claim under test:** the SL(2, ℤ) trace structure on
+three-generation paths forces the Koide algebraic form via a
+mass-matrix eigenvalue identity. Specifically, the trace of the
+mass matrix and the determinant relate via an SL(2, ℤ) invariant
+that, when interpreted as a Koide-like constraint, yields
+`|v_sym|² = |v_⊥|²`.
+
+**Status:** the claimed derivation does not exist in the corpus.
+Either (a) the claim is real and the derivation is straightforward
+from §6's machinery (needs to be written), or (b) the claim is
+overstated and the SL(2, ℤ) trace structure gives mixing angles
+but not Koide. Direct test of the claim is the immediate
+substrate-derivation target.
+
+---
+
+## Audit: what's substrate-derived, what's not (this iteration)
+
+| Component | Origin | Substrate-derived? |
+|---|---|---|
+| Value `Q = 2/3` | Klein-bottle population ratio | **Yes** via `klein_bottle.md` D19 |
+| Three observable phase states A, B, C | `generation_mechanism.md` §1 | Yes |
+| Bare-tree mass formula `m_i = base_i^(5/2)` for charged leptons | `generation_mechanism.md` §3 | Yes |
+| Sector exponent `a = 5/2 = d − 1/2` with `d = 3` | `generation_mechanism.md` §3 | Yes |
+| Geometric reformulation: `K = 2/3 ⇔ |v_sym|² = |v_⊥|²` | Standard linear algebra over `ℝ³` with `S_3` action | Standard math (foundational); the equivalence itself is content-free, just a restatement |
+| Equipartition `|v_sym|² = |v_⊥|²` for lepton amplitude vector | Postulated; equivalent to Koide constraint | **No** — the open derivation target |
+| Action of Klein-bottle τ on three-generation space | Not characterized | **Open** (candidate 1) |
+| Effect of dark state D on (A, B, C) amplitude geometry | Not characterized | **Open** (candidate 2) |
+| SL(2, ℤ) trace → Koide algebraic form | Claimed in `fermion_mass_running.md` §4c, derivation not written | **Open** (candidate 4) |
+
+No new substrate-derivation in this iteration. The contribution is
+the geometric reformulation, which sharpens the open target.
+
+---
+
+## Falsifiers
+
+- **The equivalence `K = 2/3 ⇔ |v_sym|² = |v_⊥|²` is shown to be
+  trivially incomplete** (e.g., if other geometric constraints on
+  `v` are also required). Standard linear algebra rules this out;
+  the equivalence is exact.
+- **A substrate-aligned derivation of any of the four candidates is
+  produced**: would close the gap and upgrade the Koide closure from
+  Floor to Survives.
+- **All four candidates are systematically ruled out**: would invoke
+  Discrete Extension Principle's second row (structurally
+  non-bridgeable), declaring the Koide form to be an external
+  empirical input despite `Q = 2/3` being substrate-derived. Would
+  be a sharper Floor status than the current one.
+- **A fifth substrate-aligned primitive is identified** that none
+  of the four candidates exhausts. Would expand the candidate list
+  and resume iteration.
+
+---
+
+## What this iteration enables for the next
+
+The sharper geometric statement (`|v_sym|² = |v_⊥|²`) allows the
+next iteration to test candidates directly. Specifically:
+
+1. **Candidate 1 (Klein-bottle τ)**: determine the action of `τ`
+   on three-generation space and check whether equipartition under
+   τ-eigenspaces is forced by substrate inviolables.
+2. **Candidate 4 (SL(2, ℤ) traces)**: read `generation_mechanism.md`
+   §6's mixing-angle derivation explicitly and check whether the
+   trace classification implies a mass-matrix identity equivalent
+   to Koide equipartition.
+
+Either test produces a concrete substrate-derivation chain to write
+or a concrete refutation to record. Neither completes in this
+iteration but both are now well-defined targets.
+
+The Discrete Extension Principle deployment for the Koide form is
+now: enumerate the four candidates → test each → either close
+(upgrade Floor to Survives) or rule each out (sharpen Floor verdict).
+
+Multi-iteration work; this is step 1 of N (N small but currently
+unknown).
+
+---
+
+## Cross-links
+
+- `klein_bottle.md` (D19) — `Q = 2/3` substrate origin (population
+  ratio).
+- `generation_mechanism.md` (D34) §1, §3, §4, §6 — three generations,
+  sector exponents, bare-tree masses, SL(2, ℤ) trace classification.
+- `mass_sector_closure.md` — current Floor disposition; integer
+  conservation law.
+- `fermion_mass_running.md` §4c — existing claim that Koide follows
+  from SL(2, ℤ) trace structure; derivation not written.
+- `free_parameter_scorecard.md` — Koide form acknowledged as
+  imported.
+- `numerology_inventory.md` — `K → μ running correction` flagged
+  Class 1 (phantom patch); Koide replaces it as the closing
+  mechanism but at Floor status.
+- `discrete_extension_principle.md` (PR #191) — methodology for
+  this iterative gap-closing work.
+- `physics_relevance_measurement_catalog.md` (PR #194) — `m_μ / m_e`
+  is the relevant primitive measurement endpoint.
+
+---
+
+## One-line summary
+
+The Koide constraint `K = (m_e + m_μ + m_τ) / (√m_e + √m_μ +
+√m_τ)² = 2/3` is geometrically equivalent to the equipartition
+`|v_sym|² = |v_⊥|²` for the lepton amplitude vector `v = (√m_e,
+√m_μ, √m_τ)` under the `S_3` decomposition of three-generation
+space (verified numerically: `K_PDG = 0.666658`, `θ_PDG = 44.9996°`,
+`|v_sym|² / |v_⊥|² = 1.000025` against expected `2/3, 45°, 1.0`);
+the substrate-derivation gap now reads as "explain the
+equipartition" rather than "explain the algebraic form," with four
+candidate substrate-aligned discrete primitives enumerated for
+the next iteration — Klein-bottle τ action on three-generation
+space (candidate 1), phase-state D constraint on observable
+amplitude subspace (candidate 2), sector exponent + Cauchy-Schwarz
+analysis ruling out bare-tree closure (candidate 3, status:
+consistent with framework's existing analysis; identifies where
+Koide is *additional* to the bare-tree formula), and the
+`fermion_mass_running.md` §4c claimed SL(2, ℤ) trace structure
+derivation (candidate 4, status: claim referenced but actual
+derivation not written; direct test in next iteration); this
+iteration does not close the Koide-form gap but does sharpen it
+into a tractable geometric statement and identifies four explicit
+substrate-derivation paths to test.

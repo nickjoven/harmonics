@@ -315,4 +315,9 @@
 2026-05-30T05:25:13Z | put | sync_cost/derivations/physics_relevance_measurement_catalog.md -> 6a7ad5f362451bcdcafcf1f77200391d0346c3867b7c72cc5cae907625b596df
 2026-05-30T06:10:48Z doc-seal physics_relevance_measurement_catalog.md (B7: physics-relevance × primitive-measurement catalog)
 2026-05-30T07:59:35Z | put | sync_cost/derivations/qm_reframing_programmatic.md -> a51481257996d443b7f62ce6eda5bdfec99be90cc2ba085c94c529bef73ce8c5
-2026-05-30T07:59:35Z doc-seal qm_reframing_programmatic.md (B1: programmatic QM-reframing)
+2026-05-30T07:59:35Z doc-seal qm_reframing_programmatic.md (B1: programmatic QM-reframing)2026-05-30T17:25:58Z | put | sync_cost/derivations/koide_form_substrate_iteration_1.md -> b54cbdab8a1f768c7626077a252753492c55efcf5f2028fa651794aeaf6b1c53
+2026-05-30T17:25:58Z doc-seal koide_form_substrate_iteration_1.md (Koide gap geometric reformulation)
+2026-05-30T18:06:20Z | put | sync_cost/derivations/koide_form_substrate_iteration_2.md -> 845620c21efcab7d8561433187d21e6db9808460637c2397adfbd4096b0ae337
+2026-05-30T18:06:20Z doc-seal koide_form_substrate_iteration_2.md (candidate 4 ruled out)
+2026-05-30T18:25:14Z | put | sync_cost/derivations/koide_form_substrate_iteration_3.md -> b411d75597cac96a0c394b9af60d8c5f689162756ed60169dab7c7061be8ea7b
+2026-05-30T18:25:14Z doc-seal koide_form_substrate_iteration_3.md (candidate 1 ruled out; question sharpened to full S_3 action)

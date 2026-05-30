@@ -1,0 +1,240 @@
+# Koide form substrate derivation — iteration 3
+
+## Status
+
+**Iteration 3.** Tests candidate 1 from iteration 1: the
+Klein-bottle τ action on three-generation space as a source of the
+equipartition `|v_sym|² = |v_⊥|²`.
+
+**Result: candidate 1 is ruled out in its standard form.** No
+single Z_2 involution on three-generation space (whether a
+permutation in `S_3`, a sign-flip diagonal action, or a `180°`
+rotation around a coordinate axis) produces eigenspaces matching
+the `S_3` trivial-vs-standard decomposition required by Koide.
+
+The structural reason is general: the `S_3` trivial-vs-standard
+decomposition (`1 ⊕ 2`) is a *representation-theoretic*
+decomposition by `S_3` irreducibles, not an eigenspace
+decomposition of any individual Z_2 element. A Z_2 involution
+gives a `(+1)`-eigenspace and a `(−1)`-eigenspace whose dimensions
+sum to 3, but the specific irreducible-rep split that Koide
+requires is not realized by any single Z_2 sub-action of `S_3`.
+
+No new substrate primitive. The contribution is the structural
+disposition of one candidate via direct numerical and
+representation-theoretic test.
+
+---
+
+## Test: enumerate Z_2 involutions on three-generation space
+
+For `v = (√m_e, √m_μ, √m_τ)`, the Koide equipartition is
+`|v_sym|² = |v_⊥|²` under the `S_3` decomposition
+
+- `v_sym`: projection onto `(1, 1, 1) / √3` (1-dim trivial rep)
+- `v_⊥`: projection onto the 2-dim standard rep
+
+PDG values give the target ratio `|v_sym|² / |v_⊥|² = 1.000025`.
+
+### Z_2 involutions tested
+
+**Permutations (S_3 transpositions):**
+
+| τ | `|v_+|²` (2-dim eigenspace) | `|v_-|²` (1-dim eigenspace) | Ratio |
+|---|---|---|---|
+| `τ_{eμ}` (swap e ↔ μ) | 3595.4 | 89.5 | 40.17 |
+| `τ_{eτ}` (swap e ↔ τ) | 2004.8 | 1680.1 | 1.19 |
+| `τ_{μτ}` (swap μ ↔ τ) | 2690.9 | 994.0 | 2.71 |
+
+No transposition gives ratio 1.
+
+**Sign-flip Z_2 actions (180° rotations around coordinate axes):**
+
+| τ | `|v_+|²` (1-dim) | `|v_-|²` (2-dim) | Ratio |
+|---|---|---|---|
+| `diag(+, −, −)` (180° around e) | 1.0 | 3683.9 | 0.0003 |
+| `diag(−, +, −)` (180° around μ) | 206.8 | 3478.2 | 0.0594 |
+| `diag(−, −, +)` (180° around τ) | 3477.2 | 207.8 | 16.74 |
+
+No sign-flip gives ratio 1 either.
+
+### Why no Z_2 involution works
+
+The Koide-relevant decomposition splits ℝ³ into:
+
+- 1-dim trivial rep of `S_3` (the symmetric direction `(1, 1, 1)/√3`)
+- 2-dim standard rep of `S_3` (the orthogonal complement)
+
+This is a decomposition by irreducible representations of `S_3`,
+not by eigenspaces of any single Z_2 element. The `S_3` group has
+order 6 and only acquires this decomposition via the action of the
+whole group, not via any of its individual order-2 subgroups.
+
+In representation theory terms: the trivial rep and standard rep
+have different dimensions but are both `S_3`-invariant subspaces.
+A Z_2 sub-action of `S_3` (any transposition) has eigenspaces of
+dimensions `(2, 1)`, not `(1, 2)` aligned with the trivial/standard
+decomposition.
+
+Specifically: the +1 eigenspace of a transposition `τ_{ij}`
+contains the trivial direction `(1, 1, 1)/√3` *and* the symmetric
+direction within the `{i, j}` subspace. The standard rep is *not*
+contained in either eigenspace.
+
+This is a structural obstruction: there is no individual `Z_2`
+sub-element of `S_3` whose eigenspace decomposition matches the
+trivial-vs-standard split. The split requires the full `S_3`
+group action.
+
+---
+
+## Disposition of candidate 1
+
+Candidate 1 in its standard form (Klein-bottle τ as a Z_2
+involution producing equipartition via eigenspace split) is
+**ruled out**.
+
+### Variants that remain open
+
+The disposition rules out τ acting as a *standard Z_2 involution*
+on three-generation amplitude space. Three variants remain
+unexplored:
+
+1. **τ acting as part of a larger group**: e.g., the full `S_3`
+   action with τ as one element. The Koide decomposition uses the
+   whole `S_3`, not just τ. If the framework's substrate inviolables
+   force the full `S_3` action on three-generation space (not just
+   τ), the decomposition is automatic.
+2. **τ acting on a complex amplitude space**: with eigenvalues
+   `e^{iφ}` rather than ±1. Klein-bottle τ on the substrate's
+   complex amplitude field `ℂ` (from `complex_amplitude_uniqueness.md`)
+   could have phase-rotation structure rather than sign-flip.
+3. **τ acting on a different substrate variable**: not the lepton
+   amplitude vector `v` directly, but on a substrate object that
+   *implies* a constraint on `v`. For instance, τ acting on a
+   four-component vector that includes the dark state D, with the
+   three-generation amplitude vector emerging as a quotient.
+
+These three variants are not pursued in this iteration; they
+remain in the open candidate pool for future iterations or for
+exhaustive rule-out.
+
+---
+
+## What this finding suggests
+
+The Koide form requires the *full `S_3` action* on three-generation
+space, not just a `Z_2` sub-action. The substrate-derivation path
+likely runs through `S_3` symmetry imposition on the substrate
+mode structure, rather than through Klein-bottle τ alone.
+
+This shifts the substrate-derivation question:
+
+> **Does the substrate's inviolable apparatus force the full `S_3`
+> permutation action on the three-generation amplitude space?**
+
+If yes, the trivial-vs-standard decomposition is automatic, and
+the equipartition `|v_sym|² = |v_⊥|²` becomes a constraint on the
+substrate-derived amplitude vector under that decomposition.
+
+If no, the `S_3` action is an additional structure beyond the
+inviolables, and the equipartition has no substrate-internal source.
+
+This is a sharper question than the four candidates in iteration 1,
+because it isolates the structural primitive needed: full `S_3`
+symmetry of the three-generation amplitude space.
+
+---
+
+## Audit
+
+| Component | Status |
+|---|---|
+| Iteration 1's geometric reformulation | Stands |
+| Iteration 2's ruling-out of candidate 4 (SL(2, ℤ) traces) | Stands |
+| Candidate 1 in its standard form (τ as eigenspace split) | **Ruled out** in this iteration |
+| Candidate 1 variants (full S_3, complex phase, larger substrate object) | Open; not pursued here |
+| Remaining iteration-1 candidates 2, 3 | Still open |
+| Substrate-derivation of Koide form | Open; substrate-derivation now requires either full S_3 action or one of the candidate-1 variants or candidates 2/3 |
+
+The structural insight from this iteration: **the substrate-aligned
+primitive needed is the full S_3 action on three-generation
+amplitude space, not just τ.** This is a sharper formulation than
+the four-candidate list in iteration 1.
+
+---
+
+## Falsifiers
+
+- **A Z_2 involution that does produce Koide equipartition** found
+  by a method not tested in this iteration. Would reopen candidate
+  1.
+- **Demonstration that full `S_3` action on three-generation
+  amplitude space is forced by substrate inviolables.** Would close
+  the substrate-derivation gap via the natural representation-
+  theoretic decomposition.
+- **Demonstration that full `S_3` action is *not* substrate-forced.**
+  Would push the closure to candidates 2 or 3 or beyond.
+
+---
+
+## Recommended next iteration
+
+Test the sharpened question: **does the substrate's inviolable
+apparatus force the full `S_3` action on the three-generation
+amplitude space?**
+
+This test would examine:
+- Does the framework's three-generation structure
+  (`generation_mechanism.md` §1) carry an explicit `S_3` action?
+- Are the three observable phase states `{A, B, C}` permutation-
+  symmetric by substrate construction?
+- If not, what symmetry group does the substrate impose?
+
+If the framework's existing apparatus already supplies `S_3`
+symmetry to three-generation space, the Koide equipartition would
+need only the *amplitude constraint* `|v_sym|² = |v_⊥|²` itself
+to be substrate-forced — a separate but related question.
+
+If the substrate does not supply `S_3` automatically, the
+substrate-derivation of Koide requires articulating where `S_3`
+emerges from inviolables.
+
+---
+
+## Cross-links
+
+- `koide_form_substrate_iteration_1.md` — geometric reformulation
+  + four candidates.
+- `koide_form_substrate_iteration_2.md` — candidate 4 ruled out.
+- `generation_mechanism.md` (D34) §1 — three observable phase states
+  A, B, C, D from `{locked, unlocked} × {locked, unlocked}`.
+- `klein_bottle.md` (D19) — `τ` as `k → −k mod 6` on Z_6 mode
+  lattice.
+- `discrete_extension_principle.md` (PR #191) — Discrete Extension
+  Principle deployment methodology.
+
+---
+
+## One-line summary
+
+No `Z_2` involution on three-generation amplitude space ℝ³ produces
+the Koide equipartition `|v_sym|² = |v_⊥|²` as an eigenspace split
+(verified by numerical enumeration of `S_3` transpositions and
+sign-flip diagonal actions on PDG values: all give ratio `|v_+|²
+/ |v_-|²` ≠ 1 by significant margins; e.g., the closest is `1.19`
+for `τ_{eτ}`, with the Koide target being exactly `1.000`); the
+structural reason is that the `S_3` trivial-vs-standard
+decomposition `(1 ⊕ 2)` is a representation-theoretic split by
+`S_3` irreducibles, not an eigenspace decomposition of any single
+`Z_2` sub-element of `S_3`; candidate 1 in its standard form
+(Klein-bottle τ as eigenspace split) is therefore ruled out;
+three variants remain unexplored (τ as part of larger group, τ
+on complex amplitude space with phase eigenvalues, τ on a larger
+substrate object that implies a constraint on `v`); the iteration
+sharpens the substrate-derivation question to "does the substrate
+force the full `S_3` action on three-generation amplitude space?"
+— a more tractable target than the four-candidate enumeration in
+iteration 1; remaining open candidates from iteration 1: 2 (phase-
+state D's invisibility constraint) and 3 (sector exponent +
+Cauchy-Schwarz analysis).
