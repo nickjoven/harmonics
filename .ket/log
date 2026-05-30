@@ -295,3 +295,8 @@
 2026-05-29T17:21:56Z doc-seal dicke_apparatus_theorem.md (D1: T1a theoremization)
 2026-05-29T21:25:00Z | put | sync_cost/derivations/snmc_class_and_entanglement.md -> d3cea61496513deb5784f816f6ff950b7329aaa1ebf49498edc970d354c154a7
 2026-05-29T21:31:52Z doc-seal snmc_class_and_entanglement.md (D2: SNMC + entanglement vocabulary)
+2026-05-30T02:47:40Z | put | sync_cost/derivations/discrete_extension_principle.md -> af0c5612eb59d57c4b3fe1bc46773e54911d8ea63f0b32dc54de732199f803ad
+2026-05-30T02:48:04Z | put | sync_cost/derivations/canonical_glossary.md -> 47b0d70c3ac5b6831d674af0ae92ede6db5805e980a1645668fa8536b8d15fd3
+2026-05-30T02:48:04Z | dag:create | 25433684911b83c78900fa19088f1f233dfa8083cfdd478f389c53294089c5cc
+2026-05-30T03:08:15Z | put | sync_cost/derivations/canonical_glossary.md -> 47b0d70c3ac5b6831d674af0ae92ede6db5805e980a1645668fa8536b8d15fd3
+2026-05-30T03:08:15Z doc-seal discrete_extension_principle.md + glossary update (B6 meta-principle)
