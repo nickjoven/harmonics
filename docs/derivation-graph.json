@@ -1,5 +1,5 @@
 {
-  "generated": "0cdc945a41dc227b070d4382e33594192b840a03",
+  "generated": "796e9f0be035b0f0b30cb47780f85f26de2d8e11",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -701,6 +701,7 @@
         "numerology_inventory",
         "path_closures_iter1",
         "phenomenology_cross_reference",
+        "physics_relevance_measurement_catalog",
         "sigma_squared_disambiguation",
         "vocabulary_is_the_work_pattern"
       ],
@@ -1238,6 +1239,7 @@
         "k_of_t_friedmann",
         "lesson_cosmological_constant",
         "lesson_rotation_curves_a0",
+        "physics_relevance_measurement_catalog",
         "thread_chronology"
       ],
       "git": [
@@ -1291,6 +1293,7 @@
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
         "framework_status",
+        "physics_relevance_measurement_catalog",
         "snmc_class_and_entanglement"
       ],
       "git": [
@@ -1355,6 +1358,7 @@
         "free_parameter_scorecard",
         "gr_qm_unification_synthesis",
         "k_of_t_residual_disposition",
+        "physics_relevance_measurement_catalog",
         "predictions_horizon_2026"
       ],
       "git": [
@@ -2269,6 +2273,7 @@
       "depended_on_by": [
         "discrete_extension_principle",
         "framework_status",
+        "physics_relevance_measurement_catalog",
         "snmc_class_and_entanglement"
       ],
       "git": [
@@ -2300,7 +2305,8 @@
       ],
       "depended_on_by": [
         "canonical_glossary",
-        "framework_status"
+        "framework_status",
+        "physics_relevance_measurement_catalog"
       ],
       "git": [
         {
@@ -2477,6 +2483,7 @@
         "path_closures_iter3",
         "path_closures_iter4",
         "phenomenology_cross_reference",
+        "physics_relevance_measurement_catalog",
         "sector_decoupling_phase_a",
         "session_audit",
         "statistical_conventions",
@@ -2984,6 +2991,7 @@
         "gr_qm_unification_synthesis",
         "lesson_epr_gr_qm_unification",
         "phenomenology_cross_reference",
+        "physics_relevance_measurement_catalog",
         "preferred_basis_dissolution",
         "snmc_class_and_entanglement",
         "w_state_from_substrate"
@@ -3382,7 +3390,8 @@
         "INDEX",
         "free_parameter_scorecard",
         "generation_mechanism",
-        "numerology_inventory"
+        "numerology_inventory",
+        "physics_relevance_measurement_catalog"
       ],
       "git": [
         {
@@ -3669,6 +3678,7 @@
         "path_closures_iter3",
         "path_closures_iter4",
         "phenomenology_cross_reference",
+        "physics_relevance_measurement_catalog",
         "predictions_horizon_2026",
         "primitive_completeness_audit",
         "proposed_items_disposition",
@@ -4326,7 +4336,8 @@
         "free_parameter_scorecard",
         "mixing_angle_audit",
         "negative_results_ledger",
-        "numerology_inventory"
+        "numerology_inventory",
+        "physics_relevance_measurement_catalog"
       ],
       "git": [
         {
@@ -4369,6 +4380,7 @@
         "canonical_glossary",
         "dicke_apparatus_theorem",
         "framework_status",
+        "physics_relevance_measurement_catalog",
         "snmc_class_and_entanglement",
         "w_state_from_substrate"
       ],
@@ -5367,6 +5379,7 @@
         "framework_status",
         "free_parameter_scorecard",
         "gr_qm_unification_synthesis",
+        "physics_relevance_measurement_catalog",
         "predictions_horizon_2026",
         "salpeter_gate_disposition"
       ],
@@ -6948,6 +6961,7 @@
         "path_a_walkthrough",
         "path_closures_iter2",
         "phenomenology_cross_reference",
+        "physics_relevance_measurement_catalog",
         "primitive_completeness_audit",
         "rationality_descent",
         "remaining_gap_shapes",
@@ -7773,6 +7787,40 @@
       ]
     },
     {
+      "id": "physics_relevance_measurement_catalog",
+      "path": "sync_cost/derivations/physics_relevance_measurement_catalog.md",
+      "title": "Physics-relevance \u00d7 primitive-measurement catalog (B7)",
+      "summary": "**B7 \u2014 survey doc organizing the framework's predictions against the\nspecific axis of *primitive measurement endpoints*.** Not a derivation;\na catalog. Class-3 (foundational consolidation, methodological\narticulation).",
+      "depends_on": [
+        "a_s_geometric_proof",
+        "basepoint_principle",
+        "bell_bounds_from_substrate",
+        "bicone_golden_z2_identification",
+        "dicke_apparatus_theorem",
+        "discrete_extension_principle",
+        "down_type_double_cover_closed",
+        "epr_bell_assembly_theorem",
+        "fermion_mass_running",
+        "framework_status",
+        "generation_mechanism",
+        "ghz_from_substrate",
+        "k_of_t_residual_disposition",
+        "numerology_inventory",
+        "predictions_horizon_2026",
+        "snmc_class_and_entanglement",
+        "spectral_tilt",
+        "w_state_from_substrate"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "796e9f0",
+          "date": "2026-05-30",
+          "subject": "B7: Physics-relevance \u00d7 primitive-measurement catalog (#194)"
+        }
+      ]
+    },
+    {
       "id": "planck_scale",
       "path": "sync_cost/derivations/planck_scale.md",
       "title": "Planck Scale from Self-Sustaining Threshold",
@@ -7858,6 +7906,7 @@
         "free_parameter_scorecard",
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
+        "physics_relevance_measurement_catalog",
         "w_state_from_substrate"
       ],
       "git": [
@@ -8965,7 +9014,8 @@
       "depended_on_by": [
         "canonical_glossary",
         "discrete_extension_principle",
-        "framework_status"
+        "framework_status",
+        "physics_relevance_measurement_catalog"
       ],
       "git": [
         {
@@ -9058,7 +9108,8 @@
       ],
       "depended_on_by": [
         "INDEX",
-        "graviton_reframing"
+        "graviton_reframing",
+        "physics_relevance_measurement_catalog"
       ],
       "git": [
         {
@@ -10127,6 +10178,7 @@
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
         "framework_status",
+        "physics_relevance_measurement_catalog",
         "snmc_class_and_entanglement"
       ],
       "git": [
