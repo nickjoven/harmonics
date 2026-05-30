@@ -1,5 +1,5 @@
 {
-  "generated": "5fdd8169efefa7c9c2e4472ec347e7515c1b6103",
+  "generated": "0cdc945a41dc227b070d4382e33594192b840a03",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1290,6 +1290,7 @@
       "depended_on_by": [
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
+        "framework_status",
         "snmc_class_and_entanglement"
       ],
       "git": [
@@ -2267,6 +2268,7 @@
       ],
       "depended_on_by": [
         "discrete_extension_principle",
+        "framework_status",
         "snmc_class_and_entanglement"
       ],
       "git": [
@@ -2297,7 +2299,8 @@
         "w_state_from_substrate"
       ],
       "depended_on_by": [
-        "canonical_glossary"
+        "canonical_glossary",
+        "framework_status"
       ],
       "git": [
         {
@@ -3546,12 +3549,15 @@
         "audit_findings_3_4_disposition",
         "baryon_fraction",
         "basepoint_principle",
+        "bell_bounds_from_substrate",
         "bicone_golden_z2_identification",
         "born_rule",
         "continuity_in_K_nulls",
         "continuum_limits",
         "cross_ratio_irrep_reframe",
         "denomination_boundary",
+        "dicke_apparatus_theorem",
+        "discrete_extension_principle",
         "discrete_reduction_computed",
         "duty_cycle_dictionary",
         "einstein_from_kuramoto",
@@ -3588,6 +3594,7 @@
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
         "sine_gordon_substrate",
+        "snmc_class_and_entanglement",
         "sqrt_r_n_correction",
         "substrate_determinism",
         "thread_chronology",
@@ -3682,6 +3689,11 @@
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "0cdc945",
+          "date": "2026-05-29",
+          "subject": "framework_status.md audit-fix: add Survives rows for #188-#191 (#193)"
+        },
         {
           "hash": "a8b3817",
           "date": "2026-05-29",
@@ -8952,7 +8964,8 @@
       ],
       "depended_on_by": [
         "canonical_glossary",
-        "discrete_extension_principle"
+        "discrete_extension_principle",
+        "framework_status"
       ],
       "git": [
         {
