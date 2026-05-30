@@ -1,5 +1,5 @@
 {
-  "generated": "3c7bf651370f05b50ae0c448ee0521f81893e672",
+  "generated": "5fdd8169efefa7c9c2e4472ec347e7515c1b6103",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1233,6 +1233,7 @@
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
+        "discrete_extension_principle",
         "framework_status",
         "k_of_t_friedmann",
         "lesson_cosmological_constant",
@@ -1288,6 +1289,7 @@
       ],
       "depended_on_by": [
         "dicke_apparatus_theorem",
+        "discrete_extension_principle",
         "snmc_class_and_entanglement"
       ],
       "git": [
@@ -1543,6 +1545,7 @@
         "continuum_limits",
         "cross_ratio_irrep_reframe",
         "denomination_boundary",
+        "discrete_extension_principle",
         "down_type_double_cover_closed",
         "duty_cycle_dictionary",
         "epr_bell_assembly_theorem",
@@ -1572,6 +1575,7 @@
         "psl2z_subgroup_phase_a_results",
         "psl2z_subgroup_phase_b",
         "q_mod2_conservation_theorem",
+        "snmc_class_and_entanglement",
         "statistical_conventions",
         "substrate_determinism",
         "three_dimensions",
@@ -1585,6 +1589,7 @@
         "complex_amplitude_uniqueness",
         "derivation_atlas",
         "dicke_apparatus_theorem",
+        "discrete_extension_principle",
         "down_type_double_cover_closed",
         "phenomenology_cross_reference",
         "phenomenon_glossary",
@@ -1593,6 +1598,11 @@
         "structural_lemmas"
       ],
       "git": [
+        {
+          "hash": "5fdd816",
+          "date": "2026-05-29",
+          "subject": "Discrete Extension Principle (B6): first-class meta-principle (#191)"
+        },
         {
           "hash": "a8b3817",
           "date": "2026-05-29",
@@ -2256,6 +2266,7 @@
         "w_state_from_substrate"
       ],
       "depended_on_by": [
+        "discrete_extension_principle",
         "snmc_class_and_entanglement"
       ],
       "git": [
@@ -2263,6 +2274,36 @@
           "hash": "21ea760",
           "date": "2026-05-29",
           "subject": "Dicke apparatus theorem (D1): T1a theoremization (#189)"
+        }
+      ]
+    },
+    {
+      "id": "discrete_extension_principle",
+      "path": "sync_cost/derivations/discrete_extension_principle.md",
+      "title": "The Discrete Extension Principle",
+      "summary": "**Articulation, not new content.** The pattern has been\nmultiply instantiated (PR #152, #179, #187, #188, #189, #190);\nthis doc names it and gives it a discriminator. No new substrate\nprimitive; no new inviolable; no new physical prediction.",
+      "depends_on": [
+        "basepoint_principle",
+        "bell_bounds_from_substrate",
+        "canonical_glossary",
+        "dicke_apparatus_theorem",
+        "epr_bell_assembly_theorem",
+        "framework_status",
+        "k_of_t_residual_disposition",
+        "numerology_inventory",
+        "salpeter_gate_disposition",
+        "snmc_class_and_entanglement",
+        "substrate_determinism",
+        "w_state_from_substrate"
+      ],
+      "depended_on_by": [
+        "canonical_glossary"
+      ],
+      "git": [
+        {
+          "hash": "5fdd816",
+          "date": "2026-05-29",
+          "subject": "Discrete Extension Principle (B6): first-class meta-principle (#191)"
         }
       ]
     },
@@ -2933,6 +2974,7 @@
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
         "dicke_apparatus_theorem",
+        "discrete_extension_principle",
         "equivalence_dissolution",
         "framework_status",
         "ghz_from_substrate",
@@ -3576,6 +3618,7 @@
         "continuity_in_K_nulls",
         "depth_connection_nulls",
         "dicke_apparatus_theorem",
+        "discrete_extension_principle",
         "down_type_double_cover_closed",
         "dynamical_tool_audit",
         "epr_bell_assembly_theorem",
@@ -5308,6 +5351,7 @@
       ],
       "depended_on_by": [
         "bicone_golden_z2_identification",
+        "discrete_extension_principle",
         "framework_status",
         "free_parameter_scorecard",
         "gr_qm_unification_synthesis",
@@ -6869,6 +6913,7 @@
         "audit_punch_list_2026-04",
         "canonical_glossary",
         "depth_connection_nulls",
+        "discrete_extension_principle",
         "duty_cycle_dictionary",
         "dynamical_tool_audit",
         "epsilon_physical_reading",
@@ -8539,6 +8584,7 @@
         "q_mod2_mediant_projection"
       ],
       "depended_on_by": [
+        "discrete_extension_principle",
         "meaning_of_two_wip",
         "preferred_basis_dissolution"
       ],
@@ -8904,7 +8950,10 @@
         "substrate_determinism",
         "w_state_from_substrate"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "canonical_glossary",
+        "discrete_extension_principle"
+      ],
       "git": [
         {
           "hash": "3c7bf65",
@@ -9341,6 +9390,7 @@
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
         "dicke_apparatus_theorem",
+        "discrete_extension_principle",
         "e_cross_calc",
         "e_cross_discrete_resolution",
         "empty_fork_cap",
@@ -10062,6 +10112,7 @@
         "bell_bounds_from_substrate",
         "canonical_glossary",
         "dicke_apparatus_theorem",
+        "discrete_extension_principle",
         "framework_status",
         "snmc_class_and_entanglement"
       ],
