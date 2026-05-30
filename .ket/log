@@ -319,3 +319,5 @@
 2026-05-30T17:25:58Z doc-seal koide_form_substrate_iteration_1.md (Koide gap geometric reformulation)
 2026-05-30T18:06:20Z | put | sync_cost/derivations/koide_form_substrate_iteration_2.md -> 845620c21efcab7d8561433187d21e6db9808460637c2397adfbd4096b0ae337
 2026-05-30T18:06:20Z doc-seal koide_form_substrate_iteration_2.md (candidate 4 ruled out)
+2026-05-30T18:25:14Z | put | sync_cost/derivations/koide_form_substrate_iteration_3.md -> b411d75597cac96a0c394b9af60d8c5f689162756ed60169dab7c7061be8ea7b
+2026-05-30T18:25:14Z doc-seal koide_form_substrate_iteration_3.md (candidate 1 ruled out; question sharpened to full S_3 action)
