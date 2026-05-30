@@ -1,0 +1,280 @@
+# Koide form substrate derivation — iteration 2
+
+## Status
+
+**Iteration 2.** Tests candidate 4 from
+`koide_form_substrate_iteration_1.md`: the claim in
+`fermion_mass_running.md` §4c that "the Koide constraint is the
+generation-mixing constraint from the SL(2,Z) trace structure
+(D34 §6)."
+
+**Result: candidate 4 is ruled out.** Section 6 of
+`generation_mechanism.md` (D34) derives **same-`q` mixing angles**
+(e.g., `30°` for the `q = 3` pair, in the Cabibbo region) via the
+elliptic / parabolic / hyperbolic conjugacy-class classification of
+`M_1⁻¹ M_2 ∈ SL(2, ℤ)`. This is a different geometric object from
+the Koide angle established in iteration 1 (the angle between the
+3-component lepton amplitude vector `v = (√m_e, √m_μ, √m_τ)` and
+the symmetric direction `(1, 1, 1)/√3`).
+
+The §4c reference to §6 as the source of Koide is therefore
+**unsupported by §6's actual content**. The Koide form's
+substrate-derivation remains open via candidates 1, 2, or 3.
+
+No new substrate primitive. The contribution is the disposition of
+one candidate and the identification of an unfulfilled internal
+reference in the corpus.
+
+---
+
+## The claim under test
+
+From `fermion_mass_running.md` §4c, repeated verbatim:
+
+> The Koide constraint is not an external input — it is the
+> generation-mixing constraint from the SL(2,Z) trace structure
+> (D34 §6). The population ratio 2/3 of the Klein bottle determines
+> the mixing between the three generations, and this mixing fixes
+> the middle generation's mass relative to the extremes.
+
+The claim has two parts:
+
+1. The Koide *algebraic form* `K = Σm / (Σ√m)² = Q` follows from
+   the SL(2, ℤ) trace structure derived in `generation_mechanism.md`
+   §6.
+2. The Koide *value* `Q = 2/3` comes from the Klein-bottle
+   population ratio.
+
+Iteration 1 confirmed part 2: `Q = 2/3` is substrate-derived via
+`klein_bottle.md` D19. This iteration tests part 1.
+
+---
+
+## Reading §6 of `generation_mechanism.md` directly
+
+The full text of §6:
+
+> Each path from the root to `p/q` defines an SL(2,Z) matrix (the
+> product of L and R generators along the path). For two modes at
+> the same q, the relationship between their matrices classifies
+> the mixing:
+>
+>     M₁⁻¹M₂ ∈ SL(2,Z)
+>
+> The **trace** of `M₁⁻¹M₂` determines the conjugacy class:
+>
+> | |tr| | Type | Physical meaning |
+> |------|------|-----------------|
+> | < 2 | Elliptic (rotation) | Flavor mixing (angle) |
+> | = 2 | Parabolic (shear) | Mass splitting |
+> | > 2 | Hyperbolic (boost) | Large hierarchy |
+>
+> For the q = 3 pair (1/3 and 2/3):
+>
+>     M(1/3) via path LL:  [[1,0],[2,1]]
+>     M(2/3) via path LR:  [[1,1],[1,1]] (adjusted)
+>
+>     tr(M₁⁻¹M₂) = 1    →    elliptic
+>     cos(2α) = 1/2      →    α = 30°
+>
+> This 30° mixing angle is in the Cabibbo angle region (observed
+> θ_C ≈ 13°). The trace classification provides a natural origin
+> for the CKM mixing pattern: modes at the same q but different SB
+> paths are related by elliptic rotations in SL(2,Z), and the
+> trace determines the rotation angle.
+
+### What §6 produces
+
+- A classification of pair-wise SL(2, ℤ) elements by their trace
+  (elliptic / parabolic / hyperbolic).
+- A specific 2D rotation angle `α = 30°` for the `q = 3` pair via
+  `cos(2α) = tr(M_1⁻¹ M_2) / 2`.
+- An interpretation: the rotation angle gives the CKM-like
+  *mixing* between two modes at the same `q`.
+
+### What §6 does not produce
+
+- No 3-component vector identity. The trace classification operates
+  on pairs of SB-tree paths, not on the three-generation amplitude
+  vector.
+- No relation between `m_e`, `m_μ`, `m_τ` jointly. The §6 mixing is
+  pair-wise within a same-`q` family; the three lepton masses are
+  at *different* SB depths (different paths in the tree), not at
+  the same `q`.
+- No connection between the conjugacy-class angle (e.g., `30°` for
+  `q = 3`) and the Koide angle `45°` between `v` and the symmetric
+  direction. These are geometrically different objects.
+
+---
+
+## Why §6 cannot derive Koide
+
+### The two angles are different geometric objects
+
+**§6 angle (mixing angle, 30° for q = 3):**
+- Defined on a pair of SB-tree paths at the same denominator `q`.
+- Acts on a 2-dim subspace (the pair).
+- Trace of `M_1⁻¹ M_2` gives `cos(2α)` where `α` is the rotation
+  angle in this 2-dim subspace.
+
+**Koide angle (iteration 1, 45° equipartition):**
+- Defined on the 3-component amplitude vector `v = (√m_e, √m_μ,
+  √m_τ)` in three-generation space.
+- The angle is between `v` and the symmetric direction `u =
+  (1, 1, 1) / √3`.
+- The angle is `45°` iff `|v_sym|² = |v_⊥|²` under the `S_3`
+  decomposition of three-generation space.
+
+The two angles operate on different spaces (2-dim mixing subspace
+vs. 3-dim generation space) and refer to different
+substrate-relevant invariants (SL(2, ℤ) conjugacy class vs.
+`S_3`-decomposition equipartition).
+
+### The three lepton generations are at different `q`, not the same
+
+The three charged leptons in `generation_mechanism.md` §5 are at
+SB-tree positions of different path lengths:
+
+- Generation 1 (electron): path length 1, value `1/2`
+- Generation 2 (muon): path length 2, value `1/3` or `2/3`
+- Generation 3 (tau): path length 3, value among `{1/4, 2/5, 3/5,
+  3/4}`
+
+These have *different denominators* (`q = 2, 3, 4` or `5`). The
+SL(2, ℤ) trace classification in §6 operates on pairs at the
+*same* `q`. The three lepton masses cannot be related pairwise
+through §6's machinery because they live at different `q` values.
+
+### The substantive gap
+
+For §6 to derive Koide, it would need to produce a *three-way*
+identity among the masses at different SB depths. The
+trace-of-`M_1⁻¹ M_2` machinery is intrinsically pair-wise and
+same-`q`. No three-way trace identity at different `q` is
+developed.
+
+---
+
+## Disposition of candidate 4
+
+Candidate 4 is **ruled out as a substrate-derivation path for the
+Koide algebraic form.**
+
+The §4c reference in `fermion_mass_running.md` is **unsupported by
+the cited §6 content.** This is an internal-corpus reference error;
+the actual mechanism for Koide is not in §6.
+
+Two follow-on dispositions:
+
+1. **`fermion_mass_running.md` §4c should be revised** to remove
+   the unsupported claim or to point to whichever derivation
+   (if any) actually closes the Koide form. Pending the
+   identification of the actual derivation source (candidates 1
+   or 2 in iteration 1, or a fifth candidate), the most accurate
+   wording is "the Koide form is currently imported; Q = 2/3 is
+   substrate-derived via the Klein-bottle population ratio."
+
+2. **Audit follow-up**: a sweep of other `fermion_mass_running.md`
+   claims against their cited derivation sources may reveal
+   similar unsupported references. This iteration does not perform
+   the sweep but flags it as a follow-up audit item.
+
+---
+
+## Remaining candidates from iteration 1
+
+Three candidates remain for substrate-derivation of the equipartition
+`|v_sym|² = |v_⊥|²`:
+
+- **Candidate 1: Klein-bottle τ action on three-generation space.**
+  The most concrete next test. Requires characterizing `τ`'s
+  restriction to the lepton 3-dim subspace and checking whether
+  the τ-eigenspace decomposition forces equipartition.
+- **Candidate 2: Phase-state D's invisibility constraint.** Requires
+  characterizing how D's no-coupling structure (`generation_mechanism.md`
+  §1) reflects geometrically on the (A, B, C) amplitude subspace.
+- **Candidate 3: Sector exponent + Cauchy-Schwarz analysis.** Already
+  consistent with framework analysis; identifies Koide as
+  *additional* to the bare-tree formula. Not itself a derivation
+  source but a constraint on the form any derivation must take.
+
+Recommended next iteration: **candidate 1**. The Klein-bottle τ
+action on the lepton subspace is the most concrete substrate
+mechanism to test; either it forces equipartition (closure) or it
+demonstrably does not (ruling out a second candidate and narrowing
+to candidates 2 and 3).
+
+---
+
+## Audit
+
+| Component | Status |
+|---|---|
+| Iteration 1's geometric reformulation | Stands; verified numerically against PDG |
+| Candidate 4 (SL(2, ℤ) trace structure) | **Ruled out** in this iteration |
+| `fermion_mass_running.md` §4c claim | **Unsupported by cited §6** — flagged for revision |
+| Remaining candidates 1, 2, 3 | Open; ranked for next iteration |
+| Substrate-derivation of Koide form | Open; gap unchanged in size, narrower in target list |
+| Floor status of `m_μ/m_e ≈ 204.78` closure | Unchanged; still Floor pending candidate 1 outcome |
+
+No new substrate primitive. No new physical content. The iteration
+narrows the candidate list and surfaces a corpus reference error.
+
+---
+
+## Falsifiers
+
+- **A direct derivation chain from §6's SL(2, ℤ) trace structure to
+  the Koide algebraic form that this iteration missed.** Would
+  reopen candidate 4. Test: produce the chain explicitly using only
+  §6's `tr(M_1⁻¹ M_2)` machinery applied at the three-mode level,
+  with no additional algebraic identity imported.
+- **An alternative SL(2, ℤ) machinery** elsewhere in the corpus
+  (not §6) that derives Koide. Would not reopen candidate 4 but
+  would identify a new derivation source. Audit of
+  `generation_mechanism.md` §1–§5 and §7–§9 has not been
+  performed at this depth.
+- **The §4c claim is corroborated by a separate doc.** Would mean
+  candidate 4 remains live via a different derivation chain.
+
+---
+
+## Cross-links
+
+- `koide_form_substrate_iteration_1.md` — geometric reformulation;
+  defines candidate 4 as the §6 claim under test.
+- `generation_mechanism.md` (D34) §5, §6 — SB-tree path encoding;
+  §6 trace classification for same-`q` mixing.
+- `fermion_mass_running.md` §4c — the unsupported claim, flagged
+  for revision.
+- `klein_bottle.md` (D19) — Q = 2/3 substrate origin (iteration 1
+  cross-link, retained as still-valid).
+- `mass_sector_closure.md` — current Floor disposition.
+- `discrete_extension_principle.md` (PR #191) — methodology for
+  candidate-enumeration with explicit ruling-out.
+
+---
+
+## One-line summary
+
+The claim in `fermion_mass_running.md` §4c that the Koide constraint
+"is the generation-mixing constraint from the SL(2,Z) trace
+structure (D34 §6)" is **not supported by §6's actual content**:
+§6 derives same-`q` mixing angles (`30°` for the `q = 3` pair,
+Cabibbo-like) via the trace-of-`M_1⁻¹ M_2` elliptic / parabolic /
+hyperbolic conjugacy classification on pairs of SB-tree paths, but
+the three lepton masses live at *different* `q` values (so are not
+pair-wise related through this machinery), and the §6 mixing angle
+is a 2D rotation in a pair subspace, geometrically distinct from
+the iteration-1 Koide angle of `45°` between the 3-component
+amplitude vector `v = (√m_e, √m_μ, √m_τ)` and the symmetric
+direction `(1, 1, 1) / √3`; candidate 4 from iteration 1 is
+therefore ruled out as a substrate-derivation path for the Koide
+algebraic form, the §4c reference is flagged as an unsupported
+internal-corpus claim pending revision, and three candidates remain
+(Klein-bottle τ action on three-generation space, phase-state D's
+invisibility constraint, and sector exponent + Cauchy-Schwarz
+analysis); the recommended next iteration is candidate 1 (Klein-bottle
+τ on the lepton subspace) as the most concrete test of whether
+equipartition `|v_sym|² = |v_⊥|²` is forced by substrate
+inviolables.
