@@ -1,5 +1,5 @@
 {
-  "generated": "3f7dc6aebbf865b41e6358165ced5b4bc634bad3",
+  "generated": "c344eec4ebeebf9d7d5d71a49b9d4f47c1efdd35",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1709,6 +1709,7 @@
         "bell_bounds_from_substrate",
         "canonical_glossary",
         "dicke_apparatus_theorem",
+        "koide_form_substrate_iteration_3",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
         "phenomenology_cross_reference",
@@ -2314,6 +2315,9 @@
       "depended_on_by": [
         "canonical_glossary",
         "framework_status",
+        "koide_form_substrate_iteration_1",
+        "koide_form_substrate_iteration_2",
+        "koide_form_substrate_iteration_3",
         "physics_relevance_measurement_catalog",
         "qm_reframing_programmatic"
       ],
@@ -3400,6 +3404,8 @@
         "INDEX",
         "free_parameter_scorecard",
         "generation_mechanism",
+        "koide_form_substrate_iteration_1",
+        "koide_form_substrate_iteration_2",
         "numerology_inventory",
         "physics_relevance_measurement_catalog"
       ],
@@ -3852,6 +3858,7 @@
         "equivalence_dissolution",
         "fermion_mass_running",
         "generation_mechanism",
+        "koide_form_substrate_iteration_1",
         "numerology_inventory",
         "predictions_horizon_2026"
       ],
@@ -4345,6 +4352,9 @@
         "fermion_mass_running",
         "fourth_generation_revisited",
         "free_parameter_scorecard",
+        "koide_form_substrate_iteration_1",
+        "koide_form_substrate_iteration_2",
+        "koide_form_substrate_iteration_3",
         "mixing_angle_audit",
         "negative_results_ledger",
         "numerology_inventory",
@@ -5514,6 +5524,9 @@
         "klein_bottle_derivation",
         "klein_connection",
         "klein_nodal_parity",
+        "koide_form_substrate_iteration_1",
+        "koide_form_substrate_iteration_2",
+        "koide_form_substrate_iteration_3",
         "numerology_inventory",
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
@@ -5795,6 +5808,79 @@
           "hash": "2a285e4",
           "date": "2026-04-22",
           "subject": "Flatten simulation audit into existing clarifying documents"
+        }
+      ]
+    },
+    {
+      "id": "koide_form_substrate_iteration_1",
+      "path": "sync_cost/derivations/koide_form_substrate_iteration_1.md",
+      "title": "Koide form substrate derivation \u2014 iteration 1",
+      "summary": "**Iterative formalization, step 1.** Sharpens the Koide-form gap\nidentified in the Thread 2 roadblock and the existing\n`fermion_mass_running.md` Class-1 disposition: the value `Q = 2/3`\nin the Koide constraint is substrate-derived (Klein-bottle population\nratio, `klein_bottle.md` D19); the specific algebraic form\n`K = \u03a3m / (\u03a3\u221am)\u00b2 = Q` is currently imported despite a claim in\n`fermion_mass_running.md` \u00a74c that it follows from \"SL(2,Z) trace\nstructure (D34 \u00a76)\" \u2014 a claim whose actual derivation ha",
+      "depends_on": [
+        "discrete_extension_principle",
+        "fermion_mass_running",
+        "free_parameter_scorecard",
+        "generation_mechanism",
+        "klein_bottle",
+        "mass_sector_closure",
+        "numerology_inventory",
+        "physics_relevance_measurement_catalog"
+      ],
+      "depended_on_by": [
+        "koide_form_substrate_iteration_2",
+        "koide_form_substrate_iteration_3"
+      ],
+      "git": [
+        {
+          "hash": "c344eec",
+          "date": "2026-05-30",
+          "subject": "Koide form substrate derivation \u2014 iterations 1-3 (#196)"
+        }
+      ]
+    },
+    {
+      "id": "koide_form_substrate_iteration_2",
+      "path": "sync_cost/derivations/koide_form_substrate_iteration_2.md",
+      "title": "Koide form substrate derivation \u2014 iteration 2",
+      "summary": "**Iteration 2.** Tests candidate 4 from\n`koide_form_substrate_iteration_1.md`: the claim in\n`fermion_mass_running.md` \u00a74c that \"the Koide constraint is the\ngeneration-mixing constraint from the SL(2,Z) trace structure\n(D34 \u00a76).\"",
+      "depends_on": [
+        "discrete_extension_principle",
+        "fermion_mass_running",
+        "generation_mechanism",
+        "klein_bottle",
+        "koide_form_substrate_iteration_1",
+        "mass_sector_closure"
+      ],
+      "depended_on_by": [
+        "koide_form_substrate_iteration_3"
+      ],
+      "git": [
+        {
+          "hash": "c344eec",
+          "date": "2026-05-30",
+          "subject": "Koide form substrate derivation \u2014 iterations 1-3 (#196)"
+        }
+      ]
+    },
+    {
+      "id": "koide_form_substrate_iteration_3",
+      "path": "sync_cost/derivations/koide_form_substrate_iteration_3.md",
+      "title": "Koide form substrate derivation \u2014 iteration 3",
+      "summary": "**Iteration 3.** Tests candidate 1 from iteration 1: the\nKlein-bottle \u03c4 action on three-generation space as a source of the\nequipartition `|v_sym|\u00b2 = |v_\u22a5|\u00b2`.",
+      "depends_on": [
+        "complex_amplitude_uniqueness",
+        "discrete_extension_principle",
+        "generation_mechanism",
+        "klein_bottle",
+        "koide_form_substrate_iteration_1",
+        "koide_form_substrate_iteration_2"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "c344eec",
+          "date": "2026-05-30",
+          "subject": "Koide form substrate derivation \u2014 iterations 1-3 (#196)"
         }
       ]
     },
@@ -6109,6 +6195,8 @@
         "fourth_generation_revisited",
         "k_axis_uniqueness",
         "k_scaling_scan",
+        "koide_form_substrate_iteration_1",
+        "koide_form_substrate_iteration_2",
         "mixing_angle_audit",
         "neutrino_mass_audit",
         "path_a_walkthrough",
@@ -6966,6 +7054,7 @@
         "k_of_t_friedmann",
         "k_scaling_scan",
         "klein_nodal_parity",
+        "koide_form_substrate_iteration_1",
         "lesson_8_35_vs_13_19",
         "lesson_proslambanomenos",
         "negative_results_ledger",
@@ -7828,6 +7917,7 @@
         "w_state_from_substrate"
       ],
       "depended_on_by": [
+        "koide_form_substrate_iteration_1",
         "qm_reframing_programmatic"
       ],
       "git": [
