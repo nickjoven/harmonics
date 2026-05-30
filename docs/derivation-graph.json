@@ -1,5 +1,5 @@
 {
-  "generated": "796e9f0be035b0f0b30cb47780f85f26de2d8e11",
+  "generated": "3f7dc6aebbf865b41e6358165ced5b4bc634bad3",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -614,6 +614,7 @@
         "preferred_basis_dissolution",
         "primitive_completeness_audit",
         "proposed_residual_closure",
+        "qm_reframing_programmatic",
         "s_v_nlo",
         "structural_lemmas",
         "vocabulary_is_the_work_pattern"
@@ -913,6 +914,7 @@
         "lesson_cosmological_constant",
         "lesson_rotation_curves_a0",
         "negative_results_ledger",
+        "qm_reframing_programmatic",
         "thread_chronology"
       ],
       "git": [
@@ -1240,6 +1242,7 @@
         "lesson_cosmological_constant",
         "lesson_rotation_curves_a0",
         "physics_relevance_measurement_catalog",
+        "qm_reframing_programmatic",
         "thread_chronology"
       ],
       "git": [
@@ -1294,6 +1297,7 @@
         "discrete_extension_principle",
         "framework_status",
         "physics_relevance_measurement_catalog",
+        "qm_reframing_programmatic",
         "snmc_class_and_entanglement"
       ],
       "git": [
@@ -1406,6 +1410,7 @@
         "preferred_basis_dissolution",
         "primitive_completeness_audit",
         "proposed_residual_closure",
+        "qm_reframing_programmatic",
         "seismic_eigenstate_dictionary",
         "sine_gordon_substrate",
         "snmc_class_and_entanglement",
@@ -1598,6 +1603,7 @@
         "down_type_double_cover_closed",
         "phenomenology_cross_reference",
         "phenomenon_glossary",
+        "qm_reframing_programmatic",
         "snmc_class_and_entanglement",
         "sqrt_r_n_correction",
         "structural_lemmas"
@@ -1706,6 +1712,7 @@
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
         "phenomenology_cross_reference",
+        "qm_reframing_programmatic",
         "snmc_class_and_entanglement"
       ],
       "git": [
@@ -2274,6 +2281,7 @@
         "discrete_extension_principle",
         "framework_status",
         "physics_relevance_measurement_catalog",
+        "qm_reframing_programmatic",
         "snmc_class_and_entanglement"
       ],
       "git": [
@@ -2306,7 +2314,8 @@
       "depended_on_by": [
         "canonical_glossary",
         "framework_status",
-        "physics_relevance_measurement_catalog"
+        "physics_relevance_measurement_catalog",
+        "qm_reframing_programmatic"
       ],
       "git": [
         {
@@ -2993,6 +3002,7 @@
         "phenomenology_cross_reference",
         "physics_relevance_measurement_catalog",
         "preferred_basis_dissolution",
+        "qm_reframing_programmatic",
         "snmc_class_and_entanglement",
         "w_state_from_substrate"
       ],
@@ -3685,6 +3695,7 @@
         "psl2z_subgroup_phase_c_inventory",
         "q_mod2_conservation_theorem",
         "qd_origins",
+        "qm_reframing_programmatic",
         "rectangle_perpendicularity",
         "remaining_gap_shapes",
         "s_v_nlo",
@@ -4381,6 +4392,7 @@
         "dicke_apparatus_theorem",
         "framework_status",
         "physics_relevance_measurement_catalog",
+        "qm_reframing_programmatic",
         "snmc_class_and_entanglement",
         "w_state_from_substrate"
       ],
@@ -5505,6 +5517,7 @@
         "numerology_inventory",
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
+        "qm_reframing_programmatic",
         "rectangle_perpendicularity",
         "second_law_topological",
         "sine_gordon_substrate",
@@ -6452,6 +6465,7 @@
         "predictions_horizon_2026",
         "primitive_completeness_audit",
         "q_mod2_mediant_projection",
+        "qm_reframing_programmatic",
         "structural_lemmas",
         "variable_denominator"
       ],
@@ -6963,6 +6977,7 @@
         "phenomenology_cross_reference",
         "physics_relevance_measurement_catalog",
         "primitive_completeness_audit",
+        "qm_reframing_programmatic",
         "rationality_descent",
         "remaining_gap_shapes",
         "sinw_effective_dimension",
@@ -7756,7 +7771,8 @@
       ],
       "depended_on_by": [
         "complex_amplitude_uniqueness",
-        "lesson_proslambanomenos"
+        "lesson_proslambanomenos",
+        "qm_reframing_programmatic"
       ],
       "git": [
         {
@@ -7811,7 +7827,9 @@
         "spectral_tilt",
         "w_state_from_substrate"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "qm_reframing_programmatic"
+      ],
       "git": [
         {
           "hash": "796e9f0",
@@ -7907,6 +7925,7 @@
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
         "physics_relevance_measurement_catalog",
+        "qm_reframing_programmatic",
         "w_state_from_substrate"
       ],
       "git": [
@@ -8223,6 +8242,7 @@
         "phenomenology_cross_reference",
         "predictions_horizon_2026",
         "q_mod2_mediant_projection",
+        "qm_reframing_programmatic",
         "sine_gordon_substrate",
         "snmc_class_and_entanglement",
         "substrate_determinism",
@@ -8301,6 +8321,44 @@
           "hash": "252d8ac",
           "date": "2026-05-15",
           "subject": "qd_origins: close audit Finding 2 (small primes + d = 3 \"smuggled in\") (#121)"
+        }
+      ]
+    },
+    {
+      "id": "qm_reframing_programmatic",
+      "path": "sync_cost/derivations/qm_reframing_programmatic.md",
+      "title": "Programmatic QM-reframing: substrate apparatus vs inherited QM machinery",
+      "summary": "Synthesis document. Articulates the framework's relationship to the\napparatus of 20th-century quantum mechanics: which elements of that\napparatus are substrate-replaceable, which are inherited as a\nfoundational layer, which are correctly declined as anchor-side, and\nwhich lie outside the substrate's natural reach.",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "anchor_count_reaudit",
+        "basepoint_principle",
+        "bell_bounds_from_substrate",
+        "born_rule",
+        "canonical_glossary",
+        "complex_amplitude_uniqueness",
+        "dicke_apparatus_theorem",
+        "discrete_extension_principle",
+        "epr_bell_assembly_theorem",
+        "framework_status",
+        "ghz_from_substrate",
+        "klein_bottle",
+        "minimum_alphabet",
+        "numerology_inventory",
+        "phenomenon_glossary",
+        "physics_relevance_measurement_catalog",
+        "predictions_horizon_2026",
+        "q_mod2_conservation_theorem",
+        "snmc_class_and_entanglement",
+        "substrate_determinism",
+        "w_state_from_substrate"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "3f7dc6a",
+          "date": "2026-05-30",
+          "subject": "B1: Programmatic QM-reframing \u2014 substrate apparatus vs inherited QM machinery (#195)"
         }
       ]
     },
@@ -9015,7 +9073,8 @@
         "canonical_glossary",
         "discrete_extension_principle",
         "framework_status",
-        "physics_relevance_measurement_catalog"
+        "physics_relevance_measurement_catalog",
+        "qm_reframing_programmatic"
       ],
       "git": [
         {
@@ -9476,6 +9535,7 @@
         "preferred_basis_dissolution",
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
+        "qm_reframing_programmatic",
         "snmc_class_and_entanglement",
         "thread_chronology",
         "tick_continuum_construction",
@@ -10179,6 +10239,7 @@
         "discrete_extension_principle",
         "framework_status",
         "physics_relevance_measurement_catalog",
+        "qm_reframing_programmatic",
         "snmc_class_and_entanglement"
       ],
       "git": [
