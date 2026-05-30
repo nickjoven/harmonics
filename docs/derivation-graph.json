@@ -1,5 +1,5 @@
 {
-  "generated": "c344eec4ebeebf9d7d5d71a49b9d4f47c1efdd35",
+  "generated": "0e04ca8810bd22c3ed9c10713122055dd3d3c0f0",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1710,6 +1710,7 @@
         "canonical_glossary",
         "dicke_apparatus_theorem",
         "koide_form_substrate_iteration_3",
+        "koide_form_substrate_iteration_6",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
         "phenomenology_cross_reference",
@@ -2318,6 +2319,9 @@
         "koide_form_substrate_iteration_1",
         "koide_form_substrate_iteration_2",
         "koide_form_substrate_iteration_3",
+        "koide_form_substrate_iteration_4",
+        "koide_form_substrate_iteration_5",
+        "koide_form_substrate_iteration_6",
         "physics_relevance_measurement_catalog",
         "qm_reframing_programmatic"
       ],
@@ -4243,6 +4247,7 @@
         "gauge_factorization",
         "gauge_high_scale_identification",
         "klein_connection",
+        "koide_form_substrate_iteration_6",
         "mass_sector_closure",
         "sinw_effective_dimension"
       ],
@@ -4355,6 +4360,8 @@
         "koide_form_substrate_iteration_1",
         "koide_form_substrate_iteration_2",
         "koide_form_substrate_iteration_3",
+        "koide_form_substrate_iteration_4",
+        "koide_form_substrate_iteration_5",
         "mixing_angle_audit",
         "negative_results_ledger",
         "numerology_inventory",
@@ -5464,6 +5471,7 @@
         "hybrid_strategy_audit",
         "k_axis_uniqueness",
         "k_scaling_scan",
+        "koide_form_substrate_iteration_4",
         "observer_register_closure",
         "omega_b_alpha_beta_closure",
         "omega_b_alpha_beta_phase_b",
@@ -5527,6 +5535,9 @@
         "koide_form_substrate_iteration_1",
         "koide_form_substrate_iteration_2",
         "koide_form_substrate_iteration_3",
+        "koide_form_substrate_iteration_4",
+        "koide_form_substrate_iteration_5",
+        "koide_form_substrate_iteration_6",
         "numerology_inventory",
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
@@ -5875,12 +5886,85 @@
         "koide_form_substrate_iteration_1",
         "koide_form_substrate_iteration_2"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "koide_form_substrate_iteration_4"
+      ],
       "git": [
         {
           "hash": "c344eec",
           "date": "2026-05-30",
           "subject": "Koide form substrate derivation \u2014 iterations 1-3 (#196)"
+        }
+      ]
+    },
+    {
+      "id": "koide_form_substrate_iteration_4",
+      "path": "sync_cost/derivations/koide_form_substrate_iteration_4.md",
+      "title": "Koide form substrate derivation \u2014 iteration 4",
+      "summary": "**Iteration 4.** Tests the sharpened question from iteration 3:\n*does the substrate's inviolable apparatus force the full `S_3`\naction on three-generation amplitude space?*",
+      "depends_on": [
+        "discrete_extension_principle",
+        "generation_mechanism",
+        "klein_antipodal_z2_rep_pattern",
+        "klein_bottle",
+        "koide_form_substrate_iteration_3",
+        "mass_sector_closure"
+      ],
+      "depended_on_by": [
+        "koide_form_substrate_iteration_5"
+      ],
+      "git": [
+        {
+          "hash": "0e04ca8",
+          "date": "2026-05-30",
+          "subject": "Koide form iterations 4-5: substrate gives V_4 not S_3; Koide = q_3:MEDIANT in V_4 form (#197)"
+        }
+      ]
+    },
+    {
+      "id": "koide_form_substrate_iteration_5",
+      "path": "sync_cost/derivations/koide_form_substrate_iteration_5.md",
+      "title": "Koide form substrate derivation \u2014 iteration 5",
+      "summary": "**Iteration 5.** Tests candidate 2 (V_4 + dark-state restriction)\nidentified as the most concrete remaining candidate after\niteration 4. Decomposes the 4-component amplitude vector\n`w = (\u221am_A, \u221am_B, \u221am_C, \u221am_D)` into V_4 irreducible representations\nand imposes the dark-state constraint `m_D = 0` to derive a\nconstraint on the observable amplitude vector.",
+      "depends_on": [
+        "discrete_extension_principle",
+        "generation_mechanism",
+        "klein_bottle",
+        "koide_form_substrate_iteration_4",
+        "mass_sector_closure",
+        "omega_partition_combinatorial",
+        "partition_logit_form"
+      ],
+      "depended_on_by": [
+        "koide_form_substrate_iteration_6"
+      ],
+      "git": [
+        {
+          "hash": "0e04ca8",
+          "date": "2026-05-30",
+          "subject": "Koide form iterations 4-5: substrate gives V_4 not S_3; Koide = q_3:MEDIANT in V_4 form (#197)"
+        }
+      ]
+    },
+    {
+      "id": "koide_form_substrate_iteration_6",
+      "path": "sync_cost/derivations/koide_form_substrate_iteration_6.md",
+      "title": "Koide form substrate derivation \u2014 iteration 6",
+      "summary": "**Iteration 6.** Tests candidate mechanism 3 from iteration 5: the\ncube identity `q_2\u00b3 = q_2 + 2 q_3` (substrate-derived in\n`mass_sector_closure.md`) as the structural source for the V_4\ntrivial-vs-non-trivial squared-norm ratio `q_3 : MEDIANT`.",
+      "depends_on": [
+        "complex_amplitude_uniqueness",
+        "discrete_extension_principle",
+        "gauge_sector_lovelock",
+        "klein_bottle",
+        "koide_form_substrate_iteration_5",
+        "mass_sector_closure"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "0e04ca8",
+          "date": "2026-05-30",
+          "subject": "Koide form iterations 4-5: substrate gives V_4 not S_3; Koide = q_3:MEDIANT in V_4 form (#197)"
         }
       ]
     },
@@ -6197,6 +6281,9 @@
         "k_scaling_scan",
         "koide_form_substrate_iteration_1",
         "koide_form_substrate_iteration_2",
+        "koide_form_substrate_iteration_4",
+        "koide_form_substrate_iteration_5",
+        "koide_form_substrate_iteration_6",
         "mixing_angle_audit",
         "neutrino_mass_audit",
         "path_a_walkthrough",
@@ -7508,6 +7595,7 @@
         "k_axis_uniqueness",
         "k_of_t_friedmann",
         "klein_antipodal_z2_rep_pattern",
+        "koide_form_substrate_iteration_5",
         "lesson_8_35_vs_13_19",
         "lesson_rotation_curves_a0",
         "numerology_inventory",
@@ -7583,6 +7671,7 @@
         "canonical_glossary",
         "derivation_atlas",
         "framework_status",
+        "koide_form_substrate_iteration_5",
         "lesson_8_35_vs_13_19",
         "omega_b_w_plus_candidate",
         "omega_b_w_plus_cross_ratio_search",
