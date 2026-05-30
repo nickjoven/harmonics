@@ -300,3 +300,5 @@
 2026-05-30T02:48:04Z | dag:create | 25433684911b83c78900fa19088f1f233dfa8083cfdd478f389c53294089c5cc
 2026-05-30T03:08:15Z | put | sync_cost/derivations/canonical_glossary.md -> 47b0d70c3ac5b6831d674af0ae92ede6db5805e980a1645668fa8536b8d15fd3
 2026-05-30T03:08:15Z doc-seal discrete_extension_principle.md + glossary update (B6 meta-principle)
+2026-05-30T05:25:13Z | put | sync_cost/derivations/physics_relevance_measurement_catalog.md -> 6a7ad5f362451bcdcafcf1f77200391d0346c3867b7c72cc5cae907625b596df
+2026-05-30T06:10:48Z doc-seal physics_relevance_measurement_catalog.md (B7: physics-relevance × primitive-measurement catalog)
