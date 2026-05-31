@@ -1,5 +1,5 @@
 {
-  "generated": "0e04ca8810bd22c3ed9c10713122055dd3d3c0f0",
+  "generated": "5ef57c105c7b89dbd4ab5b2119750fa301d3c08c",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -605,6 +605,7 @@
         "dynamical_tool_audit",
         "framework_status",
         "k_of_t_friedmann",
+        "koide_form_substrate_iteration_10",
         "lesson_forced_basin_selection",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
@@ -1243,6 +1244,7 @@
         "lesson_rotation_curves_a0",
         "physics_relevance_measurement_catalog",
         "qm_reframing_programmatic",
+        "substrate_prediction_selection",
         "thread_chronology"
       ],
       "git": [
@@ -1399,6 +1401,10 @@
         "framework_status",
         "free_parameter_scorecard",
         "ghz_from_substrate",
+        "koide_form_substrate_iteration_10",
+        "koide_form_substrate_iteration_7",
+        "koide_form_substrate_iteration_8",
+        "koide_form_substrate_iteration_9",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
         "mass_sector_sqrt_w_phase_a",
@@ -1606,7 +1612,8 @@
         "qm_reframing_programmatic",
         "snmc_class_and_entanglement",
         "sqrt_r_n_correction",
-        "structural_lemmas"
+        "structural_lemmas",
+        "substrate_prediction_selection"
       ],
       "git": [
         {
@@ -1711,6 +1718,7 @@
         "dicke_apparatus_theorem",
         "koide_form_substrate_iteration_3",
         "koide_form_substrate_iteration_6",
+        "koide_form_substrate_iteration_7",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
         "phenomenology_cross_reference",
@@ -2317,13 +2325,19 @@
         "canonical_glossary",
         "framework_status",
         "koide_form_substrate_iteration_1",
+        "koide_form_substrate_iteration_10",
+        "koide_form_substrate_iteration_11",
         "koide_form_substrate_iteration_2",
         "koide_form_substrate_iteration_3",
         "koide_form_substrate_iteration_4",
         "koide_form_substrate_iteration_5",
         "koide_form_substrate_iteration_6",
+        "koide_form_substrate_iteration_7",
+        "koide_form_substrate_iteration_8",
+        "koide_form_substrate_iteration_9",
         "physics_relevance_measurement_catalog",
-        "qm_reframing_programmatic"
+        "qm_reframing_programmatic",
+        "substrate_prediction_selection"
       ],
       "git": [
         {
@@ -2779,6 +2793,7 @@
         "a_s_g1_closure_attempt",
         "continuity_in_K_nulls",
         "depth_connection_nulls",
+        "koide_form_substrate_iteration_9",
         "vocabulary_is_the_work_pattern"
       ],
       "git": [
@@ -2886,6 +2901,7 @@
         "graviton_reframing",
         "k_of_t_friedmann",
         "klein_connection",
+        "koide_form_substrate_iteration_8",
         "lesson_epr_gr_qm_unification",
         "master_cascade_identity",
         "qd_origins",
@@ -3006,6 +3022,7 @@
         "framework_status",
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
+        "koide_form_substrate_iteration_10",
         "lesson_epr_gr_qm_unification",
         "phenomenology_cross_reference",
         "physics_relevance_measurement_catalog",
@@ -3310,11 +3327,13 @@
         "framework_status",
         "free_parameter_scorecard",
         "high_school_syllabus",
+        "koide_form_substrate_iteration_8",
         "lesson_8_35_vs_13_19",
         "numerology_inventory",
         "omega_partition_combinatorial",
         "predictions_horizon_2026",
         "structural_lemmas",
+        "substrate_prediction_selection",
         "unitless_check",
         "vacuum_energy"
       ],
@@ -3409,6 +3428,7 @@
         "free_parameter_scorecard",
         "generation_mechanism",
         "koide_form_substrate_iteration_1",
+        "koide_form_substrate_iteration_10",
         "koide_form_substrate_iteration_2",
         "numerology_inventory",
         "physics_relevance_measurement_catalog"
@@ -3713,6 +3733,7 @@
         "snmc_class_and_entanglement",
         "sqrt_r_n_correction",
         "structural_lemmas",
+        "substrate_prediction_selection",
         "thread_chronology",
         "time_axis_split",
         "unitless_audit",
@@ -3999,7 +4020,8 @@
       "depended_on_by": [
         "gap2_spatialization_decomposition",
         "gap2_theorem_attempt",
-        "gap_2_spatial_diffusion"
+        "gap_2_spatial_diffusion",
+        "koide_form_substrate_iteration_7"
       ],
       "git": [
         {
@@ -4358,10 +4380,14 @@
         "fourth_generation_revisited",
         "free_parameter_scorecard",
         "koide_form_substrate_iteration_1",
+        "koide_form_substrate_iteration_10",
+        "koide_form_substrate_iteration_11",
         "koide_form_substrate_iteration_2",
         "koide_form_substrate_iteration_3",
         "koide_form_substrate_iteration_4",
         "koide_form_substrate_iteration_5",
+        "koide_form_substrate_iteration_7",
+        "koide_form_substrate_iteration_9",
         "mixing_angle_audit",
         "negative_results_ledger",
         "numerology_inventory",
@@ -4408,6 +4434,7 @@
         "canonical_glossary",
         "dicke_apparatus_theorem",
         "framework_status",
+        "koide_form_substrate_iteration_10",
         "physics_relevance_measurement_catalog",
         "qm_reframing_programmatic",
         "snmc_class_and_entanglement",
@@ -5471,6 +5498,8 @@
         "hybrid_strategy_audit",
         "k_axis_uniqueness",
         "k_scaling_scan",
+        "koide_form_substrate_iteration_10",
+        "koide_form_substrate_iteration_11",
         "koide_form_substrate_iteration_4",
         "observer_register_closure",
         "omega_b_alpha_beta_closure",
@@ -5533,11 +5562,16 @@
         "klein_connection",
         "klein_nodal_parity",
         "koide_form_substrate_iteration_1",
+        "koide_form_substrate_iteration_10",
+        "koide_form_substrate_iteration_11",
         "koide_form_substrate_iteration_2",
         "koide_form_substrate_iteration_3",
         "koide_form_substrate_iteration_4",
         "koide_form_substrate_iteration_5",
         "koide_form_substrate_iteration_6",
+        "koide_form_substrate_iteration_7",
+        "koide_form_substrate_iteration_8",
+        "koide_form_substrate_iteration_9",
         "numerology_inventory",
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
@@ -5546,6 +5580,7 @@
         "second_law_topological",
         "sine_gordon_substrate",
         "soliton_dynamics",
+        "substrate_prediction_selection",
         "thread_chronology",
         "time_axis_split",
         "vacuum_energy",
@@ -5850,6 +5885,63 @@
       ]
     },
     {
+      "id": "koide_form_substrate_iteration_10",
+      "path": "sync_cost/derivations/koide_form_substrate_iteration_10.md",
+      "title": "Koide form substrate derivation \u2014 iteration 10",
+      "summary": "**Iteration 10. Reversibility-class clarification.** Reframes the\niteration 9 null result as a *category clarification* rather than\na tactical miss, identifying that the framework's substrate\nmachinery splits into reversibility classes and that Koide's\nsubstrate-derivation belongs in a specific class.",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "born_rule",
+        "discrete_extension_principle",
+        "epr_bell_assembly_theorem",
+        "fermion_mass_running",
+        "generation_mechanism",
+        "ghz_from_substrate",
+        "klein_antipodal_z2_rep_pattern",
+        "klein_bottle",
+        "koide_form_substrate_iteration_9",
+        "lesson_forced_basin_selection",
+        "mass_sector_closure",
+        "minkowski_signature",
+        "q_mod2_conservation_theorem",
+        "substrate_prediction_selection"
+      ],
+      "depended_on_by": [
+        "koide_form_substrate_iteration_11"
+      ],
+      "git": [
+        {
+          "hash": "5ef57c1",
+          "date": "2026-05-31",
+          "subject": "Koide iterations 7-11 + substrate prediction selection thread (#200)"
+        }
+      ]
+    },
+    {
+      "id": "koide_form_substrate_iteration_11",
+      "path": "sync_cost/derivations/koide_form_substrate_iteration_11.md",
+      "title": "Koide form substrate derivation \u2014 iteration 11",
+      "summary": "**Iteration 11.** Tests Candidate A4 from iteration 10: derive the\nmatrix `M = q_3 I \u2212 q_2 J` (Lorentzian signature `(2, 1)`) on\nthree-generation amplitude space via the same observability-split\nargument that `minkowski_signature.md` (D32) uses to derive\nspacetime's signature `(3, 1)`.",
+      "depends_on": [
+        "discrete_extension_principle",
+        "generation_mechanism",
+        "klein_antipodal_z2_rep_pattern",
+        "klein_bottle",
+        "koide_form_substrate_iteration_10",
+        "mass_sector_closure",
+        "minkowski_signature",
+        "substrate_prediction_selection"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "5ef57c1",
+          "date": "2026-05-31",
+          "subject": "Koide iterations 7-11 + substrate prediction selection thread (#200)"
+        }
+      ]
+    },
+    {
       "id": "koide_form_substrate_iteration_2",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_2.md",
       "title": "Koide form substrate derivation \u2014 iteration 2",
@@ -5959,12 +6051,94 @@
         "koide_form_substrate_iteration_5",
         "mass_sector_closure"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "koide_form_substrate_iteration_7"
+      ],
       "git": [
         {
           "hash": "0e04ca8",
           "date": "2026-05-30",
           "subject": "Koide form iterations 4-5: substrate gives V_4 not S_3; Koide = q_3:MEDIANT in V_4 form (#197)"
+        }
+      ]
+    },
+    {
+      "id": "koide_form_substrate_iteration_7",
+      "path": "sync_cost/derivations/koide_form_substrate_iteration_7.md",
+      "title": "Koide form substrate derivation \u2014 iteration 7",
+      "summary": "**Iteration 7. Pivot to a simpler matrix form.** Supersedes the\nV_4 + cube identity + chirality cross-link apparatus of iterations\n4\u20136 with a substantially simpler quadratic-form expression that\nuses only the substrate primitives `q_2 = 2` and `q_3 = 3` without\nany squared, cubed, or sector-cross-link multipliers.",
+      "depends_on": [
+        "born_rule",
+        "complex_amplitude_uniqueness",
+        "discrete_extension_principle",
+        "gap2_step4_farey_laplacian",
+        "generation_mechanism",
+        "klein_bottle",
+        "koide_form_substrate_iteration_6",
+        "mass_sector_closure"
+      ],
+      "depended_on_by": [
+        "koide_form_substrate_iteration_8"
+      ],
+      "git": [
+        {
+          "hash": "5ef57c1",
+          "date": "2026-05-31",
+          "subject": "Koide iterations 7-11 + substrate prediction selection thread (#200)"
+        }
+      ]
+    },
+    {
+      "id": "koide_form_substrate_iteration_8",
+      "path": "sync_cost/derivations/koide_form_substrate_iteration_8.md",
+      "title": "Koide form substrate derivation \u2014 iteration 8",
+      "summary": "**Iteration 8.** Tests reading 1 from iteration 7: derive the\nmatrix `M = q_3 I \u2212 q_2 J` from a substrate-natural quadratic form\non three-generation amplitude space.",
+      "depends_on": [
+        "born_rule",
+        "discrete_extension_principle",
+        "einstein_from_kuramoto",
+        "farey_partition",
+        "klein_bottle",
+        "koide_form_substrate_iteration_7",
+        "mass_sector_closure",
+        "omega_partition_combinatorial",
+        "substrate_prediction_selection"
+      ],
+      "depended_on_by": [
+        "koide_form_substrate_iteration_9",
+        "substrate_prediction_selection"
+      ],
+      "git": [
+        {
+          "hash": "5ef57c1",
+          "date": "2026-05-31",
+          "subject": "Koide iterations 7-11 + substrate prediction selection thread (#200)"
+        }
+      ]
+    },
+    {
+      "id": "koide_form_substrate_iteration_9",
+      "path": "sync_cost/derivations/koide_form_substrate_iteration_9.md",
+      "title": "Koide form substrate derivation \u2014 iteration 9",
+      "summary": "**Iteration 9. Path A test: empirical check whether the framework's\nexisting three-generation amplitude apparatus produces the Koide\nconstraint.**",
+      "depends_on": [
+        "born_rule",
+        "discrete_extension_principle",
+        "dynamical_tool_audit",
+        "generation_mechanism",
+        "klein_bottle",
+        "koide_form_substrate_iteration_8",
+        "mass_sector_closure",
+        "substrate_prediction_selection"
+      ],
+      "depended_on_by": [
+        "koide_form_substrate_iteration_10"
+      ],
+      "git": [
+        {
+          "hash": "5ef57c1",
+          "date": "2026-05-31",
+          "subject": "Koide iterations 7-11 + substrate prediction selection thread (#200)"
         }
       ]
     },
@@ -6082,6 +6256,7 @@
         "bell_bounds_from_substrate",
         "free_parameter_scorecard",
         "ghz_from_substrate",
+        "koide_form_substrate_iteration_10",
         "meaning_of_two_wip",
         "preferred_basis_dissolution",
         "w_state_from_substrate"
@@ -6280,15 +6455,21 @@
         "k_axis_uniqueness",
         "k_scaling_scan",
         "koide_form_substrate_iteration_1",
+        "koide_form_substrate_iteration_10",
+        "koide_form_substrate_iteration_11",
         "koide_form_substrate_iteration_2",
         "koide_form_substrate_iteration_4",
         "koide_form_substrate_iteration_5",
         "koide_form_substrate_iteration_6",
+        "koide_form_substrate_iteration_7",
+        "koide_form_substrate_iteration_8",
+        "koide_form_substrate_iteration_9",
         "mixing_angle_audit",
         "neutrino_mass_audit",
         "path_a_walkthrough",
         "phenomenology_cross_reference",
-        "sector_decoupling_phase_a"
+        "sector_decoupling_phase_a",
+        "substrate_prediction_selection"
       ],
       "git": [
         {
@@ -6696,6 +6877,8 @@
         "INDEX",
         "equivalence_dissolution",
         "klein_bottle_derivation",
+        "koide_form_substrate_iteration_10",
+        "koide_form_substrate_iteration_11",
         "meaning_of_two_wip",
         "spatial_coupling_derived"
       ],
@@ -7158,6 +7341,7 @@
         "remaining_gap_shapes",
         "sinw_effective_dimension",
         "sinw_fixed_point",
+        "substrate_prediction_selection",
         "vocabulary_is_the_work_pattern"
       ],
       "git": [
@@ -7264,6 +7448,7 @@
         "psl2z_subgroup_phase_b",
         "remaining_gap_shapes",
         "structural_lemmas",
+        "substrate_prediction_selection",
         "vocabulary_is_the_work_pattern",
         "w_plus_formalization"
       ],
@@ -7596,6 +7781,7 @@
         "k_of_t_friedmann",
         "klein_antipodal_z2_rep_pattern",
         "koide_form_substrate_iteration_5",
+        "koide_form_substrate_iteration_8",
         "lesson_8_35_vs_13_19",
         "lesson_rotation_curves_a0",
         "numerology_inventory",
@@ -7603,7 +7789,8 @@
         "omega_b_substrate_side_audit",
         "path_closures_iter1",
         "predictions_horizon_2026",
-        "structural_lemmas"
+        "structural_lemmas",
+        "substrate_prediction_selection"
       ],
       "git": [
         {
@@ -8416,6 +8603,7 @@
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
         "k_of_t_residual_disposition",
+        "koide_form_substrate_iteration_10",
         "lesson_epr_gr_qm_unification",
         "meaning_of_two_wip",
         "phenomenology_cross_reference",
@@ -9735,6 +9923,38 @@
           "hash": "deb490f",
           "date": "2026-05-15",
           "subject": "audit_findings_3_4_disposition: honest qualification of major findings (#124)"
+        }
+      ]
+    },
+    {
+      "id": "substrate_prediction_selection",
+      "path": "sync_cost/derivations/substrate_prediction_selection.md",
+      "title": "Substrate prediction selection \u2014 opening doc",
+      "summary": "**Opens a thread.** Investigates whether a *unifying* selection\nprinciple exists across the framework's substrate-primitive ratio\npredictions \u2014 that is, whether the substrate's apparatus, beyond\nderiving each prediction through its own derivation chain, also\nadmits a higher-order principle that explains *which* substrate-\nprimitive ratio each prediction lands on.",
+      "depends_on": [
+        "basepoint_principle",
+        "canonical_glossary",
+        "discrete_extension_principle",
+        "farey_partition",
+        "framework_status",
+        "klein_bottle",
+        "koide_form_substrate_iteration_8",
+        "mass_sector_closure",
+        "numerology_inventory",
+        "omega_b_alpha_beta_closure",
+        "omega_partition_combinatorial"
+      ],
+      "depended_on_by": [
+        "koide_form_substrate_iteration_10",
+        "koide_form_substrate_iteration_11",
+        "koide_form_substrate_iteration_8",
+        "koide_form_substrate_iteration_9"
+      ],
+      "git": [
+        {
+          "hash": "5ef57c1",
+          "date": "2026-05-31",
+          "subject": "Koide iterations 7-11 + substrate prediction selection thread (#200)"
         }
       ]
     },
