@@ -1,0 +1,334 @@
+# Koide form substrate derivation — iteration 8
+
+## Status
+
+**Iteration 8.** Tests reading 1 from iteration 7: derive the
+matrix `M = q_3 I − q_2 J` from a substrate-natural quadratic form
+on three-generation amplitude space.
+
+**Key result.** The matrix `M = q_3 I − q_2 J` factors as `M = q_3
+(I − Q J)` where `Q = q_2 / q_3 = 2/3`. The null-cone condition
+`v^T M v = 0` reduces to `K(v) = Q`, where `K(v) = |v|² / (Σ v_i)²`
+is the Koide functional and `Q` is the substrate's foundational
+Klein-antipodal population ratio (`klein_bottle.md` D19).
+
+**The substrate-derivation gap collapses to one statement**:
+*does the substrate force the lepton Koide functional `K(v)` to
+equal the substrate-primitive ratio `q_2 / q_3`?*
+
+This is substantively narrower than iteration 7's three-reading
+framing. The matrix structure becomes ornamentation; the actual
+content of Koide is `K = q_2 / q_3`. Additional finding: among
+substrate-primitive ratios, only `q_2 / q_3 = 2/3` falls within
+the Cauchy-Schwarz range `[1/3, 1]` for `K`, providing a *uniqueness*
+argument under one additional structural condition (which is itself
+open).
+
+No new substrate primitive. Iteration 8 makes the matrix
+form's substantive content explicit: Koide is the statement
+`K_lepton = Q_substrate`.
+
+---
+
+## Reduction of the matrix to `K = Q`
+
+The matrix `M = q_3 I − q_2 J` factors as:
+
+    M  =  q_3 (I  −  (q_2 / q_3) J)  =  q_3 (I  −  Q J)
+
+where `Q = q_2 / q_3 = 2/3` is the framework's foundational
+Klein-antipodal population ratio.
+
+The null-cone condition `v^T M v = 0` reduces to:
+
+    v^T I v  =  Q · v^T J v
+
+That is:
+
+    Σ v_i²  =  Q · (Σ v_i)²
+
+Substituting back `v_i = √m_i`:
+
+    Σ m_i  =  Q · (Σ √m_i)²
+
+Rearranging:
+
+    Q  =  (Σ m_i) / (Σ √m_i)²  =  K(v)
+
+Where `K(v)` is the Koide functional (the original Koide formula
+output).
+
+**The matrix `M = q_3 I − q_2 J` is therefore equivalent to the
+single scalar statement**:
+
+    K(v)  =  Q  =  q_2 / q_3  =  2/3
+
+The matrix decoration is informative for understanding the
+substrate structure (`S_3`-equivariance, eigenvalue decomposition,
+graph Laplacian shape) but the substantive content reduces to the
+ratio identity.
+
+---
+
+## Substrate readings of `K = q_2 / q_3`
+
+### Reading 1a — `K` as substrate-natural identity
+
+The substrate's foundational primes `(q_2, q_3) = (2, 3)` are
+forced uniquely by the cube identity (`mass_sector_closure.md`
+Theorem). Their ratio `q_2 / q_3 = 2/3` is the substrate's
+*smallest non-trivial prime ratio* and appears throughout the
+framework:
+
+- Klein-bottle population ratio (`klein_bottle.md` D19)
+- `Q` in the Koide constraint (this iteration)
+- Various dimensionless framework integers
+
+If the substrate's lepton-sector Koide functional `K_lepton`
+intrinsically equals the substrate ratio `Q`, the derivation is
+identity-shaped: "the substrate's primary ratio shows up wherever
+substrate ratios are computed in dimensionless form."
+
+**Open**: derive substrate-natively *why* `K_lepton` equals `Q`
+specifically, rather than some other substrate-primitive
+combination.
+
+### Reading 1b — Cauchy-Schwarz bounding
+
+The Koide functional satisfies `1/3 ≤ K ≤ 1` by Cauchy-Schwarz
+(strictly bounded, achievable at extremes). Among substrate-
+primitive ratios, several candidates fall in this range:
+
+| Substrate-primitive ratio | Value | In `[1/3, 1]`? |
+|---|---|---|
+| `q_2 / q_3` | `2/3 ≈ 0.667` | **Yes** |
+| `q_3 / q_2` | `3/2 = 1.5` | No (> 1) |
+| `1 / (q_2 q_3)` | `1/6 ≈ 0.167` | No (< 1/3) |
+| `(q_3 − q_2) / (q_3 + q_2)` | `1/5 = 0.2` | No (< 1/3) |
+| `q_3 / (q_2 + q_3)` | `3/5 = 0.6` | **Yes** |
+| `q_2² / q_3²` | `4/9 ≈ 0.444` | **Yes** |
+| `(q_2 + q_3) / (2 q_3)` | `5/6 ≈ 0.833` | **Yes** |
+| `q_2 / (q_2 + q_3)` | `2/5 = 0.4` | **Yes** |
+
+Cauchy-Schwarz narrows the eligible ratios but does not uniquely
+single out `q_2 / q_3`. The question of how the substrate selects
+*this* ratio among the Cauchy-Schwarz-eligible candidates is a
+distinct methodological question whose scope generalizes beyond
+the Koide form: every framework prediction that lands as a ratio
+of substrate primitives faces an analogous selection question
+(`Ω_Λ = 13/19` rather than other Farey-eligible ratios, etc.).
+
+That question is the subject of a *separate thread*
+(`substrate_prediction_selection.md`, opened concurrently with this
+iteration). It is not a Koide-specific dependency: the Koide
+gap closure work continues with reading 1c (sync cost restriction
+to three-generation amplitude space) regardless of the selection
+thread's outcome. Each framework prediction's closure rests on
+its own derivation chain (e.g., `Ω_Λ = 13/19` from
+`omega_partition_combinatorial.md`, `farey_partition.md`); the
+selection thread asks the supplementary question of whether a
+*unifying* selection principle exists across the framework's
+substrate-primitive ratio predictions.
+
+**Status (for the Koide form):** Cauchy-Schwarz narrows the
+eligible ratios for `K_lepton`. The substrate-derivation of
+`K_lepton = q_2 / q_3` specifically remains as the open Koide
+gap, with reading 1c (sync cost restriction) as the next
+substrate-derivation test. Whether the selection of `q_2 / q_3`
+out of the Cauchy-Schwarz-eligible ratios admits a unifying
+substrate principle is investigated separately and is not a
+prerequisite for the Koide closure.
+
+### Reading 1c — Kuramoto sync cost interpretation
+
+The matrix `M = q_3 I − q_2 J` is structurally the *graph
+Laplacian on the complete graph `K_3` with self-loop weight `q_3`
+and edge weight `q_2`*. This is the substrate's natural quadratic
+form for a synchronization cost with:
+
+- Self-energy per generation: `q_3` (one per color triplet?)
+- Pairwise attractive coupling: `−q_2` (one per Klein-antipodal
+  toggle?)
+
+The null-cone condition `v^T M v = 0` is the *scale-balance
+threshold*: self-energy exactly cancels coupling-attraction. The
+lepton amplitude vector lies at this threshold.
+
+**Open**: derive substrate-natively that lepton sector
+synchronization cost has *exactly* these coefficients — not `q_3
+/ k_lepton` or some other substrate-primitive choice. The
+framework's `framework_lagrangian.py` and `einstein_from_kuramoto.md`
+provide the substrate Lagrangian; restricting it to three-
+generation amplitude space and checking the coefficients is
+multi-session research.
+
+---
+
+## Numerical verification (no change from iteration 7)
+
+| Quantity | PDG value | Substrate prediction |
+|---|---|---|
+| `K(v) = Σ m / (Σ √m)²` | `0.666658` | `Q = q_2 / q_3 = 0.666667` |
+| Match | | 0.002% |
+
+Same as iteration 7; the reduction to `K = Q` doesn't add new
+numerical content — it removes apparatus while preserving the
+match.
+
+---
+
+## Comparison across iterations 1–8
+
+| Iter | Substantive content | Substrate primitives appearing |
+|---|---|---|
+| 1 | `\|v_sym\|² = \|v_⊥\|²` (S_3 equipartition) | none (abstract) |
+| 5 | `\|w_χ_0\|² : \|w_⊥\|² = q_3 : MEDIANT` (V_4 form) | `q_3, MEDIANT, q_2³` |
+| 6 | Cube identity decomposition `(2, 3, 3)` | `q_2, q_3, q_2³, k_lepton, k_quark` |
+| 7 | `v^T (q_3 I − q_2 J) v = 0` (matrix form) | `q_2, q_3` |
+| 8 (this) | **`K(v) = q_2 / q_3`** (scalar form) | `q_2, q_3` |
+
+The trajectory has reduced the Koide constraint from an abstract
+geometric statement (`|v_sym|² = |v_⊥|²`) through several
+intermediate substrate-primitive reformulations to a single scalar
+identity: `K = Q`.
+
+Iteration 8's form `K = q_2 / q_3` is the *minimal* substrate-
+primitive expression. Further reduction is not possible without
+either losing substrate-primitive structure or reducing to an
+algebraic identity void of substantive content.
+
+---
+
+## What the substrate-derivation gap actually requires
+
+The Koide derivation requires:
+
+> Establish that the substrate-derived lepton amplitude vector `v
+> = √m` produces a Koide functional `K(v)` that equals the
+> substrate ratio `q_2 / q_3`, *as a structural identity rather
+> than a numerical coincidence*.
+
+Bare-tree gives `K = 0.708`, not `2/3`. So the substrate either:
+
+1. **Corrects the bare-tree muon mass** to push `K` onto `q_2 /
+   q_3`. The correction's substrate origin must then be derived.
+2. **Imposes `K = q_2 / q_3` as a substrate constraint** on the
+   amplitude vector independently of the bare-tree formula. The
+   substrate origin of this constraint must then be derived.
+
+Either path requires deriving a chain that connects substrate
+inviolables (Klein-bottle topology, Q-mod-2 conservation, basin
+geometry, cube identity, etc.) to the specific identity `K =
+q_2 / q_3` for the lepton amplitude vector.
+
+The iteration 7 reading 1c (Kuramoto sync cost) is the most
+concrete remaining candidate path: derive that the substrate's
+synchronization cost, restricted to three-generation amplitude
+space, has exactly the form `q_3 |v|² − q_2 (Σ v)²` and
+that the lepton amplitude vector is at this cost's null cone.
+
+---
+
+## What this iteration establishes
+
+The Koide gap is now expressed in its minimal substrate-primitive
+form: `K_lepton = Q_substrate = q_2 / q_3`. The matrix form `M =
+q_3 I − q_2 J` of iteration 7 is essentially decorative; the
+content is the scalar identity.
+
+This minimal form is *both* what's needed to be proven (via the
+remaining substrate-derivation reading 1c) *and* the cleanest
+statement of what closure would look like. No further reformulation
+work is needed; iteration 9+ work is substrate-derivation work.
+
+---
+
+## Audit
+
+| Component | Status |
+|---|---|
+| Iteration 1–6 reformulations | All preserved; superseded by simpler forms |
+| Iteration 7 matrix form `v^T (q_3 I − q_2 J) v = 0` | Reduces to scalar identity in this iteration |
+| **Iteration 8 scalar form `K_lepton = q_2 / q_3`** | **Established as minimal substrate-primitive form** |
+| Substrate-derivation of `K_lepton = q_2 / q_3` | **Open**: requires substrate chain through synchronization cost or basin geometry to the lepton amplitude vector |
+| Cauchy-Schwarz uniqueness argument | **Insufficient alone**: several substrate-primitive ratios fall in `[1/3, 1]` |
+| Floor → Survives upgrade | Pending substrate-derivation of `K = q_2 / q_3` |
+
+---
+
+## Falsifiers
+
+- **The substrate's synchronization cost is shown to have
+  three-generation amplitude restriction matching `q_3 |v|² − q_2
+  (Σ v)²`**: closes reading 1c → closes Koide gap.
+- **The substrate's synchronization cost is shown to have a
+  different form**: rules out reading 1c, requires examination of
+  reading 2 (basin metric tensor).
+- **A meta-criterion forcing `K_lepton = q_2 / q_3` among the
+  several substrate-primitive ratios in `[1/3, 1]` is articulated
+  and shown substrate-natural**: provides a uniqueness argument
+  without requiring the sync-cost derivation.
+- **The bare-tree formula is found to require a substrate
+  correction whose magnitude is exactly the one pushing `K` to
+  `2/3`**: closes via reading 2 (the correction mechanism).
+
+---
+
+## Recommended next iteration
+
+Iteration 9: examine `framework_lagrangian.py` and
+`einstein_from_kuramoto.md` to identify the substrate's
+synchronization cost expression on multipartite mode systems.
+Restrict to the three-generation amplitude subspace and check
+whether the resulting quadratic form has coefficients `(q_3, −q_2)`
+matching iteration 7's matrix `M = q_3 I − q_2 J`.
+
+If yes: reading 1c closes; Koide gap closed.
+If no: examine reading 2 (basin metric tensor from `born_rule.md`).
+
+---
+
+## Cross-links
+
+- `koide_form_substrate_iteration_7.md` — matrix form, three
+  candidate readings.
+- `klein_bottle.md` (D19) — `Q = q_2 / q_3 = 2/3` substrate origin.
+- `framework_lagrangian.py` — substrate synchronization cost
+  expression.
+- `einstein_from_kuramoto.md` (D13) — Kuramoto-Einstein
+  correspondence; substrate dynamical framework.
+- `mass_sector_closure.md` — `q_2, q_3` foundational primes
+  forced.
+- `discrete_extension_principle.md` (PR #191) — methodology.
+
+---
+
+## One-line summary
+
+The matrix `M = q_3 I − q_2 J` of iteration 7 factors as `M = q_3
+(I − Q J)` where `Q = q_2 / q_3 = 2/3` is the substrate's
+Klein-antipodal population ratio (`klein_bottle.md` D19), and the
+null-cone condition `v^T M v = 0` reduces to the *scalar identity*
+`K(v) = Q`, where `K(v) = Σ m / (Σ √m)²` is the Koide functional
+— so the Koide constraint substantively says that the lepton
+Koide functional equals the substrate's foundational small-prime
+ratio, `K_lepton = q_2 / q_3`; the matrix decoration of iteration
+7 is ornamental, and the content of all prior iterations
+reduces to this scalar identity; Cauchy-Schwarz bounds `K ∈
+[1/3, 1]` exclude several substrate-primitive ratios but do not
+uniquely select `q_2 / q_3` (`q_3 / (q_2 + q_3) = 3/5`, `q_2² /
+q_3² = 4/9`, `q_2 / (q_2 + q_3) = 2/5`, `(q_2 + q_3) / (2 q_3) =
+5/6` all qualify), so the Cauchy-Schwarz argument is necessary
+but not sufficient for uniqueness; the substrate-derivation gap
+is now exactly: *derive that the substrate-derived lepton amplitude
+vector `v = √m` produces a Koide functional `K(v)` equal to the
+substrate ratio `q_2 / q_3`, as a structural identity*; the most
+concrete remaining substrate-derivation path is reading 1c — that
+the substrate's synchronization cost (`framework_lagrangian.py`,
+`einstein_from_kuramoto.md`), restricted to the three-generation
+amplitude subspace, has the quadratic form `q_3 |v|² − q_2 (Σ v)²`
+that produces the matrix `M`; iteration 9 would test this by
+examining the framework Lagrangian's restriction to three-generation
+space; floor → survives upgrade pending; matrix and earlier
+iterations are now ornamental — substrate-derivation is the
+remaining productive direction.

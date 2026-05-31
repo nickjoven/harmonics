@@ -1,0 +1,328 @@
+# Koide form substrate derivation — iteration 11
+
+## Status
+
+**Iteration 11.** Tests Candidate A4 from iteration 10: derive the
+matrix `M = q_3 I − q_2 J` (Lorentzian signature `(2, 1)`) on
+three-generation amplitude space via the same observability-split
+argument that `minkowski_signature.md` (D32) uses to derive
+spacetime's signature `(3, 1)`.
+
+**Result: structural parallel observed, but the analogy is not
+direct derivation.** The (2, 1) signature on three-generation
+amplitude space emerges from substrate primitives via a *different*
+mechanism than the (3, 1) signature on spacetime. The spacetime
+derivation uses a 4-state observable/dark split with the dark state
+*external* to the three observable directions; the Koide matrix's
+negative eigenvalue lives *within* the 3-dim three-generation
+space (on the symmetric direction `(1, 1, 1)/√3`).
+
+**Substantive structural finding**: M's signature flip (negative
+eigenvalue on the symmetric direction) requires `3 q_2 > q_3`,
+i.e., `q_2 > q_3 / 3`. The substrate values `(q_2, q_3) = (2, 3)`
+satisfy this (`2 > 1`). The Lorentzian character of M is therefore
+*forced* by the substrate's foundational primes via the inequality
+`q_2 > q_3/3`. This is a substrate-aligned constraint, not an
+arbitrary choice.
+
+**The substrate-derivation gap remains**, narrower than before:
+the substrate's natural quadratic form on three-generation amplitude
+space requires identifying *why* (i) self-energy per generation
+equals `q_3` (color triplet count) and (ii) pair coupling equals
+`−q_2` (Klein-antipodal Z_2). Both ingredients are plausible from
+substrate primitives but not independently derived in the
+framework's existing documentation.
+
+No new substrate primitive. The iteration produces a substantive
+structural observation (signature flip forced by `q_2 > q_3/3`),
+exhibits the partial analogy with spacetime signature derivation,
+and identifies the two remaining substrate-internal ingredients
+needed for full closure.
+
+Class: foundational consolidation (Class 3, iteration step 11,
+structural analogy test with partial success).
+
+---
+
+## The spacetime signature derivation (recap)
+
+From `minkowski_signature.md` (D32):
+
+- Four phase states `{A, B, C, D}` from `{locked, unlocked}²`
+- Three observable `{A, B, C}`: contribute positively to the norm
+  (observation yields definite results, positive information)
+- One dark `D`: contributes negatively (traversing `D` costs a
+  measurement; the net is negative)
+- Signature: `(3, 1) = (observable, dark)`
+- Metric: `ds² = (positive contributions from A, B, C) − (negative from D)`
+
+The dark state `D` is *outside* the three observable directions. It
+contributes its own dimension with negative norm.
+
+## Applying the analogy to three-generation amplitude space
+
+For Koide's matrix `M = q_3 I − q_2 J` to be derived analogously:
+
+- Three observable amplitudes `√m_e, √m_μ, √m_τ`
+- Some structural element giving negative-norm contribution
+- Signature `(2, 1)` emerging from this split
+
+But the (2, 1) signature is *within* the 3-dim amplitude space:
+
+- 2 positive eigenvalues: orthogonal complement of `(1, 1, 1)/√3`
+  (the 2-dim "deviation" subspace)
+- 1 negative eigenvalue: the symmetric direction `(1, 1, 1)/√3`
+
+The negative direction is *not* an external "dark" state. It is
+the symmetric (average / collective) combination of the three
+observable amplitudes themselves.
+
+The disanalogy with spacetime is real: spacetime has 4 phase states
+contributing to 4 metric directions with one dark; three-generation
+amplitude has 3 amplitudes contributing to 3 metric directions, all
+"observable" in the framework's phase-state classification, yet
+the metric still has a negative direction.
+
+So the spacetime-signature *derivation* doesn't carry over directly.
+But the *structural shape* (one negative direction, multiple
+positive) is parallel — the question is what produces the negative
+direction in the Koide case.
+
+## Why the symmetric direction has negative eigenvalue
+
+Direct computation. The matrix `M = q_3 I − q_2 J` acts on a vector
+`v` as:
+
+    M v  =  q_3 v  −  q_2 (Σ v_i) (1, 1, 1)
+
+On the symmetric direction `v_sym ∝ (1, 1, 1)`, the matrix `J`
+acts as multiplication by `3` (= matrix size), so:
+
+    M · (1, 1, 1)/√3  =  (q_3 − 3 q_2) · (1, 1, 1)/√3
+
+The eigenvalue is `q_3 − 3 q_2`. For this to be negative:
+
+    q_3 − 3 q_2  <  0
+    q_3  <  3 q_2
+    q_2 / q_3  >  1/3
+    Q  >  1/3
+
+For substrate values `(q_2, q_3) = (2, 3)`: `Q = 2/3 > 1/3`, so the
+eigenvalue is `−3` (negative).
+
+If the substrate primes were different — say `(q_2, q_3) = (1, 3)`
+— then `Q = 1/3` would give zero eigenvalue (degenerate), and
+`(q_2, q_3) = (1, 5)` would give `Q = 1/5 < 1/3` and positive
+eigenvalue.
+
+**The Lorentzian character of M is forced by the substrate's prime
+pair `(q_2, q_3) = (2, 3)` satisfying `q_2 > q_3 / 3`.**
+
+This is a substrate-aligned constraint: the framework's cube
+identity `q_2³ = q_2 + 2 q_3` forces `(q_2, q_3) = (2, 3)`
+(`mass_sector_closure.md` Theorem), and this in turn forces `Q =
+q_2/q_3 = 2/3 > 1/3`, which forces the Lorentzian character of `M`.
+
+## Structural observation: signature constraint as substrate-derived
+
+The fact that `Q > 1/3` (and hence the Lorentzian signature) is
+substrate-derived is *substantive*. It says:
+
+> The substrate's foundational primes, *via the cube identity*,
+> force the Klein-bottle population ratio `Q = 2/3 > 1/3`, which
+> *via the matrix structure*, forces the three-generation amplitude
+> space to have Lorentzian `(2, 1)` signature.
+
+This chain runs entirely through substrate primitives:
+- `cube identity` forces `(q_2, q_3) = (2, 3)` (Theorem,
+  `mass_sector_closure.md`)
+- `(q_2, q_3) = (2, 3)` forces `Q = 2/3 > 1/3` (algebraic)
+- `Q > 1/3` forces M's negative eigenvalue on symmetric direction
+  (algebraic)
+
+So the *signature* of M is substrate-derived. What's still open:
+*why M has the specific form `q_3 I − q_2 J`* with those specific
+coefficients (rather than a different combination of `I` and `J`
+that would also give Lorentzian signature).
+
+## What remains for full closure
+
+The substrate-derivation of M requires identifying *why*:
+
+### Ingredient (i) — diagonal weight = q_3
+
+Each generation contributes `q_3 = 3` to the self-energy
+(diagonal of M). Plausible substrate-aligned readings:
+
+- Each generation has `q_3 = 3` internal color sub-modes (red,
+  green, blue); each contributes one unit of self-energy
+- The matrix size `3` equals `q_3` (color triplet count)
+- The framework's `dim(color triplet)` per generation enters
+  multiplicatively
+
+Substrate origin: the lepton sector mode budget `k_lepton = q_3² =
+9` (`mass_sector_closure.md`) suggests `q_3` enters per generation
+in some way. The squared structure (`k_lepton = q_3²`) reflects
+chirality-doubling; the simple `q_3` here might be the
+non-chirality-doubled version (per-generation contribution, not
+per-chirality).
+
+### Ingredient (ii) — off-diagonal weight = −q_2
+
+Each pair of generations is coupled with weight `−q_2 = −2`. The
+sign is attractive (cost decreases as amplitudes align). Plausible
+substrate readings:
+
+- Klein-antipodal Z_2 has order `q_2 = 2`; each pair shares two
+  Klein-antipodal toggles
+- The framework's `MEDIANT = q_2 + q_3 = 5` enters specific
+  combinatorial counts; for pairs, the weight `q_2` is natural
+- The attractive sign is from the Klein-antipodal Z_2 producing
+  *coherence* between generations (substrate's "lock attraction")
+
+Substrate origin: the Klein-bottle population ratio `Q = q_2 / q_3
+= 2/3` involves `q_2` as the small-prime numerator. If `q_2`
+represents the "binary attraction strength" between any two
+generations, it produces the off-diagonal weight `−q_2`.
+
+### The remaining gap
+
+Both ingredients (i) and (ii) are plausible from substrate primitives
+but neither has been independently derived in the framework's
+existing documentation. The matrix `M = q_3 I − q_2 J` is consistent
+with substrate primitives without being structurally forced from
+them.
+
+This is the residual gap after eleven iterations. It is substantially
+narrower than the original Koide-form gap and has a specific shape:
+identify which substrate-internal structure forces (i) and (ii)
+together (not separately).
+
+## Status across eleven iterations
+
+| Iter | Result |
+|---|---|
+| 1 | Geometric reformulation `|v_sym|² = |v_⊥|²` |
+| 2 | Candidate 4 (SL(2,Z)) ruled out |
+| 3 | Candidate 1 (Z_2 eigenspace) ruled out |
+| 4 | Substrate gives V_4, not S_3 |
+| 5 | V_4 form `q_3 : MEDIANT` |
+| 6 | Cube identity gives counts but degeneracy |
+| 7 | Matrix form `v^T (q_3 I − q_2 J) v = 0` |
+| 8 | Scalar form `K_lepton = q_2/q_3` |
+| 9 | Path A null (three_basins.py basin widths don't close) |
+| 10 | Reversibility-class clarification; Lorentzian (2, 1) signature observation |
+| 11 | Spacetime analogy partial; signature *forced* by `q_2 > q_3/3` via cube identity |
+
+After eleven iterations, the residual gap is identifying the
+substrate-aligned ingredients that combine to give `M = q_3 I − q_2 J`
+with the specific weights. The signature *character* (Lorentzian)
+is substrate-forced via the cube identity. The specific matrix
+*form* requires further substrate work.
+
+---
+
+## Audit
+
+| Component | Status |
+|---|---|
+| Spacetime signature (3, 1) derivation in `minkowski_signature.md` | Used as analogy; no overclaim |
+| Koide (2, 1) signature character | **Established as substrate-forced** by `q_2 > q_3/3` via cube identity |
+| Direct analogy with spacetime signature derivation | **Partial — disanalogy noted**: spacetime's dark D is external; Koide's negative direction is internal |
+| Substrate-derivation of M's specific form `q_3 I − q_2 J` | **Open**: ingredients (i) and (ii) plausible but not airtight |
+| Floor → Survives upgrade | Pending closure of (i) and (ii) |
+
+The iteration produces a substantive structural finding (signature
+character substrate-forced) and identifies the remaining
+derivation work in concrete form. Not closure.
+
+---
+
+## Falsifiers
+
+- **A substrate-aligned derivation of ingredients (i) and (ii) is
+  produced**: closes the Koide gap.
+- **The signature character is shown to be *not* substrate-forced**
+  by a defect in the cube-identity / `q_2 > q_3/3` chain: invalidates
+  iter 11's main finding.
+- **A different matrix form (not `q_3 I − q_2 J`) is shown to
+  match Koide with simpler substrate primitives**: would supersede
+  the iteration 7–11 framing.
+
+---
+
+## Recommended next iteration
+
+Iteration 12 could:
+
+- **Option A**: Derive ingredient (i) (`q_3` as self-energy per
+  generation) via the lepton-sector mode budget `k_lepton = q_3²`.
+  Specifically: show that `k_lepton/k_quark = q_3²/q_2³ = 9/8`
+  combined with the matrix-size-3 structure produces `q_3` per
+  diagonal.
+- **Option B**: Derive ingredient (ii) (`−q_2` as pair coupling)
+  via the Klein-antipodal Z_2 action on pair-wise amplitude
+  combinations. Specifically: show that the framework's pair-wise
+  Q_AB mod 2 conservation extends to a pair-coupling weight `−q_2`
+  in the three-generation amplitude metric.
+- **Option C**: Open a meta-thread asking whether the matrix
+  form `q_3 I − q_2 J` is *unique* among substrate-primitive
+  combinations consistent with the (2, 1) signature; if not,
+  selection becomes the question (back to
+  `substrate_prediction_selection.md`).
+
+---
+
+## Cross-links
+
+- `koide_form_substrate_iteration_10.md` — reversibility-class
+  clarification; Lorentzian (2, 1) signature.
+- `minkowski_signature.md` (D32) — spacetime (3, 1) signature from
+  observability split.
+- `generation_mechanism.md` (D34) §1 — four phase states with D
+  dark.
+- `mass_sector_closure.md` — cube identity Theorem; `(q_2, q_3) =
+  (2, 3)` forced; `k_lepton = q_3²`, `k_quark = q_2³`.
+- `klein_bottle.md` (D19) — Klein-bottle Q = q_2/q_3 = 2/3.
+- `klein_antipodal_z2_rep_pattern.md` — Klein-antipodal Z_2
+  representation.
+- `substrate_prediction_selection.md` — concurrent thread on
+  prediction-uniqueness questions.
+- `discrete_extension_principle.md` (PR #191) — methodology.
+
+---
+
+## One-line summary
+
+Iteration 11 tests Candidate A4 (Lorentzian metric via
+observability-split analogy with `minkowski_signature.md`) and
+finds *partial* success: the spacetime derivation does not directly
+carry over because the spacetime negative-norm direction is the
+*external* dark state D while Koide's negative-norm direction is
+the *internal* symmetric combination of three observable amplitudes,
+but the Lorentzian signature *character* of `M = q_3 I − q_2 J`
+(specifically the negative eigenvalue `q_3 − 3 q_2 = −3` on the
+symmetric direction) is shown to be *substrate-forced* through
+the chain `cube identity → (q_2, q_3) = (2, 3) → Q = 2/3 > 1/3 →
+M has Lorentzian (2, 1) signature` — each step substrate-internal;
+the residual gap after eleven iterations narrows to identifying
+two substrate-aligned ingredients that combine to give M's specific
+form: ingredient (i), the diagonal weight `q_3` interpreted as
+self-energy per generation (plausibly from the color triplet count
+`q_3` per generation or from the lepton-sector `k_lepton = q_3²`
+chirality-blind reading), and ingredient (ii), the off-diagonal
+weight `−q_2` interpreted as pair-wise coupling (plausibly from
+the Klein-antipodal Z_2 attraction of order `q_2`); both are
+substrate-aligned but not independently derived in the framework's
+existing documentation; the disanalogy with spacetime signature
+derivation is noted honestly (Koide's negative direction is
+within-amplitude-space, not an external dark state); next
+iteration options enumerated: derive ingredient (i) via lepton
+sector mode budget, derive ingredient (ii) via pair-wise Q-mod-2
+conservation, or open meta-thread on matrix-form uniqueness; the
+overall trajectory has converted the Koide derivation from
+"derive the algebraic form" (iter 1) through multiple reformulations
+and ruling-outs to "derive two specific substrate-aligned
+ingredients" (iter 11) — substantively narrower with substrate-forced
+signature character as a new structural finding, but closure
+remains open.

@@ -1,0 +1,423 @@
+# Koide form substrate derivation — iteration 10
+
+## Status
+
+**Iteration 10. Reversibility-class clarification.** Reframes the
+iteration 9 null result as a *category clarification* rather than
+a tactical miss, identifying that the framework's substrate
+machinery splits into reversibility classes and that Koide's
+substrate-derivation belongs in a specific class.
+
+**Key result.** Substrate mechanisms in the framework partition
+into:
+
+- **Class A (reversible / algebraic)**: conserved quantities, group
+  actions, quadratic forms, algebraic identities. No information
+  loss; time-reversible.
+- **Class B (irreversible / probabilistic)**: basin-selection events,
+  Born-rule outcomes, statistical sampling. Information lost; entropy
+  generated.
+
+Lepton masses are *pre-measurement structural quantities* —
+inputs to QM dynamics, not outcomes of basin selection events.
+Therefore Koide (a relation among these quantities) is structurally
+**Class A**. The iteration 9 null result is then explainable as a
+category mistake: Path A used `three_basins.py` machinery (Class B)
+to derive a Class A quantity.
+
+The substrate-derivation of Koide must run entirely within Class
+A: Klein-bottle Q (conserved population ratio), matrix M = q_3 I
+− q_2 J (algebraic quadratic form), V_4 / S_3 / Z_2 group actions,
+cube identity, sector exponent. All Class A candidates within the
+framework's apparatus.
+
+**Substantive structural finding**: M has signature `(2, 1)` (two
+positive eigenvalues `q_3 = 3` on orthogonal complement, one
+negative eigenvalue `q_3 − 3 q_2 = −3` on symmetric direction).
+Trace = `3(q_3 − q_2) = 3`; determinant = `q_3² (q_3 − 3 q_2) = −27
+= −q_3³`. M is therefore a *Lorentzian-shape* quadratic form on
+three-generation amplitude space, with substrate-primitive
+invariants. The lepton amplitude vector lies on its null cone —
+analogous to a light cone in 2+1-dim Minkowski space.
+
+No new substrate primitive. Iteration 10 establishes a category
+clarification with a substantive structural observation about M's
+Lorentzian signature. Class B candidates pruned from the search
+space; Class A candidates remain.
+
+Class: foundational consolidation (Class 3, iteration step 10,
+category clarification + structural observation).
+
+---
+
+## Audit of three_basins.py prose
+
+Before proceeding with the reversibility analysis, a brief audit
+of the Class B apparatus tested in iteration 9:
+
+**three_basins.py summary asserts** (lines 379–390): "The three
+generation masses *are* the inverse Born weights at the moment
+probability is invited."
+
+**three_basins.py hedges** in the next paragraph: "If the basin
+ratio matches the lepton mass hierarchy (1:207:3477)..."
+
+**Numerical output shows mismatch**: basin-width-derived ratios at
+K=1.0 are `1 : 3.5 : 4.8`; observed lepton ratios are
+`1 : 207 : 3477` — a 3-order-of-magnitude discrepancy.
+
+**Verdict**: mild local overclaim in summary prose ("are" where
+"would be if matched" was honest), but the discrepancy is exposed
+by the script's own output. No load-bearing framework prediction
+depends on `three_basins.py` producing correct lepton mass ratios:
+`generation_mechanism.md` cites it as "numerical results" that the
+cube-structure derivation formalizes, not as the derivation source.
+The actual mass derivation goes through bare-tree
+`m_i = base_i^(5/2)` with `(1, 7, 26)` — a Class A algebraic
+formula.
+
+The overclaim is local and non-propagating. Acceptable for
+proceeding with iteration 10's clarification.
+
+---
+
+## The two reversibility classes
+
+### Class A — reversible / algebraic mechanisms
+
+Substrate mechanisms with no information loss; time-reversible;
+structural at all scales.
+
+Examples in framework:
+- **Q mod 2 conservation** (substrate inviolable #1):
+  `q_mod2_conservation_theorem.md`. Q is conserved under any local
+  process — reversible.
+- **Bicone-Z_2 rigidity** (substrate inviolable #3): topological
+  invariant; reversible.
+- **Klein-antipodal Z_2** (`klein_bottle.md` D19, `klein_antipodal_z2_rep_pattern.md`):
+  involution τ; (τ)² = id; reversible.
+- **Klein-bottle population ratio Q = q_2/q_3** (`klein_bottle.md`
+  D19): static substrate-derived value.
+- **Cube identity** `q_2³ = q_2 + 2 q_3` (`mass_sector_closure.md`):
+  algebraic identity.
+- **Matrix M = q_3 I − q_2 J**: symmetric quadratic form.
+- **V_4 / S_3 / SU(3) group actions**: reversible (group elements
+  invertible).
+- **Bare-tree formula** `m_i = base_i^(5/2)`: algebraic; given
+  m_i, recover base_i.
+
+These all share: no Born-rule basin selection; no statistical
+sampling; no probabilistic outcomes; no time-asymmetric processes.
+
+### Class B — irreversible / probabilistic mechanisms
+
+Substrate mechanisms involving basin selection, Born-rule outcomes,
+or statistical sampling. Information is lost; entropy generated;
+time direction matters.
+
+Examples in framework:
+- **Saddle-node basin selection** (`born_rule.md`,
+  `a1_from_saddle_node.md`, `lesson_forced_basin_selection.md`):
+  basin choice at a saddle-node is a one-way event.
+- **Born rule outcomes**: probabilistic; |ψ|² gives probabilities
+  but specific outcomes are sampled.
+- **Circle-map basin widths** (`three_basins.py`): widths derived
+  from period-3 orbit geometry → Born weights → mass-like
+  ratios. The conversion via Born rule introduces Class B character.
+- **Mode-locking / unlocking transitions**: irreversible above
+  Arnold-tongue thresholds.
+
+These all share: a measurement-like step where probability is
+"invited" (the framework's own term, `three_basins.py`).
+
+### Where the framework's substrate machinery is classified
+
+Each substrate inviolable and primitive can be classified:
+
+| Substrate component | Class |
+|---|---|
+| Q mod 2 conservation (inviolable #1) | A |
+| Bicone-Z_2 rigidity (inviolable #3) | A |
+| Klein-bottle topology | A |
+| Saddle-node parabola (`a1_from_saddle_node.md`) | A (the *form*) / B (the *selection*) |
+| Born rule from basin measure | B (the sampling) / A (the rule itself) |
+| Mediant operation | A |
+| Stern-Brocot tree | A |
+| Cascade master identity | A |
+| Sector exponents | A |
+| Cube identity | A |
+
+Most substrate primitives are Class A. The Class B character enters
+when basin selection / Born rule sampling is invoked. Class A is
+the "structure"; Class B is the "events on the structure."
+
+---
+
+## Koide is structurally Class A
+
+The Koide constraint relates lepton mass values:
+
+    K  =  (m_e + m_μ + m_τ) / (√m_e + √m_μ + √m_τ)²
+
+These masses are *pre-measurement structural inputs* to QM
+dynamics. They enter the Schrödinger equation, the Dirac equation,
+the QED vertex functions. They are not outcomes of basin selection.
+
+Time-reversibility evidence: lepton dynamics are CPT-symmetric to
+experimental precision (`fundamental_physics_textbooks`). The
+masses themselves don't carry a preferred time direction.
+
+**Therefore Koide is structurally Class A.** Its substrate-derivation
+must come from Class A machinery (algebraic, reversible).
+
+Iteration 9's null result on Path A is now explainable: Path A
+used Class B machinery (basin widths via Born rule) to derive a
+Class A quantity (mass ratios). The classes don't compose that way.
+
+This isn't a *tactical* miss; it's a *category* mistake. The same
+category mistake would explain why other Class B candidates (if
+considered) would also miss.
+
+---
+
+## Substantive structural observation: M has Lorentzian signature
+
+The matrix `M = q_3 I − q_2 J = 3 I − 2 J` on three-generation
+amplitude space has eigenvalue spectrum:
+
+| Eigenvalue | Multiplicity | Eigenspace |
+|---|---|---|
+| `+q_3 = +3` | 2 | Orthogonal complement of `(1,1,1)` |
+| `q_3 − 3 q_2 = −3` | 1 | Symmetric direction `(1,1,1)/√3` |
+
+Invariants:
+
+| Invariant | Value | Substrate-primitive form |
+|---|---|---|
+| Trace | `3` | `3(q_3 − q_2)` — but `q_3 − q_2 = 1`, so trace = `q_3` |
+| Determinant | `−27` | `q_3² (q_3 − 3 q_2) = q_3² · (−3 + q_3 − q_2 − q_2) = q_3² · (−q_3) = −q_3³` |
+
+So:
+- `trace(M) = q_3`
+- `det(M) = −q_3³`
+
+Both invariants are substrate primitives. The trace equals the
+matrix size, and the determinant equals minus the cube of the
+matrix size — substrate-natural.
+
+The signature `(2, 1)` is **Lorentzian-like**: two positive
+eigenvalues (the orthogonal complement of the symmetric direction
+is "space-like" with weight `q_3`) and one negative eigenvalue
+(the symmetric direction is "time-like" with weight `q_3 − 3 q_2 =
+−3`).
+
+**The Koide constraint `v^T M v = 0` is structurally "the lepton
+amplitude vector lies on the light cone of this Lorentzian metric
+on three-generation amplitude space."**
+
+This is a substantive observation. The framework's substrate
+apparatus produces a (2+1)-dim Minkowski-like structure on
+three-generation amplitude space, with substrate-primitive trace
+and determinant, with lepton observables on the light cone.
+
+It's also structurally analogous to spacetime's (3, 1) signature
+(`minkowski_signature.md` derives `(3, 1)` for spacetime from
+substrate phase-state observability). The Koide matrix gives a
+*lower-dimensional* analog: `(2, 1)` on three-generation
+amplitude space.
+
+Whether this is coincidence or structural is itself a research
+question. But the (2, 1) signature is the matrix's invariant
+character; it's there in the algebra regardless of derivation
+chain.
+
+---
+
+## Class A candidates not yet tested
+
+Within Class A, the remaining candidates for substrate-derivation
+of Koide are:
+
+### Candidate A1 — V_4-invariant quadratic form on 4-amplitude space
+
+The framework's V_4 = Z_2 × Z_2 acts on the 4-state amplitude
+space `(√m_A, √m_B, √m_C, √m_D)` (iteration 4). Any V_4-invariant
+quadratic form on this 4-space has the form:
+
+    Q(w)  =  α |w_trivial|²  +  β |w_χ_2|²  +  γ |w_χ_3|²  +  δ |w_χ_4|²
+
+Four free coefficients. Restricting to observable (`√m_D = 0`)
+gives a quadratic form on the 3-observable space `(√m_A, √m_B,
+√m_C)`. For this restriction to equal `M = q_3 I − q_2 J`, the
+four V_4 coefficients (α, β, γ, δ) must take specific values.
+
+Test: derive the specific `(α, β, γ, δ)` from substrate inviolables
+and check whether they produce the right restriction. If yes:
+substrate-natural V_4-invariant cost on 4-amplitude space, restricted
+to observable, gives M. Closure.
+
+### Candidate A2 — Sector-exponent + Klein-bottle Q combined
+
+Bare-tree formula `m_i = base_i^(5/2)` with bases `(1, 7, 26)`
+gives `K = 0.708`. Klein-bottle constraint `K = Q = 2/3` corrects
+this to `K = 0.667`. The 6% correction has a specific algebraic
+form; deriving its substrate origin would close.
+
+Test: derive the substrate-aligned mechanism by which the
+Klein-bottle population ratio `Q` enters the lepton sector as a
+constraint on bare-tree masses. The framework's existing
+`fermion_mass_running.md` claims this is "the SL(2, ℤ) trace
+structure (D34 §6)" — but iteration 2 ruled this out. A different
+substrate-aligned correction mechanism is needed.
+
+### Candidate A3 — Q-mod-2 conservation extended to lepton triple
+
+The framework's inviolable #1 (Q mod 2 conservation) is the
+foundational Z_2-valued substrate invariant. The pair-wise
+extension `Q_{AB} mod 2` is in `epr_bell_assembly_theorem.md`
+(#152). The triple extension `Q_{ABC} mod 2` is in
+`ghz_from_substrate.md` (#184).
+
+For three lepton generations, the analogous quantity would be
+`Q_{eμτ} mod 2`. If the lepton amplitude vector is constrained
+to a specific `Q`-eigenspace, this could give the Koide structure.
+
+Test: extend the Q mod 2 conservation to the lepton triple and
+check whether the constraint forces `K = 2/3`.
+
+### Candidate A4 — Lorentzian (2, 1) metric as direct substrate primitive
+
+The matrix M has Lorentzian (2, 1) signature with substrate-primitive
+trace and determinant. If the substrate's apparatus on
+three-generation amplitude space *naturally* produces this
+Lorentzian metric (not as a corrected sync cost, but as the
+intrinsic geometry), the Koide constraint follows directly.
+
+Connection to `minkowski_signature.md`: the framework derives
+spacetime signature `(3, 1)` from phase-state observability. An
+analogous derivation for `(2, 1)` on three-generation amplitude
+space — three observable directions, one "dark" direction
+encoded as negative eigenvalue — would close.
+
+Test: examine whether the framework's three observable phase
+states `{A, B, C}` and the dark `D` map to a (2, 1) Minkowski
+signature on three-generation amplitude space via the same
+"observability split" argument used in `minkowski_signature.md`
+for spacetime.
+
+This is the most concrete Class A candidate; the substrate
+machinery is already in place (`minkowski_signature.md`,
+`generation_mechanism.md` §1).
+
+---
+
+## Recommended next iteration
+
+**Iteration 11**: test Candidate A4 (Lorentzian (2, 1) metric via
+observability split). Examine whether `generation_mechanism.md`'s
+four phase states `{A, B, C, D}` with dark `D` produce a
+substrate-natural (2, 1) Lorentzian metric on three-generation
+amplitude space via the same observability argument that produces
+spacetime's (3, 1) in `minkowski_signature.md`.
+
+If yes: Koide closes substrate-natively via the Lorentzian metric
+analog of spacetime signature derivation. If no: refine and test
+Candidate A1 (V_4-invariant cost).
+
+---
+
+## Audit
+
+| Component | Status |
+|---|---|
+| Iteration 9 null result | Reframed as category mistake (Path A was Class B) |
+| three_basins.py overclaim | Mild local, non-propagating, audited |
+| Reversibility classification of substrate machinery | **Established** in this iteration |
+| Koide is structurally Class A | **Established** by mass quantities being pre-measurement |
+| M has Lorentzian (2, 1) signature | **Established** by direct eigenvalue analysis |
+| Substrate-derivation of M via Class A mechanism | **Open**: four candidates A1–A4 identified, A4 recommended for next test |
+| Floor → Survives upgrade | Pending Class A closure |
+
+The reversibility-class clarification prunes Class B from the
+candidate space. Class A candidates remaining: A1 (V_4-invariant
+cost), A2 (sector-exponent + Q correction), A3 (Q-mod-2 triple
+extension), A4 (Lorentzian metric via observability split — most
+concrete).
+
+The Lorentzian-signature observation about M (signature (2, 1)
+with substrate-primitive trace and determinant) is substantively
+new content in this iteration.
+
+---
+
+## Falsifiers
+
+- **Iteration 11 candidate A4 produces a substrate-derivation of
+  M**: closes the Koide gap via Lorentzian signature analog.
+- **All four Class A candidates ruled out**: pushes toward Basepoint
+  Row 1 declination (closure-by-decline-of-anchor-like structure)
+  or pushes back to a Class B reconsideration with stronger
+  category-bridging argument.
+- **Reversibility classification of substrate machinery shown to
+  be subtly different from this iteration's framing**: would refine
+  the category structure.
+- **The Lorentzian signature analogy is shown to be coincidental
+  rather than structural**: would not invalidate the matrix M but
+  would weaken the structural interpretation.
+
+---
+
+## Cross-links
+
+- `koide_form_substrate_iteration_9.md` — Path A null result;
+  reframed here as category mistake.
+- `minkowski_signature.md` (D32) — spacetime signature (3, 1)
+  from observability split; analogue for Candidate A4.
+- `generation_mechanism.md` (D34) §1 — four phase states
+  {A, B, C, D} with D dark.
+- `q_mod2_conservation_theorem.md` — Q mod 2 conservation
+  (substrate inviolable #1; Candidate A3 source).
+- `klein_bottle.md` (D19) — Klein-bottle Q = q_2/q_3.
+- `mass_sector_closure.md` — bare-tree formula; cube identity.
+- `three_basins.py` — Class B apparatus tested in iter 9; mild
+  local overclaim noted.
+- `discrete_extension_principle.md` (PR #191) — methodology for
+  Class A candidate enumeration.
+- `substrate_prediction_selection.md` — concurrent thread on
+  selection uniqueness; methodologically independent.
+
+---
+
+## One-line summary
+
+Iteration 10 establishes that the framework's substrate machinery
+partitions into reversibility classes — **Class A (reversible /
+algebraic)** including Q-mod-2 conservation, Klein-bottle τ, matrix
+M = q_3 I − q_2 J, group actions, cube identity, bare-tree formula,
+and **Class B (irreversible / probabilistic)** including basin
+selection, Born-rule outcomes, basin-width derivations like
+`three_basins.py`; lepton masses are *pre-measurement structural
+quantities* entering QM dynamics rather than outcomes of basin
+selection, so Koide (a relation among masses) is structurally
+**Class A**; iteration 9's null result is therefore *category-
+mistakenly* using Class B machinery (basin widths) to derive a
+Class A quantity (mass ratio constraint), not a tactical search
+failure; the substantive structural observation is that
+**M has signature `(2, 1)` Lorentzian** with substrate-primitive
+invariants `trace(M) = q_3` and `det(M) = −q_3³`, and the lepton
+amplitude vector lies on its null cone — analogous to the light
+cone of (2+1)-dim Minkowski space and structurally parallel to
+`minkowski_signature.md`'s derivation of spacetime's `(3, 1)`
+signature from observability split; this observation produces a
+concrete Candidate A4 for the next iteration: derive the (2, 1)
+metric on three-generation amplitude space via the same
+observability-split argument used for spacetime, applied to the
+four phase states `{A, B, C, D}` with dark D providing the
+negative-eigenvalue direction; three other Class A candidates
+remain (V_4-invariant cost on 4-amplitude restricted to observable,
+sector-exponent + Klein-Q correction mechanism, Q-mod-2 triple
+extension); audit of `three_basins.py` notes mild local prose
+overclaim but no propagating dependency on framework predictions;
+the reversibility-class clarification prunes Class B candidates
+from the search space and identifies Candidate A4 as the most
+concrete remaining substrate-derivation route.
