@@ -330,3 +330,9 @@
 2026-05-30T20:22:37Z doc-seal koide_form_substrate_iteration_6.md (cube identity necessary not sufficient)
 2026-05-30T22:33:42Z | put | sync_cost/derivations/koide_form_substrate_iteration_7.md -> 34d36900172e0030aca4e09785aad37d352e251f09bb61addc1b9eef583b5349
 2026-05-30T22:34:42Z doc-seal koide_form_substrate_iteration_7.md (pivot to matrix form M=q_3 I - q_2 J)
+2026-05-31T01:10:25Z | put | sync_cost/derivations/koide_form_substrate_iteration_8.md -> 1f5f59a01615330587c7669f9340ba05475c764ffeeaff824e11c5d9ac3a29d8
+2026-05-31T01:14:55Z doc-seal koide_form_substrate_iteration_8.md (reduction to K=Q=q_2/q_3 scalar identity)
+2026-05-31T03:29:33Z | put | sync_cost/derivations/koide_form_substrate_iteration_8.md -> 38ee64c7c8f52a31709eb320c971887e4935dcd6f3b48b6b0e6bf134a35126b0
+2026-05-31T03:29:33Z | dag:create | e59556313682df6573ad4f1e4db9164d37c9a3750eb0933e62255b29f39875c7
+2026-05-31T03:30:36Z | put | sync_cost/derivations/koide_form_substrate_iteration_8.md -> 38ee64c7c8f52a31709eb320c971887e4935dcd6f3b48b6b0e6bf134a35126b0
+2026-05-31T03:30:36Z | put | sync_cost/derivations/substrate_prediction_selection.md -> 4c151498573966a84ff21e87d3d3804f7a746e01baafef377a61391a46addb4d
