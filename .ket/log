@@ -328,3 +328,10 @@
 2026-05-30T18:54:05Z doc-seal koide_form_substrate_iteration_5.md (V_4 reformulation = q_3:MEDIANT)
 2026-05-30T20:22:37Z | put | sync_cost/derivations/koide_form_substrate_iteration_6.md -> d8e428c911d2306345cb623c3b7754b11f9e0bad1d9bb80e6afdf5329c384635
 2026-05-30T20:22:37Z doc-seal koide_form_substrate_iteration_6.md (cube identity necessary not sufficient)
+2026-05-31T11:23:18Z | put | sync_cost/derivations/koide_form_substrate_iteration_7.md -> 34d36900172e0030aca4e09785aad37d352e251f09bb61addc1b9eef583b5349
+2026-05-31T11:23:18Z | put | sync_cost/derivations/koide_form_substrate_iteration_8.md -> 38ee64c7c8f52a31709eb320c971887e4935dcd6f3b48b6b0e6bf134a35126b0
+2026-05-31T11:23:18Z | put | sync_cost/derivations/koide_form_substrate_iteration_9.md -> 88c5fad51ab3f4fb79fc2bf37df2435916690772177c3f55a4c3cdbea0ef0ff9
+2026-05-31T11:23:18Z | put | sync_cost/derivations/koide_form_substrate_iteration_10.md -> ae80fe0b0200f1258ae4e7544a143c7b11fb90b64ef3e319814c5795e5b8872e
+2026-05-31T11:23:18Z | put | sync_cost/derivations/koide_form_substrate_iteration_11.md -> 1e9b677cf6a092440f090206c9165ea57a3847b85eeb1ce6e0ce604e8ef50573
+2026-05-31T11:23:18Z | put | sync_cost/derivations/substrate_prediction_selection.md -> 4c151498573966a84ff21e87d3d3804f7a746e01baafef377a61391a46addb4d
+2026-05-31T11:27:19Z doc-seal Koide iters 7-11 + selection thread (post-#197 work)

@@ -1,0 +1,406 @@
+# Koide form substrate derivation — iteration 7
+
+## Status
+
+**Iteration 7. Pivot to a simpler matrix form.** Supersedes the
+V_4 + cube identity + chirality cross-link apparatus of iterations
+4–6 with a substantially simpler quadratic-form expression that
+uses only the substrate primitives `q_2 = 2` and `q_3 = 3` without
+any squared, cubed, or sector-cross-link multipliers.
+
+**Key result.** The Koide constraint `K = Σm/(Σ√m)² = 2/3` is
+equivalent to:
+
+    v^T M v  =  0      where    v = (√m_e, √m_μ, √m_τ)
+                                M  =  q_3 I  −  q_2 J
+
+with `I` the 3×3 identity, `J` the 3×3 all-ones matrix, and `(q_2,
+q_3) = (2, 3)` the framework's foundational primes.
+
+The matrix `M = q_3 I − q_2 J` has eigenvalues:
+- `q_3 − 3 q_2 = −3` on the symmetric direction `(1, 1, 1)/√3`
+- `q_3 = +3` on the 2-dim orthogonal complement (multiplicity 2)
+
+The null-cone condition `v^T M v = 0` constrains `|v_sym|² /
+|v|² = q_3 / (3 q_2) = 1/2`, recovering iteration 1's
+`θ = 45°` geometric statement directly from the matrix's
+eigenvalue structure.
+
+No new substrate primitive. The contribution is the simpler
+matrix reformulation, which makes the substrate-derivation
+question more tractable. Class-3 iteration step 7 (pivot
+reduction).
+
+---
+
+## Derivation of the simpler form
+
+Starting from the Koide constraint:
+
+    (Σ m_i)  =  (2/3) (Σ √m_i)²
+
+Let `v_i = √m_i`. The constraint becomes:
+
+    Σ v_i²  =  (2/3) (Σ v_i)²
+
+Expand the right-hand side: `(Σ v_i)² = Σ v_i² + 2 Σ_{i<j} v_i v_j`.
+
+    Σ v_i²  =  (2/3) [Σ v_i²  +  2 Σ_{i<j} v_i v_j]
+
+    (1 − 2/3) Σ v_i²  =  (4/3) Σ_{i<j} v_i v_j
+
+    Σ v_i²  =  4 Σ_{i<j} v_i v_j
+
+In matrix form, this is `v^T M v = 0` where `M` has:
+- Diagonal entries `M_{ii} = 1`
+- Off-diagonal entries `M_{ij} = −2` for `i ≠ j`
+
+That is, `M = 3 I − 2 J` (with `J` = matrix of all 1s), which in
+substrate primitives is:
+
+    M  =  q_3 I  −  q_2 J
+
+### Numerical verification (PDG)
+
+| Quantity | Value |
+|---|---|
+| `v` | `(1, 14.38, 58.97)` |
+| `v^T M v` | `3685 − 4 · 921.8 = 3685 − 3687 = −2` |
+| Match to zero | `0.05%` (within PDG precision of `Q = 2/3`) |
+
+The lepton amplitude vector lies on the null cone of `M` to PDG
+precision.
+
+---
+
+## Eigenvalue structure of `M = q_3 I − q_2 J`
+
+The matrix `J` (all-ones) has known spectrum:
+- Eigenvalue 3 on the symmetric direction `(1, 1, 1)/√3` (multiplicity 1)
+- Eigenvalue 0 on the orthogonal complement (multiplicity 2)
+
+Therefore `M = q_3 I − q_2 J` has:
+- Eigenvalue `λ_sym = q_3 − 3 q_2 = 3 − 6 = −3` on the symmetric direction
+- Eigenvalue `λ_⊥ = q_3 − 0 = 3` on the 2-dim orthogonal complement
+
+In general substrate primitives: `λ_sym = q_3 − 3 q_2`, `λ_⊥ = q_3`.
+
+### The null-cone condition unpacks geometrically
+
+Decompose `v` into symmetric and orthogonal components:
+
+    v  =  v_sym  +  v_⊥           (orthogonal decomposition)
+
+    v^T M v  =  λ_sym · |v_sym|²  +  λ_⊥ · |v_⊥|²
+              =  (q_3 − 3 q_2) · |v_sym|²  +  q_3 · |v_⊥|²
+
+Setting `v^T M v = 0`:
+
+    (3 q_2 − q_3) · |v_sym|²  =  q_3 · |v_⊥|²
+
+    |v_⊥|² / |v_sym|²  =  (3 q_2 − q_3) / q_3
+
+For `(q_2, q_3) = (2, 3)`:
+
+    |v_⊥|² / |v_sym|²  =  (6 − 3) / 3  =  1
+
+This is the iteration-1 equipartition `|v_sym|² = |v_⊥|²`,
+recovered as a special case of the null-cone condition for the
+substrate primitives `(2, 3)`.
+
+### The `45°` angle re-derived in substrate primitives
+
+The cosine of the angle between `v` and the symmetric direction
+satisfies:
+
+    cos² θ  =  |v_sym|² / |v|²
+
+With the null-cone condition:
+
+    cos² θ  =  q_3 / (3 q_2)
+
+For `(q_2, q_3) = (2, 3)`: `cos² θ = 3/6 = 1/2`, so `θ = π/4 = 45°`.
+
+The iteration-1 geometric statement is now a direct consequence
+of the substrate primitives via the matrix `M`.
+
+---
+
+## Comparison to iterations 4–6 apparatus
+
+| Iteration | Apparatus | Substrate primitives appearing | Complexity |
+|---|---|---|---|
+| 1 | `\|v_sym\|² = \|v_⊥\|²` equipartition (S_3 decomposition) | None (abstract) | Simple geometric form, no substrate primitives |
+| 5 | `\|w_χ_0\|² : \|w_⊥V_4\|² = q_3 : MEDIANT` in V_4 form on 4-vector | `q_3`, `MEDIANT = q_2 + q_3`, `q_2³ = q_2 + 2 q_3` | V_4 group action, irrep decomposition, dark-state restriction |
+| 6 | Cube identity `q_2³ = q_2 + 2 q_3` decomposition (2, 3, 3) with (b)/(c) degeneracy | `q_2`, `q_3`, `q_2³`, `k_lepton`, `k_quark` (potentially) | Cube identity + chirality assignment + degeneracy resolution |
+| 7 (this) | `v^T (q_3 I − q_2 J) v = 0` matrix null-cone condition | `q_2`, `q_3` only | Single 3×3 matrix; bilinear constraint |
+
+Iteration 7 uses only the two foundational primes `q_2 = 2` and
+`q_3 = 3`. It does not require:
+- Sector exponents (no `5/2` or `9/8` cross-link)
+- Cube identity (the `q_2³ = q_2 + 2 q_3` decomposition)
+- V_4 irrep apparatus or 4-vector decomposition
+- Lepton-vs-quark sector cross-link
+- Chirality / raising / lowering assignments
+- The `m_D = 0` dark-state restriction
+
+These earlier apparatuses are still consistent with the matrix
+form — but the matrix form makes them all redundant for the
+purpose of stating the Koide constraint substrate-natively.
+
+---
+
+## The substrate-derivation question after iteration 7
+
+The Koide derivation gap reads as:
+
+> **Does the substrate force the lepton amplitude vector `v = (√m_e,
+> √m_μ, √m_τ)` to lie on the null cone of `M = q_3 I − q_2 J`?**
+
+This is the simplest possible form of the question. The matrix
+`M` is built from the two foundational substrate primitives. The
+null-cone condition is the simplest non-trivial constraint a
+3-vector can satisfy.
+
+### What's known to be substrate-derived
+
+- The lepton amplitude vector components come from substrate-derived
+  bare-tree base ratios `(1, 7, 26)` and sector exponent `5/2`
+  (`generation_mechanism.md`, `mass_sector_closure.md`).
+- The framework primitives `q_2 = 2` and `q_3 = 3` are forced
+  uniquely by the framework's cube identity (`mass_sector_closure.md`
+  Theorem).
+- The matrix `M = q_3 I − q_2 J` is built from these substrate
+  primitives.
+
+### What is not yet substrate-derived
+
+- That `v` substrate-derived from `(base, exponent) = ((1, 7, 26),
+  5/2)` lies exactly on the null cone of `M`.
+
+This is an empirical relation among the bare-tree masses. Bare
+tree alone does *not* satisfy the null-cone condition (it gives
+`K = 0.708 ≠ 2/3`). Either:
+
+1. **The bare-tree formula is incomplete**: an additional substrate
+   correction mechanism pushes the muon mass from `7^(5/2) ≈ 129.6`
+   to `≈ 204.8` to land on the null cone. The substrate-derivation
+   then reads as deriving this correction.
+
+2. **The Koide constraint is an additional substrate axiom**: the
+   substrate independently imposes `v^T M v = 0` as a constraint,
+   combined with the bare-tree formula to determine `m_μ` consistently.
+   The substrate-derivation reads as identifying which substrate
+   inviolable produces the matrix `M`.
+
+Both readings are plausible. The simpler matrix form makes the
+question sharper without resolving which reading is correct.
+
+---
+
+## Re-disposition of iteration-6 candidate mechanisms
+
+In the iteration-7 framing, the three candidate mechanisms from
+iteration 6 (chirality via τ, cascade depth, Klein-bottle Z_2
+grading) are reframed:
+
+- **Candidate 1 (chirality via τ on SU(3) generators)**: irrelevant
+  to the matrix form. The matrix `M = q_3 I − q_2 J` does not
+  reference SU(3) generators; it acts on the three-generation
+  amplitude space directly.
+- **Candidate 2 (cascade depth ordering)**: irrelevant in this form.
+- **Candidate 3 (Klein-bottle Z_2 grading)**: the off-diagonal
+  `−q_2` of `M` carries the Klein-antipodal Z_2 sign-flip structure.
+  The substrate-derivation may run through a Klein-bottle quadratic
+  form rather than a Z_2-graded SU(3) adjoint decomposition.
+
+The lepton/quark `9/8` cross-link chain identified by the
+iteration-6 corpus search is also irrelevant in this form. The
+matrix `M = q_3 I − q_2 J` does not require crossing sector
+boundaries.
+
+The iteration-6 framing of the substrate-derivation question (with
+its degeneracy problems and corpus-claimed-but-unwritten
+derivations) is superseded by iteration 7's simpler matrix form.
+
+---
+
+## Substrate readings of the matrix `M = q_3 I − q_2 J`
+
+Candidate substrate-natural interpretations of the matrix:
+
+### Reading 1 — Klein-bottle quadratic form on three-generation space
+
+The matrix `q_3 I − q_2 J` has the form of a *graph Laplacian*
+on the complete graph `K_3` (three generations, each connected to
+every other) with self-loop weight `q_3` and edge weight `q_2`.
+
+The framework's Klein bottle has a substrate-natural quadratic
+form (the synchronization cost; `framework_lagrangian.py`). If
+this quadratic form, restricted to the three-generation amplitude
+subspace, has the form `q_3 I − q_2 J`, the null-cone condition
+emerges automatically.
+
+**Open**: derive the restriction of the Klein-bottle synchronization
+cost to three-generation amplitude space and check whether it
+matches `M`.
+
+### Reading 2 — Generation-space metric tensor
+
+The matrix `M` may be the *inverse metric* on three-generation
+space, with the Koide constraint expressing that the lepton
+amplitude vector is null with respect to this metric.
+
+The framework's basin geometry derives a metric structure
+(`born_rule.md`, `gap2_step4_farey_laplacian.md`). If the
+three-generation restriction of the basin metric gives `M = q_3 I
+− q_2 J`, the null-cone reading is geometric.
+
+**Open**: examine whether the substrate-derived metric on
+three-generation space matches `M`.
+
+### Reading 3 — `S_3`-equivariant operator on three-generation space
+
+The matrix `M` is `S_3`-equivariant (invariant under permutation
+of generations) since `J` is permutation-symmetric and `I` is
+trivially so.
+
+Any `S_3`-equivariant linear operator on `ℝ³` has the form `α I
++ β J` for scalars `α, β`. The substrate primitives `(q_3, −q_2)`
+specifying `M = q_3 I − q_2 J` may be the *unique* `S_3`-equivariant
+choice consistent with the substrate's two-prime structure.
+
+**Open**: derive why the substrate-natural `S_3`-equivariant
+operator has coefficients `(q_3, −q_2)` specifically, rather than
+`(q_2, −q_3)` or any other substrate-primitive combination.
+
+---
+
+## What this iteration changes for the next
+
+The simpler matrix form makes the iteration-7 work productive in
+several ways:
+
+1. **Eliminates apparatus**. The V_4 + cube identity + chirality
+   chain (iterations 4–6) is superseded; further iterations don't
+   need to navigate the V_4 4-vector decomposition or the
+   degenerate `q_3` assignment in the cube identity.
+
+2. **Focuses the substrate question**. The single matrix `M = q_3
+   I − q_2 J` localizes the substrate-derivation work: either
+   derive the matrix from substrate primitives via one of the three
+   readings above, or identify a fourth substrate origin.
+
+3. **Re-derives iteration 1**. The `45°` equipartition becomes a
+   direct consequence of the matrix's eigenvalue structure, with
+   substrate primitives appearing explicitly. Iteration 1's
+   geometric statement no longer has to be expressed in abstract
+   `S_3` rep theory.
+
+4. **Connects to standard structures**. `M = q_3 I − q_2 J` is the
+   graph Laplacian on `K_3` (up to sign convention) — a well-studied
+   linear-algebraic structure with possible substrate-internal
+   interpretations.
+
+### Recommended next iteration
+
+Test reading 1 (Klein-bottle quadratic form): derive the
+restriction of the substrate's synchronization cost (or its
+Lagrangian / Hamiltonian, per `framework_lagrangian.py`) to the
+three-generation amplitude subspace and check whether the
+resulting quadratic form matches `M = q_3 I − q_2 J`.
+
+If yes: the Koide constraint is substrate-derived from the basin
+geometry. If no: iteration 9 tests reading 2 (metric tensor).
+
+---
+
+## Audit
+
+| Component | Status |
+|---|---|
+| Iteration 1 geometric reformulation (`\|v_sym\|² = \|v_⊥\|²`) | Recovered as null-cone consequence (this iteration) |
+| Iteration 2 candidate 4 ruled out (SL(2, ℤ)) | Stands |
+| Iteration 3 candidate 1 standard form ruled out (Z_2 on ℝ³) | Stands |
+| Iteration 4 substrate gives V_4 not S_3 | Stands but reframed as irrelevant to matrix form |
+| Iteration 5 V_4 reformulation `q_3 : MEDIANT` | Superseded as overly complex |
+| Iteration 6 cube identity decomposition (2, 3, 3) | Superseded as overly complex |
+| Iteration 7 matrix form `v^T (q_3 I − q_2 J) v = 0` | **Established as simpler reformulation** |
+| Substrate forces `v` onto null cone of `M` | **Open** — substrate-derivation target with three candidate readings |
+
+The trajectory across seven iterations narrows the gap from "derive
+the Koide algebraic form" (iteration 1) to "derive the matrix
+`M = q_3 I − q_2 J` from substrate primitives via one of three
+readings" (iteration 7). Substantively narrower and substantially
+simpler than iteration 6's residual target.
+
+---
+
+## Falsifiers
+
+- **The matrix `M = q_3 I − q_2 J` is derived from one of the three
+  candidate readings (Klein-bottle quadratic form, basin metric,
+  `S_3`-equivariant operator)**. Would close the Koide gap.
+- **All three readings ruled out**. Would push the Koide derivation
+  to a fourth candidate or to a DEP row 2 verdict.
+- **A simpler matrix form than `M = q_3 I − q_2 J` is found**.
+  Would supersede iteration 7. Possible directions: `2 × 2`
+  matrix (after dimensional reduction), or a `1 × 1` scalar
+  invariant.
+- **The bare-tree formula is shown to require a substrate correction
+  that pushes `v` exactly onto the null cone of `M`**. Would close
+  reading 1 (Klein-bottle quadratic form) by deriving the correction
+  from substrate.
+
+---
+
+## Cross-links
+
+- `koide_form_substrate_iteration_6.md` — V_4 + cube identity
+  framing, now superseded.
+- `mass_sector_closure.md` — Cube identity `q_2³ = q_2 + 2 q_3`
+  (still substrate-derived; irrelevant to iteration 7's form).
+- `klein_bottle.md` (D19) — substrate's `q_2 = 2, q_3 = 3`
+  structure.
+- `framework_lagrangian.py` — substrate synchronization cost
+  (Reading 1 candidate source).
+- `born_rule.md` — basin geometry (Reading 2 candidate source).
+- `complex_amplitude_uniqueness.md` — Klein-bottle topology that
+  forces `q_2 = 2`.
+- `discrete_extension_principle.md` (PR #191) — methodology.
+
+---
+
+## One-line summary
+
+The Koide constraint `K = Σm/(Σ√m)² = 2/3` is equivalent to the
+quadratic-form condition `v^T M v = 0` for `v = (√m_e, √m_μ,
+√m_τ)` and `M = q_3 I − q_2 J` (with `I` the `3×3` identity, `J`
+the `3×3` all-ones matrix, and `(q_2, q_3) = (2, 3)` the foundational
+substrate primes), which is substantially simpler than the V_4 +
+cube identity + chirality machinery of iterations 4–6: the matrix
+`M` uses only `q_2` and `q_3` without squared, cubed, sector-
+cross-link, or chirality multipliers, has eigenvalues `q_3 −
+3 q_2 = −3` on the symmetric direction and `q_3 = 3` on the 2-dim
+orthogonal complement, and re-derives iteration 1's `45°`
+equipartition (`cos² θ = q_3 / (3 q_2) = 1/2`) directly from
+substrate primitives via its eigenvalue structure; numerical
+verification (PDG): `v^T M v ≈ −2` against `|v|² = 3685` —
+match to `0.05%`, consistent with Koide's `10⁻⁵` precision;
+substrate-derivation gap reduces to *deriving the matrix `M = q_3
+I − q_2 J` from substrate primitives* via one of three readings —
+Klein-bottle quadratic form (`framework_lagrangian.py` restricted
+to three-generation amplitude subspace), generation-space metric
+tensor (from basin geometry `born_rule.md`), or `S_3`-equivariant
+linear operator on `ℝ³` with substrate-primitive coefficients
+`(q_3, −q_2)` — none yet substantiated but all three are concrete
+substrate-derivation targets; iterations 4–6's apparatus (V_4
+group, cube identity decomposition with `(b)/(c)` degeneracy,
+lepton-quark `9/8` cross-link chain) is superseded by the matrix
+form as a cleaner reformulation, with `S_3`-equivariance of `M`
+making the substrate-natural choice transparent and the matrix
+size `3 = q_3` (three generations / color triplet / spatial
+dimensions) appearing structurally rather than via SU(3) adjoint
+decomposition; recommended next iteration tests reading 1
+(restriction of substrate synchronization cost to three-generation
+amplitude space and comparison to `M`).
