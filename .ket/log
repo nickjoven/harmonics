@@ -336,3 +336,10 @@
 2026-05-31T03:29:33Z | dag:create | e59556313682df6573ad4f1e4db9164d37c9a3750eb0933e62255b29f39875c7
 2026-05-31T03:30:36Z | put | sync_cost/derivations/koide_form_substrate_iteration_8.md -> 38ee64c7c8f52a31709eb320c971887e4935dcd6f3b48b6b0e6bf134a35126b0
 2026-05-31T03:30:36Z | put | sync_cost/derivations/substrate_prediction_selection.md -> 4c151498573966a84ff21e87d3d3804f7a746e01baafef377a61391a46addb4d
+2026-05-31T06:37:04Z | put | sync_cost/derivations/koide_form_substrate_iteration_9.md -> d5e1ca45a5ead9db18820d8e69336caf14a2143b72f10d58e9bf67eff9e4350a
+2026-05-31T10:02:43Z | put | sync_cost/derivations/koide_form_substrate_iteration_9.md -> 88c5fad51ab3f4fb79fc2bf37df2435916690772177c3f55a4c3cdbea0ef0ff9
+2026-05-31T10:02:43Z | dag:create | dc755bbf99420e0d6adb21d956998f0608f7c596dd86f3e3bf928fd0e510fd22
+2026-05-31T10:41:58Z | put | sync_cost/derivations/koide_form_substrate_iteration_9.md -> 88c5fad51ab3f4fb79fc2bf37df2435916690772177c3f55a4c3cdbea0ef0ff9
+2026-05-31T10:41:58Z | put | sync_cost/derivations/koide_form_substrate_iteration_10.md -> ae80fe0b0200f1258ae4e7544a143c7b11fb90b64ef3e319814c5795e5b8872e
+2026-05-31T10:41:58Z | put | sync_cost/derivations/koide_form_substrate_iteration_11.md -> 1e9b677cf6a092440f090206c9165ea57a3847b85eeb1ce6e0ce604e8ef50573
+2026-05-31T11:04:45Z doc-seal koide iters 9, 10, 11 (Path A null, reversibility classes, Lorentzian signature analogy)
