@@ -10,8 +10,11 @@ Severity model (revised 2026-05-18):
     --stop-on-fail, aborts immediately. These encode judgment or a
     real integrity violation (e.g. CAS corruption).
 
-  - ADVISORY checks never gate: working-tree drift, and the
-    session-status snapshot. Substrate drift is a
+  - ADVISORY checks never gate: working-tree drift, the
+    session-status snapshot, and DAG acyclicity. The acyclicity
+    check reports cycles in the prose-built `depends_on` graph,
+    which is cyclic by construction until edges are typed; it is a
+    health signal, not a policy violation. Substrate drift is a
     mechanically-regenerable derived artifact (re-`ket put`), not a
     policy violation. It self-heals on edit via
     scripts/hooks/post_edit_regen.py and is reconciled in CI by
@@ -46,6 +49,7 @@ CHECKS = [
     ("fitted-correction linter", "lint_fitted_corrections.py"),
     ("manifest consistency", "check_manifest.py"),
     ("graph orphans", "check_graph_orphans.py"),
+    ("DAG acyclicity", "check_dag_acyclic.py"),
     ("working-tree drift", "check_working_tree.py"),
     ("CAS verification", "verify_cas.py"),
 ]
@@ -53,7 +57,7 @@ CHECKS = [
 # Nonzero rc is reported but never gates: never adds to the exit
 # code, never triggers --stop-on-fail. Drift is a derived artifact,
 # not a violation — see module docstring.
-ADVISORY = {"session_status.py", "check_working_tree.py"}
+ADVISORY = {"session_status.py", "check_working_tree.py", "check_dag_acyclic.py"}
 
 
 def main() -> int:
