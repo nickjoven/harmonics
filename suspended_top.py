@@ -28,8 +28,8 @@ The spin about the figure axis is ``omega3 = (L . n) / I3``; gravity's torque is
 perpendicular to ``n`` and so never changes ``L . n`` -- the spin decays only
 through the explicit spin drag, exactly as a real top coasts down.
 
-What the faithful model shows -- and an honest caveat
------------------------------------------------------
+What this example does -- resonance crossing, NOT mode-locking
+--------------------------------------------------------------
 Linearising about the hanging equilibrium (``n = -zhat``) gives two transverse
 mode frequencies,
 
@@ -42,15 +42,40 @@ and a slow swing -- are real, emergent, and meet at the gravitational pendulum
 as the spin dies. The tilt is a genuine coordinate, and the "balanced" case is
 simply ``tilt == 0`` held by symmetry.
 
-But note what this model does NOT claim. A free (or linearly damped) symmetric
-top is *integrable*: its motion is quasi-periodic nutation+precession, not the
-Arnold-tongue mode-locking the rest of this framework is built on. Genuine
-locking onto low-order rationals needs a non-integrable element -- the
-stick-slip friction nonlinearity of `driven_stribeck.py`, or the contact drag
-optionally enabled here via ``contact_friction``. Turning that on breaks
-integrability and is the bridge back to the framework; left off (the default),
-this script is the faithful, integrable top and should be read as such. It is
-illustrative, not a derivation of any physical constant.
+This example earns its place by drawing a line the framework lives on: the
+difference between *crossing* a resonance and *locking* to one.
+
+  * Resonance crossing (what this top does): as the spin coasts down, the ratio
+    omega3/omega_p sweeps continuously and the swing peaks each time the ratio
+    *passes through* a low-order rational. It passes through; it does not hold.
+    The ratio-vs-time trace is a smooth, monotone slide that merely touches each
+    rational at a point.
+
+  * Mode-locking (what the framework's Stern-Brocot / mediant content requires):
+    the ratio *sits* on p/q over a FINITE range of detuning -- an Arnold tongue
+    has width, so the trace shows a flat step (plateau), and the stacked steps
+    are the devil's staircase. THIS is where the number-theoretic structure
+    lives. A point-crossing carries none of it.
+
+A free or linearly-damped symmetric top is *integrable*: quasi-periodic
+nutation+precession, no locking. Crucially, the ``contact_friction`` option
+below does NOT change this. It was added in the hope of being a "bridge" to the
+locking picture, but the demonstration in ``demo_resonance_vs_locking()`` shows
+the coast-down stays a monotone slide for every value of ``contact_friction``:
+no plateau ever forms. The reason is structural -- the coupling here is
+one-way. The spin drives the pendulum, but nothing pulls the spin *toward* a
+rational; ``omega3`` is an autonomous coast-down and the pendulum is a slave. A
+velocity-dependent drag cannot manufacture a tongue. Genuine locking needs
+phase-dependent, bidirectional coupling that lets the driven mode entrain the
+drive (the stick-slip mechanism of `driven_stribeck.py`, where the friction
+state feeds back on the motion that produces it) -- this top does not have it.
+
+So: this is a faithful, validated model of a suspended symmetric top, and a
+clean *negative* example for the framework -- it shows what resonance crossing
+looks like precisely so that locking is not mistaken for it. It is illustrative,
+not a derivation of any physical constant, and it does not exhibit mode-locking.
+The null result is recorded in
+`sync_cost/derivations/negative_results_ledger.md`.
 
 Dependencies: Python 3.9+, standard library only. matplotlib is used only for
 the optional figure in __main__; the simulation needs nothing beyond ``math``.
@@ -108,9 +133,11 @@ class SuspendedSymmetricTop:
     spin_damping  : drag on the figure-axis spin (1/s); sets the coast-down rate
     tilt_damping  : viscous drag on the transverse (nutation/precession) motion
     contact_friction : optional Stribeck-like drag opposing the transverse
-                       slipping velocity. ZERO by default -- the faithful top is
-                       integrable. A positive value breaks integrability and is
-                       the bridge to the framework's locking picture.
+                       slipping velocity. ZERO by default. NOTE: this does not
+                       produce mode-locking -- the coupling is one-way (spin
+                       drives pendulum, not vice versa), so no Arnold tongue
+                       forms at any value. See ``demo_resonance_vs_locking()``
+                       and the module docstring.
     mu_static, mu_kinetic, v_thr : Stribeck curve for ``contact_friction``,
                        matching the convention in `driven_stribeck.py`.
     """
@@ -164,8 +191,10 @@ class SuspendedSymmetricTop:
 
         dL = _add(_add(grav, tau_spin), tau_perp)
 
-        # Optional Stribeck contact drag opposing the transverse slip. This is
-        # the non-integrable element; zero by default.
+        # Optional Stribeck contact drag opposing the transverse slip. Zero by
+        # default. It is velocity-dependent but NOT phase-dependent and the
+        # coupling is one-way, so it does not produce locking (demonstrated in
+        # demo_resonance_vs_locking).
         if self.contact_friction != 0.0:
             omega_perp = _scale(L_perp, 1.0 / self.I1)
             speed = _norm(omega_perp)
@@ -265,11 +294,91 @@ def _summarise(name: str, top: SuspendedSymmetricTop, res: dict) -> None:
     print(f"     at spin {omega3[0]:.2f}:  fast nutation {fast0:7.3f}   slow precession {slow0:7.3f}")
     print(f"     at spin {omega3[-1]:.2f}:  fast nutation {fast1:7.3f}   slow precession {slow1:7.3f}")
     print(f"     both -> +/- omega_p = +/-{top.omega_p:.3f} as the spin dies")
-    if top.contact_friction != 0.0:
-        print(f"  contact_friction = {top.contact_friction:.3f}: integrability broken "
-              "(framework-locking bridge enabled)")
+    print(f"  contact_friction = {top.contact_friction:.3f}: the swing peaks AT each "
+          "rational crossing, but the")
+    print("     spin:pendulum ratio only crosses -- it never holds. No locking "
+          "(see demo_resonance_vs_locking).")
+
+
+def demo_resonance_vs_locking() -> bool:
+    """
+    The falsifiable test: does the coast-down LOCK or just CROSS?
+
+    A lock holds the spin:pendulum ratio on a rational over a finite stretch of
+    the coast-down -- a flat step in the ratio-vs-time trace. A crossing slides
+    smoothly through. We run the top across a range of ``contact_friction`` and
+    check whether the descent of ``omega3/omega_p`` is monotone (pure crossing)
+    or develops a plateau (a lock).
+
+    Returns True if any plateau (lock) is detected, False if every run is a
+    monotone slide. The documented result is False: this one-way-coupled top
+    never locks, for any value of ``contact_friction``.
+    """
+    print("\n" + "=" * 70)
+    print("  RESONANCE CROSSING vs MODE-LOCKING  (the distinction that matters)")
+    print("=" * 70)
+    print("  A lock = ratio holds on p/q over a finite range (a flat step).")
+    print("  A crossing = ratio slides smoothly through, touching p/q at a point.")
+    print()
+    print(f"  {'contact_friction':>16}  {'ratio start->end':>18}  {'descent':>10}  verdict")
+    print("  " + "-" * 64)
+
+    any_lock = False
+    for cf in (0.0, 0.15, 0.5, 1.0):
+        top = SuspendedSymmetricTop(
+            contact_friction=cf, spin_damping=0.03, tilt_damping=0.004
+        )
+        res = top.simulate(
+            tilt0=0.15, omega3_0=8.0, dt=0.001, n_steps=300_000, downsample=200
+        )
+        rat = [w / top.omega_p for w in res["omega3"]]
+
+        # Monotone descent (allowing tiny numerical wiggle) => pure crossing.
+        # A genuine lock would stall the descent: a run of near-zero slope while
+        # the ratio sits near a low-order rational.
+        monotone = all(rat[i] - rat[i + 1] >= -1e-6 for i in range(len(rat) - 1))
+        locked_here = _has_plateau(res["t"], rat)
+        any_lock = any_lock or locked_here
+        verdict = "LOCK" if locked_here else "crossing only"
+        print(f"  {cf:16.2f}  {rat[0]:7.3f} -> {rat[-1]:6.3f}  "
+              f"{'monotone' if monotone else 'stepped':>10}  {verdict}")
+
+    print()
+    if any_lock:
+        print("  -> a plateau formed: locking detected (revise the docstring!).")
     else:
-        print("  contact_friction = 0: integrable top -- quasi-periodic nutation, no locking")
+        print("  -> every run slides through. NO locking at any contact_friction.")
+        print("     One-way coupling (spin drives pendulum, not vice versa) cannot")
+        print("     form an Arnold tongue. This is resonance crossing -- geometry,")
+        print("     not the framework's number-theoretic locking. Recorded as a")
+        print("     null in negative_results_ledger.md.")
+    return any_lock
+
+
+def _has_plateau(ts: list[float], rat: list[float],
+                 slope_tol: float = 5e-4, near_tol: float = 0.02,
+                 min_span: float = 2.0) -> bool:
+    """
+    Detect a lock: a stretch of at least ``min_span`` seconds where the ratio
+    stays within ``near_tol`` of a low-order rational AND its slope stays below
+    ``slope_tol`` per second (it is being *held*, not passing through).
+    """
+    rationals = [p / q for q in (1, 2, 3) for p in range(1, 3 * q + 1)
+                 if math.gcd(p, q) == 1]
+    run_start = None
+    for i in range(1, len(rat)):
+        dt = ts[i] - ts[i - 1]
+        slope = abs(rat[i] - rat[i - 1]) / dt if dt > 0 else 9.9
+        near = min(abs(rat[i] - r) for r in rationals)
+        held = slope < slope_tol and near < near_tol
+        if held:
+            if run_start is None:
+                run_start = ts[i]
+            elif ts[i] - run_start >= min_span:
+                return True
+        else:
+            run_start = None
+    return False
 
 
 def main() -> None:
@@ -284,6 +393,8 @@ def main() -> None:
 
     _summarise("axial (balanced)", axial, res_axial)
     _summarise("tilted", tilted, res_tilted)
+
+    demo_resonance_vs_locking()
 
     try:
         import matplotlib
