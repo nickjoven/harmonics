@@ -335,3 +335,5 @@
 2026-05-31T11:23:18Z | put | sync_cost/derivations/koide_form_substrate_iteration_11.md -> 1e9b677cf6a092440f090206c9165ea57a3847b85eeb1ce6e0ce604e8ef50573
 2026-05-31T11:23:18Z | put | sync_cost/derivations/substrate_prediction_selection.md -> 4c151498573966a84ff21e87d3d3804f7a746e01baafef377a61391a46addb4d
 2026-05-31T11:27:19Z doc-seal Koide iters 7-11 + selection thread (post-#197 work)
+2026-06-01T19:03:20Z | put | sync_cost/derivations/negative_results_ledger.md -> ed37fe58cb8b8add656e1fe1b7fc8c7c36e2f97b89529621358de17727d2526d
+2026-06-01T19:03:20Z | dag:create | 2dee0b4481cc0e5c91a40bd6d741b8937dc9df4949c04f23130ee4abbdf30076
