@@ -1,5 +1,5 @@
 {
-  "generated": "5ef57c105c7b89dbd4ab5b2119750fa301d3c08c",
+  "generated": "a7669b82f8e57f119fa0cb0650d235f62cc77b0e",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1240,6 +1240,7 @@
         "discrete_extension_principle",
         "framework_status",
         "k_of_t_friedmann",
+        "koide_form_substrate_iteration_14",
         "lesson_cosmological_constant",
         "lesson_rotation_curves_a0",
         "physics_relevance_measurement_catalog",
@@ -2327,6 +2328,8 @@
         "koide_form_substrate_iteration_1",
         "koide_form_substrate_iteration_10",
         "koide_form_substrate_iteration_11",
+        "koide_form_substrate_iteration_12",
+        "koide_form_substrate_iteration_13",
         "koide_form_substrate_iteration_2",
         "koide_form_substrate_iteration_3",
         "koide_form_substrate_iteration_4",
@@ -3023,6 +3026,7 @@
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
         "koide_form_substrate_iteration_10",
+        "koide_form_substrate_iteration_12",
         "lesson_epr_gr_qm_unification",
         "phenomenology_cross_reference",
         "physics_relevance_measurement_catalog",
@@ -3692,6 +3696,8 @@
         "klein_antipodal_z2_rep_pattern",
         "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
+        "koide_form_substrate_iteration_13",
+        "koide_form_substrate_iteration_14",
         "lesson_8_35_vs_13_19",
         "lesson_cosmological_constant",
         "lesson_forced_basin_selection",
@@ -4382,6 +4388,9 @@
         "koide_form_substrate_iteration_1",
         "koide_form_substrate_iteration_10",
         "koide_form_substrate_iteration_11",
+        "koide_form_substrate_iteration_12",
+        "koide_form_substrate_iteration_13",
+        "koide_form_substrate_iteration_14",
         "koide_form_substrate_iteration_2",
         "koide_form_substrate_iteration_3",
         "koide_form_substrate_iteration_4",
@@ -5564,6 +5573,9 @@
         "koide_form_substrate_iteration_1",
         "koide_form_substrate_iteration_10",
         "koide_form_substrate_iteration_11",
+        "koide_form_substrate_iteration_12",
+        "koide_form_substrate_iteration_13",
+        "koide_form_substrate_iteration_14",
         "koide_form_substrate_iteration_2",
         "koide_form_substrate_iteration_3",
         "koide_form_substrate_iteration_4",
@@ -5873,6 +5885,7 @@
         "physics_relevance_measurement_catalog"
       ],
       "depended_on_by": [
+        "koide_form_substrate_iteration_14",
         "koide_form_substrate_iteration_2",
         "koide_form_substrate_iteration_3"
       ],
@@ -5932,12 +5945,91 @@
         "minkowski_signature",
         "substrate_prediction_selection"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "koide_form_substrate_iteration_12",
+        "koide_form_substrate_iteration_13"
+      ],
       "git": [
         {
           "hash": "5ef57c1",
           "date": "2026-05-31",
           "subject": "Koide iterations 7-11 + substrate prediction selection thread (#200)"
+        }
+      ]
+    },
+    {
+      "id": "koide_form_substrate_iteration_12",
+      "path": "sync_cost/derivations/koide_form_substrate_iteration_12.md",
+      "title": "Koide form substrate derivation \u2014 iteration 12",
+      "summary": "**Iteration 12.** Tests whether the two residual ingredients\nidentified in iteration 11 can be substrate-derived from\nfoundational quantities. Targets Options A and B from iteration\n11's recommended next iterations.",
+      "depends_on": [
+        "discrete_extension_principle",
+        "epr_bell_assembly_theorem",
+        "generation_mechanism",
+        "klein_bottle",
+        "koide_form_substrate_iteration_11",
+        "mass_sector_closure",
+        "substrate_prediction_selection"
+      ],
+      "depended_on_by": [
+        "koide_form_substrate_iteration_13"
+      ],
+      "git": [
+        {
+          "hash": "9a2433a",
+          "date": "2026-06-01",
+          "subject": "Koide iterations 12-14: arc closes as productive null (#203)"
+        }
+      ]
+    },
+    {
+      "id": "koide_form_substrate_iteration_13",
+      "path": "sync_cost/derivations/koide_form_substrate_iteration_13.md",
+      "title": "Koide form substrate derivation \u2014 iteration 13",
+      "summary": "**Iteration 13.** Pursues iteration 12's recommended next step:\nderive `M = q_3 I \u2212 q_2 J` *as a unified substrate-natural\nquadratic form*, not as a sum of separately-derived parts.",
+      "depends_on": [
+        "discrete_extension_principle",
+        "framework_status",
+        "generation_mechanism",
+        "klein_bottle",
+        "koide_form_substrate_iteration_11",
+        "koide_form_substrate_iteration_12",
+        "mass_sector_closure",
+        "substrate_prediction_selection"
+      ],
+      "depended_on_by": [
+        "koide_form_substrate_iteration_14"
+      ],
+      "git": [
+        {
+          "hash": "9a2433a",
+          "date": "2026-06-01",
+          "subject": "Koide iterations 12-14: arc closes as productive null (#203)"
+        }
+      ]
+    },
+    {
+      "id": "koide_form_substrate_iteration_14",
+      "path": "sync_cost/derivations/koide_form_substrate_iteration_14.md",
+      "title": "Koide form substrate derivation \u2014 iteration 14 (closing note)",
+      "summary": "**Closing note.** Iterations 1\u201313 are documented as a productive\nnull result. Koide `K_lepton = 2/3` is moved to the empirical\nshelf alongside `sin\u00b2\u03b8_W`, `\u03b8_13 PMNS`, the CKM angles, and other\nSM-empirical relations the framework notes but does not derive\nfrom current substrate apparatus.",
+      "depends_on": [
+        "basepoint_principle",
+        "framework_status",
+        "generation_mechanism",
+        "klein_bottle",
+        "koide_form_substrate_iteration_1",
+        "koide_form_substrate_iteration_13",
+        "mass_sector_closure",
+        "mixing_angle_audit",
+        "substrate_prediction_selection"
+      ],
+      "depended_on_by": [],
+      "git": [
+        {
+          "hash": "9a2433a",
+          "date": "2026-06-01",
+          "subject": "Koide iterations 12-14: arc closes as productive null (#203)"
         }
       ]
     },
@@ -6457,6 +6549,9 @@
         "koide_form_substrate_iteration_1",
         "koide_form_substrate_iteration_10",
         "koide_form_substrate_iteration_11",
+        "koide_form_substrate_iteration_12",
+        "koide_form_substrate_iteration_13",
+        "koide_form_substrate_iteration_14",
         "koide_form_substrate_iteration_2",
         "koide_form_substrate_iteration_4",
         "koide_form_substrate_iteration_5",
@@ -6907,6 +7002,7 @@
       ],
       "depended_on_by": [
         "a_s_geometric_proof",
+        "koide_form_substrate_iteration_14",
         "neutrino_mass_audit",
         "session_audit",
         "statistical_conventions"
@@ -6978,6 +7074,11 @@
         "sinw_fixed_point"
       ],
       "git": [
+        {
+          "hash": "8579ac6",
+          "date": "2026-06-01",
+          "subject": "Spinning-die examples: distinguish resonance crossing from mode-locking (#204)"
+        },
         {
           "hash": "b5f4304",
           "date": "2026-05-25",
@@ -9947,6 +10048,9 @@
       "depended_on_by": [
         "koide_form_substrate_iteration_10",
         "koide_form_substrate_iteration_11",
+        "koide_form_substrate_iteration_12",
+        "koide_form_substrate_iteration_13",
+        "koide_form_substrate_iteration_14",
         "koide_form_substrate_iteration_8",
         "koide_form_substrate_iteration_9"
       ],
