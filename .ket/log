@@ -337,3 +337,9 @@
 2026-05-31T11:27:19Z doc-seal Koide iters 7-11 + selection thread (post-#197 work)
 2026-06-01T19:03:20Z | put | sync_cost/derivations/negative_results_ledger.md -> ed37fe58cb8b8add656e1fe1b7fc8c7c36e2f97b89529621358de17727d2526d
 2026-06-01T19:03:20Z | dag:create | 2dee0b4481cc0e5c91a40bd6d741b8937dc9df4949c04f23130ee4abbdf30076
+2026-06-01T19:05:36Z | put | sync_cost/derivations/framework_status.md -> d5f0f7864cac58f371124a3c5d9cdbcfc9597cc6acf9f0f4c7906125ce4b0aee
+2026-06-01T19:05:36Z | dag:create | 2b64c141a2832ab27b3a30596d36da318e9cf0f77d20e0afe4f157b86381e0b7
+2026-06-01T19:05:56Z | put | sync_cost/derivations/substrate_prediction_selection.md -> b247effcb2281462818419cab65475861036fb23100e7c30093fe0be8fa4ae86
+2026-06-01T19:05:56Z | dag:create | 1205e9b0e74665269e978f5eb1783f1dc91f9c12f1711399e8a1cdf4409b9ca2
+2026-06-01T19:06:35Z | put | sync_cost/derivations/substrate_prediction_selection.md -> 64670315076d2c7351876fedcc068f95e079c6751f3d671f7aa733720abbce5c
+2026-06-01T19:06:35Z | dag:create | 656cd273ffa0970eacd2dd4fa99125b8d5b7a42253d2f3092bb3a64133de6322
