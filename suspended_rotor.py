@@ -1,5 +1,5 @@
 """
-Suspended imbalanced rotor: spin-down through rational frequency locks.
+Suspended imbalanced rotor: spin-down CROSSING rational frequency ratios.
 
 A motivating bench observation. Suspend a die (or any rigid body) from a
 single point and spin it about a near-vertical axis:
@@ -15,31 +15,46 @@ single point and spin it about a near-vertical axis:
     forcing at the spin frequency* in the lab frame. The suspension adds a
     slow pendulum / torsion mode. As the rotor spins down, its spin rate
     sweeps downward through the pendulum band, and whenever the ratio
-    spin : pendulum passes a low-order rational the two modes lock and energy
-    pours into a visible swing.
+    spin : pendulum *passes through* a low-order rational the swing is
+    resonantly excited and energy pours into a visible swing.
 
-This is the same mechanism as `driven_stribeck.py` (a periodic drive feeding
-a dissipative oscillator across a bifurcation into subharmonic channels) and
-`bifurcation_sweep.py` (parameter sweep revealing the locked bands), here
-driven by rotational imbalance instead of an explicit forcing term. The locks
-land specifically on the low-order rationals (small denominators) -- the
-Arnold-tongue / mediant ordering that the rest of this framework is built on.
+What this is -- and, importantly, what it is NOT.
 
-A caution on reading the amplitudes: smaller denominators have wider Arnold
-tongues, but the *measured* peak swing here is not a clean read-out of tongue
-width. Two confounds ride on top of it. (1) The imbalance forcing scales as
-omega**2, so high-spin locks are driven harder than low-spin ones. (2) The
-spin-down is exponential, so the rotor dwells far longer at low spin rates and
-the swing has more time to accumulate there. In the default run these push the
-largest *amplitude* toward the lower-frequency locks (e.g. 2:3) even though the
-widest *tongue* is at 1:1. The robust, model-independent claim is the one you
-can see on the bench: the swing wakes up at low-order rational locks and stays
-quiet between them. Disentangling tongue width from the envelope would need a
-constant-amplitude, constant-sweep-rate drive -- which is `bifurcation_sweep.py`'s
-job, not this script's.
+This is *resonance crossing*, not *mode-locking*. As the spin coasts down the
+ratio spin/pendulum sweeps continuously and the swing peaks each time the ratio
+passes through a low-order rational -- but it passes through; it does not hold.
+That is ordinary rigid-body geometry plus linear resonance (Euler/Lagrange),
+and it is genuinely what the bench die shows.
 
-This script is illustrative: it demonstrates the locking mechanism the
-framework relies on. It is not a derivation of any physical constant.
+Mode-locking is a strictly stronger phenomenon, and it is the one the framework
+actually rests on: the ratio *sits* on p/q over a FINITE range of detuning (an
+Arnold tongue has width), giving a plateau in the ratio-vs-time trace; stacked
+plateaus make the devil's staircase, and that is where the Stern-Brocot /
+mediant content lives. This model does NOT produce that. The coupling is
+one-way (the imbalance drives the swing; the small `reaction` term is a velocity
+drag, not phase entrainment), so no tongue forms and the ratio descent never
+develops a plateau. See `suspended_top.py::demo_resonance_vs_locking` for the
+explicit check on the companion model, and the null entry in
+`sync_cost/derivations/negative_results_ledger.md`.
+
+Genuine locking needs the bidirectional, phase-dependent feedback of
+`driven_stribeck.py` / `bifurcation_sweep.py` (stick-slip friction, where the
+contact state feeds back on the motion that produces it). This script does not
+have it.
+
+A caution on reading the amplitudes: the *measured* peak swing here is not a
+read-out of Arnold-tongue width at all (there is no tongue). Two effects set it.
+(1) The imbalance forcing scales as omega**2, so high-spin crossings are driven
+harder than low-spin ones. (2) The spin-down is exponential, so the rotor dwells
+far longer at low spin rates and the swing has more time to accumulate there. In
+the default run these push the largest *amplitude* toward the lower-frequency
+crossings (e.g. 2:3). The robust, model-independent claim is only the one you
+can see on the bench: the swing wakes up as the spin passes low-order rationals
+and is quiet between them.
+
+This script is illustrative -- a clean example of resonance crossing, included
+precisely so it is not mistaken for the framework's locking. It is not a
+derivation of any physical constant and does not exhibit mode-locking.
 
 Dependencies: Python 3.9+, standard library only (math, dataclasses).
 matplotlib is used only for the optional figure in __main__; numpy only for
@@ -64,8 +79,9 @@ class SuspendedRotor:
     swing the suspension permits, natural frequency ``omega_p``, viscous
     damping ratio ``zeta``. The pendulum is a true (nonlinear) pendulum:
     the ``sin(phi)`` restoring term is what opens superharmonic and
-    subharmonic locks at low-order rationals rather than only the 1:1
-    primary resonance.
+    subharmonic resonances at low-order rationals rather than only the 1:1
+    primary resonance (resonances the spin-down crosses -- it does not lock
+    to them; see the module docstring).
 
     Coupling -- the rotating imbalance: a centre-of-mass offset of relative
     size ``imbalance`` produces a horizontal force that rotates with the
@@ -256,8 +272,8 @@ def _summarise(name: str, rotor: SuspendedRotor, result: dict, dt_eff: float) ->
         return
 
     bands = find_resonance_bands(result, rotor.omega_p)
-    print("  resonance locks crossed during spin-down "
-          "(largest swing first):")
+    print("  resonances crossed during spin-down "
+          "(largest swing first; crossed, not locked):")
     print("     ratio   omega/omega_p   peak swing (rad)   t (s)")
     for b in bands[:6]:
         print(f"     {b.label:>5}   {b.omega_ratio:11.3f}   "
@@ -294,7 +310,7 @@ def main() -> None:
     axes[0].axhline(imbalanced.omega_p, ls=":", color="grey", lw=1)
     axes[0].set_ylabel("spin rate  omega (rad/s)")
     axes[0].legend(loc="upper right")
-    axes[0].set_title("Suspended rotor: spin-down through rational locks")
+    axes[0].set_title("Suspended rotor: spin-down crossing rational ratios")
 
     axes[1].plot(res_balanced["t"], res_balanced["phi"], label="balanced")
     axes[1].plot(res_imbalanced["t"], res_imbalanced["phi"], label="imbalanced")
@@ -302,7 +318,8 @@ def main() -> None:
     axes[1].legend(loc="upper right")
 
     # Swing amplitude versus the instantaneous spin:pendulum ratio, with the
-    # low-order rationals marked -- the locks should sit on these lines.
+    # low-order rationals marked -- the swing peaks as the ratio crosses these
+    # lines (it crosses; it does not lock onto them).
     ratio = [w / imbalanced.omega_p for w in res_imbalanced["omega"]]
     axes[2].plot(ratio, [abs(p) for p in res_imbalanced["phi"]], color="C1")
     for p, q in [(1, 1), (2, 1), (3, 1), (3, 2), (1, 2)]:
