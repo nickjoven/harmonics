@@ -1,5 +1,5 @@
 {
-  "generated": "fab5c34f8da4b1c4151abbd26ce7d5e1dd1423e4",
+  "generated": "7b797c8aae2d6b2e80757ecb6bbdaf270fc09c5f",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -3617,6 +3617,7 @@
         "epr_bell_assembly_theorem",
         "era_timeline_disposition",
         "farey_partition",
+        "generation_mechanism",
         "ghz_from_substrate",
         "h_inf_status",
         "hierarchy_gaussian_lattice",
@@ -3630,7 +3631,10 @@
         "klein_bottle",
         "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
+        "koide_form_substrate_iteration_13",
+        "koide_form_substrate_iteration_14",
         "master_cascade_identity",
+        "mixing_angle_audit",
         "numerology_count_phase_b",
         "numerology_inventory",
         "omega_b_alpha_beta_closure",
@@ -3747,6 +3751,11 @@
         "wave_particle_substrate"
       ],
       "git": [
+        {
+          "hash": "7b797c8",
+          "date": "2026-06-01",
+          "subject": "Disposition cleanup: Koide \u2192 empirical shelf; selection thread \u2192 Outcome 2 (#205)"
+        },
         {
           "hash": "0cdc945",
           "date": "2026-05-29",
@@ -4384,6 +4393,7 @@
         "beta_from_tongues",
         "fermion_mass_running",
         "fourth_generation_revisited",
+        "framework_status",
         "free_parameter_scorecard",
         "koide_form_substrate_iteration_1",
         "koide_form_substrate_iteration_10",
@@ -5887,7 +5897,8 @@
       "depended_on_by": [
         "koide_form_substrate_iteration_14",
         "koide_form_substrate_iteration_2",
-        "koide_form_substrate_iteration_3"
+        "koide_form_substrate_iteration_3",
+        "substrate_prediction_selection"
       ],
       "git": [
         {
@@ -5998,6 +6009,7 @@
         "substrate_prediction_selection"
       ],
       "depended_on_by": [
+        "framework_status",
         "koide_form_substrate_iteration_14"
       ],
       "git": [
@@ -6024,7 +6036,10 @@
         "mixing_angle_audit",
         "substrate_prediction_selection"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "framework_status",
+        "substrate_prediction_selection"
+      ],
       "git": [
         {
           "hash": "9a2433a",
@@ -7002,6 +7017,7 @@
       ],
       "depended_on_by": [
         "a_s_geometric_proof",
+        "framework_status",
         "koide_form_substrate_iteration_14",
         "neutrino_mass_audit",
         "session_audit",
@@ -10031,7 +10047,7 @@
       "id": "substrate_prediction_selection",
       "path": "sync_cost/derivations/substrate_prediction_selection.md",
       "title": "Substrate prediction selection \u2014 opening doc",
-      "summary": "**Opens a thread.** Investigates whether a *unifying* selection\nprinciple exists across the framework's substrate-primitive ratio\npredictions \u2014 that is, whether the substrate's apparatus, beyond\nderiving each prediction through its own derivation chain, also\nadmits a higher-order principle that explains *which* substrate-\nprimitive ratio each prediction lands on.",
+      "summary": "**Closed at Outcome 2 (2026-06-01).** Per-prediction structural\nselection verdict reached via the Koide iteration arc closure\n(`koide_form_substrate_iteration_14.md`). The Koide\n`K_lepton = 2/3` substrate-derivation attempt is the verdict's\nfirst instance: 13 iterations of structural-consistency analysis\nnarrowed to one residual structural assumption (uniform eigenvalue\nmagnitude of `M = q_3 I \u2212 q_2 J`, iter 13) that the substrate\napparatus does not independently force. The specific value `2/3`\n",
       "depends_on": [
         "basepoint_principle",
         "canonical_glossary",
@@ -10039,6 +10055,8 @@
         "farey_partition",
         "framework_status",
         "klein_bottle",
+        "koide_form_substrate_iteration_1",
+        "koide_form_substrate_iteration_14",
         "koide_form_substrate_iteration_8",
         "mass_sector_closure",
         "numerology_inventory",
@@ -10055,6 +10073,11 @@
         "koide_form_substrate_iteration_9"
       ],
       "git": [
+        {
+          "hash": "7b797c8",
+          "date": "2026-06-01",
+          "subject": "Disposition cleanup: Koide \u2192 empirical shelf; selection thread \u2192 Outcome 2 (#205)"
+        },
         {
           "hash": "5ef57c1",
           "date": "2026-05-31",
