@@ -60,8 +60,13 @@ How to verify, in order of preference:
   (`python3 scripts/drift/verify_cas.py`, or `scripts/drift/run_all.py` for the
   full sweep) when you suspect the working tree has drifted from the substrate.
 - **Cross-check the registry** — for quantitative claims, reconcile against
-  `MANIFEST.yml` and `numerology_inventory.md` (Class 1–5). A K=1 arithmetic
-  identity is *not* a corroborated result; don't cache it as one.
+  `MANIFEST.yml` and `numerology_inventory.md` (Class 1–5) and the doc's status
+  tag (Survives / Floor / Eliminated). A **bare K=1** arithmetic identity (the
+  continuum regime) is *not* a scale-consistent corroborated result the way a
+  **K<1** substrate derivation is; don't cache the former at the latter's
+  resolution. Read a concept's lineage (`ket_lineage`) to confirm you're holding
+  the **canonical** entry and not one that has been **superseded**, **retracted**,
+  or **declined**.
 
 If you cannot verify a load-bearing detail against the CAS, **say so** — assert
 it as unverified and name the gap, rather than presenting a cache guess as
@@ -75,4 +80,36 @@ Once you've read a concept fresh from the CAS this session, you may rely on that
 cache entry at that resolution for the rest of the session without re-reading —
 unless you (or a hook) mutate the underlying file, in which case the entry is
 dirtied and must be re-sealed (`ket put` / `ket_store`) and re-read before reuse.
+Mutating an **enforced-spine** path (`scripts/drift/enforced_paths.txt`) without
+re-sealing is exactly the drift the precommit gate blocks; a **retrieval-tier**
+path may move without gating but is still integrity-checked by `verify_cas`.
 Reference the CID or path rather than reproducing the content from memory.
+
+## Vocabulary — caching terms ↔ substrate terms
+
+This protocol borrows cache vocabulary to talk about a substrate that already
+has its own canonical words (see `sync_cost/derivations/canonical_glossary.md`).
+The table keeps the two registers aligned, in the spirit of that glossary:
+
+| Caching term | Substrate term | Meaning in this repo |
+|---|---|---|
+| **cache / context** | working memory over the **substrate** | What you hold in-context; never the source of truth — the `.ket` CAS is. |
+| **cache entry** | a sealed **blob** at a **CID** | One `ket put`/`ket_store` of a concept; addressed and integrity-checked by its BLAKE3 hash (the filename under `.ket/cas/`). |
+| **key** | named concept / **path** | The derivation doc, lemma, or scorecard row — e.g. `baryon_fraction.md`, a `MANIFEST.yml` claim. |
+| **resolution** | granularity / **regime** | How fine a claim you assert. Distinct from a `*_resolution.md` doc (which *resolves* an open item). A coarse value vs a forced fraction at a named Farey depth; **bare K=1** vs **K<1** is itself a resolution distinction. |
+| **freshness** | read-recency vs **drift** | Whether the entry was retrieved from the CAS this session, or recalled. **Drift** = working-tree content disagrees with the last sealed CID. |
+| **stale** | **drifted** entry | CAS content moved since you read it (or the tree drifted from its seal). Caught by `verify_cas` / `check_working_tree`. |
+| **fabricated** | **vocabulary artifact** | A detail supplied by assumption, never read — an *imported-vocabulary* framing with no canonical CAS object behind it (`vocabulary_is_the_work_pattern.md`). |
+| **cache invalidation** | **supersede** / re-seal | A concept's canonical home changing via `ket_lineage`; or re-`put` after an edit. |
+| **eviction** | **retracted** / **declined** / **Eliminated** | A claim removed from canonical status; do not re-assert it from a stale entry. |
+| **authoritative read** | **canonical** blob | The current head of a concept's lineage, confirmed via `ket_lineage` / `ket_canonicalize`. |
+| **write-through** | **seal** (`ket put` / `ket_store`) | Persisting an edit back into the CAS so the entry is retrievable and integrity-checked. |
+| **pinned vs evictable** | **enforced spine** vs **retrieval tier** | Spine paths (`enforced_paths.txt`) gate commits on drift; retrieval-tier paths are integrity-checked but un-gated. |
+
+**Why this framing earns its keep.** A fabricated cache entry is, in the repo's
+own terms, a **vocabulary artifact**: a plausible word standing in for a canonical
+substrate object that was never named. The recurring unblocking move recorded in
+`vocabulary_is_the_work_pattern.md` is the cure — *name the correct CAS object*,
+and the confident-but-wrong assertion either dissolves or sharpens into a real,
+framework-native question. Verifying against the CAS before asserting is that
+move applied pre-emptively, every time.
