@@ -7,19 +7,26 @@ strongly-connected-component (SCC) pass over the `depends_on` edges.
 Any SCC with more than one node is a dependency cycle. A clean
 derivation DAG has none.
 
-Today this check is EXPECTED to report cycles and is therefore wired
-as ADVISORY in run_all.py: the `depends_on` graph is built by
-scripts/build_derivation_graph.py from *prose filename mentions*, so
-two docs that cite each other's filenames form a reciprocal edge.
-That citation mush collapses 207 of 263 nodes into one SCC. The count
-is a health signal, not a gate.
+This is an audit of a *derived artifact*: docs/derivation-graph.json is a
+projection of the corpus, and a cycle in it is a defect in the projection
+(or in the prose it was built from), not in the substrate. The check
+re-derives the conclusion (run SCC, diff against "acyclic") rather than
+trusting the graph.
+
+Today the check is EXPECTED to report cycles and is therefore wired as
+ADVISORY in run_all.py: the `depends_on` graph is built by
+scripts/build_derivation_graph.py from *prose filename mentions*, so two
+docs that cite each other's filenames form a reciprocal edge. That citation
+mush collapses 207 of 263 nodes into one SCC. The count is a health signal,
+not a gate.
 
 To make this GATING: type the edges (see the typed-edge support in
-build_derivation_graph.py — `grounds`/`derives`/`proposes` vs
-`references`, matching ket's validate_edge_kind) and run this pass
-over only the logical `grounds`+`derives` subgraph, which should be
-acyclic. The current `depends_on` graph mixes citation edges and is
-cyclic by construction.
+build_derivation_graph.py — the framework's `grounds`/`derives`/`proposes`
+kinds vs a bare `references`) and run this pass over only the logical
+`grounds`+`derives` subgraph, which should be acyclic. The current
+`depends_on` graph mixes citation edges and is cyclic by construction.
+The deeper fix is to project from CID-pinned sealed content rather than
+from prose at all (see ket's DESIGN.md); until then this stays advisory.
 
 Exit codes: 0 = acyclic, 1 = cycle(s) found, 2 = environment error.
 
