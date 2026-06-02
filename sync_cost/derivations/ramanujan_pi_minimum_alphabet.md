@@ -139,13 +139,23 @@ is the modular group — but speaking the language is not a derivation.*
 
 A Layer-A match becomes a Layer-B result only with a **structural
 discriminator** (the standard the substrate applies to its own N13
-"multi-candidate ansatz" clusters, `continuity_in_K_nulls.md`). Candidate
-discriminators, none yet supplied:
+"multi-candidate ansatz" clusters, `continuity_in_K_nulls.md`).
 
-1. Does the framework's own dynamics ever land on the cusp `Q(√−58)` /
-   `X₀(58)`, the way it lands on `X₀(6)` for the q₂×q₃ sector? If `58`
-   has *no* substrate role, Layer B is an alignment of machinery, not a
-   prediction — which is exactly the current claim.
+**Discriminator #1 — RESOLVED, two-sided** (see
+`ramanujan_pi_modular_discriminator.md`). Does the framework's own forced
+modular data land on the 1914 series' data? The Ramanujan–Sato hierarchy
+has two coordinates — **level** `Γ₀(ℓ)` and **discriminant** `d`. Result:
+the framework reaches the **level** (it independently forces `Γ₀(6)`, a
+real populated Ramanujan–Sato π-level whose divisor lattice {1,2,3,6} *is*
+the q₂×q₃ cusp/sector taxonomy — upgrading Layer B from "uses PSL(2,Z)" to
+"lands on a specific level by its own physics"), but reaches **no
+discriminant** (the 1914 selector is `d = 58 = 2·29`; the prime 29 surfaces
+only as `|F₉|`, three depths below the forced depth-6 cone — a z-fighting
+artifact the substrate declines). **Home shared, address disjoint** — which
+is exactly why it cannot be promoted past Class 2.
+
+Still open:
+
 2. Is the appearance of `√2` (vs. some other algebraic irrational) forced
    by anything substrate-side, or is it an artifact of the N = 58
    modular data? (Currently: the latter.)
@@ -153,6 +163,10 @@ discriminators, none yet supplied:
    tree that `minimum_alphabet.md` Status lists as **Open**; Ramanujan's
    rational Cauchy sequence `S_n → 9801/(2√2·π)` is a concrete test case
    for that formalization.
+4. Forward test (from Discriminator #1): does the substrate supply a
+   *discriminant* at its own level 6 — singling out one of the level-6
+   families 6A–6D using only framework integers? That, not the level-2
+   1914 series, is where a real promotion would come from.
 
 ---
 
