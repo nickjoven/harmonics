@@ -14,7 +14,16 @@ Per-node metadata includes:
   - summary        : first meaningful paragraph (or status note) if present
   - depends_on     : list of ids this file references
   - depended_on_by : reverse edges (filled in after scan)
+  - edges          : typed forward edges [{target, kind}]; kind is
+                     "references" for a bare prose mention, or
+                     grounds/derives/proposes when an optional
+                     `## Lineage` section assigns one
+  - edged_by       : typed reverse edges [{source, kind}]
   - git            : list of commits touching this file (hash, date, subject)
+
+`depends_on`/`depended_on_by` are preserved untyped for existing
+consumers (the dag viewer, check_graph_orphans.py); `edges`/`edged_by`
+are additive and carry the epistemic kind.
 
 Output: docs/derivation-graph.json
 """
@@ -27,6 +36,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DERIV_DIR = ROOT / "sync_cost" / "derivations"
 OUT_PATH = ROOT / "docs" / "derivation-graph.json"
+
+# Epistemic edge kinds, matching ket's validate_edge_kind. A bare prose
+# mention is a "references" edge; an explicit `## Lineage` section may
+# promote a target to one of the logical kinds.
+DEFAULT_KIND = "references"
+EXPLICIT_KINDS = {"grounds", "derives", "proposes"}
 
 # Scan all .md files (not the scratch directory)
 md_files = [
@@ -85,6 +100,43 @@ def extract_references(text: str, all_ids: set) -> list:
     return sorted(refs)
 
 
+def extract_lineage(text: str, all_ids: set) -> dict:
+    """Parse an optional `## Lineage` section into {target_id: kind}.
+
+    Format — one kind per line, comma-separated filenames:
+
+        ## Lineage
+        grounds: minimum_alphabet.md
+        derives: klein_bottle.md, baryon_fraction.md
+        proposes: some_conjecture.md
+
+    An unrecognized kind word falls back to DEFAULT_KIND. Targets that
+    don't resolve to a real node id are ignored. A later line wins if a
+    target is listed twice.
+    """
+    m = re.search(
+        r"^##\s+Lineage\s*\n(.+?)(?=\n##\s|\Z)",
+        text,
+        re.MULTILINE | re.DOTALL,
+    )
+    if not m:
+        return {}
+    out = {}
+    for line in m.group(1).splitlines():
+        line = line.strip()
+        if not line or ":" not in line:
+            continue
+        kind_word, _, targets = line.partition(":")
+        kind = kind_word.strip().lower()
+        if kind not in EXPLICIT_KINDS:
+            kind = DEFAULT_KIND
+        for tok in targets.split(","):
+            tid = re.sub(r"\.(md|py)$", "", tok.strip())
+            if tid in all_ids:
+                out[tid] = kind
+    return out
+
+
 def git_log(path: Path) -> list:
     """Return list of commits touching this file."""
     rel = path.relative_to(ROOT)
@@ -124,25 +176,42 @@ def main():
     for f in md_files:
         text = f.read_text(errors="replace")
         node_id = f.stem
+        others = all_ids - {node_id}
+        refs = extract_references(text, others)
+        lineage = extract_lineage(text, others)
+        # Union prose mentions with explicit Lineage targets; a Lineage
+        # entry sets the kind, everything else is a "references" edge.
+        targets = sorted(set(refs) | set(lineage))
+        edges = [
+            {"target": t, "kind": lineage.get(t, DEFAULT_KIND)}
+            for t in targets
+        ]
         nodes[node_id] = {
             "id": node_id,
             "path": str(f.relative_to(ROOT)),
             "title": extract_title(text),
             "summary": extract_summary(text),
-            "depends_on": extract_references(text, all_ids - {node_id}),
+            "depends_on": targets,
             "depended_on_by": [],
+            "edges": edges,
+            "edged_by": [],
             "git": git_log(f),
         }
 
-    # Reverse edges
+    # Reverse edges (untyped list + typed mirror)
     for node_id, node in nodes.items():
-        for dep in node["depends_on"]:
+        for edge in node["edges"]:
+            dep = edge["target"]
             if dep in nodes:
                 nodes[dep]["depended_on_by"].append(node_id)
+                nodes[dep]["edged_by"].append(
+                    {"source": node_id, "kind": edge["kind"]}
+                )
 
     # Sort reverse edges for stability
     for node in nodes.values():
         node["depended_on_by"].sort()
+        node["edged_by"].sort(key=lambda e: e["source"])
 
     # Emit
     OUT_PATH.parent.mkdir(exist_ok=True)
