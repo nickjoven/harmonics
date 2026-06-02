@@ -37,9 +37,19 @@ ROOT = Path(__file__).resolve().parent.parent
 DERIV_DIR = ROOT / "sync_cost" / "derivations"
 OUT_PATH = ROOT / "docs" / "derivation-graph.json"
 
-# Epistemic edge kinds, matching ket's validate_edge_kind. A bare prose
-# mention is a "references" edge; an explicit `## Lineage` section may
-# promote a target to one of the logical kinds.
+# Epistemic edge kinds owned by the derivation framework: "grounds" cites an
+# irreducible input, "derives" a logical consequence, "proposes" a conjecture.
+# A bare prose mention is an untyped "references" edge; an explicit `## Lineage`
+# section may promote a target to one of the logical kinds.
+#
+# NOTE (transitional): inferring edges by regex over prose is precisely what the
+# substrate design moves away from — prose has no canonical form and cannot
+# self-audit, so it can't be the source of record (see ket's DESIGN.md). The
+# `## Lineage` block is the bridge: an explicit *declaration* the author writes,
+# rather than an inference the parser guesses — a step toward documents authored
+# as typed artifacts. The kind names stay compatible with ket's
+# validate_edge_kind so a future projection into the substrate DAG is lossless,
+# but the vocabulary is the framework's own, not a ket dependency.
 DEFAULT_KIND = "references"
 EXPLICIT_KINDS = {"grounds", "derives", "proposes"}
 
