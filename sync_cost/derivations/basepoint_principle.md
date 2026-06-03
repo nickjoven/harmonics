@@ -52,10 +52,12 @@ Class-2 discipline).
 | **#1 / #2** (`anchor_count_reaudit.md`) | `v/M_P`, the Planck→EW depth | prime-5 absent from the {2,3} canonical register |
 | **#3** (`anchor_count_reaudit.md`) | `ω₀ = v_EW/ℏ` | it *is* the particle anchor; an anchor cannot be self-derived |
 | **A_s / Instance-7** (`framework_status.md` L35) | `A_s_obs / f_amp` | anchor-side amplification (accepted closure) |
+| **L vs R orientation** (`vocabulary_bridge_iteration_2_step_2.md`) | the labeling assignment of the substrate's doublet/singlet kinematic split (which substrate sector is "L-handed") | **four-level obstruction**: (a) substrate apparatus is label-agnostic — substrate objects carry no L/R markers as structural features; (b) three direct checks pass — `gauge_sector_lovelock.md` L191-196 (SU(2)_L identification "a posteriori"), `q_mod2_conservation_theorem.md` (Q mod 2 is Z₂ scalar, unsigned), `gell_mann_nishijima.md` L29-30 (charge sign detector-relative) / L107 (Y→-Y is symmetry, not preferred orientation); (c) cost-functional involution-invariance — `born_rule.md` L19-24's quadratic cost `C_k(ψ) = C_k⁰ + α_k\|ψ - ψ_k\|² + ...` is preserved under any involution; (d) vocabulary-closure check — the 3×3 matter-sector substrate vocabulary `(sector × {k, a, \|3Q\|})` has no L/R cell, so the label has no substrate vocabulary slot. **Empirical resolution**: parity violation (Wu et al. 1957, ⁶⁰Co β-decay angular asymmetry) supplies the basepoint operationally — the "Ozma problem" resolution. |
 
-Three+ independent forcings (a Z₂-torsor lemma, an ℝ₊-torsor +
-sector decoupling, an inviolable-pair, a number-theoretic
-obstruction, a definitional circularity) ⇒ the pattern is a
+Six+ independent forcings (two Z₂-torsor instances — R1/∅ and L
+vs R — at distinct layers, an ℝ₊-torsor + sector decoupling, an
+inviolable-pair, a number-theoretic obstruction, a definitional
+circularity, and a vocabulary-closure check) ⇒ the pattern is a
 **verified regularity with a stated test**, not special pleading.
 
 ## Canonical instance: the dimensional inputs
@@ -131,6 +133,23 @@ A_s/Instance-7. Peer to `no_rescaling.md` and the
   A_s/Instance-7 precedent.
 - `thread_chronology.md` — the meta-pattern's chronology;
   elevated here to a named principle.
+- `vocabulary_bridge_iteration_2_step_2.md` — L vs R orientation
+  instance; four-level obstruction analysis (apparatus
+  label-agnostic, three direct constraint checks, cost-functional
+  involution-invariance, vocabulary-closure check); the "Ozma
+  problem" framework resolution via parity-violation reference.
+- `vocabulary_bridge_iteration_2_step_1.md` — the substrate-forced
+  doublet/singlet kinematic split that the L vs R labeling
+  attaches to; Mihailescu-strength foundation per
+  `mass_sector_closure.md`.
+- `klein_bottle_restructure_price.md` — companion empirical
+  decline at the apparatus-extension layer (ℍ-QM exclusion);
+  composed with L vs R instance gives the framework's full
+  substrate-chirality disposition.
+- `minimum_alphabet.md` L56-72 — the parabola's two roots are
+  dynamically broken (attractor vs repeller), NOT a free Z₂-torsor;
+  distinct layer from the L vs R labeling torsor. Important to
+  not conflate.
 
 ## One-line summary
 
@@ -138,8 +157,12 @@ The **Basepoint Principle**: the framework supplies torsorial
 structure and never the basepoints; a declined basepoint is a
 structural feature *iff* the missing selecting section is
 **structurally forced** (obstruction exhibited), else it stays
-open — verified at R1/∅, the two ℝ₊-scale anchors (nature/number
-sayable, value declined, dynamically inert by torsor-invariance),
-#INF, the anchor obstructions, and A_s/Instance-7 — a consistency
-boundary with a discriminator, **not** a derivation and **not** a
-licence.
+open — verified at R1/∅ (Z₂-torsor, ontological-root layer), the
+two ℝ₊-scale anchors (nature/number sayable, value declined,
+dynamically inert by torsor-invariance), #INF, the anchor
+obstructions, A_s/Instance-7, and L vs R orientation
+(Z₂-torsor at the SM-labels-on-substrate layer, four-level
+obstruction including vocabulary-closure on the 3×3 matter-sector
+matrix, empirically resolved via parity violation / Wu 1957) —
+a consistency boundary with a discriminator, **not** a derivation
+and **not** a licence.
