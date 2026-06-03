@@ -1,5 +1,21 @@
 # Horn-branch iteration 2 step 1 — sector-assignment falsifier
 
+> **This doc's q₂-axis sector-assignment finding SURVIVES later
+> audit** (`horn_branch_iteration_3_step_1.md`). The vocabulary
+> revision (flare acts on q₂ locked/unlocked, not y-parity) is
+> a real framework finding and is preserved.
+>
+> **CLOSURE-TARGET candidate `(1+Q)/2 = 5/6` named in this doc's
+> "Plan for iteration 2 step 2" did NOT close.** Iteration 3 step
+> 1's audit revealed that the framework's w* in `boundary_weight.md`
+> is observation-inverted from Ω_obs (value 0.8281, not 5/6 = 0.8333),
+> not field-equation-forced. The 5/6 candidate is substrate-internal
+> (upper Farey at q=6) but mechanism-undefined for the horn-branch.
+> The horn-branch substrate closure on m_μ remains operationally
+> open with a 1%-band cluster of candidates, not closure. The
+> "matches to 0.4%" closure phrasing in this doc's later sections
+> refers to numerical pattern-match, not substrate forcing.
+
 ## Status
 
 **Falsifier outcome: PASSES with vocabulary revision.** Step 1

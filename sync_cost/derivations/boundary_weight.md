@@ -1,5 +1,26 @@
 # The Boundary Weight
 
+> **AUDIT NOTICE — read `boundary_weight.py` L13-56 for the honest
+> derivation status of w*.** This doc presents w* as "determined
+> by self-consistency" of the field equation at the F_5/F_6
+> boundary. The companion script's added docstring records that
+> the actual w* derivation is **algebraic inversion from observed
+> Ω_Λ** (one-line algebra `w* = (11 - 16Ω) / (3Ω - 2)` giving
+> 0.8281 from Ω_obs = 0.6847), not field-equation closure. The
+> "Section 2 tongue_coverage_q6 scan" and "Section 3 fixed-point
+> search" referenced in this doc's "Dynamical fixed point" section
+> are described in the .py as "NOT genuine self-consistencies"
+> and "decorative." K* = 0.86196 is *separately* derived from
+> matter-sector self-consistency in `item12_K_star_closure.py`
+> but is not the source of w*. The clean substrate prediction is
+> **Ω_Λ = 13/19 = 0.6842 at w = 1 (substrate F₆ limit)**, which
+> already matches observation 0.685 ± 0.007 within 0.07σ; the
+> boundary weight w* < 1 inflates this to the central observed
+> 0.6847 but is not substrate-needed for empirical adequacy.
+> See also `horn_branch_iteration_3_step_1.md` for downstream
+> implications when w* is invoked as a substrate-derived
+> cross-sector constant.
+
 ## Claim
 
 The n=5 vs n=6 question dissolves. The Farey depth is not an
@@ -9,6 +30,11 @@ energy fraction Omega_Lambda is a continuous, monotone function
 of this weight, and the observed value uniquely determines w*.
 
 The topology gives the interval. The dynamics give the point.
+
+[**Audit caveat**: per the notice above, the "dynamics give the
+point" framing is closer to "observation inverts the point";
+the substrate dynamics have not been shown to force w* analytically
+in the field-equation sense the rest of this doc presents.]
 
 ## The problem
 

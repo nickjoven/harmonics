@@ -1,5 +1,27 @@
 # Horn-branch iteration 1 — regime-change flare in y-parity vocabulary
 
+> **SUPERSEDED IN VOCABULARY by `horn_branch_iteration_2_step_1.md`
+> (q₂-axis revision).** This doc frames the horn-branch flare in
+> *y-parity (cos/sin)* vocabulary. Iteration 2 step 1 found that
+> y-parity is orthogonal to the generation classification and
+> not the axis the flare actually acts on; the framework-native
+> axis is **q₂ locked/unlocked**. The flare hypothesis and
+> regime-change framing in this doc are preserved; the *sector
+> vocabulary* (y-parity) is the wrong axis. Read step 1 before
+> using this doc's "y-parity flare" framing.
+
+> **CLOSURE CLAIMS WALKED BACK by `horn_branch_iteration_3_step_1.md`
+> (PRODUCTIVE NULL).** This doc proposes a "target factor 1.595
+> ≈ √(5/2)" reading that motivated subsequent iterations. The
+> horn-branch arc through iteration 3 step 1 has surfaced a
+> clustered candidate around 0.83 for `f_locked / f_unlocked`
+> without substrate-forcing mechanism. The arc's substrate
+> closure on the m_μ 37% gap is **operationally open**, not
+> closed; the pattern-match candidates (5/6 from substrate-internal
+> readings; 0.8281 from observation-inversion) span a 1% band
+> consistent with coincidence at the framework's general
+> precision tier.
+
 ## Status
 
 **First-pass exploration.** This is iteration 1 of the
@@ -8,11 +30,12 @@ horn-branch arc. Apparatus-level unblock is in place
 sufficiency), and the chirality-extension fallback is closed
 (`klein_bottle_restructure_price.md`: structurally declined by
 empirical falsifier). This doc frames the regime-change-as-horn
-hypothesis in substrate y-parity vocabulary (not chirality),
-connects to the existing depth-correction and SL(2,Z)-trace
-work in `fermion_mass_running.md`, sets up a falsifiable
-first-pass hypothesis for the m_μ 37% bare-tree residual, and
-documents what would constitute closure vs further iteration.
+hypothesis in substrate y-parity vocabulary (not chirality,
+**but see vocabulary-revision notice above**), connects to the
+existing depth-correction and SL(2,Z)-trace work in
+`fermion_mass_running.md`, sets up a falsifiable first-pass
+hypothesis for the m_μ 37% bare-tree residual, and documents
+what would constitute closure vs further iteration.
 
 No closure is attempted in this iteration. The aim is to
 articulate the hypothesis carefully enough that subsequent

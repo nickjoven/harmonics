@@ -1,11 +1,30 @@
 # Horn-branch iteration 2 step 2 — substrate derivation of f_locked / f_unlocked
 
+> **REVISED BY `horn_branch_iteration_3_step_1.md` (PRODUCTIVE NULL).**
+> This doc presents a "SUBSTANTIVE LEAD: three identifications
+> converge on 5/6" framing. Iteration 3 step 1 audited the
+> apparatus and found this framing inflated: reading (c)
+> (`boundary_weight.md`'s w*) is **not** substrate-derived but
+> algebraic inversion from observed Ω_Λ (per the honest audit
+> in `boundary_weight.py` L13-56), and its actual value is
+> 0.8281, not 5/6 = 0.8333 (0.63% discrepancy). The "convergence"
+> collapses to two substrate-internal exact-5/6 candidates (a,
+> b) with no derived mechanism, plus one observation-inverted
+> quantity (c) at a different value. Read iteration 3 step 1's
+> verdict before relying on any closure claim from this doc.
+> What survives this doc's claims: the q₂-axis sector assignment
+> from `horn_branch_iteration_2_step_1.md` (independent of this
+> step), and the fact that 5/6 is the upper Farey fraction at
+> q=6 (a real number-theoretic substrate fact, not a forced
+> mechanism for the horn-branch).
+
 ## Status
 
-**Verdict: SUBSTANTIVE LEAD; CLOSURE NOT ATTAINED.** Three
-substrate-internal identifications converge on **5/6 ≈ 0.833**
-for the horn-branch's required suppression ratio
-`f_locked / f_unlocked`:
+**Verdict: SUBSTANTIVE LEAD; CLOSURE NOT ATTAINED.**
+**[Subsequently walked back to PRODUCTIVE NULL by iteration 3
+step 1; see notice above.]** Three substrate-internal
+identifications converge on **5/6 ≈ 0.833** for the horn-branch's
+required suppression ratio `f_locked / f_unlocked`:
 
 (a) **Klein-bottle ratio average**: `(1 + Q)/2 = (1 + q₂/q₃)/2 =
 (1 + 2/3)/2 = 5/6`, where `Q = q₂/q₃ = 2/3` is the Klein-bottle
@@ -450,24 +469,21 @@ substantive lead either narrows or transitions to productive null.
 
 ## One-line summary
 
-Three substrate-internal identifications — (a) the
-Klein-bottle mediant `(1+Q)/2 = 5/6` where `Q = q₂/q₃ = 2/3`,
-(b) the upper Farey fraction `5/6` at the composite boundary
-`q=6 = q₂ × q₃`, and (c) the cosmological boundary weight
-`w* = 0.83 ≈ 5/6` from `boundary_weight.md` — converge on the
-same target value as the horn-branch's required suppression
-ratio `f_locked / f_unlocked ≈ 0.829`, and under the proposed
-substrate↔tree mapping (q₂-locked observables propagate through
-the q=6 boundary at fractional locking w*, q₂-unlocked observables
-bypass) the predicted `m_μ / m_e = (7 × 6/5)^{5/2} = 204.5`
-matches observation 206.8 to 1.1% with **no empirical Koide
-import**, producing a **substantive lead but not closure**:
-iteration 3 must derive w* analytically from the field equation
-(showing it is exactly 5/6 or specifying the discrepancy), close
-the substrate↔tree mapping that takes q₂-locked observables
-specifically to the upper Farey fraction, and cross-check the
-PMNS θ_12 closure using the same boundary weight, with success
-constituting the framework's first cross-sector substrate
-identification of an open-residual factor (mass and cosmological
-Ω_Λ unified by w*) and failure narrowing the candidate or
-transitioning to productive null.
+**[Walked back by iteration 3 step 1; see notice at top of doc.]**
+Three substrate-internal identifications — (a) the Klein-bottle
+mediant `(1+Q)/2 = 5/6` where `Q = q₂/q₃ = 2/3`, (b) the upper
+Farey fraction `5/6` at the composite boundary `q=6 = q₂ × q₃`,
+and (c) the cosmological boundary weight `w* = 0.83 ≈ 5/6` from
+`boundary_weight.md` — *appeared to* converge on the same target
+value as the horn-branch's required suppression ratio
+`f_locked / f_unlocked ≈ 0.829`, but iteration 3 step 1's
+audit of `boundary_weight.py` L13-56 reveals reading (c) is
+observation-inverted from Ω_obs (giving 0.8281, not 5/6) rather
+than substrate-forced, collapsing the "convergence" to two
+exact-5/6 candidates without derived mechanism plus one
+observation-inverted quantity at a 0.63%-different value, so
+the apparent "first cross-sector substrate identification of an
+open-residual factor" claim does not survive scrutiny — the
+correct disposition is **operationally open with a clustered
+candidate** (1% band of near-hits at the framework's general
+precision tier), not closure.
