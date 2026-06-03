@@ -1,5 +1,5 @@
 {
-  "generated": "dfbd15e14845bb28d49e7fd10480baba968d3596",
+  "generated": "6d2bea448256fb14b77e5c327f7df71cd871f996",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1686,6 +1686,7 @@
       "summary": "**Conceptual orientation document.** Articulates the address /\nquantity distinction underlying the framework's two-anchor\nminimum (per `anchor_count_audit.md` and D.3 closure). Cited as\ncontext in `coupling_scales.md` and `mass_sector_closure.md`.",
       "depends_on": [
         "anchor_count_audit",
+        "boundary_weight",
         "coupling_scales",
         "mass_sector_closure"
       ],
@@ -1698,6 +1699,10 @@
       "edges": [
         {
           "target": "anchor_count_audit",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
           "kind": "references"
         },
         {
@@ -1728,6 +1733,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "6d2bea4",
+          "date": "2026-06-02",
+          "subject": "Axial-trajectory arc: falsifier chain \u2192 price ledger \u2192 horn-branch \u2192 null-promotion sweep (#211)"
+        },
         {
           "hash": "a6a4f5d",
           "date": "2026-04-26",
@@ -2279,6 +2289,7 @@
         "derivation_atlas",
         "epsilon_substrate_decomposition",
         "framework_status",
+        "horn_branch_iteration_3_step_1",
         "hybrid_strategy_audit",
         "k_axis_uniqueness",
         "k_scaling_scan",
@@ -2379,6 +2390,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_3_step_1",
           "kind": "references"
         },
         {
@@ -3007,6 +3022,87 @@
       ]
     },
     {
+      "id": "axial_trajectory_conservation_audit",
+      "path": "sync_cost/derivations/axial_trajectory_conservation_audit.md",
+      "title": "Axial trajectory conservation audit \u2014 chirality fineness verdict",
+      "summary": "**Audit verdict: APPARATUS INSUFFICIENT.** The framework's\ncurrent Klein-Z_2 antiperiodic structure conflates four\nstructurally distinct \u00b1 axes (direction of travel, spin,\nchirality, arrow of time) into a single Z_2. The geometric\nprogression `string \u2192 cylinder \u2192 cone` of unlocked \u00b1 axes\nrequires these to be carried independently. The framework\ncarries one Z_2 doing multiple jobs at once, and that single\nZ_2 is *not* fine-grained enough to host chirality-distinguishing\ndissipation of the kind re",
+      "depends_on": [
+        "complex_amplitude_uniqueness",
+        "framework_status",
+        "generation_mechanism",
+        "klein_bottle",
+        "koide_form_substrate_iteration_14",
+        "mass_sector_closure",
+        "proposed_residual_closure",
+        "tick_continuum_construction"
+      ],
+      "depended_on_by": [
+        "horn_branch_iteration_1",
+        "klein_bottle_restructure_price",
+        "klein_z2_decomposition_falsifier",
+        "klein_z2_decomposition_falsifier_2"
+      ],
+      "edges": [
+        {
+          "target": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "generation_mechanism",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "koide_form_substrate_iteration_14",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "proposed_residual_closure",
+          "kind": "references"
+        },
+        {
+          "target": "tick_continuum_construction",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "horn_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "source": "klein_z2_decomposition_falsifier",
+          "kind": "references"
+        },
+        {
+          "source": "klein_z2_decomposition_falsifier_2",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "6d2bea4",
+          "date": "2026-06-02",
+          "subject": "Axial-trajectory arc: falsifier chain \u2192 price ledger \u2192 horn-branch \u2192 null-promotion sweep (#211)"
+        }
+      ]
+    },
+    {
       "id": "baryon_fraction",
       "path": "sync_cost/derivations/baryon_fraction.md",
       "title": "The Baryon Fraction",
@@ -3265,7 +3361,12 @@
         "articulation_audit_2026-05",
         "discrete_extension_principle",
         "framework_status",
+        "horn_branch_iteration_1",
+        "horn_branch_iteration_2_step_1",
+        "horn_branch_iteration_3_step_1",
         "k_of_t_friedmann",
+        "klein_bottle_restructure_price",
+        "klein_z2_decomposition_falsifier_2",
         "koide_form_substrate_iteration_14",
         "lesson_cosmological_constant",
         "lesson_rotation_curves_a0",
@@ -3318,7 +3419,27 @@
           "kind": "references"
         },
         {
+          "source": "horn_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_3_step_1",
+          "kind": "references"
+        },
+        {
           "source": "k_of_t_friedmann",
+          "kind": "references"
+        },
+        {
+          "source": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "source": "klein_z2_decomposition_falsifier_2",
           "kind": "references"
         },
         {
@@ -3421,6 +3542,7 @@
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
         "framework_status",
+        "klein_bottle_restructure_price",
         "physics_relevance_measurement_catalog",
         "qm_reframing_programmatic",
         "snmc_class_and_entanglement"
@@ -3482,6 +3604,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "klein_bottle_restructure_price",
           "kind": "references"
         },
         {
@@ -3728,6 +3854,9 @@
         "framework_status",
         "free_parameter_scorecard",
         "ghz_from_substrate",
+        "horn_branch_iteration_1",
+        "horn_branch_iteration_2_step_1",
+        "klein_bottle_restructure_price",
         "koide_form_substrate_iteration_10",
         "koide_form_substrate_iteration_7",
         "koide_form_substrate_iteration_8",
@@ -3823,6 +3952,18 @@
         },
         {
           "source": "ghz_from_substrate",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "klein_bottle_restructure_price",
           "kind": "references"
         },
         {
@@ -3968,6 +4109,8 @@
         "articulation_audit_2026-05",
         "born_rule",
         "empty_fork_cap",
+        "horn_branch_iteration_1",
+        "klein_bottle_restructure_price",
         "proposed_residual_closure",
         "thread_chronology",
         "tick_continuum_construction"
@@ -4004,6 +4147,14 @@
           "kind": "references"
         },
         {
+          "source": "horn_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
           "source": "proposed_residual_closure",
           "kind": "references"
         },
@@ -4031,16 +4182,21 @@
       "summary": "The n=5 vs n=6 question dissolves. The Farey depth is not an\ninteger. The boundary modes (q=6) are partially locked at a\nfractional weight w* determined by self-consistency. The dark\nenergy fraction Omega_Lambda is a continuous, monotone function\nof this weight, and the observed value uniquely determines w*.",
       "depends_on": [
         "PROOF_A_gravity",
-        "PROOF_B_quantum"
+        "PROOF_B_quantum",
+        "horn_branch_iteration_3_step_1"
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "a_s_geometric_proof",
+        "address_and_quantity",
         "canonical_glossary",
         "continuity_in_K_nulls",
         "down_type_double_cover_closed",
         "down_type_double_cover_phase_c",
         "down_type_double_cover_phase_d",
+        "horn_branch_iteration_2_step_1",
+        "horn_branch_iteration_2_step_2",
+        "horn_branch_iteration_3_step_1",
         "item12_C_from_K_star",
         "k_critical_phase_a",
         "k_of_t_friedmann",
@@ -4063,6 +4219,10 @@
         {
           "target": "PROOF_B_quantum",
           "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_3_step_1",
+          "kind": "references"
         }
       ],
       "edged_by": [
@@ -4072,6 +4232,10 @@
         },
         {
           "source": "a_s_geometric_proof",
+          "kind": "references"
+        },
+        {
+          "source": "address_and_quantity",
           "kind": "references"
         },
         {
@@ -4092,6 +4256,18 @@
         },
         {
           "source": "down_type_double_cover_phase_d",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_3_step_1",
           "kind": "references"
         },
         {
@@ -4148,6 +4324,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "6d2bea4",
+          "date": "2026-06-02",
+          "subject": "Axial-trajectory arc: falsifier chain \u2192 price ledger \u2192 horn-branch \u2192 null-promotion sweep (#211)"
+        },
         {
           "hash": "e1e25da",
           "date": "2026-04-13",
@@ -4230,6 +4411,7 @@
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
         "down_type_double_cover_closed",
+        "klein_z2_decomposition_falsifier_2",
         "phenomenology_cross_reference",
         "phenomenon_glossary",
         "qm_reframing_programmatic",
@@ -4470,6 +4652,10 @@
           "kind": "references"
         },
         {
+          "source": "klein_z2_decomposition_falsifier_2",
+          "kind": "references"
+        },
+        {
           "source": "phenomenology_cross_reference",
           "kind": "references"
         },
@@ -4695,9 +4881,13 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "axial_trajectory_conservation_audit",
         "bell_bounds_from_substrate",
         "canonical_glossary",
         "dicke_apparatus_theorem",
+        "klein_bottle_restructure_price",
+        "klein_z2_decomposition_falsifier",
+        "klein_z2_decomposition_falsifier_2",
         "koide_form_substrate_iteration_3",
         "koide_form_substrate_iteration_6",
         "koide_form_substrate_iteration_7",
@@ -4755,6 +4945,10 @@
       ],
       "edged_by": [
         {
+          "source": "axial_trajectory_conservation_audit",
+          "kind": "references"
+        },
+        {
           "source": "bell_bounds_from_substrate",
           "kind": "references"
         },
@@ -4764,6 +4958,18 @@
         },
         {
           "source": "dicke_apparatus_theorem",
+          "kind": "references"
+        },
+        {
+          "source": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "source": "klein_z2_decomposition_falsifier",
+          "kind": "references"
+        },
+        {
+          "source": "klein_z2_decomposition_falsifier_2",
           "kind": "references"
         },
         {
@@ -7284,6 +7490,7 @@
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_b",
         "down_type_double_cover_phase_b_followup",
+        "horn_branch_iteration_3_step_1",
         "item12_cross_sector_ratios",
         "klein_bottle_derivation",
         "klein_connection"
@@ -7292,6 +7499,7 @@
         "continuity_in_K_nulls",
         "down_type_double_cover_closed",
         "down_type_double_cover_phase_d",
+        "horn_branch_iteration_2_step_2",
         "session_audit"
       ],
       "edges": [
@@ -7313,6 +7521,10 @@
         },
         {
           "target": "down_type_double_cover_phase_b_followup",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_3_step_1",
           "kind": "references"
         },
         {
@@ -7342,11 +7554,20 @@
           "kind": "references"
         },
         {
+          "source": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
           "source": "session_audit",
           "kind": "references"
         }
       ],
       "git": [
+        {
+          "hash": "6d2bea4",
+          "date": "2026-06-02",
+          "subject": "Axial-trajectory arc: falsifier chain \u2192 price ledger \u2192 horn-branch \u2192 null-promotion sweep (#211)"
+        },
         {
           "hash": "c83e5d0",
           "date": "2026-04-19",
@@ -7362,6 +7583,7 @@
       "depends_on": [
         "boundary_weight",
         "down_type_double_cover_phase_c",
+        "horn_branch_iteration_3_step_1",
         "item12_cross_sector_ratios",
         "klein_connection"
       ],
@@ -7376,6 +7598,10 @@
         },
         {
           "target": "down_type_double_cover_phase_c",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_3_step_1",
           "kind": "references"
         },
         {
@@ -7398,6 +7624,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "6d2bea4",
+          "date": "2026-06-02",
+          "subject": "Axial-trajectory arc: falsifier chain \u2192 price ledger \u2192 horn-branch \u2192 null-promotion sweep (#211)"
+        },
         {
           "hash": "c83e5d0",
           "date": "2026-04-19",
@@ -9373,6 +9604,10 @@
         "INDEX",
         "free_parameter_scorecard",
         "generation_mechanism",
+        "horn_branch_iteration_1",
+        "horn_branch_iteration_2_step_1",
+        "horn_branch_iteration_2_step_2",
+        "horn_branch_iteration_3_step_1",
         "koide_form_substrate_iteration_1",
         "koide_form_substrate_iteration_10",
         "koide_form_substrate_iteration_2",
@@ -9428,6 +9663,22 @@
         },
         {
           "source": "generation_mechanism",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_3_step_1",
           "kind": "references"
         },
         {
@@ -9561,6 +9812,7 @@
         "explicit_4x4_reduction",
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
+        "klein_z2_decomposition_falsifier_2",
         "lesson_8_35_vs_13_19",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
@@ -9655,6 +9907,10 @@
         },
         {
           "source": "gr_qm_unification_synthesis",
+          "kind": "references"
+        },
+        {
+          "source": "klein_z2_decomposition_falsifier_2",
           "kind": "references"
         },
         {
@@ -9858,6 +10114,7 @@
         "articulation_audit_2026-05",
         "audit_findings_3_4_disposition",
         "audit_punch_list_2026-04",
+        "axial_trajectory_conservation_audit",
         "basepoint_principle",
         "basin_11_connection_exploration",
         "bell_bounds_from_substrate",
@@ -10263,6 +10520,10 @@
         },
         {
           "source": "audit_punch_list_2026-04",
+          "kind": "references"
+        },
+        {
+          "source": "axial_trajectory_conservation_audit",
           "kind": "references"
         },
         {
@@ -11669,6 +11930,7 @@
         "gauge_dictionary",
         "gauge_factorization",
         "gauge_high_scale_identification",
+        "klein_bottle_restructure_price",
         "klein_connection",
         "koide_form_substrate_iteration_6",
         "mass_sector_closure",
@@ -11707,6 +11969,10 @@
         },
         {
           "source": "gauge_high_scale_identification",
+          "kind": "references"
+        },
+        {
+          "source": "klein_bottle_restructure_price",
           "kind": "references"
         },
         {
@@ -11880,11 +12146,15 @@
       ],
       "depended_on_by": [
         "INDEX",
+        "axial_trajectory_conservation_audit",
         "beta_from_tongues",
         "fermion_mass_running",
         "fourth_generation_revisited",
         "framework_status",
         "free_parameter_scorecard",
+        "horn_branch_iteration_1",
+        "horn_branch_iteration_2_step_1",
+        "horn_branch_iteration_2_step_2",
         "koide_form_substrate_iteration_1",
         "koide_form_substrate_iteration_10",
         "koide_form_substrate_iteration_11",
@@ -11934,6 +12204,10 @@
           "kind": "references"
         },
         {
+          "source": "axial_trajectory_conservation_audit",
+          "kind": "references"
+        },
+        {
           "source": "beta_from_tongues",
           "kind": "references"
         },
@@ -11951,6 +12225,18 @@
         },
         {
           "source": "free_parameter_scorecard",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_2",
           "kind": "references"
         },
         {
@@ -13269,6 +13555,365 @@
           "hash": "7c80593",
           "date": "2026-03-22",
           "subject": "Add high-z MOND prediction markdown (08_high_z_mond.md)"
+        }
+      ]
+    },
+    {
+      "id": "horn_branch_iteration_1",
+      "path": "sync_cost/derivations/horn_branch_iteration_1.md",
+      "title": "Horn-branch iteration 1 \u2014 regime-change flare in y-parity vocabulary",
+      "summary": "**First-pass exploration.** This is iteration 1 of the\nhorn-branch arc. Apparatus-level unblock is in place\n(`klein_z2_decomposition_falsifier_2.md`: modal y-parity\nsufficiency), and the chirality-extension fallback is closed\n(`klein_bottle_restructure_price.md`: structurally declined by\nempirical falsifier). This doc frames the regime-change-as-horn\nhypothesis in substrate y-parity vocabulary (not chirality,\n**but see vocabulary-revision notice above**), connects to the\nexisting depth-correctio",
+      "depends_on": [
+        "axial_trajectory_conservation_audit",
+        "basepoint_principle",
+        "born_rule",
+        "born_rule_parameter_free",
+        "fermion_mass_running",
+        "generation_mechanism",
+        "horn_branch_iteration_2_step_1",
+        "horn_branch_iteration_3_step_1",
+        "klein_bottle",
+        "klein_bottle_restructure_price",
+        "klein_z2_decomposition_falsifier_2",
+        "koide_form_substrate_iteration_14"
+      ],
+      "depended_on_by": [
+        "horn_branch_iteration_2_step_1",
+        "horn_branch_iteration_3_step_1"
+      ],
+      "edges": [
+        {
+          "target": "axial_trajectory_conservation_audit",
+          "kind": "references"
+        },
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_parameter_free",
+          "kind": "references"
+        },
+        {
+          "target": "fermion_mass_running",
+          "kind": "references"
+        },
+        {
+          "target": "generation_mechanism",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_3_step_1",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "klein_z2_decomposition_falsifier_2",
+          "kind": "references"
+        },
+        {
+          "target": "koide_form_substrate_iteration_14",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "horn_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_3_step_1",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "6d2bea4",
+          "date": "2026-06-02",
+          "subject": "Axial-trajectory arc: falsifier chain \u2192 price ledger \u2192 horn-branch \u2192 null-promotion sweep (#211)"
+        }
+      ]
+    },
+    {
+      "id": "horn_branch_iteration_2_step_1",
+      "path": "sync_cost/derivations/horn_branch_iteration_2_step_1.md",
+      "title": "Horn-branch iteration 2 step 1 \u2014 sector-assignment falsifier",
+      "summary": "**Falsifier outcome: PASSES with vocabulary revision.** Step 1\nof iteration 2 (`horn_branch_iteration_1.md` \u00a7\"Plan for\niteration 2\") was to determine the y-parity sector assignment\nfor the three observable generations and check whether the\nhorn-branch hypothesis is apparatus-consistent. Reading the\napparatus produces a sharp result that **passes** the falsifier\nbut **revises the vocabulary**: the distinguishing sector\nthe flare acts on is not cos-y / sin-y y-parity but\n**locked / unlocked at q\u2082*",
+      "depends_on": [
+        "basepoint_principle",
+        "born_rule",
+        "boundary_weight",
+        "fermion_mass_running",
+        "generation_mechanism",
+        "horn_branch_iteration_1",
+        "horn_branch_iteration_3_step_1",
+        "klein_bottle",
+        "klein_bottle_derivation",
+        "klein_z2_decomposition_falsifier_2",
+        "koide_form_substrate_iteration_14"
+      ],
+      "depended_on_by": [
+        "horn_branch_iteration_1",
+        "horn_branch_iteration_2_step_2",
+        "horn_branch_iteration_3_step_1"
+      ],
+      "edges": [
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "fermion_mass_running",
+          "kind": "references"
+        },
+        {
+          "target": "generation_mechanism",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_3_step_1",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_derivation",
+          "kind": "references"
+        },
+        {
+          "target": "klein_z2_decomposition_falsifier_2",
+          "kind": "references"
+        },
+        {
+          "target": "koide_form_substrate_iteration_14",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "horn_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_3_step_1",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "6d2bea4",
+          "date": "2026-06-02",
+          "subject": "Axial-trajectory arc: falsifier chain \u2192 price ledger \u2192 horn-branch \u2192 null-promotion sweep (#211)"
+        }
+      ]
+    },
+    {
+      "id": "horn_branch_iteration_2_step_2",
+      "path": "sync_cost/derivations/horn_branch_iteration_2_step_2.md",
+      "title": "Horn-branch iteration 2 step 2 \u2014 substrate derivation of f_locked / f_unlocked",
+      "summary": "**Verdict: SUBSTANTIVE LEAD; CLOSURE NOT ATTAINED.**\n**[Subsequently walked back to PRODUCTIVE NULL by iteration 3\nstep 1; see notice above.]** Three substrate-internal\nidentifications converge on **5/6 \u2248 0.833** for the horn-branch's\nrequired suppression ratio `f_locked / f_unlocked`:",
+      "depends_on": [
+        "boundary_weight",
+        "down_type_double_cover_phase_c",
+        "fermion_mass_running",
+        "generation_mechanism",
+        "horn_branch_iteration_2_step_1",
+        "horn_branch_iteration_3_step_1",
+        "klein_bottle",
+        "klein_bottle_restructure_price",
+        "klein_z2_decomposition_falsifier_2",
+        "koide_form_substrate_iteration_14",
+        "mass_sector_closure"
+      ],
+      "depended_on_by": [
+        "horn_branch_iteration_3_step_1"
+      ],
+      "edges": [
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "down_type_double_cover_phase_c",
+          "kind": "references"
+        },
+        {
+          "target": "fermion_mass_running",
+          "kind": "references"
+        },
+        {
+          "target": "generation_mechanism",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_3_step_1",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "klein_z2_decomposition_falsifier_2",
+          "kind": "references"
+        },
+        {
+          "target": "koide_form_substrate_iteration_14",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "horn_branch_iteration_3_step_1",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "6d2bea4",
+          "date": "2026-06-02",
+          "subject": "Axial-trajectory arc: falsifier chain \u2192 price ledger \u2192 horn-branch \u2192 null-promotion sweep (#211)"
+        }
+      ]
+    },
+    {
+      "id": "horn_branch_iteration_3_step_1",
+      "path": "sync_cost/derivations/horn_branch_iteration_3_step_1.md",
+      "title": "Horn-branch iteration 3 step 1 \u2014 analytic w* test: PRODUCTIVE NULL",
+      "summary": "**Verdict: PRODUCTIVE NULL.** Iteration 3 step 1 was to derive w*\nanalytically from the field-equation fixed-point and verify\nwhether w* = 5/6 (the iteration 2 step 2 candidate from readings\n(a) and (b)). Reading the apparatus closely reveals:",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "basepoint_principle",
+        "boundary_weight",
+        "fermion_mass_running",
+        "horn_branch_iteration_1",
+        "horn_branch_iteration_2_step_1",
+        "horn_branch_iteration_2_step_2",
+        "klein_bottle",
+        "koide_form_substrate_iteration_14"
+      ],
+      "depended_on_by": [
+        "boundary_weight",
+        "down_type_double_cover_phase_c",
+        "down_type_double_cover_phase_d",
+        "horn_branch_iteration_1",
+        "horn_branch_iteration_2_step_1",
+        "horn_branch_iteration_2_step_2"
+      ],
+      "edges": [
+        {
+          "target": "ansatz_audit_policy",
+          "kind": "references"
+        },
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "fermion_mass_running",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "koide_form_substrate_iteration_14",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "source": "down_type_double_cover_phase_c",
+          "kind": "references"
+        },
+        {
+          "source": "down_type_double_cover_phase_d",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "6d2bea4",
+          "date": "2026-06-02",
+          "subject": "Axial-trajectory arc: falsifier chain \u2192 price ledger \u2192 horn-branch \u2192 null-promotion sweep (#211)"
         }
       ]
     },
@@ -14915,6 +15560,7 @@
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
         "articulation_audit_2026-05",
+        "axial_trajectory_conservation_audit",
         "beta_from_tongues",
         "complex_amplitude_uniqueness",
         "cone_twist_substrate",
@@ -14931,10 +15577,17 @@
         "gauge_high_scale_identification",
         "gell_mann_nishijima",
         "generation_mechanism",
+        "horn_branch_iteration_1",
+        "horn_branch_iteration_2_step_1",
+        "horn_branch_iteration_2_step_2",
+        "horn_branch_iteration_3_step_1",
         "instrument_family_taxonomy",
         "klein_bottle_derivation",
+        "klein_bottle_restructure_price",
         "klein_connection",
         "klein_nodal_parity",
+        "klein_z2_decomposition_falsifier",
+        "klein_z2_decomposition_falsifier_2",
         "koide_form_substrate_iteration_1",
         "koide_form_substrate_iteration_10",
         "koide_form_substrate_iteration_11",
@@ -14993,6 +15646,10 @@
         },
         {
           "source": "articulation_audit_2026-05",
+          "kind": "references"
+        },
+        {
+          "source": "axial_trajectory_conservation_audit",
           "kind": "references"
         },
         {
@@ -15060,6 +15717,22 @@
           "kind": "references"
         },
         {
+          "source": "horn_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_3_step_1",
+          "kind": "references"
+        },
+        {
           "source": "instrument_family_taxonomy",
           "kind": "references"
         },
@@ -15068,11 +15741,23 @@
           "kind": "references"
         },
         {
+          "source": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
           "source": "klein_connection",
           "kind": "references"
         },
         {
           "source": "klein_nodal_parity",
+          "kind": "references"
+        },
+        {
+          "source": "klein_z2_decomposition_falsifier",
+          "kind": "references"
+        },
+        {
+          "source": "klein_z2_decomposition_falsifier_2",
           "kind": "references"
         },
         {
@@ -15283,6 +15968,7 @@
         "gauge_factorization",
         "gauge_high_scale_identification",
         "hierarchy_gaussian_lattice",
+        "horn_branch_iteration_2_step_1",
         "klein_bottle",
         "klein_dynamics_roadmap",
         "numerology_inventory",
@@ -15378,6 +16064,10 @@
           "kind": "references"
         },
         {
+          "source": "horn_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
           "source": "klein_bottle",
           "kind": "references"
         },
@@ -15454,6 +16144,97 @@
           "hash": "d185308",
           "date": "2026-04-08",
           "subject": "Document three open gaps in Kuramoto-to-gravity derivation (#57)"
+        }
+      ]
+    },
+    {
+      "id": "klein_bottle_restructure_price",
+      "path": "sync_cost/derivations/klein_bottle_restructure_price.md",
+      "title": "Klein-bottle restructure \u2014 price ledger for the apparatus-extension fallback",
+      "summary": "**Apparatus-extension verdict: STRUCTURALLY DECLINED BY EMPIRICAL\nFALSIFIER.** The Klein-bottle restructure path named in\n`axial_trajectory_conservation_audit.md` (adding a second\nindependent antiperiodic cycle to the substrate to get an\nindependent R-generator) was held in standby by\n`klein_z2_decomposition_falsifier_2.md` as fallback if the\nvocabulary-bridge approach fails. This document prices that\nfallback and finds the price is not just expensive \u2014 it is\n**already paid by experiment in the ",
+      "depends_on": [
+        "axial_trajectory_conservation_audit",
+        "basepoint_principle",
+        "bell_bounds_from_substrate",
+        "born_rule",
+        "born_rule_parameter_free",
+        "complex_amplitude_uniqueness",
+        "gauge_sector_lovelock",
+        "klein_bottle",
+        "klein_z2_decomposition_falsifier",
+        "klein_z2_decomposition_falsifier_2",
+        "mass_sector_closure",
+        "q_mod2_conservation_theorem"
+      ],
+      "depended_on_by": [
+        "horn_branch_iteration_1",
+        "horn_branch_iteration_2_step_2"
+      ],
+      "edges": [
+        {
+          "target": "axial_trajectory_conservation_audit",
+          "kind": "references"
+        },
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "bell_bounds_from_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_parameter_free",
+          "kind": "references"
+        },
+        {
+          "target": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_z2_decomposition_falsifier",
+          "kind": "references"
+        },
+        {
+          "target": "klein_z2_decomposition_falsifier_2",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "horn_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "6d2bea4",
+          "date": "2026-06-02",
+          "subject": "Axial-trajectory arc: falsifier chain \u2192 price ledger \u2192 horn-branch \u2192 null-promotion sweep (#211)"
         }
       ]
     },
@@ -15843,6 +16624,138 @@
           "hash": "2a285e4",
           "date": "2026-04-22",
           "subject": "Flatten simulation audit into existing clarifying documents"
+        }
+      ]
+    },
+    {
+      "id": "klein_z2_decomposition_falsifier",
+      "path": "sync_cost/derivations/klein_z2_decomposition_falsifier.md",
+      "title": "Klein-Z_2 sign-flip vs reflection decomposition \u2014 falsifier test",
+      "summary": "**Falsifier outcome: PARTIALLY PASSED.** The Klein-Z_2\nidentification `f(x+L_x, y) = \u2212f(x, L_y\u2212y)` admits a clean\nmathematical decomposition into independent sign-flip (S) and\nreflection (R) actions. The framework's existing\ncomplex-amplitude apparatus uses S and R *coupled together*\n(forced by the spinor bundle structure that gives `J\u00b2 = \u2212I`),\nbut the operations themselves are mathematically independent.",
+      "depends_on": [
+        "axial_trajectory_conservation_audit",
+        "complex_amplitude_uniqueness",
+        "klein_bottle",
+        "mass_sector_closure"
+      ],
+      "depended_on_by": [
+        "klein_bottle_restructure_price",
+        "klein_z2_decomposition_falsifier_2"
+      ],
+      "edges": [
+        {
+          "target": "axial_trajectory_conservation_audit",
+          "kind": "references"
+        },
+        {
+          "target": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "source": "klein_z2_decomposition_falsifier_2",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "6d2bea4",
+          "date": "2026-06-02",
+          "subject": "Axial-trajectory arc: falsifier chain \u2192 price ledger \u2192 horn-branch \u2192 null-promotion sweep (#211)"
+        }
+      ]
+    },
+    {
+      "id": "klein_z2_decomposition_falsifier_2",
+      "path": "sync_cost/derivations/klein_z2_decomposition_falsifier_2.md",
+      "title": "Klein-Z_2 third-caveat test \u2014 does substrate populate both R-eigenstates?",
+      "summary": "**Caveat outcome: SPLIT VERDICT.** The third caveat from\n`klein_z2_decomposition_falsifier.md` \u2014 \"whether substrate\ndynamics actually populates both R-eigenstate components, or\nonly one\" \u2014 resolves into two non-equivalent readings of\n\"populates,\" and the framework's apparatus passes one cleanly\nand fails the other in a way that is itself informative.",
+      "depends_on": [
+        "axial_trajectory_conservation_audit",
+        "basepoint_principle",
+        "canonical_glossary",
+        "complex_amplitude_uniqueness",
+        "figure_eight",
+        "klein_bottle",
+        "klein_z2_decomposition_falsifier",
+        "mass_sector_closure"
+      ],
+      "depended_on_by": [
+        "horn_branch_iteration_1",
+        "horn_branch_iteration_2_step_1",
+        "horn_branch_iteration_2_step_2",
+        "klein_bottle_restructure_price"
+      ],
+      "edges": [
+        {
+          "target": "axial_trajectory_conservation_audit",
+          "kind": "references"
+        },
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "target": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "target": "figure_eight",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_z2_decomposition_falsifier",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "horn_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "source": "klein_bottle_restructure_price",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "6d2bea4",
+          "date": "2026-06-02",
+          "subject": "Axial-trajectory arc: falsifier chain \u2192 price ledger \u2192 horn-branch \u2192 null-promotion sweep (#211)"
         }
       ]
     },
@@ -16248,7 +17161,12 @@
         "substrate_prediction_selection"
       ],
       "depended_on_by": [
+        "axial_trajectory_conservation_audit",
         "framework_status",
+        "horn_branch_iteration_1",
+        "horn_branch_iteration_2_step_1",
+        "horn_branch_iteration_2_step_2",
+        "horn_branch_iteration_3_step_1",
         "substrate_prediction_selection"
       ],
       "edges": [
@@ -16291,7 +17209,27 @@
       ],
       "edged_by": [
         {
+          "source": "axial_trajectory_conservation_audit",
+          "kind": "references"
+        },
+        {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "source": "horn_branch_iteration_3_step_1",
           "kind": "references"
         },
         {
@@ -17541,12 +18479,17 @@
         "FRAMEWORK_TOPOLOGY",
         "address_and_quantity",
         "anchor_count_audit",
+        "axial_trajectory_conservation_audit",
         "canonical_glossary",
         "depth_connection_nulls",
         "derivation_atlas",
         "fourth_generation_revisited",
+        "horn_branch_iteration_2_step_2",
         "k_axis_uniqueness",
         "k_scaling_scan",
+        "klein_bottle_restructure_price",
+        "klein_z2_decomposition_falsifier",
+        "klein_z2_decomposition_falsifier_2",
         "koide_form_substrate_iteration_1",
         "koide_form_substrate_iteration_10",
         "koide_form_substrate_iteration_11",
@@ -17595,6 +18538,10 @@
           "kind": "references"
         },
         {
+          "source": "axial_trajectory_conservation_audit",
+          "kind": "references"
+        },
+        {
           "source": "canonical_glossary",
           "kind": "references"
         },
@@ -17611,11 +18558,27 @@
           "kind": "references"
         },
         {
+          "source": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
           "source": "k_axis_uniqueness",
           "kind": "references"
         },
         {
           "source": "k_scaling_scan",
+          "kind": "references"
+        },
+        {
+          "source": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "source": "klein_z2_decomposition_falsifier",
+          "kind": "references"
+        },
+        {
+          "source": "klein_z2_decomposition_falsifier_2",
           "kind": "references"
         },
         {
@@ -23219,6 +24182,7 @@
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
+        "axial_trajectory_conservation_audit",
         "framework_status",
         "sine_gordon_substrate",
         "sqrt_r_n_correction",
@@ -23281,6 +24245,10 @@
       "edged_by": [
         {
           "source": "articulation_audit_2026-05",
+          "kind": "references"
+        },
+        {
+          "source": "axial_trajectory_conservation_audit",
           "kind": "references"
         },
         {
@@ -23733,6 +24701,7 @@
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
         "k_of_t_residual_disposition",
+        "klein_bottle_restructure_price",
         "koide_form_substrate_iteration_10",
         "lesson_epr_gr_qm_unification",
         "meaning_of_two_wip",
@@ -23839,6 +24808,10 @@
         },
         {
           "source": "k_of_t_residual_disposition",
+          "kind": "references"
+        },
+        {
+          "source": "klein_bottle_restructure_price",
           "kind": "references"
         },
         {
@@ -28132,6 +29105,7 @@
         "thread_chronology"
       ],
       "depended_on_by": [
+        "axial_trajectory_conservation_audit",
         "empty_fork_cap",
         "framework_status",
         "mediant_vs_flow_calc",
@@ -28162,6 +29136,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "axial_trajectory_conservation_audit",
+          "kind": "references"
+        },
         {
           "source": "empty_fork_cap",
           "kind": "references"
