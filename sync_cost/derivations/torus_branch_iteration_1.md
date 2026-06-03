@@ -397,20 +397,11 @@ derivations.** Specifically:
   robust. Verify that swapping (poloidal = q_3, toroidal = q_2)
   breaks something specific.
 
-**Step 3 — Connect to PR #210's Collatz/Catalan framing.** PR
-#210's `vocabulary-studies/collatz_minimal_chaos.md` reads
-Collatz as minimal discrete chaos using framework primitives
-(integers = q=1 boundary, {2, 3} incommensurability). The torus
-reading and the Collatz reading share substrate primitives. A
-joint check: does the toroidal/poloidal vocabulary clarify why
-the {2, 3} incommensurability is load-bearing for Collatz's
-single-cycle uniqueness?
-
-If steps 1-3 produce useful clarifications, the arc continues.
-If they all return "nothing new beyond canonical Z_6
-apparatus," the arc closes as productive null at iteration 2,
-with the torus vocabulary surviving only as a pedagogical /
-documentation aid (substrate-admitted, not substrate-forced).
+If steps 1 and 2 produce useful clarifications, the arc continues.
+If they both return "nothing new beyond canonical Z_6 apparatus,"
+the arc closes as productive null at iteration 2, with the
+torus vocabulary surviving only as a pedagogical / documentation
+aid (substrate-admitted, not substrate-forced).
 
 ---
 
@@ -450,10 +441,6 @@ documentation aid (substrate-admitted, not substrate-forced).
   substrate-admitted (the geometric torus realization).
 - `feedback_resolution_vs_reconstruction.md` (memory) —
   methodology guard against reconstruction-mode drift.
-- `vocabulary-studies/collatz_minimal_chaos.md` (PR #210) —
-  adjacent Class 2 reading using same substrate primitives;
-  iteration 2 step 3 cross-checks the toroidal/poloidal reading
-  against the Collatz framing.
 - `horn_branch_iteration_1.md`, `vocabulary_bridge_iteration_1.md`
   — comparable iteration-arc-opener structure and scope.
 
@@ -481,10 +468,9 @@ re-articulates the existing Z_6 lattice in geometric vocabulary
 rather than proposing a new substrate surface, which would be
 reconstruction-mode and is empirically barred per
 `klein_bottle_restructure_price.md`); five falsifiers named, with
-iteration 2 planning three concrete checks (gauge-factor
+iteration 2 planning two concrete checks (gauge-factor
 identification structural verification, downstream-derivation
-clarity test on Ω_b and Ω_b α/β closure, cross-link with PR
-#210's Collatz framing) whose three "no" outcomes would close
-the arc as productive null with the torus vocabulary surviving
-only as pedagogical/documentation aid (substrate-admitted, not
-substrate-forced).
+clarity test on Ω_b and Ω_b α/β closure) whose "no" outcomes
+would close the arc as productive null with the torus vocabulary
+surviving only as pedagogical/documentation aid (substrate-admitted,
+not substrate-forced).
