@@ -326,10 +326,11 @@ same.
 ## What this step does NOT establish
 
 - **Whether the torus reading provides PREDICTIONS** that the
-  canonical Z_6 apparatus doesn't. Step 3 of iteration 2 (cross
-  with PR #210's Collatz framing) might surface predictions; or
-  the arc may close as productive null with vocabulary
-  clarification only.
+  canonical Z_6 apparatus doesn't. Steps 1 and 2 surfaced
+  unifying-picture value and layer-invariance confirmation, but
+  no new substrate-forced predictions. Iteration 2 closes here
+  with the torus reading at substantive vocabulary clarification
+  status.
 
 - **Whether the specific value w_+ = 13/14** has a clean
   torus-coordinate reading. The geometric direction-identification
@@ -369,20 +370,33 @@ same.
 
 ---
 
-## Plan for iteration 2 step 3
+## Iteration 2 closure
 
-Original step 3 (`torus_branch_iteration_1.md`): "Cross-check
-against PR #210's Collatz framing — does the toroidal/poloidal
-vocabulary clarify why the {2, 3} incommensurability is
-load-bearing for Collatz's single-cycle uniqueness?"
+Steps 1 and 2 both PASSED with substantive findings — the
+torus reading's gauge identifications are substrate-supported,
+and the downstream clarification on Ω_b boundary count plus
+X_0(6) cusp structure provides a unifying geometric picture.
+Iteration 2 closes here with the torus reading sealed as
+**substantive vocabulary clarification** (Class 2 with
+unifying-picture value), not new substrate-derivation.
 
-This is the last open sub-step in iteration 2's plan. If step 3
-returns "the torus vocabulary doesn't add new clarity beyond
-substrate-internal modular structure," iteration 2 closes with
-the torus reading sealed as a **substantive vocabulary
-clarification** (Class 2 with unifying-picture value) but not as
-a new substrate-derivation. If step 3 finds substantive content
-in the Collatz cross-reference, iteration 2 continues.
+The arc's productive output:
+- Substrate-supported geometric vocabulary (toroidal ↔ SU(3),
+  poloidal ↔ SU(2))
+- Unifying picture across four previously-separate framings
+  (Z_6 algebra + X_0(6) cusps + Klein-antipodal action +
+  coprime-to-6 boundary count)
+- Layer-invariance confirmation per the
+  `primitives_vs_addresses_candidate.md` (gauge sector +
+  Γ_0(6) cusp structure both confirmed layer-invariant)
+- Assignment convention-only (parallel to L vs R labeling)
+
+No new substrate-forced predictions; the torus reading delivers
+clarity without modifying apparatus. Resolution-mode discipline
+preserved throughout.
+
+Task 106 (Torus-branch investigation) disposition: closed at
+substantive vocabulary clarification level.
 
 ---
 
@@ -442,8 +456,7 @@ identification + φ(6) boundary count all confirmed
 **layer-invariant** — combined with step 1's gauge sector
 result, the framework's cosmological closure machinery is
 mostly layer-invariant with only the specific value w_+ = 13/14
-being layer-specific; three falsifiers named; iteration 2 step 3
-(Collatz cross-reference) is the last open sub-step before
-iteration 2 closes with the torus reading sealed as a
-substantive vocabulary clarification (if step 3 also adds no
-new substrate-derivation content).
+being layer-specific; three falsifiers named; **iteration 2
+closes here** with the torus reading sealed as substantive
+vocabulary clarification and Task 106 disposition recorded as
+closed at this level.

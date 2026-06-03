@@ -138,15 +138,12 @@ shorter cycle around the tube cross-section).
   closure, Mihailescu-strength forcing of (q_2, q_3) under the
   toroidal/poloidal vocabulary).
 
-- **Whether the torus reading aligns with the Collatz framing in
-  PR #210.** Step 3 of iteration 2 tests this.
-
 - **Whether the torus reading adds explanatory value beyond
   Z_6 + gauge_sector_lovelock.md.** This is the broader iteration 2
   question; step 1 only confirms the gauge mapping is consistent,
   not that the geometric framing adds something new.
 
-These deferred to steps 2 and 3.
+Deferred to step 2.
 
 ---
 
