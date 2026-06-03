@@ -1,5 +1,47 @@
 # The Two Continuum Limits
 
+> **Disposition note (added 2026-06).** This doc presents K=1 and
+> K<1 as **mathematical regime limits** of the rational field
+> equation — calculational frames where the substrate apparatus
+> reproduces Einstein's equations (K=1) and Schrödinger's equation
+> (K<1) respectively. The derivations below are intact.
+>
+> Recent refinements raise a substrate-admitted *interpretive*
+> extension: K=1 may be a **physically-realized parent regime**
+> rather than purely a mathematical limit. Under this reading,
+> our observable universe (K<1) is a "pocket" coupled to a K=1
+> "medium" via boundary phenomena (the partial-locking at
+> `w* = 0.83` in `boundary_weight.md`; the substrate→tree regime
+> change; the cosmological horizon at finite mode count 12.66).
+> The two-anchor structure (`anchor_count_reaudit.md`: H₀, v_EW)
+> would then be torque transferred from the K=1 medium to our
+> K<1 pocket, rather than basepoint-of-scale alone.
+>
+> This extension is **substrate-admitted, not substrate-forced**
+> per `canonical_glossary.md` Section 8's possibility-discipline.
+> The framework's mathematical apparatus is consistent with both
+> readings (K=1 as limit vs K=1 as domain); observation does not
+> directly distinguish them. The interpretive choice is parallel
+> in shape to the K²/T² surface-choice torsor in
+> `surface_uniqueness_audit.md` and the 7 verified
+> basepoint-principle instances at distinct layers.
+>
+> The derivations in this doc DO NOT depend on the interpretive
+> choice. They produce the same Einstein/Schrödinger equations
+> whether K=1 is read as limit-only or as a physical parent
+> domain. The note documents the substrate-admitted reading for
+> discoverability; iteration arcs that would *commit* to the
+> pocket-medium reading need substantive empirical content
+> (specific predictions distinguishing pocket-from-substrate-only,
+> resolution of CTC-inheritance from Gödel-style parent), which
+> the current apparatus does not yet supply.
+>
+> See also: `surface_uniqueness_audit.md` for the parallel
+> substrate-admitted reading of the Klein-bottle surface choice;
+> `klein_bottle_restructure_price.md` for the empirical floor
+> that constrains reconstruction-mode extensions;
+> `basepoint_principle.md` for the methodology framework.
+
 ## Claim
 
 The rational field equation (Derivation 11) reproduces known physics
