@@ -12,7 +12,16 @@ a correction factor from a self-consistency condition at the
 boundary between subcomponents, read per cycle direction.**
 Precedent: `boundary_weight.md` ("topology gives the interval;
 dynamics give the point" — a self-consistent partial locking
-sets w* = 0.83 at the F_5/F_6 boundary).
+sets w* = 0.83 at the F_5/F_6 boundary). **[Audit caveat:
+`boundary_weight.py` L13-56 records that the actual w* is
+algebraic inversion from observed Ω_Λ (giving 0.8281), not
+field-equation closure. The "self-consistency" framing taken as
+precedent here is therefore an empirical fit, not a
+substrate-forced derivation. The precedent's USE in this doc
+(template for partial-locking weight at a boundary) survives;
+the precedent's DERIVATION STATUS is open. See
+`horn_branch_iteration_3_step_1.md` for the audit's
+downstream implications.]**
 
 ## Reframing
 

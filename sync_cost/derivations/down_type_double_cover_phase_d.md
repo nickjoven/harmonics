@@ -17,6 +17,18 @@ This is exactly the shape `boundary_weight.md` addresses: **topology
 gives the interval, dynamics give the point.** Phase D applies that
 template to the down-type factor.
 
+> **[Audit caveat on the template]**: `boundary_weight.py` L13-56's
+> honest summary records that the precedent's "dynamics give the
+> point" is implemented as **algebraic inversion from observed Ω_Λ**
+> (yielding w* = 0.8281 from Ω_obs = 0.6847), not as a field-equation
+> closure. The template's *structure* (continuous weight between two
+> integer-mode-count endpoints) survives; the template's *derivation
+> status* for the weight value is open. Phase D's "concrete halt"
+> language below (H1, H2, Halt D1, Halt D2) is already honest about
+> this — the down-type derivation is bounded by the same open question
+> as the precedent. See `horn_branch_iteration_3_step_1.md` for
+> further audit of the precedent's downstream uses.
+
 ## Setup
 
 Two topological endpoints from Phase C/monodromy:

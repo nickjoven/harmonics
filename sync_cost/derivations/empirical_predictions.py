@@ -202,7 +202,12 @@ from framework_constants import OMEGA_L  # noqa: E402
 
 omega_low = OMEGA_L          # = 0.684211... (framework_constants, 13/19)
 omega_high = 11/16           # = 0.6875
-omega_point = 0.6847         # self-consistent w* = 0.83 (Planck 2018 obs)
+omega_point = 0.6847         # Planck 2018 observation; equivalent to w = 0.8281
+                             # via algebraic inversion w = (11-16Ω)/(3Ω-2).
+                             # NOTE: boundary_weight.py L13-56 records that
+                             # this w value is observation-inverted, NOT a
+                             # field-equation-forced fixed point; the 3-digit
+                             # rounding "w* = 0.83" appears in older docs.
 band_width = omega_high - omega_low
 
 print(f"Framework prediction:")
