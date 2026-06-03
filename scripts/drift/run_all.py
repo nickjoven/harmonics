@@ -50,14 +50,22 @@ CHECKS = [
     ("manifest consistency", "check_manifest.py"),
     ("graph orphans", "check_graph_orphans.py"),
     ("DAG acyclicity", "check_dag_acyclic.py"),
+    ("graph sealed-projection", "check_graph_sealed.py"),
     ("working-tree drift", "check_working_tree.py"),
     ("CAS verification", "verify_cas.py"),
 ]
 
 # Nonzero rc is reported but never gates: never adds to the exit
 # code, never triggers --stop-on-fail. Drift is a derived artifact,
-# not a violation — see module docstring.
-ADVISORY = {"session_status.py", "check_working_tree.py", "check_dag_acyclic.py"}
+# not a violation — see module docstring. check_graph_sealed is advisory
+# because the corpus is only partially sealed today (coverage signal, not
+# a violation); promote it once the corpus is fully sealed.
+ADVISORY = {
+    "session_status.py",
+    "check_working_tree.py",
+    "check_dag_acyclic.py",
+    "check_graph_sealed.py",
+}
 
 
 def main() -> int:

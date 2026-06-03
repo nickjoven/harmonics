@@ -1,6 +1,6 @@
 # Anti-drift tooling
 
-Eight checks that make substrate drift loud at the earliest moment.
+Nine checks that make substrate drift loud at the earliest moment.
 Each is a standalone Python script; exit codes mean `0 = clean`,
 `1 = violation(s) to fix`, `2 = environment error` (missing tool).
 
@@ -39,6 +39,7 @@ specific binary; otherwise the tools fall back to `shutil.which("ket")`.
 | 6 | `check_graph_orphans.py` | Derivation-graph nodes with zero edges, scorecard sources absent from the graph, and scorecard sources depending on Class 1/3 files. |
 | 7 | `session_status.py` | One-line substrate snapshot: CAS count, corrupt count, scorecard/bare_k1 sizes, git dirtiness, drift count. Run at session start. |
 | 8 | `check_dag_acyclic.py` | Cycles (strongly-connected components > 1 node) in the derivation `depends_on` graph. **Advisory** — the prose-built graph is cyclic by construction until edges are typed; reports the SCCs as a health signal rather than gating. |
+| 9 | `check_graph_sealed.py` | Graph nodes whose source is unsealed (in the graph, absent from `.ket/log`) or **drifted** (sealed but the file changed since its last put). **Advisory** — reports the sealed-projection coverage % as the signal; promote to gating once the corpus is fully sealed. |
 
 ## Running
 
