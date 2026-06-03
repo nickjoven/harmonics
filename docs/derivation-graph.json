@@ -1,5 +1,5 @@
 {
-  "generated": "642c1864e6d3611fe24233fb4ffe0fc5e9d48c9a",
+  "generated": "a33d3d8ebd52dda45a3cb1c733feace29ff513db",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -3213,6 +3213,7 @@
         "structural_lemmas",
         "torus_branch_iteration_1",
         "torus_branch_iteration_2_step_1",
+        "torus_branch_iteration_2_step_2",
         "vocabulary_is_the_work_pattern",
         "w_plus_formalization"
       ],
@@ -3381,6 +3382,10 @@
         },
         {
           "source": "torus_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "torus_branch_iteration_2_step_2",
           "kind": "references"
         },
         {
@@ -4630,6 +4635,7 @@
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
         "down_type_double_cover_closed",
+        "framework_status",
         "klein_z2_decomposition_falsifier_2",
         "phenomenology_cross_reference",
         "phenomenon_glossary",
@@ -4641,6 +4647,7 @@
         "substrate_prediction_selection",
         "surface_uniqueness_audit",
         "torus_branch_iteration_1",
+        "torus_branch_iteration_2_step_2",
         "vocabulary_bridge_iteration_2_step_1",
         "vocabulary_bridge_iteration_2_step_2"
       ],
@@ -4912,6 +4919,10 @@
           "kind": "references"
         },
         {
+          "source": "framework_status",
+          "kind": "references"
+        },
+        {
           "source": "klein_z2_decomposition_falsifier_2",
           "kind": "references"
         },
@@ -4953,6 +4964,10 @@
         },
         {
           "source": "torus_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "torus_branch_iteration_2_step_2",
           "kind": "references"
         },
         {
@@ -10234,6 +10249,7 @@
         "equivalence_dissolution",
         "explicit_4x4_reduction",
         "figure_eight_necessitation_audit",
+        "framework_status",
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
         "klein_z2_decomposition_falsifier_2",
@@ -10328,6 +10344,10 @@
         },
         {
           "source": "figure_eight_necessitation_audit",
+          "kind": "references"
+        },
+        {
+          "source": "framework_status",
           "kind": "references"
         },
         {
@@ -10577,7 +10597,7 @@
     {
       "id": "framework_status",
       "path": "sync_cost/derivations/framework_status.md",
-      "cid": "d5f0f7864cac58f371124a3c5d9cdbcfc9597cc6acf9f0f4c7906125ce4b0aee",
+      "cid": "7c6e49d2e1529dff1eb80a62b15180919f6ace2e3a165092b8ec3c2dee886571",
       "sealed": true,
       "title": "Framework status map",
       "summary": "At-a-glance inventory. One line per item. Full analysis lives in the\nreferenced files; this is the bird's-eye view to prevent duplicate\nwork and re-derivation of eliminated content.",
@@ -10597,6 +10617,7 @@
         "bell_bounds_from_substrate",
         "bicone_golden_z2_identification",
         "born_rule",
+        "canonical_glossary",
         "continuity_in_K_nulls",
         "continuum_limits",
         "cross_ratio_irrep_reframe",
@@ -10609,6 +10630,8 @@
         "epr_bell_assembly_theorem",
         "era_timeline_disposition",
         "farey_partition",
+        "figure_eight",
+        "gauge_sector_lovelock",
         "generation_mechanism",
         "ghz_from_substrate",
         "h_inf_status",
@@ -10621,10 +10644,13 @@
         "k_of_t_friedmann",
         "k_of_t_residual_disposition",
         "klein_bottle",
+        "klein_bottle_restructure_price",
         "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
+        "klein_z2_decomposition_falsifier_2",
         "koide_form_substrate_iteration_13",
         "koide_form_substrate_iteration_14",
+        "mass_sector_closure",
         "master_cascade_identity",
         "mixing_angle_audit",
         "numerology_count_phase_b",
@@ -10636,6 +10662,7 @@
         "path_closures_iter3",
         "path_closures_iter4",
         "predictions_horizon_2026",
+        "primitives_vs_addresses_candidate",
         "proposed_items_disposition",
         "proposed_residual_closure",
         "psl2z_subgroup_phase_a_results",
@@ -10646,8 +10673,11 @@
         "snmc_class_and_entanglement",
         "sqrt_r_n_correction",
         "substrate_determinism",
+        "surface_uniqueness_audit",
         "thread_chronology",
         "tick_continuum_construction",
+        "vocabulary_bridge_iteration_2_step_1",
+        "vocabulary_bridge_iteration_2_step_2",
         "vocabulary_is_the_work_pattern",
         "w_plus_formalization",
         "w_state_from_substrate",
@@ -10806,6 +10836,10 @@
           "kind": "references"
         },
         {
+          "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
           "target": "continuity_in_K_nulls",
           "kind": "references"
         },
@@ -10851,6 +10885,14 @@
         },
         {
           "target": "farey_partition",
+          "kind": "references"
+        },
+        {
+          "target": "figure_eight",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_sector_lovelock",
           "kind": "references"
         },
         {
@@ -10902,6 +10944,10 @@
           "kind": "references"
         },
         {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
           "target": "klein_bridge_audit_and_probe",
           "kind": "references"
         },
@@ -10910,11 +10956,19 @@
           "kind": "references"
         },
         {
+          "target": "klein_z2_decomposition_falsifier_2",
+          "kind": "references"
+        },
+        {
           "target": "koide_form_substrate_iteration_13",
           "kind": "references"
         },
         {
           "target": "koide_form_substrate_iteration_14",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
           "kind": "references"
         },
         {
@@ -10962,6 +11016,10 @@
           "kind": "references"
         },
         {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
           "target": "proposed_items_disposition",
           "kind": "references"
         },
@@ -11002,11 +11060,23 @@
           "kind": "references"
         },
         {
+          "target": "surface_uniqueness_audit",
+          "kind": "references"
+        },
+        {
           "target": "thread_chronology",
           "kind": "references"
         },
         {
           "target": "tick_continuum_construction",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_bridge_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_bridge_iteration_2_step_2",
           "kind": "references"
         },
         {
@@ -11385,6 +11455,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "a33d3d8",
+          "date": "2026-06-03",
+          "subject": "Torus iter 2 step 2 + arc closure + framework_status update (#216)"
+        },
         {
           "hash": "7b797c8",
           "date": "2026-06-01",
@@ -12554,6 +12629,7 @@
         "beta_from_tongues",
         "fermion_mass_running",
         "figure_eight_necessitation_audit",
+        "framework_status",
         "gauge_dictionary",
         "gauge_factorization",
         "gauge_high_scale_identification",
@@ -12598,6 +12674,10 @@
         },
         {
           "source": "figure_eight_necessitation_audit",
+          "kind": "references"
+        },
+        {
+          "source": "framework_status",
           "kind": "references"
         },
         {
@@ -16186,6 +16266,7 @@
         "structural_lemmas",
         "torus_branch_iteration_1",
         "torus_branch_iteration_2_step_1",
+        "torus_branch_iteration_2_step_2",
         "vocabulary_is_the_work_pattern",
         "w_plus_formalization"
       ],
@@ -16330,6 +16411,10 @@
         },
         {
           "source": "torus_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "torus_branch_iteration_2_step_2",
           "kind": "references"
         },
         {
@@ -17015,6 +17100,7 @@
         "basepoint_principle",
         "canonical_glossary",
         "continuum_limits",
+        "framework_status",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_2",
         "surface_uniqueness_audit",
@@ -17083,6 +17169,10 @@
         },
         {
           "source": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "source": "framework_status",
           "kind": "references"
         },
         {
@@ -17586,6 +17676,7 @@
         "mass_sector_closure"
       ],
       "depended_on_by": [
+        "framework_status",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_1",
         "horn_branch_iteration_2_step_2",
@@ -17628,6 +17719,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "framework_status",
+          "kind": "references"
+        },
         {
           "source": "horn_branch_iteration_1",
           "kind": "references"
@@ -19441,6 +19536,7 @@
         "derivation_atlas",
         "figure_eight_necessitation_audit",
         "fourth_generation_revisited",
+        "framework_status",
         "horn_branch_iteration_2_step_2",
         "k_axis_uniqueness",
         "k_scaling_scan",
@@ -19470,6 +19566,7 @@
         "surface_uniqueness_audit",
         "torus_branch_iteration_1",
         "torus_branch_iteration_2_step_1",
+        "torus_branch_iteration_2_step_2",
         "vocabulary_bridge_iteration_1",
         "vocabulary_bridge_iteration_2_step_1",
         "vocabulary_bridge_iteration_2_step_2"
@@ -19527,6 +19624,10 @@
         },
         {
           "source": "fourth_generation_revisited",
+          "kind": "references"
+        },
+        {
+          "source": "framework_status",
           "kind": "references"
         },
         {
@@ -19643,6 +19744,10 @@
         },
         {
           "source": "torus_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "torus_branch_iteration_2_step_2",
           "kind": "references"
         },
         {
@@ -22366,6 +22471,7 @@
         "substrate_prediction_selection",
         "torus_branch_iteration_1",
         "torus_branch_iteration_2_step_1",
+        "torus_branch_iteration_2_step_2",
         "vocabulary_is_the_work_pattern",
         "w_plus_formalization"
       ],
@@ -22506,6 +22612,10 @@
         },
         {
           "source": "torus_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "torus_branch_iteration_2_step_2",
           "kind": "references"
         },
         {
@@ -25222,7 +25332,9 @@
         "torus_branch_iteration_1"
       ],
       "depended_on_by": [
-        "torus_branch_iteration_2_step_1"
+        "framework_status",
+        "torus_branch_iteration_2_step_1",
+        "torus_branch_iteration_2_step_2"
       ],
       "edges": [
         {
@@ -25276,7 +25388,15 @@
       ],
       "edged_by": [
         {
+          "source": "framework_status",
+          "kind": "references"
+        },
+        {
           "source": "torus_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "torus_branch_iteration_2_step_2",
           "kind": "references"
         }
       ],
@@ -25709,6 +25829,7 @@
         "remaining_gap_shapes",
         "structural_lemmas",
         "torus_branch_iteration_2_step_1",
+        "torus_branch_iteration_2_step_2",
         "vocabulary_is_the_work_pattern",
         "w_plus_formalization"
       ],
@@ -25809,6 +25930,10 @@
         },
         {
           "source": "torus_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "torus_branch_iteration_2_step_2",
           "kind": "references"
         },
         {
@@ -29722,6 +29847,7 @@
       ],
       "depended_on_by": [
         "continuum_limits",
+        "framework_status",
         "primitives_vs_addresses_candidate"
       ],
       "edges": [
@@ -29773,6 +29899,10 @@
       "edged_by": [
         {
           "source": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "source": "framework_status",
           "kind": "references"
         },
         {
@@ -30787,7 +30917,8 @@
       ],
       "depended_on_by": [
         "primitives_vs_addresses_candidate",
-        "torus_branch_iteration_2_step_1"
+        "torus_branch_iteration_2_step_1",
+        "torus_branch_iteration_2_step_2"
       ],
       "edges": [
         {
@@ -30855,9 +30986,18 @@
         {
           "source": "torus_branch_iteration_2_step_1",
           "kind": "references"
+        },
+        {
+          "source": "torus_branch_iteration_2_step_2",
+          "kind": "references"
         }
       ],
       "git": [
+        {
+          "hash": "a33d3d8",
+          "date": "2026-06-03",
+          "subject": "Torus iter 2 step 2 + arc closure + framework_status update (#216)"
+        },
         {
           "hash": "642c186",
           "date": "2026-06-03",
@@ -30884,7 +31024,9 @@
         "torus_branch_iteration_1",
         "vocabulary_bridge_iteration_2_step_2"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "torus_branch_iteration_2_step_2"
+      ],
       "edges": [
         {
           "target": "baryon_fraction",
@@ -30927,12 +31069,93 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "torus_branch_iteration_2_step_2",
+          "kind": "references"
+        }
+      ],
       "git": [
+        {
+          "hash": "a33d3d8",
+          "date": "2026-06-03",
+          "subject": "Torus iter 2 step 2 + arc closure + framework_status update (#216)"
+        },
         {
           "hash": "642c186",
           "date": "2026-06-03",
           "subject": "Torus-branch arc: Z_6 lattice + surface-uniqueness audit + recursive Kuramoto methodology (#215)"
+        }
+      ]
+    },
+    {
+      "id": "torus_branch_iteration_2_step_2",
+      "path": "sync_cost/derivations/torus_branch_iteration_2_step_2.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Torus-branch iteration 2 step 2 \u2014 downstream clarity + swap robustness",
+      "summary": "**Verdict: PASSES with substantive clarification.** Step 2 tests\nwhether the torus reading clarifies downstream derivations on\n\u03a9_b and \u03a9_b \u03b1/\u03b2 closures, and whether the toroidal/poloidal\nassignment is convention-only.",
+      "depends_on": [
+        "baryon_fraction",
+        "canonical_glossary",
+        "klein_antipodal_z2_rep_pattern",
+        "mass_sector_closure",
+        "omega_b_alpha_beta_closure",
+        "primitives_vs_addresses_candidate",
+        "psl2z_subgroup_phase_b",
+        "torus_branch_iteration_1",
+        "torus_branch_iteration_2_step_1",
+        "vocabulary_bridge_iteration_2_step_2"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "baryon_fraction",
+          "kind": "references"
+        },
+        {
+          "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "target": "klein_antipodal_z2_rep_pattern",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "omega_b_alpha_beta_closure",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "psl2z_subgroup_phase_b",
+          "kind": "references"
+        },
+        {
+          "target": "torus_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "target": "torus_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_bridge_iteration_2_step_2",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "a33d3d8",
+          "date": "2026-06-03",
+          "subject": "Torus iter 2 step 2 + arc closure + framework_status update (#216)"
         }
       ]
     },
@@ -31439,6 +31662,7 @@
       ],
       "depended_on_by": [
         "basepoint_principle",
+        "framework_status",
         "vocabulary_bridge_iteration_2_step_2"
       ],
       "edges": [
@@ -31501,6 +31725,10 @@
           "kind": "references"
         },
         {
+          "source": "framework_status",
+          "kind": "references"
+        },
+        {
           "source": "vocabulary_bridge_iteration_2_step_2",
           "kind": "references"
         }
@@ -31537,9 +31765,11 @@
       ],
       "depended_on_by": [
         "basepoint_principle",
+        "framework_status",
         "surface_uniqueness_audit",
         "torus_branch_iteration_1",
-        "torus_branch_iteration_2_step_1"
+        "torus_branch_iteration_2_step_1",
+        "torus_branch_iteration_2_step_2"
       ],
       "edges": [
         {
@@ -31601,6 +31831,10 @@
           "kind": "references"
         },
         {
+          "source": "framework_status",
+          "kind": "references"
+        },
+        {
           "source": "surface_uniqueness_audit",
           "kind": "references"
         },
@@ -31610,6 +31844,10 @@
         },
         {
           "source": "torus_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "torus_branch_iteration_2_step_2",
           "kind": "references"
         }
       ],
