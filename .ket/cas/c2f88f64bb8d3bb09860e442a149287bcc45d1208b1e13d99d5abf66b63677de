@@ -106,7 +106,6 @@ forthcoming derivation atlas.
 | **Cusp 1/2 of Γ_0(6)** | Hecke cusp at level 2 within X_0(6) | The q_2-flavored cusp; contains rationals p/q with gcd(q, 6) = 2; w_+ inhabits this cusp | `psl2z_subgroup_phase_b.md` |
 | **Anharmonic group** | Standard cross-ratio symmetry group (S_3 acting on ℙ¹) | Six values per PSL(2,ℤ) cross-ratio orbit | `cross_ratio_irrep_reframe.md` |
 | **j-invariant** | Standard PSL(2,ℤ)-invariant on ℙ¹ | Distinguishes PSL(2,ℤ) orbits; the three w_+ candidates have disjoint j-invariants | `cross_ratio_irrep_reframe.md` |
-| **Catalan equation / Mihailescu's theorem** | `x^p − y^q = 1` with `p, q ≥ 2`, `x, y` positive integers | Catalan's conjecture (1844): the only solution is `(x, p, y, q) = (3, 2, 2, 3)` — i.e., 8 and 9 are the only consecutive perfect powers in the positive integers. Proven by Mihăilescu (2002, *J. Reine Angew. Math.* **572**) via cyclotomic field methods. The framework's cube identity `q_3² − q_2³ = 1` is the specific case `(p, q) = (2, 3)`; Mihailescu (or classical Diophantine methods for the specific case) forces `(q_2, q_3) = (2, 3)` from this single identity, providing the deepest number-theoretic substrate-forcing currently available for the framework's primitive denominators | `mass_sector_closure.md` "Connection to the Catalan equation / Mihailescu's theorem" |
 
 ## Section 6 — Cosmological observables and predictions
 
@@ -193,7 +192,6 @@ equivalent because their imported framing doesn't apply:
 | **K_c (Kuramoto critical)** | Disordered-Kuramoto synchronization threshold. For identical oscillators K_c = 0, not the framework's K_STAR. Instance 4 vocabulary disambiguation. |
 | **Cutoff** / **regularization scheme** | UV regulator dependence. Substrate has no UV; finite Farey depth IS the regularization, structurally. |
 | **Discrete time / Planck-time stepping** | Imported framing assumes physical-time iteration. Framework's iteration is algebraic (Farey-mediant descent, K-self-consistency); time-free. Instance 5. |
-| **Chirality (SM L/R)** | Currently not in framework vocabulary as a substrate primitive. The framework substrate-admits chirality possibility through five distinct loci (y-parity, loop orientation, q₂ locked/unlocked, k_lepton = q_3² internal reading, SU(2)_L identification), but **does not currently force** a specific identification with SM L/R. The SU(2)_L commitment in `gauge_high_scale_identification.md` L106-113 is explicitly named "not fully forced." Apparatus-extension to add substrate-chirality is empirically declined (predicts ℍ-QM). See `vocabulary_bridge_iteration_1.md` for the five-loci survey | `vocabulary_bridge_iteration_1.md`, `gauge_high_scale_identification.md` L106-113, `klein_bottle_restructure_price.md` |
 
 ## Cross-references
 

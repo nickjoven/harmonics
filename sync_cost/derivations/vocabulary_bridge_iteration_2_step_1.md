@@ -161,6 +161,17 @@ The substrate apparatus forces:
 This forcing is at the **kinematic structure** level (doublet vs
 singlet). It is substrate-forced, not substrate-admitted.
 
+> **Foundation strengthening** (sealed after this doc):
+> `mass_sector_closure.md` now documents that the substrate-forcing
+> of `(q_2, q_3) = (2, 3)` rests on the cube identity
+> `q_3² − q_2³ = 1` being the Catalan equation (specific case
+> `(p, q) = (2, 3)`), with uniqueness proven by Mihailescu (2002).
+> This propagates downstream: `k_lepton = q_3² = 9` and the
+> doublet/singlet kinematic split inherit Mihailescu-strength
+> forcing through the substrate-derivation chain. See
+> `mass_sector_closure.md` "Connection to the Catalan equation /
+> Mihailescu's theorem" for the strengthening.
+
 ---
 
 ## What does NOT follow

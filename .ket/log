@@ -343,3 +343,12 @@
 2026-06-01T19:05:56Z | dag:create | 1205e9b0e74665269e978f5eb1783f1dc91f9c12f1711399e8a1cdf4409b9ca2
 2026-06-01T19:06:35Z | put | sync_cost/derivations/substrate_prediction_selection.md -> 64670315076d2c7351876fedcc068f95e079c6751f3d671f7aa733720abbce5c
 2026-06-01T19:06:35Z | dag:create | 656cd273ffa0970eacd2dd4fa99125b8d5b7a42253d2f3092bb3a64133de6322
+2026-06-03T04:58:04Z | put | sync_cost/derivations/canonical_glossary.md -> c2f88f64bb8d3bb09860e442a149287bcc45d1208b1e13d99d5abf66b63677de
+2026-06-03T04:58:04Z | dag:create | 5ff86d2d628b9fe196ccdbfc9ab31ad69e7caf8b27953f9da956f7d83f184d20
+2026-06-03T04:58:15Z | put | sync_cost/derivations/canonical_glossary.md -> 47cf10a995313cdbc449b4fc551e211bc4c3259e7e86754e67e0da237bcf8ee8
+2026-06-03T04:58:15Z | dag:create | 5f8dac4552d8bb6133d6ac3a40aec78bc34a26bdd689e1400691fa13530de5fe
+2026-06-03T06:14:18Z | put | sync_cost/derivations/mass_sector_closure.md -> d4a02345f73682a0aabc7d4771bd56c35765dff45e1fc4ae200ce84ba28dc311
+2026-06-03T06:14:18Z | dag:create | 8a9c7719746c9753f24637f0cf51ad53b9bc06f209fd93aafca6afca832e646b
+2026-06-03T06:14:24Z | put | sync_cost/derivations/mass_sector_closure.md -> d4a02345f73682a0aabc7d4771bd56c35765dff45e1fc4ae200ce84ba28dc311
+2026-06-03T06:53:04Z | put | sync_cost/derivations/canonical_glossary.md -> 02ac2ac90f00d14a2088db20cd94aa3e05fcd5a3af270d572195b3b728992d3c
+2026-06-03T06:53:04Z | dag:create | e64fc80a075f198750c3c2afc998d15c75bff13d2195c895444e0c223736b0ca
