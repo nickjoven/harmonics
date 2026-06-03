@@ -1,9 +1,11 @@
 {
-  "generated": "6d2bea448256fb14b77e5c327f7df71cd871f996",
+  "generated": "f6130d92c19668c7900559d061a474dfca0716e8",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
       "path": "sync_cost/derivations/CHAIN_KSTAR.md",
+      "cid": null,
+      "sealed": false,
       "title": "K_STAR closed form",
       "summary": "`K_STAR` is the matter-sector's coupling \u2014 the value that makes\nthe three sector ladders (charged leptons, up-type quarks,\ndown-type quarks) simultaneously self-consistent under the\ngeneration law `m_{g+1}/m_g = b_1^{d \u00b7 a_1}`. Its canonical\ndetermination is the joint inverse-variance fit of the three\nsectors against PDG 2024 mass ratios:",
       "depends_on": [
@@ -80,6 +82,8 @@
     {
       "id": "FRAMEWORK_TOPOLOGY",
       "path": "sync_cost/derivations/FRAMEWORK_TOPOLOGY.md",
+      "cid": "74fab4b863eb7d006713962e0141a401cad554d890107b8cb1c3b62d9d531780",
+      "sealed": true,
       "title": "Framework topology",
       "summary": "**Canonical structural map of the framework's derivation\ntopology.** Maps L0 (primitives) \u2192 L1 (substrate primitives) \u2192\nL2 (sector quantities) \u2192 L3+ (predictions). Maintained as\nderivations are added or restructured.",
       "depends_on": [
@@ -221,6 +225,8 @@
     {
       "id": "INDEX",
       "path": "sync_cost/derivations/INDEX.md",
+      "cid": null,
+      "sealed": false,
       "title": "Derivation Index",
       "summary": "**Navigation index for derivation chain.** Maps D-numbers\n(D1-D47 per `MANIFEST.yml` derivation_count) to filenames for\nmachine-readable lookup. Maintained as derivations are added or\nrenamed. Cross-checked by `check_manifest.py`.",
       "depends_on": [
@@ -637,6 +643,8 @@
     {
       "id": "L1_substrate_cusp_ground_state",
       "path": "sync_cost/derivations/L1_substrate_cusp_ground_state.md",
+      "cid": null,
+      "sealed": false,
       "title": "L1 closure \u2014 substrate cusp-1/2 ground state from soft-boundary + discreteness",
       "summary": "**L1 closes Class 5 in recognize mode.** THM (w_+ = 13/14) lifts\nto Class 5 by composition. \u03a9_b two-component closure is now a\n**fully-derived Class 5 prediction** with all three Planck partition\nobservables sub-\u03c3 (0.06% to 0.13% residuals).",
       "depends_on": [
@@ -783,6 +791,8 @@
     {
       "id": "PROOF_A_gravity",
       "path": "sync_cost/derivations/PROOF_A_gravity.md",
+      "cid": null,
+      "sealed": false,
       "title": "Proof Chain A: Polynomial \u2192 General Relativity",
       "summary": "**Canonical proof chain: polynomial \u2192 general relativity.** 8\npropositions composed from derivation chain D1-D15. Establishes\nthat GR (Einstein equations) emerges as the K = 1 continuum limit\nof the substrate's discrete dynamics per `continuum_limits.md`\nPart I.",
       "depends_on": [
@@ -919,6 +929,8 @@
     {
       "id": "PROOF_B_quantum",
       "path": "sync_cost/derivations/PROOF_B_quantum.md",
+      "cid": null,
+      "sealed": false,
       "title": "Proof Chain B: Polynomial \u2192 Quantum Mechanics",
       "summary": "**Canonical proof chain: polynomial \u2192 quantum mechanics.** 11\npropositions (5 shared with PROOF_A + 6 quantum branch).\nEstablishes that QM (Schr\u00f6dinger equation, Born rule) emerges as\nthe small-\u03b5 linearized limit at K < 1 substrate per\n`continuum_limits.md` Part II.",
       "depends_on": [
@@ -1050,6 +1062,8 @@
     {
       "id": "a0_threshold",
       "path": "sync_cost/derivations/a0_threshold.md",
+      "cid": null,
+      "sealed": false,
       "title": "a\u2080 from Synchronization Cost Threshold",
       "summary": "The MOND acceleration scale a\u2080 \u2248 1.2 \u00d7 10\u207b\u00b9\u2070 m/s\u00b2 is the point where\nlocal gravitational synchronization cost equals the cosmological mean\nfield maintenance cost. This gives a mechanistic derivation of the\ndimensional relation a\u2080 = cH\u2080/2\u03c0 already established in proslambenomenos (a companion repository deriving cosmological dimensional relations from the Hubble frequency),\nand connects it to the Stribeck lattice bifurcation threshold.",
       "depends_on": [],
@@ -1189,6 +1203,8 @@
     {
       "id": "a1_from_saddle_node",
       "path": "sync_cost/derivations/a1_from_saddle_node.md",
+      "cid": null,
+      "sealed": false,
       "title": "`a_1 = 1 / \u221aw`: the lepton identity as stick-slip",
       "summary": "The lepton-sector generation exponent equals the saddle-node\nrelaxation time at the Arnold tongue of its primary base rational,\nevaluated at the self-consistent coupling `K*`:",
       "depends_on": [
@@ -1415,6 +1431,8 @@
     {
       "id": "a_s_g1_closure_attempt",
       "path": "sync_cost/derivations/a_s_g1_closure_attempt.md",
+      "cid": "600761863fd0e9e06ae19ed1172d7b4102156cfcd8f4bf8153ece872cda910f7",
+      "sealed": true,
       "title": "A_s Floor closure attempt G1: anchor-import barrier",
       "summary": "**A_s closure: ACCEPTED as Instance 7 of\n`vocabulary_is_the_work_pattern.md` (2026-04-26).** The\nsubstrate-side prediction A_s_substrate = 2.33\u00d710\u207b\u2079 is the\nframework's complete native claim; the 11% gap to A_s_obs =\n2.10\u00d710\u207b\u2079 is the inflation amplification factor f_amp,\nanchor-side (depends on H_inf + \u03b5). Framework correctly declines\nto predict both A_s_obs and f_amp magnitude.",
       "depends_on": [
@@ -1556,6 +1574,8 @@
     {
       "id": "a_s_geometric_proof",
       "path": "sync_cost/derivations/a_s_geometric_proof.md",
+      "cid": null,
+      "sealed": false,
       "title": "A_s: a geometric proof from first principles",
       "summary": "A derivation of the CMB scalar amplitude A_s in the framework,\nusing only what is established in prior derivations. Each\nmultiplicative factor comes from one named structural result.\nThe proof terminates at a specific numerical prediction; the\ndiscrepancy with observation is documented at the end as a single\nnumber, not partitioned into ad-hoc corrections.",
       "depends_on": [
@@ -1682,6 +1702,8 @@
     {
       "id": "address_and_quantity",
       "path": "sync_cost/derivations/address_and_quantity.md",
+      "cid": null,
+      "sealed": false,
       "title": "Address and Quantity",
       "summary": "**Conceptual orientation document.** Articulates the address /\nquantity distinction underlying the framework's two-anchor\nminimum (per `anchor_count_audit.md` and D.3 closure). Cited as\ncontext in `coupling_scales.md` and `mass_sector_closure.md`.",
       "depends_on": [
@@ -1753,6 +1775,8 @@
     {
       "id": "adm_dictionary",
       "path": "sync_cost/derivations/adm_dictionary.md",
+      "cid": null,
+      "sealed": false,
       "title": "The ADM Dictionary",
       "summary": "The mapping from Kuramoto variables to ADM variables is the unique\nidentification consistent with the symmetries of the locked-state\nKuramoto system at K=1. Each entry is forced by a uniqueness argument.",
       "depends_on": [],
@@ -1802,6 +1826,8 @@
     {
       "id": "algebraic_forcing_partition",
       "path": "sync_cost/derivations/algebraic_forcing_partition.md",
+      "cid": "199acff6453c5007497b16276848f348d1ae799e9143882a711e5ec2f6c87885",
+      "sealed": true,
       "title": "The forcing partition: forced \u27f9 algebraic",
       "summary": "The framework's quantities split into two layers, and **forcing lives in\nexactly one of them**:",
       "depends_on": [
@@ -1893,6 +1919,8 @@
     {
       "id": "anchor_count_audit",
       "path": "sync_cost/derivations/anchor_count_audit.md",
+      "cid": "bbca8ac4f804a3f5b9216e4b13a52f28184a1a47f66af62add1a4996749bb7af",
+      "sealed": true,
       "title": "Anchor-count audit: single vs multiple observational anchors",
       "summary": "The anchor-count audit concludes: the framework currently has **two**\nindependent observational anchors (H_0 and v_EW), with a suggestive\nbut underived numerical near-match at v/M_P \u2248 13\u207b\u00b9\u2075 (3.1% off). The\nT4 language was softened accordingly.",
       "depends_on": [
@@ -2139,6 +2167,8 @@
     {
       "id": "anchor_count_reaudit",
       "path": "sync_cost/derivations/anchor_count_reaudit.md",
+      "cid": null,
+      "sealed": false,
       "title": "#ANCHOR: formal re-audit of the five anchor-count obstructions",
       "summary": "Class 3 (formal re-audit; closure by verified structural\nfeature). No new primitive. The five anchor-count obstructions\nre-audited under Consequence 1 + the #INF discriminator: #5\nrigorous/load-bearing, #1=#2 Feature (prime-5), #3 upgraded to\nargued, #4 dissolved \u2014 **none open**. `#ANCHOR` closed; the\ntwo-anchor-minimum-as-structural-feature is established and shown\nto be one instance of a multiply-verified decline pattern.",
       "depends_on": [
@@ -2265,6 +2295,8 @@
     {
       "id": "ansatz_audit_policy",
       "path": "sync_cost/derivations/ansatz_audit_policy.md",
+      "cid": null,
+      "sealed": false,
       "title": "Ansatz audit policy \u2014 triaging Class 4 candidates",
       "summary": "**Active methodology document.** The Step 4 default (Class 4 \u2192\nClass 2 if no forcing mechanism within one sitting) is\ncalibrated correctly per Region C Phase B\n(`numerology_count_phase_b.md`) PIGEONHOLE verdict at \u03b1 = 0.05.",
       "depends_on": [
@@ -2511,6 +2543,8 @@
     {
       "id": "articulation_audit_2026-05",
       "path": "sync_cost/derivations/articulation_audit_2026-05.md",
+      "cid": "ef520d51cc7c6fdf650fe6e8d34348b0d04bc946ba5a6a3dc67992fde4555b80",
+      "sealed": true,
       "title": "Articulation audit \u2014 2026-05 round",
       "summary": "Audit complete + post-audit revision. Findings: 7 \u00d7 P1 (5 original +\ngraviton P1.6 + gluon P1.7), 3 \u00d7 P2 (P2.1, P2.2, P2.4 + new baryon-\ncharge candidate), 3+ \u00d7 P3 articulation candidates; 7 non-particle\ndeclines reconfirmed or elevated (none shifted); one genuinely-hard\nparticle bright line preserved (baryon\u2192quark-substructure / QCD\nbound-state dynamics).",
       "depends_on": [
@@ -2762,6 +2796,8 @@
     {
       "id": "audit_findings_3_4_disposition",
       "path": "sync_cost/derivations/audit_findings_3_4_disposition.md",
+      "cid": null,
+      "sealed": false,
       "title": "Audit Findings 3 & 4: honest disposition (qualification, not closure)",
       "summary": "Class 3 (disposition / honest qualification). No new framework\nprimitive. This doc does not close Findings 3 and 4 \u2014 it **records\ntheir honest disposition**: Finding 3 qualifies Phase 2's exactness\nclaim; Finding 4 retracts the inflation-duration's parameter-free\nadvertising. The framework's recent cosmological claims are\ncorrespondingly downgraded from \"exact / parameter-free\" to\n\"leading-order / conditional.\"",
       "depends_on": [
@@ -2898,6 +2934,8 @@
     {
       "id": "audit_punch_list_2026-04",
       "path": "sync_cost/derivations/audit_punch_list_2026-04.md",
+      "cid": null,
+      "sealed": false,
       "title": "Audit punch list \u2014 2026-04 round",
       "summary": "Audit complete. Findings: P1 \u00d7 1, P2 \u00d7 3, P3 \u00d7 2. Cross-\nreferences CLEAN; numerical consistency SUBSTANTIVELY CLEAN;\nstatus tags MOSTLY CONSISTENT with stale-entry issues.",
       "depends_on": [
@@ -3024,6 +3062,8 @@
     {
       "id": "axial_trajectory_conservation_audit",
       "path": "sync_cost/derivations/axial_trajectory_conservation_audit.md",
+      "cid": null,
+      "sealed": false,
       "title": "Axial trajectory conservation audit \u2014 chirality fineness verdict",
       "summary": "**Audit verdict: APPARATUS INSUFFICIENT.** The framework's\ncurrent Klein-Z_2 antiperiodic structure conflates four\nstructurally distinct \u00b1 axes (direction of travel, spin,\nchirality, arrow of time) into a single Z_2. The geometric\nprogression `string \u2192 cylinder \u2192 cone` of unlocked \u00b1 axes\nrequires these to be carried independently. The framework\ncarries one Z_2 doing multiple jobs at once, and that single\nZ_2 is *not* fine-grained enough to host chirality-distinguishing\ndissipation of the kind re",
       "depends_on": [
@@ -3105,6 +3145,8 @@
     {
       "id": "baryon_fraction",
       "path": "sync_cost/derivations/baryon_fraction.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Baryon Fraction",
       "summary": "The cosmic energy budget partitions into three sectors from the\nsingle number 19 (the Klein bottle's total budget from D25):",
       "depends_on": [
@@ -3346,6 +3388,8 @@
     {
       "id": "basepoint_principle",
       "path": "sync_cost/derivations/basepoint_principle.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Basepoint Principle",
       "summary": "Class 3 (named principle; elevation of a verified meta-pattern).\nNo new primitive. Records, as a first-class principle with an\noperative discriminator, the regularity already instantiated at\nR1/\u2205, the dimensional inputs, #INF, the anchor obstructions, and\nA_s/Instance-7. Peer to `no_rescaling.md` and the\n`substrate_determinism.md` inviolables.",
       "depends_on": [
@@ -3482,6 +3526,8 @@
     {
       "id": "basin_11_connection_exploration",
       "path": "sync_cost/derivations/basin_11_connection_exploration.md",
+      "cid": null,
+      "sealed": false,
       "title": "Basin 1/1 connection exploration",
       "summary": "**Proposed.** Simulation specification, not a result. Motivated by\na session observation that the structures around the dominant 1/1\nFarey peak were mis-identified as \"cantori\" / \"island chains\" when\nthe actual mechanism is gradient descent on \u03c8_F. The observation\nstill points at something real \u2014 the connection topology between\nthe 1/1 basin and its neighbors \u2014 but in different language. This\nfile specifies the correctly-framed local study.",
       "depends_on": [
@@ -3523,6 +3569,8 @@
     {
       "id": "bell_bounds_from_substrate",
       "path": "sync_cost/derivations/bell_bounds_from_substrate.md",
+      "cid": "9173aa1f94273ed48405702e18a25b235e0096e796ecba1c75ba6d32f4d07b98",
+      "sealed": true,
       "title": "Bell bounds substrate-natively \u2014 closing the substitution scope",
       "summary": "**Substitution-scope tightening across `epr_bell_assembly_theorem.md`\n(#152), `ghz_from_substrate.md` (#184), and\n`w_state_from_substrate.md` (#187).** Demonstrates that the pair-wise\ncorrelation function `E(\u03b8_A, \u03b8_B) = \u2212cos(\u03b8_A \u2212 \u03b8_B)`, the Tsirelson\nbound `|S|_max = 2\u221a2`, and the GHZ Mermin bound `|M|_max = 4` are\nall derived substrate-internally from existing primitives \u2014\n*without* QM substitution at the multi-mode level.",
       "depends_on": [
@@ -3634,6 +3682,8 @@
     {
       "id": "beta_from_tongues",
       "path": "sync_cost/derivations/beta_from_tongues.md",
+      "cid": "cdcad905d740b9dc4099f2045c5ca43b6696a06d59bf0532910d33d7d4a12857",
+      "sealed": true,
       "title": "Beta Functions from Tongue Widths",
       "summary": "The one-loop beta function coefficients of the Standard Model\n(b\u2081 = 41/10, b\u2082 = \u221219/6, b\u2083 = \u22127) can be computed from the\nK-dependence of Arnold tongue widths, without using the SM\nbeta functions as a target. The running of coupling constants\nis a consequence of the circle map dynamics, not an independent\ninput.",
       "depends_on": [
@@ -3730,6 +3780,8 @@
     {
       "id": "bicone_golden_z2_identification",
       "path": "sync_cost/derivations/bicone_golden_z2_identification.md",
+      "cid": "5b37bdf157b07095ee94e49ba80201e07a7b82dc541757a6f4f055cdd6b96aee",
+      "sealed": true,
       "title": "Bicone Z\u2082 \u2194 golden-algebra Z\u2082 identification",
       "summary": "**Bridge theorem articulated.** The substrate's bicone Z\u2082 rigidity\n(inviolable #1 / #3) acts on cascade-dynamics-induced `\u211a[\u221a5]`-valued\nquantities as the Galois automorphism `\u03c3 : \u221a5 \u21a6 \u2212\u221a5` (equivalently\n`\u03c6 \u2194 \u03c8`). The identification is *forced* by three already-installed\nsubstrate facts plus a standard algebraic uniqueness:",
       "depends_on": [
@@ -3831,6 +3883,8 @@
     {
       "id": "born_rule",
       "path": "sync_cost/derivations/born_rule.md",
+      "cid": null,
+      "sealed": false,
       "title": "Born Rule from Basin Measure",
       "summary": "The Born rule (P = |\u03c8|\u00b2) is the basin measure of the synchronization\ncost landscape under dissipative convergence. It is not axiomatic \u2014 it\nis the generic outcome of dissipative dynamics on a cost landscape with\nquadratic structure near attractors.",
       "depends_on": [
@@ -4097,6 +4151,8 @@
     {
       "id": "born_rule_parameter_free",
       "path": "sync_cost/derivations/born_rule_parameter_free.md",
+      "cid": null,
+      "sealed": false,
       "title": "Born rule |\u03c8|\u00b2 is parameter-free at the binary \u2014 pressed",
       "summary": "Class 3 (resolution by structural identification + precisely\nlocated residual). No new primitive. Sharpens `born_rule.md`'s\n\"Open\" (uniform curvature) \u2014 closed for the binary by the\nhalf-twist Z\u2082-involution. Does **not** close `#TICK(b)`; it\nconcentrates the entire residual there.",
       "depends_on": [
@@ -4178,6 +4234,8 @@
     {
       "id": "boundary_weight",
       "path": "sync_cost/derivations/boundary_weight.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Boundary Weight",
       "summary": "The n=5 vs n=6 question dissolves. The Farey depth is not an\ninteger. The boundary modes (q=6) are partially locked at a\nfractional weight w* determined by self-consistency. The dark\nenergy fraction Omega_Lambda is a continuous, monotone function\nof this weight, and the observed value uniquely determines w*.",
       "depends_on": [
@@ -4349,6 +4407,8 @@
     {
       "id": "canonical_glossary",
       "path": "sync_cost/derivations/canonical_glossary.md",
+      "cid": "47b0d70c3ac5b6831d674af0ae92ede6db5805e980a1645668fa8536b8d15fd3",
+      "sealed": true,
       "title": "Canonical glossary \u2014 framework \u2194 standard physics vocabulary",
       "summary": "Glossary v1, 2026-04-26. ~70 framework terms mapped to standard\nphysics / math equivalents across 10 thematic sections. Intended\nto be readable end-to-end in 30 minutes by a working physicist\nwith no prior framework exposure.",
       "depends_on": [
@@ -4710,6 +4770,8 @@
     {
       "id": "collapse_dissolution",
       "path": "sync_cost/derivations/collapse_dissolution.md",
+      "cid": "dca3ceae7d8c5441f2dbd735eb53ff696a8a3e1f6d39a10a202d7de787156578",
+      "sealed": true,
       "title": "Collapse dissolution",
       "summary": "**Inviolable-companion dissolution articulated** \u2014 apparent\nwavefunction collapse (the non-unitary projection step of textbook\nQM) reduces to fidelity-bounded self-measurement on the framework's\nsubstrate. The measurement problem \u2014 the apparent contradiction\nbetween unitary Schr\u00f6dinger evolution and non-unitary projection \u2014\ndissolves structurally: there is no projection postulate to\nreconcile, because the substrate carries no such postulate.",
       "depends_on": [
@@ -4816,6 +4878,8 @@
     {
       "id": "comparison_class",
       "path": "sync_cost/derivations/comparison_class.md",
+      "cid": null,
+      "sealed": false,
       "title": "Comparison Class",
       "summary": "Conceptual and methodological orientation. Cited from FRAMEWORK.md as context for any reader who asks whether the framework is competing with the Standard Model. The answer is no \u2014 it is in a different conversation. The Standard Model deferred a class of questions. The framework answers them. Whether the answers are correct is a separate matter, decided by the empirical record on dimensionless ratios the Standard Model only catalogs.",
       "depends_on": [],
@@ -4865,6 +4929,8 @@
     {
       "id": "complex_amplitude_uniqueness",
       "path": "sync_cost/derivations/complex_amplitude_uniqueness.md",
+      "cid": "b1f24ee188c79844c5704b6cef7ef3b02abde9c171fd725b0402517ae5184a9d",
+      "sealed": true,
       "title": "Complex-amplitude uniqueness (\u211d/\u2102/\u210d from antiperiodic-cycle count)",
       "summary": "**Forcing argument articulated** for the question the EPR/Bell\nassembly (`epr_bell_assembly_theorem.md`) flagged as its bright\nline and left open: *is the complex amplitude field \u2102 forced, or\nmerely consistent \u2014 i.e., why not real (\u211d) or quaternionic (\u210d)\nquantum mechanics?* The corpus had `J\u00b2=\u2212I` from the half-twist\n(`figure_eight.md`, `substrate_determinism.md:67-71`) but never\nasked whether that complex structure is **unique**.",
       "depends_on": [
@@ -5016,6 +5082,8 @@
     {
       "id": "cone_twist_substrate",
       "path": "sync_cost/derivations/cone_twist_substrate.md",
+      "cid": null,
+      "sealed": false,
       "title": "Cone-twist substrate: bicone target, Z\u2082 vortex dynamics, quantum structure",
       "summary": "The K = 1 \u2194 K < 1 separation is one of the framework's standing\npieces of non-smooth substrate geometry (`framework_status.md`\nRegion D anchor obstruction #5: \"K = 1 vs K < 1 non-smooth\nseparation\"). This doc reads it as a single geometric object \u2014 a\n**Z\u2082-twisted bicone** whose two apex topologies are the spatial\nconcretization of the lambda / EML split\n(`expressibility_split.md`).",
       "depends_on": [
@@ -5192,6 +5260,8 @@
     {
       "id": "conservation_computability",
       "path": "sync_cost/derivations/conservation_computability.md",
+      "cid": null,
+      "sealed": false,
       "title": "Conservation as Computability",
       "summary": "Conservation of energy and matter is the compactness of S^1.\nCompactness is computability. The chain is deductive:",
       "depends_on": [
@@ -5248,6 +5318,8 @@
     {
       "id": "continuity_in_K_nulls",
       "path": "sync_cost/derivations/continuity_in_K_nulls.md",
+      "cid": "3a3b4152e8e20e763304b78337ded8f3e09084ccaea502737905b9d288da1254",
+      "sealed": true,
       "title": "Continuity-in-K derivation: prior null results",
       "summary": "**Active null-results registry for K-axis continuity questions.**\nCatalogues N1-N15+ null findings on continuity / smoothness\nacross K. N11 (tongue coverage discontinuity at K = 1) is\nload-bearing for the D.3 closure (K = 1 \u2194 K < 1 sector\ndecoupling) per `path_closures_iter3.md`; cited in\n`derivation_atlas.md` Part VI \u00a76.3.",
       "depends_on": [
@@ -5494,6 +5566,8 @@
     {
       "id": "continuum_limits",
       "path": "sync_cost/derivations/continuum_limits.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Two Continuum Limits",
       "summary": "The rational field equation (Derivation 11) reproduces known physics\nin two limits:",
       "depends_on": [
@@ -5730,6 +5804,8 @@
     {
       "id": "cosmological_cycle",
       "path": "sync_cost/derivations/cosmological_cycle.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Cosmological Cycle",
       "summary": "The universe does not end. It passes the baton. The stick-slip\nboundary between locked modes (our physics) and the gap (the twin)\nsweeps through the frequency axis as K evolves. The roles reverse.\nThe Klein bottle's half-twist means each handoff swaps the\norientation. The cycle has period 2 (two half-twists = full twist\n= return to original).",
       "depends_on": [
@@ -5791,6 +5867,8 @@
     {
       "id": "coupling_scales",
       "path": "sync_cost/derivations/coupling_scales.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Coupling Scales and the Bare Diffusion Constant",
       "summary": "**Derived (partial).** D_0 = 1/2 is determined by the tree geometry.\nAll dimensionless ratios are determined. The absolute coupling scales\nreduce to one dimensionful input (the root oscillator frequency),\nwhich no mathematical framework can produce.",
       "depends_on": [],
@@ -5890,6 +5968,8 @@
     {
       "id": "cross_ratio_irrep_reframe",
       "path": "sync_cost/derivations/cross_ratio_irrep_reframe.md",
+      "cid": "653912d3416553afeb85ac2edd5adb442036fcf6b2c553bf8a686321aa6257bc",
+      "sealed": true,
       "title": "Cross-ratio multi-candidate pattern is irrep multiplicity",
       "summary": "Cross-ratio findings reframed from \"multi-candidate ansatz\" to\n\"PSL(2,\u2124) irrep multiplicity.\" Class 2 floor reinterpreted as\nstructural irrep-class richness rather than pigeonhole noise.\nNew direction (#4) identified: find which subgroup's\ninvariants the framework operates under.",
       "depends_on": [
@@ -6016,6 +6096,8 @@
     {
       "id": "dark_twin_correction",
       "path": "sync_cost/derivations/dark_twin_correction.md",
+      "cid": null,
+      "sealed": false,
       "title": "Dark-twin correction: the S_v \u2248 13 retraction was wrong",
       "summary": "Class 3 (honest correction). No new primitive. This doc withdraws\n`explicit_4x4_reduction.md`'s `S_v \u2248 13` retraction (wrong\ninteraction model \u2014 collinear formula applied to orthogonal+dark-\ncoupled configuration) and restores `S_v(K=1) \u2248 16` as the leading\nvalue, while preserving the honest open status of the orthogonal-\nkink correction (so \"exact\" remains unclaimed).",
       "depends_on": [
@@ -6102,6 +6184,8 @@
     {
       "id": "denomination_boundary",
       "path": "sync_cost/derivations/denomination_boundary.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Denomination Boundary",
       "summary": "The three open questions from FRAMEWORK.md \u2014",
       "depends_on": [],
@@ -6176,6 +6260,8 @@
     {
       "id": "depth_connection_nulls",
       "path": "sync_cost/derivations/depth_connection_nulls.md",
+      "cid": "9852955aedbdf0a325ce9652bc1e95547e33f9e85c17b1aba40091c016f74fed",
+      "sealed": true,
       "title": "Null results: connecting cosmological depth 54 to EW depth ~15",
       "summary": "| Status | Count |\n|---|---|\n| Null (specifically rules out a candidate) | 8 |\n| Class 2 (numerology, near-match without derivation) | 4 |\n| Wrong axis (not the right tool for the question) | 1 |\n| Unattempted (sketched but not implemented) | 1 \u2014 Klein-quotient second invariant |\n| Open paths (neither attempted nor refuted) | 5 \u2014 (a)-(e) above |",
       "depends_on": [
@@ -6292,6 +6378,8 @@
     {
       "id": "derivation_atlas",
       "path": "sync_cost/derivations/derivation_atlas.md",
+      "cid": null,
+      "sealed": false,
       "title": "Derivation Atlas \u2014 from four primitives to physical predictions",
       "summary": "**Atlas v1, 2026-04-26.** End-to-end derivation chain from four\nprimitives to ~15 substrate-side Class 5 / Survives predictions\n(\u03a9 partition, R, \u039b\u00b7\u2113_P\u00b2, n_s, A_s_substrate, MOND a_0, Born\nrule, gauge group, anomaly cancellation, strong CP, down-type\nfactor 6, up-type factor 9, spatial dimension, Lorentz, two-\nanchor minimum, sector decoupling) with explicit substrate-side\nvs anchor-side classification and Z1-Z3 status.",
       "depends_on": [
@@ -6558,6 +6646,8 @@
     {
       "id": "dicke_apparatus_theorem",
       "path": "sync_cost/derivations/dicke_apparatus_theorem.md",
+      "cid": "4c78992deeb0581690f17393ec506c8a4503372898807e3da86820603d4f9468",
+      "sealed": true,
       "title": "Dicke apparatus theorem \u2014 substrate-internal computation of Pauli matrix elements on Dicke states",
       "summary": "**Theorem-quality result rigorizing the T1a Dicke extension\n(`w_state_from_substrate.md`, #187).** The observation that\n\"substrate's Dicke `(N, k)` primitive + recursive Schmidt +\nconditional pair-wise apparatus reproduces W's correlations\nnumerically\" is upgraded to a theorem: *all Pauli matrix elements\non Dicke states are substrate-computable* via a finite recursion\nthat terminates in the foundational layer's single-mode Pauli\nentries.",
       "depends_on": [
@@ -6659,6 +6749,8 @@
     {
       "id": "discrete_extension_principle",
       "path": "sync_cost/derivations/discrete_extension_principle.md",
+      "cid": "af0c5612eb59d57c4b3fe1bc46773e54911d8ea63f0b32dc54de732199f803ad",
+      "sealed": true,
       "title": "The Discrete Extension Principle",
       "summary": "**Articulation, not new content.** The pattern has been\nmultiply instantiated (PR #152, #179, #187, #188, #189, #190);\nthis doc names it and gives it a discriminator. No new substrate\nprimitive; no new inviolable; no new physical prediction.",
       "depends_on": [
@@ -6830,6 +6922,8 @@
     {
       "id": "discrete_gauge",
       "path": "sync_cost/derivations/discrete_gauge.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Two Open Paths",
       "summary": "**Proposed.** Five computations specified. Three are immediate\n(anomaly, depth sweep, Jacobian). All have binary outcomes with\nclear interpretations. The conjectural status of D19's particle\nphysics identification resolves or falls based on these results.",
       "depends_on": [],
@@ -6852,6 +6946,8 @@
     {
       "id": "discrete_gauge_resolution",
       "path": "sync_cost/derivations/discrete_gauge_resolution.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Discrete Gauge Resolution",
       "summary": "**Resolved (partial).** The five D21 computations are complete.\nPath 2 (gauge from mean-field F) is closed \u2014 the self-consistency\nfunctional cannot carry gauge degrees of freedom. Path 1 (discrete\nis physical) is partially confirmed: the topology determines charges,\ncenter, and confinement, but not the gauge dynamics.",
       "depends_on": [],
@@ -6911,6 +7007,8 @@
     {
       "id": "discrete_reduction_computed",
       "path": "sync_cost/derivations/discrete_reduction_computed.md",
+      "cid": null,
+      "sealed": false,
       "title": "The discrete 4-mode reduction: computed",
       "summary": "Class 3 (computed, hand-derived, numerically verified). No new\nprimitive. The discrete 4-mode reduction is delivered:",
       "depends_on": [
@@ -7042,6 +7140,8 @@
     {
       "id": "discrete_reduction_problem",
       "path": "sync_cost/derivations/discrete_reduction_problem.md",
+      "cid": null,
+      "sealed": false,
       "title": "The discrete 4-mode reduction: a hand-solvable problem statement",
       "summary": "Class 3 (problem statement + leading hand-attempt with a\nqualitative finding). No new primitive.",
       "depends_on": [
@@ -7118,6 +7218,8 @@
     {
       "id": "down_type_double_cover_closed",
       "path": "sync_cost/derivations/down_type_double_cover_closed.md",
+      "cid": null,
+      "sealed": false,
       "title": "Down-type double cover \u2014 derivation summary",
       "summary": "**Class 5 / Survives.** Down-type quark factor 6 = q_2 \u00b7 q_3\nderived from S_3 acting on Z_2 \u00d7 Z_3 lattice. Orbit dimensions\n{1, 3} = {q_3-trivial, q_3-vector}; factor 6 emerges as\n|L| = q_2 \u00b7 q_3 from orbit-counting.",
       "depends_on": [
@@ -7289,6 +7391,8 @@
     {
       "id": "down_type_double_cover_phase_a",
       "path": "sync_cost/derivations/down_type_double_cover_phase_a.md",
+      "cid": null,
+      "sealed": false,
       "title": "Down-type double cover \u2014 Phase A: formalization",
       "summary": "This document prepares the ground for a first-principles derivation\nof the claim",
       "depends_on": [
@@ -7370,6 +7474,8 @@
     {
       "id": "down_type_double_cover_phase_b",
       "path": "sync_cost/derivations/down_type_double_cover_phase_b.md",
+      "cid": null,
+      "sealed": false,
       "title": "Down-type double cover \u2014 Phase B attempt (halts)",
       "summary": "N_walk(T\u00b2; q_2, q_3) / N_walk(K\u00b2; q_2, q_3)  =?  q_2 q_3 = 6",
       "depends_on": [
@@ -7426,6 +7532,8 @@
     {
       "id": "down_type_double_cover_phase_b_followup",
       "path": "sync_cost/derivations/down_type_double_cover_phase_b_followup.md",
+      "cid": null,
+      "sealed": false,
       "title": "Down-type double cover \u2014 Phase B follow-up: Route 1 null result",
       "summary": "Phase B Attempt 5 reached the target factor 6 by positing that\nlepton orbits are Z_6-stabilized and down-type orbits have trivial\nstabilizer. Route 1 proposed validating this by acting the six\nelements of Z_6 = Z_2 \u00d7 Z_3 on the four XOR modes `{A, B, C, D}`\nfrom `gap3_principal_bundle.py` and reading off the stabilizers.",
       "depends_on": [
@@ -7482,6 +7590,8 @@
     {
       "id": "down_type_double_cover_phase_c",
       "path": "sync_cost/derivations/down_type_double_cover_phase_c.md",
+      "cid": null,
+      "sealed": false,
       "title": "Down-type double cover \u2014 Phase C attempt: self-consistent DoF reading",
       "summary": "Prior attempts (Phase B) looked for a count of cardinality 6 attached\nto bundle or base-mode data. Every candidate action on the base\nproduced either a free (trivial) stabilizer, a ratio of 2, or a\nreference-dependent number. Route 1 closed as a null result\n(`down_type_double_cover_phase_b_followup.md`).",
       "depends_on": [
@@ -7578,6 +7688,8 @@
     {
       "id": "down_type_double_cover_phase_d",
       "path": "sync_cost/derivations/down_type_double_cover_phase_d.md",
+      "cid": null,
+      "sealed": false,
       "title": "Down-type double cover \u2014 Phase D attempt: boundary-weight self-consistency",
       "summary": "Prior phases:\n- A: vocabulary; reframed target as `N_walk(T\u00b2)/N_walk(K\u00b2)`.\n- B: five candidate topological ratios; four give 2 or 3/2; Attempt 5\n  (stabilizer inversion) reaches 6 but imports the color assignment.\n- B-followup: scan confirms no natural Z_6-action on `{A,B,C,D}` gives\n  the 6:1 ratio; the hierarchy-`|Z_6|` and down-type-`6` are separate\n  integer appearances.\n- C: self-consistent DoF reading via abelianization rank; reaches 6\n  conditional on `DoF(K\u00b2) = 1`.\n- C/monodromy: the Z_2",
       "depends_on": [
@@ -7639,6 +7751,8 @@
     {
       "id": "duty_cycle_dictionary",
       "path": "sync_cost/derivations/duty_cycle_dictionary.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Duty Cycle Dictionary",
       "summary": "The K = 1 identities in this file are exact rational numbers derived\nfrom `duty_dimension_proof.md`. Numerical computations are in:\n- `gate_duty_cycle.py` (bare duty cycles, Klein bottle field equation)\n- `gate_duty_predictions.py` (single-observable K* fits; does not\n  supply joint multi-observable fits)\n- `decoherence_correction.py` (crossed dictionary, K = 1 reference)",
       "depends_on": [
@@ -7790,6 +7904,8 @@
     {
       "id": "duty_dimension_proof",
       "path": "sync_cost/derivations/duty_dimension_proof.md",
+      "cid": null,
+      "sealed": false,
       "title": "Proof: The Duty Cycle Exponent Equals the Group Dimension",
       "summary": "For the standard circle map with SL(2,Z) Farey structure, the duty\ncycle of the mode-locked tongue at p/q scales as",
       "depends_on": [],
@@ -7824,6 +7940,8 @@
     {
       "id": "dynamical_quantization",
       "path": "sync_cost/derivations/dynamical_quantization.md",
+      "cid": null,
+      "sealed": false,
       "title": "Dynamical quantization: the medium is continuous, the locking is discrete",
       "summary": "**Pedagogical clarification doc.** Articulates the medium /\ndynamics distinction that is implicit across the framework's\nexisting content but not previously headlined. Intended for the\npreprint reader who has not internalized the distinction yet \u2014\nprevents the LQG misreading and sets up the spectral / prism\nanalogy as one productive abstract connection.",
       "depends_on": [
@@ -7888,6 +8006,8 @@
     {
       "id": "dynamical_tool_audit",
       "path": "sync_cost/derivations/dynamical_tool_audit.md",
+      "cid": "389cee2d35825714a3435873070b650663888d145e44b4a30d31ca395356ff55",
+      "sealed": true,
       "title": "Dynamical-tool audit: circle maps vs Kuramoto, conceptual",
       "summary": "A research note auditing the framework's choice of dynamical\nformalism. Triggered by recognizing that the hierarchy problem\n(anchor-count obstructions #2, #4, #5) is the binding blocker\nfor the substrate-forced \u03b5 question (`epsilon_physical_reading.md`)\nand likely for the framework's broader scale-bridging program.",
       "depends_on": [
@@ -8039,6 +8159,8 @@
     {
       "id": "e_cross_calc",
       "path": "sync_cost/derivations/e_cross_calc.md",
+      "cid": null,
+      "sealed": false,
       "title": "E_cross calculation: the textbook route gives a pathology",
       "summary": "Class 3 (calc attempt with informative negative result + a usable\nbound). No new primitive. The textbook crossed-soliton route was\nattempted honestly; it produces a pathological infinite-domain\n`\u22122 M_k`, which (i) confirms the kink-fills-loop regime invalidates\ninfinite-domain formulas (consistent with the recurring audit\nfinding) and (ii) yields the rigorous bound `0 < S_v(K=1) < 16`\nwith the crossing strictly attractive. The genuine value requires\nfinite-volume sine-Gordon (TBA or lattice) \u2014 t",
       "depends_on": [
@@ -8130,6 +8252,8 @@
     {
       "id": "e_cross_discrete_resolution",
       "path": "sync_cost/derivations/e_cross_discrete_resolution.md",
+      "cid": null,
+      "sealed": false,
       "title": "E_cross resolved: the continuum route was a representation error",
       "summary": "Class 3 (resolution by representation correction). No new\nprimitive. **Lasting content: the representation correction** \u2014\nthe continuum `E_cross` pathology and `0 < S_v < 16` bound are\nsuperseded as a representation error; substrate quantities are\nfinite discrete matrix elements, not continuum integrals. The\nresidual open item this doc named (the explicit discrete 4-mode\nreduction matrix) is **closed** in `discrete_reduction_computed.md`\n(canonical), which supersedes this doc's symmetric `\u2248 16`\n",
       "depends_on": [
@@ -8221,6 +8345,8 @@
     {
       "id": "einstein_from_kuramoto",
       "path": "sync_cost/derivations/einstein_from_kuramoto.md",
+      "cid": null,
+      "sealed": false,
       "title": "Einstein Field Equations from the Rational Field Equation",
       "summary": "The self-consistency equation N(p/q) = N_total \u00d7 g(p/q) \u00d7 w(p/q, K\u2080F[N])\non the Stern-Brocot tree, at critical coupling K = 1 in the continuum\nlimit, produces the Einstein field equations as its unique output:",
       "depends_on": [
@@ -8387,6 +8513,8 @@
     {
       "id": "empty_fork_cap",
       "path": "sync_cost/derivations/empty_fork_cap.md",
+      "cid": null,
+      "sealed": false,
       "title": "The empty fork: \u2205 as the basepointless Z\u2082-torsor \u2014 R1 is \u2205-entailed unprovable",
       "summary": "Class 3 (formalization + foundational cap; informative negative).\nNo new primitive. Internally consistent with and *predicted by*\ncommitted content: the \u03b4\u21920 = symmetric-apex fact is\n`figure_eight.md`'s 50/50 crossing and `born_rule.md`'s\ntongue-boundary saddle-node; the concrete origin node is\n`qd_origins.md`'s first mediant `K=1/2` from `(0/1,1/1)`; the\nposit-level stance (substrate posited, continuum = shadow,\n\"a reading of *what is*\") is `substrate_determinism.md`'s. The\nexplicit \u2205/\"nothing\" ",
       "depends_on": [
@@ -8493,6 +8621,8 @@
     {
       "id": "engineering_targets",
       "path": "sync_cost/derivations/engineering_targets.md",
+      "cid": null,
+      "sealed": false,
       "title": "Engineering Targets",
       "summary": "**Proposed.** All four targets are specified in terms of established\nresults (D18-D19 simulations). None depend on the conjectural particle\nphysics identification. The N=3 M\u00f6bius ring is immediately buildable.",
       "depends_on": [],
@@ -8515,6 +8645,8 @@
     {
       "id": "epr_bell_assembly_theorem",
       "path": "sync_cost/derivations/epr_bell_assembly_theorem.md",
+      "cid": "884f7b74443ddaf418da6d78e87c0a422e2222161059a31f11ad22487c6ab0dc",
+      "sealed": true,
       "title": "EPR/Bell assembly theorem",
       "summary": "**Standalone assembly articulated** for the long-standing\nphenomenology pointer\n\"EPR / Bell-inequality violation: Pieces present (Born rule +\nZ_2-pair conservation theorem + substrate non-locality on\nStern-Brocot tree); \u2026 **the assembled EPR/Bell theorem still not\narticulated**\" (`phenomenology_cross_reference.md:439`).",
       "depends_on": [
@@ -8681,6 +8813,8 @@
     {
       "id": "epsilon_physical_reading",
       "path": "sync_cost/derivations/epsilon_physical_reading.md",
+      "cid": "ca3c3ddfa054e7132a24aa5d42af325ca2b3b2376290ba5fb17c1806aa445ef5",
+      "sealed": true,
       "title": "Substrate-forced \u03b5, sub-problem 1: physical reading",
       "summary": "A focused dive on sub-problem 1 of\n`epsilon_substrate_decomposition.md`: what *is* \u03b5 physically, in\nframework-native vocabulary? Three candidate readings, each\nmapped to framework structures and tested against the K-axis\nwindow `\u03b5 \u2208 [1e-4, 1e-3]` that gives K_STAR \u2192 INTERACT.",
       "depends_on": [
@@ -8757,6 +8891,8 @@
     {
       "id": "epsilon_substrate_decomposition",
       "path": "sync_cost/derivations/epsilon_substrate_decomposition.md",
+      "cid": "2375c1d1bca1bcf188ddd4d2ea07d8c76063bb3d9ccc9d14d8e1f04434479e9a",
+      "sealed": true,
       "title": "Substrate-forced \u03b5: problem decomposition and prior nulls",
       "summary": "Open. This decomposition does not solve the substrate-forced \u03b5\nproblem. It records what's been ruled out and what hasn't been\ntried with clear forcing arguments.",
       "depends_on": [
@@ -8858,6 +8994,8 @@
     {
       "id": "equivalence_dissolution",
       "path": "sync_cost/derivations/equivalence_dissolution.md",
+      "cid": "45b2e69ee04566fdb8b30a7e01b3fa7d7587e5719eb01c6668c74defd4f73497",
+      "sealed": true,
       "title": "Equivalence dissolution",
       "summary": "**Inviolable-companion dissolution articulated** \u2014 the equivalence\nprinciple (weak + strong) reduces to a substrate identity on the\nframework's apparatus. Not a new derivation; a synthesis of\ningredients already in the corpus.",
       "depends_on": [
@@ -8969,6 +9107,8 @@
     {
       "id": "era_timeline_disposition",
       "path": "sync_cost/derivations/era_timeline_disposition.md",
+      "cid": "f74cd84c074b2374b069cd47e48ac8fe26941e036615bc6e2119203f18b3a232",
+      "sealed": true,
       "title": "Era-timeline disposition (settling N9 S5)",
       "summary": "**Settles the last residual** left open by the continuity-in-K\ndisposition (`continuity_in_K_nulls.md`): the cosmological *era\ntimeline* (N9 S5 \u2014 inflation\u2192matter\u2192\u039b). It resolves into **three\ntiers** with different statuses; it is **not** a single vague \"open\nfrontier.\" No overclaim: one tier is structural, one is\nanchor-declined, and one stays Class-2 (and is explicitly *not*\npromoted here).",
       "depends_on": [
@@ -9070,6 +9210,8 @@
     {
       "id": "explicit_4x4_reduction",
       "path": "sync_cost/derivations/explicit_4x4_reduction.md",
+      "cid": null,
+      "sealed": false,
       "title": "The explicit 4\u00d74 reduction matrix: real Phase 2",
       "summary": "Class 3 (honest derivation attempt). The derivation **partially\nvindicates Finding 3**: the kink-mode energies are derivable (Part\nA) and the 4\u00d74 gap is clean (Part B), but Phase 2 neglected the\nkink-fills-loop interaction (`E_D \u2248 13` not 16) and the interleaved\ncontinuum (Part C). The \"exact precision\" claim is **retracted**;\nhonest value `S_v(K=1) \u2248 13` with continuum corrections open.",
       "depends_on": [
@@ -9166,6 +9308,8 @@
     {
       "id": "exponent",
       "path": "sync_cost/derivations/exponent.md",
+      "cid": null,
+      "sealed": false,
       "title": "Why the Exponent Is q\u2082q\u2083\u00b3",
       "summary": "**Derived**: the exponent q\u2082q\u2083^d = 54 follows from three established\nresults:\n1. The Klein bottle assigns q\u2083 to spatial, q\u2082 to temporal (D19)\n2. The spatial direction maps to d = 3 independent dimensions (D23)\n3. Independent dimensions multiply their resolutions (standard\n   mode counting)",
       "depends_on": [],
@@ -9200,6 +9344,8 @@
     {
       "id": "expressibility_split",
       "path": "sync_cost/derivations/expressibility_split.md",
+      "cid": null,
+      "sealed": false,
       "title": "Expressibility split \u2014 the lambda / EML divide",
       "summary": "Methodological orientation, parallel to `comparison_class.md` and\n`unitless_check.md`. The framework's notational invariance claim:\ntwo distinct universal generators (mediant for discrete content,\nEML for continuous content) are needed to express the framework's\npredictions. No single generator suffices.",
       "depends_on": [
@@ -9291,6 +9437,8 @@
     {
       "id": "f_exit_natural",
       "path": "sync_cost/derivations/f_exit_natural.md",
+      "cid": null,
+      "sealed": false,
       "title": "f_exit = exp(\u2212S_v) as the natural action-weighted lens",
       "summary": "Class 3 (derivation grade). The argument uses only:",
       "depends_on": [
@@ -9397,6 +9545,8 @@
     {
       "id": "farey_partition",
       "path": "sync_cost/derivations/farey_partition.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Farey Partition",
       "summary": "**Computed**:\n- \u03a9_\u039b = 13/19 = 0.6842 vs observed 0.6847 \u00b1 0.0073 (0.07\u03c3)\n- The operator is the Farey count at the interaction scale q\u2082q\u2083 = 6\n- All inputs are from the Klein bottle topology",
       "depends_on": [
@@ -9548,6 +9698,8 @@
     {
       "id": "farey_proof",
       "path": "sync_cost/derivations/farey_proof.md",
+      "cid": null,
+      "sealed": false,
       "title": "Why the Farey Partition",
       "summary": "**Theorem proved** conditional on D10's axiom that the mediant is\nprimitive. The proof has four steps, each referencing an established\nresult. The uniqueness follows from the mediant being the only\ncombining operation in the framework's alphabet that produces a\nnontrivial partition.",
       "depends_on": [],
@@ -9587,6 +9739,8 @@
     {
       "id": "fermion_mass_running",
       "path": "sync_cost/derivations/fermion_mass_running.md",
+      "cid": "7c297f721fa90ef8a873f3efc34b2e05478fe62ccbcec84979f4bde84f5bd0c5",
+      "sealed": true,
       "title": "Fermion Mass Running from the K \u2192 \u03bc Map",
       "summary": "The tree-level fermion mass formula (D34) gives mass ratios as\n(W_heavy/W_light)^a with sector exponents a = d \u2212 1/2 + charge/2.\nThe \u03c4/e ratio at a = 5/2 matches to 0.9%, but the \u03bc/e ratio has\na 37% residual. This residual is the tree-to-physical running\ncorrection. This derivation computes the correction from the K \u2192\n\u03bc mapping, closing the fermion mass gap (\u00a78.2).",
       "depends_on": [
@@ -9718,6 +9872,8 @@
     {
       "id": "fidelity_bound",
       "path": "sync_cost/derivations/fidelity_bound.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Self-Referential Fidelity Bound",
       "summary": "The MOND transition and wavefunction collapse are instances of the\nsame structure: a system measuring which attractor it belongs to,\nusing dynamics constituted by the same process being measured. The\nfidelity of this self-measurement is bounded, and the bound determines:",
       "depends_on": [],
@@ -9787,6 +9943,8 @@
     {
       "id": "figure_eight",
       "path": "sync_cost/derivations/figure_eight.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Figure-Eight Topology",
       "summary": "The Klein bottle's self-intersection in 3D embedding is a figure-8\n(lemniscate). Two loops sharing one crossing point. This is the\nphysical topology of the four Klein bottle modes (D19).",
       "depends_on": [
@@ -9988,6 +10146,8 @@
     {
       "id": "fourth_generation_revisited",
       "path": "sync_cost/derivations/fourth_generation_revisited.md",
+      "cid": null,
+      "sealed": false,
       "title": "Fourth Generation Revisited Under the Integer Conservation Law",
       "summary": "| Question | Old answer | New answer |\n|----------|-----------|-----------|\n| Is there a 4th lepton? | \"Below 7.3 GeV, predicted absent\" | **Forbidden at any mass** |\n| Where would it sit? | Backbone mode 13/8, depth 5 | Integer law forces depth 3, no slot left |\n| What rule is operative? | Exponent law a\u2083 = (3/2)a\u2082 | depth \u00d7 \\|3Q\\| = 9 |\n| Can LHC/future colliders falsify? | Yes, if found below ~45 GeV | Yes, if found at **any** mass |\n| Does the mass prediction still apply? | ~7.3 GeV | N/A; t",
       "depends_on": [
@@ -10027,6 +10187,8 @@
     {
       "id": "framework_status",
       "path": "sync_cost/derivations/framework_status.md",
+      "cid": "d5f0f7864cac58f371124a3c5d9cdbcfc9597cc6acf9f0f4c7906125ce4b0aee",
+      "sealed": true,
       "title": "Framework status map",
       "summary": "At-a-glance inventory. One line per item. Full analysis lives in the\nreferenced files; this is the bird's-eye view to prevent duplicate\nwork and re-derivation of eliminated content.",
       "depends_on": [
@@ -10948,6 +11110,8 @@
     {
       "id": "free_parameter_scorecard",
       "path": "sync_cost/derivations/free_parameter_scorecard.md",
+      "cid": "28cd0fc30e2d78a0adf837266b41120d7ec5e4e4408c3508c897ca5ed7f545f7",
+      "sealed": true,
       "title": "Free-parameter scorecard \u2014 the forcing partition applied to physics' inputs",
       "summary": "The free parameters of physics \u2014 the dimensionless inputs the Standard\nModel and \u039bCDM **measure rather than derive** \u2014 listed as the rows, with\nthe framework's verdict on each. It is the empirical roster of\n`algebraic_forcing_partition.md`: *forced \u27f9 discrete/combinatorial; the\ncontinuous couplings stay open.*",
       "depends_on": [
@@ -11099,6 +11263,8 @@
     {
       "id": "gap1_analytic_proof",
       "path": "sync_cost/derivations/gap1_analytic_proof.md",
+      "cid": null,
+      "sealed": false,
       "title": "Analytic Proof: Levi-Civita from Kuramoto at K=1",
       "summary": "In the continuum limit (N \u2192 \u221e) of the globally coupled Kuramoto model at K=1, the effective connection \u0393\u0303 defined by the ensemble averages in the ADM evolution equation equals the Levi-Civita connection \u0393 of the coherence metric \u03b3_ij. The correction at finite N is O(N^{-1/2}).",
       "depends_on": [
@@ -11128,6 +11294,8 @@
     {
       "id": "gap1_theorem",
       "path": "sync_cost/derivations/gap1_theorem.md",
+      "cid": null,
+      "sealed": false,
       "title": "Gap 1 Theorem: Christoffel Connection from Kuramoto in the Continuum Limit",
       "summary": "**Proved, conditionally.** Lifts the numerical results of\n`gap1_step1_tautology.py`, `gap1_step2_kuramoto.py`, and\n`gap1_step3_factorization.py` to a theorem about the continuum limit.\nThe theorem is conditional on the Kuramoto locked state lying in the\nsupercritical regime where the Strogatz\u2013Mirollo 1991 central limit\ntheorem applies; at criticality (K = K_c exactly), critical slowing\ninvalidates the fluctuation expansion and the argument does not carry\nthrough unchanged.",
       "depends_on": [
@@ -11209,6 +11377,8 @@
     {
       "id": "gap2_analytic_proof",
       "path": "sync_cost/derivations/gap2_analytic_proof.md",
+      "cid": null,
+      "sealed": false,
       "title": "Analytic Proof: Farey Graph Laplacian \u2192 Laplace-Beltrami",
       "summary": "The tongue-width-weighted graph Laplacian on the Farey graph at depth d converges to the Laplace-Beltrami operator on the hyperbolic plane H\u00b2 as d \u2192 \u221e (equivalently, K \u2192 1). The effective diffusion constant is D\u2080 = 1/2, giving D_eff = D\u2080/(1 - \u03c6\u207b\u2074) = (5 + 3\u221a5)/20.",
       "depends_on": [
@@ -11238,6 +11408,8 @@
     {
       "id": "gap2_spatialization_decomposition",
       "path": "sync_cost/derivations/gap2_spatialization_decomposition.md",
+      "cid": null,
+      "sealed": false,
       "title": "Gap 2 Break 1: Spatialization Decomposition and Status",
       "summary": "| | Sub-problem | Status | Result |\n|---|---|---|---|\n| A | RFE forces Q \u2192 R completion | **Closed** | Phase sum in the self-consistency equation produces irrational |r| from rational inputs. The field exists because the equation demands it. (`rfe_irrational_fixed_points.py`) |\n| B | Mori\u2013Zwanzig coarse-graining | **Closed** (Markovian level) | Standard projection with inputs from C (decorrelation rate) and D (continuum manifold). Markovian limit valid for \u03c4_coarse \u226b 1/\u03bb_unlock. |\n| C | Lyapunov",
       "depends_on": [
@@ -11319,6 +11491,8 @@
     {
       "id": "gap2_step4_farey_laplacian",
       "path": "sync_cost/derivations/gap2_step4_farey_laplacian.md",
+      "cid": null,
+      "sealed": false,
       "title": "Gap 2, Step 4: The Stern-Brocot Tree IS the Spatial Lattice",
       "summary": "**Verified.** The spatial diffusion term D\u00b7\u2207\u00b2\u03b8 is not added by hand.\nThe Stern-Brocot tree tessellates H\u00b2 = SL(2,\u211d)/SO(2) via Ford circles\n(tangency exact to machine precision). Spatial coupling IS the tree's\nnearest-neighbor structure.",
       "depends_on": [
@@ -11380,6 +11554,8 @@
     {
       "id": "gap2_sub_e_status_reconciled",
       "path": "sync_cost/derivations/gap2_sub_e_status_reconciled.md",
+      "cid": null,
+      "sealed": false,
       "title": "Gap 2 sub-problem E (\u2113_c) \u2014 status reconciliation",
       "summary": "Two framework docs state different things about sub-problem E\n(bare diffusion length `\u2113_c` in `D_0 = \u00bd \u03bb_unlock \u00b7 \u2113_c\u00b2`):",
       "depends_on": [
@@ -11436,6 +11612,8 @@
     {
       "id": "gap2_theorem_attempt",
       "path": "sync_cost/derivations/gap2_theorem_attempt.md",
+      "cid": null,
+      "sealed": false,
       "title": "Gap 2 Attempted Closure: Spatial Diffusion from Non-Orientability",
       "summary": "**Break 1 (spatialization): topological route.** The diffusion term\nD\u00b7\u2207\u00b2\u03b8 is forced by the Klein bottle's non-orientability via the\nsame chain that gives the second law (`second_law_topological.md`).",
       "depends_on": [
@@ -11517,6 +11695,8 @@
     {
       "id": "gap_1_christoffel",
       "path": "sync_cost/derivations/gap_1_christoffel.md",
+      "cid": null,
+      "sealed": false,
       "title": "Gap 1: The Christoffel Connection from Kuramoto Ensemble Averages",
       "summary": "**Closed in the continuum limit**, conditionally. See\n`gap1_theorem.md` for the theorem statement and proof combining the\nStep 1\u20133 numerical results with Strogatz\u2013Mirollo 1991 (CLT for the\nKuramoto locked state) and the fundamental theorem of Riemannian\ngeometry. Result:",
       "depends_on": [
@@ -11568,6 +11748,8 @@
     {
       "id": "gap_2_spatial_diffusion",
       "path": "sync_cost/derivations/gap_2_spatial_diffusion.md",
+      "cid": null,
+      "sealed": false,
       "title": "Gap 2: Spatial Diffusion and the Bare Coupling D\u2080",
       "summary": "**Break 1 addressed; Break 2 remains open.**",
       "depends_on": [
@@ -11634,6 +11816,8 @@
     {
       "id": "gauge_dictionary",
       "path": "sync_cost/derivations/gauge_dictionary.md",
+      "cid": null,
+      "sealed": false,
       "title": "Gauge-Sector Dictionary Promotion",
       "summary": "The three identifications isolated in `klein_connection.md` for the\nKlein-bottle gauge structure \u2014 `Z\u2082 \u21aa U(1)`, `Z\u2083 \u21aa Z(SU(3))`, and\n12 mode transitions \u2194 12 gauge generators \u2014 reduce to a single\nirreducible dictionary entry under the same promotion moves that\n`operator_to_curvature.py` applies to the gravity chain. Two of the\nthree are demoted from IDENTIFIED to DEFINITION or FORCED; the third\nfactors, with one factor FORCED and the other merging with the\nremaining identification.",
       "depends_on": [
@@ -11750,6 +11934,8 @@
     {
       "id": "gauge_factorization",
       "path": "sync_cost/derivations/gauge_factorization.md",
+      "cid": null,
+      "sealed": false,
       "title": "Direct-Product Structure of the Gauge Algebra from Klein Bottle Topology",
       "summary": "Let P \u2192 K\u00b2 be a principal G-bundle whose structure group G has a\nLie algebra g that acts on mode fibers compatibly with the Klein\nbottle's topological coordinate decomposition. Then g admits a\ndirect-sum decomposition",
       "depends_on": [
@@ -11841,6 +12027,8 @@
     {
       "id": "gauge_high_scale_identification",
       "path": "sync_cost/derivations/gauge_high_scale_identification.md",
+      "cid": null,
+      "sealed": false,
       "title": "High-scale gauge identification",
       "summary": "**Synthesis-derivation.** The substrate-feature-to-gauge-group\ncorrespondence is forced by the cited harmonics derivations, with\none remaining IDENTIFIED commitment (per `gauge_dictionary.md`)\nabout the physical-sector labeling. The high-scale assignment\ntable above is the single explicit reference for what the\nidentification commits to.",
       "depends_on": [
@@ -11917,6 +12105,8 @@
     {
       "id": "gauge_sector_lovelock",
       "path": "sync_cost/derivations/gauge_sector_lovelock.md",
+      "cid": null,
+      "sealed": false,
       "title": "Yang-Mills from the Klein Bottle (Gauge-Sector Lovelock)",
       "summary": "The Klein bottle's kinematic constraints \u2014 structure group center,\nspacetime dimension, signature, and confinement pattern \u2014 together\nwith the requirement of second-order gauge-invariant dynamics,\nuniquely produce the Yang-Mills equations:",
       "depends_on": [
@@ -12033,6 +12223,8 @@
     {
       "id": "gell_mann_nishijima",
       "path": "sync_cost/derivations/gell_mann_nishijima.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Gell-Mann-Nishijima Relation from Klein Bottle Geometry",
       "summary": "The relation Q = T_3 + Y/2 between electric charge Q, weak isospin\nT_3, and hypercharge Y is not a postulate. It is the charge\ncomposition law at the Klein bottle's identification boundary, where\nthe antiperiodic (twisted) and periodic (untwisted) directions meet.",
       "depends_on": [
@@ -12134,6 +12326,8 @@
     {
       "id": "generation_mechanism",
       "path": "sync_cost/derivations/generation_mechanism.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Generation Mechanism",
       "summary": "Three generations of fermions are not free parameters. They are the\nthree observable phase states of the {locked, unlocked}\u00b2 classification,\neach realized as a topologically distinct chain type in the Stern-Brocot\ntree. The mass hierarchy, sector exponents, mixing angles, and the\nabsence of a fourth generation all follow from the same structure.",
       "depends_on": [
@@ -12325,6 +12519,8 @@
     {
       "id": "ghz_from_substrate",
       "path": "sync_cost/derivations/ghz_from_substrate.md",
+      "cid": null,
+      "sealed": false,
       "title": "GHZ correlations from the substrate event-log (worked example)",
       "summary": "**Level-3 worked example for the QM-reframing thread.** Demonstrates\nthat the pair-wise EPR/Bell apparatus\n(`epr_bell_assembly_theorem.md`) generalizes naturally to N-mode\nsystems, with explicit calculation for the 3-mode GHZ case. The\nsubstrate's machinery reproduces:",
       "depends_on": [
@@ -12446,6 +12642,8 @@
     {
       "id": "gluon_reframing",
       "path": "sync_cost/derivations/gluon_reframing.md",
+      "cid": "34b4e82ca7f23afdeda5fddd730662fc018a1d21aeddbb96f5585a98cd106af9",
+      "sealed": true,
       "title": "The gluon's properties in framework terms: a reframing",
       "summary": "**Reframing.** Sibling of `photon_reframing.md`, `graviton_reframing.md`,\n`higgs_reframing.md`. Retains all numerical content of its parents\n(`gauge_dictionary.md`, `gauge_factorization.md`, `beta_from_tongues.md`,\n`duty_cycle_dictionary.md`); changes only the language and the\nprimary object. C-structural per `statistical_conventions.md`; not\nC-numerical; the only numerical content (\u03b1_s/\u03b1_2 = 27/8) is the\npre-existing bare K=1 identity, unchanged.",
       "depends_on": [
@@ -12537,6 +12735,8 @@
     {
       "id": "gr_qm_unification_synthesis",
       "path": "sync_cost/derivations/gr_qm_unification_synthesis.md",
+      "cid": "1ca6d1fb797caa452ec16d1268274b14fb630d40ae0c369019a3987dd45fdfb2",
+      "sealed": true,
       "title": "GR\u2013QM unification \u2014 Tier-C capstone synthesis",
       "summary": "**Tier-C capstone synthesis articulated.** The framework's grandest\nclaim \u2014 that general relativity and quantum mechanics are not two\ntheories to be glued together but **two continuum limits of one\ndiscrete substrate, taken at two couplings** \u2014 now has its structural\nform complete at the load-bearing claim level. The pedagogical lesson\n`lesson_epr_gr_qm_unification.md` carries the teaching narrative; this\ndoc carries the structural composition: the apparatus now in place,\nhow the pieces compose,",
       "depends_on": [
@@ -12673,6 +12873,8 @@
     {
       "id": "graviton_reframing",
       "path": "sync_cost/derivations/graviton_reframing.md",
+      "cid": "f54ff8ef78302f5a978fbe3cca336d9ae893cadbd7a1b943c1b539995ce91c93",
+      "sealed": true,
       "title": "Gravity's radiative mode in framework terms: a reframing",
       "summary": "**Reframing.** Sibling of `photon_reframing.md`, `higgs_reframing.md`,\nand `spectral_tilt_reframed.md`: a structural/ontological sharpening\nthat retains all numerical content of its parent derivation\n(`einstein_from_kuramoto.md`, D13) and changes only the language and\nthe primary object. C-structural per `statistical_conventions.md`;\nnot C-numerical; not registered in the MANIFEST scorecard.",
       "depends_on": [
@@ -12759,6 +12961,8 @@
     {
       "id": "h_inf_status",
       "path": "sync_cost/derivations/h_inf_status.md",
+      "cid": null,
+      "sealed": false,
       "title": "H_inf status \u2014 anchor-side, scale-free in framework integers",
       "summary": "**H_inf is anchor-side.** The framework computes H_inf in\nframework-integer units (scale-free), but the absolute value\nrequires the cosmological H_0 anchor for conversion to physical\nunits (GeV, kg, etc.).",
       "depends_on": [
@@ -12855,6 +13059,8 @@
     {
       "id": "half_mobius_boundary",
       "path": "sync_cost/derivations/half_mobius_boundary.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Half-Mobius Boundary Condition (Z4)",
       "summary": "The Mobius boundary condition (Derivation 18) imposes a Z2 twist:\nafter one traversal, the phase shifts by pi. The half-Mobius boundary\ncondition generalizes this to Z4: after one traversal, the phase\nshifts by pi/2. The wavefunction requires four full circuits to\nreturn to its starting phase.",
       "depends_on": [],
@@ -12877,6 +13083,8 @@
     {
       "id": "half_twist_dynamics",
       "path": "sync_cost/derivations/half_twist_dynamics.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Half-Twist as a Dynamical Object",
       "summary": "**Exploratory.** The twist-as-frustrated-tension picture is physically\nclear. The conjugacy with diffusion (\u03c9 \u00d7 \u03c3\u00b2 = const) connects the\ntwist to the quantum sector through the same \u03c6\u2074 scaling. The\ncosmological constant as regulated twist zero-point energy is\nstructurally correct (\u039b \u221d \u03a9_\u039b \u00d7 H\u2080\u00b2) but needs the full field\nequation calculation to produce the exact coefficient.",
       "depends_on": [],
@@ -12936,6 +13144,8 @@
     {
       "id": "hierarchy",
       "path": "sync_cost/derivations/hierarchy.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Hierarchy",
       "summary": "**Computed**: R = 6 \u00d7 13\u2075\u2074 matches observation to 0.48%. The\ncosmological constant \u039bl_P\u00b2 = 13\u207b\u00b9\u2070\u2078/12 matches to 0.1% in the\nexponent. Combined with \u03a9_\u039b = 13/19 (D25), the entire cosmological\nparameter set is determined.",
       "depends_on": [],
@@ -12970,6 +13180,8 @@
     {
       "id": "hierarchy_gaussian_lattice",
       "path": "sync_cost/derivations/hierarchy_gaussian_lattice.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Planck\u2013Hubble Hierarchy from Gaussian Lattice Index",
       "summary": "The Planck/Hubble hierarchy R is derived from the framework's\nthree framework integers (q\u2082 = 2, q\u2083 = 3, d = 3); no fitted factors:",
       "depends_on": [
@@ -13211,6 +13423,8 @@
     {
       "id": "hierarchy_problem_translation",
       "path": "sync_cost/derivations/hierarchy_problem_translation.md",
+      "cid": "70dde6c9726a48338c96e9304a48832cc1a2a366e5c0afa3eb6a46c8be670862",
+      "sealed": true,
       "title": "Does the SM hierarchy problem translate to the framework?",
       "summary": "A focused analytical note answering a methodological question\nraised after the path (a) closure (`path_a_walkthrough.md`):",
       "depends_on": [
@@ -13337,6 +13551,8 @@
     {
       "id": "higgs_from_tongue_boundary",
       "path": "sync_cost/derivations/higgs_from_tongue_boundary.md",
+      "cid": null,
+      "sealed": false,
       "title": "Electroweak Symmetry Breaking from the Tongue Boundary",
       "summary": "The Higgs mechanism \u2014 the spontaneous breaking of SU(2) x U(1)_Y\nto U(1)_em \u2014 is the tongue boundary dynamics of the Klein bottle's\nopen q=2 fiber. The scalar doublet, the quartic potential, the\ntachyonic mass, and the vacuum expectation value all have geometric\norigins in the circle map's saddle-node bifurcation.",
       "depends_on": [],
@@ -13416,6 +13632,8 @@
     {
       "id": "higgs_reframing",
       "path": "sync_cost/derivations/higgs_reframing.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Higgs' Role in the Framework: A Reframing",
       "summary": "**Reframing.** The substance of the framework's Higgs predictions\n(`m_H = v / q_2`, `\u03bb = 1/q_2^3`) is retained. The narrative role\nof the Higgs is changed from \"the particle that gives mass\" to\n\"one locked mode at a specific Stern-Brocot position.\" The\nderivations that previously used Higgs-centric language should be\nupdated to use locked-mode language.",
       "depends_on": [],
@@ -13455,6 +13673,8 @@
     {
       "id": "high_school_syllabus",
       "path": "sync_cost/derivations/high_school_syllabus.md",
+      "cid": null,
+      "sealed": false,
       "title": "High School Syllabus \u2014 *The Shape of Physics*",
       "summary": "A standalone HS-level adaptation of the three-unit collegiate\nsequence (Foundations / Structure / Address). Cited from the\ncollegiate syllabus as a feeder option for advanced HS students.",
       "depends_on": [
@@ -13499,6 +13719,8 @@
     {
       "id": "high_z_mond",
       "path": "sync_cost/derivations/high_z_mond.md",
+      "cid": null,
+      "sealed": false,
       "title": "High-Redshift Test of a\u2080(z) = cH(z)/(2\u03c0)",
       "summary": "**Prediction**: Concrete, parameter-free, and falsifiable.  a\u2080(z) is fully\ndetermined by H\u2080, \u03a9_m, and \u03a9_\u039b \u2014 all independently measured.",
       "depends_on": [],
@@ -13561,6 +13783,8 @@
     {
       "id": "horn_branch_iteration_1",
       "path": "sync_cost/derivations/horn_branch_iteration_1.md",
+      "cid": null,
+      "sealed": false,
       "title": "Horn-branch iteration 1 \u2014 regime-change flare in y-parity vocabulary",
       "summary": "**First-pass exploration.** This is iteration 1 of the\nhorn-branch arc. Apparatus-level unblock is in place\n(`klein_z2_decomposition_falsifier_2.md`: modal y-parity\nsufficiency), and the chirality-extension fallback is closed\n(`klein_bottle_restructure_price.md`: structurally declined by\nempirical falsifier). This doc frames the regime-change-as-horn\nhypothesis in substrate y-parity vocabulary (not chirality,\n**but see vocabulary-revision notice above**), connects to the\nexisting depth-correctio",
       "depends_on": [
@@ -13652,6 +13876,8 @@
     {
       "id": "horn_branch_iteration_2_step_1",
       "path": "sync_cost/derivations/horn_branch_iteration_2_step_1.md",
+      "cid": null,
+      "sealed": false,
       "title": "Horn-branch iteration 2 step 1 \u2014 sector-assignment falsifier",
       "summary": "**Falsifier outcome: PASSES with vocabulary revision.** Step 1\nof iteration 2 (`horn_branch_iteration_1.md` \u00a7\"Plan for\niteration 2\") was to determine the y-parity sector assignment\nfor the three observable generations and check whether the\nhorn-branch hypothesis is apparatus-consistent. Reading the\napparatus produces a sharp result that **passes** the falsifier\nbut **revises the vocabulary**: the distinguishing sector\nthe flare acts on is not cos-y / sin-y y-parity but\n**locked / unlocked at q\u2082*",
       "depends_on": [
@@ -13743,6 +13969,8 @@
     {
       "id": "horn_branch_iteration_2_step_2",
       "path": "sync_cost/derivations/horn_branch_iteration_2_step_2.md",
+      "cid": null,
+      "sealed": false,
       "title": "Horn-branch iteration 2 step 2 \u2014 substrate derivation of f_locked / f_unlocked",
       "summary": "**Verdict: SUBSTANTIVE LEAD; CLOSURE NOT ATTAINED.**\n**[Subsequently walked back to PRODUCTIVE NULL by iteration 3\nstep 1; see notice above.]** Three substrate-internal\nidentifications converge on **5/6 \u2248 0.833** for the horn-branch's\nrequired suppression ratio `f_locked / f_unlocked`:",
       "depends_on": [
@@ -13824,6 +14052,8 @@
     {
       "id": "horn_branch_iteration_3_step_1",
       "path": "sync_cost/derivations/horn_branch_iteration_3_step_1.md",
+      "cid": null,
+      "sealed": false,
       "title": "Horn-branch iteration 3 step 1 \u2014 analytic w* test: PRODUCTIVE NULL",
       "summary": "**Verdict: PRODUCTIVE NULL.** Iteration 3 step 1 was to derive w*\nanalytically from the field-equation fixed-point and verify\nwhether w* = 5/6 (the iteration 2 step 2 candidate from readings\n(a) and (b)). Reading the apparatus closely reveals:",
       "depends_on": [
@@ -13920,6 +14150,8 @@
     {
       "id": "hybrid_strategy_audit",
       "path": "sync_cost/derivations/hybrid_strategy_audit.md",
+      "cid": null,
+      "sealed": false,
       "title": "Hybrid strategy audit \u2014 Floor residuals against |r|^n closures",
       "summary": "Parallel audit of the three Floor items against the hybrid\n(`discrete Farey count \u00d7 continuous decoherence tax`) closure\nstrategy proposed in `omega_b_residual_phase_b.md`. Applies the\ntriage in `ansatz_audit_policy.md`.",
       "depends_on": [
@@ -14011,6 +14243,8 @@
     {
       "id": "imf_bowed_cascade",
       "path": "sync_cost/derivations/imf_bowed_cascade.md",
+      "cid": null,
+      "sealed": false,
       "title": "IMF Salpeter slope from the bowed cascade",
       "summary": "Class 2, gated on the pigeonhole audit. The two promotion gates:",
       "depends_on": [
@@ -14102,6 +14336,8 @@
     {
       "id": "inflation_duration",
       "path": "sync_cost/derivations/inflation_duration.md",
+      "cid": null,
+      "sealed": false,
       "title": "Inflation duration from S_v(K) and the universal Schwinger relation",
       "summary": "`|\u2207K|_seam(t)` is now a derived framework function. Inflation\nduration follows from `S_v = 16` and `H_inflation`. The super-Earth\nanalogy (structural pattern only, not gravitational mechanics \u2014\nsee `s_inst_inflation.md` disclaimer) is conceptually confirmed\nbut operationally resolved: hard exit, many attempts, eventual\nsuccess \u2014 with \"hard\" meaning *Boltzmann-suppressed sampling\nprobability per attempt*, not *energetic escape from a potential\nwell*. The framework's no-rescaling principle is now ",
       "depends_on": [
@@ -14258,6 +14494,8 @@
     {
       "id": "inflation_seam_anchor_closure",
       "path": "sync_cost/derivations/inflation_seam_anchor_closure.md",
+      "cid": null,
+      "sealed": false,
       "title": "#INF closed: |\u2207K|_inflation is the Schwinger-image of an anchor \u2014 the framework correctly declines",
       "summary": "Class 3 (closure by correct-classification; informative).\nNo new primitive. `#INF` resolved as the principled (b):\n`|\u2207K|_inflation` = Schwinger-image of the cosmological anchor \u2192\nout-of-class by the framework's own taxonomy; the geometric\nobstruction is the inviolables enforcing that classification;\nsame accepted shape as the A_s/Instance-7 closure; an instance of\ntwo-anchor minimality. Inflation duration stays anchor-conditional\n(Finding-4 disposition, now explained). Feeds `#ANCHOR`.",
       "depends_on": [
@@ -14374,6 +14612,8 @@
     {
       "id": "instrument_family_taxonomy",
       "path": "sync_cost/derivations/instrument_family_taxonomy.md",
+      "cid": null,
+      "sealed": false,
       "title": "Instrument-family taxonomy of the framework",
       "summary": "The framework's substrate sectors map onto classical instrument\nfamilies along two independent axes. This is a teaching frame, not a\nderivation \u2014 but the mapping is structurally tight enough to organize\nhow the framework's predictions cluster.",
       "depends_on": [
@@ -14435,6 +14675,8 @@
     {
       "id": "isotropy_lemma",
       "path": "sync_cost/derivations/isotropy_lemma.md",
+      "cid": null,
+      "sealed": false,
       "title": "Isotropy Lemma: Trivial Stabilizer in the Kuramoto Model at K=1",
       "summary": "Formally: let $G = \\mathrm{SL}(2,\\mathbb{R})$ act on the spatial\nmanifold $\\mathcal{M} = G/H$ by left multiplication. Then $H = \\{e\\}$,\nso $\\mathcal{M} = G$ and $d = \\dim \\mathcal{M} = \\dim G = 3$.",
       "depends_on": [
@@ -14474,6 +14716,8 @@
     {
       "id": "item12_C_from_K_star",
       "path": "sync_cost/derivations/item12_C_from_K_star.md",
+      "cid": null,
+      "sealed": false,
       "title": "Item 12: `C = q_2\u00b2 / K*\u00b2` from the tongue-width identity",
       "summary": "The last remaining mass-sector constant, `C = a_1(leptons)\u00b2`, admits\na closed-form reading in terms of the framework's self-consistent\ncoupling `K*` and the Klein-bottle integer `q_2 = 2`:",
       "depends_on": [
@@ -14540,6 +14784,8 @@
     {
       "id": "item12_cross_sector_ratios",
       "path": "sync_cost/derivations/item12_cross_sector_ratios.md",
+      "cid": null,
+      "sealed": false,
       "title": "Item 12: cross-sector `a_1\u00b2` ratios",
       "summary": "The three per-sector continuous exponents `a_1(leptons)`,\n`a_1(up)`, `a_1(down)` in the generation exponent law satisfy",
       "depends_on": [],
@@ -14609,6 +14855,8 @@
     {
       "id": "k_axis_uniqueness",
       "path": "sync_cost/derivations/k_axis_uniqueness.md",
+      "cid": "ac909b3dff250175f2c46e3711062d03da5ff0ff96041b9379844d7c61084e99",
+      "sealed": true,
       "title": "K-axis uniqueness probe: composed Klein-antipodal + coprime-to-6",
       "summary": "The bare K-scan (`k_scaling_scan.md`, PR #76) landed Class 2\nbecause the bare circle map *ranks* rationals by tongue width but\nnever *forbids* any \u2014 every `p/q` opens at some K. The writeup\nflagged the natural follow-up: compose the K-scan with one of the\nframework's existing forcing filters (Klein-antipodal Z\u2082-rep, XOR\non Stern-Brocot, anomaly cancellation) to see whether the\nsurviving tongue count at a canonical K equals a framework integer\nfor *structural* reasons.",
       "depends_on": [
@@ -14710,6 +14958,8 @@
     {
       "id": "k_critical_phase_a",
       "path": "sync_cost/derivations/k_critical_phase_a.md",
+      "cid": null,
+      "sealed": false,
       "title": "K = K_c criticality \u2014 Phase A: the K zoo and the concrete concern",
       "summary": "Gap 1 (Christoffel from Kuramoto) is conditionally closed:\n`gap1_theorem.md` establishes \u0393\u0303 = \u0393 + O(1/N) in the continuum\nlimit, **conditional on K > K_c** (supercritical Strogatz-Mirollo\nCLT). The residual in Issue #56 Tier 1 is the K = K_c critical\ncase: whether the framework's operating point sits above, at, or\nbelow K_c.",
       "depends_on": [
@@ -14766,6 +15016,8 @@
     {
       "id": "k_critical_phase_b",
       "path": "sync_cost/derivations/k_critical_phase_b.md",
+      "cid": null,
+      "sealed": false,
       "title": "K = K_c criticality \u2014 Phase B: the K_c concern dissolves",
       "summary": "Phase A framed the concern: is the framework's operating point\nabove, at, or below K_c, where K_c is Gap 1's \"supercritical\"\nthreshold for the Strogatz-Mirollo CLT?",
       "depends_on": [
@@ -14822,6 +15074,8 @@
     {
       "id": "k_inflation_seam_obstruction",
       "path": "sync_cost/derivations/k_inflation_seam_obstruction.md",
+      "cid": null,
+      "sealed": false,
       "title": "K_inflation: the obstruction is structural, not a missing calc",
       "summary": "Class 3 (honest disposition + computed sharpening). No new\nprimitive. Reconciles Finding 4's two-reading problem (artifact);\nproves the geometric route to `K_inflation` is structurally closed\n\u2200K by a K-cancelling 12-order margin; reduces the residual open\nitem to one well-posed question (inflation-era seam structure)\nwith a single pinned target `|\u2207K|_inflation \u2248 2.68`. Downstream of\n`discrete_reduction_computed.md`'s canonical `S_v(K=1) \u2248 11.515`.",
       "depends_on": [
@@ -14928,6 +15182,8 @@
     {
       "id": "k_of_t_friedmann",
       "path": "sync_cost/derivations/k_of_t_friedmann.md",
+      "cid": null,
+      "sealed": false,
       "title": "K(t) and the Friedmann equation at r = 1",
       "summary": "| Step | Claim | Status |\n|---|---|---|\n| S0 | FLRW reduction of the dictionary (no-twist sector) | closed |\n| S1 | Hamiltonian constraint \u27f9 Friedmann eqn (+ acceleration, continuity inherited) | **closed at K = 1** |\n| S2 | `r(t) \u2261 1`: exact (\u03b4-frequency) + stable (`K_eff=3/2 > K_c=1`) | **closed at K = 1** |\n| S3 | `F_locked(K)` as `\u03a9_m(K)` | **open** (N10 + N11 obstruction, made explicit) |\n| S4 | `\u03c4_unlock(n)` horizon-crossing amplification | **open** (depends on S3) |\n| S5 | inflation\u2192matte",
       "depends_on": [
@@ -15079,6 +15335,8 @@
     {
       "id": "k_of_t_problem_statement",
       "path": "sync_cost/derivations/k_of_t_problem_statement.md",
+      "cid": "7e3b38d151346318d2fd710ae534683332153ac71f6e0eb6ce18b58bc7b76077",
+      "sealed": true,
       "title": "K(t): the table \u2014 problem statement for the cosmological coupling trajectory",
       "summary": "Single entry point for the one remaining cosmological frontier. Consolidates\nthe scattered K(t) material (`k_of_t_friedmann.md`, `continuity_in_K_nulls.md`,\n`era_timeline_disposition.md`, `master_cascade_identity.md`,\n`inflation_seam_anchor_closure.md`) and integrates the FRW-transform\nlocalization (`frw_staircase_transform.py`). This is scaffolding, not a\nsolution.",
       "depends_on": [
@@ -15160,6 +15418,8 @@
     {
       "id": "k_of_t_residual_disposition",
       "path": "sync_cost/derivations/k_of_t_residual_disposition.md",
+      "cid": "e787c1fbd14682187e633f58dcc14a185ef21b40725097eabe8148e8bdc82501",
+      "sealed": true,
       "title": "K(t) residual closure (joint sector resolved, cadence forced)",
       "summary": "**Leaf structurally closed.** The K(t) frontier's joint\nQ-mod-2 sector residual is resolved by the bicone-Z\u2082 \u2194 golden-Z\u2082\nidentification (`bicone_golden_z2_identification.md`), which extends\nsubstrate Q-mod-2 from integer windings to the inflation rhythm's\n`\u221a5` winding by algebraic necessity. Combined with the Q-mod-2\nmediant projection (`q_mod2_mediant_projection.md`, PR #178) and the\nstructural-integers filter (inviolable #6), the inflation-segment\ncadence is **uniquely forced** by substrate pr",
       "depends_on": [
@@ -15281,6 +15541,8 @@
     {
       "id": "k_scaling_scan",
       "path": "sync_cost/derivations/k_scaling_scan.md",
+      "cid": "5abaeba377166c0acad71969596934e4281d24af467d9e63576e35e57b249b2d",
+      "sealed": true,
       "title": "K-scaling scan: tongue spectrum from K = 0 to chaos",
       "summary": "`observer_register_closure.md` \u00a77 logs an open candidate:",
       "depends_on": [
@@ -15357,6 +15619,8 @@
     {
       "id": "klein_antipodal_z2_rep_pattern",
       "path": "sync_cost/derivations/klein_antipodal_z2_rep_pattern.md",
+      "cid": null,
+      "sealed": false,
       "title": "Klein-antipodal Z\u2082 representation theory: a recurring derivation",
       "summary": "Point at three independent framework derivations that use the\nsame underlying machinery \u2014 Klein-antipodal Z\u2082 representation\ntheory on finite lattices built from framework integers. The\nmachinery is not one-off; it's a pattern.",
       "depends_on": [
@@ -15548,6 +15812,8 @@
     {
       "id": "klein_bottle",
       "path": "sync_cost/derivations/klein_bottle.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Klein Bottle",
       "summary": "The M\u00f6bius strip (Derivation 18) has one boundary. Excitations reflect\noff that boundary, which is why the container works \u2014 but the boundary\nis a degree of freedom the geometry doesn't determine. The Klein bottle\nis the compact, non-orientable surface with **no boundary**. Nothing\nenters, nothing exits, nothing reflects \u2014 everything circulates. It is\nthe fully closed variant of the M\u00f6bius container.",
       "depends_on": [
@@ -15944,6 +16210,8 @@
     {
       "id": "klein_bottle_derivation",
       "path": "sync_cost/derivations/klein_bottle_derivation.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Klein Bottle from Self-Consistency",
       "summary": "The Klein bottle is not assumed. It is the unique compact surface\ncompatible with the four primitives, the phase-state structure, and\nthe arrow of time. The torus and real projective plane are both\nexcluded by self-consistency arguments.",
       "depends_on": [
@@ -16150,6 +16418,8 @@
     {
       "id": "klein_bottle_restructure_price",
       "path": "sync_cost/derivations/klein_bottle_restructure_price.md",
+      "cid": null,
+      "sealed": false,
       "title": "Klein-bottle restructure \u2014 price ledger for the apparatus-extension fallback",
       "summary": "**Apparatus-extension verdict: STRUCTURALLY DECLINED BY EMPIRICAL\nFALSIFIER.** The Klein-bottle restructure path named in\n`axial_trajectory_conservation_audit.md` (adding a second\nindependent antiperiodic cycle to the substrate to get an\nindependent R-generator) was held in standby by\n`klein_z2_decomposition_falsifier_2.md` as fallback if the\nvocabulary-bridge approach fails. This document prices that\nfallback and finds the price is not just expensive \u2014 it is\n**already paid by experiment in the ",
       "depends_on": [
@@ -16241,6 +16511,8 @@
     {
       "id": "klein_bridge_audit_and_probe",
       "path": "sync_cost/derivations/klein_bridge_audit_and_probe.md",
+      "cid": "fd16b4ad9e654b3e546d300bbc8a6e76025cdd1e22b0c2745743bc2888bc9b93",
+      "sealed": true,
       "title": "Klein-bottle bridge: audit + minimal probe",
       "summary": "Audit + minimal probe complete. Honest landing: C2 closure is\npossible in principle, requires two well-scoped but non-trivial\nderivations not completable in single session. \u03a9_b residual\nremains substrate-side genuine open work.",
       "depends_on": [
@@ -16362,6 +16634,8 @@
     {
       "id": "klein_connection",
       "path": "sync_cost/derivations/klein_connection.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Klein Bottle Connection 1-Form",
       "summary": "The Klein bottle's antiperiodic identification is a connection-form\nspecification in the differential-geometric sense. The identification",
       "depends_on": [
@@ -16463,6 +16737,8 @@
     {
       "id": "klein_dynamics_roadmap",
       "path": "sync_cost/derivations/klein_dynamics_roadmap.md",
+      "cid": "c39f1b05c2034a9350cd3c010765d08090723a9227534509a9058c79040e6343",
+      "sealed": true,
       "title": "Klein-bottle dynamics roadmap for \u03a9_b C2 closure",
       "summary": "Roadmap complete. Implementation deferred per user request.\nBridge layer is well-scoped (~200-400 lines). Decisive\noutcome expected.",
       "depends_on": [
@@ -16554,6 +16830,8 @@
     {
       "id": "klein_nodal_parity",
       "path": "sync_cost/derivations/klein_nodal_parity.md",
+      "cid": null,
+      "sealed": false,
       "title": "Klein nodal parity: null result",
       "summary": "**Null.** Gradient descent on `U = Y\u00b2` is Z\u2082-symmetric for all \u2113,\nso the proposed parity ladder cannot discriminate even from odd \u2113.\n`framework_status.md` Eliminated; `numerology_inventory.md` Class 2.",
       "depends_on": [
@@ -16630,6 +16908,8 @@
     {
       "id": "klein_z2_decomposition_falsifier",
       "path": "sync_cost/derivations/klein_z2_decomposition_falsifier.md",
+      "cid": null,
+      "sealed": false,
       "title": "Klein-Z_2 sign-flip vs reflection decomposition \u2014 falsifier test",
       "summary": "**Falsifier outcome: PARTIALLY PASSED.** The Klein-Z_2\nidentification `f(x+L_x, y) = \u2212f(x, L_y\u2212y)` admits a clean\nmathematical decomposition into independent sign-flip (S) and\nreflection (R) actions. The framework's existing\ncomplex-amplitude apparatus uses S and R *coupled together*\n(forced by the spinor bundle structure that gives `J\u00b2 = \u2212I`),\nbut the operations themselves are mathematically independent.",
       "depends_on": [
@@ -16681,6 +16961,8 @@
     {
       "id": "klein_z2_decomposition_falsifier_2",
       "path": "sync_cost/derivations/klein_z2_decomposition_falsifier_2.md",
+      "cid": null,
+      "sealed": false,
       "title": "Klein-Z_2 third-caveat test \u2014 does substrate populate both R-eigenstates?",
       "summary": "**Caveat outcome: SPLIT VERDICT.** The third caveat from\n`klein_z2_decomposition_falsifier.md` \u2014 \"whether substrate\ndynamics actually populates both R-eigenstate components, or\nonly one\" \u2014 resolves into two non-equivalent readings of\n\"populates,\" and the framework's apparatus passes one cleanly\nand fails the other in a way that is itself informative.",
       "depends_on": [
@@ -16762,6 +17044,8 @@
     {
       "id": "koide_form_substrate_iteration_1",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_1.md",
+      "cid": null,
+      "sealed": false,
       "title": "Koide form substrate derivation \u2014 iteration 1",
       "summary": "**Iterative formalization, step 1.** Sharpens the Koide-form gap\nidentified in the Thread 2 roadblock and the existing\n`fermion_mass_running.md` Class-1 disposition: the value `Q = 2/3`\nin the Koide constraint is substrate-derived (Klein-bottle population\nratio, `klein_bottle.md` D19); the specific algebraic form\n`K = \u03a3m / (\u03a3\u221am)\u00b2 = Q` is currently imported despite a claim in\n`fermion_mass_running.md` \u00a74c that it follows from \"SL(2,Z) trace\nstructure (D34 \u00a76)\" \u2014 a claim whose actual derivation ha",
       "depends_on": [
@@ -16843,6 +17127,8 @@
     {
       "id": "koide_form_substrate_iteration_10",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_10.md",
+      "cid": "ae80fe0b0200f1258ae4e7544a143c7b11fb90b64ef3e319814c5795e5b8872e",
+      "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 10",
       "summary": "**Iteration 10. Reversibility-class clarification.** Reframes the\niteration 9 null result as a *category clarification* rather than\na tactical miss, identifying that the framework's substrate\nmachinery splits into reversibility classes and that Koide's\nsubstrate-derivation belongs in a specific class.",
       "depends_on": [
@@ -16944,6 +17230,8 @@
     {
       "id": "koide_form_substrate_iteration_11",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_11.md",
+      "cid": "1e9b677cf6a092440f090206c9165ea57a3847b85eeb1ce6e0ce604e8ef50573",
+      "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 11",
       "summary": "**Iteration 11.** Tests Candidate A4 from iteration 10: derive the\nmatrix `M = q_3 I \u2212 q_2 J` (Lorentzian signature `(2, 1)`) on\nthree-generation amplitude space via the same observability-split\nargument that `minkowski_signature.md` (D32) uses to derive\nspacetime's signature `(3, 1)`.",
       "depends_on": [
@@ -17015,6 +17303,8 @@
     {
       "id": "koide_form_substrate_iteration_12",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_12.md",
+      "cid": null,
+      "sealed": false,
       "title": "Koide form substrate derivation \u2014 iteration 12",
       "summary": "**Iteration 12.** Tests whether the two residual ingredients\nidentified in iteration 11 can be substrate-derived from\nfoundational quantities. Targets Options A and B from iteration\n11's recommended next iterations.",
       "depends_on": [
@@ -17076,6 +17366,8 @@
     {
       "id": "koide_form_substrate_iteration_13",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_13.md",
+      "cid": null,
+      "sealed": false,
       "title": "Koide form substrate derivation \u2014 iteration 13",
       "summary": "**Iteration 13.** Pursues iteration 12's recommended next step:\nderive `M = q_3 I \u2212 q_2 J` *as a unified substrate-natural\nquadratic form*, not as a sum of separately-derived parts.",
       "depends_on": [
@@ -17147,6 +17439,8 @@
     {
       "id": "koide_form_substrate_iteration_14",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_14.md",
+      "cid": null,
+      "sealed": false,
       "title": "Koide form substrate derivation \u2014 iteration 14 (closing note)",
       "summary": "**Closing note.** Iterations 1\u201313 are documented as a productive\nnull result. Koide `K_lepton = 2/3` is moved to the empirical\nshelf alongside `sin\u00b2\u03b8_W`, `\u03b8_13 PMNS`, the CKM angles, and other\nSM-empirical relations the framework notes but does not derive\nfrom current substrate apparatus.",
       "depends_on": [
@@ -17248,6 +17542,8 @@
     {
       "id": "koide_form_substrate_iteration_2",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_2.md",
+      "cid": "845620c21efcab7d8561433187d21e6db9808460637c2397adfbd4096b0ae337",
+      "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 2",
       "summary": "**Iteration 2.** Tests candidate 4 from\n`koide_form_substrate_iteration_1.md`: the claim in\n`fermion_mass_running.md` \u00a74c that \"the Koide constraint is the\ngeneration-mixing constraint from the SL(2,Z) trace structure\n(D34 \u00a76).\"",
       "depends_on": [
@@ -17304,6 +17600,8 @@
     {
       "id": "koide_form_substrate_iteration_3",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_3.md",
+      "cid": "b411d75597cac96a0c394b9af60d8c5f689162756ed60169dab7c7061be8ea7b",
+      "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 3",
       "summary": "**Iteration 3.** Tests candidate 1 from iteration 1: the\nKlein-bottle \u03c4 action on three-generation space as a source of the\nequipartition `|v_sym|\u00b2 = |v_\u22a5|\u00b2`.",
       "depends_on": [
@@ -17360,6 +17658,8 @@
     {
       "id": "koide_form_substrate_iteration_4",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_4.md",
+      "cid": "d9463cb894d8345f2816052e9c33ab0d6824b0e160d644d8973c6dc7c42b8f88",
+      "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 4",
       "summary": "**Iteration 4.** Tests the sharpened question from iteration 3:\n*does the substrate's inviolable apparatus force the full `S_3`\naction on three-generation amplitude space?*",
       "depends_on": [
@@ -17416,6 +17716,8 @@
     {
       "id": "koide_form_substrate_iteration_5",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_5.md",
+      "cid": "ed0cb65a99449809a95e205e5479c34ae3ffc84361449d61f82bfd6b620df48d",
+      "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 5",
       "summary": "**Iteration 5.** Tests candidate 2 (V_4 + dark-state restriction)\nidentified as the most concrete remaining candidate after\niteration 4. Decomposes the 4-component amplitude vector\n`w = (\u221am_A, \u221am_B, \u221am_C, \u221am_D)` into V_4 irreducible representations\nand imposes the dark-state constraint `m_D = 0` to derive a\nconstraint on the observable amplitude vector.",
       "depends_on": [
@@ -17477,6 +17779,8 @@
     {
       "id": "koide_form_substrate_iteration_6",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_6.md",
+      "cid": "d8e428c911d2306345cb623c3b7754b11f9e0bad1d9bb80e6afdf5329c384635",
+      "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 6",
       "summary": "**Iteration 6.** Tests candidate mechanism 3 from iteration 5: the\ncube identity `q_2\u00b3 = q_2 + 2 q_3` (substrate-derived in\n`mass_sector_closure.md`) as the structural source for the V_4\ntrivial-vs-non-trivial squared-norm ratio `q_3 : MEDIANT`.",
       "depends_on": [
@@ -17533,6 +17837,8 @@
     {
       "id": "koide_form_substrate_iteration_7",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_7.md",
+      "cid": "34d36900172e0030aca4e09785aad37d352e251f09bb61addc1b9eef583b5349",
+      "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 7",
       "summary": "**Iteration 7. Pivot to a simpler matrix form.** Supersedes the\nV_4 + cube identity + chirality cross-link apparatus of iterations\n4\u20136 with a substantially simpler quadratic-form expression that\nuses only the substrate primitives `q_2 = 2` and `q_3 = 3` without\nany squared, cubed, or sector-cross-link multipliers.",
       "depends_on": [
@@ -17599,6 +17905,8 @@
     {
       "id": "koide_form_substrate_iteration_8",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_8.md",
+      "cid": "38ee64c7c8f52a31709eb320c971887e4935dcd6f3b48b6b0e6bf134a35126b0",
+      "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 8",
       "summary": "**Iteration 8.** Tests reading 1 from iteration 7: derive the\nmatrix `M = q_3 I \u2212 q_2 J` from a substrate-natural quadratic form\non three-generation amplitude space.",
       "depends_on": [
@@ -17675,6 +17983,8 @@
     {
       "id": "koide_form_substrate_iteration_9",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_9.md",
+      "cid": "88c5fad51ab3f4fb79fc2bf37df2435916690772177c3f55a4c3cdbea0ef0ff9",
+      "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 9",
       "summary": "**Iteration 9. Path A test: empirical check whether the framework's\nexisting three-generation amplitude apparatus produces the Koide\nconstraint.**",
       "depends_on": [
@@ -17741,6 +18051,8 @@
     {
       "id": "lesson_8_35_vs_13_19",
       "path": "sync_cost/derivations/lesson_8_35_vs_13_19.md",
+      "cid": "50b37dac141ad0ec3910216197d8d7601990f5226267252383c51da7721eb523",
+      "sealed": true,
       "title": "Lesson \u2014 8/35 vs 13/19: telling a derivation from a coincidence",
       "summary": "A one-hour worked lesson. Two small-integer rationals, each matching\na measured dimensionless number to ~1% or better. One is the\nframework's prized survivor (Class 5, **Survives**); the other is\nfiled under **Fails**. The lesson teaches the framework's keystone\ndiscipline \u2014 *forced, not fitted* \u2014 by auditing both side by side.",
       "depends_on": [
@@ -17827,6 +18139,8 @@
     {
       "id": "lesson_cosmological_constant",
       "path": "sync_cost/derivations/lesson_cosmological_constant.md",
+      "cid": "e642350e8c14a60968dd5e8384174adb9cd1164b42ad32cd0684f2b3404a8780",
+      "sealed": true,
       "title": "Lesson \u2014 the cosmological constant: the worst prediction in physics, dissolved",
       "summary": "The capstone of the three-lesson pedagogy arc\n(`lesson_8_35_vs_13_19.md` \u2192 `lesson_rotation_curves_a0.md` \u2192 this).\nIt takes on the single most famous quantitative failure in physics \u2014\nthe ~120-order-of-magnitude cosmological-constant catastrophe \u2014 and\nteaches the deepest of the three reframing moves: **a fine-tuning\n\"problem\" can be an artifact of the framework you're computing in.**",
       "depends_on": [
@@ -17893,6 +18207,8 @@
     {
       "id": "lesson_epr_gr_qm_unification",
       "path": "sync_cost/derivations/lesson_epr_gr_qm_unification.md",
+      "cid": "fe0600fd1107a3532a5f3d8eace5b7193c5b49a92aaa452757ef6a593a833221",
+      "sealed": true,
       "title": "Lesson \u2014 EPR to GR\u2013QM unification: one substrate, two couplings",
       "summary": "The **Tier-C capstone**. The framework's grandest \u2014 and most exposed \u2014\nclaim: general relativity and quantum mechanics are not two theories\nto be glued together, but **two continuum limits of one discrete\nsubstrate, taken at different coupling**. The move it teaches:\n**unification by reframing** \u2014 an \"incompatibility\" that was a\n*category error* (treating two limits of one object as two rival\nobjects).",
       "depends_on": [
@@ -17999,6 +18315,8 @@
     {
       "id": "lesson_forced_basin_selection",
       "path": "sync_cost/derivations/lesson_forced_basin_selection.md",
+      "cid": "9378de2e6cebee718a0bdec6f81555c2af9a7a82847733dc3d1cdd150c3f42c1",
+      "sealed": true,
       "title": "Lesson \u2014 forced basin selection: the engine room of measurement",
       "summary": "The **Tier-B lesson** (mechanism) \u2014 the curriculum's engine room.\nTier A (`lesson_proslambanomenos.md`) is the on-ramp; Tier C (the four\nreframing lessons) shows what the machine *buys you*. This lesson opens\nthe hood: **here is the actual mechanism by which an outcome gets\nselected** \u2014 the thing every Tier-C lesson quietly invokes when it says\n\"basin measure\" or \"Born rule from the saddle-node.\"",
       "depends_on": [
@@ -18100,6 +18418,8 @@
     {
       "id": "lesson_proslambanomenos",
       "path": "sync_cost/derivations/lesson_proslambanomenos.md",
+      "cid": "eb87861e3a17ea73d5c41686e7faba5bd2763ad26f3a7ddedfbdf6d544725316",
+      "sealed": true,
       "title": "Lesson 0 \u2014 the proslambanomenos: the music you already know is the substrate",
       "summary": "The **front door** of the curriculum (Tier A \u2014 the on-ramp). The\nthree problem-lessons (`lesson_8_35_vs_13_19.md`,\n`lesson_rotation_curves_a0.md`, `lesson_cosmological_constant.md`) are\nall *applications*; a newcomer needs somewhere to start. This is it.",
       "depends_on": [
@@ -18166,6 +18486,8 @@
     {
       "id": "lesson_rotation_curves_a0",
       "path": "sync_cost/derivations/lesson_rotation_curves_a0.md",
+      "cid": "103fc751830df0e480a1c1e59c1d9ade13169a5be20c5edf5ce2174d068ac8ba",
+      "sealed": true,
       "title": "Lesson \u2014 stars at the spiral's edge: a\u2080 = cH\u2080/(2\u03c0) and a false dichotomy",
       "summary": "The second of three pedagogy lessons (after `lesson_8_35_vs_13_19.md`).\nWhere lesson 1 was *cautionary* \u2014 kill your prettiest hit \u2014 this one\nis a clean **win**: the framework's single most satisfying napkin\nresult, `a\u2080 = cH\u2080/(2\u03c0)`, derived and defended. It teaches a different\nreframing move: **a decades-old false dichotomy can dissolve.**",
       "depends_on": [
@@ -18237,6 +18559,8 @@
     {
       "id": "lie_group_characterization",
       "path": "sync_cost/derivations/lie_group_characterization.md",
+      "cid": null,
+      "sealed": false,
       "title": "Lie Group Characterization Theorem",
       "summary": "$\\mathrm{SL}(2,\\mathbb{R})$ is the unique connected real Lie group that can\nserve as the continuum substrate of the synchronization framework. This is\nnot merely \"a 3D Lie group works.\" It is a characterization: any candidate\nsubstrate satisfying the framework's structural requirements is isomorphic\nto $\\mathrm{SL}(2,\\mathbb{R})$ (up to the $\\mathbb{Z}_2$ quotient\n$\\mathrm{PSL}(2,\\mathbb{R})$).",
       "depends_on": [],
@@ -18321,6 +18645,8 @@
     {
       "id": "mass_entrained_measure",
       "path": "sync_cost/derivations/mass_entrained_measure.md",
+      "cid": "21345a4540c7dae743da79c73f643dbca990045351795f68b160f73d983cd398",
+      "sealed": true,
       "title": "Mass = entrained tongue width, from the synchronization-cost functional",
       "summary": "M(p/q)  \u221d  w(p/q)          (physical tongue width)  -- SOUND\n    w(p/q)  \u221d  1/q\u00b2  => -2     -- NULL (1/q\u00b2 is the tree weight, not w)",
       "depends_on": [
@@ -18377,6 +18703,8 @@
     {
       "id": "mass_function_family",
       "path": "sync_cost/derivations/mass_function_family.md",
+      "cid": null,
+      "sealed": false,
       "title": "Mass-function family across cascade depths",
       "summary": "The master cascade-lock identity gives a one-parameter slope family:",
       "depends_on": [
@@ -18468,6 +18796,8 @@
     {
       "id": "mass_sector_closure",
       "path": "sync_cost/derivations/mass_sector_closure.md",
+      "cid": "ba9cdf126c774759db9390b4537ad7e3a80e7b8d57f784db2c8d262f5b6193e0",
+      "sealed": true,
       "title": "The Mass Sector Closure: Integer Conservation and Gauge Adjoints",
       "summary": "The integer conservation law governing fermion mass hierarchies:",
       "depends_on": [
@@ -18674,6 +19004,8 @@
     {
       "id": "mass_sector_sqrt_w_phase_a",
       "path": "sync_cost/derivations/mass_sector_sqrt_w_phase_a.md",
+      "cid": null,
+      "sealed": false,
       "title": "Mass-sector `1/\u221aw` prescription \u2014 Phase A: terminology discipline",
       "summary": "The last remaining Type C in Issue #56 is the normalization\nconvention",
       "depends_on": [
@@ -18723,6 +19055,8 @@
     {
       "id": "mass_sector_sqrt_w_phase_b",
       "path": "sync_cost/derivations/mass_sector_sqrt_w_phase_b.md",
+      "cid": null,
+      "sealed": false,
       "title": "Mass-sector `1/\u221aw` prescription \u2014 Phase B: q-scan results",
       "summary": "Computed `w_F(1/q, K) / w_\u03a9(1/q, K)` at multiple K values\nfor q \u2208 {2, 3, 4}, using:",
       "depends_on": [
@@ -18779,6 +19113,8 @@
     {
       "id": "master_cascade_identity",
       "path": "sync_cost/derivations/master_cascade_identity.md",
+      "cid": null,
+      "sealed": false,
       "title": "Master cascade-lock identity",
       "summary": "The framework's K-values across multiple sectors satisfy a single\nparameterized identity:",
       "depends_on": [
@@ -18975,6 +19311,8 @@
     {
       "id": "meaning_of_two_wip",
       "path": "sync_cost/derivations/meaning_of_two_wip.md",
+      "cid": null,
+      "sealed": false,
       "title": "WIP \u2014 meaning of `2` in the framework",
       "summary": "**WIP / staging note**, explicitly *not* a closure or consolidation\nclaim. This is an audit of what \"`2`\" means in the framework's\nsubstrate vocabulary \u2014 which identifications between the framework's\nmany `2`s are rigorously established in the existing corpus, which\nare related at the substrate-source level but distinct as\nmathematical objects, and which are claimed-but-not-derived.",
       "depends_on": [
@@ -19056,6 +19394,8 @@
     {
       "id": "measurement_collapse",
       "path": "sync_cost/derivations/measurement_collapse.md",
+      "cid": null,
+      "sealed": false,
       "title": "Measurement Collapse from Tongue Traversal",
       "summary": "Wavefunction collapse is the transient of a driven nonlinear\noscillator crossing an Arnold tongue boundary. It has physical\nduration, follows from the same geometry that produces the Born\nrule, and connects to the quantum Zeno effect.",
       "depends_on": [],
@@ -19100,6 +19440,8 @@
     {
       "id": "mediant_derivation",
       "path": "sync_cost/derivations/mediant_derivation.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Mediant Is Not an Axiom",
       "summary": "**Derived.** The mediant is the unique operation satisfying\nbetweenness (energy conservation) and minimality (widest Arnold\ntongue). The Stern-Brocot theorem (1858/1860) proves this.\nThe framework's primitive (2) is replaced by a physical property\n(2') that is experimentally verifiable.",
       "depends_on": [
@@ -19221,6 +19563,8 @@
     {
       "id": "mediant_vs_flow_calc",
       "path": "sync_cost/derivations/mediant_vs_flow_calc.md",
+      "cid": null,
+      "sealed": false,
       "title": "Mediant vs. flow: the calculation run \u2014 flow fingerprint absent at K=1",
       "summary": "Class 3 (decisive measurement + honest scope). No new primitive.\nRuns the `mediant_vs_flow_problem.md` test; verdict is regime\n(complete-tree), corroborated by the framework's independent\nFinding-3 position and the recorded Adler-only/monotone\neliminations. `D \u2248 0.8700` is not a framework prediction.",
       "depends_on": [
@@ -19302,6 +19646,8 @@
     {
       "id": "mediant_vs_flow_problem",
       "path": "sync_cost/derivations/mediant_vs_flow_problem.md",
+      "cid": null,
+      "sealed": false,
       "title": "Mediant vs. flow: is a continuous flow *required*? \u2014 a hand-decidable problem statement",
       "summary": "Class 3 (problem statement, not a resolution). Poses competitor\n#1's discriminator as a hand-decidable question with a single\ndecisive numeric test. No new primitive. Anchored to the\nmechanics now resolved (`#TICK` closed, #2 eliminated): with the\ndeterministic discrete reading constructively complete, the live\nquestion is no longer \"discrete or stochastic\" (#2, settled) but\n\"is the discrete generator *sufficient*, or is a continuous flow\n*required*\" \u2014 this problem decides exactly that.",
       "depends_on": [
@@ -19353,6 +19699,8 @@
     {
       "id": "medium_change_demo",
       "path": "sync_cost/derivations/medium_change_demo.md",
+      "cid": null,
+      "sealed": false,
       "title": "Medium-change demo: address vs. structure",
       "summary": "Pedagogical / methodological orientation. Cited from the README's\nsecond clarifying note. No new derivations; this document is the\naudience-facing analogue of the address-vs-structure split that\nalready lives in the framework's foundational documents.",
       "depends_on": [
@@ -19429,6 +19777,8 @@
     {
       "id": "minimum_alphabet",
       "path": "sync_cost/derivations/minimum_alphabet.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Minimum Alphabet",
       "summary": "The framework's entire structure \u2014 the circle, the devil's staircase,\nArnold tongues, the Born rule, the RAR, and the uncertainty relation \u2014\nfollows from compositions of exactly four irreducible primitives:",
       "depends_on": [
@@ -19595,6 +19945,8 @@
     {
       "id": "minkowski_signature",
       "path": "sync_cost/derivations/minkowski_signature.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Minkowski Signature from Phase State Observability",
       "summary": "The spacetime signature (3,1) is not assumed. It is the observability\nstructure of the four phase states on a non-orientable surface. Three\nstates are observable. One is dark. The observable states are spatial.\nThe dark state is temporal. The minus sign in ds\u00b2 = dx\u00b2 + dy\u00b2 + dz\u00b2 \u2212 c\u00b2dt\u00b2\nis the statement that the dark state contributes negatively to the\nobservable norm.",
       "depends_on": [
@@ -19671,6 +20023,8 @@
     {
       "id": "mixing_angle_audit",
       "path": "sync_cost/derivations/mixing_angle_audit.md",
+      "cid": null,
+      "sealed": false,
       "title": "Mixing angle audit: the framework's tree-level predictions ARE PMNS",
       "summary": "`ckm_from_sl2z.py` computes tree-level mixing angles from the\nframework's SL(2,Z) trace / weight-ratio structure and compares\nthem to observed **CKM** (quark) angles. The comparison ratios are\nlarge (2\u2013140\u00d7), and the script's \u00a76 assessment (\"HONEST\nASSESSMENT\") states: \"None of these is a clean rotation of a\ntree-level angle to the physical one.\"",
       "depends_on": [
@@ -19737,6 +20091,8 @@
     {
       "id": "mobius_container",
       "path": "sync_cost/derivations/mobius_container.md",
+      "cid": null,
+      "sealed": false,
       "title": "The M\u00f6bius Container",
       "summary": "A bounded, compact, non-orientable surface changes the Kuramoto\nself-consistency equation from an open dissipative system to a closed\nresonator. On such a surface, excitations cannot escape \u2014 they reflect,\ninterfere, and accumulate until standing waves form at rational phase\ndivisions. The rational divisions are not approximate. They are exact,\nforced by boundary conditions, and stable enough to persist for\narbitrarily many cycles.",
       "depends_on": [],
@@ -19764,6 +20120,8 @@
     {
       "id": "negative_results_ledger",
       "path": "sync_cost/derivations/negative_results_ledger.md",
+      "cid": "ed37fe58cb8b8add656e1fe1b7fc8c7c36e2f97b89529621358de17727d2526d",
+      "sealed": true,
       "title": "Negative-results ledger \u2014 the single archival home for failed, null, and superseded claims",
       "summary": "- Public surfaces (README, `index.html`, the deployed glossaries)\n  must not present any of these as corroborated results. When a\n  claim here appears anywhere as a \"prediction,\" \"forced value,\"\n  or \"verified\" entry, that is an overstatement to fix.\n- The derivation corpus records these dispositions in scattered\n  places (`numerology_inventory.md` Class 1, `framework_status.md`\n  Eliminated/Fails, `thread_chronology.md`, `no_rescaling.md`).\n  This ledger consolidates the *negative* dispositions",
       "depends_on": [
@@ -19915,6 +20273,8 @@
     {
       "id": "neutrino_mass_audit",
       "path": "sync_cost/derivations/neutrino_mass_audit.md",
+      "cid": null,
+      "sealed": false,
       "title": "Neutrino mass audit: already closed, not a depth-limit problem",
       "summary": "This is an **outdated attribution**. `item12_neutrino_solar_closure.py`\ncloses the full neutrino mass sector via a **finite-K\ninteraction-scale correction**, not a depth \u2192 \u221e limit.",
       "depends_on": [
@@ -19981,6 +20341,8 @@
     {
       "id": "no_rescaling",
       "path": "sync_cost/derivations/no_rescaling.md",
+      "cid": null,
+      "sealed": false,
       "title": "No-rescaling principle: cosmic = substrate, under natural units",
       "summary": "Under the framework's natural unit convention (`\u03c3 = m = c = 1`,\n`L_x = \u2113_P`, `\u03c4_tick = t_P` \u2014 `unitless_audit.md`), every framework\nprediction relating a substrate-internal rate or ratio to a\ncosmological observable is an **identity**, not a proportionality.",
       "depends_on": [
@@ -20122,6 +20484,8 @@
     {
       "id": "nonperturbative_phase1",
       "path": "sync_cost/derivations/nonperturbative_phase1.md",
+      "cid": null,
+      "sealed": false,
       "title": "Non-perturbative substrate: Phase 1 (the DoF reduction)",
       "summary": "Class 3 (synthesis-and-roadmap). The DoF reduction is a\ndirect reading of `figure_eight.md` applied to the\naudit's regime; no new framework primitives. The Phase 2 calc\nthat would actually compute `S_v(K=1)` is now well-defined\n(specific 4\u00d74 matrix to diagonalise) and substrate-Lagrangian-\nlevel tractable.",
       "depends_on": [
@@ -20248,6 +20612,8 @@
     {
       "id": "nonperturbative_phase2",
       "path": "sync_cost/derivations/nonperturbative_phase2.md",
+      "cid": null,
+      "sealed": false,
       "title": "Non-perturbative Phase 2: the 4\u00d74 calc (historical; symmetric S_v(K=1)=16 superseded)",
       "summary": "**Value superseded** \u2192 `discrete_reduction_computed.md` (canonical):\n`S_v(K=1) \u2248 11.515`, not the symmetric `16`. The \"exact precision\"\nframing in the sections above is the historical symmetric-diagonal\nclaim; the structural construction (4-mode Hilbert space,\nvortex-pair path, near-diagonal Hamiltonian) is what this doc\ncontributes and that stands.",
       "depends_on": [
@@ -20404,6 +20770,8 @@
     {
       "id": "nonperturbative_phase3",
       "path": "sync_cost/derivations/nonperturbative_phase3.md",
+      "cid": null,
+      "sealed": false,
       "title": "Non-perturbative Phase 3: K < 1 sectors and the lengthscale-regime question",
       "summary": "Class 3 (setup and structural question). The Phase 3 calc was\nattempted and revealed that the substrate's lengthscale regime at\nK < 1 is a separate structural question the audit didn't address.\nBoth the audit (K = 1-specific) and the seam-profile derivation\n(continuum) were partial answers that don't extend mechanically to\nK < 1.",
       "depends_on": [
@@ -20465,6 +20833,8 @@
     {
       "id": "numerology_count_phase_a",
       "path": "sync_cost/derivations/numerology_count_phase_a.md",
+      "cid": "2d6a979f944f1aad57abe05bf249e797480225fde6bec397694b10d6f665edb0",
+      "sealed": true,
       "title": "Numerology count (Region C, Shape B) \u2014 Phase A: scope and design",
       "summary": "Phase A complete. Region C scope, null hypothesis, test design,\nand verdict shapes specified. Phase B (the count itself)\ndeferred but well-defined.",
       "depends_on": [
@@ -20571,6 +20941,8 @@
     {
       "id": "numerology_count_phase_b",
       "path": "sync_cost/derivations/numerology_count_phase_b.md",
+      "cid": null,
+      "sealed": false,
       "title": "Region C Phase B \u2014 numerology count: results",
       "summary": "Region C Phase B complete. **Verdict: PIGEONHOLE at all three\nthresholds (0.1%, 1%, 3%)**, p > 0.05 in all cases. Honest-\nlanding-loop verdict confirmed. Framework's Class 2 floor is\npigeonhole noise; substrate-structural derivation modes\nremain the productive direction.",
       "depends_on": [
@@ -20737,6 +21109,8 @@
     {
       "id": "numerology_inventory",
       "path": "sync_cost/derivations/numerology_inventory.md",
+      "cid": "679dd783679273f27962e3391c8c4532ccac82153e8cea66146f8a008bbdcefb",
+      "sealed": true,
       "title": "Numerology inventory",
       "summary": "Compilation of framework predictions / observations that are confirmed\nnumerology, noted coincidences, or suspects \u2014 so we know what to stop\nchasing as if it were structural.",
       "depends_on": [
@@ -21133,6 +21507,8 @@
     {
       "id": "observer_register_closure",
       "path": "sync_cost/derivations/observer_register_closure.md",
+      "cid": null,
+      "sealed": false,
       "title": "Observer-register closure on the Klein-quotient substrate",
       "summary": "Formalize the notion of an observer-register as a closure\ncondition on Farey-level subsets of the Klein-quotient substrate.\nRestate `R = 6\u00b713\u2075\u2074` as the resolution of the canonical register,\nthen test whether this demotes H_0 from a Type 1 observational\nanchor to a Type 2 ratio (register span \u00d7 Planck unit) and\nwhether it closes the v/M_P gap from the cosmological side.",
       "depends_on": [
@@ -21254,6 +21630,8 @@
     {
       "id": "omega_b_alpha_beta_closure",
       "path": "sync_cost/derivations/omega_b_alpha_beta_closure.md",
+      "cid": "fb366d3af850f05972f816adf12120fc0fe6341a4cdb2c6143350eb4b4b26d57",
+      "sealed": true,
       "title": "\u03a9_b (\u03b1, \u03b2) execution Phase B \u2014 closure via sign-rep no-EM-coupling",
       "summary": "**(\u03b1, \u03b2) = (0, 1) closure complete.** \u03a9_b residual closes at\nTier 1 (mechanism) + Tier 2 (parameters), both structurally\nderived. Class 5 / Survives candidate pending consistency check\non \u00a72 language.",
       "depends_on": [
@@ -21445,6 +21823,8 @@
     {
       "id": "omega_b_alpha_beta_phase_b",
       "path": "sync_cost/derivations/omega_b_alpha_beta_phase_b.md",
+      "cid": "00897f62a48645ce82cd2f0af79c8c00014cb7a0897535fb790092d02160ca70",
+      "sealed": true,
       "title": "\u03a9_b (\u03b1, \u03b2) execution \u2014 Phase B initial pass",
       "summary": "Phase B initial pass complete. Two structural candidates\nidentified ((\u03b1, \u03b2) = (0, 1) or (1, 1)) distinguished by\ntreatment of the {3} mode. Both pass Z1-Z3 cleanly. Closing\nrequires single-session reconciliation of the framework's\nexisting formula derivation (3 specific tasks listed). The\n(\u03b1, \u03b2) execution is **not closed** but is **substantially\nsharper** than entering Phase B as a \"needs derivation\"\ncandidate.",
       "depends_on": [
@@ -21506,6 +21886,8 @@
     {
       "id": "omega_b_c5_beta_audit",
       "path": "sync_cost/derivations/omega_b_c5_beta_audit.md",
+      "cid": "2c839eddc04210a134f9e90545549f043fd3907a4cedfa7d1c7b230b530fd147",
+      "sealed": true,
       "title": "\u03a9_b C5 closure: \u03b2-forcing audit",
       "summary": "A direct audit of the exponent \u03b2 in the C5 closure\n(`omega_b_c5_closure.md`), per `ansatz_audit_policy.md`. The\nquestion: is \u03b2 = 1/12 forced framework-natively, or does the\nclosure default to Class 2 because multiple candidate \u03b2 values\nmatch observation within precision?",
       "depends_on": [
@@ -21612,6 +21994,8 @@
     {
       "id": "omega_b_c5_closure",
       "path": "sync_cost/derivations/omega_b_c5_closure.md",
+      "cid": "a839e172a185b73796bf741473f2cb850677d2c34d8be0763884748a8a53c131",
+      "sealed": true,
       "title": "\u03a9_b Floor closure: C5 z-dependent w with framework-integer parameters",
       "summary": "A focused calculation of `omega_b_residual_phase_a.md` candidate\nC5 (z-dependent boundary weight w from a_0(z) = c\u00b7H(z)/(2\u03c0)),\napplied to the three-way inconsistency in (\u03a9_\u039b, \u03a9_b, \u03a9_DM).",
       "depends_on": [
@@ -21718,6 +22102,8 @@
     {
       "id": "omega_b_residual_phase_a",
       "path": "sync_cost/derivations/omega_b_residual_phase_a.md",
+      "cid": null,
+      "sealed": false,
       "title": "\u03a9_b = 1/19 residual \u2014 Phase A: the three-way boundary-weight inconsistency",
       "summary": "The cosmic partition `\u03a9_b : \u03a9_DM : \u03a9_\u039b = 1/19 : 5/19 : 13/19` is\nderived in `baryon_fraction.md` from the Farey partition and Z_6\nirreducibility. Against Planck 2018:",
       "depends_on": [
@@ -21834,6 +22220,8 @@
     {
       "id": "omega_b_residual_phase_b",
       "path": "sync_cost/derivations/omega_b_residual_phase_b.md",
+      "cid": null,
+      "sealed": false,
       "title": "\u03a9_b = 1/19 residual \u2014 Phase B: cross-sector |r|\u00b2 tax closes it",
       "summary": "The 6.7% \u03a9_b residual from Phase A, and its partner 7.5%\n\u03a9_DM/\u03a9_b residual, closed by a single structural correction\nusing an already-derived order parameter.",
       "depends_on": [
@@ -21915,6 +22303,8 @@
     {
       "id": "omega_b_substrate_side_audit",
       "path": "sync_cost/derivations/omega_b_substrate_side_audit.md",
+      "cid": "ea0b16918cd79ab438d3f7f23b66968f40e0d4e571dd1aa86eeedc97f5193061",
+      "sealed": true,
       "title": "\u03a9_b residual audit: passes substrate-side test, does NOT dissolve",
       "summary": "> **Closure update (2026-04-26).** The \"first remaining substrate-\n> side structural gap\" identified by this audit has subsequently\n> closed:\n>\n> - **Tier 1 + Tier 2 closure** via `omega_b_alpha_beta_closure.md`:\n>   the corrected mode breakdown identifies the antisym Klein\n>   eigenmode \u03c8_-(1, 5) as always-locked (sign-rep no-EM), forcing\n>   w_- = 1 STRUCTURALLY and (\u03b1, \u03b2) = (0, 1). Single-parameter\n>   w_+ closure gives 0.044% on \u03a9_b, 0.044% on \u03a9_DM, 0.13% on \u03a9_\u039b.\n>   This is a recognize-mode",
       "depends_on": [
@@ -22026,6 +22416,8 @@
     {
       "id": "omega_b_two_component_sketch",
       "path": "sync_cost/derivations/omega_b_two_component_sketch.md",
+      "cid": "f3ecf7b7d97178d45f86c31193fe86f6237d219ddd46229543da8c52db8848cb",
+      "sealed": true,
       "title": "\u03a9_b two-component sketch: the C2 mechanism mechanically traced",
       "summary": "A direct sketch of the two-component reading of the \u03a9_b residual,\nprompted by the user's reframing question (\"are we insisting on\nanything structural that can be trivialized?\"). The sketch maps\nKlein-antipodal Z\u2082-rep eigenmode decomposition onto the partition\nformula and tests whether the resulting (w_+, w_-) reading dissolves\nthe C5 continuity-in-K requirement.",
       "depends_on": [
@@ -22122,6 +22514,8 @@
     {
       "id": "omega_b_w_plus_candidate",
       "path": "sync_cost/derivations/omega_b_w_plus_candidate.md",
+      "cid": "0ba01f67df53f1cb05e968ab241f3e225baeb498a46556afc2df8e47aec7243f",
+      "sealed": true,
       "title": "\u03a9_b w_+ structural derivation: candidate found, ansatz audit applied",
       "summary": "Direction 2 produces partial result: framework-integer\ncandidate **w_+ = 13/14** identified with 0.13% match across\nthree observables. **Class 2 per audit discipline** (multi-\ncandidate ansatz pattern, no unique forcing argument).",
       "depends_on": [
@@ -22203,6 +22597,8 @@
     {
       "id": "omega_b_w_plus_cross_ratio_search",
       "path": "sync_cost/derivations/omega_b_w_plus_cross_ratio_search.md",
+      "cid": "1b73f54243f034c4360bb7803e500d262d996a2b37011d476531d4a4da42f634",
+      "sealed": true,
       "title": "Cross-ratio search for w_+ forcing argument",
       "summary": "Path 1 recognize-mode probe complete. Cross-ratio machinery\nsurfaces multiple structural readings but no unique forcing.\n\u03a9_b Tier 3 (w_+) stays Class 2. Closure status unchanged\noverall, but the Class 2 entry now has explicit structural\ninterpretation (cross-ratio invariants of Farey 4-tuples\ninvolving framework prediction points).",
       "depends_on": [
@@ -22279,6 +22675,8 @@
     {
       "id": "omega_partition_combinatorial",
       "path": "sync_cost/derivations/omega_partition_combinatorial.md",
+      "cid": null,
+      "sealed": false,
       "title": "\u03a9 partition: combinatorial derivation at depth 19",
       "summary": "**Derived.** Both halves of the \u03a9 partition follow from independent\ncombinatorial arguments rooted in the Klein bottle's Z\u2082 structure:",
       "depends_on": [
@@ -22455,6 +22853,8 @@
     {
       "id": "orthogonal_kink_interaction",
       "path": "sync_cost/derivations/orthogonal_kink_interaction.md",
+      "cid": null,
+      "sealed": false,
       "title": "Orthogonal-kink interaction: decomposition into AB-phase + jog energy",
       "summary": "Class 3 (decomposition + narrowing). The orthogonal-kink\ninteraction is decomposed into:",
       "depends_on": [
@@ -22536,6 +22936,8 @@
     {
       "id": "partition_logit_form",
       "path": "sync_cost/derivations/partition_logit_form.md",
+      "cid": "b5217bc7d3960e2a56da643a43173ee67cb6efd351744d4ae5e2ced535412013",
+      "sealed": true,
       "title": "Cosmic partition prediction in logit form",
       "summary": "The logit form is now formally stated. Three follow-on\ncandidates:",
       "depends_on": [
@@ -22667,6 +23069,8 @@
     {
       "id": "path_a_walkthrough",
       "path": "sync_cost/derivations/path_a_walkthrough.md",
+      "cid": "335db512c31d33787b42f9d0198171ec7f6759778810826481ac8cd25a54079d",
+      "sealed": true,
       "title": "Path (a) walkthrough: Klein-fold sub-action of |Z_6| \u00d7 \u27e8z\u2080\u27e9\u2085\u2084 \u00d7 \u27e8\u03b9\u27e9",
       "summary": "A direct walkthrough of path (a) from `depth_connection_nulls.md`\n\u2014 the most-recommended open path for connecting cosmological\ndepth 54 to EW depth ~15. The walkthrough shows that path (a) in\nall three of its natural interpretations runs into a structural\nobstruction: **the canonical register has prime support {2, 3},\nand 15 = 3\u00b75 cannot be reached without an external source of\nthe prime 5.**",
       "depends_on": [
@@ -22798,6 +23202,8 @@
     {
       "id": "path_closures_iter1",
       "path": "sync_cost/derivations/path_closures_iter1.md",
+      "cid": "0736ce3e22f353aa79e5f541a30b5cc8c973f6e00d0a173b0e5d27e348a8f5d6",
+      "sealed": true,
       "title": "Path closures \u2014 iteration 1",
       "summary": "Iteration 1 of \"close paths\" mode complete. Four candidates\nclosed (3 NULL, 1 BLOCKED). Region D narrowed 6\u21923. Region B\nnarrowed 4\u21923. Subtractive progress. Loop pattern broken for\nthis iteration.",
       "depends_on": [
@@ -22894,6 +23300,8 @@
     {
       "id": "path_closures_iter2",
       "path": "sync_cost/derivations/path_closures_iter2.md",
+      "cid": "6586bebf9bc0737a62834dbca4a1188178efe7b25ac213958dfea9469a1ff4c2",
+      "sealed": true,
       "title": "Path closures \u2014 iteration 2",
       "summary": "Iteration 2 complete. 4 candidates closed/promoted. Open list\nnarrowed to 3 substantive candidates total across Regions B/C/D.\nLoop pattern still broken: definite verdicts, not multi-candidate\nansatz outputs.",
       "depends_on": [
@@ -22960,6 +23368,8 @@
     {
       "id": "path_closures_iter3",
       "path": "sync_cost/derivations/path_closures_iter3.md",
+      "cid": "dfca9cd15aa4fc77a28e2d42e4d5f6f168bddaa1a7348c465e8daa62bf1cfa65",
+      "sealed": true,
       "title": "Path closures \u2014 iteration 3",
       "summary": "Iteration 3 complete. **D.3 closes Class 5 (anchor obstruction\n#5).** D.1 partial; Path (c) reduced; Region C still empirical.\nOpen list now: D.1 closure derivation + Region C empirical count.\nThe framework's anchor-count question is structurally resolved.",
       "depends_on": [
@@ -23106,6 +23516,8 @@
     {
       "id": "path_closures_iter4",
       "path": "sync_cost/derivations/path_closures_iter4.md",
+      "cid": "d98226d8906e8edcc992b2d728ed205c9deabdaff3452480b797cb2ebb77697e",
+      "sealed": true,
       "title": "Path closures \u2014 iteration 4 (breadth-first)",
       "summary": "Iteration 4 complete. **D.1 promotes to Class 5 (Klein \u03c0_1 sector\nassignment fully forced).** Combined with D.3 (iter 3), sector\ndecoupling derivation is COMPLETE in the framework. Open list\nshrinks to 3 substantive items: (\u03b1, \u03b2) execution, Region C\nempirical count, framework_status mechanical update.",
       "depends_on": [
@@ -23212,6 +23624,8 @@
     {
       "id": "phenomenology_cross_reference",
       "path": "sync_cost/derivations/phenomenology_cross_reference.md",
+      "cid": null,
+      "sealed": false,
       "title": "Phenomenology cross-reference \u2014 observation vs framework prediction",
       "summary": "Phenomenology cross-reference v1, 2026-04-26. Maps 11 thematic\nsections of physical phenomena to framework predictions with\nexplicit Z1-Z3 status, closure class, and substrate/anchor side.\nCompanion to `canonical_glossary.md`.",
       "depends_on": [
@@ -23433,6 +23847,8 @@
     {
       "id": "phenomenon_glossary",
       "path": "sync_cost/derivations/phenomenon_glossary.md",
+      "cid": "d32315a7b8ae70dcbdadbb65aec5528fa81df7ba8fd5469206f555925a4bf9ef",
+      "sealed": true,
       "title": "Phenomenon glossary \u2014 dynamics first, names second",
       "summary": "Phenomenon glossary v0.1. ~40 entries across 8 sections. Intended\nto be readable end-to-end in ~30 minutes by someone with general\nmathematical literacy and no exposure to the specific literature.",
       "depends_on": [
@@ -23504,6 +23920,8 @@
     {
       "id": "physics_relevance_measurement_catalog",
       "path": "sync_cost/derivations/physics_relevance_measurement_catalog.md",
+      "cid": "6a7ad5f362451bcdcafcf1f77200391d0346c3867b7c72cc5cae907625b596df",
+      "sealed": true,
       "title": "Physics-relevance \u00d7 primitive-measurement catalog (B7)",
       "summary": "**B7 \u2014 survey doc organizing the framework's predictions against the\nspecific axis of *primitive measurement endpoints*.** Not a derivation;\na catalog. Class-3 (foundational consolidation, methodological\narticulation).",
       "depends_on": [
@@ -23625,6 +24043,8 @@
     {
       "id": "planck_scale",
       "path": "sync_cost/derivations/planck_scale.md",
+      "cid": null,
+      "sealed": false,
       "title": "Planck Scale from Self-Sustaining Threshold",
       "summary": "The Planck scale is not an imposed cutoff. It is the minimum domain\nwhere the synchronization substrate can sustain itself \u2014 the N = 3\nthreshold of the coupling loop.",
       "depends_on": [],
@@ -23699,6 +24119,8 @@
     {
       "id": "predictions_horizon_2026",
       "path": "sync_cost/derivations/predictions_horizon_2026.md",
+      "cid": "4dc28f9e1eb6849b50d8f2b3c45fde28794d861aa8f88f585ef5ea2e1eeb62ca",
+      "sealed": true,
       "title": "Predictions horizon \u2014 2026",
       "summary": "General relativity was vindicated by three observations in three\ndistinct regimes within roughly forty years of its formulation:\nMercury's perihelion precession (1859 anomaly, 1915 explanation),\ngravitational lensing (1919 eclipse), and gravitational redshift\n(predicted 1907, measured precisely by Pound\u2013Rebka 1959). Each\naddressed a different observational channel; each used confounders\nthe others did not share; the *coherence* of the three confirmations\nwas what settled the question.",
       "depends_on": [
@@ -23850,6 +24272,8 @@
     {
       "id": "preferred_basis_dissolution",
       "path": "sync_cost/derivations/preferred_basis_dissolution.md",
+      "cid": "4f24ed847e8f886ffa92748b72ae6e3199c441d9f6d81729afdaeaec5a61c7a5",
+      "sealed": true,
       "title": "Preferred-basis dissolution",
       "summary": "**Inviolable-companion dissolution articulated** \u2014 the QM\npreferred-basis problem (why measurement settles on position\neigenstates, or energy eigenstates, or any other specific basis\nrather than arbitrary superpositions) dissolves into **basin\nselection** on the framework's substrate. Each measurement is the\nsystem identifying which basin of attraction it sits in\n(`lesson_forced_basin_selection.md`); the basin's natural coordinates\n*are* the measurement's basis. No separate preferred-basis axiom",
       "depends_on": [
@@ -23931,6 +24355,8 @@
     {
       "id": "primitive_completeness_audit",
       "path": "sync_cost/derivations/primitive_completeness_audit.md",
+      "cid": null,
+      "sealed": false,
       "title": "Shape F primitive-completeness audit (2026-04-26)",
       "summary": "Shape F audit complete. Framework is primitive-complete through\nthe 2026-04 closure round. Hygiene routine completed: stale\nrefs cleared, scripts reproduced, substrate drift-free,\nMANIFEST updated. The framework's open list now contains only\noptional Instance 7-style status updates (Q4) and ongoing\nmethodological hygiene (this audit's recommended periodic\nre-run).",
       "depends_on": [
@@ -24072,6 +24498,8 @@
     {
       "id": "proposed_items_disposition",
       "path": "sync_cost/derivations/proposed_items_disposition.md",
+      "cid": null,
+      "sealed": false,
       "title": "#PROPOSED: disposition of the three items",
       "summary": "Class 3 (disposition). No new primitive. Item A: Gap-1 K_c\ndeferred to the authoritative `k_critical_phase_b.md`; the\nclosed-form criterion out of scope (framework uses `K_map=1`\nexact); secondary RFE-internal computation recorded with the\n`K_c=\u03a3w` proximity flagged as conjecture, not claimed. B\nBasepoint-partial; C Class-2-disposed \u2014 per the framework's own\ndiscipline. Nothing overreached.",
       "depends_on": [
@@ -24163,6 +24591,8 @@
     {
       "id": "proposed_residual_closure",
       "path": "sync_cost/derivations/proposed_residual_closure.md",
+      "cid": null,
+      "sealed": false,
       "title": "#PROPOSED residual: closed",
       "summary": "Class 3 (residual closure; consistency-forced). No new primitive.\nB closed by mechanism-identification from established machinery\n(saddle-node Born geometry, the `\u03c4\u221d1/\u221a\u03b5` slowing, the `(K/2)^q`\nhierarchy). C's K<1 reduction closed by structural forcing \u2014\n`tick_continuum_construction.md`'s K-parameterized Goldstein\u2013Kac\ndischarges `sine_gordon_substrate.md`'s working assumption; the\nbare ratio carries an honest `\u221ar_n` correction; the\nobservable-mapping remains correctly declined. The framework's\no",
       "depends_on": [
@@ -24284,6 +24714,8 @@
     {
       "id": "psl2z_subgroup_identification_phase_a",
       "path": "sync_cost/derivations/psl2z_subgroup_identification_phase_a.md",
+      "cid": null,
+      "sealed": false,
       "title": "PSL(2,\u2124)-subgroup identification \u2014 Phase A",
       "summary": "Phase A planning document. Direction 4 queued as multi-session\nstructural work. The four candidate subgroups (\u0393(2), \u0393_0(2),\n\u0393_0(3), \u0393_0(6)) identified; \u0393_0(6) flagged as suggestive given\nthe framework's q_2\u00b7q_3 = 6 = INTERACT structure.",
       "depends_on": [
@@ -24355,6 +24787,8 @@
     {
       "id": "psl2z_subgroup_phase_a_results",
       "path": "sync_cost/derivations/psl2z_subgroup_phase_a_results.md",
+      "cid": null,
+      "sealed": false,
       "title": "PSL(2,\u2124)-subgroup Phase A \u2014 orbit enumeration results",
       "summary": "Phase A executed. **\u0393_0(6) identified as the framework-natural\nPSL(2,\u2124)-subgroup**: smallest Hecke level that splits {13/14,\n12/13, 14/15} into distinct cusps, with level matching INTERACT\n= q_2 \u00b7 q_3.",
       "depends_on": [
@@ -24451,6 +24885,8 @@
     {
       "id": "psl2z_subgroup_phase_b",
       "path": "sync_cost/derivations/psl2z_subgroup_phase_b.md",
+      "cid": null,
+      "sealed": false,
       "title": "PSL(2,\u2124)-subgroup Phase B \u2014 substrate-side \u0393_0(6) derivation",
       "summary": "**Phase B B1 and B2 close in recognize mode.** Substrate \u0393_0(6)\npreservation derives from existing q_2 \u00d7 q_3 sector decomposition.\nw_+ \u2194 cusp 1/2 derives from trivial Klein Z_2 rep \u2194 q_2-cusp\ncorrespondence, independently of EM-MOND reading.",
       "depends_on": [
@@ -24597,6 +25033,8 @@
     {
       "id": "psl2z_subgroup_phase_c_inventory",
       "path": "sync_cost/derivations/psl2z_subgroup_phase_c_inventory.md",
+      "cid": null,
+      "sealed": false,
       "title": "Direction 4 Phase C \u2014 what remains for Class 5 closure",
       "summary": "Direction 4 Phase C inventoried. **Reduces to the q_3-sector\nquantity pattern question** already flagged in\n`partition_logit_form.md`. No new open structure introduced.",
       "depends_on": [
@@ -24673,6 +25111,8 @@
     {
       "id": "q_mod2_conservation_theorem",
       "path": "sync_cost/derivations/q_mod2_conservation_theorem.md",
+      "cid": "f960c5840f6eff32284aeba706d577ea0e963f5da191c362ba65f0770e86bbaf",
+      "sealed": true,
       "title": "Q mod 2 conservation theorem",
       "summary": "**Standalone theorem articulated** for substrate inviolable #1\n(`substrate_determinism.md` L166-167) \u2014 the Z\u2082 topological-charge\nconservation that had been committed as a structural inviolable\nbut was flagged \"not a closed standalone theorem \u2014 the explicit\nstandalone theorem is *not yet articulated*\"\n(`framework_status.md` L31; `phenomenology_cross_reference.md:439`).",
       "depends_on": [
@@ -24874,6 +25314,8 @@
     {
       "id": "q_mod2_mediant_projection",
       "path": "sync_cost/derivations/q_mod2_mediant_projection.md",
+      "cid": "4e436ffd27ed2b98599a2da2c731339e9728ae0d99bc289a27636db418b09e94",
+      "sealed": true,
       "title": "Q mod 2 mediant projection (state-axis dual of inviolable #1)",
       "summary": "**State-axis projection articulated** for inviolable #1\n(`substrate_determinism.md` L166-167; `q_mod2_conservation_theorem.md`).\nThe conservation theorem's time-axis reading \u2014 \"no local process\nchanges `Q mod 2`\" \u2014 has a state-axis dual: a parity superselection\nrule on Farey mediants admissible as lock-ratios on the substrate.",
       "depends_on": [
@@ -24980,6 +25422,8 @@
     {
       "id": "qd_origins",
       "path": "sync_cost/derivations/qd_origins.md",
+      "cid": null,
+      "sealed": false,
       "title": "Origins of (q\u2082, q\u2083, d) = (2, 3, 3) from the four objects",
       "summary": "Class 3 (derivation grade). The three arguments use:",
       "depends_on": [
@@ -25081,6 +25525,8 @@
     {
       "id": "qm_reframing_programmatic",
       "path": "sync_cost/derivations/qm_reframing_programmatic.md",
+      "cid": "a51481257996d443b7f62ce6eda5bdfec99be90cc2ba085c94c529bef73ce8c5",
+      "sealed": true,
       "title": "Programmatic QM-reframing: substrate apparatus vs inherited QM machinery",
       "summary": "Synthesis document. Articulates the framework's relationship to the\napparatus of 20th-century quantum mechanics: which elements of that\napparatus are substrate-replaceable, which are inherited as a\nfoundational layer, which are correctly declined as anchor-side, and\nwhich lie outside the substrate's natural reach.",
       "depends_on": [
@@ -25210,6 +25656,8 @@
     {
       "id": "quantum_gravity_interpolation",
       "path": "sync_cost/derivations/quantum_gravity_interpolation.md",
+      "cid": "89e3d7e89a9da3cf1abe72ae46b1efee155238cf61d3db3c0c38c496a5c323f9",
+      "sealed": true,
       "title": "Quantum Gravity from the Rational Field Equation at K \u2248 1",
       "summary": "The rational field equation (D11) is exact at all values of the\ncoupling parameter K. The K = 1 limit gives Einstein's field\nequations (D12, D13). The K < 1 linearized limit gives the\nSchr\u00f6dinger equation (D12). The K \u2248 1 regime \u2014 where both\ngravitational and quantum effects are comparable \u2014 is the\nframework's quantum gravity. This derivation characterizes the\ninterpolating dynamics and extracts its physical predictions.",
       "depends_on": [
@@ -25286,6 +25734,8 @@
     {
       "id": "rank1_temporal_causation",
       "path": "sync_cost/derivations/rank1_temporal_causation.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Rank-1 Fr\u00e9chet Derivative as Temporal Causation",
       "summary": "For an SO(2)-equivariant Markovian synchronization operator at a\ncodimension-1 transition, the dynamically relevant present is the\ncenter-manifold coordinate |r|. All other degrees of freedom are\neither gauge/representation structure or exponentially decaying\nhistory. The rank-1 Fr\u00e9chet derivative is therefore not merely an\nalgebraic property of U, but the linearized expression of temporal\ncausation through a single active channel.",
       "depends_on": [],
@@ -25330,6 +25780,8 @@
     {
       "id": "rational_field_equation",
       "path": "sync_cost/derivations/rational_field_equation.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Rational Field Equation",
       "summary": "The field equation of the synchronization framework is a\nself-consistency condition on the Stern-Brocot tree, written in\nexact rational arithmetic using the four primitives of Derivation 10.\nThe continuum (PDE) form is a limit, not the primary object. The\nequation operates on rationals constructed by mediants because the\nphysical states it describes \u2014 mode-locked orbits \u2014 are rational.",
       "depends_on": [],
@@ -25399,6 +25851,8 @@
     {
       "id": "rationality_descent",
       "path": "sync_cost/derivations/rationality_descent.md",
+      "cid": null,
+      "sealed": false,
       "title": "Rationality descent: is the hidden algorithm real?",
       "summary": "The two **Tree-level only** examples in \u00a7\"canonical closures split into\nthree regimes\" below \u2014 `sin\u00b2\u03b8_W = 8/35 + 8/F_10\u00b2` and\n`\u03b1_s/\u03b1_2 = 27/8 + 1/q_3\u00b2` \u2014 were retracted in commits 208359f, 0882991,\neda8b60 as **fitted corrections, not derived**. They are still quoted\nhere as part of the descent-algorithm argument; the \u00a7\"Two-step\nclosures\" claim that \"the framework's actual closure is two-step\"\nshould be read as **hypothesis**, not established result. A rigorous\ndescent that reaches those residua",
       "depends_on": [
@@ -25443,6 +25897,8 @@
     {
       "id": "readings_compatibility_check",
       "path": "sync_cost/derivations/readings_compatibility_check.md",
+      "cid": null,
+      "sealed": false,
       "title": "Reading Compatibility: R and \u03a9_\u039b",
       "summary": "**Resolved.** The hierarchy formula is correctly using |F\u2086| = 13\nas an integer state count. The \u03a9_\u039b formula is correctly using\nN_eff(w) as a continuous energy partition. Both are valid readings\nof the same Klein bottle. No parameter tuning, no inconsistency.",
       "depends_on": [],
@@ -25465,6 +25921,8 @@
     {
       "id": "readings_not_constants",
       "path": "sync_cost/derivations/readings_not_constants.md",
+      "cid": null,
+      "sealed": false,
       "title": "Readings, Not Constants",
       "summary": "**Conjectured.** The reading framework is clearer than the constant\nframework but needs concrete demonstration. The lepton generation\nexponent law works. The quark extension (with effective dimension\nd_eff determined by color coupling) is the next computation.",
       "depends_on": [],
@@ -25482,6 +25940,8 @@
     {
       "id": "rectangle_perpendicularity",
       "path": "sync_cost/derivations/rectangle_perpendicularity.md",
+      "cid": null,
+      "sealed": false,
       "title": "Rectangle ansatz from perpendicularity and antiperiodic isometry",
       "summary": "Class 3 (derivation grade). The argument uses only existing\nframework structure (mediant + 2-S\u00b9-factors from Part I, antiperiodic-\nwith-reflection identification from `klein_bottle.md`) and standard\n2D geometry (isometry of reflection requires perpendicularity).",
       "depends_on": [
@@ -25553,6 +26013,8 @@
     {
       "id": "remaining_gap_shapes",
       "path": "sync_cost/derivations/remaining_gap_shapes.md",
+      "cid": "891eef5f19bed2ac44d47365fa6dcafa2c8c4559a75cdddff0ef3967e518d240",
+      "sealed": true,
       "title": "Remaining gap shapes after the disambiguation pattern",
       "summary": "A forward-looking inventory of what's genuinely open in the\nframework after the `vocabulary_is_the_work_pattern.md`\nconsolidation has cleared the surface. Five distinct shapes,\ncharacterized by what kind of work they need and what kind of\nresult would close them.",
       "depends_on": [
@@ -25729,6 +26191,8 @@
     {
       "id": "s_inst_inflation",
       "path": "sync_cost/derivations/s_inst_inflation.md",
+      "cid": null,
+      "sealed": false,
       "title": "S_inst for inflation exit: does the super-Earth analogy hold?",
       "summary": "Class 4 (structural estimate; numerical predictions conditional on\norder-of-magnitude assumptions). The framework's `S_inst` for\ninflation exit is in the range 8\u201350 in Planck units, depending on\nmechanism. The specific value `\u2248 25` that matches standard\ninflation duration requires `|\u2207K|_inflation \u2248 2` \u2014 a framework\nprediction not directly derived from the substrate Lagrangian but\nimplied by consistency with observed inflation.",
       "depends_on": [
@@ -25815,6 +26279,8 @@
     {
       "id": "s_v_nlo",
       "path": "sync_cost/derivations/s_v_nlo.md",
+      "cid": null,
+      "sealed": false,
       "title": "S_v(K=1) at next-to-leading order",
       "summary": "Class 4 (structural setup; computation pending). The contributions\nare identified, signs are framework-predicted, magnitudes are\nestimated within plausible ranges. The explicit substrate-Lagrangian\ncalc that pins `\u03b2 \u2248 0.264` is the natural next-step work.",
       "depends_on": [
@@ -25881,6 +26347,8 @@
     {
       "id": "s_v_nlo_attempt",
       "path": "sync_cost/derivations/s_v_nlo_attempt.md",
+      "cid": null,
+      "sealed": false,
       "title": "S_v(K=1) NLO calc attempt: a regime finding",
       "summary": "Class 4 (calc attempt with substantive regime finding). The explicit\nNLO computation is not produced; instead the attempt reveals that\nthe audit's convention places the framework in a non-perturbative\nregime where the 5.7% gap is the natural precision floor. This is\nnot a failure of the calc \u2014 it is the calc's *honest substantive\noutput*.",
       "depends_on": [
@@ -25952,6 +26420,8 @@
     {
       "id": "salpeter_gate_disposition",
       "path": "sync_cost/derivations/salpeter_gate_disposition.md",
+      "cid": "3938ef6a4d14da56606de8f54fdd5893385a5db7864329659b51802da57682f3",
+      "sealed": true,
       "title": "Cascade\u2194Salpeter slope: dual-gate disposition",
       "summary": "**Disposition consolidated.** The cascade\u2194Salpeter slope is **Class-2\nwith a partial structural derivation and an open dual gate** \u2014\nstructural and statistical \u2014 both currently unmet. The doc names\nwhich piece is forced, which is null, and what each gate would need\nto clear.",
       "depends_on": [
@@ -26028,6 +26498,8 @@
     {
       "id": "seam_profile",
       "path": "sync_cost/derivations/seam_profile.md",
+      "cid": null,
+      "sealed": false,
       "title": "Seam K-gradient: independent derivation of `|\u2207K|_seam`",
       "summary": "Class 3 (derivation grade). The geometric derivation uses only\nexisting substrate primitives (`\u2113_kink = 1/\u221aK`, the bicone target\nmanifold structure from `cone_twist_substrate.md`). No new primitive.",
       "depends_on": [
@@ -26104,6 +26576,8 @@
     {
       "id": "second_law_topological",
       "path": "sync_cost/derivations/second_law_topological.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Second Law from Non-Orientability",
       "summary": "The second law of thermodynamics \u2014 the monotone increase of entropy\nin isolated systems \u2014 is derived here as a consequence of the\nnon-orientability of the configuration manifold. The argument does\nnot invoke statistical ensembles, coarse-graining, or\ninformation-theoretic axioms. It uses one topological fact: on a\nnon-orientable closed manifold, no globally consistent time-reversal\noperator exists.",
       "depends_on": [
@@ -26155,6 +26629,8 @@
     {
       "id": "sector_constants_structure",
       "path": "sync_cost/derivations/sector_constants_structure.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Sector Constants: q\u2083\u00b2 and q\u2082\u00b3",
       "summary": "The sector constants in the integer conservation law\n  depth \u00d7 |3Q| = sector_constant",
       "depends_on": [
@@ -26179,6 +26655,8 @@
     {
       "id": "sector_decoupling_phase_a",
       "path": "sync_cost/derivations/sector_decoupling_phase_a.md",
+      "cid": "30b363c1a095ef582d10e494b5c50aad4b1b884b930eacf2844a2cb836ea0cef",
+      "sealed": true,
       "title": "Sector decoupling derivation (Region D, Anchor obstruction #5) \u2014 Phase A",
       "summary": "Phase A complete. Region D scope, candidates, prior nulls,\nsequencing with Region C specified. Phase B (the actual sector-\ndecoupling derivation) deferred until Region C resolves and\ncandidate is chosen.",
       "depends_on": [
@@ -26310,6 +26788,8 @@
     {
       "id": "seismic_eigenstate_dictionary",
       "path": "sync_cost/derivations/seismic_eigenstate_dictionary.md",
+      "cid": null,
+      "sealed": false,
       "title": "Seismic Eigenstate Dictionary",
       "summary": "The empirical precursor methods that drive modern seismic gap\nassessments (Iquique, Nankai, Cascadia) are already *reading* the\nframework's tongue-locking structure \u2014 they just call the modes by\ntheir seismological names. This document states the vocabulary\nmapping without adding a new tool, and explains what the framework\ndoes and does not contribute.",
       "depends_on": [
@@ -26351,6 +26831,8 @@
     {
       "id": "session_audit",
       "path": "sync_cost/derivations/session_audit.md",
+      "cid": null,
+      "sealed": false,
       "title": "Session audit: overclaims, revisions, and stale content",
       "summary": "Corrected two specific overclaims (\u2113_c factor, PMNS \u03b8_23\nstructural forcing). Kept historical artifacts (phase doc\nprogressions) with forward cross-references. Flagged Issue #56\nbody items for separate update. The remaining 5-7 closures hold\nup under critical review; caveats are labeled in the respective\ndocs.",
       "depends_on": [
@@ -26427,6 +26909,8 @@
     {
       "id": "sigma_squared_disambiguation",
       "path": "sync_cost/derivations/sigma_squared_disambiguation.md",
+      "cid": null,
+      "sealed": false,
       "title": "\u03c3\u00b2 disambiguation",
       "summary": "The symbol \u03c3\u00b2 appears in three distinct framework quantities. This\ndocument defines each precisely and gives the reconciliation\nbetween them. Use this as the reference when reading any framework\nfile that mentions \"\u03c3\u00b2\".",
       "depends_on": [
@@ -26463,6 +26947,8 @@
     {
       "id": "sine_gordon_substrate",
       "path": "sync_cost/derivations/sine_gordon_substrate.md",
+      "cid": null,
+      "sealed": false,
       "title": "Sine-Gordon as the framework's substrate effective theory",
       "summary": "Class 3 (derivation grade). The reduction from the framework Lagrangian\nto sine-Gordon is exact in the local mean-field limit; the kink mass\nformula `M_k = 8 \u03c3 \u221a(K r)` is the standard sine-Gordon result with\nframework primitives substituted. No new primitives.",
       "depends_on": [
@@ -26709,6 +27195,8 @@
     {
       "id": "sinw_effective_dimension",
       "path": "sync_cost/derivations/sinw_effective_dimension.md",
+      "cid": null,
+      "sealed": false,
       "title": "Weak Mixing Angle: sin\u00b2\u03b8_W from Effective Dimension Reduction",
       "summary": "**Null (2026-04-23).** The `d \u2192 d_eff = d \u2212 1/q\u2083^d = 80/27`\nsubstitution reproduces sin\u00b2\u03b8_W = 0.23123 at 0.5\u03c3 from PDG\nMS-bar at M_Z, but does **not** derive from framework primitives.",
       "depends_on": [
@@ -26800,6 +27288,8 @@
     {
       "id": "sinw_fixed_point",
       "path": "sync_cost/derivations/sinw_fixed_point.md",
+      "cid": null,
+      "sealed": false,
       "title": "sin\u00b2\u03b8_W Fixed-Point Hypothesis \u2014 Ruled Out",
       "summary": "**Ruled out.** The K-scanning hypothesis (that there exists a K*\nreproducing both \u03b1_s/\u03b1_2 and sin\u00b2\u03b8_W at M_Z via the framework's\nduty-cycle dynamics) fails numerically: no K in [0.93, 0.99]\nreproduces either constraint.",
       "depends_on": [
@@ -26891,6 +27381,8 @@
     {
       "id": "snmc_class_and_entanglement",
       "path": "sync_cost/derivations/snmc_class_and_entanglement.md",
+      "cid": "d3cea61496513deb5784f816f6ff950b7329aaa1ebf49498edc970d354c154a7",
+      "sealed": true,
       "title": "Substrate-Natural Multipartite Class (SNMC) and substrate-natural entanglement measures",
       "summary": "**D2 formalization** of the substrate's natural multipartite QM\nreach as a named class with characterized closure properties, and\n**substrate-natural entanglement measure vocabulary** \u2014 translating\nstandard QM entanglement measures (Schmidt rank, Von Neumann\nentropy, concurrence, 3-tangle, stabilizer corank) into\nsubstrate-readable quantities computable directly from substrate\ndata.",
       "depends_on": [
@@ -26992,6 +27484,8 @@
     {
       "id": "soliton_dynamics",
       "path": "sync_cost/derivations/soliton_dynamics.md",
+      "cid": null,
+      "sealed": false,
       "title": "Soliton dynamics: linear sector, breathers, S-matrix, medium class",
       "summary": "Class 3 (derivation grade) for sections 1, 3, and 4. The linear\ndispersion is exact under linearisation of the parent equation; the\nS-matrix structural-rigidity claim is a direct reading of\nZamolodchikov 1979 with framework primitives substituted; the medium-\nclass assignment is a direct reading of the primitives in\n`M_k = 8 \u03c3 \u221a(K r)`.",
       "depends_on": [
@@ -27118,6 +27612,8 @@
     {
       "id": "spatial_coupling_derived",
       "path": "sync_cost/derivations/spatial_coupling_derived.md",
+      "cid": "db09543e92e3b3cb027d24c502b39dc096af5c1808d103c0c58a2bf861362893",
+      "sealed": true,
       "title": "Spatial Coupling Derived from Gate Propagation",
       "summary": "The derivation chain:",
       "depends_on": [
@@ -27189,6 +27685,8 @@
     {
       "id": "spectral_tilt",
       "path": "sync_cost/derivations/spectral_tilt.md",
+      "cid": null,
+      "sealed": false,
       "title": "Spectral Tilt from Synchronization Cost Gradient",
       "summary": "The CMB spectral tilt n_s \u2248 0.965 encodes the curvature of the\nsynchronization cost function across scales. The 3.5% deviation from\nperfect scale-invariance is the slope of the cost gradient: larger\nscales had longer to synchronize and therefore lower net cost, producing\nmore power.",
       "depends_on": [
@@ -27270,6 +27768,8 @@
     {
       "id": "spectral_tilt_reframed",
       "path": "sync_cost/derivations/spectral_tilt_reframed.md",
+      "cid": null,
+      "sealed": false,
       "title": "Spectral Tilt from Mode-Locking Structure",
       "summary": "> Strip away \"cost.\" What remains is phase, frequency, coupling,\n> and the rational numbers.",
       "depends_on": [],
@@ -27349,6 +27849,8 @@
     {
       "id": "speed_of_light",
       "path": "sync_cost/derivations/speed_of_light.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Speed of Light as Gate Propagation",
       "summary": "The speed of light is the rate at which the gate of observability\npropagates through a coherent medium. It has not been derived within\nthe framework \u2014 it appears in Derivation 6 as one of three Planck\nconstants, identified with the parabolic (detuning) direction of\nSL(2,R) via the Iwasawa decomposition. This derivation gives c its\nphysical mechanism.",
       "depends_on": [
@@ -27420,6 +27922,8 @@
     {
       "id": "sqrt_r_n_correction",
       "path": "sync_cost/derivations/sqrt_r_n_correction.md",
+      "cid": "1e9fe7f79b31222af6c25d6fc8ce4cade27a7f9e47202537e5b5b1edb0ba0292",
+      "sealed": true,
       "title": "\u221ar_n correction: making the K-zoo kink-mass residual concrete",
       "summary": "**Articulation of an existing flagged correction** \u2014\n`proposed_residual_closure.md` \u00a7C established that the K<1\nsine-Gordon reduction is structurally forced (K-parameterized\nGoldstein\u2013Kac) and that the kink-mass ratio carries an honest\n`\u221ar_n` correction the bare conjecture omitted. The status entry\nread \"what is left is a *quantitative correction* (`\u221ar_n`) and\na *declined disposition* (the observable-mapping) \u2014 neither is\nan open problem to chase.\" `framework_status.md` Survives row\nechoes this ",
       "depends_on": [
@@ -27536,6 +28040,8 @@
     {
       "id": "statistical_conventions",
       "path": "sync_cost/derivations/statistical_conventions.md",
+      "cid": null,
+      "sealed": false,
       "title": "Statistical conventions for session closure docs",
       "summary": "This doc defines the operational meaning of \u03c3-statements,\n%-statements, and \"closed\" used in the seven session closure\ndocs. Where a doc's wording is loose, this defines the strict\nsense.",
       "depends_on": [
@@ -27732,6 +28238,8 @@
     {
       "id": "stribeck_vortex",
       "path": "sync_cost/derivations/stribeck_vortex.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Stribeck Vortex Regime Map",
       "summary": "A vortex in a coupled medium has a velocity field v(r) that varies\nwith distance from the core. The Stribeck curve gives velocity-dependent\ncoupling K(v). Composing these yields a radial regime map K(r) with a\ncritical radius r_c where K(r_c) = 1, separating an overcritical core\nfrom a subcritical exterior.",
       "depends_on": [
@@ -27793,6 +28301,8 @@
     {
       "id": "structural_lemmas",
       "path": "sync_cost/derivations/structural_lemmas.md",
+      "cid": null,
+      "sealed": false,
       "title": "Structural lemmas",
       "summary": "**Structural lemmas v1, 2026-04-26.** Nine load-bearing lemmas\ncatalogued for preprint citation. Each lemma is independently\nstatable with proof source, Z1-Z3 status, and substrate /\nanchor classification. Composition graph identifies headline\nchain (Lemmas 4 \u2192 5 \u2192 6 + 2 \u2192 1) producing the cosmic partition\ntwo-component closure with zero free parameters at the closure\nlevel.",
       "depends_on": [
@@ -27954,6 +28464,8 @@
     {
       "id": "substrate_determinism",
       "path": "sync_cost/derivations/substrate_determinism.md",
+      "cid": null,
+      "sealed": false,
       "title": "Substrate determinism: is probability fundamental or emergent?",
       "summary": "Class 3 (foundational framing). No new primitive. The doc:",
       "depends_on": [
@@ -28250,6 +28762,8 @@
     {
       "id": "substrate_prediction_selection",
       "path": "sync_cost/derivations/substrate_prediction_selection.md",
+      "cid": "64670315076d2c7351876fedcc068f95e079c6751f3d671f7aa733720abbce5c",
+      "sealed": true,
       "title": "Substrate prediction selection \u2014 opening doc",
       "summary": "**Closed at Outcome 2 (2026-06-01).** Per-prediction structural\nselection verdict reached via the Koide iteration arc closure\n(`koide_form_substrate_iteration_14.md`). The Koide\n`K_lepton = 2/3` substrate-derivation attempt is the verdict's\nfirst instance: 13 iterations of structural-consistency analysis\nnarrowed to one residual structural assumption (uniform eigenvalue\nmagnitude of `M = q_3 I \u2212 q_2 J`, iter 13) that the substrate\napparatus does not independently force. The specific value `2/3`\n",
       "depends_on": [
@@ -28376,6 +28890,8 @@
     {
       "id": "thread_chronology",
       "path": "sync_cost/derivations/thread_chronology.md",
+      "cid": null,
+      "sealed": false,
       "title": "Thread chronology \u2014 the single ledger",
       "summary": "Class 3 (consolidation / record hygiene). No new primitive, no\nnew physics. This ledger is the single chronology home; the\ncatalog (`framework_status.md`) carries settled state only; other\ndocs' headlines/Status state settled values with the path here.",
       "depends_on": [
@@ -28842,6 +29358,8 @@
     {
       "id": "three_dimensions",
       "path": "sync_cost/derivations/three_dimensions.md",
+      "cid": null,
+      "sealed": false,
       "title": "Three Dimensions from the Mediant",
       "summary": "$$\\text{mediant} \\to \\mathrm{SL}(2,\\mathbb{Z})\n  \\xrightarrow{K \\to 1} \\mathrm{SL}(2,\\mathbb{R})\n  \\xrightarrow{\\text{self-consistency}} \\mathcal{M} = \\mathrm{SL}(2,\\mathbb{R})\n  \\implies d = 3$$",
       "depends_on": [
@@ -29023,6 +29541,8 @@
     {
       "id": "three_formalizations",
       "path": "sync_cost/derivations/three_formalizations.md",
+      "cid": null,
+      "sealed": false,
       "title": "Three Formalizations",
       "summary": "The exponent 54 in R = 6 \u00d7 13^54 decomposes as:",
       "depends_on": [
@@ -29074,6 +29594,8 @@
     {
       "id": "three_zeros",
       "path": "sync_cost/derivations/three_zeros.md",
+      "cid": null,
+      "sealed": false,
       "title": "Three Zeros and the 1+3 Decomposition",
       "summary": "**Established**:\n- Three distinct zeros identified and separated\n- The traceless projection J\u2080 = J on the Klein bottle (the identity\n  component is the forbidden (0,0) mode)\n- The 1+3 eigenvalue decomposition: {3/4, \u22121/4, \u22121/4, \u22121/4}\n- The 3-dimensional redistribution space = n\u00b2 \u2212 1 = dim SL(2,\u211d) = d\n- Connection to D17 rank-1 temporal causation: 1 temporal + 3 spatial",
       "depends_on": [],
@@ -29096,6 +29618,8 @@
     {
       "id": "tick_continuum_construction",
       "path": "sync_cost/derivations/tick_continuum_construction.md",
+      "cid": null,
+      "sealed": false,
       "title": "#TICK(b): the first-order binary tick constructs sine-Gordon \u2014 Goldstein\u2013Kac",
       "summary": "Class 3 (constructive resolution + precisely-located\nquantitative residual). No new primitive \u2014 GK is the classical\nconsequence of the existing binary-tick + force-biased-flip\nstructure. Closes `#TICK(b)` structurally; the residual is the\nmagnitude of the arrow-friction `\u03bb`, not a mechanism gap.",
       "depends_on": [
@@ -29192,6 +29716,8 @@
     {
       "id": "time_axis_split",
       "path": "sync_cost/derivations/time_axis_split.md",
+      "cid": null,
+      "sealed": false,
       "title": "The time-axis split on the Klein bottle",
       "summary": "On the Klein bottle, two aspects of \"time\" that conventional physics\nbundles together \u2014 a clock-like cyclic counter and a forward arrow \u2014\nlive on **different axes**. This is not a bug. It is a structural\nconsequence of one direction being orientable and the other not.",
       "depends_on": [
@@ -29333,6 +29859,8 @@
     {
       "id": "two_forces",
       "path": "sync_cost/derivations/two_forces.md",
+      "cid": null,
+      "sealed": false,
       "title": "Two Forces \u2014 Coherence and Decoherence",
       "summary": "The numerical exploration (coherence_decoherence.py) confirms the\nqualitative picture:\n- K_eff peaks near 1/\u03c6 due to Fibonacci pile-up\n- Setting D critical for 1/\u03c6 makes it the last frequency to lock\n- n_s \u2248 0.965 with negative running appears in the parameter space",
       "depends_on": [],
@@ -29370,6 +29898,8 @@
     {
       "id": "unitless_audit",
       "path": "sync_cost/derivations/unitless_audit.md",
+      "cid": null,
+      "sealed": false,
       "title": "Unitless audit: substrate primitives end-to-end",
       "summary": "Class 3 (derivation grade). The audit's structural content \u2014 that\nsubstrate primitives in Planck units (`\u03c3 = m = c = 1, L_x = \u03c4_tick =\n1`) determine the listed quantities \u2014 follows directly from the\nexisting framework derivations with Planck-normalisation applied.",
       "depends_on": [
@@ -29496,6 +30026,8 @@
     {
       "id": "unitless_check",
       "path": "sync_cost/derivations/unitless_check.md",
+      "cid": null,
+      "sealed": false,
       "title": "Unitless Check: \u210f = G = c = 1",
       "summary": "The independent values of \u210f, G, and c are conventions of the meter\u2013kilogram\u2013second system. They are not three separate inputs to the framework. Re-running every derivation with \u210f = G = c = 1 (Planck units) leaves every prediction unchanged.",
       "depends_on": [
@@ -29587,6 +30119,8 @@
     {
       "id": "vacuum_energy",
       "path": "sync_cost/derivations/vacuum_energy.md",
+      "cid": null,
+      "sealed": false,
       "title": "Cosmological Constant in the Framework",
       "summary": "The cosmological constant problem in this framework is not a\nsuppression mechanism. It is a change of configuration space:\nfrom the torus (\u221e modes, 10\u2077\u2074 GeV\u2074) to the Klein bottle (4 modes,\n10\u207b\u2074\u2077 GeV\u2074). The 121 orders of magnitude are the counting\ndifference between the two. Whether this is the physical\nconfiguration space is open; if it is, the problem dissolves into\na statement about which modes are functions on the surface.",
       "depends_on": [
@@ -29633,6 +30167,8 @@
     {
       "id": "variable_denominator",
       "path": "sync_cost/derivations/variable_denominator.md",
+      "cid": null,
+      "sealed": false,
       "title": "The Variable Denominator",
       "summary": "Hz \u2014 cycles per second \u2014 assumes the denominator is fixed. In a\nuniverse where time is synchronization rate (not background parameter),\nthe denominator changes between cycles. This breaks the factorization\n\"total operations = rate \u00d7 duration\" and replaces it with accumulated\nphase against a self-referential reference. The resulting bound on\ndistinguishable operations is:",
       "depends_on": [
@@ -29694,6 +30230,8 @@
     {
       "id": "vocabulary_is_the_work_pattern",
       "path": "sync_cost/derivations/vocabulary_is_the_work_pattern.md",
+      "cid": "6c8d14955dbd6a0dd8ae38c520cc2bca29cbf184ee196c11096d9790697e529c",
+      "sealed": true,
       "title": "The \"vocabulary-is-the-work\" pattern: a recurring framework",
       "summary": "A consolidation of a recurring pattern in the framework's\ndevelopment: an apparent open obstruction dissolves when the\ncorrect framework-internal vocabulary is identified. Each\ninstance is a **disambiguation**, not a derivation: the\n\"problem\" was an externally-imported framing applied to a\nframework object that doesn't carry the same content.",
       "depends_on": [
@@ -30015,6 +30553,8 @@
     {
       "id": "w_plus_formalization",
       "path": "sync_cost/derivations/w_plus_formalization.md",
+      "cid": null,
+      "sealed": false,
       "title": "Formal closure of w_+ = 13/14 \u2014 proposition-level chain",
       "summary": "**w_+ = 13/14 closes Class 5** in recognize mode. L1 closes\nper `L1_substrate_cusp_ground_state.md` via composition of\nexisting framework content (MOND smooth crossover + EM-coupling\nlock-in + substrate discreteness + local linearity). All eight\ncomponents (T1-T7 + L1) are Class 5. THM follows by composition.",
       "depends_on": [
@@ -30131,6 +30671,8 @@
     {
       "id": "w_state_from_substrate",
       "path": "sync_cost/derivations/w_state_from_substrate.md",
+      "cid": "ecd5d44629f77bbe02910b6e414a0c319906055536c0fc4c4e1415c7871f3a5a",
+      "sealed": true,
       "title": "W states from substrate \u2014 narrowing the apparatus, then extending it",
       "summary": "**T1a worked example, with a two-sided finding: narrowing then\nextension.** Tests whether the substrate's `Q \u2208 \u2124/2\u2124`-invariant\napparatus from `ghz_from_substrate.md` (PR #184) generalizes\nnaturally to the W state \u2014 the canonical 3-mode entangled state\nLOCC-inequivalent to GHZ.",
       "depends_on": [
@@ -30232,6 +30774,8 @@
     {
       "id": "wave_particle_substrate",
       "path": "sync_cost/derivations/wave_particle_substrate.md",
+      "cid": null,
+      "sealed": false,
       "title": "Wave\u2013particle substrate: the two-primitive framework synthesis",
       "summary": "The framework's structural content is specified by **two primitives\nplus their two derived consequences**:",
       "depends_on": [
@@ -30418,6 +30962,8 @@
     {
       "id": "xor_continuum_limit",
       "path": "sync_cost/derivations/xor_continuum_limit.md",
+      "cid": null,
+      "sealed": false,
       "title": "The XOR-Filtered Continuum Limit",
       "summary": "**Established**:\n- The continuum Klein bottle has structure group O(3), pin cover\n  Pin\u207a(3) \u2245 SU(2) \u00d7 Z\u2082.\n- Lovelock still applies locally: Einstein equations are the unique\n  output of the K=1 limit.\n- The Z\u2082 holonomy adds topological constraints but not new field\n  equations.\n- The XOR denominator-parity filter does not survive the continuum\n  limit as a smooth structure \u2014 it is a property of the discrete\n  (finite-depth) description.",
       "depends_on": [],
@@ -30452,6 +30998,8 @@
     {
       "id": "xor_derivation",
       "path": "sync_cost/derivations/xor_derivation.md",
+      "cid": null,
+      "sealed": false,
       "title": "Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions",
       "summary": "This derivation closes gap #5 in `PROOFREADER_RESPONSE.md`: the XOR parity\nrule `q_1 % 2 != q_2 % 2` was previously confirmed by simulation\n(`klein_bottle_kuramoto.py`) and argued heuristically, but not derived from\nfirst principles. Here we carry out the Fourier analysis explicitly.",
       "depends_on": [
