@@ -1,0 +1,50 @@
+# vocabulary-studies — federated manifest
+#
+# Thin manifest in the harmonics federation model (cf. harmonics/MANIFEST.yml
+# `repos:` and scripts/drift/check_manifest.py §federation). This repo holds
+# Class 2 structural readings, NOT derivation-chain claims: no scorecard
+# section, no bare_k1 section, no constants. Sources that name `harmonics`
+# are federated upstream references.
+
+role: "Vocabulary studies — external mathematics read through the minimum alphabet"
+
+repos:
+  vocabulary-studies:
+    github: "nickjoven/vocabulary-studies"   # provisional slug; rename on creation
+    role: "Class 2 structural readings (Ramanujan / Collatz / Riemann)"
+  harmonics:
+    github: "nickjoven/harmonics"
+    role: "Upstream substrate — minimum alphabet, mediant=PSL(2,Z), Gamma_0(6)"
+
+# Class 2 readings (expository; each ships a runnable check)
+readings:
+  farey_tree_synthesis:
+    file: "farey_tree_synthesis.md"
+    check: "farey_tree_synthesis.py"
+    class: 2
+    claim: "none (synthesis viewpoint + its boundary)"
+    upstream: ["harmonics:minimum_alphabet.md", "harmonics:mediant_derivation.md"]
+
+  ramanujan_pi_minimum_alphabet:
+    file: "ramanujan_pi_minimum_alphabet.md"
+    check: "ramanujan_pi_decomposition.py"
+    class: 2
+    upstream: ["harmonics:minimum_alphabet.md", "harmonics:canonical_glossary.md"]
+
+  ramanujan_pi_modular_discriminator:
+    file: "ramanujan_pi_modular_discriminator.md"
+    check: "ramanujan_pi_modular_discriminator.py"
+    class: 2
+    upstream: ["harmonics:psl2z_subgroup_phase_a_results.md"]
+
+  ramanujan_pi_structure_not_numbers:
+    file: "ramanujan_pi_structure_not_numbers.md"
+    check: "ramanujan_pi_structure_not_numbers.py"
+    class: 2
+    upstream: ["harmonics:minimum_alphabet.md"]
+
+  collatz_minimal_chaos:
+    file: "collatz_minimal_chaos.md"
+    check: "collatz_minimal_chaos.py"
+    class: 2
+    upstream: ["harmonics:second_law_topological.md", "harmonics:docs/archive/collatz.html"]
