@@ -47,7 +47,12 @@ All derived numbers in the framework are either:
 
 - **Fixed points**: the self-consistent values {w*, K*, δ} that
   the address book computes about itself. These are determined to
-  arbitrary precision by iteration.
+  arbitrary precision by iteration. *(Caveat: K* is field-equation
+  self-consistent per `item12_K_star_closure.py`; w* in
+  `boundary_weight.md` is observation-inverted from Ω_Λ per the
+  audit in `boundary_weight.py` L13-56, not yet field-equation-closed
+  — so the "self-consistent" framing applies cleanly to K* and δ
+  but is open for w*.)*
 
 The single dimensionful input (v = 246 GeV, or equivalently the
 root oscillator's frequency in physical units) is the conversion
