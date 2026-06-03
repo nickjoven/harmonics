@@ -106,7 +106,6 @@ forthcoming derivation atlas.
 | **Cusp 1/2 of Γ_0(6)** | Hecke cusp at level 2 within X_0(6) | The q_2-flavored cusp; contains rationals p/q with gcd(q, 6) = 2; w_+ inhabits this cusp | `psl2z_subgroup_phase_b.md` |
 | **Anharmonic group** | Standard cross-ratio symmetry group (S_3 acting on ℙ¹) | Six values per PSL(2,ℤ) cross-ratio orbit | `cross_ratio_irrep_reframe.md` |
 | **j-invariant** | Standard PSL(2,ℤ)-invariant on ℙ¹ | Distinguishes PSL(2,ℤ) orbits; the three w_+ candidates have disjoint j-invariants | `cross_ratio_irrep_reframe.md` |
-| **Catalan equation / Mihailescu's theorem** | `x^p − y^q = 1` with `p, q ≥ 2`, `x, y` positive integers | Catalan's conjecture (1844): the only solution is `(x, p, y, q) = (3, 2, 2, 3)` — i.e., 8 and 9 are the only consecutive perfect powers in the positive integers. Proven by Mihăilescu (2002, *J. Reine Angew. Math.* **572**) via cyclotomic field methods. The framework's cube identity `q_3² − q_2³ = 1` is the specific case `(p, q) = (2, 3)`; Mihailescu (or classical Diophantine methods for the specific case) forces `(q_2, q_3) = (2, 3)` from this single identity, providing the deepest number-theoretic substrate-forcing currently available for the framework's primitive denominators | `mass_sector_closure.md` "Connection to the Catalan equation / Mihailescu's theorem" |
 
 ## Section 6 — Cosmological observables and predictions
 
