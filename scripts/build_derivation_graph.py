@@ -10,6 +10,10 @@ Per-node metadata includes:
 
   - id             : the filename stem
   - path           : relative path to the file
+  - cid            : BLAKE3 CID this file was last sealed at in the
+                     substrate (.ket/log), or null if never sealed —
+                     a content-addressed identity, not just a name
+  - sealed         : bool, whether the source is in the substrate
   - title          : first heading, if present
   - summary        : first meaningful paragraph (or status note) if present
   - depends_on     : list of ids this file references
@@ -147,6 +151,31 @@ def extract_lineage(text: str, all_ids: set) -> dict:
     return out
 
 
+_PUT_LINE = re.compile(
+    r"^\S+\s+\|\s+put\s+\|\s+(?P<path>\S[^\n]*?)\s+->\s+(?P<cid>[0-9a-f]{64})\s*$"
+)
+
+
+def load_sealed_cids(root: Path) -> dict:
+    """Map repo-relative path -> last-sealed BLAKE3 CID from `.ket/log`.
+
+    This is what turns the graph from a free-floating prose artifact into a
+    *projection of sealed substrate content*: each node can carry the CID its
+    source was last sealed at, so the node has a stable, content-addressed
+    identity rather than only a mutable filename. `check_graph_sealed.py`
+    audits that the working tree still matches these CIDs.
+    """
+    log_path = root / ".ket" / "log"
+    if not log_path.exists():
+        return {}
+    sealed: dict = {}
+    for line in log_path.read_text().splitlines():
+        m = _PUT_LINE.match(line)
+        if m and m.group("path") != "-":
+            sealed[m.group("path")] = m.group("cid")  # last write wins
+    return sealed
+
+
 def git_log(path: Path) -> list:
     """Return list of commits touching this file."""
     rel = path.relative_to(ROOT)
@@ -181,11 +210,13 @@ def git_log(path: Path) -> list:
 
 def main():
     all_ids = {f.stem for f in md_files}
+    sealed = load_sealed_cids(ROOT)
     nodes = {}
 
     for f in md_files:
         text = f.read_text(errors="replace")
         node_id = f.stem
+        rel_path = str(f.relative_to(ROOT))
         others = all_ids - {node_id}
         refs = extract_references(text, others)
         lineage = extract_lineage(text, others)
@@ -198,7 +229,12 @@ def main():
         ]
         nodes[node_id] = {
             "id": node_id,
-            "path": str(f.relative_to(ROOT)),
+            "path": rel_path,
+            # Content-addressed identity: the CID this file was last sealed at
+            # in the substrate (.ket/log), or None if never sealed. Makes the
+            # node a projection of sealed content, not just a filename.
+            "cid": sealed.get(rel_path),
+            "sealed": rel_path in sealed,
             "title": extract_title(text),
             "summary": extract_summary(text),
             "depends_on": targets,
