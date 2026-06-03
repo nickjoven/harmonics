@@ -1,5 +1,5 @@
 {
-  "generated": "f6130d92c19668c7900559d061a474dfca0716e8",
+  "generated": "5412915af3c5b3ad5b041ad754242d0553477e86",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -2320,6 +2320,7 @@
         "depth_connection_nulls",
         "derivation_atlas",
         "epsilon_substrate_decomposition",
+        "figure_eight_necessitation_audit",
         "framework_status",
         "horn_branch_iteration_3_step_1",
         "hybrid_strategy_audit",
@@ -2343,6 +2344,7 @@
         "sqrt_r_n_correction",
         "structural_lemmas",
         "thread_chronology",
+        "vocabulary_bridge_iteration_1",
         "vocabulary_is_the_work_pattern"
       ],
       "edges": [
@@ -2418,6 +2420,10 @@
         },
         {
           "source": "epsilon_substrate_decomposition",
+          "kind": "references"
+        },
+        {
+          "source": "figure_eight_necessitation_audit",
           "kind": "references"
         },
         {
@@ -2510,6 +2516,10 @@
         },
         {
           "source": "thread_chronology",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_1",
           "kind": "references"
         },
         {
@@ -3394,16 +3404,27 @@
       "summary": "Class 3 (named principle; elevation of a verified meta-pattern).\nNo new primitive. Records, as a first-class principle with an\noperative discriminator, the regularity already instantiated at\nR1/\u2205, the dimensional inputs, #INF, the anchor obstructions, and\nA_s/Instance-7. Peer to `no_rescaling.md` and the\n`substrate_determinism.md` inviolables.",
       "depends_on": [
         "anchor_count_reaudit",
+        "born_rule",
         "empty_fork_cap",
         "framework_status",
+        "gauge_sector_lovelock",
+        "gell_mann_nishijima",
         "inflation_seam_anchor_closure",
+        "klein_bottle_restructure_price",
+        "mass_sector_closure",
+        "minimum_alphabet",
         "no_rescaling",
+        "q_mod2_conservation_theorem",
         "substrate_determinism",
-        "thread_chronology"
+        "thread_chronology",
+        "vocabulary_bridge_iteration_2_step_1",
+        "vocabulary_bridge_iteration_2_step_2"
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
+        "canonical_glossary",
         "discrete_extension_principle",
+        "figure_eight_necessitation_audit",
         "framework_status",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_1",
@@ -3417,11 +3438,18 @@
         "physics_relevance_measurement_catalog",
         "qm_reframing_programmatic",
         "substrate_prediction_selection",
-        "thread_chronology"
+        "thread_chronology",
+        "vocabulary_bridge_iteration_1",
+        "vocabulary_bridge_iteration_2_step_1",
+        "vocabulary_bridge_iteration_2_step_2"
       ],
       "edges": [
         {
           "target": "anchor_count_reaudit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
           "kind": "references"
         },
         {
@@ -3433,11 +3461,35 @@
           "kind": "references"
         },
         {
+          "target": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
+          "target": "gell_mann_nishijima",
+          "kind": "references"
+        },
+        {
           "target": "inflation_seam_anchor_closure",
           "kind": "references"
         },
         {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "minimum_alphabet",
+          "kind": "references"
+        },
+        {
           "target": "no_rescaling",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_conservation_theorem",
           "kind": "references"
         },
         {
@@ -3447,6 +3499,14 @@
         {
           "target": "thread_chronology",
           "kind": "references"
+        },
+        {
+          "target": "vocabulary_bridge_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_bridge_iteration_2_step_2",
+          "kind": "references"
         }
       ],
       "edged_by": [
@@ -3455,7 +3515,15 @@
           "kind": "references"
         },
         {
+          "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
           "source": "discrete_extension_principle",
+          "kind": "references"
+        },
+        {
+          "source": "figure_eight_necessitation_audit",
           "kind": "references"
         },
         {
@@ -3513,9 +3581,26 @@
         {
           "source": "thread_chronology",
           "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_2",
+          "kind": "references"
         }
       ],
       "git": [
+        {
+          "hash": "5412915",
+          "date": "2026-06-03",
+          "subject": "Vocabulary-bridge arc: substrate-chirality closes at path \u03b4' + Mihailescu connection (#214)"
+        },
         {
           "hash": "4bf4f14",
           "date": "2026-05-17",
@@ -3897,6 +3982,7 @@
         "a1_from_saddle_node",
         "algebraic_forcing_partition",
         "articulation_audit_2026-05",
+        "basepoint_principle",
         "bell_bounds_from_substrate",
         "born_rule_parameter_free",
         "complex_amplitude_uniqueness",
@@ -3962,6 +4048,10 @@
         },
         {
           "source": "articulation_audit_2026-05",
+          "kind": "references"
+        },
+        {
+          "source": "basepoint_principle",
           "kind": "references"
         },
         {
@@ -4252,6 +4342,7 @@
         "down_type_double_cover_closed",
         "down_type_double_cover_phase_c",
         "down_type_double_cover_phase_d",
+        "figure_eight_necessitation_audit",
         "horn_branch_iteration_2_step_1",
         "horn_branch_iteration_2_step_2",
         "horn_branch_iteration_3_step_1",
@@ -4314,6 +4405,10 @@
         },
         {
           "source": "down_type_double_cover_phase_d",
+          "kind": "references"
+        },
+        {
+          "source": "figure_eight_necessitation_audit",
           "kind": "references"
         },
         {
@@ -4407,7 +4502,7 @@
     {
       "id": "canonical_glossary",
       "path": "sync_cost/derivations/canonical_glossary.md",
-      "cid": "47b0d70c3ac5b6831d674af0ae92ede6db5805e980a1645668fa8536b8d15fd3",
+      "cid": "02ac2ac90f00d14a2088db20cd94aa3e05fcd5a3af270d572195b3b728992d3c",
       "sealed": true,
       "title": "Canonical glossary \u2014 framework \u2194 standard physics vocabulary",
       "summary": "Glossary v1, 2026-04-26. ~70 framework terms mapped to standard\nphysics / math equivalents across 10 thematic sections. Intended\nto be readable end-to-end in 30 minutes by a working physicist\nwith no prior framework exposure.",
@@ -4420,6 +4515,7 @@
         "anchor_count_audit",
         "ansatz_audit_policy",
         "baryon_fraction",
+        "basepoint_principle",
         "boundary_weight",
         "complex_amplitude_uniqueness",
         "continuum_limits",
@@ -4431,15 +4527,21 @@
         "epr_bell_assembly_theorem",
         "farey_partition",
         "figure_eight",
+        "figure_eight_necessitation_audit",
         "framework_status",
+        "gauge_high_scale_identification",
         "ghz_from_substrate",
         "h_inf_status",
         "hierarchy_gaussian_lattice",
+        "horn_branch_iteration_3_step_1",
         "k_axis_uniqueness",
         "k_scaling_scan",
         "klein_antipodal_z2_rep_pattern",
+        "klein_bottle",
+        "klein_bottle_restructure_price",
         "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
+        "koide_form_substrate_iteration_14",
         "lie_group_characterization",
         "mass_sector_closure",
         "mediant_derivation",
@@ -4459,6 +4561,7 @@
         "statistical_conventions",
         "substrate_determinism",
         "three_dimensions",
+        "vocabulary_bridge_iteration_1",
         "vocabulary_is_the_work_pattern",
         "w_state_from_substrate"
       ],
@@ -4478,7 +4581,9 @@
         "snmc_class_and_entanglement",
         "sqrt_r_n_correction",
         "structural_lemmas",
-        "substrate_prediction_selection"
+        "substrate_prediction_selection",
+        "vocabulary_bridge_iteration_2_step_1",
+        "vocabulary_bridge_iteration_2_step_2"
       ],
       "edges": [
         {
@@ -4511,6 +4616,10 @@
         },
         {
           "target": "baryon_fraction",
+          "kind": "references"
+        },
+        {
+          "target": "basepoint_principle",
           "kind": "references"
         },
         {
@@ -4558,7 +4667,15 @@
           "kind": "references"
         },
         {
+          "target": "figure_eight_necessitation_audit",
+          "kind": "references"
+        },
+        {
           "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_high_scale_identification",
           "kind": "references"
         },
         {
@@ -4574,6 +4691,10 @@
           "kind": "references"
         },
         {
+          "target": "horn_branch_iteration_3_step_1",
+          "kind": "references"
+        },
+        {
           "target": "k_axis_uniqueness",
           "kind": "references"
         },
@@ -4586,11 +4707,23 @@
           "kind": "references"
         },
         {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
           "target": "klein_bridge_audit_and_probe",
           "kind": "references"
         },
         {
           "target": "klein_nodal_parity",
+          "kind": "references"
+        },
+        {
+          "target": "koide_form_substrate_iteration_14",
           "kind": "references"
         },
         {
@@ -4670,6 +4803,10 @@
           "kind": "references"
         },
         {
+          "target": "vocabulary_bridge_iteration_1",
+          "kind": "references"
+        },
+        {
           "target": "vocabulary_is_the_work_pattern",
           "kind": "references"
         },
@@ -4742,9 +4879,22 @@
         {
           "source": "substrate_prediction_selection",
           "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_2",
+          "kind": "references"
         }
       ],
       "git": [
+        {
+          "hash": "5412915",
+          "date": "2026-06-03",
+          "subject": "Vocabulary-bridge arc: substrate-chirality closes at path \u03b4' + Mihailescu connection (#214)"
+        },
         {
           "hash": "5fdd816",
           "date": "2026-05-29",
@@ -9968,6 +10118,7 @@
         "empty_fork_cap",
         "equivalence_dissolution",
         "explicit_4x4_reduction",
+        "figure_eight_necessitation_audit",
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
         "klein_z2_decomposition_falsifier_2",
@@ -9982,7 +10133,8 @@
         "preferred_basis_dissolution",
         "soliton_dynamics",
         "substrate_determinism",
-        "thread_chronology"
+        "thread_chronology",
+        "vocabulary_bridge_iteration_1"
       ],
       "edges": [
         {
@@ -10060,6 +10212,10 @@
           "kind": "references"
         },
         {
+          "source": "figure_eight_necessitation_audit",
+          "kind": "references"
+        },
+        {
           "source": "ghz_from_substrate",
           "kind": "references"
         },
@@ -10118,6 +10274,10 @@
         {
           "source": "thread_chronology",
           "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_1",
+          "kind": "references"
         }
       ],
       "git": [
@@ -10144,6 +10304,99 @@
       ]
     },
     {
+      "id": "figure_eight_necessitation_audit",
+      "path": "sync_cost/derivations/figure_eight_necessitation_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Figure-8 necessitation audit \u2014 basepoint-principle inspection",
+      "summary": "**Audit verdict: CLASS 2 (re-description / useful frame), NOT\nSUBSTRATE-FORCED.** The figure-8 topology in `figure_eight.md` is\nadopted as an organizing frame for the substrate's 4 surviving\nKlein-bottle modes; it is **not** structurally forced by the\nsubstrate apparatus.",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "basepoint_principle",
+        "boundary_weight",
+        "figure_eight",
+        "gauge_sector_lovelock",
+        "generation_mechanism",
+        "klein_bottle",
+        "klein_bottle_derivation",
+        "mass_sector_closure",
+        "minkowski_signature",
+        "vocabulary_bridge_iteration_1"
+      ],
+      "depended_on_by": [
+        "canonical_glossary",
+        "vocabulary_bridge_iteration_2_step_1",
+        "vocabulary_bridge_iteration_2_step_2"
+      ],
+      "edges": [
+        {
+          "target": "ansatz_audit_policy",
+          "kind": "references"
+        },
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "figure_eight",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
+          "target": "generation_mechanism",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_derivation",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "minkowski_signature",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_bridge_iteration_1",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_2",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "5412915",
+          "date": "2026-06-03",
+          "subject": "Vocabulary-bridge arc: substrate-chirality closes at path \u03b4' + Mihailescu connection (#214)"
+        }
+      ]
+    },
+    {
       "id": "fourth_generation_revisited",
       "path": "sync_cost/derivations/fourth_generation_revisited.md",
       "cid": null,
@@ -10155,7 +10408,11 @@
         "generation_mechanism",
         "mass_sector_closure"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "vocabulary_bridge_iteration_1",
+        "vocabulary_bridge_iteration_2_step_1",
+        "vocabulary_bridge_iteration_2_step_2"
+      ],
       "edges": [
         {
           "target": "gell_mann_nishijima",
@@ -10170,7 +10427,20 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "vocabulary_bridge_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_2",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "e387fe3",
@@ -10350,6 +10620,7 @@
         "thread_chronology",
         "time_axis_split",
         "unitless_audit",
+        "vocabulary_bridge_iteration_2_step_2",
         "vocabulary_is_the_work_pattern",
         "wave_particle_substrate"
       ],
@@ -10978,6 +11249,10 @@
         },
         {
           "source": "unitless_audit",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_2",
           "kind": "references"
         },
         {
@@ -11839,7 +12114,8 @@
         "observer_register_closure",
         "sinw_effective_dimension",
         "thread_chronology",
-        "three_formalizations"
+        "three_formalizations",
+        "vocabulary_bridge_iteration_1"
       ],
       "edges": [
         {
@@ -11910,6 +12186,10 @@
         },
         {
           "source": "three_formalizations",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_1",
           "kind": "references"
         }
       ],
@@ -12043,7 +12323,11 @@
         "sine_gordon_substrate"
       ],
       "depended_on_by": [
-        "gauge_dictionary"
+        "canonical_glossary",
+        "gauge_dictionary",
+        "vocabulary_bridge_iteration_1",
+        "vocabulary_bridge_iteration_2_step_1",
+        "vocabulary_bridge_iteration_2_step_2"
       ],
       "edges": [
         {
@@ -12085,7 +12369,23 @@
       ],
       "edged_by": [
         {
+          "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
           "source": "gauge_dictionary",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_2",
           "kind": "references"
         }
       ],
@@ -12115,8 +12415,10 @@
       "depended_on_by": [
         "INDEX",
         "anchor_count_audit",
+        "basepoint_principle",
         "beta_from_tongues",
         "fermion_mass_running",
+        "figure_eight_necessitation_audit",
         "gauge_dictionary",
         "gauge_factorization",
         "gauge_high_scale_identification",
@@ -12124,7 +12426,10 @@
         "klein_connection",
         "koide_form_substrate_iteration_6",
         "mass_sector_closure",
-        "sinw_effective_dimension"
+        "sinw_effective_dimension",
+        "vocabulary_bridge_iteration_1",
+        "vocabulary_bridge_iteration_2_step_1",
+        "vocabulary_bridge_iteration_2_step_2"
       ],
       "edges": [
         {
@@ -12142,11 +12447,19 @@
           "kind": "references"
         },
         {
+          "source": "basepoint_principle",
+          "kind": "references"
+        },
+        {
           "source": "beta_from_tongues",
           "kind": "references"
         },
         {
           "source": "fermion_mass_running",
+          "kind": "references"
+        },
+        {
+          "source": "figure_eight_necessitation_audit",
           "kind": "references"
         },
         {
@@ -12179,6 +12492,18 @@
         },
         {
           "source": "sinw_effective_dimension",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_2",
           "kind": "references"
         }
       ],
@@ -12235,13 +12560,16 @@
       "depended_on_by": [
         "INDEX",
         "baryon_fraction",
+        "basepoint_principle",
         "beta_from_tongues",
         "fermion_mass_running",
         "fourth_generation_revisited",
         "gauge_high_scale_identification",
         "mass_sector_closure",
         "omega_partition_combinatorial",
-        "sector_constants_structure"
+        "sector_constants_structure",
+        "vocabulary_bridge_iteration_2_step_1",
+        "vocabulary_bridge_iteration_2_step_2"
       ],
       "edges": [
         {
@@ -12264,6 +12592,10 @@
         },
         {
           "source": "baryon_fraction",
+          "kind": "references"
+        },
+        {
+          "source": "basepoint_principle",
           "kind": "references"
         },
         {
@@ -12292,6 +12624,14 @@
         },
         {
           "source": "sector_constants_structure",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_2",
           "kind": "references"
         }
       ],
@@ -12343,6 +12683,7 @@
         "axial_trajectory_conservation_audit",
         "beta_from_tongues",
         "fermion_mass_running",
+        "figure_eight_necessitation_audit",
         "fourth_generation_revisited",
         "framework_status",
         "free_parameter_scorecard",
@@ -12364,7 +12705,8 @@
         "mixing_angle_audit",
         "negative_results_ledger",
         "numerology_inventory",
-        "physics_relevance_measurement_catalog"
+        "physics_relevance_measurement_catalog",
+        "vocabulary_bridge_iteration_2_step_1"
       ],
       "edges": [
         {
@@ -12407,6 +12749,10 @@
         },
         {
           "source": "fermion_mass_running",
+          "kind": "references"
+        },
+        {
+          "source": "figure_eight_necessitation_audit",
           "kind": "references"
         },
         {
@@ -12495,6 +12841,10 @@
         },
         {
           "source": "physics_relevance_measurement_catalog",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_1",
           "kind": "references"
         }
       ],
@@ -13896,7 +14246,9 @@
       "depended_on_by": [
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_2",
-        "horn_branch_iteration_3_step_1"
+        "horn_branch_iteration_3_step_1",
+        "vocabulary_bridge_iteration_1",
+        "vocabulary_bridge_iteration_2_step_1"
       ],
       "edges": [
         {
@@ -13955,6 +14307,14 @@
         },
         {
           "source": "horn_branch_iteration_3_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_1",
           "kind": "references"
         }
       ],
@@ -14069,6 +14429,7 @@
       ],
       "depended_on_by": [
         "boundary_weight",
+        "canonical_glossary",
         "down_type_double_cover_phase_c",
         "down_type_double_cover_phase_d",
         "horn_branch_iteration_1",
@@ -14116,6 +14477,10 @@
       "edged_by": [
         {
           "source": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "source": "canonical_glossary",
           "kind": "references"
         },
         {
@@ -15828,6 +16193,7 @@
         "articulation_audit_2026-05",
         "axial_trajectory_conservation_audit",
         "beta_from_tongues",
+        "canonical_glossary",
         "complex_amplitude_uniqueness",
         "cone_twist_substrate",
         "dark_twin_correction",
@@ -15836,6 +16202,7 @@
         "dynamical_tool_audit",
         "epr_bell_assembly_theorem",
         "figure_eight",
+        "figure_eight_necessitation_audit",
         "framework_status",
         "free_parameter_scorecard",
         "gauge_dictionary",
@@ -15880,6 +16247,7 @@
         "thread_chronology",
         "time_axis_split",
         "vacuum_energy",
+        "vocabulary_bridge_iteration_1",
         "wave_particle_substrate",
         "xor_derivation"
       ],
@@ -15923,6 +16291,10 @@
           "kind": "references"
         },
         {
+          "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
           "source": "complex_amplitude_uniqueness",
           "kind": "references"
         },
@@ -15952,6 +16324,10 @@
         },
         {
           "source": "figure_eight",
+          "kind": "references"
+        },
+        {
+          "source": "figure_eight_necessitation_audit",
           "kind": "references"
         },
         {
@@ -16131,6 +16507,10 @@
           "kind": "references"
         },
         {
+          "source": "vocabulary_bridge_iteration_1",
+          "kind": "references"
+        },
+        {
           "source": "wave_particle_substrate",
           "kind": "references"
         },
@@ -16232,6 +16612,7 @@
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_c",
         "figure_eight",
+        "figure_eight_necessitation_audit",
         "gap2_theorem_attempt",
         "gauge_factorization",
         "gauge_high_scale_identification",
@@ -16313,6 +16694,10 @@
         },
         {
           "source": "figure_eight",
+          "kind": "references"
+        },
+        {
+          "source": "figure_eight_necessitation_audit",
           "kind": "references"
         },
         {
@@ -16437,8 +16822,12 @@
         "q_mod2_conservation_theorem"
       ],
       "depended_on_by": [
+        "basepoint_principle",
+        "canonical_glossary",
         "horn_branch_iteration_1",
-        "horn_branch_iteration_2_step_2"
+        "horn_branch_iteration_2_step_2",
+        "vocabulary_bridge_iteration_1",
+        "vocabulary_bridge_iteration_2_step_2"
       ],
       "edges": [
         {
@@ -16492,11 +16881,27 @@
       ],
       "edged_by": [
         {
+          "source": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
           "source": "horn_branch_iteration_1",
           "kind": "references"
         },
         {
           "source": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_2",
           "kind": "references"
         }
       ],
@@ -16979,7 +17384,9 @@
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_1",
         "horn_branch_iteration_2_step_2",
-        "klein_bottle_restructure_price"
+        "klein_bottle_restructure_price",
+        "vocabulary_bridge_iteration_1",
+        "vocabulary_bridge_iteration_2_step_1"
       ],
       "edges": [
         {
@@ -17030,6 +17437,14 @@
         },
         {
           "source": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_1",
           "kind": "references"
         }
       ],
@@ -17456,6 +17871,7 @@
       ],
       "depended_on_by": [
         "axial_trajectory_conservation_audit",
+        "canonical_glossary",
         "framework_status",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_1",
@@ -17504,6 +17920,10 @@
       "edged_by": [
         {
           "source": "axial_trajectory_conservation_audit",
+          "kind": "references"
+        },
+        {
+          "source": "canonical_glossary",
           "kind": "references"
         },
         {
@@ -18796,7 +19216,7 @@
     {
       "id": "mass_sector_closure",
       "path": "sync_cost/derivations/mass_sector_closure.md",
-      "cid": "ba9cdf126c774759db9390b4537ad7e3a80e7b8d57f784db2c8d262f5b6193e0",
+      "cid": "d4a02345f73682a0aabc7d4771bd56c35765dff45e1fc4ae200ce84ba28dc311",
       "sealed": true,
       "title": "The Mass Sector Closure: Integer Conservation and Gauge Adjoints",
       "summary": "The integer conservation law governing fermion mass hierarchies:",
@@ -18810,9 +19230,11 @@
         "address_and_quantity",
         "anchor_count_audit",
         "axial_trajectory_conservation_audit",
+        "basepoint_principle",
         "canonical_glossary",
         "depth_connection_nulls",
         "derivation_atlas",
+        "figure_eight_necessitation_audit",
         "fourth_generation_revisited",
         "horn_branch_iteration_2_step_2",
         "k_axis_uniqueness",
@@ -18838,7 +19260,10 @@
         "path_a_walkthrough",
         "phenomenology_cross_reference",
         "sector_decoupling_phase_a",
-        "substrate_prediction_selection"
+        "substrate_prediction_selection",
+        "vocabulary_bridge_iteration_1",
+        "vocabulary_bridge_iteration_2_step_1",
+        "vocabulary_bridge_iteration_2_step_2"
       ],
       "edges": [
         {
@@ -18872,6 +19297,10 @@
           "kind": "references"
         },
         {
+          "source": "basepoint_principle",
+          "kind": "references"
+        },
+        {
           "source": "canonical_glossary",
           "kind": "references"
         },
@@ -18881,6 +19310,10 @@
         },
         {
           "source": "derivation_atlas",
+          "kind": "references"
+        },
+        {
+          "source": "figure_eight_necessitation_audit",
           "kind": "references"
         },
         {
@@ -18986,9 +19419,26 @@
         {
           "source": "substrate_prediction_selection",
           "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_2",
+          "kind": "references"
         }
       ],
       "git": [
+        {
+          "hash": "5412915",
+          "date": "2026-06-03",
+          "subject": "Vocabulary-bridge arc: substrate-chirality closes at path \u03b4' + Mihailescu connection (#214)"
+        },
         {
           "hash": "e387fe3",
           "date": "2026-04-14",
@@ -19791,6 +20241,7 @@
       "depended_on_by": [
         "INDEX",
         "a_s_geometric_proof",
+        "basepoint_principle",
         "bicone_golden_z2_identification",
         "canonical_glossary",
         "derivation_atlas",
@@ -19837,6 +20288,10 @@
         },
         {
           "source": "a_s_geometric_proof",
+          "kind": "references"
+        },
+        {
+          "source": "basepoint_principle",
           "kind": "references"
         },
         {
@@ -19957,6 +20412,7 @@
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
         "equivalence_dissolution",
+        "figure_eight_necessitation_audit",
         "klein_bottle_derivation",
         "koide_form_substrate_iteration_10",
         "koide_form_substrate_iteration_11",
@@ -19984,6 +20440,10 @@
         },
         {
           "source": "equivalence_dissolution",
+          "kind": "references"
+        },
+        {
+          "source": "figure_eight_necessitation_audit",
           "kind": "references"
         },
         {
@@ -25128,6 +25588,7 @@
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
+        "basepoint_principle",
         "bell_bounds_from_substrate",
         "bicone_golden_z2_identification",
         "canonical_glossary",
@@ -25153,6 +25614,8 @@
         "snmc_class_and_entanglement",
         "substrate_determinism",
         "thread_chronology",
+        "vocabulary_bridge_iteration_2_step_1",
+        "vocabulary_bridge_iteration_2_step_2",
         "w_state_from_substrate"
       ],
       "edges": [
@@ -25196,6 +25659,10 @@
       "edged_by": [
         {
           "source": "articulation_audit_2026-05",
+          "kind": "references"
+        },
+        {
+          "source": "basepoint_principle",
           "kind": "references"
         },
         {
@@ -25296,6 +25763,14 @@
         },
         {
           "source": "thread_chronology",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_2",
           "kind": "references"
         },
         {
@@ -30224,6 +30699,300 @@
           "hash": "c5e7f60",
           "date": "2026-03-24",
           "subject": "Add Derivation 16: variable denominator (Hz with changing reference)"
+        }
+      ]
+    },
+    {
+      "id": "vocabulary_bridge_iteration_1",
+      "path": "sync_cost/derivations/vocabulary_bridge_iteration_1.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Vocabulary-bridge iteration 1 \u2014 substrate \u2192 particle chirality survey",
+      "summary": "**First-pass survey.** This is iteration 1 of the\nvocabulary-bridge arc per Task 110. Apparatus context:",
+      "depends_on": [
+        "ansatz_audit_policy",
+        "basepoint_principle",
+        "figure_eight",
+        "fourth_generation_revisited",
+        "gauge_dictionary",
+        "gauge_high_scale_identification",
+        "gauge_sector_lovelock",
+        "horn_branch_iteration_2_step_1",
+        "klein_bottle",
+        "klein_bottle_restructure_price",
+        "klein_z2_decomposition_falsifier_2",
+        "mass_sector_closure"
+      ],
+      "depended_on_by": [
+        "canonical_glossary",
+        "figure_eight_necessitation_audit",
+        "vocabulary_bridge_iteration_2_step_1",
+        "vocabulary_bridge_iteration_2_step_2"
+      ],
+      "edges": [
+        {
+          "target": "ansatz_audit_policy",
+          "kind": "references"
+        },
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "figure_eight",
+          "kind": "references"
+        },
+        {
+          "target": "fourth_generation_revisited",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_dictionary",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_high_scale_identification",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "klein_z2_decomposition_falsifier_2",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "figure_eight_necessitation_audit",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_2",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "5412915",
+          "date": "2026-06-03",
+          "subject": "Vocabulary-bridge arc: substrate-chirality closes at path \u03b4' + Mihailescu connection (#214)"
+        }
+      ]
+    },
+    {
+      "id": "vocabulary_bridge_iteration_2_step_1",
+      "path": "sync_cost/derivations/vocabulary_bridge_iteration_2_step_1.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Vocabulary-bridge iteration 2 step 1 \u2014 resolve locus (4) inconsistency",
+      "summary": "**Verdict: APPARENT INCONSISTENCY DISSOLVES.** Close reading of\nthe two source docs shows `mass_sector_closure.md` L46-64 and\n`fourth_generation_revisited.md` L165-171 describe the **same\nsubstrate fact in complementary vocabularies**. The \"rejection\nof chirality\" in mass_sector_closure rejects a *naive doubling\nformula* (`chiral copies \u00d7 adj dim = 2 \u00d7 3 = 6`), not chirality\ninvolvement; the chirality framing in fourth_generation_revisited\nnames the *kinematic structure* (L doublet vs R singlet)",
+      "depends_on": [
+        "basepoint_principle",
+        "canonical_glossary",
+        "figure_eight_necessitation_audit",
+        "fourth_generation_revisited",
+        "gauge_high_scale_identification",
+        "gauge_sector_lovelock",
+        "gell_mann_nishijima",
+        "generation_mechanism",
+        "horn_branch_iteration_2_step_1",
+        "klein_z2_decomposition_falsifier_2",
+        "mass_sector_closure",
+        "q_mod2_conservation_theorem",
+        "vocabulary_bridge_iteration_1"
+      ],
+      "depended_on_by": [
+        "basepoint_principle",
+        "vocabulary_bridge_iteration_2_step_2"
+      ],
+      "edges": [
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "target": "figure_eight_necessitation_audit",
+          "kind": "references"
+        },
+        {
+          "target": "fourth_generation_revisited",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_high_scale_identification",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
+          "target": "gell_mann_nishijima",
+          "kind": "references"
+        },
+        {
+          "target": "generation_mechanism",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_2_step_1",
+          "kind": "references"
+        },
+        {
+          "target": "klein_z2_decomposition_falsifier_2",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_bridge_iteration_1",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "source": "vocabulary_bridge_iteration_2_step_2",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "5412915",
+          "date": "2026-06-03",
+          "subject": "Vocabulary-bridge arc: substrate-chirality closes at path \u03b4' + Mihailescu connection (#214)"
+        }
+      ]
+    },
+    {
+      "id": "vocabulary_bridge_iteration_2_step_2",
+      "path": "sync_cost/derivations/vocabulary_bridge_iteration_2_step_2.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Vocabulary-bridge iteration 2 step 2 \u2014 labeling constraint check",
+      "summary": "**Verdict: THREE \"NO\" ANSWERS. Path \u03b4' closes.** Reading the\nthree docs named in iteration 2 step 1's plan\n(`gauge_sector_lovelock.md`, `q_mod2_conservation_theorem.md`,\n`gell_mann_nishijima.md`) for any substrate constraint on the\nL vs R labeling of the lepton doublet/singlet structure, all\nthree return \"no constraint\": the substrate forces the\nkinematic split (doublet sector vs singlet sector) but does not\nprefer one orientation as \"L\" over the other.",
+      "depends_on": [
+        "basepoint_principle",
+        "canonical_glossary",
+        "figure_eight_necessitation_audit",
+        "fourth_generation_revisited",
+        "framework_status",
+        "gauge_high_scale_identification",
+        "gauge_sector_lovelock",
+        "gell_mann_nishijima",
+        "klein_bottle_restructure_price",
+        "mass_sector_closure",
+        "q_mod2_conservation_theorem",
+        "vocabulary_bridge_iteration_1",
+        "vocabulary_bridge_iteration_2_step_1"
+      ],
+      "depended_on_by": [
+        "basepoint_principle"
+      ],
+      "edges": [
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "target": "figure_eight_necessitation_audit",
+          "kind": "references"
+        },
+        {
+          "target": "fourth_generation_revisited",
+          "kind": "references"
+        },
+        {
+          "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_high_scale_identification",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
+          "target": "gell_mann_nishijima",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_bridge_iteration_1",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_bridge_iteration_2_step_1",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "basepoint_principle",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "5412915",
+          "date": "2026-06-03",
+          "subject": "Vocabulary-bridge arc: substrate-chirality closes at path \u03b4' + Mihailescu connection (#214)"
         }
       ]
     },
