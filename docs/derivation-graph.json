@@ -1,5 +1,5 @@
 {
-  "generated": "a33d3d8ebd52dda45a3cb1c733feace29ff513db",
+  "generated": "a997790232d9f55c6b51649bd590fcd1df6440b8",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -3447,7 +3447,9 @@
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
+        "bicyclist_observer_sequence",
         "canonical_glossary",
+        "conservation_scale_stratification_audit",
         "continuum_limits",
         "discrete_extension_principle",
         "figure_eight_necessitation_audit",
@@ -3544,7 +3546,15 @@
           "kind": "references"
         },
         {
+          "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_scale_stratification_audit",
           "kind": "references"
         },
         {
@@ -3717,6 +3727,7 @@
         "w_state_from_substrate"
       ],
       "depended_on_by": [
+        "conservation_scale_stratification_audit",
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
         "framework_status",
@@ -3772,6 +3783,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
         {
           "source": "dicke_apparatus_theorem",
           "kind": "references"
@@ -4011,6 +4026,77 @@
       ]
     },
     {
+      "id": "bicyclist_observer_sequence",
+      "path": "sync_cost/derivations/bicyclist_observer_sequence.md",
+      "cid": null,
+      "sealed": false,
+      "title": "The bicyclist sequence \u2014 observer configuration and conservation",
+      "summary": "**Presentation layer for the conversation-developed thought\nexperiment sequence that accompanied\n`conservation_scale_stratification_audit.md`.** Documents five\nsequential thought experiments \u2014 box-and-diamond, rate-blind-spot,\ncrowd-division, tuning, and loop-trap-with-external-media \u2014 that\ntogether build a coherent operational picture of how observer\nconfiguration interacts with the framework's conservation\nguarantees.",
+      "depends_on": [
+        "basepoint_principle",
+        "canonical_glossary",
+        "conservation_scale_stratification_audit",
+        "continuum_limits",
+        "klein_bottle_restructure_price",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_conservation_theorem",
+        "rank1_temporal_causation",
+        "substrate_determinism",
+        "surface_uniqueness_audit"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "target": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "rank1_temporal_causation",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "surface_uniqueness_audit",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "a997790",
+          "date": "2026-06-04",
+          "subject": "Conservation scale-stratification audit + bicyclist presentation layer + make preview (#217)"
+        }
+      ]
+    },
+    {
       "id": "born_rule",
       "path": "sync_cost/derivations/born_rule.md",
       "cid": null,
@@ -4031,6 +4117,7 @@
         "bell_bounds_from_substrate",
         "born_rule_parameter_free",
         "complex_amplitude_uniqueness",
+        "conservation_scale_stratification_audit",
         "derivation_atlas",
         "dicke_apparatus_theorem",
         "dynamical_tool_audit",
@@ -4109,6 +4196,10 @@
         },
         {
           "source": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_scale_stratification_audit",
           "kind": "references"
         },
         {
@@ -4629,7 +4720,9 @@
         "a1_from_saddle_node",
         "audit_punch_list_2026-04",
         "bell_bounds_from_substrate",
+        "bicyclist_observer_sequence",
         "complex_amplitude_uniqueness",
+        "conservation_scale_stratification_audit",
         "continuum_limits",
         "derivation_atlas",
         "dicke_apparatus_theorem",
@@ -4895,7 +4988,15 @@
           "kind": "references"
         },
         {
+          "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
           "source": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_scale_stratification_audit",
           "kind": "references"
         },
         {
@@ -5556,6 +5657,139 @@
       ]
     },
     {
+      "id": "conservation_scale_stratification_audit",
+      "path": "sync_cost/derivations/conservation_scale_stratification_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Conservation scale-stratification audit \u2014 Q mod 2 and dissipation across Planck/standard/Hubble limits",
+      "summary": "**Audit verdict: the framework's two foundational conservation\ninvariants \u2014 Q mod 2 (topological) and dissipation (algebraic)\n\u2014 have *different* scale-stability. Dissipation is universal\nacross all three scales (Planck / standard / Hubble) via its\nalgebraic rank-1 Fr\u00e9chet structure; Q mod 2 is universal at\nstandard and Hubble scales but **contingent at Planck**, because\nits conservation theorem explicitly invokes Klein-bottle\ntopology (antiperiodic-cycle structure) that may dissolve under\nnon-to",
+      "depends_on": [
+        "basepoint_principle",
+        "bell_bounds_from_substrate",
+        "born_rule",
+        "canonical_glossary",
+        "continuum_limits",
+        "dicke_apparatus_theorem",
+        "epr_bell_assembly_theorem",
+        "framework_status",
+        "ghz_from_substrate",
+        "klein_bottle",
+        "klein_bottle_derivation",
+        "klein_bottle_restructure_price",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_conservation_theorem",
+        "rank1_temporal_causation",
+        "substrate_determinism",
+        "surface_uniqueness_audit",
+        "w_state_from_substrate",
+        "xor_derivation"
+      ],
+      "depended_on_by": [
+        "bicyclist_observer_sequence",
+        "q_mod2_conservation_theorem",
+        "substrate_determinism"
+      ],
+      "edges": [
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "bell_bounds_from_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "dicke_apparatus_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "epr_bell_assembly_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "ghz_from_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_derivation",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "rank1_temporal_causation",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "surface_uniqueness_audit",
+          "kind": "references"
+        },
+        {
+          "target": "w_state_from_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "xor_derivation",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
+          "source": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "source": "substrate_determinism",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "a997790",
+          "date": "2026-06-04",
+          "subject": "Conservation scale-stratification audit + bicyclist presentation layer + make preview (#217)"
+        }
+      ]
+    },
+    {
       "id": "continuity_in_K_nulls",
       "path": "sync_cost/derivations/continuity_in_K_nulls.md",
       "cid": "3a3b4152e8e20e763304b78337ded8f3e09084ccaea502737905b9d288da1254",
@@ -5828,8 +6062,10 @@
         "anchor_count_audit",
         "anchor_count_reaudit",
         "articulation_audit_2026-05",
+        "bicyclist_observer_sequence",
         "canonical_glossary",
         "complex_amplitude_uniqueness",
+        "conservation_scale_stratification_audit",
         "cross_ratio_irrep_reframe",
         "derivation_atlas",
         "dynamical_quantization",
@@ -5923,11 +6159,19 @@
           "kind": "references"
         },
         {
+          "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
           "source": "canonical_glossary",
           "kind": "references"
         },
         {
           "source": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_scale_stratification_audit",
           "kind": "references"
         },
         {
@@ -6944,6 +7188,7 @@
         "w_state_from_substrate"
       ],
       "depended_on_by": [
+        "conservation_scale_stratification_audit",
         "discrete_extension_principle",
         "framework_status",
         "physics_relevance_measurement_catalog",
@@ -6997,6 +7242,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
         {
           "source": "discrete_extension_principle",
           "kind": "references"
@@ -8946,6 +9195,7 @@
         "canonical_glossary",
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
+        "conservation_scale_stratification_audit",
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
         "equivalence_dissolution",
@@ -9019,6 +9269,10 @@
         },
         {
           "source": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_scale_stratification_audit",
           "kind": "references"
         },
         {
@@ -10702,6 +10956,7 @@
         "bell_bounds_from_substrate",
         "canonical_glossary",
         "cone_twist_substrate",
+        "conservation_scale_stratification_audit",
         "continuity_in_K_nulls",
         "depth_connection_nulls",
         "dicke_apparatus_theorem",
@@ -11167,6 +11422,10 @@
         },
         {
           "source": "cone_twist_substrate",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_scale_stratification_audit",
           "kind": "references"
         },
         {
@@ -13119,6 +13378,7 @@
       "depended_on_by": [
         "bell_bounds_from_substrate",
         "canonical_glossary",
+        "conservation_scale_stratification_audit",
         "dicke_apparatus_theorem",
         "framework_status",
         "koide_form_substrate_iteration_10",
@@ -13180,6 +13440,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_scale_stratification_audit",
           "kind": "references"
         },
         {
@@ -16456,6 +16720,7 @@
         "canonical_glossary",
         "complex_amplitude_uniqueness",
         "cone_twist_substrate",
+        "conservation_scale_stratification_audit",
         "dark_twin_correction",
         "discrete_reduction_problem",
         "duty_cycle_dictionary",
@@ -16561,6 +16826,10 @@
         },
         {
           "source": "cone_twist_substrate",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_scale_stratification_audit",
           "kind": "references"
         },
         {
@@ -16874,6 +17143,7 @@
         "a_s_geometric_proof",
         "audit_findings_3_4_disposition",
         "cone_twist_substrate",
+        "conservation_scale_stratification_audit",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_c",
         "figure_eight",
@@ -16949,6 +17219,10 @@
         },
         {
           "source": "cone_twist_substrate",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_scale_stratification_audit",
           "kind": "references"
         },
         {
@@ -17098,7 +17372,9 @@
       ],
       "depended_on_by": [
         "basepoint_principle",
+        "bicyclist_observer_sequence",
         "canonical_glossary",
+        "conservation_scale_stratification_audit",
         "continuum_limits",
         "framework_status",
         "horn_branch_iteration_1",
@@ -17164,7 +17440,15 @@
           "kind": "references"
         },
         {
+          "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_scale_stratification_audit",
           "kind": "references"
         },
         {
@@ -25332,6 +25616,8 @@
         "torus_branch_iteration_1"
       ],
       "depended_on_by": [
+        "bicyclist_observer_sequence",
+        "conservation_scale_stratification_audit",
         "framework_status",
         "torus_branch_iteration_2_step_1",
         "torus_branch_iteration_2_step_2"
@@ -25387,6 +25673,14 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
         {
           "source": "framework_status",
           "kind": "references"
@@ -26034,16 +26328,18 @@
     {
       "id": "q_mod2_conservation_theorem",
       "path": "sync_cost/derivations/q_mod2_conservation_theorem.md",
-      "cid": "f960c5840f6eff32284aeba706d577ea0e963f5da191c362ba65f0770e86bbaf",
+      "cid": "13f9893f36832c4441b2cf4af0c595e5d04fbe1e0f05a73d76154e209115d4ad",
       "sealed": true,
       "title": "Q mod 2 conservation theorem",
       "summary": "**Standalone theorem articulated** for substrate inviolable #1\n(`substrate_determinism.md` L166-167) \u2014 the Z\u2082 topological-charge\nconservation that had been committed as a structural inviolable\nbut was flagged \"not a closed standalone theorem \u2014 the explicit\nstandalone theorem is *not yet articulated*\"\n(`framework_status.md` L31; `phenomenology_cross_reference.md:439`).",
       "depends_on": [
         "cone_twist_substrate",
+        "conservation_scale_stratification_audit",
         "framework_status",
         "k_inflation_seam_obstruction",
         "klein_bottle",
         "phenomenology_cross_reference",
+        "rank1_temporal_causation",
         "sine_gordon_substrate",
         "substrate_determinism",
         "thread_chronology",
@@ -26054,9 +26350,11 @@
         "basepoint_principle",
         "bell_bounds_from_substrate",
         "bicone_golden_z2_identification",
+        "bicyclist_observer_sequence",
         "canonical_glossary",
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
+        "conservation_scale_stratification_audit",
         "derivation_atlas",
         "dicke_apparatus_theorem",
         "epr_bell_assembly_theorem",
@@ -26087,6 +26385,10 @@
           "kind": "references"
         },
         {
+          "target": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
           "target": "framework_status",
           "kind": "references"
         },
@@ -26100,6 +26402,10 @@
         },
         {
           "target": "phenomenology_cross_reference",
+          "kind": "references"
+        },
+        {
+          "target": "rank1_temporal_causation",
           "kind": "references"
         },
         {
@@ -26137,6 +26443,10 @@
           "kind": "references"
         },
         {
+          "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
           "source": "canonical_glossary",
           "kind": "references"
         },
@@ -26146,6 +26456,10 @@
         },
         {
           "source": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_scale_stratification_audit",
           "kind": "references"
         },
         {
@@ -26242,6 +26556,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "a997790",
+          "date": "2026-06-04",
+          "subject": "Conservation scale-stratification audit + bicyclist presentation layer + make preview (#217)"
+        },
         {
           "hash": "4d41418",
           "date": "2026-05-20",
@@ -26678,13 +26997,28 @@
       "summary": "For an SO(2)-equivariant Markovian synchronization operator at a\ncodimension-1 transition, the dynamically relevant present is the\ncenter-manifold coordinate |r|. All other degrees of freedom are\neither gauge/representation structure or exponentially decaying\nhistory. The rank-1 Fr\u00e9chet derivative is therefore not merely an\nalgebraic property of U, but the linearized expression of temporal\ncausation through a single active channel.",
       "depends_on": [],
       "depended_on_by": [
+        "bicyclist_observer_sequence",
+        "conservation_scale_stratification_audit",
         "klein_bottle_derivation",
+        "q_mod2_conservation_theorem",
         "time_axis_split"
       ],
       "edges": [],
       "edged_by": [
         {
+          "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
           "source": "klein_bottle_derivation",
+          "kind": "references"
+        },
+        {
+          "source": "q_mod2_conservation_theorem",
           "kind": "references"
         },
         {
@@ -29409,6 +29743,7 @@
       "depends_on": [
         "comparison_class",
         "cone_twist_substrate",
+        "conservation_scale_stratification_audit",
         "expressibility_split",
         "f_exit_natural",
         "figure_eight",
@@ -29429,11 +29764,13 @@
         "basepoint_principle",
         "bell_bounds_from_substrate",
         "bicone_golden_z2_identification",
+        "bicyclist_observer_sequence",
         "born_rule",
         "born_rule_parameter_free",
         "canonical_glossary",
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
+        "conservation_scale_stratification_audit",
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
         "e_cross_calc",
@@ -29470,6 +29807,10 @@
         },
         {
           "target": "cone_twist_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "conservation_scale_stratification_audit",
           "kind": "references"
         },
         {
@@ -29547,6 +29888,10 @@
           "kind": "references"
         },
         {
+          "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
           "source": "born_rule",
           "kind": "references"
         },
@@ -29564,6 +29909,10 @@
         },
         {
           "source": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_scale_stratification_audit",
           "kind": "references"
         },
         {
@@ -29680,6 +30029,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "a997790",
+          "date": "2026-06-04",
+          "subject": "Conservation scale-stratification audit + bicyclist presentation layer + make preview (#217)"
+        },
         {
           "hash": "4d41418",
           "date": "2026-05-20",
@@ -29846,6 +30200,8 @@
         "vocabulary_bridge_iteration_2_step_2"
       ],
       "depended_on_by": [
+        "bicyclist_observer_sequence",
+        "conservation_scale_stratification_audit",
         "continuum_limits",
         "framework_status",
         "primitives_vs_addresses_candidate"
@@ -29897,6 +30253,14 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
         {
           "source": "continuum_limits",
           "kind": "references"
@@ -32320,6 +32684,7 @@
       "depended_on_by": [
         "bell_bounds_from_substrate",
         "canonical_glossary",
+        "conservation_scale_stratification_audit",
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
         "framework_status",
@@ -32368,6 +32733,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_scale_stratification_audit",
           "kind": "references"
         },
         {
@@ -32639,6 +33008,7 @@
         "sine_gordon_substrate"
       ],
       "depended_on_by": [
+        "conservation_scale_stratification_audit",
         "discrete_reduction_computed",
         "discrete_reduction_problem",
         "framework_status",
@@ -32662,6 +33032,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
         {
           "source": "discrete_reduction_computed",
           "kind": "references"
