@@ -357,3 +357,5 @@
 2026-06-03T23:39:41Z | put | sync_cost/derivations/framework_status.md -> 7c6e49d2e1529dff1eb80a62b15180919f6ace2e3a165092b8ec3c2dee886571
 2026-06-03T23:39:41Z | dag:create | f7e88fee9b5b1de10a8869581680dc07b38c55e02d00335ee0fbb6f04d10cd68
 2026-06-03T23:40:07Z | put | sync_cost/derivations/framework_status.md -> 7c6e49d2e1529dff1eb80a62b15180919f6ace2e3a165092b8ec3c2dee886571
+2026-06-04T01:20:04Z | put | sync_cost/derivations/q_mod2_conservation_theorem.md -> 13f9893f36832c4441b2cf4af0c595e5d04fbe1e0f05a73d76154e209115d4ad
+2026-06-04T01:20:04Z | dag:create | 068f96927aff454e550528c1eb338178ee1cbe1eed0600d2138da6899c0541fa
