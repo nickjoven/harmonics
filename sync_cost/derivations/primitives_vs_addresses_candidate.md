@@ -286,6 +286,83 @@ The lossy projection happens at the substrate → observation
 interface regardless of which number-class the projected value
 inhabits.
 
+### Two-step decomposition of the lossy projection
+
+The "lossy projection" treated above as one move is actually
+**two consecutive lossy steps with distinct geometric mechanisms**.
+Distinguishing them sharpens the discrimination of what loses
+information where, and surfaces two operational layers the
+observer controls. The pen-on-projector classroom demonstration
+in `bicyclist_observer_sequence.md` (scenario #1) captures both
+in one physical setup.
+
+**Step 1 — substrate → measurement (parallel-axis collapse)**:
+two substrate axes parallel to each other (related by rational
+rate ratio, resonant phase relationship, or aligned spatial
+direction) merge through the projection. Their individual
+identities collapse into a resultant scalar. Information is
+lost via *resonance combination*. This is the Born-rule
+basin-selection step — multiple coherent substrate paths
+collapse to a measurement outcome.
+
+**Step 2 — measurement → observer (perpendicular-axis dropout)**:
+substrate axes perpendicular to the observer's projection
+direction are dropped from perception. The measurement may have
+recorded them, but they are orthogonal to the observer's
+cognitive integration capacity. This is the *dimensional limit*
+step — perpendicular information is preserved in measurement
+form but inaccessible to the observer.
+
+**Parallel and perpendicular are the two fixed points** of the
+rotation group acting on the relative angle θ between axes:
+
+| Relationship | θ | Geometric content |
+|---|---|---|
+| Parallel | 0 (or π) | Maximally dependent — colinear; one axis carries all the information |
+| Perpendicular | π/2 | Maximally independent — orthogonal; axes contribute non-overlapping information |
+| Generic intersection | otherwise | Intermediate; partial alignment |
+
+Generic angles are transient under rotation. Parallel and
+perpendicular are distinguished — they are the two endpoints
+of the alignment spectrum (maximum dependence and maximum
+orthogonality respectively).
+
+The two operational layers:
+
+- **Measurement apparatus design** controls what becomes
+  *parallel*: which substrate rates does the detector sample
+  resonantly, forcing parallel-axis collapse? The which-path
+  detector in a double-slit experiment is exactly this — it
+  imposes a sampling axis parallel to the slit-distinguishing
+  rate, collapsing the multi-basin structure into resonance
+  with itself.
+
+- **Projection direction** controls what becomes
+  *perpendicular*: which substrate axes lie orthogonal to the
+  observer's cognitive projection, ensuring they are dropped
+  even if measured? The pen-on-projector escape (pointing the
+  pen perpendicular to the screen) is the operational version
+  of this — by aligning the pen's length axis perpendicular to
+  the projection plane, the 1D content collapses into 0D and
+  cannot be recovered from the shadow.
+
+The two steps degenerate different axes:
+
+- Step 1 (parallel-axis collapse) loses *each individual axis's
+  value* but preserves their *ratio* as the measurement outcome
+- Step 2 (perpendicular-axis dropout) loses *all information
+  about axes perpendicular to projection* — neither their value
+  nor any relational quantity is recoverable from the observer's
+  perspective
+
+Honest framework work has to account for both. A framework claim
+that survives parallel-axis collapse (the framework's apparatus
+correctly handles the measurement geometry) may still fail to
+survive perpendicular-axis dropout (the observer cannot perceive
+the substrate structure the apparatus has correctly identified).
+This is where the cognitive-bandwidth caveat enters the
+methodology.
+
 ### Implication for the four-status discriminator
 
 The information-theoretic reading sharpens

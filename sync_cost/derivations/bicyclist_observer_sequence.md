@@ -4,12 +4,20 @@
 
 **Presentation layer for the conversation-developed thought
 experiment sequence that accompanied
-`conservation_scale_stratification_audit.md`.** Documents five
-sequential thought experiments — box-and-diamond, rate-blind-spot,
-crowd-division, tuning, and loop-trap-with-external-media — that
-together build a coherent operational picture of how observer
-configuration interacts with the framework's conservation
-guarantees.
+`conservation_scale_stratification_audit.md`.** Documents six
+sequential thought experiments — pen-on-projector, box-and-diamond,
+rate-blind-spot, crowd-division, tuning, and
+loop-trap-with-external-media — that together build a coherent
+operational picture of how observer configuration interacts with
+the framework's conservation guarantees.
+
+The sequence opens with **pen-on-projector** (a 4th-grade
+classroom demonstration the framework discussion later inherited)
+because it establishes the projection geometry that the rest of
+the sequence applies. The bicyclist scenarios that follow
+(#3-#6) require more arbitrary constraints to set up; the
+pen-on-projector captures the foundational geometric mechanism
+with fewer moving parts.
 
 The sequence is **not new substrate apparatus**. Each thought
 experiment elaborates how the existing conservation chain
@@ -17,9 +25,9 @@ experiment elaborates how the existing conservation chain
 different observer regimes. The contributions are:
 
 - **Layered surfacing** of dimensions implicit in the
-  conservation theorem: spatial diameter, temporal sampling
-  rate, operational prediction, active configuration,
-  privileged-observation access.
+  conservation theorem: projection geometry, spatial diameter,
+  temporal sampling rate, operational prediction, active
+  configuration, privileged-observation access.
 - **A diagnostic toolkit** for "what's useful to read"
   when characterizing recurrent or scale-boundary phenomena.
 - **A presentation idiom** that's accessible without
@@ -38,7 +46,88 @@ substantive `conservation_scale_stratification_audit.md`).
 
 ## The sequence
 
-### 1. Box-and-diamond — the spatial scale-qualification
+### 1. Pen-on-projector — the projection geometry foundation
+
+**Setup**: an overhead projector with two dry-erase pens placed
+on the glass. The pens cast shadows on the screen. The task:
+orient the pens such that lines drawn infinitely from their
+shadows neither intersect nor converge.
+
+**The naive impossibility**: in 2D (the screen plane), two
+infinite lines either intersect at exactly one point or are
+parallel. There is no third option. Two pens lying flat on the
+projector glass cast 1D line shadows in 2D space, and the
+constraint becomes geometrically forced — every configuration
+either intersects or is parallel.
+
+**The escape**: orient the pens *perpendicular to the projection
+plane* — point them straight up. The shadows are no longer lines
+but blobs (0D points). Points have no orientation; they trivially
+"neither intersect nor converge." The 2D constraint dissolves
+because the projection's dimensionality has been reduced. The
+pens still have 1D length in 3D, but their length axis is now
+aligned with the projection direction, collapsing into the
+projection rather than across it.
+
+**What it surfaces**: the geometry of projection — substrate
+axes parallel to the projection direction collapse into the
+projection; substrate axes perpendicular to the projection
+direction are dropped entirely (their information lies
+orthogonal to the captured plane). Parallel and perpendicular
+are not generic angles; they are the **two fixed points** of
+the rotation group acting on relative axis orientation:
+
+| Relationship | θ | Geometric content |
+|---|---|---|
+| Parallel | 0 (or π) | Maximally dependent — colinear; one axis carries all the information |
+| Perpendicular | π/2 | Maximally independent — orthogonal; axes contribute non-overlapping information |
+| Generic intersection | otherwise | Intermediate; partial alignment |
+
+The classmate's pen-perpendicular-to-screen is the operational
+version of *perpendicular-axis dropout* — by aligning the pen's
+length axis perpendicular to the projection plane, the pen's
+1D content collapses into a 0D shadow.
+
+**The two-step lossy decomposition**:
+
+This refines the discrete-lossless / quantum-lossy framing in
+`primitives_vs_addresses_candidate.md`. What was treated as one
+"lossy projection" move is actually two consecutive lossy steps
+with distinct geometries:
+
+**Step 1 — substrate → measurement (parallel-axis collapse)**:
+two substrate axes parallel to each other (related by rational
+rate ratio, resonant phase relationship) merge through the
+projection. Their individual identities collapse into a
+resultant scalar. Information is lost via resonance combination.
+This is the Born-rule basin-selection step — multiple coherent
+substrate paths collapse to a measurement outcome.
+
+**Step 2 — measurement → observer (perpendicular-axis
+dropout)**: substrate axes perpendicular to the observer's
+projection direction are dropped from perception. The
+measurement may have recorded them, but they're orthogonal to
+the observer's cognitive integration capacity. This is the
+dimensional limit step — perpendicular information is preserved
+in measurement form but inaccessible to the observer.
+
+The two steps correspond to two operational layers the observer
+controls:
+- **Measurement apparatus design** controls what becomes
+  parallel (what to make resonate with sampling)
+- **Projection direction** controls what becomes perpendicular
+  (what to sample along vs orthogonally)
+
+**Maps to**: the substrate's multi-vector content losing
+information through two consecutive projections with distinct
+geometric mechanisms; refines the single-step "lossy projection"
+treatment of `primitives_vs_addresses_candidate.md`'s
+discrete-lossless / quantum-lossy section. The provenance is a
+4th-grade classroom demonstration brought into the framework
+discussion; the geometry it captures is older than the framework
+and applies to any projection-based observation.
+
+### 2. Box-and-diamond — the spatial scale-qualification
 
 **Setup**: an observer stands below a square enclosure. Inside
 the enclosure: a smaller rotated diamond (a mode carrying
@@ -63,7 +152,7 @@ by the theorem. The framework currently doesn't derive which.
 (now explicit in `q_mod2_conservation_theorem.md`'s "Scale-
 qualification clause" added 2026-06).
 
-### 2. Rate-blind-spot — the temporal sampling analog
+### 3. Rate-blind-spot — the temporal sampling analog
 
 **Setup**: a single lane of bicyclists passing. You want to
 determine whether each cyclist passes on the left or right
@@ -90,7 +179,7 @@ canonical in the framework. The audit's spatial scale-qualification
 addresses Planck/standard/Hubble; this surfaces an additional
 sampling-rate qualifier that may need parallel treatment.
 
-### 3. Crowd-division — operational prediction vs in-principle
+### 4. Crowd-division — operational prediction vs in-principle
 
 **Setup**: extending the bicyclist scenario — you need
 handedness information **ahead of time** so you can divide the
@@ -116,7 +205,7 @@ operational use needs engineering apparatus the framework
 supplies the conservation guarantee for, but doesn't supply
 itself.
 
-### 4. Tuning — active observer configuration
+### 5. Tuning — active observer configuration
 
 **Setup**: now you can tune some of the frequencies — your
 observation sampling rates, your detector parameters, your
@@ -149,7 +238,7 @@ framework's seven verified basepoint instances + candidate
 layer adjacent to but distinct from the framework's
 substrate-vs-observation distinctions.
 
-### 5. Loop-trap with external media — privileged observation
+### 6. Loop-trap with external media — privileged observation
 
 **Setup**: sci-fi framing. Someone walks into a loop trap (a
 recurrent attractor, fixed-point cycle, CTC-like structure).
@@ -189,13 +278,13 @@ For escape (how do you break the loop?):
 
 **Maps to**: a worked-example of the active-observer
 configuration applied to characterizing recurrent systems via
-external access. Combines all of #1-#4 into operational use.
+external access. Combines all of #1-#5 into operational use.
 
 ---
 
 ## The diagnostic toolkit (synthesis)
 
-The five thought experiments together build a methodology for
+The six thought experiments together build a methodology for
 operating with the framework's conservation guarantees under
 realistic measurement constraints:
 
@@ -281,8 +370,9 @@ the framework's conservation chain.
 ## What this doc is NOT
 
 - **Not new substrate apparatus.** Resolution-mode throughout.
-  The five thought experiments elaborate existing conservation
-  apparatus.
+  The six thought experiments elaborate existing conservation
+  apparatus (the projection geometry foundation precedes them
+  but uses no apparatus beyond standard projection geometry).
 - **Not a derivation.** It's a presentation layer for an
   operational toolkit, accompanying the audit's substantive
   analysis.
@@ -339,9 +429,10 @@ the framework's conservation chain.
 
 ## One-line summary
 
-This doc is the **presentation layer** for the five-thought-
-experiment sequence (box-and-diamond, rate-blind-spot,
-crowd-division, tuning, loop-trap-with-external-media)
+This doc is the **presentation layer** for the six-thought-
+experiment sequence (pen-on-projector, box-and-diamond,
+rate-blind-spot, crowd-division, tuning,
+loop-trap-with-external-media)
 that accompanied `conservation_scale_stratification_audit.md` —
 documenting them as a coherent operational picture of how
 observer configuration interacts with framework conservation
