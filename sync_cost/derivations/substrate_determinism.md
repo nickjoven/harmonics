@@ -167,6 +167,18 @@ otherwise:
    topological rigidity. No local process changes `Q mod 2`.
    Standalone theorem (statement, proof, locality definition,
    falsifiers): `q_mod2_conservation_theorem.md`.
+   **Scale-qualification** (2026-06,
+   `conservation_scale_stratification_audit.md`): this inviolable
+   is **topology-conditional** — universal at standard and Hubble
+   scales where Klein-bottle topology is the substrate's
+   operational form; at Planck scales, the theorem's diameter
+   condition (`< L_x`) trivializes the threat (no Planck-scale
+   process can encircle the antiperiodic direction) but the
+   framework does not derive Planck-scale Q mod 2 *definiteness*
+   if the substrate is non-topological there. Distinct from
+   *algebraically-grounded* inviolables (e.g., rank-1 dissipation
+   structure from D46) which survive all scales without
+   topological dependence.
 2. **The no-rescaling identity.** Cosmic observable = substrate
    observable, *exact*, in Planck units (`no_rescaling.md`). Any
    resolution introducing a structural rescaling prefactor is

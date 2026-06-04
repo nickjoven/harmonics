@@ -51,6 +51,52 @@ antiperiodic-loop-free chart of `K²` can change `Q mod 2`. To
 change `Q mod 2`, a process must encircle the antiperiodic
 direction — by definition, a non-local (global) operation.
 
+### Scale-qualification clause (added 2026-06)
+
+The theorem's diameter condition `< L_x` is **scale-qualified by
+construction**. The proof and statement operate within scale
+ranges where Klein-bottle topology is well-defined — i.e., where
+the antiperiodic-cycle structure on `K²` exists as a substrate
+fact. Per `conservation_scale_stratification_audit.md`:
+
+- **Standard scale** (K_STAR ≈ 0.86, our pocket): canonical
+  Klein-bottle substrate; theorem applies as stated. Q mod 2 is
+  universal.
+- **Hubble scale** (cosmological boundary at finite mode count
+  12.66, w* ≈ 0.83): Klein-bottle topology persists; theorem
+  applies within the 12.66-mode horizon. The cosmological
+  boundary is a mode-count cutoff, not a topological transition,
+  so Q mod 2 is preserved within the horizon.
+- **Planck scale**: the diameter condition automatically
+  scale-qualifies the theorem. Any process with support of
+  spatial diameter `< L_x` includes Planck-scale processes by
+  construction (Planck length is many orders of magnitude
+  smaller than `L_x`). So Q mod 2 conservation is **trivially
+  preserved** at Planck scales: no Planck-scale process can
+  encircle the antiperiodic direction, because its support is
+  far smaller than `L_x`. This is "conserved by inability rather
+  than by inviolability" — the theorem doesn't claim Planck-scale
+  Q mod 2 is *forced* to remain definite, only that no
+  Planck-scale process can *change* it. If Planck-scale substrate
+  is non-topological (NCG, foam, causal sets, etc.), Q mod 2 as
+  defined here may become ill-defined rather than non-conserved
+  at those scales — a regime distinction the theorem doesn't
+  attempt to derive.
+
+Equivalently: this theorem governs Q mod 2 conservation at
+scales where smooth-manifold Klein-bottle topology is the
+substrate's operational form. The framework's inviolable #1
+status (`substrate_determinism.md`) is correctly read as
+*topology-conditional*: universal at standard and Hubble scales;
+contingent at Planck where the topological basis may dissolve.
+For the algebraic counterpart that survives all scales without
+topological dependence, see dissipation (D46,
+`rank1_temporal_causation.md`).
+
+See `conservation_scale_stratification_audit.md` for the
+three-candidate resolution of the Planck contingency (resolution
+(ii), the scale-qualification clause used here, recommended).
+
 ---
 
 ## Proof
