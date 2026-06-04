@@ -152,13 +152,45 @@ by the theorem. The framework currently doesn't derive which.
 (now explicit in `q_mod2_conservation_theorem.md`'s "Scale-
 qualification clause" added 2026-06).
 
-### 3. Rate-blind-spot — the temporal sampling analog
+### 3. Rate-blind-spot — the temporal sampling analog (slow regime)
 
-**Setup**: a single lane of bicyclists passing. You want to
-determine whether each cyclist passes on the left or right
-(handedness / Q mod 2 signature). Phasic interference creates a
-**blind spot at a specific rate** — you miss observations
-periodically, not at specific locations.
+**Regime binding**. Scenarios #3–#6 operate in the **slow,
+sub-c regime** where the painted-onto-film loss is *sampling
+under-resolution*, not motion blur. Each cyclist is individually
+resolvable at a single sample — the question is whether your
+sampling cadence catches each handedness event or systematically
+aliases past it. The complementary **fast regime** (motion blur,
+smear, flicker fusion, strobe-induced stationarity) belongs to
+the carousel + pulsing light setup used conversationally in the
+discrete-lossless / quantum-lossy section of
+`primitives_vs_addresses_candidate.md`. Carousels can spin near
+any rate up to c; bicyclists do not. Keeping the two regimes
+separate keeps each clean.
+
+**Setup**: a single lane of bicyclists passing a fixed
+observation point at human cycling speeds (≈4–7 m/s; trivially
+sub-c). You want to determine whether each cyclist passes on
+the left or right (handedness / Q mod 2 signature). You sample
+the lane at some rate ω_p; cyclists arrive at rate ω_c. The
+relationship between ω_p and ω_c — not the cyclists' speed —
+determines what handedness information you can recover.
+
+**How slow does the lossy configuration have to be**. The
+loss is *not* mediated by motion at single observations.
+Individual cyclists are slow enough that any single sample
+catches them sharply (no blur, no smear). The loss arises
+when ω_p ≤ 2·ω_c — the Nyquist bound is violated, and
+handedness flips can be systematically missed. For human-scale
+cycling, ω_c is ≈0.1–0.5 Hz (one cyclist every few seconds).
+Default human visual sampling is ≈10–60 Hz — three orders of
+magnitude above Nyquist. To *construct* the aliasing pathology
+you have to deliberately undersample: poll the lane once every
+few seconds, locked to the cyclist arrival cadence. This is
+the slow-sample-rate + slow-rider geometry. Both are required;
+oversampling either side dissolves the loss. The bound is
+therefore not "how slow are the cyclists" but "how slow is the
+slower of (rider arrival, observer polling) relative to the
+event you want to resolve."
 
 **What it surfaces**: the temporal analog of the spatial
 diameter condition. The conservation theorem covers spatial
@@ -166,25 +198,34 @@ locality; the bicyclist setup proposes that observation must
 also respect a **Nyquist-style sampling boundary** relative to
 the antiperiodic cycle rate. If your sampling rate aliases with
 the antiperiodic structure, Q mod 2 readout becomes systematically
-wrong.
+wrong — not because the substrate failed to conserve, but because
+the observer's sampling never carried the flip events into the
+record.
 
 **The aliasing pathology**: sample once per L_x traversal →
 every observation catches the same sign (apparent constant Q
 mod 2, actually missing all flip events). Sample at half the
-cycle rate → catch the flips. Sample at irrational multiples →
-full information recoverable.
+cycle rate → catch the flips. Sample at irrational multiples
+→ full information recoverable in principle.
 
 **Maps to**: a temporal scale-qualification not currently
 canonical in the framework. The audit's spatial scale-qualification
 addresses Planck/standard/Hubble; this surfaces an additional
-sampling-rate qualifier that may need parallel treatment.
+sampling-rate qualifier that may need parallel treatment. The
+regime binding above also makes the *separation* explicit:
+the doc characterizes slow-regime sampling losses; fast-regime
+blur/smear losses are a different mechanism with their own
+geometry and belong with the carousel material.
 
 ### 4. Crowd-division — operational prediction vs in-principle
 
-**Setup**: extending the bicyclist scenario — you need
+**Setup**: extending the bicyclist scenario — same slow,
+sub-c riders, same sampling-bounded observation — you need
 handedness information **ahead of time** so you can divide the
 crowd appropriately. You're not just observing; you're acting
-on predictions.
+on predictions. The slow regime is essential here: prediction
+needs lead time, which only exists when the cyclists are slow
+enough to give it to you.
 
 **What it surfaces**: the distinction between
 **conservation-guaranteed in-principle determinism** and
@@ -210,6 +251,11 @@ itself.
 **Setup**: now you can tune some of the frequencies — your
 observation sampling rates, your detector parameters, your
 measurement regime. You have active configuration control.
+Tuning is the bridge between regimes: in the slow regime it
+moves ω_p across the Nyquist threshold of scenario #3; in the
+fast regime (carousel territory) it controls strobe alignment
+and exposure window. Same operator, two different lossy
+mechanisms it addresses.
 
 **What it surfaces**: tuning closes the bootstrap from #3.
 Multi-rate sampling (at irrationally-related rates),
