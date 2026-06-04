@@ -147,3 +147,66 @@ lint-fix:
 # no semantic changes. Preview before committing.
 format:
 	ruff format sync_cost/derivations/
+
+# ───────────────────────── Preview ─────────────────────────
+#
+# Local preview server for the framework's visual layer. The dag
+# viewer shows the framework's document graph: nodes are
+# derivation docs, edges are cross-references between them
+# (typed grounds/derives/proposes when a `## Lineage` block is
+# present, otherwise untyped references inferred from prose
+# mentions). Hover/click for context. Other viewers cover the
+# reference index, claim chain, glossary, and full derivation
+# text.
+#
+# Usage:
+#     make preview         # default: derivation graph (dag.html)
+#     make preview-index   # reference index
+#     make preview-claims  # claim-chain view
+#     make preview-port PREVIEW_PORT=8080   # override port
+#
+# Open the printed URL in a browser. Stop with Ctrl-C.
+# Override PREVIEW_PORT to pick a different port (default 8765).
+#
+# This regenerates docs/derivation-graph.json from current
+# sources before serving, so the graph reflects whatever is in
+# your working tree. If regen fails, the server still starts
+# with the existing graph.
+
+PREVIEW_PORT ?= 8765
+
+preview: preview-dag
+
+preview-dag:
+	@echo "==> Regenerating derivation graph from current sources..."
+	@$(PYTHON) scripts/build_derivation_graph.py 2>&1 | tail -1 || \
+		echo "    (regen failed; using existing graph)"
+	@echo ""
+	@echo "==> Preview server starting on port $(PREVIEW_PORT)."
+	@echo "==> Open in browser to see the framework's connections:"
+	@echo "==>"
+	@echo "==>   http://localhost:$(PREVIEW_PORT)/docs/dag.html"
+	@echo "==>"
+	@echo "==> Other viewers:"
+	@echo "==>   /docs/index.html        — reference index"
+	@echo "==>   /docs/claim-chain.html  — claim chain (scorecard)"
+	@echo "==>   /docs/glossary.html     — glossary"
+	@echo "==>   /docs/derivations.html  — full derivation text"
+	@echo "==>   /docs/preprint.html     — preprint view"
+	@echo "==>"
+	@echo "==> Press Ctrl-C to stop the server."
+	@echo ""
+	@$(PYTHON) -m http.server $(PREVIEW_PORT)
+
+preview-index:
+	@$(PYTHON) scripts/build_derivation_graph.py 2>&1 | tail -1 || true
+	@echo "==> http://localhost:$(PREVIEW_PORT)/docs/index.html"
+	@echo "==> Ctrl-C to stop."
+	@$(PYTHON) -m http.server $(PREVIEW_PORT)
+
+preview-claims:
+	@echo "==> http://localhost:$(PREVIEW_PORT)/docs/claim-chain.html"
+	@echo "==> Ctrl-C to stop."
+	@$(PYTHON) -m http.server $(PREVIEW_PORT)
+
+.PHONY: preview preview-dag preview-index preview-claims
