@@ -5,7 +5,7 @@
 **Presentation layer for the conversation-developed thought
 experiment sequence that accompanied
 `conservation_scale_stratification_audit.md`.** Documents six
-sequential thought experiments — pen-on-projector, box-and-diamond,
+sequential thought experiments — pen-on-projector, spinning-cleaner,
 rate-blind-spot, crowd-division, tuning, and
 loop-trap-with-external-media — that together build a coherent
 operational picture of how observer configuration interacts with
@@ -127,30 +127,75 @@ discrete-lossless / quantum-lossy section. The provenance is a
 discussion; the geometry it captures is older than the framework
 and applies to any projection-based observation.
 
-### 2. Box-and-diamond — the spatial scale-qualification
+### 2. Spinning-cleaner — the L_x boundary (with ribbons and Einstein)
 
-**Setup**: an observer stands below a square enclosure. Inside
-the enclosure: a smaller rotated diamond (a mode carrying
-definite Q mod 2). An upward arrow shows the mode moving toward
-the enclosure's top boundary. Above the boundary: multiple
-fanned/feathered lines — what crosses the threshold.
+**Setup**: a window cleaner stands on a giant spinning top on
+the roof of a building. The top's spin direction (CW / CCW) is
+the mode's Q mod 2 readout. The cleaner streams long ribbons
+from each hand — as the top spins, the ribbons trace a helix in
+the air, the handedness of the helix matching the spin direction.
+Einstein watches from a window in the adjacent building (fixed
+frame, *not* freely falling). The top rolls toward the roof edge.
 
-**What it surfaces**: the existing
-`q_mod2_conservation_theorem.md` requires process support of
-diameter `< L_x`. The enclosure visualizes that diameter
-condition. The diamond's motion toward the boundary asks: what
-happens when the process approaches or exceeds the condition's
-spatial bound?
+**On the rooftop (inside K²)**: the
+`q_mod2_conservation_theorem.md` guarantees Q mod 2 is preserved
+as long as the substrate process has support of diameter strictly
+less than L_x. The rooftop is the bounded K² region; the roof
+edge is the L_x boundary. Einstein reads the helix windings in
+the ribbons and counts a definite Q mod 2.
 
-**The fanned lines**: the honest answer is that the theorem
-doesn't apply at the boundary itself. Q mod 2 could smear (fan
-of possible eigenvalues), split coherently (parallel paths each
-carrying fractional charge), or stay definite but uncertifiable
-by the theorem. The framework currently doesn't derive which.
+**At the edge — geodesic reframe**: when the top crosses the
+edge, the cleaner-top system enters free fall. Einstein's "you
+would not feel your own weight as you fall" applies — the
+cleaner's local frame becomes inertial, gravity vanishes for them,
+the system becomes a closed angular-momentum island. The boundary
+is a *frame transition*, not an apparatus failure. Q mod 2 is not
+destroyed by crossing; it has to be re-read in the new frame.
+
+**Three approach states, three ribbon signatures**: Step 4 of the
+proof establishes that non-local processes (diameter ≥ L_x) *can*
+change Q, but the proof doesn't say *how*. Spinning-top mechanics
+— gyroscopic stability (Ω_p ≈ m·g·d / I·ω_spin), precession,
+nutation — pin three dynamical states the system can be in at
+the edge, each producing a ribbon configuration Einstein can read
+across the transition:
+
+| Approach state at edge | Ribbon signature in Einstein's frame |
+|---|---|
+| Balanced, rider rigid, single L axis | Coherent helix preserved across transition; same handedness — **Q preserved as Q_combined** |
+| Mid-correction (rider actively countering wobble) | Body torques uncompensated by absent gravity; ribbons tangle into chaotic mass — **Q smears** (still in {0,1}, but unrecoverable from the tangle) |
+| Pre-separation (rider losing contact) | Clean angular-momentum partition at separation; two coherent helices, one trailing the top, one trailing the cleaner — **Q splits**: Q_top and Q_rider, each its own discrete readout |
+
+**The ribbons are the payload**: they make the discrete-and-
+measurable claim *literal*. Trajectory chaos in free fall is real
+(small approach-state differences blow up into wildly different
+falls), but helix winding count mod 2 is a topological invariant
+of the ribbon configuration — chaos can't smear *the count*, only
+the value. Einstein reads winding parity from his window across
+all three outcomes; he reads zero, one, or two coherent helices
+depending on which approach state the system was in at the edge.
+
+**What this surfaces** (and what it doesn't): the original box-
+and-diamond reading listed three outcomes at the boundary as
+*arbitrary possibilities the theorem doesn't decide between*.
+This scenario pins each outcome to a *specific dynamical state*
+the substrate process was in when it reached the boundary —
+same diameter condition, different approach histories, different
+outcomes. The theorem's proof leaves room for this refinement:
+Step 3 (local preserves) and Step 4 (non-local can change) are
+silent on within-non-local manner-of-change. The spinning-top
+mechanics offers a candidate refinement; the substrate-level
+translation — field configurations as their support first reaches
+diameter = L_x — is **open research work**, not derived here.
+The cartoon is a sensory anchor for the open question, not a
+proof of anything about it.
 
 **Maps to**: spatial scale-qualification of Q mod 2 conservation
 (now explicit in `q_mod2_conservation_theorem.md`'s "Scale-
-qualification clause" added 2026-06).
+qualification clause" added 2026-06). Beyond the existing scale-
+qualification, this surfaces a **within-boundary manner-of-change
+question** the theorem doesn't currently address — a research
+handle, flagged but not sealed.
 
 ### 3. Rate-blind-spot — the temporal sampling analog (slow regime)
 
@@ -438,9 +483,12 @@ the framework's conservation chain.
   the dissipation-universal vs Q-mod-2-scale-contingent
   distinction.
 - `q_mod2_conservation_theorem.md` — the source of the
-  diameter condition (`< L_x`) that the box-and-diamond
-  visualizes; carries the scale-qualification clause added per
-  the audit.
+  diameter condition (`< L_x`) that the spinning-cleaner
+  scenario visualizes; carries the scale-qualification clause
+  added per the audit. The spinning-cleaner scenario also flags
+  an open research handle — approach-dynamics differentiation of
+  within-non-local Q-change behavior — that the theorem's Step 4
+  leaves room for but does not currently address.
 - `substrate_determinism.md` — inviolable #1 (Z₂ topological
   charge conservation), now distinguishing
   algebraic-vs-topological inviolables.
@@ -476,7 +524,7 @@ the framework's conservation chain.
 ## One-line summary
 
 This doc is the **presentation layer** for the six-thought-
-experiment sequence (pen-on-projector, box-and-diamond,
+experiment sequence (pen-on-projector, spinning-cleaner,
 rate-blind-spot, crowd-division, tuning,
 loop-trap-with-external-media)
 that accompanied `conservation_scale_stratification_audit.md` —
