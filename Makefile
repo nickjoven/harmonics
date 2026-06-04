@@ -209,4 +209,46 @@ preview-claims:
 	@echo "==> Ctrl-C to stop."
 	@$(PYTHON) -m http.server $(PREVIEW_PORT)
 
-.PHONY: preview preview-dag preview-index preview-claims
+.PHONY: preview preview-dag preview-index preview-claims preview-live preview-bg preview-stop
+
+# Long-lived preview with auto-rebuild + front-end live-reload.
+# Watches sync_cost/derivations/*.md and regenerates the graph
+# on any change. The browser auto-reloads via docs/livereload.js
+# polling /preview-version. Pure-stdlib implementation; no extra
+# dependencies.
+#
+# Foreground:  Ctrl-C to stop.
+# Background:  use 'make preview-bg' / 'make preview-stop'.
+
+preview-live:
+	@$(PYTHON) scripts/preview_server.py
+
+PREVIEW_PIDFILE := .preview-server.pid
+PREVIEW_LOG := .preview-server.log
+
+preview-bg:
+	@if [ -f $(PREVIEW_PIDFILE) ] && kill -0 $$(cat $(PREVIEW_PIDFILE)) 2>/dev/null; then \
+		echo "==> Preview server already running (PID $$(cat $(PREVIEW_PIDFILE)))."; \
+		echo "==> Stop it first: make preview-stop"; \
+		exit 1; \
+	fi
+	@nohup $(PYTHON) scripts/preview_server.py > $(PREVIEW_LOG) 2>&1 & echo $$! > $(PREVIEW_PIDFILE)
+	@sleep 0.5
+	@echo "==> Preview server backgrounded (PID $$(cat $(PREVIEW_PIDFILE)))."
+	@echo "==> URL: http://localhost:$(PREVIEW_PORT)/docs/dag.html"
+	@echo "==> Log: $(PREVIEW_LOG)"
+	@echo "==> Stop: make preview-stop"
+
+preview-stop:
+	@if [ -f $(PREVIEW_PIDFILE) ]; then \
+		PID=$$(cat $(PREVIEW_PIDFILE)); \
+		if kill -0 $$PID 2>/dev/null; then \
+			kill $$PID; \
+			echo "==> Stopped preview server (PID $$PID)."; \
+		else \
+			echo "==> PID file exists but process not running."; \
+		fi; \
+		rm -f $(PREVIEW_PIDFILE); \
+	else \
+		echo "==> No PID file ($(PREVIEW_PIDFILE) not found)."; \
+	fi

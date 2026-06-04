@@ -1,5 +1,5 @@
 {
-  "generated": "a997790232d9f55c6b51649bd590fcd1df6440b8",
+  "generated": "3dad3ab152ab4988ea8804608819ff47195755ee",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -4044,7 +4044,9 @@
         "substrate_determinism",
         "surface_uniqueness_audit"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "pattern_identification_discipline_candidate"
+      ],
       "edges": [
         {
           "target": "basepoint_principle",
@@ -4087,7 +4089,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "pattern_identification_discipline_candidate",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "a997790",
@@ -4140,6 +4147,7 @@
         "meaning_of_two_wip",
         "mediant_vs_flow_calc",
         "numerology_inventory",
+        "pattern_identification_discipline_candidate",
         "phenomenology_cross_reference",
         "preferred_basis_dissolution",
         "primitive_completeness_audit",
@@ -4288,6 +4296,10 @@
         },
         {
           "source": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "source": "pattern_identification_discipline_candidate",
           "kind": "references"
         },
         {
@@ -4493,6 +4505,7 @@
         "omega_b_residual_phase_b",
         "omega_b_substrate_side_audit",
         "omega_b_two_component_sketch",
+        "pattern_identification_discipline_candidate",
         "primitives_vs_addresses_candidate",
         "session_audit",
         "sqrt_r_n_correction",
@@ -4604,6 +4617,10 @@
         },
         {
           "source": "omega_b_two_component_sketch",
+          "kind": "references"
+        },
+        {
+          "source": "pattern_identification_discipline_candidate",
           "kind": "references"
         },
         {
@@ -4730,6 +4747,7 @@
         "down_type_double_cover_closed",
         "framework_status",
         "klein_z2_decomposition_falsifier_2",
+        "pattern_identification_discipline_candidate",
         "phenomenology_cross_reference",
         "phenomenon_glossary",
         "primitives_vs_addresses_candidate",
@@ -5028,6 +5046,10 @@
           "kind": "references"
         },
         {
+          "source": "pattern_identification_discipline_candidate",
+          "kind": "references"
+        },
+        {
           "source": "phenomenology_cross_reference",
           "kind": "references"
         },
@@ -5300,6 +5322,7 @@
         "koide_form_substrate_iteration_7",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
+        "pattern_identification_discipline_candidate",
         "phenomenology_cross_reference",
         "qm_reframing_programmatic",
         "snmc_class_and_entanglement"
@@ -5397,6 +5420,10 @@
         },
         {
           "source": "lesson_forced_basin_selection",
+          "kind": "references"
+        },
+        {
+          "source": "pattern_identification_discipline_candidate",
           "kind": "references"
         },
         {
@@ -5686,6 +5713,7 @@
       ],
       "depended_on_by": [
         "bicyclist_observer_sequence",
+        "pattern_identification_discipline_candidate",
         "q_mod2_conservation_theorem",
         "substrate_determinism"
       ],
@@ -5770,6 +5798,10 @@
       "edged_by": [
         {
           "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
+          "source": "pattern_identification_discipline_candidate",
           "kind": "references"
         },
         {
@@ -11005,6 +11037,7 @@
         "path_closures_iter2",
         "path_closures_iter3",
         "path_closures_iter4",
+        "pattern_identification_discipline_candidate",
         "phenomenology_cross_reference",
         "physics_relevance_measurement_catalog",
         "predictions_horizon_2026",
@@ -11618,6 +11651,10 @@
         },
         {
           "source": "path_closures_iter4",
+          "kind": "references"
+        },
+        {
+          "source": "pattern_identification_discipline_candidate",
           "kind": "references"
         },
         {
@@ -12896,6 +12933,7 @@
         "klein_connection",
         "koide_form_substrate_iteration_6",
         "mass_sector_closure",
+        "pattern_identification_discipline_candidate",
         "sinw_effective_dimension",
         "surface_uniqueness_audit",
         "torus_branch_iteration_1",
@@ -12965,6 +13003,10 @@
         },
         {
           "source": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "source": "pattern_identification_discipline_candidate",
           "kind": "references"
         },
         {
@@ -17157,6 +17199,7 @@
         "klein_dynamics_roadmap",
         "numerology_inventory",
         "omega_b_residual_phase_a",
+        "pattern_identification_discipline_candidate",
         "qd_origins",
         "rectangle_perpendicularity",
         "second_law_topological",
@@ -17275,6 +17318,10 @@
         },
         {
           "source": "omega_b_residual_phase_a",
+          "kind": "references"
+        },
+        {
+          "source": "pattern_identification_discipline_candidate",
           "kind": "references"
         },
         {
@@ -19843,6 +19890,7 @@
         "mixing_angle_audit",
         "neutrino_mass_audit",
         "path_a_walkthrough",
+        "pattern_identification_discipline_candidate",
         "phenomenology_cross_reference",
         "primitives_vs_addresses_candidate",
         "sector_decoupling_phase_a",
@@ -20000,6 +20048,10 @@
         },
         {
           "source": "path_a_walkthrough",
+          "kind": "references"
+        },
+        {
+          "source": "pattern_identification_discipline_candidate",
           "kind": "references"
         },
         {
@@ -24721,6 +24773,87 @@
       ]
     },
     {
+      "id": "pattern_identification_discipline_candidate",
+      "path": "sync_cost/derivations/pattern_identification_discipline_candidate.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Pattern-identification discipline (candidate methodology)",
+      "summary": "**Candidate methodology**, not yet sealed. Proposes a working\ndiscipline that the framework's most successful closures have\nbeen using implicitly \u2014 substituting **structural-identity\nrecognition** for **precision computation** wherever the identity\nis named and forces the result. The framework's expensive\ncomputations (boundary weight `w*`, K_STAR fixed-point, specific\nmass values) are exactly the places where structural\nidentification has not been found, suggesting that **expensive\ncomputation ",
+      "depends_on": [
+        "bicyclist_observer_sequence",
+        "born_rule",
+        "boundary_weight",
+        "canonical_glossary",
+        "complex_amplitude_uniqueness",
+        "conservation_scale_stratification_audit",
+        "framework_status",
+        "gauge_sector_lovelock",
+        "klein_bottle_derivation",
+        "mass_sector_closure",
+        "primitives_vs_addresses_candidate",
+        "surface_uniqueness_audit"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "target": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "target": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_derivation",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "surface_uniqueness_audit",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "3dad3ab",
+          "date": "2026-06-04",
+          "subject": "Pattern-identification discipline (candidate methodology + front-end)"
+        }
+      ]
+    },
+    {
       "id": "phenomenology_cross_reference",
       "path": "sync_cost/derivations/phenomenology_cross_reference.md",
       "cid": null,
@@ -25619,6 +25752,7 @@
         "bicyclist_observer_sequence",
         "conservation_scale_stratification_audit",
         "framework_status",
+        "pattern_identification_discipline_candidate",
         "torus_branch_iteration_2_step_1",
         "torus_branch_iteration_2_step_2"
       ],
@@ -25683,6 +25817,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "pattern_identification_discipline_candidate",
           "kind": "references"
         },
         {
@@ -30204,6 +30342,7 @@
         "conservation_scale_stratification_audit",
         "continuum_limits",
         "framework_status",
+        "pattern_identification_discipline_candidate",
         "primitives_vs_addresses_candidate"
       ],
       "edges": [
@@ -30267,6 +30406,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "pattern_identification_discipline_candidate",
           "kind": "references"
         },
         {

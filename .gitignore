@@ -15,3 +15,7 @@ external/
 
 # Claude Code background-agent local worktrees
 .claude/worktrees/
+
+# Local preview server (scripts/preview_server.py)
+.preview-server.pid
+.preview-server.log
