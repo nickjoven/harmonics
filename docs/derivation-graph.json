@@ -1,5 +1,5 @@
 {
-  "generated": "3dad3ab152ab4988ea8804608819ff47195755ee",
+  "generated": "cd08ce0914d8374ea3cec448a34fc5dd705cff60",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -4123,6 +4123,7 @@
         "basepoint_principle",
         "bell_bounds_from_substrate",
         "born_rule_parameter_free",
+        "canonical_glossary",
         "complex_amplitude_uniqueness",
         "conservation_scale_stratification_audit",
         "derivation_atlas",
@@ -4200,6 +4201,10 @@
         },
         {
           "source": "born_rule_parameter_free",
+          "kind": "references"
+        },
+        {
+          "source": "canonical_glossary",
           "kind": "references"
         },
         {
@@ -4670,7 +4675,7 @@
     {
       "id": "canonical_glossary",
       "path": "sync_cost/derivations/canonical_glossary.md",
-      "cid": "02ac2ac90f00d14a2088db20cd94aa3e05fcd5a3af270d572195b3b728992d3c",
+      "cid": "209cbee29172ade0d8bb7345b1ef180c5d18e0f8ffe85106689b75184740ce54",
       "sealed": true,
       "title": "Canonical glossary \u2014 framework \u2194 standard physics vocabulary",
       "summary": "Glossary v1, 2026-04-26. ~70 framework terms mapped to standard\nphysics / math equivalents across 10 thematic sections. Intended\nto be readable end-to-end in 30 minutes by a working physicist\nwith no prior framework exposure.",
@@ -4684,6 +4689,7 @@
         "ansatz_audit_policy",
         "baryon_fraction",
         "basepoint_principle",
+        "born_rule",
         "boundary_weight",
         "complex_amplitude_uniqueness",
         "continuum_limits",
@@ -4721,6 +4727,7 @@
         "partition_logit_form",
         "path_a_walkthrough",
         "path_closures_iter3",
+        "primitives_vs_addresses_candidate",
         "psl2z_subgroup_identification_phase_a",
         "psl2z_subgroup_phase_a_results",
         "psl2z_subgroup_phase_b",
@@ -4797,6 +4804,10 @@
         },
         {
           "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
           "kind": "references"
         },
         {
@@ -4945,6 +4956,10 @@
         },
         {
           "target": "path_closures_iter3",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
           "kind": "references"
         },
         {
@@ -5103,6 +5118,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "cd08ce0",
+          "date": "2026-06-04",
+          "subject": "Discrete-lossless / quantum-lossy: information-theoretic basis for primitives-vs-addresses (#219)"
+        },
         {
           "hash": "5412915",
           "date": "2026-06-03",
@@ -24847,9 +24867,9 @@
       "edged_by": [],
       "git": [
         {
-          "hash": "3dad3ab",
+          "hash": "357cecb",
           "date": "2026-06-04",
-          "subject": "Pattern-identification discipline (candidate methodology + front-end)"
+          "subject": "Pattern-identification discipline + Pattern A long-lived preview server (#218)"
         }
       ]
     },
@@ -25745,11 +25765,13 @@
         "klein_bottle",
         "mass_sector_closure",
         "minimum_alphabet",
+        "substrate_determinism",
         "surface_uniqueness_audit",
         "torus_branch_iteration_1"
       ],
       "depended_on_by": [
         "bicyclist_observer_sequence",
+        "canonical_glossary",
         "conservation_scale_stratification_audit",
         "framework_status",
         "pattern_identification_discipline_candidate",
@@ -25798,6 +25820,10 @@
           "kind": "references"
         },
         {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
           "target": "surface_uniqueness_audit",
           "kind": "references"
         },
@@ -25809,6 +25835,10 @@
       "edged_by": [
         {
           "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
+          "source": "canonical_glossary",
           "kind": "references"
         },
         {
@@ -25833,6 +25863,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "cd08ce0",
+          "date": "2026-06-04",
+          "subject": "Discrete-lossless / quantum-lossy: information-theoretic basis for primitives-vs-addresses (#219)"
+        },
         {
           "hash": "642c186",
           "date": "2026-06-03",
@@ -29930,6 +29965,7 @@
         "minimum_alphabet",
         "predictions_horizon_2026",
         "preferred_basis_dissolution",
+        "primitives_vs_addresses_candidate",
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
         "qm_reframing_programmatic",
@@ -30135,6 +30171,10 @@
         },
         {
           "source": "preferred_basis_dissolution",
+          "kind": "references"
+        },
+        {
+          "source": "primitives_vs_addresses_candidate",
           "kind": "references"
         },
         {
