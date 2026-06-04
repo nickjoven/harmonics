@@ -1,5 +1,5 @@
 {
-  "generated": "a3f1ca5828cc938d20c560a9b2ee870fb1498838",
+  "generated": "c0660fcd21d913eeeeacf4b1848a3ce173680cd1",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -4031,7 +4031,7 @@
       "cid": null,
       "sealed": false,
       "title": "The bicyclist sequence \u2014 observer configuration and conservation",
-      "summary": "**Presentation layer for the conversation-developed thought\nexperiment sequence that accompanied\n`conservation_scale_stratification_audit.md`.** Documents five\nsequential thought experiments \u2014 box-and-diamond, rate-blind-spot,\ncrowd-division, tuning, and loop-trap-with-external-media \u2014 that\ntogether build a coherent operational picture of how observer\nconfiguration interacts with the framework's conservation\nguarantees.",
+      "summary": "**Presentation layer for the conversation-developed thought\nexperiment sequence that accompanied\n`conservation_scale_stratification_audit.md`.** Documents six\nsequential thought experiments \u2014 pen-on-projector, spinning-cleaner,\nrate-blind-spot, crowd-division, tuning, and\nloop-trap-with-external-media \u2014 that together build a coherent\noperational picture of how observer configuration interacts with\nthe framework's conservation guarantees.",
       "depends_on": [
         "basepoint_principle",
         "canonical_glossary",
@@ -4045,7 +4045,8 @@
         "surface_uniqueness_audit"
       ],
       "depended_on_by": [
-        "pattern_identification_discipline_candidate"
+        "pattern_identification_discipline_candidate",
+        "primitives_vs_addresses_candidate"
       ],
       "edges": [
         {
@@ -4093,9 +4094,18 @@
         {
           "source": "pattern_identification_discipline_candidate",
           "kind": "references"
+        },
+        {
+          "source": "primitives_vs_addresses_candidate",
+          "kind": "references"
         }
       ],
       "git": [
+        {
+          "hash": "c0660fc",
+          "date": "2026-06-04",
+          "subject": "Projection geometry foundation: pen-on-projector + two-step lossy decomposition (#220)"
+        },
         {
           "hash": "a997790",
           "date": "2026-06-04",
@@ -25757,6 +25767,7 @@
       "depends_on": [
         "anchor_count_reaudit",
         "basepoint_principle",
+        "bicyclist_observer_sequence",
         "boundary_weight",
         "canonical_glossary",
         "continuum_limits",
@@ -25785,6 +25796,10 @@
         },
         {
           "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "bicyclist_observer_sequence",
           "kind": "references"
         },
         {
@@ -25863,6 +25878,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "c0660fc",
+          "date": "2026-06-04",
+          "subject": "Projection geometry foundation: pen-on-projector + two-step lossy decomposition (#220)"
+        },
         {
           "hash": "cd08ce0",
           "date": "2026-06-04",
