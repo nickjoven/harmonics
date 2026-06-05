@@ -1,5 +1,5 @@
 {
-  "generated": "c6db782ddcc8ae0d3010af0d632f0a62ef877b97",
+  "generated": "29ff2d2050c199aa0c2402afe52e9f6dbcc9edf1",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -16,6 +16,7 @@
       ],
       "depended_on_by": [
         "ansatz_audit_policy",
+        "antiparticle_dark_energy_unification_audit",
         "born_rule_mode_count_extremes_audit",
         "dynamical_tool_audit",
         "halt_shock_coherence_audit",
@@ -46,6 +47,10 @@
       "edged_by": [
         {
           "source": "ansatz_audit_policy",
+          "kind": "references"
+        },
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
           "kind": "references"
         },
         {
@@ -2355,6 +2360,7 @@
         "vocabulary_is_the_work_pattern"
       ],
       "depended_on_by": [
+        "antiparticle_dark_energy_unification_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -2433,6 +2439,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
         {
           "source": "halt_shock_coherence_audit",
           "kind": "references"
@@ -2705,6 +2715,122 @@
           "hash": "9bed549",
           "date": "2026-04-24",
           "subject": "K-scaling scan + winding_number fix: K from 0 to chaos lands as Class 2 (#76)"
+        }
+      ]
+    },
+    {
+      "id": "antiparticle_dark_energy_unification_audit",
+      "path": "sync_cost/derivations/antiparticle_dark_energy_unification_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Antiparticle / dark energy unification audit",
+      "summary": "**Verdict: MODAL \u2713 / GENERATIVE \u2713** on the composite reading\nthat **antiparticles and dark energy are unified at substrate\nlevel via K\u00b2 antiperiodic identification**, with three structural\nextensions folded in:",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "anchor_extremes_audit",
+        "born_rule_mode_count_extremes_audit",
+        "boundary_weight",
+        "complex_amplitude_uniqueness",
+        "conservation_scale_stratification_audit",
+        "continuity_in_K_nulls",
+        "continuum_limits",
+        "halt_shock_coherence_audit",
+        "horn_branch_iteration_2_step_2",
+        "klein_bottle",
+        "klein_bottle_restructure_price",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_conservation_theorem",
+        "q_mod2_planck_emergence_audit",
+        "sine_gordon_substrate",
+        "substrate_determinism",
+        "surface_uniqueness_audit",
+        "unification_bridge_audits_gaps_1_3"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "target": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "continuity_in_K_nulls",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "sine_gordon_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "surface_uniqueness_audit",
+          "kind": "references"
+        },
+        {
+          "target": "unification_bridge_audits_gaps_1_3",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "29ff2d2",
+          "date": "2026-06-05",
+          "subject": "Antiparticle / dark energy unification audit (multi-domain structural identity) (#226)"
         }
       ]
     },
@@ -4593,6 +4719,7 @@
       ],
       "depended_on_by": [
         "anchor_extremes_audit",
+        "antiparticle_dark_energy_unification_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -4673,6 +4800,10 @@
       "edged_by": [
         {
           "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
           "kind": "references"
         },
         {
@@ -4796,6 +4927,7 @@
         "FRAMEWORK_TOPOLOGY",
         "a_s_geometric_proof",
         "address_and_quantity",
+        "antiparticle_dark_energy_unification_audit",
         "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
         "continuity_in_K_nulls",
@@ -4851,6 +4983,10 @@
         },
         {
           "source": "address_and_quantity",
+          "kind": "references"
+        },
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
           "kind": "references"
         },
         {
@@ -5651,6 +5787,7 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "antiparticle_dark_energy_unification_audit",
         "axial_trajectory_conservation_audit",
         "bell_bounds_from_substrate",
         "born_rule_mode_count_extremes_audit",
@@ -5718,6 +5855,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
         {
           "source": "axial_trajectory_conservation_audit",
           "kind": "references"
@@ -6069,6 +6210,7 @@
       ],
       "depended_on_by": [
         "anchor_extremes_audit",
+        "antiparticle_dark_energy_unification_audit",
         "bicyclist_observer_sequence",
         "born_rule_mode_count_extremes_audit",
         "halt_shock_coherence_audit",
@@ -6162,6 +6304,10 @@
           "kind": "references"
         },
         {
+          "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
           "source": "bicyclist_observer_sequence",
           "kind": "references"
         },
@@ -6232,6 +6378,7 @@
         "anchor_count_audit",
         "anchor_count_reaudit",
         "anchor_extremes_audit",
+        "antiparticle_dark_energy_unification_audit",
         "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
         "cross_ratio_irrep_reframe",
@@ -6336,6 +6483,10 @@
         },
         {
           "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
           "kind": "references"
         },
         {
@@ -6480,6 +6631,7 @@
         "anchor_count_audit",
         "anchor_count_reaudit",
         "anchor_extremes_audit",
+        "antiparticle_dark_energy_unification_audit",
         "articulation_audit_2026-05",
         "bicyclist_observer_sequence",
         "canonical_glossary",
@@ -6576,6 +6728,10 @@
         },
         {
           "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
           "kind": "references"
         },
         {
@@ -14453,6 +14609,7 @@
         "surface_uniqueness_audit"
       ],
       "depended_on_by": [
+        "antiparticle_dark_energy_unification_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
@@ -14518,6 +14675,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
         {
           "source": "unification_bridge_audits_gaps_1_3",
           "kind": "references"
@@ -15407,6 +15568,7 @@
         "mass_sector_closure"
       ],
       "depended_on_by": [
+        "antiparticle_dark_energy_unification_audit",
         "born_rule_mode_count_extremes_audit",
         "horn_branch_iteration_3_step_1",
         "unification_bridge_audits_gaps_1_3"
@@ -15458,6 +15620,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
         {
           "source": "born_rule_mode_count_extremes_audit",
           "kind": "references"
@@ -17281,6 +17447,7 @@
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
         "anchor_extremes_audit",
+        "antiparticle_dark_energy_unification_audit",
         "articulation_audit_2026-05",
         "axial_trajectory_conservation_audit",
         "beta_from_tongues",
@@ -17376,6 +17543,10 @@
         },
         {
           "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
           "kind": "references"
         },
         {
@@ -17963,6 +18134,7 @@
       ],
       "depended_on_by": [
         "anchor_extremes_audit",
+        "antiparticle_dark_energy_unification_audit",
         "basepoint_principle",
         "bicyclist_observer_sequence",
         "born_rule_mode_count_extremes_audit",
@@ -18033,6 +18205,10 @@
       "edged_by": [
         {
           "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
           "kind": "references"
         },
         {
@@ -26376,6 +26552,7 @@
       ],
       "depended_on_by": [
         "anchor_extremes_audit",
+        "antiparticle_dark_energy_unification_audit",
         "bicyclist_observer_sequence",
         "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
@@ -26449,6 +26626,10 @@
       "edged_by": [
         {
           "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
           "kind": "references"
         },
         {
@@ -27158,6 +27339,7 @@
         "tick_continuum_construction"
       ],
       "depended_on_by": [
+        "antiparticle_dark_energy_unification_audit",
         "articulation_audit_2026-05",
         "basepoint_principle",
         "bell_bounds_from_substrate",
@@ -27242,6 +27424,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
         {
           "source": "articulation_audit_2026-05",
           "kind": "references"
@@ -27528,6 +27714,7 @@
       ],
       "depended_on_by": [
         "anchor_extremes_audit",
+        "antiparticle_dark_energy_unification_audit",
         "born_rule_mode_count_extremes_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
@@ -27573,6 +27760,10 @@
       "edged_by": [
         {
           "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
           "kind": "references"
         },
         {
@@ -29157,6 +29348,7 @@
         "tick_continuum_construction"
       ],
       "depended_on_by": [
+        "antiparticle_dark_energy_unification_audit",
         "articulation_audit_2026-05",
         "cone_twist_substrate",
         "e_cross_calc",
@@ -29236,6 +29428,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
         {
           "source": "articulation_audit_2026-05",
           "kind": "references"
@@ -30690,6 +30886,7 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "antiparticle_dark_energy_unification_audit",
         "articulation_audit_2026-05",
         "basepoint_principle",
         "bell_bounds_from_substrate",
@@ -30805,6 +31002,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
         {
           "source": "articulation_audit_2026-05",
           "kind": "references"
@@ -31150,6 +31351,7 @@
         "vocabulary_bridge_iteration_2_step_2"
       ],
       "depended_on_by": [
+        "antiparticle_dark_energy_unification_audit",
         "bicyclist_observer_sequence",
         "born_rule_mode_count_extremes_audit",
         "conservation_scale_stratification_audit",
@@ -31206,6 +31408,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
         {
           "source": "bicyclist_observer_sequence",
           "kind": "references"
@@ -32551,7 +32757,9 @@
         "sine_gordon_substrate",
         "substrate_determinism"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "antiparticle_dark_energy_unification_audit"
+      ],
       "edges": [
         {
           "target": "CHAIN_KSTAR",
@@ -32614,7 +32822,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "c6db782",
