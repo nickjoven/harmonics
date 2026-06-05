@@ -1,5 +1,5 @@
 {
-  "generated": "893ddd1e87e0a81327c8141d58e44a6975994840",
+  "generated": "b73705d35d970a6ad9ba4331bd75daa13069d3f9",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -18,6 +18,7 @@
         "ansatz_audit_policy",
         "born_rule_mode_count_extremes_audit",
         "dynamical_tool_audit",
+        "halt_shock_coherence_audit",
         "klein_antipodal_z2_rep_pattern",
         "master_cascade_identity",
         "negative_results_ledger",
@@ -52,6 +53,10 @@
         },
         {
           "source": "dynamical_tool_audit",
+          "kind": "references"
+        },
+        {
+          "source": "halt_shock_coherence_audit",
           "kind": "references"
         },
         {
@@ -2344,7 +2349,9 @@
         "q_mod2_planck_emergence_audit",
         "vocabulary_is_the_work_pattern"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "halt_shock_coherence_audit"
+      ],
       "edges": [
         {
           "target": "anchor_count_audit",
@@ -2419,7 +2426,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "halt_shock_coherence_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "dd68ce6",
@@ -4276,6 +4288,7 @@
         "framework_status",
         "free_parameter_scorecard",
         "ghz_from_substrate",
+        "halt_shock_coherence_audit",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_1",
         "klein_bottle_restructure_price",
@@ -4391,6 +4404,10 @@
         },
         {
           "source": "ghz_from_substrate",
+          "kind": "references"
+        },
+        {
+          "source": "halt_shock_coherence_audit",
           "kind": "references"
         },
         {
@@ -4565,7 +4582,8 @@
         "surface_uniqueness_audit"
       ],
       "depended_on_by": [
-        "anchor_extremes_audit"
+        "anchor_extremes_audit",
+        "halt_shock_coherence_audit"
       ],
       "edges": [
         {
@@ -4644,6 +4662,10 @@
       "edged_by": [
         {
           "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "halt_shock_coherence_audit",
           "kind": "references"
         }
       ],
@@ -4767,6 +4789,7 @@
         "down_type_double_cover_phase_c",
         "down_type_double_cover_phase_d",
         "figure_eight_necessitation_audit",
+        "halt_shock_coherence_audit",
         "horn_branch_iteration_2_step_1",
         "horn_branch_iteration_2_step_2",
         "horn_branch_iteration_3_step_1",
@@ -4844,6 +4867,10 @@
         },
         {
           "source": "figure_eight_necessitation_audit",
+          "kind": "references"
+        },
+        {
+          "source": "halt_shock_coherence_audit",
           "kind": "references"
         },
         {
@@ -6019,6 +6046,7 @@
         "anchor_extremes_audit",
         "bicyclist_observer_sequence",
         "born_rule_mode_count_extremes_audit",
+        "halt_shock_coherence_audit",
         "pattern_identification_discipline_candidate",
         "q_mod2_conservation_theorem",
         "q_mod2_planck_emergence_audit",
@@ -6113,6 +6141,10 @@
         },
         {
           "source": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "halt_shock_coherence_audit",
           "kind": "references"
         },
         {
@@ -6435,6 +6467,7 @@
         "gap_1_christoffel",
         "gap_2_spatial_diffusion",
         "gr_qm_unification_synthesis",
+        "halt_shock_coherence_audit",
         "hierarchy_problem_translation",
         "lesson_epr_gr_qm_unification",
         "omega_b_c5_beta_audit",
@@ -6581,6 +6614,10 @@
         },
         {
           "source": "gr_qm_unification_synthesis",
+          "kind": "references"
+        },
+        {
+          "source": "halt_shock_coherence_audit",
           "kind": "references"
         },
         {
@@ -14362,6 +14399,102 @@
       ]
     },
     {
+      "id": "halt_shock_coherence_audit",
+      "path": "sync_cost/derivations/halt_shock_coherence_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Halt and shock coherence audit \u2014 coherence-type matrix initialization",
+      "summary": "**First audit in the coherence-type axis** (perpendicular to the\ninvariance-type audits in PRs #221\u2013#223). Initializes the\ncoherence-type \u00d7 layer-status matrix by populating two rows\nbeyond the invariance row.",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "anchor_extremes_audit",
+        "born_rule",
+        "born_rule_mode_count_extremes_audit",
+        "boundary_weight",
+        "conservation_scale_stratification_audit",
+        "continuum_limits",
+        "klein_bottle_restructure_price",
+        "planck_scale",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_conservation_theorem",
+        "q_mod2_planck_emergence_audit",
+        "sine_gordon_substrate",
+        "substrate_determinism",
+        "surface_uniqueness_audit"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "sine_gordon_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "surface_uniqueness_audit",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "b73705d",
+          "date": "2026-06-05",
+          "subject": "Halt and shock coherence audit (coherence-type matrix initialization) (#224)"
+        }
+      ]
+    },
+    {
       "id": "hierarchy",
       "path": "sync_cost/derivations/hierarchy.md",
       "cid": null,
@@ -17790,6 +17923,7 @@
         "conservation_scale_stratification_audit",
         "continuum_limits",
         "framework_status",
+        "halt_shock_coherence_audit",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_2",
         "q_mod2_planck_emergence_audit",
@@ -17879,6 +18013,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "halt_shock_coherence_audit",
           "kind": "references"
         },
         {
@@ -25699,6 +25837,7 @@
         "anchor_count_audit",
         "anchor_extremes_audit",
         "born_rule_mode_count_extremes_audit",
+        "halt_shock_coherence_audit",
         "isotropy_lemma",
         "q_mod2_planck_emergence_audit",
         "quantum_gravity_interpolation"
@@ -25719,6 +25858,10 @@
         },
         {
           "source": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "halt_shock_coherence_audit",
           "kind": "references"
         },
         {
@@ -26186,6 +26329,7 @@
         "canonical_glossary",
         "conservation_scale_stratification_audit",
         "framework_status",
+        "halt_shock_coherence_audit",
         "pattern_identification_discipline_candidate",
         "q_mod2_planck_emergence_audit",
         "torus_branch_iteration_2_step_1",
@@ -26272,6 +26416,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "halt_shock_coherence_audit",
           "kind": "references"
         },
         {
@@ -26970,6 +27118,7 @@
         "framework_status",
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
+        "halt_shock_coherence_audit",
         "k_of_t_residual_disposition",
         "klein_bottle_restructure_price",
         "koide_form_substrate_iteration_10",
@@ -27101,6 +27250,10 @@
         },
         {
           "source": "gr_qm_unification_synthesis",
+          "kind": "references"
+        },
+        {
+          "source": "halt_shock_coherence_audit",
           "kind": "references"
         },
         {
@@ -27313,7 +27466,8 @@
       ],
       "depended_on_by": [
         "anchor_extremes_audit",
-        "born_rule_mode_count_extremes_audit"
+        "born_rule_mode_count_extremes_audit",
+        "halt_shock_coherence_audit"
       ],
       "edges": [
         {
@@ -27360,6 +27514,10 @@
         },
         {
           "source": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "halt_shock_coherence_audit",
           "kind": "references"
         }
       ],
@@ -28941,6 +29099,7 @@
         "framework_status",
         "gauge_high_scale_identification",
         "gell_mann_nishijima",
+        "halt_shock_coherence_audit",
         "instrument_family_taxonomy",
         "klein_bottle",
         "klein_bottle_derivation",
@@ -29043,6 +29202,10 @@
         },
         {
           "source": "gell_mann_nishijima",
+          "kind": "references"
+        },
+        {
+          "source": "halt_shock_coherence_audit",
           "kind": "references"
         },
         {
@@ -30478,6 +30641,7 @@
         "framework_status",
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
+        "halt_shock_coherence_audit",
         "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
         "k_of_t_residual_disposition",
@@ -30658,6 +30822,10 @@
         },
         {
           "source": "gr_qm_unification_synthesis",
+          "kind": "references"
+        },
+        {
+          "source": "halt_shock_coherence_audit",
           "kind": "references"
         },
         {
@@ -30910,6 +31078,7 @@
         "conservation_scale_stratification_audit",
         "continuum_limits",
         "framework_status",
+        "halt_shock_coherence_audit",
         "pattern_identification_discipline_candidate",
         "primitives_vs_addresses_candidate"
       ],
@@ -30978,6 +31147,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "halt_shock_coherence_audit",
           "kind": "references"
         },
         {
