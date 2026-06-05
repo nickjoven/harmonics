@@ -1,5 +1,5 @@
 {
-  "generated": "ba55e5e3901ccb17f229bef12bc6bd710961cc1c",
+  "generated": "ef1e22cb91cfb80af1290ef677f00c5571da8893",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -16,6 +16,7 @@
       ],
       "depended_on_by": [
         "ansatz_audit_policy",
+        "born_rule_mode_count_extremes_audit",
         "dynamical_tool_audit",
         "klein_antipodal_z2_rep_pattern",
         "master_cascade_identity",
@@ -43,6 +44,10 @@
       "edged_by": [
         {
           "source": "ansatz_audit_policy",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
           "kind": "references"
         },
         {
@@ -1946,6 +1951,8 @@
         "a_s_g1_closure_attempt",
         "address_and_quantity",
         "anchor_count_reaudit",
+        "anchor_extremes_audit",
+        "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
         "depth_connection_nulls",
         "derivation_atlas",
@@ -2050,6 +2057,14 @@
         },
         {
           "source": "anchor_count_reaudit",
+          "kind": "references"
+        },
+        {
+          "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
           "kind": "references"
         },
         {
@@ -2299,6 +2314,117 @@
           "hash": "67e3ca3",
           "date": "2026-05-17",
           "subject": "Close #ANCHOR: formal re-audit of the five anchor-count obstructions (#137)"
+        }
+      ]
+    },
+    {
+      "id": "anchor_extremes_audit",
+      "path": "sync_cost/derivations/anchor_extremes_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Anchors at extremes audit (chain extension)",
+      "summary": "**Extension of the conservation chain inventory** from\n`born_rule_mode_count_extremes_audit.md` (PR #222) to cover\nthe framework's two **observational anchors** \u2014 H_0\n(cosmological) and v_EW (particle-sector) \u2014 across the three\nregimes (Planck / Standard / Hubble).",
+      "depends_on": [
+        "anchor_count_audit",
+        "born_rule_mode_count_extremes_audit",
+        "conservation_scale_stratification_audit",
+        "continuity_in_K_nulls",
+        "continuum_limits",
+        "coupling_scales",
+        "hierarchy_gaussian_lattice",
+        "hierarchy_problem_translation",
+        "klein_bottle",
+        "klein_bottle_restructure_price",
+        "klein_z2_decomposition_falsifier_2",
+        "mass_sector_closure",
+        "numerology_inventory",
+        "path_a_walkthrough",
+        "planck_scale",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_planck_emergence_audit",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "anchor_count_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "continuity_in_K_nulls",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "coupling_scales",
+          "kind": "references"
+        },
+        {
+          "target": "hierarchy_gaussian_lattice",
+          "kind": "references"
+        },
+        {
+          "target": "hierarchy_problem_translation",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "klein_z2_decomposition_falsifier_2",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "target": "path_a_walkthrough",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_is_the_work_pattern",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "dd68ce6",
+          "date": "2026-06-05",
+          "subject": "Anchors at extremes audit (chain extension) (#223)"
         }
       ]
     },
@@ -4137,6 +4263,7 @@
         "articulation_audit_2026-05",
         "basepoint_principle",
         "bell_bounds_from_substrate",
+        "born_rule_mode_count_extremes_audit",
         "born_rule_parameter_free",
         "canonical_glossary",
         "complex_amplitude_uniqueness",
@@ -4212,6 +4339,10 @@
         },
         {
           "source": "bell_bounds_from_substrate",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
           "kind": "references"
         },
         {
@@ -4407,6 +4538,124 @@
       ]
     },
     {
+      "id": "born_rule_mode_count_extremes_audit",
+      "path": "sync_cost/derivations/born_rule_mode_count_extremes_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Born rule + mode count at extremes audit",
+      "summary": "**Extension of the conservation chain inventory** from\n`conservation_scale_stratification_audit.md` (Q mod 2 +\ndissipation) to cover the next two structural invariants: the\nBorn rule and the mode count. Both are audited across the three\nregimes (Planck / standard / Hubble) with the layer-status\n(layer-invariant vs scale-specific) classification carried over.",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "anchor_count_audit",
+        "born_rule",
+        "born_rule_parameter_free",
+        "boundary_weight",
+        "complex_amplitude_uniqueness",
+        "conservation_scale_stratification_audit",
+        "horn_branch_iteration_2_step_2",
+        "klein_bottle",
+        "klein_bottle_restructure_price",
+        "klein_z2_decomposition_falsifier_2",
+        "mass_sector_closure",
+        "planck_scale",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_conservation_theorem",
+        "q_mod2_planck_emergence_audit",
+        "substrate_determinism",
+        "surface_uniqueness_audit"
+      ],
+      "depended_on_by": [
+        "anchor_extremes_audit"
+      ],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "anchor_count_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_parameter_free",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "target": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "klein_z2_decomposition_falsifier_2",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "surface_uniqueness_audit",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "anchor_extremes_audit",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "ef1e22c",
+          "date": "2026-06-05",
+          "subject": "Born rule + mode count at extremes audit (chain extension) (#222)"
+        }
+      ]
+    },
+    {
       "id": "born_rule_parameter_free",
       "path": "sync_cost/derivations/born_rule_parameter_free.md",
       "cid": null,
@@ -4422,6 +4671,7 @@
       "depended_on_by": [
         "articulation_audit_2026-05",
         "born_rule",
+        "born_rule_mode_count_extremes_audit",
         "empty_fork_cap",
         "horn_branch_iteration_1",
         "klein_bottle_restructure_price",
@@ -4454,6 +4704,10 @@
         },
         {
           "source": "born_rule",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
           "kind": "references"
         },
         {
@@ -4505,6 +4759,7 @@
         "FRAMEWORK_TOPOLOGY",
         "a_s_geometric_proof",
         "address_and_quantity",
+        "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
         "continuity_in_K_nulls",
         "continuum_limits",
@@ -4557,6 +4812,10 @@
         },
         {
           "source": "address_and_quantity",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
           "kind": "references"
         },
         {
@@ -5347,6 +5606,7 @@
       "depended_on_by": [
         "axial_trajectory_conservation_audit",
         "bell_bounds_from_substrate",
+        "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
         "dicke_apparatus_theorem",
         "klein_bottle_restructure_price",
@@ -5416,6 +5676,10 @@
         },
         {
           "source": "bell_bounds_from_substrate",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
           "kind": "references"
         },
         {
@@ -5752,7 +6016,9 @@
         "xor_derivation"
       ],
       "depended_on_by": [
+        "anchor_extremes_audit",
         "bicyclist_observer_sequence",
+        "born_rule_mode_count_extremes_audit",
         "pattern_identification_discipline_candidate",
         "q_mod2_conservation_theorem",
         "q_mod2_planck_emergence_audit",
@@ -5838,7 +6104,15 @@
       ],
       "edged_by": [
         {
+          "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
           "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
           "kind": "references"
         },
         {
@@ -5895,6 +6169,7 @@
       "depended_on_by": [
         "anchor_count_audit",
         "anchor_count_reaudit",
+        "anchor_extremes_audit",
         "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
         "cross_ratio_irrep_reframe",
@@ -5995,6 +6270,10 @@
         },
         {
           "source": "anchor_count_reaudit",
+          "kind": "references"
+        },
+        {
+          "source": "anchor_extremes_audit",
           "kind": "references"
         },
         {
@@ -6138,6 +6417,7 @@
         "a_s_geometric_proof",
         "anchor_count_audit",
         "anchor_count_reaudit",
+        "anchor_extremes_audit",
         "articulation_audit_2026-05",
         "bicyclist_observer_sequence",
         "canonical_glossary",
@@ -6229,6 +6509,10 @@
         },
         {
           "source": "anchor_count_reaudit",
+          "kind": "references"
+        },
+        {
+          "source": "anchor_extremes_audit",
           "kind": "references"
         },
         {
@@ -6477,6 +6761,7 @@
         "INDEX",
         "address_and_quantity",
         "anchor_count_audit",
+        "anchor_extremes_audit",
         "equivalence_dissolution",
         "gap2_analytic_proof",
         "gr_qm_unification_synthesis",
@@ -6499,6 +6784,10 @@
         },
         {
           "source": "anchor_count_audit",
+          "kind": "references"
+        },
+        {
+          "source": "anchor_extremes_audit",
           "kind": "references"
         },
         {
@@ -14131,6 +14420,7 @@
       "depended_on_by": [
         "INDEX",
         "anchor_count_audit",
+        "anchor_extremes_audit",
         "canonical_glossary",
         "depth_connection_nulls",
         "derivation_atlas",
@@ -14213,6 +14503,10 @@
         },
         {
           "source": "anchor_count_audit",
+          "kind": "references"
+        },
+        {
+          "source": "anchor_extremes_audit",
           "kind": "references"
         },
         {
@@ -14378,6 +14672,7 @@
         "a_s_g1_closure_attempt",
         "anchor_count_audit",
         "anchor_count_reaudit",
+        "anchor_extremes_audit",
         "articulation_audit_2026-05",
         "derivation_atlas",
         "framework_status",
@@ -14437,6 +14732,10 @@
         },
         {
           "source": "anchor_count_reaudit",
+          "kind": "references"
+        },
+        {
+          "source": "anchor_extremes_audit",
           "kind": "references"
         },
         {
@@ -14938,6 +15237,7 @@
         "mass_sector_closure"
       ],
       "depended_on_by": [
+        "born_rule_mode_count_extremes_audit",
         "horn_branch_iteration_3_step_1"
       ],
       "edges": [
@@ -14987,6 +15287,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
         {
           "source": "horn_branch_iteration_3_step_1",
           "kind": "references"
@@ -16801,9 +17105,11 @@
         "CHAIN_KSTAR",
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
+        "anchor_extremes_audit",
         "articulation_audit_2026-05",
         "axial_trajectory_conservation_audit",
         "beta_from_tongues",
+        "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
         "complex_amplitude_uniqueness",
         "cone_twist_substrate",
@@ -16893,6 +17199,10 @@
           "kind": "references"
         },
         {
+          "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
           "source": "articulation_audit_2026-05",
           "kind": "references"
         },
@@ -16902,6 +17212,10 @@
         },
         {
           "source": "beta_from_tongues",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
           "kind": "references"
         },
         {
@@ -17468,8 +17782,10 @@
         "q_mod2_conservation_theorem"
       ],
       "depended_on_by": [
+        "anchor_extremes_audit",
         "basepoint_principle",
         "bicyclist_observer_sequence",
+        "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
         "conservation_scale_stratification_audit",
         "continuum_limits",
@@ -17534,11 +17850,19 @@
       ],
       "edged_by": [
         {
+          "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
           "source": "basepoint_principle",
           "kind": "references"
         },
         {
           "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
           "kind": "references"
         },
         {
@@ -18062,6 +18386,8 @@
         "mass_sector_closure"
       ],
       "depended_on_by": [
+        "anchor_extremes_audit",
+        "born_rule_mode_count_extremes_audit",
         "framework_status",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_1",
@@ -18106,6 +18432,14 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
         {
           "source": "framework_status",
           "kind": "references"
@@ -19920,8 +20254,10 @@
         "FRAMEWORK_TOPOLOGY",
         "address_and_quantity",
         "anchor_count_audit",
+        "anchor_extremes_audit",
         "axial_trajectory_conservation_audit",
         "basepoint_principle",
+        "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
         "depth_connection_nulls",
         "derivation_atlas",
@@ -19991,11 +20327,19 @@
           "kind": "references"
         },
         {
+          "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
           "source": "axial_trajectory_conservation_audit",
           "kind": "references"
         },
         {
           "source": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
           "kind": "references"
         },
         {
@@ -22345,6 +22689,7 @@
         "CHAIN_KSTAR",
         "a_s_g1_closure_attempt",
         "anchor_count_audit",
+        "anchor_extremes_audit",
         "ansatz_audit_policy",
         "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
@@ -22517,6 +22862,10 @@
         },
         {
           "source": "anchor_count_audit",
+          "kind": "references"
+        },
+        {
+          "source": "anchor_extremes_audit",
           "kind": "references"
         },
         {
@@ -24298,6 +24647,7 @@
         "a_s_g1_closure_attempt",
         "anchor_count_audit",
         "anchor_count_reaudit",
+        "anchor_extremes_audit",
         "canonical_glossary",
         "depth_connection_nulls",
         "framework_status",
@@ -24355,6 +24705,10 @@
         },
         {
           "source": "anchor_count_reaudit",
+          "kind": "references"
+        },
+        {
+          "source": "anchor_extremes_audit",
           "kind": "references"
         },
         {
@@ -25343,6 +25697,8 @@
       "depended_on_by": [
         "INDEX",
         "anchor_count_audit",
+        "anchor_extremes_audit",
+        "born_rule_mode_count_extremes_audit",
         "isotropy_lemma",
         "q_mod2_planck_emergence_audit",
         "quantum_gravity_interpolation"
@@ -25355,6 +25711,14 @@
         },
         {
           "source": "anchor_count_audit",
+          "kind": "references"
+        },
+        {
+          "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
           "kind": "references"
         },
         {
@@ -25816,7 +26180,9 @@
         "torus_branch_iteration_1"
       ],
       "depended_on_by": [
+        "anchor_extremes_audit",
         "bicyclist_observer_sequence",
+        "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
         "conservation_scale_stratification_audit",
         "framework_status",
@@ -25885,7 +26251,15 @@
       ],
       "edged_by": [
         {
+          "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
           "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
           "kind": "references"
         },
         {
@@ -26584,6 +26958,7 @@
         "bell_bounds_from_substrate",
         "bicone_golden_z2_identification",
         "bicyclist_observer_sequence",
+        "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
@@ -26678,6 +27053,10 @@
         },
         {
           "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
           "kind": "references"
         },
         {
@@ -26932,7 +27311,10 @@
         "primitives_vs_addresses_candidate",
         "q_mod2_conservation_theorem"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "anchor_extremes_audit",
+        "born_rule_mode_count_extremes_audit"
+      ],
       "edges": [
         {
           "target": "bicyclist_observer_sequence",
@@ -26971,7 +27353,16 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "ba55e5e",
@@ -30070,6 +30461,7 @@
         "bicone_golden_z2_identification",
         "bicyclist_observer_sequence",
         "born_rule",
+        "born_rule_mode_count_extremes_audit",
         "born_rule_parameter_free",
         "canonical_glossary",
         "collapse_dissolution",
@@ -30198,6 +30590,10 @@
         },
         {
           "source": "born_rule",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
           "kind": "references"
         },
         {
@@ -30510,6 +30906,7 @@
       ],
       "depended_on_by": [
         "bicyclist_observer_sequence",
+        "born_rule_mode_count_extremes_audit",
         "conservation_scale_stratification_audit",
         "continuum_limits",
         "framework_status",
@@ -30565,6 +30962,10 @@
       "edged_by": [
         {
           "source": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
+          "source": "born_rule_mode_count_extremes_audit",
           "kind": "references"
         },
         {
@@ -32578,6 +32979,7 @@
         "a_s_g1_closure_attempt",
         "anchor_count_audit",
         "anchor_count_reaudit",
+        "anchor_extremes_audit",
         "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
         "canonical_glossary",
@@ -32730,6 +33132,10 @@
         },
         {
           "source": "anchor_count_reaudit",
+          "kind": "references"
+        },
+        {
+          "source": "anchor_extremes_audit",
           "kind": "references"
         },
         {
