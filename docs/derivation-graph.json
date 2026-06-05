@@ -1,5 +1,5 @@
 {
-  "generated": "b73705d35d970a6ad9ba4331bd75daa13069d3f9",
+  "generated": "c6db782ddcc8ae0d3010af0d632f0a62ef877b97",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -22,7 +22,8 @@
         "klein_antipodal_z2_rep_pattern",
         "master_cascade_identity",
         "negative_results_ledger",
-        "numerology_inventory"
+        "numerology_inventory",
+        "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
         {
@@ -73,6 +74,10 @@
         },
         {
           "source": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "source": "unification_bridge_audits_gaps_1_3",
           "kind": "references"
         }
       ],
@@ -2350,7 +2355,8 @@
         "vocabulary_is_the_work_pattern"
       ],
       "depended_on_by": [
-        "halt_shock_coherence_audit"
+        "halt_shock_coherence_audit",
+        "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
         {
@@ -2429,6 +2435,10 @@
       "edged_by": [
         {
           "source": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "source": "unification_bridge_audits_gaps_1_3",
           "kind": "references"
         }
       ],
@@ -4583,7 +4593,8 @@
       ],
       "depended_on_by": [
         "anchor_extremes_audit",
-        "halt_shock_coherence_audit"
+        "halt_shock_coherence_audit",
+        "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
         {
@@ -4666,6 +4677,10 @@
         },
         {
           "source": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "source": "unification_bridge_audits_gaps_1_3",
           "kind": "references"
         }
       ],
@@ -4808,6 +4823,7 @@
         "session_audit",
         "sqrt_r_n_correction",
         "torus_branch_iteration_1",
+        "unification_bridge_audits_gaps_1_3",
         "unitless_check"
       ],
       "edges": [
@@ -4943,6 +4959,10 @@
         },
         {
           "source": "torus_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "unification_bridge_audits_gaps_1_3",
           "kind": "references"
         },
         {
@@ -5648,7 +5668,8 @@
         "phenomenology_cross_reference",
         "q_mod2_planck_emergence_audit",
         "qm_reframing_programmatic",
-        "snmc_class_and_entanglement"
+        "snmc_class_and_entanglement",
+        "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
         {
@@ -5767,6 +5788,10 @@
         },
         {
           "source": "snmc_class_and_entanglement",
+          "kind": "references"
+        },
+        {
+          "source": "unification_bridge_audits_gaps_1_3",
           "kind": "references"
         }
       ],
@@ -6050,7 +6075,8 @@
         "pattern_identification_discipline_candidate",
         "q_mod2_conservation_theorem",
         "q_mod2_planck_emergence_audit",
-        "substrate_determinism"
+        "substrate_determinism",
+        "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
         {
@@ -6161,6 +6187,10 @@
         },
         {
           "source": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "source": "unification_bridge_audits_gaps_1_3",
           "kind": "references"
         }
       ],
@@ -14422,7 +14452,9 @@
         "substrate_determinism",
         "surface_uniqueness_audit"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "unification_bridge_audits_gaps_1_3"
+      ],
       "edges": [
         {
           "target": "CHAIN_KSTAR",
@@ -14485,7 +14517,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "unification_bridge_audits_gaps_1_3",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "b73705d",
@@ -15371,7 +15408,8 @@
       ],
       "depended_on_by": [
         "born_rule_mode_count_extremes_audit",
-        "horn_branch_iteration_3_step_1"
+        "horn_branch_iteration_3_step_1",
+        "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
         {
@@ -15426,6 +15464,10 @@
         },
         {
           "source": "horn_branch_iteration_3_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "unification_bridge_audits_gaps_1_3",
           "kind": "references"
         }
       ],
@@ -17299,6 +17341,7 @@
         "substrate_prediction_selection",
         "thread_chronology",
         "time_axis_split",
+        "unification_bridge_audits_gaps_1_3",
         "vacuum_energy",
         "vocabulary_bridge_iteration_1",
         "wave_particle_substrate",
@@ -17573,6 +17616,10 @@
         },
         {
           "source": "time_axis_split",
+          "kind": "references"
+        },
+        {
+          "source": "unification_bridge_audits_gaps_1_3",
           "kind": "references"
         },
         {
@@ -17929,6 +17976,7 @@
         "q_mod2_planck_emergence_audit",
         "surface_uniqueness_audit",
         "torus_branch_iteration_1",
+        "unification_bridge_audits_gaps_1_3",
         "vocabulary_bridge_iteration_1",
         "vocabulary_bridge_iteration_2_step_2"
       ],
@@ -18037,6 +18085,10 @@
         },
         {
           "source": "torus_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "unification_bridge_audits_gaps_1_3",
           "kind": "references"
         },
         {
@@ -26333,7 +26385,8 @@
         "pattern_identification_discipline_candidate",
         "q_mod2_planck_emergence_audit",
         "torus_branch_iteration_2_step_1",
-        "torus_branch_iteration_2_step_2"
+        "torus_branch_iteration_2_step_2",
+        "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
         {
@@ -26436,6 +26489,10 @@
         },
         {
           "source": "torus_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "source": "unification_bridge_audits_gaps_1_3",
           "kind": "references"
         }
       ],
@@ -27133,6 +27190,7 @@
         "snmc_class_and_entanglement",
         "substrate_determinism",
         "thread_chronology",
+        "unification_bridge_audits_gaps_1_3",
         "vocabulary_bridge_iteration_2_step_1",
         "vocabulary_bridge_iteration_2_step_2",
         "w_state_from_substrate"
@@ -27313,6 +27371,10 @@
           "kind": "references"
         },
         {
+          "source": "unification_bridge_audits_gaps_1_3",
+          "kind": "references"
+        },
+        {
           "source": "vocabulary_bridge_iteration_2_step_1",
           "kind": "references"
         },
@@ -27467,7 +27529,8 @@
       "depended_on_by": [
         "anchor_extremes_audit",
         "born_rule_mode_count_extremes_audit",
-        "halt_shock_coherence_audit"
+        "halt_shock_coherence_audit",
+        "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
         {
@@ -27518,6 +27581,10 @@
         },
         {
           "source": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "source": "unification_bridge_audits_gaps_1_3",
           "kind": "references"
         }
       ],
@@ -29117,6 +29184,7 @@
         "thread_chronology",
         "tick_continuum_construction",
         "time_axis_split",
+        "unification_bridge_audits_gaps_1_3",
         "unitless_audit",
         "wave_particle_substrate",
         "xor_derivation"
@@ -29274,6 +29342,10 @@
         },
         {
           "source": "time_axis_split",
+          "kind": "references"
+        },
+        {
+          "source": "unification_bridge_audits_gaps_1_3",
           "kind": "references"
         },
         {
@@ -30659,6 +30731,7 @@
         "snmc_class_and_entanglement",
         "thread_chronology",
         "tick_continuum_construction",
+        "unification_bridge_audits_gaps_1_3",
         "w_state_from_substrate"
       ],
       "edges": [
@@ -30894,6 +30967,10 @@
         },
         {
           "source": "tick_continuum_construction",
+          "kind": "references"
+        },
+        {
+          "source": "unification_bridge_audits_gaps_1_3",
           "kind": "references"
         },
         {
@@ -32447,6 +32524,102 @@
           "hash": "028f87b",
           "date": "2026-03-22",
           "subject": "Add two-force model: coherence vs decoherence at the golden ratio"
+        }
+      ]
+    },
+    {
+      "id": "unification_bridge_audits_gaps_1_3",
+      "path": "sync_cost/derivations/unification_bridge_audits_gaps_1_3.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Unification bridge audits \u2014 Gaps 1, 2, 3",
+      "summary": "Three bridge audits feeding into the planned antiparticle/dark-\nenergy unification audit (which folds in horizons-as-solitons +\nmedium-as-cancellation-residue + universal boundary-leakage).\nEach bridge addresses one of the open gaps from the unification\naudit's outline:",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "anchor_extremes_audit",
+        "born_rule_mode_count_extremes_audit",
+        "boundary_weight",
+        "complex_amplitude_uniqueness",
+        "conservation_scale_stratification_audit",
+        "halt_shock_coherence_audit",
+        "horn_branch_iteration_2_step_2",
+        "klein_bottle",
+        "klein_bottle_restructure_price",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_conservation_theorem",
+        "q_mod2_planck_emergence_audit",
+        "sine_gordon_substrate",
+        "substrate_determinism"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "target": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "sine_gordon_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "c6db782",
+          "date": "2026-06-05",
+          "subject": "Unification bridge audits \u2014 Gaps 1, 2, 3 (#225)"
         }
       ]
     },
