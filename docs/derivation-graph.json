@@ -1,5 +1,5 @@
 {
-  "generated": "c0660fcd21d913eeeeacf4b1848a3ce173680cd1",
+  "generated": "ba55e5e3901ccb17f229bef12bc6bd710961cc1c",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -4046,7 +4046,8 @@
       ],
       "depended_on_by": [
         "pattern_identification_discipline_candidate",
-        "primitives_vs_addresses_candidate"
+        "primitives_vs_addresses_candidate",
+        "q_mod2_planck_emergence_audit"
       ],
       "edges": [
         {
@@ -4097,6 +4098,10 @@
         },
         {
           "source": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "source": "q_mod2_planck_emergence_audit",
           "kind": "references"
         }
       ],
@@ -5354,6 +5359,7 @@
         "lesson_forced_basin_selection",
         "pattern_identification_discipline_candidate",
         "phenomenology_cross_reference",
+        "q_mod2_planck_emergence_audit",
         "qm_reframing_programmatic",
         "snmc_class_and_entanglement"
       ],
@@ -5458,6 +5464,10 @@
         },
         {
           "source": "phenomenology_cross_reference",
+          "kind": "references"
+        },
+        {
+          "source": "q_mod2_planck_emergence_audit",
           "kind": "references"
         },
         {
@@ -5745,6 +5755,7 @@
         "bicyclist_observer_sequence",
         "pattern_identification_discipline_candidate",
         "q_mod2_conservation_theorem",
+        "q_mod2_planck_emergence_audit",
         "substrate_determinism"
       ],
       "edges": [
@@ -5836,6 +5847,10 @@
         },
         {
           "source": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "source": "q_mod2_planck_emergence_audit",
           "kind": "references"
         },
         {
@@ -16836,6 +16851,7 @@
         "primitives_vs_addresses_candidate",
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
+        "q_mod2_planck_emergence_audit",
         "qm_reframing_programmatic",
         "rectangle_perpendicularity",
         "second_law_topological",
@@ -17074,6 +17090,10 @@
         },
         {
           "source": "q_mod2_mediant_projection",
+          "kind": "references"
+        },
+        {
+          "source": "q_mod2_planck_emergence_audit",
           "kind": "references"
         },
         {
@@ -17456,6 +17476,7 @@
         "framework_status",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_2",
+        "q_mod2_planck_emergence_audit",
         "surface_uniqueness_audit",
         "torus_branch_iteration_1",
         "vocabulary_bridge_iteration_1",
@@ -17542,6 +17563,10 @@
         },
         {
           "source": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "source": "q_mod2_planck_emergence_audit",
           "kind": "references"
         },
         {
@@ -18042,6 +18067,7 @@
         "horn_branch_iteration_2_step_1",
         "horn_branch_iteration_2_step_2",
         "klein_bottle_restructure_price",
+        "q_mod2_planck_emergence_audit",
         "vocabulary_bridge_iteration_1",
         "vocabulary_bridge_iteration_2_step_1"
       ],
@@ -18098,6 +18124,10 @@
         },
         {
           "source": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "source": "q_mod2_planck_emergence_audit",
           "kind": "references"
         },
         {
@@ -25314,6 +25344,7 @@
         "INDEX",
         "anchor_count_audit",
         "isotropy_lemma",
+        "q_mod2_planck_emergence_audit",
         "quantum_gravity_interpolation"
       ],
       "edges": [],
@@ -25328,6 +25359,10 @@
         },
         {
           "source": "isotropy_lemma",
+          "kind": "references"
+        },
+        {
+          "source": "q_mod2_planck_emergence_audit",
           "kind": "references"
         },
         {
@@ -25786,6 +25821,7 @@
         "conservation_scale_stratification_audit",
         "framework_status",
         "pattern_identification_discipline_candidate",
+        "q_mod2_planck_emergence_audit",
         "torus_branch_iteration_2_step_1",
         "torus_branch_iteration_2_step_2"
       ],
@@ -25866,6 +25902,10 @@
         },
         {
           "source": "pattern_identification_discipline_candidate",
+          "kind": "references"
+        },
+        {
+          "source": "q_mod2_planck_emergence_audit",
           "kind": "references"
         },
         {
@@ -26563,6 +26603,7 @@
         "phenomenology_cross_reference",
         "predictions_horizon_2026",
         "q_mod2_mediant_projection",
+        "q_mod2_planck_emergence_audit",
         "qm_reframing_programmatic",
         "sine_gordon_substrate",
         "snmc_class_and_entanglement",
@@ -26716,6 +26757,10 @@
           "kind": "references"
         },
         {
+          "source": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
           "source": "qm_reframing_programmatic",
           "kind": "references"
         },
@@ -26866,6 +26911,72 @@
           "hash": "34fd61d",
           "date": "2026-05-28",
           "subject": "Add Q-mod-2 mediant projection (state-axis dual of #1) (#178)"
+        }
+      ]
+    },
+    {
+      "id": "q_mod2_planck_emergence_audit",
+      "path": "sync_cost/derivations/q_mod2_planck_emergence_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Q mod 2 Planck-emergence audit \u2014 fuzzy floor and structural identity",
+      "summary": "**Verdict: MODAL \u2713 / GENERATIVE \u2713.** Klein-bottle topology\nemergence as a substrate fact and Planck-scale self-sustenance\nare the same event, by structural derivation from existing\napparatus. The Planck \"floor\" is a **fuzzy crossover regime**,\nnot a sharp boundary; Q mod 2 emerges *across* the crossover,\nnot at it. Three independent empirical observations (LHC\nmicroscopic black hole nulls, Higgs marginal-metastability,\nTsirelson bound saturation) align with the verdict at three\ndifferent strengt",
+      "depends_on": [
+        "bicyclist_observer_sequence",
+        "complex_amplitude_uniqueness",
+        "conservation_scale_stratification_audit",
+        "klein_bottle",
+        "klein_bottle_restructure_price",
+        "klein_z2_decomposition_falsifier_2",
+        "planck_scale",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_conservation_theorem"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "bicyclist_observer_sequence",
+          "kind": "references"
+        },
+        {
+          "target": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "target": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "klein_z2_decomposition_falsifier_2",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "ba55e5e",
+          "date": "2026-06-04",
+          "subject": "Q mod 2 Planck-emergence audit: fuzzy floor + structural identity (#221)"
         }
       ]
     },
