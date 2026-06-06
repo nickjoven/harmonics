@@ -1,5 +1,5 @@
 {
-  "generated": "42bf4a2de6fba591cb4786a5eff0e8fe2f1c3c42",
+  "generated": "ddeae4e3e9cdf3ad2fbbf9f5eaac96334488c8c2",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -22,6 +22,7 @@
         "boundary_leakage_rate_audit",
         "coherence_matrix_completion_audit",
         "dynamical_tool_audit",
+        "generation_sector_count_audit",
         "halt_shock_coherence_audit",
         "klein_antipodal_z2_rep_pattern",
         "master_cascade_identity",
@@ -74,6 +75,10 @@
         },
         {
           "source": "dynamical_tool_audit",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         },
         {
@@ -2384,6 +2389,7 @@
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
         "coherence_matrix_completion_audit",
+        "generation_sector_count_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -2476,6 +2482,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         },
         {
@@ -2784,7 +2794,8 @@
       "depended_on_by": [
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
-        "coherence_matrix_completion_audit"
+        "coherence_matrix_completion_audit",
+        "generation_sector_count_audit"
       ],
       "edges": [
         {
@@ -2876,6 +2887,10 @@
         {
           "source": "coherence_matrix_completion_audit",
           "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
+          "kind": "references"
         }
       ],
       "git": [
@@ -2920,7 +2935,8 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
-        "coherence_matrix_completion_audit"
+        "coherence_matrix_completion_audit",
+        "generation_sector_count_audit"
       ],
       "edges": [
         {
@@ -3023,6 +3039,10 @@
       "edged_by": [
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         }
       ],
@@ -4938,6 +4958,7 @@
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
         "coherence_matrix_completion_audit",
+        "generation_sector_count_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -5034,6 +5055,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         },
         {
@@ -5176,7 +5201,8 @@
       ],
       "depended_on_by": [
         "arrow_inviolability_and_unification_closure_audit",
-        "coherence_matrix_completion_audit"
+        "coherence_matrix_completion_audit",
+        "generation_sector_count_audit"
       ],
       "edges": [
         {
@@ -5243,6 +5269,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         }
       ],
@@ -6000,7 +6030,9 @@
         "surface_uniqueness_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "generation_sector_count_audit"
+      ],
       "edges": [
         {
           "target": "CHAIN_KSTAR",
@@ -6107,7 +6139,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "generation_sector_count_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "42bf4a2",
@@ -7189,6 +7226,7 @@
         "gap2_theorem_attempt",
         "gap_1_christoffel",
         "gap_2_spatial_diffusion",
+        "generation_sector_count_audit",
         "gr_qm_unification_synthesis",
         "halt_shock_coherence_audit",
         "hierarchy_problem_translation",
@@ -7345,6 +7383,10 @@
         },
         {
           "source": "gap_2_spatial_diffusion",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         },
         {
@@ -14329,6 +14371,7 @@
         "fourth_generation_revisited",
         "framework_status",
         "free_parameter_scorecard",
+        "generation_sector_count_audit",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_1",
         "horn_branch_iteration_2_step_2",
@@ -14407,6 +14450,10 @@
         },
         {
           "source": "free_parameter_scorecard",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         },
         {
@@ -14505,6 +14552,122 @@
           "hash": "16cda78",
           "date": "2026-03-27",
           "subject": "Derivation 34: The Generation Mechanism \u2014 three generations from phase-state observability"
+        }
+      ]
+    },
+    {
+      "id": "generation_sector_count_audit",
+      "path": "sync_cost/derivations/generation_sector_count_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Generation + sector count audit (Layer C chain extension)",
+      "summary": "Extends the conservation chain audit pattern (PRs #222 + #223 +\n#226 + this audit) to cover the framework's two structural\ncounts at the matter sector: **generation count (3) and sector\ncount (3)**.",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "anchor_extremes_audit",
+        "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
+        "born_rule_mode_count_extremes_audit",
+        "boundary_leakage_rate_audit",
+        "coherence_matrix_completion_audit",
+        "continuum_limits",
+        "generation_mechanism",
+        "halt_shock_coherence_audit",
+        "klein_bottle",
+        "klein_z2_decomposition_falsifier_2",
+        "mass_sector_closure",
+        "planck_scale",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_planck_emergence_audit",
+        "substrate_determinism",
+        "surface_uniqueness_audit",
+        "unification_bridge_audits_gaps_1_3"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "arrow_inviolability_and_unification_closure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "target": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "generation_mechanism",
+          "kind": "references"
+        },
+        {
+          "target": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_z2_decomposition_falsifier_2",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "surface_uniqueness_audit",
+          "kind": "references"
+        },
+        {
+          "target": "unification_bridge_audits_gaps_1_3",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "ddeae4e",
+          "date": "2026-06-05",
+          "subject": "Generation + sector count audit (Layer C chain extension) (#230)"
         }
       ]
     },
@@ -15167,6 +15330,7 @@
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
         "coherence_matrix_completion_audit",
+        "generation_sector_count_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
@@ -15246,6 +15410,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         },
         {
@@ -18051,6 +18219,7 @@
         "gauge_high_scale_identification",
         "gell_mann_nishijima",
         "generation_mechanism",
+        "generation_sector_count_audit",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_1",
         "horn_branch_iteration_2_step_2",
@@ -18224,6 +18393,10 @@
         },
         {
           "source": "generation_mechanism",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         },
         {
@@ -19354,6 +19527,7 @@
         "anchor_extremes_audit",
         "born_rule_mode_count_extremes_audit",
         "framework_status",
+        "generation_sector_count_audit",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_1",
         "horn_branch_iteration_2_step_2",
@@ -19407,6 +19581,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         },
         {
@@ -21230,6 +21408,7 @@
         "figure_eight_necessitation_audit",
         "fourth_generation_revisited",
         "framework_status",
+        "generation_sector_count_audit",
         "horn_branch_iteration_2_step_2",
         "k_axis_uniqueness",
         "k_scaling_scan",
@@ -21334,6 +21513,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         },
         {
@@ -26672,6 +26855,7 @@
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
         "coherence_matrix_completion_audit",
+        "generation_sector_count_audit",
         "halt_shock_coherence_audit",
         "isotropy_lemma",
         "q_mod2_planck_emergence_audit",
@@ -26705,6 +26889,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         },
         {
@@ -27180,6 +27368,7 @@
         "coherence_matrix_completion_audit",
         "conservation_scale_stratification_audit",
         "framework_status",
+        "generation_sector_count_audit",
         "halt_shock_coherence_audit",
         "pattern_identification_discipline_candidate",
         "q_mod2_planck_emergence_audit",
@@ -27284,6 +27473,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         },
         {
@@ -28363,6 +28556,7 @@
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
         "coherence_matrix_completion_audit",
+        "generation_sector_count_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -28427,6 +28621,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         },
         {
@@ -31584,6 +31782,7 @@
         "equivalence_dissolution",
         "era_timeline_disposition",
         "framework_status",
+        "generation_sector_count_audit",
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
         "halt_shock_coherence_audit",
@@ -31772,6 +31971,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         },
         {
@@ -32043,6 +32246,7 @@
         "conservation_scale_stratification_audit",
         "continuum_limits",
         "framework_status",
+        "generation_sector_count_audit",
         "halt_shock_coherence_audit",
         "pattern_identification_discipline_candidate",
         "primitives_vs_addresses_candidate"
@@ -32124,6 +32328,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         },
         {
@@ -33455,7 +33663,8 @@
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
-        "coherence_matrix_completion_audit"
+        "coherence_matrix_completion_audit",
+        "generation_sector_count_audit"
       ],
       "edges": [
         {
@@ -33534,6 +33743,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         }
       ],
