@@ -1,5 +1,5 @@
 {
-  "generated": "a39af8cbd8a8f5082f111ba232683348621dfb0f",
+  "generated": "f13f7eec540029fcf538a4565d69cb4678308d12",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -17,6 +17,7 @@
       "depended_on_by": [
         "ansatz_audit_policy",
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
         "dynamical_tool_audit",
@@ -52,6 +53,10 @@
         },
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -2366,6 +2371,7 @@
       ],
       "depended_on_by": [
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
@@ -2447,6 +2453,10 @@
       "edged_by": [
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -2757,6 +2767,7 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
+        "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit"
       ],
       "edges": [
@@ -2839,6 +2850,10 @@
       ],
       "edged_by": [
         {
+          "source": "arrow_inviolability_and_unification_closure_audit",
+          "kind": "references"
+        },
+        {
           "source": "boundary_leakage_rate_audit",
           "kind": "references"
         }
@@ -2848,6 +2863,147 @@
           "hash": "29ff2d2",
           "date": "2026-06-05",
           "subject": "Antiparticle / dark energy unification audit (multi-domain structural identity) (#226)"
+        }
+      ]
+    },
+    {
+      "id": "arrow_inviolability_and_unification_closure_audit",
+      "path": "sync_cost/derivations/arrow_inviolability_and_unification_closure_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Arrow inviolability + unification closure audit",
+      "summary": "Three substantive findings sealed in one doc:",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "anchor_extremes_audit",
+        "antiparticle_dark_energy_unification_audit",
+        "born_rule",
+        "born_rule_mode_count_extremes_audit",
+        "born_rule_parameter_free",
+        "boundary_leakage_rate_audit",
+        "boundary_weight",
+        "complex_amplitude_uniqueness",
+        "conservation_scale_stratification_audit",
+        "continuity_in_K_nulls",
+        "continuum_limits",
+        "halt_shock_coherence_audit",
+        "horn_branch_iteration_2_step_2",
+        "klein_bottle",
+        "klein_bottle_restructure_price",
+        "planck_scale",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_conservation_theorem",
+        "q_mod2_planck_emergence_audit",
+        "sine_gordon_substrate",
+        "substrate_determinism",
+        "surface_uniqueness_audit",
+        "unification_bridge_audits_gaps_1_3"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_parameter_free",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "target": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "continuity_in_K_nulls",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "sine_gordon_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "surface_uniqueness_audit",
+          "kind": "references"
+        },
+        {
+          "target": "unification_bridge_audits_gaps_1_3",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "f13f7ee",
+          "date": "2026-06-05",
+          "subject": "Arrow inviolability + unification closure audit (#228)"
         }
       ]
     },
@@ -4425,6 +4581,7 @@
         "INDEX",
         "a1_from_saddle_node",
         "algebraic_forcing_partition",
+        "arrow_inviolability_and_unification_closure_audit",
         "articulation_audit_2026-05",
         "basepoint_principle",
         "bell_bounds_from_substrate",
@@ -4494,6 +4651,10 @@
         },
         {
           "source": "algebraic_forcing_partition",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -4742,6 +4903,7 @@
       "depended_on_by": [
         "anchor_extremes_audit",
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
@@ -4830,6 +4992,10 @@
           "kind": "references"
         },
         {
+          "source": "arrow_inviolability_and_unification_closure_audit",
+          "kind": "references"
+        },
+        {
           "source": "boundary_leakage_rate_audit",
           "kind": "references"
         },
@@ -4864,6 +5030,7 @@
         "thread_chronology"
       ],
       "depended_on_by": [
+        "arrow_inviolability_and_unification_closure_audit",
         "articulation_audit_2026-05",
         "born_rule",
         "born_rule_mode_count_extremes_audit",
@@ -4893,6 +5060,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
+          "kind": "references"
+        },
         {
           "source": "articulation_audit_2026-05",
           "kind": "references"
@@ -4961,7 +5132,9 @@
         "sine_gordon_substrate",
         "unification_bridge_audits_gaps_1_3"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "arrow_inviolability_and_unification_closure_audit"
+      ],
       "edges": [
         {
           "target": "CHAIN_KSTAR",
@@ -5020,7 +5193,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "a39af8c",
@@ -5046,6 +5224,7 @@
         "a_s_geometric_proof",
         "address_and_quantity",
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
         "canonical_glossary",
@@ -5106,6 +5285,10 @@
         },
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -5911,6 +6094,7 @@
       ],
       "depended_on_by": [
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "axial_trajectory_conservation_audit",
         "bell_bounds_from_substrate",
         "born_rule_mode_count_extremes_audit",
@@ -5980,6 +6164,10 @@
       "edged_by": [
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -6334,6 +6522,7 @@
       "depended_on_by": [
         "anchor_extremes_audit",
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "bicyclist_observer_sequence",
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
@@ -6432,6 +6621,10 @@
           "kind": "references"
         },
         {
+          "source": "arrow_inviolability_and_unification_closure_audit",
+          "kind": "references"
+        },
+        {
           "source": "bicyclist_observer_sequence",
           "kind": "references"
         },
@@ -6507,6 +6700,7 @@
         "anchor_count_reaudit",
         "anchor_extremes_audit",
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
         "boundary_leakage_rate_audit",
@@ -6616,6 +6810,10 @@
         },
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -6765,6 +6963,7 @@
         "anchor_count_reaudit",
         "anchor_extremes_audit",
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "articulation_audit_2026-05",
         "bicyclist_observer_sequence",
         "canonical_glossary",
@@ -6865,6 +7064,10 @@
         },
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -14743,6 +14946,7 @@
       ],
       "depended_on_by": [
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -14811,6 +15015,10 @@
       "edged_by": [
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -15707,6 +15915,7 @@
       ],
       "depended_on_by": [
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "born_rule_mode_count_extremes_audit",
         "horn_branch_iteration_3_step_1",
         "unification_bridge_audits_gaps_1_3"
@@ -15760,6 +15969,10 @@
       "edged_by": [
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -17586,6 +17799,7 @@
         "INDEX",
         "anchor_extremes_audit",
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "articulation_audit_2026-05",
         "axial_trajectory_conservation_audit",
         "beta_from_tongues",
@@ -17685,6 +17899,10 @@
         },
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -18273,6 +18491,7 @@
       "depended_on_by": [
         "anchor_extremes_audit",
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "basepoint_principle",
         "bicyclist_observer_sequence",
         "born_rule_mode_count_extremes_audit",
@@ -18347,6 +18566,10 @@
         },
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -26202,6 +26425,7 @@
         "INDEX",
         "anchor_count_audit",
         "anchor_extremes_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
         "halt_shock_coherence_audit",
@@ -26221,6 +26445,10 @@
         },
         {
           "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -26696,6 +26924,7 @@
       "depended_on_by": [
         "anchor_extremes_audit",
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "bicyclist_observer_sequence",
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
@@ -26774,6 +27003,10 @@
         },
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -27488,6 +27721,7 @@
       ],
       "depended_on_by": [
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "articulation_audit_2026-05",
         "basepoint_principle",
         "bell_bounds_from_substrate",
@@ -27574,6 +27808,10 @@
       "edged_by": [
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -27863,6 +28101,7 @@
       "depended_on_by": [
         "anchor_extremes_audit",
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
         "halt_shock_coherence_audit",
@@ -27913,6 +28152,10 @@
         },
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -29502,6 +29745,7 @@
       ],
       "depended_on_by": [
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "articulation_audit_2026-05",
         "boundary_leakage_rate_audit",
         "cone_twist_substrate",
@@ -29584,6 +29828,10 @@
       "edged_by": [
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -31045,6 +31293,7 @@
       ],
       "depended_on_by": [
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "articulation_audit_2026-05",
         "basepoint_principle",
         "bell_bounds_from_substrate",
@@ -31162,6 +31411,10 @@
       "edged_by": [
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -31510,6 +31763,7 @@
       ],
       "depended_on_by": [
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "bicyclist_observer_sequence",
         "born_rule_mode_count_extremes_audit",
         "conservation_scale_stratification_audit",
@@ -31568,6 +31822,10 @@
       "edged_by": [
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
@@ -32917,6 +33175,7 @@
       ],
       "depended_on_by": [
         "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit"
       ],
       "edges": [
@@ -32984,6 +33243,10 @@
       "edged_by": [
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
         {
