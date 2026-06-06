@@ -1,5 +1,5 @@
 {
-  "generated": "ddeae4e3e9cdf3ad2fbbf9f5eaac96334488c8c2",
+  "generated": "19f8a38326297977fd36d4cc79b2733edca3173c",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -2388,6 +2388,7 @@
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
+        "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
@@ -2478,6 +2479,10 @@
         },
         {
           "source": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
           "kind": "references"
         },
         {
@@ -2794,6 +2799,7 @@
       "depended_on_by": [
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
+        "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "generation_sector_count_audit"
       ],
@@ -2885,6 +2891,10 @@
           "kind": "references"
         },
         {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
+          "kind": "references"
+        },
+        {
           "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
@@ -2935,6 +2945,7 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
+        "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "generation_sector_count_audit"
       ],
@@ -3037,6 +3048,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
+          "kind": "references"
+        },
         {
           "source": "coherence_matrix_completion_audit",
           "kind": "references"
@@ -4636,6 +4651,7 @@
         "born_rule_parameter_free",
         "boundary_leakage_rate_audit",
         "canonical_glossary",
+        "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "complex_amplitude_uniqueness",
         "conservation_scale_stratification_audit",
@@ -4731,6 +4747,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
           "kind": "references"
         },
         {
@@ -4957,6 +4977,7 @@
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
+        "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
@@ -5051,6 +5072,10 @@
         },
         {
           "source": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
           "kind": "references"
         },
         {
@@ -5201,6 +5226,7 @@
       ],
       "depended_on_by": [
         "arrow_inviolability_and_unification_closure_audit",
+        "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "generation_sector_count_audit"
       ],
@@ -5268,6 +5294,10 @@
           "kind": "references"
         },
         {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
+          "kind": "references"
+        },
+        {
           "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
@@ -5305,6 +5335,7 @@
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
         "canonical_glossary",
+        "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "continuity_in_K_nulls",
         "continuum_limits",
@@ -5379,6 +5410,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
           "kind": "references"
         },
         {
@@ -5996,6 +6031,112 @@
       ]
     },
     {
+      "id": "cmb_silk_damping_acoustic_peaks_audit",
+      "path": "sync_cost/derivations/cmb_silk_damping_acoustic_peaks_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "CMB Silk damping + acoustic peaks audit (Layer G extensions)",
+      "summary": "Two Layer G extension audits in one doc \u2014 both connecting the\nframework's substrate dynamics to CMB-scale observational\nfeatures. The two audits share the same observational arena\n(CMB power spectrum at recombination) and use closely-related\nsubstrate apparatus (dissipation + tongue-width geometry), so\nthey're audited together.",
+      "depends_on": [
+        "anchor_extremes_audit",
+        "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
+        "born_rule",
+        "born_rule_mode_count_extremes_audit",
+        "boundary_leakage_rate_audit",
+        "boundary_weight",
+        "coherence_matrix_completion_audit",
+        "generation_sector_count_audit",
+        "halt_shock_coherence_audit",
+        "horn_branch_iteration_2_step_2",
+        "klein_bottle_restructure_price",
+        "planck_scale",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_planck_emergence_audit",
+        "surface_uniqueness_audit",
+        "unification_bridge_audits_gaps_1_3"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "arrow_inviolability_and_unification_closure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "target": "generation_sector_count_audit",
+          "kind": "references"
+        },
+        {
+          "target": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "surface_uniqueness_audit",
+          "kind": "references"
+        },
+        {
+          "target": "unification_bridge_audits_gaps_1_3",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "19f8a38",
+          "date": "2026-06-06",
+          "subject": "CMB Silk damping + acoustic peaks audit (Layer G extensions) (#231)"
+        }
+      ]
+    },
+    {
       "id": "coherence_matrix_completion_audit",
       "path": "sync_cost/derivations/coherence_matrix_completion_audit.md",
       "cid": null,
@@ -6031,6 +6172,7 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
+        "cmb_silk_damping_acoustic_peaks_audit",
         "generation_sector_count_audit"
       ],
       "edges": [
@@ -6140,6 +6282,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
+          "kind": "references"
+        },
         {
           "source": "generation_sector_count_audit",
           "kind": "references"
@@ -14583,7 +14729,9 @@
         "surface_uniqueness_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "cmb_silk_damping_acoustic_peaks_audit"
+      ],
       "edges": [
         {
           "target": "CHAIN_KSTAR",
@@ -14662,7 +14810,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "ddeae4e",
@@ -15329,6 +15482,7 @@
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
+        "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "generation_sector_count_audit",
         "unification_bridge_audits_gaps_1_3"
@@ -15406,6 +15560,10 @@
         },
         {
           "source": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
           "kind": "references"
         },
         {
@@ -16308,6 +16466,7 @@
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "born_rule_mode_count_extremes_audit",
+        "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "horn_branch_iteration_3_step_1",
         "unification_bridge_audits_gaps_1_3"
@@ -16369,6 +16528,10 @@
         },
         {
           "source": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
           "kind": "references"
         },
         {
@@ -18902,6 +19065,7 @@
         "bicyclist_observer_sequence",
         "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
+        "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "conservation_scale_stratification_audit",
         "continuum_limits",
@@ -18993,6 +19157,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
           "kind": "references"
         },
         {
@@ -26854,6 +27022,7 @@
         "arrow_inviolability_and_unification_closure_audit",
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
+        "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
@@ -26885,6 +27054,10 @@
         },
         {
           "source": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
           "kind": "references"
         },
         {
@@ -27365,6 +27538,7 @@
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
         "canonical_glossary",
+        "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "conservation_scale_stratification_audit",
         "framework_status",
@@ -27461,6 +27635,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
           "kind": "references"
         },
         {
@@ -28555,6 +28733,7 @@
         "arrow_inviolability_and_unification_closure_audit",
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
+        "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
@@ -28617,6 +28796,10 @@
         },
         {
           "source": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
           "kind": "references"
         },
         {
@@ -32242,6 +32425,7 @@
         "arrow_inviolability_and_unification_closure_audit",
         "bicyclist_observer_sequence",
         "born_rule_mode_count_extremes_audit",
+        "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "conservation_scale_stratification_audit",
         "continuum_limits",
@@ -32312,6 +32496,10 @@
         },
         {
           "source": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
           "kind": "references"
         },
         {
@@ -33663,6 +33851,7 @@
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
+        "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "generation_sector_count_audit"
       ],
@@ -33739,6 +33928,10 @@
         },
         {
           "source": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "source": "cmb_silk_damping_acoustic_peaks_audit",
           "kind": "references"
         },
         {
