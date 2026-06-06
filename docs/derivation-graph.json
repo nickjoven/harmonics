@@ -1,5 +1,5 @@
 {
-  "generated": "82644955dac5d2e4ea12254195ff377f99de4caa",
+  "generated": "356119602bfa56d08c686c82e1119aa4c6ceba35",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -22,9 +22,11 @@
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
         "coherence_matrix_completion_audit",
+        "cyclotomic_content_mass_ratios_audit",
         "dynamical_tool_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
+        "half_twist_meta_structure_audit",
         "halt_shock_coherence_audit",
         "klein_antipodal_z2_rep_pattern",
         "master_cascade_identity",
@@ -82,6 +84,10 @@
           "kind": "references"
         },
         {
+          "source": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
           "source": "dynamical_tool_audit",
           "kind": "references"
         },
@@ -91,6 +97,10 @@
         },
         {
           "source": "generation_sector_count_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -2576,7 +2586,10 @@
         "sine_gordon_substrate",
         "surface_uniqueness_audit"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "cyclotomic_content_mass_ratios_audit",
+        "half_twist_meta_structure_audit"
+      ],
       "edges": [
         {
           "target": "CHAIN_KSTAR",
@@ -2667,7 +2680,16 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "8264495",
@@ -2968,6 +2990,7 @@
         "boundary_leakage_rate_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
+        "cyclotomic_content_mass_ratios_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
         "h0_tension_cross_cell_identity_audit",
@@ -3074,6 +3097,10 @@
           "kind": "references"
         },
         {
+          "source": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
           "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
@@ -3142,6 +3169,7 @@
         "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
         "h0_tension_cross_cell_identity_audit",
+        "half_twist_meta_structure_audit",
         "modular_form_behavior_cosmological_tongues_audit",
         "primes_denominators_circular_geometry_extension_audit"
       ],
@@ -3266,6 +3294,10 @@
         },
         {
           "source": "h0_tension_cross_cell_identity_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -4872,6 +4904,7 @@
         "coherence_matrix_completion_audit",
         "complex_amplitude_uniqueness",
         "conservation_scale_stratification_audit",
+        "cyclotomic_content_mass_ratios_audit",
         "derivation_atlas",
         "dicke_apparatus_theorem",
         "dynamical_tool_audit",
@@ -4881,6 +4914,7 @@
         "free_parameter_scorecard",
         "ghz_from_substrate",
         "h0_tension_cross_cell_identity_audit",
+        "half_twist_meta_structure_audit",
         "halt_shock_coherence_audit",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_1",
@@ -4991,6 +5025,10 @@
           "kind": "references"
         },
         {
+          "source": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
           "source": "derivation_atlas",
           "kind": "references"
         },
@@ -5024,6 +5062,10 @@
         },
         {
           "source": "h0_tension_cross_cell_identity_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -5485,6 +5527,7 @@
         "arrow_inviolability_and_unification_closure_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
+        "cyclotomic_content_mass_ratios_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
         "h0_tension_cross_cell_identity_audit",
@@ -5564,6 +5607,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "cyclotomic_content_mass_ratios_audit",
           "kind": "references"
         },
         {
@@ -6472,9 +6519,11 @@
       "depended_on_by": [
         "angular_momentum_three_source_inviolability_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
+        "cyclotomic_content_mass_ratios_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
         "h0_tension_cross_cell_identity_audit",
+        "half_twist_meta_structure_audit",
         "modular_form_behavior_cosmological_tongues_audit",
         "primes_denominators_circular_geometry_extension_audit"
       ],
@@ -6594,6 +6643,10 @@
           "kind": "references"
         },
         {
+          "source": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
           "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
@@ -6603,6 +6656,10 @@
         },
         {
           "source": "h0_tension_cross_cell_identity_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -6810,6 +6867,7 @@
         "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
         "dicke_apparatus_theorem",
+        "half_twist_meta_structure_audit",
         "klein_bottle_restructure_price",
         "klein_z2_decomposition_falsifier",
         "klein_z2_decomposition_falsifier_2",
@@ -6902,6 +6960,10 @@
         },
         {
           "source": "dicke_apparatus_theorem",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -8288,6 +8350,129 @@
           "hash": "f12eba4",
           "date": "2026-04-26",
           "subject": "Direction 4: \u0393_0(6) cusp identification + 2026-04 closure consolidation (#79)"
+        }
+      ]
+    },
+    {
+      "id": "cyclotomic_content_mass_ratios_audit",
+      "path": "sync_cost/derivations/cyclotomic_content_mass_ratios_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Cyclotomic content of framework mass ratios (A2: PR #235 methodology instance)",
+      "summary": "**Verdict: MODAL \u2713 / GENERATIVE \u2713** on the identification of\nspecific cyclotomic content in framework mass ratios. The\nframework's mass ratios sit at framework-native cyclotomic\nstructures \u2014 roots of unity from Z_n subgroups derived from\nMihailescu primes and Farey-cardinality content \u2014 not at\ngeneric cyclotomic positions.",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "angular_momentum_three_source_inviolability_audit",
+        "antiparticle_dark_energy_unification_audit",
+        "born_rule",
+        "boundary_leakage_rate_audit",
+        "coherence_matrix_completion_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
+        "generation_mechanism",
+        "generation_sector_count_audit",
+        "h0_tension_cross_cell_identity_audit",
+        "halt_shock_coherence_audit",
+        "horn_branch_iteration_2_step_2",
+        "klein_bottle",
+        "mass_sector_closure",
+        "modular_form_behavior_cosmological_tongues_audit",
+        "planck_scale",
+        "primes_denominators_circular_geometry_extension_audit",
+        "primitives_vs_addresses_candidate",
+        "substrate_determinism"
+      ],
+      "depended_on_by": [
+        "half_twist_meta_structure_audit"
+      ],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
+        {
+          "target": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "target": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "target": "dynamics_arithmetic_distinction_refinement_audit",
+          "kind": "references"
+        },
+        {
+          "target": "generation_mechanism",
+          "kind": "references"
+        },
+        {
+          "target": "generation_sector_count_audit",
+          "kind": "references"
+        },
+        {
+          "target": "h0_tension_cross_cell_identity_audit",
+          "kind": "references"
+        },
+        {
+          "target": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "half_twist_meta_structure_audit",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "e06fa30",
+          "date": "2026-06-06",
+          "subject": "A2: Cyclotomic content of framework mass ratios (PR #235 methodology instance) (#239)"
         }
       ]
     },
@@ -10393,7 +10578,9 @@
       ],
       "depended_on_by": [
         "angular_momentum_three_source_inviolability_audit",
+        "cyclotomic_content_mass_ratios_audit",
         "h0_tension_cross_cell_identity_audit",
+        "half_twist_meta_structure_audit",
         "modular_form_behavior_cosmological_tongues_audit",
         "primes_denominators_circular_geometry_extension_audit"
       ],
@@ -10477,7 +10664,15 @@
           "kind": "references"
         },
         {
+          "source": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
           "source": "h0_tension_cross_cell_identity_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -14993,12 +15188,14 @@
         "INDEX",
         "axial_trajectory_conservation_audit",
         "beta_from_tongues",
+        "cyclotomic_content_mass_ratios_audit",
         "fermion_mass_running",
         "figure_eight_necessitation_audit",
         "fourth_generation_revisited",
         "framework_status",
         "free_parameter_scorecard",
         "generation_sector_count_audit",
+        "half_twist_meta_structure_audit",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_1",
         "horn_branch_iteration_2_step_2",
@@ -15060,6 +15257,10 @@
           "kind": "references"
         },
         {
+          "source": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
           "source": "fermion_mass_running",
           "kind": "references"
         },
@@ -15081,6 +15282,10 @@
         },
         {
           "source": "generation_sector_count_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -15213,6 +15418,7 @@
       "depended_on_by": [
         "angular_momentum_three_source_inviolability_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
+        "cyclotomic_content_mass_ratios_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
         "primes_denominators_circular_geometry_extension_audit"
       ],
@@ -15301,6 +15507,10 @@
         },
         {
           "source": "cmb_silk_damping_acoustic_peaks_audit",
+          "kind": "references"
+        },
+        {
+          "source": "cyclotomic_content_mass_ratios_audit",
           "kind": "references"
         },
         {
@@ -15792,7 +16002,8 @@
         "primitives_vs_addresses_candidate"
       ],
       "depended_on_by": [
-        "angular_momentum_three_source_inviolability_audit"
+        "angular_momentum_three_source_inviolability_audit",
+        "cyclotomic_content_mass_ratios_audit"
       ],
       "edges": [
         {
@@ -15859,6 +16070,10 @@
       "edged_by": [
         {
           "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
+        {
+          "source": "cyclotomic_content_mass_ratios_audit",
           "kind": "references"
         }
       ],
@@ -16054,6 +16269,117 @@
       ]
     },
     {
+      "id": "half_twist_meta_structure_audit",
+      "path": "sync_cost/derivations/half_twist_meta_structure_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Half-twist meta-structure audit (cross-cutting Layer H)",
+      "summary": "**Verdict: MODAL \u2713 / GENERATIVE \u2713** on the **half-twist\nmeta-structure** as the framework's unifying mechanism for\nthe \u00bd-character that recurs across multiple sealed audits.",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "angular_momentum_three_source_inviolability_audit",
+        "arrow_inviolability_and_unification_closure_audit",
+        "born_rule",
+        "coherence_matrix_completion_audit",
+        "complex_amplitude_uniqueness",
+        "cyclotomic_content_mass_ratios_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
+        "generation_mechanism",
+        "klein_bottle",
+        "klein_bottle_restructure_price",
+        "mass_sector_closure",
+        "modular_form_behavior_cosmological_tongues_audit",
+        "planck_scale",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_conservation_theorem",
+        "substrate_determinism",
+        "surface_uniqueness_audit"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
+        {
+          "target": "arrow_inviolability_and_unification_closure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "target": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "target": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
+          "target": "dynamics_arithmetic_distinction_refinement_audit",
+          "kind": "references"
+        },
+        {
+          "target": "generation_mechanism",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "surface_uniqueness_audit",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "3561196",
+          "date": "2026-06-06",
+          "subject": "Half-twist meta-structure audit (cross-cutting Layer H) (#240)"
+        }
+      ]
+    },
+    {
       "id": "halt_shock_coherence_audit",
       "path": "sync_cost/derivations/halt_shock_coherence_audit.md",
       "cid": null,
@@ -16084,6 +16410,7 @@
         "boundary_leakage_rate_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
+        "cyclotomic_content_mass_ratios_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
         "h0_tension_cross_cell_identity_audit",
@@ -16176,6 +16503,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "cyclotomic_content_mass_ratios_audit",
           "kind": "references"
         },
         {
@@ -17092,6 +17423,7 @@
         "born_rule_mode_count_extremes_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
+        "cyclotomic_content_mass_ratios_audit",
         "horn_branch_iteration_3_step_1",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -17160,6 +17492,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "cyclotomic_content_mass_ratios_audit",
           "kind": "references"
         },
         {
@@ -18993,6 +19329,7 @@
         "complex_amplitude_uniqueness",
         "cone_twist_substrate",
         "conservation_scale_stratification_audit",
+        "cyclotomic_content_mass_ratios_audit",
         "dark_twin_correction",
         "discrete_reduction_problem",
         "duty_cycle_dictionary",
@@ -19010,6 +19347,7 @@
         "generation_mechanism",
         "generation_sector_count_audit",
         "h0_tension_cross_cell_identity_audit",
+        "half_twist_meta_structure_audit",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_1",
         "horn_branch_iteration_2_step_2",
@@ -19136,6 +19474,10 @@
           "kind": "references"
         },
         {
+          "source": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
           "source": "dark_twin_correction",
           "kind": "references"
         },
@@ -19201,6 +19543,10 @@
         },
         {
           "source": "h0_tension_cross_cell_identity_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -19720,6 +20066,7 @@
         "conservation_scale_stratification_audit",
         "continuum_limits",
         "framework_status",
+        "half_twist_meta_structure_audit",
         "halt_shock_coherence_audit",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_2",
@@ -19832,6 +20179,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -22231,6 +22582,7 @@
         "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
         "coherence_matrix_completion_audit",
+        "cyclotomic_content_mass_ratios_audit",
         "depth_connection_nulls",
         "derivation_atlas",
         "dynamics_arithmetic_distinction_refinement_audit",
@@ -22238,6 +22590,7 @@
         "fourth_generation_revisited",
         "framework_status",
         "generation_sector_count_audit",
+        "half_twist_meta_structure_audit",
         "horn_branch_iteration_2_step_2",
         "k_axis_uniqueness",
         "k_scaling_scan",
@@ -22330,6 +22683,10 @@
           "kind": "references"
         },
         {
+          "source": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
           "source": "depth_connection_nulls",
           "kind": "references"
         },
@@ -22355,6 +22712,10 @@
         },
         {
           "source": "generation_sector_count_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -23679,7 +24040,9 @@
       ],
       "depended_on_by": [
         "angular_momentum_three_source_inviolability_audit",
-        "h0_tension_cross_cell_identity_audit"
+        "cyclotomic_content_mass_ratios_audit",
+        "h0_tension_cross_cell_identity_audit",
+        "half_twist_meta_structure_audit"
       ],
       "edges": [
         {
@@ -23753,7 +24116,15 @@
           "kind": "references"
         },
         {
+          "source": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
           "source": "h0_tension_cross_cell_identity_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -27817,9 +28188,11 @@
         "boundary_leakage_rate_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
+        "cyclotomic_content_mass_ratios_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
         "h0_tension_cross_cell_identity_audit",
+        "half_twist_meta_structure_audit",
         "halt_shock_coherence_audit",
         "isotropy_lemma",
         "modular_form_behavior_cosmological_tongues_audit",
@@ -27866,6 +28239,10 @@
           "kind": "references"
         },
         {
+          "source": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
           "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
@@ -27875,6 +28252,10 @@
         },
         {
           "source": "h0_tension_cross_cell_identity_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -28212,6 +28593,7 @@
       ],
       "depended_on_by": [
         "angular_momentum_three_source_inviolability_audit",
+        "cyclotomic_content_mass_ratios_audit",
         "h0_tension_cross_cell_identity_audit",
         "modular_form_behavior_cosmological_tongues_audit"
       ],
@@ -28300,6 +28682,10 @@
       "edged_by": [
         {
           "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
+        {
+          "source": "cyclotomic_content_mass_ratios_audit",
           "kind": "references"
         },
         {
@@ -28497,10 +28883,12 @@
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "conservation_scale_stratification_audit",
+        "cyclotomic_content_mass_ratios_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
         "framework_status",
         "generation_sector_count_audit",
         "h0_tension_cross_cell_identity_audit",
+        "half_twist_meta_structure_audit",
         "halt_shock_coherence_audit",
         "pattern_identification_discipline_candidate",
         "primes_denominators_circular_geometry_extension_audit",
@@ -28613,6 +29001,10 @@
           "kind": "references"
         },
         {
+          "source": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
           "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
@@ -28626,6 +29018,10 @@
         },
         {
           "source": "h0_tension_cross_cell_identity_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -29340,6 +29736,7 @@
         "framework_status",
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
+        "half_twist_meta_structure_audit",
         "halt_shock_coherence_audit",
         "k_of_t_residual_disposition",
         "klein_bottle_restructure_price",
@@ -29489,6 +29886,10 @@
         },
         {
           "source": "gr_qm_unification_synthesis",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -33017,6 +33418,7 @@
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
         "conservation_scale_stratification_audit",
+        "cyclotomic_content_mass_ratios_audit",
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
         "dynamics_arithmetic_distinction_refinement_audit",
@@ -33030,6 +33432,7 @@
         "generation_sector_count_audit",
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
+        "half_twist_meta_structure_audit",
         "halt_shock_coherence_audit",
         "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
@@ -33185,6 +33588,10 @@
           "kind": "references"
         },
         {
+          "source": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
           "source": "dicke_apparatus_theorem",
           "kind": "references"
         },
@@ -33234,6 +33641,10 @@
         },
         {
           "source": "gr_qm_unification_synthesis",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -33508,6 +33919,7 @@
         "continuum_limits",
         "framework_status",
         "generation_sector_count_audit",
+        "half_twist_meta_structure_audit",
         "halt_shock_coherence_audit",
         "modular_form_behavior_cosmological_tongues_audit",
         "pattern_identification_discipline_candidate",
@@ -33602,6 +34014,10 @@
         },
         {
           "source": "generation_sector_count_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
           "kind": "references"
         },
         {
