@@ -1,5 +1,5 @@
 {
-  "generated": "19f8a38326297977fd36d4cc79b2733edca3173c",
+  "generated": "40a1d8a27bed2f9e7498fd4163523b5ba0766e98",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -4685,6 +4685,7 @@
         "proposed_residual_closure",
         "qm_reframing_programmatic",
         "seismic_eigenstate_dictionary",
+        "silk_damping_dissipation",
         "sine_gordon_substrate",
         "snmc_class_and_entanglement",
         "stribeck_vortex",
@@ -4883,6 +4884,10 @@
         },
         {
           "source": "seismic_eigenstate_dictionary",
+          "kind": "references"
+        },
+        {
+          "source": "silk_damping_dissipation",
           "kind": "references"
         },
         {
@@ -6916,6 +6921,7 @@
         "pattern_identification_discipline_candidate",
         "q_mod2_conservation_theorem",
         "q_mod2_planck_emergence_audit",
+        "silk_damping_dissipation",
         "substrate_determinism",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -7036,6 +7042,10 @@
         },
         {
           "source": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
+          "source": "silk_damping_dissipation",
           "kind": "references"
         },
         {
@@ -8052,6 +8062,7 @@
         "framework_status",
         "primitive_completeness_audit",
         "psl2z_subgroup_phase_c_inventory",
+        "silk_damping_dissipation",
         "w_plus_formalization"
       ],
       "edges": [],
@@ -8082,6 +8093,10 @@
         },
         {
           "source": "psl2z_subgroup_phase_c_inventory",
+          "kind": "references"
+        },
+        {
+          "source": "silk_damping_dissipation",
           "kind": "references"
         },
         {
@@ -24045,6 +24060,7 @@
         "qm_reframing_programmatic",
         "rationality_descent",
         "remaining_gap_shapes",
+        "silk_damping_dissipation",
         "sinw_effective_dimension",
         "sinw_fixed_point",
         "substrate_prediction_selection",
@@ -24323,6 +24339,10 @@
         },
         {
           "source": "remaining_gap_shapes",
+          "kind": "references"
+        },
+        {
+          "source": "silk_damping_dissipation",
           "kind": "references"
         },
         {
@@ -29152,6 +29172,7 @@
         "conservation_scale_stratification_audit",
         "klein_bottle_derivation",
         "q_mod2_conservation_theorem",
+        "silk_damping_dissipation",
         "time_axis_split"
       ],
       "edges": [],
@@ -29170,6 +29191,10 @@
         },
         {
           "source": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "source": "silk_damping_dissipation",
           "kind": "references"
         },
         {
@@ -30364,6 +30389,52 @@
           "hash": "cc58f06",
           "date": "2026-04-20",
           "subject": "DRY sweep + A_s geometric proof + Z1-Z3 convention (#68)"
+        }
+      ]
+    },
+    {
+      "id": "silk_damping_dissipation",
+      "path": "sync_cost/derivations/silk_damping_dissipation.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Silk damping from substrate dissipation",
+      "summary": "**Identification, not a new prediction.** This note identifies the\nstandard-cosmology Silk damping scale (\u03bb_S \u2248 10 Mpc comoving,\n\u2113_S \u2248 1500 in the CMB) as a *specific manifestation* of the\nframework's universal dissipation invariant at the photon-baryon\ncoupling scale during recombination. The numerical value is supplied\nentirely by standard recombination physics (Thomson scattering,\nn_e(z), H(z)) with H\u2080 and \u03a9_b as observational inputs; the framework\ncontributes the structural reading \u2014 that th",
+      "depends_on": [
+        "born_rule",
+        "conservation_scale_stratification_audit",
+        "denomination_boundary",
+        "numerology_inventory",
+        "rank1_temporal_causation"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "denomination_boundary",
+          "kind": "references"
+        },
+        {
+          "target": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "target": "rank1_temporal_causation",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "fb7347a",
+          "date": "2026-06-06",
+          "subject": "Add Silk damping dissipation identification note (#232)"
         }
       ]
     },
