@@ -1,5 +1,5 @@
 {
-  "generated": "2a93604f730d32775c08a6e6cfa382942508644a",
+  "generated": "615f0c865f6e8fb1e8c1d9b3a73310b787c1b35d",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -27,8 +27,10 @@
         "halt_shock_coherence_audit",
         "klein_antipodal_z2_rep_pattern",
         "master_cascade_identity",
+        "modular_form_behavior_cosmological_tongues_audit",
         "negative_results_ledger",
         "numerology_inventory",
+        "primes_denominators_circular_geometry_extension_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
@@ -99,11 +101,19 @@
           "kind": "references"
         },
         {
+          "source": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
           "source": "negative_results_ledger",
           "kind": "references"
         },
         {
           "source": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         },
         {
@@ -2398,6 +2408,7 @@
         "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
+        "primes_denominators_circular_geometry_extension_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
@@ -2505,6 +2516,10 @@
         },
         {
           "source": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         },
         {
@@ -2812,7 +2827,9 @@
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
-        "generation_sector_count_audit"
+        "generation_sector_count_audit",
+        "modular_form_behavior_cosmological_tongues_audit",
+        "primes_denominators_circular_geometry_extension_audit"
       ],
       "edges": [
         {
@@ -2916,6 +2933,14 @@
         {
           "source": "generation_sector_count_audit",
           "kind": "references"
+        },
+        {
+          "source": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
         }
       ],
       "git": [
@@ -2963,7 +2988,9 @@
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
-        "generation_sector_count_audit"
+        "generation_sector_count_audit",
+        "modular_form_behavior_cosmological_tongues_audit",
+        "primes_denominators_circular_geometry_extension_audit"
       ],
       "edges": [
         {
@@ -3078,6 +3105,14 @@
         },
         {
           "source": "generation_sector_count_audit",
+          "kind": "references"
+        },
+        {
+          "source": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         }
       ],
@@ -4697,10 +4732,12 @@
         "mass_sector_sqrt_w_phase_b",
         "meaning_of_two_wip",
         "mediant_vs_flow_calc",
+        "modular_form_behavior_cosmological_tongues_audit",
         "numerology_inventory",
         "pattern_identification_discipline_candidate",
         "phenomenology_cross_reference",
         "preferred_basis_dissolution",
+        "primes_denominators_circular_geometry_extension_audit",
         "primitive_completeness_audit",
         "proposed_residual_closure",
         "qm_reframing_programmatic",
@@ -4875,6 +4912,10 @@
           "kind": "references"
         },
         {
+          "source": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
           "source": "numerology_inventory",
           "kind": "references"
         },
@@ -4888,6 +4929,10 @@
         },
         {
           "source": "preferred_basis_dissolution",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         },
         {
@@ -5007,6 +5052,8 @@
         "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
+        "modular_form_behavior_cosmological_tongues_audit",
+        "primes_denominators_circular_geometry_extension_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
@@ -5118,6 +5165,14 @@
         },
         {
           "source": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "source": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         },
         {
@@ -5259,7 +5314,9 @@
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
-        "generation_sector_count_audit"
+        "generation_sector_count_audit",
+        "modular_form_behavior_cosmological_tongues_audit",
+        "primes_denominators_circular_geometry_extension_audit"
       ],
       "edges": [
         {
@@ -5338,6 +5395,14 @@
         },
         {
           "source": "generation_sector_count_audit",
+          "kind": "references"
+        },
+        {
+          "source": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         }
       ],
@@ -6092,7 +6157,9 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
-        "dynamics_arithmetic_distinction_refinement_audit"
+        "dynamics_arithmetic_distinction_refinement_audit",
+        "modular_form_behavior_cosmological_tongues_audit",
+        "primes_denominators_circular_geometry_extension_audit"
       ],
       "edges": [
         {
@@ -6168,6 +6235,14 @@
         {
           "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
+        },
+        {
+          "source": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
         }
       ],
       "git": [
@@ -6216,7 +6291,9 @@
       "depended_on_by": [
         "cmb_silk_damping_acoustic_peaks_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
-        "generation_sector_count_audit"
+        "generation_sector_count_audit",
+        "modular_form_behavior_cosmological_tongues_audit",
+        "primes_denominators_circular_geometry_extension_audit"
       ],
       "edges": [
         {
@@ -6335,6 +6412,14 @@
         },
         {
           "source": "generation_sector_count_audit",
+          "kind": "references"
+        },
+        {
+          "source": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         }
       ],
@@ -10100,7 +10185,10 @@
         "substrate_determinism",
         "unification_bridge_audits_gaps_1_3"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "modular_form_behavior_cosmological_tongues_audit",
+        "primes_denominators_circular_geometry_extension_audit"
+      ],
       "edges": [
         {
           "target": "CHAIN_KSTAR",
@@ -10175,7 +10263,16 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "2a93604",
@@ -14899,7 +14996,8 @@
       ],
       "depended_on_by": [
         "cmb_silk_damping_acoustic_peaks_audit",
-        "dynamics_arithmetic_distinction_refinement_audit"
+        "dynamics_arithmetic_distinction_refinement_audit",
+        "primes_denominators_circular_geometry_extension_audit"
       ],
       "edges": [
         {
@@ -14986,6 +15084,10 @@
         },
         {
           "source": "dynamics_arithmetic_distinction_refinement_audit",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         }
       ],
@@ -15659,6 +15761,8 @@
         "coherence_matrix_completion_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
+        "modular_form_behavior_cosmological_tongues_audit",
+        "primes_denominators_circular_geometry_extension_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
@@ -15750,6 +15854,14 @@
         },
         {
           "source": "generation_sector_count_audit",
+          "kind": "references"
+        },
+        {
+          "source": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         },
         {
@@ -18587,7 +18699,9 @@
         "koide_form_substrate_iteration_7",
         "koide_form_substrate_iteration_8",
         "koide_form_substrate_iteration_9",
+        "modular_form_behavior_cosmological_tongues_audit",
         "numerology_inventory",
+        "primes_denominators_circular_geometry_extension_audit",
         "primitives_vs_addresses_candidate",
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
@@ -18846,7 +18960,15 @@
           "kind": "references"
         },
         {
+          "source": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
           "source": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         },
         {
@@ -19256,6 +19378,7 @@
         "halt_shock_coherence_audit",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_2",
+        "modular_form_behavior_cosmological_tongues_audit",
         "q_mod2_planck_emergence_audit",
         "surface_uniqueness_audit",
         "torus_branch_iteration_1",
@@ -19372,6 +19495,10 @@
         },
         {
           "source": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "source": "modular_form_behavior_cosmological_tongues_audit",
           "kind": "references"
         },
         {
@@ -21785,6 +21912,7 @@
         "path_a_walkthrough",
         "pattern_identification_discipline_candidate",
         "phenomenology_cross_reference",
+        "primes_denominators_circular_geometry_extension_audit",
         "primitives_vs_addresses_candidate",
         "sector_decoupling_phase_a",
         "substrate_prediction_selection",
@@ -21969,6 +22097,10 @@
         },
         {
           "source": "phenomenology_cross_reference",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         },
         {
@@ -23163,6 +23295,107 @@
           "hash": "4335790",
           "date": "2026-03-25",
           "subject": "Add Derivation 18: M\u00f6bius container simulation target"
+        }
+      ]
+    },
+    {
+      "id": "modular_form_behavior_cosmological_tongues_audit",
+      "path": "sync_cost/derivations/modular_form_behavior_cosmological_tongues_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Modular-form behavior of cosmological tongues (PR #231 quantitative gap reframed)",
+      "summary": "**Verdict: MODAL \u2713 / GENERATIVE \u2713** on the structural identity\nthat the framework's cosmological-scale Arnold tongues should\nfollow **\u00bd-weight modular form structure on \u0393_0(4)** (the\ncongruence subgroup of SL(2,\u2124) at level 4, corresponding to the\nframework Farey index 4).",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
+        "born_rule",
+        "born_rule_mode_count_extremes_audit",
+        "boundary_leakage_rate_audit",
+        "cmb_silk_damping_acoustic_peaks_audit",
+        "coherence_matrix_completion_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
+        "halt_shock_coherence_audit",
+        "klein_bottle",
+        "klein_bottle_restructure_price",
+        "planck_scale",
+        "primes_denominators_circular_geometry_extension_audit",
+        "substrate_determinism",
+        "surface_uniqueness_audit"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "arrow_inviolability_and_unification_closure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "target": "cmb_silk_damping_acoustic_peaks_audit",
+          "kind": "references"
+        },
+        {
+          "target": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "target": "dynamics_arithmetic_distinction_refinement_audit",
+          "kind": "references"
+        },
+        {
+          "target": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "surface_uniqueness_audit",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "615f0c8",
+          "date": "2026-06-06",
+          "subject": "A5: Modular-form behavior of cosmological tongues (PR #231 structural-identification closure) (#236)"
         }
       ]
     },
@@ -27221,6 +27454,8 @@
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
         "isotropy_lemma",
+        "modular_form_behavior_cosmological_tongues_audit",
+        "primes_denominators_circular_geometry_extension_audit",
         "q_mod2_planck_emergence_audit",
         "quantum_gravity_interpolation"
       ],
@@ -27272,6 +27507,14 @@
         },
         {
           "source": "isotropy_lemma",
+          "kind": "references"
+        },
+        {
+          "source": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         },
         {
@@ -27563,6 +27806,134 @@
       ]
     },
     {
+      "id": "primes_denominators_circular_geometry_extension_audit",
+      "path": "sync_cost/derivations/primes_denominators_circular_geometry_extension_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Prime-denominators-in-series \u2192 framework-native circular geometry (extension to PR #234)",
+      "summary": "Substantive extension to PR #234's dynamics/arithmetic\ndistinction. PR #234's distinction holds (substrate dynamics \u2260\nsubstrate arithmetic; Layer A_arith vs Layer A_dyn split); this\naudit refines the arithmetic layer's connection to dynamics by\ndistinguishing:",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "anchor_extremes_audit",
+        "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
+        "born_rule",
+        "born_rule_mode_count_extremes_audit",
+        "boundary_leakage_rate_audit",
+        "cmb_silk_damping_acoustic_peaks_audit",
+        "coherence_matrix_completion_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
+        "generation_sector_count_audit",
+        "halt_shock_coherence_audit",
+        "klein_bottle",
+        "mass_sector_closure",
+        "planck_scale",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_planck_emergence_audit",
+        "sine_gordon_substrate",
+        "substrate_determinism",
+        "unification_bridge_audits_gaps_1_3"
+      ],
+      "depended_on_by": [
+        "modular_form_behavior_cosmological_tongues_audit"
+      ],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "arrow_inviolability_and_unification_closure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "target": "cmb_silk_damping_acoustic_peaks_audit",
+          "kind": "references"
+        },
+        {
+          "target": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "target": "dynamics_arithmetic_distinction_refinement_audit",
+          "kind": "references"
+        },
+        {
+          "target": "generation_sector_count_audit",
+          "kind": "references"
+        },
+        {
+          "target": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "sine_gordon_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "unification_bridge_audits_gaps_1_3",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "b2a8cc5",
+          "date": "2026-06-06",
+          "subject": "Prime-denominators \u2192 framework-native circular geometry (PR #234 extension) (#235)"
+        }
+      ]
+    },
+    {
       "id": "primitive_completeness_audit",
       "path": "sync_cost/derivations/primitive_completeness_audit.md",
       "cid": null,
@@ -27744,6 +28115,7 @@
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
         "pattern_identification_discipline_candidate",
+        "primes_denominators_circular_geometry_extension_audit",
         "q_mod2_planck_emergence_audit",
         "torus_branch_iteration_2_step_1",
         "torus_branch_iteration_2_step_2",
@@ -27866,6 +28238,10 @@
         },
         {
           "source": "pattern_identification_discipline_candidate",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         },
         {
@@ -28941,6 +29317,7 @@
         "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
+        "primes_denominators_circular_geometry_extension_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
@@ -29020,6 +29397,10 @@
         },
         {
           "source": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         },
         {
@@ -30669,6 +31050,7 @@
         "mass_function_family",
         "master_cascade_identity",
         "orthogonal_kink_interaction",
+        "primes_denominators_circular_geometry_extension_audit",
         "proposed_items_disposition",
         "proposed_residual_closure",
         "q_mod2_conservation_theorem",
@@ -30817,6 +31199,10 @@
         },
         {
           "source": "orthogonal_kink_interaction",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         },
         {
@@ -32242,8 +32628,10 @@
         "meaning_of_two_wip",
         "mediant_vs_flow_problem",
         "minimum_alphabet",
+        "modular_form_behavior_cosmological_tongues_audit",
         "predictions_horizon_2026",
         "preferred_basis_dissolution",
+        "primes_denominators_circular_geometry_extension_audit",
         "primitives_vs_addresses_candidate",
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
@@ -32474,11 +32862,19 @@
           "kind": "references"
         },
         {
+          "source": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
           "source": "predictions_horizon_2026",
           "kind": "references"
         },
         {
           "source": "preferred_basis_dissolution",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         },
         {
@@ -32701,6 +33097,7 @@
         "framework_status",
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
+        "modular_form_behavior_cosmological_tongues_audit",
         "pattern_identification_discipline_candidate",
         "primitives_vs_addresses_candidate"
       ],
@@ -32793,6 +33190,10 @@
         },
         {
           "source": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "source": "modular_form_behavior_cosmological_tongues_audit",
           "kind": "references"
         },
         {
@@ -34123,7 +34524,8 @@
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
-        "generation_sector_count_audit"
+        "generation_sector_count_audit",
+        "primes_denominators_circular_geometry_extension_audit"
       ],
       "edges": [
         {
@@ -34214,6 +34616,10 @@
         },
         {
           "source": "generation_sector_count_audit",
+          "kind": "references"
+        },
+        {
+          "source": "primes_denominators_circular_geometry_extension_audit",
           "kind": "references"
         }
       ],
