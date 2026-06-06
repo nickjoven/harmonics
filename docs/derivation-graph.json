@@ -1,5 +1,5 @@
 {
-  "generated": "29ff2d2050c199aa0c2402afe52e9f6dbcc9edf1",
+  "generated": "a39af8cbd8a8f5082f111ba232683348621dfb0f",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -18,6 +18,7 @@
         "ansatz_audit_policy",
         "antiparticle_dark_energy_unification_audit",
         "born_rule_mode_count_extremes_audit",
+        "boundary_leakage_rate_audit",
         "dynamical_tool_audit",
         "halt_shock_coherence_audit",
         "klein_antipodal_z2_rep_pattern",
@@ -55,6 +56,10 @@
         },
         {
           "source": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "boundary_leakage_rate_audit",
           "kind": "references"
         },
         {
@@ -2361,6 +2366,7 @@
       ],
       "depended_on_by": [
         "antiparticle_dark_energy_unification_audit",
+        "boundary_leakage_rate_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -2441,6 +2447,10 @@
       "edged_by": [
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "boundary_leakage_rate_audit",
           "kind": "references"
         },
         {
@@ -2746,7 +2756,9 @@
         "surface_uniqueness_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "boundary_leakage_rate_audit"
+      ],
       "edges": [
         {
           "target": "CHAIN_KSTAR",
@@ -2825,7 +2837,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "boundary_leakage_rate_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "29ff2d2",
@@ -4413,6 +4430,7 @@
         "bell_bounds_from_substrate",
         "born_rule_mode_count_extremes_audit",
         "born_rule_parameter_free",
+        "boundary_leakage_rate_audit",
         "canonical_glossary",
         "complex_amplitude_uniqueness",
         "conservation_scale_stratification_audit",
@@ -4496,6 +4514,10 @@
         },
         {
           "source": "born_rule_parameter_free",
+          "kind": "references"
+        },
+        {
+          "source": "boundary_leakage_rate_audit",
           "kind": "references"
         },
         {
@@ -4720,6 +4742,7 @@
       "depended_on_by": [
         "anchor_extremes_audit",
         "antiparticle_dark_energy_unification_audit",
+        "boundary_leakage_rate_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -4804,6 +4827,10 @@
         },
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "boundary_leakage_rate_audit",
           "kind": "references"
         },
         {
@@ -4912,6 +4939,97 @@
       ]
     },
     {
+      "id": "boundary_leakage_rate_audit",
+      "path": "sync_cost/derivations/boundary_leakage_rate_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Boundary leakage rate audit \u2014 Gaps 4 + 8",
+      "summary": "Closes Gaps 4 (Hawking-rate quantitative derivation) and 8\n(per-boundary leakage rate specifics) from the antiparticle/\ndark-energy unification audit (PR #226). The two gaps share a\ncommon composition: substrate dissipation rate \u00d7 boundary\nstructure \u2192 specific leakage rate. Per boundary type the\nspecific composition varies, but the structural form is\nuniversal.",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "anchor_extremes_audit",
+        "antiparticle_dark_energy_unification_audit",
+        "born_rule",
+        "born_rule_mode_count_extremes_audit",
+        "boundary_weight",
+        "conservation_scale_stratification_audit",
+        "continuity_in_K_nulls",
+        "halt_shock_coherence_audit",
+        "planck_scale",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_planck_emergence_audit",
+        "sine_gordon_substrate",
+        "unification_bridge_audits_gaps_1_3"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "continuity_in_K_nulls",
+          "kind": "references"
+        },
+        {
+          "target": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "sine_gordon_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "unification_bridge_audits_gaps_1_3",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "a39af8c",
+          "date": "2026-06-05",
+          "subject": "Boundary leakage rate audit \u2014 Gaps 4 + 8 (#227)"
+        }
+      ]
+    },
+    {
       "id": "boundary_weight",
       "path": "sync_cost/derivations/boundary_weight.md",
       "cid": null,
@@ -4929,6 +5047,7 @@
         "address_and_quantity",
         "antiparticle_dark_energy_unification_audit",
         "born_rule_mode_count_extremes_audit",
+        "boundary_leakage_rate_audit",
         "canonical_glossary",
         "continuity_in_K_nulls",
         "continuum_limits",
@@ -4991,6 +5110,10 @@
         },
         {
           "source": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "boundary_leakage_rate_audit",
           "kind": "references"
         },
         {
@@ -6213,6 +6336,7 @@
         "antiparticle_dark_energy_unification_audit",
         "bicyclist_observer_sequence",
         "born_rule_mode_count_extremes_audit",
+        "boundary_leakage_rate_audit",
         "halt_shock_coherence_audit",
         "pattern_identification_discipline_candidate",
         "q_mod2_conservation_theorem",
@@ -6316,6 +6440,10 @@
           "kind": "references"
         },
         {
+          "source": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
           "source": "halt_shock_coherence_audit",
           "kind": "references"
         },
@@ -6381,6 +6509,7 @@
         "antiparticle_dark_energy_unification_audit",
         "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
+        "boundary_leakage_rate_audit",
         "cross_ratio_irrep_reframe",
         "derivation_atlas",
         "era_timeline_disposition",
@@ -6495,6 +6624,10 @@
         },
         {
           "source": "audit_punch_list_2026-04",
+          "kind": "references"
+        },
+        {
+          "source": "boundary_leakage_rate_audit",
           "kind": "references"
         },
         {
@@ -14610,6 +14743,7 @@
       ],
       "depended_on_by": [
         "antiparticle_dark_energy_unification_audit",
+        "boundary_leakage_rate_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
@@ -14677,6 +14811,10 @@
       "edged_by": [
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "boundary_leakage_rate_audit",
           "kind": "references"
         },
         {
@@ -26065,6 +26203,7 @@
         "anchor_count_audit",
         "anchor_extremes_audit",
         "born_rule_mode_count_extremes_audit",
+        "boundary_leakage_rate_audit",
         "halt_shock_coherence_audit",
         "isotropy_lemma",
         "q_mod2_planck_emergence_audit",
@@ -26086,6 +26225,10 @@
         },
         {
           "source": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "boundary_leakage_rate_audit",
           "kind": "references"
         },
         {
@@ -26555,6 +26698,7 @@
         "antiparticle_dark_energy_unification_audit",
         "bicyclist_observer_sequence",
         "born_rule_mode_count_extremes_audit",
+        "boundary_leakage_rate_audit",
         "canonical_glossary",
         "conservation_scale_stratification_audit",
         "framework_status",
@@ -26638,6 +26782,10 @@
         },
         {
           "source": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "boundary_leakage_rate_audit",
           "kind": "references"
         },
         {
@@ -27716,6 +27864,7 @@
         "anchor_extremes_audit",
         "antiparticle_dark_energy_unification_audit",
         "born_rule_mode_count_extremes_audit",
+        "boundary_leakage_rate_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -27768,6 +27917,10 @@
         },
         {
           "source": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "boundary_leakage_rate_audit",
           "kind": "references"
         },
         {
@@ -29350,6 +29503,7 @@
       "depended_on_by": [
         "antiparticle_dark_energy_unification_audit",
         "articulation_audit_2026-05",
+        "boundary_leakage_rate_audit",
         "cone_twist_substrate",
         "e_cross_calc",
         "epr_bell_assembly_theorem",
@@ -29434,6 +29588,10 @@
         },
         {
           "source": "articulation_audit_2026-05",
+          "kind": "references"
+        },
+        {
+          "source": "boundary_leakage_rate_audit",
           "kind": "references"
         },
         {
@@ -32758,7 +32916,8 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
-        "antiparticle_dark_energy_unification_audit"
+        "antiparticle_dark_energy_unification_audit",
+        "boundary_leakage_rate_audit"
       ],
       "edges": [
         {
@@ -32825,6 +32984,10 @@
       "edged_by": [
         {
           "source": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "boundary_leakage_rate_audit",
           "kind": "references"
         }
       ],
