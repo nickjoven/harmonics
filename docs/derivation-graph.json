@@ -1,5 +1,5 @@
 {
-  "generated": "f13f7eec540029fcf538a4565d69cb4678308d12",
+  "generated": "42bf4a2de6fba591cb4786a5eff0e8fe2f1c3c42",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -20,6 +20,7 @@
         "arrow_inviolability_and_unification_closure_audit",
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
+        "coherence_matrix_completion_audit",
         "dynamical_tool_audit",
         "halt_shock_coherence_audit",
         "klein_antipodal_z2_rep_pattern",
@@ -65,6 +66,10 @@
         },
         {
           "source": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -1979,6 +1984,7 @@
         "anchor_extremes_audit",
         "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
+        "coherence_matrix_completion_audit",
         "depth_connection_nulls",
         "derivation_atlas",
         "dynamical_tool_audit",
@@ -2094,6 +2100,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -2373,6 +2383,7 @@
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
+        "coherence_matrix_completion_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -2461,6 +2472,10 @@
         },
         {
           "source": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -2768,7 +2783,8 @@
       ],
       "depended_on_by": [
         "arrow_inviolability_and_unification_closure_audit",
-        "boundary_leakage_rate_audit"
+        "boundary_leakage_rate_audit",
+        "coherence_matrix_completion_audit"
       ],
       "edges": [
         {
@@ -2856,6 +2872,10 @@
         {
           "source": "boundary_leakage_rate_audit",
           "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
+          "kind": "references"
         }
       ],
       "git": [
@@ -2899,7 +2919,9 @@
         "surface_uniqueness_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "coherence_matrix_completion_audit"
+      ],
       "edges": [
         {
           "target": "CHAIN_KSTAR",
@@ -2998,7 +3020,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "f13f7ee",
@@ -4589,6 +4616,7 @@
         "born_rule_parameter_free",
         "boundary_leakage_rate_audit",
         "canonical_glossary",
+        "coherence_matrix_completion_audit",
         "complex_amplitude_uniqueness",
         "conservation_scale_stratification_audit",
         "derivation_atlas",
@@ -4683,6 +4711,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -4905,6 +4937,7 @@
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
+        "coherence_matrix_completion_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -5000,6 +5033,10 @@
           "kind": "references"
         },
         {
+          "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
           "source": "halt_shock_coherence_audit",
           "kind": "references"
         },
@@ -5034,6 +5071,7 @@
         "articulation_audit_2026-05",
         "born_rule",
         "born_rule_mode_count_extremes_audit",
+        "coherence_matrix_completion_audit",
         "empty_fork_cap",
         "horn_branch_iteration_1",
         "klein_bottle_restructure_price",
@@ -5074,6 +5112,10 @@
         },
         {
           "source": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -5133,7 +5175,8 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
-        "arrow_inviolability_and_unification_closure_audit"
+        "arrow_inviolability_and_unification_closure_audit",
+        "coherence_matrix_completion_audit"
       ],
       "edges": [
         {
@@ -5197,6 +5240,10 @@
         {
           "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
+          "kind": "references"
         }
       ],
       "git": [
@@ -5228,6 +5275,7 @@
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
         "canonical_glossary",
+        "coherence_matrix_completion_audit",
         "continuity_in_K_nulls",
         "continuum_limits",
         "down_type_double_cover_closed",
@@ -5301,6 +5349,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -5910,6 +5962,157 @@
           "hash": "2109a3b",
           "date": "2026-04-26",
           "subject": "Legitimacy homework: glossary + phenomenology + derivation atlas (#81)"
+        }
+      ]
+    },
+    {
+      "id": "coherence_matrix_completion_audit",
+      "path": "sync_cost/derivations/coherence_matrix_completion_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Coherence-type matrix completion audit",
+      "summary": "Completes the **5 \u00d7 7 coherence-type \u00d7 layer-status matrix**\ninitialized in PR #224 (halt + shock rows) and extended across\nPRs #221\u2013#228. This audit populates the four remaining\ncoherence-type rows \u2014 **closure, recurrence, locality, and\nbifurcation** \u2014 giving the framework's apparatus its\nfirst-complete structural matrix of coherence types across\nlayer-status categories.",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "anchor_count_audit",
+        "anchor_extremes_audit",
+        "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
+        "born_rule",
+        "born_rule_mode_count_extremes_audit",
+        "born_rule_parameter_free",
+        "boundary_leakage_rate_audit",
+        "boundary_weight",
+        "continuity_in_K_nulls",
+        "continuum_limits",
+        "cosmological_cycle",
+        "halt_shock_coherence_audit",
+        "horn_branch_iteration_2_step_2",
+        "klein_bottle",
+        "klein_bottle_restructure_price",
+        "mass_sector_closure",
+        "planck_scale",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_conservation_theorem",
+        "q_mod2_planck_emergence_audit",
+        "sine_gordon_substrate",
+        "substrate_determinism",
+        "surface_uniqueness_audit",
+        "unification_bridge_audits_gaps_1_3"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "anchor_count_audit",
+          "kind": "references"
+        },
+        {
+          "target": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "arrow_inviolability_and_unification_closure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_parameter_free",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "continuity_in_K_nulls",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "cosmological_cycle",
+          "kind": "references"
+        },
+        {
+          "target": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "sine_gordon_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "surface_uniqueness_audit",
+          "kind": "references"
+        },
+        {
+          "target": "unification_bridge_audits_gaps_1_3",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "42bf4a2",
+          "date": "2026-06-05",
+          "subject": "Coherence-type matrix completion audit (#229)"
         }
       ]
     },
@@ -6704,6 +6907,7 @@
         "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
         "boundary_leakage_rate_audit",
+        "coherence_matrix_completion_audit",
         "cross_ratio_irrep_reframe",
         "derivation_atlas",
         "era_timeline_disposition",
@@ -6826,6 +7030,10 @@
         },
         {
           "source": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -6967,6 +7175,7 @@
         "articulation_audit_2026-05",
         "bicyclist_observer_sequence",
         "canonical_glossary",
+        "coherence_matrix_completion_audit",
         "complex_amplitude_uniqueness",
         "conservation_scale_stratification_audit",
         "cross_ratio_irrep_reframe",
@@ -7080,6 +7289,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -7258,6 +7471,7 @@
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
+        "coherence_matrix_completion_audit",
         "era_timeline_disposition",
         "k_of_t_friedmann",
         "lesson_epr_gr_qm_unification",
@@ -7276,6 +7490,10 @@
       "edged_by": [
         {
           "source": "articulation_audit_2026-05",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -14948,6 +15166,7 @@
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
+        "coherence_matrix_completion_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
@@ -15023,6 +15242,10 @@
         },
         {
           "source": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -15917,6 +16140,7 @@
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "born_rule_mode_count_extremes_audit",
+        "coherence_matrix_completion_audit",
         "horn_branch_iteration_3_step_1",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -15977,6 +16201,10 @@
         },
         {
           "source": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -17805,6 +18033,7 @@
         "beta_from_tongues",
         "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
+        "coherence_matrix_completion_audit",
         "complex_amplitude_uniqueness",
         "cone_twist_substrate",
         "conservation_scale_stratification_audit",
@@ -17923,6 +18152,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -18496,6 +18729,7 @@
         "bicyclist_observer_sequence",
         "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
+        "coherence_matrix_completion_audit",
         "conservation_scale_stratification_audit",
         "continuum_limits",
         "framework_status",
@@ -18586,6 +18820,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -20986,6 +21224,7 @@
         "basepoint_principle",
         "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
+        "coherence_matrix_completion_audit",
         "depth_connection_nulls",
         "derivation_atlas",
         "figure_eight_necessitation_audit",
@@ -21071,6 +21310,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -26428,6 +26671,7 @@
         "arrow_inviolability_and_unification_closure_audit",
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
+        "coherence_matrix_completion_audit",
         "halt_shock_coherence_audit",
         "isotropy_lemma",
         "q_mod2_planck_emergence_audit",
@@ -26457,6 +26701,10 @@
         },
         {
           "source": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -26929,6 +27177,7 @@
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
         "canonical_glossary",
+        "coherence_matrix_completion_audit",
         "conservation_scale_stratification_audit",
         "framework_status",
         "halt_shock_coherence_audit",
@@ -27023,6 +27272,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -27729,6 +27982,7 @@
         "bicyclist_observer_sequence",
         "born_rule_mode_count_extremes_audit",
         "canonical_glossary",
+        "coherence_matrix_completion_audit",
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
         "conservation_scale_stratification_audit",
@@ -27840,6 +28094,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -28104,6 +28362,7 @@
         "arrow_inviolability_and_unification_closure_audit",
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
+        "coherence_matrix_completion_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -28164,6 +28423,10 @@
         },
         {
           "source": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -29748,6 +30011,7 @@
         "arrow_inviolability_and_unification_closure_audit",
         "articulation_audit_2026-05",
         "boundary_leakage_rate_audit",
+        "coherence_matrix_completion_audit",
         "cone_twist_substrate",
         "e_cross_calc",
         "epr_bell_assembly_theorem",
@@ -29840,6 +30104,10 @@
         },
         {
           "source": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -31303,6 +31571,7 @@
         "born_rule_mode_count_extremes_audit",
         "born_rule_parameter_free",
         "canonical_glossary",
+        "coherence_matrix_completion_audit",
         "collapse_dissolution",
         "complex_amplitude_uniqueness",
         "conservation_scale_stratification_audit",
@@ -31451,6 +31720,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -31766,6 +32039,7 @@
         "arrow_inviolability_and_unification_closure_audit",
         "bicyclist_observer_sequence",
         "born_rule_mode_count_extremes_audit",
+        "coherence_matrix_completion_audit",
         "conservation_scale_stratification_audit",
         "continuum_limits",
         "framework_status",
@@ -31834,6 +32108,10 @@
         },
         {
           "source": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         },
         {
@@ -33176,7 +33454,8 @@
       "depended_on_by": [
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
-        "boundary_leakage_rate_audit"
+        "boundary_leakage_rate_audit",
+        "coherence_matrix_completion_audit"
       ],
       "edges": [
         {
@@ -33251,6 +33530,10 @@
         },
         {
           "source": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "source": "coherence_matrix_completion_audit",
           "kind": "references"
         }
       ],
