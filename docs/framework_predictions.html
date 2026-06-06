@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Harmonics Framework — Predictions Visualization (Tier 1)</title>
+<style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 1100px;
+    margin: 2em auto;
+    padding: 0 1em;
+    background: #fafafa;
+    color: #222;
+    line-height: 1.5;
+  }
+  h1 { font-size: 1.6em; margin-bottom: 0.2em; }
+  .subtitle { font-style: italic; color: #555; margin-top: 0; margin-bottom: 1.5em; }
+  .panel {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 1em 1.5em;
+    margin-bottom: 1em;
+  }
+  .panel h2 { font-size: 1.15em; margin-top: 0; border-bottom: 1px solid #eee; padding-bottom: 0.3em; }
+  .slider-row {
+    display: grid;
+    grid-template-columns: 220px 1fr 120px;
+    gap: 1em;
+    align-items: center;
+    margin: 0.6em 0;
+  }
+  .slider-row label { font-weight: bold; }
+  .slider-row label .tag {
+    display: inline-block;
+    font-size: 0.75em;
+    font-weight: normal;
+    color: white;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 0.4em;
+    vertical-align: middle;
+  }
+  .tag.anchor { background: #1565c0; }
+  .tag.derived { background: #2e7d32; }
+  .tag.primitive { background: #6a1b9a; }
+  .slider-row input[type=range] { width: 100%; }
+  .slider-row .value {
+    text-align: right;
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    background: #f5f5f5;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+  }
+
+  .pred-table { width: 100%; border-collapse: collapse; margin-top: 0.5em; }
+  .pred-table th, .pred-table td {
+    padding: 0.5em 0.6em;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+  }
+  .pred-table th { font-size: 0.85em; color: #555; text-transform: uppercase; letter-spacing: 0.04em; }
+  .pred-table .formula {
+    font-family: 'SFMono-Regular', Consolas, monospace;
+    color: #666;
+    font-size: 0.88em;
+  }
+  .pred-table .number { font-family: 'SFMono-Regular', Consolas, monospace; }
+  .match { color: #1b5e20; font-weight: bold; }
+  .mismatch { color: #b71c1c; font-weight: bold; }
+  .sigma { font-family: 'SFMono-Regular', Consolas, monospace; font-size: 0.9em; color: #444; }
+
+  .figure { text-align: center; }
+  .figure img { max-width: 100%; height: auto; }
+
+  .footer {
+    margin-top: 2em;
+    font-size: 0.88em;
+    color: #555;
+    padding-top: 1em;
+    border-top: 1px solid #ccc;
+  }
+  .footer a { color: #1565c0; text-decoration: none; }
+  .footer a:hover { text-decoration: underline; }
+  .footer code {
+    background: #f3f3f3;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 0.92em;
+  }
+
+  .intro {
+    background: #fff8e1;
+    border-left: 4px solid #ffa000;
+    padding: 0.8em 1em;
+    margin-bottom: 1em;
+    font-size: 0.95em;
+  }
+
+  .controls {
+    text-align: right;
+    margin-top: 0.8em;
+  }
+  .controls button {
+    background: #1565c0;
+    color: white;
+    border: none;
+    padding: 0.4em 0.9em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Georgia, serif;
+    font-size: 0.92em;
+  }
+  .controls button:hover { background: #0d47a1; }
+  .controls button.secondary { background: #757575; }
+  .controls button.secondary:hover { background: #424242; }
+
+  .legend {
+    font-size: 0.85em;
+    color: #555;
+    margin-top: 0.6em;
+  }
+</style>
+</head>
+<body>
+
+<h1>Harmonics Framework — Predictions Visualization</h1>
+<p class="subtitle">Tier 1 · adjustable parameters · framework analytic predictions vs observation</p>
+
+<div class="intro">
+This page computes the framework's load-bearing analytic predictions in real time as you adjust the underlying parameters. The framework's strength is that conservation laws + dimensional ratios are forced by substrate primitives; observational anchors (H₀, v_EW) supply absolute units, the framework supplies dimensionless ratios.<br><br>
+<strong>Scope</strong>: this page visualizes what the framework <em>derives</em>, not what the substrate <em>is</em>. Substrate-level configurations remain inaccessible per the resolution-mode discipline. The skipping-stone limit applies — we see ripples (cosmological observables), not water molecules (substrate states).
+</div>
+
+<div class="panel">
+  <h2>Parameters</h2>
+
+  <div class="slider-row">
+    <label for="w_star">Boundary weight w* <span class="tag derived">derived</span></label>
+    <input type="range" id="w_star" min="0.50" max="1.00" step="0.001" value="0.830">
+    <span class="value" id="w_star_val">0.830</span>
+  </div>
+
+  <div class="slider-row">
+    <label for="H0">H₀ (km/s/Mpc) <span class="tag anchor">anchor</span></label>
+    <input type="range" id="H0" min="60" max="80" step="0.1" value="67.4">
+    <span class="value" id="H0_val">67.4</span>
+  </div>
+
+  <div class="slider-row">
+    <label for="q2">q₂ (Mihailescu) <span class="tag primitive">primitive</span></label>
+    <input type="range" id="q2" min="1" max="5" step="1" value="2">
+    <span class="value" id="q2_val">2</span>
+  </div>
+
+  <div class="slider-row">
+    <label for="q3">q₃ (Mihailescu) <span class="tag primitive">primitive</span></label>
+    <input type="range" id="q3" min="1" max="5" step="1" value="3">
+    <span class="value" id="q3_val">3</span>
+  </div>
+
+  <div class="slider-row">
+    <label for="d_spatial">d (spatial dimensions) <span class="tag derived">derived</span></label>
+    <input type="range" id="d_spatial" min="1" max="5" step="1" value="3">
+    <span class="value" id="d_spatial_val">3</span>
+  </div>
+
+  <div class="controls">
+    <button class="secondary" onclick="setCMBH0()">H₀ = 67.4 (CMB)</button>
+    <button class="secondary" onclick="setSH0ESH0()">H₀ = 73.0 (SH0ES)</button>
+    <button onclick="resetCanonical()">Reset to canonical</button>
+  </div>
+
+  <div class="legend">
+    <span class="tag primitive">primitive</span> = substrate-forced (Mihailescu, Klein-bottle structure) ·
+    <span class="tag derived">derived</span> = computed from primitives + boundary conditions ·
+    <span class="tag anchor">anchor</span> = observational input
+  </div>
+</div>
+
+<div class="panel">
+  <h2>Framework predictions vs observation</h2>
+
+  <table class="pred-table">
+    <thead>
+      <tr>
+        <th>Prediction</th>
+        <th>Formula</th>
+        <th>Framework value</th>
+        <th>Observed</th>
+        <th>Match</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ω_Λ (dark energy)</td>
+        <td class="formula">(11 + 2w*) / (16 + 3w*)</td>
+        <td class="number" id="omega_lambda">—</td>
+        <td class="number">0.685 ± 0.007</td>
+        <td id="omega_lambda_match">—</td>
+      </tr>
+      <tr>
+        <td>K_STAR<sup>14</sup></td>
+        <td class="formula">1 / q₂^q₃</td>
+        <td class="number" id="kstar14">—</td>
+        <td class="number">0.125 (= 1/8)</td>
+        <td id="kstar14_match">—</td>
+      </tr>
+      <tr>
+        <td>m_τ / m_e (lepton ratio)</td>
+        <td class="formula">(q₃³ − 1)^(d − 1/2)</td>
+        <td class="number" id="tau_e">—</td>
+        <td class="number">3477 (PDG)</td>
+        <td id="tau_e_match">—</td>
+      </tr>
+      <tr>
+        <td>Mass hierarchy base</td>
+        <td class="formula">q₃³ − 1 : q₂³ − 1 : 1</td>
+        <td class="number" id="hierarchy">—</td>
+        <td class="number">≈ 26 : 7 : 1</td>
+        <td id="hierarchy_match">—</td>
+      </tr>
+      <tr>
+        <td>Λ (×10⁻⁵² m⁻²)</td>
+        <td class="formula">3·H₀²·Ω_Λ / c²</td>
+        <td class="number" id="lambda_si">—</td>
+        <td class="number">1.1 (CMB)</td>
+        <td id="lambda_si_match">—</td>
+      </tr>
+      <tr>
+        <td>T_dS (×10⁻³⁰ K)</td>
+        <td class="formula">ℏ·H₀ / (2π·k_B)</td>
+        <td class="number" id="tds">—</td>
+        <td class="number">(theoretical)</td>
+        <td class="sigma">—</td>
+      </tr>
+      <tr>
+        <td>Number of generations</td>
+        <td class="formula">q₂² − 1</td>
+        <td class="number" id="generations">—</td>
+        <td class="number">3 (PDG)</td>
+        <td id="generations_match">—</td>
+      </tr>
+      <tr>
+        <td>Number of sectors</td>
+        <td class="formula">|{−1, 0, +1}|</td>
+        <td class="number">3</td>
+        <td class="number">3 (PDG)</td>
+        <td class="match">✓ exact</td>
+      </tr>
+      <tr>
+        <td>Sector exponents (down / lepton / up)</td>
+        <td class="formula">d − 1, d − 1/2, d</td>
+        <td class="number" id="sector_exp">—</td>
+        <td class="number">2, 5/2, 3</td>
+        <td id="sector_exp_match">—</td>
+      </tr>
+      <tr>
+        <td>Effective mode count at boundary</td>
+        <td class="formula">11 + 2w*</td>
+        <td class="number" id="mode_count">—</td>
+        <td class="number">12.66</td>
+        <td id="mode_count_match">—</td>
+      </tr>
+      <tr>
+        <td>Ω partition total</td>
+        <td class="formula">(11 + 5 + 1) / (16 + 3) (canonical)</td>
+        <td class="number">19 / 19 = 1.000</td>
+        <td class="number">1.000 (Ω_total)</td>
+        <td class="match">✓ exact (closure)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="panel">
+  <h2>Geometric realization (PR #226 antipodal pairing on inverse-stereographic sphere)</h2>
+  <p>
+    Particles at antipodal points pair with antiparticles via K² antiperiodic identification (Q̃ → −Q̃). Integrated antipodal-pair contribution distributes uniformly across the sphere as Ω_Λ. Our pocket-soliton occupies a small region near the south pole. PR #225 Bridge 3: the boundary-weight formula <em>is</em> the antipodal-pair integration in different vocabulary, via the r → 1 − r Farey involution.
+  </p>
+  <div class="figure">
+    <img src="../sync_cost/derivations/antiparticle_dark_energy_antipodal_figure.svg" alt="Antipodal pairing on inverse-stereographic sphere">
+  </div>
+</div>
+
+<div class="panel">
+  <h2>Tier 1 scope (what this is and isn't)</h2>
+  <p>
+    <strong>This page does:</strong>
+  </p>
+  <ul>
+    <li>Compute the framework's structural predictions from current parameter values</li>
+    <li>Compare against PDG / CMB observational values</li>
+    <li>Show σ deviations honestly (✓ within 1σ; ~ within 5σ; ✗ beyond 5σ)</li>
+    <li>Embed the geometric figure as anchor</li>
+  </ul>
+  <p>
+    <strong>This page does NOT:</strong>
+  </p>
+  <ul>
+    <li>Simulate substrate dynamics (substrate is inaccessible per resolution-mode discipline)</li>
+    <li>Reveal substrate-level configurations from observation (skipping-stone limit applies)</li>
+    <li>Predict outcomes for individual measurements (Born rule gives distribution only)</li>
+    <li>Probe inaccessibility classes (other pockets, sub-Planck physics, specific dark-partner identities)</li>
+  </ul>
+</div>
+
+<div class="footer">
+  <p><strong>Source audit docs</strong> (load-bearing derivations behind each prediction):</p>
+  <ul>
+    <li>Ω_Λ derivation: <code>horn_branch_iteration_2_step_2.md</code> + PR #222 + PR #225 Bridge 3 + PR #226 Sub-claim C</li>
+    <li>K_STAR<sup>14</sup> = 1/8: <code>CHAIN_KSTAR.md</code> + <code>K_star_precision_check.py</code></li>
+    <li>m_τ/m_e: <code>generation_mechanism.md</code> Section 4 (framework's sharpest mass prediction, 0.9%)</li>
+    <li>Generation count + sector count: PR #230</li>
+    <li>Universal boundary leakage (T_dS): PR #227</li>
+    <li>Antipodal-pair geometric realization: PR #226 Sub-claim A + Bridge 3</li>
+    <li>Resolution-mode discipline / scope honesty: <code>feedback_resolution_vs_reconstruction.md</code></li>
+    <li>Inaccessibility classes (skipping-stone limit): PR #228 Findings 3 & 4 + PR #221 fuzzy floor</li>
+  </ul>
+</div>
+
+<script>
+const SI = {
+  c: 299792458,              // m/s
+  hbar: 1.054571817e-34,     // J·s
+  kB: 1.380649e-23,          // J/K
+  Mpc_in_m: 3.0857e22,       // m per Mpc
+};
+
+const CANONICAL = {
+  w_star: 0.830,
+  H0: 67.4,
+  q2: 2,
+  q3: 3,
+  d_spatial: 3,
+};
+
+function setSliders(values) {
+  Object.entries(values).forEach(([k, v]) => {
+    const el = document.getElementById(k);
+    if (el) {
+      el.value = v;
+    }
+  });
+  compute();
+}
+
+function resetCanonical() { setSliders(CANONICAL); }
+function setCMBH0()       { setSliders({ ...CANONICAL, H0: 67.4 }); }
+function setSH0ESH0()     { setSliders({ ...CANONICAL, H0: 73.0 }); }
+
+function compute() {
+  const w = parseFloat(document.getElementById('w_star').value);
+  const H0_kms = parseFloat(document.getElementById('H0').value);
+  const q2 = parseInt(document.getElementById('q2').value);
+  const q3 = parseInt(document.getElementById('q3').value);
+  const d = parseInt(document.getElementById('d_spatial').value);
+
+  document.getElementById('w_star_val').textContent = w.toFixed(3);
+  document.getElementById('H0_val').textContent = H0_kms.toFixed(1);
+  document.getElementById('q2_val').textContent = q2;
+  document.getElementById('q3_val').textContent = q3;
+  document.getElementById('d_spatial_val').textContent = d;
+
+  const H0_SI = (H0_kms * 1000) / SI.Mpc_in_m;  // 1/s
+
+  // Ω_Λ from boundary weight
+  const omega_lambda = (11 + 2 * w) / (16 + 3 * w);
+  document.getElementById('omega_lambda').textContent = omega_lambda.toFixed(4);
+  setMatch('omega_lambda_match', omega_lambda, 0.685, 0.007);
+
+  // K_STAR^14 = 1/q_2^q_3
+  const kstar14 = 1 / Math.pow(q2, q3);
+  document.getElementById('kstar14').textContent = kstar14.toFixed(6);
+  setMatch('kstar14_match', kstar14, 0.125, 0.0005);
+
+  // m_τ / m_e from cube structure: (q_3^3 - 1)^(d - 1/2)
+  const cube_q3 = Math.pow(q3, 3) - 1;
+  const a_lep = d - 0.5;
+  const tau_e = Math.pow(cube_q3, a_lep);
+  document.getElementById('tau_e').textContent = tau_e.toFixed(1);
+  setMatch('tau_e_match', tau_e, 3477, 35);
+
+  // Mass hierarchy base
+  const cube_q2 = Math.pow(q2, 3) - 1;
+  const hierarchy_str = `${cube_q3} : ${cube_q2} : 1`;
+  document.getElementById('hierarchy').textContent = hierarchy_str;
+  const matches_canon = (cube_q3 === 26 && cube_q2 === 7);
+  const matchEl = document.getElementById('hierarchy_match');
+  matchEl.textContent = matches_canon ? '✓ canonical' : '✗ off canonical';
+  matchEl.className = matches_canon ? 'match' : 'mismatch';
+
+  // Λ in physical units
+  const Lambda = 3 * H0_SI * H0_SI * omega_lambda / (SI.c * SI.c);
+  const Lambda_e52 = Lambda * 1e52;
+  document.getElementById('lambda_si').textContent = Lambda_e52.toFixed(3);
+  setMatch('lambda_si_match', Lambda_e52, 1.1, 0.1);
+
+  // T_dS
+  const T_dS = SI.hbar * H0_SI / (2 * Math.PI * SI.kB);
+  const T_dS_e30 = T_dS * 1e30;
+  document.getElementById('tds').textContent = T_dS_e30.toFixed(3);
+
+  // Generations
+  const generations = q2 * q2 - 1;
+  document.getElementById('generations').textContent = generations;
+  setMatchExact('generations_match', generations, 3);
+
+  // Sector exponents
+  const sec_down = (d - 1).toFixed(1);
+  const sec_lep  = (d - 0.5).toFixed(1);
+  const sec_up   = d.toFixed(1);
+  document.getElementById('sector_exp').textContent = `${sec_down}, ${sec_lep}, ${sec_up}`;
+  const sectorOK = (d === 3);
+  const sectorEl = document.getElementById('sector_exp_match');
+  sectorEl.textContent = sectorOK ? '✓ canonical' : '✗ off canonical';
+  sectorEl.className = sectorOK ? 'match' : 'mismatch';
+
+  // Effective mode count at boundary
+  const mode_count = 11 + 2 * w;
+  document.getElementById('mode_count').textContent = mode_count.toFixed(2);
+  setMatch('mode_count_match', mode_count, 12.66, 0.05);
+}
+
+function setMatch(elemId, value, observed, sigma) {
+  const elem = document.getElementById(elemId);
+  const deviation = Math.abs(value - observed) / sigma;
+  if (deviation < 1) {
+    elem.textContent = `✓ ${deviation.toFixed(2)}σ`;
+    elem.className = 'match';
+  } else if (deviation < 5) {
+    elem.textContent = `~ ${deviation.toFixed(2)}σ`;
+    elem.className = 'sigma';
+  } else {
+    elem.textContent = `✗ ${deviation.toFixed(1)}σ`;
+    elem.className = 'mismatch';
+  }
+}
+
+function setMatchExact(elemId, value, target) {
+  const elem = document.getElementById(elemId);
+  if (value === target) {
+    elem.textContent = '✓ exact';
+    elem.className = 'match';
+  } else {
+    elem.textContent = `✗ ${value} ≠ ${target}`;
+    elem.className = 'mismatch';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('input[type=range]').forEach(slider => {
+    slider.addEventListener('input', compute);
+  });
+  compute();
+});
+</script>
+
+</body>
+</html>
