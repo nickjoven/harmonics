@@ -1,5 +1,5 @@
 {
-  "generated": "40a1d8a27bed2f9e7498fd4163523b5ba0766e98",
+  "generated": "2a93604f730d32775c08a6e6cfa382942508644a",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -22,6 +22,7 @@
         "boundary_leakage_rate_audit",
         "coherence_matrix_completion_audit",
         "dynamical_tool_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
         "klein_antipodal_z2_rep_pattern",
@@ -75,6 +76,10 @@
         },
         {
           "source": "dynamical_tool_audit",
+          "kind": "references"
+        },
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
         {
@@ -2390,6 +2395,7 @@
         "boundary_leakage_rate_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
@@ -2487,6 +2493,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
         {
@@ -2801,6 +2811,7 @@
         "boundary_leakage_rate_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit"
       ],
       "edges": [
@@ -2899,6 +2910,10 @@
           "kind": "references"
         },
         {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
+          "kind": "references"
+        },
+        {
           "source": "generation_sector_count_audit",
           "kind": "references"
         }
@@ -2947,6 +2962,7 @@
       "depended_on_by": [
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit"
       ],
       "edges": [
@@ -3054,6 +3070,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
         {
@@ -4984,6 +5004,7 @@
         "boundary_leakage_rate_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
@@ -5085,6 +5106,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
         {
@@ -5233,6 +5258,7 @@
         "arrow_inviolability_and_unification_closure_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit"
       ],
       "edges": [
@@ -5304,6 +5330,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
         {
@@ -6061,7 +6091,9 @@
         "surface_uniqueness_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "dynamics_arithmetic_distinction_refinement_audit"
+      ],
       "edges": [
         {
           "target": "anchor_extremes_audit",
@@ -6132,7 +6164,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "19f8a38",
@@ -6178,6 +6215,7 @@
       ],
       "depended_on_by": [
         "cmb_silk_damping_acoustic_peaks_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit"
       ],
       "edges": [
@@ -6289,6 +6327,10 @@
       "edged_by": [
         {
           "source": "cmb_silk_damping_acoustic_peaks_audit",
+          "kind": "references"
+        },
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
         {
@@ -10028,6 +10070,117 @@
           "hash": "ebaf42e",
           "date": "2026-04-25",
           "subject": "K-axis uniqueness: composed Klein-antipodal + coprime-to-6 \u2192 framework integers as plateau values (#"
+        }
+      ]
+    },
+    {
+      "id": "dynamics_arithmetic_distinction_refinement_audit",
+      "path": "sync_cost/derivations/dynamics_arithmetic_distinction_refinement_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Dynamics / arithmetic distinction refinement audit",
+      "summary": "Two precision refinements to PR #228 (arrow inviolability +\nunification closure) that surface the **substrate dynamics\nvs. substrate arithmetic** distinction explicitly. The\nrefinements sharpen methodology without invalidating any\nsealed structural identity or audit verdict.",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "anchor_extremes_audit",
+        "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
+        "born_rule_mode_count_extremes_audit",
+        "boundary_leakage_rate_audit",
+        "cmb_silk_damping_acoustic_peaks_audit",
+        "coherence_matrix_completion_audit",
+        "generation_sector_count_audit",
+        "halt_shock_coherence_audit",
+        "klein_bottle",
+        "mass_sector_closure",
+        "planck_scale",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_planck_emergence_audit",
+        "sine_gordon_substrate",
+        "substrate_determinism",
+        "unification_bridge_audits_gaps_1_3"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "arrow_inviolability_and_unification_closure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_mode_count_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "target": "cmb_silk_damping_acoustic_peaks_audit",
+          "kind": "references"
+        },
+        {
+          "target": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "target": "generation_sector_count_audit",
+          "kind": "references"
+        },
+        {
+          "target": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "sine_gordon_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "unification_bridge_audits_gaps_1_3",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "2a93604",
+          "date": "2026-06-06",
+          "subject": "Dynamics / arithmetic distinction refinement audit (#234)"
         }
       ]
     },
@@ -14745,7 +14898,8 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
-        "cmb_silk_damping_acoustic_peaks_audit"
+        "cmb_silk_damping_acoustic_peaks_audit",
+        "dynamics_arithmetic_distinction_refinement_audit"
       ],
       "edges": [
         {
@@ -14828,6 +14982,10 @@
       "edged_by": [
         {
           "source": "cmb_silk_damping_acoustic_peaks_audit",
+          "kind": "references"
+        },
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         }
       ],
@@ -15499,6 +15657,7 @@
         "boundary_leakage_rate_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -15583,6 +15742,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
         {
@@ -18387,6 +18550,7 @@
         "discrete_reduction_problem",
         "duty_cycle_dictionary",
         "dynamical_tool_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
         "epr_bell_assembly_theorem",
         "figure_eight",
         "figure_eight_necessitation_audit",
@@ -18531,6 +18695,10 @@
         },
         {
           "source": "dynamical_tool_audit",
+          "kind": "references"
+        },
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
         {
@@ -21588,6 +21756,7 @@
         "coherence_matrix_completion_audit",
         "depth_connection_nulls",
         "derivation_atlas",
+        "dynamics_arithmetic_distinction_refinement_audit",
         "figure_eight_necessitation_audit",
         "fourth_generation_revisited",
         "framework_status",
@@ -21684,6 +21853,10 @@
         },
         {
           "source": "derivation_atlas",
+          "kind": "references"
+        },
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
         {
@@ -27044,6 +27217,7 @@
         "boundary_leakage_rate_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
         "isotropy_lemma",
@@ -27082,6 +27256,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
         {
@@ -27561,6 +27739,7 @@
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "conservation_scale_stratification_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
         "framework_status",
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
@@ -27667,6 +27846,10 @@
         },
         {
           "source": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
         {
@@ -28755,6 +28938,7 @@
         "boundary_leakage_rate_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
         "unification_bridge_audits_gaps_1_3"
@@ -28824,6 +29008,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
         {
@@ -30465,6 +30653,7 @@
         "boundary_leakage_rate_audit",
         "coherence_matrix_completion_audit",
         "cone_twist_substrate",
+        "dynamics_arithmetic_distinction_refinement_audit",
         "e_cross_calc",
         "epr_bell_assembly_theorem",
         "explicit_4x4_reduction",
@@ -30564,6 +30753,10 @@
         },
         {
           "source": "cone_twist_substrate",
+          "kind": "references"
+        },
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
         {
@@ -32029,6 +32222,7 @@
         "conservation_scale_stratification_audit",
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
+        "dynamics_arithmetic_distinction_refinement_audit",
         "e_cross_calc",
         "e_cross_discrete_resolution",
         "empty_fork_cap",
@@ -32197,6 +32391,10 @@
         },
         {
           "source": "discrete_extension_principle",
+          "kind": "references"
+        },
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
         {
@@ -33924,6 +34122,7 @@
         "boundary_leakage_rate_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit"
       ],
       "edges": [
@@ -34007,6 +34206,10 @@
         },
         {
           "source": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "source": "dynamics_arithmetic_distinction_refinement_audit",
           "kind": "references"
         },
         {
