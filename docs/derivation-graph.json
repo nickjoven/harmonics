@@ -1,5 +1,5 @@
 {
-  "generated": "005e52a6daac335f78a1799a697a42b46bea56c1",
+  "generated": "82644955dac5d2e4ea12254195ff377f99de4caa",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -15,6 +15,7 @@
         "numerology_inventory"
       ],
       "depended_on_by": [
+        "angular_momentum_three_source_inviolability_audit",
         "ansatz_audit_policy",
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
@@ -52,6 +53,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
         {
           "source": "ansatz_audit_policy",
           "kind": "references"
@@ -2541,6 +2546,137 @@
       ]
     },
     {
+      "id": "angular_momentum_three_source_inviolability_audit",
+      "path": "sync_cost/derivations/angular_momentum_three_source_inviolability_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Angular momentum three-source inviolability audit (B2: Layer H expansion)",
+      "summary": "**Verdict: MODAL \u2713 / GENERATIVE \u2713** on angular momentum\nconservation as a structural identity in the framework's\napparatus, composed from **three independent sources** with a\n**half-twist meta-structure** across three independent\ndimensions (temporal / spatial / mediant).",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "antiparticle_dark_energy_unification_audit",
+        "arrow_inviolability_and_unification_closure_audit",
+        "born_rule",
+        "boundary_leakage_rate_audit",
+        "coherence_matrix_completion_audit",
+        "complex_amplitude_uniqueness",
+        "dynamics_arithmetic_distinction_refinement_audit",
+        "generation_sector_count_audit",
+        "h0_tension_cross_cell_identity_audit",
+        "halt_shock_coherence_audit",
+        "klein_bottle",
+        "klein_bottle_restructure_price",
+        "mass_sector_closure",
+        "modular_form_behavior_cosmological_tongues_audit",
+        "planck_scale",
+        "primes_denominators_circular_geometry_extension_audit",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_conservation_theorem",
+        "q_mod2_planck_emergence_audit",
+        "sine_gordon_substrate",
+        "surface_uniqueness_audit"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "arrow_inviolability_and_unification_closure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "target": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "target": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "target": "dynamics_arithmetic_distinction_refinement_audit",
+          "kind": "references"
+        },
+        {
+          "target": "generation_sector_count_audit",
+          "kind": "references"
+        },
+        {
+          "target": "h0_tension_cross_cell_identity_audit",
+          "kind": "references"
+        },
+        {
+          "target": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_restructure_price",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "sine_gordon_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "surface_uniqueness_audit",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "8264495",
+          "date": "2026-06-06",
+          "subject": "B2: Angular momentum three-source inviolability audit (Layer H expansion) (#238)"
+        }
+      ]
+    },
+    {
       "id": "ansatz_audit_policy",
       "path": "sync_cost/derivations/ansatz_audit_policy.md",
       "cid": null,
@@ -2827,6 +2963,7 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
+        "angular_momentum_three_source_inviolability_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
@@ -2917,6 +3054,10 @@
       ],
       "edged_by": [
         {
+          "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
+        {
           "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
         },
@@ -2995,6 +3136,7 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
+        "angular_momentum_three_source_inviolability_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
@@ -3102,6 +3244,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
         {
           "source": "cmb_silk_damping_acoustic_peaks_audit",
           "kind": "references"
@@ -4713,6 +4859,7 @@
         "INDEX",
         "a1_from_saddle_node",
         "algebraic_forcing_partition",
+        "angular_momentum_three_source_inviolability_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "articulation_audit_2026-05",
         "basepoint_principle",
@@ -4789,6 +4936,10 @@
         },
         {
           "source": "algebraic_forcing_partition",
+          "kind": "references"
+        },
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
           "kind": "references"
         },
         {
@@ -5330,6 +5481,7 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
+        "angular_momentum_three_source_inviolability_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
@@ -5398,6 +5550,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
         {
           "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
@@ -6314,6 +6470,7 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
+        "angular_momentum_three_source_inviolability_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
@@ -6428,6 +6585,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
         {
           "source": "cmb_silk_damping_acoustic_peaks_audit",
           "kind": "references"
@@ -6641,6 +6802,7 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "angular_momentum_three_source_inviolability_audit",
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "axial_trajectory_conservation_audit",
@@ -6710,6 +6872,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
         {
           "source": "antiparticle_dark_energy_unification_audit",
           "kind": "references"
@@ -10226,6 +10392,7 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
+        "angular_momentum_three_source_inviolability_audit",
         "h0_tension_cross_cell_identity_audit",
         "modular_form_behavior_cosmological_tongues_audit",
         "primes_denominators_circular_geometry_extension_audit"
@@ -10305,6 +10472,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
         {
           "source": "h0_tension_cross_cell_identity_audit",
           "kind": "references"
@@ -15040,6 +15211,7 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
+        "angular_momentum_three_source_inviolability_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
         "primes_denominators_circular_geometry_extension_audit"
@@ -15123,6 +15295,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
         {
           "source": "cmb_silk_damping_acoustic_peaks_audit",
           "kind": "references"
@@ -15615,7 +15791,9 @@
         "primes_denominators_circular_geometry_extension_audit",
         "primitives_vs_addresses_candidate"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "angular_momentum_three_source_inviolability_audit"
+      ],
       "edges": [
         {
           "target": "anchor_extremes_audit",
@@ -15678,7 +15856,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "005e52a",
@@ -15895,6 +16078,7 @@
         "surface_uniqueness_audit"
       ],
       "depended_on_by": [
+        "angular_momentum_three_source_inviolability_audit",
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
@@ -15970,6 +16154,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
         {
           "source": "antiparticle_dark_energy_unification_audit",
           "kind": "references"
@@ -18793,6 +18981,7 @@
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
         "anchor_extremes_audit",
+        "angular_momentum_three_source_inviolability_audit",
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "articulation_audit_2026-05",
@@ -18896,6 +19085,10 @@
         },
         {
           "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
           "kind": "references"
         },
         {
@@ -19515,6 +19708,7 @@
       ],
       "depended_on_by": [
         "anchor_extremes_audit",
+        "angular_momentum_three_source_inviolability_audit",
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "basepoint_principle",
@@ -19590,6 +19784,10 @@
       "edged_by": [
         {
           "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
           "kind": "references"
         },
         {
@@ -22027,6 +22225,7 @@
         "address_and_quantity",
         "anchor_count_audit",
         "anchor_extremes_audit",
+        "angular_momentum_three_source_inviolability_audit",
         "axial_trajectory_conservation_audit",
         "basepoint_principle",
         "born_rule_mode_count_extremes_audit",
@@ -22104,6 +22303,10 @@
         },
         {
           "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
           "kind": "references"
         },
         {
@@ -23475,6 +23678,7 @@
         "surface_uniqueness_audit"
       ],
       "depended_on_by": [
+        "angular_momentum_three_source_inviolability_audit",
         "h0_tension_cross_cell_identity_audit"
       ],
       "edges": [
@@ -23544,6 +23748,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
         {
           "source": "h0_tension_cross_cell_identity_audit",
           "kind": "references"
@@ -27603,6 +27811,7 @@
         "INDEX",
         "anchor_count_audit",
         "anchor_extremes_audit",
+        "angular_momentum_three_source_inviolability_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
@@ -27630,6 +27839,10 @@
         },
         {
           "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
           "kind": "references"
         },
         {
@@ -27998,6 +28211,7 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
+        "angular_momentum_three_source_inviolability_audit",
         "h0_tension_cross_cell_identity_audit",
         "modular_form_behavior_cosmological_tongues_audit"
       ],
@@ -28084,6 +28298,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
         {
           "source": "h0_tension_cross_cell_identity_audit",
           "kind": "references"
@@ -28269,6 +28487,7 @@
       ],
       "depended_on_by": [
         "anchor_extremes_audit",
+        "angular_momentum_three_source_inviolability_audit",
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "bicyclist_observer_sequence",
@@ -28351,6 +28570,10 @@
       "edged_by": [
         {
           "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
           "kind": "references"
         },
         {
@@ -29096,6 +29319,7 @@
         "tick_continuum_construction"
       ],
       "depended_on_by": [
+        "angular_momentum_three_source_inviolability_audit",
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "articulation_audit_2026-05",
@@ -29183,6 +29407,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
         {
           "source": "antiparticle_dark_energy_unification_audit",
           "kind": "references"
@@ -29481,6 +29709,7 @@
       ],
       "depended_on_by": [
         "anchor_extremes_audit",
+        "angular_momentum_three_source_inviolability_audit",
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "born_rule_mode_count_extremes_audit",
@@ -29534,6 +29763,10 @@
       "edged_by": [
         {
           "source": "anchor_extremes_audit",
+          "kind": "references"
+        },
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
           "kind": "references"
         },
         {
@@ -31201,6 +31434,7 @@
         "tick_continuum_construction"
       ],
       "depended_on_by": [
+        "angular_momentum_three_source_inviolability_audit",
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "articulation_audit_2026-05",
@@ -31286,6 +31520,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
         {
           "source": "antiparticle_dark_energy_unification_audit",
           "kind": "references"
@@ -33259,6 +33497,7 @@
         "vocabulary_bridge_iteration_2_step_2"
       ],
       "depended_on_by": [
+        "angular_momentum_three_source_inviolability_audit",
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "bicyclist_observer_sequence",
@@ -33321,6 +33560,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
         {
           "source": "antiparticle_dark_energy_unification_audit",
           "kind": "references"
