@@ -1,5 +1,5 @@
 {
-  "generated": "1015332eb66b0d0741b34ed363dd1f05dbdcbc1f",
+  "generated": "191a4ac158df3d1e66a22be4e4ab63613d054785",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -30,6 +30,7 @@
         "half_twist_meta_structure_audit",
         "halt_shock_coherence_audit",
         "klein_antipodal_z2_rep_pattern",
+        "lambda17_test_gamma06_cosmological_audit",
         "master_cascade_identity",
         "modular_form_behavior_cosmological_tongues_audit",
         "negative_results_ledger",
@@ -115,6 +116,10 @@
         },
         {
           "source": "klein_antipodal_z2_rep_pattern",
+          "kind": "references"
+        },
+        {
+          "source": "lambda17_test_gamma06_cosmological_audit",
           "kind": "references"
         },
         {
@@ -4949,6 +4954,7 @@
         "koide_form_substrate_iteration_7",
         "koide_form_substrate_iteration_8",
         "koide_form_substrate_iteration_9",
+        "lambda17_test_gamma06_cosmological_audit",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
         "mass_sector_sqrt_w_phase_a",
@@ -5129,6 +5135,10 @@
         },
         {
           "source": "koide_form_substrate_iteration_9",
+          "kind": "references"
+        },
+        {
+          "source": "lambda17_test_gamma06_cosmological_audit",
           "kind": "references"
         },
         {
@@ -8439,6 +8449,7 @@
       "depended_on_by": [
         "gamma06_cosmological_modular_surface_audit",
         "half_twist_meta_structure_audit",
+        "lambda17_test_gamma06_cosmological_audit",
         "psl2z_noncommutative_core_structural_identity_audit"
       ],
       "edges": [
@@ -8526,6 +8537,10 @@
         },
         {
           "source": "half_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
+          "source": "lambda17_test_gamma06_cosmological_audit",
           "kind": "references"
         },
         {
@@ -14097,7 +14112,9 @@
         "substrate_determinism",
         "unification_bridge_audits_gaps_1_3"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "lambda17_test_gamma06_cosmological_audit"
+      ],
       "edges": [
         {
           "target": "CHAIN_KSTAR",
@@ -14168,7 +14185,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "lambda17_test_gamma06_cosmological_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "1015332",
@@ -17619,6 +17641,7 @@
         "cyclotomic_content_mass_ratios_audit",
         "gamma06_cosmological_modular_surface_audit",
         "horn_branch_iteration_3_step_1",
+        "lambda17_test_gamma06_cosmological_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
@@ -17698,6 +17721,10 @@
         },
         {
           "source": "horn_branch_iteration_3_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "lambda17_test_gamma06_cosmological_audit",
           "kind": "references"
         },
         {
@@ -22023,6 +22050,77 @@
       ]
     },
     {
+      "id": "lambda17_test_gamma06_cosmological_audit",
+      "path": "sync_cost/derivations/lambda17_test_gamma06_cosmological_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "\u03bb_17 test on \u0393_0(6) cosmological eigenforms \u2014 comparison to \"missing 17\" reading",
+      "summary": "**Verdict: MODAL \u2713 / GENERATIVE PARTIAL** with a specific\nempirical reading on the \u03bb_17 question for framework's\ncosmological modular content on \u0393_0(6).",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "born_rule",
+        "cyclotomic_content_mass_ratios_audit",
+        "gamma06_cosmological_modular_surface_audit",
+        "horn_branch_iteration_2_step_2",
+        "modular_form_behavior_cosmological_tongues_audit",
+        "planck_scale",
+        "primes_denominators_circular_geometry_extension_audit",
+        "psl2z_noncommutative_core_structural_identity_audit",
+        "substrate_determinism"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
+          "target": "gamma06_cosmological_modular_surface_audit",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "target": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
+        },
+        {
+          "target": "psl2z_noncommutative_core_structural_identity_audit",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "191a4ac",
+          "date": "2026-06-07",
+          "subject": "\u03bb_17 test on \u0393_0(6) cosmological eigenforms (comparison to PR #235) (#243)"
+        }
+      ]
+    },
+    {
       "id": "lesson_8_35_vs_13_19",
       "path": "sync_cost/derivations/lesson_8_35_vs_13_19.md",
       "cid": "50b37dac141ad0ec3910216197d8d7601990f5226267252383c51da7721eb523",
@@ -24262,6 +24360,7 @@
         "gamma06_cosmological_modular_surface_audit",
         "h0_tension_cross_cell_identity_audit",
         "half_twist_meta_structure_audit",
+        "lambda17_test_gamma06_cosmological_audit",
         "psl2z_noncommutative_core_structural_identity_audit"
       ],
       "edges": [
@@ -24349,6 +24448,10 @@
         },
         {
           "source": "half_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
+          "source": "lambda17_test_gamma06_cosmological_audit",
           "kind": "references"
         },
         {
@@ -28424,6 +28527,7 @@
         "half_twist_meta_structure_audit",
         "halt_shock_coherence_audit",
         "isotropy_lemma",
+        "lambda17_test_gamma06_cosmological_audit",
         "modular_form_behavior_cosmological_tongues_audit",
         "primes_denominators_circular_geometry_extension_audit",
         "psl2z_noncommutative_core_structural_identity_audit",
@@ -28498,6 +28602,10 @@
         },
         {
           "source": "isotropy_lemma",
+          "kind": "references"
+        },
+        {
+          "source": "lambda17_test_gamma06_cosmological_audit",
           "kind": "references"
         },
         {
@@ -28833,6 +28941,7 @@
         "angular_momentum_three_source_inviolability_audit",
         "cyclotomic_content_mass_ratios_audit",
         "h0_tension_cross_cell_identity_audit",
+        "lambda17_test_gamma06_cosmological_audit",
         "modular_form_behavior_cosmological_tongues_audit"
       ],
       "edges": [
@@ -28928,6 +29037,10 @@
         },
         {
           "source": "h0_tension_cross_cell_identity_audit",
+          "kind": "references"
+        },
+        {
+          "source": "lambda17_test_gamma06_cosmological_audit",
           "kind": "references"
         },
         {
@@ -29556,7 +29669,8 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
-        "gamma06_cosmological_modular_surface_audit"
+        "gamma06_cosmological_modular_surface_audit",
+        "lambda17_test_gamma06_cosmological_audit"
       ],
       "edges": [
         {
@@ -29627,6 +29741,10 @@
       "edged_by": [
         {
           "source": "gamma06_cosmological_modular_surface_audit",
+          "kind": "references"
+        },
+        {
+          "source": "lambda17_test_gamma06_cosmological_audit",
           "kind": "references"
         }
       ],
@@ -33794,6 +33912,7 @@
         "inflation_seam_anchor_closure",
         "k_inflation_seam_obstruction",
         "k_of_t_residual_disposition",
+        "lambda17_test_gamma06_cosmological_audit",
         "lesson_epr_gr_qm_unification",
         "lesson_forced_basin_selection",
         "meaning_of_two_wip",
@@ -34023,6 +34142,10 @@
         },
         {
           "source": "k_of_t_residual_disposition",
+          "kind": "references"
+        },
+        {
+          "source": "lambda17_test_gamma06_cosmological_audit",
           "kind": "references"
         },
         {
