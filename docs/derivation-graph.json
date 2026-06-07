@@ -1,5 +1,5 @@
 {
-  "generated": "cafe394a453b6014d6c3eb8d558bd7f3cfb11910",
+  "generated": "1015332eb66b0d0741b34ed363dd1f05dbdcbc1f",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -25,6 +25,7 @@
         "cyclotomic_content_mass_ratios_audit",
         "dynamical_tool_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
+        "gamma06_cosmological_modular_surface_audit",
         "generation_sector_count_audit",
         "half_twist_meta_structure_audit",
         "halt_shock_coherence_audit",
@@ -94,6 +95,10 @@
         },
         {
           "source": "dynamics_arithmetic_distinction_refinement_audit",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
         },
         {
@@ -3002,6 +3007,7 @@
         "coherence_matrix_completion_audit",
         "cyclotomic_content_mass_ratios_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
+        "gamma06_cosmological_modular_surface_audit",
         "generation_sector_count_audit",
         "h0_tension_cross_cell_identity_audit",
         "modular_form_behavior_cosmological_tongues_audit",
@@ -3112,6 +3118,10 @@
         },
         {
           "source": "dynamics_arithmetic_distinction_refinement_audit",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
         },
         {
@@ -4927,6 +4937,7 @@
         "epr_bell_assembly_theorem",
         "framework_status",
         "free_parameter_scorecard",
+        "gamma06_cosmological_modular_surface_audit",
         "ghz_from_substrate",
         "h0_tension_cross_cell_identity_audit",
         "half_twist_meta_structure_audit",
@@ -5070,6 +5081,10 @@
         },
         {
           "source": "free_parameter_scorecard",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
         },
         {
@@ -5549,6 +5564,7 @@
         "coherence_matrix_completion_audit",
         "cyclotomic_content_mass_ratios_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
+        "gamma06_cosmological_modular_surface_audit",
         "generation_sector_count_audit",
         "h0_tension_cross_cell_identity_audit",
         "modular_form_behavior_cosmological_tongues_audit",
@@ -5638,6 +5654,10 @@
           "kind": "references"
         },
         {
+          "source": "gamma06_cosmological_modular_surface_audit",
+          "kind": "references"
+        },
+        {
           "source": "generation_sector_count_audit",
           "kind": "references"
         },
@@ -5691,6 +5711,7 @@
         "down_type_double_cover_phase_c",
         "down_type_double_cover_phase_d",
         "figure_eight_necessitation_audit",
+        "gamma06_cosmological_modular_surface_audit",
         "halt_shock_coherence_audit",
         "horn_branch_iteration_2_step_1",
         "horn_branch_iteration_2_step_2",
@@ -5790,6 +5811,10 @@
         },
         {
           "source": "figure_eight_necessitation_audit",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
         },
         {
@@ -6541,6 +6566,7 @@
         "cmb_silk_damping_acoustic_peaks_audit",
         "cyclotomic_content_mass_ratios_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
+        "gamma06_cosmological_modular_surface_audit",
         "generation_sector_count_audit",
         "h0_tension_cross_cell_identity_audit",
         "half_twist_meta_structure_audit",
@@ -6668,6 +6694,10 @@
         },
         {
           "source": "dynamics_arithmetic_distinction_refinement_audit",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
         },
         {
@@ -8407,6 +8437,7 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "gamma06_cosmological_modular_surface_audit",
         "half_twist_meta_structure_audit",
         "psl2z_noncommutative_core_structural_identity_audit"
       ],
@@ -8489,6 +8520,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
+          "kind": "references"
+        },
         {
           "source": "half_twist_meta_structure_audit",
           "kind": "references"
@@ -14037,6 +14072,112 @@
       ]
     },
     {
+      "id": "gamma06_cosmological_modular_surface_audit",
+      "path": "sync_cost/derivations/gamma06_cosmological_modular_surface_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "\u0393_0(6) cosmological modular surface \u2014 polynomial readings + arithmetic prime audit",
+      "summary": "**Verdict: MODAL \u2713 / GENERATIVE \u2713** on the structural identity",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "antiparticle_dark_energy_unification_audit",
+        "born_rule",
+        "boundary_leakage_rate_audit",
+        "boundary_weight",
+        "coherence_matrix_completion_audit",
+        "cyclotomic_content_mass_ratios_audit",
+        "half_twist_meta_structure_audit",
+        "halt_shock_coherence_audit",
+        "horn_branch_iteration_2_step_2",
+        "klein_bottle",
+        "mass_sector_closure",
+        "modular_form_behavior_cosmological_tongues_audit",
+        "planck_scale",
+        "psl2z_noncommutative_core_structural_identity_audit",
+        "substrate_determinism",
+        "unification_bridge_audits_gaps_1_3"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_leakage_rate_audit",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "target": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
+          "target": "half_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "horn_branch_iteration_2_step_2",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "psl2z_noncommutative_core_structural_identity_audit",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "unification_bridge_audits_gaps_1_3",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "1015332",
+          "date": "2026-06-07",
+          "subject": "\u0393_0(6) cosmological modular surface audit (polynomial + arithmetic prime) (#242)"
+        }
+      ]
+    },
+    {
       "id": "gap1_analytic_proof",
       "path": "sync_cost/derivations/gap1_analytic_proof.md",
       "cid": null,
@@ -16331,6 +16472,7 @@
         "surface_uniqueness_audit"
       ],
       "depended_on_by": [
+        "gamma06_cosmological_modular_surface_audit",
         "psl2z_noncommutative_core_structural_identity_audit"
       ],
       "edges": [
@@ -16409,6 +16551,10 @@
       ],
       "edged_by": [
         {
+          "source": "gamma06_cosmological_modular_surface_audit",
+          "kind": "references"
+        },
+        {
           "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         }
@@ -16454,6 +16600,7 @@
         "coherence_matrix_completion_audit",
         "cyclotomic_content_mass_ratios_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
+        "gamma06_cosmological_modular_surface_audit",
         "generation_sector_count_audit",
         "h0_tension_cross_cell_identity_audit",
         "modular_form_behavior_cosmological_tongues_audit",
@@ -16553,6 +16700,10 @@
         },
         {
           "source": "dynamics_arithmetic_distinction_refinement_audit",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
         },
         {
@@ -17466,6 +17617,7 @@
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "cyclotomic_content_mass_ratios_audit",
+        "gamma06_cosmological_modular_surface_audit",
         "horn_branch_iteration_3_step_1",
         "unification_bridge_audits_gaps_1_3"
       ],
@@ -17538,6 +17690,10 @@
         },
         {
           "source": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
         },
         {
@@ -19382,6 +19538,7 @@
         "figure_eight_necessitation_audit",
         "framework_status",
         "free_parameter_scorecard",
+        "gamma06_cosmological_modular_surface_audit",
         "gauge_dictionary",
         "gauge_factorization",
         "gauge_high_scale_identification",
@@ -19558,6 +19715,10 @@
         },
         {
           "source": "free_parameter_scorecard",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
         },
         {
@@ -22636,6 +22797,7 @@
         "figure_eight_necessitation_audit",
         "fourth_generation_revisited",
         "framework_status",
+        "gamma06_cosmological_modular_surface_audit",
         "generation_sector_count_audit",
         "half_twist_meta_structure_audit",
         "horn_branch_iteration_2_step_2",
@@ -22756,6 +22918,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
         },
         {
@@ -24093,6 +24259,7 @@
       "depended_on_by": [
         "angular_momentum_three_source_inviolability_audit",
         "cyclotomic_content_mass_ratios_audit",
+        "gamma06_cosmological_modular_surface_audit",
         "h0_tension_cross_cell_identity_audit",
         "half_twist_meta_structure_audit",
         "psl2z_noncommutative_core_structural_identity_audit"
@@ -24170,6 +24337,10 @@
         },
         {
           "source": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
         },
         {
@@ -28247,6 +28418,7 @@
         "coherence_matrix_completion_audit",
         "cyclotomic_content_mass_ratios_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
+        "gamma06_cosmological_modular_surface_audit",
         "generation_sector_count_audit",
         "h0_tension_cross_cell_identity_audit",
         "half_twist_meta_structure_audit",
@@ -28302,6 +28474,10 @@
         },
         {
           "source": "dynamics_arithmetic_distinction_refinement_audit",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
         },
         {
@@ -29379,7 +29555,9 @@
         "substrate_determinism",
         "unification_bridge_audits_gaps_1_3"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "gamma06_cosmological_modular_surface_audit"
+      ],
       "edges": [
         {
           "target": "CHAIN_KSTAR",
@@ -29446,7 +29624,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "cafe394",
@@ -33602,6 +33785,7 @@
         "equivalence_dissolution",
         "era_timeline_disposition",
         "framework_status",
+        "gamma06_cosmological_modular_surface_audit",
         "generation_sector_count_audit",
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
@@ -33803,6 +33987,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
         },
         {
@@ -35534,6 +35722,7 @@
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
+        "gamma06_cosmological_modular_surface_audit",
         "generation_sector_count_audit",
         "primes_denominators_circular_geometry_extension_audit",
         "psl2z_noncommutative_core_structural_identity_audit"
@@ -35623,6 +35812,10 @@
         },
         {
           "source": "dynamics_arithmetic_distinction_refinement_audit",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
         },
         {
