@@ -1,5 +1,5 @@
 {
-  "generated": "305349b889f5178dd4993dacc43b89047cb2ae6c",
+  "generated": "cafe394a453b6014d6c3eb8d558bd7f3cfb11910",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -34,6 +34,7 @@
         "negative_results_ledger",
         "numerology_inventory",
         "primes_denominators_circular_geometry_extension_audit",
+        "psl2z_noncommutative_core_structural_identity_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
@@ -129,6 +130,10 @@
         },
         {
           "source": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
+        },
+        {
+          "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         },
         {
@@ -2588,7 +2593,8 @@
       ],
       "depended_on_by": [
         "cyclotomic_content_mass_ratios_audit",
-        "half_twist_meta_structure_audit"
+        "half_twist_meta_structure_audit",
+        "psl2z_noncommutative_core_structural_identity_audit"
       ],
       "edges": [
         {
@@ -2687,6 +2693,10 @@
         },
         {
           "source": "half_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
+          "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         }
       ],
@@ -3171,7 +3181,8 @@
         "h0_tension_cross_cell_identity_audit",
         "half_twist_meta_structure_audit",
         "modular_form_behavior_cosmological_tongues_audit",
-        "primes_denominators_circular_geometry_extension_audit"
+        "primes_denominators_circular_geometry_extension_audit",
+        "psl2z_noncommutative_core_structural_identity_audit"
       ],
       "edges": [
         {
@@ -3306,6 +3317,10 @@
         },
         {
           "source": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
+        },
+        {
+          "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         }
       ],
@@ -4937,6 +4952,7 @@
         "primes_denominators_circular_geometry_extension_audit",
         "primitive_completeness_audit",
         "proposed_residual_closure",
+        "psl2z_noncommutative_core_structural_identity_audit",
         "qm_reframing_programmatic",
         "seismic_eigenstate_dictionary",
         "silk_damping_dissipation",
@@ -5154,6 +5170,10 @@
         },
         {
           "source": "proposed_residual_closure",
+          "kind": "references"
+        },
+        {
+          "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         },
         {
@@ -6878,6 +6898,7 @@
         "lesson_forced_basin_selection",
         "pattern_identification_discipline_candidate",
         "phenomenology_cross_reference",
+        "psl2z_noncommutative_core_structural_identity_audit",
         "q_mod2_planck_emergence_audit",
         "qm_reframing_programmatic",
         "snmc_class_and_entanglement",
@@ -7004,6 +7025,10 @@
         },
         {
           "source": "phenomenology_cross_reference",
+          "kind": "references"
+        },
+        {
+          "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         },
         {
@@ -8382,7 +8407,8 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
-        "half_twist_meta_structure_audit"
+        "half_twist_meta_structure_audit",
+        "psl2z_noncommutative_core_structural_identity_audit"
       ],
       "edges": [
         {
@@ -8465,6 +8491,10 @@
       "edged_by": [
         {
           "source": "half_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
+          "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         }
       ],
@@ -10582,7 +10612,8 @@
         "h0_tension_cross_cell_identity_audit",
         "half_twist_meta_structure_audit",
         "modular_form_behavior_cosmological_tongues_audit",
-        "primes_denominators_circular_geometry_extension_audit"
+        "primes_denominators_circular_geometry_extension_audit",
+        "psl2z_noncommutative_core_structural_identity_audit"
       ],
       "edges": [
         {
@@ -10681,6 +10712,10 @@
         },
         {
           "source": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
+        },
+        {
+          "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         }
       ],
@@ -16295,7 +16330,9 @@
         "substrate_determinism",
         "surface_uniqueness_audit"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "psl2z_noncommutative_core_structural_identity_audit"
+      ],
       "edges": [
         {
           "target": "CHAIN_KSTAR",
@@ -16370,7 +16407,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "psl2z_noncommutative_core_structural_identity_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "3561196",
@@ -19377,6 +19419,7 @@
         "numerology_inventory",
         "primes_denominators_circular_geometry_extension_audit",
         "primitives_vs_addresses_candidate",
+        "psl2z_noncommutative_core_structural_identity_audit",
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
         "q_mod2_planck_emergence_audit",
@@ -19663,6 +19706,10 @@
         },
         {
           "source": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         },
         {
@@ -22617,6 +22664,7 @@
         "phenomenology_cross_reference",
         "primes_denominators_circular_geometry_extension_audit",
         "primitives_vs_addresses_candidate",
+        "psl2z_noncommutative_core_structural_identity_audit",
         "sector_decoupling_phase_a",
         "substrate_prediction_selection",
         "surface_uniqueness_audit",
@@ -22820,6 +22868,10 @@
         },
         {
           "source": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         },
         {
@@ -24042,7 +24094,8 @@
         "angular_momentum_three_source_inviolability_audit",
         "cyclotomic_content_mass_ratios_audit",
         "h0_tension_cross_cell_identity_audit",
-        "half_twist_meta_structure_audit"
+        "half_twist_meta_structure_audit",
+        "psl2z_noncommutative_core_structural_identity_audit"
       ],
       "edges": [
         {
@@ -24125,6 +24178,10 @@
         },
         {
           "source": "half_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
+          "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         }
       ],
@@ -28197,6 +28254,7 @@
         "isotropy_lemma",
         "modular_form_behavior_cosmological_tongues_audit",
         "primes_denominators_circular_geometry_extension_audit",
+        "psl2z_noncommutative_core_structural_identity_audit",
         "q_mod2_planck_emergence_audit",
         "quantum_gravity_interpolation"
       ],
@@ -28272,6 +28330,10 @@
         },
         {
           "source": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
+        },
+        {
+          "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         },
         {
@@ -28892,6 +28954,7 @@
         "halt_shock_coherence_audit",
         "pattern_identification_discipline_candidate",
         "primes_denominators_circular_geometry_extension_audit",
+        "psl2z_noncommutative_core_structural_identity_audit",
         "q_mod2_planck_emergence_audit",
         "torus_branch_iteration_2_step_1",
         "torus_branch_iteration_2_step_2",
@@ -29034,6 +29097,10 @@
         },
         {
           "source": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
+        },
+        {
+          "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         },
         {
@@ -29284,6 +29351,107 @@
           "hash": "c1c4218",
           "date": "2026-05-17",
           "subject": "Close the #PROPOSED residual \u2014 the arc is terminal (#140)"
+        }
+      ]
+    },
+    {
+      "id": "psl2z_noncommutative_core_structural_identity_audit",
+      "path": "sync_cost/derivations/psl2z_noncommutative_core_structural_identity_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "PSL(2,\u2124) noncommutative core structural identity (Mihailescu \u2194 free-product torsion)",
+      "summary": "**Verdict: MODAL \u2713 / GENERATIVE \u2713** on the structural identity",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "angular_momentum_three_source_inviolability_audit",
+        "arrow_inviolability_and_unification_closure_audit",
+        "born_rule",
+        "complex_amplitude_uniqueness",
+        "cyclotomic_content_mass_ratios_audit",
+        "dynamics_arithmetic_distinction_refinement_audit",
+        "half_twist_meta_structure_audit",
+        "klein_bottle",
+        "mass_sector_closure",
+        "modular_form_behavior_cosmological_tongues_audit",
+        "planck_scale",
+        "primitives_vs_addresses_candidate",
+        "q_mod2_conservation_theorem",
+        "substrate_determinism",
+        "unification_bridge_audits_gaps_1_3"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
+        {
+          "target": "arrow_inviolability_and_unification_closure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "complex_amplitude_uniqueness",
+          "kind": "references"
+        },
+        {
+          "target": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
+          "target": "dynamics_arithmetic_distinction_refinement_audit",
+          "kind": "references"
+        },
+        {
+          "target": "half_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "unification_bridge_audits_gaps_1_3",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "cafe394",
+          "date": "2026-06-06",
+          "subject": "PSL(2,\u2124) noncommutative core structural identity (Mihailescu \u2194 free-product torsion) (#241)"
         }
       ]
     },
@@ -29745,6 +29913,7 @@
         "meaning_of_two_wip",
         "phenomenology_cross_reference",
         "predictions_horizon_2026",
+        "psl2z_noncommutative_core_structural_identity_audit",
         "q_mod2_mediant_projection",
         "q_mod2_planck_emergence_audit",
         "qm_reframing_programmatic",
@@ -29922,6 +30091,10 @@
         },
         {
           "source": "predictions_horizon_2026",
+          "kind": "references"
+        },
+        {
+          "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         },
         {
@@ -33447,6 +33620,7 @@
         "preferred_basis_dissolution",
         "primes_denominators_circular_geometry_extension_audit",
         "primitives_vs_addresses_candidate",
+        "psl2z_noncommutative_core_structural_identity_audit",
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
         "qm_reframing_programmatic",
@@ -33701,6 +33875,10 @@
         },
         {
           "source": "primitives_vs_addresses_candidate",
+          "kind": "references"
+        },
+        {
+          "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         },
         {
@@ -35357,7 +35535,8 @@
         "coherence_matrix_completion_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
         "generation_sector_count_audit",
-        "primes_denominators_circular_geometry_extension_audit"
+        "primes_denominators_circular_geometry_extension_audit",
+        "psl2z_noncommutative_core_structural_identity_audit"
       ],
       "edges": [
         {
@@ -35452,6 +35631,10 @@
         },
         {
           "source": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
+        },
+        {
+          "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         }
       ],
