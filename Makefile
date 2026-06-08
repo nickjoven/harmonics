@@ -120,7 +120,7 @@ FIGURES := \
 	$(DERIVATIONS)/window_normalization.png \
 	$(DERIVATIONS)/klein_phase_diagram.png
 
-.PHONY: all gifs figures clean lint lint-fix format
+.PHONY: all gifs figures clean lint lint-fix format bibliography bibliography-check
 
 all: gifs figures
 
@@ -147,6 +147,24 @@ lint-fix:
 # no semantic changes. Preview before committing.
 format:
 	ruff format sync_cost/derivations/
+
+# ───────────────────────── Bibliography ─────────────────────────
+#
+# Extracts the inline arXiv:/doi: citations from sync_cost/**.md,
+# resolves each against the arXiv and CrossRef APIs (cached in
+# scripts/bibliography/cache.json), and regenerates references.bib,
+# REFERENCES.md, and docs/bibliography.json. Run after adding or
+# changing a citation, then commit the artifacts. On main, the
+# bibliography.yml workflow regenerates and bot-commits these for you.
+
+bibliography:
+	$(PYTHON) scripts/bibliography/build_bibliography.py build
+
+# Validate that every citation resolves to a real paper and the
+# generated artifacts are current. Mirrors the CI gate. Add OFFLINE=1
+# to validate from cache without touching the network.
+bibliography-check:
+	$(PYTHON) scripts/bibliography/build_bibliography.py check $(if $(OFFLINE),--offline,)
 
 # ───────────────────────── Preview ─────────────────────────
 #
