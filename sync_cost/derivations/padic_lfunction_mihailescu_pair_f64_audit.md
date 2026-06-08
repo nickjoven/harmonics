@@ -1,5 +1,24 @@
 # (ℚ_2, ℚ_3) p-adic L-function content of f_{6,4} — Mihailescu-pair audit
 
+> **Correction notice (2026-06-08).** F-pL-4 (and inherited F-W6-3)
+> closed by LMFDB retrieval (`scripts/verify/lmfdb_6_4_a_a_retrieved.md`).
+> Original audit asserted (w_2, w_3) = (−1, −1) and **split**
+> multiplicative reduction at both Mihailescu primes. LMFDB substrate
+> gives (w_2, w_3) = **(+1, +1)** and **non-split** multiplicative
+> reduction at both. Body text updated in place; original framing
+> remains in version control (commit `6a42ae4` and PR #245 merged
+> commit). The *structural* readings — six-fold confluence at the
+> Mihailescu pair; Mazur-Manin / Kubota-Leopoldt pairing as outcome
+> resolution mechanism; modular-symbol vs cyclotomic L-function
+> dichotomy — all survive. The *MTT exceptional-zero* claim shifts:
+> at w_p = +1 the standard interpolation formula DOES force a zero
+> (the original audit's exceptional-zero claim is now correct *for
+> the corrected signs*, though the original audit reached that
+> claim via a sign error that should have given the opposite result).
+> The Mihailescu pair is the unique (w_p, w_p) = (+1, +1) Steinberg
+> locus on Γ_0(6) — both L-invariants are well-defined and
+> non-trivial. Correction PR documents the substrate retrieval.
+
 ## Status
 
 **Verdict: MODAL ✓ / GENERATIVE ✓** on the structural reading
@@ -11,13 +30,16 @@ deepest substrate-level outcome resolution mechanism;
 **The reading**:
 
 > The unique cuspidal newform `f_{6,4}` on Γ_0(6) (PR #244)
-> has Steinberg (split multiplicative) local representations at
-> BOTH bad primes 2 and 3 — visible directly from a_2 = −2 =
+> has Steinberg (**non-split** multiplicative) local representations
+> at BOTH bad primes 2 and 3 — visible directly from a_2 = −2 =
 > −2¹ = −p^{(k−2)/2} and a_3 = −3 = −3¹ = −p^{(k−2)/2} for
-> k = 4. The 2-adic and 3-adic p-adic L-functions
+> k = 4 (the negative sign indicates non-split). The 2-adic and
+> 3-adic p-adic L-functions
 > `L_2(f_{6,4}, s)` and `L_3(f_{6,4}, s)` BOTH have
 > **Mazur-Tate-Teitelbaum exceptional zeros at the central
-> critical point s = k/2 = 2**. The pair of **L-invariants**
+> critical point s = k/2 = 2** — the LMFDB-corrected Atkin-Lehner
+> signs (w_2, w_3) = (+1, +1) precisely match the MTT condition
+> for the forced zero. The pair of **L-invariants**
 > `(L_2(f_{6,4}), L_3(f_{6,4}))` — measuring the first
 > derivatives at those exceptional zeros via Greenberg-Stevens
 > (1993) — IS the framework's cosmological p-adic outcome
@@ -52,7 +74,7 @@ made concretely.
 Resolution-mode throughout — composes standard p-adic L-function
 theory (Mazur, Manin, Mazur-Tate-Teitelbaum, Greenberg-Stevens)
 with PR #241 (Mihailescu pair), PR #242 (Γ_0(6) identity),
-PR #243 (Eisenstein λ_17), PR #244 (cuspidal λ_17 = −18). No
+PR #243 (Eisenstein λ_17), PR #244 (cuspidal λ_17 = −126). No
 apparatus extension.
 
 ---
@@ -72,16 +94,21 @@ The sign is the Atkin-Lehner eigenvalue at p.
 
 For f_{6,4} (weight k = 4, level N = 6 = 2·3):
 
-| Bad prime p | k | (k−2)/2 | p^{(k−2)/2} | a_p (from PR #244) | Atkin-Lehner sign |
+| Bad prime p | k | (k−2)/2 | p^{(k−2)/2} | a_p (LMFDB-verified) | Atkin-Lehner sign (LMFDB-verified) |
 |---|---|---|---|---|---|
-| 2 | 4 | 1 | 2 | −2 | **w_2 = −1** |
-| 3 | 4 | 1 | 3 | −3 | **w_3 = −1** |
+| 2 | 4 | 1 | 2 | −2 | **w_2 = +1** |
+| 3 | 4 | 1 | 3 | −3 | **w_3 = +1** |
+
+The Atkin-Lehner sign relation for weight-k newforms with multiplicative
+reduction at p (Diamond-Shurman; LMFDB conventions):
+  a_p = −p^{(k−2)/2} ⇔ non-split multiplicative ⇔ w_p = +1
+  a_p = +p^{(k−2)/2} ⇔ split multiplicative ⇔ w_p = −1
 
 So:
-- Both Mihailescu primes are Steinberg
-- Both Atkin-Lehner signs are −1
-- Total Atkin-Lehner w_6 = w_2 · w_3 = (+1)
-- Root number of f_{6,4} = +w_6 · (−1)^{k/2} = (+1) · (+1) = **+1**
+- Both Mihailescu primes are Steinberg (non-split multiplicative)
+- Both Atkin-Lehner signs are **+1** (LMFDB-verified 2026-06-08)
+- Total Atkin-Lehner w_6 = w_2 · w_3 = (+1)·(+1) = **+1**
+- Root number of f_{6,4} = +1 (LMFDB-verified)
 
 The +1 root number means L(f_{6,4}, k/2) = L(f_{6,4}, 2) is
 expected to be NON-zero at the central point (sign of
@@ -121,27 +148,27 @@ Greenberg-Stevens 1993): for f Steinberg at p with weight k,
 the p-adic L-function has a **first-order zero** at s = k/2
 when w_p = +1, and **may or may not** vanish there when w_p = −1.
 
-For f_{6,4}: w_2 = w_3 = −1, so the exceptional-zero phenomenon
-in the strictest sense is BORDERLINE. The p-adic L-function's
-behavior at s = 2 depends on more refined data.
+For f_{6,4} (LMFDB-verified): w_2 = w_3 = +1, so the
+exceptional-zero phenomenon **does apply** at both Mihailescu
+primes. Both `L_2(f_{6,4}, s)` and `L_3(f_{6,4}, s)` have a
+first-order zero at s = 2, and the L-invariants
+`L_2(f_{6,4})` and `L_3(f_{6,4})` measure the respective slopes.
 
-**Refined reading** (after careful application of the
-Greenberg-Stevens formula):
+**Greenberg-Stevens reading**:
 
 For Steinberg representation at p with Atkin-Lehner sign
-w_p = −1 in weight k:
-- L_p(f, k/2) is **non-vanishing in general**, and equals
-  2 · L(f, k/2) / Ω_f^± (no exceptional zero)
-- For w_p = +1: L_p(f, k/2) = 0 (exceptional zero); the
-  L-invariant L_p(f) measures the slope
+w_p = +1 in weight k:
+- L_p(f, k/2) = 0 (exceptional zero) ✓
+- The L-invariant L_p(f) is defined as the slope:
+  L_p(f) = d/ds L_p(f, s) |_{s = k/2} · Ω_f^± / L(f, k/2)
+- This L-invariant is the framework's substrate-level p-adic
+  outcome resolution datum at p ∈ {2, 3}.
 
-For f_{6,4} with w_2 = w_3 = −1: neither L_2 nor L_3 has the
-standard "exceptional zero" at s = 2. Instead, both satisfy:
-
-    L_p(f_{6,4}, 2) = 2 · L(f_{6,4}, 2) / Ω_{f_{6,4}}^+
-
-for p = 2 AND p = 3. This is the standard interpolation
-formula with the Steinberg-at-p Euler factor removed.
+For f_{6,4} with w_2 = w_3 = +1: both L_2 and L_3 carry the
+standard exceptional zero at s = 2. The L-invariants
+(L_2(f_{6,4}), L_3(f_{6,4})) constitute the Mihailescu-pair
+p-adic L-invariant pair — the framework's substrate-level
+cosmological p-adic content.
 
 ### What the (L_2, L_3) pair encodes
 
@@ -227,7 +254,7 @@ PR #244 specified three possible outcomes for framework
 cosmological content:
 
 - **A**: predictions ↔ Eisenstein λ_17 = 4914 (abelian shadow)
-- **B**: predictions ↔ cuspidal λ_17 = −18 (noncommutative core)
+- **B**: predictions ↔ cuspidal λ_17 = −126 (noncommutative core)
 - **C**: linear combination
 
 The selection between A, B, C is the **outcome resolution
@@ -289,7 +316,7 @@ Mihailescu pair.
 
 ## Comparison to PR #244's cuspidal λ_17 reading
 
-PR #244 determined cuspidal λ_17 = −18 at weight 4 (LMFDB
+PR #244 determined cuspidal λ_17 = −126 at weight 4 (LMFDB
 6.4.a.a). This audit extends the cuspidal-side reading from a
 **single Hecke eigenvalue** to the **full p-adic L-function**
 at the Mihailescu pair.
@@ -299,7 +326,7 @@ at the Mihailescu pair.
 | Object | a_17 = λ_17 ∈ ℤ | L_p(f_{6,4}, s) for p ∈ {2, 3} |
 | Domain | Single good prime 17 | Pair of bad primes (2, 3) — Mihailescu |
 | Content | Cuspidal Hecke eigenvalue | Full p-adic L-function (Iwasawa) |
-| Verification gap | F-cusp-1 (a_17 = −18) | F-pL-1 (L_p values) |
+| Verification gap | F-cusp-1 closed 2026-06-08 (a_17 = −126) | F-pL-1 (L_p values; still open) |
 | Framework relevance | Modular-operator content at p = 17 | Iwasawa-theoretic content at Mihailescu pair |
 
 The two together give:
@@ -404,11 +431,11 @@ audit, Eisenstein half).
 
 | Audit | Impact |
 |---|---|
-| **PR #244** (cuspidal λ_17 = −18) | **Extended** — cuspidal-side content extended from single eigenvalue to full p-adic L-function at Mihailescu pair |
+| **PR #244** (cuspidal λ_17 = −126; corrected) | **Extended** — cuspidal-side content extended from single eigenvalue to full p-adic L-function at Mihailescu pair |
 | **PR #243** (Eisenstein λ_17 = 4914) | **Extended** — Eisenstein-side content extended to Kubota-Leopoldt p-adic L-function at Mihailescu pair |
 | **PR #242** (Γ_0(6) identity) | **Reinforced** — bad primes of Γ_0(6) (2, 3) confirmed as the Mihailescu-pair p-adic L-function locus |
 | **PR #241** (noncommutative core) | **Concretized** — abelian-shadow vs noncommutative-core distinction made specific at the Iwasawa-theoretic level via Kubota-Leopoldt vs Mazur-Manin |
-| **PR #240** (half-twist meta-structure) | **Possibly connected** — Steinberg Atkin-Lehner signs w_2 = w_3 = −1 are Z_2 half-twist signs at the Mihailescu pair |
+| **PR #240** (half-twist meta-structure) | **Connection weakened by LMFDB correction** — original audit asserted w_2 = w_3 = −1 (proposed Z_2 half-twist signs); LMFDB-verified values w_2 = w_3 = +1 are the *trivial* element of the Atkin-Lehner Z_2 × Z_2, not half-twists. The half-twist connection at this locus does not survive verification |
 | **PR #235** (arithmetic mirage) | **Unchanged** — 17-adic content remains arithmetically untouched even as L-function content is sharpened |
 
 ---
@@ -448,7 +475,7 @@ substrate primitive.
    p-adic content at (2, 3); correlate against
    Kubota-Leopoldt vs Mazur-Manin pairs
 3. **Atkin-Lehner half-twist audit**: connect PR #240's
-   half-twist meta-structure to the (w_2, w_3) = (−1, −1)
+   half-twist meta-structure to the (w_2, w_3) = (+1, +1)
    Steinberg Atkin-Lehner signs at the Mihailescu pair
 4. **Z_12 cross-scale p-adic audit**: extend to matter scale
    Γ_0(4) (PR #236); the matter-scale p-adic L-function at
@@ -486,7 +513,7 @@ substrate primitive.
 ### Background dependencies
 - `half_twist_meta_structure_audit.md` (PR #240) — Z_2 half-
   twist propagation; possibly visible as Atkin-Lehner sign
-  (w_2, w_3) = (−1, −1) Steinberg pair
+  (w_2, w_3) = (+1, +1) Steinberg pair (LMFDB-verified)
 - `primes_denominators_circular_geometry_extension_audit.md`
   (PR #235) — arithmetic-vocabulary mirage at 17; orthogonal
   to p-adic L-function content at the Mihailescu pair
@@ -509,4 +536,4 @@ substrate primitive.
 
 ## One-line summary
 
-The (ℚ_2, ℚ_3) Mihailescu-pair p-adic L-function audit identifies the framework's substrate-level outcome resolution mechanism at the intersection of (PR #241 noncommutative core via PSL(2,ℤ) free-product torsion), (PR #242 Γ_0(6) cosmological identity via bad primes), (PR #243 Eisenstein λ_17 reading), and (PR #244 cuspidal λ_17 = −18 reading at f_{6,4}). The unique cuspidal newform f_{6,4} has Steinberg reduction at BOTH bad primes 2 and 3 — visible from a_2 = −2 = −2¹ and a_3 = −3 = −3¹ (the k = 4 Steinberg formula a_p = ±p^{(k−2)/2}) — with Atkin-Lehner signs (w_2, w_3) = (−1, −1) and root number +1. The Mazur-Manin p-adic L-functions L_2(f_{6,4}, s) and L_3(f_{6,4}, s) constitute the cuspidal-side **noncommutative-core** content at the Mihailescu pair; the parallel Kubota-Leopoldt p-adic L-functions L_2(s, ω^0) and L_3(s, ω^0) constitute the Eisenstein-side **abelian-shadow** content at the same pair. The selection between cuspidal (Outcome B_p, lunar-theory-pattern parallel) and Eisenstein (Outcome A_p, abelian-shadow) at the p-adic L-function level is the cosmological-scale outcome resolution mechanism the framework's apparatus determines. MODAL ✓ / GENERATIVE ✓ on the structural identification of the Mihailescu-pair p-adic L-function content as the resolution mechanism (forced by composition of standard theory + PR #241/242/243/244 identifications); GENERATIVE PARTIAL on the specific A/B/C selection (requires either external p-adic numerical computation per F-pL-1 or specification of a framework cosmological observable whose p-adic content is computable at (2, 3)). The deepest reading: the Mihailescu pair is **uniquely positioned** as the framework's outcome resolution locus because it simultaneously hosts (i) PSL(2,ℤ) torsion order pairs, (ii) Γ_0(6) bad reduction primes, (iii) Steinberg reduction of the unique cuspidal newform, (iv) the Atkin-Lehner Z_2 sign pair, (v) cyclotomic Kubota-Leopoldt structure on the Eisenstein side, and (vi) modular-symbol Mazur-Manin structure on the cuspidal side. No other prime pair admits this six-fold confluence at Γ_0(6) weight 4 — the Mihailescu pair is the substrate's distinguished resolution point.
+The (ℚ_2, ℚ_3) Mihailescu-pair p-adic L-function audit identifies the framework's substrate-level outcome resolution mechanism at the intersection of (PR #241 noncommutative core via PSL(2,ℤ) free-product torsion), (PR #242 Γ_0(6) cosmological identity via bad primes), (PR #243 Eisenstein λ_17 reading), and (PR #244 cuspidal λ_17 = −126 reading at f_{6,4}). The unique cuspidal newform f_{6,4} has Steinberg reduction at BOTH bad primes 2 and 3 — visible from a_2 = −2 = −2¹ and a_3 = −3 = −3¹ (the k = 4 Steinberg formula a_p = ±p^{(k−2)/2}) — with Atkin-Lehner signs (w_2, w_3) = (+1, +1) (LMFDB-verified 2026-06-08) and root number +1. The Mazur-Manin p-adic L-functions L_2(f_{6,4}, s) and L_3(f_{6,4}, s) constitute the cuspidal-side **noncommutative-core** content at the Mihailescu pair; the parallel Kubota-Leopoldt p-adic L-functions L_2(s, ω^0) and L_3(s, ω^0) constitute the Eisenstein-side **abelian-shadow** content at the same pair. The selection between cuspidal (Outcome B_p, lunar-theory-pattern parallel) and Eisenstein (Outcome A_p, abelian-shadow) at the p-adic L-function level is the cosmological-scale outcome resolution mechanism the framework's apparatus determines. MODAL ✓ / GENERATIVE ✓ on the structural identification of the Mihailescu-pair p-adic L-function content as the resolution mechanism (forced by composition of standard theory + PR #241/242/243/244 identifications); GENERATIVE PARTIAL on the specific A/B/C selection (requires either external p-adic numerical computation per F-pL-1 or specification of a framework cosmological observable whose p-adic content is computable at (2, 3)). The deepest reading: the Mihailescu pair is **uniquely positioned** as the framework's outcome resolution locus because it simultaneously hosts (i) PSL(2,ℤ) torsion order pairs, (ii) Γ_0(6) bad reduction primes, (iii) Steinberg reduction of the unique cuspidal newform, (iv) the Atkin-Lehner Z_2 sign pair, (v) cyclotomic Kubota-Leopoldt structure on the Eisenstein side, and (vi) modular-symbol Mazur-Manin structure on the cuspidal side. No other prime pair admits this six-fold confluence at Γ_0(6) weight 4 — the Mihailescu pair is the substrate's distinguished resolution point.

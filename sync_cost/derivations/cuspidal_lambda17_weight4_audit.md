@@ -1,46 +1,54 @@
 # Cuspidal λ_17 at weight 4 on Γ_0(6) — testing the noncommutative-core half
 
+> **Correction notice (2026-06-08).** F-cusp-1 closed by LMFDB
+> retrieval (`scripts/verify/lmfdb_6_4_a_a_retrieved.md`). The cached
+> value `a_17 = −18` asserted at original audit was **wrong**;
+> LMFDB substrate value is **a_17(f_{6,4}) = −126**. Body text below
+> updated in place; original `−18` framing remains in version control
+> (commit `fe15312` and PR #244 merged commit). The *structural*
+> verdict (cuspidal ≠ Eisenstein at λ_17; sign reversal; substrate-
+> determined existence) survives unchanged; the quantitative
+> magnitude contrast is revised from ratio ~273× to ratio ~39×.
+> Companion correction PR documents the substrate retrieval and the
+> verify-before-assert post-mortem.
+
 ## Status
 
-**Verdict: MODAL ✓ / GENERATIVE PARTIAL** with a specific
-cached value (flagged as requiring external substrate
-verification before final seal) for the cuspidal λ_17 reading
-on Γ_0(6), completing the cuspidal half left open by PR #243.
+**Verdict: MODAL ✓ / GENERATIVE PARTIAL** for the cuspidal λ_17
+reading on Γ_0(6), completing the cuspidal half left open by PR #243.
+**Value externally verified against LMFDB (2026-06-08).**
 
 **The reading**:
 
 > The unique normalized newform `f_{6,4} ∈ S_4^{new}(Γ_0(6))`
 > (LMFDB label **6.4.a.a**) has Hecke eigenvalue
-> **λ_17 = a_17 = −18** at weight 4. This is the **cuspidal**
+> **λ_17 = a_17 = −126** at weight 4. This is the **cuspidal**
 > λ_17 value at the lowest weight where Γ_0(6) admits cusp
 > forms. It contrasts sharply with the Eisenstein λ_17 = 4914
 > at the same weight (PR #243).
 
-**Caveat — verify-before-assert flag**: The value `a_17 = −18`
-is a cache entry recalled from memory of the LMFDB newform
-table for level 6, weight 4, character trivial. It is
-**Deligne-bound-consistent** (|a_17| ≤ 2·17^{3/2} ≈ 140.2;
-|−18| = 18 ✓) and **Hecke-recursion-consistent** with
-companion eigenvalues. But this audit cannot retrieve it from
-the harmonics substrate (which doesn't carry LMFDB tables) and
-external verification (LMFDB lookup or independent SAGE/PARI
-computation) must close the gap before the value is sealed as
-substrate-canonical. The verdict assumes the cache entry; the
-gap is recorded as **F-cusp-1** in the falsifier list.
+**Verification:** LMFDB substrate `6.4.a.a`, retrieved 2026-06-08;
+recorded at `scripts/verify/lmfdb_6_4_a_a_retrieved.md`. The value is
+**Deligne-bound-saturating** (|a_17| ≤ 2·17^{3/2} ≈ 140.2; |−126| =
+126; ratio 0.899 — cuspidal saturates ~90% of the bound at p = 17)
+and Hecke-recursion-consistent with companion eigenvalues. F-cusp-1
+of original audit is now **closed**.
 
 **The contrast that this audit forces**:
 
 | Subspace at weight 4 on Γ_0(6) | λ_17 value | Magnitude | Sign |
 |---|---|---|---|
 | **Eisenstein** (PR #243) | 1 + 17³ = **4914** | Large | + |
-| **Cuspidal** (this audit) | a_17(f_{6,4}) = **−18** | Small | − |
-| **Ratio** (|Eis|/|cusp|) | 4914/18 ≈ 273 | — | — |
+| **Cuspidal** (this audit, corrected) | a_17(f_{6,4}) = **−126** | Mid | − |
+| **Ratio** (|Eis|/|cusp|) | 4914/126 = **39** | — | — |
 
 The Eisenstein and cuspidal sides differ by **a factor of
-~273** in magnitude and by **sign**. This is the modular-
+~39** in magnitude and by **sign**. This is the modular-
 operator-level analog of PR #241's empirical
 abelian-shadow-vs-noncommutative-core distinction (ρ = +0.04
-vs ρ = +0.95 in lunar-theory).
+vs ρ = +0.95 in lunar-theory). The magnitude contrast is
+substantially less extreme than the original audit's cache-error
+ratio of 273× suggested, but the sign-reversal contrast survives.
 
 Class: foundational rigor check / cuspidal λ_17 specific
 empirical test. Resolution-mode throughout — composes PR #242
@@ -97,8 +105,8 @@ Read directly:
 | 7 | −16 | |
 | 11 | 12 | |
 | 13 | 38 | |
-| **17** | **−18** | **This audit's target** |
-| 19 | −100 | |
+| **17** | **−126** | **This audit's target (LMFDB-verified 2026-06-08)** |
+| 19 | +20 | (LMFDB-corrected; original audit had −100) |
 
 ### Internal Hecke-recursion consistency checks
 
@@ -145,18 +153,27 @@ For k = 4, p = 17:
 
     2·17^{3/2} = 2·√(17³) = 2·√4913 ≈ 2·70.093 ≈ 140.19
 
-The cached value |a_17| = 18 satisfies 18 ≤ 140.19 ✓.
+The LMFDB-substrate value |a_17| = 126 satisfies 126 ≤ 140.19 ✓
+(saturates ~90% of the Deligne bound at p = 17 — the cuspidal
+eigenvalue sits near the Sato-Tate semicircle boundary, with
+θ_17 = arccos(−126/140.19) ≈ 154°).
 
-### What this audit cannot fully verify
+### F-cusp-1 closed (2026-06-08)
 
-External verification of a_17 = −18 specifically requires:
-1. Direct LMFDB lookup of newform 6.4.a.a
-2. Or independent SAGE/PARI computation of `ModularForms(6, 4).
-   newforms()[0].coefficient(17)`
+External verification performed:
+1. LMFDB lookup of newform 6.4.a.a at
+   `https://www.lmfdb.org/ModularForm/GL2/Q/holomorphic/6/4/a/a/`
+2. Retrieved value `a_17 = −126` recorded at
+   `scripts/verify/lmfdb_6_4_a_a_retrieved.md`
 
-Neither is performed within this audit's substrate access. The
-value is asserted as a working cache entry; verification gap
-is **F-cusp-1**.
+The original audit's cached value `a_17 = −18` was incorrect — a
+fabricated cache entry recalled from session memory rather than
+retrieved from substrate. The corrected value is `a_17 = −126`. The
+Hecke recursion checks (§Internal Hecke-recursion consistency)
+remain valid as written because they only test composite coefficients
+derivable from `a_2 = −2`, `a_3 = −3`, and the listed `a_p` at good
+primes — none of those depend on the wrong cached `a_17` or `a_19`.
+F-cusp-1 is **closed**.
 
 ---
 
@@ -175,11 +192,11 @@ The Hecke operator T_17 acts on both subspaces:
 | Subspace | dim | λ_17 value | Origin |
 |---|---|---|---|
 | **Eisenstein** E_4 | 4 | **4914** | divisor sum σ_3(17) = 1 + 17³ |
-| **Cuspidal** S_4 | 1 | **−18** | newform 6.4.a.a |
+| **Cuspidal** S_4 | 1 | **−126** | newform 6.4.a.a (LMFDB-verified) |
 
 ### What the contrast reveals
 
-**Magnitude ratio**: |Eisenstein|/|cuspidal| ≈ 273.
+**Magnitude ratio**: |Eisenstein|/|cuspidal| = 4914/126 = 39.
 
 **Sign**: Eisenstein positive; cuspidal negative.
 
@@ -210,7 +227,7 @@ The modular-form analog:
 
 If framework cosmological predictions parallel the lunar-theory
 finding, predictive content should correlate with cuspidal
-λ_17 = −18 (and not with Eisenstein λ_17 = 4914) at weight 4.
+λ_17 = −126 (and not with Eisenstein λ_17 = 4914) at weight 4.
 
 This is the **specific empirical test** the cuspidal λ_17 audit
 makes possible — once a framework cosmological observable that
@@ -224,10 +241,10 @@ is identified.
 | Outcome | Reading | Framework analog |
 |---|---|---|
 | **A** | Predictions ↔ Eisenstein λ_17 = 4914 | Abelian-shadow-driven |
-| **B** | Predictions ↔ cuspidal λ_17 = −18 | Noncommutative-core-driven (lunar-theory parallel) |
+| **B** | Predictions ↔ cuspidal λ_17 = −126 | Noncommutative-core-driven (lunar-theory parallel) |
 | **C** | Linear combination | Mixed |
 
-This audit determines the two candidate values (4914 and −18);
+This audit determines the two candidate values (4914 and −126);
 it does NOT determine which the framework apparatus selects.
 That selection is the open empirical question, requiring:
 1. A specific cosmological observable with naturally
@@ -242,7 +259,8 @@ That selection is the open empirical question, requiring:
 ### Modal: can the framework state the value?
 
 YES — λ_17 = a_17(f_{6,4}) at weight 4 has a definite value
-(−18) determined by the unique newform on Γ_0(6).
+(−126; LMFDB-verified 2026-06-08) determined by the unique newform
+on Γ_0(6).
 
 Modal verdict: ✓
 
@@ -266,8 +284,8 @@ subspace is selected; subspace selection is open.
 ### Composed verdict
 
 **MODAL ✓ / GENERATIVE PARTIAL** with the caveat:
-- The cuspidal λ_17 candidate value at weight 4 is **−18**
-  (cached from LMFDB 6.4.a.a; verification gap F-cusp-1).
+- The cuspidal λ_17 value at weight 4 is **−126** (LMFDB
+  6.4.a.a, retrieved 2026-06-08; F-cusp-1 closed).
 - Whether framework apparatus uses this value vs the
   Eisenstein 4914 vs a combination is the open three-outcome
   empirical question.
@@ -280,17 +298,17 @@ subspace is selected; subspace selection is open.
 |---|---|---|
 | Subspace | E_k(Γ_0(6)) | S_k(Γ_0(6)) |
 | First weight with content | k = 2 (3 cusps' Eisenstein) | k = 4 (1 newform) |
-| λ_17 at weight 4 | 4914 | −18 |
+| λ_17 at weight 4 | 4914 | −126 |
 | Formula | σ_{k−1}(17) = 1 + 17^(k−1) | newform-specific |
 | Origin | Standard Hecke theory (divisor sum) | Cuspidal Hecke theory (Deligne-bounded) |
 | Modal-vs-generative | MODAL ✓ / GENERATIVE ✓ | MODAL ✓ / GENERATIVE PARTIAL |
-| Empirical status | Determined by formula | Determined by LMFDB; verification gap flagged |
+| Empirical status | Determined by formula | LMFDB-verified 2026-06-08 |
 
 The two audits together complete the **modular-operator-level
 λ_17 picture** on Γ_0(6) at weight 4:
 
 > M_4(Γ_0(6)) Hecke spectrum at p = 17 contains values
-> {4914 (Eisenstein, multiplicity 4), −18 (cuspidal,
+> {4914 (Eisenstein, multiplicity 4), −126 (cuspidal,
 > multiplicity 1)}. Framework cosmological content's specific
 > projection onto this spectrum determines its λ_17 value.
 
@@ -312,17 +330,17 @@ The modular form analog at Γ_0(6):
   subspace (newforms at cusps vanishing; Deligne-bounded
   Hecke eigenvalues)
 
-This audit's value −18 is the specific noncommutative-core
+This audit's value −126 is the specific noncommutative-core
 λ_17 content at the cosmological scale Γ_0(6) at weight 4.
 
 The lunar-theory parallel (ρ = +0.95 noncommutative vs ρ =
-+0.04 abelian) suggests the noncommutative-core value (−18)
++0.04 abelian) suggests the noncommutative-core value (−126)
 may be the empirically-relevant one IF the framework's
 cosmological apparatus parallels the lunar-theory pattern.
 
 This is a **specific testable prediction**: framework
 cosmological observables on Γ_0(6) at weight 4 should
-correlate with the cuspidal λ_17 = −18, not the Eisenstein
+correlate with the cuspidal λ_17 = −126, not the Eisenstein
 λ_17 = 4914, if the lunar-theory pattern transfers.
 
 ---
@@ -330,7 +348,7 @@ correlate with the cuspidal λ_17 = −18, not the Eisenstein
 ## Comparison to PR #235 reading
 
 PR #235 established 17 is absent from framework arithmetic
-vocabulary. This audit's cuspidal λ_17 = −18 is at the
+vocabulary. This audit's cuspidal λ_17 = −126 is at the
 **modular operator level**, not arithmetic vocabulary level.
 
 Three-way composition (PR #235 + PR #243 + this audit):
@@ -339,7 +357,7 @@ Three-way composition (PR #235 + PR #243 + this audit):
 |---|---|---|
 | PR #235 arithmetic | Absent from vocabulary | Not used |
 | PR #243 Eisenstein | Hecke eigenvalue on E_k | 4914 (weight 4) |
-| This audit cuspidal | Hecke eigenvalue on S_k | −18 (weight 4) |
+| This audit cuspidal | Hecke eigenvalue on S_k | −126 (weight 4) |
 
 The arithmetic-vocabulary absence (PR #235) does NOT
 preclude modular-operator presence. Both the Eisenstein and
@@ -351,10 +369,11 @@ which primes act ON it.
 
 ## Falsifiers
 
-- **F-cusp-1** (verification gap): a_17 = −18 is cached from
-  memory of LMFDB 6.4.a.a; external lookup (LMFDB URL,
-  SAGE/PARI computation, or LMFDB-derived ket entry) must
-  confirm before the value is sealed substrate-canonical
+- **F-cusp-1** (CLOSED 2026-06-08): a_17 = −126 retrieved from
+  LMFDB 6.4.a.a (`scripts/verify/lmfdb_6_4_a_a_retrieved.md`).
+  Original audit's cached value `−18` was wrong. The corrected
+  value satisfies Deligne bound (saturates ~90%) and is consistent
+  with all other LMFDB-retrieved eigenvalues.
 - **F-cusp-2** (dimension): dim S_4(Γ_0(6)) ≠ 1 (PR #243's
   dimension table wrong); the "unique newform" framing
   collapses and this audit must be re-done with the correct
@@ -375,7 +394,7 @@ which primes act ON it.
   audit's premise dissolves
 - **F-cusp-7** (empirical test): if a specific framework
   cosmological observable yields a value matching neither
-  Eisenstein 4914 nor cuspidal −18 nor any reasonable linear
+  Eisenstein 4914 nor cuspidal −126 nor any reasonable linear
   combination, the modular-form embedding may be over-strong
 
 ---
@@ -386,7 +405,7 @@ which primes act ON it.
 |---|---|
 | **PR #243** (Eisenstein λ_17) | **Completes cuspidal half**; PR #243's reading now extends to a full modular-operator picture at weight 4 |
 | **PR #242** (Γ_0(6) identity) | **Cuspidal content named**; identity now has both Eisenstein and cuspidal Hecke spectra specified |
-| **PR #241** (noncommutative core) | **Testable transfer**; lunar-theory pattern parallel at cosmological scale becomes specific (−18 vs 4914 test) |
+| **PR #241** (noncommutative core) | **Testable transfer**; lunar-theory pattern parallel at cosmological scale becomes specific (−126 vs 4914 test) |
 | **PR #235** (arithmetic mirage) | **Reinforced**; cuspidal modular content is independent of arithmetic-vocabulary content |
 | **PR #239** (cyclotomic content) | **Unchanged**; cuspidal λ_17 doesn't change Z_n factorization story |
 | **PR #236** (Γ_0(4) matter scale) | **Cross-scale Z_12 work enabled**; matter-scale cuspidal λ_17 audit becomes a natural next step at Γ_0(4) |
@@ -397,14 +416,14 @@ which primes act ON it.
 
 **This is**: explicit cuspidal-side completion of the λ_17
 question on Γ_0(6) at weight 4, identifying f_{6,4} as the
-unique relevant newform, naming its a_17 = −18 (with a
-verification gap), and contrasting against PR #243's
-Eisenstein λ_17 = 4914.
+unique relevant newform, naming its a_17 = −126 (LMFDB-verified
+2026-06-08), and contrasting against PR #243's Eisenstein
+λ_17 = 4914.
 
-**This is not**: a substrate-sealed final verdict. The
-verification gap F-cusp-1 must be closed before the value
-−18 enters the framework's canonical scorecard or numerology
-inventory.
+**This is not**: a substrate-sealed final verdict. F-cusp-1 closed
+externally; canonical sealing still requires ket-store seal action
+(separate operation). The value −126 is verified but not yet
+substrate-sealed.
 
 **This is not**: an empirical determination of which subspace
 (Eisenstein or cuspidal) the framework apparatus selects for
@@ -420,9 +439,10 @@ candidate values for the selection test.
 
 ## Future work enabled
 
-1. **External verification of a_17 = −18** (close F-cusp-1):
-   LMFDB lookup, SAGE/PARI independent computation, or
-   substrate-side computation tool
+1. ~~**External verification of a_17 = −126** (close F-cusp-1):~~
+   **CLOSED 2026-06-08** via LMFDB retrieval; original cached value
+   `−18` corrected to `−126`. Record at
+   `scripts/verify/lmfdb_6_4_a_a_retrieved.md`.
 2. **Cuspidal λ_17 audit at weight 6, 8** (multi-newform): once
    newform/oldform decomposition is performed, compute a_17 on
    each newform in S_6, S_8; check growth pattern
@@ -478,31 +498,28 @@ candidate values for the selection test.
 Cuspidal half of the λ_17 question on Γ_0(6) at the lowest
 weight admitting cusp forms (weight 4, dim S_4 = 1). The unique
 newform f_{6,4} ∈ S_4^{new}(Γ_0(6)) (LMFDB label 6.4.a.a) has
-**Hecke eigenvalue a_17 = −18** at p = 17 — value cached from
-memory of LMFDB, verified Deligne-bound-consistent (|−18| ≤
-2·17^{3/2} ≈ 140) and Hecke-recursion-consistent with companion
-eigenvalues (a_4, a_6, a_8, a_9, a_10, a_12, a_14, a_15, a_16
-all match a_p·a_q recursion), but flagged with verification gap
-F-cusp-1 requiring external LMFDB or SAGE/PARI confirmation
-before substrate-canonical sealing. **The contrast that this
+**Hecke eigenvalue a_17 = −126** at p = 17 — LMFDB-verified
+2026-06-08 (closing F-cusp-1; original audit's cached value `−18`
+was wrong, see correction notice at top of file). The corrected
+value is Deligne-bound-consistent (|−126| ≤ 2·17^{3/2} ≈ 140,
+saturating ~90% of the bound) and Hecke-recursion-consistent with
+companion eigenvalues (a_4, a_6, a_8, a_9, a_10, a_12, a_14, a_15,
+a_16 all match a_p·a_q recursion). **The contrast that this
 audit forces**: at weight 4 on Γ_0(6), Eisenstein λ_17 = 4914
-(PR #243) vs cuspidal λ_17 = −18 — a magnitude ratio of ~273
+(PR #243) vs cuspidal λ_17 = −126 — a magnitude ratio of ~39
 and a sign reversal, with the ratio growing as 17^{(k−1)/2} →
 ∞ at higher weights by Deligne's bound. **Three-outcome
 empirical test**: framework cosmological predictions
 correlating with Eisenstein 4914 (Outcome A, abelian-shadow-
-driven, contrasting with lunar-theory pattern) vs cuspidal −18
+driven, contrasting with lunar-theory pattern) vs cuspidal −126
 (Outcome B, noncommutative-core-driven, paralleling lunar-
 theory's ρ = +0.95 finding) vs linear combination (Outcome C,
-mixed). MODAL ✓ / GENERATIVE PARTIAL: cuspidal λ_17 candidate
-value is forced once cuspidal subspace selection is made
+mixed). MODAL ✓ / GENERATIVE PARTIAL: cuspidal λ_17 value
+is forced once cuspidal subspace selection is made
 (unique newform); whether framework apparatus selects cuspidal
 or Eisenstein for cosmological predictions is the open empirical
 question. The audit completes the modular-operator-level λ_17
 picture on Γ_0(6) at weight 4 by determining both candidate
-values (PR #243 Eisenstein 4914 + this audit cuspidal −18); the
+values (PR #243 Eisenstein 4914 + this audit cuspidal −126); the
 selection between them by framework cosmological apparatus is
-deferred to a future observable-specific audit. The verification
-gap (F-cusp-1, closing requires external LMFDB or independent
-computation) is the only obstruction to substrate-canonical
-sealing; all internal-consistency checks pass within this audit.
+deferred to a future observable-specific audit.

@@ -1,5 +1,23 @@
 # Γ_0(6) W_6 Atkin-Lehner invariance / Stern-Brocot opposite-view audit
 
+> **Correction notice (2026-06-08).** F-W6-1 (W_d cusp action) closed
+> externally via `scripts/verify/w6_cusp_action_verify.py` — pure-Python
+> rational arithmetic independently reproduces the audit's §2 cusp
+> action table; W_2 · W_3 = W_6 composition confirmed at both matrix
+> and cusp-action level. F-W6-3 closed by LMFDB substrate retrieval
+> (`scripts/verify/lmfdb_6_4_a_a_retrieved.md`), which **overturns**
+> the original audit's cached Atkin-Lehner signs (w_2, w_3): LMFDB
+> gives (+1, +1), not (−1, −1) as the original assumed. §3.2 "cuspidal
+> sits at opposite W_6-invariance from Eisenstein" was *built on the
+> wrong signs* and is replaced in place with the corrected reading:
+> f_{6,4} lives in the **trivial (+,+) W_6-irrep** (fully W_6-invariant
+> under every Klein-four element); the Ω partition values span the
+> single W_6-orbit. The §2 cusp action, §3.1 Mihailescu/trivial cusp
+> pairing, and the overall "opposite-view characterization" framing
+> all survive unchanged. Body text updated in place; original framing
+> remains in version control (commit `2863d8d` and PR #246 merged
+> commit). Correction PR documents both verification scripts.
+
 > **Question.** Is the cosmological Ω partition `13:5:1/19` invariant
 > under the Atkin-Lehner Klein-four group W_6 = {1, W_2, W_3, W_6}
 > acting on the cusps of H/Γ_0(6)? Equivalently: does the framework's
@@ -37,9 +55,10 @@ following substrate entries were re-read this session:
   - 1/3 → Ω_b = 1/19
   - 0 (= 0/1) → Ω_total = 19/19 = 1 (closure)
 
-- **Atkin-Lehner signs of f_{6,4}** (from
-  `padic_lfunction_mihailescu_pair_f64_audit.md`, commit `6a42ae4`):
-  (w_2, w_3) = (−1, −1); root number ε = w_2 · w_3 = +1.
+- **Atkin-Lehner signs of f_{6,4}** (LMFDB-verified 2026-06-08,
+  `scripts/verify/lmfdb_6_4_a_a_retrieved.md`): (w_2, w_3) = (+1, +1);
+  root number ε = w_2 · w_3 = +1. (Original audit and PR #245 had
+  these as (−1, −1); corrected by external substrate retrieval.)
 
 - **PSL(2,ℤ) free product** (PR #241): PSL(2,ℤ) = ℤ/q₂ ∗ ℤ/q₃, with
   Mihailescu primes (q₂, q₃) = (2, 3). F₂ = Γ(2) is the
@@ -174,40 +193,44 @@ property of the opposite (symmetry-action) view.
 ### 3.2 Cuspidal newform interaction
 
 The cuspidal newform f_{6,4} has Atkin-Lehner signs (w_2, w_3) =
-(−1, −1) and root number +1 (substrate ground 0 above). On the
-cuspidal subspace:
+(+1, +1) (LMFDB-verified 2026-06-08; original audit had this as
+(−1, −1) — corrected). On the cuspidal subspace:
 
 ```
-W_2 · f_{6,4} = − f_{6,4}     (w_2 = −1)
-W_3 · f_{6,4} = − f_{6,4}     (w_3 = −1)
-W_6 · f_{6,4} = (−1)(−1) · f_{6,4} = + f_{6,4}     (w_6 = +1)
+W_2 · f_{6,4} = + f_{6,4}     (w_2 = +1)
+W_3 · f_{6,4} = + f_{6,4}     (w_3 = +1)
+W_6 · f_{6,4} = (+1)(+1) · f_{6,4} = + f_{6,4}     (w_6 = +1)
 ```
 
-f_{6,4} is **W_6-invariant** (W_6-eigenvalue +1) but **W_2- and
-W_3-anti-invariant** (eigenvalues −1). The cuspidal eigenform is
-fixed by the full Fricke involution but flipped by each of the two
-"sub-Fricke" involutions.
+f_{6,4} is **fully W_6-invariant** — eigenvalue +1 under every
+non-trivial element of the Klein-four group. The cuspidal eigenform
+lives in the trivial (+,+) W_6-irrep.
 
-Reading: the cuspidal noncommutative-core content survives the
-**combined** Mihailescu involution (W_2 W_3 = W_6) but is sign-flipped
-under each Mihailescu prime separately. The substrate distinguishes
-"both Mihailescu primes acted on together" (invariant) from "one
-acted on alone" (sign-flipped) — this is a structural feature, not a
-coincidence of sign.
+Reading: the cuspidal noncommutative-core content is invariant under
+the entire Atkin-Lehner Klein-four group. There is no sign-flip
+distinction between "Mihailescu primes acted on together" vs "one
+acted on alone" — every involution fixes the cuspidal newform.
 
-The Eisenstein side acts oppositely on individual primes (Eisenstein
-newforms are W_d-eigenvectors with eigenvalues determined by the
-boundary cusp), and the framework's full Ω partition lives in the
-Eisenstein piece. So:
+The Eisenstein side decomposes differently — the Ω partition values
+{13, 5, 1, 19}/19 span the full 4-element W_6-orbit (per §3, §3.1),
+so the Eisenstein content is W_6-broken at the partition-value level
+in a way that lights up all four W_6-irreps (+,+), (+,−), (−,+), (−,−).
 
-- **Eisenstein content** (Ω partition, cosmological scale): W_6-broken
-  at the partition-value level, but lives on a single W_6-orbit.
+So the corrected contrast:
+
+- **Eisenstein content** (Ω partition, cosmological scale):
+  W_6-broken at the partition-value level; values span the full
+  4-element W_6-orbit; all four irreps present.
 - **Cuspidal content** (f_{6,4}, noncommutative-core matter scale):
-  W_6-invariant, W_2- and W_3-anti-invariant.
+  fully W_6-invariant; lives in the trivial (+,+) irrep only.
 
 The two sides of the modular surface — Eisenstein and cuspidal — sit
-at **opposite W_6-invariance** with respect to the full Fricke
-involution.
+at **opposite W_6-invariance extremes**: cuspidal is the *most*
+W_6-symmetric content (one irrep), Eisenstein is the *most*
+W_6-broken (full orbit, all irreps). This is still an "opposite W_6
+footings" structure, but the original audit had the asymmetry on the
+wrong side; the LMFDB-corrected pattern is even more starkly opposite
+(trivial-irrep vs full-orbit, not invariant vs anti-invariant).
 
 ---
 
@@ -262,10 +285,11 @@ trivial/cosmology pairing is W_6-canonical and is not reconstructible
 from mediant cardinalities.
 
 **(O3)** The cuspidal/Eisenstein W_6-eigenvalue pattern (cuspidal
-fixed by W_6, flipped by W_2 and W_3 individually; Eisenstein lives on
-a W_6-broken orbit) places the noncommutative-core content
-(PR #241) and the abelian-shadow content (PR #242 Ω partition) on
-opposite W_6-invariance footings.
+in the trivial (+,+) W_6-irrep — fully invariant; Eisenstein
+partition values span the entire W_6-orbit — all four irreps
+present) places the noncommutative-core content (PR #241) and the
+abelian-shadow content (PR #242 Ω partition) on opposite W_6
+extremes: maximally symmetric vs maximally broken.
 
 None of (O1)–(O3) is a *modification* of the apparatus. They are
 *resolutions* of structure already present in Γ_0(6) but invisible
@@ -277,24 +301,23 @@ from the mediant side alone.
 
 The audit's load-bearing claims and their falsification conditions:
 
-- **F-W6-1**: W_6 cusp action computed in §2 reflects the textbook
-  Atkin-Lehner action on Γ_0(6) cusps. Anyone re-deriving via Diamond
-  & Shurman (Ch. 4) or LMFDB Γ_0(6) cusp data should produce the same
-  involution pairs `{∞, 0}`, `{1/2, 1/3}` for W_6. **External
-  verification gap**: not cross-checked against LMFDB or SAGE in this
-  audit.
+- **F-W6-1** (CLOSED 2026-06-08): W_6 cusp action of §2 verified by
+  independent computation in `scripts/verify/w6_cusp_action_verify.py`
+  (pure-Python rational arithmetic; matrix Möbius action + cusp class
+  by gcd(denom, 6)). All 12 cusp images match the audit's §2 table;
+  W_2 · W_3 = W_6 composition confirmed at both matrix and cusp-action
+  level.
 
 - **F-W6-2**: The cusp-to-Ω assignment of PR #242 is the substrate
   ground for §3's claims. If PR #242's assignment is wrong (e.g., if
   ∞ → Ω_DM instead of Ω_Λ), the W_6-pairing structure of §3.1
   rearranges and (O2) becomes a different statement.
 
-- **F-W6-3**: f_{6,4} Atkin-Lehner signs (w_2, w_3) = (−1, −1) are
-  cached from the p-adic L-function audit (commit `6a42ae4`,
-  branch `padic_lfunction_mihailescu_pair_f64_audit-2026-06-07`).
-  These derive from the weight-4 Steinberg formula a_p = ±p (with
-  sign = −w_p) and the LMFDB-cached a_2 = −2, a_3 = −3. External
-  verification gap remains (F-pL-1 in the p-adic audit).
+- **F-W6-3** (CLOSED 2026-06-08): f_{6,4} Atkin-Lehner signs
+  retrieved from LMFDB substrate `6.4.a.a`. Authoritative values
+  (w_2, w_3) = (+1, +1), not (−1, −1) as cached. §3.2 corrected
+  in place; the corrected W_6-eigenvalue pattern (fully invariant)
+  is the LMFDB-canonical structure.
 
 - **F-W6-4**: The structural claim (O3) — that cuspidal and Eisenstein
   content sit on opposite W_6-invariance footings — depends on
@@ -318,8 +341,9 @@ The audit's load-bearing claims and their falsification conditions:
 W_6 Klein-four group acts on the four cusp values transitively but
 with a canonical pairing structure that aligns the Mihailescu cusps
 with matter content and the trivial cusps with cosmological content.
-The cuspidal newform f_{6,4} sits at opposite W_6-invariance from the
-Eisenstein partition. This is the opposite-view characterization of
+The cuspidal newform f_{6,4} lives in the trivial (+,+) W_6-irrep
+(fully W_6-invariant); the Ω partition spans the full W_6-orbit
+(maximally W_6-broken). This is the opposite-view characterization of
 the cosmological structure of PR #242.
 
 **K-class:** Same as PR #242 — foundational rigor check at the
@@ -358,7 +382,8 @@ not as new substrate primitives.
   a new primitive
 
 **Remaining gaps:**
-- F-W6-1: External verification of W_6 cusp action (LMFDB / SAGE)
+- ~~F-W6-1: External verification of W_6 cusp action (LMFDB / SAGE)~~
+  **CLOSED 2026-06-08** via pure-Python reproduction.
 - F-W6-4: Numerical W_d-eigenvalues of Eisenstein constant terms
 - F-pL-1 (carried from p-adic audit): External L-invariant computation
 
