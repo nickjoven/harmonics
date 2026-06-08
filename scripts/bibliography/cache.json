@@ -1,0 +1,105 @@
+{
+  "entries": {
+    "arxiv:2502.11902": {
+      "arxiv_id": "2502.11902",
+      "authors": [
+        "Shotaro Kawano",
+        "Kenji Kobayashi",
+        "Takuya Suzuki",
+        "Naoki Ichiji"
+      ],
+      "category": "physics.class-ph",
+      "doi": "",
+      "id": "arxiv:2502.11902",
+      "title": "Experimental Validation of String Oscillation in Subharmonic Generation",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2502.11902",
+      "venue": "arXiv",
+      "year": "2025"
+    },
+    "arxiv:2504.19874": {
+      "arxiv_id": "2504.19874",
+      "authors": [
+        "Amir Zandieh",
+        "Majid Daliri",
+        "Majid Hadian",
+        "Vahab Mirrokni"
+      ],
+      "category": "cs.LG",
+      "doi": "",
+      "id": "arxiv:2504.19874",
+      "title": "TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2504.19874",
+      "venue": "arXiv",
+      "year": "2025"
+    },
+    "arxiv:2601.21704": {
+      "arxiv_id": "2601.21704",
+      "authors": [
+        "Andrey Pryamikov"
+      ],
+      "category": "physics.optics",
+      "doi": "",
+      "id": "arxiv:2601.21704",
+      "title": "Reverse Energy Flows in Two-Dimensional Photonic Crystals and Analogies with Vortex Formation and Analogous Flows in Hydrodynamics",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2601.21704",
+      "venue": "arXiv",
+      "year": "2026"
+    },
+    "arxiv:2603.08696": {
+      "arxiv_id": "2603.08696",
+      "authors": [
+        "Samuele Piccinelli",
+        "Stefano Barison",
+        "Alberto Baiardi",
+        "Francesco Tacchino",
+        "Jascha Repp",
+        "Igor Rončević",
+        "Florian Albrecht",
+        "Harry L. Anderson",
+        "Leo Gross",
+        "Alessandro Curioni",
+        "Ivano Tavernelli"
+      ],
+      "category": "quant-ph",
+      "doi": "",
+      "id": "arxiv:2603.08696",
+      "title": "Exploring pathways towards quantum advantage in quantum chemistry: the case of a molecule with half-Möbius topology",
+      "type": "arxiv",
+      "url": "https://arxiv.org/abs/2603.08696",
+      "venue": "arXiv",
+      "year": "2026"
+    },
+    "doi:10.1126/science.aea3321": {
+      "authors": [
+        "Igor Rončević",
+        "Fabian Paschke",
+        "Yueze Gao",
+        "Leonard-Alexander Lieske",
+        "Lene A. Gödde",
+        "Stefano Barison",
+        "Samuele Piccinelli",
+        "Alberto Baiardi",
+        "Ivano Tavernelli",
+        "Jascha Repp",
+        "Florian Albrecht",
+        "Harry L. Anderson",
+        "Leo Gross"
+      ],
+      "crossref_type": "journal-article",
+      "doi": "10.1126/science.aea3321",
+      "id": "doi:10.1126/science.aea3321",
+      "issue": "6798",
+      "page": "",
+      "publisher": "American Association for the Advancement of Science (AAAS)",
+      "title": "A molecule with half-Möbius topology",
+      "type": "doi",
+      "url": "https://doi.org/10.1126/science.aea3321",
+      "venue": "Science",
+      "volume": "392",
+      "year": "2026"
+    }
+  }
+}

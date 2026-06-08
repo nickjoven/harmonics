@@ -57,10 +57,13 @@ OUT_PATH = ROOT / "docs" / "derivation-graph.json"
 DEFAULT_KIND = "references"
 EXPLICIT_KINDS = {"grounds", "derives", "proposes"}
 
-# Scan all .md files (not the scratch directory)
+# Scan all .md files (not the scratch directory). REFERENCES.md is a
+# generated bibliography artifact (scripts/bibliography/), not a
+# derivation doc; excluding it keeps it out of the document graph and
+# avoids spurious edges from its per-entry "Cited by" backlinks.
 md_files = [
     f for f in DERIV_DIR.glob("*.md")
-    if f.name not in {"README.md"}
+    if f.name not in {"README.md", "REFERENCES.md"}
 ]
 
 
