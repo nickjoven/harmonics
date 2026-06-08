@@ -1,5 +1,5 @@
 {
-  "generated": "77c8f24d894df5e7be6d77ea2d86b5116910bc46",
+  "generated": "1445da5a41c846ab5996405fd57b2933c62e84d9",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -6016,6 +6016,7 @@
         "discrete_extension_principle",
         "down_type_double_cover_closed",
         "framework_status",
+        "gamma06_w6_invariance_opposite_view_audit",
         "klein_z2_decomposition_falsifier_2",
         "pattern_identification_discipline_candidate",
         "phenomenology_cross_reference",
@@ -6317,6 +6318,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_w6_invariance_opposite_view_audit",
           "kind": "references"
         },
         {
@@ -8433,7 +8438,10 @@
         "primes_denominators_circular_geometry_extension_audit",
         "psl2z_noncommutative_core_structural_identity_audit"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "gamma06_w6_invariance_opposite_view_audit",
+        "padic_lfunction_mihailescu_pair_f64_audit"
+      ],
       "edges": [
         {
           "target": "cyclotomic_content_mass_ratios_audit",
@@ -8460,7 +8468,16 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "gamma06_w6_invariance_opposite_view_audit",
+          "kind": "references"
+        },
+        {
+          "source": "padic_lfunction_mihailescu_pair_f64_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "77c8f24",
@@ -14170,7 +14187,9 @@
       ],
       "depended_on_by": [
         "cuspidal_lambda17_weight4_audit",
-        "lambda17_test_gamma06_cosmological_audit"
+        "gamma06_w6_invariance_opposite_view_audit",
+        "lambda17_test_gamma06_cosmological_audit",
+        "padic_lfunction_mihailescu_pair_f64_audit"
       ],
       "edges": [
         {
@@ -14248,7 +14267,15 @@
           "kind": "references"
         },
         {
+          "source": "gamma06_w6_invariance_opposite_view_audit",
+          "kind": "references"
+        },
+        {
           "source": "lambda17_test_gamma06_cosmological_audit",
+          "kind": "references"
+        },
+        {
+          "source": "padic_lfunction_mihailescu_pair_f64_audit",
           "kind": "references"
         }
       ],
@@ -14257,6 +14284,57 @@
           "hash": "1015332",
           "date": "2026-06-07",
           "subject": "\u0393_0(6) cosmological modular surface audit (polynomial + arithmetic prime) (#242)"
+        }
+      ]
+    },
+    {
+      "id": "gamma06_w6_invariance_opposite_view_audit",
+      "path": "sync_cost/derivations/gamma06_w6_invariance_opposite_view_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "\u0393_0(6) W_6 Atkin-Lehner invariance / Stern-Brocot opposite-view audit",
+      "summary": "> **Question.** Is the cosmological \u03a9 partition `13:5:1/19` invariant\n> under the Atkin-Lehner Klein-four group W_6 = {1, W_2, W_3, W_6}\n> acting on the cusps of H/\u0393_0(6)? Equivalently: does the framework's\n> distinguished partition arise as a W_6-symmetric structure, or as a\n> W_6-broken pick from a four-element W_6-orbit?\n>\n> This is the **opposite-view audit** of the cosmological structure\n> from PR #242. PR #242 builds the partition via the *mediant* /\n> *constructive* side of \u0393_0(6) (Farey ",
+      "depends_on": [
+        "canonical_glossary",
+        "cuspidal_lambda17_weight4_audit",
+        "gamma06_cosmological_modular_surface_audit",
+        "padic_lfunction_mihailescu_pair_f64_audit",
+        "psl2z_noncommutative_core_structural_identity_audit",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "target": "cuspidal_lambda17_weight4_audit",
+          "kind": "references"
+        },
+        {
+          "target": "gamma06_cosmological_modular_surface_audit",
+          "kind": "references"
+        },
+        {
+          "target": "padic_lfunction_mihailescu_pair_f64_audit",
+          "kind": "references"
+        },
+        {
+          "target": "psl2z_noncommutative_core_structural_identity_audit",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_is_the_work_pattern",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "1445da5",
+          "date": "2026-06-07",
+          "subject": "\u0393_0(6) W_6 Atkin-Lehner invariance \u2014 Stern-Brocot opposite-view audit (#246)"
         }
       ]
     },
@@ -16556,6 +16634,7 @@
       ],
       "depended_on_by": [
         "gamma06_cosmological_modular_surface_audit",
+        "padic_lfunction_mihailescu_pair_f64_audit",
         "psl2z_noncommutative_core_structural_identity_audit"
       ],
       "edges": [
@@ -16635,6 +16714,10 @@
       "edged_by": [
         {
           "source": "gamma06_cosmological_modular_surface_audit",
+          "kind": "references"
+        },
+        {
+          "source": "padic_lfunction_mihailescu_pair_f64_audit",
           "kind": "references"
         },
         {
@@ -22130,7 +22213,8 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
-        "cuspidal_lambda17_weight4_audit"
+        "cuspidal_lambda17_weight4_audit",
+        "padic_lfunction_mihailescu_pair_f64_audit"
       ],
       "edges": [
         {
@@ -22177,6 +22261,10 @@
       "edged_by": [
         {
           "source": "cuspidal_lambda17_weight4_audit",
+          "kind": "references"
+        },
+        {
+          "source": "padic_lfunction_mihailescu_pair_f64_audit",
           "kind": "references"
         }
       ],
@@ -27382,6 +27470,64 @@
       ]
     },
     {
+      "id": "padic_lfunction_mihailescu_pair_f64_audit",
+      "path": "sync_cost/derivations/padic_lfunction_mihailescu_pair_f64_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "(\u211a_2, \u211a_3) p-adic L-function content of f_{6,4} \u2014 Mihailescu-pair audit",
+      "summary": "**Verdict: MODAL \u2713 / GENERATIVE \u2713** on the structural reading\nof the (\u211a_2, \u211a_3) p-adic L-function pair as the framework's\ndeepest substrate-level outcome resolution mechanism;\n**GENERATIVE PARTIAL** on specific L-invariant values\n(verification gap F-pL-1 for explicit p-adic computation).",
+      "depends_on": [
+        "cuspidal_lambda17_weight4_audit",
+        "gamma06_cosmological_modular_surface_audit",
+        "half_twist_meta_structure_audit",
+        "lambda17_test_gamma06_cosmological_audit",
+        "primes_denominators_circular_geometry_extension_audit",
+        "psl2z_noncommutative_core_structural_identity_audit"
+      ],
+      "depended_on_by": [
+        "gamma06_w6_invariance_opposite_view_audit"
+      ],
+      "edges": [
+        {
+          "target": "cuspidal_lambda17_weight4_audit",
+          "kind": "references"
+        },
+        {
+          "target": "gamma06_cosmological_modular_surface_audit",
+          "kind": "references"
+        },
+        {
+          "target": "half_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "lambda17_test_gamma06_cosmological_audit",
+          "kind": "references"
+        },
+        {
+          "target": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
+        },
+        {
+          "target": "psl2z_noncommutative_core_structural_identity_audit",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "gamma06_w6_invariance_opposite_view_audit",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "be4fdd9",
+          "date": "2026-06-07",
+          "subject": "(\u211a_2, \u211a_3) p-adic L-function content of f_{6,4} \u2014 Mihailescu-pair audit (#245)"
+        }
+      ]
+    },
+    {
       "id": "partition_logit_form",
       "path": "sync_cost/derivations/partition_logit_form.md",
       "cid": "b5217bc7d3960e2a56da643a43173ee67cb6efd351744d4ae5e2ced535412013",
@@ -29016,7 +29162,8 @@
         "cyclotomic_content_mass_ratios_audit",
         "h0_tension_cross_cell_identity_audit",
         "lambda17_test_gamma06_cosmological_audit",
-        "modular_form_behavior_cosmological_tongues_audit"
+        "modular_form_behavior_cosmological_tongues_audit",
+        "padic_lfunction_mihailescu_pair_f64_audit"
       ],
       "edges": [
         {
@@ -29123,6 +29270,10 @@
         },
         {
           "source": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "source": "padic_lfunction_mihailescu_pair_f64_audit",
           "kind": "references"
         }
       ],
@@ -29749,7 +29900,9 @@
       "depended_on_by": [
         "cuspidal_lambda17_weight4_audit",
         "gamma06_cosmological_modular_surface_audit",
-        "lambda17_test_gamma06_cosmological_audit"
+        "gamma06_w6_invariance_opposite_view_audit",
+        "lambda17_test_gamma06_cosmological_audit",
+        "padic_lfunction_mihailescu_pair_f64_audit"
       ],
       "edges": [
         {
@@ -29827,7 +29980,15 @@
           "kind": "references"
         },
         {
+          "source": "gamma06_w6_invariance_opposite_view_audit",
+          "kind": "references"
+        },
+        {
           "source": "lambda17_test_gamma06_cosmological_audit",
+          "kind": "references"
+        },
+        {
+          "source": "padic_lfunction_mihailescu_pair_f64_audit",
           "kind": "references"
         }
       ],
@@ -36756,6 +36917,7 @@
         "derivation_atlas",
         "down_type_double_cover_closed",
         "framework_status",
+        "gamma06_w6_invariance_opposite_view_audit",
         "gluon_reframing",
         "h_inf_status",
         "klein_bridge_audit_and_probe",
@@ -36936,6 +37098,10 @@
         },
         {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_w6_invariance_opposite_view_audit",
           "kind": "references"
         },
         {
