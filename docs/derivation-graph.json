@@ -1,5 +1,5 @@
 {
-  "generated": "191a4ac158df3d1e66a22be4e4ab63613d054785",
+  "generated": "77c8f24d894df5e7be6d77ea2d86b5116910bc46",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -8419,6 +8419,57 @@
       ]
     },
     {
+      "id": "cuspidal_lambda17_weight4_audit",
+      "path": "sync_cost/derivations/cuspidal_lambda17_weight4_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Cuspidal \u03bb_17 at weight 4 on \u0393_0(6) \u2014 testing the noncommutative-core half",
+      "summary": "**Verdict: MODAL \u2713 / GENERATIVE PARTIAL** with a specific\ncached value (flagged as requiring external substrate\nverification before final seal) for the cuspidal \u03bb_17 reading\non \u0393_0(6), completing the cuspidal half left open by PR #243.",
+      "depends_on": [
+        "cyclotomic_content_mass_ratios_audit",
+        "gamma06_cosmological_modular_surface_audit",
+        "lambda17_test_gamma06_cosmological_audit",
+        "modular_form_behavior_cosmological_tongues_audit",
+        "primes_denominators_circular_geometry_extension_audit",
+        "psl2z_noncommutative_core_structural_identity_audit"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
+          "target": "gamma06_cosmological_modular_surface_audit",
+          "kind": "references"
+        },
+        {
+          "target": "lambda17_test_gamma06_cosmological_audit",
+          "kind": "references"
+        },
+        {
+          "target": "modular_form_behavior_cosmological_tongues_audit",
+          "kind": "references"
+        },
+        {
+          "target": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
+        },
+        {
+          "target": "psl2z_noncommutative_core_structural_identity_audit",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "77c8f24",
+          "date": "2026-06-07",
+          "subject": "Cuspidal \u03bb_17 at weight 4 on \u0393_0(6): MODAL \u2713 / GENERATIVE PARTIAL (#244)"
+        }
+      ]
+    },
+    {
       "id": "cyclotomic_content_mass_ratios_audit",
       "path": "sync_cost/derivations/cyclotomic_content_mass_ratios_audit.md",
       "cid": null,
@@ -8447,6 +8498,7 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "cuspidal_lambda17_weight4_audit",
         "gamma06_cosmological_modular_surface_audit",
         "half_twist_meta_structure_audit",
         "lambda17_test_gamma06_cosmological_audit",
@@ -8531,6 +8583,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "cuspidal_lambda17_weight4_audit",
+          "kind": "references"
+        },
         {
           "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
@@ -14113,6 +14169,7 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
+        "cuspidal_lambda17_weight4_audit",
         "lambda17_test_gamma06_cosmological_audit"
       ],
       "edges": [
@@ -14186,6 +14243,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "cuspidal_lambda17_weight4_audit",
+          "kind": "references"
+        },
         {
           "source": "lambda17_test_gamma06_cosmological_audit",
           "kind": "references"
@@ -22068,7 +22129,9 @@
         "psl2z_noncommutative_core_structural_identity_audit",
         "substrate_determinism"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "cuspidal_lambda17_weight4_audit"
+      ],
       "edges": [
         {
           "target": "CHAIN_KSTAR",
@@ -22111,7 +22174,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "cuspidal_lambda17_weight4_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "191a4ac",
@@ -24356,6 +24424,7 @@
       ],
       "depended_on_by": [
         "angular_momentum_three_source_inviolability_audit",
+        "cuspidal_lambda17_weight4_audit",
         "cyclotomic_content_mass_ratios_audit",
         "gamma06_cosmological_modular_surface_audit",
         "h0_tension_cross_cell_identity_audit",
@@ -24432,6 +24501,10 @@
       "edged_by": [
         {
           "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
+        {
+          "source": "cuspidal_lambda17_weight4_audit",
           "kind": "references"
         },
         {
@@ -28939,6 +29012,7 @@
       ],
       "depended_on_by": [
         "angular_momentum_three_source_inviolability_audit",
+        "cuspidal_lambda17_weight4_audit",
         "cyclotomic_content_mass_ratios_audit",
         "h0_tension_cross_cell_identity_audit",
         "lambda17_test_gamma06_cosmological_audit",
@@ -29029,6 +29103,10 @@
       "edged_by": [
         {
           "source": "angular_momentum_three_source_inviolability_audit",
+          "kind": "references"
+        },
+        {
+          "source": "cuspidal_lambda17_weight4_audit",
           "kind": "references"
         },
         {
@@ -29669,6 +29747,7 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
+        "cuspidal_lambda17_weight4_audit",
         "gamma06_cosmological_modular_surface_audit",
         "lambda17_test_gamma06_cosmological_audit"
       ],
@@ -29739,6 +29818,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "cuspidal_lambda17_weight4_audit",
+          "kind": "references"
+        },
         {
           "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
