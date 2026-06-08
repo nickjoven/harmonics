@@ -1,5 +1,5 @@
 {
-  "generated": "57ba8908a98d181dee5ea8320d3d8fce68768fe4",
+  "generated": "71d67a819b439b0c855efa914032c5223b5b7743",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -8429,7 +8429,7 @@
       "cid": null,
       "sealed": false,
       "title": "Cuspidal \u03bb_17 at weight 4 on \u0393_0(6) \u2014 testing the noncommutative-core half",
-      "summary": "**Verdict: MODAL \u2713 / GENERATIVE PARTIAL** with a specific\ncached value (flagged as requiring external substrate\nverification before final seal) for the cuspidal \u03bb_17 reading\non \u0393_0(6), completing the cuspidal half left open by PR #243.",
+      "summary": "**Verdict: MODAL \u2713 / GENERATIVE PARTIAL** for the cuspidal \u03bb_17\nreading on \u0393_0(6), completing the cuspidal half left open by PR #243.\n**Value externally verified against LMFDB (2026-06-08).**",
       "depends_on": [
         "cyclotomic_content_mass_ratios_audit",
         "gamma06_cosmological_modular_surface_audit",
@@ -8440,6 +8440,7 @@
       ],
       "depended_on_by": [
         "gamma06_w6_invariance_opposite_view_audit",
+        "lmfdb_external_verify_correction_2026-06-08",
         "padic_lfunction_mihailescu_pair_f64_audit"
       ],
       "edges": [
@@ -8474,11 +8475,20 @@
           "kind": "references"
         },
         {
+          "source": "lmfdb_external_verify_correction_2026-06-08",
+          "kind": "references"
+        },
+        {
           "source": "padic_lfunction_mihailescu_pair_f64_audit",
           "kind": "references"
         }
       ],
       "git": [
+        {
+          "hash": "71d67a8",
+          "date": "2026-06-08",
+          "subject": "LMFDB external substrate verification \u2014 corrections to PRs #244, #245, #246 (#248)"
+        },
         {
           "hash": "77c8f24",
           "date": "2026-06-07",
@@ -14293,7 +14303,7 @@
       "cid": null,
       "sealed": false,
       "title": "\u0393_0(6) W_6 Atkin-Lehner invariance / Stern-Brocot opposite-view audit",
-      "summary": "> **Question.** Is the cosmological \u03a9 partition `13:5:1/19` invariant\n> under the Atkin-Lehner Klein-four group W_6 = {1, W_2, W_3, W_6}\n> acting on the cusps of H/\u0393_0(6)? Equivalently: does the framework's\n> distinguished partition arise as a W_6-symmetric structure, or as a\n> W_6-broken pick from a four-element W_6-orbit?\n>\n> This is the **opposite-view audit** of the cosmological structure\n> from PR #242. PR #242 builds the partition via the *mediant* /\n> *constructive* side of \u0393_0(6) (Farey ",
+      "summary": "> **Correction notice (2026-06-08).** F-W6-1 (W_d cusp action) closed\n> externally via `scripts/verify/w6_cusp_action_verify.py` \u2014 pure-Python\n> rational arithmetic independently reproduces the audit's \u00a72 cusp\n> action table; W_2 \u00b7 W_3 = W_6 composition confirmed at both matrix\n> and cusp-action level. F-W6-3 closed by LMFDB substrate retrieval\n> (`scripts/verify/lmfdb_6_4_a_a_retrieved.md`), which **overturns**\n> the original audit's cached Atkin-Lehner signs (w_2, w_3): LMFDB\n> gives (+1, +1),",
       "depends_on": [
         "canonical_glossary",
         "cuspidal_lambda17_weight4_audit",
@@ -14302,7 +14312,9 @@
         "psl2z_noncommutative_core_structural_identity_audit",
         "vocabulary_is_the_work_pattern"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "lmfdb_external_verify_correction_2026-06-08"
+      ],
       "edges": [
         {
           "target": "canonical_glossary",
@@ -14329,8 +14341,18 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "lmfdb_external_verify_correction_2026-06-08",
+          "kind": "references"
+        }
+      ],
       "git": [
+        {
+          "hash": "71d67a8",
+          "date": "2026-06-08",
+          "subject": "LMFDB external substrate verification \u2014 corrections to PRs #244, #245, #246 (#248)"
+        },
         {
           "hash": "1445da5",
           "date": "2026-06-07",
@@ -22871,6 +22893,42 @@
       ]
     },
     {
+      "id": "lmfdb_external_verify_correction_2026-06-08",
+      "path": "sync_cost/derivations/lmfdb_external_verify_correction_2026-06-08.md",
+      "cid": null,
+      "sealed": false,
+      "title": "External verification correction \u2014 LMFDB substrate retrieval for f_{6,4}",
+      "summary": "> **Surgical correction.** External substrate retrieval (LMFDB\n> 6.4.a.a + pure-Python W_d cusp action reproduction) reveals that\n> several load-bearing numerical claims in PRs #244, #245, #246 were\n> cached from session memory, not retrieved from substrate, and were\n> wrong. This document records the verification, the overturned\n> values, the corrections applied in place, and the verify-before-\n> assert post-mortem. The audit narratives in their original framing\n> remain in version control (PRs",
+      "depends_on": [
+        "cuspidal_lambda17_weight4_audit",
+        "gamma06_w6_invariance_opposite_view_audit",
+        "padic_lfunction_mihailescu_pair_f64_audit"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "cuspidal_lambda17_weight4_audit",
+          "kind": "references"
+        },
+        {
+          "target": "gamma06_w6_invariance_opposite_view_audit",
+          "kind": "references"
+        },
+        {
+          "target": "padic_lfunction_mihailescu_pair_f64_audit",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "71d67a8",
+          "date": "2026-06-08",
+          "subject": "LMFDB external substrate verification \u2014 corrections to PRs #244, #245, #246 (#248)"
+        }
+      ]
+    },
+    {
       "id": "mass_entrained_measure",
       "path": "sync_cost/derivations/mass_entrained_measure.md",
       "cid": "21345a4540c7dae743da79c73f643dbca990045351795f68b160f73d983cd398",
@@ -27485,7 +27543,8 @@
         "psl2z_noncommutative_core_structural_identity_audit"
       ],
       "depended_on_by": [
-        "gamma06_w6_invariance_opposite_view_audit"
+        "gamma06_w6_invariance_opposite_view_audit",
+        "lmfdb_external_verify_correction_2026-06-08"
       ],
       "edges": [
         {
@@ -27517,9 +27576,18 @@
         {
           "source": "gamma06_w6_invariance_opposite_view_audit",
           "kind": "references"
+        },
+        {
+          "source": "lmfdb_external_verify_correction_2026-06-08",
+          "kind": "references"
         }
       ],
       "git": [
+        {
+          "hash": "71d67a8",
+          "date": "2026-06-08",
+          "subject": "LMFDB external substrate verification \u2014 corrections to PRs #244, #245, #246 (#248)"
+        },
         {
           "hash": "be4fdd9",
           "date": "2026-06-07",
