@@ -1,5 +1,5 @@
 {
-  "generated": "71d67a819b439b0c855efa914032c5223b5b7743",
+  "generated": "8e70f0604e34133f9e19835c027e007f8e3a04ad",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -6017,6 +6017,7 @@
         "down_type_double_cover_closed",
         "framework_status",
         "gamma06_w6_invariance_opposite_view_audit",
+        "half_twist_identity_signature_audit",
         "klein_z2_decomposition_falsifier_2",
         "pattern_identification_discipline_candidate",
         "phenomenology_cross_reference",
@@ -6322,6 +6323,10 @@
         },
         {
           "source": "gamma06_w6_invariance_opposite_view_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_identity_signature_audit",
           "kind": "references"
         },
         {
@@ -14198,6 +14203,7 @@
       "depended_on_by": [
         "cuspidal_lambda17_weight4_audit",
         "gamma06_w6_invariance_opposite_view_audit",
+        "half_twist_identity_signature_audit",
         "lambda17_test_gamma06_cosmological_audit",
         "padic_lfunction_mihailescu_pair_f64_audit"
       ],
@@ -14281,6 +14287,10 @@
           "kind": "references"
         },
         {
+          "source": "half_twist_identity_signature_audit",
+          "kind": "references"
+        },
+        {
           "source": "lambda17_test_gamma06_cosmological_audit",
           "kind": "references"
         },
@@ -14313,6 +14323,7 @@
         "vocabulary_is_the_work_pattern"
       ],
       "depended_on_by": [
+        "half_twist_identity_signature_audit",
         "lmfdb_external_verify_correction_2026-06-08"
       ],
       "edges": [
@@ -14342,6 +14353,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "half_twist_identity_signature_audit",
+          "kind": "references"
+        },
         {
           "source": "lmfdb_external_verify_correction_2026-06-08",
           "kind": "references"
@@ -16628,6 +16643,62 @@
       ]
     },
     {
+      "id": "half_twist_identity_signature_audit",
+      "path": "sync_cost/derivations/half_twist_identity_signature_audit.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Half-twist identity and signature \u2014 canonical restatement",
+      "summary": "> **Restatement of identity and signature for the half-twist as the\n> framework names it.** PR #240 established the half-twist as the\n> framework's unifying \u00bd-character pattern across eight catalogued\n> instances; this audit gives the sharp definition the catalog has\n> been using implicitly. The definition distinguishes the half-twist\n> from three nearby structures that the original catalog conflated\n> with it: (a) Z_n cyclic rotations for n \u2265 3 (third-twist,\n> quarter-twist, sixth-twist), (b) t",
+      "depends_on": [
+        "canonical_glossary",
+        "gamma06_cosmological_modular_surface_audit",
+        "gamma06_w6_invariance_opposite_view_audit",
+        "half_twist_meta_structure_audit",
+        "klein_bottle",
+        "koide_form_substrate_iteration_4",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "target": "gamma06_cosmological_modular_surface_audit",
+          "kind": "references"
+        },
+        {
+          "target": "gamma06_w6_invariance_opposite_view_audit",
+          "kind": "references"
+        },
+        {
+          "target": "half_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "koide_form_substrate_iteration_4",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_is_the_work_pattern",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "b2be9c8",
+          "date": "2026-06-09",
+          "subject": "Half-twist identity and signature \u2014 canonical restatement (#250)"
+        }
+      ]
+    },
+    {
       "id": "half_twist_meta_structure_audit",
       "path": "sync_cost/derivations/half_twist_meta_structure_audit.md",
       "cid": null,
@@ -16656,6 +16727,7 @@
       ],
       "depended_on_by": [
         "gamma06_cosmological_modular_surface_audit",
+        "half_twist_identity_signature_audit",
         "padic_lfunction_mihailescu_pair_f64_audit",
         "psl2z_noncommutative_core_structural_identity_audit"
       ],
@@ -16736,6 +16808,10 @@
       "edged_by": [
         {
           "source": "gamma06_cosmological_modular_surface_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_identity_signature_audit",
           "kind": "references"
         },
         {
@@ -19739,6 +19815,7 @@
         "generation_mechanism",
         "generation_sector_count_audit",
         "h0_tension_cross_cell_identity_audit",
+        "half_twist_identity_signature_audit",
         "half_twist_meta_structure_audit",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_1",
@@ -19940,6 +20017,10 @@
         },
         {
           "source": "h0_tension_cross_cell_identity_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_identity_signature_audit",
           "kind": "references"
         },
         {
@@ -21838,6 +21919,7 @@
         "mass_sector_closure"
       ],
       "depended_on_by": [
+        "half_twist_identity_signature_audit",
         "koide_form_substrate_iteration_5"
       ],
       "edges": [
@@ -21867,6 +21949,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "half_twist_identity_signature_audit",
+          "kind": "references"
+        },
         {
           "source": "koide_form_substrate_iteration_5",
           "kind": "references"
@@ -36988,6 +37074,7 @@
         "gamma06_w6_invariance_opposite_view_audit",
         "gluon_reframing",
         "h_inf_status",
+        "half_twist_identity_signature_audit",
         "klein_bridge_audit_and_probe",
         "klein_dynamics_roadmap",
         "numerology_count_phase_a",
@@ -37178,6 +37265,10 @@
         },
         {
           "source": "h_inf_status",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_identity_signature_audit",
           "kind": "references"
         },
         {
