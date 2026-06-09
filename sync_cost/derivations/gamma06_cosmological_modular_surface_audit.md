@@ -142,7 +142,7 @@ The relevant cyclotomic polynomials for Γ_0(6) content:
 | Φ_1(x) | x − 1 | 1 | Trivial Z_1 |
 | Φ_2(x) | x + 1 | 1 | Z_2 = ⟨q₂⟩ (Mihailescu Z_2) |
 | Φ_3(x) | x² + x + 1 | 2 | Z_3 = ⟨q₃⟩ (Mihailescu Z_3) |
-| Φ_4(x) | x² + 1 | 2 | Z_4 = Klein four-group (matter scale) |
+| Φ_4(x) | x² + 1 | 2 | Z_4 cyclic — cyclotomic labels via 4th roots of unity at the matter scale. (NB: "Z_4 = Klein four-group" is wrong terminology; Z_4 is cyclic. The matter-scale Klein four-group is V_4 = Z_2 × Z_2, a distinct order-4 subgroup of the ambient D_4 envelope — see `lepton_state_group_reconciliation_audit.md`.) |
 | **Φ_6(x)** | **x² − x + 1** | **2** | **Z_6 substrate lattice — cosmological** |
 | Φ_12(x) | x⁴ − x² + 1 | 4 | Z_12 = Z_4 × Z_3 (cross-scale composite) |
 

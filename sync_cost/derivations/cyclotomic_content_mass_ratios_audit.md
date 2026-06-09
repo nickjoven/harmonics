@@ -18,7 +18,7 @@ Specifically:
 | **Sector exponents 2, 5/2, 3** | ½-weight content | Connects to Γ_0(4) modular forms (PR #236) |
 | **Mass hierarchy 26 : 7 : 1** | Mixed cyclotomic content | Z_2 × Z_13 ; Z_7 ; Z_1 |
 | **Substrate Z_6 lattice** | 6th roots of unity | Z_6 = Z_2 × Z_3 (Mihailescu primes) |
-| **N_lep = q_2² = 4** | 4th roots of unity | Z_4 (Klein four-group) |
+| **N_lep = q_2² = 4** | 4th roots of unity | Z_4 cyclic (cyclotomic labels); see `lepton_state_group_reconciliation_audit.md` for the V_4 substrate action coexisting as a distinct order-4 subgroup of D_4 |
 
 The unifying structure: all cyclotomic content reduces to
 **factorizations involving Mihailescu primes {2, 3} extended
@@ -338,7 +338,7 @@ clear hierarchical structure:
 | Level | Cyclotomic content | Z_n factorization |
 |---|---|---|
 | **Substrate base** | Z_6 lattice | Z_2 × Z_3 (Mihailescu primes) |
-| **Matter Farey index** | Z_4 (Klein four-group); Z_14 (K_STAR ladder) | Z_4; Z_2 × Z_7 |
+| **Matter Farey index** | Z_4 cyclic (4th roots; cyclotomic content); Z_14 (K_STAR ladder); Koide V_4 = Z_2 × Z_2 action coexists in ambient D_4 — see `lepton_state_group_reconciliation_audit.md` | Z_4; Z_2 × Z_7 |
 | **Cosmological boundary** | Z_13 (in Ω partition denominator 19 prime; |F_6| = 13) | Z_13 prime |
 | **Mass hierarchy heavy** | Z_2 × Z_13 (from 26) | Mihailescu + cosmological |
 | **Mass hierarchy middle** | Z_7 (from 7) | Matter Farey |

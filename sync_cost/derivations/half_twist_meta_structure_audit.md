@@ -290,8 +290,17 @@ substrate features to produce specific mathematical structures:
   Farey index 4 (PR #236)
 - **½-weight modular forms**: cosmological tongue structure
   (PR #236)
-- **Z_4 = Klein four-group**: N_lep = q_2² = 4 phase states
-  (`CHAIN_KSTAR.md` Step 2)
+- **4 phase states with two coexisting order-4 group structures**:
+  N_lep = q_2² = 4 admits both Z_4 cyclic (cyclotomic labeling via
+  4th roots of unity) and V_4 = Z_2 × Z_2 (Koide substrate
+  pair-swap action) as distinct subgroups of the ambient
+  D_4 envelope (order 8 = q_2³). The two Z_2 generators of V_4
+  are the half-twist instances at this scale; the Z_4 cyclic
+  rotation is *not* a half-twist (it is a quarter-twist). See
+  `lepton_state_group_reconciliation_audit.md` for the full
+  D_4 envelope and the single coordinate map.
+  (`CHAIN_KSTAR.md` Step 2; the original framing "Z_4 = Klein
+  four-group" conflated the two distinct order-4 structures.)
 
 All five connect the substrate Z_2 to specific mathematical
 content at different layers.
