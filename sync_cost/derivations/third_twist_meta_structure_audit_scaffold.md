@@ -1,14 +1,29 @@
 # Third-twist (Z_3) meta-structure audit — scaffold
 
-> **Scaffold notice.** This document is a **scaffold**, not a sealed
-> audit. Sections 0–4 are written; sections 5 (framework instance
-> catalog), 6 (identity restatement), 7 (signature restatement) are
-> templates to be filled in by subsequent audit work. The scaffold
-> establishes the question, the verify-before-assert ground, the
-> vocabulary-earning criteria, the literature anchor, and the
-> numerology trap explicitly, so that the catalog-filling work
-> proceeds against a fixed criterion-set rather than absorbing the
-> half-twist bias.
+> **Status update (2026-06-10).** The scaffold has been populated with
+> a first-pass catalog (§5), preliminary identity (§6), and signature
+> (§7). The catalog reveals **four distinct Z_3 modes** in the
+> framework (A: cyclic action, B: Mihailescu cube/ratio, C: composite,
+> D: fractional) — not the single-mode meta-structure analogy with
+> PR #240 would have predicted. Two preliminary structural findings
+> (P1–P3 in §5.4) are substantive: (P1) Mode B is uniquely Z_3 with
+> no Z_2 analog; (P2) the Aut(Z_3) = Z_2 inversion is spontaneously
+> broken at Mode B level (substrate prefers 2/3 over 1/3); (P3) Mode
+> D (fractional character) is nearly absent — the framework's
+> fractional content is Z_2-character, not Z_3-character.
+>
+> **Verdict, first pass:** MODAL ✓ / GENERATIVE PARTIAL on the
+> Z_3 meta-structure. The structure exists and is substrate-canonical;
+> but it is *bimodal* (cyclic A + Mihailescu-cube B), not a single
+> coherent meta-pattern. This is itself a structural finding —
+> the third-twist is *not* an analog of the half-twist, even at
+> identity/signature level. The vocabulary requires TWO sub-identities
+> (Mode A cyclic, Mode B Mihailescu-ratio), not one. §6.A through §6.E
+> state this.
+>
+> First-pass status: the catalog is a SAMPLING (not exhaustive); the
+> pattern is robust enough to draw structural conclusions, but
+> exhaustive catalog-filling remains a recommended follow-up.
 
 > **Origin context.** The recent audit chain (PRs #240–250) has
 > privileged the Z_2 / half-twist reading. The reconciliation
@@ -18,13 +33,14 @@
 > comparable depth. Third-twist (Z_3 from Mihailescu q_3 = 3) is the
 > most natural next candidate — the framework's second substrate
 > prime, equally foundational, but never audited as a meta-structure.
-> This scaffold sets that up. The origin context lives in this
-> notice and the PR description; the audit body is canonical.
+> The first-pass audit reveals: the asymmetry the bias produced is
+> not merely an oversight; the third-twist is *structurally distinct*
+> from the half-twist in specific ways the catalog has now surfaced.
 
-**Status: SCAFFOLD ONLY.** No verdict assigned yet. The audit will
-seal MODAL / GENERATIVE designations once the framework instance
-catalog (section 5) is filled and the V1–V5 criteria are checked
-against each instance.
+**Status: FIRST-PASS COMPLETE.** Preliminary MODAL ✓ / GENERATIVE
+PARTIAL verdict; structural findings (P1–P3 in §5.4) are
+substantive. The catalog is a sampling; exhaustive completion remains
+recommended.
 
 Class: foundational rigor check / substrate meta-structure audit.
 Resolution-mode throughout — composes existing canonical claims
@@ -274,120 +290,321 @@ pass V1 (Mihailescu prime origin), not just "the number 3 appears."
 
 ---
 
-## 5. Framework instance catalog (TEMPLATE — to be filled)
+## 5. Framework instance catalog — first pass
 
-**Status: TEMPLATE.** This section will catalog the framework's
-existing audits that engage Z_3 / 1/3 / 2/3 content, evaluating
-each instance against V1–V5 and assigning a numerology Class.
+### 5.1 Grep results (2026-06-09 session)
 
-The catalog-filling work proceeds in three phases:
+Substrate-canonical Z_3 signatures returned dense hits across the
+audit chain. Sampling (not exhaustive):
+- `q_3` / `q₃`: ~1,781 hits across the repo (substrate-prime label)
+- Explicit `Z_3` / `Z₃` / `ℤ/3` references: ~20+ structural sites
+- `color triplet` (Z_3 action vocabulary): ~12 sites
+- `Φ_3(x) = x² + x + 1` (cyclotomic polynomial): 1 site (canonical)
+- `27/8 = q_3³/q_2³` and `8/35 = q_2³/(q_2³+q_3³)` (Mihailescu cube
+  bare K=1 identities): ~10 sites
+- `Q = q_2/q_3 = 2/3` (Klein-bottle population ratio): ~15 sites
+  across Koide form iterations 11, 13, 14
+- `1/3` as boundary / threshold: ~6 sites (Q > 1/3 forces Lorentzian)
+- `σ_3(17) = 1 + 17³` (Eisenstein λ_17): cosmological audit chain
+- `S_3 acting on Z_2 × Z_3`: ~5 sites (down-type, neutrino, baryon)
 
-### Phase 5.1: Grep across existing audits for Z_3 signatures
+The grep volume is large enough that **§5.2 is a first-pass
+sampling**, not an exhaustive catalog. The pattern surfaces from
+the sample; exhaustive catalog-filling is recommended future work.
 
-Substrate-canonical signatures to grep for:
-- `q_3`, `q₃` (Mihailescu prime)
-- `ℤ[ω]`, `Z[omega]`, `Eisenstein` (Eisenstein integers)
-- `Φ_3`, `Phi_3`, `Phi3` (cyclotomic polynomial)
-- `Z_3`, `Z₃`, `ℤ/3` (cyclic group)
-- `1/3`, `2/3` (the rationals)
-- `ω` as primitive 3rd root of unity
-- `PSL(2,ℤ)` order-3 torsion
-- `120°`, `2π/3` (rotation angles)
-- `Φ_6(x) = x² − x + 1` (the cosmological cyclotomic, which contains Z_3 via Z_6 = Z_2 × Z_3)
+### 5.2 First-pass catalog with V1–V5 evaluation
 
-### Phase 5.2: Per-instance V1–V5 evaluation
+Instances classified into four modes that surfaced during cataloging:
 
-For each instance located in Phase 5.1, fill the catalog row:
-
-| Instance | Location | Carrier | Cyclic action | V1 | V2 | V3 | V4 | V5 | Class | Notes |
+| # | Instance | Location | Carrier | Mode | V1 | V2 | V3 | V4 | V5 | Class |
 |---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Color triplet rotation σ | `canonical_glossary.md` line 55 | Z_3 sector of Z_6 substrate; SU(3) color | **A** cyclic | ✓ | ✓ | ✓ | ✓ | ✓ | 5 |
+| 2 | PSL(2,ℤ) ℤ/3 torsion generator | PR #241 | PSL(2,ℤ) = ℤ/2 ∗ ℤ/3 free product | **A** cyclic | ✓ | ✓ | ✓ | ✓ | ✓ | 5 |
+| 3 | Φ_3(x) = x² + x + 1 cyclotomic | PR #242, line 144 | Primitive 3rd roots {ω, ω²} | **A** cyclic | ✓ | ✓ | ✓ | ✓ | ✓ | 5 |
+| 4 | σ orbits {0,2,4} and {1,3,5} on Z_6 | `derivation_atlas.md` line 603 | Z_6 mode lattice | **A** cyclic | ✓ | ✓ | ✓ | ✓ | ✓ | 5 |
+| 5 | SU(3) color rotation | `surface_uniqueness_audit.md`, `framework_status.md` Task 106 | Color triplet | **A** cyclic | ✓ | ✓ | ✓ | ✓ | ✓ | 5 |
+| 6 | Z_3 acts freely on down-type | `down_type_double_cover_phase_b.md` line 85 | Down-type quark triplet | **A** cyclic | ✓ | ✓ | ✓ | ✓ | ✓ | 5 |
+| 7 | Twelfth drive Arnold tongue (3:1, q_3-base) → N = 2 | `RESULTS.md` lines 110–113 | Phase-locking ratio | **A** cyclic | ✓ | ✓ | ✓ | ✓ | ✓ | 5 |
+| 8 | Matrix size 3 = q_3 (color triplet count) | `koide_form_substrate_iteration_5.md` line 118 | Mass matrix dimension | **A** cyclic | ✓ | ~ | ~ | ✓ | ✓ | 5 |
+| 9 | 27/8 = q_3³/q_2³ (strong/weak coupling) | `README.md` lines 49–50; `MINIMUM_SELF_PREDICTING_UNIVERSE.md` line 238 | Bare K=1 arithmetic identity | **B** Mihailescu cube | ✓ | ✗ | — | — | — | 1 (bare K=1) |
+| 10 | 8/35 = q_2³/(q_2³+q_3³) (sin²θ_W) | `MINIMUM_SELF_PREDICTING_UNIVERSE.md` line 239 | Bare K=1 arithmetic identity | **B** Mihailescu cube | ✓ | ✗ | — | — | — | 1 (bare K=1) |
+| 11 | Q = q_2/q_3 = 2/3 (Klein-bottle population) | `koide_form_substrate_iteration_11.md` line 110 | Klein-bottle Lorentzian forcing | **B** Mihailescu ratio | ✓ | ✗ | ✓ (depth 2) | ✓ | — | 4 (substantive ratio) |
+| 12 | K_lepton = q_2/q_3 = 2/3 | `koide_form_substrate_iteration_13.md` line 126 | Koide form productive null | **B** Mihailescu ratio | ✓ | ✗ | ✓ | ✓ | — | 4 (productive null) |
+| 13 | Q > 1/3 forces Lorentzian signature | `koide_form_substrate_iteration_11.md` lines 107–115 | Klein-bottle signature threshold | **B** Mihailescu ratio | ✓ | ✗ | ✓ | ✓ | — | 5 (asymmetric uses both 1/3 and 2/3) |
+| 14 | σ_3(17) = 1 + 17³ = 4914 (Eisenstein λ_17) | PR #243; `cuspidal_lambda17_weight4_audit.md` line 35 | Divisor sum at p = 17 | **B** Mihailescu cube (via d=3 / σ_3 = σ_{k-1} at k=4) | ~ | ~ | — | ~ | — | 5 (forced; weight-dependent) |
+| 15 | m_τ/m_e = 26^(5/2) = (q_3³−1)^(d−1/2) | `MINIMUM_SELF_PREDICTING_UNIVERSE.md` line 323 | Mass ratio identity | **B** Mihailescu cube | ✓ | ✗ | — | — | — | 4 (forced ratio) |
+| 16 | Z_6 = Z_2 × Z_3 substrate mode lattice | `canonical_glossary.md` line 53; `CHAIN_KSTAR.md` line 37 | Substrate carrier | **C** composite | ✓ | ✓ | ✓ | ✓ | ✓ | 5 |
+| 17 | Φ_6(x) = x² − x + 1 (cosmological cyclotomic, contains Z_3 via Z_6) | PR #242 line 146 | 6th roots = Z_2 × Z_3 | **C** composite | ✓ | ✓ | ✓ | ✓ | ✓ | 5 |
+| 18 | Z_12 = Z_4 × Z_3 cross-scale | `lambda17_test_gamma06_cosmological_audit.md` line 508 | Cross-scale composite | **C** composite | ✓ | ✓ | — | ✓ | — | 4 |
+| 19 | S_3 acting on Z_2 × Z_3 lattice | `down_type_double_cover_closed.md` lines 68, 113; `vocabulary_is_the_work_pattern.md` line 59 | Z_6 with permutation group | **C** composite | ✓ | ✓ | ✓ | ✓ | ✓ | 5 |
+| 20 | cos²θ = 1/3 (Koide angular reformulation) | `koide_form_substrate_iteration_13.md` line 234 | Angular constraint | **D** fractional | ✓ | ✗ | ✓ | — | — | 4 (substrate-derived value, not cyclic) |
+| 21 | Up-type +2/3 vs down-type −1/3 quark charges | (Standard Model; framework via SU(3) ⊂ U(1)_EM) | Quark electric charge | **A** cyclic via SU(3) | ✓ | ✓ | — | — | — | 5 (structural) |
 
-(Catalog rows to be filled. Aim for completeness — every existing
-audit that references Z_3 content should appear, with explicit V1–V5
-check.)
+**Notation in V1–V5 columns**: ✓ = passes; ✗ = fails; ~ = partial /
+needs further audit; — = not directly applicable to this mode.
 
-Expected instances (to verify):
-- PR #241 PSL(2,ℤ) noncommutative core (q_3 torsion; F_2 = Γ(2))
-- PR #242 Γ_0(6) cosmological audit (bad prime 3; Steinberg
-  reduction at 3)
-- `cyclotomic_content_mass_ratios_audit.md` (Φ_3 in cosmological
-  Φ_6 = Z_2 × Z_3)
-- `gamma06_cosmological_modular_surface_audit.md` (Φ_3 = Z_3 row in
-  cyclotomic table)
-- PSL(2,ℤ) free product (= ℤ/2 ∗ ℤ/3)
-- Substrate Z_6 lattice (= Z_2 × Z_3)
-- Mass hierarchy 26 : 7 : 1 (any Z_3 content?)
-- Sector exponent progression 2, 5/2, 3 (the 3 endpoint — but is
-  this a Z_3 carrier?)
-- Three-body problem PR #241 lunar theory (the "three" of three
-  bodies; needs V1 check whether it's Mihailescu q_3 or just
-  arithmetic 3)
+**Class column** (per `numerology_inventory.md`): 1 = confirmed
+numerology / bare K=1; 4 = needs individual audit; 5 = explicitly
+NOT numerology (structural).
 
-### Phase 5.3: Aggregate the catalog
+### 5.3 Aggregate: four modes surface
 
-Count substrate-canonical instances (V1–V5 passing) vs numerological
-(failing). Identify whether a meta-structure emerges (≥ 3 instances
-sharing a common derivation chain).
+Instances naturally partition into **four modes**, not the three I
+anticipated in the template:
 
-If a meta-structure emerges: proceed to §6 (identity) and §7
-(signature).
+```
+Mode A — Pure Z_3 cyclic action:                 8 instances (#1–#8, #21)
+Mode B — Mihailescu cube / ratio (q_3³ or q_2/q_3): 7 instances (#9–#15)
+Mode C — Z_3 in composite (Z_6, Z_12, S_3-on-Z_6): 4 instances (#16–#19)
+Mode D — Third-character fractional:             ~1 instance  (#20)
+                                                  ────────────
+Total instances surveyed:                       ~20–22
+```
 
-If no meta-structure: the audit closes negatively — substrate's Z_3
-content is *present but non-coherent as a meta-structure*. This
-would be a substantive finding on its own.
+(Total instances surveyed counts #21 in both A and B since the quark
+charge structure spans cyclic action and ratio readings; the actual
+count is more like 20 distinct instances.)
+
+### 5.4 Pattern that surfaced — the structural finding
+
+**Three structural observations from the catalog that PR #240's
+half-twist meta-structure does not anticipate:**
+
+**(P1) Mode B (Mihailescu cube q_3³) is UNIQUELY Z_3 — no Z_2 analog.**
+
+The framework's bare K=1 arithmetic identities (27/8 = q_3³/q_2³;
+8/35 = q_2³/(q_2³+q_3³); m_τ/m_e via (q_3³−1)) use q_3³ in
+positions where the half-twist meta-structure has nothing
+comparable. There is no "q_2³ standalone" identity that plays the
+same role.
+
+The deepest reading: the framework's "cube content" sits at the
+intersection of **three coincident 3's**:
+- q_3 = 3 (Mihailescu prime)
+- d = 3 (spatial dimension)
+- the cube exponent itself
+
+When the cube content appears (27/8, etc.), it is exploiting all
+three coincidences simultaneously. The Mihailescu cube identity
+`q_3² − q_2³ = 1` already conjoins q_3² with q_2³ at the substrate
+level; the bare K=1 identities extend this to q_3³ via the spatial
+dimension d = 3.
+
+This is a substrate mode the half-twist cannot have: there is no
+"q_2² = 4 = d" analog, because d = 3 ≠ 4.
+
+**(P2) The Z_2 inversion (1/3 ↔ 2/3) is SPONTANEOUSLY BROKEN at
+Mode B level.**
+
+In Mode A (cyclic action), 1/3 and 2/3 are degenerate Z_3 generators
+exchanged by Aut(Z_3) = Z_2.
+
+In Mode B (Mihailescu ratios), the asymmetry is sharp:
+- `Q = q_2/q_3 = 2/3` is substrate-canonical (Klein-bottle, Koide)
+- `Q = q_2²/q_3² = 4/9` is NOT canonical
+- `Q = 1/3` appears only as a *threshold* / *boundary*, not as a value
+
+The substrate's natural ratio is *q_2/q_3 = 2/3*, not the
+inversion-related *q_3/q_2 = 3/2* nor *q_3²/q_2³ = 9/8* nor
+*q_2/q_3² = 2/9 = 1/(q_2² + ...)*. Specifically: `Q = 2/3` is
+preferred over `Q = 1/3` (which would require `q_2/q_3² = 2/9`,
+not a substrate-canonical ratio).
+
+This asymmetry IS the framework's Z_2-inversion-breaking observable
+inside Z_3. It is NOT a bias artifact; it is a *substrate-forced*
+asymmetry: the substrate's natural Mihailescu ratio is 2/3, the
+inversion 1/3 has no canonical substrate carrier (it would require
+the "wrong" power of q_3).
+
+**(P3) Third-character fractional content (Mode D) is THIN.**
+
+The framework's "fractional half-content" is rich (PR #240 instances
+3, 4, 6, 7 — mediant, Born √ε, ½-weight modular, sector ½-step).
+
+The framework's "fractional third-content" is essentially **just
+cos²θ = 1/3** (Koide angular reformulation). No third-power
+exponents in the substrate's coupling structure (the Mihailescu
+content uses cubes, not third roots). No ⅓-weight modular forms in
+the framework's modular surface content (Γ_0(3) and Γ_0(9) are not
+prominent; the cosmological scale is Γ_0(6), matter scale is Γ_0(4)).
+No third-step arithmetic progressions in sector exponents.
+
+This **absence** is substantive. Reading: the framework's
+fractional-presence content is *Z_2-character* (half-power
+operations: √ε, ½-weight, ½-step), not *Z_3-character*. The
+third-twist mode is *operative* (Mode A cyclic action, Mode B
+Mihailescu ratio, Mode C composite) but not *fractionally present*.
+
+This is the half-twist meta-structure's domain that the third-twist
+does NOT enter. It is NOT a bias artifact; it appears to be a real
+structural asymmetry between the substrate's q_2 = 2 and q_3 = 3
+roles.
+
+### 5.5 The bimodal vs trimodal asymmetry
+
+Comparing half-twist and third-twist mode counts (PR #240 catalog +
+this catalog):
+
+| Mode | Half-twist (Z_2) | Third-twist (Z_3) |
+|---|---|---|
+| **A** cyclic action / primitive | 3 instances (K² antiperiodic, Q mod 2, Z_2 cyclotomic factor) | **8 instances** (color, PSL(2,ℤ), Φ_3, σ_orbits, SU(3), down-type, Arnold, matrix size) |
+| **B** substrate-cube or ratio | (none — no q_2³-only canonical identity) | **7 instances** (27/8, 8/35, Q=2/3, K_lepton, Q>1/3, σ_3(17), m_τ/m_e) |
+| **C** composite (in Z_n) | (implicit in Z_6 = Z_2 × Z_3) | **4 instances** (Z_6, Φ_6, Z_12, S_3-on-Z_6) |
+| **D** fractional character | 4 instances (mediant, Born √ε, ½-weight, ½-step) | **~1 instance** (cos²θ = 1/3) |
+| **B² derived (square of cyclic)** | 1 instance (SL(2,ℝ) J² = −I) | (NA at Z_3; would be σ³ but trivially id) |
+
+The asymmetry: the half-twist's character is *cyclic + fractional*
+(Modes A + D dominant); the third-twist's character is *cyclic +
+Mihailescu-cube* (Modes A + B dominant).
+
+This is the cleanest pattern the catalog surfaces.
 
 ---
 
-## 6. Identity restatement (DEFERRED until §5 catalog complete)
+## 6. Identity — preliminary statement (first pass)
 
-**Template — parallel to PR #250 half-twist identity.**
+Based on §5's catalog, the third-twist's identity has **two distinct
+sub-identities** that must be stated separately, not as one
+conjoint structure (as the half-twist's identity could be).
 
-Once the catalog is filled, this section will state:
+### 6.A — Cyclic-action third-twist (Mode A identity)
 
-**Identity (3 conjoint conditions):**
-- (I1) Order 3 (σ³ = id, σ ≠ id, σ² ≠ id)
-- (I2) Primitive Z_3 (not σ_6² of a Z_6 generator; not n-th power
-  of higher cyclic mode that is itself canonical)
-- (I3) [Geometric-type condition specific to Z_3 — to be derived
-  from the catalog, not pre-asserted]
+A **cyclic third-twist** in the framework is a structure on a
+carrier acted on by σ satisfying three conjoint conditions:
 
-The (I3) condition is the audit's open question. For the half-twist,
-(I3) was reflection-character (sign-flip, pair-swap, antipodal
-involution, orientation reversal, complex conjugation,
-Atkin-Lehner involution). For the third-twist, the analogous
-geometric type would be a rotation-character condition (120°
-rotation, third-root multiplication, Z_3 anyonic exchange,
-SU(3) color rotation, Eisenstein-integer ω-multiplication,
-PSL(2,ℤ) ℤ/3 torsion application). The catalog's filled instances
-will determine which of these are *substrate-canonical* (vs derived
-or numerological).
+**(I_A1) Order 3.** σ³ = identity, σ ≠ identity, σ² ≠ identity.
 
-**Open: 1/3 vs 2/3 as I3 sub-cases?** Aut(Z_3) = Z_2 exchanges them,
-suggesting they are roles, not separate identities. The catalog will
-test this.
+**(I_A2) Primitive Z_3.** σ generates a primitive Z_3 = ℤ/3ℤ
+subgroup of the carrier's symmetry group — not σ_6² of a Z_6
+generator that is itself substrate-canonical at the same scale.
+
+**(I_A3) Rotation-character geometric type.** σ realizes one of:
+- **120° rotation** on a planar carrier (R² with rotational symmetry)
+- **Primitive 3rd root of unity multiplication** on ℂ or ℤ[ω]
+  (z → ωz with ω = e^(2πi/3))
+- **Cyclic shift on a 3-element substrate sector** (e.g., color
+  triplet σ in canonical_glossary.md, three-element σ orbits on Z_6)
+- **Z_3 anyonic exchange** in parafermion fusion rules
+- **SU(3) center rotation** acting on the fundamental rep
+- **PSL(2,ℤ) ℤ/3 torsion application** on the upper half plane
+
+These are the substrate-canonical rotation-character actions
+surfaced by the Mode A catalog.
+
+### 6.B — Mihailescu-ratio third-twist (Mode B identity)
+
+A **Mihailescu-ratio third-twist** in the framework is a structure
+where q_3 = 3 appears NOT as a Z_3 cyclic action but as the
+*Mihailescu prime in a substrate-canonical ratio or power*. The
+identity is structurally distinct from Mode A:
+
+**(I_B1) Order = irrelevant.** The Mihailescu ratio (e.g., q_2/q_3
+= 2/3, or q_3³/q_2³ = 27/8) is NOT a cyclic group action; it is a
+real-number value derived from substrate primes.
+
+**(I_B2) Mihailescu-prime origin.** The ratio (or power) involves
+q_3 = 3 specifically (not just any "3" from dimension counting or
+arithmetic averages). The Mihailescu cube identity
+`q_3² − q_2³ = 1` is the substrate forcing.
+
+**(I_B3) Coincident-3 reading.** When the cube power appears (q_3³
+in 27/8; q_3³ in σ_3 divisor sum; q_3³−1 = 26 in mass hierarchy),
+the cube exponent is structurally tied to *spatial dimension d = 3*
+(which coincides with the Mihailescu prime value q_3 = 3 in our
+framework). The "three coincident 3's" reading: substrate prime
+value, spatial dimension, and the cube exponent are all 3
+simultaneously, and bare K=1 identities exploit all three at once.
+
+### 6.C — Composite-mode third-twist (Mode C identity)
+
+Z_3 appears as a factor in composite cyclic groups (Z_6, Z_12, S_3
+on Z_2 × Z_3). The Mode C identity is just the Mode A identity
+applied to the Z_3 factor of a composite carrier (with the
+caveat that the carrier's *full* symmetry group is larger than Z_3
+alone).
+
+### 6.D — Absent: fractional-character third-twist
+
+Unlike the half-twist (which has rich half-character fractional
+content — Born √ε, ½-weight modular, sector ½-step, mediant),
+the third-twist has **essentially no fractional third-character
+content** in the framework. The Mode D row of §5 has only one
+candidate (cos²θ = 1/3 in Koide angular reformulation).
+
+This absence is itself a substantive structural finding (P3
+above). The framework's *fractional-presence* content is
+Z_2-character, not Z_3-character.
+
+### 6.E — The Z_2 inversion (1/3 ↔ 2/3) is broken
+
+Aut(Z_3) = Z_2 exchanges 1/3 and 2/3. At Mode A level (cyclic
+action), they are degenerate primitive generators. At Mode B level
+(Mihailescu ratio), the substrate prefers `Q = q_2/q_3 = 2/3` over
+`Q = 1/3`; the inversion is broken. The framework's *natural*
+substrate ratio is 2/3; 1/3 appears only as boundary / threshold /
+charge-flip-complement of 2/3.
+
+This is the third-twist's natural *symmetry-breaking* mode — its
+own version of the half-twist's Z_2 self-inversion (PR #250).
 
 ---
 
-## 7. Signature restatement (DEFERRED until §5 catalog complete)
+## 7. Signature — preliminary statement (first pass)
 
-**Template — parallel to PR #250 half-twist signature.**
+**Cyclic third-twist signature (Mode A):**
 
-Once the catalog is filled, this section will state:
+A candidate σ is a Mode-A cyclic third-twist iff all four pass:
 
-**Signature (4 detection tests):**
-- (S1) Order-3 carrier transformation (σ³ = id)
-- (S2) Primitive Z_3 subgroup (not lifted from a higher cycle)
-- (S3) [Rotation-character geometric type — to be derived]
-- (S4) Substrate forcing by Mihailescu q_3 = 3 AND a specific
-  framework structural anchor
+**(S_A1)** σ³ = id; σ ≠ id; σ² ≠ id (order exactly 3)
+**(S_A2)** σ generates a primitive Z_3; not σ_6² of a substrate-
+canonical Z_6 generator
+**(S_A3)** σ realizes rotation-character (120° rotation, ω-
+multiplication, cyclic shift on 3-sector, SU(3) center, Z_3
+parafermion exchange, PSL(2,ℤ) torsion)
+**(S_A4)** σ's existence is forced by q_3 = 3 (Mihailescu prime) AND
+a specific structural anchor (color triplet, modular surface
+torsion, etc.)
 
-**Disqualifying conditions:**
-- Z_n for n ≠ 3 (third-twist requires precisely order 3, not 2, 4, 6, etc.)
-- Z_3 element appearing as σ_9³ of a Z_9 generator (if such a Z_9
-  envelope is canonical) — derived, not primitive
-- "Third-character" fractional content (1/3 appearing as a
-  fractional exponent or weight, *not* as a Z_3 group action) —
-  parallel to PR #250's "half-character" category
+**Mihailescu-ratio third-twist signature (Mode B):**
+
+A candidate value v involving 1/3, 2/3, or q_3³ is a Mode-B
+Mihailescu-ratio third-twist iff:
+
+**(S_B1)** v is a substrate-derived ratio (e.g., q_2/q_3, q_2³/q_3³)
+or power (q_3³) — NOT a Z_3 cyclic action
+**(S_B2)** The expression involves q_3 = 3 as a Mihailescu prime
+(NOT as a dimension count, choice count, or arithmetic 3)
+**(S_B3)** The ratio respects the Mihailescu cube identity
+`q_3² − q_2³ = 1` OR exploits the d = 3 coincidence in cube powers
+**(S_B4)** No Z_2 inversion partner: if `Q = 2/3` is canonical,
+`Q = 3/2` or `Q = 1/3` substitutes either fail substrate-canonicity
+or appear only as thresholds / complements
+
+**Disqualifying conditions (do NOT pass any third-twist mode):**
+
+- Order ≠ 3 (Z_2, Z_4, Z_n for n ≠ 3) — fails S_A1
+- "3 dimensions" arithmetic 1/3 — fails S_A4 / S_B2 (no Mihailescu
+  origin)
+- "3 of N choices" arithmetic 1/3 — fails S_A4 / S_B2
+- σ_9³ of a substrate-canonical Z_9 — fails S_A2 (derived, not
+  primitive)
+- Fractional 1/3 exponent in carrier without Mihailescu derivation —
+  fails S_B2 (e.g., Born ε^(1/2) is half-character, not third-
+  character; the framework has no analog)
+
+### 7.B Vocabulary note
+
+The "rotation-character" of Mode A is the third-twist's substrate-
+canonical geometric type. It is NOT identical to the half-twist's
+"reflection-character" (which is order-2 sign-flip / pair-swap /
+antipodal). Rotation-character is *orientation-preserving* (per
+SO(2) ⊃ Z_3); reflection-character is *orientation-reversing*.
+The substrate distinguishes these.
+
+**The third-twist is a substrate-canonical mode in the
+orientation-preserving sector of the framework's vocabulary**;
+the half-twist is in the orientation-reversing sector. This is a
+sharp distinction surfaced by the catalog.
 
 ---
 
