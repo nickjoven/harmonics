@@ -339,6 +339,12 @@ Instances classified into four modes that surfaced during cataloging:
 | 19 | S_3 acting on Z_2 × Z_3 lattice | `down_type_double_cover_closed.md` lines 68, 113; `vocabulary_is_the_work_pattern.md` line 59 | Z_6 with permutation group | **C** composite | ✓ | ✓ | ✓ | ✓ | ✓ | 5 |
 | 20 | cos²θ = 1/3 (Koide angular reformulation) | `koide_form_substrate_iteration_13.md` line 234 | Angular constraint | **D** fractional | ✓ | ✗ | ✓ | — | — | 4 (substrate-derived value, not cyclic) |
 | 21 | Up-type +2/3 vs down-type −1/3 quark charges | (Standard Model; framework via SU(3) ⊂ U(1)_EM) | Quark electric charge | **A** cyclic via SU(3) | ✓ | ✓ | — | — | — | 5 (structural) |
+| 22 | Möbius container phase pattern (θ₁, θ₂, θ₃) = (0, π/3, 2π/3) | `mobius_container.md` lines 179–184 | Möbius ring oscillator phases | **A** cyclic on Möbius carrier | ✓ | ✓ | ✓ | ✓ | ✓ | 5 (substantive — Z_3 cyclic on Z_2 Möbius carrier) |
+| 23 | Discrete reduction Z_3 cyclic gradient (0, π/3, 2π/3) | `discrete_reduction_computed.md` lines 61, 101 | Phase reduction energy formula | **A** cyclic | ✓ | ✓ | ✓ | ✓ | ✓ | 5 |
+| 24 | Substrate natural mass exponent q_2 × q_3^d = 54 | `exponent.md` line 9; `VISUAL_ONTOLOGY_PROMPT.md` line 157 | Hierarchy exponent | **B** Mihailescu cube (d=3) | ✓ | ✗ | — | ✓ | — | 5 (substrate-forced; d = 3 = q_3 coincidence) |
+| 25 | a_3 = −3 = −q_3 (LMFDB Hecke eigenvalue at Steinberg prime 3) | `padic_lfunction_mihailescu_pair_f64_audit.md` (corrected by PR #248) | Hecke eigenvalue / local Steinberg rep | **B** Mihailescu value (non-split mult.) | ✓ | ~ | — | — | — | 5 (LMFDB-verified) |
+| 26 | α_s/α_2 = 27/8 = q_3³/q_2³ appears across 5+ audits | `MINIMUM_SELF_PREDICTING_UNIVERSE.md`, `cosmological_cycle.md`, `beta_from_tongues.md`, `STAR_SUBSTRATE.md`, `unitless_check.md` | Strong/weak coupling ratio | **B** Mihailescu cube | ✓ | ✗ | — | — | — | 1 (bare K=1; widely-referenced; same expression as #9) |
+| 27 | α_2/α_3 = 2/3 (population ratio in Higgs sector) | `higgs_from_tongue_boundary.md` line 232 | Coupling ratio | **B** Mihailescu ratio | ✓ | ✗ | ✓ | ✓ | — | 4 (substantive; second Q = 2/3 instance) |
 
 **Notation in V1–V5 columns**: ✓ = passes; ✗ = fails; ~ = partial /
 needs further audit; — = not directly applicable to this mode.
@@ -347,23 +353,52 @@ needs further audit; — = not directly applicable to this mode.
 numerology / bare K=1; 4 = needs individual audit; 5 = explicitly
 NOT numerology (structural).
 
-### 5.3 Aggregate: four modes surface
+### 5.3 Aggregate: four modes surface (extended)
 
 Instances naturally partition into **four modes**, not the three I
 anticipated in the template:
 
 ```
-Mode A — Pure Z_3 cyclic action:                 8 instances (#1–#8, #21)
-Mode B — Mihailescu cube / ratio (q_3³ or q_2/q_3): 7 instances (#9–#15)
+Mode A — Pure Z_3 cyclic action:                  10 instances
+         (#1–#8, #21 SU(3); #22 Möbius container;
+          #23 discrete reduction gradient)
+
+Mode B — Mihailescu cube / ratio (q_3³ or q_2/q_3): 10 instances
+         (#9–#15 first pass; #24 substrate exponent q_2 × q_3^d;
+          #25 a_3 = −3 Steinberg; #26 α_s/α_2 multi-site; #27 α_2/α_3)
+
 Mode C — Z_3 in composite (Z_6, Z_12, S_3-on-Z_6): 4 instances (#16–#19)
-Mode D — Third-character fractional:             ~1 instance  (#20)
-                                                  ────────────
-Total instances surveyed:                       ~20–22
+
+Mode D — Third-character fractional:               ~1 instance  (#20)
+                                                  ─────────────
+Total distinct instances surveyed:                 ~25
 ```
 
-(Total instances surveyed counts #21 in both A and B since the quark
-charge structure spans cyclic action and ratio readings; the actual
-count is more like 20 distinct instances.)
+The catalog extension confirms the four-mode partition. The new
+instances also surface two additional structural observations:
+
+**(P4) Möbius container with Z_3 phase pattern (#22) is a
+*cross-twist coupling*** — a Z_3 cyclic action operating on a
+Möbius (Z_2 substrate) carrier. This is a *single concrete example*
+of a half-twist + third-twist composite, suggesting the substrate
+admits explicit cross-twist composition. The Z_6 substrate lattice
+(Mode C #16) is the *abstract* algebraic version (Z_2 × Z_3); the
+Möbius container is the *geometric* realization with both twists
+simultaneously active on the same carrier.
+
+**(P5) Substrate's natural exponent q_2 × q_3^d (#24) is the
+"three coincident 3's" finding rendered into a single expression.**
+The hierarchy exponent that appears in mass-ratio derivations is
+literally `q_2 × q_3^(d)` where d = 3 is spatial dimension. This is
+the substrate's load-bearing exploitation of:
+- q_3 = 3 (Mihailescu prime value)
+- d = 3 (spatial dimension)
+- cube power (the exponent)
+
+all coincident at 3. The expression equals q_2 × q_3³ = 54 — the
+substrate's natural hierarchy exponent. This is the single
+clearest instance of (P1) made concrete in a substrate-canonical
+constant.
 
 ### 5.4 Pattern that surfaced — the structural finding
 
@@ -440,24 +475,82 @@ does NOT enter. It is NOT a bias artifact; it appears to be a real
 structural asymmetry between the substrate's q_2 = 2 and q_3 = 3
 roles.
 
-### 5.5 The bimodal vs trimodal asymmetry
+**(P4) Cross-twist coupling is substrate-canonical (Möbius + Z_3).**
+
+The mobius_container's phase pattern (0, π/3, 2π/3) on a Möbius
+ring oscillator (instance #22) is a *concrete* example of half-twist
+(Z_2) + third-twist (Z_3) composite at the same geometric carrier.
+The substrate admits explicit cross-twist composition; this is the
+geometric realization of the abstract Z_2 × Z_3 = Z_6 substrate
+lattice (instance #16).
+
+(P4) implies: the framework's natural way to combine half-twist and
+third-twist content is not "either/or" but "both/and" via Z_6. Both
+modes can act on the same carrier simultaneously without conflict
+because gcd(2, 3) = 1 (Chinese Remainder Theorem).
+
+**(P5) Substrate's natural exponent q_2 × q_3^d concretizes (P1).**
+
+The substrate's hierarchy exponent (`exponent.md`) is literally
+`q_2 × q_3^d` where d = 3 = spatial dimension. The expression
+exploits all three coincident 3's in one constant:
+- q_3 = 3 (Mihailescu prime value)
+- d = 3 (spatial dimension)
+- the cube exponent itself
+
+This evaluates to 54 = 2 × 27 = q_2 × q_3³. The substrate carries
+this as a *named* hierarchy exponent — it is not a derived constant
+but a primary substrate quantity. This is the cleanest single
+concrete instance of (P1).
+
+### 5.5 The bimodal vs trimodal asymmetry (final aggregation)
 
 Comparing half-twist and third-twist mode counts (PR #240 catalog +
-this catalog):
+this catalog, extended):
 
 | Mode | Half-twist (Z_2) | Third-twist (Z_3) |
 |---|---|---|
-| **A** cyclic action / primitive | 3 instances (K² antiperiodic, Q mod 2, Z_2 cyclotomic factor) | **8 instances** (color, PSL(2,ℤ), Φ_3, σ_orbits, SU(3), down-type, Arnold, matrix size) |
-| **B** substrate-cube or ratio | (none — no q_2³-only canonical identity) | **7 instances** (27/8, 8/35, Q=2/3, K_lepton, Q>1/3, σ_3(17), m_τ/m_e) |
+| **A** cyclic action / primitive | 3 instances (K² antiperiodic, Q mod 2, Z_2 cyclotomic factor) | **10 instances** (color triplet σ, PSL(2,ℤ) ℤ/3, Φ_3, σ orbits on Z_6, SU(3) color, down-type Z_3, Arnold 3:1, matrix size, SU(3) quark charge via fundamental rep, Möbius container Z_3 phases, discrete reduction phase gradient) |
+| **B** substrate-cube or ratio | (none — no q_2³-only canonical identity) | **10 instances** (27/8 = q_3³/q_2³, 8/35 = q_2³/(q_2³+q_3³), Q = 2/3 Klein-bottle, K_lepton = 2/3, Q > 1/3 threshold, σ_3(17), m_τ/m_e via (q_3³−1), q_2 × q_3^d = 54 substrate exponent, a_3 = −3 Steinberg, α_s/α_2 multi-site, α_2/α_3 = 2/3 Higgs) |
 | **C** composite (in Z_n) | (implicit in Z_6 = Z_2 × Z_3) | **4 instances** (Z_6, Φ_6, Z_12, S_3-on-Z_6) |
 | **D** fractional character | 4 instances (mediant, Born √ε, ½-weight, ½-step) | **~1 instance** (cos²θ = 1/3) |
-| **B² derived (square of cyclic)** | 1 instance (SL(2,ℝ) J² = −I) | (NA at Z_3; would be σ³ but trivially id) |
+| **B² derived (square of cyclic)** | 1 instance (SL(2,ℝ) J² = −I) | (NA at Z_3; σ³ is trivially id, not a derived element) |
 
 The asymmetry: the half-twist's character is *cyclic + fractional*
 (Modes A + D dominant); the third-twist's character is *cyclic +
 Mihailescu-cube* (Modes A + B dominant).
 
-This is the cleanest pattern the catalog surfaces.
+This is the cleanest pattern the catalog surfaces. The extension
+strengthens it: Mode A doubles (10 vs initial 8), Mode B grows
+substantially (10 vs initial 7), Mode D stays at ~1.
+
+**The deepest finding from the extended catalog**: the framework's
+substrate prefers *operator content* for the third-twist (cyclic
+action and Mihailescu-prime expressions) and *fractional content*
+for the half-twist (√ε, ½-weight, ½-step). This is a sharp
+substrate-level functional division:
+
+| Substrate role | Z_2 (half-twist) carries | Z_3 (third-twist) carries |
+|---|---|---|
+| Cyclic action | yes (3 instances) | **yes (10 instances)** ⭐ |
+| Mihailescu power/ratio | no | **yes (10 instances)** ⭐ |
+| Fractional presence | **yes (4 instances)** ⭐ | barely (1 instance) |
+| Composite Z_n factor | yes (in Z_6) | yes (4 instances) |
+| Reflection-character | yes (signature S3) | NO (rotation-character only) |
+| Rotation-character | NO | yes (signature S_A3) |
+
+The substrate uses Z_2 for *reflection-character and fractional
+presence*; it uses Z_3 for *rotation-character and Mihailescu
+operator content*. These are **complementary substrate functions**,
+not competing for the same role.
+
+This complementarity is the audit's most significant finding. The
+bias toward half-twist in the recent audit chain was NOT just a Z_2
+preference; it was a *reflection-character + fractional* preference
+— a *function-class* preference. The third-twist provides the
+substrate's *orientation-preserving operator content*, distinct
+from but parallel to the half-twist's *orientation-reversing
+fractional content*.
 
 ---
 
