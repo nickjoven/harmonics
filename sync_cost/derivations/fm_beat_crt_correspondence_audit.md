@@ -43,7 +43,7 @@ line 109 verbatim.
   line 508
 
 **(G4) Cyclic-mode frequency convention.** ω_n := 2π/n on phase
-carriers of order n; used in `scratch/substrate_mode_evolution.py`
+carriers of order n; used in `substrate_mode_evolution.py`
 line 30: `OMEGA = {n: 2*math.pi/n for n in PRIMITIVE_MODES}`. This
 convention is *natural* but is not derived from substrate primitives
 elsewhere in the audit chain. See §6 falsifier F-FM-1.
@@ -382,9 +382,10 @@ Natural next audits, in order of likely substrate-yield:
 - PR #251 third-twist meta-structure (Mode A and Mode B Z_3 content)
 
 **Simulation reference:**
-- `scratch/substrate_mode_evolution.py` (ω_n = 2π/n convention used in
-  the multi-mode evolution simulation; this audit formalizes the
-  beat-frequency observation that simulation surfaces)
+- `substrate_mode_evolution.py` (repo root, alongside the other
+  substrate simulations; ω_n = 2π/n convention used in the multi-mode
+  evolution simulation; this audit formalizes the beat-frequency
+  observation that simulation surfaces)
 
 **Vocabulary discipline:**
 - `vocabulary_is_the_work_pattern.md` — the audit names Z_72 as a
