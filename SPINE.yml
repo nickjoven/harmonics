@@ -1,0 +1,368 @@
+# SPINE.yml — declarative backbone for the harmonics framework
+#
+# Each entry is a typed edge in the framework's epistemic graph,
+# stating either a premise → outcome relation ("Based on X, Y
+# occurs.") or an inheritance relation ("X inherits A from Y.").
+# Each entry carries a list of equivalent forms — alternate
+# phrasings of the same underlying claim — so the same edge can be
+# rendered to a reader in whichever register suits the surrounding
+# document.
+#
+# An agent crawling the repo can lift these edges directly into a
+# Merkle DAG.  A human reader can pull alternate phrasings at the
+# blurb level on the deployed Pages site via the shake-up icon
+# (docs/genesis.html and anywhere else the data-spine attribute
+# is wired).
+#
+# Schema:
+#   id           — short kebab-case identifier
+#   kind         — based-on  |  inherits-from
+#   source       — which document the edge was first stated in
+#   subject      — the consequent (based-on) or inheritor (inherits-from)
+#   premises     — for kind: based-on, the list of premises
+#   from         — for kind: inherits-from, the source object
+#   forms        — list of equivalent phrasings (≥1)
+#
+# Cross-document edges may share an id with consistent kind/subject.
+# Per-document spines live under section ids matched to the document
+# in source.
+
+version: 1
+
+spine:
+
+  # ──────────────────────────────────────────────────────────
+  # README · Lede
+  # ──────────────────────────────────────────────────────────
+
+  - id: lede-coupling-locks
+    kind: based-on
+    source: README.md (lede)
+    subject: mode-locking-at-small-integer-ratios
+    premises:
+      - continuous-oscillator-coupling
+    forms:
+      - "Based on coupling between continuous oscillators, mode-locking at small-integer-ratio frequencies occurs."
+      - "Coupled continuous oscillators produce discrete mode-locked tongues; the integers count locked states, not pixels."
+      - "When two oscillators in a continuous medium couple, the locking spectrum is discrete even though the underlying motion stays smooth."
+
+  - id: lede-discrete-features-inheritance
+    kind: inherits-from
+    source: README.md (lede)
+    subject: universe-discrete-features
+    from: continuous-oscillator-coupling
+    forms:
+      - "The universe's discrete features (quantum numbers, three spatial dimensions, the gauge group) inherit from coupling between continuous parts, not from a separate quantization postulate."
+      - "Discreteness is what locking produces; it is not added to the substrate by hand."
+      - "Quantum numbers, dimensional structure, and gauge factorisation are downstream of coupling, not parallel posits."
+
+  # ──────────────────────────────────────────────────────────
+  # README · The mechanism
+  # ──────────────────────────────────────────────────────────
+
+  - id: mechanism-mediant-forced
+    kind: based-on
+    source: README.md (The mechanism)
+    subject: mediant-operation-uniqueness
+    premises:
+      - energy-conservation
+      - stability-under-coupling
+    forms:
+      - "Based on energy conservation and stability under coupling, the mediant (a+c)/(b+d) is the only admissible binary operation between two locked frequencies."
+      - "Energy conservation forces the locked frequency between two bare frequencies; stability under coupling selects the smallest-denominator rational. Together these constraints have the mediant as their unique fixed point."
+      - "The mediant is not chosen; it is what remains when every alternative violates either the conservation or the stability constraint."
+
+  - id: mechanism-stern-brocot-inheritance
+    kind: inherits-from
+    source: README.md (The mechanism)
+    subject: stern-brocot-tree
+    from: iterated-mediant-insertion
+    forms:
+      - "The Stern-Brocot tree inherits its structure from iterated mediant insertion on adjacent fractions."
+      - "Iterating the mediant operation from 0/1 and 1/1 builds the Stern-Brocot tree depth by depth."
+      - "Stern-Brocot is the natural enumeration of the locked tongues the dynamics produces."
+
+  - id: mechanism-forced-property
+    kind: inherits-from
+    source: README.md (The mechanism)
+    subject: framework-forced-quantities
+    from: no-alternative-constraint-satisfaction
+    forms:
+      - "The framework's 'forced' property inherits from the no-alternative status of each constraint-satisfying step."
+      - "'Forced' is shorthand for 'every alternative violates a physical constraint'; the framework's quantities have no remaining degrees of freedom."
+      - "Each named structure in the framework is uniquely admitted by its constraints, not selected from a range of possibilities."
+
+  - id: mechanism-integers-as-counts
+    kind: inherits-from
+    source: README.md (The mechanism)
+    subject: framework-integers
+    from: mode-locked-state-counting
+    forms:
+      - "The framework integers (13, 5, 1, 19, q₂, q₃) inherit their meaning as counts of mode-locked states, not as cell counts of a pixelated geometry."
+      - "Each framework integer answers 'how many tongues are locked at this depth?', not 'how many cells fit in this volume?'"
+      - "The cosmic partition 13:5:1/19 is the substrate's spectral signature at Farey depth 7, not a cell count."
+
+  # ──────────────────────────────────────────────────────────
+  # README · Address vs structure
+  # ──────────────────────────────────────────────────────────
+
+  - id: address-structural-invariance
+    kind: inherits-from
+    source: README.md (Address vs structure)
+    subject: dimensionless-ratios
+    from: combinatorial-substrate
+    forms:
+      - "Structural constants inherit their values from the combinatorial substrate and are invariant under any change of the physical medium."
+      - "The dimensionless ratios (Ω_Λ = 13/19, n_s ≈ 0.965, K_c = 2/π) are the same for any observer at any cosmic epoch, in any unit system."
+      - "A structural constant is a contrabass pitch: independent of the medium it sits in."
+
+  - id: address-dimensionful-medium-dependence
+    kind: inherits-from
+    source: README.md (Address vs structure)
+    subject: dimensionful-constants
+    from: instantiated-physical-medium
+    forms:
+      - "Address constants inherit their values from the particular medium the universe happens to instantiate."
+      - "H_0, ℏ, v_EW, the Planck mass tell us where on the structure we happen to be, not what the structure is."
+      - "An address constant is a tuba pitch: the same instrument in helium gives a different number."
+
+  # ──────────────────────────────────────────────────────────
+  # README · What the mechanism forces
+  # ──────────────────────────────────────────────────────────
+
+  - id: forces-three-dimensions
+    kind: inherits-from
+    source: README.md (What the mechanism forces)
+    subject: spatial-dimension-d-equals-3
+    from: dim-SL2R-equals-3
+    forms:
+      - "Spatial dimension d = 3 inherits from dim SL(2, ℝ) = 3 — the continuum closure of the Stern-Brocot symmetry group SL(2, ℤ)."
+      - "Iterating the mediant generates SL(2, ℤ); the spatial manifold's dimension is fixed by the dimension of its continuum closure SL(2, ℝ)."
+      - "Three-dimensional space is what the geometry must be to stay consistent with the substrate's combining operation."
+
+  - id: forces-z6-mode-structure
+    kind: inherits-from
+    source: README.md (What the mechanism forces)
+    subject: gauge-group-and-three-generations
+    from: Z6-mode-structure-on-klein-bottle
+    forms:
+      - "Three generations of fermions and the gauge factorisation SU(3) × SU(2) × U(1) inherit from Z_6 = Z_2 × Z_3."
+      - "The Klein bottle's two smallest accessible denominators (q₂ = 2, q₃ = 3) produce the Z_6 mode lattice; the Standard Model gauge group is its automorphism structure."
+      - "Three generations is what the framework gets for free once Z_6 is fixed."
+
+  - id: forces-charge-quantization
+    kind: based-on
+    source: README.md (What the mechanism forces)
+    subject: integer-charge-quantization
+    premises:
+      - mediant-identifies-integer-phase-translations
+      - S1-compactness
+    forms:
+      - "Based on the mediant primitive identifying integer phase translations, S¹ compactness is forced; charge quantization in units of e/3 inherits from this."
+      - "S¹ has integer winding number for any continuous self-map; the framework's mediant primitive lands this on the charge sector."
+      - "Charge quantization is what integer winding number looks like once it acts on the gauge degrees of freedom."
+
+  # ──────────────────────────────────────────────────────────
+  # README · The largest residue (cosmological constant)
+  # ──────────────────────────────────────────────────────────
+
+  - id: residue-klein-bottle-topology
+    kind: based-on
+    source: README.md (The largest residue)
+    subject: admissible-field-mode-topology
+    premises:
+      - substrate-self-consistency
+    forms:
+      - "Based on substrate self-consistency, the Klein bottle is the only admissible field-mode topology."
+      - "The vacuum's topology is not a modelling choice; substrate self-consistency uniquely admits the Klein bottle."
+      - "Of all 2-manifolds, only the Klein bottle survives the substrate's parity-conservation requirement on field modes."
+
+  - id: residue-four-mode-vacuum
+    kind: based-on
+    source: README.md (The largest residue)
+    subject: surviving-zero-point-mode-count
+    premises:
+      - klein-bottle-topology
+      - Z2-parity-filter
+    forms:
+      - "Based on Klein-bottle topology and a Z₂ parity filter, exactly four zero-point modes survive."
+      - "A Z₂ parity filter on the Klein bottle admits four modes and no others; the vacuum has four constituent states."
+      - "Four is what zero-point counting gives when run on the substrate's actual topology, not on the assumed torus."
+
+  - id: residue-Lambda-from-four-modes
+    kind: inherits-from
+    source: README.md (The largest residue)
+    subject: cosmological-constant-Lambda
+    from: four-mode-vacuum
+    forms:
+      - "Λ ≈ 10⁻⁴⁷ GeV⁴ inherits from a four-mode vacuum, not from fine-tuning a many-mode sum."
+      - "The observed cosmological-constant value sits where four zero-point modes put it — no tuning required."
+      - "The 10¹²¹-order QFT discrepancy inherits from the torus-topology modelling choice, not from a physics mismatch."
+
+  # ──────────────────────────────────────────────────────────
+  # README · What the mechanism predicts (numerical residuals)
+  # ──────────────────────────────────────────────────────────
+
+  - id: predicts-omega-lambda-13-over-19
+    kind: inherits-from
+    source: README.md (What the mechanism predicts)
+    subject: dark-energy-fraction
+    from: Z6-mode-counting-at-stern-brocot-depth-6
+    forms:
+      - "Ω_Λ = 13/19 inherits from Z_6 mode counting at Stern-Brocot depth 6: 13 locked-mode fractions, 6 unlocked modes (2 × 3), ratio 13 / (13 + 6)."
+      - "The dark-energy fraction is 13/19 because that is the only ratio admitted by the substrate's mode counting at depth 6."
+      - "Ω_Λ = 13/19 = 0.6842, against Planck 2018's 0.685 ± 0.007 — a 0.07σ residual without fitted parameters."
+
+  - id: predicts-n_s-golden-winding
+    kind: inherits-from
+    source: README.md (What the mechanism predicts)
+    subject: scalar-spectral-tilt
+    from: stern-brocot-self-similarity-at-golden-ratio-winding
+    forms:
+      - "n_s ≈ 0.965 inherits from Stern-Brocot self-similarity at the golden-ratio winding."
+      - "The scalar spectral tilt is what self-similarity gives at the 1/φ winding number; no inflaton potential is needed."
+      - "n_s ≈ 0.965 is the framework's only admitted value at the golden-ratio gap, matching Planck's 0.9649 ± 0.0042."
+
+  - id: predicts-bare-K1-exclusion
+    kind: inherits-from
+    source: README.md (What the mechanism predicts)
+    subject: bare-K1-identities-status
+    from: scale-inconsistency-with-renormalization-group
+    forms:
+      - "The bare K = 1 identities 8/35 and 27/8 inherit from substrate-scale arithmetic only and do not survive renormalization-group running to the electroweak scale; they are reference identities, not predictions."
+      - "8/35 and 27/8 land near the electroweak measurements but with the wrong sign of running; they are excluded from the corroborated list."
+      - "A bare K = 1 arithmetic identity is not a scale-consistent corroborated result the way a K < 1 substrate derivation is."
+
+  # ──────────────────────────────────────────────────────────
+  # README · What this framework does not do
+  # ──────────────────────────────────────────────────────────
+
+  - id: scope-why-these-parameters
+    kind: inherits-from
+    source: README.md (What this framework does not do)
+    subject: framework-question-class
+    from: standard-model-silences
+    forms:
+      - "The framework's scope inherits from the question class the Standard Model is silent on: *why these Lagrangian parameters and not others*."
+      - "The framework speaks where the Standard Model is silent by convention; it does not displace the Standard Model on its home turf."
+      - "Standard Model cross-sections and decay rates are not addressed; substrate values of the Lagrangian parameters are."
+
+  - id: scope-wightman-convention
+    kind: based-on
+    source: README.md (What this framework does not do)
+    subject: standard-model-input-treatment
+    premises:
+      - wightman-axiom-convention
+    forms:
+      - "Based on the Wightman-axiom convention that Lagrangian parameters are inputs to be measured rather than outputs to be derived, the Standard Model's silence on this class is structural, not an oversight."
+      - "The Standard Model treats parameters as inputs by research-program design; this framework treats them as outputs."
+      - "The Wightman convention is not under attack — it is just being moved one layer down."
+
+  # ──────────────────────────────────────────────────────────
+  # README · Comparison class
+  # ──────────────────────────────────────────────────────────
+
+  - id: comparison-program-class
+    kind: inherits-from
+    source: README.md (Comparison class)
+    subject: framework-comparison-class
+    from: standard-model-parameters-should-not-be-free
+    forms:
+      - "The framework's comparison class inherits from the program-level claim 'Standard Model parameters should not be free': GUTs, string theory, loop quantum gravity, asymptotic safety, causal set theory, the Wolfram hypergraph program, Geometric Unity."
+      - "This framework competes with unification programs that try to derive Standard Model parameters, not with the Standard Model itself."
+      - "Each member of the comparison class accepts the empirical burden of producing numbers the Standard Model only catalogs."
+
+  - id: comparison-distinguishing-feature
+    kind: inherits-from
+    source: README.md (Comparison class)
+    subject: framework-distinguishing-feature
+    from: shallow-combinatorial-derivation-depth
+    forms:
+      - "The framework's distinguishing feature inside its comparison class inherits from its derivation depth: exact small-integer ratios at shallow combinatorial depth, not fits to free parameters in a high-dimensional manifold."
+      - "Predictions like Ω_Λ = 13/19 land at Stern-Brocot depth 6, not after Landau-pole running in a 14-dimensional manifold."
+      - "Shallowness is the framework's advantage: the predictions are reproducible without simulation."
+
+  # ──────────────────────────────────────────────────────────
+  # README · Two independent anchors
+  # ──────────────────────────────────────────────────────────
+
+  - id: anchors-K1-non-smooth-separation
+    kind: based-on
+    source: README.md (Two independent anchors)
+    subject: regime-separation
+    premises:
+      - K1-critical-line-tongue-coverage-discontinuity
+    forms:
+      - "Based on the K = 1 / K < 1 critical-line tongue-coverage discontinuity, the cosmological and particle-sector regimes are non-smoothly separated."
+      - "The Einstein (K = 1) and Schrödinger (K < 1) continuum limits are separated by a non-smooth tongue-coverage step."
+      - "There is no smooth path across K = 1; the two regimes cannot share an anchor."
+
+  - id: anchors-two-minimum
+    kind: inherits-from
+    source: README.md (Two independent anchors)
+    subject: anchor-count
+    from: regime-separation
+    forms:
+      - "The two-anchor minimum (H_0 and v_EW = 246 GeV) inherits from this regime obstruction; it is a structural feature, not a derivation gap."
+      - "Each regime requires its own anchor; reduction to one anchor is structurally obstructed."
+      - "Two is the minimum the framework can run on; not three, not one."
+
+  # ──────────────────────────────────────────────────────────
+  # docs/genesis.html · Companion animations
+  # (the shake-up demo lives here; one entry per gallery card)
+  # ──────────────────────────────────────────────────────────
+
+  - id: companion-stairs
+    kind: based-on
+    source: "docs/genesis.html (companion: stairs)"
+    subject: continued-fraction-staircase-at-depth-1-over-13
+    premises:
+      - cosmic-partition-configuration
+    forms:
+      - "Continued-fraction staircase at depth 1/13, budget 19. The configuration the headline Ω_Λ = 13/19 prediction lives in."
+      - "The framework's cosmic-partition number, made into a moving picture: thirteen locked modes against a budget of nineteen."
+      - "Each step of this staircase is a mediant insertion; depth 13 is where the Ω_Λ ratio closes."
+
+  - id: companion-orbit
+    kind: based-on
+    source: "docs/genesis.html (companion: orbit)"
+    subject: stern-brocot-orbit-at-7-over-60
+    premises:
+      - modular-tree-walk
+    forms:
+      - "A Stern-Brocot walk traced in polar coordinates. Eight lefts, one right, one left, three rights — the walk lands on 7/60 as a rational on the unit circle."
+      - "Modular orbit L⁸R¹L¹R³: a thirteen-step path through the Stern-Brocot tree ending at 7/60."
+      - "What the substrate looks like from inside the tree, as a single rational picks itself out of an unbounded enumeration."
+
+  - id: companion-rose
+    kind: based-on
+    source: "docs/genesis.html (companion: rose)"
+    subject: rational-rose-curve
+    premises:
+      - lissajous-figure-at-rational-frequency-ratio
+    forms:
+      - "Rational rose curve. A Lissajous figure at a rational frequency ratio — the geometric counterpart to the staircase plateau at the same rational."
+      - "Two oscillators locked at a small-integer ratio, traced in phase space: a closed curve with as many petals as the ratio prescribes."
+      - "Every Stern-Brocot rational has a rose: the same dynamics, viewed as a shape instead of a frequency."
+
+  - id: companion-spiral
+    kind: based-on
+    source: "docs/genesis.html (companion: spiral)"
+    subject: continuum-spiral-evolution
+    premises:
+      - substrate-evolution-in-the-K-less-than-1-regime
+    forms:
+      - "Spiral evolution. The continuum-side companion to the discrete tree: the same substrate read at a different regime."
+      - "The K < 1 regime is not a sea of locked plateaus; it is a slow continuous wind, drawn here as a spiral."
+      - "Substrate dynamics outside the locked tongues, where the framework's Schrödinger limit lives."
+
+  - id: companion-triangles
+    kind: based-on
+    source: "docs/genesis.html (companion: triangles)"
+    subject: farey-triangulation-of-upper-half-plane
+    premises:
+      - SL2Z-action-on-upper-half-plane
+    forms:
+      - "Farey triangles tiling the upper half plane under the SL(2, ℤ) action — the symmetry group that forces dim = 3 on the spatial manifold."
+      - "Every Farey triangle is a fundamental domain image; the tiling is what dim SL(2, ℝ) = 3 looks like before it closes."
+      - "The triangulation viewer for the same group whose continuum closure gives the spatial manifold its dimension."

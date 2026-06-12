@@ -51,6 +51,9 @@ jobs:
           cp -r sync_cost _site/
           cp -r docs _site/
           cp LICENSE _site/
+          # SPINE.yml — declarative-backbone artifact linked from
+          # docs/genesis.html's footer.
+          cp SPINE.yml _site/
           # Root-level animations surfaced through docs/genesis.html.
           # 4.8 MB genesis.gif paid for by viewers who chose to navigate
           # to the gallery, not by every README visitor.
@@ -109,6 +112,7 @@ jobs:
           cp -r sync_cost _site/
           cp -r docs _site/
           cp LICENSE _site/
+          cp SPINE.yml _site/
           # Root-level animations surfaced through docs/genesis.html.
           cp genesis.gif orbit.gif stairs.gif rose.gif spiral.gif triangles.gif _site/
 
