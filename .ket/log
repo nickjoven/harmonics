@@ -361,3 +361,5 @@
 2026-06-04T01:20:04Z | dag:create | 068f96927aff454e550528c1eb338178ee1cbe1eed0600d2138da6899c0541fa
 2026-06-04T19:29:54Z | put | sync_cost/derivations/canonical_glossary.md -> 209cbee29172ade0d8bb7345b1ef180c5d18e0f8ffe85106689b75184740ce54
 2026-06-04T19:29:54Z | dag:create | 631968b50790aeb126f2c9e84f81926abf625d60fdb2808cf526d282c4b859df
+2026-06-12T02:54:44Z | put | sync_cost/derivations/fm_beat_crt_correspondence_audit.md -> b9863e26015aba70d92e8e693ad73211157769ca431d8378390b8f00e9874a0b
+2026-06-12T02:54:44Z | put | substrate_mode_evolution.py -> 18b85b69c5c4e669a1f0069af332e4e333b76669cd79e5042b03b60d263f9b1c
