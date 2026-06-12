@@ -1,29 +1,29 @@
-# Third-twist (Z_3) meta-structure audit — scaffold
+# Third-twist (Z_3) meta-structure audit
 
-> **Status update (2026-06-10).** The scaffold has been populated with
-> a first-pass catalog (§5), preliminary identity (§6), and signature
-> (§7). The catalog reveals **four distinct Z_3 modes** in the
-> framework (A: cyclic action, B: Mihailescu cube/ratio, C: composite,
-> D: fractional) — not the single-mode meta-structure analogy with
-> PR #240 would have predicted. Two preliminary structural findings
-> (P1–P3 in §5.4) are substantive: (P1) Mode B is uniquely Z_3 with
-> no Z_2 analog; (P2) the Aut(Z_3) = Z_2 inversion is spontaneously
-> broken at Mode B level (substrate prefers 2/3 over 1/3); (P3) Mode
-> D (fractional character) is nearly absent — the framework's
-> fractional content is Z_2-character, not Z_3-character.
->
-> **Verdict, first pass:** MODAL ✓ / GENERATIVE PARTIAL on the
-> Z_3 meta-structure. The structure exists and is substrate-canonical;
-> but it is *bimodal* (cyclic A + Mihailescu-cube B), not a single
-> coherent meta-pattern. This is itself a structural finding —
-> the third-twist is *not* an analog of the half-twist, even at
-> identity/signature level. The vocabulary requires TWO sub-identities
-> (Mode A cyclic, Mode B Mihailescu-ratio), not one. §6.A through §6.E
-> state this.
->
-> First-pass status: the catalog is a SAMPLING (not exhaustive); the
-> pattern is robust enough to draw structural conclusions, but
-> exhaustive catalog-filling remains a recommended follow-up.
+**Status: FIRST-PASS COMPLETE — MODAL ✓ / GENERATIVE PARTIAL.**
+
+The catalog (§5) surfaces **four distinct Z_3 modes** in the
+framework (A: cyclic action, B: Mihailescu cube/ratio, C: composite,
+D: fractional) — not the single-mode meta-structure an analogy with
+PR #240 would predict. Five structural findings (P1–P5, §5.4) are
+substantive: (P1) Mode B is uniquely Z_3 with no Z_2 analog; (P2)
+the Aut(Z_3) = Z_2 inversion is spontaneously broken at Mode B level
+(substrate prefers 2/3 over 1/3); (P3) Mode D (fractional character)
+is nearly absent — the framework's fractional content is
+Z_2-character, not Z_3-character; (P4) cross-twist coupling is
+substrate-canonical (Möbius container); (P5) the substrate exponent
+q_2 × q_3^d = 54 concretizes the three-coincident-3's structure.
+
+The Z_3 meta-structure exists and is substrate-canonical, but it is
+*bimodal* (cyclic A + Mihailescu-cube B), not a single coherent
+meta-pattern. The third-twist is *not* an analog of the half-twist,
+even at identity/signature level: the vocabulary requires TWO
+sub-identities (Mode A cyclic, Mode B Mihailescu-ratio), not one
+(§6.A–§6.E).
+
+The catalog is a sampling, not exhaustive; the pattern is robust
+enough to draw the structural conclusions above, but exhaustive
+catalog completion remains a recommended follow-up.
 
 > **Origin context.** The recent audit chain (PRs #240–250) has
 > privileged the Z_2 / half-twist reading. The reconciliation
@@ -36,11 +36,6 @@
 > The first-pass audit reveals: the asymmetry the bias produced is
 > not merely an oversight; the third-twist is *structurally distinct*
 > from the half-twist in specific ways the catalog has now surfaced.
-
-**Status: FIRST-PASS COMPLETE.** Preliminary MODAL ✓ / GENERATIVE
-PARTIAL verdict; structural findings (P1–P3 in §5.4) are
-substantive. The catalog is a sampling; exhaustive completion remains
-recommended.
 
 Class: foundational rigor check / substrate meta-structure audit.
 Resolution-mode throughout — composes existing canonical claims
@@ -290,9 +285,9 @@ pass V1 (Mihailescu prime origin), not just "the number 3 appears."
 
 ---
 
-## 5. Framework instance catalog — first pass
+## 5. Framework instance catalog (sampling)
 
-### 5.1 Grep results (2026-06-09 session)
+### 5.1 Search basis
 
 Substrate-canonical Z_3 signatures returned dense hits across the
 audit chain. Sampling (not exhaustive):
@@ -312,7 +307,7 @@ The grep volume is large enough that **§5.2 is a first-pass
 sampling**, not an exhaustive catalog. The pattern surfaces from
 the sample; exhaustive catalog-filling is recommended future work.
 
-### 5.2 First-pass catalog with V1–V5 evaluation
+### 5.2 Catalog with V1–V5 evaluation (sampling)
 
 Instances classified into four modes that surfaced during cataloging:
 
@@ -353,56 +348,30 @@ needs further audit; — = not directly applicable to this mode.
 numerology / bare K=1; 4 = needs individual audit; 5 = explicitly
 NOT numerology (structural).
 
-### 5.3 Aggregate: four modes surface (extended)
+### 5.3 Aggregate: four modes surface
 
-Instances naturally partition into **four modes**, not the three I
-anticipated in the template:
+Instances naturally partition into **four modes**, not the three
+the audit template anticipated:
 
 ```
-Mode A — Pure Z_3 cyclic action:                  10 instances
-         (#1–#8, #21 SU(3); #22 Möbius container;
+Mode A — Pure Z_3 cyclic action:                  11 instances
+         (#1–#8; #21 SU(3); #22 Möbius container;
           #23 discrete reduction gradient)
 
-Mode B — Mihailescu cube / ratio (q_3³ or q_2/q_3): 10 instances
-         (#9–#15 first pass; #24 substrate exponent q_2 × q_3^d;
+Mode B — Mihailescu cube / ratio (q_3³ or q_2/q_3): 11 instances
+         (#9–#15; #24 substrate exponent q_2 × q_3^d;
           #25 a_3 = −3 Steinberg; #26 α_s/α_2 multi-site; #27 α_2/α_3)
 
 Mode C — Z_3 in composite (Z_6, Z_12, S_3-on-Z_6): 4 instances (#16–#19)
 
-Mode D — Third-character fractional:               ~1 instance  (#20)
+Mode D — Third-character fractional:               1 instance  (#20)
                                                   ─────────────
-Total distinct instances surveyed:                 ~25
+Total distinct instances surveyed:                 27
 ```
 
-The catalog extension confirms the four-mode partition. The new
-instances also surface two additional structural observations:
+### 5.4 Structural findings (P1–P5)
 
-**(P4) Möbius container with Z_3 phase pattern (#22) is a
-*cross-twist coupling*** — a Z_3 cyclic action operating on a
-Möbius (Z_2 substrate) carrier. This is a *single concrete example*
-of a half-twist + third-twist composite, suggesting the substrate
-admits explicit cross-twist composition. The Z_6 substrate lattice
-(Mode C #16) is the *abstract* algebraic version (Z_2 × Z_3); the
-Möbius container is the *geometric* realization with both twists
-simultaneously active on the same carrier.
-
-**(P5) Substrate's natural exponent q_2 × q_3^d (#24) is the
-"three coincident 3's" finding rendered into a single expression.**
-The hierarchy exponent that appears in mass-ratio derivations is
-literally `q_2 × q_3^(d)` where d = 3 is spatial dimension. This is
-the substrate's load-bearing exploitation of:
-- q_3 = 3 (Mihailescu prime value)
-- d = 3 (spatial dimension)
-- cube power (the exponent)
-
-all coincident at 3. The expression equals q_2 × q_3³ = 54 — the
-substrate's natural hierarchy exponent. This is the single
-clearest instance of (P1) made concrete in a substrate-canonical
-constant.
-
-### 5.4 Pattern that surfaced — the structural finding
-
-**Three structural observations from the catalog that PR #240's
+**Five structural findings from the catalog that PR #240's
 half-twist meta-structure does not anticipate:**
 
 **(P1) Mode B (Mihailescu cube q_3³) is UNIQUELY Z_3 — no Z_2 analog.**
@@ -510,8 +479,8 @@ this catalog, extended):
 
 | Mode | Half-twist (Z_2) | Third-twist (Z_3) |
 |---|---|---|
-| **A** cyclic action / primitive | 3 instances (K² antiperiodic, Q mod 2, Z_2 cyclotomic factor) | **10 instances** (color triplet σ, PSL(2,ℤ) ℤ/3, Φ_3, σ orbits on Z_6, SU(3) color, down-type Z_3, Arnold 3:1, matrix size, SU(3) quark charge via fundamental rep, Möbius container Z_3 phases, discrete reduction phase gradient) |
-| **B** substrate-cube or ratio | (none — no q_2³-only canonical identity) | **10 instances** (27/8 = q_3³/q_2³, 8/35 = q_2³/(q_2³+q_3³), Q = 2/3 Klein-bottle, K_lepton = 2/3, Q > 1/3 threshold, σ_3(17), m_τ/m_e via (q_3³−1), q_2 × q_3^d = 54 substrate exponent, a_3 = −3 Steinberg, α_s/α_2 multi-site, α_2/α_3 = 2/3 Higgs) |
+| **A** cyclic action / primitive | 3 instances (K² antiperiodic, Q mod 2, Z_2 cyclotomic factor) | **11 instances** (color triplet σ, PSL(2,ℤ) ℤ/3, Φ_3, σ orbits on Z_6, SU(3) color, down-type Z_3, Arnold 3:1, matrix size, SU(3) quark charge via fundamental rep, Möbius container Z_3 phases, discrete reduction phase gradient) |
+| **B** substrate-cube or ratio | (none — no q_2³-only canonical identity) | **11 instances** (27/8 = q_3³/q_2³, 8/35 = q_2³/(q_2³+q_3³), Q = 2/3 Klein-bottle, K_lepton = 2/3, Q > 1/3 threshold, σ_3(17), m_τ/m_e via (q_3³−1), q_2 × q_3^d = 54 substrate exponent, a_3 = −3 Steinberg, α_s/α_2 multi-site, α_2/α_3 = 2/3 Higgs) |
 | **C** composite (in Z_n) | (implicit in Z_6 = Z_2 × Z_3) | **4 instances** (Z_6, Φ_6, Z_12, S_3-on-Z_6) |
 | **D** fractional character | 4 instances (mediant, Born √ε, ½-weight, ½-step) | **~1 instance** (cos²θ = 1/3) |
 | **B² derived (square of cyclic)** | 1 instance (SL(2,ℝ) J² = −I) | (NA at Z_3; σ³ is trivially id, not a derived element) |
@@ -521,8 +490,8 @@ The asymmetry: the half-twist's character is *cyclic + fractional*
 Mihailescu-cube* (Modes A + B dominant).
 
 This is the cleanest pattern the catalog surfaces. The extension
-strengthens it: Mode A doubles (10 vs initial 8), Mode B grows
-substantially (10 vs initial 7), Mode D stays at ~1.
+strengthens it: Mode A grows (11 vs initial 8), Mode B grows
+substantially (11 vs initial 7), Mode D stays at 1.
 
 **The deepest finding from the extended catalog**: the framework's
 substrate prefers *operator content* for the third-twist (cyclic
@@ -532,8 +501,8 @@ substrate-level functional division:
 
 | Substrate role | Z_2 (half-twist) carries | Z_3 (third-twist) carries |
 |---|---|---|
-| Cyclic action | yes (3 instances) | **yes (10 instances)** ⭐ |
-| Mihailescu power/ratio | no | **yes (10 instances)** ⭐ |
+| Cyclic action | yes (3 instances) | **yes (11 instances)** ⭐ |
+| Mihailescu power/ratio | no | **yes (11 instances)** ⭐ |
 | Fractional presence | **yes (4 instances)** ⭐ | barely (1 instance) |
 | Composite Z_n factor | yes (in Z_6) | yes (4 instances) |
 | Reflection-character | yes (signature S3) | NO (rotation-character only) |
@@ -554,7 +523,7 @@ fractional content*.
 
 ---
 
-## 6. Identity — preliminary statement (first pass)
+## 6. Identity — first-pass statement
 
 Based on §5's catalog, the third-twist's identity has **two distinct
 sub-identities** that must be stated separately, not as one
@@ -642,7 +611,7 @@ own version of the half-twist's Z_2 self-inversion (PR #250).
 
 ---
 
-## 7. Signature — preliminary statement (first pass)
+## 7. Signature — first-pass statement
 
 **Cyclic third-twist signature (Mode A):**
 
@@ -701,7 +670,7 @@ sharp distinction surfaced by the catalog.
 
 ---
 
-## 8. Falsification anchors (preliminary)
+## 8. Falsification anchors
 
 - **F-3-1** (no meta-structure): the catalog finds fewer than 3
   instances passing V1–V5; the third-twist does not constitute a
@@ -728,8 +697,8 @@ sharp distinction surfaced by the catalog.
 
 ## 9. Forward references
 
-After the catalog (§5) is filled and the identity / signature
-(§6, §7) are derived, the natural next audits are:
+With the catalog (§5) sampled and the identity / signature
+(§6, §7) stated, the natural next audits are:
 
 - **Two-thirds twist explicit treatment**: if Aut(Z_3) = Z_2
   asymmetry surfaces in the catalog (1/3 and 2/3 with different
@@ -737,9 +706,11 @@ After the catalog (§5) is filled and the identity / signature
   as a substrate-canonical mode in its own right (distinct from
   but coupled to one-third twist).
 - **Sixth-twist (Z_6) meta-structure**: Z_6 = Z_2 × Z_3 is the
-  substrate's lattice; once half-twist (PR #250) and third-twist
-  (this audit, sealed) are both characterized, the Z_6 composite
-  becomes auditable.
+  substrate's lattice; with half-twist (PR #250) and third-twist
+  (this audit, first pass) both characterized, the Z_6 composite
+  becomes auditable. The FM-beat/CRT correspondence audit (PR #252)
+  engages the composite chain (Z_6, Z_12, Z_72) from the dynamical
+  side.
 - **Twelfth-twist (Z_12 = Z_4 × Z_3) meta-structure**: cross-scale
   composite.
 - **Higher-order n-twist symmetry audit**: a cyclic-vs-dihedral
@@ -768,7 +739,7 @@ After the catalog (§5) is filled and the identity / signature
   framework-native indices
 
 **Bias acknowledgment (origin context):**
-- The session preceding this scaffold acknowledged the recent audit
+- The session preceding this audit acknowledged the recent audit
   chain's bias toward Z_2 / half-twist content. This audit is the
   symmetric counter — auditing the framework's Z_3 substrate-mode
   with comparable depth so that the bias is corrected by *parallel
@@ -789,10 +760,12 @@ After the catalog (§5) is filled and the identity / signature
 
 ---
 
-## 11. What this scaffold does NOT claim
+## 11. What this audit does NOT claim
 
-- **Not a sealed audit.** No MODAL / GENERATIVE verdict assigned;
-  §5 catalog must be filled first.
+- **Not exhaustive, not sealed.** The first-pass MODAL ✓ /
+  GENERATIVE PARTIAL verdict rests on a 27-instance sampling; the
+  verdict could sharpen (or a finding could be demoted) under
+  exhaustive catalog completion.
 - **Not a substrate primitive.** Z_3 / q_3 = 3 is the substrate
   primitive; this audit clarifies what structures the primitive
   generates as third-twists vs as numerological appearances of "3."
@@ -810,8 +783,7 @@ After the catalog (§5) is filled and the identity / signature
 
 ## Appendix A: The (1/3, 2/3) coupled-pair structure
 
-The session's literature scan surfaced an observation worth
-preserving as a load-bearing structural fact for the catalog-filling:
+A load-bearing structural fact underpinning the catalog evaluation:
 
 **1/3 and 2/3 are exchanged by Aut(Z_3) = Z_2.** They form a single
 Z_2-orbit under the inversion automorphism of Z_3.
@@ -826,10 +798,11 @@ where broken, they carry distinguishable framework content.
 
 This is the third-twist's *internal* structure: a Z_3 cyclic group
 acted on by a Z_2 inversion automorphism, with the pair (1/3, 2/3)
-as the orbit. The catalog should evaluate per-instance whether the
-inversion is broken or preserved, as part of the V1–V5 evaluation.
+as the orbit. The catalog (§5) evaluated per-instance whether the
+inversion is broken or preserved; the aggregate answer is finding
+(P2): broken at Mode B, preserved at Mode A.
 
 This treatment of 1/3 and 2/3 as a *Z_2-coupled pair inside Z_3*
 is the audit's deepest structural commitment. It is the
 substrate-canonical generalization of "primitive 3rd roots of unity"
-that the catalog will test against framework content.
+tested against framework content in §5.
