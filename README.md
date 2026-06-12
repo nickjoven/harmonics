@@ -1,117 +1,152 @@
 # harmonics
 
-When two oscillators are coupled — pendulums hanging from a
-shared beam, metronomes on the same wobbling table, neighbouring
-strings on an instrument — they tend over time to lock into
-ratios with small integer denominators, even though each
-oscillator's underlying motion stays entirely smooth. The
-discreteness lives in the relationship between them rather than
-in the motion of either one taken on its own.
+Put two metronomes on the same wobbly table, hang two pendulums
+off the same beam, or pluck two strings next to each other on a
+guitar, and after a little while they'll drift into step — not
+just at 1:1, but at 2:1, 3:2, 5:3, and other small whole-number
+ratios. They never lock at something messy like 7.4:3.1. Each
+oscillator's own motion stays perfectly smooth the whole time;
+what snapped to a clean ratio is the *relationship* between them.
 
-This framework takes that single observation seriously as
-physics, and reads the universe's discrete features — its quantum
-numbers, its three spatial dimensions, its small set of forces —
-as what the locking produces between continuous degrees of
-freedom, rather than as separate posits added on top of a
-continuous background. Working that one idea out at the relevant
-level of detail is what fills the rest of this document; the
-numerical residuals and small-integer ratios catalogued further
-down are what falls out of it.
+The framework here is what you get when you take that one
+observation seriously and follow it down to physics. The universe
+has a long list of discrete features — quantum numbers, three
+dimensions of space, a small handful of forces — and the claim is
+that those features are what the locking produces between things
+that, on their own, are perfectly continuous. They aren't extra
+ingredients added on top to make the integers come out right;
+they're what coupling does. Working that idea out at the level of
+detail the universe actually shows us is what the rest of this
+document is about.
+
+**Spine.**
+- Based on coupling between continuous oscillators, mode-locking at small-integer-ratio frequencies occurs.
+- The universe's discrete features (quantum numbers, three spatial dimensions, the gauge group) inherit from this coupling, not from a separate quantization postulate.
 
 ## The mechanism
 
-The framework's underlying combinatorial structure is the **Stern-
-Brocot tree** — a recursive binary tree that enumerates every
-positive rational exactly once, by repeatedly inserting the
-*mediant* (a+c)/(b+d) between adjacent fractions a/b and c/d. The
-mediant is not a stipulation; it is forced. Any other binary
-operation between two locked frequencies violates either energy
-conservation (the locked frequency must lie between the two bare
-frequencies) or stability under coupling (the smallest-denominator
-rational has the widest Arnold tongue and is therefore the unique
-stable lock). Stern-Brocot is the natural enumeration of the
-tongues the dynamics produces.
+There's a piece of math that catches the locking precisely: the
+**Stern-Brocot tree**. Start with two fractions side by side, like
+0/1 and 1/1, and insert the *mediant* (a+c)/(b+d) between them —
+which here gives 1/2. Do it again on each new neighbouring pair,
+and again, and you end up with a binary tree that lists every
+positive fraction exactly once, with the simplest ratios near the
+top and progressively more elaborate ones further down.
 
-In this document, **forced** means: any alternative violates one
-of the framework's physical constraints (energy conservation,
-stability under coupling, or topological self-consistency of the
-configuration space) and is therefore not a possible solution. The
-structure has no remaining degrees of freedom; whatever the listed
-quantity is, it is the only one compatible with the constraints.
+The mediant isn't a stylistic choice; it's the only binary
+operation that can sit between two locked frequencies without
+breaking something. Anything else would either violate energy
+conservation (the locked frequency has to land *between* the two
+bare frequencies it locks together) or kill the stability of the
+lock itself (the rational with the smallest denominator has the
+widest Arnold tongue, so it's the only stable choice). Stern-
+Brocot, in other words, isn't picked out of options — it's just
+the natural enumeration of the tongues the dynamics already
+produces.
 
-The discrete-substrate language is sometimes misread as pixelated
-spacetime (loop quantum gravity, causal sets, cellular geometries).
-It is **not** that. See
+Throughout the document, "forced" is shorthand for that kind of
+argument: every alternative violates one of the physical
+constraints (energy conservation, stability under coupling, or
+topological self-consistency of the configuration space), so the
+framework has no remaining degrees of freedom and the listed
+quantity is the only one compatible with the constraints.
+
+One small caveat. The "discrete substrate" language sometimes
+gets read as a claim that spacetime is pixelated — like loop
+quantum gravity or causal sets. It isn't. The medium stays
+continuous; what's discrete is the locking itself, and the
+framework integers showing up downstream (13, 5, 1, 19, q₂, q₃,
+and so on) are counts of mode-locked states, not cell counts.
 [`dynamical_quantization.md`](sync_cost/derivations/dynamical_quantization.md)
-for the headline articulation, including the prism / spectral
-analogy: Stern-Brocot is the substrate's prism, decomposing the
-continuous coupling into discrete locked frequencies (tongues
-$\sim$ spectral lines, $(K/2)^q$ widths $\sim$ line widths, mode
-counts $\sim$ atomic structure constants). The cosmic partition
-$13:5:1/19$ is the substrate's "spectral signature" at Farey depth
+has the longer version, including the prism analogy: Stern-Brocot
+acts as the substrate's prism, decomposing continuous coupling
+into discrete locked frequencies the way an actual prism
+decomposes white light into spectral lines. The cosmic partition
+13:5:1/19 is the substrate's "spectral signature" at Farey depth
 7, not a cell count.
+
+**Spine.**
+- Based on energy conservation and stability under coupling, the mediant (a+c)/(b+d) is the only admissible binary operation between two locked frequencies.
+- The Stern-Brocot tree inherits its structure from iterated mediant insertion on adjacent fractions.
+- The framework's "forced" property inherits from the no-alternative status of each constraint-satisfying step.
+- The framework integers inherit their meaning as counts of mode-locked states, not as cell counts of a pixelated geometry.
 
 ## Address vs structure
 
-The framework distinguishes two categorically different kinds of
-constants, and conflating them is the most common reading error.
-*Dimensionless ratios* — Ω_Λ = 13/19, n_s ≈ 0.965, K_c = 2/π —
-are structural; they are forced by the combinatorial structure and
-would be the same for any observer at any cosmic epoch, in any
-unit system. *Dimensionful constants* — H_0, ℏ, v_EW, the Planck
-mass — are addresses; they tell you *where on the structure we
-are*, not what the structure is.
+The framework predicts two very different kinds of constants, and
+mixing them up is the most common way to misread it. The
+*dimensionless ratios* — Ω_Λ = 13/19, n_s ≈ 0.965, K_c = 2/π —
+are *structural*: they're forced by the combinatorics, and they'd
+be the same for any observer at any cosmic epoch, in any unit
+system. The *dimensionful constants* — H_0, ℏ, v_EW, the Planck
+mass — are *addresses*. They tell you where on the structure we
+happen to be, not what the structure is.
 
-The cleanest physical demonstration of this distinction is the
-helium-chamber test. A tuba's pitch lives in the medium (the air
-that resonates inside it), and changes when the medium changes —
-in helium, a tuba sounds about three semitones higher (the
-Donald-Duck-effect for instruments). A contrabass's pitch lives
-in the structure (the string itself); the medium is irrelevant,
-and a contrabass sounds the same in air and in helium. The
-framework's claim is that the universe has *both* registers. The
-Standard Model treats every constant as a tuba-pitch, which is
-why it has roughly 20 dimensionful free parameters; this
-framework recovers a contrabass-pitch — Ω_Λ = 13/19 — that does
-not change under any "medium swap" you could imagine.
+The cleanest way to feel the difference is the helium-chamber
+test. A tuba's pitch lives in the medium — the air resonating
+inside the horn — so when you swap the air for helium, the pitch
+goes up about three semitones. (The Donald Duck effect, but for
+instruments.) A contrabass's pitch lives in the structure itself
+— the string — and helium does nothing to it. A contrabass sounds
+the same whether the room is full of air or helium. The
+framework's claim is that the universe has both kinds of
+constants. The Standard Model treats every constant as a tuba
+pitch, which is why it carries about twenty of them around as
+free parameters. This framework recovers a contrabass pitch —
+Ω_Λ = 13/19 — that doesn't change under any medium swap you can
+imagine.
 
 See [`medium_change_demo.md`](sync_cost/derivations/medium_change_demo.md)
 for the full walkthrough, including the tuba/contrabass/speaker
 comparison table and the framework interpretation.
 
+**Spine.**
+- Structural constants inherit their values from the combinatorial substrate and are invariant under any change of the physical medium.
+- Address constants inherit their values from the particular medium the universe happens to instantiate.
+- A constant's register (structural or address) inherits from how its value would respond to a medium swap.
+
 ## What the mechanism forces
 
-Each Standard Model "input" listed below is a consequence of the
-mediant + Stern-Brocot mechanism, not an independent posit.
+Each Standard Model "input" below isn't really an input. It's
+what falls out of the mediant + Stern-Brocot mechanism when you
+ask the right question.
 
-**Spatial dimension d = 3.** Iterating the mediant generates
-**SL(2, ℤ)** — the special linear group of 2×2 integer matrices
-with determinant ±1, the natural symmetry group of the Stern-
-Brocot tree — whose continuum closure SL(2, ℝ) is three-
-dimensional. The spatial manifold's three-dimensionality follows:
-the geometry must be self-consistent with the substrate's
-combining operation, and dim SL(2, ℝ) = 3 admits no other choice.
-The Standard Model takes spatial dimension d = 3 as input.
+**Three spatial dimensions.** Iterate the mediant operation and
+you generate **SL(2, ℤ)** — the group of 2×2 integer matrices
+with determinant ±1, which is the natural symmetry group of the
+Stern-Brocot tree. Take its continuum closure SL(2, ℝ), and you
+land on a three-dimensional Lie group. The geometry has to be
+consistent with the operation that builds the substrate, so
+dim SL(2, ℝ) = 3 leaves no other choice for the dimension of
+space. The Standard Model takes "space has three dimensions" as a
+given.
 
 **Gauge group and three generations.** The Klein bottle's two
-smallest accessible denominators (q_2 = 2, q_3 = 3) give a Z_6 =
-Z_2 × Z_3 mode structure (the cyclic group of order six factored
-into its 2- and 3-element subgroups), which forces three
-generations of fermions and the gauge factorization SU(3) × SU(2)
-× U(1) — the Standard Model's symmetry group, broken into the
-strong (color), electroweak, and hypercharge subgroups. The
-Standard Model takes both as input.
+smallest accessible denominators are q₂ = 2 and q₃ = 3, and
+together they give Z_6 = Z_2 × Z_3 — the cyclic group of order
+six, written as the product of its order-two and order-three
+factors. That structure forces both three generations of fermions
+and the gauge factorization SU(3) × SU(2) × U(1) — the Standard
+Model's symmetry group, broken into the strong (color),
+electroweak, and hypercharge subgroups. Both are inputs to the
+Standard Model.
 
-**Charge quantization.** The compactness of the unit circle S¹ —
-the topological fact that any continuous map from S¹ to itself
-has integer winding number — is forced by the mediant primitive
-identifying integer phase translations. Charge quantization (the
-observation that all electric charges are integer multiples of
-e/3) follows. The Standard Model takes integer charge as input.
+**Charge quantization.** Continuous maps from the unit circle S¹
+to itself have integer winding number — that's a basic topology
+fact about the circle. The mediant primitive identifies integer
+phase translations, which forces this S¹ compactness onto the
+framework. Integer charge quantization follows, in units of e/3.
+The Standard Model takes integer charge as a given.
 
 In each case the framework derives a Standard Model input from a
-forced combinatorial structure. The Standard Model is not
-contradicted; its inputs are explained.
+forced combinatorial structure. The Standard Model isn't being
+contradicted — its inputs are being explained one layer down.
+
+**Spine.**
+- Based on iterated mediant insertion generating SL(2, ℤ) and closing to SL(2, ℝ), spatial dimension d = 3 inherits from dim SL(2, ℝ) = 3.
+- Based on q₂ = 2 and q₃ = 3 being the two smallest accessible denominators on the Klein bottle, the mode structure Z_6 = Z_2 × Z_3 follows.
+- Three generations of fermions and the gauge factorization SU(3) × SU(2) × U(1) inherit from Z_6 = Z_2 × Z_3.
+- Based on the mediant primitive identifying integer phase translations, S¹ compactness is forced; charge quantization in units of e/3 inherits from this.
 
 ## The largest residue: the cosmological constant problem
 
@@ -157,6 +192,12 @@ against 4 Klein-bottle modes, times the Planck-to-Hubble frequency
 ratio. The cosmological-constant problem is reframed as a topology-
 selection problem with a derivable answer.
 
+**Spine.**
+- Based on substrate self-consistency, the Klein bottle is the only admissible field-mode topology.
+- Based on Klein-bottle topology and a Z_2 parity filter, exactly four zero-point modes survive.
+- Λ ≈ 10⁻⁴⁷ GeV⁴ inherits from a four-mode vacuum, not from fine-tuning a many-mode sum.
+- The 10¹²¹-order QFT discrepancy inherits from the torus-topology modelling choice, not from a physics mismatch.
+
 ## What this framework does not do
 
 It does not improve on the Standard Model's existing predictions.
@@ -179,6 +220,11 @@ measured, not outputs to be derived. As an empirical strategy
 this has been extraordinarily successful, but it leaves a known
 residue of *why these and not others* questions that the Standard
 Model does not attempt to answer.
+
+**Spine.**
+- The framework's scope inherits from the question class the Standard Model is silent on: *why these Lagrangian parameters and not others*.
+- Based on the Wightman-axiom convention that Lagrangian parameters are inputs to be measured rather than outputs to be derived, the Standard Model's silence on this class is structural, not an oversight.
+- The framework's predictions on Standard Model territory (cross-sections, decay rates) inherit nothing; the Standard Model is not displaced on its home turf.
 
 ## What the mechanism predicts (numerical residuals)
 
@@ -222,6 +268,11 @@ observed M_Z value. They are recorded as reference identities, not
 results — see
 [`negative_results_ledger.md`](sync_cost/derivations/negative_results_ledger.md).
 
+**Spine.**
+- Ω_Λ = 13/19 inherits from Z_6 mode counting at Stern-Brocot depth 6: 13 locked-mode fractions, 6 unlocked modes (2 × 3), ratio 13/(13 + 6).
+- n_s ≈ 0.965 inherits from Stern-Brocot self-similarity at the golden-ratio winding.
+- The bare K = 1 identities 8/35 and 27/8 inherit from substrate-scale arithmetic only and do not survive renormalization-group running to the electroweak scale; they are reference identities, not predictions.
+
 ## Empirical posture
 
 The framework's empirical commitments are symmetric with the
@@ -249,6 +300,11 @@ precise predicted value of the **Hubble constant** H_0 — the
 present rate of cosmic expansion, with units of inverse time —
 within the framework's tree-depth accounting.
 
+**Spine.**
+- Based on the framework deriving a subset of Standard Model parameters from a forced structure, falsification inherits from any derived dimensionless ratio disagreeing with observation.
+- Corroborated predictions (Ω_Λ, n_s, structural results, the cosmic-partition closure) inherit from the framework's substrate-derived register.
+- The bare K = 1 identities (8/35, 27/8) inherit nothing on the corroborated side; they are explicitly excluded.
+
 ## Comparison class
 
 This framework is not in competition with the Standard Model; it
@@ -271,6 +327,10 @@ catalogs. This framework's distinguishing feature within the
 class is that its predictions are exact small-integer ratios
 derivable at shallow combinatorial depth, rather than fits to
 free parameters in a high-dimensional manifold.
+
+**Spine.**
+- The framework's comparison class inherits from the program-level claim "Standard Model parameters should not be free": GUTs, string theory, loop quantum gravity, asymptotic safety, causal set theory, the Wolfram hypergraph program, Geometric Unity.
+- The framework's distinguishing feature inside that class inherits from its derivation depth: exact small-integer ratios at shallow combinatorial depth, not fits to free parameters in a high-dimensional manifold.
 
 ## Entry points
 
@@ -517,6 +577,11 @@ cannot reach $15 = 3 \cdot 5$ via the canonical register).
 
 See [Lemma 3](sync_cost/derivations/structural_lemmas.md) for
 the formal statement.
+
+**Spine.**
+- Based on the K = 1 / K < 1 critical-line tongue-coverage discontinuity, the cosmological and particle-sector regimes are non-smoothly separated.
+- Each regime inherits an independent anchor requirement; reduction to a single anchor is structurally obstructed.
+- The two-anchor minimum (H_0 and v_EW = 246 GeV) inherits from this obstruction; it is a structural feature, not a derivation gap.
 
 ## Status snapshot (2026-04 closure round)
 
