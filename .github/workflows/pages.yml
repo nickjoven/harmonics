@@ -51,6 +51,10 @@ jobs:
           cp -r sync_cost _site/
           cp -r docs _site/
           cp LICENSE _site/
+          # Root-level animations surfaced through docs/genesis.html.
+          # 4.8 MB genesis.gif paid for by viewers who chose to navigate
+          # to the gallery, not by every README visitor.
+          cp genesis.gif orbit.gif stairs.gif rose.gif spiral.gif triangles.gif _site/
 
       - name: Structural checks
         run: |
@@ -80,7 +84,8 @@ jobs:
             _site/docs/glossary.html \
             _site/docs/derivations.html \
             _site/docs/cmb-s4.html \
-            _site/docs/preprint.html
+            _site/docs/preprint.html \
+            _site/docs/genesis.html
 
   # Runs only on push to main, gated on validate.  Real Pages deploy.
   deploy:
@@ -104,6 +109,8 @@ jobs:
           cp -r sync_cost _site/
           cp -r docs _site/
           cp LICENSE _site/
+          # Root-level animations surfaced through docs/genesis.html.
+          cp genesis.gif orbit.gif stairs.gif rose.gif spiral.gif triangles.gif _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
