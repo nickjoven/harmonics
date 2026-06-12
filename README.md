@@ -1,16 +1,22 @@
 # harmonics
 
-When two oscillators couple — pendulums on a shared beam,
-metronomes on a wobbling table, neighbouring strings — they tend
-to lock into small-integer ratios. Each oscillator's motion stays
-smooth; the relationship between them snaps into discrete steps.
+When two oscillators are coupled — pendulums hanging from a
+shared beam, metronomes on the same wobbling table, neighbouring
+strings on an instrument — they tend over time to lock into
+ratios with small integer denominators, even though each
+oscillator's underlying motion stays entirely smooth. The
+discreteness lives in the relationship between them rather than
+in the motion of either one taken on its own.
 
-The framework takes that single observation seriously as physics.
-The universe's discrete features — quantum numbers, three spatial
-dimensions, the small set of forces — are what the locking
-produces, not separate posits added on top. Everything downstream
-is what falls out of working that one idea at the relevant level
-of detail. The "how" is the framework; the "what" is its output.
+This framework takes that single observation seriously as
+physics, and reads the universe's discrete features — its quantum
+numbers, its three spatial dimensions, its small set of forces —
+as what the locking produces between continuous degrees of
+freedom, rather than as separate posits added on top of a
+continuous background. Working that one idea out at the relevant
+level of detail is what fills the rest of this document; the
+numerical residuals and small-integer ratios catalogued further
+down are what falls out of it.
 
 ## The mechanism
 
