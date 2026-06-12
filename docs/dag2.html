@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Derivation graph (spine) &mdash; Harmonics</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body { max-width: 100%; padding: 0; margin: 0; font-family: ui-sans-serif, system-ui, sans-serif; color: #e0e0e0; background: #101018; }
+  nav { padding: 1rem 2rem; background: #1a1a2e; border-bottom: 1px solid #333; }
+  nav a { color: #e0e0e0; margin-right: 1rem; text-decoration: none; }
+  nav a.active { color: #f0c040; border-bottom: 2px solid #f0c040; padding-bottom: 2px; }
+  .layout { display: grid; grid-template-columns: 1fr 420px; height: calc(100vh - 60px); gap: 0; }
+  .graph-pane { position: relative; overflow: hidden; background: #0a0a12; }
+  .graph-pane svg { width: 100%; height: 100%; cursor: grab; display: block; }
+  .graph-pane svg:active { cursor: grabbing; }
+  .detail-pane { background: #141424; padding: 1.5rem; overflow-y: auto; border-left: 1px solid #333; }
+  .detail-pane h1 { font-size: 1.3rem; color: #f0c040; margin: 0 0 0.5rem; word-break: break-all; }
+  .detail-pane h2 { font-size: 0.9rem; color: #e94560; margin: 1.5rem 0 0.5rem; text-transform: uppercase; letter-spacing: 1px; }
+  .detail-pane .meta { font-size: 0.85rem; color: #888; margin-bottom: 1rem; }
+  .detail-pane .summary { font-size: 0.95rem; line-height: 1.5; margin-bottom: 1rem; }
+  .detail-pane .summary code { background: #2a2a4e; padding: 1px 4px; border-radius: 3px; font-size: 0.85em; }
+  .detail-pane ul { margin: 0; padding-left: 1.2rem; font-size: 0.9rem; }
+  .detail-pane li { margin-bottom: 0.25rem; }
+  .detail-pane a { color: #f0c040; text-decoration: none; cursor: pointer; }
+  .detail-pane a:hover { text-decoration: underline; }
+  .detail-pane .git-entry { font-size: 0.8rem; color: #aaa; margin-bottom: 0.5rem; display: flex; gap: 0.5rem; }
+  .detail-pane .git-hash { color: #40c060; font-family: monospace; }
+  .detail-pane .git-date { color: #888; font-family: monospace; }
+  .detail-pane .pill { display:inline-block; font-size:0.7rem; padding:1px 6px; border-radius:8px; background:#2a2a4e; color:#bbb; margin-left:0.4rem; vertical-align:middle; }
+  .search-box { padding: 0.5rem 1rem; background: #1a1a2e; border-bottom: 1px solid #333; }
+  .search-box input { width: 100%; padding: 0.4rem 0.6rem; font-size: 0.9rem; background: #0a0a12; color: #e0e0e0; border: 1px solid #444; border-radius: 4px; }
+  .controls { padding: 0.5rem 1rem; font-size: 0.85rem; color: #aaa; background: #1a1a2e; border-bottom: 1px solid #333; }
+  .controls label { margin-right: 1rem; cursor: pointer; }
+  .controls .hint { float:right; color:#777; }
+  .node-circle { stroke-width: 1.5; cursor: pointer; }
+  .node-circle.selected { stroke: #f0c040; stroke-width: 3; }
+  .node-circle.ancestor { stroke: #e94560; }
+  .node-circle.descendant { stroke: #40c060; }
+  .node-circle.dimmed { opacity: 0.18; }
+  .node-circle.hidden { display: none; }
+  .node-label { font-size: 9px; fill: #aaa; pointer-events: none; font-family: monospace; }
+  .node-label.selected { fill: #f0c040; font-weight: bold; }
+  .node-label.dimmed { opacity: 0.18; }
+  .node-label.hidden { display: none; }
+  /* spine = the one primary-parent edge per node, always drawn */
+  .spine { stroke: #3a3a52; stroke-width: 0.8; fill: none; }
+  .spine.dimmed { opacity: 0.12; }
+  .spine.hidden { display: none; }
+  /* lazy = cross-links revealed only for the selection's lineage */
+  .lazy.ancestor { stroke: #e94560; stroke-width: 1.4; fill: none; }
+  .lazy.descendant { stroke: #40c060; stroke-width: 1.4; fill: none; }
+  .legend { position: absolute; top: 10px; left: 10px; background: rgba(26,26,46,0.92); padding: 0.5rem 0.6rem; border-radius: 4px; font-size: 0.75rem; color: #aaa; line-height: 1.6; }
+  .legend .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+  .legend .ln { display:inline-block; width:14px; height:0; border-top:2px solid; margin-right:4px; vertical-align:middle; }
+  .empty-state { color: #666; font-style: italic; padding: 2rem 0; text-align: center; }
+  @media (max-width: 800px) {
+    .layout { grid-template-columns: 1fr; grid-template-rows: 50vh 1fr; }
+    .detail-pane { border-left: none; border-top: 1px solid #333; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Reference</a>
+  <a href="claim-chain.html">Claim chain</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="derivations.html">Derivations</a>
+  <a href="dag.html">Graph</a>
+  <a href="dag2.html" class="active">Graph (spine)</a>
+  <a href="mastery-graph.html">Mastery</a>
+  <a href="preprint.html">Preprint</a>
+</nav>
+
+<div class="search-box">
+  <input type="text" id="search" placeholder="Filter nodes by name... (e.g. klein, gauge, born)">
+</div>
+
+<div class="controls">
+  <label><input type="checkbox" id="toggle-labels" checked> labels</label>
+  <label><input type="checkbox" id="toggle-orphans" checked> orphans</label>
+  <span class="hint">spine = primary-parent tree &middot; click a node to reveal its full lineage</span>
+</div>
+
+<div class="layout">
+  <div class="graph-pane">
+    <div class="legend">
+      <div><span class="dot" style="background:#f0c040"></span> selected</div>
+      <div><span class="ln" style="border-color:#e94560"></span> ancestors (depends on)</div>
+      <div><span class="ln" style="border-color:#40c060"></span> descendants (depended on by)</div>
+      <div><span class="ln" style="border-color:#3a3a52"></span> spine (primary parent)</div>
+      <div><span class="dot" style="background:#4080c0"></span> root &middot; <span class="dot" style="background:#a060c0"></span> leaf</div>
+    </div>
+    <svg id="graph"></svg>
+  </div>
+
+  <div class="detail-pane" id="detail">
+    <div class="empty-state">Click a node to view its lineage, summary, and git history.<br><br>At rest you see the <b>spine</b> &mdash; each node hung under the single prerequisite it most rests on. The full dependency web (2,457 edges) is drawn only around what you select.</div>
+  </div>
+</div>
+
+<script>
+(async function() {
+  const SVGNS = 'http://www.w3.org/2000/svg';
+  const res = await fetch('derivation-graph.json');
+  const data = await res.json();
+  const nodes = data.nodes;
+  const byId = Object.fromEntries(nodes.map(n => [n.id, n]));
+  nodes.forEach(n => { n.depends_on = n.depends_on || []; n.depended_on_by = n.depended_on_by || []; n.git = n.git || []; });
+
+  // depends_on is NOT acyclic here — it has one ~240-node strongly-connected cluster
+  // (mutually-referencing derivations). So first compute a cycle-tolerant depth: longest
+  // path from a root, treating any back-edge encountered on the current path as depth 0.
+  const depth = {};
+  (function computeDepth() {
+    const visit = (id, seen) => {
+      if (id in depth) return depth[id];
+      if (seen.has(id)) return 0;            // back-edge on this path → ignore for layering
+      seen.add(id);
+      const node = byId[id];
+      const deps = node ? node.depends_on : [];
+      depth[id] = deps.length === 0 ? 0 : 1 + Math.max(...deps.map(d => visit(d, seen)));
+      seen.delete(id);
+      return depth[id];
+    };
+    nodes.forEach(n => visit(n.id, new Set()));
+  })();
+
+  // ---- Spine: each node keeps ONE primary parent = the dependency it most rests on,
+  // chosen only among *strictly shallower* dependencies. Because parent.depth < child.depth
+  // always, the parent-pointer graph is a provable forest even though depends_on is cyclic.
+  // Among the shallower deps, prefer the most foundational (highest fan-in), tie-break by id.
+  function primaryParent(n) {
+    let best = null, bestKey = null;
+    for (const d of n.depends_on) {
+      const dn = byId[d];
+      if (!dn || depth[d] >= depth[n.id]) continue;   // must go strictly "up" a layer
+      const key = [dn.depended_on_by.length, d];        // higher fan-in wins, then lower id
+      if (bestKey === null || key[0] > bestKey[0] || (key[0] === bestKey[0] && key[1] < bestKey[1])) {
+        best = d; bestKey = key;
+      }
+    }
+    return best;
+  }
+  const parent = {};
+  const children = {};
+  nodes.forEach(n => { children[n.id] = []; });
+  nodes.forEach(n => {
+    const p = primaryParent(n);
+    parent[n.id] = p;
+    if (p && children[p]) children[p].push(n.id);
+  });
+  const roots = nodes.filter(n => parent[n.id] === null).map(n => n.id);
+
+  // Tree depth = length of the parent chain (the spine column), distinct from the cyclic
+  // layer depth above. Forest is acyclic, so this terminates.
+  const tdepth = {};
+  function treeDepth(id) {
+    if (id in tdepth) return tdepth[id];
+    const p = parent[id];
+    tdepth[id] = (p === null) ? 0 : treeDepth(p) + 1;
+    return tdepth[id];
+  }
+  nodes.forEach(n => treeDepth(n.id));
+
+  // ---- Tidy left-to-right tree layout (leaf-counter + center-parent-over-children).
+  // x = parent-chain depth (columns); y = abstract leaf order. Computed once, viewport-independent.
+  const COL = 190, ROW = 24;
+  const posX = {}, posY = {};
+  let leafCursor = 0;
+  function place(id) {
+    const kids = children[id].slice().sort((a, b) => a.localeCompare(b));
+    if (kids.length === 0) {
+      posY[id] = leafCursor++;
+    } else {
+      kids.forEach(place);
+      posY[id] = (posY[kids[0]] + posY[kids[kids.length - 1]]) / 2;
+    }
+    posX[id] = tdepth[id];
+  }
+  roots.sort((a, b) => a.localeCompare(b)).forEach(place);
+  nodes.forEach(n => { n._x = posX[n.id] * COL; n._y = posY[n.id] * ROW; });
+
+  function nodeColor(n) {
+    if (n.depends_on.length === 0 && n.depended_on_by.length === 0) return '#666';
+    if (n.depends_on.length === 0) return '#4080c0';      // root (blue)
+    if (n.depended_on_by.length === 0) return '#a060c0';  // leaf (purple)
+    return '#888';
+  }
+  function isOrphan(n) { return n.depends_on.length === 0 && n.depended_on_by.length === 0; }
+
+  function edgePath(p1, p2) {
+    const mx = (p1.x + p2.x) / 2;
+    return `M${p1.x},${p1.y} C${mx},${p1.y} ${mx},${p2.y} ${p2.x},${p2.y}`;
+  }
+
+  // ---- Build the DOM exactly once. Pan/zoom only mutate one transform attribute.
+  const svg = document.getElementById('graph');
+  const gRoot = document.createElementNS(SVGNS, 'g');
+  const gSpine = document.createElementNS(SVGNS, 'g');
+  const gLazy = document.createElementNS(SVGNS, 'g');   // lazy lineage edges live here
+  const gNodes = document.createElementNS(SVGNS, 'g');
+  gRoot.appendChild(gSpine); gRoot.appendChild(gLazy); gRoot.appendChild(gNodes);
+  svg.appendChild(gRoot);
+
+  // Spine edges (one per non-root node).
+  const spineEls = {};
+  nodes.forEach(n => {
+    const p = parent[n.id];
+    if (!p) return;
+    const path = document.createElementNS(SVGNS, 'path');
+    path.setAttribute('class', 'spine');
+    path.setAttribute('d', edgePath({ x: byId[p]._x, y: byId[p]._y }, { x: n._x, y: n._y }));
+    path.dataset.child = n.id;
+    gSpine.appendChild(path);
+    spineEls[n.id] = path;
+  });
+
+  // Node circles + labels.
+  const circleEls = {}, labelEls = {};
+  nodes.forEach(n => {
+    const r = 3 + Math.min(7, n.depends_on.length + n.depended_on_by.length);
+    const c = document.createElementNS(SVGNS, 'circle');
+    c.setAttribute('class', 'node-circle');
+    c.setAttribute('cx', n._x); c.setAttribute('cy', n._y); c.setAttribute('r', r);
+    const col = nodeColor(n);
+    c.setAttribute('fill', col); c.setAttribute('stroke', col);
+    c.dataset.id = n.id; c.dataset.r = r;
+    gNodes.appendChild(c);
+    circleEls[n.id] = c;
+
+    const t = document.createElementNS(SVGNS, 'text');
+    t.setAttribute('class', 'node-label');
+    t.setAttribute('x', n._x + r + 3); t.setAttribute('y', n._y + 3);
+    t.textContent = n.id;
+    gNodes.appendChild(t);
+    labelEls[n.id] = t;
+
+    c.addEventListener('click', (e) => { e.stopPropagation(); selectNode(n.id); });
+  });
+
+  // ---- Pan & zoom: transform-only, no DOM rebuild.
+  let zoom = 1, panX = 0, panY = 0;
+  function applyTransform() {
+    gRoot.setAttribute('transform', `translate(${panX},${panY}) scale(${zoom})`);
+  }
+  function fitView() {
+    const xs = nodes.map(n => n._x), ys = nodes.map(n => n._y);
+    const minX = Math.min(...xs) - 40, maxX = Math.max(...xs) + 160;
+    const minY = Math.min(...ys) - 40, maxY = Math.max(...ys) + 40;
+    const w = svg.clientWidth || 800, h = svg.clientHeight || 600;
+    zoom = Math.min(w / (maxX - minX), h / (maxY - minY)) * 0.95;
+    zoom = Math.max(0.05, Math.min(zoom, 1.5));
+    panX = (w - (maxX + minX) * zoom) / 2;
+    panY = (h - (maxY + minY) * zoom) / 2;
+    applyTransform();
+  }
+
+  let isDragging = false, dragStartX, dragStartY, panStartX, panStartY;
+  svg.addEventListener('mousedown', (e) => {
+    if (e.target.classList.contains('node-circle')) return;
+    isDragging = true;
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    panStartX = panX; panStartY = panY;
+  });
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    panX = panStartX + (e.clientX - dragStartX);
+    panY = panStartY + (e.clientY - dragStartY);
+    applyTransform();
+  });
+  window.addEventListener('mouseup', () => { isDragging = false; });
+  svg.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    const delta = e.deltaY < 0 ? 1.1 : 0.9;
+    const rect = svg.getBoundingClientRect();
+    const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+    panX = mx - (mx - panX) * delta;
+    panY = my - (my - panY) * delta;
+    zoom *= delta;
+    applyTransform();
+  }, { passive: false });
+
+  // ---- Selection: full-DAG lineage, drawn lazily; highlight via class toggles only.
+  let selectedId = null;
+
+  function collect(id, field, acc) {
+    const n = byId[id];
+    if (!n) return acc;
+    for (const x of n[field]) {
+      if (!acc.has(x)) { acc.add(x); collect(x, field, acc); }
+    }
+    return acc;
+  }
+
+  function clearLazy() { while (gLazy.firstChild) gLazy.removeChild(gLazy.firstChild); }
+
+  function addLazyEdge(from, to, cls) {
+    const a = byId[from], b = byId[to];
+    if (!a || !b) return;
+    const path = document.createElementNS(SVGNS, 'path');
+    path.setAttribute('class', `lazy ${cls}`);
+    path.setAttribute('d', edgePath({ x: a._x, y: a._y }, { x: b._x, y: b._y }));
+    gLazy.appendChild(path);
+  }
+
+  function selectNode(id) {
+    selectedId = id;
+    const ancestors = collect(id, 'depends_on', new Set());
+    const descendants = collect(id, 'depended_on_by', new Set());
+    const inView = new Set([id, ...ancestors, ...descendants]);
+
+    // Reveal cross-links only within the lineage neighborhood.
+    clearLazy();
+    const anc = new Set([id, ...ancestors]);
+    const desc = new Set([id, ...descendants]);
+    nodes.forEach(n => {
+      if (!anc.has(n.id)) return;
+      n.depends_on.forEach(d => { if (anc.has(d)) addLazyEdge(d, n.id, 'ancestor'); });
+    });
+    nodes.forEach(n => {
+      if (!desc.has(n.id)) return;
+      n.depended_on_by.forEach(d => { if (desc.has(d)) addLazyEdge(n.id, d, 'descendant'); });
+    });
+
+    // Highlight nodes + labels by class toggle (no rebuild).
+    nodes.forEach(n => {
+      const c = circleEls[n.id], l = labelEls[n.id];
+      c.classList.remove('selected', 'ancestor', 'descendant', 'dimmed');
+      l.classList.remove('selected', 'dimmed');
+      if (n.id === id) { c.classList.add('selected'); l.classList.add('selected'); }
+      else if (ancestors.has(n.id)) c.classList.add('ancestor');
+      else if (descendants.has(n.id)) c.classList.add('descendant');
+      else { c.classList.add('dimmed'); l.classList.add('dimmed'); }
+    });
+    // Dim spine edges outside the neighborhood.
+    Object.entries(spineEls).forEach(([child, el]) => {
+      const p = parent[child];
+      el.classList.toggle('dimmed', !(inView.has(child) && inView.has(p)));
+    });
+
+    renderDetail(id);
+  }
+
+  function clearSelection() {
+    selectedId = null;
+    clearLazy();
+    nodes.forEach(n => {
+      circleEls[n.id].classList.remove('selected', 'ancestor', 'descendant', 'dimmed');
+      labelEls[n.id].classList.remove('selected', 'dimmed');
+    });
+    Object.values(spineEls).forEach(el => el.classList.remove('dimmed'));
+    document.getElementById('detail').innerHTML = '<div class="empty-state">Click a node to view its lineage, summary, and git history.</div>';
+  }
+
+  svg.addEventListener('click', (e) => {
+    if (e.target === svg || e.target === gRoot) clearSelection();
+  });
+
+  function renderDetail(id) {
+    const n = byId[id];
+    if (!n) return;
+    const pane = document.getElementById('detail');
+    const repoBase = 'https://github.com/nickjoven/harmonics/blob/main/';
+    const commitBase = 'https://github.com/nickjoven/harmonics/commit/';
+    const p = parent[id];
+    let html = `<h1>${n.id}</h1>`;
+    if (n.title && n.title !== n.id) html += `<div class="meta">${escapeHtml(n.title)}</div>`;
+    html += `<div class="meta"><a href="${repoBase}${n.path}" target="_blank">${n.path}</a>`;
+    if (n.sealed) html += `<span class="pill">sealed</span>`;
+    html += `</div>`;
+    if (p) html += `<div class="meta">spine parent: <a data-id="${p}">${p}</a></div>`;
+    if (n.summary) html += `<div class="summary">${escapeHtml(n.summary).replace(/\n/g, '<br>')}</div>`;
+
+    html += `<h2>Depends on (${n.depends_on.length})</h2>`;
+    html += n.depends_on.length
+      ? '<ul>' + n.depends_on.map(d => `<li><a data-id="${d}">${d}</a>${d === p ? ' <span class="pill">spine</span>' : ''}</li>`).join('') + '</ul>'
+      : '<div class="empty-state" style="padding:0.5rem 0;">No prerequisites — root node</div>';
+
+    html += `<h2>Depended on by (${n.depended_on_by.length})</h2>`;
+    html += n.depended_on_by.length
+      ? '<ul>' + n.depended_on_by.map(d => `<li><a data-id="${d}">${d}</a></li>`).join('') + '</ul>'
+      : '<div class="empty-state" style="padding:0.5rem 0;">No descendants — leaf node</div>';
+
+    html += `<h2>Audit trail (${n.git.length} commits)</h2>`;
+    if (n.git.length) {
+      html += n.git.slice(0, 20).map(c => `
+        <div class="git-entry">
+          <span class="git-date">${c.date}</span>
+          <a href="${commitBase}${c.hash}" target="_blank" class="git-hash">${c.hash}</a>
+          <span>${escapeHtml(c.subject)}</span>
+        </div>`).join('');
+      if (n.git.length > 20) html += `<div style="font-size:0.8rem;color:#888;margin-top:0.5rem;">...${n.git.length - 20} earlier commits</div>`;
+    } else {
+      html += '<div class="empty-state" style="padding:0.5rem 0;">No git history available</div>';
+    }
+    pane.innerHTML = html;
+    pane.querySelectorAll('a[data-id]').forEach(a => {
+      a.addEventListener('click', (e) => { e.preventDefault(); selectNode(a.dataset.id); });
+    });
+    pane.scrollTop = 0;
+  }
+
+  function escapeHtml(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  // ---- Filter + toggles: class toggles only, no rebuild.
+  function applyVisibility() {
+    const showLabels = document.getElementById('toggle-labels').checked;
+    const showOrphans = document.getElementById('toggle-orphans').checked;
+    const filter = document.getElementById('search').value.toLowerCase();
+    nodes.forEach(n => {
+      let hide = false;
+      if (!showOrphans && isOrphan(n)) hide = true;
+      if (filter && !n.id.toLowerCase().includes(filter)) hide = true;
+      circleEls[n.id].classList.toggle('hidden', hide);
+      labelEls[n.id].classList.toggle('hidden', hide || !showLabels);
+      if (spineEls[n.id]) spineEls[n.id].classList.toggle('hidden', hide);
+    });
+  }
+  document.getElementById('toggle-labels').addEventListener('change', applyVisibility);
+  document.getElementById('toggle-orphans').addEventListener('change', applyVisibility);
+  document.getElementById('search').addEventListener('input', applyVisibility);
+  window.addEventListener('resize', fitView);
+
+  // ---- Deep linking: ?node=klein_bottle
+  applyVisibility();
+  fitView();
+  const initialNode = new URLSearchParams(window.location.search).get('node');
+  if (initialNode && byId[initialNode]) selectNode(initialNode);
+})();
+</script>
+
+</body>
+</html>
