@@ -1,22 +1,22 @@
 # harmonics
 
-Put two metronomes on the same wobbly table, hang two pendulums
-off the same beam, or pluck two strings next to each other on a
-guitar, and after a little while they'll drift into step — not
-just at 1:1, but at 2:1, 3:2, 5:3, and other small whole-number
-ratios. They never lock at something messy like 7.4:3.1. Each
-oscillator's own motion stays perfectly smooth the whole time;
-what snapped to a clean ratio is the *relationship* between them.
+Two metronomes on the same wobbly table, two pendulums hanging
+off the same beam, two adjacent strings plucked on a guitar —
+after a little while they all drift into step. Not just at 1:1,
+but at 2:1, 3:2, 5:3, and other small whole-number ratios. They
+never lock at something messy like 7.4:3.1. Each oscillator's own
+motion stays perfectly smooth the whole time; what snapped to a
+clean ratio is the *relationship* between them.
 
-The framework here is what you get when you take that one
-observation seriously and follow it down to physics. The universe
-has a long list of discrete features — quantum numbers, three
+The framework here is what comes of taking that one observation
+seriously and following it down to physics. The universe has a
+long list of discrete features — quantum numbers, three
 dimensions of space, a small handful of forces — and the claim is
 that those features are what the locking produces between things
 that, on their own, are perfectly continuous. They aren't extra
 ingredients added on top to make the integers come out right;
 they're what coupling does. Working that idea out at the level of
-detail the universe actually shows us is what the rest of this
+detail the universe actually shows is what the rest of this
 document is about.
 
 **Spine.**
@@ -26,12 +26,12 @@ document is about.
 ## The mechanism
 
 There's a piece of math that catches the locking precisely: the
-**Stern-Brocot tree**. Start with two fractions side by side, like
-0/1 and 1/1, and insert the *mediant* (a+c)/(b+d) between them —
-which here gives 1/2. Do it again on each new neighbouring pair,
-and again, and you end up with a binary tree that lists every
-positive fraction exactly once, with the simplest ratios near the
-top and progressively more elaborate ones further down.
+**Stern-Brocot tree**. Two starting fractions — say 0/1 and 1/1
+— admit a single insertion between them, the *mediant*
+(a+c)/(b+d), which here gives 1/2. Iterating the same operation
+on each new neighbouring pair builds a binary tree that lists
+every positive fraction exactly once, with the simplest ratios
+near the top and progressively more elaborate ones further down.
 
 The mediant isn't a stylistic choice; it's the only binary
 operation that can sit between two locked frequencies without
@@ -79,22 +79,22 @@ mixing them up is the most common way to misread it. The
 are *structural*: they're forced by the combinatorics, and they'd
 be the same for any observer at any cosmic epoch, in any unit
 system. The *dimensionful constants* — H_0, ℏ, v_EW, the Planck
-mass — are *addresses*. They tell you where on the structure we
+mass — are *addresses*. They specify where on the structure we
 happen to be, not what the structure is.
 
-The cleanest way to feel the difference is the helium-chamber
-test. A tuba's pitch lives in the medium — the air resonating
-inside the horn — so when you swap the air for helium, the pitch
-goes up about three semitones. (The Donald Duck effect, but for
-instruments.) A contrabass's pitch lives in the structure itself
-— the string — and helium does nothing to it. A contrabass sounds
-the same whether the room is full of air or helium. The
-framework's claim is that the universe has both kinds of
-constants. The Standard Model treats every constant as a tuba
+The cleanest demonstration of the difference is the helium-
+chamber test. A tuba's pitch lives in the medium — the air
+resonating inside the horn — and swapping the air for helium
+sends the pitch up about three semitones. (The Donald Duck
+effect, but for instruments.) A contrabass's pitch lives in the
+structure itself — the string — and helium does nothing to it. A
+contrabass sounds the same whether the room is full of air or
+helium. The framework's claim is that the universe has both kinds
+of constants. The Standard Model treats every constant as a tuba
 pitch, which is why it carries about twenty of them around as
 free parameters. This framework recovers a contrabass pitch —
-Ω_Λ = 13/19 — that doesn't change under any medium swap you can
-imagine.
+Ω_Λ = 13/19 — that doesn't change under any imaginable medium
+swap.
 
 See [`medium_change_demo.md`](sync_cost/derivations/medium_change_demo.md)
 for the full walkthrough, including the tuba/contrabass/speaker
@@ -108,18 +108,17 @@ comparison table and the framework interpretation.
 ## What the mechanism forces
 
 Each Standard Model "input" below isn't really an input. It's
-what falls out of the mediant + Stern-Brocot mechanism when you
-ask the right question.
+what falls out of the mediant + Stern-Brocot mechanism, read at
+the relevant depth.
 
-**Three spatial dimensions.** Iterate the mediant operation and
-you generate **SL(2, ℤ)** — the group of 2×2 integer matrices
-with determinant ±1, which is the natural symmetry group of the
-Stern-Brocot tree. Take its continuum closure SL(2, ℝ), and you
-land on a three-dimensional Lie group. The geometry has to be
-consistent with the operation that builds the substrate, so
-dim SL(2, ℝ) = 3 leaves no other choice for the dimension of
-space. The Standard Model takes "space has three dimensions" as a
-given.
+**Three spatial dimensions.** Iterating the mediant operation
+generates **SL(2, ℤ)** — the group of 2×2 integer matrices with
+determinant ±1, which is the natural symmetry group of the Stern-
+Brocot tree. Its continuum closure SL(2, ℝ) is a three-
+dimensional Lie group. The geometry has to be consistent with the
+operation that builds the substrate, so dim SL(2, ℝ) = 3 leaves
+no other choice for the dimension of space. The Standard Model
+takes "space has three dimensions" as a given.
 
 **Gauge group and three generations.** The Klein bottle's two
 smallest accessible denominators are q₂ = 2 and q₃ = 3, and
