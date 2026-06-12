@@ -8,6 +8,10 @@ never lock at something messy like 7.4:3.1. Each oscillator's own
 motion stays perfectly smooth the whole time; what snapped to a
 clean ratio is the *relationship* between them.
 
+![Continued-fraction staircase building to depth 1/13 with budget 19, traced step by step against the underlying frequency axis](stairs.gif)
+
+*Figure 1. Two coupled rationals climbing the Stern-Brocot tree to depth 13. The framework's headline Ω_Λ = 13/19 lives in exactly this configuration — 13 locked-mode fractions against a budget of 19.*
+
 The framework here is what comes of taking that one observation
 seriously and following it down to physics. The universe has a
 long list of discrete features — quantum numbers, three
@@ -32,6 +36,10 @@ There's a piece of math that catches the locking precisely: the
 on each new neighbouring pair builds a binary tree that lists
 every positive fraction exactly once, with the simplest ratios
 near the top and progressively more elaborate ones further down.
+
+![Devil's-staircase mediant insertion animated by depth, mode-locked tongues colour-coded by denominator from q₂ blue through q₆ orange](sync_cost/staircase_forming.svg)
+
+*Figure 2. The staircase is time. Each step adds one mediant; each tongue's width is (K/2)^q at the rational p/q. q₂ blue (1/2), q₃ pink (1/3, 2/3), q₄ green (1/4, 3/4), q₅ purple (1/5, 2/5, 3/5, 4/5), q₆ orange (1/6, 5/6). The 1/φ gap at the centre never fills.*
 
 The mediant isn't a stylistic choice; it's the only binary
 operation that can sit between two locked frequencies without
@@ -110,6 +118,10 @@ comparison table and the framework interpretation.
 Each Standard Model "input" below isn't really an input. It's
 what falls out of the mediant + Stern-Brocot mechanism, read at
 the relevant depth.
+
+![Full Stern-Brocot tree colour-coded by denominator (q₂–q₆) above a Klein figure-eight loop, with the framework's headline numerology — 13 modes, 12 channels, 4 states, 3 dimensions, 1 dark, 0 parameters — across the top](sync_cost/minimum_self_predicting_universe.svg)
+
+*Figure 3. The minimum self-predicting universe: six Stern-Brocot generations colour-coded by denominator, with the Klein-bottle vacuum sector below. Each forced structure listed next has a home in this diagram.*
 
 **Three spatial dimensions.** Iterating the mediant operation
 generates **SL(2, ℤ)** — the group of 2×2 integer matrices with
@@ -190,6 +202,10 @@ collapses to a counting ratio: approximately 10¹⁸³ torus modes
 against 4 Klein-bottle modes, times the Planck-to-Hubble frequency
 ratio. The cosmological-constant problem is reframed as a topology-
 selection problem with a derivable answer.
+
+![Six-panel comparison of Klein bottle vs torus mode occupation under a coupling-strength sweep: order parameter, effective mode count, and per-sector populations on each topology](sync_cost/derivations/klein_phase_diagram.png)
+
+*Figure 4. Numerical evidence for the topology selection. Klein-extended mode count (red, panel B) saturates at four; the torus (blue) keeps accumulating with the cutoff. The 10¹²¹-order QFT discrepancy is the gap between those two curves.*
 
 **Spine.**
 - Based on substrate self-consistency, the Klein bottle is the only admissible field-mode topology.
@@ -617,6 +633,10 @@ for the current at-a-glance map.
 A chain of oscillators coupled by Stribeck friction demonstrates
 the dual-regime mechanism numerically.
 
+![Two-panel spectral comparison: square wave vs Devil's staircase at golden-ratio fundamental frequency, with the bottom panel marking the bands where the staircase carries more spectral content than the square wave](sync_cost/derivations/square_vs_staircase.png)
+
+*Figure 5. The spectral signature the framework predicts: a square-wave baseline versus the Devil's staircase at ω = 1/φ. The bottom panel marks where the staircase exceeds the square — the "spectral tilt in miniature" the Stribeck chain reproduces.*
+
 **Results** ([RESULTS.md](RESULTS.md)):
 
 - **N = 3 is the critical chain length** for frequency conversion.
@@ -799,10 +819,17 @@ but aren't:
   partially mitigate this, but the underlying derivations themselves
   do not render. A static `.md → .html` pass (e.g. Jekyll, mdBook,
   or a small build step) would close this gap.
-- **Root-level animations (`genesis.gif`, `orbit.gif`) are not
-  referenced by any deployed page.** They are evidence assets that
-  could carry weight in the landing page or the preprint view if
-  surfaced.
+- **`genesis.gif` (4.8 MB) is not on the Pages deploy.** It is too
+  heavy to inline in the README (where it would auto-load for every
+  visitor), and the right home is a dedicated Pages page where the
+  load cost is paid only by a viewer who navigated there on purpose.
+  Until it is added to the `Assemble _site` allow-list, the asset is
+  reachable only through the GitHub tree.
+- **`orbit.gif` (Stern-Brocot orbit) is not referenced from any
+  deployed page.** Same Pages-allow-list change would close this.
+  `stairs.gif` is now embedded in the lede; the other root-level
+  animations (`rose.gif`, `spiral.gif`, `triangles.gif`) remain
+  unsurfaced.
 
 If something belongs on Pages but isn't, the change lives in the
 `Assemble _site` step of [`.github/workflows/pages.yml`](.github/workflows/pages.yml)
