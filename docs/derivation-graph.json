@@ -1,5 +1,5 @@
 {
-  "generated": "8e70f0604e34133f9e19835c027e007f8e3a04ad",
+  "generated": "5be5673ace7420cacf6ba048580e257788073460",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -25,6 +25,7 @@
         "cyclotomic_content_mass_ratios_audit",
         "dynamical_tool_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
+        "fm_beat_crt_correspondence_audit",
         "gamma06_cosmological_modular_surface_audit",
         "generation_sector_count_audit",
         "half_twist_meta_structure_audit",
@@ -37,6 +38,7 @@
         "numerology_inventory",
         "primes_denominators_circular_geometry_extension_audit",
         "psl2z_noncommutative_core_structural_identity_audit",
+        "third_twist_meta_structure_audit",
         "unification_bridge_audits_gaps_1_3"
       ],
       "edges": [
@@ -99,6 +101,10 @@
           "kind": "references"
         },
         {
+          "source": "fm_beat_crt_correspondence_audit",
+          "kind": "references"
+        },
+        {
           "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
         },
@@ -144,6 +150,10 @@
         },
         {
           "source": "psl2z_noncommutative_core_structural_identity_audit",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -901,10 +911,12 @@
         "minimum_alphabet",
         "minkowski_signature",
         "quantum_gravity_interpolation",
+        "spacetime_dissipative_emergence",
         "spatial_coupling_derived",
         "speed_of_light",
         "stribeck_vortex",
-        "three_dimensions"
+        "three_dimensions",
+        "vacuum_stress_meta_structure_audit"
       ],
       "edges": [
         {
@@ -982,6 +994,10 @@
           "kind": "references"
         },
         {
+          "source": "spacetime_dissipative_emergence",
+          "kind": "references"
+        },
+        {
           "source": "spatial_coupling_derived",
           "kind": "references"
         },
@@ -995,6 +1011,10 @@
         },
         {
           "source": "three_dimensions",
+          "kind": "references"
+        },
+        {
+          "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -1167,6 +1187,7 @@
         "predictions_horizon_2026",
         "primitive_completeness_audit",
         "unitless_check",
+        "vacuum_stress_meta_structure_audit",
         "w_plus_formalization"
       ],
       "edges": [],
@@ -1225,6 +1246,10 @@
         },
         {
           "source": "unitless_check",
+          "kind": "references"
+        },
+        {
+          "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -1333,6 +1358,7 @@
         "proposed_residual_closure",
         "qm_reframing_programmatic",
         "s_v_nlo",
+        "spacetime_dissipative_emergence",
         "structural_lemmas",
         "vocabulary_is_the_work_pattern"
       ],
@@ -1489,6 +1515,10 @@
         },
         {
           "source": "s_v_nlo",
+          "kind": "references"
+        },
+        {
+          "source": "spacetime_dissipative_emergence",
           "kind": "references"
         },
         {
@@ -1869,7 +1899,9 @@
         "articulation_audit_2026-05",
         "graviton_reframing",
         "k_of_t_friedmann",
-        "thread_chronology"
+        "spacetime_dissipative_emergence",
+        "thread_chronology",
+        "vacuum_stress_meta_structure_audit"
       ],
       "edges": [],
       "edged_by": [
@@ -1886,7 +1918,15 @@
           "kind": "references"
         },
         {
+          "source": "spacetime_dissipative_emergence",
+          "kind": "references"
+        },
+        {
           "source": "thread_chronology",
+          "kind": "references"
+        },
+        {
+          "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -2053,8 +2093,10 @@
         "primitive_completeness_audit",
         "remaining_gap_shapes",
         "sector_decoupling_phase_a",
+        "spacetime_dissipative_emergence",
         "structural_lemmas",
         "thread_chronology",
+        "vacuum_stress_meta_structure_audit",
         "vocabulary_is_the_work_pattern"
       ],
       "edges": [
@@ -2229,11 +2271,19 @@
           "kind": "references"
         },
         {
+          "source": "spacetime_dissipative_emergence",
+          "kind": "references"
+        },
+        {
           "source": "structural_lemmas",
           "kind": "references"
         },
         {
           "source": "thread_chronology",
+          "kind": "references"
+        },
+        {
+          "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -2296,7 +2346,9 @@
         "negative_results_ledger",
         "primitives_vs_addresses_candidate",
         "qm_reframing_programmatic",
-        "thread_chronology"
+        "spacetime_dissipative_emergence",
+        "thread_chronology",
+        "vacuum_stress_meta_structure_audit"
       ],
       "edges": [
         {
@@ -2390,7 +2442,15 @@
           "kind": "references"
         },
         {
+          "source": "spacetime_dissipative_emergence",
+          "kind": "references"
+        },
+        {
           "source": "thread_chronology",
+          "kind": "references"
+        },
+        {
+          "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -4001,6 +4061,7 @@
         "torus_branch_iteration_1",
         "torus_branch_iteration_2_step_1",
         "torus_branch_iteration_2_step_2",
+        "vacuum_stress_meta_structure_audit",
         "vocabulary_is_the_work_pattern",
         "w_plus_formalization"
       ],
@@ -4176,6 +4237,10 @@
           "kind": "references"
         },
         {
+          "source": "vacuum_stress_meta_structure_audit",
+          "kind": "references"
+        },
+        {
           "source": "vocabulary_is_the_work_pattern",
           "kind": "references"
         },
@@ -4253,10 +4318,12 @@
         "physics_relevance_measurement_catalog",
         "primitives_vs_addresses_candidate",
         "qm_reframing_programmatic",
+        "spacetime_dissipative_emergence",
         "substrate_prediction_selection",
         "surface_uniqueness_audit",
         "thread_chronology",
         "torus_branch_iteration_1",
+        "vacuum_stress_meta_structure_audit",
         "vocabulary_bridge_iteration_1",
         "vocabulary_bridge_iteration_2_step_1",
         "vocabulary_bridge_iteration_2_step_2"
@@ -4409,6 +4476,10 @@
           "kind": "references"
         },
         {
+          "source": "spacetime_dissipative_emergence",
+          "kind": "references"
+        },
+        {
           "source": "substrate_prediction_selection",
           "kind": "references"
         },
@@ -4422,6 +4493,10 @@
         },
         {
           "source": "torus_branch_iteration_1",
+          "kind": "references"
+        },
+        {
+          "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -4635,6 +4710,7 @@
         "gluon_reframing",
         "hierarchy_problem_translation",
         "sqrt_r_n_correction",
+        "third_twist_meta_structure_audit",
         "thread_chronology"
       ],
       "edges": [
@@ -4694,6 +4770,10 @@
         },
         {
           "source": "sqrt_r_n_correction",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -4975,6 +5055,7 @@
         "silk_damping_dissipation",
         "sine_gordon_substrate",
         "snmc_class_and_entanglement",
+        "spacetime_dissipative_emergence",
         "stribeck_vortex",
         "structural_lemmas"
       ],
@@ -5219,6 +5300,10 @@
         },
         {
           "source": "snmc_class_and_entanglement",
+          "kind": "references"
+        },
+        {
+          "source": "spacetime_dissipative_emergence",
           "kind": "references"
         },
         {
@@ -5469,6 +5554,7 @@
         "horn_branch_iteration_1",
         "klein_bottle_restructure_price",
         "proposed_residual_closure",
+        "spacetime_dissipative_emergence",
         "thread_chronology",
         "tick_continuum_construction"
       ],
@@ -5525,6 +5611,10 @@
         },
         {
           "source": "proposed_residual_closure",
+          "kind": "references"
+        },
+        {
+          "source": "spacetime_dissipative_emergence",
           "kind": "references"
         },
         {
@@ -6015,6 +6105,7 @@
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
         "down_type_double_cover_closed",
+        "fm_beat_crt_correspondence_audit",
         "framework_status",
         "gamma06_w6_invariance_opposite_view_audit",
         "half_twist_identity_signature_audit",
@@ -6029,6 +6120,7 @@
         "structural_lemmas",
         "substrate_prediction_selection",
         "surface_uniqueness_audit",
+        "third_twist_meta_structure_audit",
         "torus_branch_iteration_1",
         "torus_branch_iteration_2_step_2",
         "vocabulary_bridge_iteration_2_step_1",
@@ -6318,6 +6410,10 @@
           "kind": "references"
         },
         {
+          "source": "fm_beat_crt_correspondence_audit",
+          "kind": "references"
+        },
+        {
           "source": "framework_status",
           "kind": "references"
         },
@@ -6371,6 +6467,10 @@
         },
         {
           "source": "surface_uniqueness_audit",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -6591,7 +6691,8 @@
         "h0_tension_cross_cell_identity_audit",
         "half_twist_meta_structure_audit",
         "modular_form_behavior_cosmological_tongues_audit",
-        "primes_denominators_circular_geometry_extension_audit"
+        "primes_denominators_circular_geometry_extension_audit",
+        "vacuum_stress_meta_structure_audit"
       ],
       "edges": [
         {
@@ -6738,6 +6839,10 @@
         },
         {
           "source": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
+        },
+        {
+          "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -7382,8 +7487,10 @@
         "q_mod2_conservation_theorem",
         "q_mod2_planck_emergence_audit",
         "silk_damping_dissipation",
+        "spacetime_dissipative_emergence",
         "substrate_determinism",
-        "unification_bridge_audits_gaps_1_3"
+        "unification_bridge_audits_gaps_1_3",
+        "vacuum_stress_meta_structure_audit"
       ],
       "edges": [
         {
@@ -7509,11 +7616,19 @@
           "kind": "references"
         },
         {
+          "source": "spacetime_dissipative_emergence",
+          "kind": "references"
+        },
+        {
           "source": "substrate_determinism",
           "kind": "references"
         },
         {
           "source": "unification_bridge_audits_gaps_1_3",
+          "kind": "references"
+        },
+        {
+          "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -7865,6 +7980,7 @@
         "sigma_squared_disambiguation",
         "spatial_coupling_derived",
         "structural_lemmas",
+        "vacuum_stress_meta_structure_audit",
         "vocabulary_is_the_work_pattern",
         "w_plus_formalization"
       ],
@@ -8080,6 +8196,10 @@
           "kind": "references"
         },
         {
+          "source": "vacuum_stress_meta_structure_audit",
+          "kind": "references"
+        },
+        {
           "source": "vocabulary_is_the_work_pattern",
           "kind": "references"
         },
@@ -8143,7 +8263,8 @@
         "era_timeline_disposition",
         "k_of_t_friedmann",
         "lesson_epr_gr_qm_unification",
-        "lesson_proslambanomenos"
+        "lesson_proslambanomenos",
+        "third_twist_meta_structure_audit"
       ],
       "edges": [
         {
@@ -8178,6 +8299,10 @@
         },
         {
           "source": "lesson_proslambanomenos",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -8534,7 +8659,8 @@
         "gamma06_cosmological_modular_surface_audit",
         "half_twist_meta_structure_audit",
         "lambda17_test_gamma06_cosmological_audit",
-        "psl2z_noncommutative_core_structural_identity_audit"
+        "psl2z_noncommutative_core_structural_identity_audit",
+        "third_twist_meta_structure_audit"
       ],
       "edges": [
         {
@@ -8633,6 +8759,10 @@
         },
         {
           "source": "psl2z_noncommutative_core_structural_identity_audit",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -8986,6 +9116,7 @@
         "down_type_double_cover_closed",
         "dynamical_quantization",
         "structural_lemmas",
+        "third_twist_meta_structure_audit",
         "thread_chronology"
       ],
       "edges": [
@@ -9169,6 +9300,10 @@
         },
         {
           "source": "structural_lemmas",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -9595,6 +9730,7 @@
         "negative_results_ledger",
         "nonperturbative_phase2",
         "sqrt_r_n_correction",
+        "third_twist_meta_structure_audit",
         "thread_chronology"
       ],
       "edges": [
@@ -9678,6 +9814,10 @@
         },
         {
           "source": "sqrt_r_n_correction",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -9814,6 +9954,7 @@
         "sector_decoupling_phase_a",
         "session_audit",
         "statistical_conventions",
+        "third_twist_meta_structure_audit",
         "vocabulary_is_the_work_pattern"
       ],
       "edges": [
@@ -9929,6 +10070,10 @@
         },
         {
           "source": "statistical_conventions",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -10048,7 +10193,8 @@
       "depended_on_by": [
         "down_type_double_cover_closed",
         "down_type_double_cover_phase_b_followup",
-        "down_type_double_cover_phase_c"
+        "down_type_double_cover_phase_c",
+        "third_twist_meta_structure_audit"
       ],
       "edges": [
         {
@@ -10079,6 +10225,10 @@
         },
         {
           "source": "down_type_double_cover_phase_c",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -12028,12 +12178,17 @@
       "summary": "**Derived**: the exponent q\u2082q\u2083^d = 54 follows from three established\nresults:\n1. The Klein bottle assigns q\u2083 to spatial, q\u2082 to temporal (D19)\n2. The spatial direction maps to d = 3 independent dimensions (D23)\n3. Independent dimensions multiply their resolutions (standard\n   mode counting)",
       "depends_on": [],
       "depended_on_by": [
-        "INDEX"
+        "INDEX",
+        "third_twist_meta_structure_audit"
       ],
       "edges": [],
       "edged_by": [
         {
           "source": "INDEX",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -12172,6 +12327,7 @@
         "explicit_4x4_reduction",
         "inflation_duration",
         "k_inflation_seam_obstruction",
+        "spacetime_dissipative_emergence",
         "substrate_determinism",
         "thread_chronology"
       ],
@@ -12232,6 +12388,10 @@
         },
         {
           "source": "k_inflation_seam_obstruction",
+          "kind": "references"
+        },
+        {
+          "source": "spacetime_dissipative_emergence",
           "kind": "references"
         },
         {
@@ -12596,7 +12756,8 @@
         "equivalence_dissolution",
         "gr_qm_unification_synthesis",
         "predictions_horizon_2026",
-        "preferred_basis_dissolution"
+        "preferred_basis_dissolution",
+        "spacetime_dissipative_emergence"
       ],
       "edges": [],
       "edged_by": [
@@ -12618,6 +12779,10 @@
         },
         {
           "source": "preferred_basis_dissolution",
+          "kind": "references"
+        },
+        {
+          "source": "spacetime_dissipative_emergence",
           "kind": "references"
         }
       ],
@@ -12683,6 +12848,7 @@
         "equivalence_dissolution",
         "explicit_4x4_reduction",
         "figure_eight_necessitation_audit",
+        "fm_beat_crt_correspondence_audit",
         "framework_status",
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
@@ -12697,6 +12863,7 @@
         "orthogonal_kink_interaction",
         "preferred_basis_dissolution",
         "soliton_dynamics",
+        "spacetime_dissipative_emergence",
         "substrate_determinism",
         "thread_chronology",
         "vocabulary_bridge_iteration_1"
@@ -12781,6 +12948,10 @@
           "kind": "references"
         },
         {
+          "source": "fm_beat_crt_correspondence_audit",
+          "kind": "references"
+        },
+        {
           "source": "framework_status",
           "kind": "references"
         },
@@ -12834,6 +13005,10 @@
         },
         {
           "source": "soliton_dynamics",
+          "kind": "references"
+        },
+        {
+          "source": "spacetime_dissipative_emergence",
           "kind": "references"
         },
         {
@@ -12967,6 +13142,72 @@
           "hash": "5412915",
           "date": "2026-06-03",
           "subject": "Vocabulary-bridge arc: substrate-chirality closes at path \u03b4' + Mihailescu connection (#214)"
+        }
+      ]
+    },
+    {
+      "id": "fm_beat_crt_correspondence_audit",
+      "path": "sync_cost/derivations/fm_beat_crt_correspondence_audit.md",
+      "cid": "b9863e26015aba70d92e8e693ad73211157769ca431d8378390b8f00e9874a0b",
+      "sealed": true,
+      "title": "FM beat-frequency / CRT composition correspondence \u2014 bounded by Mihailescu",
+      "summary": "> **Question.** With the substrate convention \u03c9_n = 2\u03c0/n on cyclic-mode\n> phases, does the dynamical FM-beat identity \u03c9_{ab} = |\u03c9_a \u2212 \u03c9_b|\n> coincide with the algebraic CRT decomposition Z_{ab} = Z_a \u00d7 Z_b\n> (gcd(a, b) = 1) for the framework's composite substrate modes? If so,\n> what bounds the chain of substrate composites where both routes agree?",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "canonical_glossary",
+        "figure_eight",
+        "gamma06_cosmological_modular_surface_audit",
+        "higgs_from_tongue_boundary",
+        "lambda17_test_gamma06_cosmological_audit",
+        "numerology_count_phase_a",
+        "substrate_determinism",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "target": "figure_eight",
+          "kind": "references"
+        },
+        {
+          "target": "gamma06_cosmological_modular_surface_audit",
+          "kind": "references"
+        },
+        {
+          "target": "higgs_from_tongue_boundary",
+          "kind": "references"
+        },
+        {
+          "target": "lambda17_test_gamma06_cosmological_audit",
+          "kind": "references"
+        },
+        {
+          "target": "numerology_count_phase_a",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_is_the_work_pattern",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "0b118cb",
+          "date": "2026-06-12",
+          "subject": "FM beat-frequency / CRT composite correspondence \u2014 Mihailescu-bounded (#252)"
         }
       ]
     },
@@ -13203,6 +13444,7 @@
         "sqrt_r_n_correction",
         "structural_lemmas",
         "substrate_prediction_selection",
+        "third_twist_meta_structure_audit",
         "thread_chronology",
         "time_axis_split",
         "unitless_audit",
@@ -13874,6 +14116,10 @@
           "kind": "references"
         },
         {
+          "source": "third_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
           "source": "thread_chronology",
           "kind": "references"
         },
@@ -14202,10 +14448,12 @@
       ],
       "depended_on_by": [
         "cuspidal_lambda17_weight4_audit",
+        "fm_beat_crt_correspondence_audit",
         "gamma06_w6_invariance_opposite_view_audit",
         "half_twist_identity_signature_audit",
         "lambda17_test_gamma06_cosmological_audit",
-        "padic_lfunction_mihailescu_pair_f64_audit"
+        "padic_lfunction_mihailescu_pair_f64_audit",
+        "third_twist_meta_structure_audit"
       ],
       "edges": [
         {
@@ -14283,6 +14531,10 @@
           "kind": "references"
         },
         {
+          "source": "fm_beat_crt_correspondence_audit",
+          "kind": "references"
+        },
+        {
           "source": "gamma06_w6_invariance_opposite_view_audit",
           "kind": "references"
         },
@@ -14296,6 +14548,10 @@
         },
         {
           "source": "padic_lfunction_mihailescu_pair_f64_audit",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -16658,7 +16914,9 @@
         "koide_form_substrate_iteration_4",
         "vocabulary_is_the_work_pattern"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "third_twist_meta_structure_audit"
+      ],
       "edges": [
         {
           "target": "canonical_glossary",
@@ -16689,7 +16947,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "third_twist_meta_structure_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "b2be9c8",
@@ -16729,7 +16992,8 @@
         "gamma06_cosmological_modular_surface_audit",
         "half_twist_identity_signature_audit",
         "padic_lfunction_mihailescu_pair_f64_audit",
-        "psl2z_noncommutative_core_structural_identity_audit"
+        "psl2z_noncommutative_core_structural_identity_audit",
+        "third_twist_meta_structure_audit"
       ],
       "edges": [
         {
@@ -16820,6 +17084,10 @@
         },
         {
           "source": "psl2z_noncommutative_core_structural_identity_audit",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -17436,7 +17704,9 @@
         "articulation_audit_2026-05",
         "beta_from_tongues",
         "dynamical_tool_audit",
-        "fermion_mass_running"
+        "fermion_mass_running",
+        "fm_beat_crt_correspondence_audit",
+        "third_twist_meta_structure_audit"
       ],
       "edges": [],
       "edged_by": [
@@ -17466,6 +17736,14 @@
         },
         {
           "source": "fermion_mass_running",
+          "kind": "references"
+        },
+        {
+          "source": "fm_beat_crt_correspondence_audit",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -21489,7 +21767,8 @@
       ],
       "depended_on_by": [
         "koide_form_substrate_iteration_12",
-        "koide_form_substrate_iteration_13"
+        "koide_form_substrate_iteration_13",
+        "third_twist_meta_structure_audit"
       ],
       "edges": [
         {
@@ -21532,6 +21811,10 @@
         },
         {
           "source": "koide_form_substrate_iteration_13",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -21625,7 +21908,8 @@
       ],
       "depended_on_by": [
         "framework_status",
-        "koide_form_substrate_iteration_14"
+        "koide_form_substrate_iteration_14",
+        "third_twist_meta_structure_audit"
       ],
       "edges": [
         {
@@ -21668,6 +21952,10 @@
         },
         {
           "source": "koide_form_substrate_iteration_14",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -21983,7 +22271,8 @@
         "partition_logit_form"
       ],
       "depended_on_by": [
-        "koide_form_substrate_iteration_6"
+        "koide_form_substrate_iteration_6",
+        "third_twist_meta_structure_audit"
       ],
       "edges": [
         {
@@ -22018,6 +22307,10 @@
       "edged_by": [
         {
           "source": "koide_form_substrate_iteration_6",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -22322,7 +22615,9 @@
       ],
       "depended_on_by": [
         "cuspidal_lambda17_weight4_audit",
-        "padic_lfunction_mihailescu_pair_f64_audit"
+        "fm_beat_crt_correspondence_audit",
+        "padic_lfunction_mihailescu_pair_f64_audit",
+        "third_twist_meta_structure_audit"
       ],
       "edges": [
         {
@@ -22372,7 +22667,15 @@
           "kind": "references"
         },
         {
+          "source": "fm_beat_crt_correspondence_audit",
+          "kind": "references"
+        },
+        {
           "source": "padic_lfunction_mihailescu_pair_f64_audit",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -24464,8 +24767,10 @@
         "koide_form_substrate_iteration_10",
         "koide_form_substrate_iteration_11",
         "meaning_of_two_wip",
+        "spacetime_dissipative_emergence",
         "spatial_coupling_derived",
-        "surface_uniqueness_audit"
+        "surface_uniqueness_audit",
+        "vacuum_stress_meta_structure_audit"
       ],
       "edges": [
         {
@@ -24511,11 +24816,19 @@
           "kind": "references"
         },
         {
+          "source": "spacetime_dissipative_emergence",
+          "kind": "references"
+        },
+        {
           "source": "spatial_coupling_derived",
           "kind": "references"
         },
         {
           "source": "surface_uniqueness_audit",
+          "kind": "references"
+        },
+        {
+          "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -24608,9 +24921,16 @@
       "title": "The M\u00f6bius Container",
       "summary": "A bounded, compact, non-orientable surface changes the Kuramoto\nself-consistency equation from an open dissipative system to a closed\nresonator. On such a surface, excitations cannot escape \u2014 they reflect,\ninterfere, and accumulate until standing waves form at rational phase\ndivisions. The rational divisions are not approximate. They are exact,\nforced by boundary conditions, and stable enough to persist for\narbitrarily many cycles.",
       "depends_on": [],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "third_twist_meta_structure_audit"
+      ],
       "edges": [],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "third_twist_meta_structure_audit",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "b2deee7",
@@ -25505,6 +25825,7 @@
       ],
       "depended_on_by": [
         "cross_ratio_irrep_reframe",
+        "fm_beat_crt_correspondence_audit",
         "numerology_count_phase_b",
         "omega_b_w_plus_candidate",
         "omega_b_w_plus_cross_ratio_search",
@@ -25554,6 +25875,10 @@
       "edged_by": [
         {
           "source": "cross_ratio_irrep_reframe",
+          "kind": "references"
+        },
+        {
+          "source": "fm_beat_crt_correspondence_audit",
           "kind": "references"
         },
         {
@@ -25843,6 +26168,7 @@
         "sinw_effective_dimension",
         "sinw_fixed_point",
         "substrate_prediction_selection",
+        "third_twist_meta_structure_audit",
         "vocabulary_is_the_work_pattern"
       ],
       "edges": [
@@ -26134,6 +26460,10 @@
         },
         {
           "source": "substrate_prediction_selection",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -27630,7 +27960,8 @@
       ],
       "depended_on_by": [
         "gamma06_w6_invariance_opposite_view_audit",
-        "lmfdb_external_verify_correction_2026-06-08"
+        "lmfdb_external_verify_correction_2026-06-08",
+        "third_twist_meta_structure_audit"
       ],
       "edges": [
         {
@@ -27665,6 +27996,10 @@
         },
         {
           "source": "lmfdb_external_verify_correction_2026-06-08",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -27846,6 +28181,7 @@
         "remaining_gap_shapes",
         "sector_decoupling_phase_a",
         "thread_chronology",
+        "vacuum_stress_meta_structure_audit",
         "vocabulary_is_the_work_pattern"
       ],
       "edges": [
@@ -27937,6 +28273,10 @@
         },
         {
           "source": "thread_chronology",
+          "kind": "references"
+        },
+        {
+          "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -28905,7 +29245,8 @@
         "primes_denominators_circular_geometry_extension_audit",
         "psl2z_noncommutative_core_structural_identity_audit",
         "q_mod2_planck_emergence_audit",
-        "quantum_gravity_interpolation"
+        "quantum_gravity_interpolation",
+        "spacetime_dissipative_emergence"
       ],
       "edges": [],
       "edged_by": [
@@ -28999,6 +29340,10 @@
         },
         {
           "source": "quantum_gravity_interpolation",
+          "kind": "references"
+        },
+        {
+          "source": "spacetime_dissipative_emergence",
           "kind": "references"
         }
       ],
@@ -30056,7 +30401,8 @@
         "gamma06_cosmological_modular_surface_audit",
         "gamma06_w6_invariance_opposite_view_audit",
         "lambda17_test_gamma06_cosmological_audit",
-        "padic_lfunction_mihailescu_pair_f64_audit"
+        "padic_lfunction_mihailescu_pair_f64_audit",
+        "third_twist_meta_structure_audit"
       ],
       "edges": [
         {
@@ -30143,6 +30489,10 @@
         },
         {
           "source": "padic_lfunction_mihailescu_pair_f64_audit",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -30993,7 +31343,9 @@
         "generation_sector_count_audit",
         "halt_shock_coherence_audit",
         "primes_denominators_circular_geometry_extension_audit",
-        "unification_bridge_audits_gaps_1_3"
+        "spacetime_dissipative_emergence",
+        "unification_bridge_audits_gaps_1_3",
+        "vacuum_stress_meta_structure_audit"
       ],
       "edges": [
         {
@@ -31083,7 +31435,15 @@
           "kind": "references"
         },
         {
+          "source": "spacetime_dissipative_emergence",
+          "kind": "references"
+        },
+        {
           "source": "unification_bridge_audits_gaps_1_3",
+          "kind": "references"
+        },
+        {
+          "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -31118,6 +31478,7 @@
         "empty_fork_cap",
         "f_exit_natural",
         "hierarchy_gaussian_lattice",
+        "spacetime_dissipative_emergence",
         "substrate_determinism",
         "thread_chronology",
         "three_dimensions"
@@ -31175,6 +31536,10 @@
         },
         {
           "source": "hierarchy_gaussian_lattice",
+          "kind": "references"
+        },
+        {
+          "source": "spacetime_dissipative_emergence",
           "kind": "references"
         },
         {
@@ -31349,7 +31714,8 @@
         "speed_of_light"
       ],
       "depended_on_by": [
-        "master_cascade_identity"
+        "master_cascade_identity",
+        "vacuum_stress_meta_structure_audit"
       ],
       "edges": [
         {
@@ -31396,6 +31762,10 @@
       "edged_by": [
         {
           "source": "master_cascade_identity",
+          "kind": "references"
+        },
+        {
+          "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -31651,6 +32021,7 @@
         "f_exit_natural",
         "klein_bottle_derivation",
         "qd_origins",
+        "spacetime_dissipative_emergence",
         "thread_chronology",
         "wave_particle_substrate"
       ],
@@ -31687,6 +32058,10 @@
         },
         {
           "source": "qd_origins",
+          "kind": "references"
+        },
+        {
+          "source": "spacetime_dissipative_emergence",
           "kind": "references"
         },
         {
@@ -32284,7 +32659,9 @@
       ],
       "depended_on_by": [
         "gap2_spatialization_decomposition",
-        "gap2_theorem_attempt"
+        "gap2_theorem_attempt",
+        "spacetime_dissipative_emergence",
+        "vacuum_stress_meta_structure_audit"
       ],
       "edges": [
         {
@@ -32311,6 +32688,14 @@
         },
         {
           "source": "gap2_theorem_attempt",
+          "kind": "references"
+        },
+        {
+          "source": "spacetime_dissipative_emergence",
+          "kind": "references"
+        },
+        {
+          "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -33397,6 +33782,159 @@
       ]
     },
     {
+      "id": "spacetime_dissipative_emergence",
+      "path": "sync_cost/derivations/spacetime_dissipative_emergence.md",
+      "cid": "bca882f32da79a5876dba3644bba8e5f04f547638288ed545349cdc23c0b3c98",
+      "sealed": true,
+      "title": "Spacetime as dissipative emergence: anchor-free mechanics and the tick-selection locus",
+      "summary": "Three statements, formalized jointly as the framework's emergence\npicture. Each is a composition of results already canonical; the\ncontribution of this doc is the names and the assembly, not new\nderivation content.",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "a1_from_saddle_node",
+        "adm_dictionary",
+        "anchor_count_audit",
+        "anchor_count_reaudit",
+        "basepoint_principle",
+        "born_rule",
+        "born_rule_parameter_free",
+        "conservation_scale_stratification_audit",
+        "f_exit_natural",
+        "fidelity_bound",
+        "figure_eight",
+        "minkowski_signature",
+        "planck_scale",
+        "q_mod2_planck_emergence_audit",
+        "qd_origins",
+        "rectangle_perpendicularity",
+        "second_law_topological",
+        "structural_lemmas",
+        "substrate_determinism",
+        "three_dimensions",
+        "tick_continuum_construction",
+        "time_axis_split",
+        "vocabulary_is_the_work_pattern",
+        "wave_particle_substrate"
+      ],
+      "depended_on_by": [
+        "vacuum_stress_meta_structure_audit"
+      ],
+      "edges": [
+        {
+          "target": "PROOF_A_gravity",
+          "kind": "references"
+        },
+        {
+          "target": "a1_from_saddle_node",
+          "kind": "references"
+        },
+        {
+          "target": "adm_dictionary",
+          "kind": "references"
+        },
+        {
+          "target": "anchor_count_audit",
+          "kind": "references"
+        },
+        {
+          "target": "anchor_count_reaudit",
+          "kind": "references"
+        },
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule_parameter_free",
+          "kind": "references"
+        },
+        {
+          "target": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "f_exit_natural",
+          "kind": "references"
+        },
+        {
+          "target": "fidelity_bound",
+          "kind": "references"
+        },
+        {
+          "target": "figure_eight",
+          "kind": "references"
+        },
+        {
+          "target": "minkowski_signature",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "qd_origins",
+          "kind": "references"
+        },
+        {
+          "target": "rectangle_perpendicularity",
+          "kind": "references"
+        },
+        {
+          "target": "second_law_topological",
+          "kind": "references"
+        },
+        {
+          "target": "structural_lemmas",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
+          "kind": "references"
+        },
+        {
+          "target": "tick_continuum_construction",
+          "kind": "references"
+        },
+        {
+          "target": "time_axis_split",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_is_the_work_pattern",
+          "kind": "references"
+        },
+        {
+          "target": "wave_particle_substrate",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "vacuum_stress_meta_structure_audit",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "e225e7c",
+          "date": "2026-06-12",
+          "subject": "Formalize spacetime as dissipative emergence of Planck-tick dynamics (#254)"
+        }
+      ]
+    },
+    {
       "id": "spatial_coupling_derived",
       "path": "sync_cost/derivations/spatial_coupling_derived.md",
       "cid": "db09543e92e3b3cb027d24c502b39dc096af5c1808d103c0c58a2bf861362893",
@@ -34122,7 +34660,8 @@
         "w_plus_formalization"
       ],
       "depended_on_by": [
-        "dynamical_quantization"
+        "dynamical_quantization",
+        "spacetime_dissipative_emergence"
       ],
       "edges": [
         {
@@ -34238,6 +34777,10 @@
         {
           "source": "dynamical_quantization",
           "kind": "references"
+        },
+        {
+          "source": "spacetime_dissipative_emergence",
+          "kind": "references"
         }
       ],
       "git": [
@@ -34300,6 +34843,7 @@
         "epr_bell_assembly_theorem",
         "equivalence_dissolution",
         "era_timeline_disposition",
+        "fm_beat_crt_correspondence_audit",
         "framework_status",
         "gamma06_cosmological_modular_surface_audit",
         "generation_sector_count_audit",
@@ -34326,6 +34870,8 @@
         "q_mod2_mediant_projection",
         "qm_reframing_programmatic",
         "snmc_class_and_entanglement",
+        "spacetime_dissipative_emergence",
+        "third_twist_meta_structure_audit",
         "thread_chronology",
         "tick_continuum_construction",
         "unification_bridge_audits_gaps_1_3",
@@ -34503,6 +35049,10 @@
           "kind": "references"
         },
         {
+          "source": "fm_beat_crt_correspondence_audit",
+          "kind": "references"
+        },
+        {
           "source": "framework_status",
           "kind": "references"
         },
@@ -34604,6 +35154,14 @@
         },
         {
           "source": "snmc_class_and_entanglement",
+          "kind": "references"
+        },
+        {
+          "source": "spacetime_dissipative_emergence",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -34810,7 +35368,8 @@
         "halt_shock_coherence_audit",
         "modular_form_behavior_cosmological_tongues_audit",
         "pattern_identification_discipline_candidate",
-        "primitives_vs_addresses_candidate"
+        "primitives_vs_addresses_candidate",
+        "third_twist_meta_structure_audit"
       ],
       "edges": [
         {
@@ -34922,6 +35481,10 @@
         {
           "source": "primitives_vs_addresses_candidate",
           "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
+          "kind": "references"
         }
       ],
       "git": [
@@ -34929,6 +35492,162 @@
           "hash": "642c186",
           "date": "2026-06-03",
           "subject": "Torus-branch arc: Z_6 lattice + surface-uniqueness audit + recursive Kuramoto methodology (#215)"
+        }
+      ]
+    },
+    {
+      "id": "third_twist_meta_structure_audit",
+      "path": "sync_cost/derivations/third_twist_meta_structure_audit.md",
+      "cid": "01ecc97cf15ed3faa26f0c7d1b6578884f793509e119894fcce8345947848166",
+      "sealed": true,
+      "title": "Third-twist (Z_3) meta-structure audit",
+      "summary": "The catalog (\u00a75) surfaces **four distinct Z_3 modes** in the\nframework (A: cyclic action, B: Mihailescu cube/ratio, C: composite,\nD: fractional) \u2014 not the single-mode meta-structure an analogy with\nPR #240 would predict. Five structural findings (P1\u2013P5, \u00a75.4) are\nsubstantive: (P1) Mode B is uniquely Z_3 with no Z_2 analog; (P2)\nthe Aut(Z_3) = Z_2 inversion is spontaneously broken at Mode B level\n(substrate prefers 2/3 over 1/3); (P3) Mode D (fractional character)\nis nearly absent \u2014 the framework",
+      "depends_on": [
+        "CHAIN_KSTAR",
+        "beta_from_tongues",
+        "canonical_glossary",
+        "cosmological_cycle",
+        "cyclotomic_content_mass_ratios_audit",
+        "derivation_atlas",
+        "discrete_reduction_computed",
+        "down_type_double_cover_closed",
+        "down_type_double_cover_phase_b",
+        "exponent",
+        "framework_status",
+        "gamma06_cosmological_modular_surface_audit",
+        "half_twist_identity_signature_audit",
+        "half_twist_meta_structure_audit",
+        "higgs_from_tongue_boundary",
+        "koide_form_substrate_iteration_11",
+        "koide_form_substrate_iteration_13",
+        "koide_form_substrate_iteration_5",
+        "lambda17_test_gamma06_cosmological_audit",
+        "mobius_container",
+        "numerology_inventory",
+        "padic_lfunction_mihailescu_pair_f64_audit",
+        "psl2z_noncommutative_core_structural_identity_audit",
+        "substrate_determinism",
+        "surface_uniqueness_audit",
+        "unitless_check",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "beta_from_tongues",
+          "kind": "references"
+        },
+        {
+          "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "target": "cosmological_cycle",
+          "kind": "references"
+        },
+        {
+          "target": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
+          "target": "derivation_atlas",
+          "kind": "references"
+        },
+        {
+          "target": "discrete_reduction_computed",
+          "kind": "references"
+        },
+        {
+          "target": "down_type_double_cover_closed",
+          "kind": "references"
+        },
+        {
+          "target": "down_type_double_cover_phase_b",
+          "kind": "references"
+        },
+        {
+          "target": "exponent",
+          "kind": "references"
+        },
+        {
+          "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "gamma06_cosmological_modular_surface_audit",
+          "kind": "references"
+        },
+        {
+          "target": "half_twist_identity_signature_audit",
+          "kind": "references"
+        },
+        {
+          "target": "half_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "higgs_from_tongue_boundary",
+          "kind": "references"
+        },
+        {
+          "target": "koide_form_substrate_iteration_11",
+          "kind": "references"
+        },
+        {
+          "target": "koide_form_substrate_iteration_13",
+          "kind": "references"
+        },
+        {
+          "target": "koide_form_substrate_iteration_5",
+          "kind": "references"
+        },
+        {
+          "target": "lambda17_test_gamma06_cosmological_audit",
+          "kind": "references"
+        },
+        {
+          "target": "mobius_container",
+          "kind": "references"
+        },
+        {
+          "target": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "target": "padic_lfunction_mihailescu_pair_f64_audit",
+          "kind": "references"
+        },
+        {
+          "target": "psl2z_noncommutative_core_structural_identity_audit",
+          "kind": "references"
+        },
+        {
+          "target": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "target": "surface_uniqueness_audit",
+          "kind": "references"
+        },
+        {
+          "target": "unitless_check",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_is_the_work_pattern",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "06cfc2b",
+          "date": "2026-06-12",
+          "subject": "Third-twist (Z_3) meta-structure audit \u2014 first-pass catalog (#251)"
         }
       ]
     },
@@ -35434,6 +36153,7 @@
         "phenomenology_cross_reference",
         "qd_origins",
         "sinw_effective_dimension",
+        "spacetime_dissipative_emergence",
         "spatial_coupling_derived",
         "structural_lemmas",
         "surface_uniqueness_audit",
@@ -35536,6 +36256,10 @@
         },
         {
           "source": "sinw_effective_dimension",
+          "kind": "references"
+        },
+        {
+          "source": "spacetime_dissipative_emergence",
           "kind": "references"
         },
         {
@@ -35687,9 +36411,11 @@
         "proposed_residual_closure",
         "q_mod2_conservation_theorem",
         "sine_gordon_substrate",
+        "spacetime_dissipative_emergence",
         "sqrt_r_n_correction",
         "substrate_determinism",
-        "thread_chronology"
+        "thread_chronology",
+        "vacuum_stress_meta_structure_audit"
       ],
       "edges": [
         {
@@ -35743,6 +36469,10 @@
           "kind": "references"
         },
         {
+          "source": "spacetime_dissipative_emergence",
+          "kind": "references"
+        },
+        {
           "source": "sqrt_r_n_correction",
           "kind": "references"
         },
@@ -35752,6 +36482,10 @@
         },
         {
           "source": "thread_chronology",
+          "kind": "references"
+        },
+        {
+          "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -35793,6 +36527,7 @@
         "klein_bottle_derivation",
         "no_rescaling",
         "s_inst_inflation",
+        "spacetime_dissipative_emergence",
         "substrate_determinism",
         "unitless_audit",
         "wave_particle_substrate"
@@ -35878,6 +36613,10 @@
         },
         {
           "source": "s_inst_inflation",
+          "kind": "references"
+        },
+        {
+          "source": "spacetime_dissipative_emergence",
           "kind": "references"
         },
         {
@@ -36509,6 +37248,7 @@
         "medium_change_demo",
         "no_rescaling",
         "soliton_dynamics",
+        "third_twist_meta_structure_audit",
         "time_axis_split",
         "unitless_audit",
         "wave_particle_substrate"
@@ -36558,6 +37298,10 @@
         },
         {
           "source": "soliton_dynamics",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -36626,6 +37370,117 @@
           "hash": "7fb3846",
           "date": "2026-03-25",
           "subject": "D24: The cosmological constant problem dissolves"
+        }
+      ]
+    },
+    {
+      "id": "vacuum_stress_meta_structure_audit",
+      "path": "sync_cost/derivations/vacuum_stress_meta_structure_audit.md",
+      "cid": "18e350c877784affdb6b8e68b3b47e0be84d97805d2bc6c0b60d59e08f7378b4",
+      "sealed": true,
+      "title": "Vacuum stress meta-structure: anchors as stress denominations, complementary slackness, and the de-emergence ordering",
+      "summary": "Exploration-audit, Class 3 over Class 5 pieces. Recognize-mode in\nPart I (assembly of `baryon_fraction.md`,\n`quantum_gravity_interpolation.md`, `continuum_limits.md` \u00a76,\n`a0_threshold.md` \u2014 no new content); framing in Part II (consistent\nrestatement of Lemma 3, upgrade path named in residual 2); mixed in\nPart III (forced on chains, open on totality). Names three objects:\nthe **sector-resolved stress map** (tension | shadow price |\npressure), **anchors as stress denominations**, and **LIFO\nunwind",
+      "depends_on": [
+        "PROOF_A_gravity",
+        "a0_threshold",
+        "adm_dictionary",
+        "anchor_count_audit",
+        "anchor_count_reaudit",
+        "baryon_fraction",
+        "basepoint_principle",
+        "coherence_matrix_completion_audit",
+        "conservation_scale_stratification_audit",
+        "continuum_limits",
+        "minkowski_signature",
+        "path_a_walkthrough",
+        "q_mod2_planck_emergence_audit",
+        "quantum_gravity_interpolation",
+        "second_law_topological",
+        "spacetime_dissipative_emergence",
+        "tick_continuum_construction",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "PROOF_A_gravity",
+          "kind": "references"
+        },
+        {
+          "target": "a0_threshold",
+          "kind": "references"
+        },
+        {
+          "target": "adm_dictionary",
+          "kind": "references"
+        },
+        {
+          "target": "anchor_count_audit",
+          "kind": "references"
+        },
+        {
+          "target": "anchor_count_reaudit",
+          "kind": "references"
+        },
+        {
+          "target": "baryon_fraction",
+          "kind": "references"
+        },
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "coherence_matrix_completion_audit",
+          "kind": "references"
+        },
+        {
+          "target": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "minkowski_signature",
+          "kind": "references"
+        },
+        {
+          "target": "path_a_walkthrough",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_planck_emergence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "quantum_gravity_interpolation",
+          "kind": "references"
+        },
+        {
+          "target": "second_law_topological",
+          "kind": "references"
+        },
+        {
+          "target": "spacetime_dissipative_emergence",
+          "kind": "references"
+        },
+        {
+          "target": "tick_continuum_construction",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_is_the_work_pattern",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "e225e7c",
+          "date": "2026-06-12",
+          "subject": "Formalize spacetime as dissipative emergence of Planck-tick dynamics (#254)"
         }
       ]
     },
@@ -37070,6 +37925,7 @@
         "cross_ratio_irrep_reframe",
         "derivation_atlas",
         "down_type_double_cover_closed",
+        "fm_beat_crt_correspondence_audit",
         "framework_status",
         "gamma06_w6_invariance_opposite_view_audit",
         "gluon_reframing",
@@ -37090,7 +37946,10 @@
         "psl2z_subgroup_phase_c_inventory",
         "remaining_gap_shapes",
         "sector_decoupling_phase_a",
-        "thread_chronology"
+        "spacetime_dissipative_emergence",
+        "third_twist_meta_structure_audit",
+        "thread_chronology",
+        "vacuum_stress_meta_structure_audit"
       ],
       "edges": [
         {
@@ -37252,6 +38111,10 @@
           "kind": "references"
         },
         {
+          "source": "fm_beat_crt_correspondence_audit",
+          "kind": "references"
+        },
+        {
           "source": "framework_status",
           "kind": "references"
         },
@@ -37332,7 +38195,19 @@
           "kind": "references"
         },
         {
+          "source": "spacetime_dissipative_emergence",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
           "source": "thread_chronology",
+          "kind": "references"
+        },
+        {
+          "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         }
       ],
@@ -37622,6 +38497,7 @@
         "nonperturbative_phase2",
         "orthogonal_kink_interaction",
         "q_mod2_mediant_projection",
+        "spacetime_dissipative_emergence",
         "substrate_determinism",
         "thread_chronology",
         "time_axis_split",
@@ -37736,6 +38612,10 @@
         },
         {
           "source": "q_mod2_mediant_projection",
+          "kind": "references"
+        },
+        {
+          "source": "spacetime_dissipative_emergence",
           "kind": "references"
         },
         {
