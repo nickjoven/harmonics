@@ -16,9 +16,9 @@ the "what" is its output.
 
 ## The mechanism
 
-The framework's underlying combinatorial structure is the **Stern-
-Brocot tree** — a recursive binary tree that enumerates every
-positive rational exactly once, by repeatedly inserting the
+Underneath the framework sits a single combinatorial object: the
+**Stern-Brocot tree** — a recursive binary tree that enumerates
+every positive rational exactly once, by repeatedly inserting the
 *mediant* (a+c)/(b+d) between adjacent fractions a/b and c/d. The
 mediant is not a stipulation; it is forced. Any other binary
 operation between two locked frequencies violates either energy
@@ -130,8 +130,8 @@ possible vacua is selected by observer presence), and quintessence
 additional physics whose own free parameters must themselves be
 tuned. The resolution is deferred rather than achieved.
 
-The framework's reframing of this discrepancy is not a fix; it
-is a recategorization. The QFT estimate implicitly assumes that
+What's offered here is a recategorization, not a fix. The QFT
+estimate implicitly assumes that
 spacetime's field-mode topology is a torus (the standard periodic
 boundary condition, in which the vacuum is a sum over infinitely
 many zero-point modes). This topological assumption is a modeling
@@ -219,11 +219,11 @@ results — see
 
 ## Empirical posture
 
-The framework's empirical commitments are symmetric with the
-Standard Model's. The Standard Model takes its parameters as
-inputs and computes consequences to high precision; this framework
-derives a subset of those parameters from a forced structure and
-checks consistency with measurement.
+Empirical commitments here are symmetric with the Standard
+Model's. Where the Standard Model takes its parameters as inputs
+and computes consequences to high precision, this framework
+derives a subset of those same parameters from a forced structure
+and checks consistency with measurement.
 
 Both are falsifiable. The Standard Model is falsified by failure
 of any of its computed cross-sections or decay rates to match
@@ -421,7 +421,8 @@ structure (Direction 4, 2026-04 closure round).
 
 ## Reading paths
 
-The framework's docs are available at three depths.
+Three reading depths are available, scaled to how much time the
+reader has.
 
 ### One-minute skim
 
