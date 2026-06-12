@@ -77,37 +77,36 @@ comparison table and the framework interpretation.
 
 ## What the mechanism forces
 
-Each Standard Model "input" listed below is a consequence of the
-mediant + Stern-Brocot mechanism, not an independent posit.
+Three Standard Model "inputs" — spatial dimension, the gauge
+factorization, and charge quantization — fall out of the mediant +
+Stern-Brocot mechanism on inspection. Different routes for each.
 
-**Spatial dimension d = 3.** Iterating the mediant generates
-**SL(2, ℤ)** — the special linear group of 2×2 integer matrices
-with determinant ±1, the natural symmetry group of the Stern-
-Brocot tree — whose continuum closure SL(2, ℝ) is three-
-dimensional. The spatial manifold's three-dimensionality follows:
-the geometry must be self-consistent with the substrate's
-combining operation, and dim SL(2, ℝ) = 3 admits no other choice.
-The Standard Model takes spatial dimension d = 3 as input.
+**Three spatial dimensions.** The natural symmetry group of the
+Stern-Brocot tree is **SL(2, ℤ)**, the 2×2 integer matrices with
+determinant ±1, which falls out of the mediant operation iterated.
+Its continuum closure SL(2, ℝ) happens to be a three-dimensional
+Lie group, and the spatial manifold has to remain consistent with
+whatever operation builds the substrate. Hence d = 3, where the
+Standard Model would have it as a given.
 
-**Gauge group and three generations.** The Klein bottle's two
-smallest accessible denominators (q_2 = 2, q_3 = 3) give a Z_6 =
-Z_2 × Z_3 mode structure (the cyclic group of order six factored
-into its 2- and 3-element subgroups), which forces three
-generations of fermions and the gauge factorization SU(3) × SU(2)
-× U(1) — the Standard Model's symmetry group, broken into the
-strong (color), electroweak, and hypercharge subgroups. The
-Standard Model takes both as input.
+**Three generations and SU(3) × SU(2) × U(1).** A second route.
+On the Klein bottle the two smallest accessible denominators are
+q₂ = 2 and q₃ = 3, and the product Z_6 = Z_2 × Z_3 is the
+substrate's mode lattice. The Standard Model carries three
+generations of fermions and the strong / electroweak / hypercharge
+factorization as two independent inputs; here they emerge from the
+same single object, twice.
 
-**Charge quantization.** The compactness of the unit circle S¹ —
-the topological fact that any continuous map from S¹ to itself
-has integer winding number — is forced by the mediant primitive
-identifying integer phase translations. Charge quantization (the
-observation that all electric charges are integer multiples of
-e/3) follows. The Standard Model takes integer charge as input.
+**Charge quantization.** Topology does the work in the third case.
+Continuous maps from the unit circle to itself have integer
+winding number — that is just a fact about S¹ — and the mediant
+primitive identifies integer phase translations, which is what
+lands S¹ compactness on the charge sector. Integer charge follows,
+in units of e/3.
 
-In each case the framework derives a Standard Model input from a
-forced combinatorial structure. The Standard Model is not
-contradicted; its inputs are explained.
+None of this displaces the Standard Model. The framework sits one
+layer beneath it and supplies an account of what the Standard
+Model was content to stipulate.
 
 ## The largest residue: the cosmological constant problem
 
@@ -300,10 +299,11 @@ partition) and [Lemma 1](sync_cost/derivations/structural_lemmas.md)
 
 ### E2 — MOND $a_0 = c H_0 / (2\pi)$ at 4% on Lelli 2017 RAR
 
-The mental shift: accept that the empirical MOND scale is
-structurally derived from $\Lambda$ via $a_0 = cH_0/(2\pi)$, and
-that MOND is a substrate feature (the partial-locking dynamics
-at the EM coupling threshold), not a modification of gravity.
+Watch the MOND scale come out of $\Lambda$. The relation
+$a_0 = cH_0 / (2\pi)$ holds at 4% on the Lelli 2017 RAR, and what
+it suggests is that MOND is a substrate feature — the
+partial-locking dynamics at the EM coupling threshold — and not a
+modification of gravity.
 
 **If accepted**: galactic rotation curves at low acceleration
 follow from the substrate's partial-decoupling dynamics; no
@@ -333,10 +333,11 @@ and [Lemma 8](sync_cost/derivations/structural_lemmas.md).
 
 ### E4 — Cosmological constant from depth, not fine-tuning
 
-The mental shift: accept that $\Lambda \cdot \ell_P^2 =
-13^{-108}/12$ is the *expected* behavior of multiplicative
-depth-54 stratification, not a fine-tuning. The smallness
-$10^{-122}$ is the natural output of a depth machine.
+Read $\Lambda \cdot \ell_P^2 = 13^{-108}/12$ as what multiplicative
+depth-54 stratification routinely produces. The smallness
+$10^{-122}$ is the natural output of a depth machine, and calling
+it a fine-tuning is a category error inherited from a different
+substrate.
 
 **If accepted**: the cosmological constant problem dissolves.
 Standard QFT estimates of $\Lambda \sim M_P^4$ assume Wilsonian
@@ -363,10 +364,11 @@ See derivation chain D45 referenced in
 
 ### E6 — SM hierarchy problem doesn't translate
 
-The mental shift: accept that the SM hierarchy problem requires
-three ingredients (small ratio + naturalness + Wilsonian RG),
-only the first translates to a discrete substrate, so the
-"problem" dissolves rather than needing a small-Higgs mechanism.
+Diagnose the problem first. The SM hierarchy problem rests on
+three ingredients — a small ratio, a naturalness expectation, and
+Wilsonian RG — and only the first of those translates to a
+discrete substrate. With two of the three legs gone, the "problem"
+does not need a small-Higgs mechanism to address; it dissolves.
 
 **If accepted**: $v / M_P \approx 2 \times 10^{-17}$ is anchor-side
 input requiring no further mechanism. SUSY, technicolor, and
