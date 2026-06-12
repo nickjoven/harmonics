@@ -660,12 +660,11 @@
 </h2>
 
 <!--
-  Each card carries a data-spine id that matches an entry in SPINE.yml,
-  and an inline data-forms attribute that lists the alternate phrasings
-  the shake-up icon will cycle through.  The forms are subset-mirrored
-  from SPINE.yml; an out-of-band script will eventually regenerate
-  them automatically from the YAML, but for now they live inline so
-  the page is self-contained.
+  Each card carries a data-spine id that matches an entry in SPINE.yml.
+  The alternate phrasings the shake-up icon cycles through are pulled
+  at load time from spine-data.json (the JSON projection of SPINE.yml
+  built by scripts/build_spine_data.py).  The inline blurb text is the
+  first form, rendered server-side as a no-JS fallback.
 -->
 <div class="gallery">
 
@@ -675,16 +674,12 @@
     <div class="card-img"><img src="../stairs.gif" alt="Continued-fraction staircase building to depth 1/13 with budget 19 — the framework's cosmic-partition configuration as a moving staircase plot" loading="lazy"></div>
     <div class="card-body">
       <h3>Stairs <span class="tag">depth 1/13</span></h3>
-      <p class="blurb" data-forms='[
-        "Continued-fraction staircase at depth 1/13, budget 19. The configuration the headline Ω_Λ = 13/19 prediction lives in.",
-        "The framework’s cosmic-partition number, made into a moving picture: thirteen locked modes against a budget of nineteen.",
-        "Each step of this staircase is a mediant insertion; depth 13 is where the Ω_Λ ratio closes."
-      ]'>
+      <p class="blurb">
         Continued-fraction staircase at depth 1/13, budget 19. The
         configuration the headline &Omega;<sub>&Lambda;</sub> = 13/19
         prediction lives in.
       </p>
-      <span class="form-index" aria-hidden="true">1 / 3</span>
+      <span class="form-index" aria-hidden="true"></span>
       <button class="shake-btn" type="button" aria-label="Rearrange this blurb">
         <svg viewBox="0 0 16 16" aria-hidden="true">
           <!-- circular arrow open at the top — the shake-up motif -->
@@ -709,16 +704,12 @@
     <div class="card-img"><img src="../orbit.gif" alt="A Stern-Brocot orbit traced as L and R steps on the modular tree, projected to polar coordinates ending at the rational 7/60" loading="lazy"></div>
     <div class="card-body">
       <h3>Orbit <span class="tag">L⁸R¹L¹R³ → 7/60</span></h3>
-      <p class="blurb" data-forms='[
-        "A Stern-Brocot walk traced in polar coordinates. Eight lefts, one right, one left, three rights — the walk lands on 7/60 as a rational on the unit circle.",
-        "Modular orbit L⁸R¹L¹R³: a thirteen-step path through the Stern-Brocot tree ending at 7/60.",
-        "What the substrate looks like from inside the tree, as a single rational picks itself out of an unbounded enumeration."
-      ]'>
+      <p class="blurb">
         A Stern-Brocot walk traced in polar coordinates. Eight lefts,
         one right, one left, three rights &mdash; the walk lands on
         7/60 as a rational on the unit circle.
       </p>
-      <span class="form-index" aria-hidden="true">1 / 3</span>
+      <span class="form-index" aria-hidden="true"></span>
       <button class="shake-btn" type="button" aria-label="Rearrange this blurb">
         <svg viewBox="0 0 16 16" aria-hidden="true">
           <path d="M 8 2.4 A 5.6 5.6 0 1 1 2.4 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
@@ -736,16 +727,12 @@
     <div class="card-img"><img src="../rose.gif" alt="A rose-curve animation — Lissajous figure or related rational rosette traced over time" loading="lazy"></div>
     <div class="card-body">
       <h3>Rose <span class="tag">rational rosette</span></h3>
-      <p class="blurb" data-forms='[
-        "Rational rose curve. A Lissajous figure at a rational frequency ratio — the geometric counterpart to the staircase plateau at the same rational.",
-        "Two oscillators locked at a small-integer ratio, traced in phase space: a closed curve with as many petals as the ratio prescribes.",
-        "Every Stern-Brocot rational has a rose: the same dynamics, viewed as a shape instead of a frequency."
-      ]'>
+      <p class="blurb">
         Rational rose curve. A Lissajous figure at a rational frequency
         ratio &mdash; the geometric counterpart to the staircase
         plateau at the same rational.
       </p>
-      <span class="form-index" aria-hidden="true">1 / 3</span>
+      <span class="form-index" aria-hidden="true"></span>
       <button class="shake-btn" type="button" aria-label="Rearrange this blurb">
         <svg viewBox="0 0 16 16" aria-hidden="true">
           <path d="M 8 2.4 A 5.6 5.6 0 1 1 2.4 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
@@ -763,16 +750,12 @@
     <div class="card-img"><img src="../spiral.gif" alt="A spiral curve animation — the substrate's continuum approach to a fixed point" loading="lazy"></div>
     <div class="card-body">
       <h3>Spiral <span class="tag">continuum</span></h3>
-      <p class="blurb" data-forms='[
-        "Spiral evolution. The continuum-side companion to the discrete tree: the same substrate read at a different regime.",
-        "The K < 1 regime is not a sea of locked plateaus; it is a slow continuous wind, drawn here as a spiral.",
-        "Substrate dynamics outside the locked tongues, where the framework’s Schrödinger limit lives."
-      ]'>
+      <p class="blurb">
         Spiral evolution. The continuum-side companion to the
         discrete tree: the same substrate read at a different
         regime.
       </p>
-      <span class="form-index" aria-hidden="true">1 / 3</span>
+      <span class="form-index" aria-hidden="true"></span>
       <button class="shake-btn" type="button" aria-label="Rearrange this blurb">
         <svg viewBox="0 0 16 16" aria-hidden="true">
           <path d="M 8 2.4 A 5.6 5.6 0 1 1 2.4 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
@@ -790,16 +773,12 @@
     <div class="card-img"><img src="../triangles.gif" alt="A modular triangulation animation — Farey triangles tiling the upper half plane under SL(2,Z) action" loading="lazy"></div>
     <div class="card-body">
       <h3>Triangles <span class="tag">SL(2,ℤ)</span></h3>
-      <p class="blurb" data-forms='[
-        "Farey triangles tiling the upper half plane under the SL(2, ℤ) action — the symmetry group that forces dim = 3 on the spatial manifold.",
-        "Every Farey triangle is a fundamental domain image; the tiling is what dim SL(2, ℝ) = 3 looks like before it closes.",
-        "The triangulation viewer for the same group whose continuum closure gives the spatial manifold its dimension."
-      ]'>
+      <p class="blurb">
         Farey triangles tiling the upper half plane under the
         SL(2,&Zopf;) action &mdash; the symmetry group that
         forces dim&nbsp;=&nbsp;3 on the spatial manifold.
       </p>
-      <span class="form-index" aria-hidden="true">1 / 3</span>
+      <span class="form-index" aria-hidden="true"></span>
       <button class="shake-btn" type="button" aria-label="Rearrange this blurb">
         <svg viewBox="0 0 16 16" aria-hidden="true">
           <path d="M 8 2.4 A 5.6 5.6 0 1 1 2.4 8" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
@@ -845,74 +824,81 @@
 <!-- ─────────────────────────────────────────────
      Shake-up wiring.
 
-     Each card carries a data-forms attribute whose value parses to
-     a JSON array of equivalent phrasings (a slice of SPINE.yml's
-     `forms:` list for the entry named in data-spine).  Clicking the
-     shake-btn cycles the visible blurb to the next form, replaying
-     a short slide-up animation and updating the form-index chip.
-
-     The view-building per card is independent — no card depends on
-     another — so we parse data-forms on each card in parallel and
-     attach handlers in one pass.  No fetch, no YAML in the browser;
-     SPINE.yml is the canonical document, and its content is mirrored
-     inline at build time (manual today, scripted later).
+     SPINE.yml is the canonical declarative backbone.  Its JSON
+     projection (docs/spine-data.json, built by
+     scripts/build_spine_data.py) is fetched at page load; each card
+     looks up its data-spine id and binds the matching `forms` list
+     to the shake-btn.  Card builds are independent — no cross-card
+     state — so the lookups run in one pass against the cached JSON.
      ───────────────────────────────────────────── -->
 <script>
 (function () {
   "use strict";
 
-  // Single pass: build a small handler bundle per card in parallel
-  // (no cross-card state).  Filter out cards that fail to parse.
-  const cards = Array.from(document.querySelectorAll(".card[data-spine]"));
-  const wired = cards.map(card => {
-    const blurb = card.querySelector(".blurb");
-    const btn   = card.querySelector(".shake-btn");
-    const idx   = card.querySelector(".form-index");
-    if (!blurb || !btn) return null;
+  function wireCards(entries) {
+    const cards = Array.from(document.querySelectorAll(".card[data-spine]"));
+    const wired = cards.map(card => {
+      const blurb = card.querySelector(".blurb");
+      const btn   = card.querySelector(".shake-btn");
+      const idx   = card.querySelector(".form-index");
+      if (!blurb || !btn) return null;
 
-    let forms;
-    try {
-      forms = JSON.parse(blurb.getAttribute("data-forms") || "[]");
-    } catch (_) {
-      return null;
-    }
-    if (!Array.isArray(forms) || forms.length < 2) {
-      // Hide the icon entirely when there's nothing to cycle.
-      btn.style.display = "none";
-      if (idx) idx.style.display = "none";
-      return null;
-    }
-
-    let cursor = 0;
-    const total = forms.length;
-    if (idx) idx.textContent = (cursor + 1) + " / " + total;
-
-    function rotate() {
-      cursor = (cursor + 1) % total;
-      // Re-trigger the swap animation by removing + re-adding the class
-      blurb.classList.remove("swapping");
-      void blurb.offsetWidth;       // force reflow so the animation re-runs
-      blurb.textContent = forms[cursor];
-      blurb.classList.add("swapping");
-      if (idx) idx.textContent = (cursor + 1) + " / " + total;
-    }
-
-    btn.addEventListener("click", rotate);
-    // Keyboard accessibility: Enter / Space activate the button by default,
-    // but we also support the framework's own habit — pressing "/"
-    // shakes the focused card.
-    card.tabIndex = 0;
-    card.addEventListener("keydown", e => {
-      if (e.key === "/" || e.key === "?") {
-        e.preventDefault();
-        rotate();
+      const entry = entries[card.dataset.spine];
+      const forms = entry && Array.isArray(entry.forms) ? entry.forms : [];
+      if (forms.length < 2) {
+        // Hide the icon entirely when there's nothing to cycle.
+        btn.style.display = "none";
+        if (idx) idx.style.display = "none";
+        return null;
       }
-    });
-    return { card, rotate };
-  }).filter(Boolean);
 
-  // Expose for debugging / future cross-card features
-  window.__spineCards = wired;
+      // Server-rendered blurb is the no-JS fallback; once the JSON is
+      // in hand, snap the visible text to forms[0] so the cursor and
+      // the rendered content agree.
+      blurb.textContent = forms[0];
+      let cursor = 0;
+      const total = forms.length;
+      if (idx) idx.textContent = (cursor + 1) + " / " + total;
+
+      function rotate() {
+        cursor = (cursor + 1) % total;
+        blurb.classList.remove("swapping");
+        void blurb.offsetWidth;       // force reflow so the animation re-runs
+        blurb.textContent = forms[cursor];
+        blurb.classList.add("swapping");
+        if (idx) idx.textContent = (cursor + 1) + " / " + total;
+      }
+
+      btn.addEventListener("click", rotate);
+      // Keyboard accessibility: Enter / Space activate the button by default,
+      // but we also support the framework's own habit — pressing "/"
+      // shakes the focused card.
+      card.tabIndex = 0;
+      card.addEventListener("keydown", e => {
+        if (e.key === "/" || e.key === "?") {
+          e.preventDefault();
+          rotate();
+        }
+      });
+      return { card, rotate };
+    }).filter(Boolean);
+
+    window.__spineCards = wired;
+  }
+
+  // Resolve spine-data.json relative to this document.  The file
+  // ships next to genesis.html under /docs/ on the deployed site and
+  // in the repo working tree alike.
+  fetch("spine-data.json", { cache: "no-cache" })
+    .then(r => r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status)))
+    .then(data => wireCards(data.entries || {}))
+    .catch(err => {
+      // Fallback: leave the server-rendered blurbs visible and hide
+      // the shake icons. The page still reads correctly without JS.
+      console.warn("spine-data.json unavailable:", err);
+      document.querySelectorAll(".card[data-spine] .shake-btn, .card[data-spine] .form-index")
+        .forEach(el => { el.style.display = "none"; });
+    });
 })();
 </script>
 
