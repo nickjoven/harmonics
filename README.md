@@ -696,8 +696,11 @@ rendering path, or is deliberately out-of-band.
   `animate_mediants.py`, `bifurcation_sweep.py`, `clarinet_lattice.py`,
   `driven_stribeck.py`, `lattice_sweep.py`. Source-only; reachable
   through the GitHub tree.
-- **Root-level animations** — `genesis.gif`, `orbit.gif`. Tracked in
-  git but not in the deploy bundle.
+- **Root-level animations** — `genesis.gif`, `orbit.gif`,
+  `stairs.gif`, `rose.gif`, `spiral.gif`, `triangles.gif`. Now
+  copied into the deploy bundle and surfaced through
+  [`docs/genesis.html`](docs/genesis.html); the raw GIFs remain
+  outside `docs/` for clarity at the GitHub tree level.
 - **[`problem/`](problem/)** and **`ket/`** (empty placeholder) —
   internal areas, not part of the published surface.
 - **`.ket/`** — local ket-substrate ledger (CAS, log, manifest).
@@ -731,10 +734,11 @@ but aren't:
   partially mitigate this, but the underlying derivations themselves
   do not render. A static `.md → .html` pass (e.g. Jekyll, mdBook,
   or a small build step) would close this gap.
-- **Root-level animations (`genesis.gif`, `orbit.gif`) are not
-  referenced by any deployed page.** They are evidence assets that
-  could carry weight in the landing page or the preprint view if
-  surfaced.
+- *(retired)* The root-level animations are now surfaced at
+  [`docs/genesis.html`](docs/genesis.html), a dedicated gallery
+  page in the canonical Mobius dark theme with Fibonacci-spaced
+  typography. `genesis.gif` (4.8 MB) loads lazily so the cost is
+  paid only by viewers who navigate to the page.
 
 If something belongs on Pages but isn't, the change lives in the
 `Assemble _site` step of [`.github/workflows/pages.yml`](.github/workflows/pages.yml)

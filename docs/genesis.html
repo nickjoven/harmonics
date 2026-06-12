@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Genesis &mdash; Harmonics</title>
+<meta name="description" content="The framework's substrate forming, depth by depth — the Stern-Brocot tree unfolding mediant by mediant.">
+<style>
+  :root {
+    /* ─────────────────────────────────────────────
+       Mobius theme palette (canonical, from
+       github.com/nickjoven/submediant-site static/mobius-theme.css)
+       ───────────────────────────────────────────── */
+    --m-bg: #000000;
+    --m-surface: #07070a;
+    --m-border: #1a1a22;
+    --m-text: #e6edf3;
+    --m-text-muted: #8b949e;
+    --m-pink:   #DE3373;
+    --m-yellow: #FCCA28;
+    --m-green:  #08A953;
+    --m-orange: #F5712A;
+    --m-blue:   #1E76B8;
+    --m-purple: #7C2E87;
+    --m-red:    #EE1B3E;
+    --m-teal:   #37BA9B;
+
+    /* ─────────────────────────────────────────────
+       Q-denominator palette (semantic, from
+       sync_cost/staircase_forming.svg and siblings)
+       q_n -> the colour of every depth-n locked tongue
+       ───────────────────────────────────────────── */
+    --q1: #f0d060;  /* yellow  — 1/1 root */
+    --q2: #60a0f0;  /* blue    — 1/2 */
+    --q3: #f06080;  /* pink    — 1/3, 2/3 */
+    --q4: #80c080;  /* green   — 1/4, 3/4 */
+    --q5: #d090e0;  /* purple  — 1/5, 2/5, 3/5, 4/5 */
+    --q6: #e0a060;  /* orange  — 1/6, 5/6 */
+    --gold-gap: #a060c0;  /* 1/phi gap centre */
+
+    /* ─────────────────────────────────────────────
+       Fibonacci spacing (multiples of phi)
+       ───────────────────────────────────────────── */
+    --pad-0: 0.382rem;
+    --pad-1: 0.618rem;
+    --pad-2: 1rem;
+    --pad-3: 1.618rem;
+    --pad-4: 2.618rem;
+    --pad-5: 4.236rem;
+    --pad-6: 6.854rem;
+
+    /* Golden-ratio bezier — the canonical easing */
+    --ease-phi: cubic-bezier(0.618, 0, 0.382, 1);
+
+    /* Type stacks */
+    --font-body: Georgia, 'Times New Roman', serif;
+    --font-display: 'Iowan Old Style', Georgia, serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Menlo, monospace;
+    --font-ui: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--pad-4);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background: var(--m-bg);
+    color: var(--m-text);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.7;
+    overflow-x: hidden;
+    min-height: 100vh;
+    /* A very subtle radial signature; the page itself a tiny Klein-bottle vacuum */
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(222, 51, 115, 0.04), transparent 70%),
+      radial-gradient(ellipse 60% 40% at 50% 100%, rgba(30, 118, 184, 0.03), transparent 70%);
+  }
+
+  /* ─────────────────────────────────────────────
+     Navigation — kept consistent with the rest of docs/
+     ───────────────────────────────────────────── */
+  nav {
+    padding: var(--pad-2) var(--pad-3);
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--m-border);
+    display: flex;
+    gap: var(--pad-3);
+    flex-wrap: wrap;
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  nav a {
+    color: var(--m-text-muted);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.25s var(--ease-phi);
+  }
+  nav a:hover { color: var(--m-pink); }
+  nav a.active {
+    color: var(--m-pink);
+    border-bottom: 1px solid var(--m-pink);
+    padding-bottom: 2px;
+  }
+
+  /* ─────────────────────────────────────────────
+     Mirror bars — the framework's symmetry as type
+     I · II · III · V · VIII · XIII   (Fibonacci)
+     XIII · VIII · V · III · II · I   (reflected)
+     each numeral coloured by its q_n denominator
+     ───────────────────────────────────────────── */
+  .mirror-bar {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.35em;
+    color: var(--m-text-muted);
+    user-select: none;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .mirror-bar > span {
+    display: inline-block;
+    padding: 0 var(--pad-1);
+    transition: transform 0.4s var(--ease-phi);
+  }
+  .mirror-bar > span:hover {
+    transform: translateY(-2px);
+  }
+  .q1 { color: var(--q1); }
+  .q2 { color: var(--q2); }
+  .q3 { color: var(--q3); }
+  .q4 { color: var(--q4); }
+  .q5 { color: var(--q5); }
+  .q6 { color: var(--q6); }
+  .gap { color: var(--gold-gap); }
+  .eq  { color: var(--m-text-muted); padding: 0 var(--pad-0); opacity: 0.5; }
+
+  /* ─────────────────────────────────────────────
+     Hero
+     ───────────────────────────────────────────── */
+  .hero {
+    padding: var(--pad-5) var(--pad-3) var(--pad-4);
+    max-width: 72rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2.8rem, 9vw, 6.4rem);
+    letter-spacing: 0.34em;
+    margin: var(--pad-3) 0 var(--pad-2) 0.34em;  /* offset right by one letter-space for visual centring */
+    color: var(--m-text);
+    /* The G gets the framework's primary accent — the locking point */
+    background: linear-gradient(180deg,
+      var(--m-text) 0%,
+      var(--m-text) 60%,
+      var(--m-pink) 60%,
+      var(--m-pink) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero .subtitle {
+    max-width: 38em;
+    margin: var(--pad-3) auto 0;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--m-text-muted);
+    line-height: 1.6;
+  }
+
+  .hero .subtitle em {
+    color: var(--m-text);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* ─────────────────────────────────────────────
+     The centrepiece — genesis.gif itself
+     ───────────────────────────────────────────── */
+  .centrepiece {
+    padding: var(--pad-2) var(--pad-3) var(--pad-4);
+    max-width: 96rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .centrepiece .frame {
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+    /* a thin border with a soft pink shadow — the substrate inside the void */
+    padding: var(--pad-1);
+    background: linear-gradient(135deg,
+      var(--m-border) 0%,
+      transparent 30%,
+      transparent 70%,
+      var(--m-border) 100%);
+    border: 1px solid var(--m-border);
+    box-shadow:
+      0 0 var(--pad-3) rgba(222, 51, 115, 0.10),
+      0 0 var(--pad-5) rgba(252, 202, 40, 0.06);
+  }
+
+  .centrepiece img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    background: var(--m-bg);
+  }
+
+  .centrepiece figcaption {
+    font-style: italic;
+    color: var(--m-text-muted);
+    margin: var(--pad-3) auto 0;
+    max-width: 48em;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .centrepiece figcaption strong {
+    color: var(--m-text);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* ─────────────────────────────────────────────
+     Section heads — used for the reading + gallery
+     Render as: ═════ III ═════ with the roman
+     numeral coloured by its q_n
+     ───────────────────────────────────────────── */
+  h2.section-head {
+    font-family: var(--font-ui);
+    font-weight: 400;
+    text-align: center;
+    margin: var(--pad-5) 0 var(--pad-3);
+    color: var(--m-text);
+    letter-spacing: 0.25em;
+    font-size: 1rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--pad-2);
+  }
+  h2.section-head::before,
+  h2.section-head::after {
+    content: "";
+    flex: 1;
+    max-width: 6rem;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--m-border) 50%, transparent);
+  }
+
+  /* ─────────────────────────────────────────────
+     Reading — what the page is asking the viewer to see
+     ───────────────────────────────────────────── */
+  .reading {
+    max-width: 44rem;
+    margin: 0 auto;
+    padding: 0 var(--pad-3);
+    color: var(--m-text);
+  }
+  .reading p {
+    margin-bottom: var(--pad-3);
+    line-height: 1.75;
+  }
+  .reading p:first-of-type::first-letter {
+    /* a small drop-cap — homage to the substrate's root rational 1/1 */
+    initial-letter: 2;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--m-pink);
+    margin-right: 0.18em;
+  }
+  .reading a {
+    color: var(--m-pink);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(222, 51, 115, 0.3);
+    transition: border-color 0.2s var(--ease-phi);
+  }
+  .reading a:hover {
+    border-bottom-color: var(--m-pink);
+  }
+  .reading .spine-call {
+    margin: var(--pad-3) 0;
+    padding: var(--pad-2) var(--pad-3);
+    border-left: 2px solid var(--m-pink);
+    background: rgba(222, 51, 115, 0.04);
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    color: var(--m-text-muted);
+    line-height: 1.6;
+  }
+  .reading .spine-call strong {
+    color: var(--m-pink);
+    font-family: var(--font-ui);
+    letter-spacing: 0.08em;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: var(--pad-1);
+  }
+
+  /* ─────────────────────────────────────────────
+     Companion gallery — the other root animations
+     ───────────────────────────────────────────── */
+  .gallery {
+    max-width: 88rem;
+    margin: var(--pad-3) auto var(--pad-5);
+    padding: 0 var(--pad-3);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--pad-3);
+  }
+  .card {
+    background: var(--m-surface);
+    border: 1px solid var(--m-border);
+    transition: border-color 0.3s var(--ease-phi),
+                transform 0.3s var(--ease-phi);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .card:hover {
+    border-color: var(--card-accent, var(--m-pink));
+    transform: translateY(-2px);
+  }
+  .card .card-img {
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: var(--m-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .card .card-body {
+    padding: var(--pad-2) var(--pad-3);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--pad-1);
+  }
+  .card h3 {
+    font-family: var(--font-ui);
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: var(--m-text);
+    display: flex;
+    align-items: center;
+    gap: var(--pad-1);
+  }
+  .card h3 .tag {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    padding: 0.18rem 0.45rem;
+    border-radius: 2px;
+    text-transform: uppercase;
+    background: color-mix(in srgb, var(--card-accent, var(--m-pink)) 18%, transparent);
+    color: var(--card-accent, var(--m-pink));
+  }
+  .card p {
+    color: var(--m-text-muted);
+    font-size: 0.92rem;
+    line-height: 1.55;
+    font-style: italic;
+  }
+  .card[data-q="2"] { --card-accent: var(--q2); }
+  .card[data-q="3"] { --card-accent: var(--q3); }
+  .card[data-q="4"] { --card-accent: var(--q4); }
+  .card[data-q="5"] { --card-accent: var(--q5); }
+  .card[data-q="6"] { --card-accent: var(--q6); }
+
+  /* ─────────────────────────────────────────────
+     Footer mirror — closes the page with the same
+     mirror device used in the hero
+     ───────────────────────────────────────────── */
+  footer {
+    border-top: 1px solid var(--m-border);
+    padding: var(--pad-4) var(--pad-3) var(--pad-5);
+    text-align: center;
+    margin-top: var(--pad-5);
+    color: var(--m-text-muted);
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+  }
+  footer .mirror-bar { margin: var(--pad-2) 0; }
+  footer a {
+    color: var(--m-text-muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--m-border);
+    padding-bottom: 1px;
+    transition: color 0.2s var(--ease-phi),
+                border-color 0.2s var(--ease-phi);
+  }
+  footer a:hover {
+    color: var(--m-pink);
+    border-bottom-color: var(--m-pink);
+  }
+
+  /* ─────────────────────────────────────────────
+     Small screens
+     ───────────────────────────────────────────── */
+  @media (max-width: 640px) {
+    .hero { padding: var(--pad-3) var(--pad-2); }
+    .hero h1 { letter-spacing: 0.2em; margin-left: 0.2em; }
+    .mirror-bar { font-size: 0.75rem; letter-spacing: 0.2em; }
+    .centrepiece { padding: var(--pad-2); }
+    .reading { font-size: 0.95rem; }
+    nav { font-size: 0.75rem; gap: var(--pad-2); padding: var(--pad-1) var(--pad-2); }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Reference</a>
+  <a href="genesis.html" class="active">Genesis</a>
+  <a href="preprint.html">Preprint</a>
+  <a href="dag.html">Graph</a>
+  <a href="derivations.html">Derivations</a>
+  <a href="claim-chain.html">Claim chain</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="cmb-s4.html">CMB-S4</a>
+</nav>
+
+<header class="hero">
+
+  <!--
+    Mirror bar above the title: the Fibonacci numerals coloured by q_n.
+    I (q_2 blue) · II (q_3 pink) · III (q_4 green) · V (q_5 purple) ·
+    VIII (q_6 orange) · XIII (q_1 yellow).  The same numerals appear
+    reversed below the title; the page is a small palindrome on
+    its own opening line.
+  -->
+  <div class="mirror-bar" aria-hidden="true">
+    <span class="q2">I</span><span class="eq">═══</span><span class="q3">II</span><span class="eq">═══</span><span class="q4">III</span><span class="eq">═══</span><span class="q5">V</span><span class="eq">═══</span><span class="q6">VIII</span><span class="eq">═══</span><span class="q1">XIII</span>
+  </div>
+
+  <h1>GENESIS</h1>
+
+  <div class="mirror-bar" aria-hidden="true">
+    <span class="q1">XIII</span><span class="eq">═══</span><span class="q6">VIII</span><span class="eq">═══</span><span class="q5">V</span><span class="eq">═══</span><span class="q4">III</span><span class="eq">═══</span><span class="q3">II</span><span class="eq">═══</span><span class="q2">I</span>
+  </div>
+
+  <p class="subtitle">
+    The framework's substrate forming, depth by depth. The Stern-Brocot
+    tree unfolds from the root rational 1/1 by repeated insertion of
+    the mediant (a+c)/(b+d); each new generation is one more tongue at
+    one more rational, colour-coded by its denominator. What looks
+    like a graph is <em>time</em> &mdash; each step is one mediant,
+    each gap a traversal between two locked frequencies.
+  </p>
+
+</header>
+
+<!-- ─────────────────────────────────────────────
+     The centrepiece itself.  loading="lazy" so the
+     4.8 MB asset is only fetched if the viewer
+     actually reaches it.
+     ───────────────────────────────────────────── -->
+<section class="centrepiece" aria-labelledby="genesis-figure">
+  <figure>
+    <div class="frame">
+      <img src="../genesis.gif"
+           id="genesis-figure"
+           alt="Genesis animation: the Stern-Brocot tree unfolding mediant by mediant from the root rational 1/1, with mode-locked tongues materialising at each new generation against the underlying frequency axis. Earlier generations dim as later ones appear, the staircase building from a single horizontal step at 1/2 through 1/3 and 2/3 down to the sixth-generation boundary at 1/6 and 5/6, with the 1/phi gap holding at the centre."
+           loading="lazy"
+           width="800" height="600">
+    </div>
+    <figcaption>
+      <strong>Figure.</strong> Genesis &mdash; the mediant operator
+      generating the full Stern-Brocot tree, generation by generation,
+      on a substrate that was structureless one moment before. The
+      <span style="color: var(--gold-gap);">1/&phi;</span> gap at the
+      centre never fills; the same gap is what closes off the
+      cosmic partition at depth&nbsp;7.
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ─────────────────────────────────────────────
+     Reading — explains what to look at
+     ───────────────────────────────────────────── -->
+<h2 class="section-head">
+  <span class="q4">III</span>
+</h2>
+
+<section class="reading">
+
+  <p>
+    The Stern-Brocot tree is the natural enumeration of every positive
+    rational, generated by a single binary operation: the mediant
+    (a+c)/(b+d) inserted between adjacent fractions a/b and c/d.
+    Energy conservation forces the locked frequency between two bare
+    frequencies to be the mediant; stability under coupling forces
+    the smallest-denominator rational, which has the widest Arnold
+    tongue, to be the unique stable lock. Iterating those two
+    constraints builds the entire tree.
+  </p>
+
+  <p>
+    What this animation shows is that build, in time. At t = 0 the
+    substrate is two starting fractions, 0/1 and 1/1, with nothing
+    in between. By t = 1 the first mediant 1/2 has materialised. By
+    t = 2 the two children of 1/2 &mdash; 1/3 and 2/3 &mdash; are
+    in. Each subsequent depth adds 2^n new tongues, each tongue's
+    width set by (K/2)^q at the rational p/q.
+    The 1/&phi; gap at the centre is conspicuous: the golden-ratio
+    winding sits between 3/5 and 2/3 and is the last rational the
+    tree ever reaches.
+  </p>
+
+  <div class="spine-call">
+    <strong>Spine</strong>
+    Based on energy conservation and stability under coupling, the
+    mediant is the only admissible binary operation between two
+    locked frequencies. The Stern-Brocot tree inherits its structure
+    from iterated mediant insertion on adjacent fractions. The
+    framework integers inherit their meaning as counts of mode-locked
+    states, not as cell counts of a pixelated geometry.
+  </div>
+
+  <p>
+    Every dimensionless prediction the framework makes lives in this
+    tree at some depth: &Omega;<sub>&Lambda;</sub> = 13/19 at
+    depth&nbsp;6, n<sub>s</sub> &asymp; 0.965 at the
+    self-similarity point of the golden-ratio winding,
+    &alpha;<sub>s</sub>/&alpha;<sub>2</sub> = 27/8 at the
+    bare K = 1 substrate scale. The animation above is the
+    substrate inside which all of those numbers sit.
+    The reader interested in <em>which</em> number lives at
+    <em>which</em> depth can follow up at the
+    <a href="https://github.com/nickjoven/harmonics/blob/main/README.md">README</a>
+    or the <a href="preprint.html">preprint view</a>.
+  </p>
+
+</section>
+
+<!-- ─────────────────────────────────────────────
+     Companion animations.  Each is a root-level
+     GIF that the README's "gaps worth flagging"
+     section noted as un-surfaced.  They live here
+     now.
+     ───────────────────────────────────────────── -->
+<h2 class="section-head">
+  <span class="q3">II</span>
+  <span style="font-family: var(--font-ui); letter-spacing: 0.2em; font-size: 0.78rem; color: var(--m-text-muted);">COMPANION ANIMATIONS</span>
+  <span class="q3">II</span>
+</h2>
+
+<div class="gallery">
+
+  <article class="card" data-q="2">
+    <div class="card-img"><img src="../stairs.gif" alt="Continued-fraction staircase building to depth 1/13 with budget 19 — the framework's cosmic-partition configuration as a moving staircase plot" loading="lazy"></div>
+    <div class="card-body">
+      <h3>Stairs <span class="tag">depth 1/13</span></h3>
+      <p>
+        Continued-fraction staircase at depth 1/13, budget 19. The
+        configuration the headline &Omega;<sub>&Lambda;</sub> = 13/19
+        prediction lives in.
+      </p>
+    </div>
+  </article>
+
+  <article class="card" data-q="3">
+    <div class="card-img"><img src="../orbit.gif" alt="A Stern-Brocot orbit traced as L and R steps on the modular tree, projected to polar coordinates ending at the rational 7/60" loading="lazy"></div>
+    <div class="card-body">
+      <h3>Orbit <span class="tag">L⁸R¹L¹R³ → 7/60</span></h3>
+      <p>
+        A Stern-Brocot walk traced in polar coordinates. Eight lefts,
+        one right, one left, three rights &mdash; the walk lands on
+        7/60 as a rational on the unit circle.
+      </p>
+    </div>
+  </article>
+
+  <article class="card" data-q="5">
+    <div class="card-img"><img src="../rose.gif" alt="A rose-curve animation — Lissajous figure or related rational rosette traced over time" loading="lazy"></div>
+    <div class="card-body">
+      <h3>Rose <span class="tag">rational rosette</span></h3>
+      <p>
+        Rational rose curve. A Lissajous figure at a rational frequency
+        ratio &mdash; the geometric counterpart to the staircase
+        plateau at the same rational.
+      </p>
+    </div>
+  </article>
+
+  <article class="card" data-q="4">
+    <div class="card-img"><img src="../spiral.gif" alt="A spiral curve animation — the substrate's continuum approach to a fixed point" loading="lazy"></div>
+    <div class="card-body">
+      <h3>Spiral <span class="tag">continuum</span></h3>
+      <p>
+        Spiral evolution. The continuum-side companion to the
+        discrete tree: the same substrate read at a different
+        regime.
+      </p>
+    </div>
+  </article>
+
+  <article class="card" data-q="6">
+    <div class="card-img"><img src="../triangles.gif" alt="A modular triangulation animation — Farey triangles tiling the upper half plane under SL(2,Z) action" loading="lazy"></div>
+    <div class="card-body">
+      <h3>Triangles <span class="tag">SL(2,ℤ)</span></h3>
+      <p>
+        Farey triangles tiling the upper half plane under the
+        SL(2,&Zopf;) action &mdash; the symmetry group that
+        forces dim&nbsp;=&nbsp;3 on the spatial manifold.
+      </p>
+    </div>
+  </article>
+
+</div>
+
+<!-- ─────────────────────────────────────────────
+     Footer mirror — closes with the same numerals
+     ───────────────────────────────────────────── -->
+<footer>
+
+  <div class="mirror-bar" aria-hidden="true">
+    <span class="q2">I</span><span class="eq">═</span><span class="q3">II</span><span class="eq">═</span><span class="q4">III</span><span class="eq">═</span><span class="q5">V</span><span class="eq">═</span><span class="q6">VIII</span><span class="eq">═</span><span class="q1">XIII</span>
+  </div>
+
+  <p>
+    <a href="../index.html">Home</a> &middot;
+    <a href="index.html">Reference</a> &middot;
+    <a href="https://github.com/nickjoven/harmonics">Source</a>
+  </p>
+
+  <p style="margin-top: var(--pad-2); opacity: 0.6;">
+    Stern-Brocot at depth 13. The 1/&phi; gap at the centre is the
+    last to fill &mdash; if it ever does.
+  </p>
+
+</footer>
+
+</body>
+</html>
