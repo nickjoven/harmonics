@@ -1,18 +1,16 @@
 # harmonics
 
-This framework's central claim is mechanical: **coupled oscillators
-in a continuous medium produce discrete mode-locked tongues, and
-quantization lives in that coupling, not in the geometry.** The
-medium is smooth. Lorentz invariance is preserved. No minimum
-length is claimed. The discreteness is the dynamics — Arnold
-tongues at every rational $p/q$ with measurable period $q$.
+When two oscillators couple — pendulums on a shared beam,
+metronomes on a wobbling table, neighbouring strings — they tend
+to lock into small-integer ratios. Each oscillator's motion stays
+smooth; the relationship between them snaps into discrete steps.
 
-The framework integers (13, 5, 1, 19, $q_2$, $q_3$, etc.) count
-mode-locked states, not pixels. Every downstream consequence — the
-forced spatial dimension, the gauge group, the small-integer
-ratios — is what falls out of that single mechanical claim worked
-out at the relevant level of detail. The "how" is the framework;
-the "what" is its output.
+The framework takes that single observation seriously as physics.
+The universe's discrete features — quantum numbers, three spatial
+dimensions, the small set of forces — are what the locking
+produces, not separate posits added on top. Everything downstream
+is what falls out of working that one idea at the relevant level
+of detail. The "how" is the framework; the "what" is its output.
 
 ## The mechanism
 
