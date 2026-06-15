@@ -53,6 +53,7 @@ CHECKS = [
     ("graph sealed-projection", "check_graph_sealed.py"),
     ("working-tree drift", "check_working_tree.py"),
     ("CAS verification", "verify_cas.py"),
+    ("SPINE.yml integrity", "check_spine.py"),
 ]
 
 # Nonzero rc is reported but never gates: never adds to the exit
