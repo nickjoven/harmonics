@@ -1,5 +1,5 @@
 {
-  "generated": "5ad35a45d4487c7b582ae3ef96516eb8f7cb4cc6",
+  "generated": "46ce6b1b56ec3ba8b08b0355b641d54665b0e517",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1697,6 +1697,7 @@
         "boundary_weight",
         "continuum_limits",
         "gap2_spatialization_decomposition",
+        "k_of_t_residual_disposition",
         "klein_bottle_derivation",
         "minimum_alphabet",
         "mixing_angle_audit",
@@ -1728,6 +1729,10 @@
         },
         {
           "target": "gap2_spatialization_decomposition",
+          "kind": "references"
+        },
+        {
+          "target": "k_of_t_residual_disposition",
           "kind": "references"
         },
         {
@@ -1802,6 +1807,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "29e05bb",
+          "date": "2026-06-19",
+          "subject": "N_efolds: promote derived form (63.7 from cadence closure) across surfaces (#264)"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -9086,6 +9096,7 @@
         "hierarchy_gaussian_lattice",
         "hierarchy_problem_translation",
         "k_axis_uniqueness",
+        "k_of_t_residual_disposition",
         "klein_antipodal_z2_rep_pattern",
         "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
@@ -9186,6 +9197,10 @@
         },
         {
           "target": "k_axis_uniqueness",
+          "kind": "references"
+        },
+        {
+          "target": "k_of_t_residual_disposition",
           "kind": "references"
         },
         {
@@ -9312,6 +9327,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "29e05bb",
+          "date": "2026-06-19",
+          "subject": "N_efolds: promote derived form (63.7 from cadence closure) across surfaces (#264)"
+        },
         {
           "hash": "2beb996",
           "date": "2026-05-23",
@@ -19653,11 +19673,15 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "a_s_geometric_proof",
         "bicone_golden_z2_identification",
+        "derivation_atlas",
         "discrete_extension_principle",
         "framework_status",
         "free_parameter_scorecard",
         "gr_qm_unification_synthesis",
+        "minimum_alphabet",
+        "phenomenology_cross_reference",
         "physics_relevance_measurement_catalog",
         "predictions_horizon_2026",
         "salpeter_gate_disposition"
@@ -19714,7 +19738,15 @@
       ],
       "edged_by": [
         {
+          "source": "a_s_geometric_proof",
+          "kind": "references"
+        },
+        {
           "source": "bicone_golden_z2_identification",
+          "kind": "references"
+        },
+        {
+          "source": "derivation_atlas",
           "kind": "references"
         },
         {
@@ -19731,6 +19763,14 @@
         },
         {
           "source": "gr_qm_unification_synthesis",
+          "kind": "references"
+        },
+        {
+          "source": "minimum_alphabet",
+          "kind": "references"
+        },
+        {
+          "source": "phenomenology_cross_reference",
           "kind": "references"
         },
         {
@@ -24581,6 +24621,7 @@
         "PROOF_B_quantum",
         "continuity_in_K_nulls",
         "k_of_t_problem_statement",
+        "k_of_t_residual_disposition",
         "substrate_determinism"
       ],
       "depended_on_by": [
@@ -24597,6 +24638,7 @@
         "klein_bottle_derivation",
         "lesson_forced_basin_selection",
         "meaning_of_two_wip",
+        "phenomenology_cross_reference",
         "predictions_horizon_2026",
         "primitive_completeness_audit",
         "primitives_vs_addresses_candidate",
@@ -24620,6 +24662,10 @@
         },
         {
           "target": "k_of_t_problem_statement",
+          "kind": "references"
+        },
+        {
+          "target": "k_of_t_residual_disposition",
           "kind": "references"
         },
         {
@@ -24681,6 +24727,10 @@
           "kind": "references"
         },
         {
+          "source": "phenomenology_cross_reference",
+          "kind": "references"
+        },
+        {
           "source": "predictions_horizon_2026",
           "kind": "references"
         },
@@ -24710,6 +24760,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "29e05bb",
+          "date": "2026-06-19",
+          "subject": "N_efolds: promote derived form (63.7 from cadence closure) across surfaces (#264)"
+        },
         {
           "hash": "350bb14",
           "date": "2026-05-28",
@@ -28818,7 +28873,9 @@
         "h_inf_status",
         "hierarchy_gaussian_lattice",
         "hierarchy_problem_translation",
+        "k_of_t_residual_disposition",
         "mass_sector_closure",
+        "minimum_alphabet",
         "numerology_count_phase_b",
         "numerology_inventory",
         "omega_b_alpha_beta_closure",
@@ -28904,7 +28961,15 @@
           "kind": "references"
         },
         {
+          "target": "k_of_t_residual_disposition",
+          "kind": "references"
+        },
+        {
           "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "minimum_alphabet",
           "kind": "references"
         },
         {
@@ -28991,6 +29056,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "29e05bb",
+          "date": "2026-06-19",
+          "subject": "N_efolds: promote derived form (63.7 from cadence closure) across surfaces (#264)"
+        },
         {
           "hash": "2beb996",
           "date": "2026-05-23",
