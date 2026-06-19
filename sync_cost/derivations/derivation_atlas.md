@@ -1869,9 +1869,11 @@ The framework's current scope leaves several open extensions:
 - **Neutrino sector**: framework has substantial neutrino
   content but absolute neutrino masses are anchor-side; specific
   oscillation parameters not all individually derived
-- **CMB-S4 era predictions**: N_efolds = 61.3 ± 0.7 is a
-  consistency relation; observational test in ~2030 would
-  confirm or revise
+- **CMB-S4 era predictions**: N_efolds = √5 / (2/57) ≈ 63.7
+  (band [62, 66]) is a substrate-forced structural prediction
+  (cadence closure: `k_of_t_residual_disposition.md`, PRs #178/#179);
+  CMB-S4 / LiteBIRD observational test in ~2030 would confirm or
+  falsify. (Supersedes the earlier n_s-anchored 61.3 ± 0.7.)
 
 These are extensions, not gaps. The framework's current state
 is structurally complete on its declared scope; extensions

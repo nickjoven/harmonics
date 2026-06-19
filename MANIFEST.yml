@@ -127,10 +127,20 @@ scorecard:
 
   efolds:
     name: "N_efolds"
-    computed: "61.3 ± 0.7"
+    computed: "63.7 (band [62, 66])"
     observed: "TBD"
-    residual: "CMB-S4, ~2030"
-    source: ["D10"]
+    residual: "CMB-S4 / LiteBIRD ~2030; falsifier outside [62, 66]"
+    source: ["D10", "k_of_t_residual_disposition"]
+    note: >
+      Substrate-forced via the K(t) cadence closure:
+      cadence = 2/(q₃·19_Λ) = 2/57 ≈ 0.0351 levels/e-fold
+      (PRs #178/#179, k_of_t_residual_disposition.md). Numerator √5
+      from D10 (eigenvalue separation of x²−x−1=0). Supersedes the
+      earlier n_s-anchored figure 61.3 ± 0.7, which used
+      rate = (1−n_s)/ln(φ²) ≈ 0.0365 from Planck n_s = 0.9649 ± 0.0042;
+      0.0365 is not in the forced candidate set {1/26, 1/27, 2/57},
+      so the prior value is stranded by the closure, not refined by it.
+      Observation is noisy; the derived form does not consume it.
 
   # Weinberg angle sin²θ_W: declined — the framework has no rigorous
   # prediction at M_Z. The bare K=1 identity 8/35 is listed under

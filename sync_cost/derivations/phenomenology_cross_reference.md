@@ -145,11 +145,22 @@ Z_2 rep theory, refined by two-component closure with w_+ = 13/14
 
 ### N_efolds
 
-- **Framework prediction**: 61.3 ± 0.7 (consistency relation)
-- **Derivation**: D10
-- **Observed**: TBD (CMB-S4, ~2030)
-- **Class**: Class 2 (consistency relation, n_s-dependent)
-- **Side**: anchor-side (requires absolute time)
+- **Framework prediction**: √5 / (2/57) ≈ 63.7 (band [62, 66]) —
+  cadence substrate-forced via K(t) closure
+  (`k_of_t_residual_disposition.md`, PRs #178/#179)
+- **Derivation**: D10 (√5 numerator from `minimum_alphabet.md`) +
+  `k_of_t_residual_disposition.md` (cadence denominator)
+- **Observed**: TBD (CMB-S4 / LiteBIRD, ~2030)
+- **Class**: Class 5 / Survives (structural prediction; does not
+  consume `n_s`)
+- **Side**: substrate-side (the dimensionless e-fold count is
+  forced; only absolute durations require an anchor)
+- **Supersedes**: an earlier `61.3 ± 0.7` figure derived from the
+  `n_s`-anchored identification `cadence = (1−n_s)/ln(φ²) ≈ 0.0365`
+  using Planck `n_s = 0.9649 ± 0.0042`. The forced candidate set is
+  `{1/26, 1/27, 2/57} → {58.1, 60.4, 63.7}` e-folds; `0.0365` is
+  not in it, so the earlier figure is stranded by the closure, not
+  refined by it.
 
 ### Tensor-to-scalar ratio r
 

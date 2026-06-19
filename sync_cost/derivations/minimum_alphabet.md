@@ -346,26 +346,45 @@ The two roots are separated by φ - ψ = √5. In the two-mode
 decomposition F_n = (φⁿ - ψⁿ)/√5, this separation normalizes the
 modes. It is the distance between attractors in eigenvalue space.
 
-The observable universe samples ~2.2 Fibonacci levels of the
-staircase hierarchy (Identification 4: 60 e-folds × 0.0365 levels/e-fold
-= 2.19). The eigenvalue separation is √5 ≈ 2.236. If these are
-the same quantity — if the number of sampled levels is set by the
-eigenvalue separation of the golden polynomial — then the number
-of e-folds of inflation is determined by the algebra:
+The number of Fibonacci levels sampled across inflation is set by
+the eigenvalue separation of the golden polynomial: N_levels = √5.
+Combined with the substrate-forced inflation-segment cadence
+(`k_of_t_residual_disposition.md`, PRs #178/#179),
+
+    cadence = 2/57 = 2/(q₃·19_Λ) ≈ 0.0351 levels/e-fold,
+
+the number of e-folds of inflation is determined by the algebra:
 
     N_levels = √5
-    N_efolds = √5 / 0.0365 ≈ 61.2
+    N_efolds = √5 / (2/57) = 57·√5 / 2 ≈ 63.7
 
-The observed value is 60 ± a few (not precisely known). Conditional
-on Identification 4 (`cadence = (1−n_s)/ln(φ²)`), the framework's
-consequence is √5/0.0365 ≈ 61.2 e-folds — a sharp number to test
-against future CMB polarization measurements of the tensor-to-scalar
-ratio r. The prediction inherits the identification's status: the
-cadence is fixed by observed `n_s`, not derived from primitives, so
-the e-fold count is a consequence of the identification, not of the
-framework alone (see the cluster note below).
+This is no longer conditional on an observational anchor — the
+denominator is derived from substrate primitives (Q-mod-2 mediant
+projection + #6 structural integers + bicone-golden Z₂ + XOR lock
+conservation). A sharp number to test against future CMB polarization
+measurements of the tensor-to-scalar ratio r; the falsifier band is
+[62, 66]. The prior n_s-anchored formulation (60 e-folds × 0.0365 ≈
+2.19 ≈ √5, giving N_efolds ≈ 61.2) is preserved as historical reading
+in §3 below and superseded — 0.0365 is not in the forced candidate
+set {1/26, 1/27, 2/57}, so this is a supersession, not a refinement.
+Observation is noisy; the derived form does not consume it.
 
-**Identification cluster (N13 pattern, 2026-05-28 audit).** Within
+> **[2026-06 supersession]** The cluster discussed in this
+> subsection is closed by the K(t) cadence closure (PRs #178/#179,
+> `k_of_t_residual_disposition.md`): Q-mod-2 mediant projection +
+> #6 structural integers + bicone-golden Z₂ identification + XOR
+> lock conservation uniquely force the cadence to `2/57 =
+> 2/(q₃·19_Λ) ≈ 0.0351`. The forced candidate set is
+> `{1/26, 1/27, 2/57} → {58.1, 60.4, 63.7}` e-folds; 0.0365 (the
+> n_s-anchored target) is not in it, and the substrate-only
+> `1/q₃³ ≈ 0.0370` is also not in it. The "real selector from the
+> inviolables of `substrate_determinism.md`" the original prose
+> said was needed is exactly what the closure delivers. The original
+> prose is preserved below as the apparatus available at the time
+> of writing.
+
+**Identification cluster (N13 pattern, 2026-05-28 audit; closed
+2026-06 — see callout above).** Within
 Planck's `n_s = 0.9649 ± 0.0042`, the cadence target is
 `0.0365 ± 0.004` (≈ 12% band). The substrate-only expression
 `1/q₃³ ≈ 0.0370` lies inside this band (≈ 1.5% off), at a tolerance
@@ -481,19 +500,40 @@ in their frequency spectra that are not attributable to finite size.
 
 ### 3. The √5 prediction: e-folds of inflation from the golden polynomial
 
+> **[2026-06 supersession]** This subsection's original derivation
+> obtained `N_efolds = 61.3 ± 0.7` from an n_s-anchored identification
+> (`cadence = (1−n_s)/ln(φ²) ≈ 0.0365` using Planck
+> `n_s = 0.9649 ± 0.0042`). The K(t) cadence closure
+> (`k_of_t_residual_disposition.md`, PRs #178/#179) supersedes this
+> by forcing the cadence to `2/57 = 2/(q₃·19_Λ) ≈ 0.0351` from
+> substrate primitives alone — Q-mod-2 mediant projection + #6
+> structural integers + bicone-golden Z₂ identification + XOR lock
+> conservation. The canonical headline is now
+>
+>     N_efolds = √5 / (2/57) = 57·√5 / 2 ≈ 63.7   (band [62, 66])
+>
+> The forced candidate set is `{1/26, 1/27, 2/57} → {58.1, 60.4, 63.7}`
+> e-folds; the earlier `0.0365` is not in it, so this is a
+> *supersession*, not a *refinement*. The structural argument the
+> n_s-anchored derivation below makes for the √5 numerator stands
+> unchanged; only the denominator's epistemic shape changes — from
+> "consumes a noisy observation" to "derived from substrate
+> primitives." The original derivation is preserved as the historical
+> formulation.
+
 **Conditional claim** (contingent on Identification 4 —
-`cadence = (1−n_s)/ln(φ²)`; see §"Identification cluster" above for
-the cluster ambiguity). If the cadence identification holds, the
-number of Fibonacci levels the observable universe samples is
-exactly √5 (not approximately), and the number of e-folds of
-inflation is:
+`cadence = (1−n_s)/ln(φ²)`; superseded by the cadence closure, see
+callout above; preserved as the historical formulation). If the
+cadence identification holds, the number of Fibonacci levels the
+observable universe samples is exactly √5 (not approximately), and
+the number of e-folds of inflation is:
 
     N_efolds = √5 / rate = √5 / [(n_s - 1) / (-ln φ²)]
 
 Using Planck 2018 values (n_s = 0.9649 ± 0.0042):
 
     rate = (1 - 0.9649) / ln(φ²) = 0.0351 / 0.9624 = 0.03649
-    N_efolds = 2.2360 / 0.03649 = 61.3 ± 0.7
+    N_efolds = 2.2360 / 0.03649 = 61.3 ± 0.7   [superseded — see callout]
 
 The argument: the staircase at 1/φ is self-similar with ratio φ².
 The two-mode decomposition F_n = (φⁿ - ψⁿ)/√5 has the separation
@@ -531,16 +571,19 @@ For common slow-roll models:
 - φ² (Starobinsky/R²): N_efolds = (3 - n_s)/(2(1 - n_s)) ≈ 58
 - φ²/³ (axion monodromy): N_efolds ≈ 45-55
 
-The √5 prediction gives N_efolds = 61.3 ± 0.7, which is:
-- **Distinguishable from φ² inflation** (58) at ~4σ given
-  Planck+CMB-S4 precision on n_s
+The √5 prediction (canonical form, post-cadence-closure) gives
+`N_efolds = √5 / (2/57) ≈ 63.7` (band [62, 66]), which is:
+- **Distinguishable from φ² inflation** (~58) given CMB-S4 / LiteBIRD
+  precision on the joint (r, n_s)
 - **Distinguishable from lower N_efolds models** (45-55) already
 - **Consistent with current data** (N_efolds = 50-70 allowed)
 
-The specific test: if CMB-S4 measures r and n_s to sufficient
-precision to determine N_efolds to ±2, the prediction N_efolds =
-√5/rate = 61.3 is falsifiable. A measurement of N_efolds < 59 or
-N_efolds > 63 would rule it out.
+The specific test: if CMB-S4 / LiteBIRD measures r and n_s to
+sufficient precision to determine N_efolds to ±2, the prediction
+`N_efolds = √5 / (2/57) ≈ 63.7` is falsifiable. A measurement of
+N_efolds outside [62, 66] would rule it out. (The original
+n_s-anchored 61.3 ± 0.7 figure used a falsifier band of [59, 63];
+it is superseded.)
 
 **What this would mean if confirmed.** The duration of inflation is
 not a contingent fact about initial conditions. It is the eigenvalue
@@ -564,7 +607,10 @@ self-similarity) also produces the duration of inflation (through
 - Born rule / HUP conjugacy identified (same parabola, dual axes)
 - Uncertainty relation = Cassini's identity (|φψ| = 1)
 - 2π factor traced to cycle-radian conversion on S¹
-- √5 prediction: N_efolds = √5/rate ≈ 61.3, testable by CMB-S4
+- √5 prediction: N_efolds = √5 / (2/57) ≈ 63.7 (band [62, 66]),
+  testable by CMB-S4 / LiteBIRD (cadence forced by closure in
+  `k_of_t_residual_disposition.md`; supersedes the earlier 61.3 ± 0.7
+  from the n_s-anchored cadence identification)
 
 **Open**:
 - Formalize the completion as a specific limiting process on the
