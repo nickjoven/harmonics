@@ -236,7 +236,13 @@ dimensionless variance per pivot bracket:
 
 With q_pivot = F_21 = 10946 (from A9 with the Planck 2018 n_s,
 giving N_efolds ≈ 61.3, placing the pivot at depth 21 in the
-Stern-Brocot tree per `alphabet_depth21.py`):
+Stern-Brocot tree per `alphabet_depth21.py`; **note:** the
+canonical N_efolds is now 63.7, forced by the K(t) cadence closure
+(`k_of_t_residual_disposition.md`, PRs #178/#179); the
+depth-identification under the substrate-forced cadence
+`2/57 ≈ 0.0351` levels/e-fold (vs the n_s-anchored 0.0365) is a
+follow-up not executed here — the q_pivot value below is preserved
+as the prior n_s-anchored computation):
 
     1 − φ⁻⁴ = 0.854102                  (golden-ratio identity)
     λ_unlock(1) = 0.473096              (A5.2)
@@ -302,8 +308,12 @@ or boundary contribution). Either would modify (T) by an O(1)
 factor.
 
 **E3: The pivot identification A9 is off.** The framework's pivot
-sits at depth 21, corresponding to N_efolds = 61.3. If the actual
-CMB pivot is at a slightly different depth (e.g. N_efolds ≈ 58),
+sits at depth 21, corresponding to N_efolds = 61.3 *under the
+n_s-anchored cadence (`(1−n_s)/ln(φ²) ≈ 0.0365`); the K(t) closure
+now forces N_efolds = 63.7 from the substrate-derived cadence
+`2/57 ≈ 0.0351`, which may shift the depth identification — a
+re-derivation is open work*. If the actual CMB pivot is at a
+slightly different depth (e.g. N_efolds ≈ 58),
 q_pivot increases by a factor ~1.05, and A_s_predicted decreases
 by a factor ~0.90. This would close the prediction at the ~1%
 level, BUT requires a derivation of the N_efolds correction (i.e.

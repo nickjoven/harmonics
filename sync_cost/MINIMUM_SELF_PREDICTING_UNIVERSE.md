@@ -349,7 +349,10 @@ round: same melody, offset by 1/φ, tempo at H₀ [D35].
 4. **General SL(n) duty scaling.** Proved for n = 2 (Gauss-Kuzmin
    + orbit period). Conjectured for n ≥ 3 (Siegel domain volumes).
 
-5. **N_efolds = 61.3 ± 0.7.** Testable by CMB-S4 (~2028).
+5. **N_efolds = √5 / (2/57) ≈ 63.7 (band [62, 66]).** Testable by
+   CMB-S4 / LiteBIRD (~2030). Substrate-forced cadence from the K(t)
+   closure (`derivations/k_of_t_residual_disposition.md`, PRs
+   #178/#179); supersedes the earlier n_s-anchored 61.3 ± 0.7.
 
 ---
 

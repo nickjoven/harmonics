@@ -411,7 +411,7 @@ entries (E3-E6) follow as natural extensions.
 | Planck/Hubble ratio $R$ | $6 \times 13^{54}$ | $8.49 \times 10^{60}$ | 0.48% | [`hierarchy_gaussian_lattice.md`](sync_cost/derivations/hierarchy_gaussian_lattice.md) |
 | $\Lambda \ell_P^2$ | $13^{-108}/12$ | $\sim 10^{-121.5}$ | 0.1% in exponent | same |
 | $A_s$ substrate-side | $2.33 \times 10^{-9}$ | $2.10 \times 10^{-9}$ | 11% (anchor-side gap, [Instance 7](sync_cost/derivations/vocabulary_is_the_work_pattern.md)) | [`a_s_geometric_proof.md`](sync_cost/derivations/a_s_geometric_proof.md) |
-| $N_{\text{efolds}}$ | 61.3 ± 0.7 | TBD | CMB-S4, ~2030 | [`numerology_inventory.md`](sync_cost/derivations/numerology_inventory.md) |
+| $N_{\text{efolds}}$ | 63.7 (band [62, 66]) | TBD | CMB-S4 / LiteBIRD, ~2030 | [`k_of_t_residual_disposition.md`](sync_cost/derivations/k_of_t_residual_disposition.md) |
 
 The two-component closure ([`L1_substrate_cusp_ground_state.md`](sync_cost/derivations/L1_substrate_cusp_ground_state.md))
 gives the cosmic partition with **zero free parameters at the
@@ -565,16 +565,35 @@ the dual-regime mechanism numerically.
 
 ## The 2030 prediction
 
-The framework predicts $N_{\text{efolds}} = \sqrt{5} / \text{rate}
-= 61.3 \pm 0.7$.
+The framework predicts
+$N_{\text{efolds}} = \sqrt{5} / (2/57) \approx 63.7$
+(falsifier band $[62, 66]$).
 
-This is the number of e-folds of inflation, set by the eigenvalue
-separation of $x^2 - x - 1 = 0$. Falsified if CMB-S4 measures
-$N_{\text{efolds}} < 59$ or $> 63$. CMB-S4 is expected to reach
-the required precision by ~2030.
+The numerator is the eigenvalue separation of $x^2 - x - 1 = 0$
+($\sqrt{5} = \varphi - \psi$). The denominator is the
+substrate-forced inflation-segment cadence
+$2/57 = 2/(q_3 \cdot 19_\Lambda) \approx 0.0351$ levels/e-fold —
+*uniquely forced, not consumed from observation* — by the Q-mod-2
+mediant projection, the #6 structural-integers filter
+$\{2, 3, 13, 19\}$, the bicone-golden $Z_2$ identification, and
+XOR lock conservation
+$Q_{\text{lock}} = Q_{\text{cascade}} \oplus Q_{\text{inflation}} = 0$
+(PRs #178 / #179; see
+[`k_of_t_residual_disposition.md`](sync_cost/derivations/k_of_t_residual_disposition.md)).
+Falsified if CMB-S4 / LiteBIRD measures $N_{\text{efolds}}$
+outside $[62, 66]$.
 
-If confirmed: inflation duration is algebraic, not a free
-parameter.
+If confirmed: inflation duration is algebraic, not a free parameter,
+and not anchored to a noisy observational input — both the numerator
+$\sqrt{5}$ and the denominator $2/57$ are substrate primitives.
+
+> *Supersedes an earlier $N_{\text{efolds}} = 61.3 \pm 0.7$ figure
+> derived from the $n_s$-anchored identification
+> $\text{rate} = (1 - n_s) / \ln(\varphi^2) \approx 0.0365$ using
+> Planck's $n_s = 0.9649 \pm 0.0042$. The forced candidate set is
+> $\{1/26, 1/27, 2/57\} \to \{58.1, 60.4, 63.7\}$ e-folds; $0.0365$
+> is not in it, so the earlier figure is stranded by the closure,
+> not refined by it.*
 
 ## Observational program
 
