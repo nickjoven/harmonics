@@ -538,11 +538,41 @@ The framework completed a substantial closure round in 2026-04:
 - **Shape F primitive-completeness audit** — four primitives
   verified sufficient through the round's closures
 
-After the round: the Floor section is empty; all five anchor-count
-obstructions are reframed/closed; the framework's open list
-contains only optional Q4 follow-ups (Instance 7-style status
-tagging for tensor-to-scalar r, τ_unlock, etc.) and periodic
-audit re-runs.
+After the round: the
+[`framework_status.md`](sync_cost/derivations/framework_status.md)
+Floor map is empty; all five anchor-count obstructions are
+reframed/closed. The framework's open list outside the 2026-04
+round's scope contains:
+
+- **Optional Q4 follow-ups** — Instance 7-style status tagging
+  for tensor-to-scalar $r$, $\tau_{\text{unlock}}$, etc.; periodic
+  audit re-runs.
+- **Six framework-noted Empirical items**
+  ([`framework_status.md`](sync_cost/derivations/framework_status.md)
+  §"Empirical (open, framework-noted, not derived)"): Koide
+  $K_{\text{lepton}} = 2/3$ (exact match to Klein-bottle ratio
+  $Q = q_2/q_3 = 2/3$ undecided); sin$^2\theta_W$ parameter (no
+  derivation attempted at the parameter level); $m_\mu/m_e$
+  bare-tree (37% gap; prior 0.96% match retracted as hidden Koide
+  import); PMNS $\theta_{13}$ (3.3× gap); all CKM angles (tree-level
+  only; SM RG running orthogonal to framework); muon $g{-}2$ (no
+  framework apparatus). Same administrative status as the SM's free
+  parameters. Each lands Class 2 by the framework's pigeonhole
+  discipline (`numerology_count_phase_b.md`, $\alpha = 0.05$);
+  listed for completeness, not chased.
+- **Structural research frontiers** — nonlinear-ADM uniqueness,
+  the Klein-bottle continuum limit to gauge structure, the
+  $\hbar / D_0$ anchor, and the preferred-basis question. High
+  leverage; outside the 2026-04 round's scope. Inventoried and
+  triaged in
+  [audit issue #263](https://github.com/nickjoven/harmonics/issues/263).
+
+The `framework_status.md` Floor map being empty means the
+*at-a-glance status map* carries no Floor entries; the substrate-side
+bare K=1 identities (sin$^2\theta_W = 8/35$, $\alpha_s/\alpha_2 =
+27/8$, $1/\alpha_{\text{em}}$ tree = 35, $m_H/v = 1/2$, $\lambda_H
+= 1/8$) live separately in `MANIFEST.yml`'s `bare_k1_identities`
+block as substrate-side reference values, not predictions at $M_Z$.
 
 See [`framework_status.md`](sync_cost/derivations/framework_status.md)
 for the current at-a-glance map.
