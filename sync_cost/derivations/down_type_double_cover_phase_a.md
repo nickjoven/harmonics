@@ -344,3 +344,21 @@ Phase B:
 | `hierarchy_gaussian_lattice.md` | Independent appearance of `6 = q_2 q_3` as `|Z_6|` |
 | `cross_parabola_audit.py` | Matter-cell integer `N_dn = 24`, consistency check for Phase B |
 | `gap1_theorem.md` | Conditional-closure precedent |
+
+## Status
+
+**Phase A: vocabulary fixed, derivation not attempted.** Open /
+preparatory. Phase A retires three overloaded terms ("walk,"
+"mode," "double cover"), pins the Klein-bottle parameterization,
+and reformulates `a_1(down)² / a_1(lep)² = 6` as a ratio of
+walk measures `N_walk(T²) / N_walk(K²)` on two explicit surfaces.
+The §6 unification hypothesis (down-type 6 = hierarchy 6 = `|Z_6|`)
+is stated as a target for Phase B, not established here.
+
+Open: the three evaluations Phase B must perform — `N_walk(K²)`,
+`N_walk(T²)`, and their ratio. Phase A's §6 hypothesis was
+subsequently refuted by `down_type_double_cover_phase_b_followup.md`.
+
+Side: substrate-side, articulation / vocabulary; no new prediction.
+Class: preparatory (no closure claimed); downstream chain runs
+through Phase B → B-followup → C → D.

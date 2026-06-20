@@ -199,3 +199,24 @@ representation assignment is available.
 | `gauge_factorization.md` | Z_2 × Z_3 = Z_6 fiber structure |
 | `hierarchy_gaussian_lattice.md` | Independent appearance of `|Z_6| = 6` |
 | `gap3_principal_bundle.py` | Four-mode set `{A, B, C, D}` candidate for Route 1 |
+
+## Status
+
+**Phase B: halted.** Five attempts to evaluate
+`N_walk(T²; 2,3) / N_walk(K²; 2,3)` from topology + Klein parity
+alone produced `{3/2, 2, 2, 2, 6}`. Only Attempt 5 reaches 6,
+and only by importing a color-singlet vs. color-triplet Z_3
+stabilizer distinction — the gauge representation assignment the
+framework is supposed to derive, not consume. Halts 1–3 record
+that purely-topological counts land at 2 or 3/2; the missing
+piece is a representation-assignment theorem for Z_6 acting on
+the four XOR modes.
+
+Open: representation assignment for `{A, B, C, D}` under
+`Z_6 = Z_2 × Z_3`. Route 1 (derive from XOR parity) was pursued
+in `down_type_double_cover_phase_b_followup.md` and returned a
+null result; the program continued through Phase C (DoF /
+coupling reading) and Phase D (boundary-weight reading).
+
+Side: substrate-side, structural attempt; no new closure.
+Class: open / halted attempt.

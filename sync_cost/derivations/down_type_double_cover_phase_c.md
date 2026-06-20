@@ -281,3 +281,25 @@ monodromy structure.
 | `down_type_double_cover_phase_a.md` | Terminology (surface Σ, walk measure) |
 | `down_type_double_cover_phase_b.md` | Five candidate attempts that halted |
 | `down_type_double_cover_phase_b_followup.md` | Null-result scan ruling out Z_6-action readings |
+
+## Status
+
+**Phase C: reaches ratio 6 via a DoF-product / coupling-collapse
+reading, halted on three justification steps.** The reframing
+`a_1(down)² / a_1(lep)² = ∏_k DoF_k(Σ_down) / ∏_k DoF_k(Σ_lep)`
+gives `(q_2 · q_3) / 1 = 6` when the Klein-flip on K² collapses
+the two cycle DoFs into one coupled DoF; the route is
+structurally cleaner than Phase B.5 (no color-triplet input).
+
+Open halts: C1 — justify `DoF(K²) = 1` (Klein-flip rank reduction
+asserted, not proven); C2 — identify `1/w(Σ) = DoF(Σ)`; C3 —
+verify Fibonacci-shift / surface-DoF commutativity. Audit caveat
+(§Reframing): `boundary_weight` precedent is cited as a template,
+but `boundary_weight.py` records the actual w* as an algebraic
+inversion from observed Ω_Λ, not a field-equation closure — so
+the precedent's USE survives, its DERIVATION STATUS is open.
+
+Side: substrate-side, structural attempt.
+Class: open; conditional closure pending C1–C3. Superseded in
+part by Phase D's boundary-weight saturation reading
+(`down_type_double_cover_phase_d.md`).
