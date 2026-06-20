@@ -68,6 +68,7 @@ scorecard:
     observed: "0.9649 ± 0.0042"
     residual: "< 0.2%"
     source: ["D4", "rfe"]
+    closure_status: "Class 5 — n_s from Stern-Brocot self-similarity at the golden-ratio winding (D4, rfe); only admitted value, no remaining freedom"
 
   born_rule:
     name: "Born rule exponent"
@@ -75,6 +76,7 @@ scorecard:
     observed: "2"
     residual: "exact"
     source: ["D1", "D9"]
+    closure_status: "Class 5 (exact) — |ψ|² exponent from saddle-node bifurcation (a1_from_saddle_node.md, born_rule.md); structural via universality, not numerology"
 
   mond_scale:
     name: "MOND scale a₀"
@@ -82,6 +84,7 @@ scorecard:
     observed: "1.2 × 10⁻¹⁰"
     residual: "4%"
     source: ["D3", "D8", "rfe"]
+    closure_status: "Class 5 — a₀ = cH₀/(2π) from Λ (a0_threshold.md); 4% to local value within the framework's no-fit declared scope"
 
   spatial_dimension:
     name: "Spatial dimension"
@@ -89,6 +92,7 @@ scorecard:
     observed: "3"
     residual: "exact"
     source: ["D14"]
+    closure_status: "Class 5 (exact) — SL(2,ℝ) Lie-group dimension = 3 from the Stern-Brocot mediant's SL(2,ℤ) symmetry (D14)"
 
   lorentz:
     name: "Lorentz symmetry"
@@ -96,6 +100,7 @@ scorecard:
     observed: "SO⁺(3,1)"
     residual: "exact"
     source: ["D14", "D15"]
+    closure_status: "Class 5 (exact) — Spin(3,1) from Klein-bottle Cl(3,1) construction (D14, D15)"
 
   dark_energy:
     name: "Dark energy fraction Ω_Λ"
@@ -103,6 +108,7 @@ scorecard:
     observed: "0.6847 ± 0.0073"
     residual: "0.07σ"
     source: ["D25", "D28"]
+    closure_status: "Class 5 (single-w form) — Ω_Λ = 13/19 from the Farey-7 partition 13:5:1/19 (omega_partition_combinatorial.md, baryon_fraction.md); refined under two-component closure — see dark_energy_fraction_two_component below"
 
   hierarchy:
     name: "Planck/Hubble ratio R"
@@ -110,6 +116,7 @@ scorecard:
     observed: "8.492 × 10⁶⁰"
     residual: "0.48%"
     source: ["D26"]
+    closure_status: "Class 5 — R = 6·13⁵⁴ from Gaussian-lattice cell counting R = q₂q₃·(q₂² + q₃²)^(q₂q₃^d) (hierarchy_gaussian_lattice.md); 0.48% match"
 
   lambda_planck:
     name: "Λ l_P²"
@@ -117,6 +124,7 @@ scorecard:
     observed: "~10⁻¹²¹·⁵"
     residual: "0.1% in exponent"
     source: ["D27"]
+    closure_status: "Class 5 — Λ·ℓ_P² = 3/R² identity from the hierarchy R = 6·13⁵⁴ (hierarchy_gaussian_lattice.md); 0.1% in exponent"
 
   uncertainty:
     name: "τ × Δθ (uncertainty)"
@@ -124,6 +132,7 @@ scorecard:
     observed: "—"
     residual: "exact"
     source: ["D7", "D9"]
+    closure_status: "Class 5 (exact) — Cassini identity |φψ| = 1 on the golden-mean recurrence (D7, D9)"
 
   efolds:
     name: "N_efolds"
@@ -131,6 +140,7 @@ scorecard:
     observed: "TBD"
     residual: "CMB-S4 / LiteBIRD ~2030; falsifier outside [62, 66]"
     source: ["D10", "k_of_t_residual_disposition"]
+    closure_status: "Class 5 — substrate-forced cadence 2/(q₃·19_Λ) = 2/57 via the K(t) closure (PRs #178/#179, k_of_t_residual_disposition.md); √5 numerator from D10. Supersedes the prior Class 2 n_s-anchored figure (61.3 ± 0.7); does not consume observed n_s"
     note: >
       Substrate-forced via the K(t) cadence closure:
       cadence = 2/(q₃·19_Λ) = 2/57 ≈ 0.0351 levels/e-fold
@@ -163,6 +173,7 @@ scorecard:
     observed: "SU(3) × SU(2) × U(1)"
     residual: "exact"
     source: ["D41", "D42"]
+    closure_status: "Class 5 (exact) — SU(3) × SU(2) × U(1) from the Klein-bottle mode lattice Z₆ = Z₂ × Z₃ (D41, D42)"
 
   strong_cp:
     name: "θ (strong CP)"
@@ -170,6 +181,7 @@ scorecard:
     observed: "< 10⁻¹⁰"
     residual: "exact"
     source: ["D45"]
+    closure_status: "Class 5 (exact) — substrate forces θ_QCD = 0 (D45); resolves the strong-CP problem at the substrate layer"
 
   anomaly_cancellation:
     name: "SM anomaly cancellation"
@@ -177,6 +189,7 @@ scorecard:
     observed: "all 6 conditions = 0"
     residual: "exact"
     source: ["D41"]
+    closure_status: "Class 5 (exact) — all 6 SM gauge-anomaly conditions verified at the substrate level (D41)"
 
   dark_matter_fraction:
     name: "Dark matter fraction Ω_DM"

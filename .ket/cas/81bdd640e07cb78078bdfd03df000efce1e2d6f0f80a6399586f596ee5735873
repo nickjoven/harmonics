@@ -169,17 +169,10 @@ distinguishing these is the basepoint principle.
 
 ## Fails (confirmed numerology, do not use as building block)
 
-(empty after 2026-06 bare-K=1 consolidation; the two prior entries —
-sin²θ_W = 8/35 and 1/α_em (tree) = 35 — moved to
-`Bare K=1 substrate-side identities` above with their
-`sinW_running_check.py` SM-running disproofs preserved as per-entry
-annotations. The **"do not use as building block at M_Z"** warning
-travels with each.)
-
-| Former entry | Disposition |
+| Item | Disproof |
 |---|---|
-| ~~sin²θ_W = 8/35~~ | Consolidated into `Bare K=1 substrate-side identities` (SM running disproof preserved). |
-| ~~1/α_em (tree) = 35~~ | Consolidated into `Bare K=1 substrate-side identities` (same running analysis as sin²θ_W). |
+| sin²θ_W = 8/35 | `sinW_running_check.py` (SM running rules out Planck-scale origin) |
+| 1/α_em (tree) = 35 | Same analysis, same issue |
 
 ## Eliminated (coincidences or structural-attempt nulls)
 

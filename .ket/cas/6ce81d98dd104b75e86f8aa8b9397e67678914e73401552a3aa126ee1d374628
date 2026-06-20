@@ -150,7 +150,7 @@ the SM's free parameters.
 | Item | Observed | Framework status | Source |
 |---|---|---|---|
 | **Koide `K_lepton = 2/3`** | ≈ 0.6667 at running scale | Iter 13 uniqueness theorem: `M = q_3 I − q_2 J` is unique under (S_3-equivariance, Lorentzian (2,1) signature, uniform eigenvalue magnitude q_3); two constraints substrate-derived, third is the one residual structural assumption. **Iteration arc 1–13 closed as productive null at iter 14**. Exact match to independently-derived Klein-bottle ratio `Q = q_2/q_3 = 2/3` is structural coincidence or unfound correspondence — undecided. | `koide_form_substrate_iteration_14.md` (closing note); `koide_form_substrate_iteration_13.md` (uniqueness theorem) |
-| **sin²θ_W (parameter)** | ≈ 0.231 at M_Z | Framework notes; no derivation attempted at the parameter level. The specific identity `sin²θ_W = 8/35` is in `Bare K=1 substrate-side identities` above as a tested-and-failed Planck-scale numerology (SM running disproof preserved per entry), but the underlying parameter remains open. | (none) |
+| **sin²θ_W (parameter)** | ≈ 0.231 at M_Z | Framework notes; no derivation attempted at the parameter level. The specific identity `sin²θ_W = 8/35` is in "Fails" below as a tested-and-failed Planck-scale numerology, but the underlying parameter remains open. | (none) |
 | **`m_μ/m_e` bare-tree** | Observed: 206.77 | Framework prediction: `7^(5/2) = 129.6`. **37% gap, open.** Previous "0.96% match" in `generation_mechanism.md` §4 was a hidden empirical import of Koide constraint and is retracted. | `koide_form_substrate_iteration_14.md`; `generation_mechanism.md` §4 (now historical) |
 | **PMNS θ_13** | Observed: 8.6° | Framework prediction (Fritzsch-form `arctan √(W_A/W_B)`): 28.13°. **3.3× gap, open.** Same regime as strict Fritzsch's V_cb failure; no NLO mechanism identified. Symmetric self-field NLO worsens this angle (cross-check failed). | `mixing_angle_audit.md`; `koide_form_substrate_iteration_14.md` |
 | **All CKM angles** | θ_12 ≈ 13.04°, θ_23 ≈ 2.38°, θ_13 ≈ 0.20°, δ_CP ≈ 69° | Framework provides tree-level (30°, 42.79°, 28.13°); SM RG running between tree scale and EW scale orthogonal to framework. **All open at the running-mechanism level.** | `mixing_angle_audit.md`, `ckm_from_sl2z.py` |
@@ -169,17 +169,10 @@ distinguishing these is the basepoint principle.
 
 ## Fails (confirmed numerology, do not use as building block)
 
-(empty after 2026-06 bare-K=1 consolidation; the two prior entries —
-sin²θ_W = 8/35 and 1/α_em (tree) = 35 — moved to
-`Bare K=1 substrate-side identities` above with their
-`sinW_running_check.py` SM-running disproofs preserved as per-entry
-annotations. The **"do not use as building block at M_Z"** warning
-travels with each.)
-
-| Former entry | Disposition |
+| Item | Disproof |
 |---|---|
-| ~~sin²θ_W = 8/35~~ | Consolidated into `Bare K=1 substrate-side identities` (SM running disproof preserved). |
-| ~~1/α_em (tree) = 35~~ | Consolidated into `Bare K=1 substrate-side identities` (same running analysis as sin²θ_W). |
+| sin²θ_W = 8/35 | `sinW_running_check.py` (SM running rules out Planck-scale origin) |
+| 1/α_em (tree) = 35 | Same analysis, same issue |
 
 ## Eliminated (coincidences or structural-attempt nulls)
 
