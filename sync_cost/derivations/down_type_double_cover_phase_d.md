@@ -142,7 +142,7 @@ always locked at any K > 0), then:
 and the ratio is exactly 6, **derived from topology + trivially
 satisfied self-consistency.** This would close the derivation.
 
-## Status and halts
+## Status
 
 **Phase D closes down-type to** `a_1(dn)²/a_1(lep)² = 6` **IF**:
 

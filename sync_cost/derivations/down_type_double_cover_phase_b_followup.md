@@ -125,7 +125,7 @@ topology derivation. This leaves the down-type Type C match open
 in Issue #56 and does not reduce the Type C count from 2 to 1.
 Shortest path but weakest outcome.
 
-## Status summary
+## Status
 
 - Down-type double-cover derivation: **not closed** by Phase B
   and Route 1.
