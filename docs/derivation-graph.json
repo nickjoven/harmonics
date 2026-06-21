@@ -1,5 +1,5 @@
 {
-  "generated": "46ce6b1b56ec3ba8b08b0355b641d54665b0e517",
+  "generated": "b79df6a7ee08f46d6adf3e1638619396836f9748",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -10502,7 +10502,6 @@
         "beta_from_tongues",
         "canonical_glossary",
         "fermion_mass_running",
-        "framework_status",
         "gluon_reframing",
         "hybrid_strategy_audit",
         "negative_results_ledger",
@@ -10566,10 +10565,6 @@
         },
         {
           "source": "fermion_mass_running",
-          "kind": "references"
-        },
-        {
-          "source": "framework_status",
           "kind": "references"
         },
         {
@@ -10643,6 +10638,7 @@
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "duty_cycle_dictionary",
+        "framework_status",
         "numerology_inventory"
       ],
       "edges": [],
@@ -10653,6 +10649,10 @@
         },
         {
           "source": "duty_cycle_dictionary",
+          "kind": "references"
+        },
+        {
+          "source": "framework_status",
           "kind": "references"
         },
         {
@@ -13292,7 +13292,7 @@
     {
       "id": "framework_status",
       "path": "sync_cost/derivations/framework_status.md",
-      "cid": "7c6e49d2e1529dff1eb80a62b15180919f6ace2e3a165092b8ec3c2dee886571",
+      "cid": "086826997ec339cc040da2d06874e31087f371579ae200d35770fa669368ac73",
       "sealed": true,
       "title": "Framework status map",
       "summary": "At-a-glance inventory. One line per item. Full analysis lives in the\nreferenced files; this is the bird's-eye view to prevent duplicate\nwork and re-derivation of eliminated content.",
@@ -13320,7 +13320,7 @@
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
         "discrete_reduction_computed",
-        "duty_cycle_dictionary",
+        "duty_dimension_proof",
         "einstein_from_kuramoto",
         "epr_bell_assembly_theorem",
         "era_timeline_disposition",
@@ -13365,6 +13365,7 @@
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
         "sine_gordon_substrate",
+        "sinw_fixed_point",
         "snmc_class_and_entanglement",
         "sqrt_r_n_correction",
         "substrate_determinism",
@@ -13566,7 +13567,7 @@
           "kind": "references"
         },
         {
-          "target": "duty_cycle_dictionary",
+          "target": "duty_dimension_proof",
           "kind": "references"
         },
         {
@@ -13743,6 +13744,10 @@
         },
         {
           "target": "sine_gordon_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "sinw_fixed_point",
           "kind": "references"
         },
         {
@@ -14165,6 +14170,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "0778154",
+          "date": "2026-06-20",
+          "subject": "MANIFEST + framework_status: complete closure_status; consolidate bare K=1 (#266)"
+        },
         {
           "hash": "a33d3d8",
           "date": "2026-06-03",
@@ -33542,6 +33552,7 @@
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "duty_cycle_dictionary",
+        "framework_status",
         "gauge_dictionary",
         "gauge_sector_lovelock",
         "klein_connection",
@@ -33570,6 +33581,10 @@
         },
         {
           "source": "duty_cycle_dictionary",
+          "kind": "references"
+        },
+        {
+          "source": "framework_status",
           "kind": "references"
         },
         {
