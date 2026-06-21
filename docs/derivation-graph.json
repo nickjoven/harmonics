@@ -1,5 +1,5 @@
 {
-  "generated": "b79df6a7ee08f46d6adf3e1638619396836f9748",
+  "generated": "f4b9a800a80209fa6e451a99e06dfb6ed78d8f64",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -10120,9 +10120,10 @@
       "cid": null,
       "sealed": false,
       "title": "Down-type double cover \u2014 Phase A: formalization",
-      "summary": "This document prepares the ground for a first-principles derivation\nof the claim",
+      "summary": "**Phase A: vocabulary fixed, derivation not attempted.** Open /\npreparatory. Phase A retires three overloaded terms (\"walk,\"\n\"mode,\" \"double cover\"), pins the Klein-bottle parameterization,\nand reformulates `a_1(down)\u00b2 / a_1(lep)\u00b2 = 6` as a ratio of\nwalk measures `N_walk(T\u00b2) / N_walk(K\u00b2)` on two explicit surfaces.\nThe \u00a76 unification hypothesis (down-type 6 = hierarchy 6 = `|Z_6|`)\nis stated as a target for Phase B, not established here.",
       "depends_on": [
         "a1_from_saddle_node",
+        "down_type_double_cover_phase_b_followup",
         "gap1_theorem",
         "gauge_factorization",
         "hierarchy_gaussian_lattice",
@@ -10140,6 +10141,10 @@
       "edges": [
         {
           "target": "a1_from_saddle_node",
+          "kind": "references"
+        },
+        {
+          "target": "down_type_double_cover_phase_b_followup",
           "kind": "references"
         },
         {
@@ -10191,6 +10196,11 @@
       ],
       "git": [
         {
+          "hash": "f4b9a80",
+          "date": "2026-06-21",
+          "subject": "down-type chain: machine-readable ## Status sections (audit \u24fa P2.1) (#267)"
+        },
+        {
           "hash": "c83e5d0",
           "date": "2026-04-19",
           "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
@@ -10203,9 +10213,10 @@
       "cid": null,
       "sealed": false,
       "title": "Down-type double cover \u2014 Phase B attempt (halts)",
-      "summary": "N_walk(T\u00b2; q_2, q_3) / N_walk(K\u00b2; q_2, q_3)  =?  q_2 q_3 = 6",
+      "summary": "**Phase B: halted.** Five attempts to evaluate\n`N_walk(T\u00b2; 2,3) / N_walk(K\u00b2; 2,3)` from topology + Klein parity\nalone produced `{3/2, 2, 2, 2, 6}`. Only Attempt 5 reaches 6,\nand only by importing a color-singlet vs. color-triplet Z_3\nstabilizer distinction \u2014 the gauge representation assignment the\nframework is supposed to derive, not consume. Halts 1\u20133 record\nthat purely-topological counts land at 2 or 3/2; the missing\npiece is a representation-assignment theorem for Z_6 acting on\nthe four XOR m",
       "depends_on": [
         "down_type_double_cover_phase_a",
+        "down_type_double_cover_phase_b_followup",
         "gauge_factorization",
         "hierarchy_gaussian_lattice",
         "item12_cross_sector_ratios"
@@ -10219,6 +10230,10 @@
       "edges": [
         {
           "target": "down_type_double_cover_phase_a",
+          "kind": "references"
+        },
+        {
+          "target": "down_type_double_cover_phase_b_followup",
           "kind": "references"
         },
         {
@@ -10254,6 +10269,11 @@
       ],
       "git": [
         {
+          "hash": "f4b9a80",
+          "date": "2026-06-21",
+          "subject": "down-type chain: machine-readable ## Status sections (audit \u24fa P2.1) (#267)"
+        },
+        {
           "hash": "c83e5d0",
           "date": "2026-04-19",
           "subject": "Close 7 Issue #56 items via structural audits + attribution fixes (#67)"
@@ -10266,7 +10286,7 @@
       "cid": null,
       "sealed": false,
       "title": "Down-type double cover \u2014 Phase B follow-up: Route 1 null result",
-      "summary": "Phase B Attempt 5 reached the target factor 6 by positing that\nlepton orbits are Z_6-stabilized and down-type orbits have trivial\nstabilizer. Route 1 proposed validating this by acting the six\nelements of Z_6 = Z_2 \u00d7 Z_3 on the four XOR modes `{A, B, C, D}`\nfrom `gap3_principal_bundle.py` and reading off the stabilizers.",
+      "summary": "- Down-type double-cover derivation: **not closed** by Phase B\n  and Route 1.\n- The halt is deeper than a missing representation-assignment\n  theorem: no Z_6-action on the base modes produces the ratio.\n- Phase A \u00a76's unification hypothesis (down-type 6 = hierarchy 6)\n  is **refuted** by the scan.\n- The observed Klein-parity / subgroup-order pattern in\n  Candidate 3 is real but does not yet yield a reference-free\n  derivation.\n- Routes 2, 3, and 4 remain; Route 3 is the highest-leverage\n  remain",
       "depends_on": [
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_b",
@@ -10275,6 +10295,8 @@
       ],
       "depended_on_by": [
         "down_type_double_cover_closed",
+        "down_type_double_cover_phase_a",
+        "down_type_double_cover_phase_b",
         "down_type_double_cover_phase_c",
         "session_audit"
       ],
@@ -10302,6 +10324,14 @@
           "kind": "references"
         },
         {
+          "source": "down_type_double_cover_phase_a",
+          "kind": "references"
+        },
+        {
+          "source": "down_type_double_cover_phase_b",
+          "kind": "references"
+        },
+        {
           "source": "down_type_double_cover_phase_c",
           "kind": "references"
         },
@@ -10311,6 +10341,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "f4b9a80",
+          "date": "2026-06-21",
+          "subject": "down-type chain: machine-readable ## Status sections (audit \u24fa P2.1) (#267)"
+        },
         {
           "hash": "c83e5d0",
           "date": "2026-04-19",
@@ -10324,13 +10359,14 @@
       "cid": null,
       "sealed": false,
       "title": "Down-type double cover \u2014 Phase C attempt: self-consistent DoF reading",
-      "summary": "Prior attempts (Phase B) looked for a count of cardinality 6 attached\nto bundle or base-mode data. Every candidate action on the base\nproduced either a free (trivial) stabilizer, a ratio of 2, or a\nreference-dependent number. Route 1 closed as a null result\n(`down_type_double_cover_phase_b_followup.md`).",
+      "summary": "**Phase C: reaches ratio 6 via a DoF-product / coupling-collapse\nreading, halted on three justification steps.** The reframing\n`a_1(down)\u00b2 / a_1(lep)\u00b2 = \u220f_k DoF_k(\u03a3_down) / \u220f_k DoF_k(\u03a3_lep)`\ngives `(q_2 \u00b7 q_3) / 1 = 6` when the Klein-flip on K\u00b2 collapses\nthe two cycle DoFs into one coupled DoF; the route is\nstructurally cleaner than Phase B.5 (no color-triplet input).",
       "depends_on": [
         "a1_from_saddle_node",
         "boundary_weight",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_b",
         "down_type_double_cover_phase_b_followup",
+        "down_type_double_cover_phase_d",
         "horn_branch_iteration_3_step_1",
         "item12_cross_sector_ratios",
         "klein_bottle_derivation",
@@ -10362,6 +10398,10 @@
         },
         {
           "target": "down_type_double_cover_phase_b_followup",
+          "kind": "references"
+        },
+        {
+          "target": "down_type_double_cover_phase_d",
           "kind": "references"
         },
         {
@@ -10405,6 +10445,11 @@
       ],
       "git": [
         {
+          "hash": "f4b9a80",
+          "date": "2026-06-21",
+          "subject": "down-type chain: machine-readable ## Status sections (audit \u24fa P2.1) (#267)"
+        },
+        {
           "hash": "6d2bea4",
           "date": "2026-06-02",
           "subject": "Axial-trajectory arc: falsifier chain \u2192 price ledger \u2192 horn-branch \u2192 null-promotion sweep (#211)"
@@ -10422,7 +10467,7 @@
       "cid": null,
       "sealed": false,
       "title": "Down-type double cover \u2014 Phase D attempt: boundary-weight self-consistency",
-      "summary": "Prior phases:\n- A: vocabulary; reframed target as `N_walk(T\u00b2)/N_walk(K\u00b2)`.\n- B: five candidate topological ratios; four give 2 or 3/2; Attempt 5\n  (stabilizer inversion) reaches 6 but imports the color assignment.\n- B-followup: scan confirms no natural Z_6-action on `{A,B,C,D}` gives\n  the 6:1 ratio; the hierarchy-`|Z_6|` and down-type-`6` are separate\n  integer appearances.\n- C: self-consistent DoF reading via abelianization rank; reaches 6\n  conditional on `DoF(K\u00b2) = 1`.\n- C/monodromy: the Z_2",
+      "summary": "**Phase D closes down-type to** `a_1(dn)\u00b2/a_1(lep)\u00b2 = 6` **IF**:",
       "depends_on": [
         "boundary_weight",
         "down_type_double_cover_phase_c",
@@ -10432,6 +10477,7 @@
       ],
       "depended_on_by": [
         "down_type_double_cover_closed",
+        "down_type_double_cover_phase_c",
         "master_cascade_identity"
       ],
       "edges": [
@@ -10462,11 +10508,20 @@
           "kind": "references"
         },
         {
+          "source": "down_type_double_cover_phase_c",
+          "kind": "references"
+        },
+        {
           "source": "master_cascade_identity",
           "kind": "references"
         }
       ],
       "git": [
+        {
+          "hash": "f4b9a80",
+          "date": "2026-06-21",
+          "subject": "down-type chain: machine-readable ## Status sections (audit \u24fa P2.1) (#267)"
+        },
         {
           "hash": "6d2bea4",
           "date": "2026-06-02",
