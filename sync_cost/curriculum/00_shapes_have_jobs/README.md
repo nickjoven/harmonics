@@ -109,30 +109,36 @@ the plane *and* admits the binary structure of halving?"
 
 ## What this prepares for
 
-Three roles have been planted, each of which the next modules will
-need:
+Three roles have been planted. Each reappears later, at a different
+depth of the curriculum:
 
-- **Orthogonality** (the 90° role) — when two oscillators interact,
-  there is a coordinate change that decouples them; the decoupled
-  axes are *at right angles* to the coupling axis. The "force does
-  no work" version of 90° is the version that makes this
-  decomposition possible.
+- **Boundary between captured and free** (the parabola role) —
+  reappears *immediately* in Module 1, where the local shape of any
+  smooth potential minimum is a parabola. This is what makes
+  restoring force "proportional to displacement" generic across
+  every medium, rather than a special property of springs. It
+  returns again in Module 3 as the curve separating "two waves
+  lock" from "two waves drift."
 
-- **Boundary between captured and free** (the parabola role) — when
-  two oscillators are weakly coupled, the boundary between "they
-  lock" and "they drift" is a parabola in coupling-strength vs.
-  frequency-mismatch space. The parabola will reappear as the most
-  important continuous shape in the framework.
+- **Orthogonality** (the 90° role) — reappears in Module 2, when
+  two waves on the same medium decompose into independently
+  evolving combinations. The decomposition axes are at 90° to each
+  other in displacement space; the "force does no work" reading of
+  90° is exactly what makes the decoupling possible.
 
 - **Tiling with binary rotational structure** (the square role) —
-  when the locking pattern is forced to be both space-filling on the
-  joint state and recursively bisectable, the answer is discrete and
-  small. This is where integer mode counts come from, and where the
-  binary structure of every later tree in the curriculum begins.
+  reappears in Module 6, when the joint state of two waves is
+  shown to live on a surface whose mode lattice has the square's
+  binary rotational structure. This is also where the framework's
+  integer mode counts originate.
 
-Module 1 begins with two pendula on a shared support — the simplest
-physical system in which all three roles will arrive together.
+Module 1 begins with the simplest object the rest of the curriculum
+needs: *one wave*. Three ingredients (restoration, inertia,
+coupling) combine to produce outward propagation, and six familiar
+physical effects fall out as consequences — planted without yet
+being named.
 
 History and naming for the three shapes (Euclid, Apollonius,
-crystallography) is in [`history.md`](history.md). Read it after you
-can comfortably re-describe each shape as its role, not its picture.
+crystallography) is in [`history.md`](history.md). Read it after
+you can comfortably re-describe each shape as its role, not its
+picture.
