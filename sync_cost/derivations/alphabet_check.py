@@ -10,7 +10,16 @@ Constructs the devil's staircase from the four primitives alone:
 Then computes n_s and N_efolds from the tree's population distribution
 at the fixed point of the rational field equation (Derivation 11).
 
-Target: N_efolds = √5 / rate ≈ 61.3 (the √5 prediction).
+Target: N_efolds = √5 / rate ≈ 61.3 (the √5 prediction, n_s-anchored
+frame: rate = (1 - n_s_obs)/ln(φ²) with Planck n_s_obs = 0.9649).
+
+[2026-06 supersession note] The substrate-forced cadence is now
+rate = 2/57 ≈ 0.0351 levels/e-fold (PRs #178/#179; see
+minimum_alphabet.md §3). Under that cadence the parallel prediction
+is N_efolds = √5 / (2/57) ≈ 63.7 (band [62, 66]). The n_s-anchored
+61.3 computed below is preserved as the Planck-anchored reference;
+the substrate-forced 63.7 and its predicted n_s ≈ 0.9662 are a
+separate Wave-1.5 audit (issue #263), not promoted here.
 
 All arithmetic is exact rational (Python's fractions.Fraction) until
 the final physical observables, which require floating point for
@@ -306,10 +315,12 @@ def extract_spectral_tilt(populations, tree_nodes):
     # n_s - 1 = density_slope × ln(φ²)
 
     # Wait — that's not right either. Let me just compute it directly.
-    # From k_omega_mapping.py:
-    #   rate = 0.0365 levels per e-fold
-    #   n_s - 1 = -rate × ln(φ²) = -0.0365 × 0.9624 = -0.0351
+    # From k_omega_mapping.py and the substrate-forced cadence (PRs #178/#179):
+    #   rate = 2/57 ≈ 0.0351 levels per e-fold
+    #   n_s - 1 = -rate × ln(φ²) = -0.0351 × 0.9624 = -0.0338
     # So: n_s - 1 = -rate × ln(φ²)
+    # (Earlier n_s-anchored rate ≈ 0.0365 superseded; predicted n_s ≈ 0.9662
+    # is a separate Wave-1.5 audit, not promoted here.)
     # And: rate = -(density_slope)  [if density is flat in SB coords,
     #       the tilt comes from the mapping, not the density]
     #

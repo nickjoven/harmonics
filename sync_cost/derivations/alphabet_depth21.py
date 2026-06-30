@@ -12,6 +12,15 @@ construction and the sum Σ 1/q².
 The final observables (A_s, n_s, N_efolds) are computed in floating
 point for comparison with Planck 2018 data.
 
+[2026-06 supersession note] This script's depth-21 calibration uses the
+n_s-anchored cadence rate (-0.0365 levels/e-fold, derived from observed
+n_s = 0.9649). The substrate-forced cadence is now 2/57 ≈ 0.0351 per the
+K(t) cadence closure (PRs #178/#179; see minimum_alphabet.md §3). Under
+the new cadence the depth-21 pivot identification may shift by ~0.5
+Fibonacci levels — re-derivation is tracked as Wave-2 follow-up (flagged
+in issue #263). The depth-21 logic below is preserved as-is pending that
+re-derivation; outputs labeled "observed" reflect the n_s-anchored frame.
+
 Usage:
     python3 sync_cost/derivations/alphabet_depth21.py [--max-depth 21]
 """

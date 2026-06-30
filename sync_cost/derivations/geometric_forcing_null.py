@@ -23,14 +23,16 @@ What this does NOT show: it does not establish a positive replacement. A
 stronger condition -- metric/curvature matching (isometric embedding of the
 cascade self-similarity into the FRW geometry), not a topological invariant
 -- WOULD constrain the map, but it carries one free rate parameter (cascade
-steps per unit FRW expansion). Whether that rate coincides with the n_s
-e-fold rate (0.0365 levels/e-fold; FRAMEWORK.md, alphabet_check.py) is an
-OPEN CONJECTURE, not a result: the inflationary k<->level mapping (which
-sets n_s) and the matter-era tongue<->epoch mapping (which sets the slope)
-are distinct, and continuity_in_K_nulls.md N12/S2 already catalogs treating
-one rate as another -- differing by exactly this 0.0365 -- as a 27x
-ambiguity null. So the rate is NOT shown to be the n_s rate here; that
-identification would itself need a derivation. The map stays Class-2.
+steps per unit FRW expansion). Whether that rate coincides with the
+inflation-segment cadence (2/57 ~ 0.0351 levels/e-fold, substrate-forced
+per PRs #178/#179; supersedes the earlier n_s-anchored ~0.0365 rate cited
+in continuity_in_K_nulls.md N12/S2) is an OPEN CONJECTURE, not a result:
+the inflationary k<->level mapping (which sets n_s) and the matter-era
+tongue<->epoch mapping (which sets the slope) are distinct, and the
+N12/S2 catalog of rate-conflation as an ambiguity null still applies
+under either cadence value. So the rate is NOT shown to be the
+inflation-segment cadence here; that identification would itself need a
+derivation. The map stays Class-2.
 
 Run: python3 geometric_forcing_null.py   (pure stdlib; ~5 s)
 """
@@ -96,11 +98,12 @@ def main() -> int:
     print("-" * 60)
     print("A positive replacement. Metric/curvature matching (not a topological")
     print("invariant) WOULD constrain the map, but carries one free rate: cascade")
-    print("steps per unit FRW expansion. Whether that rate IS the n_s e-fold rate")
-    print("(0.0365 levels/e-fold) is an OPEN CONJECTURE, not a result -- the")
-    print("inflationary k<->level map (sets n_s) and the matter-era tongue<->epoch")
-    print("map (sets the slope) are distinct, and continuity_in_K_nulls.md N12/S2")
-    print("flags rate-conflation (off by exactly 0.0365) as a 27x ambiguity null.")
+    print("steps per unit FRW expansion. Whether that rate IS the substrate-forced")
+    print("inflation cadence (2/57 ~ 0.0351 levels/e-fold; PRs #178/#179)")
+    print("is an OPEN CONJECTURE, not a result -- the inflationary k<->level")
+    print("map (sets n_s) and the matter-era tongue<->epoch map (sets the slope)")
+    print("are distinct, and continuity_in_K_nulls.md N12/S2 flags rate-conflation")
+    print("(off by a comparable factor) as an ambiguity null.")
     print("The station<->epoch map stays Class-2: D does not force it, and the")
     print("n_s identification is unproven. The frontier is unmoved -- one route")
     print("closed, no scale smuggled, no slope manufactured.")

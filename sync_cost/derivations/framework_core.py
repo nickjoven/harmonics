@@ -79,8 +79,12 @@ sin2_theta_W = lambda: duty(3) / (duty(2) + duty(3))
 # Gauge coupling ratio α_s/α₂ = duty(2)/duty(3) = 27/8.
 alpha_ratio = lambda: duty(2) / duty(3)
 
-# Spectral tilt: 0.0365 Fibonacci levels per CMB e-fold; one level per ln(φ²).
-n_s = lambda: 1 - log(phi_sq) / 27.4
+# Spectral tilt: 2/57 ≈ 0.0351 Fibonacci levels per CMB e-fold (substrate-forced
+# cadence per PRs #178/#179; see minimum_alphabet.md §3). Earlier n_s-anchored
+# rate ≈ 0.0365 (= 1/27.4) is superseded. The lambda below now returns the
+# substrate-side prediction n_s ≈ 0.9662; scorecard promotion of that value
+# is flagged as a separate Wave-1.5 audit (not promoted here).
+n_s = lambda: 1 - log(phi_sq) * Fraction(2, 57)
 
 
 # ── Tier 5: address (the only place anchors enter) ───────────────────────

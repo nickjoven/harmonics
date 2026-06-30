@@ -238,7 +238,10 @@ if __name__ == "__main__":
 
     bracket_width = 1 / (PHI**(2*21))  # width at level 21
     print(f"  Bracket width at level 21: {bracket_width:.4e}")
-    print(f"  E-folds spanning this bracket: {bracket_width / 0.0365 * 60:.4f}")
+    # Cadence: 2/57 ≈ 0.0351 levels/e-fold (substrate-forced per PRs #178/#179;
+    # supersedes the earlier n_s-anchored ≈ 0.0365). Depth-21 calibration may
+    # shift under the new cadence — Wave-2 follow-up.
+    print(f"  E-folds spanning this bracket: {bracket_width / (2/57) * 60:.4f}")
     print()
 
     for Q in [10, 50, 100, 500, 1000]:
