@@ -1,5 +1,5 @@
 {
-  "generated": "f4b9a800a80209fa6e451a99e06dfb6ed78d8f64",
+  "generated": "eefbdd722857347f2b0b4f3cdc6547d71a6be57c",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -19749,7 +19749,8 @@
         "phenomenology_cross_reference",
         "physics_relevance_measurement_catalog",
         "predictions_horizon_2026",
-        "salpeter_gate_disposition"
+        "salpeter_gate_disposition",
+        "variable_denominator"
       ],
       "edges": [
         {
@@ -19848,6 +19849,10 @@
         },
         {
           "source": "salpeter_gate_disposition",
+          "kind": "references"
+        },
+        {
+          "source": "variable_denominator",
           "kind": "references"
         }
       ],
@@ -24709,6 +24714,7 @@
         "primitives_vs_addresses_candidate",
         "q_mod2_mediant_projection",
         "qm_reframing_programmatic",
+        "rational_field_equation",
         "structural_lemmas",
         "variable_denominator"
       ],
@@ -24813,6 +24819,10 @@
         },
         {
           "source": "qm_reframing_programmatic",
+          "kind": "references"
+        },
+        {
+          "source": "rational_field_equation",
           "kind": "references"
         },
         {
@@ -31985,7 +31995,9 @@
       "sealed": false,
       "title": "The Rational Field Equation",
       "summary": "The field equation of the synchronization framework is a\nself-consistency condition on the Stern-Brocot tree, written in\nexact rational arithmetic using the four primitives of Derivation 10.\nThe continuum (PDE) form is a limit, not the primary object. The\nequation operates on rationals constructed by mediants because the\nphysical states it describes \u2014 mode-locked orbits \u2014 are rational.",
-      "depends_on": [],
+      "depends_on": [
+        "minimum_alphabet"
+      ],
       "depended_on_by": [
         "INDEX",
         "gap1_theorem",
@@ -31997,7 +32009,12 @@
         "quantum_gravity_interpolation",
         "thread_chronology"
       ],
-      "edges": [],
+      "edges": [
+        {
+          "target": "minimum_alphabet",
+          "kind": "references"
+        }
+      ],
       "edged_by": [
         {
           "source": "INDEX",
@@ -32037,6 +32054,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "d375d27",
+          "date": "2026-06-29",
+          "subject": "cadence 2/57: propagate substrate-forced rate across prose surfaces"
+        },
         {
           "hash": "b2deee7",
           "date": "2026-04-07",
@@ -37632,12 +37654,17 @@
       "title": "The Variable Denominator",
       "summary": "Hz \u2014 cycles per second \u2014 assumes the denominator is fixed. In a\nuniverse where time is synchronization rate (not background parameter),\nthe denominator changes between cycles. This breaks the factorization\n\"total operations = rate \u00d7 duration\" and replaces it with accumulated\nphase against a self-referential reference. The resulting bound on\ndistinguishable operations is:",
       "depends_on": [
+        "k_of_t_residual_disposition",
         "minimum_alphabet"
       ],
       "depended_on_by": [
         "k_of_t_problem_statement"
       ],
       "edges": [
+        {
+          "target": "k_of_t_residual_disposition",
+          "kind": "references"
+        },
         {
           "target": "minimum_alphabet",
           "kind": "references"
@@ -37650,6 +37677,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "d375d27",
+          "date": "2026-06-29",
+          "subject": "cadence 2/57: propagate substrate-forced rate across prose surfaces"
+        },
         {
           "hash": "350bb14",
           "date": "2026-05-28",
