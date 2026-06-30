@@ -1,5 +1,5 @@
 {
-  "generated": "f4b9a800a80209fa6e451a99e06dfb6ed78d8f64",
+  "generated": "27091760e0979bfa333d10c15ad7ded0368a6bf3",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -2348,6 +2348,7 @@
         "articulation_audit_2026-05",
         "basepoint_principle",
         "continuum_limits",
+        "f2_scoping",
         "framework_status",
         "free_parameter_scorecard",
         "graviton_reframing",
@@ -2417,6 +2418,10 @@
         },
         {
           "source": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "source": "f2_scoping",
           "kind": "references"
         },
         {
@@ -4314,6 +4319,7 @@
         "conservation_scale_stratification_audit",
         "continuum_limits",
         "discrete_extension_principle",
+        "f2_scoping",
         "figure_eight_necessitation_audit",
         "framework_status",
         "horn_branch_iteration_1",
@@ -4427,6 +4433,10 @@
         },
         {
           "source": "discrete_extension_principle",
+          "kind": "references"
+        },
+        {
+          "source": "f2_scoping",
           "kind": "references"
         },
         {
@@ -7966,6 +7976,7 @@
         "dynamical_quantization",
         "dynamical_tool_audit",
         "epr_bell_assembly_theorem",
+        "f2_scoping",
         "framework_status",
         "gap1_theorem",
         "gap2_step4_farey_laplacian",
@@ -8107,6 +8118,10 @@
         },
         {
           "source": "epr_bell_assembly_theorem",
+          "kind": "references"
+        },
+        {
+          "source": "f2_scoping",
           "kind": "references"
         },
         {
@@ -11560,9 +11575,16 @@
       "title": "Engineering Targets",
       "summary": "**Proposed.** All four targets are specified in terms of established\nresults (D18-D19 simulations). None depend on the conjectural particle\nphysics identification. The N=3 M\u00f6bius ring is immediately buildable.",
       "depends_on": [],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "f2_scoping"
+      ],
       "edges": [],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "f2_scoping",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "b2deee7",
@@ -12375,6 +12397,77 @@
           "hash": "9a97408",
           "date": "2026-05-10",
           "subject": "Pedagogical: link EML/lambda split to bowed-string/clarinet/flute trio (#96)"
+        }
+      ]
+    },
+    {
+      "id": "f2_scoping",
+      "path": "sync_cost/derivations/f2_scoping.md",
+      "cid": null,
+      "sealed": false,
+      "title": "F2 scoping \u2014 Klein \u2192 gauge continuum limit (Yang-Mills target)",
+      "summary": "**Class 3 articulation; no derivation attempted in this PR.**\nF2's open question is restructured: the frame-bundle approach\nis closed with a substrate-documented negative result; two\nspecific open possibilities (discrete-is-physical / mean-field\nfunctional) remain, each with closure and refutation criteria\narticulated; four candidate techniques are cataloged with bright\nlines; the Basepoint Principle discriminator applies if\ntechniques fail.",
+      "depends_on": [
+        "anchor_count_reaudit",
+        "basepoint_principle",
+        "continuum_limits",
+        "engineering_targets",
+        "framework_status",
+        "gauge_factorization",
+        "klein_bottle",
+        "klein_bottle_derivation",
+        "rational_field_equation",
+        "xor_continuum_limit"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "anchor_count_reaudit",
+          "kind": "references"
+        },
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "engineering_targets",
+          "kind": "references"
+        },
+        {
+          "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_factorization",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_derivation",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
+          "kind": "references"
+        },
+        {
+          "target": "xor_continuum_limit",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "b079a84",
+          "date": "2026-06-29",
+          "subject": "F2 scoping doc + companion substrate-side simulators (#270)"
         }
       ]
     },
@@ -13463,6 +13556,7 @@
         "epr_bell_assembly_theorem",
         "epsilon_physical_reading",
         "era_timeline_disposition",
+        "f2_scoping",
         "figure_eight",
         "free_parameter_scorecard",
         "h_inf_status",
@@ -13965,6 +14059,10 @@
         },
         {
           "source": "era_timeline_disposition",
+          "kind": "references"
+        },
+        {
+          "source": "f2_scoping",
           "kind": "references"
         },
         {
@@ -15419,6 +15517,7 @@
         "articulation_audit_2026-05",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_b",
+        "f2_scoping",
         "gauge_dictionary",
         "gauge_high_scale_identification",
         "gluon_reframing",
@@ -15456,6 +15555,10 @@
         },
         {
           "source": "down_type_double_cover_phase_b",
+          "kind": "references"
+        },
+        {
+          "source": "f2_scoping",
           "kind": "references"
         },
         {
@@ -20186,6 +20289,7 @@
         "dynamical_tool_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
         "epr_bell_assembly_theorem",
+        "f2_scoping",
         "figure_eight",
         "figure_eight_necessitation_audit",
         "framework_status",
@@ -20352,6 +20456,10 @@
         },
         {
           "source": "epr_bell_assembly_theorem",
+          "kind": "references"
+        },
+        {
+          "source": "f2_scoping",
           "kind": "references"
         },
         {
@@ -20688,6 +20796,7 @@
         "conservation_scale_stratification_audit",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_c",
+        "f2_scoping",
         "figure_eight",
         "figure_eight_necessitation_audit",
         "gap2_theorem_attempt",
@@ -20774,6 +20883,10 @@
         },
         {
           "source": "down_type_double_cover_phase_c",
+          "kind": "references"
+        },
+        {
+          "source": "f2_scoping",
           "kind": "references"
         },
         {
@@ -31988,6 +32101,7 @@
       "depends_on": [],
       "depended_on_by": [
         "INDEX",
+        "f2_scoping",
         "gap1_theorem",
         "gap2_spatialization_decomposition",
         "gap_1_christoffel",
@@ -32001,6 +32115,10 @@
       "edged_by": [
         {
           "source": "INDEX",
+          "kind": "references"
+        },
+        {
+          "source": "f2_scoping",
           "kind": "references"
         },
         {
@@ -38803,12 +38921,17 @@
       "depends_on": [],
       "depended_on_by": [
         "audit_findings_3_4_disposition",
+        "f2_scoping",
         "klein_connection"
       ],
       "edges": [],
       "edged_by": [
         {
           "source": "audit_findings_3_4_disposition",
+          "kind": "references"
+        },
+        {
+          "source": "f2_scoping",
           "kind": "references"
         },
         {
