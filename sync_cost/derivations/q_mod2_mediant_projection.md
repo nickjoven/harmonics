@@ -43,7 +43,10 @@ theorem.
 
 Applied to the K(t) inflation cadence band
 (`k_of_t_problem_statement.md` §3 + §"Identification 4 scope"; the
-audit-revised `0.0365 ± 0.004` per Planck 1σ on `n_s`), the projection
+audit-revised `0.0365 ± 0.004` per Planck 1σ on `n_s` — an n_s-anchored
+band that the substrate-forced `2/57 ≈ 0.0351` of PRs #178/#179
+supersedes for cadence cites, though the projection logic here is
+cadence-agnostic), the projection
 narrows the cluster of `(p, q)` candidates by half. Combined with
 inviolable #6 (exact structural integers `{2, 3, 13, 19}`), only three
 candidates survive both filters jointly — one per (distinct)

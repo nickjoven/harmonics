@@ -158,7 +158,7 @@ canonical derivation never landed as a doc.
 **Result (null)**: All three coefficients open. Three sub-gaps:
 
 - **S1 (R gauge ambiguity)**: R = δθ vs δθ/(2π) vs other; `sigma_squared.py` uses one but doesn't derive the canonical normalization.
-- **S2 (formula-meaning ambiguity)**: same expression treated as per-bracket variance AND per-d-ln-k power in different sections; differ by `rate ≈ 0.0365`, a 27× ambiguity.
+- **S2 (formula-meaning ambiguity)**: same expression treated as per-bracket variance AND per-d-ln-k power in different sections; differ by `rate ≈ 0.0365` (n_s-anchored frame; the substrate-forced cadence `2/57 ≈ 0.0351` from PRs #178/#179 doesn't close this ambiguity — see `geometric_forcing_null.py`), a 27× ambiguity.
 - **S3 (q^-2 source ambiguity)**: gate fraction (W1) vs inverse mode density (W2); both produce 1/q² scaling but predict different prefactors.
 
 **Constraint on C5**: closely parallels the C5 audit's β

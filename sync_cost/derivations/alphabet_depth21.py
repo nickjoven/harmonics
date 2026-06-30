@@ -247,6 +247,8 @@ if __name__ == "__main__":
               f"{tilt_g:10.6f}  {tilt_c:10.6f}")
 
     print()
+    # Crossover targets below use the n_s-anchored rate (-0.0365); the
+    # substrate-forced rate is 2/57 ~ 0.0351 - see header supersession note.
     if crossover_g:
         print(f"  Geometric tilt crosses -0.0365 at d = {crossover_g}")
     if crossover_c:
