@@ -1,0 +1,186 @@
+/* Concentric view — overrides + new rules layered on docs/style.css */
+
+body {
+  max-width: 64em;   /* wider than the reference page; the SVG needs room */
+}
+
+.subtitle {
+  color: var(--text-dim);
+  font-style: italic;
+  margin-bottom: 2em;
+  max-width: 44em;
+}
+.subtitle em {
+  color: var(--text);
+  font-style: normal;
+}
+
+.concentric-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 18em;
+  gap: 1.5em;
+  align-items: start;
+  margin-bottom: 3em;
+}
+
+@media (max-width: 800px) {
+  .concentric-layout { grid-template-columns: 1fr; }
+}
+
+#concentric {
+  width: 100%;
+  height: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  display: block;
+}
+
+/* SVG element classes */
+
+.cn-band {
+  fill: var(--green);
+  opacity: 0.06;
+}
+.cn-band-edge {
+  stroke: var(--green);
+  stroke-width: 1;
+  stroke-dasharray: 2 4;
+  opacity: 0.4;
+  fill: none;
+}
+.cn-band-label {
+  fill: var(--green);
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 11px;
+  text-anchor: middle;
+  opacity: 0.85;
+}
+
+.cn-ring {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 1;
+  stroke-dasharray: 3 5;
+  opacity: 0.5;
+}
+
+.cn-edge {
+  stroke: var(--accent-dim);
+  stroke-width: 1;
+  opacity: 0.4;
+  fill: none;
+}
+.cn-edge.cn-edge-trunk {
+  stroke: var(--text-dim);
+  stroke-width: 1.5;
+  opacity: 0.75;
+}
+
+.cn-node {
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+.cn-node circle {
+  transition: r 0.15s ease, stroke-width 0.15s ease;
+}
+.cn-node text {
+  font-family: 'Georgia', serif;
+  font-size: 11px;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Center: the wave root */
+.cn-node.cn-root circle  { fill: var(--text-bright); stroke: var(--gold); stroke-width: 1.5; }
+.cn-node.cn-root text    { fill: var(--bg); font-weight: bold; }
+
+/* Three ingredients */
+.cn-node.cn-ingredient circle { fill: var(--accent); stroke: var(--text-bright); stroke-width: 1; }
+.cn-node.cn-ingredient text   { fill: var(--text); }
+
+/* Observations */
+.cn-node.cn-observation circle  { fill: var(--accent-dim); stroke: var(--accent); stroke-width: 1.5; }
+.cn-node.cn-observation text    { fill: var(--text-bright); font-weight: bold; }
+
+/* Walls — gold, larger */
+.cn-node.cn-wall circle { fill: var(--gold); stroke: var(--text-bright); stroke-width: 2; }
+.cn-node.cn-wall text   { fill: var(--text-bright); font-weight: bold; }
+
+/* Framework nodes — small, blue, dimmer */
+.cn-node.cn-framework circle { fill: var(--bg-card); stroke: var(--link); stroke-width: 1; }
+.cn-node.cn-framework text   { fill: var(--text-dim); font-size: 9px; }
+
+/* Hover state */
+.cn-node:hover circle    { stroke-width: 3; r: 10; }
+.cn-node.cn-active circle{ stroke-width: 3; }
+.cn-node.cn-dim          { opacity: 0.2; }
+
+/* You-are-here marker */
+.cn-here {
+  fill: var(--green);
+  stroke: var(--text-bright);
+  stroke-width: 1.5;
+}
+.cn-here-label {
+  fill: var(--green);
+  font-family: 'Georgia', serif;
+  font-size: 11px;
+  text-anchor: middle;
+  font-weight: bold;
+}
+
+/* Info panel */
+#info-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.2em 1.4em;
+  position: sticky;
+  top: 1em;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.info-kind {
+  font-size: 0.7em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.3em;
+}
+#info-title {
+  font-size: 1.05em;
+  color: var(--text-bright);
+  margin: 0 0 0.6em 0;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: normal;
+}
+#info-summary {
+  color: var(--text);
+  margin: 0;
+}
+#info-link {
+  margin-top: 0.8em;
+  font-size: 0.9em;
+}
+#info-link a {
+  color: var(--link);
+  text-decoration: none;
+}
+#info-link a:hover { color: var(--link-hover); text-decoration: underline; }
+
+/* Narrative section under the diagram */
+.narrative {
+  border-top: 1px solid var(--border);
+  padding-top: 1.5em;
+  max-width: 44em;
+}
+.narrative p { margin-bottom: 1em; }
+.footnote {
+  font-size: 0.85em;
+  color: var(--text-dim);
+  margin-top: 1.5em;
+}
+.footnote a { color: var(--link); }

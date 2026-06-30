@@ -1,0 +1,75 @@
+{
+  "_comment": "Concentric-view anchors. The root is a wave propagating outward; everything in this file is constructed in sync_cost/curriculum/01_what_a_wave_is. The six observations are planted (un-named) at the end of that module and named in the (not-yet-written) Module 1a. Each observation links to one or more framework nodes — these IDs MUST exist in derivation-graph.json and the link should be verified before edits.",
+  "root": {
+    "id": "wave_outward",
+    "label": "wave outward",
+    "summary": "A disturbance propagating from one point to another through a medium with restoring tendency, inertia, and coupling between neighbors. The single object every claim in this graph descends from."
+  },
+  "ingredients": [
+    {
+      "id": "restoration",
+      "label": "restoration",
+      "summary": "Near any rest state, the energy is locally a parabola; the restoring force is proportional to displacement. Forced by the local-parabola role planted in Module 0."
+    },
+    {
+      "id": "inertia",
+      "label": "inertia",
+      "summary": "Mass means the medium overshoots when restored. Without it, no oscillation. With it, period 2π·√(m/k)."
+    },
+    {
+      "id": "coupling",
+      "label": "coupling",
+      "summary": "A force between neighbors that responds to their *relative* displacement. Translation symmetry of the medium forces this form. What turns a row of oscillators into a wave."
+    }
+  ],
+  "observations": [
+    {
+      "id": "doppler",
+      "label": "Doppler shift",
+      "angle_oclock": 1.5,
+      "summary": "Relative motion between source and observer shifts the measured frequency. Direct from wave-outward + relative motion.",
+      "links": ["fm_beat_crt_correspondence_audit"]
+    },
+    {
+      "id": "redshift",
+      "label": "redshift",
+      "angle_oclock": 4.5,
+      "summary": "The cosmic-scale version of the same effect: distant sources, receding as the cosmos stretches, are measured at lower frequencies. The shift grows with distance.",
+      "links": ["spectral_tilt", "high_z_mond", "graviton_reframing"]
+    },
+    {
+      "id": "dilation",
+      "label": "time dilation",
+      "angle_oclock": 7.5,
+      "summary": "If a wave's propagation speed is the same for every observer, time and distance must be measured differently by different observers. The wave's constancy forces the geometry.",
+      "links": ["einstein_from_kuramoto", "continuum_limits", "gap1_theorem"]
+    },
+    {
+      "id": "mass_energy",
+      "label": "E = mc²",
+      "angle_oclock": 10.5,
+      "summary": "A wave confined to a small region carries energy proportional to its frequency of confinement. That confined energy, pinned in place, is what we call mass.",
+      "links": ["mass_sector_closure", "fermion_mass_running", "generation_mechanism"]
+    },
+    {
+      "id": "planck_wall",
+      "label": "Planck wall",
+      "angle_oclock": 9,
+      "is_wall": "min",
+      "summary": "The smallest-scale wall. Below this confinement scale, the energy required to localize the wave makes its own gravitational horizon. No wave can be defined further in.",
+      "links": ["hierarchy_gaussian_lattice", "klein_bottle", "L1_substrate_cusp_ground_state"]
+    },
+    {
+      "id": "hubble_wall",
+      "label": "Hubble wall",
+      "angle_oclock": 3,
+      "is_wall": "max",
+      "summary": "The largest-scale wall. Above this wavelength, the cosmos stretches faster than the wave can complete a cycle. No wave can complete a coherent oscillation further out.",
+      "links": ["hierarchy_gaussian_lattice", "a0_threshold", "address_and_quantity"]
+    }
+  ],
+  "our_band": {
+    "label": "where we live",
+    "summary": "Our frequency — sound, light, chemistry, biology — sits decades-deep between the two walls. The behavior at our frequency is extremely stable because we are far from both boundaries; no boundary correction matters at our scale. The framework's dramatic moves happen at the walls; here, locally, the construction simply holds."
+  }
+}
