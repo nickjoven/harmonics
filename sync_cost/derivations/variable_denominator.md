@@ -496,12 +496,13 @@ Cosmological expansion in this framing:
 - **What doesn't move**: the existing rational structure (antinodes)
 - **What drives it**: accumulation of Hubble cycles (denominator
   stability)
-- **The rate**: one new Fibonacci level per ~27.4 e-folds of expansion
-  (Identification 4: rate = 0.0365 levels/e-fold, contingent on
-  `cadence = (1−n_s)/ln(φ²)` — see `minimum_alphabet.md` "Identification
-  cluster" for the N13 cluster note flagging that `1/q₃³ ≈ 0.0370` is a
-  competing substrate-only candidate within tolerance; the identification
-  is *not* a derivation from primitives)
+- **The rate**: one new Fibonacci level per ≈28.5 e-folds of expansion
+  (substrate-forced `cadence = 2/57 = 2/(q₃·19_Λ) ≈ 0.0351` levels/e-fold,
+  per the K(t) cadence closure PRs #178/#179 — see `minimum_alphabet.md`
+  §3 and `k_of_t_residual_disposition.md`. The earlier n_s-anchored
+  identification `cadence = (1−n_s)/ln(φ²) ≈ 0.0365` is superseded; the
+  forced candidate set `{1/26, 1/27, 2/57} → {58.1, 60.4, 63.7}` e-folds
+  selects `2/57` via Q-mod-2 mediant projection + XOR lock)
 
 The redshift of distant galaxies is not "space stretching" in this
 picture. It is the frequency ratio between emission and observation

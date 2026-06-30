@@ -64,11 +64,16 @@ an exactly scale-invariant power spectrum in the natural Stern-Brocot
 coordinates (the binary tree that enumerates all rationals by mediant insertion, providing the natural indexing of mode-locked plateaus). The 3.5% tilt comes from the mapping between the staircase's
 Fibonacci levels and the CMB wavenumber k.
 
-The mapping traverses 0.0365 Fibonacci levels per e-fold of k (one
-level per 27.4 e-folds). In 60 e-folds of observable inflation, the
-universe samples ~2.2 Fibonacci levels — a tiny slice of the self-similar
-hierarchy. The amplitude A_s ≈ 2.1 × 10⁻⁹ places the pivot at level
-~21 (F₂₁ = 17711).
+The mapping traverses `2/57 ≈ 0.0351` Fibonacci levels per e-fold of k
+(one level per ≈28.5 e-folds; substrate-forced cadence per PRs #178/#179,
+see `derivations/minimum_alphabet.md` §3 and `derivations/k_of_t_residual_disposition.md`).
+In the derived `N_efolds = √5 / (2/57) ≈ 63.7` e-folds of observable
+inflation, the universe samples `√5 ≈ 2.24` Fibonacci levels — a tiny
+slice of the self-similar hierarchy. The amplitude A_s ≈ 2.1 × 10⁻⁹
+places the pivot at level ~21 (F₂₁ = 17711). The earlier n_s-anchored
+rate `≈ 0.0365` (derived from observed `n_s`) is superseded; the
+predicted `n_s ≈ 0.9662` from the substrate-forced cadence is flagged
+as a separate Wave-1.5 audit (not promoted here).
 
 The staircase provides exact scale-invariance; inflation provides the
 tilt. See `derivations/framework_status.md` for the at-a-glance
