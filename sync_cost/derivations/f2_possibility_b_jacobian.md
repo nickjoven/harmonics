@@ -1,5 +1,46 @@
 # F2 Possibility B — Jacobian at the 4-mode XOR fixed point
 
+## Status
+
+**Structural-attempt null for Possibility B of [[f2_scoping]].**
+The 4-mode XOR-filtered Jacobian of the D11 field equation is
+well-defined only in the discrete regime (the substrate-derived
+K=1 Hamiltonian of [[discrete_reduction_computed]]); its symmetry
+group is at most U(1)^4, and dimension counting rules out
+SU(3)×SU(2)×U(1) inside u(4) at the derived non-degenerate
+spectrum {0, 3.645, 9.580, 11.515}. In the continuum regime the
+XOR filter dissolves per [[xor_continuum_limit]], so B's stated
+premise ("4-mode XOR-filtered fixed point") does not exist as a
+distinct object. Obstructions are **exhibited** in both regimes.
+
+Under [[basepoint_principle]]: Possibility B is **structurally
+declined** (obstructions exhibited on the substrate's own
+outputs) rather than operationally open. B joins the frame-bundle
+approach ([[xor_continuum_limit]] §"What the topology does NOT
+produce") as a second closed technique for F2.
+
+**This closes Possibility B, not the F2 epic (#268).** The epic
+remains open on Possibility A ("discrete is physical"), whose
+closure criterion (finite tree reproduces gauge theory predictions
+without continuum limit) is untouched by this doc. Per the F2
+scoping doc's own three-way discriminator, honest-null closure of
+F2 requires "multiple substrate-aligned techniques refuted with
+named obstruction"; two of the four scoping-doc techniques are
+now closed (frame-bundle in PR-1, F[N] Jacobian here), leaving
+Possibility A's finite-tree techniques (Wilson-action on the
+discrete tree; RG flow on the XOR-filtered measure) as the
+remaining substrate-aligned attempts.
+
+Class: 3 (arc-closing step for one F2 possibility; no new
+primitive). Canonical vocabulary: **productive null** at the
+possibility-arc level per [[canonical_glossary]] Section 8 —
+"an arc that surfaces obstructions on substrate-admitted
+possibility-space" — but stronger than the Koide-iter-14
+disposition (operationally open, no obstruction proven), because
+obstructions ARE exhibited here.
+
+---
+
 ## What this doc is — and what it is not
 
 Possibility B of [[f2_scoping]] (F2 epic, #268) claims that
@@ -15,11 +56,14 @@ and articulated a bright line:
 > analysis.
 
 This doc executes that calculation on the substrate as it stands.
-The finding is **honest-null closure for Possibility B, in both
-the discrete and continuum regimes**, for the reasons below. No
-positive derivation is claimed; no fitted structure is asserted.
+No positive derivation is claimed; no fitted structure is
+asserted. Framework-wide vocabulary alignment (per Koide-iter-14
+template): B is a **structural-attempt null** — the ledger's
+`Eliminated` shelf category for "structural attempts tested null"
+([[framework_status]] line 184), not the empirical shelf category
+Koide K_lepton = 2/3 was moved to.
 
-Consequence for F2: Possibility A ([[xor_continuum_limit]]
+Consequence for the F2 epic: Possibility A ([[xor_continuum_limit]]
 reading 1, "discrete is physical") now bears the entire remaining
 weight of the F2 question, or the framework must move to a
 Basepoint-Principle discriminator-decline
@@ -229,7 +273,7 @@ is not well-defined in the continuum — the "4-mode XOR-filtered
 fixed point" it names does not exist as a distinct object when the
 XOR filter dissolves. **B's premise is untenable in the continuum.**
 
-## Combined honest-null closure
+## Combined disposition — structural-attempt null
 
 Possibility B has:
 
@@ -240,11 +284,14 @@ Possibility B has:
   criterion invokes does not exist. B's premise fails to hold.
 
 There is no regime where B's closure criterion is **both**
-well-defined **and** could yield SU(3)×SU(2)×U(1). B is closed as
-an **honest-null** result with named obstruction: the XOR filter
-that defines the 4-mode structure is discrete-only, and the
-resulting discrete Hamiltonian's spectrum (substrate-derived,
-non-degenerate) admits only abelian symmetry.
+well-defined **and** could yield SU(3)×SU(2)×U(1). Obstructions
+are exhibited in both regimes: the substrate-derived non-
+degenerate spectrum (discrete) and the XOR-filter dissolution
+(continuum). Per [[framework_status]] line 184's ledger category,
+this is a **structural-attempt null** — B moves to the
+`Eliminated` shelf as a derivation-strategy attempt tested null,
+not to the empirical shelf (which houses noted-but-not-derived
+values like Koide K_lepton = 2/3 or sin²θ_W).
 
 ## What this means for F2 (updates to [[f2_scoping]])
 
@@ -264,16 +311,16 @@ closed:
 - **Discriminator-decline** remains available: show that gauge
   structure necessarily requires an observational anchor parallel
   to the two-anchor minimum's disposition in
-  `anchor_count_reaudit.md`. B's honest-null closure is one of the
-  "multiple substrate-aligned techniques refuted" the discriminator
-  requires; with the frame-bundle also closed (PR-1) that gives two
-  named obstructions. A third — attempting Possibility A and
-  finding a specific finite-tree obstruction — would let the
-  discriminator activate.
+  `anchor_count_reaudit.md`. B's structural-attempt null is one of
+  the "multiple substrate-aligned techniques refuted" the
+  discriminator requires; with the frame-bundle also closed (PR-1)
+  that gives two named obstructions. A third — attempting
+  Possibility A and finding a specific finite-tree obstruction —
+  would let the discriminator activate.
 
 The F2 epic issue (#268) closure criteria are otherwise unchanged.
-B's honest-null closure counts as Wave-3 progress per the epic
-body ("negative results being a valid outcome").
+B's structural-attempt null counts as Wave-3 progress per the
+epic body ("negative results being a valid outcome").
 
 ## What is **not** claimed
 
@@ -292,24 +339,30 @@ body ("negative results being a valid outcome").
 - **No claim that SU(3)×SU(2)×U(1) is impossible in the framework.**
   The combinatorial identification Z_6 = Z_2 × Z_3
   (`gauge_factorization.md`) stands as Class 3. B's closure would
-  have promoted it to forced; B's honest-null leaves it at
-  Class 3.
+  have promoted it to forced; B's structural-attempt null
+  leaves it at Class 3.
 
-## Downstream updates (proposed, not applied here)
+## The disposition update
 
-Not edited in this PR — proposed for follow-up PRs:
+Applied to the framework's canonical ledgers in follow-up PRs
+(not edited here):
 
-- `framework_status.md` — new entry under an appropriate section
-  (Eliminated? Honest-null? — the ledger's existing categories
-  don't have an obvious slot for "possibility within an epic
-  closed with named obstruction"; this may require a new category
-  or a `[[f2_epic_state]]` pointer doc)
-- `MANIFEST.yml::scorecard::gauge_group::closure_status` —
-  refresh to note that B is closed honest-null; the entry stays
-  at Class 5 combinatorial identification, not promoted to
-  continuum-limit derivation
-- `f2_scoping.md` §"Open possibilities" — mark B as closed
-  honest-null, cite this doc
+| Item | Previous | Updated |
+|---|---|---|
+| `framework_status.md` **Eliminated** section | 5 structural-attempt nulls listed (line 184-190) | Add: "F2 Possibility B — F[N] Jacobian at 4-mode XOR fixed point — abelian symmetry (U(1)^4 at derived spectrum) + XOR dissolves in continuum; both regimes obstruct SU(3)×SU(2)×U(1). See `f2_possibility_b_jacobian.md`" |
+| `MANIFEST.yml::scorecard::gauge_group::closure_status` | Class 5 (exact) — combinatorial Z_6 = Z_2 × Z_3 | Unchanged — the combinatorial identification stands at Class 5; B's null forecloses its promotion to continuum-limit derivation but does not demote the existing identification |
+| `f2_scoping.md` §"Open possibilities" | A and B both open | B marked closed (structural-attempt null); A remains open; pointer to this doc |
+| F2 epic (#268) | Two possibilities open | One remaining (A); progress toward "multiple techniques refuted" threshold for eventual honest-null closure of F2 itself (2 of 4 scoping-doc techniques now closed) |
+
+Not proposed:
+
+- No new entry on the empirical shelf (B is not a value, it is
+  a derivation strategy)
+- No update to Class 5 gauge_group identification — the Z_6 =
+  Z_2 × Z_3 combinatorial coincidence stands independent of B
+- No discriminator-decline yet; two named obstructions is one
+  short of the "multiple techniques" threshold per the scoping
+  doc's own criteria
 
 ## Cross-references
 
@@ -325,36 +378,18 @@ Not edited in this PR — proposed for follow-up PRs:
 | `anchor_count_reaudit.md` | Template for a discriminator-decline closure |
 | `gauge_factorization.md` | The Z_6 = Z_2 × Z_3 combinatorial identification — Class 3 stands |
 
-## Status
+## One-line summary
 
-**F2 Possibility B: honest-null closure.** The 4-mode XOR-filtered
-Jacobian is well-defined in the discrete regime and yields an
-abelian symmetry group (at most U(1)^4) directly from the
-substrate-derived non-degenerate spectrum
-{0, 3.645, 9.580, 11.515}; the bright-line "scalar coupling → B
-refuted" is struck for all-to-all F, and dimension counting rules
-out SU(3)×SU(2)×U(1) inside u(4) for the derived spectrum. In the
-continuum regime, the XOR filter dissolves per
-[[xor_continuum_limit]], so B's premise ("4-mode XOR-filtered fixed
-point") does not exist as a distinct object. No regime supports B's
-closure criterion.
-
-Open: (a) Possibility A ("discrete is physical") — now bears F2's
-remaining weight; closure requires the finite tree to reproduce
-gauge theory predictions without continuum limit. (b) Discriminator-
-decline — B's honest-null joins the frame-bundle negative result
-as a second named obstruction, one short of the multi-technique
-threshold the Basepoint Principle requires. (c) D11 Open Q #1 —
-F[N] for intermediate K remains underived; this doc's discrete-
-regime bounds are stable across candidate forms, so closing Q #1
-would sharpen but not overturn B's honest-null.
-
-Side: substrate-side, honest-null closure of a Wave-3 possibility.
-Class: partial F2 progress via named obstruction (Wave-3 valid
-outcome per #268 epic body). Not a new derivation; a bounded
-closure of one of the epic's two open possibilities.
-Downstream: PR-4 candidates — (i) attempt Possibility A on a
-specific finite-tree observable (anomaly cancellation is the
-scoping doc's example); (ii) discriminator-decline articulation
-if A hits its own obstruction. Selection deferred to a #268
-epic-comment after this PR merges.
+Possibility B of the F2 epic — gauge groups from the F[N]
+Jacobian at the 4-mode XOR fixed point with structure constants
+matching SU(3)×SU(2)×U(1) — closes as a **structural-attempt null**
+with obstructions exhibited in both regimes: the substrate-derived
+non-degenerate spectrum {0, 3.645, 9.580, 11.515} admits at most
+U(1)^4 symmetry (dimension counting rules out SU(3)×SU(2)×U(1)
+inside u(4)) in the discrete regime, and the XOR filter that
+defines the 4-mode structure dissolves in the continuum regime;
+Possibility B moves to [[framework_status]]'s `Eliminated` shelf
+as a derivation-strategy null. The F2 epic itself remains open on
+Possibility A ("discrete is physical"); this doc closes one of
+its two remaining substrate-aligned techniques, joining the frame-
+bundle refutation from [[xor_continuum_limit]].
