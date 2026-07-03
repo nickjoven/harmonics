@@ -78,6 +78,11 @@ body {
   opacity: 0.75;
 }
 
+/* Tier-coded link styles (visible on framework-node edges) */
+.cn-edge.cn-tier-1 { stroke: var(--accent);    stroke-width: 1.4; opacity: 0.7;  }
+.cn-edge.cn-tier-2 { stroke: var(--accent-dim); stroke-width: 1.1; opacity: 0.6;  stroke-dasharray: 4 4; }
+.cn-edge.cn-tier-3 { stroke: var(--text-dim);   stroke-width: 1;   opacity: 0.45; stroke-dasharray: 1 4; }
+
 .cn-node {
   cursor: pointer;
   transition: opacity 0.15s ease;
@@ -108,9 +113,54 @@ body {
 .cn-node.cn-wall circle { fill: var(--gold); stroke: var(--text-bright); stroke-width: 2; }
 .cn-node.cn-wall text   { fill: var(--text-bright); font-weight: bold; }
 
-/* Framework nodes — small, blue, dimmer */
-.cn-node.cn-framework circle { fill: var(--bg-card); stroke: var(--link); stroke-width: 1; }
-.cn-node.cn-framework text   { fill: var(--text-dim); font-size: 9px; }
+/* Framework nodes — small, blue, dimmer. Tier-coded fills. */
+.cn-node.cn-framework circle              { stroke-width: 1; }
+.cn-node.cn-framework text                { fill: var(--text-dim); font-size: 9px; }
+.cn-node.cn-framework.cn-tier-1 circle    { fill: var(--link);    stroke: var(--link-hover); stroke-width: 1.2; }
+.cn-node.cn-framework.cn-tier-2 circle    { fill: var(--bg-card); stroke: var(--link);       stroke-width: 1.2; }
+.cn-node.cn-framework.cn-tier-3 circle    { fill: var(--bg-card); stroke: var(--text-dim);   stroke-width: 1; stroke-dasharray: 2 2; }
+.cn-node.cn-framework.cn-tier-1 text      { fill: var(--text); font-style: normal; }
+.cn-node.cn-framework.cn-tier-2 text      { fill: var(--text-dim); font-style: normal; }
+.cn-node.cn-framework.cn-tier-3 text      { fill: var(--text-dim); font-style: italic; }
+
+/* Anchor-level tier badge (small subscript-like marker next to observation labels) */
+.cn-anchor-badge {
+  font-family: 'Georgia', serif;
+  font-size: 8px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  user-select: none;
+}
+.cn-anchor-badge.cn-tier-1 { fill: var(--accent); }
+.cn-anchor-badge.cn-tier-2 { fill: var(--text-dim); }
+.cn-anchor-badge.cn-tier-3 { fill: var(--gold); opacity: 0.9; }
+
+/* Legend (rendered inside the SVG) */
+.cn-legend-bg {
+  fill: var(--bg);
+  stroke: var(--border);
+  stroke-width: 1;
+  opacity: 0.92;
+}
+.cn-legend-title {
+  fill: var(--text-dim);
+  font-family: 'Georgia', serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.cn-legend-label {
+  fill: var(--text);
+  font-family: 'Georgia', serif;
+  font-size: 11px;
+}
+.cn-legend-desc {
+  fill: var(--text-dim);
+  font-family: 'Georgia', serif;
+  font-size: 9px;
+  font-style: italic;
+}
 
 /* Hover state */
 .cn-node:hover circle    { stroke-width: 3; r: 10; }
@@ -165,6 +215,23 @@ body {
   margin-top: 0.8em;
   font-size: 0.9em;
 }
+#info-summary {
+  white-space: pre-line;     /* preserve the \n\n we inject between blocks */
+}
+.info-tier {
+  display: inline-block;
+  padding: 1px 6px;
+  font-size: 0.7em;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  border-radius: 2px;
+  margin-right: 0.4em;
+  vertical-align: 1px;
+  border: 1px solid;
+}
+.info-tier-t1 { color: var(--accent);     border-color: var(--accent); }
+.info-tier-t2 { color: var(--text-dim);   border-color: var(--accent-dim); }
+.info-tier-t3 { color: var(--gold);       border-color: var(--gold); opacity: 0.9; }
 #info-link a {
   color: var(--link);
   text-decoration: none;

@@ -72,9 +72,49 @@ open its source.</em>
     where the construction first breaks down. Locally, the behavior is
     stable because it is heavily reinforced from below and from above.
   </p>
+
+  <h2>Reading the tiers</h2>
+  <p>
+    Not every familiar observation in the ring is something the framework
+    derives from substrate. The legend at lower-left distinguishes three
+    derivation tiers, and each link in the diagram carries its tier in
+    its edge style and the framework-node fill:
+  </p>
+  <ul>
+    <li><strong>T1 (derived)</strong> — solid edges, filled framework
+      nodes. The framework constructs the observation (or a clean
+      substrate analog) from its primitives.
+      <em>Time dilation, Planck wall, Hubble wall</em> survive this bar:
+      Einstein's equations fall out of the Kuramoto continuum limit at
+      K=1, and the Planck/Hubble ratio is derived to 0.48%.</li>
+    <li><strong>T2 (engaged)</strong> — dashed edges, hollow framework
+      nodes. The framework engages with the observation or makes
+      predictions parametric in it, but does not derive the observation
+      itself. <em>Redshift and E = mc²</em> sit here: the framework
+      consumes z as a coordinate and derives mass <em>ratios</em>, but
+      neither the cosmic stretch nor the inertia↔energy equivalence is
+      constructed from substrate.</li>
+    <li><strong>T3 (imported)</strong> — dotted edges, dashed-outline
+      nodes. A textbook landmark with no constructive substrate
+      engagement. <em>Doppler</em> alone falls in this bracket: the
+      framework's intra-substrate frequency arithmetic (FM beat / CRT
+      composition) is structurally different from observer-motion
+      Doppler. Kept here in honesty about the gap, not pruned to make
+      the diagram look fuller.</li>
+  </ul>
+  <p>
+    Reading the legend, the visitor sees not only <em>what</em> the
+    framework claims about familiar physics but <em>how strongly</em>
+    each claim is anchored. The pattern itself is part of the message:
+    when something is derived from substrate, the framework says so by
+    drawing a solid line. When it isn't, the dashed or dotted edges are
+    the framework being honest about its own perimeter.
+  </p>
+
   <p class="footnote">
     Curriculum spine: <a href="https://github.com/nickjoven/harmonics/tree/main/sync_cost/curriculum">sync_cost/curriculum/</a>.
-    Anchor mapping: <a href="concentric-anchors.json">concentric-anchors.json</a>.
+    Anchor mapping: <a href="concentric-anchors.json">concentric-anchors.json</a>
+    (audited 2026-06-29 against derivation-graph.json commit f4b9a80).
     Underlying graph: <a href="derivation-graph.json">derivation-graph.json</a>
     (317 nodes, regenerated from <code>sync_cost/derivations/</code>).
   </p>

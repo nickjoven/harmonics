@@ -1,5 +1,19 @@
 {
-  "_comment": "Concentric-view anchors. The root is a wave propagating outward; everything in this file is constructed in sync_cost/curriculum/01_what_a_wave_is. The six observations are planted (un-named) at the end of that module and named in the (not-yet-written) Module 1a. Each observation links to one or more framework nodes — these IDs MUST exist in derivation-graph.json and the link should be verified before edits.",
+  "_comment": "Concentric-view anchors. The root is a wave propagating outward; everything in this file is constructed in sync_cost/curriculum/01_what_a_wave_is. The six observations are planted (un-named) at the end of that module and named in the (not-yet-written) Module 1a. Each link's `tier` records derivation strength against the substrate: T1 = framework constructs this observation (or a clean substrate analog) from primitives; T2 = framework engages with it / makes predictions involving it but does not derive it; T3 = textbook landmark with no constructive substrate engagement (link is analog or category-match only). Audited 2026-06-29 against derivation-graph.json (commit f4b9a80).",
+  "tiers": {
+    "T1": {
+      "label": "derived",
+      "description": "The framework constructs this observation (or a clean substrate analog) from its primitives. The linked doc does load-bearing constructive work for this anchor."
+    },
+    "T2": {
+      "label": "engaged",
+      "description": "The framework engages with this observation, makes predictions involving it, or uses it as a parameter — but does not derive it from substrate primitives."
+    },
+    "T3": {
+      "label": "imported",
+      "description": "Textbook landmark with no constructive substrate engagement. The link is an analog or category-match, not a derivation. Listed here in honesty about what the framework does and does not do."
+    }
+  },
   "root": {
     "id": "wave_outward",
     "label": "wave outward",
@@ -27,45 +41,133 @@
       "id": "doppler",
       "label": "Doppler shift",
       "angle_oclock": 1.5,
-      "summary": "Relative motion between source and observer shifts the measured frequency. Direct from wave-outward + relative motion.",
-      "links": ["fm_beat_crt_correspondence_audit"]
+      "tier": "T3",
+      "tier_note": "The framework has no constructive Doppler derivation. Its only frequency-shift content is intra-substrate arithmetic (FM beat / CRT composition), which is structurally different — coupling changes the wave, not observer motion. Kept here in honesty about the gap.",
+      "summary": "Relative motion between source and observer shifts the measured frequency. Textbook. The framework's nearest substrate analog is FM-beat arithmetic, which composes modes by frequency difference but does not involve motion through a medium.",
+      "links": [
+        {
+          "node": "fm_beat_crt_correspondence_audit",
+          "tier": "T3",
+          "relation": "analog only — composite modes as differences of primitive modes, bounded by Mihailescu; not observer-motion shift"
+        }
+      ]
     },
     {
       "id": "redshift",
       "label": "redshift",
       "angle_oclock": 4.5,
-      "summary": "The cosmic-scale version of the same effect: distant sources, receding as the cosmos stretches, are measured at lower frequencies. The shift grows with distance.",
-      "links": ["spectral_tilt", "high_z_mond", "graviton_reframing"]
+      "tier": "T2",
+      "tier_note": "Framework treats redshift z as a coordinate (input from ΛCDM) and makes predictions parametric in it; does not derive cosmic redshift from substrate.",
+      "summary": "The cosmic-scale version of frequency shift: distant sources, receding as the cosmos stretches, are measured at lower frequencies. The shift grows with distance.",
+      "links": [
+        {
+          "node": "spectral_tilt_reframed",
+          "tier": "T2",
+          "relation": "canonical cosmological power-spectrum tilt from mode-locking structure (the non-superseded version)"
+        },
+        {
+          "node": "high_z_mond",
+          "tier": "T2",
+          "relation": "a₀(z) = cH(z)/(2π) prediction parametric in z; redshift consumed as input"
+        }
+      ]
     },
     {
       "id": "dilation",
       "label": "time dilation",
       "angle_oclock": 7.5,
+      "tier": "T1",
+      "tier_note": "Strong derivation: GR (and thus geometric time dilation) falls out of the Kuramoto continuum limit at K=1.",
       "summary": "If a wave's propagation speed is the same for every observer, time and distance must be measured differently by different observers. The wave's constancy forces the geometry.",
-      "links": ["einstein_from_kuramoto", "continuum_limits", "gap1_theorem"]
+      "links": [
+        {
+          "node": "einstein_from_kuramoto",
+          "tier": "T1",
+          "relation": "Einstein field equations derived as unique K=1 continuum output (Lovelock 1971)"
+        },
+        {
+          "node": "continuum_limits",
+          "tier": "T1",
+          "relation": "ADM evolution + Hamiltonian/momentum constraints → Einstein equations at σ²=1/4"
+        },
+        {
+          "node": "gap1_theorem",
+          "tier": "T1",
+          "relation": "Christoffel/Levi-Civita connection emerges in continuum limit; Γ̃ = Γ + O(1/N)"
+        }
+      ]
     },
     {
       "id": "mass_energy",
       "label": "E = mc²",
       "angle_oclock": 10.5,
+      "tier": "T2",
+      "tier_note": "Framework derives mass values and ratios from substrate (integer conservation law, generation structure) but does not construct the inertia↔energy equivalence as such.",
       "summary": "A wave confined to a small region carries energy proportional to its frequency of confinement. That confined energy, pinned in place, is what we call mass.",
-      "links": ["mass_sector_closure", "fermion_mass_running", "generation_mechanism"]
+      "links": [
+        {
+          "node": "mass_sector_closure",
+          "tier": "T2",
+          "relation": "integer law depth × |3Q| = k_sector with k_lepton = q₃² = 9, k_quark = q₂³ = 8"
+        },
+        {
+          "node": "fermion_mass_running",
+          "tier": "T2",
+          "relation": "m_τ/m_e = 26^(5/2); m_μ/m_e ≈ 205 via Koide Q=2/3"
+        },
+        {
+          "node": "generation_mechanism",
+          "tier": "T2",
+          "relation": "3 generations from {locked, unlocked}²; hierarchy seed 26:7:1"
+        }
+      ]
     },
     {
       "id": "planck_wall",
       "label": "Planck wall",
       "angle_oclock": 9,
       "is_wall": "min",
+      "tier": "T1",
+      "tier_note": "Strong derivation. The Planck scale is constructed as a self-sustaining substrate threshold (N=3, three-stage ℏ↔c↔G loop), and the Planck-Hubble hierarchy ratio is derived to 0.48%.",
       "summary": "The smallest-scale wall. Below this confinement scale, the energy required to localize the wave makes its own gravitational horizon. No wave can be defined further in.",
-      "links": ["hierarchy_gaussian_lattice", "klein_bottle", "L1_substrate_cusp_ground_state"]
+      "links": [
+        {
+          "node": "hierarchy_gaussian_lattice",
+          "tier": "T1",
+          "relation": "R = q₂q₃ · (q₂² + q₃²)^(q₂q₃^d) = 6 · 13^54 matches t_H/t_P to 0.48%"
+        },
+        {
+          "node": "planck_scale",
+          "tier": "T1",
+          "relation": "Planck scale as N=3 self-sustaining threshold of the substrate"
+        }
+      ]
     },
     {
       "id": "hubble_wall",
       "label": "Hubble wall",
       "angle_oclock": 3,
       "is_wall": "max",
+      "tier": "T1",
+      "tier_note": "Strong derivation at the hierarchy end (paired with the Planck wall in the same ratio); the cosmological-cycle structure engages the Hubble regime constructively.",
       "summary": "The largest-scale wall. Above this wavelength, the cosmos stretches faster than the wave can complete a cycle. No wave can complete a coherent oscillation further out.",
-      "links": ["hierarchy_gaussian_lattice", "a0_threshold", "address_and_quantity"]
+      "links": [
+        {
+          "node": "hierarchy_gaussian_lattice",
+          "tier": "T1",
+          "relation": "the Hubble end of the derived t_H/t_P ratio"
+        },
+        {
+          "node": "cosmological_cycle",
+          "tier": "T2",
+          "relation": "engages the Hubble-scale regime structurally; reads the wall as part of the cycle's outer turn"
+        },
+        {
+          "node": "a0_threshold",
+          "tier": "T2",
+          "relation": "MOND threshold a₀ = cH₀/(2π); H₀ as anchor parameter"
+        }
+      ]
     }
   ],
   "our_band": {
