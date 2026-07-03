@@ -244,8 +244,10 @@ with the φ² scaling relating successive levels:
     w(F_{n+1}/F_{n+2}) = φ^{-2} × w(F_n/F_{n+1}) × (1 + O(K))
 
 This recurrence along the Fibonacci backbone IS the spectral tilt
-equation. The 0.0365 levels per e-fold (Derivation 4) is the rate
-at which the field equation's solution decays along this path.
+equation. The `2/57 ≈ 0.0351` levels per e-fold (substrate-forced
+cadence per PRs #178/#179; superseded the earlier n_s-anchored
+`≈ 0.0365`, see `minimum_alphabet.md` §3) is the rate at which the
+field equation's solution decays along this path.
 
 ### The Born rule from the fixed point
 
