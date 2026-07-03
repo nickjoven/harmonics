@@ -1,5 +1,5 @@
 {
-  "generated": "3236a42673c28a9ccf7c4cc804fd849ed3f0801c",
+  "generated": "861378d6b9c5a5fb933560b08b60ccbc3e9a640d",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1191,6 +1191,7 @@
         "phenomenology_cross_reference",
         "predictions_horizon_2026",
         "primitive_completeness_audit",
+        "substrate_kk_dispersion_target",
         "unitless_check",
         "vacuum_stress_meta_structure_audit",
         "w_plus_formalization"
@@ -1247,6 +1248,10 @@
         },
         {
           "source": "primitive_completeness_audit",
+          "kind": "references"
+        },
+        {
+          "source": "substrate_kk_dispersion_target",
           "kind": "references"
         },
         {
@@ -2353,6 +2358,7 @@
         "articulation_audit_2026-05",
         "basepoint_principle",
         "continuum_limits",
+        "f2_possibility_b_jacobian",
         "f2_scoping",
         "framework_status",
         "free_parameter_scorecard",
@@ -2423,6 +2429,10 @@
         },
         {
           "source": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "source": "f2_possibility_b_jacobian",
           "kind": "references"
         },
         {
@@ -3277,7 +3287,8 @@
         "half_twist_meta_structure_audit",
         "modular_form_behavior_cosmological_tongues_audit",
         "primes_denominators_circular_geometry_extension_audit",
-        "psl2z_noncommutative_core_structural_identity_audit"
+        "psl2z_noncommutative_core_structural_identity_audit",
+        "substrate_kk_dispersion_target"
       ],
       "edges": [
         {
@@ -3416,6 +3427,10 @@
         },
         {
           "source": "psl2z_noncommutative_core_structural_identity_audit",
+          "kind": "references"
+        },
+        {
+          "source": "substrate_kk_dispersion_target",
           "kind": "references"
         }
       ],
@@ -4324,6 +4339,7 @@
         "conservation_scale_stratification_audit",
         "continuum_limits",
         "discrete_extension_principle",
+        "f2_possibility_b_jacobian",
         "f2_scoping",
         "figure_eight_necessitation_audit",
         "framework_status",
@@ -4340,6 +4356,7 @@
         "primitives_vs_addresses_candidate",
         "qm_reframing_programmatic",
         "spacetime_dissipative_emergence",
+        "substrate_kk_dispersion_target",
         "substrate_prediction_selection",
         "surface_uniqueness_audit",
         "thread_chronology",
@@ -4441,6 +4458,10 @@
           "kind": "references"
         },
         {
+          "source": "f2_possibility_b_jacobian",
+          "kind": "references"
+        },
+        {
           "source": "f2_scoping",
           "kind": "references"
         },
@@ -4502,6 +4523,10 @@
         },
         {
           "source": "spacetime_dissipative_emergence",
+          "kind": "references"
+        },
+        {
+          "source": "substrate_kk_dispersion_target",
           "kind": "references"
         },
         {
@@ -6098,6 +6123,7 @@
         "mass_sector_closure",
         "mediant_derivation",
         "minimum_alphabet",
+        "negative_results_ledger",
         "numerology_count_phase_b",
         "numerology_inventory",
         "omega_b_alpha_beta_closure",
@@ -6111,6 +6137,8 @@
         "psl2z_subgroup_phase_b",
         "q_mod2_conservation_theorem",
         "snmc_class_and_entanglement",
+        "spectral_tilt",
+        "spectral_tilt_reframed",
         "statistical_conventions",
         "substrate_determinism",
         "three_dimensions",
@@ -6313,6 +6341,10 @@
           "kind": "references"
         },
         {
+          "target": "negative_results_ledger",
+          "kind": "references"
+        },
+        {
           "target": "numerology_count_phase_b",
           "kind": "references"
         },
@@ -6362,6 +6394,14 @@
         },
         {
           "target": "snmc_class_and_entanglement",
+          "kind": "references"
+        },
+        {
+          "target": "spectral_tilt",
+          "kind": "references"
+        },
+        {
+          "target": "spectral_tilt_reframed",
           "kind": "references"
         },
         {
@@ -6517,6 +6557,11 @@
       ],
       "git": [
         {
+          "hash": "861378d",
+          "date": "2026-07-03",
+          "subject": "canonical_glossary: fix 3 broken source references (issue #263 \u24fc) (#276)"
+        },
+        {
           "hash": "cd08ce0",
           "date": "2026-06-04",
           "subject": "Discrete-lossless / quantum-lossy: information-theoretic basis for primitives-vs-addresses (#219)"
@@ -6577,7 +6622,8 @@
       "depended_on_by": [
         "dynamics_arithmetic_distinction_refinement_audit",
         "modular_form_behavior_cosmological_tongues_audit",
-        "primes_denominators_circular_geometry_extension_audit"
+        "primes_denominators_circular_geometry_extension_audit",
+        "substrate_kk_dispersion_target"
       ],
       "edges": [
         {
@@ -6660,6 +6706,10 @@
         },
         {
           "source": "primes_denominators_circular_geometry_extension_audit",
+          "kind": "references"
+        },
+        {
+          "source": "substrate_kk_dispersion_target",
           "kind": "references"
         }
       ],
@@ -8011,6 +8061,7 @@
         "sigma_squared_disambiguation",
         "spatial_coupling_derived",
         "structural_lemmas",
+        "substrate_kk_dispersion_target",
         "vacuum_stress_meta_structure_audit",
         "vocabulary_is_the_work_pattern",
         "w_plus_formalization"
@@ -8228,6 +8279,10 @@
         },
         {
           "source": "structural_lemmas",
+          "kind": "references"
+        },
+        {
+          "source": "substrate_kk_dispersion_target",
           "kind": "references"
         },
         {
@@ -9767,6 +9822,7 @@
         "discrete_reduction_problem",
         "e_cross_calc",
         "e_cross_discrete_resolution",
+        "f2_possibility_b_jacobian",
         "f_exit_natural",
         "framework_status",
         "inflation_duration",
@@ -9827,6 +9883,10 @@
         },
         {
           "source": "e_cross_discrete_resolution",
+          "kind": "references"
+        },
+        {
+          "source": "f2_possibility_b_jacobian",
           "kind": "references"
         },
         {
@@ -12430,7 +12490,9 @@
         "rational_field_equation",
         "xor_continuum_limit"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "f2_possibility_b_jacobian"
+      ],
       "edges": [
         {
           "target": "engineering_targets",
@@ -12457,12 +12519,93 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "f2_possibility_b_jacobian",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "3fb1ad1",
           "date": "2026-07-02",
           "subject": "f2_fm_beat_results.md: PR-2 of F2 epic \u2014 Tier-0 simulator results (#274)"
+        }
+      ]
+    },
+    {
+      "id": "f2_possibility_b_jacobian",
+      "path": "sync_cost/derivations/f2_possibility_b_jacobian.md",
+      "cid": null,
+      "sealed": false,
+      "title": "F2 Possibility B \u2014 Jacobian at the 4-mode XOR fixed point",
+      "summary": "**Structural-attempt null for Possibility B of [[f2_scoping]].**\nThe 4-mode XOR-filtered Jacobian of the D11 field equation is\nwell-defined only in the discrete regime (the substrate-derived\nK=1 Hamiltonian of [[discrete_reduction_computed]]); its symmetry\ngroup is at most U(1)^4, computed **explicitly for all three\nD11-named candidate F forms** (all-to-all, local mediant,\nhierarchical) and confirmed F-independently by dimension counting\non the derived non-degenerate spectrum {0, 3.645, 9.580, 1",
+      "depends_on": [
+        "anchor_count_reaudit",
+        "basepoint_principle",
+        "discrete_reduction_computed",
+        "f2_fm_beat_results",
+        "f2_scoping",
+        "figure_eight",
+        "framework_status",
+        "gauge_factorization",
+        "rational_field_equation",
+        "xor_continuum_limit",
+        "xor_derivation"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "anchor_count_reaudit",
+          "kind": "references"
+        },
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "discrete_reduction_computed",
+          "kind": "references"
+        },
+        {
+          "target": "f2_fm_beat_results",
+          "kind": "references"
+        },
+        {
+          "target": "f2_scoping",
+          "kind": "references"
+        },
+        {
+          "target": "figure_eight",
+          "kind": "references"
+        },
+        {
+          "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_factorization",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
+          "kind": "references"
+        },
+        {
+          "target": "xor_continuum_limit",
+          "kind": "references"
+        },
+        {
+          "target": "xor_derivation",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "f11c532",
+          "date": "2026-07-03",
+          "subject": "f2_possibility_b_jacobian.md: PR-3 of F2 epic \u2014 Possibility B structural-attempt null (#281)"
         }
       ]
     },
@@ -12486,7 +12629,8 @@
         "xor_continuum_limit"
       ],
       "depended_on_by": [
-        "f2_fm_beat_results"
+        "f2_fm_beat_results",
+        "f2_possibility_b_jacobian"
       ],
       "edges": [
         {
@@ -12533,6 +12677,10 @@
       "edged_by": [
         {
           "source": "f2_fm_beat_results",
+          "kind": "references"
+        },
+        {
+          "source": "f2_possibility_b_jacobian",
           "kind": "references"
         }
       ],
@@ -12998,7 +13146,8 @@
         "gr_qm_unification_synthesis",
         "predictions_horizon_2026",
         "preferred_basis_dissolution",
-        "spacetime_dissipative_emergence"
+        "spacetime_dissipative_emergence",
+        "substrate_kk_dispersion_target"
       ],
       "edges": [],
       "edged_by": [
@@ -13024,6 +13173,10 @@
         },
         {
           "source": "spacetime_dissipative_emergence",
+          "kind": "references"
+        },
+        {
+          "source": "substrate_kk_dispersion_target",
           "kind": "references"
         }
       ],
@@ -13088,6 +13241,7 @@
         "empty_fork_cap",
         "equivalence_dissolution",
         "explicit_4x4_reduction",
+        "f2_possibility_b_jacobian",
         "figure_eight_necessitation_audit",
         "fm_beat_crt_correspondence_audit",
         "framework_status",
@@ -13182,6 +13336,10 @@
         },
         {
           "source": "explicit_4x4_reduction",
+          "kind": "references"
+        },
+        {
+          "source": "f2_possibility_b_jacobian",
           "kind": "references"
         },
         {
@@ -13520,7 +13678,7 @@
     {
       "id": "framework_status",
       "path": "sync_cost/derivations/framework_status.md",
-      "cid": "086826997ec339cc040da2d06874e31087f371579ae200d35770fa669368ac73",
+      "cid": "8c51e9d25194c62beba5e32a2b4fabb99cf3a2ba53c11a9824c946ef51190dc7",
       "sealed": true,
       "title": "Framework status map",
       "summary": "At-a-glance inventory. One line per item. Full analysis lives in the\nreferenced files; this is the bird's-eye view to prevent duplicate\nwork and re-derivation of eliminated content.",
@@ -13636,6 +13794,7 @@
         "epr_bell_assembly_theorem",
         "epsilon_physical_reading",
         "era_timeline_disposition",
+        "f2_possibility_b_jacobian",
         "f2_scoping",
         "figure_eight",
         "free_parameter_scorecard",
@@ -13694,6 +13853,7 @@
         "snmc_class_and_entanglement",
         "sqrt_r_n_correction",
         "structural_lemmas",
+        "substrate_kk_dispersion_target",
         "substrate_prediction_selection",
         "third_twist_meta_structure_audit",
         "thread_chronology",
@@ -14143,6 +14303,10 @@
           "kind": "references"
         },
         {
+          "source": "f2_possibility_b_jacobian",
+          "kind": "references"
+        },
+        {
           "source": "f2_scoping",
           "kind": "references"
         },
@@ -14375,6 +14539,10 @@
           "kind": "references"
         },
         {
+          "source": "substrate_kk_dispersion_target",
+          "kind": "references"
+        },
+        {
           "source": "substrate_prediction_selection",
           "kind": "references"
         },
@@ -14408,6 +14576,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "0350890",
+          "date": "2026-07-03",
+          "subject": "align \u03b1_s/\u03b1_2 = 27/8 disposition: suspect-by-association, not disproved (issue #263 \u24f9) (#280)"
+        },
         {
           "hash": "0778154",
           "date": "2026-06-20",
@@ -15602,6 +15775,7 @@
         "articulation_audit_2026-05",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_b",
+        "f2_possibility_b_jacobian",
         "f2_scoping",
         "gauge_dictionary",
         "gauge_high_scale_identification",
@@ -15640,6 +15814,10 @@
         },
         {
           "source": "down_type_double_cover_phase_b",
+          "kind": "references"
+        },
+        {
+          "source": "f2_possibility_b_jacobian",
           "kind": "references"
         },
         {
@@ -25486,11 +25664,13 @@
         "thread_chronology"
       ],
       "depended_on_by": [
+        "canonical_glossary",
         "free_parameter_scorecard",
         "neutrino_mass_audit",
         "phenomenon_glossary",
         "salpeter_gate_disposition",
-        "sinw_fixed_point"
+        "sinw_fixed_point",
+        "substrate_kk_dispersion_target"
       ],
       "edges": [
         {
@@ -25572,6 +25752,10 @@
       ],
       "edged_by": [
         {
+          "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
           "source": "free_parameter_scorecard",
           "kind": "references"
         },
@@ -25589,6 +25773,10 @@
         },
         {
           "source": "sinw_fixed_point",
+          "kind": "references"
+        },
+        {
+          "source": "substrate_kk_dispersion_target",
           "kind": "references"
         }
       ],
@@ -26459,7 +26647,7 @@
     {
       "id": "numerology_inventory",
       "path": "sync_cost/derivations/numerology_inventory.md",
-      "cid": "679dd783679273f27962e3391c8c4532ccac82153e8cea66146f8a008bbdcefb",
+      "cid": "da253a41b9dba375c61e9392abbf39bbb167f459b7ebfa2f620bd136b6c9c877",
       "sealed": true,
       "title": "Numerology inventory",
       "summary": "Compilation of framework predictions / observations that are confirmed\nnumerology, noted coincidences, or suspects \u2014 so we know what to stop\nchasing as if it were structural.",
@@ -26847,6 +27035,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "0350890",
+          "date": "2026-07-03",
+          "subject": "align \u03b1_s/\u03b1_2 = 27/8 disposition: suspect-by-association, not disproved (issue #263 \u24f9) (#280)"
+        },
         {
           "hash": "543d8b6",
           "date": "2026-05-27",
@@ -32251,6 +32444,7 @@
       "depended_on_by": [
         "INDEX",
         "f2_fm_beat_results",
+        "f2_possibility_b_jacobian",
         "f2_scoping",
         "gap1_theorem",
         "gap2_spatialization_decomposition",
@@ -32274,6 +32468,10 @@
         },
         {
           "source": "f2_fm_beat_results",
+          "kind": "references"
+        },
+        {
+          "source": "f2_possibility_b_jacobian",
           "kind": "references"
         },
         {
@@ -33547,6 +33745,7 @@
         "soliton_dynamics",
         "sqrt_r_n_correction",
         "substrate_determinism",
+        "substrate_kk_dispersion_target",
         "thread_chronology",
         "tick_continuum_construction",
         "time_axis_split",
@@ -33724,6 +33923,10 @@
         },
         {
           "source": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "source": "substrate_kk_dispersion_target",
           "kind": "references"
         },
         {
@@ -34448,6 +34651,7 @@
       ],
       "depended_on_by": [
         "INDEX",
+        "canonical_glossary",
         "graviton_reframing",
         "physics_relevance_measurement_catalog"
       ],
@@ -34460,6 +34664,10 @@
       "edged_by": [
         {
           "source": "INDEX",
+          "kind": "references"
+        },
+        {
+          "source": "canonical_glossary",
           "kind": "references"
         },
         {
@@ -34529,6 +34737,7 @@
       "depends_on": [],
       "depended_on_by": [
         "algebraic_forcing_partition",
+        "canonical_glossary",
         "free_parameter_scorecard",
         "graviton_reframing",
         "spectral_tilt",
@@ -34538,6 +34747,10 @@
       "edged_by": [
         {
           "source": "algebraic_forcing_partition",
+          "kind": "references"
+        },
+        {
+          "source": "canonical_glossary",
           "kind": "references"
         },
         {
@@ -35634,6 +35847,92 @@
       ]
     },
     {
+      "id": "substrate_kk_dispersion_target",
+      "path": "sync_cost/derivations/substrate_kk_dispersion_target.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Substrate Kramers-Kronig dispersion relation \u2014 status audit + posed derivation target",
+      "summary": "Two resolution-mode findings sealed, one derivation target **posed,\nnot derived**:",
+      "depends_on": [
+        "a0_threshold",
+        "arrow_inviolability_and_unification_closure_audit",
+        "basepoint_principle",
+        "cmb_silk_damping_acoustic_peaks_audit",
+        "continuum_limits",
+        "fidelity_bound",
+        "framework_status",
+        "negative_results_ledger",
+        "sine_gordon_substrate",
+        "thread_chronology",
+        "tick_continuum_construction",
+        "time_axis_split",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "a0_threshold",
+          "kind": "references"
+        },
+        {
+          "target": "arrow_inviolability_and_unification_closure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "cmb_silk_damping_acoustic_peaks_audit",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "fidelity_bound",
+          "kind": "references"
+        },
+        {
+          "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "negative_results_ledger",
+          "kind": "references"
+        },
+        {
+          "target": "sine_gordon_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "thread_chronology",
+          "kind": "references"
+        },
+        {
+          "target": "tick_continuum_construction",
+          "kind": "references"
+        },
+        {
+          "target": "time_axis_split",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_is_the_work_pattern",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "e767e6c",
+          "date": "2026-07-03",
+          "subject": "Register substrate KK dispersion relation as posed derivation target (#278)"
+        }
+      ]
+    },
+    {
       "id": "substrate_prediction_selection",
       "path": "sync_cost/derivations/substrate_prediction_selection.md",
       "cid": "64670315076d2c7351876fedcc068f95e079c6751f3d671f7aa733720abbce5c",
@@ -36164,6 +36463,7 @@
         "s_inst_inflation",
         "sqrt_r_n_correction",
         "substrate_determinism",
+        "substrate_kk_dispersion_target",
         "tick_continuum_construction"
       ],
       "edges": [
@@ -36463,6 +36763,10 @@
         },
         {
           "source": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "source": "substrate_kk_dispersion_target",
           "kind": "references"
         },
         {
@@ -36843,6 +37147,7 @@
         "spacetime_dissipative_emergence",
         "sqrt_r_n_correction",
         "substrate_determinism",
+        "substrate_kk_dispersion_target",
         "thread_chronology",
         "vacuum_stress_meta_structure_audit"
       ],
@@ -36910,6 +37215,10 @@
           "kind": "references"
         },
         {
+          "source": "substrate_kk_dispersion_target",
+          "kind": "references"
+        },
+        {
           "source": "thread_chronology",
           "kind": "references"
         },
@@ -36958,6 +37267,7 @@
         "s_inst_inflation",
         "spacetime_dissipative_emergence",
         "substrate_determinism",
+        "substrate_kk_dispersion_target",
         "unitless_audit",
         "wave_particle_substrate"
       ],
@@ -37050,6 +37360,10 @@
         },
         {
           "source": "substrate_determinism",
+          "kind": "references"
+        },
+        {
+          "source": "substrate_kk_dispersion_target",
           "kind": "references"
         },
         {
@@ -38386,6 +38700,7 @@
         "remaining_gap_shapes",
         "sector_decoupling_phase_a",
         "spacetime_dissipative_emergence",
+        "substrate_kk_dispersion_target",
         "third_twist_meta_structure_audit",
         "thread_chronology",
         "vacuum_stress_meta_structure_audit"
@@ -38635,6 +38950,10 @@
         },
         {
           "source": "spacetime_dissipative_emergence",
+          "kind": "references"
+        },
+        {
+          "source": "substrate_kk_dispersion_target",
           "kind": "references"
         },
         {
@@ -39103,6 +39422,7 @@
       "depended_on_by": [
         "audit_findings_3_4_disposition",
         "f2_fm_beat_results",
+        "f2_possibility_b_jacobian",
         "f2_scoping",
         "klein_connection"
       ],
@@ -39114,6 +39434,10 @@
         },
         {
           "source": "f2_fm_beat_results",
+          "kind": "references"
+        },
+        {
+          "source": "f2_possibility_b_jacobian",
           "kind": "references"
         },
         {
@@ -39153,6 +39477,7 @@
         "conservation_scale_stratification_audit",
         "discrete_reduction_computed",
         "discrete_reduction_problem",
+        "f2_possibility_b_jacobian",
         "framework_status",
         "gauge_factorization",
         "gell_mann_nishijima",
@@ -39184,6 +39509,10 @@
         },
         {
           "source": "discrete_reduction_problem",
+          "kind": "references"
+        },
+        {
+          "source": "f2_possibility_b_jacobian",
           "kind": "references"
         },
         {
