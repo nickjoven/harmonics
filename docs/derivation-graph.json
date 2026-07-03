@@ -1,5 +1,5 @@
 {
-  "generated": "2337c929a2b1f4111c14e41110f6369666224eb3",
+  "generated": "9976dcf1cfc51e038bfc22199979bb0bed1607d2",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -203,7 +203,8 @@
         "vocabulary_is_the_work_pattern"
       ],
       "depended_on_by": [
-        "CHAIN_KSTAR"
+        "CHAIN_KSTAR",
+        "higgs_from_tongue_boundary"
       ],
       "edges": [
         {
@@ -286,6 +287,10 @@
       "edged_by": [
         {
           "source": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "source": "higgs_from_tongue_boundary",
           "kind": "references"
         }
       ],
@@ -7912,9 +7917,9 @@
       ],
       "git": [
         {
-          "hash": "1a1af8b",
-          "date": "2026-06-29",
-          "subject": "cadence 2/57: cite 3 retracted-value sites surfaced by negation-seal linter"
+          "hash": "21830c7",
+          "date": "2026-07-02",
+          "subject": "cadence 2/57: propagate substrate-forced rate across 9 derivation surfaces (#272)"
         },
         {
           "hash": "350bb14",
@@ -12453,7 +12458,13 @@
         }
       ],
       "edged_by": [],
-      "git": []
+      "git": [
+        {
+          "hash": "3fb1ad1",
+          "date": "2026-07-02",
+          "subject": "f2_fm_beat_results.md: PR-2 of F2 epic \u2014 Tier-0 simulator results (#274)"
+        }
+      ]
     },
     {
       "id": "f2_scoping",
@@ -12525,7 +12536,13 @@
           "kind": "references"
         }
       ],
-      "git": []
+      "git": [
+        {
+          "hash": "b079a84",
+          "date": "2026-06-29",
+          "subject": "F2 scoping doc + companion substrate-side simulators (#270)"
+        }
+      ]
     },
     {
       "id": "f_exit_natural",
@@ -13624,6 +13641,7 @@
         "free_parameter_scorecard",
         "h_inf_status",
         "hierarchy_problem_translation",
+        "higgs_from_tongue_boundary",
         "hybrid_strategy_audit",
         "inflation_seam_anchor_closure",
         "k_of_t_friedmann",
@@ -14142,6 +14160,10 @@
         },
         {
           "source": "hierarchy_problem_translation",
+          "kind": "references"
+        },
+        {
+          "source": "higgs_from_tongue_boundary",
           "kind": "references"
         },
         {
@@ -17947,7 +17969,13 @@
       "sealed": false,
       "title": "Electroweak Symmetry Breaking from the Tongue Boundary",
       "summary": "The Higgs mechanism \u2014 the spontaneous breaking of SU(2) x U(1)_Y\nto U(1)_em \u2014 is the tongue boundary dynamics of the Klein bottle's\nopen q=2 fiber. The scalar doublet, the quartic potential, the\ntachyonic mass, and the vacuum expectation value all have geometric\norigins in the circle map's saddle-node bifurcation.",
-      "depends_on": [],
+      "depends_on": [
+        "FRAMEWORK_TOPOLOGY",
+        "framework_status",
+        "neutrino_mass_audit",
+        "numerology_inventory",
+        "rationality_descent"
+      ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
@@ -17959,7 +17987,28 @@
         "fm_beat_crt_correspondence_audit",
         "third_twist_meta_structure_audit"
       ],
-      "edges": [],
+      "edges": [
+        {
+          "target": "FRAMEWORK_TOPOLOGY",
+          "kind": "references"
+        },
+        {
+          "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "neutrino_mass_audit",
+          "kind": "references"
+        },
+        {
+          "target": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "target": "rationality_descent",
+          "kind": "references"
+        }
+      ],
       "edged_by": [
         {
           "source": "FRAMEWORK_TOPOLOGY",
@@ -17999,6 +18048,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "c51fb86",
+          "date": "2026-07-02",
+          "subject": "higgs_from_tongue_boundary: retract stale +1/q_3^2 correction (issue #263 \u24fb) (#275)"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -25573,6 +25627,7 @@
         "statistical_conventions"
       ],
       "depended_on_by": [
+        "higgs_from_tongue_boundary",
         "statistical_conventions"
       ],
       "edges": [
@@ -25606,6 +25661,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "higgs_from_tongue_boundary",
+          "kind": "references"
+        },
         {
           "source": "statistical_conventions",
           "kind": "references"
@@ -26456,6 +26515,7 @@
         "free_parameter_scorecard",
         "generation_mechanism",
         "hierarchy_problem_translation",
+        "higgs_from_tongue_boundary",
         "hybrid_strategy_audit",
         "k_of_t_friedmann",
         "k_scaling_scan",
@@ -26679,6 +26739,10 @@
         },
         {
           "source": "hierarchy_problem_translation",
+          "kind": "references"
+        },
+        {
+          "source": "higgs_from_tongue_boundary",
           "kind": "references"
         },
         {
@@ -31632,9 +31696,9 @@
       ],
       "git": [
         {
-          "hash": "1a1af8b",
-          "date": "2026-06-29",
-          "subject": "cadence 2/57: cite 3 retracted-value sites surfaced by negation-seal linter"
+          "hash": "21830c7",
+          "date": "2026-07-02",
+          "subject": "cadence 2/57: propagate substrate-forced rate across 9 derivation surfaces (#272)"
         },
         {
           "hash": "34fd61d",
@@ -32251,9 +32315,9 @@
       ],
       "git": [
         {
-          "hash": "d375d27",
-          "date": "2026-06-29",
-          "subject": "cadence 2/57: propagate substrate-forced rate across prose surfaces"
+          "hash": "21830c7",
+          "date": "2026-07-02",
+          "subject": "cadence 2/57: propagate substrate-forced rate across 9 derivation surfaces (#272)"
         },
         {
           "hash": "b2deee7",
@@ -32279,7 +32343,9 @@
         "item12_C_from_K_star",
         "numerology_inventory"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "higgs_from_tongue_boundary"
+      ],
       "edges": [
         {
           "target": "conservation_computability",
@@ -32294,7 +32360,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "higgs_from_tongue_boundary",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "dffc200",
@@ -37874,9 +37945,9 @@
       ],
       "git": [
         {
-          "hash": "d375d27",
-          "date": "2026-06-29",
-          "subject": "cadence 2/57: propagate substrate-forced rate across prose surfaces"
+          "hash": "21830c7",
+          "date": "2026-07-02",
+          "subject": "cadence 2/57: propagate substrate-forced rate across 9 derivation surfaces (#272)"
         },
         {
           "hash": "350bb14",
