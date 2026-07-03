@@ -256,7 +256,7 @@ bare_k1_identities:
     value: "27/8 = 3.375"
     source: ["duty_dimension_proof", "three_dimensions", "klein_bottle_derivation", "duty_cycle_dictionary"]
     status: "substrate-side bare reference; not a prediction at M_Z"
-    m_z_gap: "3.2% vs PDG 3.488; anchor-side amplification (Instance 7); Class 2 by construction (Shape B pigeonhole)."
+    m_z_gap: "3.2% vs PDG 3.488; anchor-side amplification (Instance 7); Class 2 by construction (Shape B pigeonhole). No running-disproof script (unlike sin2_theta_W): alpha_s's large running spoils any tree-scale ratio a priori by magnitude (asymptotic freedom, b_3 = -7), so none is warranted. See numerology_inventory.md Class 3."
 
   inv_alpha_em_tree:
     form: "q_2^3 + q_3^3"
