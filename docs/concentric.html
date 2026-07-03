@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concentric &mdash; Harmonics</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="concentric.css">
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Reference</a>
+  <a href="genesis.html">Genesis</a>
+  <a href="claim-chain.html">Claim chain</a>
+  <a href="claim-chain-views.html">Three views</a>
+  <a href="concentric.html" class="active">Concentric</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="phenomenon-glossary.html">Phenomena</a>
+  <a href="derivations.html">Derivations</a>
+  <a href="mastery-graph.html">Mastery</a>
+  <a href="preprint.html">Preprint</a>
+</nav>
+
+<h1>The framework, from a wave outward</h1>
+
+<p class="subtitle">
+A single object — a wave propagating outward — sits at the center. Every
+claim is a consequence of it, at increasing distance from the construction.
+Six familiar effects (Doppler, redshift, time dilation, mass-energy
+equivalence, and the two walls at the extremes of scale) ring it. The
+framework's deeper claims hang off whichever wall or observation they speak
+to. <em>Hover any node to see what it asserts; click a framework node to
+open its source.</em>
+</p>
+
+<div class="concentric-layout">
+  <svg id="concentric" viewBox="-500 -500 1000 1000" role="img"
+       aria-label="Concentric view of the framework rooted at a propagating wave">
+  </svg>
+
+  <aside id="info-panel" aria-live="polite">
+    <div class="info-kind">root</div>
+    <h3 id="info-title">A wave, propagating outward</h3>
+    <p id="info-summary">
+      Hover any node to read its claim. The center is the wave construction
+      from <code>sync_cost/curriculum/01_what_a_wave_is</code>. The
+      observation ring (gold + blue) is what falls out of the construction
+      directly. Everything outside the observation ring is the framework's
+      own derivation graph, arranged by which observation it speaks to.
+    </p>
+    <p id="info-link"></p>
+  </aside>
+</div>
+
+<section class="narrative">
+  <h2>Why &ldquo;extremely stable at our frequency&rdquo;</h2>
+  <p>
+    The two gold nodes on the observation ring are <strong>walls</strong> —
+    the smallest scale (Planck) and the largest scale (Hubble) at which a
+    coherent wave can exist at all. Between them is a band of many decades
+    of wavelength, and our local physics — sound, light, chemistry, the
+    biology that runs you — lives <em>deep inside that band</em>.
+  </p>
+  <p>
+    The green region in the center marks that band visually. We are far
+    from both walls; no boundary correction matters at our scale; the wave
+    construction at the center describes what we observe without
+    modification. The framework's dramatic claims happen <em>at the
+    walls</em> &mdash; not at our position, but at the boundary scales
+    where the construction first breaks down. Locally, the behavior is
+    stable because it is heavily reinforced from below and from above.
+  </p>
+
+  <h2>Reading the tiers</h2>
+  <p>
+    Not every familiar observation in the ring is something the framework
+    derives from substrate. The legend at lower-left distinguishes three
+    derivation tiers, and each link in the diagram carries its tier in
+    its edge style and the framework-node fill:
+  </p>
+  <ul>
+    <li><strong>T1 (derived)</strong> — solid edges, filled framework
+      nodes. The framework constructs the observation (or a clean
+      substrate analog) from its primitives.
+      <em>Time dilation, Planck wall, Hubble wall</em> survive this bar:
+      Einstein's equations fall out of the Kuramoto continuum limit at
+      K=1, and the Planck/Hubble ratio is derived to 0.48%.</li>
+    <li><strong>T2 (engaged)</strong> — dashed edges, hollow framework
+      nodes. The framework engages with the observation or makes
+      predictions parametric in it, but does not derive the observation
+      itself. <em>Redshift and E = mc²</em> sit here: the framework
+      consumes z as a coordinate and derives mass <em>ratios</em>, but
+      neither the cosmic stretch nor the inertia↔energy equivalence is
+      constructed from substrate.</li>
+    <li><strong>T3 (imported)</strong> — dotted edges, dashed-outline
+      nodes. A textbook landmark with no constructive substrate
+      engagement. <em>Doppler</em> alone falls in this bracket: the
+      framework's intra-substrate frequency arithmetic (FM beat / CRT
+      composition) is structurally different from observer-motion
+      Doppler. Kept here in honesty about the gap, not pruned to make
+      the diagram look fuller.</li>
+  </ul>
+  <p>
+    Reading the legend, the visitor sees not only <em>what</em> the
+    framework claims about familiar physics but <em>how strongly</em>
+    each claim is anchored. The pattern itself is part of the message:
+    when something is derived from substrate, the framework says so by
+    drawing a solid line. When it isn't, the dashed or dotted edges are
+    the framework being honest about its own perimeter.
+  </p>
+
+  <p class="footnote">
+    Curriculum spine: <a href="https://github.com/nickjoven/harmonics/tree/main/sync_cost/curriculum">sync_cost/curriculum/</a>.
+    Anchor mapping: <a href="concentric-anchors.json">concentric-anchors.json</a>
+    (audited 2026-06-29 against derivation-graph.json commit f4b9a80).
+    Underlying graph: <a href="derivation-graph.json">derivation-graph.json</a>
+    (317 nodes, regenerated from <code>sync_cost/derivations/</code>).
+  </p>
+</section>
+
+<script src="concentric.js"></script>
+</body>
+</html>

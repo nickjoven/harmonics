@@ -1,0 +1,253 @@
+/* Concentric view — overrides + new rules layered on docs/style.css */
+
+body {
+  max-width: 64em;   /* wider than the reference page; the SVG needs room */
+}
+
+.subtitle {
+  color: var(--text-dim);
+  font-style: italic;
+  margin-bottom: 2em;
+  max-width: 44em;
+}
+.subtitle em {
+  color: var(--text);
+  font-style: normal;
+}
+
+.concentric-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 18em;
+  gap: 1.5em;
+  align-items: start;
+  margin-bottom: 3em;
+}
+
+@media (max-width: 800px) {
+  .concentric-layout { grid-template-columns: 1fr; }
+}
+
+#concentric {
+  width: 100%;
+  height: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  display: block;
+}
+
+/* SVG element classes */
+
+.cn-band {
+  fill: var(--green);
+  opacity: 0.06;
+}
+.cn-band-edge {
+  stroke: var(--green);
+  stroke-width: 1;
+  stroke-dasharray: 2 4;
+  opacity: 0.4;
+  fill: none;
+}
+.cn-band-label {
+  fill: var(--green);
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 11px;
+  text-anchor: middle;
+  opacity: 0.85;
+}
+
+.cn-ring {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 1;
+  stroke-dasharray: 3 5;
+  opacity: 0.5;
+}
+
+.cn-edge {
+  stroke: var(--accent-dim);
+  stroke-width: 1;
+  opacity: 0.4;
+  fill: none;
+}
+.cn-edge.cn-edge-trunk {
+  stroke: var(--text-dim);
+  stroke-width: 1.5;
+  opacity: 0.75;
+}
+
+/* Tier-coded link styles (visible on framework-node edges) */
+.cn-edge.cn-tier-1 { stroke: var(--accent);    stroke-width: 1.4; opacity: 0.7;  }
+.cn-edge.cn-tier-2 { stroke: var(--accent-dim); stroke-width: 1.1; opacity: 0.6;  stroke-dasharray: 4 4; }
+.cn-edge.cn-tier-3 { stroke: var(--text-dim);   stroke-width: 1;   opacity: 0.45; stroke-dasharray: 1 4; }
+
+.cn-node {
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+.cn-node circle {
+  transition: r 0.15s ease, stroke-width 0.15s ease;
+}
+.cn-node text {
+  font-family: 'Georgia', serif;
+  font-size: 11px;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Center: the wave root */
+.cn-node.cn-root circle  { fill: var(--text-bright); stroke: var(--gold); stroke-width: 1.5; }
+.cn-node.cn-root text    { fill: var(--bg); font-weight: bold; }
+
+/* Three ingredients */
+.cn-node.cn-ingredient circle { fill: var(--accent); stroke: var(--text-bright); stroke-width: 1; }
+.cn-node.cn-ingredient text   { fill: var(--text); }
+
+/* Observations */
+.cn-node.cn-observation circle  { fill: var(--accent-dim); stroke: var(--accent); stroke-width: 1.5; }
+.cn-node.cn-observation text    { fill: var(--text-bright); font-weight: bold; }
+
+/* Walls — gold, larger */
+.cn-node.cn-wall circle { fill: var(--gold); stroke: var(--text-bright); stroke-width: 2; }
+.cn-node.cn-wall text   { fill: var(--text-bright); font-weight: bold; }
+
+/* Framework nodes — small, blue, dimmer. Tier-coded fills. */
+.cn-node.cn-framework circle              { stroke-width: 1; }
+.cn-node.cn-framework text                { fill: var(--text-dim); font-size: 9px; }
+.cn-node.cn-framework.cn-tier-1 circle    { fill: var(--link);    stroke: var(--link-hover); stroke-width: 1.2; }
+.cn-node.cn-framework.cn-tier-2 circle    { fill: var(--bg-card); stroke: var(--link);       stroke-width: 1.2; }
+.cn-node.cn-framework.cn-tier-3 circle    { fill: var(--bg-card); stroke: var(--text-dim);   stroke-width: 1; stroke-dasharray: 2 2; }
+.cn-node.cn-framework.cn-tier-1 text      { fill: var(--text); font-style: normal; }
+.cn-node.cn-framework.cn-tier-2 text      { fill: var(--text-dim); font-style: normal; }
+.cn-node.cn-framework.cn-tier-3 text      { fill: var(--text-dim); font-style: italic; }
+
+/* Anchor-level tier badge (small subscript-like marker next to observation labels) */
+.cn-anchor-badge {
+  font-family: 'Georgia', serif;
+  font-size: 8px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  user-select: none;
+}
+.cn-anchor-badge.cn-tier-1 { fill: var(--accent); }
+.cn-anchor-badge.cn-tier-2 { fill: var(--text-dim); }
+.cn-anchor-badge.cn-tier-3 { fill: var(--gold); opacity: 0.9; }
+
+/* Legend (rendered inside the SVG) */
+.cn-legend-bg {
+  fill: var(--bg);
+  stroke: var(--border);
+  stroke-width: 1;
+  opacity: 0.92;
+}
+.cn-legend-title {
+  fill: var(--text-dim);
+  font-family: 'Georgia', serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+.cn-legend-label {
+  fill: var(--text);
+  font-family: 'Georgia', serif;
+  font-size: 11px;
+}
+.cn-legend-desc {
+  fill: var(--text-dim);
+  font-family: 'Georgia', serif;
+  font-size: 9px;
+  font-style: italic;
+}
+
+/* Hover state */
+.cn-node:hover circle    { stroke-width: 3; r: 10; }
+.cn-node.cn-active circle{ stroke-width: 3; }
+.cn-node.cn-dim          { opacity: 0.2; }
+
+/* You-are-here marker */
+.cn-here {
+  fill: var(--green);
+  stroke: var(--text-bright);
+  stroke-width: 1.5;
+}
+.cn-here-label {
+  fill: var(--green);
+  font-family: 'Georgia', serif;
+  font-size: 11px;
+  text-anchor: middle;
+  font-weight: bold;
+}
+
+/* Info panel */
+#info-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.2em 1.4em;
+  position: sticky;
+  top: 1em;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.info-kind {
+  font-size: 0.7em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.3em;
+}
+#info-title {
+  font-size: 1.05em;
+  color: var(--text-bright);
+  margin: 0 0 0.6em 0;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: normal;
+}
+#info-summary {
+  color: var(--text);
+  margin: 0;
+}
+#info-link {
+  margin-top: 0.8em;
+  font-size: 0.9em;
+}
+#info-summary {
+  white-space: pre-line;     /* preserve the \n\n we inject between blocks */
+}
+.info-tier {
+  display: inline-block;
+  padding: 1px 6px;
+  font-size: 0.7em;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  border-radius: 2px;
+  margin-right: 0.4em;
+  vertical-align: 1px;
+  border: 1px solid;
+}
+.info-tier-t1 { color: var(--accent);     border-color: var(--accent); }
+.info-tier-t2 { color: var(--text-dim);   border-color: var(--accent-dim); }
+.info-tier-t3 { color: var(--gold);       border-color: var(--gold); opacity: 0.9; }
+#info-link a {
+  color: var(--link);
+  text-decoration: none;
+}
+#info-link a:hover { color: var(--link-hover); text-decoration: underline; }
+
+/* Narrative section under the diagram */
+.narrative {
+  border-top: 1px solid var(--border);
+  padding-top: 1.5em;
+  max-width: 44em;
+}
+.narrative p { margin-bottom: 1em; }
+.footnote {
+  font-size: 0.85em;
+  color: var(--text-dim);
+  margin-top: 1.5em;
+}
+.footnote a { color: var(--link); }
