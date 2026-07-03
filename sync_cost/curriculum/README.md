@@ -86,9 +86,9 @@ from Module 1 forward traces back to the wave.
 
 ## Status
 
-Active. Modules 0 and 1 are written as the pattern template; Module
-1a and Modules 2–9 are roadmap-only at this stage. Each will be
-promoted to its own folder when written.
+Active. Modules 0, 1, and 2 are written; Module 1a and Modules 3–9
+are roadmap-only at this stage. Each will be promoted to its own
+folder when written.
 
 The arc was reindexed early when it became clear that no module could
 sit at the root if "a wave" was not constructed first. The original
