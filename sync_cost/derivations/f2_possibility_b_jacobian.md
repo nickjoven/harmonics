@@ -6,12 +6,23 @@
 The 4-mode XOR-filtered Jacobian of the D11 field equation is
 well-defined only in the discrete regime (the substrate-derived
 K=1 Hamiltonian of [[discrete_reduction_computed]]); its symmetry
-group is at most U(1)^4, and dimension counting rules out
-SU(3)×SU(2)×U(1) inside u(4) at the derived non-degenerate
-spectrum {0, 3.645, 9.580, 11.515}. In the continuum regime the
-XOR filter dissolves per [[xor_continuum_limit]], so B's stated
-premise ("4-mode XOR-filtered fixed point") does not exist as a
-distinct object. Obstructions are **exhibited** in both regimes.
+group is at most U(1)^4, computed **explicitly for all three
+D11-named candidate F forms** (all-to-all, local mediant,
+hierarchical) and confirmed F-independently by dimension counting
+on the derived non-degenerate spectrum {0, 3.645, 9.580, 11.515}
+inside u(4). In the continuum regime the XOR filter dissolves per
+[[xor_continuum_limit]], so B's stated premise ("4-mode
+XOR-filtered fixed point") does not exist as a distinct object.
+Obstructions are **exhibited** in both regimes.
+
+Positive record from the explicit computation: the local-mediant
+Jacobian carries an approximate SU(2)-like near-degeneracy on the
+endpoint mode pair {B, D} broken at ~10⁻⁸ (third-order Schwinger
+suppression through the B → A → C → D path). This does not
+satisfy B's closure criterion (approximate not exact; SU(2)
+alone not SU(3)×SU(2)×U(1)) but is the natural mechanism to
+invoke if Possibility A ever needs approximate gauge structure
+at high perturbative order.
 
 Under [[basepoint_principle]]: Possibility B is **structurally
 declined** (obstructions exhibited on the substrate's own
@@ -166,47 +177,105 @@ non-abelian-valued coupling.
 
 **Bright line: struck. B refuted for all-to-all F.**
 
-### Local mediant coupling: sparse but abelian
+### Local mediant F: explicit Jacobian
 
 Mediant adjacency on the Stern-Brocot tree doesn't directly apply
 to the 4 modes {A, B, C, D} — these are kink-content labels, not
-rationals. The natural adjacency is the off-diagonal Hamiltonian
-graph: `α ↔ β` when H_αβ is a single-excitation-flip amplitude:
+rationals. The natural adjacency is the single-flip Hamiltonian
+graph. From `discrete_reduction_computed.md`'s off-diagonal
+Schwinger-suppression structure, the single-flip amplitudes are:
 
-- A ↔ B (create q₂=3 periodic 2π kink)
-- A ↔ C (create q₁=3 antiperiodic π half-twist)
-- A ↔ D (create composite; two-excitation, doubly suppressed)
-- B ↔ D (differ by q₂ sector 3→2 plus half-twist add)
-- C ↔ D (add q₂=2 kink to C's half-twist)
-- B ↔ C: cross-sector, sector (2,3)→(3,2), requires topology change,
-  strongly suppressed
+- g_AB = exp(−S_B) = exp(−9.580) ≈ 6.9×10⁻⁵
+- g_AC = exp(−S_C) = exp(−3.645) ≈ 0.026
+- g_CD = exp(−S_{q₂=2 kink}) = exp(−11.870) ≈ 6.9×10⁻⁶
 
-The adjacency graph is a rooted tree (A at root, C nearest child,
-B and D further) — **not a Cayley graph of a non-abelian group**.
-The Jacobian in this basis is a sparse 4×4 with Schwinger-
-suppressed off-diagonals; its symmetry group is the automorphisms
-of the mode graph plus generic phase rotations, all abelian.
+No single-flip A–D (two-excitation), B–C (cross-sector, topology
+change), or B–D (sector flip + excitation add). **The adjacency
+graph is the path B–A–C–D.**
 
-**No non-abelian structure emerges from mediant/adjacency coupling
-on the discrete 4-mode substrate.**
+Local F treated as vector-valued (per-node K, D11 line 144):
+`F_α[N] = c_α + Σ_{β~α} g_{αβ} N_β`. Jacobian
+`J_{αβ} = d_α × ∂F_α/∂N_β` where
+`d_α = N_total × g(α) × w'(α, K₀F*_α) × K₀`.
 
-### Hierarchical coupling: same conclusion
+Similarity-transformed to symmetric form (ordering B, A, C, D):
 
-Ancestor/descendant structure on the Stern-Brocot rationals
-{1/2, 1/3, 2/3} that underlie the (2,3) denominator classes gives
-a graph with 1/2 as the parent of 1/3 and 2/3 (both mediants of
-0/1 or 1/1 with 1/2). Mapping this back to modes {A, B, C, D}
-requires the kink-content ↔ rational correspondence, which
-factors through:
+    J_sym = [  0     α_AB    0      0    ]
+            [ α_AB    0     α_AC    0    ]
+            [  0     α_AC    0     α_CD  ]
+            [  0      0     α_CD    0    ]
 
-- q₂=3 kink (mode B) ↔ 1/3 or 2/3 winding in periodic-y
-- q₁=3 half-twist (mode C) ↔ 1/3 winding in antiperiodic-x
-- Mode D ↔ product of C and q₂=2 kink at 1/2
+with `α_AB = √(d_A d_B)·g_AB ≈ 6.9×10⁻⁵`,
+`α_AC = √(d_A d_C)·g_AC ≈ 0.026`,
+`α_CD = √(d_C d_D)·g_CD ≈ 6.9×10⁻⁶` (using `d_α ≈ 1`
+normalization; the qualitative structure is d-independent).
 
-The hierarchical structure produces a tree-like coupling matrix.
-Its symmetry group inherits the (mode) ↔ (rational) mapping's
-automorphisms — the Z₂ swap 1/3 ↔ 2/3 in periodic-y, and
-generic phase rotations. Abelian. No SU(3) or SU(2).
+Tridiagonal weighted path-graph adjacency. **Leading-order
+eigenvalues** (with α_AB, α_CD → 0):
+- {A, C} block: eigenvalues ±α_AC ≈ ±0.026
+- {B, D} isolated: two zero eigenvalues
+
+The leading-order **2-fold zero degeneracy on {B, D}** is a
+genuine structural feature — it would support an approximate
+SU(2)-like near-symmetry on that subspace. Degeneracy-lifting:
+direct second-order shifts cancel
+(`⟨B|H_eff|B⟩ = |α_AB|²(−1/α_AC + 1/α_AC) = 0`); first
+non-vanishing splitting is **third-order** through the
+B → A → C → D path:
+
+    δ ~ α_AB · α_CD / α_AC ≈ 1.8×10⁻⁸
+
+The {B, D} near-symmetry is broken at the **10⁻⁸ level** by
+Schwinger-suppressed transition amplitudes.
+
+**This still fails B's closure criterion** for four reasons:
+1. The near-symmetry is approximate (broken at 10⁻⁸), not exact
+2. It's SU(2)-like on {B, D} only — no SU(3) anywhere
+3. {B, D} are the endpoint modes (2π periodic-y kink; half-twist +
+   q₂=2 kink + crossing) — not structurally paired the way
+   weak-isospin doublets are. The near-degeneracy is a graph-
+   topology artifact of the path adjacency, not a substrate-
+   forced flavor symmetry
+4. B requires **SU(3)×SU(2)×U(1) exact with matching structure
+   constants**, not an approximate SU(2) at high perturbative
+   order
+
+**Local mediant F: full symmetry group U(1)^4 exact; approximate
+SU(2)-like on {B, D} broken at 10⁻⁸. B refuted.**
+
+Worth recording honestly: the leading-order {B, D} degeneracy is
+a genuine structural feature of the local-mediant Jacobian on the
+substrate-derived path adjacency, and it would be the natural
+mechanism to invoke if Possibility A ever needed to produce
+approximate gauge structure at high perturbative order.
+
+### Hierarchical F: explicit Jacobian
+
+Hierarchical coupling by sector labels {(2,3): A, B} and
+{(3,2): C, D}. F_α depends on N at same-sector modes only.
+
+Block-diagonal Jacobian (in the sector basis):
+
+    J_sym = [  0     β_AB    0      0    ]
+            [ β_AB    0      0      0    ]
+            [  0      0      0     β_CD  ]
+            [  0      0     β_CD    0    ]
+
+Each 2×2 block has eigenvalues ±|β|. Total spectrum:
+(+β_AB, −β_AB, +β_CD, −β_CD).
+
+Generically β_AB ≠ β_CD: the intra-sector couplings in (2,3) and
+(3,2) come from structurally distinct sectors — different
+denominator parities, different homotopy behavior per
+`xor_derivation.md` §3.3. The B/C asymmetry that forces
+H_BB ≠ H_CC forces the analogous inter-sector coupling asymmetry.
+
+Symmetry between sectors would require β_AB = β_CD, which the
+substrate does not deliver — the same homotopy theorem that
+breaks the H_BB = H_CC symmetry breaks it here first.
+
+**Hierarchical F: symmetry group U(1)^4 exact. No emergent
+non-abelian structure. B refuted.**
 
 ### Spectrum-based analysis: same conclusion, structural version
 
@@ -229,11 +298,29 @@ an SU(2)-like action. **But H_BB ≠ H_CC is forced by
 substrate-derived, not a modeling choice**. The SU(2)-degenerate
 reading is ruled out at the substrate level, not by convention.
 
-**Discrete regime conclusion**: for every candidate F, and directly
-from the substrate-derived Hamiltonian spectrum, the 4-mode
-XOR-filtered Jacobian's symmetry group is abelian — at most
-U(1)^4. No non-abelian gauge structure, no room for
-SU(3)×SU(2)×U(1). **B refuted in the discrete regime.**
+### Discrete regime summary — all three F candidates explicitly computed
+
+| Candidate F | Jacobian structure | Symmetry group | B closure? |
+|---|---|---|---|
+| **All-to-all** | rank-1 outer product | U(1) × 3-dim kernel | Refuted (bright line struck) |
+| **Local mediant** | tridiagonal path B–A–C–D | U(1)^4 exact; approximate SU(2)-like on {B, D} broken at ~10⁻⁸ | Refuted — approximate not exact; SU(2) not SU(3); endpoint modes not doublet partners |
+| **Hierarchical (by sector)** | block-diagonal 2⊕2 with β_AB ≠ β_CD | U(1)^4 exact, no emergent symmetry | Refuted — homotopy theorem breaks inter-sector symmetry |
+
+Directly from the substrate-derived Hamiltonian spectrum (spectrum
+argument, F-independent), any Hermitian 4×4 with non-degenerate
+spectrum has symmetry group U(1)^4, and dimension counting rules
+out SU(3)×SU(2)×U(1) inside u(4). The three-way explicit
+computation confirms the F-agnostic spectrum argument at the
+matrix level and adds one refined observation: the local-mediant
+case carries an **approximate SU(2)-like near-degeneracy on {B, D}
+broken at ~10⁻⁸**, a graph-topology artifact of the path
+adjacency. It doesn't satisfy B's closure criterion (exact,
+matching SU(3)×SU(2)×U(1)) but is the natural mechanism to
+invoke if Possibility A ever needed approximate gauge structure
+at high perturbative order.
+
+**Discrete regime conclusion: B refuted across all three candidate
+F forms and directly from the substrate-derived spectrum.**
 
 ## The continuum-regime Jacobian
 
@@ -331,11 +418,24 @@ epic body ("negative results being a valid outcome").
   It is the substrate-derived object for the K=1 4-mode reduction.
   It just doesn't carry gauge structure.
 - **No claim that F[N] for K < 1 is derived.** D11 Q #1 stays open.
-  This doc's discrete-regime analysis bounds the answer across
-  candidate forms; a specific derived F would sharpen but not
-  overturn the conclusion (the substrate-derived Hamiltonian
-  spectrum is the same object regardless of which F you route
-  through, in the K=1 discrete limit).
+  This doc's discrete-regime analysis explicitly computes Jacobians
+  for all three D11-named candidate F forms (all-to-all, local
+  mediant, hierarchical); each fails B's closure criterion. The
+  spectrum argument (dimension counting on the substrate-derived
+  Hamiltonian) is F-independent and gives the same conclusion
+  directly. A future substrate-derived F would need to escape
+  BOTH the F-agnostic spectrum bound AND the three explicit
+  candidate results to reopen B, which is a strong constraint.
+
+- **Positive record**: the local-mediant Jacobian carries an
+  approximate SU(2)-like near-degeneracy on {B, D} broken at
+  ~10⁻⁸ (third-order Schwinger suppression). This is a genuine
+  structural feature of the path-adjacency Jacobian, discovered
+  by the explicit computation rather than the spectrum argument.
+  It does not satisfy B's closure criterion (approximate, not
+  exact; SU(2)-like, not SU(3)×SU(2)×U(1)) but is worth recording
+  as a possible mechanism for approximate gauge structure at high
+  perturbative order if Possibility A ever needs it.
 - **No claim that SU(3)×SU(2)×U(1) is impossible in the framework.**
   The combinatorial identification Z_6 = Z_2 × Z_3
   (`gauge_factorization.md`) stands as Class 3. B's closure would
@@ -386,10 +486,16 @@ matching SU(3)×SU(2)×U(1) — closes as a **structural-attempt null**
 with obstructions exhibited in both regimes: the substrate-derived
 non-degenerate spectrum {0, 3.645, 9.580, 11.515} admits at most
 U(1)^4 symmetry (dimension counting rules out SU(3)×SU(2)×U(1)
-inside u(4)) in the discrete regime, and the XOR filter that
-defines the 4-mode structure dissolves in the continuum regime;
-Possibility B moves to [[framework_status]]'s `Eliminated` shelf
-as a derivation-strategy null. The F2 epic itself remains open on
+inside u(4)) in the discrete regime — with the local-mediant F
+Jacobian's explicit computation additionally revealing an
+approximate SU(2)-like near-degeneracy on the endpoint mode pair
+{B, D} broken at ~10⁻⁸ (third-order Schwinger suppression), a
+path-adjacency artifact that doesn't satisfy B's closure criterion
+but records a possible mechanism for approximate high-order
+gauge structure — and the XOR filter that defines the 4-mode
+structure dissolves in the continuum regime; Possibility B moves
+to [[framework_status]]'s `Eliminated` shelf as a
+derivation-strategy null. The F2 epic itself remains open on
 Possibility A ("discrete is physical"); this doc closes one of
 its two remaining substrate-aligned techniques, joining the frame-
 bundle refutation from [[xor_continuum_limit]].
