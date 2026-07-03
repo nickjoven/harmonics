@@ -85,7 +85,7 @@ forthcoming derivation atlas.
 | **K < 1 (subcritical)** | Substrate is discrete; gaps in tongue cover | Quantum mechanics emerges as small-ε limit; the substrate's actual physical regime | `continuum_limits.md` Part II, `denomination_boundary.md` |
 | **K = K_c (Kuramoto critical)** | Standard Kuramoto synchronization threshold | Vocabulary disambiguation: for identical oscillators K_c = 0; not the framework's K_STAR | Instance 4 of `vocabulary_is_the_work_pattern.md` |
 | **K_0 ~ 3 (RFE nucleation)** | Iteration nucleation threshold | Distinct from K_STAR and K_c; framework's third K | (rfe repo, K-zoo) |
-| **λ_unlock = (4G − π·ln 2)/π** | Arnold Lyapunov rate on Z_2 quotient | Substrate's partial-decoupling rate | `kam_bridge_synthesis.md` |
+| **λ_unlock = (4G − π·ln 2)/π** | Arnold Lyapunov rate on Z_2 quotient | Substrate's partial-decoupling rate | `lambda_unlock_closed_form.py` (closed-form ↔ numerical to 1e-15), `a_s_geometric_proof.md` A5.2, `numerology_inventory.md` §λ_unlock — *value salvaged; the derivation doc `kam_bridge_synthesis.md` was net-rejected work, never committed (see `framework_status.md` L30, `negative_results_ledger.md`)* |
 | **a_0 = cH_0/(2π)** | MOND acceleration scale | Substrate-derived from Λ; the threshold below which mode-locking partial-decouples | `a0_threshold.md` |
 | **MOND threshold** | Smooth crossover at a = a_0 | Above: full lock-in (Newtonian); below: partial decoupling (MOND-modified); at: partial locking | `a0_threshold.md`, `omega_b_alpha_beta_closure.md` |
 | **w (partial-locking weight)** | Lock-in fraction ∈ [0, 1] | Weight at which a mode is locked; w = 1 = full lock; w < 1 = partial | `boundary_weight.md` |
@@ -117,7 +117,7 @@ forthcoming derivation atlas.
 | **Ω_b** | Baryon density fraction | 1/19 (single-w) → 13/264 = 0.04924 (two-component); observed 0.0493 | same |
 | **R = 6·13⁵⁴** | Planck/Hubble ratio (≈ 8.5×10⁶⁰) | Substrate hierarchy from 54-step depth structure | `hierarchy_gaussian_lattice.md` |
 | **Λ·ℓ_P² = 13⁻¹⁰⁸/12 = 3/R²** | Cosmological constant in Planck units | Structurally derived; smallness is expected behavior of multiplicative depth, not fine-tuning | same |
-| **n_s** | Scalar spectral tilt | Closed-form derivation per A1-A9; predicted 0.963-0.966 vs observed 0.9649 | `a_s_geometric_proof.md`, `n_s_derivation.md` |
+| **n_s** | Scalar spectral tilt | Closed-form derivation per A1-A9; predicted 0.963-0.966 vs observed 0.9649 | `spectral_tilt_reframed.md` (canonical; supersedes `spectral_tilt.md` D02), `a_s_geometric_proof.md` |
 | **A_s_substrate** | Substrate-side scalar amplitude (= 2.33×10⁻⁹) | Framework's complete native prediction; static curvature variance at matter pivot | `a_s_geometric_proof.md` |
 | **A_s_obs** | Observed scalar amplitude (= 2.10×10⁻⁹) | Post-inflation observable; requires anchor-side amplification (H_inf + ε) to compute from substrate prediction | `a_s_g1_closure_attempt.md`, Instance 7 in `vocabulary_is_the_work_pattern.md` |
 | **f_amp** | Inflation amplification factor (H_inf/M_P)²/(8π²·ε·c_s) | The conversion from substrate-side to post-inflation observable; anchor-side, framework declines to predict its magnitude | `a_s_g1_closure_attempt.md`, `h_inf_status.md` |
@@ -127,7 +127,7 @@ forthcoming derivation atlas.
 | Framework term | Standard physics / math | Definition | Source doc |
 |---|---|---|---|
 | **Gauge group** | SU(3) × SU(2) × U(1) | Derived structurally from substrate's q_3 (color), q_2 (Klein), and U(1) hypercharge | (gauge chain) |
-| **SM anomaly cancellation** | All 6 conditions = 0 | Derived from substrate's mode-counting; not assumed | `anomaly_cancellation.md` |
+| **SM anomaly cancellation** | All 6 conditions = 0 | Derived from substrate's mode-counting; not assumed | `anomaly_check.py` |
 | **Strong CP θ = 0** | Strong CP angle vanishes exactly | Substrate symmetry forces it (no Peccei-Quinn axion needed) | (gauge chain) |
 | **Down-type quark factor 6** | a_1(down)²/a_1(lep)² = q_2·q_3 | From S_3 acting on Z_2 × Z_3 lattice; orbit dimensions {1, 3} = {q_3-trivial, q_3-vector} | `down_type_double_cover_closed.md` |
 | **Up-type quark factor 9** | √N_up = q_3 (after K_STAR normalization) | Klein parity −1 on Fibonacci shift applied to matter modes | `item12_K_star_closure.py` |
