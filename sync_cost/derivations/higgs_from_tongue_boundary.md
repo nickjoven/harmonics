@@ -314,10 +314,14 @@ quantities from q_2 = 2, q_3 = 3, and d = 3 alone:
    alternative `1/(2 q_2^2)` reading is numerically equal at q=2
    but is excluded at q=3.
 
-10. **alpha_s/alpha_2 = q_3^3/q_2^3 + 1/q_3^2 = 251/72 = 3.486**.
-    Observed: 3.487. Residual: **0.17%**. The 1/q_3^2 correction
-    is the inverse of the lepton sector constant k_lepton = q_3^2 = 9
-    (see item12_other_residuals.py).
+10. **alpha_s/alpha_2 = q_3^3/q_2^3 = 27/8 = 3.375**.
+    Observed at M_Z: 3.488. Residual: **3.2%**. Bare K=1 substrate-side
+    identity (`framework_status.md` "Bare K=1"; `MANIFEST.yml:
+    bare_k1_identities`; `numerology_inventory.md`). The `+ 1/q_3^2`
+    correction that would give `251/72 = 3.486` (0.17%) was
+    **retracted as a fitted term, not derived** (commit `b2e99ef`/#161;
+    see `rationality_descent.md`, `neutrino_mass_audit.md`,
+    `FRAMEWORK_TOPOLOGY.md`) — do not reintroduce it.
 
 11. **M_W/M_Z = cos(theta_W) = sqrt(27/35)**. Observed: 80.4/91.2
     = 0.882. Computed: 0.878. Residual: **0.4%**.
