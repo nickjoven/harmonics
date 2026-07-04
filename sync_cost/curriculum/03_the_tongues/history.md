@@ -1,0 +1,117 @@
+# Module 3 — History and naming
+
+Read this after working through `README.md` and `engine.py`. You built
+the map of locks — the staircase, the width ordering, the wedges —
+without names. Here they are, with the people who found them, and the
+foreshadow of the structure Module 4 makes explicit.
+
+## The once-per-beat rule — the circle map
+
+The snapshot rule you iterated,
+
+```
+    θ_next = θ_now + Ω − (K / 2π) sin(2π θ_now),
+```
+
+is the **sine circle map** (or **standard circle map**). It is the
+canonical model of a driven oscillator observed once per drive cycle —
+a *stroboscopic* view, the phase sampled at one instant of each
+driver-period. It was introduced and studied by **Vladimir Arnold** in
+1961 as the simplest map on the circle that is a rigid rotation when
+K = 0 and develops locking when K > 0. The regime K < 1 (invertible
+map, clean locks and clean drift) is the one this module stays in; at
+K = 1 the map turns critical, and above it the locks overlap and the
+dynamics can become chaotic.
+
+## The locking ratio — the rotation number
+
+The average phase advance per beat, ρ, is the **rotation number** (or
+**winding number**) of the map. The concept is due to **Henri
+Poincaré** (1885), who proved that for a smooth invertible map of the
+circle the average rotation per step converges to a definite value
+independent of where you start — which is why ρ is well-defined at all.
+A rational rotation number p/q means a periodic orbit: the phase
+returns to where it started after exactly q beats, having gone around p
+times. An irrational rotation number means the orbit never closes — the
+drifting, un-locked motion between the treads.
+
+## The wedges — Arnold tongues
+
+The wedge-shaped locked regions in the (Ω, K) plane are **Arnold
+tongues**, named for the same Vladimir Arnold who wrote down the map.
+Each tongue is the set of (rate, coupling) pairs for which the
+oscillator locks to one particular ratio p/q; each is rooted at the
+point Ω = p/q on the K = 0 axis and widens as K grows, exactly as the
+`wedge` demo shows. Arnold introduced them in the context of "small
+denominator" problems in celestial mechanics — the same small-
+denominator difficulty that makes some planetary resonances stable and
+others not.
+
+The width law you measured — narrower tongue for larger denominator —
+is quantitative and known: near K = 0 the tongue over p/q has width
+proportional to K^q. The 1/2 tongue (q = 2) opens as K²; the 1/3 and
+2/3 tongues (q = 3) open as K³; and so on. Larger denominators are
+crushed to threads. This is the precise form of "the simplest ratio
+wins," and it is why the width in the `widths` table falls by roughly
+half at each step of the denominator.
+
+## The staircase — the devil's staircase
+
+The graph of ρ against Ω at K = 1 — flat over every rational, rising
+only on a dust of irrational points between — is the **devil's
+staircase**, a specific instance of a **Cantor function**. It has the
+paradoxical property that it climbs from 0 to 1 while being flat
+"almost everywhere": the locked intervals (the treads) together fill
+the *entire* length of the axis at K = 1, yet the staircase still
+manages to rise, on a set of points of zero total length. The
+connection between the circle map, mode-locking, and the devil's
+staircase was made explicit by **Jensen, Bak, and Bohr** (1983–84),
+who showed that this exact structure governs mode-locking in real
+driven physical systems.
+
+Below K = 1 — the regime of this module's `staircase` demo — the
+treads do *not* fill the axis; genuine drifting intervals of positive
+length remain between them, which is why you can see the sloped
+un-locked stretches in the plot. As K rises to 1 the treads swell until
+they close the gaps.
+
+## The physical universality
+
+Mode-locking through Arnold tongues is not a mathematical curiosity;
+it is how driven oscillators behave everywhere. It governs the firing
+of cardiac cells driven by a pacemaker (and the arrhythmias that appear
+when the drive falls in a narrow high-denominator tongue), the voltage
+steps of a Josephson junction under microwave radiation (**Shapiro
+steps**, a devil's staircase measured in a laboratory), the resonances
+of moons and planets, the entrainment of circadian rhythms to daylight,
+and injection-locking in electronics. The width law — simple ratios
+robust, complex ratios fragile — is why the stable planetary resonances
+are the simple ones, and why a healthy heart locks 1 : 1 to its
+pacemaker rather than to some elaborate high-order ratio.
+
+## The foreshadow — how the tongues are ordered
+
+One fact about the tongues is held back for Module 4 because it *is*
+Module 4. Between the tongue over p/q and the tongue over r/s (when
+those two are as-close-as-possible neighbors), the widest tongue in the
+gap sits over one specific ratio: the one whose numerator is p + r and
+whose denominator is q + s. The whole numbers do not merely each get a
+tongue; they get tongues arranged in a definite order of appearance,
+generated by a combining rule on the neighbors. Module 4 discovers that
+rule by tabulation, before naming it — and with it, the wedges of this
+module become an enumeration of every ratio, in the exact order their
+locks emerge as coupling weakens.
+
+## What you now have
+
+Names for the whole map: the circle map (Arnold) for the once-per-beat
+rule; the rotation number (Poincaré) for the locking ratio; the Arnold
+tongues for the wedges, with their K^q width law; and the devil's
+staircase (Cantor function; Jensen–Bak–Bohr for the physics) for the
+staircase of locks. And one selection principle, robust enough to run
+a heart: among competing locks, the simplest ratio holds the widest
+tongue and wins.
+
+Module 4 takes two neighboring locks and finds the rule that produces
+the one between them — the seed of every tree the framework is built
+on.
