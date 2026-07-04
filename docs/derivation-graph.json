@@ -1,5 +1,5 @@
 {
-  "generated": "bab66fc7e8ebab15ee3ca7318e69cddf11996397",
+  "generated": "213ee7c29759b84289b867246b2b1358f126a53e",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -26699,7 +26699,7 @@
     {
       "id": "numerology_inventory",
       "path": "sync_cost/derivations/numerology_inventory.md",
-      "cid": "da253a41b9dba375c61e9392abbf39bbb167f459b7ebfa2f620bd136b6c9c877",
+      "cid": "ed588e748e994960433964ee302a330c1e445e2694abac495b1da65a19645d78",
       "sealed": true,
       "title": "Numerology inventory",
       "summary": "Compilation of framework predictions / observations that are confirmed\nnumerology, noted coincidences, or suspects \u2014 so we know what to stop\nchasing as if it were structural.",
@@ -27087,6 +27087,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "213ee7c",
+          "date": "2026-07-04",
+          "subject": "numerology_inventory: unbacktick framework_status ref in \u03b1_s/\u03b1_2 bullet (defense-in-depth for #283) "
+        },
         {
           "hash": "0350890",
           "date": "2026-07-03",
