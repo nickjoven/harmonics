@@ -66,10 +66,12 @@ from Module 1 forward traces back to the wave.
    oscillator, then recognized as arithmetic, then iterated into a
    tree of all ratios. (Necessitates: Module 3. Plants: combining
    rule + enumeration. Names: mediant, Farey, Stern-Brocot tree.)
-5. **The tree the rule builds** — iterating the mediant generates
-   every rational exactly once. (Necessitates: Module 4. Plants:
-   enumeration of rationals. Names: Stern-Brocot tree, Farey
-   sequence.)
+5. **The tree the rule builds** — the mediant run between 0 and
+   infinity enumerates every rational once, in lowest terms; the
+   neighbor invariant b·c−a·d=1 proves it, and each ratio gets a
+   unique L/R address (its continued fraction). (Necessitates: Module
+   4. Plants: enumeration + address/coordinate system. Names:
+   Stern-Brocot tree, SL(2,ℤ), continued fractions.)
 6. **Where the joint state lives** — phase tori, quotients by
    physical symmetries, and what surfaces survive the exclusions.
    (Necessitates: Module 2. Plants: configuration space. Names:
@@ -88,7 +90,7 @@ from Module 1 forward traces back to the wave.
 
 ## Status
 
-Active. Modules 0–4 are written; Module 1a and Modules 5–9 are
+Active. Modules 0–5 are written; Module 1a and Modules 6–9 are
 roadmap-only at this stage. Each will be promoted to its own folder
 when written.
 
