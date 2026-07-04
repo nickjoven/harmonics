@@ -10,6 +10,8 @@ Loads docs/derivation-graph.json and flags:
   (c) scorecard sources whose graph node's direct dependencies
       include any file in numerology_inventory.md Class 1/3 —
       that's a scorecard entry leaning on withdrawn content.
+      (Status/aggregator docs cross-referenced from a Class 1/3
+      entry are excluded — see STATUS_META_NODES.)
 
 Exits 1 if any finding.
 
@@ -39,6 +41,27 @@ ROOT_ALLOWLIST = {
     "README",
 }
 
+# Status-map / scorecard / index / navigation documents. These
+# AGGREGATE the framework's state; they never DERIVE content, so they
+# are never "withdrawn Class 1/3 content." A Class 1/3 entry may
+# legitimately *cross-reference* one — e.g. an align-down disposition
+# noting "aligns `framework_status.md`" — and the `_class_1_3_files`
+# regex captures every backticked .md under a Class 1/3 header, so
+# without this exclusion a cross-reference wrongly marks a status doc
+# as a bad dependency target. (Surfaced when a #263 ⓹ align-down
+# cross-ref to framework_status.md under Class 3 tripped check (c) and
+# broke the substrate-maintenance bot: run_all.py exit 1 → drift
+# reconciliation never committed.) A scorecard claim depending on an
+# aggregator is a status back-reference, not a lean on withdrawn work.
+STATUS_META_NODES = {
+    "framework_status",
+    "free_parameter_scorecard",
+    "numerology_inventory",
+    "README",
+    "FRAMEWORK_TOPOLOGY",
+    "INDEX",
+}
+
 
 def _resolve_source_id(name: str) -> str:
     """Map a scorecard source to a derivation-graph node id."""
@@ -63,7 +86,9 @@ def _class_1_3_files(path: Path) -> set[str]:
         if current in (1, 3):
             for fn in re.findall(r"`([a-z_0-9]+\.md)`", line):
                 files.add(fn[:-3])  # strip .md to match graph ids
-    return files
+    # Aggregator/status docs mentioned in a Class 1/3 entry are
+    # cross-references, not withdrawn content — never a bad dep target.
+    return files - STATUS_META_NODES
 
 
 def main() -> int:
