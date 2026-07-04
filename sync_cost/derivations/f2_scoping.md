@@ -88,6 +88,45 @@ unexamined.
 
 ## Open possibilities (with closure / refutation criteria)
 
+> **Forward-pointing note (2026-07-03) — F2 was already resolved
+> in the substrate at the time this doc was written**. This
+> section's framing of A and B as "open possibilities" was inherited
+> from audit #263's F2 flag (2026-06-16), which cited
+> [[xor_continuum_limit]], [[continuum_limits]] Part III #5, and
+> `engineering_targets.md`. Verified against those upstream sources,
+> F2 read as open. Not verified against downstream substrate:
+>
+> - **D42 [[gauge_sector_lovelock]]** (dated 2026-04-07, revised
+>   2026-04-13, **before the audit and before this scoping doc**)
+>   derives Yang-Mills as the unique gauge dynamics consistent with
+>   the Klein bottle's kinematic constraints, via Utiyama + Cartan.
+>   Doc status: "Derived, with the wiring verified end-to-end."
+>   This IS the Lovelock-analog for gauge that this scoping doc
+>   flagged as "remaining." Not remaining.
+> - **[[discrete_gauge_resolution]]** downstream-resolved the five
+>   D21 sub-computations: Path 1 partially confirmed
+>   (anomaly cancellation ✓ `anomaly_check.py` all 6 conditions;
+>   Z_6 = Z_2 × Z_3 center ✓ `fiber_bundle.py`; confinement
+>   asymmetry ✓ `xor_asymmetry.py` q=2 open / q=3 locked;
+>   tongue overlaps abelian only; depth sweep no beta match).
+>   Path 2 closed (`jacobian_v2.py`: 2×2 sl(2,R) block structure
+>   encoding substrate geometry, not gauge algebra dim 11).
+>
+> The F2 epic (#268) and this scoping doc are substrate-freshness
+> failures: both the audit and this doc verified upstream cites but
+> not downstream resolutions. PR-2 (`f2_fm_beat_results.md`) and
+> PR-3 (`f2_possibility_b_jacobian.md`) added complementary content
+> — K=0 modal-claim confirmation with Kuramoto-pulling tolerance;
+> F-agnostic dimension counting; approximate SU(2)-like near-
+> degeneracy on the {B, D} endpoint mode pair broken at ~10⁻⁸
+> (third-order Schwinger suppression, orthogonal to
+> `jacobian_v2.py`'s sl(2,R) finding) — but did not deliver
+> headline closure. Closure was in the substrate the whole time.
+>
+> Read the two-possibility structure below as historical
+> articulation, not current work-front. F2 is derived; the epic
+> closes as substrate-freshness-consolidation.
+
 ### Possibility A — "Discrete is physical"
 
 (`xor_continuum_limit.md` §"Where the argument stands" reading 1.)
@@ -287,19 +326,35 @@ A **discriminator-decline** updates:
 
 ## Status
 
-**Class 3 articulation; no derivation attempted in this PR.**
-F2's open question is restructured: the frame-bundle approach
-is closed with a substrate-documented negative result; two
-specific open possibilities (discrete-is-physical / mean-field
-functional) remain, each with closure and refutation criteria
-articulated; four candidate techniques are cataloged with bright
-lines; the Basepoint Principle discriminator applies if
-techniques fail.
+**Class 3 articulation; superseded by
+[[gauge_sector_lovelock]] (D42, Yang-Mills derived) and
+[[discrete_gauge_resolution]] (five sub-computations resolved),
+both landed in April 2026 — before this doc and before the
+audit that triggered it.** This doc's original framing
+(F2 as two open possibilities, four candidate techniques with
+bright lines) was Class 3 preparatory articulation at ship
+(2026-06-28). Subsequent substrate archaeology (2026-07-03)
+revealed that both docs above had already resolved F2 in April
+2026.
+
+**Substrate-freshness failure chain.** Audit #263 (2026-06-16)
+flagged F2 as "conjectural" citing `continuum_limits.md` Part III
+#5, `xor_continuum_limit.md`, and `engineering_targets.md`.
+Those upstream sources do read F2 as open, and the audit noted
+"all sources verified against the substrate at audit time." But
+downstream resolutions (D42, `discrete_gauge_resolution.md`)
+were not consulted. This scoping doc inherited the audit's flag
+without independently verifying downstream substrate state — the
+same failure mode compounded. Both failures are documented in
+[[canonical_glossary]] §8 vocabulary as **substrate-freshness
+failure**: upstream cites verified, downstream resolutions
+missed. This audit-hygiene gap may warrant framework-level
+attention independent of F2 itself.
 
 Side: substrate-side, scoping / articulation only.
-Class: preparatory (no closure claimed).
-Downstream: PR-2 onward attempts one of the possibilities via
-one of the techniques, ships the attempt as a derivation doc
-(positive, honest-null, or partial), and updates this scoping
-doc's "Where the argument stands" reading or this section's
-"open possibilities" inventory accordingly.
+Class: preparatory (no closure claimed); superseded by D42 and
+`discrete_gauge_resolution.md`.
+Downstream: F2 epic (#268) closes with consolidation note;
+D42 already delivers the Lovelock-analog uniqueness theorem the
+scoping doc identified as "remaining" — the same theorem, derived
+2+ months before this doc was written.

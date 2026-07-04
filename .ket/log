@@ -378,3 +378,13 @@
 2026-07-03T02:44:32Z | put | sync_cost/derivations/framework_status.md -> 8c51e9d25194c62beba5e32a2b4fabb99cf3a2ba53c11a9824c946ef51190dc7
 2026-07-03T02:44:32Z | put | sync_cost/derivations/numerology_inventory.md -> da253a41b9dba375c61e9392abbf39bbb167f459b7ebfa2f620bd136b6c9c877
 2026-07-03T05:49:40Z | put | sync_cost/derivations/substrate_kk_dispersion_target.md -> c521b0fec854f5c0f53ee2e055119734b8882b29dd0cb7b09c04809e06754689
+2026-07-04T03:39:44Z | put | sync_cost/derivations/continuity_in_K_nulls.md -> 1782542e521d0cd306fd0010419306f10473e1c47d35d60e6d915a9cd728095e
+2026-07-04T03:39:44Z | dag:create | 7898079a501349b2cc00aafeef77ee7281cac497b1459335bfeaf5c780b83f1e
+2026-07-04T03:39:44Z | put | sync_cost/derivations/geometric_forcing_null.py -> b63451ae1aeae1576685f916e37d853a0af13849f1bd8d839aaf400e8b7f9b87
+2026-07-04T03:39:44Z | dag:create | fffa952bc98f0204ac646bdf24bfc7189498832ccfa1152fdb0c3d7c31dc2f6f
+2026-07-04T03:39:44Z | put | sync_cost/derivations/q_mod2_mediant_projection.md -> 6770e87f33e2cdb0bf2ec93b3aa15c91aece83ef5986eb34934340058d6f75b3
+2026-07-04T03:39:44Z | dag:create | 3c9a650b8fe6d66b9c4f0e4890ab072faa4bb3ace9666a9489638eed396f0d03
+2026-07-04T03:39:44Z | put | sync_cost/derivations/canonical_glossary.md -> db27ec108cba4b37bb07bf912ba9f2f9c89781ebc4236e7db3280122f444b28e
+2026-07-04T03:39:44Z | dag:create | 0d1c0711b34f112a2e4fbb92b43f42ec16ed163be0f9a9712625592d82570b5c
+2026-07-04T03:42:56Z | put | sync_cost/derivations/framework_status.md -> 9f3ce4719819d7a04fef8ee718f704aea025b58ae52b69c96f1772f342775da2
+2026-07-04T03:42:56Z | dag:create | c25282554f2f29c041284b5aff8c1c3e09604e6a0bfdb0fc70dc15b2012363ae
