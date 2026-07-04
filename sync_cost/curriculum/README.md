@@ -61,9 +61,11 @@ from Module 1 forward traces back to the wave.
    regions in the coupling-vs-mismatch plane; the boundary is a
    parabola. (Necessitates: Module 2. Plants: stability wedges.
    Names: Arnold tongues.)
-4. **Combining two locks** — discovering the (a+c)/(b+d) rule by
-   tabulating empirical lock points. (Necessitates: Module 3.
-   Plants: combining rule. Names: mediant; Stern 1858 / Brocot 1860.)
+4. **Combining two locks** — the widest lock between two neighbors is
+   the tops-added, bottoms-added fraction; discovered from the driven
+   oscillator, then recognized as arithmetic, then iterated into a
+   tree of all ratios. (Necessitates: Module 3. Plants: combining
+   rule + enumeration. Names: mediant, Farey, Stern-Brocot tree.)
 5. **The tree the rule builds** — iterating the mediant generates
    every rational exactly once. (Necessitates: Module 4. Plants:
    enumeration of rationals. Names: Stern-Brocot tree, Farey
@@ -86,9 +88,9 @@ from Module 1 forward traces back to the wave.
 
 ## Status
 
-Active. Modules 0, 1, and 2 are written; Module 1a and Modules 3–9
-are roadmap-only at this stage. Each will be promoted to its own
-folder when written.
+Active. Modules 0–4 are written; Module 1a and Modules 5–9 are
+roadmap-only at this stage. Each will be promoted to its own folder
+when written.
 
 The arc was reindexed early when it became clear that no module could
 sit at the root if "a wave" was not constructed first. The original
