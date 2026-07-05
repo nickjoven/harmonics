@@ -57,21 +57,20 @@ from Module 1 forward traces back to the wave.
    is not alone. Normal-mode decomposition, integer-ratio
    mode-locking emerging with no integers put in by hand.
    (Necessitates: Module 1. Plants: mode-locking.)
-3. **The shape of stable locking** — wedge-shaped stability
-   regions in the coupling-vs-mismatch plane; the boundary is a
-   parabola. (Necessitates: Module 2. Plants: stability wedges.
-   Names: Arnold tongues.)
-4. **Combining two locks** — the widest lock between two neighbors is
-   the tops-added, bottoms-added fraction; discovered from the driven
-   oscillator, then recognized as arithmetic, then iterated into a
-   tree of all ratios. (Necessitates: Module 3. Plants: combining
-   rule + enumeration. Names: mediant, Farey, Stern-Brocot tree.)
-5. **The tree the rule builds** — the mediant run between 0 and
-   infinity enumerates every rational once, in lowest terms; the
-   neighbor invariant b·c−a·d=1 proves it, and each ratio gets a
-   unique L/R address (its continued fraction). (Necessitates: Module
-   4. Plants: enumeration + address/coordinate system. Names:
-   Stern-Brocot tree, SL(2,ℤ), continued fractions.)
+3. **The tongues** — a driven oscillator locks at every whole-number
+   ratio; each lock is a wedge, and the wedge over a simpler ratio is
+   wider. The simplest ratio holds the widest, most robust lock — the
+   selection principle the framework rests on. (Necessitates: Module
+   2. Plants: the width-ordering / simplest-ratio-wins selection.
+   Names: circle map, rotation number, Arnold tongues, devil's
+   staircase.)
+4. **Combining two locks** — discovering the (a+c)/(b+d) rule by
+   tabulating empirical lock points. (Necessitates: Module 3.
+   Plants: combining rule. Names: mediant; Stern 1858 / Brocot 1860.)
+5. **The tree the rule builds** — iterating the mediant generates
+   every rational exactly once. (Necessitates: Module 4. Plants:
+   enumeration of rationals. Names: Stern-Brocot tree, Farey
+   sequence.)
 6. **Where the joint state lives** — phase tori, quotients by
    physical symmetries, and what surfaces survive the exclusions.
    (Necessitates: Module 2. Plants: configuration space. Names:
