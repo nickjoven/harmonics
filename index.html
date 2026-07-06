@@ -690,6 +690,62 @@ a predictive row and a decisive verdict.</p>
     $\sim\!22$&nbsp;ppb.</li>
 </ul>
 
+<h2 id="curriculum">Curriculum</h2>
+
+<p>A reader-facing teaching arc that builds the framework
+<em>inward</em>. Where the derivation docs above start from named
+mathematical objects (Stern-Brocot trees, Klein bottles, Farey
+rationals), the curriculum starts from phenomena and constructions a
+reader can follow with no prior math, and arrives at those same objects
+from the other side. History and naming come <em>after</em> the
+construction: you finish a module having built the object yourself, then
+learn what it has been called for the last 200 years. The name is the
+reward, not the prerequisite.</p>
+
+<p>Each module is a folder with three parts: a <strong>README</strong>
+(the assertion + the construction), a runnable <strong>engine.py</strong>
+(pure standard library — run it, change parameters, watch the
+construction work), and a <strong>history.md</strong> naming reveal you
+can skip on a first pass. Start with the
+<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/curriculum/README.md">arc index</a>;
+the <a href="docs/concentric.html">concentric graph</a> is its visual
+companion, showing the six familiar observations as consequences of a
+single wave.</p>
+
+<ol>
+  <li><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/curriculum/00_shapes_have_jobs/README.md"><strong>Shapes have jobs</strong></a>
+    &mdash; 90&deg;, the parabola, the square, each as the <em>answer</em>
+    to a physical or combinatorial question rather than a thing to
+    recognise.</li>
+  <li><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/curriculum/01_what_a_wave_is/README.md"><strong>What a wave is</strong></a>
+    &mdash; restoration + inertia + coupling combine into outward
+    propagation, and six familiar effects (Doppler, redshift, dilation,
+    mass-energy, and two walls) fall out as consequences, not yet named.</li>
+  <li><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/curriculum/02_two_waves_one_medium/README.md"><strong>Two waves on one medium</strong></a>
+    &mdash; normal modes, and integer-ratio mode-locking emerging with no
+    integers put in by hand.</li>
+  <li><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/curriculum/03_the_tongues/README.md"><strong>The shape of stable locking</strong></a>
+    &mdash; wedge-shaped stability regions in the coupling-vs-mismatch
+    plane; the boundary is the parabola from Module 0.</li>
+  <li><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/curriculum/04_combining_two_locks/README.md"><strong>Combining two locks</strong></a>
+    &mdash; the widest lock between two neighbours is the tops-added,
+    bottoms-added fraction; discovered from the driven oscillator, then
+    recognised as arithmetic, then iterated into a tree of all ratios.</li>
+  <li><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/curriculum/05_the_tree_the_rule_builds/README.md"><strong>The tree the rule builds</strong></a>
+    &mdash; one rule between zero and infinity enumerates every rational
+    once, in lowest terms; the neighbor invariant
+    $b\,c - a\,d = 1$ proves it, each ratio gets a unique left/right
+    address, and every edge carries a turn that is at once a mediant step,
+    an $\mathrm{SL}(2,\mathbb{Z})$ generator, and a bifurcation to a
+    strictly narrower lock. <em>(Landing via
+    <a href="https://github.com/nickjoven/harmonics/pull/288">#288</a>.)</em></li>
+</ol>
+
+<p>Modules&nbsp;6&ndash;9 are on the roadmap: where the joint state lives
+(tori, M&ouml;bius, Klein), why only 2 and 3, the cosmic address
+($\Omega_\Lambda = 13/19$ as a position on the tree, not a fitted
+number), and the connection back to the named framework above.</p>
+
 <h2>Interactive resources</h2>
 
 <p>A consolidated index of the deployed interactive pages,
@@ -727,6 +783,11 @@ grouped by intent. Each link has a short note on what to expect.</p>
     <a href="docs/claim-chain-views.html">three views</a> &mdash;
     canonical claim chain generated from
     <a href="https://github.com/nickjoven/harmonics/blob/main/MANIFEST.yml">MANIFEST.yml</a>.</li>
+  <li><a href="docs/concentric.html">Concentric graph</a> &mdash;
+    the curriculum's visual companion: a single wave at the centre, its
+    three ingredients on the first ring, and the six familiar
+    observations on the next &mdash; each drawn as a consequence, with the
+    Planck and Hubble walls marking the band we live inside.</li>
   <li><a href="docs/a_s_proof.html">A_s proof</a> &mdash;
     three-dimensional layout of the scalar-amplitude proof structure.</li>
   <li><a href="docs/cmb-s4.html">CMB-S4 forecast</a> &mdash;
