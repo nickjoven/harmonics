@@ -1,5 +1,5 @@
 {
-  "generated": "67d82cac3e2800f695534d871ab86cdde864c4d9",
+  "generated": "213ee7c29759b84289b867246b2b1358f126a53e",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -6078,7 +6078,7 @@
     {
       "id": "canonical_glossary",
       "path": "sync_cost/derivations/canonical_glossary.md",
-      "cid": "209cbee29172ade0d8bb7345b1ef180c5d18e0f8ffe85106689b75184740ce54",
+      "cid": "db27ec108cba4b37bb07bf912ba9f2f9c89781ebc4236e7db3280122f444b28e",
       "sealed": true,
       "title": "Canonical glossary \u2014 framework \u2194 standard physics vocabulary",
       "summary": "Glossary v1, 2026-04-26. ~70 framework terms mapped to standard\nphysics / math equivalents across 10 thematic sections. Intended\nto be readable end-to-end in 30 minutes by a working physicist\nwith no prior framework exposure.",
@@ -7718,7 +7718,7 @@
     {
       "id": "continuity_in_K_nulls",
       "path": "sync_cost/derivations/continuity_in_K_nulls.md",
-      "cid": "3a3b4152e8e20e763304b78337ded8f3e09084ccaea502737905b9d288da1254",
+      "cid": "1782542e521d0cd306fd0010419306f10473e1c47d35d60e6d915a9cd728095e",
       "sealed": true,
       "title": "Continuity-in-K derivation: prior null results",
       "summary": "**Active null-results registry for K-axis continuity questions.**\nCatalogues N1-N15+ null findings on continuity / smoothness\nacross K. N11 (tongue coverage discontinuity at K = 1) is\nload-bearing for the D.3 closure (K = 1 \u2194 K < 1 sector\ndecoupling) per `path_closures_iter3.md`; cited in\n`derivation_atlas.md` Part VI \u00a76.3.",
@@ -9749,6 +9749,8 @@
       "depends_on": [],
       "depended_on_by": [
         "INDEX",
+        "f2_scoping",
+        "framework_status",
         "gauge_high_scale_identification",
         "klein_connection",
         "meaning_of_two_wip"
@@ -9757,6 +9759,14 @@
       "edged_by": [
         {
           "source": "INDEX",
+          "kind": "references"
+        },
+        {
+          "source": "f2_scoping",
+          "kind": "references"
+        },
+        {
+          "source": "framework_status",
           "kind": "references"
         },
         {
@@ -12491,7 +12501,8 @@
         "xor_continuum_limit"
       ],
       "depended_on_by": [
-        "f2_possibility_b_jacobian"
+        "f2_possibility_b_jacobian",
+        "f2_scoping"
       ],
       "edges": [
         {
@@ -12523,6 +12534,10 @@
         {
           "source": "f2_possibility_b_jacobian",
           "kind": "references"
+        },
+        {
+          "source": "f2_scoping",
+          "kind": "references"
         }
       ],
       "git": [
@@ -12553,7 +12568,9 @@
         "xor_continuum_limit",
         "xor_derivation"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "f2_scoping"
+      ],
       "edges": [
         {
           "target": "anchor_count_reaudit",
@@ -12600,7 +12617,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "f2_scoping",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "f11c532",
@@ -12615,12 +12637,15 @@
       "cid": null,
       "sealed": false,
       "title": "F2 scoping \u2014 Klein \u2192 gauge continuum limit (Yang-Mills target)",
-      "summary": "**Class 3 articulation; no derivation attempted in this PR.**\nF2's open question is restructured: the frame-bundle approach\nis closed with a substrate-documented negative result; two\nspecific open possibilities (discrete-is-physical / mean-field\nfunctional) remain, each with closure and refutation criteria\narticulated; four candidate techniques are cataloged with bright\nlines; the Basepoint Principle discriminator applies if\ntechniques fail.",
+      "summary": "**Class 3 articulation; superseded by\n[[gauge_sector_lovelock]] (D42, Yang-Mills derived) and\n[[discrete_gauge_resolution]] (five sub-computations resolved),\nboth landed in April 2026 \u2014 before this doc and before the\naudit that triggered it.** This doc's original framing\n(F2 as two open possibilities, four candidate techniques with\nbright lines) was Class 3 preparatory articulation at ship\n(2026-06-28). Subsequent substrate archaeology (2026-07-03)\nrevealed that both docs above had already resol",
       "depends_on": [
         "anchor_count_reaudit",
         "basepoint_principle",
         "continuum_limits",
+        "discrete_gauge_resolution",
         "engineering_targets",
+        "f2_fm_beat_results",
+        "f2_possibility_b_jacobian",
         "framework_status",
         "gauge_factorization",
         "klein_bottle",
@@ -12646,7 +12671,19 @@
           "kind": "references"
         },
         {
+          "target": "discrete_gauge_resolution",
+          "kind": "references"
+        },
+        {
           "target": "engineering_targets",
+          "kind": "references"
+        },
+        {
+          "target": "f2_fm_beat_results",
+          "kind": "references"
+        },
+        {
+          "target": "f2_possibility_b_jacobian",
           "kind": "references"
         },
         {
@@ -12685,6 +12722,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "2099bf5",
+          "date": "2026-07-04",
+          "subject": "F2 consolidation: acknowledge D42 as the actual Yang-Mills closure (#285)"
+        },
         {
           "hash": "b079a84",
           "date": "2026-06-29",
@@ -13678,7 +13720,7 @@
     {
       "id": "framework_status",
       "path": "sync_cost/derivations/framework_status.md",
-      "cid": "8c51e9d25194c62beba5e32a2b4fabb99cf3a2ba53c11a9824c946ef51190dc7",
+      "cid": "9f3ce4719819d7a04fef8ee718f704aea025b58ae52b69c96f1772f342775da2",
       "sealed": true,
       "title": "Framework status map",
       "summary": "At-a-glance inventory. One line per item. Full analysis lives in the\nreferenced files; this is the bird's-eye view to prevent duplicate\nwork and re-derivation of eliminated content.",
@@ -13705,6 +13747,7 @@
         "denomination_boundary",
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
+        "discrete_gauge_resolution",
         "discrete_reduction_computed",
         "duty_dimension_proof",
         "einstein_from_kuramoto",
@@ -13950,6 +13993,10 @@
         },
         {
           "target": "discrete_extension_principle",
+          "kind": "references"
+        },
+        {
+          "target": "discrete_gauge_resolution",
           "kind": "references"
         },
         {
@@ -14576,6 +14623,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "2099bf5",
+          "date": "2026-07-04",
+          "subject": "F2 consolidation: acknowledge D42 as the actual Yang-Mills closure (#285)"
+        },
         {
           "hash": "0350890",
           "date": "2026-07-03",
@@ -26647,7 +26699,7 @@
     {
       "id": "numerology_inventory",
       "path": "sync_cost/derivations/numerology_inventory.md",
-      "cid": "da253a41b9dba375c61e9392abbf39bbb167f459b7ebfa2f620bd136b6c9c877",
+      "cid": "ed588e748e994960433964ee302a330c1e445e2694abac495b1da65a19645d78",
       "sealed": true,
       "title": "Numerology inventory",
       "summary": "Compilation of framework predictions / observations that are confirmed\nnumerology, noted coincidences, or suspects \u2014 so we know what to stop\nchasing as if it were structural.",
@@ -27035,6 +27087,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "213ee7c",
+          "date": "2026-07-04",
+          "subject": "numerology_inventory: unbacktick framework_status ref in \u03b1_s/\u03b1_2 bullet (defense-in-depth for #283) "
+        },
         {
           "hash": "0350890",
           "date": "2026-07-03",
@@ -31790,7 +31847,7 @@
     {
       "id": "q_mod2_mediant_projection",
       "path": "sync_cost/derivations/q_mod2_mediant_projection.md",
-      "cid": "4e436ffd27ed2b98599a2da2c731339e9728ae0d99bc289a27636db418b09e94",
+      "cid": "6770e87f33e2cdb0bf2ec93b3aa15c91aece83ef5986eb34934340058d6f75b3",
       "sealed": true,
       "title": "Q mod 2 mediant projection (state-axis dual of inviolable #1)",
       "summary": "**State-axis projection articulated** for inviolable #1\n(`substrate_determinism.md` L166-167; `q_mod2_conservation_theorem.md`).\nThe conservation theorem's time-axis reading \u2014 \"no local process\nchanges `Q mod 2`\" \u2014 has a state-axis dual: a parity superselection\nrule on Farey mediants admissible as lock-ratios on the substrate.",
@@ -35849,8 +35906,8 @@
     {
       "id": "substrate_kk_dispersion_target",
       "path": "sync_cost/derivations/substrate_kk_dispersion_target.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "c521b0fec854f5c0f53ee2e055119734b8882b29dd0cb7b09c04809e06754689",
+      "sealed": true,
       "title": "Substrate Kramers-Kronig dispersion relation \u2014 status audit + posed derivation target",
       "summary": "Two resolution-mode findings sealed, one derivation target **posed,\nnot derived**:",
       "depends_on": [
