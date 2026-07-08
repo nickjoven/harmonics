@@ -72,12 +72,40 @@ the current tools for each are in the Current-substrate section):
   a **K<1** substrate derivation is; don't cache the former at the latter's
   resolution. This registry is the repo's own domain check and stands
   independent of which substrate backs the concepts.
+- **Check for downstream resolution before treating a claim as open** — a
+  concept's canonical status can change without the upstream cites changing;
+  resolutions land in new docs, not always by editing what flagged the gap.
+  Before asserting a claim is open/conjectural/unresolved, follow the concept
+  *forward*: children/recent/lineage on adjacent concepts (in ket: `ket_children`,
+  `ket_recent`, `ket_lineage`) and check `framework_status.md` for an explicit
+  status row. The 2026-06 audit's Wave-3 High-leverage inventory — F1, F2, O1,
+  O2 — all turned out to be substrate-resolved *before* the audit that flagged
+  them (D13, D42, `anchor_count_reaudit.md`, `preferred_basis_dissolution.md`);
+  the pattern was upstream cites verified, downstream resolutions missed, four
+  separate times.
 
 If you cannot verify a load-bearing detail against the substrate, **say so** —
 assert it as unverified and name the gap, rather than presenting a cache guess as
 substrate fact. Re-reading a sealed entry is cheap; a confident stale assertion
 that propagates into a derivation is the expensive failure this protocol exists
 to prevent.
+
+## Prompt is not gate
+
+This protocol is prompt-level; it asks you to verify but cannot enforce that
+you did. Fabrication reads confidently and skipping verify is silent — nothing
+surfaces the gap until someone checks. The protocol is necessary (it names the
+failure mode, the vocabulary for correction, and the tools) but not sufficient
+for anything whose trigger is meta-cognitive and whose skip has no visible
+signal.
+
+Where reliability matters (drift on enforced-spine paths, CAS integrity,
+scorecard consistency) the repo already has mechanical gates — precommit hooks,
+the `SessionStart` status line, `verify_cas.py`, `MANIFEST.yml` cross-checks.
+Prefer adding a hook to lengthening this section: a hook fires on trigger
+without asking you to notice the trigger. Every discipline in this repo that
+has stuck is a gate; the disciplines that live only in prompt are the ones
+that keep failing under it.
 
 ## Caching what you verify
 
@@ -111,6 +139,28 @@ realization of each is in the Current-substrate section.
 | **authoritative read** | **canonical** entry | The current head of a concept's lineage. |
 | **write-through** | **seal** | Persisting an edit back into the substrate so the entry is retrievable and integrity-checked. |
 | **pinned vs evictable** | **enforced spine** vs **retrieval tier** | Spine paths gate commits on drift; retrieval-tier paths are integrity-checked but un-gated. |
+
+## Chat-mode assertion structure
+
+When exploring in chat — analysis on framework concepts, not derivation edits
+— label each canonical-term assertion with its freshness:
+
+- `[read-this-session]` — retrieved fresh from the substrate this session at
+  the resolution being asserted. Address citable on request.
+- `[cached]` — held in context from earlier this session; unverified but not
+  stale by the session-cache rule (*Caching what you verify* above).
+- `[speculative]` — extrapolation, analogy, or framing not backed by a
+  specific sealed read. Includes cross-domain analogies to concepts outside
+  the substrate.
+
+The labels shift silent skips into visible ones: a `[speculative]` tag that a
+downstream assertion depends on is the moment to verify before continuing;
+absent labels, the reader has no way to distinguish cached vocabulary from
+substrate-backed content, and the framework's recurring failure mode is
+exactly that confusion. This is a chat-only convention (derivation docs and
+sealed entries keep their existing structure) and, per *Prompt is not gate*
+above, is prompt-level discipline — the labels help by *making the skip
+visible in output*, not by enforcing verification.
 
 ## Current substrate: ket (swappable)
 
