@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curriculum &mdash; Harmonics</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ── Curriculum arc: a spine emanating from a wave ────────────── */
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 1.4em;
+    font-size: 0.82em; color: var(--text-dim);
+    margin: 0 0 2.6em; padding-bottom: 1.2em;
+    border-bottom: 1px solid var(--border);
+    letter-spacing: 0.03em;
+  }
+  .legend span { display: inline-flex; align-items: center; gap: 0.5em; }
+  .swatch { width: 0.72em; height: 0.72em; border-radius: 50%; flex: none; }
+  .swatch.written  { background: var(--green); }
+  .swatch.roadmap  { background: var(--accent-dim); }
+  .swatch.wall     { background: var(--gold); }
+
+  /* the spine */
+  .arc { list-style: none; margin: 0; padding: 0; }
+  .mod {
+    position: relative;
+    padding: 0 0 1.9em 2.6em;
+  }
+  /* spine segment (solid while written, dashed once roadmap) */
+  .mod::before {
+    content: ""; position: absolute;
+    left: 0.5em; top: 0.35em; bottom: -0.35em;
+    border-left: 2px solid var(--accent-dim);
+  }
+  .mod.written::before { border-left-style: solid; border-left-color: var(--accent); }
+  .mod.roadmap::before { border-left-style: dashed; border-left-color: var(--accent-dim); }
+  .mod:last-child::before { display: none; }
+  /* the node dot */
+  .mod::after {
+    content: ""; position: absolute;
+    left: calc(0.5em - 4px); top: 0.4em;
+    width: 11px; height: 11px; border-radius: 50%;
+    background: var(--accent-dim);
+    box-shadow: 0 0 0 3px var(--bg);
+  }
+  .mod.written::after { background: var(--green); }
+  .mod.wall::after    { background: var(--gold); }
+
+  .mod .num {
+    font-size: 0.8em; color: var(--text-dim);
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .mod h2 {
+    font-size: 1.08em; color: var(--text-dim);
+    margin: 0.1em 0 0.4em; border: none; padding: 0;
+    letter-spacing: 0.02em; font-weight: normal;
+  }
+  .mod.written h2 { color: var(--text-bright); }
+  .mod h2 a { border-bottom: 1px solid var(--accent-dim); }
+  .mod .hook { margin: 0 0 0.5em; }
+  .mod.roadmap .hook { color: var(--text-dim); }
+  .mod .names {
+    margin: 0; font-size: 0.82em; color: var(--text-dim);
+    font-style: italic;
+  }
+  .mod .names::before { content: "names revealed \2014 "; font-style: normal; opacity: 0.7; }
+  .mod .glyph { font-family: 'Menlo','Consolas','DejaVu Sans Mono',monospace; font-style: normal; color: var(--accent); }
+  .gold { color: var(--gold); }
+
+  /* status chip */
+  .chip {
+    display: inline-block; font-size: 0.68em; letter-spacing: 0.09em;
+    text-transform: uppercase; padding: 0.1em 0.6em; border-radius: 2px;
+    vertical-align: 0.22em; margin-left: 0.7em;
+  }
+  .written .chip { color: var(--green);      border: 1px solid var(--green); opacity: 0.85; }
+  .roadmap .chip { color: var(--text-dim);   border: 1px solid var(--border); }
+
+  /* the wave at the root */
+  .root-wave { display: block; margin: 0 0 0.5em; color: var(--accent); }
+  .root-note { font-size: 0.82em; color: var(--text-dim); font-style: italic; margin: 0.3em 0 0; }
+
+  /* frontier marker between written and roadmap */
+  .frontier {
+    position: relative; padding: 0 0 1.9em 2.6em;
+    font-size: 0.8em; color: var(--gold); letter-spacing: 0.06em;
+  }
+  .frontier::before {
+    content: ""; position: absolute; left: 0.5em; top: -0.35em; bottom: -0.35em;
+    border-left: 2px dashed var(--accent-dim);
+  }
+  .frontier span { display: inline-block; padding-top: 0.1em; opacity: 0.85; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Reference</a>
+  <a href="curriculum.html" class="active">Curriculum</a>
+  <a href="concentric.html">Concentric</a>
+  <a href="genesis.html">Genesis</a>
+  <a href="glossary.html">Glossary</a>
+  <a href="phenomenon-glossary.html">Phenomena</a>
+  <a href="derivations.html">Derivations</a>
+  <a href="preprint.html">Preprint</a>
+</nav>
+
+<h1>The curriculum, from a wave outward</h1>
+
+<p class="subtitle">
+A reader-facing teaching arc built <em>inward</em>: it starts from phenomena
+a reader can follow with no prior math and arrives at the framework's named
+objects from the other side. Every module is a consequence of the one before
+it, and the whole spine grows outward from a single object &mdash; a wave.
+History and naming come <em>after</em> the construction; the name is the
+reward, not the prerequisite. Written modules link to their source; run each
+one's <code>engine.py</code> to watch the construction work.
+</p>
+
+<div class="legend">
+  <span><span class="swatch written"></span>written &mdash; ready to read &amp; run</span>
+  <span><span class="swatch roadmap"></span>roadmap &mdash; planned</span>
+  <span><span class="swatch wall"></span>a wall / a marked address</span>
+</div>
+
+<ol class="arc">
+
+  <li class="mod written">
+    <div class="num">Module 0 &middot; foundation</div>
+    <h2><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/curriculum/00_shapes_have_jobs/README.md">Shapes have jobs</a><span class="chip">written</span></h2>
+    <p class="hook">90&deg;, the parabola, the square &mdash; each as the <em>answer</em> to a physical or combinatorial question, not a thing to recognise. The prerequisite the wave will draw on.</p>
+    <p class="names">orthogonality, the bound/unbound boundary, discrete binary symmetry (planted, not yet named)</p>
+  </li>
+
+  <li class="mod written">
+    <svg class="root-wave" width="130" height="24" viewBox="0 0 130 24" fill="none" aria-hidden="true">
+      <path d="M2 12 C 12 2, 22 2, 32 12 S 52 22, 62 12 S 82 2, 92 12 S 112 22, 122 12" stroke="currentColor" stroke-width="2" fill="none"/>
+    </svg>
+    <div class="num">Module 1 &middot; the root</div>
+    <h2><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/curriculum/01_what_a_wave_is/README.md">What a wave is</a><span class="chip">written</span></h2>
+    <p class="hook">Restoration + inertia + coupling combine into outward propagation. Six familiar effects &mdash; Doppler, redshift, time dilation, mass&ndash;energy, and two <span class="gold">walls</span> at the extremes of scale &mdash; fall out as consequences, not yet named.</p>
+    <p class="root-note">Everything below traces back to this one object.</p>
+  </li>
+
+  <li class="mod roadmap">
+    <div class="num">Module 1a &middot; companion</div>
+    <h2>The six observations<span class="chip">roadmap</span></h2>
+    <p class="hook">Names for what Module 1 planted: Doppler shift, redshift, time dilation, mass&ndash;energy equivalence, the Planck wall, the Hubble wall &mdash; kept structurally separate from the construction.</p>
+  </li>
+
+  <li class="mod written">
+    <div class="num">Module 2</div>
+    <h2><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/curriculum/02_two_waves_one_medium/README.md">Two waves on one medium</a><span class="chip">written</span></h2>
+    <p class="hook">What happens when one wave is not alone: normal-mode decomposition, and integer-ratio mode-locking emerging with no integers put in by hand.</p>
+    <p class="names">normal modes, mode-locking</p>
+  </li>
+
+  <li class="mod written">
+    <div class="num">Module 3</div>
+    <h2><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/curriculum/03_the_tongues/README.md">The shape of stable locking</a><span class="chip">written</span></h2>
+    <p class="hook">Wedge-shaped stability regions in the coupling-vs-mismatch plane; the boundary is the parabola from Module 0, and the wedge over a simpler ratio is wider &mdash; the selection principle the framework rests on.</p>
+    <p class="names">circle map, rotation number, Arnold tongues, the devil&rsquo;s staircase</p>
+  </li>
+
+  <li class="mod written">
+    <div class="num">Module 4</div>
+    <h2><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/curriculum/04_combining_two_locks/README.md">Combining two locks</a><span class="chip">written</span></h2>
+    <p class="hook">The widest lock between two neighbours is the tops-added, bottoms-added fraction &mdash; discovered from the driven oscillator, recognised as arithmetic, then iterated into a tree of all ratios.</p>
+    <p class="names">the mediant, Farey sequences, Stern&ndash;Brocot</p>
+  </li>
+
+  <li class="mod written">
+    <div class="num">Module 5</div>
+    <h2><a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/curriculum/05_the_tree_the_rule_builds/README.md">The tree the rule builds</a><span class="chip">written</span></h2>
+    <p class="hook">One rule between zero and infinity enumerates every rational once, in lowest terms; the neighbor invariant <span class="glyph">b&middot;c&minus;a&middot;d = 1</span> proves it, each ratio gets a unique <span class="glyph">L/R</span> address, and every edge carries a turn that is at once a mediant step, an <span class="glyph">SL(2,&#8484;)</span> generator, and a bifurcation to a strictly narrower lock.</p>
+    <p class="names">Stern&ndash;Brocot tree, SL(2,&#8484;), continued fractions</p>
+  </li>
+
+  <li class="frontier"><span>&mdash; frontier: everything below is roadmap &mdash;</span></li>
+
+  <li class="mod roadmap">
+    <div class="num">Module 6</div>
+    <h2>Where the joint state lives<span class="chip">roadmap</span></h2>
+    <p class="hook">Phase tori, quotients by physical symmetries, and which surfaces survive the exclusions &mdash; the half-twist that turns Module 5&rsquo;s edges into a non-orientable surface.</p>
+    <p class="names">torus, M&ouml;bius strip, Klein bottle, the real projective plane</p>
+  </li>
+
+  <li class="mod roadmap">
+    <div class="num">Module 7</div>
+    <h2>Why only 2 and 3<span class="chip">roadmap</span></h2>
+    <p class="hook">An exhaustive search for consecutive perfect powers finds that <span class="glyph">(8, 9)</span> is alone &mdash; the minimal integer pair the mass sector turns on.</p>
+    <p class="names">Catalan&rsquo;s conjecture, Mih&#259;ilescu 2002</p>
+  </li>
+
+  <li class="mod roadmap wall">
+    <div class="num">Module 8</div>
+    <h2>Where on the tree are we<span class="chip">roadmap</span></h2>
+    <p class="hook">Depth as a cosmic address; rational constants read as positions, not measurements. The <span class="gold">walls</span> planted in Module 1 reappear as the Planck and Hubble depths, and <span class="gold glyph">&#8486;<sub>&#923;</sub> = 13/19</span> becomes a location on the tree rather than a fitted number.</p>
+    <p class="names">H&#8320;, &#8486;<sub>&#923;</sub> = 13/19</p>
+  </li>
+
+  <li class="mod roadmap">
+    <div class="num">Module 9</div>
+    <h2>The named framework<span class="chip">roadmap</span></h2>
+    <p class="hook">Connecting back to the existing derivation graph. Having built the objects, the reader can now open any top-tier doc in <code>sync_cost/derivations/</code> and recognise the construction.</p>
+  </li>
+
+</ol>
+
+<p style="margin-top:2.5em; font-size:0.9em; color:var(--text-dim);">
+The <a href="concentric.html">concentric graph</a> is the companion view:
+it shows the six familiar observations arranged as consequences of the same
+wave at the centre. Start reading at the
+<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/curriculum/README.md">arc index</a>.
+</p>
+
+</body>
+</html>
