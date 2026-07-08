@@ -259,6 +259,11 @@ against observation. Ω_Λ = 13/19 matching to 0.07σ is the check.
 
 ## Status
 
+**Class 5 / Survives.** Uniqueness proof of Ω_Λ = 13/19 (0.07σ); the
+Ω-partition is a `numerology_inventory.md` §Class 5 item (structural,
+counted not fitted — sibling of `farey_partition.md`).
+(Machine-readable tag, issue #263 ⓾.)
+
 **Theorem proved** conditional on D10's axiom that the mediant is
 primitive. The proof has four steps, each referencing an established
 result. The uniqueness follows from the mediant being the only

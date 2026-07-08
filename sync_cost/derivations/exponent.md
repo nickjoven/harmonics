@@ -160,6 +160,11 @@ independently), so no other hierarchy is possible.
 
 ## Status
 
+**Class 5 / Survives.** The exponent q₂q₃^d = 54 of R = 6·13⁵⁴ is
+structural (mode counting, no fitted factors); the hierarchy result
+is a `numerology_inventory.md` §Class 5 item. (Machine-readable tag,
+issue #263 ⓾.)
+
 **Derived**: the exponent q₂q₃^d = 54 follows from three established
 results:
 1. The Klein bottle assigns q₃ to spatial, q₂ to temporal (D19)
