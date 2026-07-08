@@ -1,5 +1,5 @@
 {
-  "generated": "213ee7c29759b84289b867246b2b1358f126a53e",
+  "generated": "d5b1268d627a1476359d949f945b43d804d5a4bb",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -910,6 +910,7 @@
         "cosmological_cycle",
         "einstein_from_kuramoto",
         "figure_eight",
+        "framework_status",
         "generation_mechanism",
         "k_of_t_friedmann",
         "mediant_derivation",
@@ -972,6 +973,10 @@
         },
         {
           "source": "figure_eight",
+          "kind": "references"
+        },
+        {
+          "source": "framework_status",
           "kind": "references"
         },
         {
@@ -6950,6 +6955,7 @@
       ],
       "depended_on_by": [
         "bicone_golden_z2_identification",
+        "framework_status",
         "ghz_from_substrate",
         "gr_qm_unification_synthesis",
         "k_of_t_residual_disposition",
@@ -7002,6 +7008,10 @@
       "edged_by": [
         {
           "source": "bicone_golden_z2_identification",
+          "kind": "references"
+        },
+        {
+          "source": "framework_status",
           "kind": "references"
         },
         {
@@ -13720,12 +13730,13 @@
     {
       "id": "framework_status",
       "path": "sync_cost/derivations/framework_status.md",
-      "cid": "9f3ce4719819d7a04fef8ee718f704aea025b58ae52b69c96f1772f342775da2",
+      "cid": "56cb7f66483f3ffa9ff7789b3d52370050055011b0efd0792e4cea8008885c96",
       "sealed": true,
       "title": "Framework status map",
       "summary": "At-a-glance inventory. One line per item. Full analysis lives in the\nreferenced files; this is the bird's-eye view to prevent duplicate\nwork and re-derivation of eliminated content.",
       "depends_on": [
         "L1_substrate_cusp_ground_state",
+        "PROOF_A_gravity",
         "a0_threshold",
         "a1_from_saddle_node",
         "a_s_g1_closure_attempt",
@@ -13741,6 +13752,7 @@
         "bicone_golden_z2_identification",
         "born_rule",
         "canonical_glossary",
+        "collapse_dissolution",
         "continuity_in_K_nulls",
         "continuum_limits",
         "cross_ratio_irrep_reframe",
@@ -13774,6 +13786,7 @@
         "klein_z2_decomposition_falsifier_2",
         "koide_form_substrate_iteration_13",
         "koide_form_substrate_iteration_14",
+        "lesson_forced_basin_selection",
         "mass_sector_closure",
         "master_cascade_identity",
         "mixing_angle_audit",
@@ -13786,6 +13799,7 @@
         "path_closures_iter3",
         "path_closures_iter4",
         "predictions_horizon_2026",
+        "preferred_basis_dissolution",
         "primitives_vs_addresses_candidate",
         "proposed_items_disposition",
         "proposed_residual_closure",
@@ -13912,6 +13926,10 @@
           "kind": "references"
         },
         {
+          "target": "PROOF_A_gravity",
+          "kind": "references"
+        },
+        {
           "target": "a0_threshold",
           "kind": "references"
         },
@@ -13969,6 +13987,10 @@
         },
         {
           "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "target": "collapse_dissolution",
           "kind": "references"
         },
         {
@@ -14104,6 +14126,10 @@
           "kind": "references"
         },
         {
+          "target": "lesson_forced_basin_selection",
+          "kind": "references"
+        },
+        {
           "target": "mass_sector_closure",
           "kind": "references"
         },
@@ -14149,6 +14175,10 @@
         },
         {
           "target": "predictions_horizon_2026",
+          "kind": "references"
+        },
+        {
+          "target": "preferred_basis_dissolution",
           "kind": "references"
         },
         {
@@ -14623,6 +14653,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "9572c1a",
+          "date": "2026-07-08",
+          "subject": "Substrate-freshness followups: CLAUDE.md protocol tweaks + D13/O2 status rows (#292)"
+        },
         {
           "hash": "2099bf5",
           "date": "2026-07-04",
@@ -23541,6 +23576,7 @@
       "depended_on_by": [
         "algebraic_forcing_partition",
         "bell_bounds_from_substrate",
+        "framework_status",
         "free_parameter_scorecard",
         "ghz_from_substrate",
         "koide_form_substrate_iteration_10",
@@ -23589,6 +23625,10 @@
         },
         {
           "source": "bell_bounds_from_substrate",
+          "kind": "references"
+        },
+        {
+          "source": "framework_status",
           "kind": "references"
         },
         {
@@ -30204,6 +30244,7 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "framework_status",
         "ghz_from_substrate"
       ],
       "edges": [
@@ -30253,6 +30294,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "framework_status",
+          "kind": "references"
+        },
         {
           "source": "ghz_from_substrate",
           "kind": "references"
