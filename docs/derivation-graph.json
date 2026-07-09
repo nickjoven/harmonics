@@ -1,5 +1,5 @@
 {
-  "generated": "d5b1268d627a1476359d949f945b43d804d5a4bb",
+  "generated": "526de56e5205a273fb9e078242d902182de5bca5",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1181,7 +1181,9 @@
       "sealed": false,
       "title": "a\u2080 from Synchronization Cost Threshold",
       "summary": "The MOND acceleration scale a\u2080 \u2248 1.2 \u00d7 10\u207b\u00b9\u2070 m/s\u00b2 is the point where\nlocal gravitational synchronization cost equals the cosmological mean\nfield maintenance cost. This gives a mechanistic derivation of the\ndimensional relation a\u2080 = cH\u2080/2\u03c0 already established in proslambenomenos (a companion repository deriving cosmological dimensional relations from the Hubble frequency),\nand connects it to the Stribeck lattice bifurcation threshold.",
-      "depends_on": [],
+      "depends_on": [
+        "numerology_inventory"
+      ],
       "depended_on_by": [
         "INDEX",
         "L1_substrate_cusp_ground_state",
@@ -1201,7 +1203,12 @@
         "vacuum_stress_meta_structure_audit",
         "w_plus_formalization"
       ],
-      "edges": [],
+      "edges": [
+        {
+          "target": "numerology_inventory",
+          "kind": "references"
+        }
+      ],
       "edged_by": [
         {
           "source": "INDEX",
@@ -1273,6 +1280,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "5d6c2e2",
+          "date": "2026-07-09",
+          "subject": "class-tags: advisory coverage linter + 6 Class-5 tags (#263 \u24fe) (#293)"
+        },
         {
           "hash": "e387fe3",
           "date": "2026-04-14",
@@ -12367,13 +12379,20 @@
       "cid": null,
       "sealed": false,
       "title": "Why the Exponent Is q\u2082q\u2083\u00b3",
-      "summary": "**Derived**: the exponent q\u2082q\u2083^d = 54 follows from three established\nresults:\n1. The Klein bottle assigns q\u2083 to spatial, q\u2082 to temporal (D19)\n2. The spatial direction maps to d = 3 independent dimensions (D23)\n3. Independent dimensions multiply their resolutions (standard\n   mode counting)",
-      "depends_on": [],
+      "summary": "**Class 5 / Survives.** The exponent q\u2082q\u2083^d = 54 of R = 6\u00b713\u2075\u2074 is\nstructural (mode counting, no fitted factors); the hierarchy result\nis a `numerology_inventory.md` \u00a7Class 5 item. (Machine-readable tag,\nissue #263 \u24fe.)",
+      "depends_on": [
+        "numerology_inventory"
+      ],
       "depended_on_by": [
         "INDEX",
         "third_twist_meta_structure_audit"
       ],
-      "edges": [],
+      "edges": [
+        {
+          "target": "numerology_inventory",
+          "kind": "references"
+        }
+      ],
       "edged_by": [
         {
           "source": "INDEX",
@@ -12385,6 +12404,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "5d6c2e2",
+          "date": "2026-07-09",
+          "subject": "class-tags: advisory coverage linter + 6 Class-5 tags (#263 \u24fe) (#293)"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -12863,9 +12887,10 @@
       "cid": null,
       "sealed": false,
       "title": "The Farey Partition",
-      "summary": "**Computed**:\n- \u03a9_\u039b = 13/19 = 0.6842 vs observed 0.6847 \u00b1 0.0073 (0.07\u03c3)\n- The operator is the Farey count at the interaction scale q\u2082q\u2083 = 6\n- All inputs are from the Klein bottle topology",
+      "summary": "**Class 5 / Survives.** \u03a9_\u039b = 13/19 is counted, not fitted;\n`numerology_inventory.md` \u00a7Class 5 lists this partition as explicitly\nNOT numerology (structural). (Machine-readable tag, issue #263 \u24fe.)",
       "depends_on": [
         "L1_substrate_cusp_ground_state",
+        "numerology_inventory",
         "omega_b_alpha_beta_closure",
         "omega_partition_combinatorial"
       ],
@@ -12875,6 +12900,7 @@
         "algebraic_forcing_partition",
         "audit_punch_list_2026-04",
         "canonical_glossary",
+        "farey_proof",
         "framework_status",
         "free_parameter_scorecard",
         "high_school_syllabus",
@@ -12891,6 +12917,10 @@
       "edges": [
         {
           "target": "L1_substrate_cusp_ground_state",
+          "kind": "references"
+        },
+        {
+          "target": "numerology_inventory",
           "kind": "references"
         },
         {
@@ -12921,6 +12951,10 @@
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "farey_proof",
           "kind": "references"
         },
         {
@@ -12974,6 +13008,11 @@
       ],
       "git": [
         {
+          "hash": "5d6c2e2",
+          "date": "2026-07-09",
+          "subject": "class-tags: advisory coverage linter + 6 Class-5 tags (#263 \u24fe) (#293)"
+        },
+        {
           "hash": "a6a4f5d",
           "date": "2026-04-26",
           "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
@@ -13016,12 +13055,24 @@
       "cid": null,
       "sealed": false,
       "title": "Why the Farey Partition",
-      "summary": "**Theorem proved** conditional on D10's axiom that the mediant is\nprimitive. The proof has four steps, each referencing an established\nresult. The uniqueness follows from the mediant being the only\ncombining operation in the framework's alphabet that produces a\nnontrivial partition.",
-      "depends_on": [],
+      "summary": "**Class 5 / Survives.** Uniqueness proof of \u03a9_\u039b = 13/19 (0.07\u03c3); the\n\u03a9-partition is a `numerology_inventory.md` \u00a7Class 5 item (structural,\ncounted not fitted \u2014 sibling of `farey_partition.md`).\n(Machine-readable tag, issue #263 \u24fe.)",
+      "depends_on": [
+        "farey_partition",
+        "numerology_inventory"
+      ],
       "depended_on_by": [
         "q_mod2_mediant_projection"
       ],
-      "edges": [],
+      "edges": [
+        {
+          "target": "farey_partition",
+          "kind": "references"
+        },
+        {
+          "target": "numerology_inventory",
+          "kind": "references"
+        }
+      ],
       "edged_by": [
         {
           "source": "q_mod2_mediant_projection",
@@ -13029,6 +13080,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "5d6c2e2",
+          "date": "2026-07-09",
+          "subject": "class-tags: advisory coverage linter + 6 Class-5 tags (#263 \u24fe) (#293)"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -17811,12 +17867,19 @@
       "cid": null,
       "sealed": false,
       "title": "The Hierarchy",
-      "summary": "**Computed**: R = 6 \u00d7 13\u2075\u2074 matches observation to 0.48%. The\ncosmological constant \u039bl_P\u00b2 = 13\u207b\u00b9\u2070\u2078/12 matches to 0.1% in the\nexponent. Combined with \u03a9_\u039b = 13/19 (D25), the entire cosmological\nparameter set is determined.",
-      "depends_on": [],
+      "summary": "**Class 5 / Survives.** R = 6\u00b713\u2075\u2074 and \u039bl_P\u00b2 = 13\u207b\u00b9\u2070\u2078/12 are\nstructural cell-counting results, listed under\n`numerology_inventory.md` \u00a7Class 5 (NOT numerology). The\nexponent-derivation step is noted open below. (Machine-readable tag,\nissue #263 \u24fe.)",
+      "depends_on": [
+        "numerology_inventory"
+      ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY"
       ],
-      "edges": [],
+      "edges": [
+        {
+          "target": "numerology_inventory",
+          "kind": "references"
+        }
+      ],
       "edged_by": [
         {
           "source": "FRAMEWORK_TOPOLOGY",
@@ -17824,6 +17887,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "5d6c2e2",
+          "date": "2026-07-09",
+          "subject": "class-tags: advisory coverage linter + 6 Class-5 tags (#263 \u24fe) (#293)"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -17847,7 +17915,7 @@
       "cid": null,
       "sealed": false,
       "title": "The Planck\u2013Hubble Hierarchy from Gaussian Lattice Index",
-      "summary": "The Planck/Hubble hierarchy R is derived from the framework's\nthree framework integers (q\u2082 = 2, q\u2083 = 3, d = 3); no fitted factors:",
+      "summary": "**Class 5 / Survives.** R = 6\u00b713\u2075\u2074 is derived by Gaussian-lattice\ncell counting with no fitted factors; `numerology_inventory.md`\n\u00a7Class 5 names this file as explicitly NOT numerology (structural).\n(Machine-readable tag, issue #263 \u24fe.)",
       "depends_on": [
         "anchor_count_audit",
         "gap2_spatialization_decomposition",
@@ -17855,6 +17923,7 @@
         "gauge_factorization",
         "h_inf_status",
         "klein_bottle_derivation",
+        "numerology_inventory",
         "qd_origins",
         "sinw_effective_dimension",
         "statistical_conventions",
@@ -17917,6 +17986,10 @@
         },
         {
           "target": "klein_bottle_derivation",
+          "kind": "references"
+        },
+        {
+          "target": "numerology_inventory",
           "kind": "references"
         },
         {
@@ -18067,6 +18140,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "5d6c2e2",
+          "date": "2026-07-09",
+          "subject": "class-tags: advisory coverage linter + 6 Class-5 tags (#263 \u24fe) (#293)"
+        },
         {
           "hash": "252d8ac",
           "date": "2026-05-15",
@@ -26777,6 +26855,7 @@
       ],
       "depended_on_by": [
         "CHAIN_KSTAR",
+        "a0_threshold",
         "a_s_g1_closure_attempt",
         "anchor_count_audit",
         "anchor_extremes_audit",
@@ -26790,10 +26869,15 @@
         "dynamical_tool_audit",
         "epsilon_physical_reading",
         "epsilon_substrate_decomposition",
+        "exponent",
+        "farey_partition",
+        "farey_proof",
         "fermion_mass_running",
         "framework_status",
         "free_parameter_scorecard",
         "generation_mechanism",
+        "hierarchy",
+        "hierarchy_gaussian_lattice",
         "hierarchy_problem_translation",
         "higgs_from_tongue_boundary",
         "hybrid_strategy_audit",
@@ -26950,6 +27034,10 @@
           "kind": "references"
         },
         {
+          "source": "a0_threshold",
+          "kind": "references"
+        },
+        {
           "source": "a_s_g1_closure_attempt",
           "kind": "references"
         },
@@ -27002,6 +27090,18 @@
           "kind": "references"
         },
         {
+          "source": "exponent",
+          "kind": "references"
+        },
+        {
+          "source": "farey_partition",
+          "kind": "references"
+        },
+        {
+          "source": "farey_proof",
+          "kind": "references"
+        },
+        {
           "source": "fermion_mass_running",
           "kind": "references"
         },
@@ -27015,6 +27115,14 @@
         },
         {
           "source": "generation_mechanism",
+          "kind": "references"
+        },
+        {
+          "source": "hierarchy",
+          "kind": "references"
+        },
+        {
+          "source": "hierarchy_gaussian_lattice",
           "kind": "references"
         },
         {
