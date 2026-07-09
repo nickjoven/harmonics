@@ -121,6 +121,12 @@ The output R = 8.533 × 10⁶⁰ determines:
 
 ## Status
 
+**Class 5 / Survives.** R = 6·13⁵⁴ and Λl_P² = 13⁻¹⁰⁸/12 are
+structural cell-counting results, listed under
+`numerology_inventory.md` §Class 5 (NOT numerology). The
+exponent-derivation step is noted open below. (Machine-readable tag,
+issue #263 ⓾.)
+
 **Computed**: R = 6 × 13⁵⁴ matches observation to 0.48%. The
 cosmological constant Λl_P² = 13⁻¹⁰⁸/12 matches to 0.1% in the
 exponent. Combined with Ω_Λ = 13/19 (D25), the entire cosmological

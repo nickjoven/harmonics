@@ -191,6 +191,10 @@ No fitted factors. No external inputs beyond the framework integers
 
 ## Status
 
+**Class 5 / Survives.** Ω_Λ = 13/19 is counted, not fitted;
+`numerology_inventory.md` §Class 5 lists this partition as explicitly
+NOT numerology (structural). (Machine-readable tag, issue #263 ⓾.)
+
 **Computed**:
 - Ω_Λ = 13/19 = 0.6842 vs observed 0.6847 ± 0.0073 (0.07σ)
 - The operator is the Farey count at the interaction scale q₂q₃ = 6

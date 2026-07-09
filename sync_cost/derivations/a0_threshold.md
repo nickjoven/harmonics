@@ -256,6 +256,11 @@ stick-regime coupling strength).
 
 ## Status
 
+**Class 5 / Survives.** a₀ = cH₀/2π is a structural threshold
+(a₀² ∝ Λ), the canonical Class 5 example in `numerology_inventory.md`
+— a "cosmic coincidence" reframed as forced. (Machine-readable tag,
+issue #263 ⓾.)
+
 This derivation provides the mechanistic grounding for a₀ = cH₀/2π:
 the transition point where local gravitational cost equals cosmological
 mean field maintenance cost. The 2π factor is structural (Kuramoto

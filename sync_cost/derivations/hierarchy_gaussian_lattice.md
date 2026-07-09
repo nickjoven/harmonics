@@ -165,6 +165,13 @@ The three items below are formalized in `three_formalizations.md`:
    identification rather than the de Sitter horizon. Verified in
    `r_residual_audit.py`.
 
+## Status
+
+**Class 5 / Survives.** R = 6·13⁵⁴ is derived by Gaussian-lattice
+cell counting with no fitted factors; `numerology_inventory.md`
+§Class 5 names this file as explicitly NOT numerology (structural).
+(Machine-readable tag, issue #263 ⓾.)
+
 ## References
 
 - `gauge_factorization.md` — gauge algebra decomposition
