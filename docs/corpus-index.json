@@ -1,0 +1,3151 @@
+{
+ "count": 322,
+ "coverage_totals": {
+  "classified": 187,
+  "prose-only": 29,
+  "unclassified-quantitative": 106
+ },
+ "docs": {
+  "CHAIN_KSTAR": {
+   "classes": [
+    2,
+    4
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "K_STAR closed form"
+  },
+  "FRAMEWORK_TOPOLOGY": {
+   "classes": [
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Framework topology"
+  },
+  "INDEX": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Derivation Index"
+  },
+  "L1_substrate_cusp_ground_state": {
+   "classes": [
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": "Class 5.",
+   "title": "L1 closure — substrate cusp-1/2 ground state from soft-boundary + discreteness"
+  },
+  "PROOF_A_gravity": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Proof Chain A: Polynomial → General Relativity"
+  },
+  "PROOF_B_quantum": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Proof Chain B: Polynomial → Quantum Mechanics"
+  },
+  "REFERENCES": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "References"
+  },
+  "a0_threshold": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [
+    "D3"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "a₀ from Synchronization Cost Threshold"
+  },
+  "a1_from_saddle_node": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [
+    "D8",
+    "D9"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "`a_1 = 1 / √w`: the lepton identity as stick-slip"
+  },
+  "a_s_g1_closure_attempt": {
+   "classes": [
+    2,
+    4
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "A_s Floor closure attempt G1: anchor-import barrier"
+  },
+  "a_s_geometric_proof": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "A_s: a geometric proof from first principles"
+  },
+  "address_and_quantity": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [
+    "D7"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Address and Quantity"
+  },
+  "adm_dictionary": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The ADM Dictionary"
+  },
+  "algebraic_forcing_partition": {
+   "classes": [
+    2,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The forcing partition: forced ⟹ algebraic"
+  },
+  "anchor_count_audit": {
+   "classes": [
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Anchor-count audit: single vs multiple observational anchors"
+  },
+  "anchor_count_reaudit": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "#ANCHOR: formal re-audit of the five anchor-count obstructions"
+  },
+  "anchor_extremes_audit": {
+   "classes": [
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Anchors at extremes audit (chain extension)"
+  },
+  "angular_momentum_three_source_inviolability_audit": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Angular momentum three-source inviolability audit (B2: Layer H expansion)"
+  },
+  "ansatz_audit_policy": {
+   "classes": [
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Ansatz audit policy — triaging Class 4 candidates"
+  },
+  "antiparticle_dark_energy_unification_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Antiparticle / dark energy unification audit"
+  },
+  "arrow_inviolability_and_unification_closure_audit": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Arrow inviolability + unification closure audit"
+  },
+  "articulation_audit_2026-05": {
+   "classes": [
+    1,
+    2,
+    3,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Articulation audit — 2026-05 round"
+  },
+  "audit_findings_3_4_disposition": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Audit Findings 3 & 4: honest disposition (qualification, not closure)"
+  },
+  "audit_punch_list_2026-04": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": "NO ACTION NEEDED. The doc's intermediate values are",
+   "title": "Audit punch list — 2026-04 round"
+  },
+  "axial_trajectory_conservation_audit": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Axial trajectory conservation audit — chirality fineness verdict"
+  },
+  "baryon_fraction": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [
+    "D47"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Baryon Fraction"
+  },
+  "basepoint_principle": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Basepoint Principle"
+  },
+  "basin_11_connection_exploration": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Basin 1/1 connection exploration"
+  },
+  "bell_bounds_from_substrate": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Bell bounds substrate-natively — closing the substitution scope"
+  },
+  "beta_from_tongues": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D49"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Beta Functions from Tongue Widths"
+  },
+  "bicone_golden_z2_identification": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Bicone Z₂ ↔ golden-algebra Z₂ identification"
+  },
+  "bicyclist_observer_sequence": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The bicyclist sequence — observer configuration and conservation"
+  },
+  "born_rule": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D1"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Born Rule from Basin Measure"
+  },
+  "born_rule_mode_count_extremes_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Born rule + mode count at extremes audit"
+  },
+  "born_rule_parameter_free": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Born rule |ψ|² is parameter-free at the binary — pressed"
+  },
+  "boundary_leakage_rate_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Boundary leakage rate audit — Gaps 4 + 8"
+  },
+  "boundary_weight": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Boundary Weight"
+  },
+  "canonical_glossary": {
+   "classes": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Canonical glossary — framework ↔ standard physics vocabulary"
+  },
+  "cmb_silk_damping_acoustic_peaks_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "CMB Silk damping + acoustic peaks audit (Layer G extensions)"
+  },
+  "coherence_matrix_completion_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Coherence-type matrix completion audit"
+  },
+  "collapse_dissolution": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Collapse dissolution"
+  },
+  "comparison_class": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Comparison Class"
+  },
+  "complex_amplitude_uniqueness": {
+   "classes": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Complex-amplitude uniqueness (ℝ/ℂ/ℍ from antiperiodic-cycle count)"
+  },
+  "cone_twist_substrate": {
+   "classes": [
+    3,
+    4
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Cone-twist substrate: bicone target, Z₂ vortex dynamics, quantum structure"
+  },
+  "conservation_computability": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D36"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Conservation as Computability"
+  },
+  "conservation_scale_stratification_audit": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": "not currently derived. Would require new substrate",
+   "title": "Conservation scale-stratification audit — Q mod 2 and dissipation across Planck/standard/Hubble limits"
+  },
+  "continuity_in_K_nulls": {
+   "classes": [
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Continuity-in-K derivation: prior null results"
+  },
+  "continuum_limits": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D12"
+   ],
+   "has_lineage": false,
+   "status_line": "Derived. The q⁻² tongue-width scaling at K = 1 is a",
+   "title": "The Two Continuum Limits"
+  },
+  "cosmological_cycle": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Cosmological Cycle"
+  },
+  "coupling_scales": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D45"
+   ],
+   "has_lineage": false,
+   "status_line": "theta = 0 derived from Pin+(3) on the Klein bottle.",
+   "title": "The Coupling Scales and the Bare Diffusion Constant"
+  },
+  "cross_ratio_irrep_reframe": {
+   "classes": [
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Cross-ratio multi-candidate pattern is irrep multiplicity"
+  },
+  "cuspidal_lambda17_weight4_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Cuspidal λ_17 at weight 4 on Γ_0(6) — testing the noncommutative-core half"
+  },
+  "cyclotomic_content_mass_ratios_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Cyclotomic content of framework mass ratios (A2: PR #235 methodology instance)"
+  },
+  "dark_twin_correction": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Dark-twin correction: the S_v ≈ 13 retraction was wrong"
+  },
+  "denomination_boundary": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Denomination Boundary"
+  },
+  "depth_connection_nulls": {
+   "classes": [
+    1,
+    2,
+    4
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Null results: connecting cosmological depth 54 to EW depth ~15"
+  },
+  "derivation_atlas": {
+   "classes": [
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Derivation Atlas — from four primitives to physical predictions"
+  },
+  "dicke_apparatus_theorem": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Dicke apparatus theorem — substrate-internal computation of Pauli matrix elements on Dicke states"
+  },
+  "discrete_extension_principle": {
+   "classes": [
+    2,
+    3,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Discrete Extension Principle"
+  },
+  "discrete_gauge": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Two Open Paths"
+  },
+  "discrete_gauge_resolution": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D41"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Discrete Gauge Resolution"
+  },
+  "discrete_reduction_computed": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The discrete 4-mode reduction: computed"
+  },
+  "discrete_reduction_problem": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The discrete 4-mode reduction: a hand-solvable problem statement"
+  },
+  "down_type_double_cover_closed": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Down-type double cover — derivation summary"
+  },
+  "down_type_double_cover_phase_a": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Down-type double cover — Phase A: formalization"
+  },
+  "down_type_double_cover_phase_b": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Down-type double cover — Phase B attempt (halts)"
+  },
+  "down_type_double_cover_phase_b_followup": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Down-type double cover — Phase B follow-up: Route 1 null result"
+  },
+  "down_type_double_cover_phase_c": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Down-type double cover — Phase C attempt: self-consistent DoF reading"
+  },
+  "down_type_double_cover_phase_d": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Down-type double cover — Phase D attempt: boundary-weight self-consistency"
+  },
+  "duty_cycle_dictionary": {
+   "classes": [
+    1,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [
+    "D33"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Duty Cycle Dictionary"
+  },
+  "duty_dimension_proof": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Proof: The Duty Cycle Exponent Equals the Group Dimension"
+  },
+  "dynamical_quantization": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Dynamical quantization: the medium is continuous, the locking is discrete"
+  },
+  "dynamical_tool_audit": {
+   "classes": [
+    2,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Dynamical-tool audit: circle maps vs Kuramoto, conceptual"
+  },
+  "dynamics_arithmetic_distinction_refinement_audit": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Dynamics / arithmetic distinction refinement audit"
+  },
+  "e_cross_calc": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "E_cross calculation: the textbook route gives a pathology"
+  },
+  "e_cross_discrete_resolution": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "E_cross resolved: the continuum route was a representation error"
+  },
+  "einstein_from_kuramoto": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D13"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Einstein Field Equations from the Rational Field Equation"
+  },
+  "empty_fork_cap": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The empty fork: ∅ as the basepointless Z₂-torsor — R1 is ∅-entailed unprovable"
+  },
+  "engineering_targets": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Engineering Targets"
+  },
+  "epr_bell_assembly_theorem": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "EPR/Bell assembly theorem"
+  },
+  "epsilon_physical_reading": {
+   "classes": [
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Substrate-forced ε, sub-problem 1: physical reading"
+  },
+  "epsilon_substrate_decomposition": {
+   "classes": [
+    2,
+    4
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Substrate-forced ε: problem decomposition and prior nulls"
+  },
+  "equivalence_dissolution": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Equivalence dissolution"
+  },
+  "era_timeline_disposition": {
+   "classes": [
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Era-timeline disposition (settling N9 S5)"
+  },
+  "explicit_4x4_reduction": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The explicit 4×4 reduction matrix: real Phase 2"
+  },
+  "exponent": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [
+    "D27"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Why the Exponent Is q₂q₃³"
+  },
+  "expressibility_split": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Expressibility split — the lambda / EML divide"
+  },
+  "f2_fm_beat_results": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "F2 PR-2 — FM-beat Tier-0 simulator results"
+  },
+  "f2_possibility_b_jacobian": {
+   "classes": [
+    3,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "F2 Possibility B — Jacobian at the 4-mode XOR fixed point"
+  },
+  "f2_scoping": {
+   "classes": [
+    3,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "F2 scoping — Klein → gauge continuum limit (Yang-Mills target)"
+  },
+  "f_exit_natural": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "f_exit = exp(−S_v) as the natural action-weighted lens"
+  },
+  "farey_partition": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [
+    "D25"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Farey Partition"
+  },
+  "farey_proof": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Why the Farey Partition"
+  },
+  "fermion_mass_running": {
+   "classes": [
+    1,
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Fermion Mass Running from the K → μ Map"
+  },
+  "fidelity_bound": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Self-Referential Fidelity Bound"
+  },
+  "figure_eight": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Figure-Eight Topology"
+  },
+  "figure_eight_necessitation_audit": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Figure-8 necessitation audit — basepoint-principle inspection"
+  },
+  "fm_beat_crt_correspondence_audit": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "FM beat-frequency / CRT composition correspondence — bounded by Mihailescu"
+  },
+  "fourth_generation_revisited": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Fourth Generation Revisited Under the Integer Conservation Law"
+  },
+  "framework_status": {
+   "classes": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Framework status map"
+  },
+  "free_parameter_scorecard": {
+   "classes": [
+    1,
+    2,
+    3,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Free-parameter scorecard — the forcing partition applied to physics' inputs"
+  },
+  "gamma06_cosmological_modular_surface_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Γ_0(6) cosmological modular surface — polynomial readings + arithmetic prime audit"
+  },
+  "gamma06_w6_invariance_opposite_view_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Γ_0(6) W_6 Atkin-Lehner invariance / Stern-Brocot opposite-view audit"
+  },
+  "gap1_analytic_proof": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Analytic Proof: Levi-Civita from Kuramoto at K=1"
+  },
+  "gap1_theorem": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Gap 1 Theorem: Christoffel Connection from Kuramoto in the Continuum Limit"
+  },
+  "gap2_analytic_proof": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Analytic Proof: Farey Graph Laplacian → Laplace-Beltrami"
+  },
+  "gap2_spatialization_decomposition": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Gap 2 Break 1: Spatialization Decomposition and Status"
+  },
+  "gap2_step4_farey_laplacian": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Gap 2, Step 4: The Stern-Brocot Tree IS the Spatial Lattice"
+  },
+  "gap2_sub_e_status_reconciled": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Gap 2 sub-problem E (ℓ_c) — status reconciliation"
+  },
+  "gap2_theorem_attempt": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Gap 2 Attempted Closure: Spatial Diffusion from Non-Orientability"
+  },
+  "gap_1_christoffel": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Gap 1: The Christoffel Connection from Kuramoto Ensemble Averages"
+  },
+  "gap_2_spatial_diffusion": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Gap 2: Spatial Diffusion and the Bare Coupling D₀"
+  },
+  "gauge_dictionary": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": "was IDENTIFIED, now **DEFINITION**.",
+   "title": "Gauge-Sector Dictionary Promotion"
+  },
+  "gauge_factorization": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Direct-Product Structure of the Gauge Algebra from Klein Bottle Topology"
+  },
+  "gauge_high_scale_identification": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "High-scale gauge identification"
+  },
+  "gauge_sector_lovelock": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D42"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Yang-Mills from the Klein Bottle (Gauge-Sector Lovelock)"
+  },
+  "gell_mann_nishijima": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D43"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Gell-Mann-Nishijima Relation from Klein Bottle Geometry"
+  },
+  "generation_mechanism": {
+   "classes": [
+    1
+   ],
+   "coverage": "classified",
+   "d_numbers": [
+    "D34"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Generation Mechanism"
+  },
+  "generation_sector_count_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Generation + sector count audit (Layer C chain extension)"
+  },
+  "ghz_from_substrate": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "GHZ correlations from the substrate event-log (worked example)"
+  },
+  "gluon_reframing": {
+   "classes": [
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The gluon's properties in framework terms: a reframing"
+  },
+  "gr_qm_unification_synthesis": {
+   "classes": [
+    2,
+    3,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "GR–QM unification — Tier-C capstone synthesis"
+  },
+  "graviton_reframing": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Gravity's radiative mode in framework terms: a reframing"
+  },
+  "h0_tension_cross_cell_identity_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "H_0 tension cross-cell identity audit (C1: PR #229 matrix correlation test)"
+  },
+  "h_inf_status": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "H_inf status — anchor-side, scale-free in framework integers"
+  },
+  "half_mobius_boundary": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Half-Mobius Boundary Condition (Z4)"
+  },
+  "half_twist_dynamics": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Half-Twist as a Dynamical Object"
+  },
+  "half_twist_identity_signature_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Half-twist identity and signature — canonical restatement"
+  },
+  "half_twist_meta_structure_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Half-twist meta-structure audit (cross-cutting Layer H)"
+  },
+  "halt_shock_coherence_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Halt and shock coherence audit — coherence-type matrix initialization"
+  },
+  "hierarchy": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Hierarchy"
+  },
+  "hierarchy_gaussian_lattice": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [
+    "D26"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Planck–Hubble Hierarchy from Gaussian Lattice Index"
+  },
+  "hierarchy_problem_translation": {
+   "classes": [
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Does the SM hierarchy problem translate to the framework?"
+  },
+  "higgs_from_tongue_boundary": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D44"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Electroweak Symmetry Breaking from the Tongue Boundary"
+  },
+  "higgs_reframing": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Higgs' Role in the Framework: A Reframing"
+  },
+  "high_school_syllabus": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "High School Syllabus — *The Shape of Physics*"
+  },
+  "high_z_mond": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "High-Redshift Test of a₀(z) = cH(z)/(2π)"
+  },
+  "horn_branch_iteration_1": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Horn-branch iteration 1 — regime-change flare in y-parity vocabulary"
+  },
+  "horn_branch_iteration_2_step_1": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Horn-branch iteration 2 step 1 — sector-assignment falsifier"
+  },
+  "horn_branch_iteration_2_step_2": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Horn-branch iteration 2 step 2 — substrate derivation of f_locked / f_unlocked"
+  },
+  "horn_branch_iteration_3_step_1": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Horn-branch iteration 3 step 1 — analytic w* test: PRODUCTIVE NULL"
+  },
+  "hybrid_strategy_audit": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Hybrid strategy audit — Floor residuals against |r|^n closures"
+  },
+  "imf_bowed_cascade": {
+   "classes": [
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "IMF Salpeter slope from the bowed cascade"
+  },
+  "inflation_duration": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Inflation duration from S_v(K) and the universal Schwinger relation"
+  },
+  "inflation_seam_anchor_closure": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "#INF closed: |∇K|_inflation is the Schwinger-image of an anchor — the framework correctly declines"
+  },
+  "instrument_family_taxonomy": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Instrument-family taxonomy of the framework"
+  },
+  "isotropy_lemma": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Isotropy Lemma: Trivial Stabilizer in the Kuramoto Model at K=1"
+  },
+  "item12_C_from_K_star": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Item 12: `C = q_2² / K*²` from the tongue-width identity"
+  },
+  "item12_cross_sector_ratios": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": "this reading is **a conjecture**, not a derivation.",
+   "title": "Item 12: cross-sector `a_1²` ratios"
+  },
+  "k_axis_uniqueness": {
+   "classes": [
+    2,
+    4
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "K-axis uniqueness probe: composed Klein-antipodal + coprime-to-6"
+  },
+  "k_critical_phase_a": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "K = K_c criticality — Phase A: the K zoo and the concrete concern"
+  },
+  "k_critical_phase_b": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "K = K_c criticality — Phase B: the K_c concern dissolves"
+  },
+  "k_inflation_seam_obstruction": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "K_inflation: the obstruction is structural, not a missing calc"
+  },
+  "k_of_t_friedmann": {
+   "classes": [
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "K(t) and the Friedmann equation at r = 1"
+  },
+  "k_of_t_problem_statement": {
+   "classes": [
+    2,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "K(t): the table — problem statement for the cosmological coupling trajectory"
+  },
+  "k_of_t_residual_disposition": {
+   "classes": [
+    2,
+    3,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "K(t) residual closure (joint sector resolved, cadence forced)"
+  },
+  "k_scaling_scan": {
+   "classes": [
+    2,
+    4
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "K-scaling scan: tongue spectrum from K = 0 to chaos"
+  },
+  "klein_antipodal_z2_rep_pattern": {
+   "classes": [
+    4
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Klein-antipodal Z₂ representation theory: a recurring derivation"
+  },
+  "klein_bottle": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D19"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Klein Bottle"
+  },
+  "klein_bottle_derivation": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Klein Bottle from Self-Consistency"
+  },
+  "klein_bottle_restructure_price": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Klein-bottle restructure — price ledger for the apparatus-extension fallback"
+  },
+  "klein_bridge_audit_and_probe": {
+   "classes": [
+    2,
+    4
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Klein-bottle bridge: audit + minimal probe"
+  },
+  "klein_connection": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Klein Bottle Connection 1-Form"
+  },
+  "klein_dynamics_roadmap": {
+   "classes": [
+    2,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": "existing Klein-bottle Kuramoto could feed S3",
+   "title": "Klein-bottle dynamics roadmap for Ω_b C2 closure"
+  },
+  "klein_nodal_parity": {
+   "classes": [
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Klein nodal parity: null result"
+  },
+  "klein_z2_decomposition_falsifier": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Klein-Z_2 sign-flip vs reflection decomposition — falsifier test"
+  },
+  "klein_z2_decomposition_falsifier_2": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Klein-Z_2 third-caveat test — does substrate populate both R-eigenstates?"
+  },
+  "koide_form_substrate_iteration_1": {
+   "classes": [
+    1,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Koide form substrate derivation — iteration 1"
+  },
+  "koide_form_substrate_iteration_10": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Koide form substrate derivation — iteration 10"
+  },
+  "koide_form_substrate_iteration_11": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Koide form substrate derivation — iteration 11"
+  },
+  "koide_form_substrate_iteration_12": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Koide form substrate derivation — iteration 12"
+  },
+  "koide_form_substrate_iteration_13": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Koide form substrate derivation — iteration 13"
+  },
+  "koide_form_substrate_iteration_14": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Koide form substrate derivation — iteration 14 (closing note)"
+  },
+  "koide_form_substrate_iteration_2": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Koide form substrate derivation — iteration 2"
+  },
+  "koide_form_substrate_iteration_3": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Koide form substrate derivation — iteration 3"
+  },
+  "koide_form_substrate_iteration_4": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Koide form substrate derivation — iteration 4"
+  },
+  "koide_form_substrate_iteration_5": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Koide form substrate derivation — iteration 5"
+  },
+  "koide_form_substrate_iteration_6": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Koide form substrate derivation — iteration 6"
+  },
+  "koide_form_substrate_iteration_7": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Koide form substrate derivation — iteration 7"
+  },
+  "koide_form_substrate_iteration_8": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Koide form substrate derivation — iteration 8"
+  },
+  "koide_form_substrate_iteration_9": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Koide form substrate derivation — iteration 9"
+  },
+  "lambda17_test_gamma06_cosmological_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "λ_17 test on Γ_0(6) cosmological eigenforms — comparison to \"missing 17\" reading"
+  },
+  "lesson_8_35_vs_13_19": {
+   "classes": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Lesson — 8/35 vs 13/19: telling a derivation from a coincidence"
+  },
+  "lesson_cosmological_constant": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Lesson — the cosmological constant: the worst prediction in physics, dissolved"
+  },
+  "lesson_epr_gr_qm_unification": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Lesson — EPR to GR–QM unification: one substrate, two couplings"
+  },
+  "lesson_forced_basin_selection": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Lesson — forced basin selection: the engine room of measurement"
+  },
+  "lesson_proslambanomenos": {
+   "classes": [
+    2,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Lesson 0 — the proslambanomenos: the music you already know is the substrate"
+  },
+  "lesson_rotation_curves_a0": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Lesson — stars at the spiral's edge: a₀ = cH₀/(2π) and a false dichotomy"
+  },
+  "lie_group_characterization": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [
+    "D15"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Lie Group Characterization Theorem"
+  },
+  "lmfdb_external_verify_correction_2026-06-08": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "External verification correction — LMFDB substrate retrieval for f_{6,4}"
+  },
+  "mass_entrained_measure": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Mass = entrained tongue width, from the synchronization-cost functional"
+  },
+  "mass_function_family": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Mass-function family across cascade depths"
+  },
+  "mass_sector_closure": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Mass Sector Closure: Integer Conservation and Gauge Adjoints"
+  },
+  "mass_sector_sqrt_w_phase_a": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Mass-sector `1/√w` prescription — Phase A: terminology discipline"
+  },
+  "mass_sector_sqrt_w_phase_b": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Mass-sector `1/√w` prescription — Phase B: q-scan results"
+  },
+  "master_cascade_identity": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Master cascade-lock identity"
+  },
+  "meaning_of_two_wip": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "WIP — meaning of `2` in the framework"
+  },
+  "measurement_collapse": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Measurement Collapse from Tongue Traversal"
+  },
+  "mediant_derivation": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [
+    "D29"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Mediant Is Not an Axiom"
+  },
+  "mediant_vs_flow_calc": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Mediant vs. flow: the calculation run — flow fingerprint absent at K=1"
+  },
+  "mediant_vs_flow_problem": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Mediant vs. flow: is a continuous flow *required*? — a hand-decidable problem statement"
+  },
+  "medium_change_demo": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Medium-change demo: address vs. structure"
+  },
+  "minimum_alphabet": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D10"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Minimum Alphabet"
+  },
+  "minkowski_signature": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [
+    "D32"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Minkowski Signature from Phase State Observability"
+  },
+  "mixing_angle_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Mixing angle audit: the framework's tree-level predictions ARE PMNS"
+  },
+  "mobius_container": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Möbius Container"
+  },
+  "modular_form_behavior_cosmological_tongues_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Modular-form behavior of cosmological tongues (PR #231 quantitative gap reframed)"
+  },
+  "negative_results_ledger": {
+   "classes": [
+    1,
+    2,
+    4
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Negative-results ledger — the single archival home for failed, null, and superseded claims"
+  },
+  "neutrino_mass_audit": {
+   "classes": [
+    1
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Neutrino mass audit: already closed, not a depth-limit problem"
+  },
+  "no_rescaling": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "No-rescaling principle: cosmic = substrate, under natural units"
+  },
+  "nonperturbative_phase1": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Non-perturbative substrate: Phase 1 (the DoF reduction)"
+  },
+  "nonperturbative_phase2": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Non-perturbative Phase 2: the 4×4 calc (historical; symmetric S_v(K=1)=16 superseded)"
+  },
+  "nonperturbative_phase3": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Non-perturbative Phase 3: K < 1 sectors and the lengthscale-regime question"
+  },
+  "numerology_count_phase_a": {
+   "classes": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Numerology count (Region C, Shape B) — Phase A: scope and design"
+  },
+  "numerology_count_phase_b": {
+   "classes": [
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Region C Phase B — numerology count: results"
+  },
+  "numerology_inventory": {
+   "classes": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Numerology inventory"
+  },
+  "observer_register_closure": {
+   "classes": [
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Observer-register closure on the Klein-quotient substrate"
+  },
+  "omega_b_alpha_beta_closure": {
+   "classes": [
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Ω_b (α, β) execution Phase B — closure via sign-rep no-EM-coupling"
+  },
+  "omega_b_alpha_beta_phase_b": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Ω_b (α, β) execution — Phase B initial pass"
+  },
+  "omega_b_c5_beta_audit": {
+   "classes": [
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Ω_b C5 closure: β-forcing audit"
+  },
+  "omega_b_c5_closure": {
+   "classes": [
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Ω_b Floor closure: C5 z-dependent w with framework-integer parameters"
+  },
+  "omega_b_residual_phase_a": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Ω_b = 1/19 residual — Phase A: the three-way boundary-weight inconsistency"
+  },
+  "omega_b_residual_phase_b": {
+   "classes": [
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Ω_b = 1/19 residual — Phase B: cross-sector |r|² tax closes it"
+  },
+  "omega_b_substrate_side_audit": {
+   "classes": [
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Ω_b residual audit: passes substrate-side test, does NOT dissolve"
+  },
+  "omega_b_two_component_sketch": {
+   "classes": [
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Ω_b two-component sketch: the C2 mechanism mechanically traced"
+  },
+  "omega_b_w_plus_candidate": {
+   "classes": [
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Ω_b w_+ structural derivation: candidate found, ansatz audit applied"
+  },
+  "omega_b_w_plus_cross_ratio_search": {
+   "classes": [
+    2,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Cross-ratio search for w_+ forcing argument"
+  },
+  "omega_partition_combinatorial": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [
+    "D28"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Ω partition: combinatorial derivation at depth 19"
+  },
+  "orthogonal_kink_interaction": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Orthogonal-kink interaction: decomposition into AB-phase + jog energy"
+  },
+  "padic_lfunction_mihailescu_pair_f64_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "(ℚ_2, ℚ_3) p-adic L-function content of f_{6,4} — Mihailescu-pair audit"
+  },
+  "partition_logit_form": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Cosmic partition prediction in logit form"
+  },
+  "path_a_walkthrough": {
+   "classes": [
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Path (a) walkthrough: Klein-fold sub-action of |Z_6| × ⟨z₀⟩₅₄ × ⟨ι⟩"
+  },
+  "path_closures_iter1": {
+   "classes": [
+    2,
+    4
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Path closures — iteration 1"
+  },
+  "path_closures_iter2": {
+   "classes": [
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Path closures — iteration 2"
+  },
+  "path_closures_iter3": {
+   "classes": [
+    2,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Path closures — iteration 3"
+  },
+  "path_closures_iter4": {
+   "classes": [
+    2,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Path closures — iteration 4 (breadth-first)"
+  },
+  "pattern_identification_discipline_candidate": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Pattern-identification discipline (candidate methodology)"
+  },
+  "phenomenology_cross_reference": {
+   "classes": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Phenomenology cross-reference — observation vs framework prediction"
+  },
+  "phenomenon_glossary": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Phenomenon glossary — dynamics first, names second"
+  },
+  "physics_relevance_measurement_catalog": {
+   "classes": [
+    2,
+    3,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Physics-relevance × primitive-measurement catalog (B7)"
+  },
+  "planck_scale": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D6"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Planck Scale from Self-Sustaining Threshold"
+  },
+  "predictions_horizon_2026": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Predictions horizon — 2026"
+  },
+  "preferred_basis_dissolution": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Preferred-basis dissolution"
+  },
+  "primes_denominators_circular_geometry_extension_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Prime-denominators-in-series → framework-native circular geometry (extension to PR #234)"
+  },
+  "primitive_completeness_audit": {
+   "classes": [
+    2,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Shape F primitive-completeness audit (2026-04-26)"
+  },
+  "primitives_vs_addresses_candidate": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Layer-invariant primitives vs layer-specific addresses (candidate methodology)"
+  },
+  "proposed_items_disposition": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "#PROPOSED: disposition of the three items"
+  },
+  "proposed_residual_closure": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "#PROPOSED residual: closed"
+  },
+  "psl2z_noncommutative_core_structural_identity_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "PSL(2,ℤ) noncommutative core structural identity (Mihailescu ↔ free-product torsion)"
+  },
+  "psl2z_subgroup_identification_phase_a": {
+   "classes": [
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "PSL(2,ℤ)-subgroup identification — Phase A"
+  },
+  "psl2z_subgroup_phase_a_results": {
+   "classes": [
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "PSL(2,ℤ)-subgroup Phase A — orbit enumeration results"
+  },
+  "psl2z_subgroup_phase_b": {
+   "classes": [
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "PSL(2,ℤ)-subgroup Phase B — substrate-side Γ_0(6) derivation"
+  },
+  "psl2z_subgroup_phase_c_inventory": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": "recognize-mode candidate. The \"max locking subject to",
+   "title": "Direction 4 Phase C — what remains for Class 5 closure"
+  },
+  "q_mod2_conservation_theorem": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Q mod 2 conservation theorem"
+  },
+  "q_mod2_mediant_projection": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Q mod 2 mediant projection (state-axis dual of inviolable #1)"
+  },
+  "q_mod2_planck_emergence_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Q mod 2 Planck-emergence audit — fuzzy floor and structural identity"
+  },
+  "qd_origins": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Origins of (q₂, q₃, d) = (2, 3, 3) from the four objects"
+  },
+  "qm_reframing_programmatic": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Programmatic QM-reframing: substrate apparatus vs inherited QM machinery"
+  },
+  "quantum_gravity_interpolation": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Quantum Gravity from the Rational Field Equation at K ≈ 1"
+  },
+  "rank1_temporal_causation": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Rank-1 Fréchet Derivative as Temporal Causation"
+  },
+  "rational_field_equation": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D11"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Rational Field Equation"
+  },
+  "rationality_descent": {
+   "classes": [
+    1
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Rationality descent: is the hidden algorithm real?"
+  },
+  "readings_compatibility_check": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Reading Compatibility: R and Ω_Λ"
+  },
+  "readings_not_constants": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Readings, Not Constants"
+  },
+  "rectangle_perpendicularity": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Rectangle ansatz from perpendicularity and antiperiodic isometry"
+  },
+  "remaining_gap_shapes": {
+   "classes": [
+    1,
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Remaining gap shapes after the disambiguation pattern"
+  },
+  "s_inst_inflation": {
+   "classes": [
+    4
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "S_inst for inflation exit: does the super-Earth analogy hold?"
+  },
+  "s_v_nlo": {
+   "classes": [
+    4
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "S_v(K=1) at next-to-leading order"
+  },
+  "s_v_nlo_attempt": {
+   "classes": [
+    4
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": "substrate-Lagrangian-level work, tractable in principle,",
+   "title": "S_v(K=1) NLO calc attempt: a regime finding"
+  },
+  "salpeter_gate_disposition": {
+   "classes": [
+    2,
+    3,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Cascade↔Salpeter slope: dual-gate disposition"
+  },
+  "seam_profile": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Seam K-gradient: independent derivation of `|∇K|_seam`"
+  },
+  "second_law_topological": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Second Law from Non-Orientability"
+  },
+  "sector_constants_structure": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Sector Constants: q₃² and q₂³"
+  },
+  "sector_decoupling_phase_a": {
+   "classes": [
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Sector decoupling derivation (Region D, Anchor obstruction #5) — Phase A"
+  },
+  "seismic_eigenstate_dictionary": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Seismic Eigenstate Dictionary"
+  },
+  "session_audit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Session audit: overclaims, revisions, and stale content"
+  },
+  "sigma_squared_disambiguation": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "σ² disambiguation"
+  },
+  "silk_damping_dissipation": {
+   "classes": [
+    1
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Silk damping from substrate dissipation"
+  },
+  "sine_gordon_substrate": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Sine-Gordon as the framework's substrate effective theory"
+  },
+  "sinw_effective_dimension": {
+   "classes": [
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Weak Mixing Angle: sin²θ_W from Effective Dimension Reduction"
+  },
+  "sinw_fixed_point": {
+   "classes": [
+    1,
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "sin²θ_W Fixed-Point Hypothesis — Ruled Out"
+  },
+  "snmc_class_and_entanglement": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Substrate-Natural Multipartite Class (SNMC) and substrate-natural entanglement measures"
+  },
+  "soliton_dynamics": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Soliton dynamics: linear sector, breathers, S-matrix, medium class"
+  },
+  "spacetime_dissipative_emergence": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Spacetime as dissipative emergence: anchor-free mechanics and the tick-selection locus"
+  },
+  "spatial_coupling_derived": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D48"
+   ],
+   "has_lineage": false,
+   "status_line": "Derived. Uses only D31 (c finite) and the gate",
+   "title": "Spatial Coupling Derived from Gate Propagation"
+  },
+  "spectral_tilt": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D4"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Spectral Tilt from Synchronization Cost Gradient"
+  },
+  "spectral_tilt_reframed": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Spectral Tilt from Mode-Locking Structure"
+  },
+  "speed_of_light": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D31"
+   ],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Speed of Light as Gate Propagation"
+  },
+  "sqrt_r_n_correction": {
+   "classes": [
+    1,
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "√r_n correction: making the K-zoo kink-mass residual concrete"
+  },
+  "statistical_conventions": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Statistical conventions for session closure docs"
+  },
+  "stribeck_vortex": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Stribeck Vortex Regime Map"
+  },
+  "structural_lemmas": {
+   "classes": [
+    2,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": "Class 5 / Survives. Numerical residuals on Planck",
+   "title": "Structural lemmas"
+  },
+  "substrate_determinism": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Substrate determinism: is probability fundamental or emergent?"
+  },
+  "substrate_kk_dispersion_target": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Substrate Kramers-Kronig dispersion relation — status audit + posed derivation target"
+  },
+  "substrate_prediction_selection": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Substrate prediction selection — opening doc"
+  },
+  "surface_uniqueness_audit": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Surface uniqueness audit — Klein bottle's \"uniqueness\" decomposed"
+  },
+  "third_twist_meta_structure_audit": {
+   "classes": [
+    1,
+    2
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Third-twist (Z_3) meta-structure audit"
+  },
+  "thread_chronology": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Thread chronology — the single ledger"
+  },
+  "three_dimensions": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [
+    "D14"
+   ],
+   "has_lineage": false,
+   "status_line": "Theorem. The Stern-Brocot tree is the Cayley graph of the",
+   "title": "Three Dimensions from the Mediant"
+  },
+  "three_formalizations": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Three Formalizations"
+  },
+  "three_zeros": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Three Zeros and the 1+3 Decomposition"
+  },
+  "tick_continuum_construction": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "#TICK(b): the first-order binary tick constructs sine-Gordon — Goldstein–Kac"
+  },
+  "time_axis_split": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The time-axis split on the Klein bottle"
+  },
+  "torus_branch_iteration_1": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Torus-branch iteration 1 — Z_6 mode lattice as toroidal/poloidal substrate"
+  },
+  "torus_branch_iteration_2_step_1": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Torus-branch iteration 2 step 1 — gauge factor identifications verified"
+  },
+  "torus_branch_iteration_2_step_2": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Torus-branch iteration 2 step 2 — downstream clarity + swap robustness"
+  },
+  "two_forces": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Two Forces — Coherence and Decoherence"
+  },
+  "unification_bridge_audits_gaps_1_3": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Unification bridge audits — Gaps 1, 2, 3"
+  },
+  "unitless_audit": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Unitless audit: substrate primitives end-to-end"
+  },
+  "unitless_check": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Unitless Check: ℏ = G = c = 1"
+  },
+  "vacuum_energy": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Cosmological Constant in the Framework"
+  },
+  "vacuum_stress_meta_structure_audit": {
+   "classes": [
+    3,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Vacuum stress meta-structure: anchors as stress denominations, complementary slackness, and the de-emergence ordering"
+  },
+  "variable_denominator": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The Variable Denominator"
+  },
+  "vocabulary_bridge_iteration_1": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Vocabulary-bridge iteration 1 — substrate → particle chirality survey"
+  },
+  "vocabulary_bridge_iteration_2_step_1": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Vocabulary-bridge iteration 2 step 1 — resolve locus (4) inconsistency"
+  },
+  "vocabulary_bridge_iteration_2_step_2": {
+   "classes": [
+    2,
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Vocabulary-bridge iteration 2 step 2 — labeling constraint check"
+  },
+  "vocabulary_is_the_work_pattern": {
+   "classes": [
+    2,
+    4,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": "ACCEPTED. Floor entry retired; substrate-side",
+   "title": "The \"vocabulary-is-the-work\" pattern: a recurring framework"
+  },
+  "w_plus_formalization": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": "Class 5 / Survives.",
+   "title": "Formal closure of w_+ = 13/14 — proposition-level chain"
+  },
+  "w_state_from_substrate": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "W states from substrate — narrowing the apparatus, then extending it"
+  },
+  "wave_particle_substrate": {
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Wave–particle substrate: the two-primitive framework synthesis"
+  },
+  "xor_continuum_limit": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The XOR-Filtered Continuum Limit"
+  },
+  "xor_derivation": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions"
+  }
+ },
+ "generated": "8401c53",
+ "generator": "scripts/build_corpus_index.py"
+}
