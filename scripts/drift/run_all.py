@@ -52,6 +52,7 @@ CHECKS = [
     ("DAG acyclicity", "check_dag_acyclic.py"),
     ("graph sealed-projection", "check_graph_sealed.py"),
     ("class-tag coverage", "lint_class_tags.py"),
+    ("corpus-index freshness", "check_corpus_index.py"),
     ("working-tree drift", "check_working_tree.py"),
     ("CAS verification", "verify_cas.py"),
 ]
@@ -67,6 +68,7 @@ ADVISORY = {
     "check_dag_acyclic.py",
     "check_graph_sealed.py",
     "lint_class_tags.py",
+    "check_corpus_index.py",
 }
 
 
