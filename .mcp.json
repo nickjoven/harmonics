@@ -12,6 +12,13 @@
       "env": {
         "KET_HOME": ".ket"
       }
+    },
+    "harmonics": {
+      "command": "python3",
+      "args": ["scripts/mcp/harmonics_mcp.py"],
+      "env": {
+        "KET_HOME": ".ket"
+      }
     }
   }
 }
