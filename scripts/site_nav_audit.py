@@ -43,11 +43,23 @@ DELIBERATE_ORPHANS = {
 }
 
 
+def nav_json_links() -> set:
+    """All hrefs nav.js renders, resolved repo-relative, from nav.json."""
+    import json
+    data = json.loads((ROOT / "docs" / "nav.json").read_text())
+    hrefs = [data["home"]["href"]]
+    hrefs += [i["href"] for g in data["groups"] for i in g["items"]]
+    out = set()
+    for href in hrefs:
+        out.add(str((ROOT / "docs" / href).resolve().relative_to(ROOT)))
+    return out
+
+
 def inventory() -> dict:
+    shared_nav = nav_json_links()
     pages = {}
     for p in [ROOT / "index.html"] + sorted((ROOT / "docs").glob("*.html")):
         text = p.read_text(errors="replace")
-        nav_html = " ".join(NAV_RE.findall(text))
 
         def resolve(links):
             out = set()
@@ -61,9 +73,15 @@ def inventory() -> dict:
                     pass
             return out
 
+        if "data-site-nav" in text:
+            # nav.js renders this page's nav from nav.json at load time;
+            # the static placeholder holds only the no-JS fallback link.
+            nav_links = set(shared_nav)
+        else:
+            nav_links = resolve(A_RE.findall(" ".join(NAV_RE.findall(text))))
         pages[str(p.relative_to(ROOT))] = {
-            "nav": resolve(A_RE.findall(nav_html)),
-            "all": resolve(A_RE.findall(text)),
+            "nav": nav_links,
+            "all": resolve(A_RE.findall(text)) | nav_links,
         }
     return pages
 
@@ -89,6 +107,13 @@ def main() -> int:
         for p in sorted(pages):
             print(p)
         return 0
+
+    broken = sorted(t for t in nav_json_links() if not (ROOT / t).exists())
+    if broken:
+        print("nav.json points at missing files:")
+        for t in broken:
+            print(f"  {t}")
+        return len(broken)
 
     nav_seen = reachable(pages, "docs/index.html", "nav")
     body_seen = reachable(pages, "index.html", "all")
