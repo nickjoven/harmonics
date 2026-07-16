@@ -1,0 +1,37 @@
+{
+  "_comment": "Single source of truth for the docs-site navigation. Rendered on every page by nav.js; read by scripts/site_nav_audit.py so the nav, the audit, and the sitemap cannot disagree. Grouping is by reader intent: Learn (top-down narrative), Explore (interactive structure), Reference (look something up). Drill-down pages carry the nav for wayfinding but hold no slot in it; they are reached from their parent page's content.",
+  "home": { "title": "Home", "href": "../index.html" },
+  "groups": [
+    {
+      "label": "Learn",
+      "items": [
+        { "title": "Curriculum", "href": "curriculum.html" },
+        { "title": "Genesis", "href": "genesis.html" },
+        { "title": "Concentric", "href": "concentric.html" }
+      ]
+    },
+    {
+      "label": "Explore",
+      "items": [
+        { "title": "Graph", "href": "dag.html" },
+        { "title": "Claim chain", "href": "claim-chain.html" },
+        { "title": "Three views", "href": "claim-chain-views.html" },
+        { "title": "Mastery", "href": "mastery-graph.html" }
+      ]
+    },
+    {
+      "label": "Reference",
+      "items": [
+        { "title": "Scorecard", "href": "index.html" },
+        { "title": "Glossary", "href": "glossary.html" },
+        { "title": "Phenomena", "href": "phenomenon-glossary.html" },
+        { "title": "Derivations", "href": "derivations.html" },
+        { "title": "Preprint", "href": "preprint.html" }
+      ]
+    }
+  ],
+  "drilldowns": [
+    { "title": "A_s proof (3D)", "href": "a_s_proof.html", "parent": "dag.html" },
+    { "title": "CMB-S4 prediction", "href": "cmb-s4.html", "parent": "claim-chain.html" }
+  ]
+}
