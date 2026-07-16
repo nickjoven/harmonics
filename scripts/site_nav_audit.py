@@ -12,8 +12,10 @@ Nav-reachability is walked from docs/index.html, the hub page carrying
 the canonical nav (the root index.html is a landing page with no <nav>
 by design). Body-reachability is walked from the root.
 
-Exit code = number of FULLY orphaned pages (advisory; a WIP viewer may
-be deliberately unlinked).
+Exit code = number of UNEXPECTED full orphans — pages with zero inbound
+links that are not allowlisted in DELIBERATE_ORPHANS. Deliberate
+orphans (a WIP viewer, a standalone visualization) are recorded there
+with reasons and never count against the verdict.
 
 Run:
   python3 scripts/site_nav_audit.py           # full report
@@ -30,6 +32,15 @@ ROOT = Path(__file__).resolve().parents[1]
 
 NAV_RE = re.compile(r"<nav[^>]*>(.*?)</nav>", re.S | re.I)
 A_RE = re.compile(r'<a\s+href="([^"#?]+\.html)"', re.I)
+
+# Pages with no inbound link anywhere, unlinked ON PURPOSE (owner
+# decision, 2026-07-16). They don't count against the tree verdict;
+# a NEW page landing with zero inbound links still does.
+DELIBERATE_ORPHANS = {
+    "docs/dag2.html": "WIP alternate graph viewer (#255) — unfinished by intent",
+    "docs/framework_predictions.html":
+        "standalone Tier-1 visualization (#233) — no nav slot by decision",
+}
 
 
 def inventory() -> dict:
@@ -83,6 +94,7 @@ def main() -> int:
     body_seen = reachable(pages, "index.html", "all")
     nav_orphans = sorted(set(pages) - nav_seen - {"index.html"})
     full_orphans = sorted(set(pages) - body_seen)
+    unexpected = [p for p in full_orphans if p not in DELIBERATE_ORPHANS]
 
     print(f"pages: {len(pages)} "
           f"(nav-reachable from docs/index.html: {len(nav_seen)}, "
@@ -90,18 +102,20 @@ def main() -> int:
     if nav_orphans:
         print("\nnot reachable through <nav> alone:")
         for p in nav_orphans:
-            tag = "FULL ORPHAN — no inbound link anywhere" \
-                if p in full_orphans else "prose/body links only"
+            if p in DELIBERATE_ORPHANS:
+                tag = f"deliberate orphan — {DELIBERATE_ORPHANS[p]}"
+            elif p in full_orphans:
+                tag = "UNEXPECTED ORPHAN — no inbound link anywhere"
+            else:
+                tag = "prose/body links only"
             print(f"  {p:42s} {tag}")
-    missing_nav = sorted(p for p, v in pages.items()
-                         if not v["nav"] and p != "index.html")
-    if missing_nav:
-        print("\npages with no <nav> element (root index excluded by design):")
-        for p in missing_nav:
-            print(f"  {p}")
-    if not nav_orphans and not missing_nav:
-        print("site is a fully navigable tree")
-    return len(full_orphans)
+    if unexpected:
+        print(f"\n{len(unexpected)} unexpected orphan(s) — link them or add "
+              f"to DELIBERATE_ORPHANS with a reason")
+    else:
+        print(f"\nsite is a navigable tree "
+              f"({len(DELIBERATE_ORPHANS)} deliberate orphans excluded)")
+    return len(unexpected)
 
 
 if __name__ == "__main__":
