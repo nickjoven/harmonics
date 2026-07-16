@@ -192,6 +192,19 @@ bibliography-check:
 # with the existing graph.
 
 PREVIEW_PORT ?= 8765
+PREVIEW_URL := http://localhost:$(PREVIEW_PORT)
+
+# Browser opener, auto-detected: wslview/xdg-open (Linux), open (mac),
+# explorer.exe (WSL without wslu). Override: make preview BROWSER=firefox
+# Disable auto-open entirely: make preview BROWSER=:
+BROWSER ?= $(shell command -v wslview 2>/dev/null || command -v xdg-open 2>/dev/null \
+	|| command -v open 2>/dev/null || command -v explorer.exe 2>/dev/null || echo :)
+
+# Open $(1) once the server (started after this line) is listening.
+# explorer.exe exits nonzero even on success, hence the || true.
+define OPEN_BROWSER
+	@( sleep 1; $(BROWSER) "$(1)" >/dev/null 2>&1 || true ) &
+endef
 
 preview: preview-dag
 
@@ -214,20 +227,42 @@ preview-dag:
 	@echo "==>"
 	@echo "==> Press Ctrl-C to stop the server."
 	@echo ""
+	$(call OPEN_BROWSER,$(PREVIEW_URL)/docs/dag.html)
 	@$(PYTHON) -m http.server $(PREVIEW_PORT)
 
 preview-index:
 	@$(PYTHON) scripts/build_derivation_graph.py 2>&1 | tail -1 || true
-	@echo "==> http://localhost:$(PREVIEW_PORT)/docs/index.html"
+	@echo "==> $(PREVIEW_URL)/docs/index.html"
 	@echo "==> Ctrl-C to stop."
+	$(call OPEN_BROWSER,$(PREVIEW_URL)/docs/index.html)
 	@$(PYTHON) -m http.server $(PREVIEW_PORT)
 
 preview-claims:
-	@echo "==> http://localhost:$(PREVIEW_PORT)/docs/claim-chain.html"
+	@echo "==> $(PREVIEW_URL)/docs/claim-chain.html"
 	@echo "==> Ctrl-C to stop."
+	$(call OPEN_BROWSER,$(PREVIEW_URL)/docs/claim-chain.html)
 	@$(PYTHON) -m http.server $(PREVIEW_PORT)
 
-.PHONY: preview preview-dag preview-index preview-claims preview-live preview-bg preview-stop
+# Serve + open any docs page by stem: make preview-page PAGE=curriculum
+PAGE ?= dag
+preview-page:
+	@test -f docs/$(PAGE).html || \
+		{ echo "==> no docs/$(PAGE).html — see 'make preview-list'"; exit 1; }
+	@echo "==> $(PREVIEW_URL)/docs/$(PAGE).html"
+	@echo "==> Ctrl-C to stop."
+	$(call OPEN_BROWSER,$(PREVIEW_URL)/docs/$(PAGE).html)
+	@$(PYTHON) -m http.server $(PREVIEW_PORT)
+
+# Every frontend artifact, as clickable preview URLs.
+preview-list:
+	@$(PYTHON) scripts/site_nav_audit.py --list | sed 's|^|  $(PREVIEW_URL)/|'
+
+# Is the site a navigable tree? Reports nav-orphans and full orphans.
+nav-audit:
+	@$(PYTHON) scripts/site_nav_audit.py || true
+
+.PHONY: preview preview-dag preview-index preview-claims preview-page \
+	preview-list nav-audit preview-live preview-bg preview-stop
 
 # Long-lived preview with auto-rebuild + front-end live-reload.
 # Watches sync_cost/derivations/*.md and regenerates the graph
@@ -253,6 +288,7 @@ preview-bg:
 	@nohup $(PYTHON) scripts/preview_server.py > $(PREVIEW_LOG) 2>&1 & echo $$! > $(PREVIEW_PIDFILE)
 	@sleep 0.5
 	@echo "==> Preview server backgrounded (PID $$(cat $(PREVIEW_PIDFILE)))."
+	@$(BROWSER) "$(PREVIEW_URL)/docs/dag.html" >/dev/null 2>&1 || true
 	@echo "==> URL: http://localhost:$(PREVIEW_PORT)/docs/dag.html"
 	@echo "==> Log: $(PREVIEW_LOG)"
 	@echo "==> Stop: make preview-stop"
