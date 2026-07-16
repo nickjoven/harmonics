@@ -1,9 +1,9 @@
 {
- "count": 322,
+ "count": 324,
  "coverage_totals": {
-  "classified": 187,
+  "classified": 188,
   "prose-only": 29,
-  "unclassified-quantitative": 106
+  "unclassified-quantitative": 107
  },
  "docs": {
   "CHAIN_KSTAR": {
@@ -1914,6 +1914,17 @@
    "status_line": null,
    "title": "The Mediant Is Not an Axiom"
   },
+  "mediant_forcing_lemma": {
+   "classes": [
+    2,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "The mediant-forcing lemma — statement, proof, and explicit obligations"
+  },
   "mediant_vs_flow_calc": {
    "classes": [
     3
@@ -1977,6 +1988,14 @@
    "has_lineage": false,
    "status_line": null,
    "title": "The Möbius Container"
+  },
+  "mode_locking_exhibits": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Mode-locking exhibits — the mechanism in the laboratory, the clinic, and the sky"
   },
   "modular_form_behavior_cosmological_tongues_audit": {
    "classes": [],
@@ -3146,6 +3165,6 @@
    "title": "Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions"
   }
  },
- "generated": "84856c7",
+ "generated": "906778d",
  "generator": "scripts/build_corpus_index.py"
 }

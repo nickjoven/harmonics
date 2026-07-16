@@ -1,5 +1,5 @@
 {
-  "generated": "84856c7ba6ebcca84ad1a6c4d22f582964cdedda",
+  "generated": "906778ddab8db04c973e77d15bfdf2caa7805c19",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1193,6 +1193,7 @@
         "dynamical_tool_audit",
         "framework_status",
         "lesson_rotation_curves_a0",
+        "mode_locking_exhibits",
         "numerology_inventory",
         "path_closures_iter1",
         "phenomenology_cross_reference",
@@ -1240,6 +1241,10 @@
         },
         {
           "source": "lesson_rotation_curves_a0",
+          "kind": "references"
+        },
+        {
+          "source": "mode_locking_exhibits",
           "kind": "references"
         },
         {
@@ -1377,7 +1382,9 @@
         "lesson_forced_basin_selection",
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
+        "mediant_forcing_lemma",
         "mediant_vs_flow_calc",
+        "mode_locking_exhibits",
         "numerology_inventory",
         "phenomenology_cross_reference",
         "preferred_basis_dissolution",
@@ -1513,7 +1520,15 @@
           "kind": "references"
         },
         {
+          "source": "mediant_forcing_lemma",
+          "kind": "references"
+        },
+        {
           "source": "mediant_vs_flow_calc",
+          "kind": "references"
+        },
+        {
+          "source": "mode_locking_exhibits",
           "kind": "references"
         },
         {
@@ -2861,6 +2876,8 @@
         "k_scaling_scan",
         "klein_bridge_audit_and_probe",
         "lesson_8_35_vs_13_19",
+        "mediant_forcing_lemma",
+        "mode_locking_exhibits",
         "numerology_count_phase_a",
         "numerology_count_phase_b",
         "numerology_inventory",
@@ -2985,6 +3002,14 @@
         },
         {
           "source": "lesson_8_35_vs_13_19",
+          "kind": "references"
+        },
+        {
+          "source": "mediant_forcing_lemma",
+          "kind": "references"
+        },
+        {
+          "source": "mode_locking_exhibits",
           "kind": "references"
         },
         {
@@ -4089,6 +4114,7 @@
         "klein_dynamics_roadmap",
         "lesson_rotation_curves_a0",
         "mass_function_family",
+        "mediant_forcing_lemma",
         "numerology_inventory",
         "observer_register_closure",
         "omega_b_alpha_beta_closure",
@@ -4190,6 +4216,10 @@
         },
         {
           "source": "mass_function_family",
+          "kind": "references"
+        },
+        {
+          "source": "mediant_forcing_lemma",
           "kind": "references"
         },
         {
@@ -5107,7 +5137,9 @@
         "mass_sector_sqrt_w_phase_a",
         "mass_sector_sqrt_w_phase_b",
         "meaning_of_two_wip",
+        "mediant_forcing_lemma",
         "mediant_vs_flow_calc",
+        "mode_locking_exhibits",
         "modular_form_behavior_cosmological_tongues_audit",
         "numerology_inventory",
         "pattern_identification_discipline_candidate",
@@ -5310,7 +5342,15 @@
           "kind": "references"
         },
         {
+          "source": "mediant_forcing_lemma",
+          "kind": "references"
+        },
+        {
           "source": "mediant_vs_flow_calc",
+          "kind": "references"
+        },
+        {
+          "source": "mode_locking_exhibits",
           "kind": "references"
         },
         {
@@ -5887,6 +5927,7 @@
         "k_critical_phase_a",
         "k_of_t_friedmann",
         "mass_sector_sqrt_w_phase_a",
+        "mode_locking_exhibits",
         "omega_b_alpha_beta_phase_b",
         "omega_b_c5_closure",
         "omega_b_residual_phase_a",
@@ -6014,6 +6055,10 @@
         },
         {
           "source": "mass_sector_sqrt_w_phase_a",
+          "kind": "references"
+        },
+        {
+          "source": "mode_locking_exhibits",
           "kind": "references"
         },
         {
@@ -8071,6 +8116,7 @@
         "halt_shock_coherence_audit",
         "hierarchy_problem_translation",
         "lesson_epr_gr_qm_unification",
+        "mode_locking_exhibits",
         "omega_b_c5_beta_audit",
         "path_closures_iter1",
         "path_closures_iter2",
@@ -8253,6 +8299,10 @@
         },
         {
           "source": "lesson_epr_gr_qm_unification",
+          "kind": "references"
+        },
+        {
+          "source": "mode_locking_exhibits",
           "kind": "references"
         },
         {
@@ -10858,7 +10908,9 @@
         "structural_lemmas",
         "three_dimensions"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "mode_locking_exhibits"
+      ],
       "edges": [
         {
           "target": "a0_threshold",
@@ -10897,7 +10949,12 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "mode_locking_exhibits",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "7aa21fb",
@@ -13252,6 +13309,7 @@
         "collapse_dissolution",
         "equivalence_dissolution",
         "gr_qm_unification_synthesis",
+        "mediant_forcing_lemma",
         "predictions_horizon_2026",
         "preferred_basis_dissolution",
         "spacetime_dissipative_emergence",
@@ -13269,6 +13327,10 @@
         },
         {
           "source": "gr_qm_unification_synthesis",
+          "kind": "references"
+        },
+        {
+          "source": "mediant_forcing_lemma",
           "kind": "references"
         },
         {
@@ -13931,6 +13993,7 @@
         "lesson_rotation_curves_a0",
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
+        "mode_locking_exhibits",
         "negative_results_ledger",
         "no_rescaling",
         "nonperturbative_phase2",
@@ -14529,6 +14592,10 @@
         },
         {
           "source": "mediant_vs_flow_problem",
+          "kind": "references"
+        },
+        {
+          "source": "mode_locking_exhibits",
           "kind": "references"
         },
         {
@@ -25049,6 +25116,84 @@
       ]
     },
     {
+      "id": "mediant_forcing_lemma",
+      "path": "sync_cost/derivations/mediant_forcing_lemma.md",
+      "cid": null,
+      "sealed": false,
+      "title": "The mediant-forcing lemma \u2014 statement, proof, and explicit obligations",
+      "summary": "**Formalization of the framework's hinge claim**, previously stated\nonly as README prose (\"the mediant is not a stipulation; it is\nforced\"). The claim decomposes into a **number-theoretic core** \u2014\nproven below in full (unimodular minimality; standard Farey/\nStern-Brocot theory, external mathematics) \u2014 and a **dynamical\nselection claim**, decomposed here into four obligations O1\u2013O4 of\nwhich two are established, one is a framework-physical premise, and\none (**O3\u2032, the tongue-prefactor uniformity b",
+      "depends_on": [
+        "a1_from_saddle_node",
+        "ansatz_audit_policy",
+        "baryon_fraction",
+        "born_rule",
+        "fidelity_bound",
+        "mode_locking_exhibits",
+        "numerology_count_phase_b",
+        "rational_field_equation",
+        "structural_lemmas",
+        "three_dimensions"
+      ],
+      "depended_on_by": [
+        "mode_locking_exhibits"
+      ],
+      "edges": [
+        {
+          "target": "a1_from_saddle_node",
+          "kind": "references"
+        },
+        {
+          "target": "ansatz_audit_policy",
+          "kind": "references"
+        },
+        {
+          "target": "baryon_fraction",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "fidelity_bound",
+          "kind": "references"
+        },
+        {
+          "target": "mode_locking_exhibits",
+          "kind": "references"
+        },
+        {
+          "target": "numerology_count_phase_b",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
+          "kind": "references"
+        },
+        {
+          "target": "structural_lemmas",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "mode_locking_exhibits",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "5f05e03",
+          "date": "2026-07-16",
+          "subject": "Add mode-locking exhibits catalog and mediant-forcing lemma draft (#304)"
+        }
+      ]
+    },
+    {
       "id": "mediant_vs_flow_calc",
       "path": "sync_cost/derivations/mediant_vs_flow_calc.md",
       "cid": null,
@@ -25659,6 +25804,84 @@
           "hash": "4335790",
           "date": "2026-03-25",
           "subject": "Add Derivation 18: M\u00f6bius container simulation target"
+        }
+      ]
+    },
+    {
+      "id": "mode_locking_exhibits",
+      "path": "sync_cost/derivations/mode_locking_exhibits.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Mode-locking exhibits \u2014 the mechanism in the laboratory, the clinic, and the sky",
+      "summary": "Orientation / external-evidence catalog (pedagogical, evidential).\nNo new derivation, no new primitive, no substrate claim. This doc\ncollects the *measured* instances of mode-locking \u2014 the framework's\ncentral mechanism \u2014 in systems where the physics is uncontroversial,\nand states precisely what these exhibits do and do not establish for\nthe framework. Companion to `dynamical_quantization.md` (the\nprism/spectral articulation) and `mediant_forcing_lemma.md` (the\nformal hinge). External citations a",
+      "depends_on": [
+        "a0_threshold",
+        "a1_from_saddle_node",
+        "ansatz_audit_policy",
+        "born_rule",
+        "boundary_weight",
+        "continuum_limits",
+        "dynamical_quantization",
+        "framework_status",
+        "mediant_forcing_lemma",
+        "rational_field_equation"
+      ],
+      "depended_on_by": [
+        "mediant_forcing_lemma"
+      ],
+      "edges": [
+        {
+          "target": "a0_threshold",
+          "kind": "references"
+        },
+        {
+          "target": "a1_from_saddle_node",
+          "kind": "references"
+        },
+        {
+          "target": "ansatz_audit_policy",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "dynamical_quantization",
+          "kind": "references"
+        },
+        {
+          "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "mediant_forcing_lemma",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "mediant_forcing_lemma",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "5f05e03",
+          "date": "2026-07-16",
+          "subject": "Add mode-locking exhibits catalog and mediant-forcing lemma draft (#304)"
         }
       ]
     },
@@ -26674,6 +26897,7 @@
         "framework_status",
         "gluon_reframing",
         "lesson_8_35_vs_13_19",
+        "mediant_forcing_lemma",
         "negative_results_ledger",
         "phenomenology_cross_reference",
         "primitive_completeness_audit",
@@ -26759,6 +26983,10 @@
         },
         {
           "source": "lesson_8_35_vs_13_19",
+          "kind": "references"
+        },
+        {
+          "source": "mediant_forcing_lemma",
           "kind": "references"
         },
         {
@@ -32661,6 +32889,8 @@
         "gap_1_christoffel",
         "k_critical_phase_a",
         "k_critical_phase_b",
+        "mediant_forcing_lemma",
+        "mode_locking_exhibits",
         "proposed_items_disposition",
         "quantum_gravity_interpolation",
         "thread_chronology"
@@ -32706,6 +32936,14 @@
         },
         {
           "source": "k_critical_phase_b",
+          "kind": "references"
+        },
+        {
+          "source": "mediant_forcing_lemma",
+          "kind": "references"
+        },
+        {
+          "source": "mode_locking_exhibits",
           "kind": "references"
         },
         {
@@ -35513,6 +35751,7 @@
       ],
       "depended_on_by": [
         "dynamical_quantization",
+        "mediant_forcing_lemma",
         "spacetime_dissipative_emergence"
       ],
       "edges": [
@@ -35628,6 +35867,10 @@
       "edged_by": [
         {
           "source": "dynamical_quantization",
+          "kind": "references"
+        },
+        {
+          "source": "mediant_forcing_lemma",
           "kind": "references"
         },
         {
@@ -37092,6 +37335,7 @@
         "high_school_syllabus",
         "isotropy_lemma",
         "klein_bottle_derivation",
+        "mediant_forcing_lemma",
         "numerology_inventory",
         "phenomenology_cross_reference",
         "qd_origins",
@@ -37183,6 +37427,10 @@
         },
         {
           "source": "klein_bottle_derivation",
+          "kind": "references"
+        },
+        {
+          "source": "mediant_forcing_lemma",
           "kind": "references"
         },
         {
