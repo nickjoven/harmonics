@@ -5,7 +5,7 @@
 
 External literature cited inline (as `arXiv:` / `doi:`) across the
 derivation docs, resolved to canonical metadata via the arXiv and
-CrossRef APIs. 5 reference(s). Generated 2026-07-09.
+CrossRef APIs. 5 reference(s). Generated 2026-07-16.
 
 - **[Kawano2025]** Shotaro Kawano, Kenji Kobayashi, Takuya Suzuki, Naoki Ichiji (2025). *Experimental Validation of String Oscillation in Subharmonic Generation*.
   [arXiv:2502.11902](https://arxiv.org/abs/2502.11902)
