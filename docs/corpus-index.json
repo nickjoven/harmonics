@@ -2,8 +2,8 @@
  "count": 324,
  "coverage_totals": {
   "classified": 188,
-  "prose-only": 29,
-  "unclassified-quantitative": 107
+  "prose-only": 28,
+  "unclassified-quantitative": 108
  },
  "docs": {
   "CHAIN_KSTAR": {
@@ -29,7 +29,7 @@
   },
   "INDEX": {
    "classes": [],
-   "coverage": "prose-only",
+   "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
    "status_line": null,
@@ -264,7 +264,7 @@
    "d_numbers": [
     "D47"
    ],
-   "has_lineage": false,
+   "has_lineage": true,
    "status_line": null,
    "title": "The Baryon Fraction"
   },
@@ -367,7 +367,9 @@
   "boundary_weight": {
    "classes": [],
    "coverage": "unclassified-quantitative",
-   "d_numbers": [],
+   "d_numbers": [
+    "D38"
+   ],
    "has_lineage": false,
    "status_line": null,
    "title": "The Boundary Weight"
@@ -1534,7 +1536,7 @@
    "d_numbers": [
     "D19"
    ],
-   "has_lineage": false,
+   "has_lineage": true,
    "status_line": null,
    "title": "The Klein Bottle"
   },
@@ -1910,7 +1912,7 @@
    "d_numbers": [
     "D29"
    ],
-   "has_lineage": false,
+   "has_lineage": true,
    "status_line": null,
    "title": "The Mediant Is Not an Axiom"
   },
@@ -1984,7 +1986,9 @@
   "mobius_container": {
    "classes": [],
    "coverage": "unclassified-quantitative",
-   "d_numbers": [],
+   "d_numbers": [
+    "D18"
+   ],
    "has_lineage": false,
    "status_line": null,
    "title": "The Möbius Container"
@@ -2123,7 +2127,7 @@
    ],
    "coverage": "classified",
    "d_numbers": [],
-   "has_lineage": false,
+   "has_lineage": true,
    "status_line": null,
    "title": "Ω_b (α, β) execution Phase B — closure via sign-rep no-EM-coupling"
   },
@@ -2260,7 +2264,7 @@
    "classes": [],
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
-   "has_lineage": false,
+   "has_lineage": true,
    "status_line": null,
    "title": "Cosmic partition prediction in logit form"
   },
@@ -3068,7 +3072,9 @@
   "variable_denominator": {
    "classes": [],
    "coverage": "unclassified-quantitative",
-   "d_numbers": [],
+   "d_numbers": [
+    "D16"
+   ],
    "has_lineage": false,
    "status_line": null,
    "title": "The Variable Denominator"
@@ -3165,6 +3171,6 @@
    "title": "Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions"
   }
  },
- "generated": "906778d",
+ "generated": "d42651e",
  "generator": "scripts/build_corpus_index.py"
 }

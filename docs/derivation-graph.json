@@ -1,5 +1,5 @@
 {
-  "generated": "906778ddab8db04c973e77d15bfdf2caa7805c19",
+  "generated": "d42651e6c3ff6b14791e09cc83fa22e13c7d8ff5",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -325,8 +325,8 @@
     {
       "id": "INDEX",
       "path": "sync_cost/derivations/INDEX.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "6bb322c6550e839fb0c57eab8c31fdc490f429e2bac336fcbaf3b697d9241690",
+      "sealed": true,
       "title": "Derivation Index",
       "summary": "**Navigation index for derivation chain.** Maps D-numbers\n(D1-D47 per `MANIFEST.yml` derivation_count) to filenames for\nmachine-readable lookup. Maintained as derivations are added or\nrenamed. Cross-checked by `check_manifest.py`.",
       "depends_on": [
@@ -337,6 +337,7 @@
         "baryon_fraction",
         "beta_from_tongues",
         "born_rule",
+        "boundary_weight",
         "conservation_computability",
         "continuum_limits",
         "coupling_scales",
@@ -356,13 +357,15 @@
         "mediant_derivation",
         "minimum_alphabet",
         "minkowski_signature",
+        "mobius_container",
         "omega_partition_combinatorial",
         "planck_scale",
         "rational_field_equation",
         "spatial_coupling_derived",
         "spectral_tilt",
         "speed_of_light",
-        "three_dimensions"
+        "three_dimensions",
+        "variable_denominator"
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY"
@@ -394,6 +397,10 @@
         },
         {
           "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
           "kind": "references"
         },
         {
@@ -473,6 +480,10 @@
           "kind": "references"
         },
         {
+          "target": "mobius_container",
+          "kind": "references"
+        },
+        {
           "target": "omega_partition_combinatorial",
           "kind": "references"
         },
@@ -499,6 +510,10 @@
         {
           "target": "three_dimensions",
           "kind": "references"
+        },
+        {
+          "target": "variable_denominator",
+          "kind": "references"
         }
       ],
       "edged_by": [
@@ -508,6 +523,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "f93adf4",
+          "date": "2026-07-17",
+          "subject": "Typed-lineage pilot: ## Lineage blocks in 5 spine docs (#300) (#306)"
+        },
         {
           "hash": "a6a4f5d",
           "date": "2026-04-26",
@@ -1187,6 +1207,7 @@
       "depended_on_by": [
         "INDEX",
         "L1_substrate_cusp_ground_state",
+        "baryon_fraction",
         "canonical_glossary",
         "derivation_atlas",
         "dynamical_quantization",
@@ -1218,6 +1239,10 @@
         {
           "source": "L1_substrate_cusp_ground_state",
           "kind": "references"
+        },
+        {
+          "source": "baryon_fraction",
+          "kind": "proposes"
         },
         {
           "source": "canonical_glossary",
@@ -1365,6 +1390,7 @@
         "PROOF_B_quantum",
         "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
+        "baryon_fraction",
         "bell_bounds_from_substrate",
         "born_rule_parameter_free",
         "canonical_glossary",
@@ -1450,6 +1476,10 @@
         {
           "source": "audit_punch_list_2026-04",
           "kind": "references"
+        },
+        {
+          "source": "baryon_fraction",
+          "kind": "proposes"
         },
         {
           "source": "bell_bounds_from_substrate",
@@ -4089,14 +4119,22 @@
     {
       "id": "baryon_fraction",
       "path": "sync_cost/derivations/baryon_fraction.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "5fe6b2b017cb7ea064819305933460acf121627dcb2b5d40371c9312c986724f",
+      "sealed": true,
       "title": "The Baryon Fraction",
       "summary": "The cosmic energy budget partitions into three sectors from the\nsingle number 19 (the Klein bottle's total budget from D25):",
       "depends_on": [
         "L1_substrate_cusp_ground_state",
+        "a0_threshold",
+        "a1_from_saddle_node",
+        "boundary_weight",
+        "discrete_gauge_resolution",
+        "duty_cycle_dictionary",
+        "farey_partition",
+        "gauge_sector_lovelock",
         "gell_mann_nishijima",
-        "omega_b_alpha_beta_closure"
+        "omega_b_alpha_beta_closure",
+        "omega_partition_combinatorial"
       ],
       "depended_on_by": [
         "INDEX",
@@ -4149,12 +4187,44 @@
           "kind": "references"
         },
         {
+          "target": "a0_threshold",
+          "kind": "proposes"
+        },
+        {
+          "target": "a1_from_saddle_node",
+          "kind": "proposes"
+        },
+        {
+          "target": "boundary_weight",
+          "kind": "proposes"
+        },
+        {
+          "target": "discrete_gauge_resolution",
+          "kind": "grounds"
+        },
+        {
+          "target": "duty_cycle_dictionary",
+          "kind": "proposes"
+        },
+        {
+          "target": "farey_partition",
+          "kind": "derives"
+        },
+        {
+          "target": "gauge_sector_lovelock",
+          "kind": "grounds"
+        },
+        {
           "target": "gell_mann_nishijima",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "target": "omega_b_alpha_beta_closure",
           "kind": "references"
+        },
+        {
+          "target": "omega_partition_combinatorial",
+          "kind": "derives"
         }
       ],
       "edged_by": [
@@ -4232,7 +4302,7 @@
         },
         {
           "source": "omega_b_alpha_beta_closure",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "source": "omega_b_alpha_beta_phase_b",
@@ -4264,7 +4334,7 @@
         },
         {
           "source": "partition_logit_form",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "source": "path_closures_iter1",
@@ -4332,6 +4402,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "f93adf4",
+          "date": "2026-07-17",
+          "subject": "Typed-lineage pilot: ## Lineage blocks in 5 spine docs (#300) (#306)"
+        },
         {
           "hash": "a6a4f5d",
           "date": "2026-04-26",
@@ -5903,10 +5978,12 @@
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
+        "INDEX",
         "a_s_geometric_proof",
         "address_and_quantity",
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
+        "baryon_fraction",
         "born_rule_mode_count_extremes_audit",
         "boundary_leakage_rate_audit",
         "canonical_glossary",
@@ -5962,6 +6039,10 @@
           "kind": "references"
         },
         {
+          "source": "INDEX",
+          "kind": "references"
+        },
+        {
           "source": "a_s_geometric_proof",
           "kind": "references"
         },
@@ -5976,6 +6057,10 @@
         {
           "source": "arrow_inviolability_and_unification_closure_audit",
           "kind": "references"
+        },
+        {
+          "source": "baryon_fraction",
+          "kind": "proposes"
         },
         {
           "source": "born_rule_mode_count_extremes_audit",
@@ -8115,6 +8200,7 @@
         "h0_tension_cross_cell_identity_audit",
         "halt_shock_coherence_audit",
         "hierarchy_problem_translation",
+        "klein_bottle",
         "lesson_epr_gr_qm_unification",
         "mode_locking_exhibits",
         "omega_b_c5_beta_audit",
@@ -8296,6 +8382,10 @@
         {
           "source": "hierarchy_problem_translation",
           "kind": "references"
+        },
+        {
+          "source": "klein_bottle",
+          "kind": "proposes"
         },
         {
           "source": "lesson_epr_gr_qm_unification",
@@ -9821,6 +9911,7 @@
       "depends_on": [],
       "depended_on_by": [
         "INDEX",
+        "baryon_fraction",
         "f2_scoping",
         "framework_status",
         "gauge_high_scale_identification",
@@ -9832,6 +9923,10 @@
         {
           "source": "INDEX",
           "kind": "references"
+        },
+        {
+          "source": "baryon_fraction",
+          "kind": "grounds"
         },
         {
           "source": "f2_scoping",
@@ -10721,6 +10816,7 @@
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
         "articulation_audit_2026-05",
+        "baryon_fraction",
         "beta_from_tongues",
         "canonical_glossary",
         "fermion_mass_running",
@@ -10776,6 +10872,10 @@
         {
           "source": "articulation_audit_2026-05",
           "kind": "references"
+        },
+        {
+          "source": "baryon_fraction",
+          "kind": "proposes"
         },
         {
           "source": "beta_from_tongues",
@@ -11474,6 +11574,7 @@
         "gr_qm_unification_synthesis",
         "graviton_reframing",
         "k_of_t_friedmann",
+        "klein_bottle",
         "klein_connection",
         "koide_form_substrate_iteration_8",
         "lesson_epr_gr_qm_unification",
@@ -11544,6 +11645,10 @@
         {
           "source": "k_of_t_friedmann",
           "kind": "references"
+        },
+        {
+          "source": "klein_bottle",
+          "kind": "proposes"
         },
         {
           "source": "klein_connection",
@@ -11707,7 +11812,7 @@
         },
         {
           "source": "mediant_derivation",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "source": "proposed_items_disposition",
@@ -12956,6 +13061,7 @@
         "INDEX",
         "algebraic_forcing_partition",
         "audit_punch_list_2026-04",
+        "baryon_fraction",
         "canonical_glossary",
         "farey_proof",
         "framework_status",
@@ -13005,6 +13111,10 @@
         {
           "source": "audit_punch_list_2026-04",
           "kind": "references"
+        },
+        {
+          "source": "baryon_fraction",
+          "kind": "derives"
         },
         {
           "source": "canonical_glossary",
@@ -13309,6 +13419,7 @@
         "collapse_dissolution",
         "equivalence_dissolution",
         "gr_qm_unification_synthesis",
+        "klein_bottle",
         "mediant_forcing_lemma",
         "predictions_horizon_2026",
         "preferred_basis_dissolution",
@@ -13328,6 +13439,10 @@
         {
           "source": "gr_qm_unification_synthesis",
           "kind": "references"
+        },
+        {
+          "source": "klein_bottle",
+          "kind": "proposes"
         },
         {
           "source": "mediant_forcing_lemma",
@@ -16187,6 +16302,7 @@
       "depended_on_by": [
         "INDEX",
         "anchor_count_audit",
+        "baryon_fraction",
         "basepoint_principle",
         "beta_from_tongues",
         "fermion_mass_running",
@@ -16222,6 +16338,10 @@
         {
           "source": "anchor_count_audit",
           "kind": "references"
+        },
+        {
+          "source": "baryon_fraction",
+          "kind": "grounds"
         },
         {
           "source": "basepoint_principle",
@@ -16389,7 +16509,7 @@
         },
         {
           "source": "baryon_fraction",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "source": "basepoint_principle",
@@ -20702,7 +20822,7 @@
         },
         {
           "source": "omega_b_alpha_beta_closure",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "source": "omega_b_alpha_beta_phase_b",
@@ -20726,7 +20846,7 @@
         },
         {
           "source": "partition_logit_form",
-          "kind": "references"
+          "kind": "proposes"
         },
         {
           "source": "path_closures_iter4",
@@ -20788,14 +20908,23 @@
     {
       "id": "klein_bottle",
       "path": "sync_cost/derivations/klein_bottle.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "94f5f308f62b5eb86832dc627516a4f0d53b55d546ce7f5434d5fa6afdbf4f20",
+      "sealed": true,
       "title": "The Klein Bottle",
       "summary": "The M\u00f6bius strip (Derivation 18) has one boundary. Excitations reflect\noff that boundary, which is why the container works \u2014 but the boundary\nis a degree of freedom the geometry doesn't determine. The Klein bottle\nis the compact, non-orientable surface with **no boundary**. Nothing\nenters, nothing exits, nothing reflects \u2014 everything circulates. It is\nthe fully closed variant of the M\u00f6bius container.",
       "depends_on": [
+        "continuum_limits",
+        "einstein_from_kuramoto",
+        "fidelity_bound",
         "klein_bottle_derivation",
+        "lie_group_characterization",
+        "mobius_container",
+        "planck_scale",
+        "rational_field_equation",
         "sine_gordon_substrate",
-        "time_axis_split"
+        "three_dimensions",
+        "time_axis_split",
+        "variable_denominator"
       ],
       "depended_on_by": [
         "CHAIN_KSTAR",
@@ -20861,6 +20990,7 @@
         "koide_form_substrate_iteration_7",
         "koide_form_substrate_iteration_8",
         "koide_form_substrate_iteration_9",
+        "mediant_derivation",
         "modular_form_behavior_cosmological_tongues_audit",
         "numerology_inventory",
         "primes_denominators_circular_geometry_extension_audit",
@@ -20885,16 +21015,52 @@
       ],
       "edges": [
         {
+          "target": "continuum_limits",
+          "kind": "proposes"
+        },
+        {
+          "target": "einstein_from_kuramoto",
+          "kind": "proposes"
+        },
+        {
+          "target": "fidelity_bound",
+          "kind": "proposes"
+        },
+        {
           "target": "klein_bottle_derivation",
           "kind": "references"
+        },
+        {
+          "target": "lie_group_characterization",
+          "kind": "proposes"
+        },
+        {
+          "target": "mobius_container",
+          "kind": "grounds"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "derives"
+        },
+        {
+          "target": "rational_field_equation",
+          "kind": "derives"
         },
         {
           "target": "sine_gordon_substrate",
           "kind": "references"
         },
         {
+          "target": "three_dimensions",
+          "kind": "derives"
+        },
+        {
           "target": "time_axis_split",
           "kind": "references"
+        },
+        {
+          "target": "variable_denominator",
+          "kind": "derives"
         }
       ],
       "edged_by": [
@@ -21151,6 +21317,10 @@
           "kind": "references"
         },
         {
+          "source": "mediant_derivation",
+          "kind": "derives"
+        },
+        {
           "source": "modular_form_behavior_cosmological_tongues_audit",
           "kind": "references"
         },
@@ -21236,6 +21406,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "f93adf4",
+          "date": "2026-07-17",
+          "subject": "Typed-lineage pilot: ## Lineage blocks in 5 spine docs (#300) (#306)"
+        },
         {
           "hash": "b973b2c",
           "date": "2026-05-10",
@@ -23966,6 +24141,7 @@
         "derivation_atlas",
         "dynamical_quantization",
         "isotropy_lemma",
+        "klein_bottle",
         "omega_b_w_plus_cross_ratio_search",
         "primitive_completeness_audit",
         "psl2z_subgroup_identification_phase_a",
@@ -24000,6 +24176,10 @@
         {
           "source": "isotropy_lemma",
           "kind": "references"
+        },
+        {
+          "source": "klein_bottle",
+          "kind": "proposes"
         },
         {
           "source": "omega_b_w_plus_cross_ratio_search",
@@ -25002,7 +25182,9 @@
       "depends_on": [
         "PROOF_A_gravity",
         "PROOF_B_quantum",
-        "empty_fork_cap"
+        "empty_fork_cap",
+        "klein_bottle",
+        "minimum_alphabet"
       ],
       "depended_on_by": [
         "INDEX",
@@ -25030,7 +25212,15 @@
         },
         {
           "target": "empty_fork_cap",
-          "kind": "references"
+          "kind": "grounds"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "derives"
+        },
+        {
+          "target": "minimum_alphabet",
+          "kind": "grounds"
         }
       ],
       "edged_by": [
@@ -25088,6 +25278,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "f93adf4",
+          "date": "2026-07-17",
+          "subject": "Typed-lineage pilot: ## Lineage blocks in 5 spine docs (#300) (#306)"
+        },
         {
           "hash": "17b6140",
           "date": "2026-05-17",
@@ -25436,6 +25631,7 @@
         "klein_bottle_derivation",
         "lesson_forced_basin_selection",
         "meaning_of_two_wip",
+        "mediant_derivation",
         "phenomenology_cross_reference",
         "predictions_horizon_2026",
         "primitive_completeness_audit",
@@ -25524,6 +25720,10 @@
         {
           "source": "meaning_of_two_wip",
           "kind": "references"
+        },
+        {
+          "source": "mediant_derivation",
+          "kind": "grounds"
         },
         {
           "source": "phenomenology_cross_reference",
@@ -25780,10 +25980,20 @@
       "summary": "A bounded, compact, non-orientable surface changes the Kuramoto\nself-consistency equation from an open dissipative system to a closed\nresonator. On such a surface, excitations cannot escape \u2014 they reflect,\ninterfere, and accumulate until standing waves form at rational phase\ndivisions. The rational divisions are not approximate. They are exact,\nforced by boundary conditions, and stable enough to persist for\narbitrarily many cycles.",
       "depends_on": [],
       "depended_on_by": [
+        "INDEX",
+        "klein_bottle",
         "third_twist_meta_structure_audit"
       ],
       "edges": [],
       "edged_by": [
+        {
+          "source": "INDEX",
+          "kind": "references"
+        },
+        {
+          "source": "klein_bottle",
+          "kind": "grounds"
+        },
         {
           "source": "third_twist_meta_structure_audit",
           "kind": "references"
@@ -27403,7 +27613,7 @@
         },
         {
           "source": "partition_logit_form",
-          "kind": "references"
+          "kind": "proposes"
         },
         {
           "source": "path_a_walkthrough",
@@ -27626,7 +27836,7 @@
     {
       "id": "omega_b_alpha_beta_closure",
       "path": "sync_cost/derivations/omega_b_alpha_beta_closure.md",
-      "cid": "fb366d3af850f05972f816adf12120fc0fe6341a4cdb2c6143350eb4b4b26d57",
+      "cid": "80c32cc449c4cc0d7daad19ee27d940c610b3134c4ed6711b718d96bf8839784",
       "sealed": true,
       "title": "\u03a9_b (\u03b1, \u03b2) execution Phase B \u2014 closure via sign-rep no-EM-coupling",
       "summary": "**(\u03b1, \u03b2) = (0, 1) closure complete.** \u03a9_b residual closes at\nTier 1 (mechanism) + Tier 2 (parameters), both structurally\nderived. Class 5 / Survives candidate pending consistency check\non \u00a72 language.",
@@ -27674,7 +27884,7 @@
       "edges": [
         {
           "target": "baryon_fraction",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "target": "framework_status",
@@ -27682,11 +27892,11 @@
         },
         {
           "target": "klein_antipodal_z2_rep_pattern",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "target": "omega_b_alpha_beta_phase_b",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "target": "omega_b_c5_beta_audit",
@@ -27698,7 +27908,7 @@
         },
         {
           "target": "omega_b_residual_phase_a",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "target": "omega_b_substrate_side_audit",
@@ -27706,7 +27916,7 @@
         },
         {
           "target": "omega_b_two_component_sketch",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "target": "path_closures_iter3",
@@ -27776,7 +27986,7 @@
         },
         {
           "source": "partition_logit_form",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "source": "phenomenology_cross_reference",
@@ -27824,6 +28034,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "f93adf4",
+          "date": "2026-07-17",
+          "subject": "Typed-lineage pilot: ## Lineage blocks in 5 spine docs (#300) (#306)"
+        },
         {
           "hash": "400f558",
           "date": "2026-04-25",
@@ -27883,7 +28098,7 @@
       "edged_by": [
         {
           "source": "omega_b_alpha_beta_closure",
-          "kind": "references"
+          "kind": "derives"
         }
       ],
       "git": [
@@ -28184,7 +28399,7 @@
         },
         {
           "source": "omega_b_alpha_beta_closure",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "source": "omega_b_alpha_beta_phase_b",
@@ -28499,7 +28714,7 @@
         },
         {
           "source": "omega_b_alpha_beta_closure",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "source": "omega_b_alpha_beta_phase_b",
@@ -28704,6 +28919,7 @@
         "INDEX",
         "algebraic_forcing_partition",
         "audit_punch_list_2026-04",
+        "baryon_fraction",
         "canonical_glossary",
         "farey_partition",
         "framework_status",
@@ -28769,6 +28985,10 @@
         {
           "source": "audit_punch_list_2026-04",
           "kind": "references"
+        },
+        {
+          "source": "baryon_fraction",
+          "kind": "derives"
         },
         {
           "source": "canonical_glossary",
@@ -29020,7 +29240,7 @@
     {
       "id": "partition_logit_form",
       "path": "sync_cost/derivations/partition_logit_form.md",
-      "cid": "b5217bc7d3960e2a56da643a43173ee67cb6efd351744d4ae5e2ced535412013",
+      "cid": "98495a13afb9fe6cc1f996309c306893610cc14ba6a9be232f064203250760c7",
       "sealed": true,
       "title": "Cosmic partition prediction in logit form",
       "summary": "The logit form is now formally stated. Three follow-on\ncandidates:",
@@ -29053,19 +29273,19 @@
       "edges": [
         {
           "target": "baryon_fraction",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "target": "klein_antipodal_z2_rep_pattern",
-          "kind": "references"
+          "kind": "proposes"
         },
         {
           "target": "numerology_inventory",
-          "kind": "references"
+          "kind": "proposes"
         },
         {
           "target": "omega_b_alpha_beta_closure",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "target": "omega_b_residual_phase_a",
@@ -29143,6 +29363,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "f93adf4",
+          "date": "2026-07-17",
+          "subject": "Typed-lineage pilot: ## Lineage blocks in 5 spine docs (#300) (#306)"
+        },
         {
           "hash": "f12eba4",
           "date": "2026-04-26",
@@ -30256,6 +30481,7 @@
         "half_twist_meta_structure_audit",
         "halt_shock_coherence_audit",
         "isotropy_lemma",
+        "klein_bottle",
         "lambda17_test_gamma06_cosmological_audit",
         "modular_form_behavior_cosmological_tongues_audit",
         "primes_denominators_circular_geometry_extension_audit",
@@ -30333,6 +30559,10 @@
         {
           "source": "isotropy_lemma",
           "kind": "references"
+        },
+        {
+          "source": "klein_bottle",
+          "kind": "derives"
         },
         {
           "source": "lambda17_test_gamma06_cosmological_audit",
@@ -32889,6 +33119,7 @@
         "gap_1_christoffel",
         "k_critical_phase_a",
         "k_critical_phase_b",
+        "klein_bottle",
         "mediant_forcing_lemma",
         "mode_locking_exhibits",
         "proposed_items_disposition",
@@ -32937,6 +33168,10 @@
         {
           "source": "k_critical_phase_b",
           "kind": "references"
+        },
+        {
+          "source": "klein_bottle",
+          "kind": "derives"
         },
         {
           "source": "mediant_forcing_lemma",
@@ -37334,6 +37569,7 @@
         "hierarchy_gaussian_lattice",
         "high_school_syllabus",
         "isotropy_lemma",
+        "klein_bottle",
         "klein_bottle_derivation",
         "mediant_forcing_lemma",
         "numerology_inventory",
@@ -37424,6 +37660,10 @@
         {
           "source": "isotropy_lemma",
           "kind": "references"
+        },
+        {
+          "source": "klein_bottle",
+          "kind": "derives"
         },
         {
           "source": "klein_bottle_derivation",
@@ -38697,7 +38937,9 @@
         "minimum_alphabet"
       ],
       "depended_on_by": [
-        "k_of_t_problem_statement"
+        "INDEX",
+        "k_of_t_problem_statement",
+        "klein_bottle"
       ],
       "edges": [
         {
@@ -38711,8 +38953,16 @@
       ],
       "edged_by": [
         {
+          "source": "INDEX",
+          "kind": "references"
+        },
+        {
           "source": "k_of_t_problem_statement",
           "kind": "references"
+        },
+        {
+          "source": "klein_bottle",
+          "kind": "derives"
         }
       ],
       "git": [
