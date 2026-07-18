@@ -399,3 +399,5 @@
 2026-07-17T18:40:15Z | put | sync_cost/derivations/omega_b_alpha_beta_closure.md -> 80c32cc449c4cc0d7daad19ee27d940c610b3134c4ed6711b718d96bf8839784
 2026-07-17T18:40:15Z | put | sync_cost/derivations/partition_logit_form.md -> 98495a13afb9fe6cc1f996309c306893610cc14ba6a9be232f064203250760c7
 2026-07-17T18:40:15Z | put | sync_cost/derivations/INDEX.md -> 6bb322c6550e839fb0c57eab8c31fdc490f429e2bac336fcbaf3b697d9241690
+2026-07-18T07:20:51Z | put | MANIFEST.yml -> ac3edb85a45ccfdec48dcd18a9eae420d43ae49fdacd809fd9a1ba8e3c5e48ad
+2026-07-18T07:20:51Z | put | sync_cost/derivations/INDEX.md -> a4331c64d0c01be7dcd70fe87b9d53d739cd62e75033e714e60e8ef38ad77b8f
