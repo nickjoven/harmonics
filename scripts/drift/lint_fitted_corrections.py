@@ -45,7 +45,17 @@ RETRACTION_MARKERS = (
     "bare reference", "bare k=1", "class 1", "class 3", "class 4",
     "audit", "pending", "conjecture", "numerology",
 )
-CONTEXT_LINES = 60
+# ±10, not ±60. A ±60 window let an unrelated "Not derived" header 12
+# lines from a fitted-correction pattern silence the flag, masking a
+# stale `251/72` claim in higgs_from_tongue_boundary.md (issue #263 ⓻/⓽).
+# Corpus sweep: ±60→±20 all give 0 unmarked (the wide window was pure
+# slack); ±10 catches the marker-bleed class with 0 false-positives;
+# ±5 starts flagging legitimately-audited items in numerology_inventory.md
+# whose marker sits just past the window. ±10 is the measured sweet spot.
+# A marker must now sit within 10 lines of the pattern it excuses —
+# roughly same-item proximity. (Future: bind marker to the same
+# paragraph/list-item rather than a raw line count.)
+CONTEXT_LINES = 10
 
 # Files to scan. The suffix + directory filter is intentionally
 # narrow; expand if needed.

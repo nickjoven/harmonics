@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 780" font-family="Helvetica, Arial, sans-serif">
+  <!--
+    Single coordinate map: 4 lepton phase states at 4th roots of unity in C.
+    Two coexisting order-4 subgroups of the ambient D_4 (dihedral, order 8 = q_2^3):
+      - Z_4 cyclic (rotations, cyclotomic labels) — BLUE
+      - V_4 = Z_2 × Z_2 (Koide pair-swaps, substrate action) — RED/GREEN/PURPLE
+    Shared Z_2 center (180° rotation = (AC)(BD) = tau_2): GOLD
+  -->
+
+  <defs>
+    <!-- Arrowhead for Z_4 rotation arrows -->
+    <marker id="arrow-z4" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1d4ed8"/>
+    </marker>
+    <!-- Small arrowhead for caption pointers -->
+    <marker id="arrow-thin" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+
+  <!-- ========== TITLE ========== -->
+  <text x="380" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#111827">
+    Lepton 4-state group reconciliation: Z_4 ↔ V_4 inside D_4
+  </text>
+  <text x="380" y="54" text-anchor="middle" font-size="13" fill="#374151">
+    Cyclotomic (rotations) and Koide (pair-swaps) as distinct order-4 subgroups of D_4 (order 8 = q_2³)
+  </text>
+
+  <!-- ========== D_4 ENVELOPE FRAME ========== -->
+  <rect x="50" y="80" width="660" height="540" rx="6" ry="6"
+        fill="none" stroke="#6b7280" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="60" y="100" font-size="13" fill="#6b7280" font-style="italic">
+    Ambient D_4 envelope (order 8 = q_2³) = ⟨Z_4, V_4⟩
+  </text>
+
+  <!-- ========== COORDINATE FRAME ========== -->
+  <!-- Center at (380, 360), unit radius = 180 -->
+
+  <!-- Unit circle background -->
+  <circle cx="380" cy="360" r="180" fill="none" stroke="#d1d5db" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- Real and imaginary axes -->
+  <line x1="160" y1="360" x2="600" y2="360" stroke="#e5e7eb" stroke-width="1"/>
+  <line x1="380" y1="140" x2="380" y2="580" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="608" y="365" font-size="11" fill="#9ca3af">Re</text>
+  <text x="385" y="138" font-size="11" fill="#9ca3af">Im</text>
+
+  <!-- ========== V_4 PAIR-SWAP LINES (Koide substrate action) ========== -->
+
+  <!-- τ_2 = (AC)(BD): SHARED Z_2 center with Z_4 — gold -->
+  <line x1="560" y1="360" x2="200" y2="360" stroke="#d97706" stroke-width="3" opacity="0.85"/>
+  <line x1="380" y1="180" x2="380" y2="540" stroke="#d97706" stroke-width="3" opacity="0.85"/>
+  <text x="380" y="354" text-anchor="middle" font-size="11" font-weight="bold" fill="#d97706">τ₂ = r² (shared Z_2 center)</text>
+  <text x="380" y="370" text-anchor="middle" font-size="10" fill="#d97706" font-style="italic">also = 180° rotation in Z_4</text>
+
+  <!-- τ_3 = (AB)(CD): swaps NE-pair, SW-pair — green -->
+  <line x1="560" y1="360" x2="380" y2="180" stroke="#059669" stroke-width="2.5" opacity="0.8"/>
+  <line x1="200" y1="360" x2="380" y2="540" stroke="#059669" stroke-width="2.5" opacity="0.8"/>
+
+  <!-- τ_2 τ_3 = (AD)(BC): swaps SE-pair, NW-pair — purple -->
+  <line x1="560" y1="360" x2="380" y2="540" stroke="#7c3aed" stroke-width="2.5" opacity="0.8"/>
+  <line x1="200" y1="360" x2="380" y2="180" stroke="#7c3aed" stroke-width="2.5" opacity="0.8"/>
+
+  <!-- ========== Z_4 CYCLIC ROTATION (cyclotomic content) ========== -->
+  <!-- Curved blue arrows outside the unit circle showing A → B → C → D → A -->
+  <!-- Radius 215 for the outer arc -->
+
+  <!-- A → B (upper right quarter arc) -->
+  <path d="M 590 360 A 215 215 0 0 0 380 145"
+        fill="none" stroke="#1d4ed8" stroke-width="2.5" opacity="0.85"
+        marker-end="url(#arrow-z4)"/>
+  <!-- B → C (upper left quarter arc) -->
+  <path d="M 380 145 A 215 215 0 0 0 165 360"
+        fill="none" stroke="#1d4ed8" stroke-width="2.5" opacity="0.85"
+        marker-end="url(#arrow-z4)"/>
+  <!-- C → D (lower left quarter arc) -->
+  <path d="M 165 360 A 215 215 0 0 0 380 575"
+        fill="none" stroke="#1d4ed8" stroke-width="2.5" opacity="0.85"
+        marker-end="url(#arrow-z4)"/>
+  <!-- D → A (lower right quarter arc) -->
+  <path d="M 380 575 A 215 215 0 0 0 595 360"
+        fill="none" stroke="#1d4ed8" stroke-width="2.5" opacity="0.85"
+        marker-end="url(#arrow-z4)"/>
+
+  <text x="650" y="252" font-size="12" font-weight="bold" fill="#1d4ed8">Z_4</text>
+  <text x="650" y="266" font-size="10" fill="#1d4ed8">cyclotomic</text>
+  <text x="650" y="278" font-size="10" fill="#1d4ed8">rotation</text>
+
+  <!-- ========== VERTICES (lepton phase states at 4th roots of unity) ========== -->
+
+  <!-- A = +1 -->
+  <circle cx="560" cy="360" r="9" fill="#111827"/>
+  <text x="580" y="346" font-size="15" font-weight="bold" fill="#111827">A</text>
+  <text x="580" y="362" font-size="11" fill="#374151">= +1</text>
+  <text x="580" y="376" font-size="9" fill="#6b7280" font-style="italic">e (electron)</text>
+
+  <!-- B = +i -->
+  <circle cx="380" cy="180" r="9" fill="#111827"/>
+  <text x="395" y="170" font-size="15" font-weight="bold" fill="#111827">B</text>
+  <text x="395" y="184" font-size="11" fill="#374151">= +i</text>
+  <text x="395" y="198" font-size="9" fill="#6b7280" font-style="italic">μ (muon)</text>
+
+  <!-- C = −1 -->
+  <circle cx="200" cy="360" r="9" fill="#111827"/>
+  <text x="153" y="346" font-size="15" font-weight="bold" fill="#111827">C</text>
+  <text x="135" y="362" font-size="11" fill="#374151">= −1</text>
+  <text x="115" y="376" font-size="9" fill="#6b7280" font-style="italic">τ (tau)</text>
+
+  <!-- D = −i -->
+  <circle cx="380" cy="540" r="9" fill="#111827"/>
+  <text x="395" y="552" font-size="15" font-weight="bold" fill="#111827">D</text>
+  <text x="395" y="566" font-size="11" fill="#374151">= −i</text>
+  <text x="395" y="580" font-size="9" fill="#6b7280" font-style="italic">(4th gen.)</text>
+
+  <!-- ========== LEGEND ========== -->
+  <rect x="50" y="635" width="660" height="135" rx="4" ry="4"
+        fill="#f9fafb" stroke="#d1d5db" stroke-width="1"/>
+
+  <!-- Legend header -->
+  <text x="65" y="657" font-size="13" font-weight="bold" fill="#111827">Two subgroups of D_4, both acting on the 4 vertices:</text>
+
+  <!-- Z_4 row -->
+  <line x1="70" y1="678" x2="105" y2="678" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#arrow-z4)"/>
+  <text x="115" y="682" font-size="12" font-weight="bold" fill="#1d4ed8">Z_4 (cyclic):</text>
+  <text x="200" y="682" font-size="11" fill="#1f2937">
+    rotation generator i (90°); orbit A → B → C → D → A; carries cyclotomic content Φ_4(x) = x² + 1
+  </text>
+
+  <!-- V_4 header -->
+  <text x="65" y="704" font-size="12" font-weight="bold" fill="#111827">V_4 = Z_2 × Z_2 (Koide substrate action) — three non-identity elements:</text>
+
+  <!-- tau_2 (shared) -->
+  <line x1="80" y1="720" x2="115" y2="720" stroke="#d97706" stroke-width="3"/>
+  <text x="125" y="724" font-size="11" fill="#1f2937">
+    <tspan font-weight="bold" fill="#d97706">τ₂ = r² (gold, SHARED)</tspan>: (AC)(BD); 180° rotation; lives in both Z_4 and V_4 — the shared Z_2 center
+  </text>
+
+  <!-- tau_3 -->
+  <line x1="80" y1="738" x2="115" y2="738" stroke="#059669" stroke-width="2.5"/>
+  <text x="125" y="742" font-size="11" fill="#1f2937">
+    <tspan font-weight="bold" fill="#059669">τ₃ (green)</tspan>: (AB)(CD); reflection across y = x (NE-SW diagonal); V_4 element only
+  </text>
+
+  <!-- tau_2 tau_3 -->
+  <line x1="80" y1="756" x2="115" y2="756" stroke="#7c3aed" stroke-width="2.5"/>
+  <text x="125" y="760" font-size="11" fill="#1f2937">
+    <tspan font-weight="bold" fill="#7c3aed">τ₂·τ₃ (purple)</tspan>: (AD)(BC); reflection across y = −x (NW-SE diagonal); V_4 element only
+  </text>
+
+</svg>

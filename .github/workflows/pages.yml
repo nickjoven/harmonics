@@ -9,6 +9,9 @@ on:
       - "sync_cost/applications/**"
       - "sync_cost/curriculum/**"
       - "sync_cost/derivations/**"
+      - "SPINE.yml"
+      - "scripts/build_spine_data.py"
+      - "scripts/drift/check_spine.py"
       - ".github/workflows/pages.yml"
       - ".github/scripts/check_links.py"
   pull_request:
@@ -18,6 +21,9 @@ on:
       - "sync_cost/applications/**"
       - "sync_cost/curriculum/**"
       - "sync_cost/derivations/**"
+      - "SPINE.yml"
+      - "scripts/build_spine_data.py"
+      - "scripts/drift/check_spine.py"
       - ".github/workflows/pages.yml"
       - ".github/scripts/check_links.py"
   workflow_dispatch:
@@ -93,6 +99,11 @@ jobs:
             _site/docs/cmb-s4.html \
             _site/docs/preprint.html \
             _site/docs/genesis.html
+
+      - name: SPINE.yml integrity (schema + regen-no-diff)
+        run: |
+          pip install --quiet pyyaml
+          python3 scripts/drift/check_spine.py
 
   # Runs only on push to main, gated on validate.  Real Pages deploy.
   deploy:

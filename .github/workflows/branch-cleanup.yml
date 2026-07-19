@@ -1,0 +1,63 @@
+name: branch-cleanup
+
+# Weekly content-verified branch sweep. This repo squash-merges, so
+# `--merged` never fires; scripts/maintenance/verify_merged_branches.py
+# re-derives merged-ness from content ((blob,path) landed on main).
+# Unattended runs delete only the strictly VERIFIED tier, never touch
+# branches younger than 14 days or open-PR heads, and print a recovery
+# line (git push origin <sha>:refs/heads/<name>) for every deletion into
+# the job summary. The CONTENT-ARCHIVED tier (bytes preserved in main's
+# .ket CAS but never landed at path) is deleted only when a human
+# dispatches with include_archived=true.
+
+on:
+  schedule:
+    - cron: '0 7 * * 1'   # Mondays 07:00 UTC, after manifest-watch
+  workflow_dispatch:
+    inputs:
+      include_archived:
+        description: 'also delete content-archived branches'
+        type: boolean
+        default: false
+      dry_run:
+        description: 'report only, delete nothing'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: read
+
+concurrency:
+  group: branch-cleanup
+  cancel-in-progress: false
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Sweep
+        run: |
+          ARGS=""
+          if [ "${{ inputs.dry_run }}" != "true" ]; then
+            ARGS="--delete"
+            if [ "${{ inputs.include_archived }}" = "true" ]; then
+              ARGS="$ARGS --include-archived"
+            fi
+          fi
+          {
+            echo '## Branch cleanup report'
+            echo '```'
+            python3 scripts/maintenance/verify_merged_branches.py $ARGS
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
