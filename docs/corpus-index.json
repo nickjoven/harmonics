@@ -1,8 +1,8 @@
 {
- "count": 324,
+ "count": 325,
  "coverage_totals": {
   "classified": 188,
-  "prose-only": 28,
+  "prose-only": 29,
   "unclassified-quantitative": 108
  },
  "docs": {
@@ -1757,6 +1757,14 @@
    "status_line": null,
    "title": "λ_17 test on Γ_0(6) cosmological eigenforms — comparison to \"missing 17\" reading"
   },
+  "lepton_state_group_reconciliation_audit": {
+   "classes": [],
+   "coverage": "prose-only",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Lepton 4-state group reconciliation: cyclotomic Z_4 ↔ Koide V_4 inside D_4"
+  },
   "lesson_8_35_vs_13_19": {
    "classes": [
     1,
@@ -3171,6 +3179,6 @@
    "title": "Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions"
   }
  },
- "generated": "d42651e",
+ "generated": "856b0f5",
  "generator": "scripts/build_corpus_index.py"
 }

@@ -1,5 +1,5 @@
 {
-  "generated": "d42651e6c3ff6b14791e09cc83fa22e13c7d8ff5",
+  "generated": "856b0f532d70de0bc55dc8e89048de7d55f08938",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -4054,7 +4054,8 @@
         "horn_branch_iteration_1",
         "klein_bottle_restructure_price",
         "klein_z2_decomposition_falsifier",
-        "klein_z2_decomposition_falsifier_2"
+        "klein_z2_decomposition_falsifier_2",
+        "lepton_state_group_reconciliation_audit"
       ],
       "edges": [
         {
@@ -4105,6 +4106,10 @@
         },
         {
           "source": "klein_z2_decomposition_falsifier_2",
+          "kind": "references"
+        },
+        {
+          "source": "lepton_state_group_reconciliation_audit",
           "kind": "references"
         }
       ],
@@ -6310,6 +6315,7 @@
         "gamma06_w6_invariance_opposite_view_audit",
         "half_twist_identity_signature_audit",
         "klein_z2_decomposition_falsifier_2",
+        "lepton_state_group_reconciliation_audit",
         "pattern_identification_discipline_candidate",
         "phenomenology_cross_reference",
         "phenomenon_glossary",
@@ -6639,6 +6645,10 @@
         },
         {
           "source": "klein_z2_decomposition_falsifier_2",
+          "kind": "references"
+        },
+        {
+          "source": "lepton_state_group_reconciliation_audit",
           "kind": "references"
         },
         {
@@ -8881,8 +8891,8 @@
     {
       "id": "cyclotomic_content_mass_ratios_audit",
       "path": "sync_cost/derivations/cyclotomic_content_mass_ratios_audit.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "b0343e088919c5ce4e26e4552567e495647199df8dce023fc0389adfd37c64bf",
+      "sealed": true,
       "title": "Cyclotomic content of framework mass ratios (A2: PR #235 methodology instance)",
       "summary": "**Verdict: MODAL \u2713 / GENERATIVE \u2713** on the identification of\nspecific cyclotomic content in framework mass ratios. The\nframework's mass ratios sit at framework-native cyclotomic\nstructures \u2014 roots of unity from Z_n subgroups derived from\nMihailescu primes and Farey-cardinality content \u2014 not at\ngeneric cyclotomic positions.",
       "depends_on": [
@@ -8899,6 +8909,7 @@
         "halt_shock_coherence_audit",
         "horn_branch_iteration_2_step_2",
         "klein_bottle",
+        "lepton_state_group_reconciliation_audit",
         "mass_sector_closure",
         "modular_form_behavior_cosmological_tongues_audit",
         "planck_scale",
@@ -8911,6 +8922,7 @@
         "gamma06_cosmological_modular_surface_audit",
         "half_twist_meta_structure_audit",
         "lambda17_test_gamma06_cosmological_audit",
+        "lepton_state_group_reconciliation_audit",
         "psl2z_noncommutative_core_structural_identity_audit",
         "third_twist_meta_structure_audit"
       ],
@@ -8968,6 +8980,10 @@
           "kind": "references"
         },
         {
+          "target": "lepton_state_group_reconciliation_audit",
+          "kind": "references"
+        },
+        {
           "target": "mass_sector_closure",
           "kind": "references"
         },
@@ -9010,6 +9026,10 @@
           "kind": "references"
         },
         {
+          "source": "lepton_state_group_reconciliation_audit",
+          "kind": "references"
+        },
+        {
           "source": "psl2z_noncommutative_core_structural_identity_audit",
           "kind": "references"
         },
@@ -9019,6 +9039,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "a6ce274",
+          "date": "2026-07-19",
+          "subject": "Salvage lepton state-group reconciliation from unmerged 2026-06-08 branch (#308)"
+        },
         {
           "hash": "e06fa30",
           "date": "2026-06-06",
@@ -10560,6 +10585,7 @@
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_b",
         "down_type_double_cover_phase_c",
+        "lepton_state_group_reconciliation_audit",
         "session_audit"
       ],
       "edges": [
@@ -10595,6 +10621,10 @@
         },
         {
           "source": "down_type_double_cover_phase_c",
+          "kind": "references"
+        },
+        {
+          "source": "lepton_state_group_reconciliation_audit",
           "kind": "references"
         },
         {
@@ -15189,8 +15219,8 @@
     {
       "id": "gamma06_cosmological_modular_surface_audit",
       "path": "sync_cost/derivations/gamma06_cosmological_modular_surface_audit.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "ab51a437bd2464fe3764d8c03b2695c0379b9b9b2beb557feb3d40cc1c5de78b",
+      "sealed": true,
       "title": "\u0393_0(6) cosmological modular surface \u2014 polynomial readings + arithmetic prime audit",
       "summary": "**Verdict: MODAL \u2713 / GENERATIVE \u2713** on the structural identity",
       "depends_on": [
@@ -15205,6 +15235,7 @@
         "halt_shock_coherence_audit",
         "horn_branch_iteration_2_step_2",
         "klein_bottle",
+        "lepton_state_group_reconciliation_audit",
         "mass_sector_closure",
         "modular_form_behavior_cosmological_tongues_audit",
         "planck_scale",
@@ -15218,6 +15249,7 @@
         "gamma06_w6_invariance_opposite_view_audit",
         "half_twist_identity_signature_audit",
         "lambda17_test_gamma06_cosmological_audit",
+        "lepton_state_group_reconciliation_audit",
         "padic_lfunction_mihailescu_pair_f64_audit",
         "third_twist_meta_structure_audit"
       ],
@@ -15267,6 +15299,10 @@
           "kind": "references"
         },
         {
+          "target": "lepton_state_group_reconciliation_audit",
+          "kind": "references"
+        },
+        {
           "target": "mass_sector_closure",
           "kind": "references"
         },
@@ -15313,6 +15349,10 @@
           "kind": "references"
         },
         {
+          "source": "lepton_state_group_reconciliation_audit",
+          "kind": "references"
+        },
+        {
           "source": "padic_lfunction_mihailescu_pair_f64_audit",
           "kind": "references"
         },
@@ -15322,6 +15362,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "a6ce274",
+          "date": "2026-07-19",
+          "subject": "Salvage lepton state-group reconciliation from unmerged 2026-06-08 branch (#308)"
+        },
         {
           "hash": "1015332",
           "date": "2026-06-07",
@@ -15346,6 +15391,7 @@
       ],
       "depended_on_by": [
         "half_twist_identity_signature_audit",
+        "lepton_state_group_reconciliation_audit",
         "lmfdb_external_verify_correction_2026-06-08"
       ],
       "edges": [
@@ -15377,6 +15423,10 @@
       "edged_by": [
         {
           "source": "half_twist_identity_signature_audit",
+          "kind": "references"
+        },
+        {
+          "source": "lepton_state_group_reconciliation_audit",
           "kind": "references"
         },
         {
@@ -17693,6 +17743,7 @@
         "half_twist_meta_structure_audit",
         "klein_bottle",
         "koide_form_substrate_iteration_4",
+        "lepton_state_group_reconciliation_audit",
         "vocabulary_is_the_work_pattern"
       ],
       "depended_on_by": [
@@ -17724,6 +17775,10 @@
           "kind": "references"
         },
         {
+          "target": "lepton_state_group_reconciliation_audit",
+          "kind": "references"
+        },
+        {
           "target": "vocabulary_is_the_work_pattern",
           "kind": "references"
         }
@@ -17745,8 +17800,8 @@
     {
       "id": "half_twist_meta_structure_audit",
       "path": "sync_cost/derivations/half_twist_meta_structure_audit.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "ec15afe2962bbc90a87af0dbb58f0241270c04e9c04868c93c4cdaa979959d17",
+      "sealed": true,
       "title": "Half-twist meta-structure audit (cross-cutting Layer H)",
       "summary": "**Verdict: MODAL \u2713 / GENERATIVE \u2713** on the **half-twist\nmeta-structure** as the framework's unifying mechanism for\nthe \u00bd-character that recurs across multiple sealed audits.",
       "depends_on": [
@@ -17761,6 +17816,7 @@
         "generation_mechanism",
         "klein_bottle",
         "klein_bottle_restructure_price",
+        "lepton_state_group_reconciliation_audit",
         "mass_sector_closure",
         "modular_form_behavior_cosmological_tongues_audit",
         "planck_scale",
@@ -17772,6 +17828,7 @@
       "depended_on_by": [
         "gamma06_cosmological_modular_surface_audit",
         "half_twist_identity_signature_audit",
+        "lepton_state_group_reconciliation_audit",
         "padic_lfunction_mihailescu_pair_f64_audit",
         "psl2z_noncommutative_core_structural_identity_audit",
         "third_twist_meta_structure_audit"
@@ -17822,6 +17879,10 @@
           "kind": "references"
         },
         {
+          "target": "lepton_state_group_reconciliation_audit",
+          "kind": "references"
+        },
+        {
           "target": "mass_sector_closure",
           "kind": "references"
         },
@@ -17860,6 +17921,10 @@
           "kind": "references"
         },
         {
+          "source": "lepton_state_group_reconciliation_audit",
+          "kind": "references"
+        },
+        {
           "source": "padic_lfunction_mihailescu_pair_f64_audit",
           "kind": "references"
         },
@@ -17873,6 +17938,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "a6ce274",
+          "date": "2026-07-19",
+          "subject": "Salvage lepton state-group reconciliation from unmerged 2026-06-08 branch (#308)"
+        },
         {
           "hash": "3561196",
           "date": "2026-06-06",
@@ -22595,7 +22665,8 @@
         "substrate_prediction_selection"
       ],
       "depended_on_by": [
-        "koide_form_substrate_iteration_11"
+        "koide_form_substrate_iteration_11",
+        "lepton_state_group_reconciliation_audit"
       ],
       "edges": [
         {
@@ -22662,6 +22733,10 @@
       "edged_by": [
         {
           "source": "koide_form_substrate_iteration_11",
+          "kind": "references"
+        },
+        {
+          "source": "lepton_state_group_reconciliation_audit",
           "kind": "references"
         }
       ],
@@ -23133,7 +23208,8 @@
       ],
       "depended_on_by": [
         "half_twist_identity_signature_audit",
-        "koide_form_substrate_iteration_5"
+        "koide_form_substrate_iteration_5",
+        "lepton_state_group_reconciliation_audit"
       ],
       "edges": [
         {
@@ -23169,6 +23245,10 @@
         {
           "source": "koide_form_substrate_iteration_5",
           "kind": "references"
+        },
+        {
+          "source": "lepton_state_group_reconciliation_audit",
+          "kind": "references"
         }
       ],
       "git": [
@@ -23197,6 +23277,7 @@
       ],
       "depended_on_by": [
         "koide_form_substrate_iteration_6",
+        "lepton_state_group_reconciliation_audit",
         "third_twist_meta_structure_audit"
       ],
       "edges": [
@@ -23232,6 +23313,10 @@
       "edged_by": [
         {
           "source": "koide_form_substrate_iteration_6",
+          "kind": "references"
+        },
+        {
+          "source": "lepton_state_group_reconciliation_audit",
           "kind": "references"
         },
         {
@@ -23609,6 +23694,104 @@
           "hash": "191a4ac",
           "date": "2026-06-07",
           "subject": "\u03bb_17 test on \u0393_0(6) cosmological eigenforms (comparison to PR #235) (#243)"
+        }
+      ]
+    },
+    {
+      "id": "lepton_state_group_reconciliation_audit",
+      "path": "sync_cost/derivations/lepton_state_group_reconciliation_audit.md",
+      "cid": "eeb75c9b82315e28a918bab6db46474c604d35210152677c86de5ef7f4172b51",
+      "sealed": true,
+      "title": "Lepton 4-state group reconciliation: cyclotomic Z_4 \u2194 Koide V_4 inside D_4",
+      "summary": "> **Question.** The repo carries two structurally inconsistent\n> identifications of the 4-element group structure on N_lep = q_2\u00b2 = 4\n> lepton phase states:\n> - The cyclotomic-content audits identify the 4 states with 4th\n>   roots of unity {1, i, \u22121, \u2212i}, labeling the group \"Z_4 (Klein\n>   four-group)\" \u2014 math: Z_4 is cyclic of order 4, NOT the Klein\n>   four-group.\n> - The Koide-form audits identify the 4 states with phase symbols\n>   {A, B, C, D} acted on by \u03c4_2 (swaps A\u2194C, B\u2194D) and \u03c4_3 (swaps",
+      "depends_on": [
+        "axial_trajectory_conservation_audit",
+        "canonical_glossary",
+        "cyclotomic_content_mass_ratios_audit",
+        "down_type_double_cover_phase_b_followup",
+        "gamma06_cosmological_modular_surface_audit",
+        "gamma06_w6_invariance_opposite_view_audit",
+        "half_twist_meta_structure_audit",
+        "koide_form_substrate_iteration_10",
+        "koide_form_substrate_iteration_4",
+        "koide_form_substrate_iteration_5",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [
+        "cyclotomic_content_mass_ratios_audit",
+        "gamma06_cosmological_modular_surface_audit",
+        "half_twist_identity_signature_audit",
+        "half_twist_meta_structure_audit"
+      ],
+      "edges": [
+        {
+          "target": "axial_trajectory_conservation_audit",
+          "kind": "references"
+        },
+        {
+          "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "target": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
+          "target": "down_type_double_cover_phase_b_followup",
+          "kind": "references"
+        },
+        {
+          "target": "gamma06_cosmological_modular_surface_audit",
+          "kind": "references"
+        },
+        {
+          "target": "gamma06_w6_invariance_opposite_view_audit",
+          "kind": "references"
+        },
+        {
+          "target": "half_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "koide_form_substrate_iteration_10",
+          "kind": "references"
+        },
+        {
+          "target": "koide_form_substrate_iteration_4",
+          "kind": "references"
+        },
+        {
+          "target": "koide_form_substrate_iteration_5",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_is_the_work_pattern",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "cyclotomic_content_mass_ratios_audit",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_identity_signature_audit",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_meta_structure_audit",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "a6ce274",
+          "date": "2026-07-19",
+          "subject": "Salvage lepton state-group reconciliation from unmerged 2026-06-08 branch (#308)"
         }
       ]
     },
@@ -39394,6 +39577,7 @@
         "half_twist_identity_signature_audit",
         "klein_bridge_audit_and_probe",
         "klein_dynamics_roadmap",
+        "lepton_state_group_reconciliation_audit",
         "numerology_count_phase_a",
         "numerology_count_phase_b",
         "omega_b_alpha_beta_closure",
@@ -39602,6 +39786,10 @@
         },
         {
           "source": "klein_dynamics_roadmap",
+          "kind": "references"
+        },
+        {
+          "source": "lepton_state_group_reconciliation_audit",
           "kind": "references"
         },
         {
