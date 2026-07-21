@@ -1,5 +1,5 @@
 {
-  "generated": "8c0b5527c03064d2866ca2317cb2e4bba90d8a82",
+  "generated": "74bb0d0da537092edb3706bb76d4ed4dc5dde9ee",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -325,7 +325,7 @@
     {
       "id": "INDEX",
       "path": "sync_cost/derivations/INDEX.md",
-      "cid": "6bb322c6550e839fb0c57eab8c31fdc490f429e2bac336fcbaf3b697d9241690",
+      "cid": "55181d4c60068bb2548969625bb1c9df2feb85b33f517ae778a2aa42d9ec98f8",
       "sealed": true,
       "title": "Derivation Index",
       "summary": "**Navigation index for derivation chain.** Maps D-numbers\n(D1-D47 per `MANIFEST.yml` derivation_count) to filenames for\nmachine-readable lookup. Maintained as derivations are added or\nrenamed. Cross-checked by `check_manifest.py`.",
@@ -363,6 +363,7 @@
         "rational_field_equation",
         "spatial_coupling_derived",
         "spectral_tilt",
+        "spectral_tilt_reframed",
         "speed_of_light",
         "three_dimensions",
         "variable_denominator"
@@ -504,6 +505,10 @@
           "kind": "references"
         },
         {
+          "target": "spectral_tilt_reframed",
+          "kind": "references"
+        },
+        {
           "target": "speed_of_light",
           "kind": "references"
         },
@@ -523,6 +528,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "74bb0d0",
+          "date": "2026-07-21",
+          "subject": "Problem-surface map + engine; reconcile four registry inconsistencies it surfaced (#315)"
+        },
         {
           "hash": "f93adf4",
           "date": "2026-07-17",
@@ -5080,7 +5090,7 @@
         "higgs_from_tongue_boundary",
         "klein_bottle",
         "minkowski_signature",
-        "spectral_tilt",
+        "spectral_tilt_reframed",
         "three_dimensions"
       ],
       "depended_on_by": [
@@ -5124,7 +5134,7 @@
           "kind": "references"
         },
         {
-          "target": "spectral_tilt",
+          "target": "spectral_tilt_reframed",
           "kind": "references"
         },
         {
@@ -9744,7 +9754,7 @@
     {
       "id": "depth_connection_nulls",
       "path": "sync_cost/derivations/depth_connection_nulls.md",
-      "cid": "9852955aedbdf0a325ce9652bc1e95547e33f9e85c17b1aba40091c016f74fed",
+      "cid": "5e0108737acc8d9883bb74e8d6ac7c0b3dd6f178b55e71239cdffbba7395c6cf",
       "sealed": true,
       "title": "Null results: connecting cosmological depth 54 to EW depth ~15",
       "summary": "| Status | Count |\n|---|---|\n| Null (specifically rules out a candidate) | 8 |\n| Class 2 (numerology, near-match without derivation) | 4 |\n| Wrong axis (not the right tool for the question) | 1 |\n| Unattempted (sketched but not implemented) | 1 \u2014 Klein-quotient second invariant |\n| Open paths (neither attempted nor refuted) | 5 \u2014 (a)-(e) above |",
@@ -9759,12 +9769,15 @@
         "hierarchy_gaussian_lattice",
         "hybrid_strategy_audit",
         "mass_sector_closure",
+        "negative_results_ledger",
         "numerology_inventory",
         "observer_register_closure",
         "path_a_walkthrough",
         "statistical_conventions"
       ],
       "depended_on_by": [
+        "framework_status",
+        "numerology_inventory",
         "path_a_walkthrough",
         "path_closures_iter1",
         "path_closures_iter2",
@@ -9812,6 +9825,10 @@
           "kind": "references"
         },
         {
+          "target": "negative_results_ledger",
+          "kind": "references"
+        },
+        {
           "target": "numerology_inventory",
           "kind": "references"
         },
@@ -9830,6 +9847,14 @@
       ],
       "edged_by": [
         {
+          "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "numerology_inventory",
+          "kind": "references"
+        },
+        {
           "source": "path_a_walkthrough",
           "kind": "references"
         },
@@ -9847,6 +9872,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "74bb0d0",
+          "date": "2026-07-21",
+          "subject": "Problem-surface map + engine; reconcile four registry inconsistencies it surfaced (#315)"
+        },
         {
           "hash": "a6a4f5d",
           "date": "2026-04-26",
@@ -9905,7 +9935,7 @@
         "primitive_completeness_audit",
         "psl2z_subgroup_phase_b",
         "q_mod2_conservation_theorem",
-        "spectral_tilt",
+        "spectral_tilt_reframed",
         "statistical_conventions",
         "three_dimensions",
         "vocabulary_is_the_work_pattern",
@@ -10077,7 +10107,7 @@
           "kind": "references"
         },
         {
-          "target": "spectral_tilt",
+          "target": "spectral_tilt_reframed",
           "kind": "references"
         },
         {
@@ -14208,7 +14238,7 @@
         "higgs_from_tongue_boundary",
         "klein_bottle",
         "numerology_inventory",
-        "spectral_tilt",
+        "spectral_tilt_reframed",
         "three_dimensions"
       ],
       "depended_on_by": [
@@ -14263,7 +14293,7 @@
           "kind": "references"
         },
         {
-          "target": "spectral_tilt",
+          "target": "spectral_tilt_reframed",
           "kind": "references"
         },
         {
@@ -14950,7 +14980,7 @@
     {
       "id": "framework_status",
       "path": "sync_cost/derivations/framework_status.md",
-      "cid": "56cb7f66483f3ffa9ff7789b3d52370050055011b0efd0792e4cea8008885c96",
+      "cid": "9a0f0c3db8ef6453f9e1f4fae05de05bc424561fd58a60a9585e31b38850945f",
       "sealed": true,
       "title": "Framework status map",
       "summary": "At-a-glance inventory. One line per item. Full analysis lives in the\nreferenced files; this is the bird's-eye view to prevent duplicate\nwork and re-derivation of eliminated content.",
@@ -14977,6 +15007,7 @@
         "continuum_limits",
         "cross_ratio_irrep_reframe",
         "denomination_boundary",
+        "depth_connection_nulls",
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
         "discrete_gauge_resolution",
@@ -15230,6 +15261,10 @@
         },
         {
           "target": "denomination_boundary",
+          "kind": "references"
+        },
+        {
+          "target": "depth_connection_nulls",
           "kind": "references"
         },
         {
@@ -15889,6 +15924,11 @@
       ],
       "git": [
         {
+          "hash": "74bb0d0",
+          "date": "2026-07-21",
+          "subject": "Problem-surface map + engine; reconcile four registry inconsistencies it surfaced (#315)"
+        },
+        {
           "hash": "9572c1a",
           "date": "2026-07-08",
           "subject": "Substrate-freshness followups: CLAUDE.md protocol tweaks + D13/O2 status rows (#292)"
@@ -16033,7 +16073,7 @@
     {
       "id": "free_parameter_scorecard",
       "path": "sync_cost/derivations/free_parameter_scorecard.md",
-      "cid": "28cd0fc30e2d78a0adf837266b41120d7ec5e4e4408c3508c897ca5ed7f545f7",
+      "cid": "bb33f9c797a12d4a1c714da76b3d3648bce695f1f6bf86f56a001d9c5354a302",
       "sealed": true,
       "title": "Free-parameter scorecard \u2014 the forcing partition applied to physics' inputs",
       "summary": "The free parameters of physics \u2014 the dimensionless inputs the Standard\nModel and \u039bCDM **measure rather than derive** \u2014 listed as the rows, with\nthe framework's verdict on each. It is the empirical roster of\n`algebraic_forcing_partition.md`: *forced \u27f9 discrete/combinatorial; the\ncontinuous couplings stay open.*",
@@ -16057,8 +16097,10 @@
         "omega_partition_combinatorial",
         "phenomenology_cross_reference",
         "predictions_horizon_2026",
+        "spectral_tilt",
         "spectral_tilt_reframed",
-        "three_dimensions"
+        "three_dimensions",
+        "two_forces"
       ],
       "depended_on_by": [
         "algebraic_forcing_partition",
@@ -16147,11 +16189,19 @@
           "kind": "references"
         },
         {
+          "target": "spectral_tilt",
+          "kind": "references"
+        },
+        {
           "target": "spectral_tilt_reframed",
           "kind": "references"
         },
         {
           "target": "three_dimensions",
+          "kind": "references"
+        },
+        {
+          "target": "two_forces",
           "kind": "references"
         }
       ],
@@ -16186,6 +16236,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "74bb0d0",
+          "date": "2026-07-21",
+          "subject": "Problem-surface map + engine; reconcile four registry inconsistencies it surfaced (#315)"
+        },
         {
           "hash": "ef29d37",
           "date": "2026-05-28",
@@ -28166,6 +28221,7 @@
       ],
       "depended_on_by": [
         "canonical_glossary",
+        "depth_connection_nulls",
         "free_parameter_scorecard",
         "neutrino_mass_audit",
         "phenomenon_glossary",
@@ -28254,6 +28310,10 @@
       "edged_by": [
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "depth_connection_nulls",
           "kind": "references"
         },
         {
@@ -29163,7 +29223,7 @@
     {
       "id": "numerology_inventory",
       "path": "sync_cost/derivations/numerology_inventory.md",
-      "cid": "ed588e748e994960433964ee302a330c1e445e2694abac495b1da65a19645d78",
+      "cid": "2605cbafc63e828403e9e90e85e5defdd11efb63ac9cad87812f11aaa888e7c0",
       "sealed": true,
       "title": "Numerology inventory",
       "summary": "Compilation of framework predictions / observations that are confirmed\nnumerology, noted coincidences, or suspects \u2014 so we know what to stop\nchasing as if it were structural.",
@@ -29176,6 +29236,7 @@
         "ansatz_audit_policy",
         "baryon_fraction",
         "born_rule",
+        "depth_connection_nulls",
         "duty_cycle_dictionary",
         "duty_dimension_proof",
         "farey_partition",
@@ -29246,6 +29307,7 @@
         "path_closures_iter2",
         "phenomenology_cross_reference",
         "physics_relevance_measurement_catalog",
+        "predictions_horizon_2026",
         "primitive_completeness_audit",
         "qm_reframing_programmatic",
         "rationality_descent",
@@ -29289,6 +29351,10 @@
         },
         {
           "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "depth_connection_nulls",
           "kind": "references"
         },
         {
@@ -29566,6 +29632,10 @@
           "kind": "references"
         },
         {
+          "source": "predictions_horizon_2026",
+          "kind": "references"
+        },
+        {
           "source": "primitive_completeness_audit",
           "kind": "references"
         },
@@ -29611,6 +29681,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "74bb0d0",
+          "date": "2026-07-21",
+          "subject": "Problem-surface map + engine; reconcile four registry inconsistencies it surfaced (#315)"
+        },
         {
           "hash": "213ee7c",
           "date": "2026-07-04",
@@ -32045,7 +32120,7 @@
         "omega_b_alpha_beta_closure",
         "psl2z_subgroup_phase_b",
         "q_mod2_conservation_theorem",
-        "spectral_tilt",
+        "spectral_tilt_reframed",
         "statistical_conventions",
         "three_dimensions"
       ],
@@ -32178,7 +32253,7 @@
           "kind": "references"
         },
         {
-          "target": "spectral_tilt",
+          "target": "spectral_tilt_reframed",
           "kind": "references"
         },
         {
@@ -32672,7 +32747,7 @@
     {
       "id": "predictions_horizon_2026",
       "path": "sync_cost/derivations/predictions_horizon_2026.md",
-      "cid": "4dc28f9e1eb6849b50d8f2b3c45fde28794d861aa8f88f585ef5ea2e1eeb62ca",
+      "cid": "43bb5cc191534494e64a06286d08c736593770ca02b8a812d6377383cf66f122",
       "sealed": true,
       "title": "Predictions horizon \u2014 2026",
       "summary": "General relativity was vindicated by three observations in three\ndistinct regimes within roughly forty years of its formulation:\nMercury's perihelion precession (1859 anomaly, 1915 explanation),\ngravitational lensing (1919 eclipse), and gravitational redshift\n(predicted 1907, measured precisely by Pound\u2013Rebka 1959). Each\naddressed a different observational channel; each used confounders\nthe others did not share; the *coherence* of the three confirmations\nwas what settled the question.",
@@ -32692,9 +32767,11 @@
         "lesson_epr_gr_qm_unification",
         "master_cascade_identity",
         "minimum_alphabet",
+        "numerology_inventory",
         "omega_partition_combinatorial",
         "q_mod2_conservation_theorem",
         "q_mod2_mediant_projection",
+        "statistical_conventions",
         "substrate_determinism"
       ],
       "depended_on_by": [
@@ -32768,6 +32845,10 @@
           "kind": "references"
         },
         {
+          "target": "numerology_inventory",
+          "kind": "references"
+        },
+        {
           "target": "omega_partition_combinatorial",
           "kind": "references"
         },
@@ -32777,6 +32858,10 @@
         },
         {
           "target": "q_mod2_mediant_projection",
+          "kind": "references"
+        },
+        {
+          "target": "statistical_conventions",
           "kind": "references"
         },
         {
@@ -32815,6 +32900,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "74bb0d0",
+          "date": "2026-07-21",
+          "subject": "Problem-surface map + engine; reconcile four registry inconsistencies it surfaced (#315)"
+        },
         {
           "hash": "ef29d37",
           "date": "2026-05-28",
@@ -37457,12 +37547,9 @@
       ],
       "depended_on_by": [
         "INDEX",
-        "beta_from_tongues",
         "canonical_glossary",
-        "derivation_atlas",
-        "fermion_mass_running",
+        "free_parameter_scorecard",
         "graviton_reframing",
-        "phenomenology_cross_reference",
         "physics_relevance_measurement_catalog"
       ],
       "edges": [
@@ -37477,27 +37564,15 @@
           "kind": "references"
         },
         {
-          "source": "beta_from_tongues",
-          "kind": "references"
-        },
-        {
           "source": "canonical_glossary",
           "kind": "references"
         },
         {
-          "source": "derivation_atlas",
-          "kind": "references"
-        },
-        {
-          "source": "fermion_mass_running",
+          "source": "free_parameter_scorecard",
           "kind": "references"
         },
         {
           "source": "graviton_reframing",
-          "kind": "references"
-        },
-        {
-          "source": "phenomenology_cross_reference",
           "kind": "references"
         },
         {
@@ -37562,21 +37637,42 @@
       "summary": "> Strip away \"cost.\" What remains is phase, frequency, coupling,\n> and the rational numbers.",
       "depends_on": [],
       "depended_on_by": [
+        "INDEX",
         "algebraic_forcing_partition",
+        "beta_from_tongues",
         "canonical_glossary",
+        "derivation_atlas",
+        "fermion_mass_running",
         "free_parameter_scorecard",
         "graviton_reframing",
+        "phenomenology_cross_reference",
         "spectral_tilt",
         "unitless_check"
       ],
       "edges": [],
       "edged_by": [
         {
+          "source": "INDEX",
+          "kind": "references"
+        },
+        {
           "source": "algebraic_forcing_partition",
           "kind": "references"
         },
         {
+          "source": "beta_from_tongues",
+          "kind": "references"
+        },
+        {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "derivation_atlas",
+          "kind": "references"
+        },
+        {
+          "source": "fermion_mass_running",
           "kind": "references"
         },
         {
@@ -37585,6 +37681,10 @@
         },
         {
           "source": "graviton_reframing",
+          "kind": "references"
+        },
+        {
+          "source": "phenomenology_cross_reference",
           "kind": "references"
         },
         {
@@ -37901,6 +38001,7 @@
         "numerology_count_phase_a",
         "numerology_inventory",
         "phenomenology_cross_reference",
+        "predictions_horizon_2026",
         "sector_decoupling_phase_a",
         "structural_lemmas",
         "vocabulary_is_the_work_pattern"
@@ -38030,6 +38131,10 @@
         },
         {
           "source": "phenomenology_cross_reference",
+          "kind": "references"
+        },
+        {
+          "source": "predictions_horizon_2026",
           "kind": "references"
         },
         {
@@ -40737,9 +40842,16 @@
       "title": "Two Forces \u2014 Coherence and Decoherence",
       "summary": "The numerical exploration (coherence_decoherence.py) confirms the\nqualitative picture:\n- K_eff peaks near 1/\u03c6 due to Fibonacci pile-up\n- Setting D critical for 1/\u03c6 makes it the last frequency to lock\n- n_s \u2248 0.965 with negative running appears in the parameter space",
       "depends_on": [],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "free_parameter_scorecard"
+      ],
       "edges": [],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "free_parameter_scorecard",
+          "kind": "references"
+        }
+      ],
       "git": [
         {
           "hash": "b2deee7",

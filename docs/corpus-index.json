@@ -1,9 +1,9 @@
 {
  "count": 326,
  "coverage_totals": {
-  "classified": 200,
+  "classified": 201,
   "prose-only": 29,
-  "unclassified-quantitative": 97
+  "unclassified-quantitative": 96
  },
  "docs": {
   "CHAIN_KSTAR": {
@@ -28,8 +28,10 @@
    "title": "Framework topology"
   },
   "INDEX": {
-   "classes": [],
-   "coverage": "unclassified-quantitative",
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
    "status_line": null,
@@ -2412,6 +2414,8 @@
   },
   "predictions_horizon_2026": {
    "classes": [
+    2,
+    4,
     5
    ],
    "coverage": "classified",
@@ -2847,9 +2851,7 @@
   "spectral_tilt": {
    "classes": [],
    "coverage": "unclassified-quantitative",
-   "d_numbers": [
-    "D4"
-   ],
+   "d_numbers": [],
    "has_lineage": false,
    "status_line": null,
    "title": "Spectral Tilt from Synchronization Cost Gradient"
@@ -2857,7 +2859,9 @@
   "spectral_tilt_reframed": {
    "classes": [],
    "coverage": "unclassified-quantitative",
-   "d_numbers": [],
+   "d_numbers": [
+    "D4"
+   ],
    "has_lineage": false,
    "status_line": null,
    "title": "Spectral Tilt from Mode-Locking Structure"
@@ -3216,6 +3220,6 @@
    "title": "Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions"
   }
  },
- "generated": "8c0b552",
+ "generated": "74bb0d0",
  "generator": "scripts/build_corpus_index.py"
 }
