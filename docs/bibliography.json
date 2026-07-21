@@ -1,8 +1,32 @@
 {
-  "generated": "2026-07-19",
+  "generated": "2026-07-21",
   "generator": "scripts/bibliography/build_bibliography.py",
-  "count": 5,
+  "count": 6,
   "entries": [
+    {
+      "id": "doi:10.1038/nature07378",
+      "type": "doi",
+      "doi": "10.1038/nature07378",
+      "title": "Correlation between nanosecond X-ray flashes and stick–slip friction in peeling tape",
+      "authors": [
+        "Carlos G. Camara",
+        "Juan V. Escobar",
+        "Jonathan R. Hird",
+        "Seth J. Putterman"
+      ],
+      "year": "2008",
+      "venue": "Nature",
+      "volume": "455",
+      "issue": "7216",
+      "page": "1089-1092",
+      "publisher": "Springer Science and Business Media LLC",
+      "crossref_type": "journal-article",
+      "url": "https://doi.org/10.1038/nature07378",
+      "_bibkey": "Camara2008",
+      "cited_by": [
+        "sync_cost/derivations/tape_stick_slip_dual_regime_correspondence.md"
+      ]
+    },
     {
       "arxiv_id": "2502.11902",
       "authors": [
