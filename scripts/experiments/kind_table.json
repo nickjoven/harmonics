@@ -1,0 +1,8 @@
+{
+  "references": {"parent": "DEPENDS", "polarity": "+", "modality": "proposed"},
+  "grounds": {"parent": "DEPENDS", "polarity": "+", "modality": "committed"},
+  "derives": {"parent": "DEPENDS", "polarity": "+", "modality": "committed"},
+  "proposes": {"parent": "DEPENDS", "polarity": "+", "modality": "proposed"},
+  "contradicts": {"parent": "DEPENDS", "polarity": "-", "modality": "committed"},
+  "supersedes": {"parent": "SUCCEEDS"}
+}
