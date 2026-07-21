@@ -213,15 +213,52 @@ def state_counts(states: dict):
 # ------------------------------------------------------------------ weakening
 
 def apply_fixtures(fixtures: dict):
-    """Extract {node: event_label} from fixtures events[].demoted[].node."""
-    demoted = {}
+    """Extract weakening and succession maps from fixtures events[].
+
+    Returns (demoted, succeeded): {node: event_label} and
+    {node: (successor, event_label)} from events[].succeeded[]
+    ({node, by}). Succession is a frontier displacement, not a
+    weakening: the succeeded node leaves the default read surface.
+    """
+    demoted, succeeded = {}, {}
     for i, event in enumerate(fixtures.get("events", [])):
         label = event.get("id") or event.get("name") or f"event-{i}"
         for item in event.get("demoted", []):
             node = item.get("node")
             if node:
                 demoted.setdefault(node, label)
-    return demoted
+        for item in event.get("succeeded", []):
+            node = item.get("node")
+            if node:
+                succeeded.setdefault(node, (item.get("by"), label))
+    return demoted, succeeded
+
+
+def committed_dependents(edges: list, seeds: set):
+    """Nodes whose COMMITTED support chain reaches a seed (transitive,
+    committed DEPENDS+ edges only), excluding the seeds themselves.
+
+    This is the committed-layer divergence signal the coarse closure
+    misses: a doc keeps any-path reachability through untyped references
+    while the specific ground its Status asserts has been demoted.
+    Returns {node: seed_it_depends_on}.
+    """
+    radj = {}
+    for e in edges:
+        if (e["parent"] == "DEPENDS" and e["polarity"] == "+"
+                and e.get("modality") == "committed"):
+            radj.setdefault(e["dst"], []).append(e["src"])
+    hit = {}
+    queue = deque(seeds)
+    origin = {s: s for s in seeds}
+    while queue:
+        u = queue.popleft()
+        for s in radj.get(u, ()):
+            if s not in origin:
+                origin[s] = origin[u]
+                queue.append(s)
+                hit[s] = origin[u]
+    return hit
 
 
 def delta_set(before: dict, after: dict, demoted: dict):
@@ -279,20 +316,51 @@ def toposort(nodes: list, edges: list):
 
 
 def divergence_queue(dropped: list, after: dict, corpus_docs: dict,
-                     edges: list, implied_by: dict):
-    """Topologically ordered queue of divergent (stale-surface) nodes."""
+                     edges: list, implied_by: dict,
+                     committed_hits: dict = None, succeeded: dict = None,
+                     demoted: dict = None):
+    """Topologically ordered queue of divergent (stale-surface) nodes.
+
+    Three admission routes: (1) closure state dropped AND the surface
+    asserts strength; (2) a committed support edge chain reaches a
+    demoted node — the asserted ground itself weakened, so admission
+    does not require the strength heuristic; (3) the node was succeeded
+    and its surface does not acknowledge the successor.
+    """
     divergent = {}
     for nid in dropped:
         evidence = committed_evidence(corpus_docs.get(nid))
         if evidence:
-            divergent[nid] = evidence
+            divergent[nid] = (evidence, after[nid], implied_by.get(nid))
+    for nid, seed in (committed_hits or {}).items():
+        if nid in divergent or nid in (demoted or {}):
+            continue
+        evidence = committed_evidence(corpus_docs.get(nid))
+        evidence = evidence or "no strength surface; flagged by support route"
+        divergent[nid] = (
+            f"committed support runs through demoted {seed!r}; {evidence}",
+            after.get(nid, "unknown"),
+            (demoted or {}).get(seed),
+        )
+    for nid, (by, label) in (succeeded or {}).items():
+        entry = corpus_docs.get(nid) or {}
+        status = entry.get("status_line") or ""
+        if by and by in status:
+            continue  # surface already acknowledges the successor
+        divergent[nid] = (
+            f"succeeded by {by!r}, surface does not acknowledge it "
+            f"(status_line: {status.strip()!r})",
+            "superseded",
+            label,
+        )
     queue = []
     for nid in toposort(list(divergent), edges):
+        evidence, state, event = divergent[nid]
         queue.append({
             "doc": nid,
-            "committed_evidence": divergent[nid],
-            "computed_state": after[nid],
-            "implied_by_event": implied_by.get(nid),
+            "committed_evidence": evidence,
+            "computed_state": state,
+            "implied_by_event": event,
         })
     return queue
 
@@ -362,19 +430,25 @@ def run_pipeline(graph, corpus, spine, kind_table, anchors_file=None,
     }
 
     if fixtures is not None:
-        demoted = apply_fixtures(fixtures)
+        demoted, succeeded = apply_fixtures(fixtures)
         unknown_demoted = sorted(set(demoted) - node_ids)
         weakened = frozenset(set(demoted) & node_ids)
         after = grounded_closure(node_ids, edges, anchors - weakened, weakened)
         dropped = delta_set(before, after, demoted)
         implied = implied_events(dropped, edges, demoted)
+        committed_hits = committed_dependents(edges, set(weakened))
         queue = divergence_queue(dropped, after, corpus.get("docs", {}),
-                                 edges, implied)
+                                 edges, implied, committed_hits,
+                                 {k: v for k, v in succeeded.items()
+                                  if k in node_ids},
+                                 demoted)
         result["weakening"] = {
             "demoted": {k: demoted[k] for k in sorted(demoted)},
             "unknown_demoted": unknown_demoted,
+            "succeeded": {k: v[0] for k, v in sorted(succeeded.items())},
             "closure_after": state_counts(after),
             "delta": sorted(dropped),
+            "committed_support_hits": {k: v for k, v in sorted(committed_hits.items())},
             "queue": queue,
         }
         expected = fixtures.get("expected_findings")
@@ -472,7 +546,8 @@ def self_test():
                      "D": GROUNDED, "E": UNGROUNDED},
           f"baseline closure wrong: {before}")
 
-    demoted = apply_fixtures(fixtures)
+    demoted, succeeded = apply_fixtures(fixtures)
+    check(succeeded == {}, f"synthetic fixture has no succession: {succeeded}")
     weakened = frozenset(demoted)
     after = grounded_closure(node_ids, edges, anchors - weakened, weakened)
     check(after["B"] == WEAKENED, f"B not weakened: {after['B']}")
@@ -483,7 +558,11 @@ def self_test():
     check("E" not in dropped, "E incorrectly in delta")
 
     implied = implied_events(dropped, edges, demoted)
-    queue = divergence_queue(dropped, after, corpus["docs"], edges, implied)
+    committed_hits = committed_dependents(edges, set(weakened))
+    check(set(committed_hits) == {"C", "D"},
+          f"committed-support route wrong: {committed_hits}")
+    queue = divergence_queue(dropped, after, corpus["docs"], edges, implied,
+                             committed_hits, {}, demoted)
     docs = [item["doc"] for item in queue]
     check(docs == ["C", "D"], f"queue wrong or misordered: {docs}")
     check(all(item["implied_by_event"] == "synthetic-demotion" for item in queue),

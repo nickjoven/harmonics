@@ -415,4 +415,5 @@
 2026-07-20T00:42:27Z | put | sync_cost/derivations/boundary_weight.md -> 6a8a647b2e3d7e7e3634073ee3a853282a1dec428b46e995a410966006b09437
 2026-07-20T00:42:27Z | put | sync_cost/derivations/higgs_reframing.md -> f571cf091f2897d05e5fa45bc520a6ec0fcff95d5d81fe17fae36b26ac11d11b
 2026-07-20T00:42:27Z | put | sync_cost/derivations/three_formalizations.md -> 4dcb588e553e93ae78d690297acd3089dbd40fba746b9115229fb38432b844ff
-2026-07-20T00:42:27Z | put | sync_cost/derivations/coupling_scales.md -> edd78e5c91c924ab28d2b2df81d91280a275c5309e7b71f95d6fcc5c3e0da694
+2026-07-20T00:42:27Z | put | sync_cost/derivations/coupling_scales.md -> edd78e5c91c924ab28d2b2df81d91280a275c5309e7b71f95d6fcc5c3e0da6942026-07-21T04:49:30Z | put | sync_cost/derivations/coupling_scales.md -> f0e6ddf6ddecc9d0b0c87927e33596d96b5076969ab23edf60eec1417575ce59
+2026-07-21T04:49:30Z | put | sync_cost/derivations/higgs_reframing.md -> e0acd0587cfb34d0fa73a0227621295b385f80dde31f682fef85dd092cbce8fe

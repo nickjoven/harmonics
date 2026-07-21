@@ -24,10 +24,14 @@
     "7b797c8"
    ],
    "date": "2026-06-01",
-   "demoted": [
+   "succeeded": [
     {
-     "node": "koide_form_substrate_iteration_14_supersedes_5_and_8",
-     "note": "succession, not weakening; unsupported by scaffold"
+     "node": "koide_form_substrate_iteration_5",
+     "by": "koide_form_substrate_iteration_14"
+    },
+    {
+     "node": "koide_form_substrate_iteration_8",
+     "by": "koide_form_substrate_iteration_14"
     }
    ]
   }
