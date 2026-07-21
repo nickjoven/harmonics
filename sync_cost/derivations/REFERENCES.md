@@ -5,7 +5,11 @@
 
 External literature cited inline (as `arXiv:` / `doi:`) across the
 derivation docs, resolved to canonical metadata via the arXiv and
-CrossRef APIs. 5 reference(s). Generated 2026-07-19.
+CrossRef APIs. 6 reference(s). Generated 2026-07-21.
+
+- **[Camara2008]** Carlos G. Camara, Juan V. Escobar, Jonathan R. Hird, Seth J. Putterman (2008). *Correlation between nanosecond X-ray flashes and stick–slip friction in peeling tape*. Nature.
+  [doi:10.1038/nature07378](https://doi.org/10.1038/nature07378)
+  Cited by: `tape_stick_slip_dual_regime_correspondence.md`
 
 - **[Kawano2025]** Shotaro Kawano, Kenji Kobayashi, Takuya Suzuki, Naoki Ichiji (2025). *Experimental Validation of String Oscillation in Subharmonic Generation*.
   [arXiv:2502.11902](https://arxiv.org/abs/2502.11902)
