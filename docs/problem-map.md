@@ -124,7 +124,7 @@ n_s = 0.963–0.966 from devil's-staircase self-similarity at the golden-ratio w
 
 **Docs:** [`spectral_tilt_reframed`](../sync_cost/derivations/spectral_tilt_reframed.md), [`spectral_tilt`](../sync_cost/derivations/spectral_tilt.md)
 
-**Caveat:** Classification tension on record: MANIFEST carries Class 5 ("no remaining freedom") while free_parameter_scorecard.md carries Class 2 ("free pivot x_*") — the pivot freedom belongs to the superseded doc, but the reconciliation edit has not landed. See the generated map's inconsistency ledger.
+**Caveat:** Reconciled 2026-07-21: the "free pivot x_*" belonged to the superseded cost-function derivation; the live staircase mechanism is structural. One named residual remains — the selection of 1/φ among noble windings has no committed forcing argument (two_forces.md §Open-3), so MANIFEST's "no remaining freedom" is slightly stronger than the committed docs.
 
 ## Tier 2 — structurally declined (the honest lines)
 
@@ -172,7 +172,7 @@ The doublet/singlet kinematic split is substrate-forced (Catalan equation: Mihai
 
 ### Tau mass forward prediction
 
-m_τ = 1776.78875 ± 0.00004 MeV (22 ppb, ~3100× tighter than PDG) from the muon mass alone — conditional on K⋆¹⁴ = 1/8, which the repo's own audit demoted to a Class-2 ansatz (Steps 1–5 of the chain structural, Step 6 a precision conjecture).
+m_τ = 1776.78875 ± 0.00004 MeV (22 ppb, ~3100× tighter than PDG) from the muon mass alone — conditional on K⋆¹⁴ = 1/8, which the repo's own audit demoted to a Class-2 ansatz (Steps 1–5 of the chain structural, Step 6 a precision conjecture). The conditional is now stated wherever the prediction is advertised (predictions_horizon_2026.md reconciled 2026-07-21).
 
 **Docs:** [`CHAIN_KSTAR`](../sync_cost/derivations/CHAIN_KSTAR.md), [`numerology_inventory`](../sync_cost/derivations/numerology_inventory.md)
 

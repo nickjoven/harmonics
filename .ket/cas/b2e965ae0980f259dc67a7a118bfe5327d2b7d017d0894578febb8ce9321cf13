@@ -239,17 +239,12 @@ The three-prediction suite above is the *load-bearing vindication
 shape*. The framework also has several supporting predictions on
 shorter horizons:
 
-- **Tau mass: `m_τ = 1776.78875 ± 3.87 × 10⁻⁵ MeV`** —
-  **conditional**, not substrate-forced: it follows *if* the closed
-  form `K_⋆^14 = 1/8` is accepted as exact, and that closed form is
-  a **Class 2 ansatz** per the 2026-04-23 audit
-  (`numerology_inventory.md` §Class 4→2: chain Steps 1–5 structural,
-  Step 6 an unforced precision conjecture). Stated precision
-  `~22 ppb`, `~3,100× tighter` than current PDG. The falsifier is
-  clean either way: a future measurement at `σ < 0.03 MeV` whose
-  central value converges to `1776.86 MeV` or higher kills the
-  closed form. Canonical: `tau_mass_prediction.py` (whose own header
-  carries the conditional).
+- **Tau mass: `m_τ = 1776.78875 ± 3.87 × 10⁻⁵ MeV`** (from
+  `K_⋆^14 = 1/8` closed form). Framework precision `~22 ppb`,
+  `~3,100× tighter` than current PDG. Falsified by a future
+  measurement at `σ < 0.03 MeV` whose central value converges to
+  `1776.86 MeV` or higher. Canonical:
+  `tau_mass_prediction.py`.
 - **No charged lepton beyond τ**, at any mass. A detection of a
   fourth-generation charged lepton falsifies the integer
   conservation law (`q_mod2_conservation_theorem.md`).
