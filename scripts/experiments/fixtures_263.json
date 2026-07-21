@@ -1,0 +1,71 @@
+{
+ "_comment": "Ground truth for the canon.d#11 shadow gate, from git archaeology (agent-verified shas). Doc-granular node mapping: the bare-K=1 demotion is modeled as weakening the D33 source doc (duty_cycle_dictionary, home of the five identities per MANIFEST) and sinw_effective_dimension (the parked d_eff correction). The koide arc-close is a SUCCESSION event (iteration_14 supersedes 5/8's framing); the scaffold has no SUCCEEDS support yet, so its two findings are expected misses in this run, kept in the fixture deliberately.",
+ "events": [
+  {
+   "id": "bare_k1_demotion",
+   "commits": [
+    "dffc200",
+    "2a285e4"
+   ],
+   "date": "2026-04-22",
+   "demoted": [
+    {
+     "node": "duty_cycle_dictionary"
+    },
+    {
+     "node": "sinw_effective_dimension"
+    }
+   ]
+  },
+  {
+   "id": "koide_arc_close",
+   "commits": [
+    "9a2433a",
+    "7b797c8"
+   ],
+   "date": "2026-06-01",
+   "succeeded": [
+    {
+     "node": "koide_form_substrate_iteration_5",
+     "by": "koide_form_substrate_iteration_14"
+    },
+    {
+     "node": "koide_form_substrate_iteration_8",
+     "by": "koide_form_substrate_iteration_14"
+    }
+   ]
+  }
+ ],
+ "expected_findings": [
+  {
+   "doc": "coupling_scales",
+   "stale": "five gauge rows stamped Derived (D33)",
+   "implied_by": "bare_k1_demotion"
+  },
+  {
+   "doc": "coupling_scales",
+   "stale": "decoherence-tax / 2-loop-running sentence",
+   "implied_by": "bare_k1_demotion"
+  },
+  {
+   "doc": "higgs_reframing",
+   "stale": "(now-closed) corrections sentence",
+   "implied_by": "bare_k1_demotion"
+  },
+  {
+   "doc": "higgs_reframing",
+   "stale": "no class marker linking to the demotion",
+   "implied_by": "bare_k1_demotion"
+  },
+  {
+   "doc": "koide_form_substrate_iteration_5",
+   "stale": "pending Floor->Survives upgrade",
+   "implied_by": "koide_arc_close"
+  },
+  {
+   "doc": "koide_form_substrate_iteration_8",
+   "stale": "pending Floor->Survives upgrade",
+   "implied_by": "koide_arc_close"
+  }
+ ]
+}

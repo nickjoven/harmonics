@@ -98,7 +98,27 @@ def extract_summary(text: str) -> str:
     return ""
 
 
-def extract_references(text: str, all_ids: set) -> list:
+# D-number citations ("(D33)", "**D25**", "per D26") are the corpus's other
+# citation form, resolved through INDEX.md's canonical mapping table. The
+# regex layer's silent miss of these (W1) left load-bearing docs edgeless —
+# coupling_scales cited D33 eight times and had zero graph edges, which is
+# what blocked the canon.d#11 retrodiction gate.
+INDEX_ROW_RE = re.compile(r"^\|\s*(D\d+)\s*\|\s*\[`([^`]+)`\]", re.MULTILINE)
+D_CITE_RE = re.compile(r"\bD(\d{1,3})\b")
+
+
+def load_dnumber_map() -> dict:
+    """D-number -> filename stem, from INDEX.md's mapping table."""
+    index = DERIV_DIR / "INDEX.md"
+    if not index.exists():
+        return {}
+    return {
+        f"D{num.lstrip('D')}": Path(fname).stem
+        for num, fname in INDEX_ROW_RE.findall(index.read_text(errors="replace"))
+    }
+
+
+def extract_references(text: str, all_ids: set, dmap: dict = None) -> list:
     """Find other derivation files referenced by this one."""
     refs = set()
     for mid in all_ids:
@@ -114,6 +134,10 @@ def extract_references(text: str, all_ids: set) -> list:
             if re.search(pat, text):
                 refs.add(mid)
                 break
+    for num in D_CITE_RE.findall(text):
+        target = (dmap or {}).get(f"D{num}")
+        if target and target in all_ids:
+            refs.add(target)
     return sorted(refs)
 
 
@@ -214,6 +238,7 @@ def git_log(path: Path) -> list:
 def main():
     all_ids = {f.stem for f in md_files}
     sealed = load_sealed_cids(ROOT)
+    dmap = load_dnumber_map()
     nodes = {}
 
     for f in md_files:
@@ -221,7 +246,7 @@ def main():
         node_id = f.stem
         rel_path = str(f.relative_to(ROOT))
         others = all_ids - {node_id}
-        refs = extract_references(text, others)
+        refs = extract_references(text, others, dmap)
         lineage = extract_lineage(text, others)
         # Union prose mentions with explicit Lineage targets; a Lineage
         # entry sets the kind, everything else is a "references" edge.
