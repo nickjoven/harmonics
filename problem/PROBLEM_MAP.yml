@@ -1,0 +1,381 @@
+# Problem-surface map — named problems of physics vs this repository's
+# defensible position on each.
+#
+# Curated by hand; validated and rendered by scripts/build_problem_map.py
+# (which cross-checks every doc/claim/script reference against
+# MANIFEST.yml, sync_cost/derivations/, and docs/corpus-index.json).
+# Generated outputs: docs/problem-map.md, docs/problem-map.json.
+#
+# Organization model: each problem carries a POSTURE from the repo's own
+# possibility-discipline discriminator (canonical_glossary.md §8):
+#   forced    — substrate-forced resolution; Survives/Class 5 apparatus
+#   declined  — structurally declined; the framework proves or argues it
+#               should NOT predict this (obstruction exhibited)
+#   proposed  — conditional or unreconciled prediction; testable but not
+#               at Survives tier
+#   open      — operationally open; honest gap, no framework claim
+# and a MODE describing what kind of line is drawn:
+#   derived | dissolved | articulated | declined | conditional | open
+#
+# The map is honesty-forward by construction: declined and open rows sit
+# in the same file as the forced ones, because the declines carry
+# executed disproofs and are part of the defensible surface.
+
+version: 1
+posture_vocab: [forced, declined, proposed, open]
+mode_vocab: [derived, dissolved, articulated, declined, conditional, open]
+
+problems:
+
+  # ------------------------------------------------------------------
+  # Tier 1 — substrate-forced (the firm lines)
+  # ------------------------------------------------------------------
+
+  - id: cosmological_constant_problem
+    title: "Cosmological constant problem"
+    moniker: "the worst prediction in physics (~120 orders of magnitude)"
+    posture: forced
+    mode: derived
+    statement: >
+      The magnitude of Λ is derived, not tuned: Λ·ℓ_P² = 13⁻¹⁰⁸/12 = 3/R²
+      with R = 6·13⁵⁴ from Gaussian-lattice cell counting (0.1% in the
+      exponent, 0.48% on R). The 120-order "catastrophe" is an artifact of
+      computing vacuum energy in a framework where Λ is an input; here it
+      is a counting output.
+    resolution_docs: [hierarchy_gaussian_lattice, exponent, lesson_cosmological_constant]
+    manifest_claims: [lambda_planck, hierarchy]
+    test: >
+      Tighter joint (Λ, H₀) determinations move R; the identity fails if
+      the exponent drifts beyond its 0.1% window.
+
+  - id: dark_energy_fraction
+    title: "Dark energy fraction / cosmic coincidence problem"
+    moniker: "why is Ω_Λ order unity now?"
+    posture: forced
+    mode: derived
+    statement: >
+      Ω_Λ = 13/19 (0.07σ vs Planck 2018), refined to 181/264 = 0.68561
+      (0.13%) under the two-component closure with w₊ = 13/14 from the
+      Γ₀(6) cusp-1/2 ground state. The fraction is combinatorial (Farey-6
+      partition + Z₂ rep theory), so no coincidence remains to explain.
+    resolution_docs: [omega_partition_combinatorial, farey_partition, baryon_fraction,
+                      omega_b_alpha_beta_closure, psl2z_subgroup_phase_b,
+                      L1_substrate_cusp_ground_state, w_plus_formalization]
+    manifest_claims: [dark_energy, dark_energy_fraction_two_component]
+    test: >
+      Euclid/DESI refinement of Ω_Λ outside the 13/19 window falsifies the
+      F₆ partition; w = −1 (+ small twist-breathing correction) testable
+      ~2028.
+
+  - id: dark_sector_composition
+    title: "Dark matter and baryon fractions"
+    moniker: "what fixes Ω_DM : Ω_b ≈ 5.4?"
+    posture: forced
+    mode: derived
+    statement: >
+      Ω_DM = 35/132 (0.06%), Ω_b = 13/264 (0.12%), Ω_DM/Ω_b = 70/13
+      (0.6%) from the same 13:5:1/19 partition plus the two-component
+      closure. The dark-matter abundance question is answered at the
+      fraction level (what shares exist), not the particle level.
+    resolution_docs: [baryon_fraction, omega_partition_combinatorial,
+                      omega_b_alpha_beta_closure, L1_substrate_cusp_ground_state]
+    manifest_claims: [dark_matter_fraction, baryon_fraction, dm_baryon_ratio]
+    caveats: >
+      No particle candidate is offered; the framework's dark-matter story
+      is fractional/combinatorial, with galactic phenomenology handled by
+      the a₀ row below.
+
+  - id: strong_cp_problem
+    title: "Strong CP problem"
+    posture: forced
+    mode: derived
+    statement: >
+      θ_QCD = 0 exactly, forced by Pin⁺(3) topology on the Klein bottle
+      (D45): the substrate admits no θ-term. Resolves strong CP with no
+      axion and no tuning.
+    resolution_docs: [coupling_scales]
+    manifest_claims: [strong_cp]
+    test: >
+      Any measurement of θ ≠ 0 falsifies; discovery of a QCD axion doing
+      the resolving would undercut the mechanism.
+
+  - id: measurement_problem
+    title: "Quantum measurement problem"
+    moniker: "often called the most embarrassing problem in physics"
+    posture: forced
+    mode: dissolved
+    statement: >
+      Dissolved, not solved-by-interpretation: the substrate carries no
+      projection postulate to reconcile with unitary evolution. Collapse
+      is fidelity-bounded self-measurement; the preferred basis is basin
+      selection (the saddle-node normal form fixes each context's basis
+      structurally); the Born exponent 2 is saddle-node universality, not
+      an axiom.
+    resolution_docs: [collapse_dissolution, preferred_basis_dissolution,
+                      lesson_forced_basin_selection, figure_eight,
+                      born_rule, a1_from_saddle_node, fidelity_bound]
+    manifest_claims: [born_rule]
+    test: >
+      Collapse duration τ ∝ 1/√ε with τΔω = const, and Zeno suppression,
+      from the fidelity bound — testable in cavity QED / superconducting
+      qubits.
+    caveats: >
+      The dissolution docs are Class-3 articulations resting on the
+      Class-5 Born-rule apparatus; the falsifiable content lives in the
+      collapse-timing predictions.
+
+  - id: bell_nonlocality
+    title: "Bell nonlocality / EPR"
+    moniker: "how can correlations violate Bell bounds without signaling?"
+    posture: forced
+    mode: articulated
+    statement: >
+      Bell-violating, non-signaling statistics at exactly the Tsirelson
+      bound (and Mermin |M| = 4 for GHZ) are derived substrate-internally.
+      Bell's no-go is evaded honestly: the conserved Q mod 2 is a global
+      topological invariant of the Klein-bottle context window, not a
+      shared local hidden variable λ.
+    resolution_docs: [epr_bell_assembly_theorem, bell_bounds_from_substrate,
+                      ghz_from_substrate, q_mod2_conservation_theorem]
+    caveats: >
+      Reproduces QM's bounds rather than predicting deviations from them;
+      the claim is structural explanation, not new statistics.
+
+  - id: spacetime_dimensionality
+    title: "Dimensionality and signature of spacetime"
+    moniker: "why 3+1 and why Lorentz?"
+    posture: forced
+    mode: derived
+    statement: >
+      d = 3 from the SL(2,ℝ) Lie-group dimension forced by the mediant's
+      SL(2,ℤ) symmetry (D14); Minkowski signature and Spin(3,1) from the
+      Klein-bottle Cl(3,1) construction (D32, D15). Exact, structural.
+    resolution_docs: [three_dimensions, minkowski_signature, lie_group_characterization]
+    manifest_claims: [spatial_dimension, lorentz]
+
+  - id: gauge_group_origin
+    title: "Origin of the Standard Model gauge group"
+    moniker: "why SU(3)×SU(2)×U(1), why do anomalies cancel?"
+    posture: forced
+    mode: derived
+    statement: >
+      SU(3)×SU(2)×U(1) from the Klein-bottle mode lattice Z₆ = Z₂ × Z₃
+      (D41/D42); Yang-Mills dynamics unique via Utiyama + Cartan given the
+      substrate's kinematics (gauge-sector Lovelock); all 6 SM anomaly
+      conditions verified as substrate mode-count identities; charge
+      quantization via Gell-Mann–Nishijima (D43).
+    resolution_docs: [gauge_sector_lovelock, discrete_gauge_resolution, gell_mann_nishijima]
+    manifest_claims: [gauge_group, anomaly_cancellation]
+    engines: [anomaly_check.py, fiber_bundle.py, xor_asymmetry.py]
+
+  - id: gr_qm_unification
+    title: "Unification of general relativity and quantum mechanics"
+    posture: forced
+    mode: articulated
+    statement: >
+      GR and QM are the two continuum limits of one substrate: Einstein's
+      equations unique (Lovelock, D13) at the locked K=1 limit,
+      Schrödinger structure at K<1, with the K=1 ↔ K<1 decoupling
+      non-smooth — which is why the two theories resist merger in the
+      continuum and why each needs its own anchor.
+    resolution_docs: [einstein_from_kuramoto, continuum_limits,
+                      gr_qm_unification_synthesis, lesson_epr_gr_qm_unification,
+                      PROOF_A_gravity, PROOF_B_quantum]
+    caveats: >
+      Unification is at the substrate layer; no quantum-gravity
+      phenomenology (e.g. graviton scattering) is predicted.
+
+  - id: galactic_acceleration_scale
+    title: "MOND scale and the radial acceleration relation"
+    moniker: "why a₀ ≈ cH₀ (the a₀ coincidence)"
+    posture: forced
+    mode: derived
+    statement: >
+      a₀ = cH₀/(2π) structurally from Λ (both scales are set by Λ, so the
+      coincidence is an identity), and the RAR interpolating shape with
+      its scatter pattern derived from the fidelity bound rather than fit.
+    resolution_docs: [a0_threshold, fidelity_bound, high_z_mond]
+    manifest_claims: [mond_scale]
+    test: >
+      a₀(z) = cH(z)/(2π) at high z (GEKO/CRISTAL ~2025–2030): z≈5
+      galaxies Newtonian at z=0 should sit in the transition zone;
+      post-merger RAR re-establishment on ~1/H(z).
+
+  - id: inflation_duration
+    title: "Inflation duration (e-fold count)"
+    posture: forced
+    mode: derived
+    statement: >
+      N_efolds = √5/(2/57) ≈ 63.7, with the cadence 2/57 = 2/(q₃·19_Λ)
+      uniquely forced by the K(t) closure (Q mod 2 mediant projection +
+      structural integers + bicone-golden Z₂ bridge). Does not consume
+      observed n_s.
+    resolution_docs: [k_of_t_residual_disposition, bicone_golden_z2_identification,
+                      q_mod2_mediant_projection, predictions_horizon_2026]
+    manifest_claims: [efolds]
+    test: >
+      Falsified outside [62, 66] at CMB-S4 (~2028+) / LiteBIRD (~2032)
+      precision. Sits at the upper edge of standard slow-roll estimates,
+      so it is discriminating.
+
+  - id: spectral_tilt
+    title: "Near-scale-invariance of the primordial spectrum"
+    moniker: "why n_s ≈ 0.965?"
+    posture: forced
+    mode: derived
+    statement: >
+      n_s = 0.963–0.966 from devil's-staircase self-similarity at the
+      golden-ratio winding (φ² zoom structure), replacing the earlier
+      cost-function derivation whose running sign was a theorem-level
+      failure.
+    resolution_docs: [spectral_tilt_reframed, spectral_tilt]
+    manifest_claims: [spectral_tilt]
+    caveats: >
+      Reconciled 2026-07-21: the "free pivot x_*" belonged to the
+      superseded cost-function derivation; the live staircase mechanism
+      is structural. One named residual remains — the selection of 1/φ
+      among noble windings has no committed forcing argument
+      (two_forces.md §Open-3), so MANIFEST's "no remaining freedom" is
+      slightly stronger than the committed docs.
+
+  # ------------------------------------------------------------------
+  # Tier 2 — structurally declined (the honest lines)
+  # ------------------------------------------------------------------
+
+  - id: hierarchy_problem
+    title: "Hierarchy problem (smallness of v/M_P)"
+    posture: declined
+    mode: dissolved
+    statement: >
+      The SM framing does not translate: the framework has no naturalness
+      criterion and no quadratic divergences, so small ratios are not
+      "problematic". Two dimensional anchors (H₀, v_EW) are proven
+      structurally minimal (prime-5 obstruction: the canonical register's
+      prime support {2,3} cannot reach 15 for the 13⁻¹⁵ target); the
+      near-match v/M_P ≈ 13⁻¹⁵ (3.1%) is Class-2 numerology, declined
+      with executed nulls.
+    resolution_docs: [hierarchy_problem_translation, anchor_count_audit,
+                      anchor_count_reaudit, basepoint_principle,
+                      depth_connection_nulls]
+    caveats: >
+      Provenance gap on record: the two null scripts backing the 13⁻¹⁵
+      elimination (yukawa_mediant_cascade.py, z_30_substrate_check.py)
+      are deleted, and the commits depth_connection_nulls.md cites for
+      them (16205d5, 2780fd6) do not resolve in this repo's history.
+      The nulls are documented but not reproducible from this tree.
+
+  - id: gauge_couplings_at_mz
+    title: "Values of the gauge couplings at observational scales"
+    moniker: "sin²θ_W, α_em, α_s/α₂, m_H/v, λ_H"
+    posture: declined
+    mode: declined
+    statement: >
+      The framework computes bare K=1 substrate-side references (8/35,
+      35, 27/8, 1/2, 1/8) and declines them as M_Z predictions — with
+      executed disproofs where a falsifier existed (SM running sign for
+      sin²θ_W; magnitude a priori for α_s) and a permutation-null verdict
+      that the 1–3% near-match cloud is pigeonhole, not signal.
+    resolution_docs: [duty_cycle_dictionary, duty_dimension_proof,
+                      sinw_fixed_point, sinw_effective_dimension,
+                      numerology_count_phase_b, numerology_inventory]
+    bare_k1_claims: [sin2_theta_W, alpha_s_over_alpha_2, inv_alpha_em_tree,
+                     m_H_over_v, lambda_higgs]
+    engines: [sinW_running_check.py]
+    caveats: >
+      This row is a strength of method, not of prediction: the declines
+      carry disproof scripts and a calibrated Class-2 discriminator.
+
+  - id: absolute_scales
+    title: "Why these values of H₀, v_EW, ℏ, c, G"
+    posture: declined
+    mode: declined
+    statement: >
+      Declined by the Basepoint Principle: the framework supplies
+      torsorial structure and never the dimensionful basepoints; the two
+      anchors are a structural feature with the obstruction exhibited
+      (seven verified instances of the principle), not an unfinished
+      derivation.
+    resolution_docs: [basepoint_principle, anchor_count_reaudit]
+
+  - id: parity_violation_direction
+    title: "Why the weak interaction couples to left-handed states"
+    posture: declined
+    mode: declined
+    statement: >
+      The doublet/singlet kinematic split is substrate-forced (Catalan
+      equation: Mihailescu's theorem makes (q₂,q₃)=(2,3) the unique
+      consecutive perfect powers), while the L-vs-R labeling is an
+      observation-fixed Z₂ torsor (Wu 1957) — the framework proves it
+      neither forces nor needs to force which side is "left".
+    resolution_docs: [vocabulary_bridge_iteration_2_step_2, mass_sector_closure,
+                      klein_bottle_restructure_price]
+
+  # ------------------------------------------------------------------
+  # Tier 3 — proposed (conditional or unreconciled; testable)
+  # ------------------------------------------------------------------
+
+  - id: neutrino_masses
+    title: "Neutrino masses and nature"
+    posture: proposed
+    mode: conditional
+    statement: >
+      Σm_ν ≈ 66.7 meV, normal ordering, Majorana — closed via a finite-K
+      interaction-scale correction per neutrino_mass_audit.md, testable by
+      0νββ at LEGEND-1000 / nEXO.
+    resolution_docs: [neutrino_mass_audit, predictions_horizon_2026]
+    caveats: >
+      Status mismatch on record: claimed closed in the audit doc but
+      absent from MANIFEST.yml's scorecard and framework_status.md's
+      Survives ledger. Unreconciled; treat as proposed until promoted.
+
+  - id: tau_mass_precision
+    title: "Tau mass forward prediction"
+    posture: proposed
+    mode: conditional
+    statement: >
+      m_τ = 1776.78875 ± 0.00004 MeV (22 ppb, ~3100× tighter than PDG)
+      from the muon mass alone — conditional on K⋆¹⁴ = 1/8, which the
+      repo's own audit demoted to a Class-2 ansatz (Steps 1–5 of the
+      chain structural, Step 6 a precision conjecture). The conditional
+      is now stated wherever the prediction is advertised
+      (predictions_horizon_2026.md reconciled 2026-07-21).
+    resolution_docs: [CHAIN_KSTAR, numerology_inventory]
+    engines: [tau_mass_prediction.py]
+    test: >
+      A future m_τ measurement at σ < 0.03 MeV converging to 1776.86 MeV
+      or higher falsifies the closed form cleanly.
+
+  # ------------------------------------------------------------------
+  # Tier 4 — operationally open (the honest gaps)
+  # ------------------------------------------------------------------
+
+  - id: flavor_problem
+    title: "Flavor problem (fermion mass ratios, CKM/PMNS mixing)"
+    posture: open
+    mode: open
+    statement: >
+      Open. Bare-tree μ/e misses by 37% (Class 1 null retained); the
+      Koide-constrained closure reaches the ~1% coincidence floor with
+      the Koide form imported, not forced; CKM/PMNS angles are Class 2
+      with tree-level values far from observation (θ₁₃ off 3.3×). The
+      continuous couplings sit in the same open class the SM leaves them.
+    resolution_docs: [free_parameter_scorecard, mixing_angle_audit,
+                      koide_form_substrate_iteration_14, fermion_mass_running]
+
+  - id: muon_g2
+    title: "Muon g−2 anomaly"
+    posture: open
+    mode: open
+    statement: >
+      Not addressed — no framework apparatus for anomalous magnetic
+      moments.
+    resolution_docs: [framework_status]
+
+  - id: baryon_asymmetry
+    title: "Baryon asymmetry of the universe"
+    posture: open
+    mode: open
+    statement: >
+      Not addressed at the η_B level; matter-antimatter structure appears
+      only in audit-level discussion.
+    resolution_docs: [free_parameter_scorecard]
