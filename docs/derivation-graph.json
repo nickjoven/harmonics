@@ -1,5 +1,5 @@
 {
-  "generated": "298ddab9f1275949b5edc3cfc09d0eacfe04962b",
+  "generated": "8c0b5527c03064d2866ca2317cb2e4bba90d8a82",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -769,6 +769,7 @@
       "summary": "**L1 closes Class 5 in recognize mode.** THM (w_+ = 13/14) lifts\nto Class 5 by composition. \u03a9_b two-component closure is now a\n**fully-derived Class 5 prediction** with all three Planck partition\nobservables sub-\u03c3 (0.06% to 0.13% residuals).",
       "depends_on": [
         "a0_threshold",
+        "a1_from_saddle_node",
         "baryon_fraction",
         "denomination_boundary",
         "framework_status",
@@ -799,6 +800,10 @@
       "edges": [
         {
           "target": "a0_threshold",
+          "kind": "references"
+        },
+        {
+          "target": "a1_from_saddle_node",
           "kind": "references"
         },
         {
@@ -916,9 +921,17 @@
       "title": "Proof Chain A: Polynomial \u2192 General Relativity",
       "summary": "**Canonical proof chain: polynomial \u2192 general relativity.** 8\npropositions composed from derivation chain D1-D15. Establishes\nthat GR (Einstein equations) emerges as the K = 1 continuum limit\nof the substrate's discrete dynamics per `continuum_limits.md`\nPart I.",
       "depends_on": [
+        "a0_threshold",
+        "born_rule",
         "continuum_limits",
         "derivation_atlas",
-        "framework_status"
+        "einstein_from_kuramoto",
+        "framework_status",
+        "lie_group_characterization",
+        "mediant_derivation",
+        "minimum_alphabet",
+        "rational_field_equation",
+        "three_dimensions"
       ],
       "depended_on_by": [
         "INDEX",
@@ -946,6 +959,14 @@
       ],
       "edges": [
         {
+          "target": "a0_threshold",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
           "target": "continuum_limits",
           "kind": "references"
         },
@@ -954,7 +975,31 @@
           "kind": "references"
         },
         {
+          "target": "einstein_from_kuramoto",
+          "kind": "references"
+        },
+        {
           "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "lie_group_characterization",
+          "kind": "references"
+        },
+        {
+          "target": "mediant_derivation",
+          "kind": "references"
+        },
+        {
+          "target": "minimum_alphabet",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
           "kind": "references"
         }
       ],
@@ -1071,9 +1116,14 @@
       "depends_on": [
         "PROOF_A_gravity",
         "a1_from_saddle_node",
+        "born_rule",
         "continuum_limits",
         "derivation_atlas",
-        "framework_status"
+        "framework_status",
+        "mediant_derivation",
+        "minimum_alphabet",
+        "rational_field_equation",
+        "three_dimensions"
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
@@ -1103,6 +1153,10 @@
           "kind": "references"
         },
         {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
           "target": "continuum_limits",
           "kind": "references"
         },
@@ -1112,6 +1166,22 @@
         },
         {
           "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "mediant_derivation",
+          "kind": "references"
+        },
+        {
+          "target": "minimum_alphabet",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
           "kind": "references"
         }
       ],
@@ -1207,9 +1277,12 @@
       "depended_on_by": [
         "INDEX",
         "L1_substrate_cusp_ground_state",
+        "PROOF_A_gravity",
         "baryon_fraction",
         "canonical_glossary",
         "derivation_atlas",
+        "dicke_apparatus_theorem",
+        "discrete_extension_principle",
         "dynamical_quantization",
         "dynamical_tool_audit",
         "framework_status",
@@ -1220,7 +1293,10 @@
         "phenomenology_cross_reference",
         "predictions_horizon_2026",
         "primitive_completeness_audit",
+        "qm_reframing_programmatic",
+        "snmc_class_and_entanglement",
         "substrate_kk_dispersion_target",
+        "third_twist_meta_structure_audit",
         "unitless_check",
         "vacuum_stress_meta_structure_audit",
         "w_plus_formalization"
@@ -1241,6 +1317,10 @@
           "kind": "references"
         },
         {
+          "source": "PROOF_A_gravity",
+          "kind": "references"
+        },
+        {
           "source": "baryon_fraction",
           "kind": "proposes"
         },
@@ -1250,6 +1330,14 @@
         },
         {
           "source": "derivation_atlas",
+          "kind": "references"
+        },
+        {
+          "source": "dicke_apparatus_theorem",
+          "kind": "references"
+        },
+        {
+          "source": "discrete_extension_principle",
           "kind": "references"
         },
         {
@@ -1293,7 +1381,19 @@
           "kind": "references"
         },
         {
+          "source": "qm_reframing_programmatic",
+          "kind": "references"
+        },
+        {
+          "source": "snmc_class_and_entanglement",
+          "kind": "references"
+        },
+        {
           "source": "substrate_kk_dispersion_target",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
           "kind": "references"
         },
         {
@@ -1387,6 +1487,7 @@
       ],
       "depended_on_by": [
         "INDEX",
+        "L1_substrate_cusp_ground_state",
         "PROOF_B_quantum",
         "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
@@ -1396,6 +1497,7 @@
         "canonical_glossary",
         "cone_twist_substrate",
         "continuity_in_K_nulls",
+        "denomination_boundary",
         "depth_connection_nulls",
         "derivation_atlas",
         "dicke_apparatus_theorem",
@@ -1412,6 +1514,8 @@
         "mediant_vs_flow_calc",
         "mode_locking_exhibits",
         "numerology_inventory",
+        "omega_b_c5_closure",
+        "omega_b_substrate_side_audit",
         "phenomenology_cross_reference",
         "preferred_basis_dissolution",
         "primitive_completeness_audit",
@@ -1420,7 +1524,8 @@
         "s_v_nlo",
         "spacetime_dissipative_emergence",
         "structural_lemmas",
-        "vocabulary_is_the_work_pattern"
+        "vocabulary_is_the_work_pattern",
+        "w_plus_formalization"
       ],
       "edges": [
         {
@@ -1466,6 +1571,10 @@
           "kind": "references"
         },
         {
+          "source": "L1_substrate_cusp_ground_state",
+          "kind": "references"
+        },
+        {
           "source": "PROOF_B_quantum",
           "kind": "references"
         },
@@ -1499,6 +1608,10 @@
         },
         {
           "source": "continuity_in_K_nulls",
+          "kind": "references"
+        },
+        {
+          "source": "denomination_boundary",
           "kind": "references"
         },
         {
@@ -1566,6 +1679,14 @@
           "kind": "references"
         },
         {
+          "source": "omega_b_c5_closure",
+          "kind": "references"
+        },
+        {
+          "source": "omega_b_substrate_side_audit",
+          "kind": "references"
+        },
+        {
           "source": "phenomenology_cross_reference",
           "kind": "references"
         },
@@ -1599,6 +1720,10 @@
         },
         {
           "source": "vocabulary_is_the_work_pattern",
+          "kind": "references"
+        },
+        {
+          "source": "w_plus_formalization",
           "kind": "references"
         }
       ],
@@ -1932,8 +2057,13 @@
       "depended_on_by": [
         "INDEX",
         "anchor_count_audit",
+        "derivation_atlas",
+        "engineering_targets",
         "expressibility_split",
-        "medium_change_demo"
+        "figure_eight",
+        "higgs_from_tongue_boundary",
+        "medium_change_demo",
+        "phenomenology_cross_reference"
       ],
       "edges": [
         {
@@ -1963,11 +2093,31 @@
           "kind": "references"
         },
         {
+          "source": "derivation_atlas",
+          "kind": "references"
+        },
+        {
+          "source": "engineering_targets",
+          "kind": "references"
+        },
+        {
           "source": "expressibility_split",
           "kind": "references"
         },
         {
+          "source": "figure_eight",
+          "kind": "references"
+        },
+        {
+          "source": "higgs_from_tongue_boundary",
+          "kind": "references"
+        },
+        {
           "source": "medium_change_demo",
+          "kind": "references"
+        },
+        {
+          "source": "phenomenology_cross_reference",
           "kind": "references"
         }
       ],
@@ -1996,7 +2146,12 @@
       "sealed": false,
       "title": "The ADM Dictionary",
       "summary": "The mapping from Kuramoto variables to ADM variables is the unique\nidentification consistent with the symmetries of the locked-state\nKuramoto system at K=1. Each entry is forced by a uniqueness argument.",
-      "depends_on": [],
+      "depends_on": [
+        "continuum_limits",
+        "coupling_scales",
+        "einstein_from_kuramoto",
+        "three_dimensions"
+      ],
       "depended_on_by": [
         "articulation_audit_2026-05",
         "graviton_reframing",
@@ -2005,7 +2160,24 @@
         "thread_chronology",
         "vacuum_stress_meta_structure_audit"
       ],
-      "edges": [],
+      "edges": [
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "coupling_scales",
+          "kind": "references"
+        },
+        {
+          "target": "einstein_from_kuramoto",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
+          "kind": "references"
+        }
+      ],
       "edged_by": [
         {
           "source": "articulation_audit_2026-05",
@@ -3795,6 +3967,7 @@
       "title": "Audit Findings 3 & 4: honest disposition (qualification, not closure)",
       "summary": "Class 3 (disposition / honest qualification). No new framework\nprimitive. This doc does not close Findings 3 and 4 \u2014 it **records\ntheir honest disposition**: Finding 3 qualifies Phase 2's exactness\nclaim; Finding 4 retracts the inflation-duration's parameter-free\nadvertising. The framework's recent cosmological claims are\ncorrespondingly downgraded from \"exact / parameter-free\" to\n\"leading-order / conditional.\"",
       "depends_on": [
+        "continuum_limits",
         "f_exit_natural",
         "framework_status",
         "inflation_duration",
@@ -3820,6 +3993,10 @@
         "thread_chronology"
       ],
       "edges": [
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
         {
           "target": "f_exit_natural",
           "kind": "references"
@@ -4902,6 +5079,8 @@
         "generation_mechanism",
         "higgs_from_tongue_boundary",
         "klein_bottle",
+        "minkowski_signature",
+        "spectral_tilt",
         "three_dimensions"
       ],
       "depended_on_by": [
@@ -4938,6 +5117,14 @@
         },
         {
           "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "minkowski_signature",
+          "kind": "references"
+        },
+        {
+          "target": "spectral_tilt",
           "kind": "references"
         },
         {
@@ -5201,6 +5388,8 @@
       ],
       "depended_on_by": [
         "INDEX",
+        "PROOF_A_gravity",
+        "PROOF_B_quantum",
         "a1_from_saddle_node",
         "algebraic_forcing_partition",
         "angular_momentum_three_source_inviolability_audit",
@@ -5219,6 +5408,8 @@
         "cyclotomic_content_mass_ratios_audit",
         "derivation_atlas",
         "dicke_apparatus_theorem",
+        "down_type_double_cover_closed",
+        "down_type_double_cover_phase_d",
         "dynamical_tool_audit",
         "empty_fork_cap",
         "epr_bell_assembly_theorem",
@@ -5229,6 +5420,7 @@
         "h0_tension_cross_cell_identity_audit",
         "half_twist_meta_structure_audit",
         "halt_shock_coherence_audit",
+        "higgs_from_tongue_boundary",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_1",
         "klein_bottle_restructure_price",
@@ -5256,12 +5448,16 @@
         "psl2z_noncommutative_core_structural_identity_audit",
         "qm_reframing_programmatic",
         "seismic_eigenstate_dictionary",
+        "session_audit",
         "silk_damping_dissipation",
         "sine_gordon_substrate",
         "snmc_class_and_entanglement",
         "spacetime_dissipative_emergence",
+        "statistical_conventions",
         "stribeck_vortex",
-        "structural_lemmas"
+        "structural_lemmas",
+        "third_twist_meta_structure_audit",
+        "thread_chronology"
       ],
       "edges": [
         {
@@ -5280,6 +5476,14 @@
       "edged_by": [
         {
           "source": "INDEX",
+          "kind": "references"
+        },
+        {
+          "source": "PROOF_A_gravity",
+          "kind": "references"
+        },
+        {
+          "source": "PROOF_B_quantum",
           "kind": "references"
         },
         {
@@ -5355,6 +5559,14 @@
           "kind": "references"
         },
         {
+          "source": "down_type_double_cover_closed",
+          "kind": "references"
+        },
+        {
+          "source": "down_type_double_cover_phase_d",
+          "kind": "references"
+        },
+        {
           "source": "dynamical_tool_audit",
           "kind": "references"
         },
@@ -5392,6 +5604,10 @@
         },
         {
           "source": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "source": "higgs_from_tongue_boundary",
           "kind": "references"
         },
         {
@@ -5503,6 +5719,10 @@
           "kind": "references"
         },
         {
+          "source": "session_audit",
+          "kind": "references"
+        },
+        {
           "source": "silk_damping_dissipation",
           "kind": "references"
         },
@@ -5519,11 +5739,23 @@
           "kind": "references"
         },
         {
+          "source": "statistical_conventions",
+          "kind": "references"
+        },
+        {
           "source": "stribeck_vortex",
           "kind": "references"
         },
         {
           "source": "structural_lemmas",
+          "kind": "references"
+        },
+        {
+          "source": "third_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
+          "source": "thread_chronology",
           "kind": "references"
         }
       ],
@@ -6004,8 +6236,12 @@
       "depends_on": [
         "PROOF_A_gravity",
         "PROOF_B_quantum",
+        "farey_partition",
+        "hierarchy_gaussian_lattice",
         "horn_branch_iteration_3_step_1",
-        "numerology_inventory"
+        "numerology_inventory",
+        "omega_partition_combinatorial",
+        "rational_field_equation"
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
@@ -6060,11 +6296,27 @@
           "kind": "references"
         },
         {
+          "target": "farey_partition",
+          "kind": "references"
+        },
+        {
+          "target": "hierarchy_gaussian_lattice",
+          "kind": "references"
+        },
+        {
           "target": "horn_branch_iteration_3_step_1",
           "kind": "references"
         },
         {
           "target": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "target": "omega_partition_combinatorial",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
           "kind": "references"
         }
       ],
@@ -7670,13 +7922,17 @@
       "summary": "Conservation of energy and matter is the compactness of S^1.\nCompactness is computability. The chain is deductive:",
       "depends_on": [
         "PROOF_A_gravity",
-        "PROOF_B_quantum"
+        "PROOF_B_quantum",
+        "minimum_alphabet",
+        "rational_field_equation"
       ],
       "depended_on_by": [
         "INDEX",
         "empty_fork_cap",
+        "figure_eight",
         "quantum_gravity_interpolation",
-        "rationality_descent"
+        "rationality_descent",
+        "stribeck_vortex"
       ],
       "edges": [
         {
@@ -7685,6 +7941,14 @@
         },
         {
           "target": "PROOF_B_quantum",
+          "kind": "references"
+        },
+        {
+          "target": "minimum_alphabet",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
           "kind": "references"
         }
       ],
@@ -7698,11 +7962,19 @@
           "kind": "references"
         },
         {
+          "source": "figure_eight",
+          "kind": "references"
+        },
+        {
           "source": "quantum_gravity_interpolation",
           "kind": "references"
         },
         {
           "source": "rationality_descent",
+          "kind": "references"
+        },
+        {
+          "source": "stribeck_vortex",
           "kind": "references"
         }
       ],
@@ -8209,6 +8481,7 @@
         "basepoint_principle",
         "boundary_weight",
         "canonical_glossary",
+        "klein_bottle",
         "klein_bottle_restructure_price",
         "surface_uniqueness_audit"
       ],
@@ -8217,18 +8490,22 @@
         "PROOF_A_gravity",
         "PROOF_B_quantum",
         "a_s_geometric_proof",
+        "adm_dictionary",
         "anchor_count_audit",
         "anchor_count_reaudit",
         "anchor_extremes_audit",
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "articulation_audit_2026-05",
+        "audit_findings_3_4_disposition",
         "bicyclist_observer_sequence",
         "canonical_glossary",
         "coherence_matrix_completion_audit",
         "complex_amplitude_uniqueness",
         "conservation_scale_stratification_audit",
+        "coupling_scales",
         "cross_ratio_irrep_reframe",
+        "denomination_boundary",
         "derivation_atlas",
         "dynamical_quantization",
         "dynamical_tool_audit",
@@ -8240,11 +8517,13 @@
         "gap2_theorem_attempt",
         "gap_1_christoffel",
         "gap_2_spatial_diffusion",
+        "gauge_sector_lovelock",
         "generation_sector_count_audit",
         "gr_qm_unification_synthesis",
         "h0_tension_cross_cell_identity_audit",
         "halt_shock_coherence_audit",
         "hierarchy_problem_translation",
+        "higgs_from_tongue_boundary",
         "klein_bottle",
         "lesson_epr_gr_qm_unification",
         "mode_locking_exhibits",
@@ -8259,12 +8538,15 @@
         "sector_decoupling_phase_a",
         "sigma_squared_disambiguation",
         "spatial_coupling_derived",
+        "stribeck_vortex",
         "structural_lemmas",
         "substrate_kk_dispersion_target",
         "tape_stick_slip_dual_regime_correspondence",
+        "three_zeros",
         "vacuum_stress_meta_structure_audit",
         "vocabulary_is_the_work_pattern",
-        "w_plus_formalization"
+        "w_plus_formalization",
+        "xor_continuum_limit"
       ],
       "edges": [
         {
@@ -8289,6 +8571,10 @@
         },
         {
           "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
           "kind": "references"
         },
         {
@@ -8318,6 +8604,10 @@
           "kind": "references"
         },
         {
+          "source": "adm_dictionary",
+          "kind": "references"
+        },
+        {
           "source": "anchor_count_audit",
           "kind": "references"
         },
@@ -8342,6 +8632,10 @@
           "kind": "references"
         },
         {
+          "source": "audit_findings_3_4_disposition",
+          "kind": "references"
+        },
+        {
           "source": "bicyclist_observer_sequence",
           "kind": "references"
         },
@@ -8362,7 +8656,15 @@
           "kind": "references"
         },
         {
+          "source": "coupling_scales",
+          "kind": "references"
+        },
+        {
           "source": "cross_ratio_irrep_reframe",
+          "kind": "references"
+        },
+        {
+          "source": "denomination_boundary",
           "kind": "references"
         },
         {
@@ -8410,6 +8712,10 @@
           "kind": "references"
         },
         {
+          "source": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
           "source": "generation_sector_count_audit",
           "kind": "references"
         },
@@ -8427,6 +8733,10 @@
         },
         {
           "source": "hierarchy_problem_translation",
+          "kind": "references"
+        },
+        {
+          "source": "higgs_from_tongue_boundary",
           "kind": "references"
         },
         {
@@ -8486,6 +8796,10 @@
           "kind": "references"
         },
         {
+          "source": "stribeck_vortex",
+          "kind": "references"
+        },
+        {
           "source": "structural_lemmas",
           "kind": "references"
         },
@@ -8498,6 +8812,10 @@
           "kind": "references"
         },
         {
+          "source": "three_zeros",
+          "kind": "references"
+        },
+        {
           "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         },
@@ -8507,6 +8825,10 @@
         },
         {
           "source": "w_plus_formalization",
+          "kind": "references"
+        },
+        {
+          "source": "xor_continuum_limit",
           "kind": "references"
         }
       ],
@@ -8557,7 +8879,13 @@
       "summary": "The universe does not end. It passes the baton. The stick-slip\nboundary between locked modes (our physics) and the gap (the twin)\nsweeps through the frequency axis as K evolves. The roles reverse.\nThe Klein bottle's half-twist means each handoff swaps the\norientation. The cycle has period 2 (two half-twists = full twist\n= return to original).",
       "depends_on": [
         "PROOF_A_gravity",
-        "PROOF_B_quantum"
+        "PROOF_B_quantum",
+        "farey_partition",
+        "klein_bottle",
+        "minkowski_signature",
+        "speed_of_light",
+        "three_dimensions",
+        "variable_denominator"
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
@@ -8575,6 +8903,30 @@
         },
         {
           "target": "PROOF_B_quantum",
+          "kind": "references"
+        },
+        {
+          "target": "farey_partition",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "minkowski_signature",
+          "kind": "references"
+        },
+        {
+          "target": "speed_of_light",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
+          "kind": "references"
+        },
+        {
+          "target": "variable_denominator",
           "kind": "references"
         }
       ],
@@ -8624,23 +8976,39 @@
     {
       "id": "coupling_scales",
       "path": "sync_cost/derivations/coupling_scales.md",
-      "cid": "edd78e5c91c924ab28d2b2df81d91280a275c5309e7b71f95d6fcc5c3e0da694",
-      "sealed": true,
+      "cid": null,
+      "sealed": false,
       "title": "The Coupling Scales and the Bare Diffusion Constant",
       "summary": "**Derived (partial), rescoped (#263 \u24fe ruling, 2026-07-19).** What\nstands: D_0 = 1/2 from the tree geometry, the hierarchy consistency\ncheck (Part II), and theta = 0 (Part V). The five gauge-sector ratio\nrows are superseded \u2014 bare K=1 identities, not predictions at M_Z; see\nthe registry dispositions marked in Parts III and IV. The absolute\ncoupling scales reduce to one dimensionful input (the root oscillator\nfrequency), which no mathematical framework can produce.",
       "depends_on": [
-        "numerology_inventory"
+        "continuum_limits",
+        "discrete_gauge_resolution",
+        "duty_cycle_dictionary",
+        "einstein_from_kuramoto",
+        "gauge_sector_lovelock",
+        "hierarchy_gaussian_lattice",
+        "klein_bottle",
+        "numerology_inventory",
+        "planck_scale",
+        "speed_of_light",
+        "three_dimensions"
       ],
       "depended_on_by": [
         "INDEX",
         "address_and_quantity",
+        "adm_dictionary",
         "anchor_count_audit",
         "anchor_extremes_audit",
+        "derivation_atlas",
         "equivalence_dissolution",
+        "free_parameter_scorecard",
         "gap2_analytic_proof",
+        "gauge_sector_lovelock",
         "gr_qm_unification_synthesis",
         "h_inf_status",
+        "higgs_from_tongue_boundary",
         "observer_register_closure",
+        "phenomenology_cross_reference",
         "predictions_horizon_2026",
         "sector_decoupling_phase_a",
         "spatial_coupling_derived",
@@ -8648,7 +9016,47 @@
       ],
       "edges": [
         {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "discrete_gauge_resolution",
+          "kind": "grounds"
+        },
+        {
+          "target": "duty_cycle_dictionary",
+          "kind": "derives"
+        },
+        {
+          "target": "einstein_from_kuramoto",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_sector_lovelock",
+          "kind": "grounds"
+        },
+        {
+          "target": "hierarchy_gaussian_lattice",
+          "kind": "derives"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
           "target": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "derives"
+        },
+        {
+          "target": "speed_of_light",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
           "kind": "references"
         }
       ],
@@ -8662,6 +9070,10 @@
           "kind": "references"
         },
         {
+          "source": "adm_dictionary",
+          "kind": "references"
+        },
+        {
           "source": "anchor_count_audit",
           "kind": "references"
         },
@@ -8670,11 +9082,23 @@
           "kind": "references"
         },
         {
+          "source": "derivation_atlas",
+          "kind": "references"
+        },
+        {
           "source": "equivalence_dissolution",
           "kind": "references"
         },
         {
+          "source": "free_parameter_scorecard",
+          "kind": "references"
+        },
+        {
           "source": "gap2_analytic_proof",
+          "kind": "references"
+        },
+        {
+          "source": "gauge_sector_lovelock",
           "kind": "references"
         },
         {
@@ -8686,7 +9110,15 @@
           "kind": "references"
         },
         {
+          "source": "higgs_from_tongue_boundary",
+          "kind": "references"
+        },
+        {
           "source": "observer_register_closure",
+          "kind": "references"
+        },
+        {
+          "source": "phenomenology_cross_reference",
           "kind": "references"
         },
         {
@@ -8707,6 +9139,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "8c0b552",
+          "date": "2026-07-21",
+          "subject": "Retrodiction gate: fixtures + the ladder \u2014 0/6 to 4/4, gate passes (#314)"
+        },
         {
           "hash": "c9a7683",
           "date": "2026-07-20",
@@ -9198,7 +9635,14 @@
       "sealed": false,
       "title": "The Denomination Boundary",
       "summary": "The three open questions from FRAMEWORK.md \u2014",
-      "depends_on": [],
+      "depends_on": [
+        "a1_from_saddle_node",
+        "continuum_limits",
+        "farey_partition",
+        "klein_bottle",
+        "minimum_alphabet",
+        "rational_field_equation"
+      ],
       "depended_on_by": [
         "L1_substrate_cusp_ground_state",
         "canonical_glossary",
@@ -9210,7 +9654,32 @@
         "silk_damping_dissipation",
         "w_plus_formalization"
       ],
-      "edges": [],
+      "edges": [
+        {
+          "target": "a1_from_saddle_node",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "farey_partition",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "minimum_alphabet",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
+          "kind": "references"
+        }
+      ],
       "edged_by": [
         {
           "source": "L1_substrate_cusp_ground_state",
@@ -9402,6 +9871,7 @@
         "a0_threshold",
         "a1_from_saddle_node",
         "a_s_geometric_proof",
+        "address_and_quantity",
         "anchor_count_audit",
         "ansatz_audit_policy",
         "baryon_fraction",
@@ -9409,8 +9879,11 @@
         "canonical_glossary",
         "continuity_in_K_nulls",
         "continuum_limits",
+        "coupling_scales",
         "denomination_boundary",
+        "discrete_gauge_resolution",
         "down_type_double_cover_closed",
+        "gauge_sector_lovelock",
         "h_inf_status",
         "hierarchy_gaussian_lattice",
         "hierarchy_problem_translation",
@@ -9432,6 +9905,7 @@
         "primitive_completeness_audit",
         "psl2z_subgroup_phase_b",
         "q_mod2_conservation_theorem",
+        "spectral_tilt",
         "statistical_conventions",
         "three_dimensions",
         "vocabulary_is_the_work_pattern",
@@ -9467,6 +9941,10 @@
           "kind": "references"
         },
         {
+          "target": "address_and_quantity",
+          "kind": "references"
+        },
+        {
           "target": "anchor_count_audit",
           "kind": "references"
         },
@@ -9495,11 +9973,23 @@
           "kind": "references"
         },
         {
+          "target": "coupling_scales",
+          "kind": "references"
+        },
+        {
           "target": "denomination_boundary",
           "kind": "references"
         },
         {
+          "target": "discrete_gauge_resolution",
+          "kind": "references"
+        },
+        {
           "target": "down_type_double_cover_closed",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_sector_lovelock",
           "kind": "references"
         },
         {
@@ -9584,6 +10074,10 @@
         },
         {
           "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "spectral_tilt",
           "kind": "references"
         },
         {
@@ -9681,6 +10175,7 @@
       "title": "Dicke apparatus theorem \u2014 substrate-internal computation of Pauli matrix elements on Dicke states",
       "summary": "**Theorem-quality result rigorizing the T1a Dicke extension\n(`w_state_from_substrate.md`, #187).** The observation that\n\"substrate's Dicke `(N, k)` primitive + recursive Schmidt +\nconditional pair-wise apparatus reproduces W's correlations\nnumerically\" is upgraded to a theorem: *all Pauli matrix elements\non Dicke states are substrate-computable* via a finite recursion\nthat terminates in the foundational layer's single-mode Pauli\nentries.",
       "depends_on": [
+        "a0_threshold",
         "a1_from_saddle_node",
         "bell_bounds_from_substrate",
         "born_rule",
@@ -9702,6 +10197,10 @@
         "snmc_class_and_entanglement"
       ],
       "edges": [
+        {
+          "target": "a0_threshold",
+          "kind": "references"
+        },
         {
           "target": "a1_from_saddle_node",
           "kind": "references"
@@ -9789,6 +10288,7 @@
       "title": "The Discrete Extension Principle",
       "summary": "**Articulation, not new content.** The pattern has been\nmultiply instantiated (PR #152, #179, #187, #188, #189, #190);\nthis doc names it and gives it a discriminator. No new substrate\nprimitive; no new inviolable; no new physical prediction.",
       "depends_on": [
+        "a0_threshold",
         "basepoint_principle",
         "bell_bounds_from_substrate",
         "canonical_glossary",
@@ -9823,6 +10323,10 @@
         "substrate_prediction_selection"
       ],
       "edges": [
+        {
+          "target": "a0_threshold",
+          "kind": "references"
+        },
         {
           "target": "basepoint_principle",
           "kind": "references"
@@ -9961,9 +10465,16 @@
       "sealed": false,
       "title": "The Two Open Paths",
       "summary": "**Proposed.** Five computations specified. Three are immediate\n(anomaly, depth sweep, Jacobian). All have binary outcomes with\nclear interpretations. The conjectural status of D19's particle\nphysics identification resolves or falls based on these results.",
-      "depends_on": [],
+      "depends_on": [
+        "klein_bottle"
+      ],
       "depended_on_by": [],
-      "edges": [],
+      "edges": [
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        }
+      ],
       "edged_by": [],
       "git": [
         {
@@ -9985,17 +10496,39 @@
       "sealed": false,
       "title": "The Discrete Gauge Resolution",
       "summary": "**Resolved (partial).** The five D21 computations are complete.\nPath 2 (gauge from mean-field F) is closed \u2014 the self-consistency\nfunctional cannot carry gauge degrees of freedom. Path 1 (discrete\nis physical) is partially confirmed: the topology determines charges,\ncenter, and confinement, but not the gauge dynamics.",
-      "depends_on": [],
+      "depends_on": [
+        "klein_bottle",
+        "lie_group_characterization"
+      ],
       "depended_on_by": [
         "INDEX",
         "baryon_fraction",
+        "coupling_scales",
+        "derivation_atlas",
         "f2_scoping",
         "framework_status",
+        "free_parameter_scorecard",
         "gauge_high_scale_identification",
+        "gauge_sector_lovelock",
+        "gell_mann_nishijima",
+        "higgs_from_tongue_boundary",
         "klein_connection",
-        "meaning_of_two_wip"
+        "mass_sector_closure",
+        "meaning_of_two_wip",
+        "pattern_identification_discipline_candidate",
+        "phenomenology_cross_reference",
+        "surface_uniqueness_audit"
       ],
-      "edges": [],
+      "edges": [
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "lie_group_characterization",
+          "kind": "references"
+        }
+      ],
       "edged_by": [
         {
           "source": "INDEX",
@@ -10006,6 +10539,14 @@
           "kind": "grounds"
         },
         {
+          "source": "coupling_scales",
+          "kind": "grounds"
+        },
+        {
+          "source": "derivation_atlas",
+          "kind": "references"
+        },
+        {
           "source": "f2_scoping",
           "kind": "references"
         },
@@ -10014,7 +10555,23 @@
           "kind": "references"
         },
         {
+          "source": "free_parameter_scorecard",
+          "kind": "references"
+        },
+        {
           "source": "gauge_high_scale_identification",
+          "kind": "references"
+        },
+        {
+          "source": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
+          "source": "gell_mann_nishijima",
+          "kind": "references"
+        },
+        {
+          "source": "higgs_from_tongue_boundary",
           "kind": "references"
         },
         {
@@ -10022,7 +10579,23 @@
           "kind": "references"
         },
         {
+          "source": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
           "source": "meaning_of_two_wip",
+          "kind": "references"
+        },
+        {
+          "source": "pattern_identification_discipline_candidate",
+          "kind": "references"
+        },
+        {
+          "source": "phenomenology_cross_reference",
+          "kind": "references"
+        },
+        {
+          "source": "surface_uniqueness_audit",
           "kind": "references"
         }
       ],
@@ -10067,6 +10640,7 @@
         "e_cross_discrete_resolution",
         "figure_eight",
         "inflation_duration",
+        "klein_bottle",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
         "thread_chronology",
@@ -10107,6 +10681,10 @@
         },
         {
           "target": "inflation_duration",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
           "kind": "references"
         },
         {
@@ -10283,6 +10861,7 @@
       "title": "Down-type double cover \u2014 derivation summary",
       "summary": "**Class 5 / Survives.** Down-type quark factor 6 = q_2 \u00b7 q_3\nderived from S_3 acting on Z_2 \u00d7 Z_3 lattice. Orbit dimensions\n{1, 3} = {q_3-trivial, q_3-vector}; factor 6 emerges as\n|L| = q_2 \u00b7 q_3 from orbit-counting.",
       "depends_on": [
+        "born_rule",
         "boundary_weight",
         "canonical_glossary",
         "derivation_atlas",
@@ -10317,6 +10896,10 @@
         "vocabulary_is_the_work_pattern"
       ],
       "edges": [
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
         {
           "target": "boundary_weight",
           "kind": "references"
@@ -10558,7 +11141,8 @@
         "down_type_double_cover_phase_b_followup",
         "gauge_factorization",
         "hierarchy_gaussian_lattice",
-        "item12_cross_sector_ratios"
+        "item12_cross_sector_ratios",
+        "klein_bottle"
       ],
       "depended_on_by": [
         "down_type_double_cover_closed",
@@ -10585,6 +11169,10 @@
         },
         {
           "target": "item12_cross_sector_ratios",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
           "kind": "references"
         }
       ],
@@ -10813,6 +11401,7 @@
       "title": "Down-type double cover \u2014 Phase D attempt: boundary-weight self-consistency",
       "summary": "**Class 4** \u2014 needs individual audit: the closure is conditional on H1\nand H2 below (the doc's own framing \u2014 \"if false, the factor 6 is a\ncoincidence of an interior w*\"), with Halts D1/D2 as the open audit\nitems. [#263 \u24fe ruling, 2026-07-19]",
       "depends_on": [
+        "born_rule",
         "boundary_weight",
         "down_type_double_cover_phase_c",
         "horn_branch_iteration_3_step_1",
@@ -10825,6 +11414,10 @@
         "master_cascade_identity"
       ],
       "edges": [
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
         {
           "target": "boundary_weight",
           "kind": "references"
@@ -10894,6 +11487,7 @@
         "duty_dimension_proof",
         "klein_bottle",
         "numerology_inventory",
+        "rational_field_equation",
         "sinw_effective_dimension",
         "sinw_fixed_point",
         "speed_of_light",
@@ -10906,13 +11500,19 @@
         "baryon_fraction",
         "beta_from_tongues",
         "canonical_glossary",
+        "coupling_scales",
         "fermion_mass_running",
+        "gauge_sector_lovelock",
         "gluon_reframing",
+        "higgs_from_tongue_boundary",
+        "higgs_reframing",
         "hybrid_strategy_audit",
         "negative_results_ledger",
         "numerology_inventory",
         "observer_register_closure",
+        "omega_b_c5_closure",
         "omega_b_residual_phase_b",
+        "omega_b_substrate_side_audit",
         "quantum_gravity_interpolation",
         "sinw_effective_dimension",
         "thread_chronology"
@@ -10928,6 +11528,10 @@
         },
         {
           "target": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
           "kind": "references"
         },
         {
@@ -10973,12 +11577,28 @@
           "kind": "references"
         },
         {
+          "source": "coupling_scales",
+          "kind": "derives"
+        },
+        {
           "source": "fermion_mass_running",
+          "kind": "references"
+        },
+        {
+          "source": "gauge_sector_lovelock",
           "kind": "references"
         },
         {
           "source": "gluon_reframing",
           "kind": "references"
+        },
+        {
+          "source": "higgs_from_tongue_boundary",
+          "kind": "references"
+        },
+        {
+          "source": "higgs_reframing",
+          "kind": "derives"
         },
         {
           "source": "hybrid_strategy_audit",
@@ -10997,7 +11617,15 @@
           "kind": "references"
         },
         {
+          "source": "omega_b_c5_closure",
+          "kind": "references"
+        },
+        {
           "source": "omega_b_residual_phase_b",
+          "kind": "references"
+        },
+        {
+          "source": "omega_b_substrate_side_audit",
           "kind": "references"
         },
         {
@@ -11469,6 +12097,7 @@
         "discrete_reduction_computed",
         "explicit_4x4_reduction",
         "figure_eight",
+        "klein_bottle",
         "nonperturbative_phase1",
         "orthogonal_kink_interaction",
         "s_v_nlo_attempt",
@@ -11499,6 +12128,10 @@
         },
         {
           "target": "figure_eight",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
           "kind": "references"
         },
         {
@@ -11651,18 +12284,24 @@
       "summary": "The self-consistency equation N(p/q) = N_total \u00d7 g(p/q) \u00d7 w(p/q, K\u2080F[N])\non the Stern-Brocot tree, at critical coupling K = 1 in the continuum\nlimit, produces the Einstein field equations as its unique output:",
       "depends_on": [
         "PROOF_A_gravity",
-        "graviton_reframing"
+        "graviton_reframing",
+        "klein_bottle"
       ],
       "depended_on_by": [
         "INDEX",
+        "PROOF_A_gravity",
+        "adm_dictionary",
         "articulation_audit_2026-05",
         "cone_twist_substrate",
+        "coupling_scales",
         "dynamical_tool_audit",
+        "f2_scoping",
         "framework_status",
         "gap1_analytic_proof",
         "gap1_theorem",
         "gap_1_christoffel",
         "gauge_dictionary",
+        "gauge_sector_lovelock",
         "gr_qm_unification_synthesis",
         "graviton_reframing",
         "k_of_t_friedmann",
@@ -11671,13 +12310,16 @@
         "koide_form_substrate_iteration_8",
         "lesson_epr_gr_qm_unification",
         "master_cascade_identity",
+        "minkowski_signature",
         "qd_origins",
         "quantum_gravity_interpolation",
         "sine_gordon_substrate",
         "soliton_dynamics",
         "sqrt_r_n_correction",
         "thread_chronology",
-        "three_dimensions"
+        "three_dimensions",
+        "three_zeros",
+        "xor_continuum_limit"
       ],
       "edges": [
         {
@@ -11687,11 +12329,23 @@
         {
           "target": "graviton_reframing",
           "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
         }
       ],
       "edged_by": [
         {
           "source": "INDEX",
+          "kind": "references"
+        },
+        {
+          "source": "PROOF_A_gravity",
+          "kind": "references"
+        },
+        {
+          "source": "adm_dictionary",
           "kind": "references"
         },
         {
@@ -11703,7 +12357,15 @@
           "kind": "references"
         },
         {
+          "source": "coupling_scales",
+          "kind": "references"
+        },
+        {
           "source": "dynamical_tool_audit",
+          "kind": "references"
+        },
+        {
+          "source": "f2_scoping",
           "kind": "references"
         },
         {
@@ -11724,6 +12386,10 @@
         },
         {
           "source": "gauge_dictionary",
+          "kind": "references"
+        },
+        {
+          "source": "gauge_sector_lovelock",
           "kind": "references"
         },
         {
@@ -11759,6 +12425,10 @@
           "kind": "references"
         },
         {
+          "source": "minkowski_signature",
+          "kind": "references"
+        },
+        {
           "source": "qd_origins",
           "kind": "references"
         },
@@ -11784,6 +12454,14 @@
         },
         {
           "source": "three_dimensions",
+          "kind": "references"
+        },
+        {
+          "source": "three_zeros",
+          "kind": "references"
+        },
+        {
+          "source": "xor_continuum_limit",
           "kind": "references"
         }
       ],
@@ -11930,12 +12608,34 @@
       "sealed": false,
       "title": "Engineering Targets",
       "summary": "**Proposed.** All four targets are specified in terms of established\nresults (D18-D19 simulations). None depend on the conjectural particle\nphysics identification. The N=3 M\u00f6bius ring is immediately buildable.",
-      "depends_on": [],
+      "depends_on": [
+        "address_and_quantity",
+        "klein_bottle",
+        "minimum_alphabet",
+        "mobius_container"
+      ],
       "depended_on_by": [
         "f2_fm_beat_results",
         "f2_scoping"
       ],
-      "edges": [],
+      "edges": [
+        {
+          "target": "address_and_quantity",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "minimum_alphabet",
+          "kind": "references"
+        },
+        {
+          "target": "mobius_container",
+          "kind": "references"
+        }
+      ],
       "edged_by": [
         {
           "source": "f2_fm_beat_results",
@@ -12543,6 +13243,7 @@
         "f_exit_natural",
         "figure_eight",
         "inflation_duration",
+        "klein_bottle",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
         "sine_gordon_substrate",
@@ -12577,6 +13278,10 @@
         },
         {
           "target": "inflation_duration",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
           "kind": "references"
         },
         {
@@ -12635,7 +13340,11 @@
       "title": "Why the Exponent Is q\u2082q\u2083\u00b3",
       "summary": "**Class 5 / Survives.** The exponent q\u2082q\u2083^d = 54 of R = 6\u00b713\u2075\u2074 is\nstructural (mode counting, no fitted factors); the hierarchy result\nis a `numerology_inventory.md` \u00a7Class 5 item. (Machine-readable tag,\nissue #263 \u24fe.)",
       "depends_on": [
-        "numerology_inventory"
+        "farey_partition",
+        "hierarchy_gaussian_lattice",
+        "klein_bottle",
+        "numerology_inventory",
+        "three_dimensions"
       ],
       "depended_on_by": [
         "INDEX",
@@ -12643,7 +13352,23 @@
       ],
       "edges": [
         {
+          "target": "farey_partition",
+          "kind": "references"
+        },
+        {
+          "target": "hierarchy_gaussian_lattice",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
           "target": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
           "kind": "references"
         }
       ],
@@ -12692,6 +13417,7 @@
         "comparison_class",
         "cone_twist_substrate",
         "medium_change_demo",
+        "minimum_alphabet",
         "unitless_check"
       ],
       "depended_on_by": [
@@ -12719,6 +13445,10 @@
         },
         {
           "target": "medium_change_demo",
+          "kind": "references"
+        },
+        {
+          "target": "minimum_alphabet",
           "kind": "references"
         },
         {
@@ -12852,6 +13582,7 @@
         "figure_eight",
         "framework_status",
         "gauge_factorization",
+        "klein_bottle",
         "rational_field_equation",
         "xor_continuum_limit",
         "xor_derivation"
@@ -12893,6 +13624,10 @@
           "kind": "references"
         },
         {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
           "target": "rational_field_equation",
           "kind": "references"
         },
@@ -12931,14 +13666,18 @@
         "basepoint_principle",
         "continuum_limits",
         "discrete_gauge_resolution",
+        "einstein_from_kuramoto",
         "engineering_targets",
         "f2_fm_beat_results",
         "f2_possibility_b_jacobian",
         "framework_status",
         "gauge_factorization",
+        "gauge_sector_lovelock",
         "klein_bottle",
         "klein_bottle_derivation",
+        "mobius_container",
         "rational_field_equation",
+        "variable_denominator",
         "xor_continuum_limit"
       ],
       "depended_on_by": [
@@ -12963,6 +13702,10 @@
           "kind": "references"
         },
         {
+          "target": "einstein_from_kuramoto",
+          "kind": "references"
+        },
+        {
           "target": "engineering_targets",
           "kind": "references"
         },
@@ -12983,6 +13726,10 @@
           "kind": "references"
         },
         {
+          "target": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
           "target": "klein_bottle",
           "kind": "references"
         },
@@ -12991,7 +13738,15 @@
           "kind": "references"
         },
         {
+          "target": "mobius_container",
+          "kind": "references"
+        },
+        {
           "target": "rational_field_equation",
+          "kind": "references"
+        },
+        {
+          "target": "variable_denominator",
           "kind": "references"
         },
         {
@@ -13144,6 +13899,7 @@
       "summary": "**Class 5 / Survives.** \u03a9_\u039b = 13/19 is counted, not fitted;\n`numerology_inventory.md` \u00a7Class 5 lists this partition as explicitly\nNOT numerology (structural). (Machine-readable tag, issue #263 \u24fe.)",
       "depends_on": [
         "L1_substrate_cusp_ground_state",
+        "klein_bottle",
         "numerology_inventory",
         "omega_b_alpha_beta_closure",
         "omega_partition_combinatorial"
@@ -13154,13 +13910,22 @@
         "algebraic_forcing_partition",
         "audit_punch_list_2026-04",
         "baryon_fraction",
+        "boundary_weight",
         "canonical_glossary",
+        "cosmological_cycle",
+        "denomination_boundary",
+        "exponent",
         "farey_proof",
+        "figure_eight",
         "framework_status",
         "free_parameter_scorecard",
+        "generation_mechanism",
+        "hierarchy",
         "high_school_syllabus",
         "koide_form_substrate_iteration_8",
         "lesson_8_35_vs_13_19",
+        "mass_sector_closure",
+        "mediant_derivation",
         "numerology_inventory",
         "omega_partition_combinatorial",
         "predictions_horizon_2026",
@@ -13172,6 +13937,10 @@
       "edges": [
         {
           "target": "L1_substrate_cusp_ground_state",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
           "kind": "references"
         },
         {
@@ -13209,11 +13978,31 @@
           "kind": "derives"
         },
         {
+          "source": "boundary_weight",
+          "kind": "references"
+        },
+        {
           "source": "canonical_glossary",
           "kind": "references"
         },
         {
+          "source": "cosmological_cycle",
+          "kind": "references"
+        },
+        {
+          "source": "denomination_boundary",
+          "kind": "references"
+        },
+        {
+          "source": "exponent",
+          "kind": "references"
+        },
+        {
           "source": "farey_proof",
+          "kind": "references"
+        },
+        {
+          "source": "figure_eight",
           "kind": "references"
         },
         {
@@ -13222,6 +14011,14 @@
         },
         {
           "source": "free_parameter_scorecard",
+          "kind": "references"
+        },
+        {
+          "source": "generation_mechanism",
+          "kind": "references"
+        },
+        {
+          "source": "hierarchy",
           "kind": "references"
         },
         {
@@ -13234,6 +14031,14 @@
         },
         {
           "source": "lesson_8_35_vs_13_19",
+          "kind": "references"
+        },
+        {
+          "source": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "source": "mediant_derivation",
           "kind": "references"
         },
         {
@@ -13317,7 +14122,11 @@
       "summary": "**Class 5 / Survives.** Uniqueness proof of \u03a9_\u039b = 13/19 (0.07\u03c3); the\n\u03a9-partition is a `numerology_inventory.md` \u00a7Class 5 item (structural,\ncounted not fitted \u2014 sibling of `farey_partition.md`).\n(Machine-readable tag, issue #263 \u24fe.)",
       "depends_on": [
         "farey_partition",
-        "numerology_inventory"
+        "klein_bottle",
+        "minimum_alphabet",
+        "numerology_inventory",
+        "rational_field_equation",
+        "three_dimensions"
       ],
       "depended_on_by": [
         "q_mod2_mediant_projection"
@@ -13328,7 +14137,23 @@
           "kind": "references"
         },
         {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "minimum_alphabet",
+          "kind": "references"
+        },
+        {
           "target": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
           "kind": "references"
         }
       ],
@@ -13381,7 +14206,9 @@
         "gell_mann_nishijima",
         "generation_mechanism",
         "higgs_from_tongue_boundary",
+        "klein_bottle",
         "numerology_inventory",
+        "spectral_tilt",
         "three_dimensions"
       ],
       "depended_on_by": [
@@ -13428,7 +14255,15 @@
           "kind": "references"
         },
         {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
           "target": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "target": "spectral_tilt",
           "kind": "references"
         },
         {
@@ -13600,12 +14435,19 @@
       "depends_on": [
         "PROOF_A_gravity",
         "PROOF_B_quantum",
+        "address_and_quantity",
+        "conservation_computability",
+        "farey_partition",
         "figure_eight_necessitation_audit",
         "framework_status",
         "klein_bottle",
         "klein_bottle_derivation",
+        "minkowski_signature",
         "numerology_inventory",
-        "sine_gordon_substrate"
+        "omega_partition_combinatorial",
+        "rational_field_equation",
+        "sine_gordon_substrate",
+        "speed_of_light"
       ],
       "depended_on_by": [
         "articulation_audit_2026-05",
@@ -13652,6 +14494,18 @@
           "kind": "references"
         },
         {
+          "target": "address_and_quantity",
+          "kind": "references"
+        },
+        {
+          "target": "conservation_computability",
+          "kind": "references"
+        },
+        {
+          "target": "farey_partition",
+          "kind": "references"
+        },
+        {
           "target": "figure_eight_necessitation_audit",
           "kind": "references"
         },
@@ -13668,11 +14522,27 @@
           "kind": "references"
         },
         {
+          "target": "minkowski_signature",
+          "kind": "references"
+        },
+        {
           "target": "numerology_inventory",
           "kind": "references"
         },
         {
+          "target": "omega_partition_combinatorial",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
+          "kind": "references"
+        },
+        {
           "target": "sine_gordon_substrate",
+          "kind": "references"
+        },
+        {
+          "target": "speed_of_light",
           "kind": "references"
         }
       ],
@@ -15172,9 +16042,12 @@
         "anchor_count_reaudit",
         "bicone_golden_z2_identification",
         "born_rule",
+        "coupling_scales",
+        "discrete_gauge_resolution",
         "farey_partition",
         "fermion_mass_running",
         "framework_status",
+        "gauge_sector_lovelock",
         "generation_mechanism",
         "k_of_t_residual_disposition",
         "klein_bottle",
@@ -15214,6 +16087,14 @@
           "kind": "references"
         },
         {
+          "target": "coupling_scales",
+          "kind": "references"
+        },
+        {
+          "target": "discrete_gauge_resolution",
+          "kind": "references"
+        },
+        {
           "target": "farey_partition",
           "kind": "references"
         },
@@ -15223,6 +16104,10 @@
         },
         {
           "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_sector_lovelock",
           "kind": "references"
         },
         {
@@ -16239,6 +17124,7 @@
       "summary": "Let P \u2192 K\u00b2 be a principal G-bundle whose structure group G has a\nLie algebra g that acts on mode fibers compatibly with the Klein\nbottle's topological coordinate decomposition. Then g admits a\ndirect-sum decomposition",
       "depends_on": [
         "gauge_sector_lovelock",
+        "gell_mann_nishijima",
         "klein_bottle",
         "klein_bottle_derivation",
         "xor_derivation"
@@ -16260,6 +17146,10 @@
       "edges": [
         {
           "target": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
+          "target": "gell_mann_nishijima",
           "kind": "references"
         },
         {
@@ -16444,7 +17334,20 @@
       "title": "Yang-Mills from the Klein Bottle (Gauge-Sector Lovelock)",
       "summary": "The Klein bottle's kinematic constraints \u2014 structure group center,\nspacetime dimension, signature, and confinement pattern \u2014 together\nwith the requirement of second-order gauge-invariant dynamics,\nuniquely produce the Yang-Mills equations:",
       "depends_on": [
-        "sinw_fixed_point"
+        "continuum_limits",
+        "coupling_scales",
+        "discrete_gauge_resolution",
+        "duty_cycle_dictionary",
+        "einstein_from_kuramoto",
+        "gell_mann_nishijima",
+        "hierarchy_gaussian_lattice",
+        "higgs_from_tongue_boundary",
+        "klein_bottle",
+        "minimum_alphabet",
+        "minkowski_signature",
+        "rational_field_equation",
+        "sinw_fixed_point",
+        "three_dimensions"
       ],
       "depended_on_by": [
         "INDEX",
@@ -16452,17 +17355,24 @@
         "baryon_fraction",
         "basepoint_principle",
         "beta_from_tongues",
+        "coupling_scales",
+        "derivation_atlas",
+        "f2_scoping",
         "fermion_mass_running",
         "figure_eight_necessitation_audit",
         "framework_status",
+        "free_parameter_scorecard",
         "gauge_dictionary",
         "gauge_factorization",
         "gauge_high_scale_identification",
+        "gell_mann_nishijima",
+        "higgs_from_tongue_boundary",
         "klein_bottle_restructure_price",
         "klein_connection",
         "koide_form_substrate_iteration_6",
         "mass_sector_closure",
         "pattern_identification_discipline_candidate",
+        "phenomenology_cross_reference",
         "sinw_effective_dimension",
         "surface_uniqueness_audit",
         "torus_branch_iteration_1",
@@ -16473,7 +17383,59 @@
       ],
       "edges": [
         {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "coupling_scales",
+          "kind": "references"
+        },
+        {
+          "target": "discrete_gauge_resolution",
+          "kind": "references"
+        },
+        {
+          "target": "duty_cycle_dictionary",
+          "kind": "references"
+        },
+        {
+          "target": "einstein_from_kuramoto",
+          "kind": "references"
+        },
+        {
+          "target": "gell_mann_nishijima",
+          "kind": "references"
+        },
+        {
+          "target": "hierarchy_gaussian_lattice",
+          "kind": "references"
+        },
+        {
+          "target": "higgs_from_tongue_boundary",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "minimum_alphabet",
+          "kind": "references"
+        },
+        {
+          "target": "minkowski_signature",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
+          "kind": "references"
+        },
+        {
           "target": "sinw_fixed_point",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
           "kind": "references"
         }
       ],
@@ -16499,6 +17461,18 @@
           "kind": "references"
         },
         {
+          "source": "coupling_scales",
+          "kind": "grounds"
+        },
+        {
+          "source": "derivation_atlas",
+          "kind": "references"
+        },
+        {
+          "source": "f2_scoping",
+          "kind": "references"
+        },
+        {
           "source": "fermion_mass_running",
           "kind": "references"
         },
@@ -16511,6 +17485,10 @@
           "kind": "references"
         },
         {
+          "source": "free_parameter_scorecard",
+          "kind": "references"
+        },
+        {
           "source": "gauge_dictionary",
           "kind": "references"
         },
@@ -16520,6 +17498,14 @@
         },
         {
           "source": "gauge_high_scale_identification",
+          "kind": "references"
+        },
+        {
+          "source": "gell_mann_nishijima",
+          "kind": "references"
+        },
+        {
+          "source": "higgs_from_tongue_boundary",
           "kind": "references"
         },
         {
@@ -16540,6 +17526,10 @@
         },
         {
           "source": "pattern_identification_discipline_candidate",
+          "kind": "references"
+        },
+        {
+          "source": "phenomenology_cross_reference",
           "kind": "references"
         },
         {
@@ -16617,6 +17607,8 @@
       "title": "The Gell-Mann-Nishijima Relation from Klein Bottle Geometry",
       "summary": "The relation Q = T_3 + Y/2 between electric charge Q, weak isospin\nT_3, and hypercharge Y is not a postulate. It is the charge\ncomposition law at the Klein bottle's identification boundary, where\nthe antiperiodic (twisted) and periodic (untwisted) directions meet.",
       "depends_on": [
+        "discrete_gauge_resolution",
+        "gauge_sector_lovelock",
         "klein_bottle",
         "sine_gordon_substrate",
         "xor_derivation"
@@ -16628,7 +17620,11 @@
         "beta_from_tongues",
         "fermion_mass_running",
         "fourth_generation_revisited",
+        "gauge_factorization",
         "gauge_high_scale_identification",
+        "gauge_sector_lovelock",
+        "higgs_from_tongue_boundary",
+        "klein_connection",
         "mass_sector_closure",
         "omega_partition_combinatorial",
         "sector_constants_structure",
@@ -16636,6 +17632,14 @@
         "vocabulary_bridge_iteration_2_step_2"
       ],
       "edges": [
+        {
+          "target": "discrete_gauge_resolution",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_sector_lovelock",
+          "kind": "references"
+        },
         {
           "target": "klein_bottle",
           "kind": "references"
@@ -16675,7 +17679,23 @@
           "kind": "references"
         },
         {
+          "source": "gauge_factorization",
+          "kind": "references"
+        },
+        {
           "source": "gauge_high_scale_identification",
+          "kind": "references"
+        },
+        {
+          "source": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
+          "source": "higgs_from_tongue_boundary",
+          "kind": "references"
+        },
+        {
+          "source": "klein_connection",
           "kind": "references"
         },
         {
@@ -16737,10 +17757,15 @@
       "depends_on": [
         "PROOF_A_gravity",
         "PROOF_B_quantum",
+        "farey_partition",
         "fermion_mass_running",
         "free_parameter_scorecard",
+        "hierarchy_gaussian_lattice",
         "klein_bottle",
-        "numerology_inventory"
+        "minkowski_signature",
+        "numerology_inventory",
+        "speed_of_light",
+        "three_dimensions"
       ],
       "depended_on_by": [
         "INDEX",
@@ -16785,6 +17810,10 @@
           "kind": "references"
         },
         {
+          "target": "farey_partition",
+          "kind": "references"
+        },
+        {
           "target": "fermion_mass_running",
           "kind": "references"
         },
@@ -16793,11 +17822,27 @@
           "kind": "references"
         },
         {
+          "target": "hierarchy_gaussian_lattice",
+          "kind": "references"
+        },
+        {
           "target": "klein_bottle",
           "kind": "references"
         },
         {
+          "target": "minkowski_signature",
+          "kind": "references"
+        },
+        {
           "target": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "target": "speed_of_light",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
           "kind": "references"
         }
       ],
@@ -16966,6 +18011,7 @@
         "klein_bottle",
         "klein_z2_decomposition_falsifier_2",
         "mass_sector_closure",
+        "minkowski_signature",
         "planck_scale",
         "primitives_vs_addresses_candidate",
         "q_mod2_planck_emergence_audit",
@@ -17031,6 +18077,10 @@
         },
         {
           "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "minkowski_signature",
           "kind": "references"
         },
         {
@@ -17748,9 +18798,21 @@
       "sealed": false,
       "title": "The Half-Mobius Boundary Condition (Z4)",
       "summary": "The Mobius boundary condition (Derivation 18) imposes a Z2 twist:\nafter one traversal, the phase shifts by pi. The half-Mobius boundary\ncondition generalizes this to Z4: after one traversal, the phase\nshifts by pi/2. The wavefunction requires four full circuits to\nreturn to its starting phase.",
-      "depends_on": [],
+      "depends_on": [
+        "klein_bottle",
+        "mobius_container"
+      ],
       "depended_on_by": [],
-      "edges": [],
+      "edges": [
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "mobius_container",
+          "kind": "references"
+        }
+      ],
       "edged_by": [],
       "git": [
         {
@@ -17772,7 +18834,9 @@
       "sealed": false,
       "title": "The Half-Twist as a Dynamical Object",
       "summary": "**Exploratory.** The twist-as-frustrated-tension picture is physically\nclear. The conjugacy with diffusion (\u03c9 \u00d7 \u03c3\u00b2 = const) connects the\ntwist to the quantum sector through the same \u03c6\u2074 scaling. The\ncosmological constant as regulated twist zero-point energy is\nstructurally correct (\u039b \u221d \u03a9_\u039b \u00d7 H\u2080\u00b2) but needs the full field\nequation calculation to produce the exact coefficient.",
-      "depends_on": [],
+      "depends_on": [
+        "hierarchy_gaussian_lattice"
+      ],
       "depended_on_by": [
         "cone_twist_substrate",
         "gap2_theorem_attempt",
@@ -17783,7 +18847,12 @@
         "unitless_audit",
         "wave_particle_substrate"
       ],
-      "edges": [],
+      "edges": [
+        {
+          "target": "hierarchy_gaussian_lattice",
+          "kind": "references"
+        }
+      ],
       "edged_by": [
         {
           "source": "cone_twist_substrate",
@@ -18223,14 +19292,29 @@
       "title": "The Hierarchy",
       "summary": "**Class 5 / Survives.** R = 6\u00b713\u2075\u2074 and \u039bl_P\u00b2 = 13\u207b\u00b9\u2070\u2078/12 are\nstructural cell-counting results, listed under\n`numerology_inventory.md` \u00a7Class 5 (NOT numerology). The\nexponent-derivation step is noted open below. (Machine-readable tag,\nissue #263 \u24fe.)",
       "depends_on": [
-        "numerology_inventory"
+        "farey_partition",
+        "klein_bottle",
+        "numerology_inventory",
+        "three_dimensions"
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY"
       ],
       "edges": [
         {
+          "target": "farey_partition",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
           "target": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
           "kind": "references"
         }
       ],
@@ -18288,7 +19372,9 @@
         "INDEX",
         "anchor_count_audit",
         "anchor_extremes_audit",
+        "boundary_weight",
         "canonical_glossary",
+        "coupling_scales",
         "depth_connection_nulls",
         "derivation_atlas",
         "down_type_double_cover_closed",
@@ -18296,12 +19382,17 @@
         "down_type_double_cover_phase_b",
         "dynamical_tool_audit",
         "epsilon_substrate_decomposition",
+        "exponent",
         "framework_status",
         "gap2_spatialization_decomposition",
         "gap2_sub_e_status_reconciled",
+        "gauge_sector_lovelock",
+        "generation_mechanism",
         "h_inf_status",
+        "half_twist_dynamics",
         "k_of_t_friedmann",
         "lesson_cosmological_constant",
+        "mass_sector_closure",
         "neutrino_mass_audit",
         "numerology_inventory",
         "observer_register_closure",
@@ -18381,8 +19472,16 @@
           "kind": "references"
         },
         {
+          "source": "boundary_weight",
+          "kind": "references"
+        },
+        {
           "source": "canonical_glossary",
           "kind": "references"
+        },
+        {
+          "source": "coupling_scales",
+          "kind": "derives"
         },
         {
           "source": "depth_connection_nulls",
@@ -18413,6 +19512,10 @@
           "kind": "references"
         },
         {
+          "source": "exponent",
+          "kind": "references"
+        },
+        {
           "source": "framework_status",
           "kind": "references"
         },
@@ -18425,7 +19528,19 @@
           "kind": "references"
         },
         {
+          "source": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
+          "source": "generation_mechanism",
+          "kind": "references"
+        },
+        {
           "source": "h_inf_status",
+          "kind": "references"
+        },
+        {
+          "source": "half_twist_dynamics",
           "kind": "references"
         },
         {
@@ -18434,6 +19549,10 @@
         },
         {
           "source": "lesson_cosmological_constant",
+          "kind": "references"
+        },
+        {
+          "source": "mass_sector_closure",
           "kind": "references"
         },
         {
@@ -18668,10 +19787,21 @@
       "summary": "The Higgs mechanism \u2014 the spontaneous breaking of SU(2) x U(1)_Y\nto U(1)_em \u2014 is the tongue boundary dynamics of the Klein bottle's\nopen q=2 fiber. The scalar doublet, the quartic potential, the\ntachyonic mass, and the vacuum expectation value all have geometric\norigins in the circle map's saddle-node bifurcation.",
       "depends_on": [
         "FRAMEWORK_TOPOLOGY",
+        "address_and_quantity",
+        "born_rule",
+        "continuum_limits",
+        "coupling_scales",
+        "discrete_gauge_resolution",
+        "duty_cycle_dictionary",
         "framework_status",
+        "gauge_sector_lovelock",
+        "gell_mann_nishijima",
+        "klein_bottle",
+        "minimum_alphabet",
         "neutrino_mass_audit",
         "numerology_inventory",
-        "rationality_descent"
+        "rationality_descent",
+        "three_dimensions"
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
@@ -18682,6 +19812,7 @@
         "dynamical_tool_audit",
         "fermion_mass_running",
         "fm_beat_crt_correspondence_audit",
+        "gauge_sector_lovelock",
         "third_twist_meta_structure_audit"
       ],
       "edges": [
@@ -18690,7 +19821,47 @@
           "kind": "references"
         },
         {
+          "target": "address_and_quantity",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "coupling_scales",
+          "kind": "references"
+        },
+        {
+          "target": "discrete_gauge_resolution",
+          "kind": "references"
+        },
+        {
+          "target": "duty_cycle_dictionary",
+          "kind": "references"
+        },
+        {
           "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
+          "target": "gell_mann_nishijima",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "minimum_alphabet",
           "kind": "references"
         },
         {
@@ -18703,6 +19874,10 @@
         },
         {
           "target": "rationality_descent",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
           "kind": "references"
         }
       ],
@@ -18737,6 +19912,10 @@
         },
         {
           "source": "fm_beat_crt_correspondence_audit",
+          "kind": "references"
+        },
+        {
+          "source": "gauge_sector_lovelock",
           "kind": "references"
         },
         {
@@ -18785,11 +19964,12 @@
     {
       "id": "higgs_reframing",
       "path": "sync_cost/derivations/higgs_reframing.md",
-      "cid": "f571cf091f2897d05e5fa45bc520a6ec0fcff95d5d81fe17fae36b26ac11d11b",
+      "cid": "e0acd0587cfb34d0fa73a0227621295b385f80dde31f682fef85dd092cbce8fe",
       "sealed": true,
       "title": "The Higgs' Role in the Framework: A Reframing",
       "summary": "**Class 3** \u2014 suspect by association: the two quantitative claims this\nreframing carries (`m_H = v/q_2`, `\u03bb = 1/q_2\u00b3`) are registry Class 3\nbare K=1 identities, declined as predictions at M_Z (`MANIFEST.yml`\n`bare_k1_identities`; `numerology_inventory.md`). The prose reframing\nitself carries no class. [#263 \u24fe ruling, 2026-07-19]",
       "depends_on": [
+        "duty_cycle_dictionary",
         "numerology_inventory"
       ],
       "depended_on_by": [
@@ -18799,6 +19979,10 @@
         "thread_chronology"
       ],
       "edges": [
+        {
+          "target": "duty_cycle_dictionary",
+          "kind": "derives"
+        },
         {
           "target": "numerology_inventory",
           "kind": "references"
@@ -18823,6 +20007,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "8c0b552",
+          "date": "2026-07-21",
+          "subject": "Retrodiction gate: fixtures + the ladder \u2014 0/6 to 4/4, gate passes (#314)"
+        },
         {
           "hash": "c9a7683",
           "date": "2026-07-20",
@@ -20448,7 +21637,8 @@
         "numerology_inventory",
         "omega_b_alpha_beta_closure",
         "omega_partition_combinatorial",
-        "path_closures_iter4"
+        "path_closures_iter4",
+        "three_dimensions"
       ],
       "depended_on_by": [
         "continuity_in_K_nulls",
@@ -20527,6 +21717,10 @@
         },
         {
           "target": "path_closures_iter4",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
           "kind": "references"
         }
       ],
@@ -21137,14 +22331,31 @@
         "complex_amplitude_uniqueness",
         "cone_twist_substrate",
         "conservation_scale_stratification_audit",
+        "continuum_limits",
+        "cosmological_cycle",
+        "coupling_scales",
         "cyclotomic_content_mass_ratios_audit",
         "dark_twin_correction",
+        "denomination_boundary",
+        "discrete_gauge",
+        "discrete_gauge_resolution",
+        "discrete_reduction_computed",
         "discrete_reduction_problem",
+        "down_type_double_cover_phase_b",
         "duty_cycle_dictionary",
         "dynamical_tool_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
+        "e_cross_calc",
+        "einstein_from_kuramoto",
+        "engineering_targets",
         "epr_bell_assembly_theorem",
+        "explicit_4x4_reduction",
+        "exponent",
+        "f2_possibility_b_jacobian",
         "f2_scoping",
+        "farey_partition",
+        "farey_proof",
+        "fermion_mass_running",
         "figure_eight",
         "figure_eight_necessitation_audit",
         "framework_status",
@@ -21153,12 +22364,16 @@
         "gauge_dictionary",
         "gauge_factorization",
         "gauge_high_scale_identification",
+        "gauge_sector_lovelock",
         "gell_mann_nishijima",
         "generation_mechanism",
         "generation_sector_count_audit",
         "h0_tension_cross_cell_identity_audit",
+        "half_mobius_boundary",
         "half_twist_identity_signature_audit",
         "half_twist_meta_structure_audit",
+        "hierarchy",
+        "higgs_from_tongue_boundary",
         "horn_branch_iteration_1",
         "horn_branch_iteration_2_step_1",
         "horn_branch_iteration_2_step_2",
@@ -21185,8 +22400,12 @@
         "koide_form_substrate_iteration_8",
         "koide_form_substrate_iteration_9",
         "mediant_derivation",
+        "minkowski_signature",
         "modular_form_behavior_cosmological_tongues_audit",
+        "nonperturbative_phase1",
+        "nonperturbative_phase2",
         "numerology_inventory",
+        "orthogonal_kink_interaction",
         "primes_denominators_circular_geometry_extension_audit",
         "primitives_vs_addresses_candidate",
         "psl2z_noncommutative_core_structural_identity_audit",
@@ -21323,6 +22542,18 @@
           "kind": "references"
         },
         {
+          "source": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "source": "cosmological_cycle",
+          "kind": "references"
+        },
+        {
+          "source": "coupling_scales",
+          "kind": "references"
+        },
+        {
           "source": "cyclotomic_content_mass_ratios_audit",
           "kind": "references"
         },
@@ -21331,7 +22562,27 @@
           "kind": "references"
         },
         {
+          "source": "denomination_boundary",
+          "kind": "references"
+        },
+        {
+          "source": "discrete_gauge",
+          "kind": "references"
+        },
+        {
+          "source": "discrete_gauge_resolution",
+          "kind": "references"
+        },
+        {
+          "source": "discrete_reduction_computed",
+          "kind": "references"
+        },
+        {
           "source": "discrete_reduction_problem",
+          "kind": "references"
+        },
+        {
+          "source": "down_type_double_cover_phase_b",
           "kind": "references"
         },
         {
@@ -21347,11 +22598,47 @@
           "kind": "references"
         },
         {
+          "source": "e_cross_calc",
+          "kind": "references"
+        },
+        {
+          "source": "einstein_from_kuramoto",
+          "kind": "references"
+        },
+        {
+          "source": "engineering_targets",
+          "kind": "references"
+        },
+        {
           "source": "epr_bell_assembly_theorem",
           "kind": "references"
         },
         {
+          "source": "explicit_4x4_reduction",
+          "kind": "references"
+        },
+        {
+          "source": "exponent",
+          "kind": "references"
+        },
+        {
+          "source": "f2_possibility_b_jacobian",
+          "kind": "references"
+        },
+        {
           "source": "f2_scoping",
+          "kind": "references"
+        },
+        {
+          "source": "farey_partition",
+          "kind": "references"
+        },
+        {
+          "source": "farey_proof",
+          "kind": "references"
+        },
+        {
+          "source": "fermion_mass_running",
           "kind": "references"
         },
         {
@@ -21387,6 +22674,10 @@
           "kind": "references"
         },
         {
+          "source": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
           "source": "gell_mann_nishijima",
           "kind": "references"
         },
@@ -21403,11 +22694,23 @@
           "kind": "references"
         },
         {
+          "source": "half_mobius_boundary",
+          "kind": "references"
+        },
+        {
           "source": "half_twist_identity_signature_audit",
           "kind": "references"
         },
         {
           "source": "half_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
+          "source": "hierarchy",
+          "kind": "references"
+        },
+        {
+          "source": "higgs_from_tongue_boundary",
           "kind": "references"
         },
         {
@@ -21515,11 +22818,27 @@
           "kind": "derives"
         },
         {
+          "source": "minkowski_signature",
+          "kind": "references"
+        },
+        {
           "source": "modular_form_behavior_cosmological_tongues_audit",
           "kind": "references"
         },
         {
+          "source": "nonperturbative_phase1",
+          "kind": "references"
+        },
+        {
+          "source": "nonperturbative_phase2",
+          "kind": "references"
+        },
+        {
           "source": "numerology_inventory",
+          "kind": "references"
+        },
+        {
+          "source": "orthogonal_kink_interaction",
           "kind": "references"
         },
         {
@@ -21681,9 +23000,11 @@
       "summary": "The Klein bottle is not assumed. It is the unique compact surface\ncompatible with the four primitives, the phase-state structure, and\nthe arrow of time. The torus and real projective plane are both\nexcluded by self-consistency arguments.",
       "depends_on": [
         "klein_bottle",
+        "mediant_derivation",
         "minimum_alphabet",
         "minkowski_signature",
         "rank1_temporal_causation",
+        "rational_field_equation",
         "rectangle_perpendicularity",
         "sine_gordon_substrate",
         "three_dimensions",
@@ -21729,6 +23050,10 @@
           "kind": "references"
         },
         {
+          "target": "mediant_derivation",
+          "kind": "references"
+        },
+        {
           "target": "minimum_alphabet",
           "kind": "references"
         },
@@ -21738,6 +23063,10 @@
         },
         {
           "target": "rank1_temporal_causation",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
           "kind": "references"
         },
         {
@@ -22248,6 +23577,7 @@
         "einstein_from_kuramoto",
         "gauge_factorization",
         "gauge_sector_lovelock",
+        "gell_mann_nishijima",
         "klein_bottle",
         "sinw_fixed_point",
         "xor_continuum_limit"
@@ -22278,6 +23608,10 @@
         },
         {
           "target": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
+          "target": "gell_mann_nishijima",
           "kind": "references"
         },
         {
@@ -24473,13 +25807,16 @@
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
+        "PROOF_A_gravity",
         "canonical_glossary",
         "cross_ratio_irrep_reframe",
         "derivation_atlas",
+        "discrete_gauge_resolution",
         "dynamical_quantization",
         "isotropy_lemma",
         "klein_bottle",
         "omega_b_w_plus_cross_ratio_search",
+        "phenomenology_cross_reference",
         "primitive_completeness_audit",
         "psl2z_subgroup_identification_phase_a",
         "psl2z_subgroup_phase_a_results"
@@ -24495,6 +25832,10 @@
           "kind": "references"
         },
         {
+          "source": "PROOF_A_gravity",
+          "kind": "references"
+        },
+        {
           "source": "canonical_glossary",
           "kind": "references"
         },
@@ -24504,6 +25845,10 @@
         },
         {
           "source": "derivation_atlas",
+          "kind": "references"
+        },
+        {
+          "source": "discrete_gauge_resolution",
           "kind": "references"
         },
         {
@@ -24520,6 +25865,10 @@
         },
         {
           "source": "omega_b_w_plus_cross_ratio_search",
+          "kind": "references"
+        },
+        {
+          "source": "phenomenology_cross_reference",
           "kind": "references"
         },
         {
@@ -24758,8 +26107,11 @@
       "title": "The Mass Sector Closure: Integer Conservation and Gauge Adjoints",
       "summary": "The integer conservation law governing fermion mass hierarchies:",
       "depends_on": [
+        "discrete_gauge_resolution",
+        "farey_partition",
         "gauge_sector_lovelock",
-        "gell_mann_nishijima"
+        "gell_mann_nishijima",
+        "hierarchy_gaussian_lattice"
       ],
       "depended_on_by": [
         "CHAIN_KSTAR",
@@ -24822,11 +26174,23 @@
       ],
       "edges": [
         {
+          "target": "discrete_gauge_resolution",
+          "kind": "references"
+        },
+        {
+          "target": "farey_partition",
+          "kind": "references"
+        },
+        {
           "target": "gauge_sector_lovelock",
           "kind": "references"
         },
         {
           "target": "gell_mann_nishijima",
+          "kind": "references"
+        },
+        {
+          "target": "hierarchy_gaussian_lattice",
           "kind": "references"
         }
       ],
@@ -25530,18 +26894,25 @@
         "PROOF_A_gravity",
         "PROOF_B_quantum",
         "empty_fork_cap",
+        "farey_partition",
         "klein_bottle",
-        "minimum_alphabet"
+        "minimum_alphabet",
+        "mobius_container",
+        "omega_partition_combinatorial",
+        "rational_field_equation"
       ],
       "depended_on_by": [
         "INDEX",
         "L1_substrate_cusp_ground_state",
+        "PROOF_A_gravity",
+        "PROOF_B_quantum",
         "canonical_glossary",
         "derivation_atlas",
         "dynamical_quantization",
         "dynamical_tool_audit",
         "empty_fork_cap",
         "high_school_syllabus",
+        "klein_bottle_derivation",
         "lesson_proslambanomenos",
         "primitive_completeness_audit",
         "psl2z_subgroup_phase_b",
@@ -25562,12 +26933,28 @@
           "kind": "grounds"
         },
         {
+          "target": "farey_partition",
+          "kind": "references"
+        },
+        {
           "target": "klein_bottle",
           "kind": "derives"
         },
         {
           "target": "minimum_alphabet",
           "kind": "grounds"
+        },
+        {
+          "target": "mobius_container",
+          "kind": "references"
+        },
+        {
+          "target": "omega_partition_combinatorial",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
+          "kind": "references"
         }
       ],
       "edged_by": [
@@ -25577,6 +26964,14 @@
         },
         {
           "source": "L1_substrate_cusp_ground_state",
+          "kind": "references"
+        },
+        {
+          "source": "PROOF_A_gravity",
+          "kind": "references"
+        },
+        {
+          "source": "PROOF_B_quantum",
           "kind": "references"
         },
         {
@@ -25601,6 +26996,10 @@
         },
         {
           "source": "high_school_syllabus",
+          "kind": "references"
+        },
+        {
+          "source": "klein_bottle_derivation",
           "kind": "references"
         },
         {
@@ -25971,13 +27370,22 @@
       ],
       "depended_on_by": [
         "INDEX",
+        "PROOF_A_gravity",
+        "PROOF_B_quantum",
         "a_s_geometric_proof",
         "basepoint_principle",
         "bicone_golden_z2_identification",
         "canonical_glossary",
+        "conservation_computability",
+        "denomination_boundary",
         "derivation_atlas",
         "dynamical_quantization",
+        "engineering_targets",
+        "expressibility_split",
+        "farey_proof",
         "gap_2_spatial_diffusion",
+        "gauge_sector_lovelock",
+        "higgs_from_tongue_boundary",
         "k_of_t_problem_statement",
         "k_of_t_residual_disposition",
         "klein_bottle_derivation",
@@ -26026,6 +27434,14 @@
           "kind": "references"
         },
         {
+          "source": "PROOF_A_gravity",
+          "kind": "references"
+        },
+        {
+          "source": "PROOF_B_quantum",
+          "kind": "references"
+        },
+        {
           "source": "a_s_geometric_proof",
           "kind": "references"
         },
@@ -26042,6 +27458,14 @@
           "kind": "references"
         },
         {
+          "source": "conservation_computability",
+          "kind": "references"
+        },
+        {
+          "source": "denomination_boundary",
+          "kind": "references"
+        },
+        {
           "source": "derivation_atlas",
           "kind": "references"
         },
@@ -26050,7 +27474,27 @@
           "kind": "references"
         },
         {
+          "source": "engineering_targets",
+          "kind": "references"
+        },
+        {
+          "source": "expressibility_split",
+          "kind": "references"
+        },
+        {
+          "source": "farey_proof",
+          "kind": "references"
+        },
+        {
           "source": "gap_2_spatial_diffusion",
+          "kind": "references"
+        },
+        {
+          "source": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
+          "source": "higgs_from_tongue_boundary",
           "kind": "references"
         },
         {
@@ -26166,17 +27610,29 @@
       "summary": "The spacetime signature (3,1) is not assumed. It is the observability\nstructure of the four phase states on a non-orientable surface. Three\nstates are observable. One is dark. The observable states are spatial.\nThe dark state is temporal. The minus sign in ds\u00b2 = dx\u00b2 + dy\u00b2 + dz\u00b2 \u2212 c\u00b2dt\u00b2\nis the statement that the dark state contributes negatively to the\nobservable norm.",
       "depends_on": [
         "PROOF_A_gravity",
-        "PROOF_B_quantum"
+        "PROOF_B_quantum",
+        "einstein_from_kuramoto",
+        "klein_bottle",
+        "planck_scale",
+        "speed_of_light",
+        "three_dimensions"
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
+        "beta_from_tongues",
+        "cosmological_cycle",
         "equivalence_dissolution",
+        "figure_eight",
         "figure_eight_necessitation_audit",
+        "gauge_sector_lovelock",
+        "generation_mechanism",
+        "generation_sector_count_audit",
         "klein_bottle_derivation",
         "koide_form_substrate_iteration_10",
         "koide_form_substrate_iteration_11",
         "meaning_of_two_wip",
+        "primitives_vs_addresses_candidate",
         "spacetime_dissipative_emergence",
         "spatial_coupling_derived",
         "surface_uniqueness_audit",
@@ -26190,6 +27646,26 @@
         {
           "target": "PROOF_B_quantum",
           "kind": "references"
+        },
+        {
+          "target": "einstein_from_kuramoto",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "speed_of_light",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
+          "kind": "references"
         }
       ],
       "edged_by": [
@@ -26202,11 +27678,35 @@
           "kind": "references"
         },
         {
+          "source": "beta_from_tongues",
+          "kind": "references"
+        },
+        {
+          "source": "cosmological_cycle",
+          "kind": "references"
+        },
+        {
           "source": "equivalence_dissolution",
           "kind": "references"
         },
         {
+          "source": "figure_eight",
+          "kind": "references"
+        },
+        {
           "source": "figure_eight_necessitation_audit",
+          "kind": "references"
+        },
+        {
+          "source": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
+          "source": "generation_mechanism",
+          "kind": "references"
+        },
+        {
+          "source": "generation_sector_count_audit",
           "kind": "references"
         },
         {
@@ -26223,6 +27723,10 @@
         },
         {
           "source": "meaning_of_two_wip",
+          "kind": "references"
+        },
+        {
+          "source": "primitives_vs_addresses_candidate",
           "kind": "references"
         },
         {
@@ -26330,16 +27834,50 @@
       "sealed": false,
       "title": "The M\u00f6bius Container",
       "summary": "A bounded, compact, non-orientable surface changes the Kuramoto\nself-consistency equation from an open dissipative system to a closed\nresonator. On such a surface, excitations cannot escape \u2014 they reflect,\ninterfere, and accumulate until standing waves form at rational phase\ndivisions. The rational divisions are not approximate. They are exact,\nforced by boundary conditions, and stable enough to persist for\narbitrarily many cycles.",
-      "depends_on": [],
+      "depends_on": [
+        "planck_scale",
+        "rational_field_equation",
+        "variable_denominator"
+      ],
       "depended_on_by": [
         "INDEX",
+        "engineering_targets",
+        "f2_scoping",
+        "half_mobius_boundary",
         "klein_bottle",
-        "third_twist_meta_structure_audit"
+        "mediant_derivation",
+        "third_twist_meta_structure_audit",
+        "three_zeros"
       ],
-      "edges": [],
+      "edges": [
+        {
+          "target": "planck_scale",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
+          "kind": "references"
+        },
+        {
+          "target": "variable_denominator",
+          "kind": "references"
+        }
+      ],
       "edged_by": [
         {
           "source": "INDEX",
+          "kind": "references"
+        },
+        {
+          "source": "engineering_targets",
+          "kind": "references"
+        },
+        {
+          "source": "f2_scoping",
+          "kind": "references"
+        },
+        {
+          "source": "half_mobius_boundary",
           "kind": "references"
         },
         {
@@ -26347,7 +27885,15 @@
           "kind": "grounds"
         },
         {
+          "source": "mediant_derivation",
+          "kind": "references"
+        },
+        {
           "source": "third_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
+          "source": "three_zeros",
           "kind": "references"
         }
       ],
@@ -26979,6 +28525,7 @@
       "depends_on": [
         "cone_twist_substrate",
         "figure_eight",
+        "klein_bottle",
         "no_rescaling",
         "s_v_nlo_attempt",
         "seam_profile",
@@ -27008,6 +28555,10 @@
         },
         {
           "target": "figure_eight",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
           "kind": "references"
         },
         {
@@ -27109,6 +28660,7 @@
         "discrete_reduction_computed",
         "figure_eight",
         "framework_status",
+        "klein_bottle",
         "no_rescaling",
         "nonperturbative_phase1",
         "s_v_nlo",
@@ -27146,6 +28698,10 @@
         },
         {
           "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
           "kind": "references"
         },
         {
@@ -28607,10 +30163,12 @@
       "title": "\u03a9_b Floor closure: C5 z-dependent w with framework-integer parameters",
       "summary": "A focused calculation of `omega_b_residual_phase_a.md` candidate\nC5 (z-dependent boundary weight w from a_0(z) = c\u00b7H(z)/(2\u03c0)),\napplied to the three-way inconsistency in (\u03a9_\u039b, \u03a9_b, \u03a9_DM).",
       "depends_on": [
+        "a1_from_saddle_node",
         "a_s_g1_closure_attempt",
         "ansatz_audit_policy",
         "baryon_fraction",
         "boundary_weight",
+        "duty_cycle_dictionary",
         "framework_status",
         "klein_antipodal_z2_rep_pattern",
         "omega_b_residual_phase_a",
@@ -28629,6 +30187,10 @@
       ],
       "edges": [
         {
+          "target": "a1_from_saddle_node",
+          "kind": "references"
+        },
+        {
           "target": "a_s_g1_closure_attempt",
           "kind": "references"
         },
@@ -28642,6 +30204,10 @@
         },
         {
           "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "duty_cycle_dictionary",
           "kind": "references"
         },
         {
@@ -28916,9 +30482,11 @@
       "title": "\u03a9_b residual audit: passes substrate-side test, does NOT dissolve",
       "summary": "> **Closure update (2026-04-26).** The \"first remaining substrate-\n> side structural gap\" identified by this audit has subsequently\n> closed:\n>\n> - **Tier 1 + Tier 2 closure** via `omega_b_alpha_beta_closure.md`:\n>   the corrected mode breakdown identifies the antisym Klein\n>   eigenmode \u03c8_-(1, 5) as always-locked (sign-rep no-EM), forcing\n>   w_- = 1 STRUCTURALLY and (\u03b1, \u03b2) = (0, 1). Single-parameter\n>   w_+ closure gives 0.044% on \u03a9_b, 0.044% on \u03a9_DM, 0.13% on \u03a9_\u039b.\n>   This is a recognize-mode",
       "depends_on": [
+        "a1_from_saddle_node",
         "a_s_g1_closure_attempt",
         "baryon_fraction",
         "boundary_weight",
+        "duty_cycle_dictionary",
         "framework_status",
         "omega_b_alpha_beta_closure",
         "omega_b_residual_phase_a",
@@ -28938,6 +30506,10 @@
       ],
       "edges": [
         {
+          "target": "a1_from_saddle_node",
+          "kind": "references"
+        },
+        {
           "target": "a_s_g1_closure_attempt",
           "kind": "references"
         },
@@ -28947,6 +30519,10 @@
         },
         {
           "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "duty_cycle_dictionary",
           "kind": "references"
         },
         {
@@ -29302,8 +30878,10 @@
         "algebraic_forcing_partition",
         "audit_punch_list_2026-04",
         "baryon_fraction",
+        "boundary_weight",
         "canonical_glossary",
         "farey_partition",
+        "figure_eight",
         "framework_status",
         "free_parameter_scorecard",
         "k_axis_uniqueness",
@@ -29313,6 +30891,7 @@
         "koide_form_substrate_iteration_8",
         "lesson_8_35_vs_13_19",
         "lesson_rotation_curves_a0",
+        "mediant_derivation",
         "numerology_inventory",
         "omega_b_residual_phase_a",
         "omega_b_substrate_side_audit",
@@ -29373,11 +30952,19 @@
           "kind": "derives"
         },
         {
+          "source": "boundary_weight",
+          "kind": "references"
+        },
+        {
           "source": "canonical_glossary",
           "kind": "references"
         },
         {
           "source": "farey_partition",
+          "kind": "references"
+        },
+        {
+          "source": "figure_eight",
           "kind": "references"
         },
         {
@@ -29414,6 +31001,10 @@
         },
         {
           "source": "lesson_rotation_curves_a0",
+          "kind": "references"
+        },
+        {
+          "source": "mediant_derivation",
           "kind": "references"
         },
         {
@@ -29475,6 +31066,7 @@
         "dark_twin_correction",
         "explicit_4x4_reduction",
         "figure_eight",
+        "klein_bottle",
         "nonperturbative_phase1",
         "nonperturbative_phase2",
         "sine_gordon_substrate",
@@ -29501,6 +31093,10 @@
         },
         {
           "target": "figure_eight",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle",
           "kind": "references"
         },
         {
@@ -30341,6 +31937,7 @@
         "canonical_glossary",
         "complex_amplitude_uniqueness",
         "conservation_scale_stratification_audit",
+        "discrete_gauge_resolution",
         "framework_status",
         "gauge_sector_lovelock",
         "klein_bottle_derivation",
@@ -30372,6 +31969,10 @@
         },
         {
           "target": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "discrete_gauge_resolution",
           "kind": "references"
         },
         {
@@ -30420,18 +32021,23 @@
         "a0_threshold",
         "a1_from_saddle_node",
         "a_s_geometric_proof",
+        "address_and_quantity",
         "ansatz_audit_policy",
         "born_rule",
         "canonical_glossary",
         "complex_amplitude_uniqueness",
         "continuum_limits",
+        "coupling_scales",
+        "discrete_gauge_resolution",
         "down_type_double_cover_closed",
         "epr_bell_assembly_theorem",
         "framework_status",
+        "gauge_sector_lovelock",
         "h_inf_status",
         "hierarchy_gaussian_lattice",
         "hierarchy_problem_translation",
         "k_of_t_residual_disposition",
+        "lie_group_characterization",
         "mass_sector_closure",
         "minimum_alphabet",
         "numerology_count_phase_b",
@@ -30439,6 +32045,7 @@
         "omega_b_alpha_beta_closure",
         "psl2z_subgroup_phase_b",
         "q_mod2_conservation_theorem",
+        "spectral_tilt",
         "statistical_conventions",
         "three_dimensions"
       ],
@@ -30475,6 +32082,10 @@
           "kind": "references"
         },
         {
+          "target": "address_and_quantity",
+          "kind": "references"
+        },
+        {
           "target": "ansatz_audit_policy",
           "kind": "references"
         },
@@ -30495,6 +32106,14 @@
           "kind": "references"
         },
         {
+          "target": "coupling_scales",
+          "kind": "references"
+        },
+        {
+          "target": "discrete_gauge_resolution",
+          "kind": "references"
+        },
+        {
           "target": "down_type_double_cover_closed",
           "kind": "references"
         },
@@ -30504,6 +32123,10 @@
         },
         {
           "target": "framework_status",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_sector_lovelock",
           "kind": "references"
         },
         {
@@ -30520,6 +32143,10 @@
         },
         {
           "target": "k_of_t_residual_disposition",
+          "kind": "references"
+        },
+        {
+          "target": "lie_group_characterization",
           "kind": "references"
         },
         {
@@ -30548,6 +32175,10 @@
         },
         {
           "target": "q_mod2_conservation_theorem",
+          "kind": "references"
+        },
+        {
+          "target": "spectral_tilt",
           "kind": "references"
         },
         {
@@ -30860,6 +32491,7 @@
         "boundary_leakage_rate_audit",
         "cmb_silk_damping_acoustic_peaks_audit",
         "coherence_matrix_completion_audit",
+        "coupling_scales",
         "cyclotomic_content_mass_ratios_audit",
         "dynamics_arithmetic_distinction_refinement_audit",
         "gamma06_cosmological_modular_surface_audit",
@@ -30870,6 +32502,8 @@
         "isotropy_lemma",
         "klein_bottle",
         "lambda17_test_gamma06_cosmological_audit",
+        "minkowski_signature",
+        "mobius_container",
         "modular_form_behavior_cosmological_tongues_audit",
         "primes_denominators_circular_geometry_extension_audit",
         "psl2z_noncommutative_core_structural_identity_audit",
@@ -30916,6 +32550,10 @@
           "kind": "references"
         },
         {
+          "source": "coupling_scales",
+          "kind": "derives"
+        },
+        {
           "source": "cyclotomic_content_mass_ratios_audit",
           "kind": "references"
         },
@@ -30953,6 +32591,14 @@
         },
         {
           "source": "lambda17_test_gamma06_cosmological_audit",
+          "kind": "references"
+        },
+        {
+          "source": "minkowski_signature",
+          "kind": "references"
+        },
+        {
+          "source": "mobius_container",
           "kind": "references"
         },
         {
@@ -31584,8 +33230,10 @@
         "klein_bottle",
         "mass_sector_closure",
         "minimum_alphabet",
+        "minkowski_signature",
         "substrate_determinism",
         "surface_uniqueness_audit",
+        "three_dimensions",
         "torus_branch_iteration_1"
       ],
       "depended_on_by": [
@@ -31661,11 +33309,19 @@
           "kind": "references"
         },
         {
+          "target": "minkowski_signature",
+          "kind": "references"
+        },
+        {
           "target": "substrate_determinism",
           "kind": "references"
         },
         {
           "target": "surface_uniqueness_audit",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
           "kind": "references"
         },
         {
@@ -33214,6 +34870,7 @@
       "title": "Programmatic QM-reframing: substrate apparatus vs inherited QM machinery",
       "summary": "Synthesis document. Articulates the framework's relationship to the\napparatus of 20th-century quantum mechanics: which elements of that\napparatus are substrate-replaceable, which are inherited as a\nfoundational layer, which are correctly declined as anchor-side, and\nwhich lie outside the substrate's natural reach.",
       "depends_on": [
+        "a0_threshold",
         "a1_from_saddle_node",
         "anchor_count_reaudit",
         "basepoint_principle",
@@ -33239,6 +34896,10 @@
       ],
       "depended_on_by": [],
       "edges": [
+        {
+          "target": "a0_threshold",
+          "kind": "references"
+        },
         {
           "target": "a1_from_saddle_node",
           "kind": "references"
@@ -33498,20 +35159,33 @@
       ],
       "depended_on_by": [
         "INDEX",
+        "PROOF_A_gravity",
+        "PROOF_B_quantum",
+        "boundary_weight",
+        "conservation_computability",
+        "denomination_boundary",
+        "duty_cycle_dictionary",
         "f2_fm_beat_results",
         "f2_possibility_b_jacobian",
         "f2_scoping",
+        "farey_proof",
+        "figure_eight",
         "gap1_theorem",
         "gap2_spatialization_decomposition",
         "gap_1_christoffel",
+        "gauge_sector_lovelock",
         "k_critical_phase_a",
         "k_critical_phase_b",
         "klein_bottle",
+        "klein_bottle_derivation",
+        "mediant_derivation",
         "mediant_forcing_lemma",
+        "mobius_container",
         "mode_locking_exhibits",
         "proposed_items_disposition",
         "quantum_gravity_interpolation",
-        "thread_chronology"
+        "thread_chronology",
+        "xor_continuum_limit"
       ],
       "edges": [
         {
@@ -33522,6 +35196,30 @@
       "edged_by": [
         {
           "source": "INDEX",
+          "kind": "references"
+        },
+        {
+          "source": "PROOF_A_gravity",
+          "kind": "references"
+        },
+        {
+          "source": "PROOF_B_quantum",
+          "kind": "references"
+        },
+        {
+          "source": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "source": "conservation_computability",
+          "kind": "references"
+        },
+        {
+          "source": "denomination_boundary",
+          "kind": "references"
+        },
+        {
+          "source": "duty_cycle_dictionary",
           "kind": "references"
         },
         {
@@ -33537,6 +35235,14 @@
           "kind": "references"
         },
         {
+          "source": "farey_proof",
+          "kind": "references"
+        },
+        {
+          "source": "figure_eight",
+          "kind": "references"
+        },
+        {
           "source": "gap1_theorem",
           "kind": "references"
         },
@@ -33546,6 +35252,10 @@
         },
         {
           "source": "gap_1_christoffel",
+          "kind": "references"
+        },
+        {
+          "source": "gauge_sector_lovelock",
           "kind": "references"
         },
         {
@@ -33561,7 +35271,19 @@
           "kind": "derives"
         },
         {
+          "source": "klein_bottle_derivation",
+          "kind": "references"
+        },
+        {
+          "source": "mediant_derivation",
+          "kind": "references"
+        },
+        {
           "source": "mediant_forcing_lemma",
+          "kind": "references"
+        },
+        {
+          "source": "mobius_container",
           "kind": "references"
         },
         {
@@ -33578,6 +35300,10 @@
         },
         {
           "source": "thread_chronology",
+          "kind": "references"
+        },
+        {
+          "source": "xor_continuum_limit",
           "kind": "references"
         }
       ],
@@ -34609,6 +36335,7 @@
       "title": "Session audit: overclaims, revisions, and stale content",
       "summary": "Corrected two specific overclaims (\u2113_c factor, PMNS \u03b8_23\nstructural forcing). Kept historical artifacts (phase doc\nprogressions) with forward cross-references. Flagged Issue #56\nbody items for separate update. The remaining 5-7 closures hold\nup under critical review; caveats are labeled in the respective\ndocs.",
       "depends_on": [
+        "born_rule",
         "boundary_weight",
         "down_type_double_cover_closed",
         "down_type_double_cover_phase_a",
@@ -34624,6 +36351,10 @@
         "statistical_conventions"
       ],
       "edges": [
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
         {
           "target": "boundary_weight",
           "kind": "references"
@@ -35260,6 +36991,7 @@
       "title": "Substrate-Natural Multipartite Class (SNMC) and substrate-natural entanglement measures",
       "summary": "**D2 formalization** of the substrate's natural multipartite QM\nreach as a named class with characterized closure properties, and\n**substrate-natural entanglement measure vocabulary** \u2014 translating\nstandard QM entanglement measures (Schmidt rank, Von Neumann\nentropy, concurrence, 3-tangle, stabilizer corank) into\nsubstrate-readable quantities computable directly from substrate\ndata.",
       "depends_on": [
+        "a0_threshold",
         "bell_bounds_from_substrate",
         "born_rule",
         "canonical_glossary",
@@ -35280,6 +37012,10 @@
         "qm_reframing_programmatic"
       ],
       "edges": [
+        {
+          "target": "a0_threshold",
+          "kind": "references"
+        },
         {
           "target": "bell_bounds_from_substrate",
           "kind": "references"
@@ -35721,8 +37457,12 @@
       ],
       "depended_on_by": [
         "INDEX",
+        "beta_from_tongues",
         "canonical_glossary",
+        "derivation_atlas",
+        "fermion_mass_running",
         "graviton_reframing",
+        "phenomenology_cross_reference",
         "physics_relevance_measurement_catalog"
       ],
       "edges": [
@@ -35737,11 +37477,27 @@
           "kind": "references"
         },
         {
+          "source": "beta_from_tongues",
+          "kind": "references"
+        },
+        {
           "source": "canonical_glossary",
           "kind": "references"
         },
         {
+          "source": "derivation_atlas",
+          "kind": "references"
+        },
+        {
+          "source": "fermion_mass_running",
+          "kind": "references"
+        },
+        {
           "source": "graviton_reframing",
+          "kind": "references"
+        },
+        {
+          "source": "phenomenology_cross_reference",
           "kind": "references"
         },
         {
@@ -35897,11 +37653,17 @@
       "depended_on_by": [
         "INDEX",
         "articulation_audit_2026-05",
+        "cosmological_cycle",
+        "coupling_scales",
         "duty_cycle_dictionary",
+        "figure_eight",
+        "generation_mechanism",
         "gluon_reframing",
         "graviton_reframing",
+        "minkowski_signature",
         "quantum_gravity_interpolation",
-        "spatial_coupling_derived"
+        "spatial_coupling_derived",
+        "stribeck_vortex"
       ],
       "edges": [
         {
@@ -35923,7 +37685,23 @@
           "kind": "references"
         },
         {
+          "source": "cosmological_cycle",
+          "kind": "references"
+        },
+        {
+          "source": "coupling_scales",
+          "kind": "references"
+        },
+        {
           "source": "duty_cycle_dictionary",
+          "kind": "references"
+        },
+        {
+          "source": "figure_eight",
+          "kind": "references"
+        },
+        {
+          "source": "generation_mechanism",
           "kind": "references"
         },
         {
@@ -35935,11 +37713,19 @@
           "kind": "references"
         },
         {
+          "source": "minkowski_signature",
+          "kind": "references"
+        },
+        {
           "source": "quantum_gravity_interpolation",
           "kind": "references"
         },
         {
           "source": "spatial_coupling_derived",
+          "kind": "references"
+        },
+        {
+          "source": "stribeck_vortex",
           "kind": "references"
         }
       ],
@@ -36082,6 +37868,7 @@
       "title": "Statistical conventions for session closure docs",
       "summary": "This doc defines the operational meaning of \u03c3-statements,\n%-statements, and \"closed\" used in the seven session closure\ndocs. Where a doc's wording is loose, this defines the strict\nsense.",
       "depends_on": [
+        "born_rule",
         "down_type_double_cover_closed",
         "gap1_theorem",
         "gap2_sub_e_status_reconciled",
@@ -36119,6 +37906,10 @@
         "vocabulary_is_the_work_pattern"
       ],
       "edges": [
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
         {
           "target": "down_type_double_cover_closed",
           "kind": "references"
@@ -36283,7 +38074,10 @@
         "PROOF_A_gravity",
         "PROOF_B_quantum",
         "born_rule",
-        "seismic_eigenstate_dictionary"
+        "conservation_computability",
+        "continuum_limits",
+        "seismic_eigenstate_dictionary",
+        "speed_of_light"
       ],
       "depended_on_by": [
         "a1_from_saddle_node",
@@ -36303,7 +38097,19 @@
           "kind": "references"
         },
         {
+          "target": "conservation_computability",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
           "target": "seismic_eigenstate_dictionary",
+          "kind": "references"
+        },
+        {
+          "target": "speed_of_light",
           "kind": "references"
         }
       ],
@@ -37145,6 +38951,7 @@
       "depends_on": [
         "basepoint_principle",
         "canonical_glossary",
+        "discrete_gauge_resolution",
         "figure_eight_necessitation_audit",
         "gauge_high_scale_identification",
         "gauge_sector_lovelock",
@@ -37181,6 +38988,10 @@
         },
         {
           "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "target": "discrete_gauge_resolution",
           "kind": "references"
         },
         {
@@ -37363,7 +39174,9 @@
       "summary": "The catalog (\u00a75) surfaces **four distinct Z_3 modes** in the\nframework (A: cyclic action, B: Mihailescu cube/ratio, C: composite,\nD: fractional) \u2014 not the single-mode meta-structure an analogy with\nPR #240 would predict. Five structural findings (P1\u2013P5, \u00a75.4) are\nsubstantive: (P1) Mode B is uniquely Z_3 with no Z_2 analog; (P2)\nthe Aut(Z_3) = Z_2 inversion is spontaneously broken at Mode B level\n(substrate prefers 2/3 over 1/3); (P3) Mode D (fractional character)\nis nearly absent \u2014 the framework",
       "depends_on": [
         "CHAIN_KSTAR",
+        "a0_threshold",
         "beta_from_tongues",
+        "born_rule",
         "canonical_glossary",
         "cosmological_cycle",
         "cyclotomic_content_mass_ratios_audit",
@@ -37397,7 +39210,15 @@
           "kind": "references"
         },
         {
+          "target": "a0_threshold",
+          "kind": "references"
+        },
+        {
           "target": "beta_from_tongues",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
           "kind": "references"
         },
         {
@@ -37526,6 +39347,7 @@
         "audit_findings_3_4_disposition",
         "basepoint_principle",
         "beta_from_tongues",
+        "born_rule",
         "born_rule_parameter_free",
         "derivation_atlas",
         "discrete_reduction_computed",
@@ -37628,6 +39450,10 @@
         },
         {
           "target": "beta_from_tongues",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
           "kind": "references"
         },
         {
@@ -37999,31 +39825,46 @@
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
+        "PROOF_A_gravity",
+        "PROOF_B_quantum",
+        "adm_dictionary",
         "beta_from_tongues",
         "canonical_glossary",
+        "cosmological_cycle",
+        "coupling_scales",
         "derivation_atlas",
         "duty_cycle_dictionary",
         "dynamical_quantization",
+        "exponent",
+        "farey_proof",
         "fermion_mass_running",
         "free_parameter_scorecard",
         "gap2_step4_farey_laplacian",
         "gap2_theorem_attempt",
         "gap_2_spatial_diffusion",
+        "gauge_sector_lovelock",
+        "generation_mechanism",
+        "hierarchy",
         "hierarchy_gaussian_lattice",
+        "higgs_from_tongue_boundary",
         "high_school_syllabus",
         "isotropy_lemma",
+        "k_of_t_friedmann",
         "klein_bottle",
         "klein_bottle_derivation",
         "mediant_forcing_lemma",
+        "minkowski_signature",
         "numerology_inventory",
         "phenomenology_cross_reference",
+        "primitives_vs_addresses_candidate",
         "qd_origins",
         "sinw_effective_dimension",
         "spacetime_dissipative_emergence",
         "spatial_coupling_derived",
         "structural_lemmas",
         "surface_uniqueness_audit",
-        "three_formalizations"
+        "three_formalizations",
+        "three_zeros"
       ],
       "edges": [
         {
@@ -38053,11 +39894,31 @@
           "kind": "references"
         },
         {
+          "source": "PROOF_A_gravity",
+          "kind": "references"
+        },
+        {
+          "source": "PROOF_B_quantum",
+          "kind": "references"
+        },
+        {
+          "source": "adm_dictionary",
+          "kind": "references"
+        },
+        {
           "source": "beta_from_tongues",
           "kind": "references"
         },
         {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "cosmological_cycle",
+          "kind": "references"
+        },
+        {
+          "source": "coupling_scales",
           "kind": "references"
         },
         {
@@ -38070,6 +39931,14 @@
         },
         {
           "source": "dynamical_quantization",
+          "kind": "references"
+        },
+        {
+          "source": "exponent",
+          "kind": "references"
+        },
+        {
+          "source": "farey_proof",
           "kind": "references"
         },
         {
@@ -38093,7 +39962,23 @@
           "kind": "references"
         },
         {
+          "source": "gauge_sector_lovelock",
+          "kind": "references"
+        },
+        {
+          "source": "generation_mechanism",
+          "kind": "references"
+        },
+        {
+          "source": "hierarchy",
+          "kind": "references"
+        },
+        {
           "source": "hierarchy_gaussian_lattice",
+          "kind": "references"
+        },
+        {
+          "source": "higgs_from_tongue_boundary",
           "kind": "references"
         },
         {
@@ -38102,6 +39987,10 @@
         },
         {
           "source": "isotropy_lemma",
+          "kind": "references"
+        },
+        {
+          "source": "k_of_t_friedmann",
           "kind": "references"
         },
         {
@@ -38117,11 +40006,19 @@
           "kind": "references"
         },
         {
+          "source": "minkowski_signature",
+          "kind": "references"
+        },
+        {
           "source": "numerology_inventory",
           "kind": "references"
         },
         {
           "source": "phenomenology_cross_reference",
+          "kind": "references"
+        },
+        {
+          "source": "primitives_vs_addresses_candidate",
           "kind": "references"
         },
         {
@@ -38150,6 +40047,10 @@
         },
         {
           "source": "three_formalizations",
+          "kind": "references"
+        },
+        {
+          "source": "three_zeros",
           "kind": "references"
         }
       ],
@@ -38256,9 +40157,31 @@
       "sealed": false,
       "title": "Three Zeros and the 1+3 Decomposition",
       "summary": "**Established**:\n- Three distinct zeros identified and separated\n- The traceless projection J\u2080 = J on the Klein bottle (the identity\n  component is the forbidden (0,0) mode)\n- The 1+3 eigenvalue decomposition: {3/4, \u22121/4, \u22121/4, \u22121/4}\n- The 3-dimensional redistribution space = n\u00b2 \u2212 1 = dim SL(2,\u211d) = d\n- Connection to D17 rank-1 temporal causation: 1 temporal + 3 spatial",
-      "depends_on": [],
+      "depends_on": [
+        "continuum_limits",
+        "einstein_from_kuramoto",
+        "mobius_container",
+        "three_dimensions"
+      ],
       "depended_on_by": [],
-      "edges": [],
+      "edges": [
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "einstein_from_kuramoto",
+          "kind": "references"
+        },
+        {
+          "target": "mobius_container",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
+          "kind": "references"
+        }
+      ],
       "edged_by": [],
       "git": [
         {
@@ -39228,7 +41151,8 @@
       "summary": "The cosmological constant problem in this framework is not a\nsuppression mechanism. It is a change of configuration space:\nfrom the torus (\u221e modes, 10\u2077\u2074 GeV\u2074) to the Klein bottle (4 modes,\n10\u207b\u2074\u2077 GeV\u2074). The 121 orders of magnitude are the counting\ndifference between the two. Whether this is the physical\nconfiguration space is open; if it is, the problem dissolves into\na statement about which modes are functions on the surface.",
       "depends_on": [
         "farey_partition",
-        "klein_bottle"
+        "klein_bottle",
+        "variable_denominator"
       ],
       "depended_on_by": [
         "unitless_check"
@@ -39240,6 +41164,10 @@
         },
         {
           "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "variable_denominator",
           "kind": "references"
         }
       ],
@@ -39391,8 +41319,12 @@
       ],
       "depended_on_by": [
         "INDEX",
+        "cosmological_cycle",
+        "f2_scoping",
         "k_of_t_problem_statement",
-        "klein_bottle"
+        "klein_bottle",
+        "mobius_container",
+        "vacuum_energy"
       ],
       "edges": [
         {
@@ -39410,12 +41342,28 @@
           "kind": "references"
         },
         {
+          "source": "cosmological_cycle",
+          "kind": "references"
+        },
+        {
+          "source": "f2_scoping",
+          "kind": "references"
+        },
+        {
           "source": "k_of_t_problem_statement",
           "kind": "references"
         },
         {
           "source": "klein_bottle",
           "kind": "derives"
+        },
+        {
+          "source": "mobius_container",
+          "kind": "references"
+        },
+        {
+          "source": "vacuum_energy",
+          "kind": "references"
         }
       ],
       "git": [
@@ -40173,6 +42121,7 @@
       "depends_on": [
         "L1_substrate_cusp_ground_state",
         "a0_threshold",
+        "a1_from_saddle_node",
         "baryon_fraction",
         "continuum_limits",
         "cross_ratio_irrep_reframe",
@@ -40200,6 +42149,10 @@
         },
         {
           "target": "a0_threshold",
+          "kind": "references"
+        },
+        {
+          "target": "a1_from_saddle_node",
           "kind": "references"
         },
         {
@@ -40589,7 +42542,11 @@
       "sealed": false,
       "title": "The XOR-Filtered Continuum Limit",
       "summary": "**Established**:\n- The continuum Klein bottle has structure group O(3), pin cover\n  Pin\u207a(3) \u2245 SU(2) \u00d7 Z\u2082.\n- Lovelock still applies locally: Einstein equations are the unique\n  output of the K=1 limit.\n- The Z\u2082 holonomy adds topological constraints but not new field\n  equations.\n- The XOR denominator-parity filter does not survive the continuum\n  limit as a smooth structure \u2014 it is a property of the discrete\n  (finite-depth) description.",
-      "depends_on": [],
+      "depends_on": [
+        "continuum_limits",
+        "einstein_from_kuramoto",
+        "rational_field_equation"
+      ],
       "depended_on_by": [
         "audit_findings_3_4_disposition",
         "f2_fm_beat_results",
@@ -40597,7 +42554,20 @@
         "f2_scoping",
         "klein_connection"
       ],
-      "edges": [],
+      "edges": [
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "einstein_from_kuramoto",
+          "kind": "references"
+        },
+        {
+          "target": "rational_field_equation",
+          "kind": "references"
+        }
+      ],
       "edged_by": [
         {
           "source": "audit_findings_3_4_disposition",

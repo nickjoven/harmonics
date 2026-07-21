@@ -510,7 +510,7 @@
    "d_numbers": [
     "D45"
    ],
-   "has_lineage": false,
+   "has_lineage": true,
    "status_line": "theta = 0 derived from Pin+(3) on the Klein bottle.",
    "title": "The Coupling Scales and the Bare Diffusion Constant"
   },
@@ -1321,7 +1321,7 @@
    ],
    "coverage": "classified",
    "d_numbers": [],
-   "has_lineage": false,
+   "has_lineage": true,
    "status_line": null,
    "title": "The Higgs' Role in the Framework: A Reframing"
   },
@@ -3216,6 +3216,6 @@
    "title": "Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions"
   }
  },
- "generated": "298ddab",
+ "generated": "8c0b552",
  "generator": "scripts/build_corpus_index.py"
 }
