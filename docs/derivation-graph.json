@@ -1,5 +1,5 @@
 {
-  "generated": "856b0f532d70de0bc55dc8e89048de7d55f08938",
+  "generated": "22cbc442807d9e44a1bce0b6bb32a7bc44bf5b79",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -1761,18 +1761,21 @@
     {
       "id": "a_s_geometric_proof",
       "path": "sync_cost/derivations/a_s_geometric_proof.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "b10358df08f65a9b507affe2774c0d5d4d1a22e127922ba7cab4dabbe9e65867",
+      "sealed": true,
       "title": "A_s: a geometric proof from first principles",
       "summary": "A derivation of the CMB scalar amplitude A_s in the framework,\nusing only what is established in prior derivations. Each\nmultiplicative factor comes from one named structural result.\nThe proof terminates at a specific numerical prediction; the\ndiscrepancy with observation is documented at the end as a single\nnumber, not partitioned into ad-hoc corrections.",
       "depends_on": [
         "boundary_weight",
         "continuum_limits",
+        "framework_status",
         "gap2_spatialization_decomposition",
+        "hybrid_strategy_audit",
         "k_of_t_residual_disposition",
         "klein_bottle_derivation",
         "minimum_alphabet",
         "mixing_angle_audit",
+        "numerology_inventory",
         "sigma_squared_disambiguation",
         "statistical_conventions"
       ],
@@ -1800,7 +1803,15 @@
           "kind": "references"
         },
         {
+          "target": "framework_status",
+          "kind": "references"
+        },
+        {
           "target": "gap2_spatialization_decomposition",
+          "kind": "references"
+        },
+        {
+          "target": "hybrid_strategy_audit",
           "kind": "references"
         },
         {
@@ -1817,6 +1828,10 @@
         },
         {
           "target": "mixing_angle_audit",
+          "kind": "references"
+        },
+        {
+          "target": "numerology_inventory",
           "kind": "references"
         },
         {
@@ -1879,6 +1894,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "c9a7683",
+          "date": "2026-07-20",
+          "subject": "#263 \u24fe ruling pass: class judgments applied to the 12-doc queue (#312)"
+        },
         {
           "hash": "29e05bb",
           "date": "2026-06-19",
@@ -4486,6 +4506,7 @@
         "substrate_kk_dispersion_target",
         "substrate_prediction_selection",
         "surface_uniqueness_audit",
+        "tape_stick_slip_dual_regime_correspondence",
         "thread_chronology",
         "torus_branch_iteration_1",
         "vacuum_stress_meta_structure_audit",
@@ -4662,6 +4683,10 @@
         },
         {
           "source": "surface_uniqueness_audit",
+          "kind": "references"
+        },
+        {
+          "source": "tape_stick_slip_dual_regime_correspondence",
           "kind": "references"
         },
         {
@@ -5972,14 +5997,15 @@
     {
       "id": "boundary_weight",
       "path": "sync_cost/derivations/boundary_weight.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "6a8a647b2e3d7e7e3634073ee3a853282a1dec428b46e995a410966006b09437",
+      "sealed": true,
       "title": "The Boundary Weight",
       "summary": "The n=5 vs n=6 question dissolves. The Farey depth is not an\ninteger. The boundary modes (q=6) are partially locked at a\nfractional weight w* determined by self-consistency. The dark\nenergy fraction Omega_Lambda is a continuous, monotone function\nof this weight, and the observed value uniquely determines w*.",
       "depends_on": [
         "PROOF_A_gravity",
         "PROOF_B_quantum",
-        "horn_branch_iteration_3_step_1"
+        "horn_branch_iteration_3_step_1",
+        "numerology_inventory"
       ],
       "depended_on_by": [
         "FRAMEWORK_TOPOLOGY",
@@ -6035,6 +6061,10 @@
         },
         {
           "target": "horn_branch_iteration_3_step_1",
+          "kind": "references"
+        },
+        {
+          "target": "numerology_inventory",
           "kind": "references"
         }
       ],
@@ -6205,6 +6235,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "c9a7683",
+          "date": "2026-07-20",
+          "subject": "#263 \u24fe ruling pass: class judgments applied to the 12-doc queue (#312)"
+        },
         {
           "hash": "6d2bea4",
           "date": "2026-06-02",
@@ -8226,6 +8261,7 @@
         "spatial_coupling_derived",
         "structural_lemmas",
         "substrate_kk_dispersion_target",
+        "tape_stick_slip_dual_regime_correspondence",
         "vacuum_stress_meta_structure_audit",
         "vocabulary_is_the_work_pattern",
         "w_plus_formalization"
@@ -8458,6 +8494,10 @@
           "kind": "references"
         },
         {
+          "source": "tape_stick_slip_dual_regime_correspondence",
+          "kind": "references"
+        },
+        {
           "source": "vacuum_stress_meta_structure_audit",
           "kind": "references"
         },
@@ -8584,11 +8624,13 @@
     {
       "id": "coupling_scales",
       "path": "sync_cost/derivations/coupling_scales.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "edd78e5c91c924ab28d2b2df81d91280a275c5309e7b71f95d6fcc5c3e0da694",
+      "sealed": true,
       "title": "The Coupling Scales and the Bare Diffusion Constant",
-      "summary": "**Derived (partial).** D_0 = 1/2 is determined by the tree geometry.\nAll dimensionless ratios are determined. The absolute coupling scales\nreduce to one dimensionful input (the root oscillator frequency),\nwhich no mathematical framework can produce.",
-      "depends_on": [],
+      "summary": "**Derived (partial), rescoped (#263 \u24fe ruling, 2026-07-19).** What\nstands: D_0 = 1/2 from the tree geometry, the hierarchy consistency\ncheck (Part II), and theta = 0 (Part V). The five gauge-sector ratio\nrows are superseded \u2014 bare K=1 identities, not predictions at M_Z; see\nthe registry dispositions marked in Parts III and IV. The absolute\ncoupling scales reduce to one dimensionful input (the root oscillator\nfrequency), which no mathematical framework can produce.",
+      "depends_on": [
+        "numerology_inventory"
+      ],
       "depended_on_by": [
         "INDEX",
         "address_and_quantity",
@@ -8604,7 +8646,12 @@
         "spatial_coupling_derived",
         "structural_lemmas"
       ],
-      "edges": [],
+      "edges": [
+        {
+          "target": "numerology_inventory",
+          "kind": "references"
+        }
+      ],
       "edged_by": [
         {
           "source": "INDEX",
@@ -8660,6 +8707,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "c9a7683",
+          "date": "2026-07-20",
+          "subject": "#263 \u24fe ruling pass: class judgments applied to the 12-doc queue (#312)"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -10756,10 +10808,10 @@
     {
       "id": "down_type_double_cover_phase_d",
       "path": "sync_cost/derivations/down_type_double_cover_phase_d.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "7cc3fb2bb1e9537274595b30b430c0d5a37124fa7cf579ed9b0fe3a42d4b26cf",
+      "sealed": true,
       "title": "Down-type double cover \u2014 Phase D attempt: boundary-weight self-consistency",
-      "summary": "**Phase D closes down-type to** `a_1(dn)\u00b2/a_1(lep)\u00b2 = 6` **IF**:",
+      "summary": "**Class 4** \u2014 needs individual audit: the closure is conditional on H1\nand H2 below (the doc's own framing \u2014 \"if false, the factor 6 is a\ncoincidence of an interior w*\"), with Halts D1/D2 as the open audit\nitems. [#263 \u24fe ruling, 2026-07-19]",
       "depends_on": [
         "boundary_weight",
         "down_type_double_cover_phase_c",
@@ -10809,6 +10861,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "c9a7683",
+          "date": "2026-07-20",
+          "subject": "#263 \u24fe ruling pass: class judgments applied to the 12-doc queue (#312)"
+        },
         {
           "hash": "f4b9a80",
           "date": "2026-06-21",
@@ -11039,7 +11096,8 @@
         "three_dimensions"
       ],
       "depended_on_by": [
-        "mode_locking_exhibits"
+        "mode_locking_exhibits",
+        "tape_stick_slip_dual_regime_correspondence"
       ],
       "edges": [
         {
@@ -11082,6 +11140,10 @@
       "edged_by": [
         {
           "source": "mode_locking_exhibits",
+          "kind": "references"
+        },
+        {
+          "source": "tape_stick_slip_dual_regime_correspondence",
           "kind": "references"
         }
       ],
@@ -13531,16 +13593,18 @@
     {
       "id": "figure_eight",
       "path": "sync_cost/derivations/figure_eight.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "1d3333c5fc14380ef33c921c287e51072b4a2efc9f42605bd7d05fb169d32b4f",
+      "sealed": true,
       "title": "The Figure-Eight Topology",
       "summary": "The Klein bottle's self-intersection in 3D embedding is a figure-8\n(lemniscate). Two loops sharing one crossing point. This is the\nphysical topology of the four Klein bottle modes (D19).",
       "depends_on": [
         "PROOF_A_gravity",
         "PROOF_B_quantum",
+        "figure_eight_necessitation_audit",
         "framework_status",
         "klein_bottle",
         "klein_bottle_derivation",
+        "numerology_inventory",
         "sine_gordon_substrate"
       ],
       "depended_on_by": [
@@ -13588,6 +13652,10 @@
           "kind": "references"
         },
         {
+          "target": "figure_eight_necessitation_audit",
+          "kind": "references"
+        },
+        {
           "target": "framework_status",
           "kind": "references"
         },
@@ -13597,6 +13665,10 @@
         },
         {
           "target": "klein_bottle_derivation",
+          "kind": "references"
+        },
+        {
+          "target": "numerology_inventory",
           "kind": "references"
         },
         {
@@ -13740,6 +13812,11 @@
       ],
       "git": [
         {
+          "hash": "c9a7683",
+          "date": "2026-07-20",
+          "subject": "#263 \u24fe ruling pass: class judgments applied to the 12-doc queue (#312)"
+        },
+        {
           "hash": "8ad1d2c",
           "date": "2026-05-11",
           "subject": "Soliton dynamics companion + corrected J\u00b2 = \u2212I under right Klein topology (#107)"
@@ -13783,6 +13860,7 @@
       ],
       "depended_on_by": [
         "canonical_glossary",
+        "figure_eight",
         "surface_uniqueness_audit",
         "vocabulary_bridge_iteration_2_step_1",
         "vocabulary_bridge_iteration_2_step_2"
@@ -13839,6 +13917,10 @@
           "kind": "references"
         },
         {
+          "source": "figure_eight",
+          "kind": "references"
+        },
+        {
           "source": "surface_uniqueness_audit",
           "kind": "references"
         },
@@ -13878,7 +13960,8 @@
         "vocabulary_is_the_work_pattern"
       ],
       "depended_on_by": [
-        "f2_fm_beat_results"
+        "f2_fm_beat_results",
+        "tape_stick_slip_dual_regime_correspondence"
       ],
       "edges": [
         {
@@ -13921,6 +14004,10 @@
       "edged_by": [
         {
           "source": "f2_fm_beat_results",
+          "kind": "references"
+        },
+        {
+          "source": "tape_stick_slip_dual_regime_correspondence",
           "kind": "references"
         }
       ],
@@ -14092,6 +14179,7 @@
         "PROOF_B_quantum",
         "a1_from_saddle_node",
         "a_s_g1_closure_attempt",
+        "a_s_geometric_proof",
         "algebraic_forcing_partition",
         "anchor_count_reaudit",
         "ansatz_audit_policy",
@@ -14136,6 +14224,7 @@
         "lesson_forced_basin_selection",
         "lesson_proslambanomenos",
         "lesson_rotation_curves_a0",
+        "mass_entrained_measure",
         "mediant_vs_flow_calc",
         "mediant_vs_flow_problem",
         "mode_locking_exhibits",
@@ -14556,6 +14645,10 @@
           "kind": "references"
         },
         {
+          "source": "a_s_geometric_proof",
+          "kind": "references"
+        },
+        {
           "source": "algebraic_forcing_partition",
           "kind": "references"
         },
@@ -14729,6 +14822,10 @@
         },
         {
           "source": "lesson_rotation_curves_a0",
+          "kind": "references"
+        },
+        {
+          "source": "mass_entrained_measure",
           "kind": "references"
         },
         {
@@ -18688,18 +18785,25 @@
     {
       "id": "higgs_reframing",
       "path": "sync_cost/derivations/higgs_reframing.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "f571cf091f2897d05e5fa45bc520a6ec0fcff95d5d81fe17fae36b26ac11d11b",
+      "sealed": true,
       "title": "The Higgs' Role in the Framework: A Reframing",
-      "summary": "**Reframing.** The substance of the framework's Higgs predictions\n(`m_H = v / q_2`, `\u03bb = 1/q_2^3`) is retained. The narrative role\nof the Higgs is changed from \"the particle that gives mass\" to\n\"one locked mode at a specific Stern-Brocot position.\" The\nderivations that previously used Higgs-centric language should be\nupdated to use locked-mode language.",
-      "depends_on": [],
+      "summary": "**Class 3** \u2014 suspect by association: the two quantitative claims this\nreframing carries (`m_H = v/q_2`, `\u03bb = 1/q_2\u00b3`) are registry Class 3\nbare K=1 identities, declined as predictions at M_Z (`MANIFEST.yml`\n`bare_k1_identities`; `numerology_inventory.md`). The prose reframing\nitself carries no class. [#263 \u24fe ruling, 2026-07-19]",
+      "depends_on": [
+        "numerology_inventory"
+      ],
       "depended_on_by": [
         "articulation_audit_2026-05",
         "gluon_reframing",
         "graviton_reframing",
         "thread_chronology"
       ],
-      "edges": [],
+      "edges": [
+        {
+          "target": "numerology_inventory",
+          "kind": "references"
+        }
+      ],
       "edged_by": [
         {
           "source": "articulation_audit_2026-05",
@@ -18719,6 +18823,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "c9a7683",
+          "date": "2026-07-20",
+          "subject": "#263 \u24fe ruling pass: class judgments applied to the 12-doc queue (#312)"
+        },
         {
           "hash": "e1e25da",
           "date": "2026-04-13",
@@ -19287,6 +19396,7 @@
         "omega_b_residual_phase_b"
       ],
       "depended_on_by": [
+        "a_s_geometric_proof",
         "depth_connection_nulls",
         "framework_status",
         "numerology_inventory",
@@ -19332,6 +19442,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "a_s_geometric_proof",
+          "kind": "references"
+        },
         {
           "source": "depth_connection_nulls",
           "kind": "references"
@@ -19837,8 +19951,8 @@
     {
       "id": "item12_C_from_K_star",
       "path": "sync_cost/derivations/item12_C_from_K_star.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "a2d23ee2db260ece6b524076090e48978a08fdcafb2281ddb41fd81e44835a47",
+      "sealed": true,
       "title": "Item 12: `C = q_2\u00b2 / K*\u00b2` from the tongue-width identity",
       "summary": "The last remaining mass-sector constant, `C = a_1(leptons)\u00b2`, admits\na closed-form reading in terms of the framework's self-consistent\ncoupling `K*` and the Klein-bottle integer `q_2 = 2`:",
       "depends_on": [
@@ -19891,6 +20005,11 @@
       ],
       "git": [
         {
+          "hash": "c9a7683",
+          "date": "2026-07-20",
+          "subject": "#263 \u24fe ruling pass: class judgments applied to the 12-doc queue (#312)"
+        },
+        {
           "hash": "e387fe3",
           "date": "2026-04-14",
           "subject": "Archive stale derivations and consolidate framework constants (#61)"
@@ -19905,8 +20024,8 @@
     {
       "id": "item12_cross_sector_ratios",
       "path": "sync_cost/derivations/item12_cross_sector_ratios.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "90fa90b3e48480614cf8282a9a57cb2811729ecee4a41f4be246978cb2bc620a",
+      "sealed": true,
       "title": "Item 12: cross-sector `a_1\u00b2` ratios",
       "summary": "The three per-sector continuous exponents `a_1(leptons)`,\n`a_1(up)`, `a_1(down)` in the generation exponent law satisfy",
       "depends_on": [],
@@ -19961,6 +20080,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "c9a7683",
+          "date": "2026-07-20",
+          "subject": "#263 \u24fe ruling pass: class judgments applied to the 12-doc queue (#312)"
+        },
         {
           "hash": "e387fe3",
           "date": "2026-04-14",
@@ -22993,6 +23117,8 @@
         "horn_branch_iteration_2_step_1",
         "horn_branch_iteration_2_step_2",
         "horn_branch_iteration_3_step_1",
+        "koide_form_substrate_iteration_5",
+        "koide_form_substrate_iteration_8",
         "substrate_prediction_selection"
       ],
       "edges": [
@@ -23060,6 +23186,14 @@
         },
         {
           "source": "horn_branch_iteration_3_step_1",
+          "kind": "references"
+        },
+        {
+          "source": "koide_form_substrate_iteration_5",
+          "kind": "references"
+        },
+        {
+          "source": "koide_form_substrate_iteration_8",
           "kind": "references"
         },
         {
@@ -23262,7 +23396,7 @@
     {
       "id": "koide_form_substrate_iteration_5",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_5.md",
-      "cid": "ed0cb65a99449809a95e205e5479c34ae3ffc84361449d61f82bfd6b620df48d",
+      "cid": "8455ec02ac3adf436f7fde4cf8afe8c3b1c44a56819f49836ba6b4703a9a47f3",
       "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 5",
       "summary": "**Iteration 5.** Tests candidate 2 (V_4 + dark-state restriction)\nidentified as the most concrete remaining candidate after\niteration 4. Decomposes the 4-component amplitude vector\n`w = (\u221am_A, \u221am_B, \u221am_C, \u221am_D)` into V_4 irreducible representations\nand imposes the dark-state constraint `m_D = 0` to derive a\nconstraint on the observable amplitude vector.",
@@ -23270,6 +23404,7 @@
         "discrete_extension_principle",
         "generation_mechanism",
         "klein_bottle",
+        "koide_form_substrate_iteration_14",
         "koide_form_substrate_iteration_4",
         "mass_sector_closure",
         "omega_partition_combinatorial",
@@ -23291,6 +23426,10 @@
         },
         {
           "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "koide_form_substrate_iteration_14",
           "kind": "references"
         },
         {
@@ -23325,6 +23464,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "c9a7683",
+          "date": "2026-07-20",
+          "subject": "#263 \u24fe ruling pass: class judgments applied to the 12-doc queue (#312)"
+        },
         {
           "hash": "0e04ca8",
           "date": "2026-05-30",
@@ -23461,7 +23605,7 @@
     {
       "id": "koide_form_substrate_iteration_8",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_8.md",
-      "cid": "38ee64c7c8f52a31709eb320c971887e4935dcd6f3b48b6b0e6bf134a35126b0",
+      "cid": "6073c41c9c921d79a017136a27161183184709f6b6f057e5c6ea6844a9c11b9c",
       "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 8",
       "summary": "**Iteration 8.** Tests reading 1 from iteration 7: derive the\nmatrix `M = q_3 I \u2212 q_2 J` from a substrate-natural quadratic form\non three-generation amplitude space.",
@@ -23471,6 +23615,7 @@
         "einstein_from_kuramoto",
         "farey_partition",
         "klein_bottle",
+        "koide_form_substrate_iteration_14",
         "koide_form_substrate_iteration_7",
         "mass_sector_closure",
         "omega_partition_combinatorial",
@@ -23502,6 +23647,10 @@
           "kind": "references"
         },
         {
+          "target": "koide_form_substrate_iteration_14",
+          "kind": "references"
+        },
+        {
           "target": "koide_form_substrate_iteration_7",
           "kind": "references"
         },
@@ -23529,6 +23678,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "c9a7683",
+          "date": "2026-07-20",
+          "subject": "#263 \u24fe ruling pass: class judgments applied to the 12-doc queue (#312)"
+        },
         {
           "hash": "5ef57c1",
           "date": "2026-05-31",
@@ -24438,11 +24592,12 @@
     {
       "id": "mass_entrained_measure",
       "path": "sync_cost/derivations/mass_entrained_measure.md",
-      "cid": "21345a4540c7dae743da79c73f643dbca990045351795f68b160f73d983cd398",
+      "cid": "b22e5f4704d7341329c5b53ad7fff6216d5d035eccad1c29ef55e97f25b9dc09",
       "sealed": true,
       "title": "Mass = entrained tongue width, from the synchronization-cost functional",
       "summary": "M(p/q)  \u221d  w(p/q)          (physical tongue width)  -- SOUND\n    w(p/q)  \u221d  1/q\u00b2  => -2     -- NULL (1/q\u00b2 is the tree weight, not w)",
       "depends_on": [
+        "framework_status",
         "imf_bowed_cascade",
         "sine_gordon_substrate"
       ],
@@ -24453,6 +24608,10 @@
         "salpeter_gate_disposition"
       ],
       "edges": [
+        {
+          "target": "framework_status",
+          "kind": "references"
+        },
         {
           "target": "imf_bowed_cascade",
           "kind": "references"
@@ -24481,6 +24640,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "c9a7683",
+          "date": "2026-07-20",
+          "subject": "#263 \u24fe ruling pass: class judgments applied to the 12-doc queue (#312)"
+        },
         {
           "hash": "b5f4304",
           "date": "2026-05-25",
@@ -25726,6 +25890,7 @@
         "instrument_family_taxonomy",
         "no_rescaling",
         "soliton_dynamics",
+        "tape_stick_slip_dual_regime_correspondence",
         "time_axis_split"
       ],
       "edges": [
@@ -25765,6 +25930,10 @@
         },
         {
           "source": "soliton_dynamics",
+          "kind": "references"
+        },
+        {
+          "source": "tape_stick_slip_dual_regime_correspondence",
           "kind": "references"
         },
         {
@@ -27478,12 +27647,15 @@
         "CHAIN_KSTAR",
         "a0_threshold",
         "a_s_g1_closure_attempt",
+        "a_s_geometric_proof",
         "anchor_count_audit",
         "anchor_extremes_audit",
         "ansatz_audit_policy",
         "articulation_audit_2026-05",
         "audit_punch_list_2026-04",
+        "boundary_weight",
         "canonical_glossary",
+        "coupling_scales",
         "depth_connection_nulls",
         "discrete_extension_principle",
         "duty_cycle_dictionary",
@@ -27494,6 +27666,7 @@
         "farey_partition",
         "farey_proof",
         "fermion_mass_running",
+        "figure_eight",
         "framework_status",
         "free_parameter_scorecard",
         "generation_mechanism",
@@ -27501,6 +27674,7 @@
         "hierarchy_gaussian_lattice",
         "hierarchy_problem_translation",
         "higgs_from_tongue_boundary",
+        "higgs_reframing",
         "hybrid_strategy_audit",
         "k_of_t_friedmann",
         "k_scaling_scan",
@@ -27525,6 +27699,7 @@
         "sinw_fixed_point",
         "substrate_prediction_selection",
         "third_twist_meta_structure_audit",
+        "three_formalizations",
         "vocabulary_is_the_work_pattern"
       ],
       "edges": [
@@ -27663,6 +27838,10 @@
           "kind": "references"
         },
         {
+          "source": "a_s_geometric_proof",
+          "kind": "references"
+        },
+        {
           "source": "anchor_count_audit",
           "kind": "references"
         },
@@ -27683,7 +27862,15 @@
           "kind": "references"
         },
         {
+          "source": "boundary_weight",
+          "kind": "references"
+        },
+        {
           "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "source": "coupling_scales",
           "kind": "references"
         },
         {
@@ -27727,6 +27914,10 @@
           "kind": "references"
         },
         {
+          "source": "figure_eight",
+          "kind": "references"
+        },
+        {
           "source": "framework_status",
           "kind": "references"
         },
@@ -27752,6 +27943,10 @@
         },
         {
           "source": "higgs_from_tongue_boundary",
+          "kind": "references"
+        },
+        {
+          "source": "higgs_reframing",
           "kind": "references"
         },
         {
@@ -27848,6 +28043,10 @@
         },
         {
           "source": "third_twist_meta_structure_audit",
+          "kind": "references"
+        },
+        {
+          "source": "three_formalizations",
           "kind": "references"
         },
         {
@@ -29901,6 +30100,7 @@
         "omega_b_alpha_beta_closure",
         "remaining_gap_shapes",
         "structural_lemmas",
+        "tape_stick_slip_dual_regime_correspondence",
         "thread_chronology"
       ],
       "edges": [
@@ -30000,6 +30200,10 @@
         },
         {
           "source": "structural_lemmas",
+          "kind": "references"
+        },
+        {
+          "source": "tape_stick_slip_dual_regime_correspondence",
           "kind": "references"
         },
         {
@@ -37095,6 +37299,62 @@
       ]
     },
     {
+      "id": "tape_stick_slip_dual_regime_correspondence",
+      "path": "sync_cost/derivations/tape_stick_slip_dual_regime_correspondence.md",
+      "cid": "02a9c62609bb9b9fc54ab7494efb032155a6de8bd67230e3f7b2c2429e0c66c5",
+      "sealed": true,
+      "title": "Tape physics as a dual-regime / basepoint correspondence",
+      "summary": "> **Question.** Scotch-tape peeling shows stick-slip at the peel front (and,\n> in vacuum, emits X-ray flashes correlated with the slip events); magnetic\n> cassette recording is high-fidelity *with* a high-frequency AC bias and\n> grossly nonlinear *without* it; both are read through phase/frequency\n> modulation. Across these tape systems, **does the framework see two\n> regimes or a set of fixed points** \u2014 and which part of that picture is\n> substrate-forced versus basepoint-declined?",
+      "depends_on": [
+        "basepoint_principle",
+        "continuum_limits",
+        "dynamical_quantization",
+        "fm_beat_crt_correspondence_audit",
+        "medium_change_demo",
+        "path_closures_iter3",
+        "vocabulary_is_the_work_pattern"
+      ],
+      "depended_on_by": [],
+      "edges": [
+        {
+          "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
+          "kind": "references"
+        },
+        {
+          "target": "dynamical_quantization",
+          "kind": "references"
+        },
+        {
+          "target": "fm_beat_crt_correspondence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "medium_change_demo",
+          "kind": "references"
+        },
+        {
+          "target": "path_closures_iter3",
+          "kind": "references"
+        },
+        {
+          "target": "vocabulary_is_the_work_pattern",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "3acc67a",
+          "date": "2026-07-20",
+          "subject": "Salvage tape stick-slip dual-regime correspondence from unmerged branch (#311)"
+        }
+      ]
+    },
+    {
       "id": "third_twist_meta_structure_audit",
       "path": "sync_cost/derivations/third_twist_meta_structure_audit.md",
       "cid": "01ecc97cf15ed3faa26f0c7d1b6578884f793509e119894fcce8345947848166",
@@ -37929,14 +38189,15 @@
     {
       "id": "three_formalizations",
       "path": "sync_cost/derivations/three_formalizations.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "4dcb588e553e93ae78d690297acd3089dbd40fba746b9115229fb38432b844ff",
+      "sealed": true,
       "title": "Three Formalizations",
       "summary": "The exponent 54 in R = 6 \u00d7 13^54 decomposes as:",
       "depends_on": [
         "gauge_dictionary",
         "hierarchy_gaussian_lattice",
         "klein_bottle_derivation",
+        "numerology_inventory",
         "sinw_effective_dimension",
         "three_dimensions"
       ],
@@ -37957,6 +38218,10 @@
           "kind": "references"
         },
         {
+          "target": "numerology_inventory",
+          "kind": "references"
+        },
+        {
           "target": "sinw_effective_dimension",
           "kind": "references"
         },
@@ -37972,6 +38237,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "c9a7683",
+          "date": "2026-07-20",
+          "subject": "#263 \u24fe ruling pass: class judgments applied to the 12-doc queue (#312)"
+        },
         {
           "hash": "2ca0794",
           "date": "2026-04-18",
@@ -39593,6 +39863,7 @@
         "sector_decoupling_phase_a",
         "spacetime_dissipative_emergence",
         "substrate_kk_dispersion_target",
+        "tape_stick_slip_dual_regime_correspondence",
         "third_twist_meta_structure_audit",
         "thread_chronology",
         "vacuum_stress_meta_structure_audit"
@@ -39850,6 +40121,10 @@
         },
         {
           "source": "substrate_kk_dispersion_target",
+          "kind": "references"
+        },
+        {
+          "source": "tape_stick_slip_dual_regime_correspondence",
           "kind": "references"
         },
         {

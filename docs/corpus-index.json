@@ -1,9 +1,9 @@
 {
- "count": 325,
+ "count": 326,
  "coverage_totals": {
-  "classified": 188,
+  "classified": 200,
   "prose-only": 29,
-  "unclassified-quantitative": 108
+  "unclassified-quantitative": 97
  },
  "docs": {
   "CHAIN_KSTAR": {
@@ -111,8 +111,11 @@
    "title": "A_s Floor closure attempt G1: anchor-import barrier"
   },
   "a_s_geometric_proof": {
-   "classes": [],
-   "coverage": "unclassified-quantitative",
+   "classes": [
+    2,
+    5
+   ],
+   "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
    "status_line": null,
@@ -365,8 +368,11 @@
    "title": "Boundary leakage rate audit — Gaps 4 + 8"
   },
   "boundary_weight": {
-   "classes": [],
-   "coverage": "unclassified-quantitative",
+   "classes": [
+    2,
+    5
+   ],
+   "coverage": "classified",
    "d_numbers": [
     "D38"
    ],
@@ -496,8 +502,11 @@
    "title": "The Cosmological Cycle"
   },
   "coupling_scales": {
-   "classes": [],
-   "coverage": "unclassified-quantitative",
+   "classes": [
+    1,
+    3
+   ],
+   "coverage": "classified",
    "d_numbers": [
     "D45"
    ],
@@ -678,8 +687,10 @@
    "title": "Down-type double cover — Phase C attempt: self-consistent DoF reading"
   },
   "down_type_double_cover_phase_d": {
-   "classes": [],
-   "coverage": "unclassified-quantitative",
+   "classes": [
+    4
+   ],
+   "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
    "status_line": null,
@@ -950,8 +961,11 @@
    "title": "The Self-Referential Fidelity Bound"
   },
   "figure_eight": {
-   "classes": [],
-   "coverage": "unclassified-quantitative",
+   "classes": [
+    1,
+    2
+   ],
+   "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
    "status_line": null,
@@ -1302,8 +1316,10 @@
    "title": "Electroweak Symmetry Breaking from the Tongue Boundary"
   },
   "higgs_reframing": {
-   "classes": [],
-   "coverage": "unclassified-quantitative",
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
    "status_line": null,
@@ -1424,16 +1440,20 @@
    "title": "Isotropy Lemma: Trivial Stabilizer in the Kuramoto Model at K=1"
   },
   "item12_C_from_K_star": {
-   "classes": [],
-   "coverage": "unclassified-quantitative",
+   "classes": [
+    4
+   ],
+   "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
    "status_line": null,
    "title": "Item 12: `C = q_2² / K*²` from the tongue-width identity"
   },
   "item12_cross_sector_ratios": {
-   "classes": [],
-   "coverage": "unclassified-quantitative",
+   "classes": [
+    4
+   ],
+   "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
    "status_line": "this reading is **a conjecture**, not a derivation.",
@@ -1704,8 +1724,10 @@
    "title": "Koide form substrate derivation — iteration 4"
   },
   "koide_form_substrate_iteration_5": {
-   "classes": [],
-   "coverage": "unclassified-quantitative",
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
    "status_line": null,
@@ -1732,8 +1754,10 @@
    "title": "Koide form substrate derivation — iteration 7"
   },
   "koide_form_substrate_iteration_8": {
-   "classes": [],
-   "coverage": "unclassified-quantitative",
+   "classes": [
+    3
+   ],
+   "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
    "status_line": null,
@@ -1848,8 +1872,10 @@
    "title": "External verification correction — LMFDB substrate retrieval for f_{6,4}"
   },
   "mass_entrained_measure": {
-   "classes": [],
-   "coverage": "unclassified-quantitative",
+   "classes": [
+    2
+   ],
+   "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
    "status_line": null,
@@ -2925,6 +2951,14 @@
    "status_line": null,
    "title": "Surface uniqueness audit — Klein bottle's \"uniqueness\" decomposed"
   },
+  "tape_stick_slip_dual_regime_correspondence": {
+   "classes": [],
+   "coverage": "unclassified-quantitative",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_line": null,
+   "title": "Tape physics as a dual-regime / basepoint correspondence"
+  },
   "third_twist_meta_structure_audit": {
    "classes": [
     1,
@@ -2958,8 +2992,11 @@
    "title": "Three Dimensions from the Mediant"
   },
   "three_formalizations": {
-   "classes": [],
-   "coverage": "unclassified-quantitative",
+   "classes": [
+    2,
+    5
+   ],
+   "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
    "status_line": null,
@@ -3179,6 +3216,6 @@
    "title": "Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions"
   }
  },
- "generated": "856b0f5",
+ "generated": "22cbc44",
  "generator": "scripts/build_corpus_index.py"
 }
