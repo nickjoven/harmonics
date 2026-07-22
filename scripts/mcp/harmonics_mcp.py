@@ -53,8 +53,38 @@ def _graph_nodes() -> dict:
     return _cache["graph_by_id"]
 
 
+SUCCESSIONS_LEDGER = ROOT / "sync_cost" / "successions.jsonl"
+
+
 def _corpus_index() -> dict:
-    return _load_json("docs/corpus-index.json")["docs"]
+    """Docs projection with the quantum-declaration ledger overlaid.
+
+    The overlay gives read-your-write: a succession declared this
+    session is visible to resolve/doc_get/search immediately, without
+    waiting for the CI index regen (canon.d#11 commitment 8)."""
+    if "docs_overlaid" not in _cache:
+        docs = {k: dict(v)
+                for k, v in _load_json("docs/corpus-index.json")["docs"].items()}
+        if SUCCESSIONS_LEDGER.exists():
+            for line in SUCCESSIONS_LEDGER.read_text().splitlines():
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    rec = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                if rec.get("kind") != "SUCCEEDS":
+                    continue
+                new = rec.get("new")
+                new = new if isinstance(new, list) else [new]
+                targets = list(dict.fromkeys(
+                    t for t in new if t in docs and t != rec.get("old")))
+                if rec.get("old") in docs and targets:
+                    docs[rec["old"]]["superseded_by"] = targets
+                    docs[rec["old"]]["superseded_basis"] = "quantum"
+        _cache["docs_overlaid"] = docs
+    return _cache["docs_overlaid"]
 
 
 def _frontier_head(doc_id: str) -> tuple:
@@ -321,6 +351,102 @@ def _tool_resolve(args: dict) -> dict:
     return out
 
 
+def _tool_declare_succession(args: dict) -> dict:
+    """The first write-path tool (canon.d#11 commitment 8): declare a
+    supersession as one sealed ledger record. Envelope (agent, time)
+    is auto-stamped; the doc's content is never touched. The banner a
+    reader sees is a projection from this record, not stored prose."""
+    import datetime
+    import os
+    old = (args or {}).get("old", "")
+    new = (args or {}).get("new")
+    reason = (args or {}).get("reason", "")
+    if isinstance(new, str):
+        new = [new]
+    new = list(dict.fromkeys(new or []))  # order-preserving dedup
+    # Validate against the LIVE ledger, not this session's cached overlay
+    # (TOCTOU: another session may have declared since our first read).
+    _cache.pop("docs_overlaid", None)
+    index = _corpus_index()
+    if old not in index:
+        return {"error": f"unknown doc: {old!r}"}
+    if not new or any(t not in index for t in new):
+        return {"error": f"unknown successor(s): {new!r}"}
+    if old in new:
+        return {"error": "a doc cannot succeed itself"}
+    warnings = []
+    for t in new:
+        heads, chain = _frontier_head(t)
+        if old in chain or old in heads:
+            return {"error": f"cycle: {t!r} already resolves through {old!r}"}
+        if heads != [t]:
+            warnings.append(f"target {t!r} is itself superseded "
+                            f"(heads: {heads}); did you mean the head?")
+    previous = index[old].get("superseded_by")
+    record = {
+        "kind": "SUCCEEDS",
+        "old": old,
+        "new": new,
+        "agent": os.environ.get("HARMONICS_AGENT",
+                                os.environ.get("USER", "unknown")) + "@mcp",
+        "time": datetime.datetime.now(datetime.timezone.utc)
+                .isoformat(timespec="seconds"),
+        "modality": "committed",
+    }
+    if reason:
+        record["reason"] = reason
+    line = json.dumps(record, ensure_ascii=False) + "\n"
+    # Single O_APPEND write + fsync: atomic vs concurrent sessions for
+    # normal record sizes; newline-guard heals a crash-truncated tail
+    # so a partial line can never merge with this record.
+    fd = os.open(SUCCESSIONS_LEDGER, os.O_APPEND | os.O_CREAT | os.O_WRONLY,
+                 0o644)
+    try:
+        if os.fstat(fd).st_size > 0:
+            with open(SUCCESSIONS_LEDGER, "rb") as fh:
+                fh.seek(-1, 2)
+                if fh.read(1) != b"\n":
+                    line = "\n" + line
+        os.write(fd, line.encode())
+        os.fsync(fd)
+    finally:
+        os.close(fd)
+    # Read-your-write must survive any seal failure below.
+    _cache.pop("docs_overlaid", None)
+    sealed, seal_error = None, None
+    if not os.environ.get("HARMONICS_MCP_NO_SEAL"):
+        try:
+            proc = subprocess.run(
+                ["ket", "put", str(SUCCESSIONS_LEDGER.relative_to(ROOT))],
+                capture_output=True, text=True, cwd=str(ROOT),
+                env={**os.environ,
+                     "KET_HOME": os.environ.get("KET_HOME", ".ket")},
+                timeout=60,
+            )
+            if proc.returncode == 0:
+                sealed = proc.stdout.strip()[:64]
+            else:
+                seal_error = (proc.stderr or proc.stdout).strip()[:200]
+        except Exception as ex:
+            seal_error = f"{type(ex).__name__}: {ex}"
+    out = {"declared": record, "ledger": str(SUCCESSIONS_LEDGER.name),
+           "sealed_cid": sealed,
+           "note": ("succession is live in this server immediately; the "
+                    "committed index projection updates on the next regen")}
+    if warnings:
+        out["warnings"] = warnings
+    if previous:
+        out["previous_superseded_by"] = previous
+        out["re_declaration"] = True
+    if seal_error:
+        out["seal_error"] = (seal_error +
+                             " — record IS in the ledger; re-seal with "
+                             "`ket put sync_cost/successions.jsonl` (the "
+                             "enforced-spine gate will block commits until "
+                             "sealed)")
+    return out
+
+
 def _tool_corpus_health(args: dict) -> dict:
     proc = subprocess.run(
         [sys.executable, str(ROOT / "scripts/drift/session_status.py")],
@@ -448,6 +574,27 @@ TOOLS = [
         },
     },
     {
+        "name": "declare_succession",
+        "description": (
+            "WRITE: declare that a doc is superseded by one or more "
+            "successors, as a sealed envelope-attributed ledger record. "
+            "The doc's content is never edited; readers see the "
+            "supersession as a computed projection. Use for owner-ratified "
+            "successions only — this is a commitment, not a proposal."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "old": {"type": "string", "description": "superseded doc stem"},
+                "new": {"type": "array", "items": {"type": "string"},
+                        "description": "successor stem(s)"},
+                "reason": {"type": "string",
+                           "description": "claim-level reason (optional)"},
+            },
+            "required": ["old", "new"],
+        },
+    },
+    {
         "name": "corpus_health",
         "description": (
             "One-line substrate health snapshot (scripts/drift/"
@@ -466,6 +613,7 @@ _DISPATCH = {
     "spine_get": _tool_spine_get,
     "manifest_claim": _tool_manifest_claim,
     "resolve": _tool_resolve,
+    "declare_succession": _tool_declare_succession,
     "corpus_health": _tool_corpus_health,
 }
 
