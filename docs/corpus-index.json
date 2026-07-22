@@ -1826,7 +1826,7 @@
    "has_lineage": false,
    "status_bold": "Iterative formalization, step 1.",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "koide_form_substrate_iteration_14"
    ],
@@ -1841,7 +1841,7 @@
    "has_lineage": false,
    "status_bold": "Iteration 10. Reversibility-class clarification.",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "koide_form_substrate_iteration_14"
    ],
@@ -1856,7 +1856,7 @@
    "has_lineage": false,
    "status_bold": "Iteration 11.",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "koide_form_substrate_iteration_14"
    ],
@@ -1871,7 +1871,7 @@
    "has_lineage": false,
    "status_bold": "Iteration 12.",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "koide_form_substrate_iteration_14"
    ],
@@ -1886,7 +1886,7 @@
    "has_lineage": false,
    "status_bold": "Iteration 13.",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "koide_form_substrate_iteration_14"
    ],
@@ -1910,7 +1910,7 @@
    "has_lineage": false,
    "status_bold": "Iteration 2.",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "koide_form_substrate_iteration_14"
    ],
@@ -1923,7 +1923,7 @@
    "has_lineage": false,
    "status_bold": "Iteration 3.",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "koide_form_substrate_iteration_14"
    ],
@@ -1936,7 +1936,7 @@
    "has_lineage": false,
    "status_bold": "Iteration 4.",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "koide_form_substrate_iteration_14"
    ],
@@ -1951,7 +1951,7 @@
    "has_lineage": false,
    "status_bold": "Iteration 5.",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "koide_form_substrate_iteration_14"
    ],
@@ -1966,7 +1966,7 @@
    "has_lineage": false,
    "status_bold": "Iteration 6.",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "koide_form_substrate_iteration_14"
    ],
@@ -1981,7 +1981,7 @@
    "has_lineage": false,
    "status_bold": "Iteration 7. Pivot to a simpler matrix form.",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "koide_form_substrate_iteration_14"
    ],
@@ -1996,7 +1996,7 @@
    "has_lineage": false,
    "status_bold": "Iteration 8.",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "koide_form_substrate_iteration_14"
    ],
@@ -2011,7 +2011,7 @@
    "has_lineage": false,
    "status_bold": "Iteration 9. Path A test: empirical check whether the framework's existing three-generation amplitude apparatus produces the Koide constraint.",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "koide_form_substrate_iteration_14"
    ],
@@ -3611,7 +3611,7 @@
    "title": "Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions"
   }
  },
- "generated": "bad4748",
+ "generated": "9ad4417",
  "generator": "scripts/build_corpus_index.py",
  "rule8_flags": []
 }
