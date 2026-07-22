@@ -129,6 +129,40 @@ def _drop_table_rows(lines: list) -> list:
     return [l for l in lines if not l.lstrip().startswith("|")]  # RULE 2
 
 
+# Quantum declarations ledger (canon.d#11 commitment 8): succession
+# declared as sealed envelope-attributed records, one JSON object per
+# line, never as content edits. Read FIRST; the prose harvest below is
+# the legacy importer for pre-quantum declarations. On conflict the
+# quantum wins (it is the later, cheaper, attributable act).
+SUCCESSIONS_LEDGER = "sync_cost/successions.jsonl"
+
+
+def load_quantum_successions(root: Path, known: set) -> dict:
+    ledger = root / SUCCESSIONS_LEDGER
+    if not ledger.exists():
+        return {}
+    out = {}
+    for line in ledger.read_text().splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            rec = json.loads(line)
+        except json.JSONDecodeError:
+            print(f"  WARNING: unparseable ledger line skipped: {line[:60]}")
+            continue
+        if rec.get("kind") != "SUCCEEDS":
+            continue
+        old = rec.get("old")
+        new = rec.get("new")
+        new = new if isinstance(new, list) else [new]
+        targets = list(dict.fromkeys(
+            t for t in new if t in known and t != old))
+        if old in known and targets:
+            out[old] = {"by": targets, "basis": "quantum"}
+    return out
+
+
 def compute_succession(texts: dict, rule8_flags: list = None) -> dict:
     """{stem: {"by": [targets], "basis": "declared"}} per RULES 0-8."""
     succession = {}
@@ -215,6 +249,7 @@ def build(root: Path) -> dict:
              for p in sorted(deriv.glob("*.md"))}
     rule8_flags = []
     succession = compute_succession(texts, rule8_flags)
+    succession.update(load_quantum_successions(root, set(texts)))
     docs = {}
     totals = {"classified": 0, "unclassified-quantitative": 0, "prose-only": 0}
     for p in sorted(deriv.glob("*.md")):
