@@ -1,0 +1,3649 @@
+{
+ "generated": "e45c00e",
+ "generator": "scripts/build_claims_index.py",
+ "ingest": {
+  "annotator": null,
+  "telemetry": {
+   "docs": 326,
+   "utterances_sealed": 326,
+   "unstructured": 189,
+   "edges_promoted": 36,
+   "references_untyped": 3130,
+   "propositions": 322,
+   "terms_bound": 110,
+   "corroborated": 40,
+   "unattributed_values": 52894,
+   "needs_review_depth": 14,
+   "reassertion_blocks": 0,
+   "heads_superseded": 0
+  }
+ },
+ "claim_count": 130,
+ "claims": {
+  "0256777fe98e154d9133004d3808a72bfa56a5972b4d0b70007d09e55e398af2": {
+   "subject": "omega_b",
+   "witness": "13/264",
+   "routes": [
+    "urtext-regex-postfix-v1",
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "audit_punch_list_2026-04",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "05932b96fb77cfc49b128ccfe50ccd6a9598f5035af2ceb47915875e7eeab2da": {
+   "subject": "omega_lambda",
+   "witness": "181/264",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "audit_punch_list_2026-04",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "0594c4ecc41f1ed842b4b79b3031877d02759d76c06795775be3470679aa63e8": {
+   "subject": "r",
+   "witness": "1/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "CHAIN_KSTAR",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "067aea9375175cff727c4a22da303c60eea0f0c29e14aa8485e450653080f2a2": {
+   "subject": "d_eff",
+   "witness": "80/27",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "CHAIN_KSTAR",
+     "frontier": true
+    },
+    {
+     "doc": "FRAMEWORK_TOPOLOGY",
+     "frontier": true
+    },
+    {
+     "doc": "down_type_double_cover_phase_a",
+     "frontier": true
+    },
+    {
+     "doc": "duty_cycle_dictionary",
+     "frontier": true
+    },
+    {
+     "doc": "framework_status",
+     "frontier": true
+    },
+    {
+     "doc": "higgs_reframing",
+     "frontier": true
+    },
+    {
+     "doc": "hybrid_strategy_audit",
+     "frontier": true
+    },
+    {
+     "doc": "mass_sector_sqrt_w_phase_a",
+     "frontier": true
+    },
+    {
+     "doc": "negative_results_ledger",
+     "frontier": true
+    },
+    {
+     "doc": "neutrino_mass_audit",
+     "frontier": true
+    },
+    {
+     "doc": "numerology_inventory",
+     "frontier": true
+    },
+    {
+     "doc": "sinw_fixed_point",
+     "frontier": true
+    },
+    {
+     "doc": "three_formalizations",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 13,
+   "corroboration": 13,
+   "corroboration_frontier": 13
+  },
+  "0e6bde8924222cdee0d2ae2d8f09ded292098679ed8d814f6c4d3e481eb95b57": {
+   "subject": "omega_dm",
+   "witness": "5/1",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_two_component_sketch",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 2,
+   "corroboration": 2,
+   "corroboration_frontier": 2
+  },
+  "0fea91107aee1eae4b3fa09b8924985152d7b2965e5c9b5b2b8620a871d285ed": {
+   "subject": "q_3",
+   "witness": "2/3",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "framework_status",
+     "frontier": true
+    },
+    {
+     "doc": "koide_form_substrate_iteration_14",
+     "frontier": true
+    },
+    {
+     "doc": "substrate_prediction_selection",
+     "frontier": true
+    },
+    {
+     "doc": "third_twist_meta_structure_audit",
+     "frontier": true
+    },
+    {
+     "doc": "koide_form_substrate_iteration_11",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_12",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_13",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_8",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_9",
+     "frontier": false
+    }
+   ],
+   "assertion_cids": 9,
+   "corroboration": 9,
+   "corroboration_frontier": 4
+  },
+  "11d9cd6f60dde36555c039e3362466604047acffffb073ae6d5ce30dfe6566f4": {
+   "subject": "v",
+   "witness": "1/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "canonical_glossary",
+     "frontier": true
+    },
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    },
+    {
+     "doc": "duty_cycle_dictionary",
+     "frontier": true
+    },
+    {
+     "doc": "free_parameter_scorecard",
+     "frontier": true
+    },
+    {
+     "doc": "gauge_sector_lovelock",
+     "frontier": true
+    },
+    {
+     "doc": "numerology_count_phase_a",
+     "frontier": true
+    },
+    {
+     "doc": "numerology_count_phase_b",
+     "frontier": true
+    },
+    {
+     "doc": "numerology_inventory",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 8,
+   "corroboration": 8,
+   "corroboration_frontier": 8
+  },
+  "13039cc328acde0c24688c1fe223f2e2d0e3d5e710f33d3fe11a3a699cc09361": {
+   "subject": "omega_b",
+   "witness": "2018/1",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "structural_lemmas",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "140a82b54fd074e7e6c79ba9c3f096cae52f0e72771cd4139167ef89493a3d65": {
+   "subject": "rate_C",
+   "witness": "1/7",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "generation_mechanism",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "14ed4377e06f8777fe50faccf4be73ee82e4b7a5107f5726fff1a384ee68c98a": {
+   "subject": "Omega_DM",
+   "witness": "5/19",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "baryon_fraction",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "15fbd8ff4a41ba6f6f53d47e0bc107932401d3d97ec0aafd49d5198633205cf0": {
+   "subject": "q_2",
+   "witness": "1/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "FRAMEWORK_TOPOLOGY",
+     "frontier": true
+    },
+    {
+     "doc": "anchor_count_audit",
+     "frontier": true
+    },
+    {
+     "doc": "coupling_scales",
+     "frontier": true
+    },
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    },
+    {
+     "doc": "duty_cycle_dictionary",
+     "frontier": true
+    },
+    {
+     "doc": "higgs_from_tongue_boundary",
+     "frontier": true
+    },
+    {
+     "doc": "numerology_inventory",
+     "frontier": true
+    },
+    {
+     "doc": "phenomenology_cross_reference",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 8,
+   "corroboration": 8,
+   "corroboration_frontier": 8
+  },
+  "18cf697e72b8cc69e1e6b57fddd332ede467898349579dbdaafca3f09b488dbe": {
+   "subject": "omega_dm",
+   "witness": "3/50",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "structural_lemmas",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "1a4a567552834d07aaa0a402a74c788eac1714f016b49c07b1613ff25461b76e": {
+   "subject": "Q",
+   "witness": "3/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "third_twist_meta_structure_audit",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "1ca836fb6eb40cbdb5178952bd4a811b247fc20da95182b9b03d5080fd30afe1": {
+   "subject": "Lambda",
+   "witness": "13/19",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "mass_sector_closure",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "1d30a2cda0e93c793421720faf055479f091d96c28b3fbf4761a028667359d34": {
+   "subject": "A",
+   "witness": "26/1",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "horn_branch_iteration_1",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "1de7168ae50af4b10ce68975bfaee1ee227c26fcd707fb9ade1107d068d71922": {
+   "subject": "d",
+   "witness": "1/8",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "sinw_effective_dimension",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "1eec18879a97c539c3ec6d65b440344dbd08a1028bdaa47df4020e39e57b4e8c": {
+   "subject": "omega_dm",
+   "witness": "5/19",
+   "routes": [
+    "urtext-regex-prefix-v1",
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "antiparticle_dark_energy_unification_audit",
+     "frontier": true
+    },
+    {
+     "doc": "baryon_fraction",
+     "frontier": true
+    },
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    },
+    {
+     "doc": "gamma06_cosmological_modular_surface_audit",
+     "frontier": true
+    },
+    {
+     "doc": "gamma06_w6_invariance_opposite_view_audit",
+     "frontier": true
+    },
+    {
+     "doc": "lesson_rotation_curves_a0",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_residual_phase_a",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 7,
+   "corroboration": 7,
+   "corroboration_frontier": 7
+  },
+  "23bd6497c403e7415b2b1107ff1adfa9fdd7751c65fe407d48661399ccb89507": {
+   "subject": "omega_lambda",
+   "witness": "2/3",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_w_plus_cross_ratio_search",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "24ac41577975719fe011ede1f6ace4e29fe7863497fa80b8fa8ed11481809c8b": {
+   "subject": "d",
+   "witness": "1/27",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "hierarchy_gaussian_lattice",
+     "frontier": true
+    },
+    {
+     "doc": "sinw_effective_dimension",
+     "frontier": true
+    },
+    {
+     "doc": "three_formalizations",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 3,
+   "corroboration": 3,
+   "corroboration_frontier": 3
+  },
+  "296ed535bce14a65c3169f112d1cb5d40493c4bf4055913ad5b63bb1575a65fe": {
+   "subject": "omega_b",
+   "witness": "2/1",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "klein_bridge_audit_and_probe",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_alpha_beta_closure",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_c5_closure",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_substrate_side_audit",
+     "frontier": true
+    },
+    {
+     "doc": "session_audit",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 5,
+   "corroboration": 5,
+   "corroboration_frontier": 5
+  },
+  "2c0497c539db389174dd0146779bbc236c9264ccc25016ace7ed3e1be5dc9a63": {
+   "subject": "Omega_b",
+   "witness": "1/19",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "baryon_fraction",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "2c43844268f40661148669ba669bd6228ef9a31fbd2a2224889a0ef7936836bf": {
+   "subject": "k_quark",
+   "witness": "9/8",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "substrate_prediction_selection",
+     "frontier": true
+    },
+    {
+     "doc": "koide_form_substrate_iteration_5",
+     "frontier": false
+    }
+   ],
+   "assertion_cids": 2,
+   "corroboration": 2,
+   "corroboration_frontier": 1
+  },
+  "2d74b58134dd57e4c5c522eebec673381c591545af75175e79a9712d39e381b7": {
+   "subject": "omega_lambda",
+   "witness": "11/16",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "boundary_weight",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_residual_phase_a",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 2,
+   "corroboration": 2,
+   "corroboration_frontier": 2
+  },
+  "3181b8d58d3649efa9cfa1605f6db41d0e661cf24f1aea52cdf378c55f8def09": {
+   "subject": "omega_b",
+   "witness": "343/500",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_residual_phase_a",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "326cc007cc41b161c7bc45ab8e64983c8880bf074db5e98125da4dac662dd74b": {
+   "subject": "MEDIANT",
+   "witness": "3/5",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "koide_form_substrate_iteration_5",
+     "frontier": false
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 0
+  },
+  "32bccc987f0e23046313956ad8632e13326af02638f55c31219ab941d3f0e981": {
+   "subject": "omega_lambda",
+   "witness": "6847/10000",
+   "routes": [
+    "urtext-regex-prefix-v1",
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "anchor_extremes_audit",
+     "frontier": true
+    },
+    {
+     "doc": "born_rule_mode_count_extremes_audit",
+     "frontier": true
+    },
+    {
+     "doc": "boundary_weight",
+     "frontier": true
+    },
+    {
+     "doc": "down_type_double_cover_phase_d",
+     "frontier": true
+    },
+    {
+     "doc": "halt_shock_coherence_audit",
+     "frontier": true
+    },
+    {
+     "doc": "horn_branch_iteration_2_step_2",
+     "frontier": true
+    },
+    {
+     "doc": "klein_bottle_derivation",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_alpha_beta_phase_b",
+     "frontier": true
+    },
+    {
+     "doc": "primitives_vs_addresses_candidate",
+     "frontier": true
+    },
+    {
+     "doc": "readings_compatibility_check",
+     "frontier": true
+    },
+    {
+     "doc": "surface_uniqueness_audit",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 11,
+   "corroboration": 11,
+   "corroboration_frontier": 11
+  },
+  "352addc67843929673b5dc0e84d067519e891871770c58335a2abde4e6d80501": {
+   "subject": "b_1",
+   "witness": "8/5",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "a1_from_saddle_node",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "356c5c5b2cc2871947dc915b39a555e1c0f18d5805c7ab7df499c0bfd67c7aa0": {
+   "subject": "omega_b",
+   "witness": "259/5000",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "partition_logit_form",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "35d66c47c58939aa2d606df0253b9e5ab3cab507575b46bcad66f39bb2d5a464": {
+   "subject": "d",
+   "witness": "26/27",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "sinw_effective_dimension",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "35f4ebcf18840ee4fc12ef6c6e62aa1a676dbcf47834c51a2d1f42874b2db273": {
+   "subject": "b_1",
+   "witness": "5/4",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "a1_from_saddle_node",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "3bce113183840d2dab978d49b6e87a6ef0b0cc07a2d656aa54961f075cf9def1": {
+   "subject": "omega_b",
+   "witness": "5/19",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_residual_phase_a",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "3e34fe4e65fa28c25311877c21712334cc590abae0239cb029a907852d8435f6": {
+   "subject": "Omega_m",
+   "witness": "6/19",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "baryon_fraction",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "3eeeeda85ce906e2f17d8bd560cff21412c4e20c7d3e0ddf2f2b8aae2d20a5e5": {
+   "subject": "omega_b",
+   "witness": "3/25",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "structural_lemmas",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "42aefc1a0fb099bf439a27d96872f1a8128d05068d0e76b8696ef7bef50753cc": {
+   "subject": "K",
+   "witness": "1/3",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "k_inflation_seam_obstruction",
+     "frontier": true
+    },
+    {
+     "doc": "nonperturbative_phase3",
+     "frontier": true
+    },
+    {
+     "doc": "seam_profile",
+     "frontier": true
+    },
+    {
+     "doc": "koide_form_substrate_iteration_6",
+     "frontier": false
+    }
+   ],
+   "assertion_cids": 4,
+   "corroboration": 4,
+   "corroboration_frontier": 3
+  },
+  "43aa00af1ce2b8c00bea832ebe652c021f1cf0b2aef04a8075bd101d501d76ef": {
+   "subject": "omega_dm",
+   "witness": "1657/6250",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "476c68198222cb0852eabcaa604f4c5ce2592643ba1ca8e4ee7e0cc3335067f5": {
+   "subject": "K",
+   "witness": "8/15",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "koide_form_substrate_iteration_6",
+     "frontier": false
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 0
+  },
+  "49a761b69ec4e20b349472f595fde7cae8c085883707d1a230a9977d78f4700d": {
+   "subject": "candidate",
+   "witness": "2/57",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "bicone_golden_z2_identification",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "4b15d98223262083061914da2676680d9fe1f10783a03f74fec8080bcf6abe86": {
+   "subject": "spacing",
+   "witness": "1/7",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "L1_substrate_cusp_ground_state",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "5137d1a4fc34d2ecd2737868d4125c8ff094744278a110178b065696cd579619": {
+   "subject": "N",
+   "witness": "132/7",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_w_plus_candidate",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "51d9a1403a066030529ba95713f16119eaa4451190b3d73b8ea09497a3d42632": {
+   "subject": "omega_dm",
+   "witness": "1/19",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "baryon_fraction",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "5268685d5ab343c9f0ddf5add664de7ba0eeef86d66cef7908a3c213b72d7aa1": {
+   "subject": "C",
+   "witness": "2/3",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "snmc_class_and_entanglement",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "52952c9d03ca1853e3ca8fdcc21a551eef44a726bb6163169fcf33e4d5b3123d": {
+   "subject": "K_lepton",
+   "witness": "2/3",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "canonical_glossary",
+     "frontier": true
+    },
+    {
+     "doc": "f2_possibility_b_jacobian",
+     "frontier": true
+    },
+    {
+     "doc": "framework_status",
+     "frontier": true
+    },
+    {
+     "doc": "koide_form_substrate_iteration_14",
+     "frontier": true
+    },
+    {
+     "doc": "substrate_prediction_selection",
+     "frontier": true
+    },
+    {
+     "doc": "third_twist_meta_structure_audit",
+     "frontier": true
+    },
+    {
+     "doc": "koide_form_substrate_iteration_1",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_10",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_11",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_12",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_13",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_2",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_3",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_4",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_5",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_6",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_7",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_8",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_9",
+     "frontier": false
+    }
+   ],
+   "assertion_cids": 19,
+   "corroboration": 19,
+   "corroboration_frontier": 6
+  },
+  "534468169c43b4e6103cda7767c9c5409c6c848c4a8f9874ff5bd1fec03f4987": {
+   "subject": "omega_dm",
+   "witness": "35/132",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "audit_punch_list_2026-04",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "564473bce12d078a49999d92e95bdf2dc9e33bd60903128ccf31ea4f86c62f8b": {
+   "subject": "omega_b",
+   "witness": "13/19",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_c5_closure",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "59a74b2a1cf3cceb70ddac8a9257851c9c988ddaf6388f01a7a1ebd7e5267013": {
+   "subject": "INTERACT",
+   "witness": "1/6",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_c5_beta_audit",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "5c4f065c093c9e3a954dee6ee3bf5977d04fd053d6ffaeaf2e2b196ba552c89d": {
+   "subject": "omega_lambda",
+   "witness": "83/100",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "anchor_extremes_audit",
+     "frontier": true
+    },
+    {
+     "doc": "born_rule_mode_count_extremes_audit",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 2,
+   "corroboration": 2,
+   "corroboration_frontier": 2
+  },
+  "5ce5049e0a34c527db94b8b4d9266d0daeaa61a3f13ac1ec0bdc3e3d4e60d391": {
+   "subject": "Omega_Lambda",
+   "witness": "11/16",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "boundary_weight",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "5dd4d6089003f392f16a15fbd95dc7d030de6173c6c3081817e28193df305ace": {
+   "subject": "omega_dm",
+   "witness": "5/16",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_residual_phase_a",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "5e324c9d1e596b609e65ae5365d4d11979282fcd1672f4a4815c1b6dda8a5b65": {
+   "subject": "omega_lambda",
+   "witness": "7/10",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "klein_antipodal_z2_rep_pattern",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "5f80e44ec8f7dfb1efa547dcf84e5e8b656524935778bf0d5a29815d20df564b": {
+   "subject": "omega_dm",
+   "witness": "11/16",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_residual_phase_a",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "60bfedda10b7e2371073f397b94b737f2dd6e3df14ff43a1d65a388d1b412a1c": {
+   "subject": "omega_b",
+   "witness": "181/1",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "61552ef6244538032d9bcd24c8824625f846656181c24052b6135c998ff3e762": {
+   "subject": "y",
+   "witness": "1/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "klein_connection",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "621fa334d5eb382ab13cf9b4e99e6a168e81777af55aca4d4139f6a7df6d7c2e": {
+   "subject": "A",
+   "witness": "1/18",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "koide_form_substrate_iteration_1",
+     "frontier": false
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 0
+  },
+  "62c634a82f8e30929f2ebbf17fa4dde57b670b9b6a89c1e04e86a773c3823baa": {
+   "subject": "omega_lambda",
+   "witness": "1/19",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "gamma06_w6_invariance_opposite_view_audit",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "63280090dcce574b2ac5a924776e46c66d610c77f729372d610ea4351612e61f": {
+   "subject": "omega_b",
+   "witness": "1/19",
+   "routes": [
+    "urtext-regex-prefix-v1",
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "antiparticle_dark_energy_unification_audit",
+     "frontier": true
+    },
+    {
+     "doc": "audit_punch_list_2026-04",
+     "frontier": true
+    },
+    {
+     "doc": "baryon_fraction",
+     "frontier": true
+    },
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    },
+    {
+     "doc": "gamma06_cosmological_modular_surface_audit",
+     "frontier": true
+    },
+    {
+     "doc": "gamma06_w6_invariance_opposite_view_audit",
+     "frontier": true
+    },
+    {
+     "doc": "numerology_inventory",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_residual_phase_a",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_residual_phase_b",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_substrate_side_audit",
+     "frontier": true
+    },
+    {
+     "doc": "torus_branch_iteration_1",
+     "frontier": true
+    },
+    {
+     "doc": "torus_branch_iteration_2_step_1",
+     "frontier": true
+    },
+    {
+     "doc": "torus_branch_iteration_2_step_2",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 13,
+   "corroboration": 13,
+   "corroboration_frontier": 13
+  },
+  "67da97b0e5239350b57be018e01b7d10f39d06c8dae4fb71121fcf779bd88a57": {
+   "subject": "omega_b",
+   "witness": "5/1",
+   "routes": [
+    "urtext-regex-prefix-v1",
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "baryon_fraction",
+     "frontier": true
+    },
+    {
+     "doc": "numerology_inventory",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 2,
+   "corroboration": 2,
+   "corroboration_frontier": 2
+  },
+  "6c9d029d8797c73c6dc10cfd158a189ccb0b268c72a00d46c78c7a17273394d4": {
+   "subject": "K",
+   "witness": "1/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "empty_fork_cap",
+     "frontier": true
+    },
+    {
+     "doc": "nonperturbative_phase3",
+     "frontier": true
+    },
+    {
+     "doc": "seam_profile",
+     "frontier": true
+    },
+    {
+     "doc": "unitless_audit",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 4,
+   "corroboration": 4,
+   "corroboration_frontier": 4
+  },
+  "6d1ee517198b7abcdabf98eba7edcc8ddc265be822d8991f095eb3e408f31c36": {
+   "subject": "INTERACT",
+   "witness": "5/6",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_c5_beta_audit",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_c5_closure",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 2,
+   "corroboration": 2,
+   "corroboration_frontier": 2
+  },
+  "6e036f62ef8831026da1496af76af96e5279aced9ac5bec4d1228a7ccfa4b6b2": {
+   "subject": "K",
+   "witness": "7/6",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "denomination_boundary",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "6f63c5fdd8303847d06e1fc25b90a90b707ea8c7d48d4bd74849d36b73b0d572": {
+   "subject": "omega_b",
+   "witness": "1/1",
+   "routes": [
+    "urtext-regex-postfix-v1",
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "cross_ratio_irrep_reframe",
+     "frontier": true
+    },
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_two_component_sketch",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_w_plus_candidate",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_w_plus_cross_ratio_search",
+     "frontier": true
+    },
+    {
+     "doc": "psl2z_subgroup_phase_b",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 6,
+   "corroboration": 6,
+   "corroboration_frontier": 6
+  },
+  "709b433036b3ef4c4c9afdb442b518bae05cb9cbdc2aa4435bc22c202123a03e": {
+   "subject": "b_1",
+   "witness": "3/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "a1_from_saddle_node",
+     "frontier": true
+    },
+    {
+     "doc": "item12_C_from_K_star",
+     "frontier": true
+    },
+    {
+     "doc": "mass_sector_sqrt_w_phase_b",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 3,
+   "corroboration": 3,
+   "corroboration_frontier": 3
+  },
+  "70c239c4e5b8b60490342b98c0b605b6e3f35054f196a92bfb75fc7c04cc7c59": {
+   "subject": "omega_lambda",
+   "witness": "137/200",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "antiparticle_dark_energy_unification_audit",
+     "frontier": true
+    },
+    {
+     "doc": "born_rule_mode_count_extremes_audit",
+     "frontier": true
+    },
+    {
+     "doc": "comparison_class",
+     "frontier": true
+    },
+    {
+     "doc": "gamma06_cosmological_modular_surface_audit",
+     "frontier": true
+    },
+    {
+     "doc": "high_z_mond",
+     "frontier": true
+    },
+    {
+     "doc": "horn_branch_iteration_2_step_2",
+     "frontier": true
+    },
+    {
+     "doc": "surface_uniqueness_audit",
+     "frontier": true
+    },
+    {
+     "doc": "vacuum_energy",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 8,
+   "corroboration": 8,
+   "corroboration_frontier": 8
+  },
+  "730fdd5538a00872ff23437c0a54169114874ada609277ac8023cb7ab895eb2d": {
+   "subject": "rate_B",
+   "witness": "1/26",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "generation_mechanism",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "73fdc475c94f504168999fc28cfb568f1c4eb10e64591db3a65709edb2b5b5c7": {
+   "subject": "omega_lambda",
+   "witness": "13/100",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "structural_lemmas",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "79ccda2be80dd0e3fc55a50256ec46dd33f0a0d57c15322e54176d6b9e797eda": {
+   "subject": "omega_b",
+   "witness": "3/1",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "a_s_g1_closure_attempt",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "7b331d822295e5856227c89cc667d5029c1a13d00286b345efa9ef36575e9c4b": {
+   "subject": "omega_b",
+   "witness": "493/10000",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_alpha_beta_phase_b",
+     "frontier": true
+    },
+    {
+     "doc": "torus_branch_iteration_2_step_2",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 3,
+   "corroboration": 3,
+   "corroboration_frontier": 3
+  },
+  "7ee4f4f7eb007aea39e0dc4fa46ee5543d4656feb220f5662ebf761d1778bbff": {
+   "subject": "Omega_Lambda",
+   "witness": "13/19",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "baryon_fraction",
+     "frontier": true
+    },
+    {
+     "doc": "boundary_weight",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 2,
+   "corroboration": 2,
+   "corroboration_frontier": 2
+  },
+  "7fc7b01801f45b1de18e5130b7ec945195696ea1fccad030350f6afea270ff8a": {
+   "subject": "omega_dm",
+   "witness": "1231/25000",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "audit_punch_list_2026-04",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "802b05fe225370d893fc9f0afccc5f52161ed23125c6c504ad6136743089e133": {
+   "subject": "alpha_2",
+   "witness": "27/8",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "duty_cycle_dictionary",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "8113df869e5b431cb15496248be286a457d7f9e5b0954c0ca40f7a38001f10d6": {
+   "subject": "p",
+   "witness": "1/27",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "sinw_effective_dimension",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "81153ce0d0ed426cbe88c80b5a6629d17a460c34fa882a49ce39a23510986682": {
+   "subject": "omega_lambda",
+   "witness": "207/250",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_residual_phase_a",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "839c4b4c417daeebb90d418ab8506666cc3feed4c082fe6f99a7f468c743b7d9": {
+   "subject": "q_2",
+   "witness": "3/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "item12_cross_sector_ratios",
+     "frontier": true
+    },
+    {
+     "doc": "third_twist_meta_structure_audit",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 2,
+   "corroboration": 2,
+   "corroboration_frontier": 2
+  },
+  "83f3f9f9b260da4e26e8343f43dc6786c1f7f901b2cd831613d79606d88bc453": {
+   "subject": "Q",
+   "witness": "1/5",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "koide_form_substrate_iteration_11",
+     "frontier": false
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 0
+  },
+  "84f1d8a1545885478bddd1884ba51123cc30726d184880aa0baae36644e6a7d5": {
+   "subject": "ratio",
+   "witness": "1/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "discrete_gauge_resolution",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "86346e14a5bc11d6bedeb9430ba744700b95a84a48110e249f314bf1b284f68e": {
+   "subject": "Ratio",
+   "witness": "1/1",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "down_type_double_cover_phase_b_followup",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "8683659f20fbc1157cbbe3e556dcd1e003d06764e45f56692cb81dcf33004c55": {
+   "subject": "omega_b",
+   "witness": "7/1",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_c5_closure",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "87b9ea3f90770448cc09dc4aa006c5459de0b2943ac3b6bc18be6ae7d0243802": {
+   "subject": "omega_dm",
+   "witness": "53/200",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_alpha_beta_phase_b",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "88693fe584b975dc9b6dbb4be034b92b02a10e693250802d76c7e87d0cf4bd25": {
+   "subject": "omega_lambda",
+   "witness": "1266/1849",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "antiparticle_dark_energy_unification_audit",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "8c3c5a08b40519c45d8a2fda5ea92a14a7cc0eceb980f5e9a97d9983c5046e92": {
+   "subject": "omega_b",
+   "witness": "6/1",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "remaining_gap_shapes",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "92b64db1f2b4bc9e15ce485b5cd331544aeda611f6dab0764c7afa1470be41e9": {
+   "subject": "R",
+   "witness": "4/3",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "horn_branch_iteration_1",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "94bff2f74b735878909b8d42c599303a5d291b802b8f5867c798f000292c3c3b": {
+   "subject": "omega_dm",
+   "witness": "3421/5000",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "95110cd68d300a6f4d2753f8d9c8db68c6da63f8b6c0cdae19f1c5d024c61196": {
+   "subject": "q_2",
+   "witness": "7/1",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "w_plus_formalization",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "9594b42cbc9324b842030e1c1148e281e5d1a990fd110e8760b33c09087265a2": {
+   "subject": "omega_b",
+   "witness": "13/1",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    },
+    {
+     "doc": "omega_partition_combinatorial",
+     "frontier": true
+    },
+    {
+     "doc": "partition_logit_form",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 3,
+   "corroboration": 3,
+   "corroboration_frontier": 3
+  },
+  "95c91ae42a99ea271809d6c0b96342fbdd5439c1297229f89376603ade03d748": {
+   "subject": "omega_lambda",
+   "witness": "35/132",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "audit_punch_list_2026-04",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "966df995db30d51d98f96ab22862b5564a14955d3b7a87376fbbcf528214038c": {
+   "subject": "omega_dm",
+   "witness": "13/5",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "9c1944aa8d62f37a0df9defbc1ca8accd3a5ac12c5bbb330c0d064725d0e9051": {
+   "subject": "omega_b",
+   "witness": "67/10",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "klein_dynamics_roadmap",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_c5_closure",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_residual_phase_a",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_substrate_side_audit",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_two_component_sketch",
+     "frontier": true
+    },
+    {
+     "doc": "vocabulary_is_the_work_pattern",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 6,
+   "corroboration": 6,
+   "corroboration_frontier": 6
+  },
+  "9d38c79943ef43ec41ae5922ba32384ab9121c9639fa9b2be480283c0451cb3e": {
+   "subject": "a_down",
+   "witness": "3/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "generation_mechanism",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "9eb433d3e99de2950804ee26d36cd6f57f9b7e0a7706b5f18be8c5a6b32909cd": {
+   "subject": "omega_b",
+   "witness": "13/14",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "audit_punch_list_2026-04",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "9fc42ff3b53a21b1a431aadfcffc80c490b69b1df91e990aecf764690d5f0363": {
+   "subject": "a_1",
+   "witness": "3/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "mass_sector_closure",
+     "frontier": true
+    },
+    {
+     "doc": "koide_form_substrate_iteration_4",
+     "frontier": false
+    }
+   ],
+   "assertion_cids": 2,
+   "corroboration": 2,
+   "corroboration_frontier": 1
+  },
+  "a1900236c76d144636d3c592f381a24d945481db3ded976de970eb42517d51d2": {
+   "subject": "omega_dm",
+   "witness": "361/1000",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "partition_logit_form",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "a3cd4e069198c9a3a7f01866d7bbb0230e127acedb679ea3b53598eaf504acab": {
+   "subject": "alpha_3",
+   "witness": "2/3",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "higgs_from_tongue_boundary",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "a64f0b5fc11ddd7e1907cadc1399f89e81965ce6f22fa67b104a7bbf7adb614f": {
+   "subject": "omega_b",
+   "witness": "0/1",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_residual_phase_a",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "af8376bd508c31b6835fb28bd73647953168d519bff762ec23f513be32787e1b": {
+   "subject": "depth",
+   "witness": "3/1",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "fourth_generation_revisited",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "b09055f52b795e214238c87f340ff30e3f06f91e0c41ca1d8f19d52657f3bb5d": {
+   "subject": "m",
+   "witness": "1/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "xor_derivation",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "b454fc34c3293d2b096831bbf69e4daedcc1a6f0373a83891c31941abb86ebea": {
+   "subject": "w",
+   "witness": "5/6",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "horn_branch_iteration_3_step_1",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_c5_closure",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 2,
+   "corroboration": 2,
+   "corroboration_frontier": 2
+  },
+  "b6d0cf079ea7091afb3a3187ece3e38051b501d06607d99d2a698ca726716ba3": {
+   "subject": "q",
+   "witness": "1/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "a1_from_saddle_node",
+     "frontier": true
+    },
+    {
+     "doc": "higgs_reframing",
+     "frontier": true
+    },
+    {
+     "doc": "variable_denominator",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 3,
+   "corroboration": 3,
+   "corroboration_frontier": 3
+  },
+  "b7029f76f267ec6338d3537728901f457568a65803cac0a096afa2c601dc357e": {
+   "subject": "Q",
+   "witness": "2/3",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "fermion_mass_running",
+     "frontier": true
+    },
+    {
+     "doc": "free_parameter_scorecard",
+     "frontier": true
+    },
+    {
+     "doc": "gell_mann_nishijima",
+     "frontier": true
+    },
+    {
+     "doc": "generation_mechanism",
+     "frontier": true
+    },
+    {
+     "doc": "horn_branch_iteration_1",
+     "frontier": true
+    },
+    {
+     "doc": "horn_branch_iteration_2_step_1",
+     "frontier": true
+    },
+    {
+     "doc": "horn_branch_iteration_3_step_1",
+     "frontier": true
+    },
+    {
+     "doc": "koide_form_substrate_iteration_14",
+     "frontier": true
+    },
+    {
+     "doc": "numerology_inventory",
+     "frontier": true
+    },
+    {
+     "doc": "substrate_prediction_selection",
+     "frontier": true
+    },
+    {
+     "doc": "third_twist_meta_structure_audit",
+     "frontier": true
+    },
+    {
+     "doc": "vocabulary_bridge_iteration_2_step_2",
+     "frontier": true
+    },
+    {
+     "doc": "koide_form_substrate_iteration_1",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_10",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_11",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_13",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_2",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_7",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_9",
+     "frontier": false
+    }
+   ],
+   "assertion_cids": 19,
+   "corroboration": 19,
+   "corroboration_frontier": 12
+  },
+  "b7228582e26c174e5bec80b0ae3c8697fb5ea61e1d5f0360527377446f76d5bb": {
+   "subject": "b_2",
+   "witness": "42/19",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "discrete_gauge_resolution",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "b7a57cdb8cb46215b57c80233810a8dfd353b60d68d482c8218728f2a54b80a8": {
+   "subject": "omega_dm",
+   "witness": "13/19",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_residual_phase_a",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "b83cf19dcbff0e327c12f46d507c707fc0d11dd228eb35a9e4fd18cae6642d15": {
+   "subject": "omega_b",
+   "witness": "5/6",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_w_plus_cross_ratio_search",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "baeb68f08ddb8825aab496a56539e710589e840b1cf9a94620df1edfb877fbb4": {
+   "subject": "omega_lambda",
+   "witness": "34279/50000",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "bbef6da15ad826e84f8b0cc94f1e8bcf34a21ade57c119bad210bc2dc4849893": {
+   "subject": "a_lepton",
+   "witness": "5/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "horn_branch_iteration_1",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "be27874591886f406d45e9b5a1307946cd35eeb28a6a30811175c10d670b2cee": {
+   "subject": "W_x",
+   "witness": "1/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "klein_bridge_audit_and_probe",
+     "frontier": true
+    },
+    {
+     "doc": "klein_dynamics_roadmap",
+     "frontier": true
+    },
+    {
+     "doc": "path_closures_iter1",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 3,
+   "corroboration": 3,
+   "corroboration_frontier": 3
+  },
+  "c27619e19482920440821d278a38568b8cf886a5d7376ed407550cfd0dabfc78": {
+   "subject": "rate_A",
+   "witness": "1/1",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "generation_mechanism",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "c3042ebbcbd96221c162a9c8fc97cfd20423ba0aea41c0006b5345d869aab4d2": {
+   "subject": "omega_b",
+   "witness": "329/1250",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "c4100594e2f06b868a4e27c2b1e3880b0cc2db61fe3de05254b1b62df102088e": {
+   "subject": "W_A",
+   "witness": "1/18",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "koide_form_substrate_iteration_14",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "c64e75548c376fdaf8524004c0700bc6c75ba61ac6d8e4fcdbeb7ea52c05b472": {
+   "subject": "a",
+   "witness": "5/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "fermion_mass_running",
+     "frontier": true
+    },
+    {
+     "doc": "generation_mechanism",
+     "frontier": true
+    },
+    {
+     "doc": "numerology_inventory",
+     "frontier": true
+    },
+    {
+     "doc": "koide_form_substrate_iteration_1",
+     "frontier": false
+    }
+   ],
+   "assertion_cids": 4,
+   "corroboration": 4,
+   "corroboration_frontier": 3
+  },
+  "c9a1e3ec8aceba10e15bb8f1724ba3df04fcdb718014a9065f1f7ca86e5e41e6": {
+   "subject": "D",
+   "witness": "7/12",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "koide_form_substrate_iteration_1",
+     "frontier": false
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 0
+  },
+  "cae0a3bb3e70aec4c306b62bd187e21b1dd5fafd062ca88a62302ea94957594d": {
+   "subject": "omega_dm",
+   "witness": "67/10",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "klein_antipodal_z2_rep_pattern",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "d04613853bcc0ddab3dc3ad80520dd4f7bf3d28412d35f790d03d81d9aaad73d": {
+   "subject": "f_unlocked",
+   "witness": "5/6",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "horn_branch_iteration_2_step_2",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "d20ef07b70861bb7b7621a2f6df225237e3fff33054ceeec29696e57b9d87484": {
+   "subject": "q",
+   "witness": "2/3",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "horn_branch_iteration_1",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "d4b1a28eb96f8f6ba2f6ce388d307977900acedde7e3017f1ec3d03ffd92b0ac": {
+   "subject": "Q",
+   "witness": "1/3",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "third_twist_meta_structure_audit",
+     "frontier": true
+    },
+    {
+     "doc": "koide_form_substrate_iteration_11",
+     "frontier": false
+    }
+   ],
+   "assertion_cids": 2,
+   "corroboration": 2,
+   "corroboration_frontier": 1
+  },
+  "d4fc4bf18b07238fe201bcfc8112eaa45d023e68d7f406b100309045fcd4403b": {
+   "subject": "omega_b",
+   "witness": "463/500",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "audit_punch_list_2026-04",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "d561c5b6cb1ac6c4a1af4a3b104615200fdd9e9cef8a011644214f94c2cc0b43": {
+   "subject": "omega_dm",
+   "witness": "1/1",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "farey_partition",
+     "frontier": true
+    },
+    {
+     "doc": "omega_partition_combinatorial",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 2,
+   "corroboration": 2,
+   "corroboration_frontier": 2
+  },
+  "d5f90dbd1adb6f48b7edbfe5b498072b57dede88c16b0e0448d125e086f5cf37": {
+   "subject": "D_0",
+   "witness": "1/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "coupling_scales",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "d9bdb38838f1e295fa6702212484a7ec1d241e0a9c3c4d8b0e37d6d6ba3ffb9c": {
+   "subject": "C",
+   "witness": "1/6",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "koide_form_substrate_iteration_1",
+     "frontier": false
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 0
+  },
+  "dabb1cc829333f5bc3cbda511e0d135ea99534d42ebff072ad87a0795a335749": {
+   "subject": "Q_up",
+   "witness": "2/3",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "gell_mann_nishijima",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "dcbce1a0f8366e8afed2c8881d4d5a22a26807298ea5cc58ee6f6c7f77878665": {
+   "subject": "K",
+   "witness": "2/3",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "figure_eight",
+     "frontier": true
+    },
+    {
+     "doc": "koide_form_substrate_iteration_14",
+     "frontier": true
+    },
+    {
+     "doc": "seam_profile",
+     "frontier": true
+    },
+    {
+     "doc": "koide_form_substrate_iteration_1",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_10",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_12",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_5",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_6",
+     "frontier": false
+    },
+    {
+     "doc": "koide_form_substrate_iteration_9",
+     "frontier": false
+    }
+   ],
+   "assertion_cids": 9,
+   "corroboration": 9,
+   "corroboration_frontier": 3
+  },
+  "e078defbed06e83cba5bd2ed42c27ce7990eed384d5c8076c3cb994f6eb67093": {
+   "subject": "omega_b",
+   "witness": "269/50",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "path_closures_iter4",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "e6e455897f5fe4489759ec55c8f461f0a613cea3688ca03d74a6b2f6a1a78dbd": {
+   "subject": "r",
+   "witness": "1/1",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "sqrt_r_n_correction",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "e72ef04fcc76689b24337d7ce293f6088ba8b069251241ea5011e9a962e020c6": {
+   "subject": "omega_lambda",
+   "witness": "6857/10000",
+   "routes": [
+    "urtext-regex-prefix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_alpha_beta_phase_b",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "eb2048c975e7239eec35d88e05a7d58c1b99a817372dc354b7d092f1b82e93ef": {
+   "subject": "omega_lambda",
+   "witness": "63/200",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "high_z_mond",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "ef1d723d8106ba28c9158c4a90c02f619558890e431e7a0410260309b25ec3bb": {
+   "subject": "B",
+   "witness": "7/36",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "koide_form_substrate_iteration_1",
+     "frontier": false
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 0
+  },
+  "f1abc320378331e68e2d0a91400674f0128b7372c24bd915bce5eef127e0b9c9": {
+   "subject": "cadence",
+   "witness": "2/57",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "framework_status",
+     "frontier": true
+    },
+    {
+     "doc": "k_of_t_residual_disposition",
+     "frontier": true
+    },
+    {
+     "doc": "minimum_alphabet",
+     "frontier": true
+    },
+    {
+     "doc": "predictions_horizon_2026",
+     "frontier": true
+    },
+    {
+     "doc": "variable_denominator",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 5,
+   "corroboration": 5,
+   "corroboration_frontier": 5
+  },
+  "f2edae2f179555912d8a1f0efd06ecd638d48786c006310868ef207a165c3daf": {
+   "subject": "omega_b",
+   "witness": "8/1",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "vocabulary_is_the_work_pattern",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "f3d115e470593b56cb747b90bf6bdf21c196e5544ffcbb0097cca3b260347fc6": {
+   "subject": "d",
+   "witness": "80/27",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "numerology_inventory",
+     "frontier": true
+    },
+    {
+     "doc": "sinw_effective_dimension",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 2,
+   "corroboration": 2,
+   "corroboration_frontier": 2
+  },
+  "f798f910625ea0cd345bf7ec9bb81ef0b7e3329404f5ce3bb5ad5b83bf883ff9": {
+   "subject": "K_eff",
+   "witness": "3/2",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "continuity_in_K_nulls",
+     "frontier": true
+    },
+    {
+     "doc": "continuum_limits",
+     "frontier": true
+    },
+    {
+     "doc": "k_of_t_friedmann",
+     "frontier": true
+    },
+    {
+     "doc": "sigma_squared_disambiguation",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 4,
+   "corroboration": 4,
+   "corroboration_frontier": 4
+  },
+  "fbf1c7610e858f4db0b3d02052c15cb730382992b0464517f40379e5be18134e": {
+   "subject": "omega_dm",
+   "witness": "1/3",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_w_plus_cross_ratio_search",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "fe2b10a9928fa417c47fef176d3c256f194c4682a7d61c47913c3dabaf568476": {
+   "subject": "omega_b",
+   "witness": "5/16",
+   "routes": [
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_residual_phase_a",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_frontier": 1
+  },
+  "febf3ea4dac3d3284995cbde0569a8fe17d23ffece1748f60e449df15f98e2b0": {
+   "subject": "omega_lambda",
+   "witness": "13/19",
+   "routes": [
+    "urtext-regex-prefix-v1",
+    "urtext-regex-postfix-v1"
+   ],
+   "docs": [
+    {
+     "doc": "antiparticle_dark_energy_unification_audit",
+     "frontier": true
+    },
+    {
+     "doc": "baryon_fraction",
+     "frontier": true
+    },
+    {
+     "doc": "boundary_weight",
+     "frontier": true
+    },
+    {
+     "doc": "comparison_class",
+     "frontier": true
+    },
+    {
+     "doc": "cosmological_cycle",
+     "frontier": true
+    },
+    {
+     "doc": "denomination_boundary",
+     "frontier": true
+    },
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    },
+    {
+     "doc": "farey_partition",
+     "frontier": true
+    },
+    {
+     "doc": "farey_proof",
+     "frontier": true
+    },
+    {
+     "doc": "free_parameter_scorecard",
+     "frontier": true
+    },
+    {
+     "doc": "gamma06_cosmological_modular_surface_audit",
+     "frontier": true
+    },
+    {
+     "doc": "gamma06_w6_invariance_opposite_view_audit",
+     "frontier": true
+    },
+    {
+     "doc": "half_twist_dynamics",
+     "frontier": true
+    },
+    {
+     "doc": "hierarchy",
+     "frontier": true
+    },
+    {
+     "doc": "high_school_syllabus",
+     "frontier": true
+    },
+    {
+     "doc": "horn_branch_iteration_3_step_1",
+     "frontier": true
+    },
+    {
+     "doc": "k_of_t_residual_disposition",
+     "frontier": true
+    },
+    {
+     "doc": "lambda17_test_gamma06_cosmological_audit",
+     "frontier": true
+    },
+    {
+     "doc": "mediant_derivation",
+     "frontier": true
+    },
+    {
+     "doc": "mediant_forcing_lemma",
+     "frontier": true
+    },
+    {
+     "doc": "mode_locking_exhibits",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_residual_phase_a",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_w_plus_cross_ratio_search",
+     "frontier": true
+    },
+    {
+     "doc": "statistical_conventions",
+     "frontier": true
+    },
+    {
+     "doc": "vacuum_energy",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 25,
+   "corroboration": 25,
+   "corroboration_frontier": 25
+  }
+ },
+ "edges": [
+  {
+   "from": "baryon_fraction",
+   "to": "discrete_gauge_resolution",
+   "kind": "grounds",
+   "annotation_cid": "bbc824c9075d2592704d501ac9277d5269132201fae9be5943df530fe3a15417"
+  },
+  {
+   "from": "baryon_fraction",
+   "to": "gauge_sector_lovelock",
+   "kind": "grounds",
+   "annotation_cid": "d29467561af219369764a51cab45a491f93d1c4c6ad57de29b1a9f67bd5cedaa"
+  },
+  {
+   "from": "baryon_fraction",
+   "to": "farey_partition",
+   "kind": "derives",
+   "annotation_cid": "7e0b2501d0b9b3fbde67f28ed3f3845d01cdf945bf8ccd64474be2fbb5c0059c"
+  },
+  {
+   "from": "baryon_fraction",
+   "to": "omega_partition_combinatorial",
+   "kind": "derives",
+   "annotation_cid": "361467275242ebb1eb09a4e61960ff6649a091ccf3ddebab5c1b2bf674155cc3"
+  },
+  {
+   "from": "baryon_fraction",
+   "to": "gell_mann_nishijima",
+   "kind": "derives",
+   "annotation_cid": "053d68fbc9d32b4daafc35ec819ef362d0309ff6a7125732ef5dcc2f58c6f2be"
+  },
+  {
+   "from": "baryon_fraction",
+   "to": "a0_threshold",
+   "kind": "proposes",
+   "annotation_cid": "d4abd6a99fe97b21928c8ae9d30bea0e5a9d710590838322997da28b19b87d2e"
+  },
+  {
+   "from": "baryon_fraction",
+   "to": "a1_from_saddle_node",
+   "kind": "proposes",
+   "annotation_cid": "e7ac061b88dd64faea062fa8a3a4fe7fdb186f588970717fda9f8e836cf3a71d"
+  },
+  {
+   "from": "baryon_fraction",
+   "to": "duty_cycle_dictionary",
+   "kind": "proposes",
+   "annotation_cid": "99fec3a7c5748acf06b4d314091d1c24685ceb3c579157194076e32c4c99fc97"
+  },
+  {
+   "from": "baryon_fraction",
+   "to": "boundary_weight",
+   "kind": "proposes",
+   "annotation_cid": "d2b046423bd6555d41015685e371af1e1880430812d502fb2ed971a68afb3af2"
+  },
+  {
+   "from": "coupling_scales",
+   "to": "discrete_gauge_resolution",
+   "kind": "grounds",
+   "annotation_cid": "661b35cb96220238751590efa993f267b44edd3bb53e1743f105a3a7ed2b4f07"
+  },
+  {
+   "from": "coupling_scales",
+   "to": "gauge_sector_lovelock",
+   "kind": "grounds",
+   "annotation_cid": "66bcb3756bdcf7ca58a260683387529997353f8c162cc293f971e04a550547b4"
+  },
+  {
+   "from": "coupling_scales",
+   "to": "duty_cycle_dictionary",
+   "kind": "derives",
+   "annotation_cid": "e4e7ea5f9f4711f9ca10055e8fd67526e31824d6a2ccfe3e4fd8626e30d8f90b"
+  },
+  {
+   "from": "coupling_scales",
+   "to": "hierarchy_gaussian_lattice",
+   "kind": "derives",
+   "annotation_cid": "d65e4377c7a3629ff8f8a54d6820122d62b14ee19d1a8465d55fc35ab34c69b9"
+  },
+  {
+   "from": "coupling_scales",
+   "to": "planck_scale",
+   "kind": "derives",
+   "annotation_cid": "f76b7d1293606fe5a056d944ace073b1185b520de0f53dd5d1f8a80dcc87caad"
+  },
+  {
+   "from": "higgs_reframing",
+   "to": "duty_cycle_dictionary",
+   "kind": "derives",
+   "annotation_cid": "45674a5d44d22d27cc87d6a90b505a7d1d4cbf2556fce0290a8263ea4362ef63"
+  },
+  {
+   "from": "klein_bottle",
+   "to": "mobius_container",
+   "kind": "grounds",
+   "annotation_cid": "8515d869d6f3f0dc3ac8f77d38a657f8fee127cce1c8b62b58e2d78db0f0e32d"
+  },
+  {
+   "from": "klein_bottle",
+   "to": "rational_field_equation",
+   "kind": "derives",
+   "annotation_cid": "7719ff6f54119895eef1dce4c506a750c8588b6154ea02d1a8f3a1c5bcce76d8"
+  },
+  {
+   "from": "klein_bottle",
+   "to": "planck_scale",
+   "kind": "derives",
+   "annotation_cid": "c72cc5ca69ac972f60973ef6418c05326ca9df7b09afa8469bdf873d14326090"
+  },
+  {
+   "from": "klein_bottle",
+   "to": "variable_denominator",
+   "kind": "derives",
+   "annotation_cid": "880058a57f7c9b609aaff48ce6487c16c142f4d9399471963aa60d8e6890b06a"
+  },
+  {
+   "from": "klein_bottle",
+   "to": "three_dimensions",
+   "kind": "derives",
+   "annotation_cid": "5b79b081dd95d67c16b9e52116018b0fc11c13dc7247ef59b729152bd9d923ce"
+  },
+  {
+   "from": "klein_bottle",
+   "to": "continuum_limits",
+   "kind": "proposes",
+   "annotation_cid": "5e66252e0d216fe5234ac83eeec2cd482e034ae1a47f073a280d9620534ca028"
+  },
+  {
+   "from": "klein_bottle",
+   "to": "einstein_from_kuramoto",
+   "kind": "proposes",
+   "annotation_cid": "3f8dfed25d21566b0711a0d5b12a8275e6755bd64154c30904945808d116ad02"
+  },
+  {
+   "from": "klein_bottle",
+   "to": "lie_group_characterization",
+   "kind": "proposes",
+   "annotation_cid": "35c1c81ec444248fad254137bc8ce06043b919c2a51bbb168ec3b3dbb60e4141"
+  },
+  {
+   "from": "klein_bottle",
+   "to": "fidelity_bound",
+   "kind": "proposes",
+   "annotation_cid": "3fd883156c161dc59da741e52e90bf3512aaaad0b3ac675779b8e46f3599a412"
+  },
+  {
+   "from": "mediant_derivation",
+   "to": "minimum_alphabet",
+   "kind": "grounds",
+   "annotation_cid": "a32fab26a692bef37603fab3d27640e4e1bd247129c45832cf6eedc833e3df02"
+  },
+  {
+   "from": "mediant_derivation",
+   "to": "empty_fork_cap",
+   "kind": "grounds",
+   "annotation_cid": "ad0c417ea64a71c719b75b917d75c6842ed7cb33738f29fc10062acdbf8a3714"
+  },
+  {
+   "from": "mediant_derivation",
+   "to": "klein_bottle",
+   "kind": "derives",
+   "annotation_cid": "cc62c23fe2839234ef9c429d8afbd077af599e342642e0b4c8c54781a0fb233c"
+  },
+  {
+   "from": "omega_b_alpha_beta_closure",
+   "to": "klein_antipodal_z2_rep_pattern",
+   "kind": "grounds",
+   "annotation_cid": "b9bed5c539f573d993be330acce6784a69264f995c8517a13da474a311ef69e4"
+  },
+  {
+   "from": "omega_b_alpha_beta_closure",
+   "to": "baryon_fraction",
+   "kind": "derives",
+   "annotation_cid": "bc4f14a4c69db225025e36e98d681f7dfd168516d0d4f4def792671adcbbfdc0"
+  },
+  {
+   "from": "omega_b_alpha_beta_closure",
+   "to": "omega_b_residual_phase_a",
+   "kind": "derives",
+   "annotation_cid": "d2609ba9fd0585ebfddc1c2a313599e023ab9a89d7ec393f34a264b040bca7c6"
+  },
+  {
+   "from": "omega_b_alpha_beta_closure",
+   "to": "omega_b_alpha_beta_phase_b",
+   "kind": "derives",
+   "annotation_cid": "b601cf14c36531a979c8159d0a36452a7074c901c25fe7d24cb64f11eac0d63c"
+  },
+  {
+   "from": "omega_b_alpha_beta_closure",
+   "to": "omega_b_two_component_sketch",
+   "kind": "derives",
+   "annotation_cid": "b52b855871c0245e8af6c99a4d51cda5d69dbceebe8d496a570d06193529d959"
+  },
+  {
+   "from": "partition_logit_form",
+   "to": "baryon_fraction",
+   "kind": "derives",
+   "annotation_cid": "b6e3abe728aa1dbb2515b823ce44ce3c48981802cf9342ca0e46e3fcf6a806f8"
+  },
+  {
+   "from": "partition_logit_form",
+   "to": "omega_b_alpha_beta_closure",
+   "kind": "derives",
+   "annotation_cid": "240e851b2d8c76c071551235bfe2999364ca0370dd4e31c4dd453996917f501c"
+  },
+  {
+   "from": "partition_logit_form",
+   "to": "klein_antipodal_z2_rep_pattern",
+   "kind": "proposes",
+   "annotation_cid": "05114c7baffc384980f638a2bf55ddaf9ace9faf48d70dfa5bb6a8073c0fe970"
+  },
+  {
+   "from": "partition_logit_form",
+   "to": "numerology_inventory",
+   "kind": "proposes",
+   "annotation_cid": "f814dfad58d944c091f160edbbe42e266e2f37fe12a1d49738047383d6f2e843"
+  }
+ ],
+ "terms": {
+  "'t Hooft naturalness": {
+   "home": "canonical_glossary",
+   "term_cid": "3b7d07fe8f4bc3a937c00b5001b739d86a98b711eeb0e5bf7c590f25528a3e62",
+   "assertion_cid": "731143c3b34b812f6741fc72f57566dabb76d2d759f2b560bbad342accea39aa"
+  },
+  "A_s_obs": {
+   "home": "canonical_glossary",
+   "term_cid": "d7480a53334283b3b9bfe6673dc9e60fe99ef0d80d47de1f3b69ca3dd45b4e91",
+   "assertion_cid": "a7c4afc31ca818b80db2b583e1105050434615cd19187ae9e4d3a3b62b47db20"
+  },
+  "A_s_substrate": {
+   "home": "canonical_glossary",
+   "term_cid": "5c1dedc80f91b08799d27e9f17c191762ae07753c45cc798bd87efba4040dff7",
+   "assertion_cid": "c739858ada8c93b7a740023cec89f479560acffe8e6f080ee25223ea332421b1"
+  },
+  "Anchor-side": {
+   "home": "canonical_glossary",
+   "term_cid": "d2c8a358bd7deab8c815ffd1925b8a4c1762e65e4ca3015adfd254c4cd1acffe",
+   "assertion_cid": "b79d659dc1592e0d7a2d0316ea6a3dbed5fa72f0e83314beec1ea82823f62d1d"
+  },
+  "Anharmonic group": {
+   "home": "canonical_glossary",
+   "term_cid": "85415bb87c47e35458b9fefc5210a9a541751c88605c9eb335a5bdb5302ea201",
+   "assertion_cid": "452112a2c4e315c00637f316a86341c1de7e98671d9a68250fbbbc2d72647a61"
+  },
+  "Ansatz audit policy": {
+   "home": "canonical_glossary",
+   "term_cid": "26defc98ebff1d3cad0960eeece5e8f89453c3f8903b27a97ae83c4c109a0a90",
+   "assertion_cid": "cbe7941979976855dca235e018b47304497e652ad3bcc1699b1e1d2547421806"
+  },
+  "Antiperiodic-cycle count → amplitude field": {
+   "home": "canonical_glossary",
+   "term_cid": "f6dd759302d0cc74bfc26387036a35e1fb811d9ce7dbe8f5f4d6998669f0b616",
+   "assertion_cid": "e327681a34af0ce2e8383e350a1a5042cbc84090ca37a6551af42978d114e3a3"
+  },
+  "Boundary modes {1, 5}": {
+   "home": "canonical_glossary",
+   "term_cid": "698de6840bb9b2dc8cc5a3ab7adc3a1e93b7b5e01dce73094a378f7b5bdf678b",
+   "assertion_cid": "dc14fc89119ede47b7074be876a57491b7f2cf134e673ceba1a2782f2304dd72"
+  },
+  "Catalan equation / Mihailescu's theorem": {
+   "home": "canonical_glossary",
+   "term_cid": "5235a15fcc6ad7cf60c06038d608aa0e06d3f62e863423c409ace301d1f280d8",
+   "assertion_cid": "63c0d9261be3734ba533dc3a78e22300751d3516bce014981f1738e409fa65a0"
+  },
+  "Chirality (SM L/R)": {
+   "home": "canonical_glossary",
+   "term_cid": "195a3be6657697a62450f55a415ef51b56868dea7521d67128be46394d2adeee",
+   "assertion_cid": "6da8fede858f187c15ba3a1201e2a7cde996ff93ed1f8027dcec7d3151c31831"
+  },
+  "Circle map": {
+   "home": "canonical_glossary",
+   "term_cid": "942e99c82e701103f6ec0f2de022e485331361ff1f3d7727426e80020f4a6477",
+   "assertion_cid": "e189239219012a550235914438548f94a45a931ce2a2a52335ead712ab667f99"
+  },
+  "Class 1-5": {
+   "home": "canonical_glossary",
+   "term_cid": "d547fcc5457fcbec48aba63984e41379e918ae18047ba8b5384909620e9bed9f",
+   "assertion_cid": "86e5ca3e7e2817f788eb1dcfacd2e43c23485b61251a3c0f66126a0751e5799d"
+  },
+  "Color triplet rotation σ": {
+   "home": "canonical_glossary",
+   "term_cid": "efea5852f1f9d4a3d015575617a03ba56e1318c61e080561b9ed8cd53cff1f0f",
+   "assertion_cid": "0f157588628202c420d04ddc4ca5c31534e9c6ee93a9dd518863ade421b4bff0"
+  },
+  "Conditional pair-wise apparatus": {
+   "home": "canonical_glossary",
+   "term_cid": "cd96df3d9489abe8ff962d3212de8e5d5d23a013f0020e627050975ff05f1dde",
+   "assertion_cid": "2d94c86ae3a27c5c1e3a36a2ecee567ef66e9485477e2e5a243c34dd267370ab"
+  },
+  "Continuum (ℝ)": {
+   "home": "canonical_glossary",
+   "term_cid": "9a519a73653e6bb19b82f430ad5fd7f8f88e29e79f524b1634622cc42d936135",
+   "assertion_cid": "41541e4613d5a829b39a40343e890617557b8d20d6c96b2d271965fdf7feb411"
+  },
+  "Cusp 1/2 of Γ_0(6)": {
+   "home": "canonical_glossary",
+   "term_cid": "29358f710ebe785725f028a9ed240a4fe302637b882b1f7759246de3fd07f448",
+   "assertion_cid": "d0e72ce1fc10725418613f1e657217c65eeb8cf573c88315beb3e9416604ff2c"
+  },
+  "Cutoff": {
+   "home": "canonical_glossary",
+   "term_cid": "7b1aeba853d0b2b55e71767d2422cdb00b8425178f6672c376c437e30c349ea9",
+   "assertion_cid": "8b19b601ad9300145f1a5de5b3f84aca853190f037efcb936ca3abd1426813a8"
+  },
+  "Derive-mode": {
+   "home": "canonical_glossary",
+   "term_cid": "f04f67692ed939e2ad1dd29f764b7e5436295f939ff08bc300961ee3f6909be6",
+   "assertion_cid": "bcb9fb8b77e7e440bcb28d9e4253c5f245d081182efb470de498c4a5825be7d9"
+  },
+  "Dicke primitive (N, k)": {
+   "home": "canonical_glossary",
+   "term_cid": "192888021d5b509811adc92edfa2186076499191933a8feaef37ae7818f7f023",
+   "assertion_cid": "25813b04bd2fb219dc4d6a802cd3bb741e60ded26db0b17aa9bd2e25a1e61c5d"
+  },
+  "Discrete Extension Principle": {
+   "home": "canonical_glossary",
+   "term_cid": "ef4fff9e05d11dbd159d09289e66dfc5eb16761a4103c2a43dce2258954ab6b3",
+   "assertion_cid": "d4301168730220848900cb1ec2c336e860ef034df4114794d247dc24b6b3d058"
+  },
+  "Discrete time / Planck-time stepping": {
+   "home": "canonical_glossary",
+   "term_cid": "69cdffea2d09ce1b7405d6bc8f8c2fc52bd01c70b76857c9437fbbb35e2435d2",
+   "assertion_cid": "fe6f6231c6f2596446099635860c41ba2eedf92035fdce4bc6a63dddea1967b6"
+  },
+  "Discrete-lossless / quantum-lossy": {
+   "home": "canonical_glossary",
+   "term_cid": "9fb28574d6af4b91db5f6fe00d328891e8a632dd5bdfb72549e49d0a57b70ad8",
+   "assertion_cid": "5150b50e0a2e54e2c5be28eeeec7e3656c80814c3cd278febe25c538217549a0"
+  },
+  "Discriminator clause (multi-mode)": {
+   "home": "canonical_glossary",
+   "term_cid": "40091c21024139f26b101309888f5c337e40869f7271d86179740aaf83f99904",
+   "assertion_cid": "8af0fce8423992e2b227374b621305a6d3a0c80ee7c34cebc2d7a74074a23217"
+  },
+  "Down-type quark factor 6": {
+   "home": "canonical_glossary",
+   "term_cid": "801a5b1e438f8bea19eea0950477cd70b9ae2939cd33de2552eb1381b72f492a",
+   "assertion_cid": "a33287cacbfc44774c22fb3873e10a19524420a6235cb6e74acece6419620082"
+  },
+  "Eliminate-mode": {
+   "home": "canonical_glossary",
+   "term_cid": "30dc23978c50c05e2329e79a8e65d176f6205988ab9b0bf94fd6d7e428ce25f4",
+   "assertion_cid": "7109494590d455e9021ea699ada42ce04c39b49883dbc854b247785d318bada6"
+  },
+  "Floor": {
+   "home": "canonical_glossary",
+   "term_cid": "8e0f0c33a27dfbc31c6da4462e2a0fba33b7111f25b572516c9184c91d67f886",
+   "assertion_cid": "1d345cf6276acbf68754959d5080e32cd8e923e15d80efa3a477c4bc14e5bae9"
+  },
+  "Gauge group": {
+   "home": "canonical_glossary",
+   "term_cid": "d6408b92b5f5a4b2dd52ebc4b0f560a7a5ff713b8a4f439b72ed84995c03a8b3",
+   "assertion_cid": "d0c59ccbdf378d1db0bb4c04bb51b4f09f0587579b4e6891e9bb7253a058204d"
+  },
+  "Hecke cusps of X_0(6)": {
+   "home": "canonical_glossary",
+   "term_cid": "24859e34a23a8953a92e9f3e89d88bd856e5460bd7645ffc1110db66a30e148b",
+   "assertion_cid": "1d839529dde116db31eb38302514a5aa4a7892f228d22bce664170f04dfe0afc"
+  },
+  "Hierarchy problem": {
+   "home": "canonical_glossary",
+   "term_cid": "1c14025becfa9c62f892836ca2702c4b71e00472192dc6c54c14d86a6faaa84d",
+   "assertion_cid": "ed944c4737f7b73c0953712ec89a9804a250b27b25e06b954ad602c5c7a90e08"
+  },
+  "Honest-landing loop": {
+   "home": "canonical_glossary",
+   "term_cid": "f30c99ee8f027580c72dd63d747da89933b20dfbfda5d1fbb14055d840ef3df7",
+   "assertion_cid": "200f055deba0449e84727ab6843a89df92479eeb9221a4700ec9c7a7700b768d"
+  },
+  "INTERACT = q_2·q_3 = 6": {
+   "home": "canonical_glossary",
+   "term_cid": "41861f79576957656f80597ae93717ef85a3cc1150ccf2159e24e221f190ce0e",
+   "assertion_cid": "ae07e826cdde73a31214d4f7bd1d9fa27de860b5b9ff59e66d13493c50d727d8"
+  },
+  "Inner modes {0, 2, 3, 4}": {
+   "home": "canonical_glossary",
+   "term_cid": "a64f23dd63556d6e51e1e839033d99ec3021a6c1c8ab265338c2a28fcb30b100",
+   "assertion_cid": "c37a16aa8bbc8d6848eb7fc984c864f8e233ef2696305750689d9eddcefba45a"
+  },
+  "K (coupling)": {
+   "home": "canonical_glossary",
+   "term_cid": "307a8cb84091b9422264a050b4dad813bb8c9d0369511088f0a24f66d577dc97",
+   "assertion_cid": "c59ee2b4bd7131f41d41dd27f9ee4a709b29078f56f1f0c67ca39f8f22fe6d0d"
+  },
+  "K < 1 (subcritical)": {
+   "home": "canonical_glossary",
+   "term_cid": "e88297218481dc21332b94824224c63045b5aee1f345dd9eb87a959a7119ea15",
+   "assertion_cid": "f909945c2135fa15b2f692a0ec9bae8bd75366c485c6cad94781927440cd4b17"
+  },
+  "K = 1 (critical)": {
+   "home": "canonical_glossary",
+   "term_cid": "73deeaf381e41bfeeebdd3c8394fc2709765bd18240804b59823e889b23d9d93",
+   "assertion_cid": "a8f43208e3cb31e29dcea985de5195abc4cea89905bb28fa372fbd7cc01417a1"
+  },
+  "K = K_c (Kuramoto critical)": {
+   "home": "canonical_glossary",
+   "term_cid": "df702cf7101ce40c688748f4bc71197f3c6040e18fb86c9455b533f4330f2726",
+   "assertion_cid": "c46c128f5fd146ec3518bfc4dd226d697184f3a3ade825f5eb54e577e55f8fb8"
+  },
+  "K=1 ↔ K<1 boundary": {
+   "home": "canonical_glossary",
+   "term_cid": "80f1040b15263cdec1da2a10b9bde5f44c6456c46699a88570c0cbfa3826d449",
+   "assertion_cid": "a09d26009f716edbd1731154c2cc1f48e45474af3b3b5be057539e60c7597156"
+  },
+  "K_0 ~ 3 (RFE nucleation)": {
+   "home": "canonical_glossary",
+   "term_cid": "ac7407c8a7b049124f538361f754a8b490d2416dafb01f9021f19cec0b7816dd",
+   "assertion_cid": "3ad77a0b544172cef676c542fa376ce561a200facdd0788f19fd7049ab684f6c"
+  },
+  "K_LEPTON = q_3² = 9": {
+   "home": "canonical_glossary",
+   "term_cid": "d844eba5c12501557d510d7bb381059e0cce6a4a2438cba864bdb3f1eaee73b9",
+   "assertion_cid": "43d7e705d124db97c71c1b864cc5c1590ae0c33c327d1fa0c0deaeece9eddda4"
+  },
+  "K_QUARK = q_2³ = 8": {
+   "home": "canonical_glossary",
+   "term_cid": "2a453855360b2e5e7299f9f021d59d79d0f46b2a27180f94555ddcf6964a8256",
+   "assertion_cid": "22a770f9ddab937c0ea0c352198c5ea02268e361d8c44303b8297be91ce9da76"
+  },
+  "K_STAR ≈ 0.86196": {
+   "home": "canonical_glossary",
+   "term_cid": "7a32e3bc2c00c882c2b2fae1292a455b5660b7385afdf69d7babbcb174ca4d2d",
+   "assertion_cid": "6ac9110efca9e9785ae310e4ede7a82c68b150a38bf50095c5f995984399b0ec"
+  },
+  "K_c (Kuramoto critical)": {
+   "home": "canonical_glossary",
+   "term_cid": "5fee34fbf205e7fd6573b853f76e6989c35108aeaccb734d354f0df136006730",
+   "assertion_cid": "740988f4225fb486f98d4138d556bc22f13f1bcf8d010e5a14c8b504e9a17b5c"
+  },
+  "Klein-antipodal Z_2 rep": {
+   "home": "canonical_glossary",
+   "term_cid": "1a144ad5996799fac8bf9d9031248b89940dcaf56f18e32ace3f01abe6e44e11",
+   "assertion_cid": "c469e6eaec3a986a5d43fcd75bbae5b4215fdee51792632b136826ce36ea38dc"
+  },
+  "Klein-antipodal involution τ": {
+   "home": "canonical_glossary",
+   "term_cid": "0d20cbadc97b2e44f53c3dc468b19f93507aad51e9b29c97e7c3175f68e75218",
+   "assertion_cid": "60531564d2c5b022b8c4812e4b950d0f8d0d86733b2b29bc05f19d8b74ef14e4"
+  },
+  "Klein-monodromy ±1": {
+   "home": "canonical_glossary",
+   "term_cid": "3314297c98ec191cbbfa9cc7be07c5d67b74b5e091d48d03315da9cb4d6f59d8",
+   "assertion_cid": "10113667ce986e2d0e05d9fca97d19615db82969acbb761fd4cdb0959a689c3a"
+  },
+  "Klein-singlet ∩ coprime-to-6": {
+   "home": "canonical_glossary",
+   "term_cid": "8c0ef929db75b5db4dff28f52c2edb7c25be73a48b56c35e3409d81eeb53f24a",
+   "assertion_cid": "49c342a2e2dc13664acf60156a71316847c34fbc87eea01f625228560569be34"
+  },
+  "MEDIANT = q_2 + q_3 = 5": {
+   "home": "canonical_glossary",
+   "term_cid": "a7bd8d405b65aa07062e044e0d7e36a674c214b481081bffa17914359a5ceeec",
+   "assertion_cid": "9a3666c9cfbaff9bd0c21391be72d8909afb55b0c10b8616c4ad02dd732261ea"
+  },
+  "MOND threshold": {
+   "home": "canonical_glossary",
+   "term_cid": "936a02a43b64c323d945723a5a4b91be3c9e0a5ccfbea64743dc984292a3c7dc",
+   "assertion_cid": "26055fa9d5025bf329bda5990572fa96abb265da16289343b1239d59ebb25acf"
+  },
+  "MOND threshold a_0": {
+   "home": "canonical_glossary",
+   "term_cid": "12c9a8001fb6b0acd4ba501663173ac59e23cfa2f0243f0c2f57ab4e063c54a8",
+   "assertion_cid": "f55f159f471da71a176f7eccdb5d8f23c222497e18c216675ff236dd26585052"
+  },
+  "Mediant operation": {
+   "home": "canonical_glossary",
+   "term_cid": "64ef6566b31c3e01246f83d67ccfa0aa87e1dde3b85039e77bb276acacff6b77",
+   "assertion_cid": "14bacd311e53f36430d32de1d23c18d9fc1dc2ef4173ecaa9a65c6687a85788e"
+  },
+  "PSL(2,ℤ)": {
+   "home": "canonical_glossary",
+   "term_cid": "2427e59453bbf67bb9b0395202ab43a9fc1d4c3cab49549a3fb18bb1fd3d8a55",
+   "assertion_cid": "64a6625c1a256261fb5250fce982308013f479d704f5007d697e1b4f681571ea"
+  },
+  "Pauli stabilizer apparatus": {
+   "home": "canonical_glossary",
+   "term_cid": "251a2a558117c88e6f36678f5a1558e75d9048df195648f0db049b4908a54e94",
+   "assertion_cid": "f06d8511617437ac5d51d1717f12e16f1baf1171f955a3f98aca5918e0921d0c"
+  },
+  "Pigeonhole verdict": {
+   "home": "canonical_glossary",
+   "term_cid": "adae73b1ee9013b083a3abda4d55e8420138639f7041f9109b3aa34c8db42db6",
+   "assertion_cid": "458b81a7fc815637df4ec51bdb63e22263ba8ae17dc65e7965f3ff6f7b829277"
+  },
+  "Possibility-discipline": {
+   "home": "canonical_glossary",
+   "term_cid": "97a3c96041105e8effdc83418912fa77e70632415f44bb523c0a4f84bcbd2345",
+   "assertion_cid": "2142606de50468a45b13e0fd5be38eb35b23fb9a88483ca33ee2fac944570069"
+  },
+  "Primitive 1: integers Z": {
+   "home": "canonical_glossary",
+   "term_cid": "7d727ced1b6bf53fe3f53e1debf25db517c521aff90931fa4cdfbac6a15a7367",
+   "assertion_cid": "55b4431f5e676bc8bd8df27772a544738315dba5d3bbab9e059d48c3c56b584e"
+  },
+  "Primitive 2: mediant": {
+   "home": "canonical_glossary",
+   "term_cid": "f0a51e3821d5690387742dfcf498146dd0c90eebfc092d8c60759ab95b0ed17b",
+   "assertion_cid": "378d24f6b695bfc7ee5cb27bf86ca6575f00095edcd2d94a503c776858d79081"
+  },
+  "Primitive 3: fixed-point": {
+   "home": "canonical_glossary",
+   "term_cid": "6e597ae1c9e764ac0036ba334506b840f885b4cb667bb8ee0d92b99d0288cb81",
+   "assertion_cid": "206539a7d9226324b3cd6b476e616fe6ac1d49d5157fd7679a388cf10edce606"
+  },
+  "Primitive 4: parabola": {
+   "home": "canonical_glossary",
+   "term_cid": "bfe89f7b18979a8853a96b27f6cfd715e703a693750f39c413b9d64d72a813d1",
+   "assertion_cid": "00478bd6ef61e14393a6e51999ffafd4c61421c508e658022ecf5c1152f0702f"
+  },
+  "Productive null / substrate-admitted-with-cluster": {
+   "home": "canonical_glossary",
+   "term_cid": "9caf96a09184e318cf51a62c1711b5de0f5168d636aaa56fb041ff4dbdaab54d",
+   "assertion_cid": "58016b42d8607b6d5f198e8c96b7967e49295107adab831f07203da002e201f7"
+  },
+  "Q mod 2 (topological charge)": {
+   "home": "canonical_glossary",
+   "term_cid": "f91cef45b5b6830ae97378d1b21bd2956ee8379a2b079ef6ec9a3edfe84f78ba",
+   "assertion_cid": "cd6fd8f3d76c8d7b7eac94a93a1a4a60371326e1be712ee17abd6cb32eb7cbe3"
+  },
+  "Q_{ABC} mod 2 (triple, XOR extension)": {
+   "home": "canonical_glossary",
+   "term_cid": "fd646e74e6cec5df4ba2e147ef79e0c0d7c3f663d1c7f7b45ee71ecc88566786",
+   "assertion_cid": "9a14675b429f7334848b6fccf5638a270716a98763ef5f06fc3da404a2899e09"
+  },
+  "Q_{AB} mod 2 (pair-wise)": {
+   "home": "canonical_glossary",
+   "term_cid": "ef0920ecc7725c1647ec1fbe7b07bf0d257649e5bf1b5860de66536eb93c8639",
+   "assertion_cid": "a6730da234c4fd0f588b4e3070c78c6ed5dc0f9aff577b9a051f2af6927f4bc8"
+  },
+  "Quadratic UV divergences": {
+   "home": "canonical_glossary",
+   "term_cid": "5fe1e44d9a099b4ad5785feb6b5cc3aba2c35be1cec2a41e688cb7022e796c26",
+   "assertion_cid": "5efd73868844efa07dbef3d97ba4c33463a47fd3e878e26565f7346dbb274d7b"
+  },
+  "R = 6·13⁵⁴": {
+   "home": "canonical_glossary",
+   "term_cid": "486c535abf6f03f45afa2b5130463dcc1b62e7fedbfdd59c9397d5f75b6a563f",
+   "assertion_cid": "79bc60762a2fbbb155579e69b8bac495f14471393a20dd00a29a57c58a6d3340"
+  },
+  "Recognize-mode": {
+   "home": "canonical_glossary",
+   "term_cid": "b6a24c6fbfe6078a212ae5588b5aa3510d9725e8edcbac685402dce6c209ba61",
+   "assertion_cid": "ab3366218debd8ec6c991fb26019f579bd37b07445ab53455c5881d3fad184be"
+  },
+  "Recursive Schmidt structure (Dicke)": {
+   "home": "canonical_glossary",
+   "term_cid": "1695f7a6daf863975563a876a355b3a0231edf68e42d6e2e889d3e20babb214a",
+   "assertion_cid": "506b4ba4c9701cbe83b86151aebcbb25a4b6b5e8001efb567c47aa1cac8a23ce"
+  },
+  "Resolution vs reconstruction": {
+   "home": "canonical_glossary",
+   "term_cid": "9d50273420a24b4aff7388d9170c9a96bfdd2296cd9f3ce75e7c5d260b70a369",
+   "assertion_cid": "2adea325e046b7dd6caf6b05456f3bbee66fc9d7b92d44fae07e1c176ecc45ec"
+  },
+  "SM anomaly cancellation": {
+   "home": "canonical_glossary",
+   "term_cid": "ab94be5241f8a36d3bbfbd7784f0c5aa74b456c12e067ad0cca21fcdd81df7ec",
+   "assertion_cid": "6bbd55a4d6387d675558b77ffc44361454d21737672b9a34d37ba21f724c2619"
+  },
+  "SNMC (Substrate-Natural Multipartite Class)": {
+   "home": "canonical_glossary",
+   "term_cid": "0b16b10aee398d878f8e71a0531a4c94e7082201921e7b6c860e20042e2f1c89",
+   "assertion_cid": "4f1553ea6e3dd945d352195c2792568d68fc1605b4152d8bd9aff33d9e984074"
+  },
+  "Self-consistency (field-equation)": {
+   "home": "canonical_glossary",
+   "term_cid": "93bbdc7ec15113d437d9141cd50f0576ba034abfbdb8357d03517669260baa19",
+   "assertion_cid": "b683381b7ea888a15124e5b29d2f5c4a0face6c2e379b50125d6e222f00924af"
+  },
+  "Stern-Brocot tree": {
+   "home": "canonical_glossary",
+   "term_cid": "fc309cd0a6a89abe1dda4e07ff5929ebbe19d6846fec536e1923bea166824f4a",
+   "assertion_cid": "0fbf46fc45957acb6a27cbd2bbb00d80a6bf34fc29175225f98242dc1ad9e74b"
+  },
+  "Strong CP θ = 0": {
+   "home": "canonical_glossary",
+   "term_cid": "deac0a2a793095736f57dba232d70c2b6b7388ab3950fb82af2fa4e5bf5e94bf",
+   "assertion_cid": "8701e31eaf5e2caff535b26202239e895049498ccf741c83f3fcbcfa892a9470"
+  },
+  "Substrate's natural multi-mode reach": {
+   "home": "canonical_glossary",
+   "term_cid": "2170f50a36e715e81c07b8802d55acdc8b440cece35d2172eebbb8b76dc6ce9c",
+   "assertion_cid": "da2c0768c33b2407ba3df0068935840540f4d2bda875e11a6478cdbcc0c3ec8b"
+  },
+  "Substrate-admitted": {
+   "home": "canonical_glossary",
+   "term_cid": "740fa34f21c08e1dd060d155b588b4d2fd7d10f0e00a4ac5c0ac9523a4e166d3",
+   "assertion_cid": "fa4abe938051b2afa0a3a79cd9d42a4cf6f53ed4f59653ae4db8a7be3b6c6992"
+  },
+  "Substrate-forced": {
+   "home": "canonical_glossary",
+   "term_cid": "94b5802027e0b8eff92251a9c996c846acd8d2387f5d522b859f7d4bdf80dc16",
+   "assertion_cid": "6ac36a66cd2e88fd7965ba3a7f288d22aa8e676b5617a3ef199a8e6ca1e532d0"
+  },
+  "Substrate-natural entanglement measures": {
+   "home": "canonical_glossary",
+   "term_cid": "a72862626453cef9b11e8c45d677cadbb8dc759732a1232144d3e6a63225c531",
+   "assertion_cid": "33b550e7ae871d937515b926344fbaba3119ccfe824c8b713cace40766953a07"
+  },
+  "Substrate-side": {
+   "home": "canonical_glossary",
+   "term_cid": "2c42ef8b7ae33fb664269872422246b6ad52b0308a8e308faa472f9fb0ad48d2",
+   "assertion_cid": "76e01869f3902de99f1a7bbcfb4a43e747cd296675aeb6d895c4b0eac2d445f0"
+  },
+  "Survives": {
+   "home": "canonical_glossary",
+   "term_cid": "833c07baf2c193838895de3279863c506b8f5f4ae13e856885751a0dcdefd2b8",
+   "assertion_cid": "57413fdcaa399762fb34e6ec1e61d05a7ad243db5f6e51ce0e11ff4a11d1d0d6"
+  },
+  "Sym/antisym decomposition": {
+   "home": "canonical_glossary",
+   "term_cid": "d8f0330000d9be8aec0012ab71f4f0c6ef23d94d5f2e1c2f3d74675c58d53703",
+   "assertion_cid": "a19b65cfedb28d83e2d88eae900ae0dbe32a8bd5744803be7e333ff9c2910ed7"
+  },
+  "S¹ (circle)": {
+   "home": "canonical_glossary",
+   "term_cid": "ce7721133ee68efa9ef45566e789f027d02e8788ad4f9868e3a07e488dacd8a5",
+   "assertion_cid": "912a911d5c3e12b2d13789448568cec015f74f98d276d4c1a9aa579a90aac935"
+  },
+  "Two-anchor minimum": {
+   "home": "canonical_glossary",
+   "term_cid": "50e054598b3698e635d68cc5f00300b67b2abad044fdbb2ee81c519bd781afbf",
+   "assertion_cid": "6f152beca0d40960200cce49ddc6f387d1402e2626ff3fe66fa837d9d8aec8d5"
+  },
+  "Up-type quark factor 9": {
+   "home": "canonical_glossary",
+   "term_cid": "a19b82970c1aa87d10618a8a3667bd422d1543ab7935aeb5af2c265a02f2c682",
+   "assertion_cid": "6dc3db962b5597e2d896975c89e672bf7bffa25b24c4c4d1c0d08e07c9e3b405"
+  },
+  "Vocabulary-is-the-work pattern": {
+   "home": "canonical_glossary",
+   "term_cid": "07fa5693376b394e30bbdca9770716a0aa9ab3e2c9fb82dafe3729587acfa55d",
+   "assertion_cid": "aa60f6ed396a51d64fcf0f1bb64412f24208056737686400a5970dae71bcd214"
+  },
+  "X_0(N) cusps": {
+   "home": "canonical_glossary",
+   "term_cid": "417c22d5f882c2dc2577dd6f575179ab0ea6d246c587d8b41b14831a07a7189c",
+   "assertion_cid": "fe2b25dc97a74ba78de9e6c002408aa8beb35e07b8c4bdbcf5188b05fcc28074"
+  },
+  "Z1-Z3 discipline": {
+   "home": "canonical_glossary",
+   "term_cid": "5da727e3eb3a724f225f450c1428f8ba19464b0b59a62fb8f93555283ff10738",
+   "assertion_cid": "cd37a2324aebfe7508729c1f9226207b2d5a96c2405de6a741479332f2267433"
+  },
+  "Z_3 rep (color)": {
+   "home": "canonical_glossary",
+   "term_cid": "f76da77ab61851719d0d19c3d665e987a6ff1c4b1b7b929ffbeb9a896f552146",
+   "assertion_cid": "b45c3d80de51272c2e90ecc5d6bffeb2f7d1fb2878ee106a8909961d41da5e59"
+  },
+  "Z_6 mode lattice": {
+   "home": "canonical_glossary",
+   "term_cid": "56a39bce289116d22aa5c43981647cd97b8212dd6c4421d75699ab6b8f9505e9",
+   "assertion_cid": "a366c3e062d8f8a4a5ce51f40e80ea765f5fb540e0ff1d7ee8dc63c3ad7ecf61"
+  },
+  "a_0 = cH_0/(2π)": {
+   "home": "canonical_glossary",
+   "term_cid": "e690e9696e3f868e98da7e64ffecb4938a3423a3fddc7225c6719cd75d8080ea",
+   "assertion_cid": "71387dca54e19b5af1cf1733fd9222ac62a863f6ad122f257f6695d0185c5981"
+  },
+  "f_amp": {
+   "home": "canonical_glossary",
+   "term_cid": "2e2c4f52120ce7a0c5f2d1ae8b48896f70a62d2118ff10ad8a6fd00fc1426799",
+   "assertion_cid": "aade3a9c2eba1b100d316e69afa62019e4d456e530c65619f975e96ba4e3da67"
+  },
+  "j-invariant": {
+   "home": "canonical_glossary",
+   "term_cid": "16e855620f3c9facd09ed2f2be131b0cae22349be0fcb4d401201b078db3b2dc",
+   "assertion_cid": "bb0b69b7528b3be50a964646bd1c10ba8dbe927385c514bf944578d17c64778f"
+  },
+  "m_H/v = 1/2": {
+   "home": "canonical_glossary",
+   "term_cid": "e317125ef2ccf58eeeb84a0f5fbbe5e13697c7bf713513af50d6c2a8a48a6207",
+   "assertion_cid": "34af917f655359f3aab83fb5b3357768a47c5e70d8dddcb4966cb7bbd0b6fcf1"
+  },
+  "n_s": {
+   "home": "canonical_glossary",
+   "term_cid": "233c2cc4dad4639c1fc9588cd9543c2ba64f5c6714d89b65ab69c37620dcb1a6",
+   "assertion_cid": "c03e779c36c01418f8ad9776bad384cef5ee3259b1fcfc9548af85c13143cbce"
+  },
+  "q_2 = 2": {
+   "home": "canonical_glossary",
+   "term_cid": "07721c33b9771134e5834f5310fdf13e81d5c1b54a2d83d42187cf40048637eb",
+   "assertion_cid": "413c71f13fdd9f6713059c16c6819f5d5811616cc859f90a9f80dbec7a2ab96c"
+  },
+  "q_3 = 3": {
+   "home": "canonical_glossary",
+   "term_cid": "14d204430c70ff89d226e21a015320c53568afd4dd2020180f3e8090df9f80dc",
+   "assertion_cid": "856135d22a939dc813d01fa79f36b335fc70015a39845cf0fd7051108549cf29"
+  },
+  "w (partial-locking weight)": {
+   "home": "canonical_glossary",
+   "term_cid": "07eef8f4480ec205f07df4031c294e101d620cea8c13f161cd2ae6b97017a40c",
+   "assertion_cid": "784425907b0e39e6ba8ef2eec09a125ec93792806653814003a023241a5914be"
+  },
+  "w_+": {
+   "home": "canonical_glossary",
+   "term_cid": "9074d289e0faf774c82a51c51524dee8f130d8d05e13e29f5d8c91082d2f4502",
+   "assertion_cid": "65ac1ad476ff8ddfe432ac26b8b24ca6ad4a8c80124ccb96d5b58f4684473c05"
+  },
+  "w_- = 1": {
+   "home": "canonical_glossary",
+   "term_cid": "82f88bd4bf181a22f685005026eeef76ae7d95eb4d1d5d29a619b4edd5b98c5c",
+   "assertion_cid": "7cf84d212c28ad54165ac3d6b01aa7dead103ff4a3832b20162ab2577cd03855"
+  },
+  "|F_n| (Farey count)": {
+   "home": "canonical_glossary",
+   "term_cid": "8e138cd8ada72da9c5c553d78169da4a4da4fe0a01d72fcc30532288f7050a69",
+   "assertion_cid": "931abecbbaca4f738c53ee4bbc6d5ac0928f3c137d9a139cd2be86c64d2135b2"
+  },
+  "Γ_0(6) = Γ_0(2) ∩ Γ_0(3)": {
+   "home": "canonical_glossary",
+   "term_cid": "65b310ef6efb7fed31071483cf348a3da5ae221e28c27885ec3ce9d7173af767",
+   "assertion_cid": "01924962cff58b2fec8bc960468498df17365d625755fe95ec6c0605e7e277eb"
+  },
+  "Γ_0(N)": {
+   "home": "canonical_glossary",
+   "term_cid": "0390e176a86c83f4efa01c5f36b9e46cf06cd46ecf0e648015757e7ef10b1339",
+   "assertion_cid": "cc73e391ddd988e831489df8623189d49249eb0aacb52b927a59bdf4967b7608"
+  },
+  "Λ·ℓ_P² = 13⁻¹⁰⁸/12 = 3/R²": {
+   "home": "canonical_glossary",
+   "term_cid": "72c9a804609afe4f8d7c27749e89336cc6d7173ab25413d5f631310644dc4792",
+   "assertion_cid": "cb139d57d8385008c300c81f33fcb29ca72d1321387e1fb033cd0c5027b0f794"
+  },
+  "Ω_DM": {
+   "home": "canonical_glossary",
+   "term_cid": "ffeae6377780d636dc9ecc3b18027124dcb5e6e4c3f132086c87041015a6b878",
+   "assertion_cid": "dbbda66dc965655c5070c48964fb073da2619273e1b4d52c5e1ae7143ab46082"
+  },
+  "Ω_b": {
+   "home": "canonical_glossary",
+   "term_cid": "54b8ea4f8e964a5640992d6b8fabd636ee96ae1c0be09355076c247cde185537",
+   "assertion_cid": "9874e5c49ff444982ee07826070604f7af6d35c3b17afa408ce5935c56055a3e"
+  },
+  "Ω_Λ": {
+   "home": "canonical_glossary",
+   "term_cid": "d7aea3ddb6459ff09fe949008d39531590ec17f1dc2a3317e7cd8de3ab67be12",
+   "assertion_cid": "89cdec2a4c4ffd87b2d5339ab29441c6b13bb0f5094c6d476d5adfe092275d71"
+  },
+  "α_s/α_2 = 27/8": {
+   "home": "canonical_glossary",
+   "term_cid": "57c6c886ceafa8c5b9137d1b69bb609e5d563af148d01babd94bc09e56532e25",
+   "assertion_cid": "ce9aa1049959ca3525cab2d9d333ec11c43004b82dba0b1db043b281b484dfaf"
+  },
+  "λ_Higgs = 1/8": {
+   "home": "canonical_glossary",
+   "term_cid": "5ac30eda9edf12e96d78c3e0bade95e4734c2c963a15a0b0dcad04952df9e05a",
+   "assertion_cid": "3a8a4bded6bc099f27d77b7aa71c5ef9d126a345f648703f4f21733c1000de1d"
+  },
+  "λ_unlock = (4G − π·ln 2)/π": {
+   "home": "canonical_glossary",
+   "term_cid": "bc67b163cbd8fb9ce0863cf2185b739879bff140625ecf2d6f3bfcb3b801f606",
+   "assertion_cid": "768a0554ec38aba37ab99e2b8643d3033aab98f130907ddb45732c4ab3c24273"
+  },
+  "ψ_+ (sym mode)": {
+   "home": "canonical_glossary",
+   "term_cid": "6d2085d2dd34213089d7274e65a2bfe0b9a4e2de7c9bf1ca1a9a7228133e2da4",
+   "assertion_cid": "87155f327eeae1e92b400e497470e2c2f29b09450f7a45c0ed8028ca189812da"
+  },
+  "ψ_- (antisym mode)": {
+   "home": "canonical_glossary",
+   "term_cid": "716da43666e8d958e73f5b40862681c1a10e5eae5ba49296d6ea48a04ef249eb",
+   "assertion_cid": "e6fb9a9144712484af115348fc552040285fdc6c6dd51594a8200355ba7383c0"
+  },
+  "ℚ (rationals)": {
+   "home": "canonical_glossary",
+   "term_cid": "2e91b10499463c629ba21c13e404861e1f04751f1f6fe13b9f615d69afc13936",
+   "assertion_cid": "dcf8b213469b6593a86db83e5d158148566696c5408cc2778f434d5dbcdb3cde"
+  }
+ }
+}

@@ -351,6 +351,47 @@ def _tool_resolve(args: dict) -> dict:
     return out
 
 
+def _tool_claim_search(args: dict) -> dict:
+    """Search the sealed-claims projection (clean ingest, 2026-07-22):
+    quantitative propositions keyed by content address, with
+    frontier-split corroboration. Cite the proposition_cid in
+    discussion — it is stable across sessions and reformattings."""
+    query = ((args or {}).get("subject") or "").lower()
+    min_corr = int((args or {}).get("min_corroboration") or 0)
+    claims = _load_json("docs/claims-index.json")["claims"]
+    hits = []
+    for cid, c in claims.items():
+        if query and query not in (c.get("subject") or "").lower():
+            continue
+        if c["corroboration"] < min_corr:
+            continue
+        hits.append({
+            "proposition_cid": cid,
+            "subject": c["subject"],
+            "witness": c["witness"],
+            "corroboration": c["corroboration"],
+            "corroboration_frontier": c["corroboration_frontier"],
+        })
+    hits.sort(key=lambda h: -h["corroboration_frontier"])
+    return {"count": len(hits), "hits": hits[:25],
+            "truncated": len(hits) > 25}
+
+
+def _tool_claim_get(args: dict) -> dict:
+    """Fetch one sealed claim by proposition CID (prefix ok): the full
+    support record, frontier docs first."""
+    cid = (args or {}).get("cid", "")
+    claims = _load_json("docs/claims-index.json")["claims"]
+    matches = [k for k in claims if k.startswith(cid)] if cid else []
+    if len(matches) != 1:
+        return {"error": f"{len(matches)} claims match prefix {cid!r}"}
+    full = matches[0]
+    out = {"proposition_cid": full, **claims[full]}
+    out["superseded_supporters"] = [
+        d["doc"] for d in out["docs"] if not d["frontier"]]
+    return out
+
+
 def _tool_declare_succession(args: dict) -> dict:
     """The first write-path tool (canon.d#11 commitment 8): declare a
     supersession as one sealed ledger record. Envelope (agent, time)
@@ -574,6 +615,37 @@ TOOLS = [
         },
     },
     {
+        "name": "claim_search",
+        "description": (
+            "Search the sealed-claims projection: quantitative "
+            "propositions from the clean ingest, keyed by content "
+            "address, corroboration split into frontier vs superseded "
+            "support. The way to discuss corpus claims without context "
+            "rot: cite proposition CIDs, not remembered prose."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "subject": {"type": "string",
+                            "description": "substring over claim subjects"},
+                "min_corroboration": {"type": "integer"},
+            },
+        },
+    },
+    {
+        "name": "claim_get",
+        "description": (
+            "Fetch one sealed claim by proposition CID (prefix ok): "
+            "witness value, routes, and every supporting doc with its "
+            "frontier state."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {"cid": {"type": "string"}},
+            "required": ["cid"],
+        },
+    },
+    {
         "name": "declare_succession",
         "description": (
             "WRITE: declare that a doc is superseded by one or more "
@@ -613,6 +685,8 @@ _DISPATCH = {
     "spine_get": _tool_spine_get,
     "manifest_claim": _tool_manifest_claim,
     "resolve": _tool_resolve,
+    "claim_search": _tool_claim_search,
+    "claim_get": _tool_claim_get,
     "declare_succession": _tool_declare_succession,
     "corpus_health": _tool_corpus_health,
 }
