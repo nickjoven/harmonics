@@ -57,6 +57,42 @@ def _corpus_index() -> dict:
     return _load_json("docs/corpus-index.json")["docs"]
 
 
+def _frontier_head(doc_id: str) -> tuple:
+    """Follow the succession chain. Returns (heads, chain).
+
+    `superseded_by` is a LIST (a doc may be displaced by several
+    successors jointly, e.g. f2_scoping). Single-successor links are
+    followed transitively; a multi-successor link ends the chain with
+    all successors as heads. Cycle-safe. Succession is harvested from
+    self-declarations only (RULES 0-8, adjudicated 2026-07-21; the
+    interim for sealed SUCCEEDS quanta, canon.d#6/#11)."""
+    index = _corpus_index()
+
+    def walk(doc, seen):
+        if doc in seen:
+            return [], [doc]  # cycle: no resolvable head (review finding 6)
+        meta = index.get(doc, {})
+        if "superseded_by" not in meta:
+            return [doc], []
+        seen = seen | {doc}
+        heads, chain = [], [doc]
+        for s in meta["superseded_by"]:
+            if s not in index:
+                if s not in heads:
+                    heads.append(s)
+                continue
+            h, c = walk(s, seen)  # successors resolve recursively
+            heads += [x for x in h if x not in heads]
+            chain += [x for x in c if x not in chain]
+        return heads, chain
+
+    return walk(doc_id, frozenset())
+
+
+def _is_frontier(doc_id: str) -> bool:
+    return "superseded_by" not in _corpus_index().get(doc_id, {})
+
+
 def _manifest() -> dict:
     if "manifest" not in _cache:
         import yaml
@@ -92,22 +128,36 @@ def _tool_doc_get(args: dict) -> dict:
             "status_line": meta["status_line"],
             "d_numbers": meta["d_numbers"],
         })
+        if "superseded_by" in meta:
+            heads, chain = _frontier_head(doc_id)
+            out["superseded_by"] = meta["superseded_by"]
+            out["superseded_basis"] = meta.get("superseded_basis")
+            out["frontier_heads"] = heads
+            out["frontier_note"] = (
+                "this doc is NOT on the frontier; the current head(s) of "
+                f"this line of work: {heads}. "
+                "Do not assert this doc's status claims as current."
+            )
     return out
 
 
 def _tool_doc_search(args: dict) -> dict:
     query = ((args or {}).get("query") or "").lower()
     klass = (args or {}).get("class")
+    historical = bool((args or {}).get("historical"))
     if not query and klass is None:
         return {"error": "provide query and/or class"}
     index = _corpus_index()
-    hits = []
+    hits, hidden = [], 0
     for doc_id, node in _graph_nodes().items():
         meta = index.get(doc_id, {})
         if klass is not None and int(klass) not in meta.get("classes", []):
             continue
         hay = f"{doc_id} {node['title']} {node['summary']}".lower()
         if query and query not in hay:
+            continue
+        if "superseded_by" in meta and not historical:
+            hidden += 1
             continue
         hits.append({
             "id": doc_id,
@@ -118,7 +168,10 @@ def _tool_doc_search(args: dict) -> dict:
     hits.sort(key=lambda h: (query not in h["id"].lower(), h["id"]) if query
               else (0, h["id"]))
     return {"count": len(hits), "hits": hits[:25],
-            "truncated": len(hits) > 25}
+            "truncated": len(hits) > 25,
+            "superseded_hidden": hidden,
+            "note": ("frontier view; pass historical=true to include "
+                     "superseded docs") if hidden else None}
 
 
 def _tool_graph_walk(args: dict) -> dict:
@@ -151,16 +204,20 @@ def _tool_class_query(args: dict) -> dict:
         idx = _load_json("docs/corpus-index.json")
         return {"coverage_totals": idx["coverage_totals"],
                 "count": idx["count"], "generated": idx["generated"]}
-    hits = []
+    historical = bool((args or {}).get("historical"))
+    hits, hidden = [], 0
     for doc_id, meta in sorted(_corpus_index().items()):
         if klass is not None and int(klass) not in meta["classes"]:
             continue
         if coverage is not None and meta["coverage"] != coverage:
             continue
+        if "superseded_by" in meta and not historical:
+            hidden += 1
+            continue
         hits.append({"id": doc_id, "title": meta["title"],
                      "classes": meta["classes"],
                      "status_line": meta["status_line"]})
-    return {"count": len(hits), "hits": hits}
+    return {"count": len(hits), "hits": hits, "superseded_hidden": hidden}
 
 
 def _tool_spine_get(args: dict) -> dict:
@@ -175,6 +232,29 @@ def _tool_spine_get(args: dict) -> dict:
     return {"id": entry_id, **entry}
 
 
+def _dnumber_to_doc() -> dict:
+    """Reverse map D-number -> doc stem, from the corpus index."""
+    if "dnum_map" not in _cache:
+        _cache["dnum_map"] = {
+            d: doc_id
+            for doc_id, meta in _corpus_index().items()
+            for d in meta.get("d_numbers", [])
+        }
+    return _cache["dnum_map"]
+
+
+def _resolve_source(src: str) -> dict:
+    """Resolve a MANIFEST source token (D-number or stem) to its frontier."""
+    doc = _dnumber_to_doc().get(src, src)
+    if doc not in _corpus_index():
+        return {"source": src, "doc": None, "frontier": None}
+    heads, chain = _frontier_head(doc)
+    on_frontier = heads == [doc]
+    return {"source": src, "doc": doc,
+            "frontier": on_frontier,
+            "frontier_heads": None if on_frontier else heads}
+
+
 def _tool_manifest_claim(args: dict) -> dict:
     scorecard = _manifest().get("scorecard", {})
     name = (args or {}).get("name")
@@ -183,7 +263,62 @@ def _tool_manifest_claim(args: dict) -> dict:
     claim = scorecard.get(name)
     if claim is None:
         return {"error": f"unknown scorecard claim: {name!r}"}
-    return {"name": name, **claim}
+    out = {"name": name, **claim}
+    sources = claim.get("source")
+    if isinstance(sources, list):
+        resolved = [_resolve_source(s) for s in sources]
+        out["sources_resolved"] = resolved
+        stale = [r for r in resolved if r["frontier"] is False]
+        if stale:
+            out["source_frontier_warning"] = (
+                "some sources are superseded docs: "
+                + ", ".join(f"{r['doc']} -> {r['frontier_heads']}" for r in stale))
+    return out
+
+
+def _tool_resolve(args: dict) -> dict:
+    """Claim-first resolution: the unit of query is the claim, the doc
+    is its container (canon.d#11 commitment 1). Docs resolve through
+    the succession chain to the frontier head."""
+    name = (args or {}).get("name", "")
+    if not name:
+        return {"error": "provide name (scorecard claim, D-number, or doc stem)"}
+    scorecard = _manifest().get("scorecard", {})
+    if name in scorecard:
+        out = {"kind": "claim", **_tool_manifest_claim({"name": name})}
+        # A claim key can shadow a doc stem (spectral_tilt is both). The
+        # doc-level supersession must stay reachable through the advertised
+        # entry point (review finding 4, 2026-07-21).
+        meta = _corpus_index().get(name)
+        if meta and "superseded_by" in meta:
+            heads, chain = _frontier_head(name)
+            out["doc_view"] = {
+                "doc": name, "frontier": False,
+                "superseded_by": meta["superseded_by"],
+                "frontier_heads": heads,
+                "warning": (f"the DOC named {name!r} is superseded "
+                            f"(heads: {heads}); the claim row above is the "
+                            "current claim state — do not read the doc's "
+                            "content as current"),
+            }
+        return out
+    doc = _dnumber_to_doc().get(name, name)
+    index = _corpus_index()
+    if doc not in index:
+        return {"error": f"unresolvable: {name!r} is neither a scorecard "
+                         f"claim, a D-number, nor a doc stem"}
+    heads, chain = _frontier_head(doc)
+    on_frontier = heads == [doc]
+    out = {"kind": "doc", "input": name, "doc": doc,
+           "frontier_heads": heads, "frontier": on_frontier}
+    if chain:
+        out["chain"] = chain + heads
+        out["basis"] = index[chain[0]].get("superseded_basis")
+    if len(heads) == 1:
+        head_meta = index.get(heads[0], {})
+        out["head_status_line"] = head_meta.get("status_line")
+        out["head_classes"] = head_meta.get("classes")
+    return out
 
 
 def _tool_corpus_health(args: dict) -> dict:
@@ -226,6 +361,9 @@ TOOLS = [
                 "query": {"type": "string", "description": "case-insensitive substring"},
                 "class": {"type": "integer", "minimum": 1, "maximum": 5,
                           "description": "only docs carrying this Class tag"},
+                "historical": {"type": "boolean",
+                               "description": "include superseded docs "
+                                              "(default false: frontier only)"},
             },
         },
     },
@@ -260,6 +398,9 @@ TOOLS = [
                 "coverage": {"type": "string",
                              "enum": ["classified", "unclassified-quantitative",
                                       "prose-only"]},
+                "historical": {"type": "boolean",
+                               "description": "include superseded docs "
+                                              "(default false: frontier only)"},
             },
         },
     },
@@ -289,6 +430,24 @@ TOOLS = [
         },
     },
     {
+        "name": "resolve",
+        "description": (
+            "Resolve a name to the frontier: a scorecard claim returns the "
+            "claim row with frontier-resolved sources; a D-number or doc "
+            "stem follows the succession chain to the current head. The "
+            "claim is the unit of query; the doc is its container. Use "
+            "this FIRST when checking what the corpus currently holds on "
+            "a topic — it is how you avoid reading a superseded doc as "
+            "current."
+        ),
+        "inputSchema": {
+            "type": "object",
+            "properties": {"name": {"type": "string",
+                                    "description": "claim name, D-number, or doc stem"}},
+            "required": ["name"],
+        },
+    },
+    {
         "name": "corpus_health",
         "description": (
             "One-line substrate health snapshot (scripts/drift/"
@@ -306,6 +465,7 @@ _DISPATCH = {
     "class_query": _tool_class_query,
     "spine_get": _tool_spine_get,
     "manifest_claim": _tool_manifest_claim,
+    "resolve": _tool_resolve,
     "corpus_health": _tool_corpus_health,
 }
 

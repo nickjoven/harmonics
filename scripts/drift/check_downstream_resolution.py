@@ -1,0 +1,98 @@
+#!/usr/bin/env python3
+"""
+Check: downstream-resolution divergence (issue #294; advisory).
+
+The failure class this kills: a doc keeps asserting strength after the
+ground it committed to has weakened, silently, until a manual audit
+notices (the coupling_scales rows survived the 2026-04 demotion for 88
+days; the F1/F2/O1/O2 postmortem is the same failure with the sign
+flipped). The mechanism was validated by the canon.d#11 retrodiction
+gate (harmonics#314, 4/4 with zero extras): the divergence signal is
+edge-local to the COMMITTED layer, not global to the closure.
+
+Weak grounds are read from STRUCTURED surfaces only (owner ruling,
+2026-07-21; no prose regex taxonomy):
+  - docs the corpus index marks superseded (computed succession)
+  - docs whose structured class projection contains Class 1
+
+A doc diverges when a committed support edge (grounds/derives, from its
+## Lineage block) lands on a weak ground while its own surface still
+asserts strength (Class 5, or a "Derived" status line that does not
+acknowledge a rescope/supersession). Succession divergence: a
+superseded doc whose surface does not name its successor.
+
+Destination: this becomes a query over sealed claim quanta in the Dolt
+projection once canon.d#6/#11 land; this file is the projection-level
+interim. ADVISORY in run_all.py until a few weeks of false-positive
+data argue for promotion.
+
+Exit code = number of divergent docs (advisory).
+"""
+
+import json
+import re
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+
+DERIVED_RE = re.compile(r"\bDerived\b")
+ACK_RE = re.compile(r"rescoped|superseded|historical", re.IGNORECASE)
+COMMITTED_KINDS = {"grounds", "derives"}
+
+
+def main() -> int:
+    graph = json.loads((ROOT / "docs/derivation-graph.json").read_text())
+    index = json.loads((ROOT / "docs/corpus-index.json").read_text())["docs"]
+
+    weak = {d for d, m in index.items()
+            if "superseded_by" in m or 1 in (m.get("classes") or [])}
+
+    divergent = []
+    for node in graph["nodes"]:
+        doc_id = node["id"]
+        meta = index.get(doc_id, {})
+        committed_weak = sorted(
+            e["target"] for e in node.get("edges", [])
+            if e["kind"] in COMMITTED_KINDS and e["target"] in weak)
+        if committed_weak:
+            # status_bold covers section-style statuses ('## Status' +
+            # bold verdict) that have no inline '**Status**:' line —
+            # coupling_scales, this check's motivating doc, is one
+            # (review finding 5, 2026-07-21).
+            status = " ".join(filter(None, [meta.get("status_line"),
+                                            meta.get("status_bold")]))
+            asserts = (5 in (meta.get("classes") or [])
+                       or (DERIVED_RE.search(status)
+                           and not ACK_RE.search(status)))
+            if asserts:
+                divergent.append(
+                    (doc_id, f"committed support on weak ground(s) "
+                             f"{committed_weak}, surface asserts strength"))
+        if "superseded_by" in meta:
+            # basis "declared" means the doc self-declares its supersession
+            # (RULES 0-8 harvest), which is acknowledgment by definition;
+            # this branch exists for future non-declared bases (sealed
+            # SUCCEEDS quanta whose subject doc predates the ruling).
+            if str(meta.get("superseded_basis", "")) != "declared":
+                successors = meta["superseded_by"]
+                status = meta.get("status_line") or ""
+                if (not any(s in status for s in successors)
+                        and not ACK_RE.search(status)):
+                    divergent.append(
+                        (doc_id, f"superseded by {successors}, surface "
+                                 f"does not acknowledge it"))
+
+    if divergent:
+        print(f"NOTE: {len(divergent)} downstream-resolution divergence(s) "
+              f"(advisory — see issue #294):")
+        for doc_id, why in divergent:
+            print(f"  {doc_id}: {why}")
+    else:
+        print(f"OK: no committed support on weak grounds "
+              f"({len(weak)} weak-ground docs tracked)")
+    return len(divergent)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

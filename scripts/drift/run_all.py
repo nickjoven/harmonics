@@ -54,6 +54,7 @@ CHECKS = [
     ("class-tag coverage", "lint_class_tags.py"),
     ("corpus-index freshness", "check_corpus_index.py"),
     ("nav orphans", "check_nav_orphans.py"),
+    ("downstream resolution", "check_downstream_resolution.py"),
     ("working-tree drift", "check_working_tree.py"),
     ("CAS verification", "verify_cas.py"),
     ("SPINE.yml integrity", "check_spine.py"),
@@ -72,6 +73,7 @@ ADVISORY = {
     "lint_class_tags.py",
     "check_corpus_index.py",
     "check_nav_orphans.py",
+    "check_downstream_resolution.py",
 }
 
 

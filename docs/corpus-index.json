@@ -14,6 +14,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Derived from canonical L0/L1/L3 framework objects (structural):",
    "status_line": null,
    "title": "K_STAR closed form"
   },
@@ -24,6 +25,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Canonical structural map of the framework's derivation topology.",
    "status_line": null,
    "title": "Framework topology"
   },
@@ -34,6 +36,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Navigation index for derivation chain.",
    "status_line": null,
    "title": "Derivation Index"
   },
@@ -45,6 +48,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "L1 closes Class 5 in recognize mode.",
    "status_line": "Class 5.",
    "title": "L1 closure — substrate cusp-1/2 ground state from soft-boundary + discreteness"
   },
@@ -55,6 +59,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Canonical proof chain: polynomial → general relativity.",
    "status_line": null,
    "title": "Proof Chain A: Polynomial → General Relativity"
   },
@@ -65,6 +70,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Canonical proof chain: polynomial → quantum mechanics.",
    "status_line": null,
    "title": "Proof Chain B: Polynomial → Quantum Mechanics"
   },
@@ -73,6 +79,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "References"
   },
@@ -85,6 +92,7 @@
     "D3"
    ],
    "has_lineage": false,
+   "status_bold": "Class 5 / Survives.",
    "status_line": null,
    "title": "a₀ from Synchronization Cost Threshold"
   },
@@ -98,6 +106,7 @@
     "D9"
    ],
    "has_lineage": false,
+   "status_bold": "Class 5 / Survives.",
    "status_line": null,
    "title": "`a_1 = 1 / √w`: the lepton identity as stick-slip"
   },
@@ -109,6 +118,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "A_s closure: ACCEPTED as Instance 7 of `vocabulary_is_the_work_pattern.md` (2026-04-26).",
    "status_line": null,
    "title": "A_s Floor closure attempt G1: anchor-import barrier"
   },
@@ -120,6 +130,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "A_s is %-only closed at 11%.",
    "status_line": null,
    "title": "A_s: a geometric proof from first principles"
   },
@@ -130,6 +141,7 @@
     "D7"
    ],
    "has_lineage": false,
+   "status_bold": "Conceptual orientation document.",
    "status_line": null,
    "title": "Address and Quantity"
   },
@@ -138,6 +150,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Derived.",
    "status_line": null,
    "title": "The ADM Dictionary"
   },
@@ -149,6 +162,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "with a mechanism",
    "status_line": null,
    "title": "The forcing partition: forced ⟹ algebraic"
   },
@@ -159,6 +173,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "two",
    "status_line": null,
    "title": "Anchor-count audit: single vs multiple observational anchors"
   },
@@ -169,6 +184,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "none open",
    "status_line": null,
    "title": "#ANCHOR: formal re-audit of the five anchor-count obstructions"
   },
@@ -179,6 +195,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Extension of the conservation chain inventory",
    "status_line": null,
    "title": "Anchors at extremes audit (chain extension)"
   },
@@ -187,6 +204,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: MODAL ✓ / GENERATIVE ✓",
    "status_line": null,
    "title": "Angular momentum three-source inviolability audit (B2: Layer H expansion)"
   },
@@ -199,6 +217,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Active methodology document.",
    "status_line": null,
    "title": "Ansatz audit policy — triaging Class 4 candidates"
   },
@@ -207,6 +226,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: MODAL ✓ / GENERATIVE ✓",
    "status_line": null,
    "title": "Antiparticle / dark energy unification audit"
   },
@@ -215,6 +235,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "The 1D arrow of time is a structural identity in the framework's apparatus",
    "status_line": null,
    "title": "Arrow inviolability + unification closure audit"
   },
@@ -228,6 +249,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Articulation audit — 2026-05 round"
   },
@@ -238,6 +260,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "records their honest disposition",
    "status_line": null,
    "title": "Audit Findings 3 & 4: honest disposition (qualification, not closure)"
   },
@@ -248,6 +271,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": "NO ACTION NEEDED. The doc's intermediate values are",
    "title": "Audit punch list — 2026-04 round"
   },
@@ -258,6 +282,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Audit verdict: APPARATUS INSUFFICIENT.",
    "status_line": null,
    "title": "Axial trajectory conservation audit — chirality fineness verdict"
   },
@@ -270,6 +295,7 @@
     "D47"
    ],
    "has_lineage": true,
+   "status_bold": "Derived.",
    "status_line": null,
    "title": "The Baryon Fraction"
   },
@@ -281,6 +307,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "The Basepoint Principle"
   },
@@ -289,6 +316,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Proposed.",
    "status_line": null,
    "title": "Basin 1/1 connection exploration"
   },
@@ -299,6 +327,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Substitution-scope tightening across `epr_bell_assembly_theorem.md` (#152), `ghz_from_substrate.md` (#184), and `w_state_from_substrate.md` (#187).",
    "status_line": null,
    "title": "Bell bounds substrate-natively — closing the substitution scope"
   },
@@ -309,6 +338,7 @@
     "D49"
    ],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Beta Functions from Tongue Widths"
   },
@@ -320,6 +350,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Bridge theorem articulated.",
    "status_line": null,
    "title": "Bicone Z₂ ↔ golden-algebra Z₂ identification"
   },
@@ -330,6 +361,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Presentation layer for the conversation-developed thought experiment sequence that accompanied `conservation_scale_stratification_audit.md`.",
    "status_line": null,
    "title": "The bicyclist sequence — observer configuration and conservation"
   },
@@ -340,6 +372,7 @@
     "D1"
    ],
    "has_lineage": false,
+   "status_bold": "Basin measure",
    "status_line": null,
    "title": "Born Rule from Basin Measure"
   },
@@ -348,6 +381,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Extension of the conservation chain inventory",
    "status_line": null,
    "title": "Born rule + mode count at extremes audit"
   },
@@ -358,6 +392,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "not",
    "status_line": null,
    "title": "Born rule |ψ|² is parameter-free at the binary — pressed"
   },
@@ -366,6 +401,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdicts",
    "status_line": null,
    "title": "Boundary leakage rate audit — Gaps 4 + 8"
   },
@@ -379,6 +415,7 @@
     "D38"
    ],
    "has_lineage": false,
+   "status_bold": "Split status (#263 ⓾ ruling, 2026-07-19).",
    "status_line": null,
    "title": "The Boundary Weight"
   },
@@ -392,6 +429,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Canonical glossary — framework ↔ standard physics vocabulary"
   },
@@ -400,6 +438,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdicts",
    "status_line": null,
    "title": "CMB Silk damping + acoustic peaks audit (Layer G extensions)"
   },
@@ -408,6 +447,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "5 × 7 coherence-type × layer-status matrix",
    "status_line": null,
    "title": "Coherence-type matrix completion audit"
   },
@@ -418,6 +458,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Inviolable-companion dissolution articulated",
    "status_line": null,
    "title": "Collapse dissolution"
   },
@@ -426,6 +467,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Comparison Class"
   },
@@ -439,6 +481,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Forcing argument articulated",
    "status_line": null,
    "title": "Complex-amplitude uniqueness (ℝ/ℂ/ℍ from antiperiodic-cycle count)"
   },
@@ -450,6 +493,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Cone-twist substrate: bicone target, Z₂ vortex dynamics, quantum structure"
   },
@@ -460,6 +504,7 @@
     "D36"
    ],
    "has_lineage": false,
+   "status_bold": "Derived.",
    "status_line": null,
    "title": "Conservation as Computability"
   },
@@ -470,6 +515,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Audit verdict: the framework's two foundational conservation invariants — Q mod 2 (topological) and dissipation (algebraic) — have *different* scale-stability. Dissipation is universal across all thre",
    "status_line": "not currently derived. Would require new substrate",
    "title": "Conservation scale-stratification audit — Q mod 2 and dissipation across Planck/standard/Hubble limits"
   },
@@ -482,6 +528,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Active null-results registry for K-axis continuity questions.",
    "status_line": null,
    "title": "Continuity-in-K derivation: prior null results"
   },
@@ -492,6 +539,7 @@
     "D12"
    ],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": "Derived. The q⁻² tongue-width scaling at K = 1 is a",
    "title": "The Two Continuum Limits"
   },
@@ -500,6 +548,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Derived.",
    "status_line": null,
    "title": "The Cosmological Cycle"
   },
@@ -513,6 +562,7 @@
     "D45"
    ],
    "has_lineage": true,
+   "status_bold": "Derived (partial), rescoped (#263 ⓾ ruling, 2026-07-19).",
    "status_line": "theta = 0 derived from Pin+(3) on the Klein bottle.",
    "title": "The Coupling Scales and the Bare Diffusion Constant"
   },
@@ -525,6 +575,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Cross-ratio multi-candidate pattern is irrep multiplicity"
   },
@@ -533,6 +584,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: MODAL ✓ / GENERATIVE PARTIAL",
    "status_line": null,
    "title": "Cuspidal λ_17 at weight 4 on Γ_0(6) — testing the noncommutative-core half"
   },
@@ -541,6 +593,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: MODAL ✓ / GENERATIVE ✓",
    "status_line": null,
    "title": "Cyclotomic content of framework mass ratios (A2: PR #235 methodology instance)"
   },
@@ -551,6 +604,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "leading-order correct",
    "status_line": null,
    "title": "Dark-twin correction: the S_v ≈ 13 retraction was wrong"
   },
@@ -559,6 +613,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Confirmed numerically.",
    "status_line": null,
    "title": "The Denomination Boundary"
   },
@@ -571,6 +626,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Null-results registry for cross-sector depth-15 connection (v/M_P).",
    "status_line": null,
    "title": "Null results: connecting cosmological depth 54 to EW depth ~15"
   },
@@ -583,6 +639,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Atlas v1, 2026-04-26.",
    "status_line": null,
    "title": "Derivation Atlas — from four primitives to physical predictions"
   },
@@ -593,6 +650,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Theorem-quality result rigorizing the T1a Dicke extension (`w_state_from_substrate.md`, #187).",
    "status_line": null,
    "title": "Dicke apparatus theorem — substrate-internal computation of Pauli matrix elements on Dicke states"
   },
@@ -605,6 +663,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Articulation, not new content.",
    "status_line": null,
    "title": "The Discrete Extension Principle"
   },
@@ -613,6 +672,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Proposed.",
    "status_line": null,
    "title": "The Two Open Paths"
   },
@@ -623,6 +683,7 @@
     "D41"
    ],
    "has_lineage": false,
+   "status_bold": "Resolved (partial).",
    "status_line": null,
    "title": "The Discrete Gauge Resolution"
   },
@@ -633,6 +694,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "closed",
    "status_line": null,
    "title": "The discrete 4-mode reduction: computed"
   },
@@ -643,6 +705,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "`H_BB ≠ H_CC` — the half-twist breaks the sector-swap degeneracy the continuum assumed.",
    "status_line": null,
    "title": "The discrete 4-mode reduction: a hand-solvable problem statement"
   },
@@ -653,6 +716,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Class 5 / Survives.",
    "status_line": null,
    "title": "Down-type double cover — derivation summary"
   },
@@ -661,6 +725,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Phase A: vocabulary fixed, derivation not attempted.",
    "status_line": null,
    "title": "Down-type double cover — Phase A: formalization"
   },
@@ -669,6 +734,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Phase B: halted.",
    "status_line": null,
    "title": "Down-type double cover — Phase B attempt (halts)"
   },
@@ -677,6 +743,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "not closed",
    "status_line": null,
    "title": "Down-type double cover — Phase B follow-up: Route 1 null result"
   },
@@ -685,6 +752,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Phase C: reaches ratio 6 via a DoF-product / coupling-collapse reading, halted on three justification steps.",
    "status_line": null,
    "title": "Down-type double cover — Phase C attempt: self-consistent DoF reading"
   },
@@ -695,6 +763,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Class 4",
    "status_line": null,
    "title": "Down-type double cover — Phase D attempt: boundary-weight self-consistency"
   },
@@ -708,6 +777,7 @@
     "D33"
    ],
    "has_lineage": false,
+   "status_bold": "demoted from framework predictions to K=1 reference identities",
    "status_line": null,
    "title": "The Duty Cycle Dictionary"
   },
@@ -716,6 +786,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Proof: The Duty Cycle Exponent Equals the Group Dimension"
   },
@@ -726,6 +797,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Pedagogical clarification doc.",
    "status_line": null,
    "title": "Dynamical quantization: the medium is continuous, the locking is discrete"
   },
@@ -737,6 +809,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Kuramoto self-consistency integral",
    "status_line": null,
    "title": "Dynamical-tool audit: circle maps vs Kuramoto, conceptual"
   },
@@ -745,6 +818,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "substrate dynamics vs. substrate arithmetic",
    "status_line": null,
    "title": "Dynamics / arithmetic distinction refinement audit"
   },
@@ -755,7 +829,12 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
+   "superseded_basis": "declared",
+   "superseded_by": [
+    "discrete_reduction_computed"
+   ],
    "title": "E_cross calculation: the textbook route gives a pathology"
   },
   "e_cross_discrete_resolution": {
@@ -765,6 +844,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Lasting content: the representation correction",
    "status_line": null,
    "title": "E_cross resolved: the continuum route was a representation error"
   },
@@ -775,6 +855,7 @@
     "D13"
    ],
    "has_lineage": false,
+   "status_bold": "Theorem established.",
    "status_line": null,
    "title": "Einstein Field Equations from the Rational Field Equation"
   },
@@ -785,6 +866,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "first committed here",
    "status_line": null,
    "title": "The empty fork: ∅ as the basepointless Z₂-torsor — R1 is ∅-entailed unprovable"
   },
@@ -793,6 +875,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Proposed.",
    "status_line": null,
    "title": "Engineering Targets"
   },
@@ -803,6 +886,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Standalone assembly articulated",
    "status_line": null,
    "title": "EPR/Bell assembly theorem"
   },
@@ -815,6 +899,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Substrate-forced ε, sub-problem 1: physical reading"
   },
@@ -826,6 +911,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "C2 (Klein z₀-stratification at half-integer depth)",
    "status_line": null,
    "title": "Substrate-forced ε: problem decomposition and prior nulls"
   },
@@ -836,6 +922,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Inviolable-companion dissolution articulated",
    "status_line": null,
    "title": "Equivalence dissolution"
   },
@@ -846,6 +933,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Settles the last residual",
    "status_line": null,
    "title": "Era-timeline disposition (settling N9 S5)"
   },
@@ -856,6 +944,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "partially vindicates Finding 3",
    "status_line": null,
    "title": "The explicit 4×4 reduction matrix: real Phase 2"
   },
@@ -868,6 +957,7 @@
     "D27"
    ],
    "has_lineage": false,
+   "status_bold": "Class 5 / Survives.",
    "status_line": null,
    "title": "Why the Exponent Is q₂q₃³"
   },
@@ -876,6 +966,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Expressibility split — the lambda / EML divide"
   },
@@ -886,6 +977,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "F2 PR-2 result: partial Possibility-A brick + Tier-1 benchtop tolerance derived; no F2 closure claimed.",
    "status_line": null,
    "title": "F2 PR-2 — FM-beat Tier-0 simulator results"
   },
@@ -897,6 +989,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Structural-attempt null for Possibility B of [[f2_scoping]].",
    "status_line": null,
    "title": "F2 Possibility B — Jacobian at the 4-mode XOR fixed point"
   },
@@ -908,7 +1001,13 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Class 3 articulation; superseded by [[gauge_sector_lovelock]] (D42, Yang-Mills derived) and [[discrete_gauge_resolution]] (five sub-computations resolved), both landed in April 2026 — before this doc ",
    "status_line": null,
+   "superseded_basis": "declared",
+   "superseded_by": [
+    "gauge_sector_lovelock",
+    "discrete_gauge_resolution"
+   ],
    "title": "F2 scoping — Klein → gauge continuum limit (Yang-Mills target)"
   },
   "f_exit_natural": {
@@ -918,6 +1017,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "f_exit = exp(−S_v) as the natural action-weighted lens"
   },
@@ -930,6 +1030,7 @@
     "D25"
    ],
    "has_lineage": false,
+   "status_bold": "Class 5 / Survives.",
    "status_line": null,
    "title": "The Farey Partition"
   },
@@ -940,6 +1041,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Class 5 / Survives.",
    "status_line": null,
    "title": "Why the Farey Partition"
   },
@@ -951,6 +1053,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Fermion Mass Running from the K → μ Map"
   },
@@ -959,6 +1062,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Established",
    "status_line": null,
    "title": "The Self-Referential Fidelity Bound"
   },
@@ -970,6 +1074,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Class 1",
    "status_line": null,
    "title": "The Figure-Eight Topology"
   },
@@ -981,6 +1086,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Audit verdict: CLASS 2 (re-description / useful frame), NOT SUBSTRATE-FORCED.",
    "status_line": null,
    "title": "Figure-8 necessitation audit — basepoint-principle inspection"
   },
@@ -989,6 +1095,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "FM beat-frequency / CRT composition correspondence — bounded by Mihailescu"
   },
@@ -997,6 +1104,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Fourth Generation Revisited Under the Integer Conservation Law"
   },
@@ -1011,6 +1119,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Framework status map"
   },
@@ -1024,6 +1133,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Free-parameter scorecard — the forcing partition applied to physics' inputs"
   },
@@ -1032,6 +1142,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: MODAL ✓ / GENERATIVE ✓",
    "status_line": null,
    "title": "Γ_0(6) cosmological modular surface — polynomial readings + arithmetic prime audit"
   },
@@ -1040,6 +1151,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Γ_0(6) W_6 Atkin-Lehner invariance / Stern-Brocot opposite-view audit"
   },
@@ -1048,6 +1160,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Analytic Proof: Levi-Civita from Kuramoto at K=1"
   },
@@ -1056,6 +1169,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Proved, conditionally.",
    "status_line": null,
    "title": "Gap 1 Theorem: Christoffel Connection from Kuramoto in the Continuum Limit"
   },
@@ -1064,6 +1178,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Analytic Proof: Farey Graph Laplacian → Laplace-Beltrami"
   },
@@ -1072,6 +1187,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Gap 2 Break 1: Spatialization Decomposition and Status"
   },
@@ -1080,6 +1196,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verified.",
    "status_line": null,
    "title": "Gap 2, Step 4: The Stern-Brocot Tree IS the Spatial Lattice"
   },
@@ -1088,6 +1205,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Gap 2 sub-problem E (ℓ_c) — status reconciliation"
   },
@@ -1096,6 +1214,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Break 1 (spatialization): topological route.",
    "status_line": null,
    "title": "Gap 2 Attempted Closure: Spatial Diffusion from Non-Orientability"
   },
@@ -1104,6 +1223,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Closed in the continuum limit",
    "status_line": null,
    "title": "Gap 1: The Christoffel Connection from Kuramoto Ensemble Averages"
   },
@@ -1112,6 +1232,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Break 1 addressed; Break 2 remains open.",
    "status_line": null,
    "title": "Gap 2: Spatial Diffusion and the Bare Coupling D₀"
   },
@@ -1120,6 +1241,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Promoted:",
    "status_line": "was IDENTIFIED, now **DEFINITION**.",
    "title": "Gauge-Sector Dictionary Promotion"
   },
@@ -1128,6 +1250,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Direct-Product Structure of the Gauge Algebra from Klein Bottle Topology"
   },
@@ -1136,6 +1259,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Synthesis-derivation.",
    "status_line": null,
    "title": "High-scale gauge identification"
   },
@@ -1146,6 +1270,7 @@
     "D42"
    ],
    "has_lineage": false,
+   "status_bold": "Derived, with the wiring verified end-to-end.",
    "status_line": null,
    "title": "Yang-Mills from the Klein Bottle (Gauge-Sector Lovelock)"
   },
@@ -1156,6 +1281,7 @@
     "D43"
    ],
    "has_lineage": false,
+   "status_bold": "Derived.",
    "status_line": null,
    "title": "The Gell-Mann-Nishijima Relation from Klein Bottle Geometry"
   },
@@ -1168,6 +1294,7 @@
     "D34"
    ],
    "has_lineage": false,
+   "status_bold": "Partially derived (Floor).",
    "status_line": null,
    "title": "The Generation Mechanism"
   },
@@ -1176,6 +1303,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "generation count (3) and sector count (3)",
    "status_line": null,
    "title": "Generation + sector count audit (Layer C chain extension)"
   },
@@ -1186,6 +1314,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Level-3 worked example for the QM-reframing thread.",
    "status_line": null,
    "title": "GHZ correlations from the substrate event-log (worked example)"
   },
@@ -1196,6 +1325,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Reframing.",
    "status_line": null,
    "title": "The gluon's properties in framework terms: a reframing"
   },
@@ -1208,6 +1338,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Tier-C capstone synthesis articulated.",
    "status_line": null,
    "title": "GR–QM unification — Tier-C capstone synthesis"
   },
@@ -1216,6 +1347,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Reframing.",
    "status_line": null,
    "title": "Gravity's radiative mode in framework terms: a reframing"
   },
@@ -1224,6 +1356,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: MODAL ✓ / GENERATIVE ✓",
    "status_line": null,
    "title": "H_0 tension cross-cell identity audit (C1: PR #229 matrix correlation test)"
   },
@@ -1232,6 +1365,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "H_inf is anchor-side.",
    "status_line": null,
    "title": "H_inf status — anchor-side, scale-free in framework integers"
   },
@@ -1240,6 +1374,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "The Half-Mobius Boundary Condition (Z4)"
   },
@@ -1248,6 +1383,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Exploratory.",
    "status_line": null,
    "title": "The Half-Twist as a Dynamical Object"
   },
@@ -1256,6 +1392,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Half-twist identity and signature — canonical restatement"
   },
@@ -1264,6 +1401,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: MODAL ✓ / GENERATIVE ✓",
    "status_line": null,
    "title": "Half-twist meta-structure audit (cross-cutting Layer H)"
   },
@@ -1272,6 +1410,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "First audit in the coherence-type axis",
    "status_line": null,
    "title": "Halt and shock coherence audit — coherence-type matrix initialization"
   },
@@ -1282,6 +1421,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Class 5 / Survives.",
    "status_line": null,
    "title": "The Hierarchy"
   },
@@ -1294,6 +1434,7 @@
     "D26"
    ],
    "has_lineage": false,
+   "status_bold": "Class 5 / Survives.",
    "status_line": null,
    "title": "The Planck–Hubble Hierarchy from Gaussian Lattice Index"
   },
@@ -1304,6 +1445,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Does the SM hierarchy problem translate to the framework?"
   },
@@ -1314,6 +1456,7 @@
     "D44"
    ],
    "has_lineage": false,
+   "status_bold": "Derived (structural + numerical ratios).",
    "status_line": null,
    "title": "Electroweak Symmetry Breaking from the Tongue Boundary"
   },
@@ -1324,6 +1467,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": true,
+   "status_bold": "Class 3",
    "status_line": null,
    "title": "The Higgs' Role in the Framework: A Reframing"
   },
@@ -1332,6 +1476,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "High School Syllabus — *The Shape of Physics*"
   },
@@ -1340,6 +1485,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Prediction",
    "status_line": null,
    "title": "High-Redshift Test of a₀(z) = cH(z)/(2π)"
   },
@@ -1350,6 +1496,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "First-pass exploration.",
    "status_line": null,
    "title": "Horn-branch iteration 1 — regime-change flare in y-parity vocabulary"
   },
@@ -1360,6 +1507,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Falsifier outcome: PASSES with vocabulary revision.",
    "status_line": null,
    "title": "Horn-branch iteration 2 step 1 — sector-assignment falsifier"
   },
@@ -1370,6 +1518,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: SUBSTANTIVE LEAD; CLOSURE NOT ATTAINED.",
    "status_line": null,
    "title": "Horn-branch iteration 2 step 2 — substrate derivation of f_locked / f_unlocked"
   },
@@ -1381,6 +1530,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: PRODUCTIVE NULL.",
    "status_line": null,
    "title": "Horn-branch iteration 3 step 1 — analytic w* test: PRODUCTIVE NULL"
   },
@@ -1392,6 +1542,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Hybrid strategy audit — Floor residuals against |r|^n closures"
   },
@@ -1402,6 +1553,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Pigeonhole audit on the slope identity — does not pass at α = 0.05.",
    "status_line": null,
    "title": "IMF Salpeter slope from the bowed cascade"
   },
@@ -1412,6 +1564,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "`S_v(K=1)` value → canonical `discrete_reduction_computed.md` (`≈ 11.515`, not `16`)",
    "status_line": null,
    "title": "Inflation duration from S_v(K) and the universal Schwinger relation"
   },
@@ -1422,6 +1575,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "#INF closed: |∇K|_inflation is the Schwinger-image of an anchor — the framework correctly declines"
   },
@@ -1430,6 +1584,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Instrument-family taxonomy of the framework"
   },
@@ -1438,6 +1593,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Isotropy Lemma: Trivial Stabilizer in the Kuramoto Model at K=1"
   },
@@ -1448,6 +1604,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Item 12: `C = q_2² / K*²` from the tongue-width identity"
   },
@@ -1458,6 +1615,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": "this reading is **a conjecture**, not a derivation.",
    "title": "Item 12: cross-sector `a_1²` ratios"
   },
@@ -1469,6 +1627,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "K-axis uniqueness probe: composed Klein-antipodal + coprime-to-6"
   },
@@ -1477,6 +1636,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "K = K_c criticality — Phase A: the K zoo and the concrete concern"
   },
@@ -1485,6 +1645,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "K = K_c criticality — Phase B: the K_c concern dissolves"
   },
@@ -1495,6 +1656,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "K_inflation: the obstruction is structural, not a missing calc"
   },
@@ -1505,6 +1667,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "S1–S2: derived (closed at K = 1).",
    "status_line": null,
    "title": "K(t) and the Friedmann equation at r = 1"
   },
@@ -1516,6 +1679,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "K(t): the table — problem statement for the cosmological coupling trajectory"
   },
@@ -1528,6 +1692,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Leaf structurally closed.",
    "status_line": null,
    "title": "K(t) residual closure (joint sector resolved, cadence forced)"
   },
@@ -1539,6 +1704,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "framework_status.md",
    "status_line": null,
    "title": "K-scaling scan: tongue spectrum from K = 0 to chaos"
   },
@@ -1549,6 +1715,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Klein-antipodal Z₂ representation theory: a recurring derivation"
   },
@@ -1559,6 +1726,7 @@
     "D19"
    ],
    "has_lineage": true,
+   "status_bold": "Established",
    "status_line": null,
    "title": "The Klein Bottle"
   },
@@ -1567,6 +1735,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Derived.",
    "status_line": null,
    "title": "The Klein Bottle from Self-Consistency"
   },
@@ -1577,6 +1746,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Apparatus-extension verdict: STRUCTURALLY DECLINED BY EMPIRICAL FALSIFIER.",
    "status_line": null,
    "title": "Klein-bottle restructure — price ledger for the apparatus-extension fallback"
   },
@@ -1588,6 +1758,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Klein-bottle bridge: audit + minimal probe"
   },
@@ -1596,6 +1767,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Established:",
    "status_line": null,
    "title": "The Klein Bottle Connection 1-Form"
   },
@@ -1607,6 +1779,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": "existing Klein-bottle Kuramoto could feed S3",
    "title": "Klein-bottle dynamics roadmap for Ω_b C2 closure"
   },
@@ -1617,6 +1790,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Null.",
    "status_line": null,
    "title": "Klein nodal parity: null result"
   },
@@ -1627,6 +1801,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Falsifier outcome: PARTIALLY PASSED.",
    "status_line": null,
    "title": "Klein-Z_2 sign-flip vs reflection decomposition — falsifier test"
   },
@@ -1637,6 +1812,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Caveat outcome: SPLIT VERDICT.",
    "status_line": null,
    "title": "Klein-Z_2 third-caveat test — does substrate populate both R-eigenstates?"
   },
@@ -1648,7 +1824,12 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Iterative formalization, step 1.",
    "status_line": null,
+   "superseded_basis": "declared",
+   "superseded_by": [
+    "koide_form_substrate_iteration_14"
+   ],
    "title": "Koide form substrate derivation — iteration 1"
   },
   "koide_form_substrate_iteration_10": {
@@ -1658,7 +1839,12 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Iteration 10. Reversibility-class clarification.",
    "status_line": null,
+   "superseded_basis": "declared",
+   "superseded_by": [
+    "koide_form_substrate_iteration_14"
+   ],
    "title": "Koide form substrate derivation — iteration 10"
   },
   "koide_form_substrate_iteration_11": {
@@ -1668,7 +1854,12 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Iteration 11.",
    "status_line": null,
+   "superseded_basis": "declared",
+   "superseded_by": [
+    "koide_form_substrate_iteration_14"
+   ],
    "title": "Koide form substrate derivation — iteration 11"
   },
   "koide_form_substrate_iteration_12": {
@@ -1678,7 +1869,12 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Iteration 12.",
    "status_line": null,
+   "superseded_basis": "declared",
+   "superseded_by": [
+    "koide_form_substrate_iteration_14"
+   ],
    "title": "Koide form substrate derivation — iteration 12"
   },
   "koide_form_substrate_iteration_13": {
@@ -1688,7 +1884,12 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Iteration 13.",
    "status_line": null,
+   "superseded_basis": "declared",
+   "superseded_by": [
+    "koide_form_substrate_iteration_14"
+   ],
    "title": "Koide form substrate derivation — iteration 13"
   },
   "koide_form_substrate_iteration_14": {
@@ -1698,6 +1899,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Closing note.",
    "status_line": null,
    "title": "Koide form substrate derivation — iteration 14 (closing note)"
   },
@@ -1706,7 +1908,12 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Iteration 2.",
    "status_line": null,
+   "superseded_basis": "declared",
+   "superseded_by": [
+    "koide_form_substrate_iteration_14"
+   ],
    "title": "Koide form substrate derivation — iteration 2"
   },
   "koide_form_substrate_iteration_3": {
@@ -1714,7 +1921,12 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Iteration 3.",
    "status_line": null,
+   "superseded_basis": "declared",
+   "superseded_by": [
+    "koide_form_substrate_iteration_14"
+   ],
    "title": "Koide form substrate derivation — iteration 3"
   },
   "koide_form_substrate_iteration_4": {
@@ -1722,7 +1934,12 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Iteration 4.",
    "status_line": null,
+   "superseded_basis": "declared",
+   "superseded_by": [
+    "koide_form_substrate_iteration_14"
+   ],
    "title": "Koide form substrate derivation — iteration 4"
   },
   "koide_form_substrate_iteration_5": {
@@ -1732,7 +1949,12 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Iteration 5.",
    "status_line": null,
+   "superseded_basis": "declared",
+   "superseded_by": [
+    "koide_form_substrate_iteration_14"
+   ],
    "title": "Koide form substrate derivation — iteration 5"
   },
   "koide_form_substrate_iteration_6": {
@@ -1742,7 +1964,12 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Iteration 6.",
    "status_line": null,
+   "superseded_basis": "declared",
+   "superseded_by": [
+    "koide_form_substrate_iteration_14"
+   ],
    "title": "Koide form substrate derivation — iteration 6"
   },
   "koide_form_substrate_iteration_7": {
@@ -1752,7 +1979,12 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Iteration 7. Pivot to a simpler matrix form.",
    "status_line": null,
+   "superseded_basis": "declared",
+   "superseded_by": [
+    "koide_form_substrate_iteration_14"
+   ],
    "title": "Koide form substrate derivation — iteration 7"
   },
   "koide_form_substrate_iteration_8": {
@@ -1762,7 +1994,12 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Iteration 8.",
    "status_line": null,
+   "superseded_basis": "declared",
+   "superseded_by": [
+    "koide_form_substrate_iteration_14"
+   ],
    "title": "Koide form substrate derivation — iteration 8"
   },
   "koide_form_substrate_iteration_9": {
@@ -1772,7 +2009,12 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Iteration 9. Path A test: empirical check whether the framework's existing three-generation amplitude apparatus produces the Koide constraint.",
    "status_line": null,
+   "superseded_basis": "declared",
+   "superseded_by": [
+    "koide_form_substrate_iteration_14"
+   ],
    "title": "Koide form substrate derivation — iteration 9"
   },
   "lambda17_test_gamma06_cosmological_audit": {
@@ -1780,6 +2022,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: MODAL ✓ / GENERATIVE PARTIAL",
    "status_line": null,
    "title": "λ_17 test on Γ_0(6) cosmological eigenforms — comparison to \"missing 17\" reading"
   },
@@ -1788,6 +2031,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Lepton 4-state group reconciliation: cyclotomic Z_4 ↔ Koide V_4 inside D_4"
   },
@@ -1801,6 +2045,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Lesson — 8/35 vs 13/19: telling a derivation from a coincidence"
   },
@@ -1811,6 +2056,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Lesson — the cosmological constant: the worst prediction in physics, dissolved"
   },
@@ -1821,6 +2067,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Lesson — EPR to GR–QM unification: one substrate, two couplings"
   },
@@ -1831,6 +2078,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Lesson — forced basin selection: the engine room of measurement"
   },
@@ -1842,6 +2090,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Lesson 0 — the proslambanomenos: the music you already know is the substrate"
   },
@@ -1852,6 +2101,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Lesson — stars at the spiral's edge: a₀ = cH₀/(2π) and a false dichotomy"
   },
@@ -1862,6 +2112,7 @@
     "D15"
    ],
    "has_lineage": false,
+   "status_bold": "Established",
    "status_line": null,
    "title": "Lie Group Characterization Theorem"
   },
@@ -1870,6 +2121,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "External verification correction — LMFDB substrate retrieval for f_{6,4}"
   },
@@ -1880,6 +2132,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "not",
    "status_line": null,
    "title": "Mass = entrained tongue width, from the synchronization-cost functional"
   },
@@ -1888,6 +2141,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Mass-function family across cascade depths"
   },
@@ -1896,6 +2150,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Derived.",
    "status_line": null,
    "title": "The Mass Sector Closure: Integer Conservation and Gauge Adjoints"
   },
@@ -1904,6 +2159,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Mass-sector `1/√w` prescription — Phase A: terminology discipline"
   },
@@ -1912,6 +2168,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Mass-sector `1/√w` prescription — Phase B: q-scan results"
   },
@@ -1923,6 +2180,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Master cascade-lock identity"
   },
@@ -1931,6 +2189,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "WIP / staging note",
    "status_line": null,
    "title": "WIP — meaning of `2` in the framework"
   },
@@ -1939,6 +2198,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Established",
    "status_line": null,
    "title": "Measurement Collapse from Tongue Traversal"
   },
@@ -1949,6 +2209,7 @@
     "D29"
    ],
    "has_lineage": true,
+   "status_bold": "Derived.",
    "status_line": null,
    "title": "The Mediant Is Not an Axiom"
   },
@@ -1960,6 +2221,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Formalization of the framework's hinge claim",
    "status_line": null,
    "title": "The mediant-forcing lemma — statement, proof, and explicit obligations"
   },
@@ -1970,6 +2232,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Mediant vs. flow: the calculation run — flow fingerprint absent at K=1"
   },
@@ -1980,6 +2243,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Mediant vs. flow: is a continuous flow *required*? — a hand-decidable problem statement"
   },
@@ -1988,6 +2252,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Medium-change demo: address vs. structure"
   },
@@ -1998,6 +2263,7 @@
     "D10"
    ],
    "has_lineage": false,
+   "status_bold": "Established",
    "status_line": null,
    "title": "The Minimum Alphabet"
   },
@@ -2008,6 +2274,7 @@
     "D32"
    ],
    "has_lineage": false,
+   "status_bold": "Derived.",
    "status_line": null,
    "title": "The Minkowski Signature from Phase State Observability"
   },
@@ -2016,6 +2283,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Mixing angle audit: the framework's tree-level predictions ARE PMNS"
   },
@@ -2026,6 +2294,7 @@
     "D18"
    ],
    "has_lineage": false,
+   "status_bold": "Proposed",
    "status_line": null,
    "title": "The Möbius Container"
   },
@@ -2034,6 +2303,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Mode-locking exhibits — the mechanism in the laboratory, the clinic, and the sky"
   },
@@ -2042,6 +2312,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: MODAL ✓ / GENERATIVE ✓",
    "status_line": null,
    "title": "Modular-form behavior of cosmological tongues (PR #231 quantitative gap reframed)"
   },
@@ -2054,6 +2325,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Negative-results ledger — the single archival home for failed, null, and superseded claims"
   },
@@ -2064,6 +2336,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Neutrino mass audit: already closed, not a depth-limit problem"
   },
@@ -2074,6 +2347,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "No-rescaling principle: cosmic = substrate, under natural units"
   },
@@ -2084,6 +2358,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "finite- mode QM on the substrate's 4-mode Hilbert space at K=1",
    "status_line": null,
    "title": "Non-perturbative substrate: Phase 1 (the DoF reduction)"
   },
@@ -2094,6 +2369,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Value superseded",
    "status_line": null,
    "title": "Non-perturbative Phase 2: the 4×4 calc (historical; symmetric S_v(K=1)=16 superseded)"
   },
@@ -2104,6 +2380,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "regime-clarifying finding",
    "status_line": null,
    "title": "Non-perturbative Phase 3: K < 1 sectors and the lengthscale-regime question"
   },
@@ -2117,6 +2394,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Numerology count (Region C, Shape B) — Phase A: scope and design"
   },
@@ -2129,6 +2407,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: PIGEONHOLE at all three thresholds (0.1%, 1%, 3%)",
    "status_line": null,
    "title": "Region C Phase B — numerology count: results"
   },
@@ -2143,6 +2422,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Numerology inventory"
   },
@@ -2153,6 +2433,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Observer-register closure on the Klein-quotient substrate"
   },
@@ -2164,6 +2445,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": true,
+   "status_bold": "(α, β) = (0, 1) closure complete.",
    "status_line": null,
    "title": "Ω_b (α, β) execution Phase B — closure via sign-rep no-EM-coupling"
   },
@@ -2174,6 +2456,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "not closed",
    "status_line": null,
    "title": "Ω_b (α, β) execution — Phase B initial pass"
   },
@@ -2186,6 +2469,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Ω_b C5 closure: β-forcing audit"
   },
@@ -2198,6 +2482,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Ω_b Floor closure: C5 z-dependent w with framework-integer parameters"
   },
@@ -2206,6 +2491,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Ω_b = 1/19 residual — Phase A: the three-way boundary-weight inconsistency"
   },
@@ -2216,6 +2502,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Demoted to Class 2 numerology cloud",
    "status_line": null,
    "title": "Ω_b = 1/19 residual — Phase B: cross-sector |r|² tax closes it"
   },
@@ -2228,6 +2515,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Ω_b residual audit: passes substrate-side test, does NOT dissolve"
   },
@@ -2240,6 +2528,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Ω_b two-component sketch: the C2 mechanism mechanically traced"
   },
@@ -2252,6 +2541,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "w_+ = 13/14",
    "status_line": null,
    "title": "Ω_b w_+ structural derivation: candidate found, ansatz audit applied"
   },
@@ -2263,6 +2553,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Cross-ratio search for w_+ forcing argument"
   },
@@ -2275,6 +2566,7 @@
     "D28"
    ],
    "has_lineage": false,
+   "status_bold": "Derived.",
    "status_line": null,
    "title": "Ω partition: combinatorial derivation at depth 19"
   },
@@ -2285,6 +2577,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Phase π",
    "status_line": null,
    "title": "Orthogonal-kink interaction: decomposition into AB-phase + jog energy"
   },
@@ -2293,6 +2586,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: MODAL ✓ / GENERATIVE ✓",
    "status_line": null,
    "title": "(ℚ_2, ℚ_3) p-adic L-function content of f_{6,4} — Mihailescu-pair audit"
   },
@@ -2301,6 +2595,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": true,
+   "status_bold": "Connect q_2 factor to Klein-antipodal Z_2 rep machinery",
    "status_line": null,
    "title": "Cosmic partition prediction in logit form"
   },
@@ -2311,6 +2606,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Path (a) walkthrough: Klein-fold sub-action of |Z_6| × ⟨z₀⟩₅₄ × ⟨ι⟩"
   },
@@ -2322,6 +2618,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Path closures — iteration 1"
   },
@@ -2334,6 +2631,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Path closures — iteration 2"
   },
@@ -2345,6 +2643,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "D.3 closes Class 5 (anchor obstruction #5).",
    "status_line": null,
    "title": "Path closures — iteration 3"
   },
@@ -2356,6 +2655,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "D.1 promotes to Class 5 (Klein π_1 sector assignment fully forced).",
    "status_line": null,
    "title": "Path closures — iteration 4 (breadth-first)"
   },
@@ -2366,6 +2666,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Candidate methodology",
    "status_line": null,
    "title": "Pattern-identification discipline (candidate methodology)"
   },
@@ -2379,6 +2680,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Phenomenology cross-reference — observation vs framework prediction"
   },
@@ -2387,6 +2689,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Phenomenon glossary — dynamics first, names second"
   },
@@ -2399,6 +2702,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "B7 — survey doc organizing the framework's predictions against the specific axis of *primitive measurement endpoints*.",
    "status_line": null,
    "title": "Physics-relevance × primitive-measurement catalog (B7)"
   },
@@ -2409,6 +2713,7 @@
     "D6"
    ],
    "has_lineage": false,
+   "status_bold": "Established",
    "status_line": null,
    "title": "Planck Scale from Self-Sustaining Threshold"
   },
@@ -2421,6 +2726,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Predictions horizon — 2026"
   },
@@ -2431,6 +2737,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Inviolable-companion dissolution articulated",
    "status_line": null,
    "title": "Preferred-basis dissolution"
   },
@@ -2439,6 +2746,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Prime sequence as such",
    "status_line": null,
    "title": "Prime-denominators-in-series → framework-native circular geometry (extension to PR #234)"
   },
@@ -2450,6 +2758,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Shape F primitive-completeness audit (2026-04-26)"
   },
@@ -2460,6 +2769,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Candidate distinction, not yet sealed.",
    "status_line": null,
    "title": "Layer-invariant primitives vs layer-specific addresses (candidate methodology)"
   },
@@ -2471,6 +2781,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "#PROPOSED: disposition of the three items"
   },
@@ -2482,6 +2793,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "#PROPOSED residual: closed"
   },
@@ -2490,6 +2802,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: MODAL ✓ / GENERATIVE ✓",
    "status_line": null,
    "title": "PSL(2,ℤ) noncommutative core structural identity (Mihailescu ↔ free-product torsion)"
   },
@@ -2500,6 +2813,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "PSL(2,ℤ)-subgroup identification — Phase A"
   },
@@ -2512,6 +2826,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Not yet, but close.",
    "status_line": null,
    "title": "PSL(2,ℤ)-subgroup Phase A — orbit enumeration results"
   },
@@ -2524,6 +2839,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Phase B B1 and B2 close in recognize mode.",
    "status_line": null,
    "title": "PSL(2,ℤ)-subgroup Phase B — substrate-side Γ_0(6) derivation"
   },
@@ -2534,6 +2850,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Reduces to the q_3-sector quantity pattern question",
    "status_line": "recognize-mode candidate. The \"max locking subject to",
    "title": "Direction 4 Phase C — what remains for Class 5 closure"
   },
@@ -2544,6 +2861,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Standalone theorem articulated",
    "status_line": null,
    "title": "Q mod 2 conservation theorem"
   },
@@ -2555,6 +2873,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "State-axis projection articulated",
    "status_line": null,
    "title": "Q mod 2 mediant projection (state-axis dual of inviolable #1)"
   },
@@ -2563,6 +2882,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: MODAL ✓ / GENERATIVE ✓.",
    "status_line": null,
    "title": "Q mod 2 Planck-emergence audit — fuzzy floor and structural identity"
   },
@@ -2573,6 +2893,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Origins of (q₂, q₃, d) = (2, 3, 3) from the four objects"
   },
@@ -2584,6 +2905,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Programmatic QM-reframing: substrate apparatus vs inherited QM machinery"
   },
@@ -2592,6 +2914,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Quantum Gravity from the Rational Field Equation at K ≈ 1"
   },
@@ -2600,6 +2923,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Theorem established.",
    "status_line": null,
    "title": "The Rank-1 Fréchet Derivative as Temporal Causation"
   },
@@ -2610,6 +2934,7 @@
     "D11"
    ],
    "has_lineage": false,
+   "status_bold": "Established",
    "status_line": null,
    "title": "The Rational Field Equation"
   },
@@ -2620,6 +2945,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Tree-level only",
    "status_line": null,
    "title": "Rationality descent: is the hidden algorithm real?"
   },
@@ -2628,6 +2954,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Resolved.",
    "status_line": null,
    "title": "Reading Compatibility: R and Ω_Λ"
   },
@@ -2636,6 +2963,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Conjectured.",
    "status_line": null,
    "title": "Readings, Not Constants"
   },
@@ -2646,6 +2974,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Rectangle ansatz from perpendicularity and antiperiodic isometry"
   },
@@ -2659,6 +2988,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Remaining gap shapes after the disambiguation pattern"
   },
@@ -2669,6 +2999,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "The super-Earth analogy is structurally confirmed: inflation exit is \"hard\" in the framework's natural setup.",
    "status_line": null,
    "title": "S_inst for inflation exit: does the super-Earth analogy hold?"
   },
@@ -2679,6 +3010,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Not yet done.",
    "status_line": null,
    "title": "S_v(K=1) at next-to-leading order"
   },
@@ -2689,6 +3021,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": "substrate-Lagrangian-level work, tractable in principle,",
    "title": "S_v(K=1) NLO calc attempt: a regime finding"
   },
@@ -2701,6 +3034,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Disposition consolidated.",
    "status_line": null,
    "title": "Cascade↔Salpeter slope: dual-gate disposition"
   },
@@ -2711,6 +3045,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Seam K-gradient: independent derivation of `|∇K|_seam`"
   },
@@ -2719,6 +3054,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "The Second Law from Non-Orientability"
   },
@@ -2727,6 +3063,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Observation",
    "status_line": null,
    "title": "The Sector Constants: q₃² and q₂³"
   },
@@ -2739,6 +3076,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Sector decoupling derivation (Region D, Anchor obstruction #5) — Phase A"
   },
@@ -2747,6 +3085,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Seismic Eigenstate Dictionary"
   },
@@ -2755,6 +3094,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Session audit: overclaims, revisions, and stale content"
   },
@@ -2763,6 +3103,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "σ² disambiguation"
   },
@@ -2773,6 +3114,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Identification, not a new prediction.",
    "status_line": null,
    "title": "Silk damping from substrate dissipation"
   },
@@ -2784,6 +3126,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "does",
    "status_line": null,
    "title": "Sine-Gordon as the framework's substrate effective theory"
   },
@@ -2794,6 +3137,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Null (2026-04-23).",
    "status_line": null,
    "title": "Weak Mixing Angle: sin²θ_W from Effective Dimension Reduction"
   },
@@ -2805,6 +3149,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Ruled out.",
    "status_line": null,
    "title": "sin²θ_W Fixed-Point Hypothesis — Ruled Out"
   },
@@ -2815,6 +3160,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "D2 formalization",
    "status_line": null,
    "title": "Substrate-Natural Multipartite Class (SNMC) and substrate-natural entanglement measures"
   },
@@ -2825,6 +3171,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "does",
    "status_line": null,
    "title": "Soliton dynamics: linear sector, breathers, S-matrix, medium class"
   },
@@ -2835,6 +3182,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "dissipative emergence",
    "status_line": null,
    "title": "Spacetime as dissipative emergence: anchor-free mechanics and the tick-selection locus"
   },
@@ -2845,6 +3193,7 @@
     "D48"
    ],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": "Derived. Uses only D31 (c finite) and the gate",
    "title": "Spatial Coupling Derived from Gate Propagation"
   },
@@ -2853,7 +3202,12 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Open",
    "status_line": null,
+   "superseded_basis": "declared",
+   "superseded_by": [
+    "spectral_tilt_reframed"
+   ],
    "title": "Spectral Tilt from Synchronization Cost Gradient"
   },
   "spectral_tilt_reframed": {
@@ -2863,6 +3217,7 @@
     "D4"
    ],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Spectral Tilt from Mode-Locking Structure"
   },
@@ -2873,6 +3228,7 @@
     "D31"
    ],
    "has_lineage": false,
+   "status_bold": "New derivation.",
    "status_line": null,
    "title": "The Speed of Light as Gate Propagation"
   },
@@ -2885,6 +3241,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Articulation of an existing flagged correction",
    "status_line": null,
    "title": "√r_n correction: making the K-zoo kink-mass residual concrete"
   },
@@ -2893,6 +3250,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Statistical conventions for session closure docs"
   },
@@ -2901,6 +3259,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "The Stribeck Vortex Regime Map"
   },
@@ -2912,6 +3271,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Structural lemmas v1, 2026-04-26.",
    "status_line": "Class 5 / Survives. Numerical residuals on Planck",
    "title": "Structural lemmas"
   },
@@ -2922,6 +3282,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "open",
    "status_line": null,
    "title": "Substrate determinism: is probability fundamental or emergent?"
   },
@@ -2930,6 +3291,7 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "posed, not derived",
    "status_line": null,
    "title": "Substrate Kramers-Kronig dispersion relation — status audit + posed derivation target"
   },
@@ -2941,6 +3303,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Closed at Outcome 2 (2026-06-01).",
    "status_line": null,
    "title": "Substrate prediction selection — opening doc"
   },
@@ -2952,6 +3315,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Audit verdict: the surface uniqueness claim is layered. The substrate-internal arguments do NOT uniquely select K²; they exclude RP² genuinely (the framework's apparatus literally cannot operate on RP",
    "status_line": null,
    "title": "Surface uniqueness audit — Klein bottle's \"uniqueness\" decomposed"
   },
@@ -2960,6 +3324,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Tape physics as a dual-regime / basepoint correspondence"
   },
@@ -2971,6 +3336,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Third-twist (Z_3) meta-structure audit"
   },
@@ -2982,6 +3348,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Thread chronology — the single ledger"
   },
@@ -2992,6 +3359,7 @@
     "D14"
    ],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": "Theorem. The Stern-Brocot tree is the Cayley graph of the",
    "title": "Three Dimensions from the Mediant"
   },
@@ -3003,6 +3371,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Three Formalizations"
   },
@@ -3011,6 +3380,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Established",
    "status_line": null,
    "title": "Three Zeros and the 1+3 Decomposition"
   },
@@ -3021,6 +3391,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "#TICK(b): the first-order binary tick constructs sine-Gordon — Goldstein–Kac"
   },
@@ -3031,6 +3402,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "The time-axis split on the Klein bottle"
   },
@@ -3041,6 +3413,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "First-pass exploration, resolution-mode.",
    "status_line": null,
    "title": "Torus-branch iteration 1 — Z_6 mode lattice as toroidal/poloidal substrate"
   },
@@ -3051,6 +3424,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: PASSES. Gauge factor identifications are substrate-forced via the Cartan + minimum-rank + XOR-confinement + anomaly-cancellation chain in `gauge_sector_lovelock.md`. The torus-reading's toroi",
    "status_line": null,
    "title": "Torus-branch iteration 2 step 1 — gauge factor identifications verified"
   },
@@ -3062,6 +3436,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: PASSES with substantive clarification.",
    "status_line": null,
    "title": "Torus-branch iteration 2 step 2 — downstream clarity + swap robustness"
   },
@@ -3070,6 +3445,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Two Forces — Coherence and Decoherence"
   },
@@ -3078,6 +3454,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Gap 1",
    "status_line": null,
    "title": "Unification bridge audits — Gaps 1, 2, 3"
   },
@@ -3088,6 +3465,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Unitless audit: substrate primitives end-to-end"
   },
@@ -3096,6 +3474,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Unitless Check: ℏ = G = c = 1"
   },
@@ -3104,6 +3483,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Ω_Λ = 13/19 = 0.6842",
    "status_line": null,
    "title": "Cosmological Constant in the Framework"
   },
@@ -3115,6 +3495,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "sector-resolved stress map",
    "status_line": null,
    "title": "Vacuum stress meta-structure: anchors as stress denominations, complementary slackness, and the de-emergence ordering"
   },
@@ -3125,6 +3506,7 @@
     "D16"
    ],
    "has_lineage": false,
+   "status_bold": "Proposed",
    "status_line": null,
    "title": "The Variable Denominator"
   },
@@ -3136,6 +3518,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "First-pass survey.",
    "status_line": null,
    "title": "Vocabulary-bridge iteration 1 — substrate → particle chirality survey"
   },
@@ -3147,6 +3530,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: APPARENT INCONSISTENCY DISSOLVES.",
    "status_line": null,
    "title": "Vocabulary-bridge iteration 2 step 1 — resolve locus (4) inconsistency"
   },
@@ -3158,6 +3542,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Verdict: THREE \"NO\" ANSWERS. Path δ' closes.",
    "status_line": null,
    "title": "Vocabulary-bridge iteration 2 step 2 — labeling constraint check"
   },
@@ -3170,6 +3555,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": "ACCEPTED. Floor entry retired; substrate-side",
    "title": "The \"vocabulary-is-the-work\" pattern: a recurring framework"
   },
@@ -3180,6 +3566,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "w_+ = 13/14 closes Class 5",
    "status_line": "Class 5 / Survives.",
    "title": "Formal closure of w_+ = 13/14 — proposition-level chain"
   },
@@ -3190,6 +3577,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "T1a worked example, with a two-sided finding: narrowing then extension.",
    "status_line": null,
    "title": "W states from substrate — narrowing the apparatus, then extending it"
   },
@@ -3200,6 +3588,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Class 3 (synthesis grade).",
    "status_line": null,
    "title": "Wave–particle substrate: the two-primitive framework synthesis"
   },
@@ -3208,6 +3597,7 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": "Established",
    "status_line": null,
    "title": "The XOR-Filtered Continuum Limit"
   },
@@ -3216,10 +3606,12 @@
    "coverage": "unclassified-quantitative",
    "d_numbers": [],
    "has_lineage": false,
+   "status_bold": null,
    "status_line": null,
    "title": "Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions"
   }
  },
- "generated": "74bb0d0",
- "generator": "scripts/build_corpus_index.py"
+ "generated": "8d3652f",
+ "generator": "scripts/build_corpus_index.py",
+ "rule8_flags": []
 }
