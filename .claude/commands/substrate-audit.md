@@ -24,8 +24,12 @@ For each target: one visible line `HYPOTHESIS: … TEST: …`, then run the test
 4. **Registry consistency.** `manifest_claim` over every name: sources must resolve frontier; computed values must have a matching sealed claim in `claims-index` (witness agreement). Mismatches are findings.
 5. **Ingest coverage.** Sample the 189 unstructured frontier docs: claims the ratio route missed (prose-stated quantities, non-ratio claims). Product: route-improvement proposals or write-for-ingest edits, not hand-waving.
 6. **Deep chain audit** (at least one): pick a Class 5 claim, walk its full support via `graph_walk {direction: deps}` and `claim_get`; every load-bearing step that is prose-only (no committed edge, no sealed claim) is a finding.
+7. **Engine verification.** `list_engines`, then `run_engine` every pinned engine: `matches: false` (output diverges from its sealed canonical CID) is a finding of the highest class, a computation the corpus cites no longer reproduces. Where a deep-chain step (target 6) cites a numeric result an engine covers, recompute rather than trust.
+8. **Global selection accounting** (the look-elsewhere ledger; a per-claim loop is structurally blind to this, so it is an explicit target). Maintain or refresh the trials ledger: enumerate every observable the program has EVER attempted, using the graveyard the substrate preserved (Class 1-3 docs, `bare_k1_identities`, retracted and declined claims, closed null arcs like koide), alongside the survivors; for each surviving Class 5 construction, estimate the admissible candidate space (how many low-complexity rationals the construction could have produced); report the trials-corrected picture of the surviving set. Output is a dossier for owner review and, when mature, a standalone derivation doc (`selection_accounting.md`), because it is the single highest-credibility artifact the program can produce before external data arrives. Aggregate honestly: attempted-and-killed counts are evidence FOR the survivors only if the counting includes everything.
 
 Before acting on any finding that would change substrate content, spawn one subagent skeptic instructed to refute it. Only surviving findings go forward.
+
+Out of audit scope by design: the substrate posit's abductive standing (why coupled oscillators at all) is foundational assessment, owed a dedicated theory session, not an auditor's pass; note it if touched, do not adjudicate it.
 
 ## Revision rules
 
