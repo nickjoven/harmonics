@@ -51,3 +51,4 @@ sync_cost/derivations/sector_decoupling_phase_a.md
 sync_cost/derivations/spatial_coupling_derived.md
 sync_cost/derivations/vocabulary_is_the_work_pattern.md
 sync_cost/successions.jsonl
+MANIFEST.yml
