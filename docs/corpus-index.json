@@ -715,7 +715,7 @@
    ],
    "coverage": "classified",
    "d_numbers": [],
-   "has_lineage": false,
+   "has_lineage": true,
    "status_bold": "Class 5 / Survives.",
    "status_line": null,
    "title": "Down-type double cover — derivation summary"
@@ -3611,7 +3611,7 @@
    "title": "Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions"
   }
  },
- "generated": "ca29374",
+ "generated": "8a4433f",
  "generator": "scripts/build_corpus_index.py",
  "rule8_flags": []
 }

@@ -1,5 +1,5 @@
 {
-  "generated": "ca29374e9e79dd5a31e04f19b1de71aa6e11842e",
+  "generated": "8a4433f1ad2ed3addc1fef04a53c554a00265525",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -5570,7 +5570,7 @@
         },
         {
           "source": "down_type_double_cover_closed",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "source": "down_type_double_cover_phase_d",
@@ -6389,7 +6389,7 @@
         },
         {
           "source": "down_type_double_cover_closed",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "source": "down_type_double_cover_phase_c",
@@ -6922,7 +6922,7 @@
         },
         {
           "source": "down_type_double_cover_closed",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "source": "fm_beat_crt_correspondence_audit",
@@ -10150,7 +10150,7 @@
         },
         {
           "source": "down_type_double_cover_closed",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "source": "dynamical_quantization",
@@ -10886,8 +10886,8 @@
     {
       "id": "down_type_double_cover_closed",
       "path": "sync_cost/derivations/down_type_double_cover_closed.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "2fb6a8b12b4de5a6c979edca2b604d5ef1f153ac17103a8477378a42ff0eebef",
+      "sealed": true,
       "title": "Down-type double cover \u2014 derivation summary",
       "summary": "**Class 5 / Survives.** Down-type quark factor 6 = q_2 \u00b7 q_3\nderived from S_3 acting on Z_2 \u00d7 Z_3 lattice. Orbit dimensions\n{1, 3} = {q_3-trivial, q_3-vector}; factor 6 emerges as\n|L| = q_2 \u00b7 q_3 from orbit-counting.",
       "depends_on": [
@@ -10900,7 +10900,6 @@
         "down_type_double_cover_phase_b_followup",
         "down_type_double_cover_phase_c",
         "down_type_double_cover_phase_d",
-        "framework_status",
         "hierarchy_gaussian_lattice",
         "phenomenology_cross_reference",
         "vocabulary_is_the_work_pattern"
@@ -10928,51 +10927,47 @@
       "edges": [
         {
           "target": "born_rule",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "target": "boundary_weight",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "target": "canonical_glossary",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "target": "derivation_atlas",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "target": "down_type_double_cover_phase_a",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "target": "down_type_double_cover_phase_b",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "target": "down_type_double_cover_phase_b_followup",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "target": "down_type_double_cover_phase_c",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "target": "down_type_double_cover_phase_d",
-          "kind": "references"
-        },
-        {
-          "target": "framework_status",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "target": "hierarchy_gaussian_lattice",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "target": "phenomenology_cross_reference",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "target": "vocabulary_is_the_work_pattern",
@@ -11127,7 +11122,7 @@
       "edged_by": [
         {
           "source": "down_type_double_cover_closed",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "source": "down_type_double_cover_phase_b",
@@ -11209,7 +11204,7 @@
       "edged_by": [
         {
           "source": "down_type_double_cover_closed",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "source": "down_type_double_cover_phase_b_followup",
@@ -11279,7 +11274,7 @@
       "edged_by": [
         {
           "source": "down_type_double_cover_closed",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "source": "down_type_double_cover_phase_a",
@@ -11390,7 +11385,7 @@
         },
         {
           "source": "down_type_double_cover_closed",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "source": "down_type_double_cover_phase_d",
@@ -11472,7 +11467,7 @@
       "edged_by": [
         {
           "source": "down_type_double_cover_closed",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "source": "down_type_double_cover_phase_c",
@@ -15098,7 +15093,6 @@
         "depth_connection_nulls",
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
-        "down_type_double_cover_closed",
         "dynamical_tool_audit",
         "epr_bell_assembly_theorem",
         "epsilon_physical_reading",
@@ -15619,10 +15613,6 @@
         },
         {
           "source": "discrete_extension_principle",
-          "kind": "references"
-        },
-        {
-          "source": "down_type_double_cover_closed",
           "kind": "references"
         },
         {
@@ -19548,7 +19538,7 @@
         },
         {
           "source": "down_type_double_cover_closed",
-          "kind": "references"
+          "kind": "grounds"
         },
         {
           "source": "down_type_double_cover_phase_a",
@@ -32463,7 +32453,7 @@
         },
         {
           "source": "down_type_double_cover_closed",
-          "kind": "references"
+          "kind": "derives"
         },
         {
           "source": "epr_bell_assembly_theorem",
