@@ -45,8 +45,20 @@ def main() -> int:
     graph = json.loads((ROOT / "docs/derivation-graph.json").read_text())
     index = json.loads((ROOT / "docs/corpus-index.json").read_text())["docs"]
 
+    # Class membership must be SELF-DECLARED (the doc's own status line or
+    # Status-section bold), never the corpus-index `classes` scrape — that
+    # field records every prose MENTION, so reference docs that discuss
+    # Class 1 (glossary, cross-reference atlas) carry classes=[1,2,4,5]
+    # without being any of them. First audit session's Card 8 was this
+    # false positive (2026-07-24); the audit misdiagnosed it as an edge-
+    # direction bug, but direction was correct — membership was polluted.
+    def self_status(m):
+        return " ".join(filter(None, [m.get("status_line"),
+                                      m.get("status_bold")]))
+
+    CLASS1_RE = re.compile(r"\bClass[ -]?1\b")
     weak = {d for d, m in index.items()
-            if "superseded_by" in m or 1 in (m.get("classes") or [])}
+            if "superseded_by" in m or CLASS1_RE.search(self_status(m))}
 
     divergent = []
     for node in graph["nodes"]:
@@ -60,9 +72,8 @@ def main() -> int:
             # bold verdict) that have no inline '**Status**:' line —
             # coupling_scales, this check's motivating doc, is one
             # (review finding 5, 2026-07-21).
-            status = " ".join(filter(None, [meta.get("status_line"),
-                                            meta.get("status_bold")]))
-            asserts = (5 in (meta.get("classes") or [])
+            status = self_status(meta)
+            asserts = (re.search(r"\bClass[ -]?5\b", status)
                        or (DERIVED_RE.search(status)
                            and not ACK_RE.search(status)))
             if asserts:
