@@ -1,0 +1,53 @@
+name: ci-gates
+
+# The drift suite as a PR gate. Locally these run via the precommit
+# hook and scripts/drift/run_all.py; this workflow makes the FATAL
+# tier (CAS integrity, manifest consistency, graph orphans, linters)
+# binding on every PR and push to main, and surfaces the advisory
+# tier (divergence queue, freshness, coverage) into the job summary
+# without blocking. Pure-Python: blake3 has a hashlib fallback in
+# scripts/drift/_hash.py, and no ket binary is required to verify.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-gates-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install --quiet blake3 pyyaml
+
+      - name: FATAL gates
+        run: |
+          {
+            echo '## Drift suite'
+            echo '```'
+            python3 scripts/drift/run_all.py
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Advisory surfaces (non-blocking)
+        if: always()
+        run: |
+          {
+            echo '## Divergence queue (advisory)'
+            echo '```'
+            python3 scripts/drift/check_downstream_resolution.py || true
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
