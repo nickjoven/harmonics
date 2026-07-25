@@ -1,5 +1,5 @@
 {
-  "generated": "8a4433f1ad2ed3addc1fef04a53c554a00265525",
+  "generated": "340e841a91a203802fdf8441c47e17fbb6785479",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -11049,6 +11049,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "655538d",
+          "date": "2026-07-24",
+          "subject": "down_type_double_cover_closed: drop false framework_status cite; add Lineage"
+        },
         {
           "hash": "a6a4f5d",
           "date": "2026-04-26",

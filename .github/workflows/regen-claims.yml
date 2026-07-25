@@ -1,0 +1,246 @@
+name: Regenerate claims ingest
+
+# Owns sync_cost/ingest/report.json and docs/claims-index.json — the
+# claims-ingest chain that PR #320 committed as a manually-produced
+# baseline ("CI ownership follows once canon.d integrates"). This
+# workflow is that ownership, taken by pinning instead of waiting:
+#
+#   1. Build canon.d's `canon-demo` at a pinned rev, `--features prose`.
+#      The prose feature has a *path* dependency on `../urtext`, so
+#      urtext is checked out beside canon.d (see CANON_D_REV /
+#      URTEXT_REV below; both clones sit under .canon-build/, untracked).
+#   2. Re-ingest the corpus: `canon-demo intake-corpus
+#      sync_cost/derivations --json --prior-heads <committed report>`.
+#      --prior-heads closes the cross-run head chain (canon.d#6): docs
+#      whose content moved supersede their previous canonical heads.
+#   3. Compare byte-for-byte against the committed report. Intake is
+#      idempotent (proven locally: an unchanged corpus reproduces the
+#      committed report exactly, given the same annotator), so equality
+#      means nothing to do.
+#   4. If changed: overwrite the report, regenerate
+#      docs/claims-index.json (scripts/build_claims_index.py), and
+#      re-seal the report into the .ket substrate. Sealing mirrors
+#      substrate-maintenance.yml: build the ket binary (shared cache
+#      key), then run scripts/maintenance/reconcile_substrate.py, which
+#      `ket put`s every drifted sealed path — report.json being the one
+#      this workflow just drifted — and records a reconciliation DAG
+#      node. The .ket/ changes ride in the same bot commit.
+#
+# urtext is a PRIVATE repo: the default GITHUB_TOKEN cannot read it.
+# A fine-grained PAT with Contents:read on nickjoven/urtext must exist
+# as the URTEXT_READ_TOKEN repo secret or this workflow fails early
+# with an explicit error.
+#
+# Annotator note: edge annotations seal (from, to, annotator) into
+# their CID, so the FIRST run under CI_ANNOTATOR re-attributes the 36
+# typed edges (one deliberate re-ingest commit, heads_superseded: 0,
+# no proposition/claim changes); every later run on an unchanged
+# corpus is byte-identical and exits quietly.
+#
+# Triggers only on push to main, like regen-derivation-graph.yml: PRs
+# do not re-ingest because doing so would race concurrent merges, and
+# a stale report between merge and bot-commit is tolerated.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "sync_cost/derivations/*.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: regen-claims
+  # Don't cancel in-flight runs; every push must be handled so the
+  # report converges to the latest corpus state.
+  cancel-in-progress: false
+
+env:
+  # canon.d intake toolchain — PINNED, not floating. Bumping this rev is
+  # a deliberate act: a new canon.d can change CIDs and report shape, so
+  # move it only with a PR that re-proves idempotence against the
+  # committed report. unit2-wiring HEAD as of 2026-07-23 (the #12
+  # head-succession build that produced the committed baseline).
+  CANON_D_REV: 7dbabcbe794c151be122fb5bcfd38d9abc70d4f2
+  # urtext (canonicalizer behind the prose feature) — pinned for the
+  # same reason. main HEAD as of 2026-07-23; the local fresh-clone-pair
+  # proof reproduced the committed report byte-for-byte with this pair.
+  URTEXT_REV: c78f3a07ad59bfad3212917642410e7ab015e916
+  # The attestation identity CI ingests under (see annotator note above).
+  CI_ANNOTATOR: harmonics-ci
+
+jobs:
+  regen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require URTEXT_READ_TOKEN
+        run: |
+          if [ -z "${{ secrets.URTEXT_READ_TOKEN }}" ]; then
+            echo "::error::URTEXT_READ_TOKEN secret is not set. urtext is private and canon.d's prose feature path-depends on it; create a fine-grained PAT with Contents:read on nickjoven/urtext and add it as a repo secret."
+            exit 1
+          fi
+
+      - uses: actions/checkout@v5
+        # Shallow is fine: the race-safe retry loop fetches main on
+        # demand, and build_claims_index.py only embeds `rev-parse HEAD`.
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      # blake3 for scripts/maintenance/reconcile_substrate.py (drift
+      # detection hashes via scripts/drift/_hash).
+      - run: pip install blake3
+
+      # --- canon-demo: pinned clone pair, side by side (path dep) ---
+      - uses: actions/checkout@v5
+        with:
+          repository: nickjoven/canon.d
+          ref: ${{ env.CANON_D_REV }}
+          path: .canon-build/canon.d
+
+      - uses: actions/checkout@v5
+        with:
+          repository: nickjoven/urtext
+          ref: ${{ env.URTEXT_REV }}
+          token: ${{ secrets.URTEXT_READ_TOKEN }}
+          path: .canon-build/urtext
+
+      - uses: dtolnay/rust-toolchain@stable
+        # canon.d pins its real toolchain in rust-toolchain.toml
+        # (1.95.0 at the pinned rev); rustup resolves that file when
+        # building inside the clone, so stable here is just bootstrap.
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: .canon-build/canon.d
+
+      - name: Build canon-demo (release, prose features)
+        working-directory: .canon-build/canon.d
+        run: cargo build --release --bin canon-demo --features prose
+
+      # --- ket binary for re-sealing: same pattern and cache key as
+      # substrate-maintenance.yml, so the two workflows share one build.
+      - name: Cache ket binary
+        id: ket-cache
+        uses: actions/cache@v5
+        with:
+          path: ~/.local/bin/ket
+          key: ket-binary-${{ runner.os }}-v1
+
+      - name: Install Rust toolchain (ket build)
+        if: steps.ket-cache.outputs.cache-hit != 'true'
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Build ket binary
+        if: steps.ket-cache.outputs.cache-hit != 'true'
+        run: |
+          git clone --depth 1 https://github.com/nickjoven/ket.git /tmp/ket-src
+          cd /tmp/ket-src
+          cargo build --release -p ket-cli
+          mkdir -p ~/.local/bin
+          cp target/release/ket ~/.local/bin/ket
+
+      - name: Export KET_BIN
+        run: echo "KET_BIN=$HOME/.local/bin/ket" >> $GITHUB_ENV
+
+      - name: Re-ingest, compare, commit (race-safe)
+        # main can advance while this job runs (substrate-maintenance
+        # bot commits, PR merges, regen-derivation-graph). A plain
+        # `git push` then fails non-fast-forward on a benign race; the
+        # report is a pure function of the corpus + prior heads, so on
+        # a rejected push we sync to the new tip, re-ingest, and retry
+        # — the same loop as regen-derivation-graph.yml.
+        run: |
+          set -euo pipefail
+          CANON=".canon-build/canon.d/target/release/canon-demo"
+
+          regen() {
+          # canon-demo exit 1 = review items present (expected: the
+          # corpus carries a standing needs_review backlog); >= 2 =
+          # real failure. Returns 1 when the report is unchanged.
+          set +e
+          "$CANON" intake-corpus sync_cost/derivations --json \
+            --annotator "$CI_ANNOTATOR" \
+            --prior-heads sync_cost/ingest/report.json \
+            > "$RUNNER_TEMP/report.new.json"
+          rc=$?
+          set -e
+          if [ "$rc" -ge 2 ]; then
+            echo "::error::canon-demo intake-corpus failed (exit $rc)"
+            exit 1
+          fi
+          if cmp -s "$RUNNER_TEMP/report.new.json" sync_cost/ingest/report.json; then
+            return 1
+          fi
+          cp docs/claims-index.json "$RUNNER_TEMP/claims-index.old.json"
+          cp "$RUNNER_TEMP/report.new.json" sync_cost/ingest/report.json
+          python3 scripts/build_claims_index.py
+          # report.json is a sealed (retrieval-tier) path; overwriting
+          # it without a fresh `ket put` is exactly the drift the
+          # substrate gates on. Reconcile re-seals it (and any other
+          # drifted sealed path) and appends the reconciliation node.
+          python3 scripts/maintenance/reconcile_substrate.py
+          return 0
+          }
+
+          summary() {
+          python3 - "$RUNNER_TEMP/claims-index.old.json" docs/claims-index.json >> "$GITHUB_STEP_SUMMARY" <<'PY'
+          import json, sys
+          old = json.load(open(sys.argv[1]))
+          new = json.load(open(sys.argv[2]))
+          t = json.load(open("sync_cost/ingest/report.json"))["telemetry"]
+          oc, nc = old.get("claim_count", 0), new.get("claim_count", 0)
+          print("## claims ingest: report updated")
+          print(f"- heads_superseded: **{t.get('heads_superseded')}**")
+          print(f"- claims: {oc} -> {nc} ({nc - oc:+d})")
+          osub = {cid: c.get("subject") for cid, c in old.get("claims", {}).items()}
+          nsub = {cid: c.get("subject") for cid, c in new.get("claims", {}).items()}
+          added = sorted({s for cid, s in nsub.items() if cid not in osub and s})
+          removed = sorted({s for cid, s in osub.items() if cid not in nsub and s})
+          if added:
+              print(f"- new proposition subjects: {', '.join(added)}")
+          if removed:
+              print(f"- dropped proposition subjects: {', '.join(removed)}")
+          if not added and not removed:
+              print("- proposition subjects: unchanged (content-neutral update, e.g. annotator re-attribution)")
+          PY
+          }
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if ! regen; then
+            echo "::notice::ingest report unchanged (byte-identical); nothing to do"
+            {
+              echo "## claims ingest: no change"
+              echo "Re-ingest reproduced the committed report byte-for-byte (idempotent chain)."
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          for attempt in 1 2 3 4 5; do
+            HS=$(python3 -c "import json; print(json.load(open('sync_cost/ingest/report.json'))['telemetry']['heads_superseded'])")
+            git add sync_cost/ingest/report.json docs/claims-index.json .ket/
+            git commit -m "bot: re-ingest claims (heads_superseded: $HS)
+
+          Auto-generated by .github/workflows/regen-claims.yml in response
+          to changes under sync_cost/derivations/*.md. Report re-sealed via
+          reconcile_substrate.py; claims-index regenerated from the report."
+            if git push origin HEAD:main; then
+              echo "::notice::pushed re-ingested claims (attempt $attempt)"
+              summary
+              exit 0
+            fi
+            echo "::warning::push rejected (attempt $attempt); syncing to origin/main and re-ingesting"
+            git fetch origin main
+            git reset --hard FETCH_HEAD
+            if ! regen; then
+              echo "::notice::after sync, the committed report is already current; nothing to push"
+              exit 0
+            fi
+          done
+          echo "::error::could not push re-ingested claims after 5 attempts"
+          exit 1
