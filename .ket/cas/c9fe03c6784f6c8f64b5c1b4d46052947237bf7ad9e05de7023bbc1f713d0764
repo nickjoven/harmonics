@@ -1,0 +1,32 @@
+D under a family of embedding exponents Omega -> Omega^p
+(different p = different perspective concavity / station<->epoch map)
+     p         D
+------------------
+   0.6     0.872
+   0.8     0.868
+   1.0     0.875
+   1.3     0.858
+   1.7     0.864
+------------------
+D spread across exponents: 0.017
+
+VERDICT (N17)
+------------------------------------------------------------
+* D ~ 0.87 for EVERY exponent (spread 0.017). D-preservation
+  is VACUOUS: box-counting dimension is bi-Lipschitz-invariant, so
+  any smooth embedding preserves it. It does NOT force the exponent.
+  The 'geometrically forced via the invariant D' route is CLOSED.
+
+What this does NOT establish
+------------------------------------------------------------
+A positive replacement. Metric/curvature matching (not a topological
+invariant) WOULD constrain the map, but carries one free rate: cascade
+steps per unit FRW expansion. Whether that rate IS the substrate-forced
+inflation cadence (2/57 ~ 0.0351 levels/e-fold; PRs #178/#179)
+is an OPEN CONJECTURE, not a result -- the inflationary k<->level
+map (sets n_s) and the matter-era tongue<->epoch map (sets the slope)
+are distinct, and continuity_in_K_nulls.md N12/S2 flags rate-conflation
+(off by a comparable factor) as an ambiguity null.
+The station<->epoch map stays Class-2: D does not force it, and the
+n_s identification is unproven. The frontier is unmoved -- one route
+closed, no scale smuggled, no slope manufactured.
