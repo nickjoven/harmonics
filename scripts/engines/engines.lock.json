@@ -6,5 +6,13 @@
     "held_out_slope_test": "2e7a50d6f3f9bc69cb32263d742d7692cb0da354f69321371d0df237a103695c",
     "imf_step2_klein_orbit": "a5cbc1b114e96fabec0836995f167c2a9d84a7d29318d4e5f76b1a6127a2b8ae",
     "koide_closure_check": "551b882a0b6d3f97c361ec47e951f5331c9d0ffe6f52a13833d983a04da7b427"
+  },
+  "scripts": {
+    "epsilon_residual": "ee8c3eb969ac921492e0f432ccf94c62c8b258b2c6c9a87e4ef84fbd7cc19cf0",
+    "farey_tongue_width_null": "47ba68efe85363c892352ea05996b74f37535992d34449da5d68c36814ebe6e3",
+    "geometric_forcing_null": "b63451ae1aeae1576685f916e37d853a0af13849f1bd8d839aaf400e8b7f9b87",
+    "held_out_slope_test": "87ef57a6e67fce8a9781ef93330a20b2082315d8ca3972bf8d4bfbbb35f03ed4",
+    "imf_step2_klein_orbit": "8ddf0e976d3b4204224410ab203995fbd69dab4e0eda7d674bc4ab81df08acf5",
+    "koide_closure_check": "7303a155a72be205a43a987ae7ceaf167581e06a4a1da38e11f92d7d93ffd087"
   }
 }
