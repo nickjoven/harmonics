@@ -61,10 +61,10 @@ env:
   # canon.d intake toolchain — PINNED, not floating. Bumping this rev is
   # a deliberate act: a new canon.d can change CIDs and report shape, so
   # move it only with a PR that re-proves idempotence against the
-  # committed report. intake-route-v2 head (canon.d#13, the route-v2
-  # build that produced the committed baseline; #328 Card 3). If #13
-  # squash-merges, bump to the merge SHA in the same sweep that lands it.
-  CANON_D_REV: 0ab4ba32de998ffb69db9c05dbf2f7c9d164f019
+  # committed report. canon.d#13 squash-merge on unit2-wiring (the
+  # route-v2 build that produced the committed baseline, #328 Card 3;
+  # tree-identical to the pre-merge head that ran the local proof).
+  CANON_D_REV: 540d41128f9f9818269a450fb11d87bf89d68d7a
   # urtext (canonicalizer behind the prose feature) — pinned for the
   # same reason. main HEAD as of 2026-07-23; the local fresh-clone-pair
   # proof reproduced the committed report byte-for-byte with this pair.
