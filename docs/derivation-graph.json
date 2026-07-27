@@ -1,5 +1,5 @@
 {
-  "generated": "c3387d3cbf9068ae542eee0f48b2bc30fdd8b4fc",
+  "generated": "cd31a131ade9e3ca5e5dd87a5cf16d897e461ecf",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -10907,9 +10907,12 @@
       "depended_on_by": [
         "canonical_glossary",
         "derivation_atlas",
+        "down_type_double_cover_phase_d",
+        "framework_status",
         "k_critical_phase_a",
         "klein_antipodal_z2_rep_pattern",
         "mass_sector_sqrt_w_phase_b",
+        "numerology_inventory",
         "omega_b_c5_beta_audit",
         "omega_b_residual_phase_a",
         "omega_b_residual_phase_b",
@@ -10984,6 +10987,14 @@
           "kind": "references"
         },
         {
+          "source": "down_type_double_cover_phase_d",
+          "kind": "references"
+        },
+        {
+          "source": "framework_status",
+          "kind": "references"
+        },
+        {
           "source": "k_critical_phase_a",
           "kind": "references"
         },
@@ -10993,6 +11004,10 @@
         },
         {
           "source": "mass_sector_sqrt_w_phase_b",
+          "kind": "references"
+        },
+        {
+          "source": "numerology_inventory",
           "kind": "references"
         },
         {
@@ -11426,13 +11441,14 @@
     {
       "id": "down_type_double_cover_phase_d",
       "path": "sync_cost/derivations/down_type_double_cover_phase_d.md",
-      "cid": "7cc3fb2bb1e9537274595b30b430c0d5a37124fa7cf579ed9b0fe3a42d4b26cf",
+      "cid": "58a9a92c36aabe201450695f0117bc8fb49205d85e8058e6cc8bca8d5e673fed",
       "sealed": true,
       "title": "Down-type double cover \u2014 Phase D attempt: boundary-weight self-consistency",
-      "summary": "**Class 4** \u2014 needs individual audit: the closure is conditional on H1\nand H2 below (the doc's own framing \u2014 \"if false, the factor 6 is a\ncoincidence of an interior w*\"), with Halts D1/D2 as the open audit\nitems. [#263 \u24fe ruling, 2026-07-19]",
+      "summary": "**Class 4** \u2014 needs individual audit: the closure is conditional on H1\nand H2 below (the doc's own framing \u2014 \"if false, the factor 6 is a\ncoincidence of an interior w*\"), with Halt D2 as the open audit item.\nD1 closed downstream (2026-04-26): orbit-count theorem in\n`down_type_double_cover_closed.md`, verified by\n`down_type_phase_d1_eigenvalue.py` \u2014 the downstream-resolution pattern;\nthis note corrected 2026-07-25 per #328 Card 1, the #263 batch missed\nit. [#263 \u24fe ruling, 2026-07-19]",
       "depends_on": [
         "born_rule",
         "boundary_weight",
+        "down_type_double_cover_closed",
         "down_type_double_cover_phase_c",
         "horn_branch_iteration_3_step_1",
         "item12_cross_sector_ratios",
@@ -11450,6 +11466,10 @@
         },
         {
           "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "down_type_double_cover_closed",
           "kind": "references"
         },
         {
@@ -11484,6 +11504,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "1a934ca",
+          "date": "2026-07-27",
+          "subject": "#328 Card 1 ruling: down-type Class 5 stands, registry rows added (#329)"
+        },
         {
           "hash": "c9a7683",
           "date": "2026-07-20",
@@ -14980,7 +15005,7 @@
     {
       "id": "framework_status",
       "path": "sync_cost/derivations/framework_status.md",
-      "cid": "9a0f0c3db8ef6453f9e1f4fae05de05bc424561fd58a60a9585e31b38850945f",
+      "cid": "a7b171512bd4592ace22373b9549253eb82415439bc677e7e7c5321b9c366df9",
       "sealed": true,
       "title": "Framework status map",
       "summary": "At-a-glance inventory. One line per item. Full analysis lives in the\nreferenced files; this is the bird's-eye view to prevent duplicate\nwork and re-derivation of eliminated content.",
@@ -15012,6 +15037,7 @@
         "discrete_extension_principle",
         "discrete_gauge_resolution",
         "discrete_reduction_computed",
+        "down_type_double_cover_closed",
         "duty_dimension_proof",
         "einstein_from_kuramoto",
         "epr_bell_assembly_theorem",
@@ -15280,6 +15306,10 @@
         },
         {
           "target": "discrete_reduction_computed",
+          "kind": "references"
+        },
+        {
+          "target": "down_type_double_cover_closed",
           "kind": "references"
         },
         {
@@ -15918,6 +15948,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "1a934ca",
+          "date": "2026-07-27",
+          "subject": "#328 Card 1 ruling: down-type Class 5 stands, registry rows added (#329)"
+        },
         {
           "hash": "74bb0d0",
           "date": "2026-07-21",
@@ -29393,7 +29428,7 @@
     {
       "id": "numerology_inventory",
       "path": "sync_cost/derivations/numerology_inventory.md",
-      "cid": "2605cbafc63e828403e9e90e85e5defdd11efb63ac9cad87812f11aaa888e7c0",
+      "cid": "5c46277bcf7410d71173d31034747943ae29a2467f9ee008a105b148c30ad78d",
       "sealed": true,
       "title": "Numerology inventory",
       "summary": "Compilation of framework predictions / observations that are confirmed\nnumerology, noted coincidences, or suspects \u2014 so we know what to stop\nchasing as if it were structural.",
@@ -29407,6 +29442,7 @@
         "baryon_fraction",
         "born_rule",
         "depth_connection_nulls",
+        "down_type_double_cover_closed",
         "duty_cycle_dictionary",
         "duty_dimension_proof",
         "farey_partition",
@@ -29525,6 +29561,10 @@
         },
         {
           "target": "depth_connection_nulls",
+          "kind": "references"
+        },
+        {
+          "target": "down_type_double_cover_closed",
           "kind": "references"
         },
         {
@@ -29851,6 +29891,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "1a934ca",
+          "date": "2026-07-27",
+          "subject": "#328 Card 1 ruling: down-type Class 5 stands, registry rows added (#329)"
+        },
         {
           "hash": "74bb0d0",
           "date": "2026-07-21",
