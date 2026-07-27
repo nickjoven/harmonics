@@ -8,28 +8,40 @@ this directory removes.
 
 ## What it does
 
-`run_engine.py` runs a **whitelisted** engine, seals its stdout in the
-ket CAS (content-addressed, dedup-free), and compares the result's BLAKE3
-CID to a **pinned canonical CID**. A match proves the result is
-bit-identical to the sealed canonical run — *run the code AND verify it
-didn't drift from canonical.* That is what removes the ambiguity.
+`run_engine.py run` executes a **whitelisted** engine and **verifies**
+its result: it computes the stdout's BLAKE3 CID and compares it to a
+**pinned canonical CID**. A match proves the result is bit-identical to
+the sealed canonical run — *run the code AND verify it didn't drift from
+canonical.* That is what removes the ambiguity.
+
+`run` is **read-only by default** (#328 Card 10: checking never
+mutates): it writes nothing — no CAS write, no ledger line. Sealing is
+explicit: `run --seal` seals the stdout in the ket CAS, and `pin` always
+seals internally (a pin without a sealed canonical is meaningless).
+
+`pin` also records the BLAKE3 of the engine's **script file** in the
+lock; the FATAL drift check `scripts/drift/check_engine_pins.py`
+(#328 Card 5) re-hashes those scripts on every commit — without running
+any engine — and fails if a pinned engine's script changed since pin
+time. Remedy: review the change, then `run_engine.py pin <name>`.
 
 ## Files
 
 | File | Role |
 |---|---|
 | `engines.yaml` | human-authored registry: `cmd`, `computes`, `timeout` |
-| `engines.lock.json` | generated pins: `name -> canonical expect_cid` |
-| `run_engine.py` | CLI: `list` / `run` / `info` / `pin` |
+| `engines.lock.json` | generated lock, written only by `pin`: `pins` (`name -> canonical expect_cid`) + `scripts` (`name -> BLAKE3 of engine script at pin time`) |
+| `run_engine.py` | CLI: `list` / `run [--seal]` / `info` / `pin` |
 | `engine_mcp.py` | minimal MCP server exposing `list_engines` / `run_engine` |
 
 ## Usage
 
 ```sh
 python3 scripts/engines/run_engine.py list
-python3 scripts/engines/run_engine.py run koide_closure_check
+python3 scripts/engines/run_engine.py run koide_closure_check           # verify-only
 python3 scripts/engines/run_engine.py run koide_closure_check --json
-python3 scripts/engines/run_engine.py pin --all      # set/refresh canonical CIDs
+python3 scripts/engines/run_engine.py run koide_closure_check --seal    # also seal in CAS
+python3 scripts/engines/run_engine.py pin --all      # set/refresh canonical CIDs (seals)
 ```
 
 `run` exits `0` on match (or unpinned), `1` on **DRIFT** (CID ≠ pin —
@@ -39,7 +51,9 @@ the engine's output changed from canonical), `2` on engine/env error.
 
 `.mcp.json` registers the `engines` server; on session reload an agent
 gets `list_engines` and `run_engine`. `run_engine(name)` returns
-`{cid, expect_cid, matches, output, ...}`; `matches=true` ⇒ verified.
+`{cid, expect_cid, matches, output, ...}`; `matches=true` means
+recomputed-and-identical to the pinned canonical. The MCP tool is
+verify-only: it never writes (no CAS entry, no ledger line).
 
 ## Adding an engine
 
@@ -51,9 +65,11 @@ gets `list_engines` and `run_engine`. `run_engine(name)` returns
 
 ## Why this is drift-gate-safe
 
-The runner seals output via `ket put -` (stdin), which logs with path
-`-`. `scripts/drift/check_working_tree.py` explicitly ignores stdin puts,
-so sealing engine results never enrolls anything in the drift gate. The
-canonical pin lives in `engines.lock.json` (git-tracked), not the
-substrate log. Hashing uses the canonical BLAKE3 path
+Verification (`run` without `--seal`) touches nothing, so there is
+nothing to enroll. When sealing IS requested (`run --seal`, `pin`), the
+runner seals via `ket put -` (stdin), which logs with path `-`;
+`scripts/drift/check_working_tree.py` explicitly ignores stdin puts, so
+sealing engine results never enrolls anything in the working-tree drift
+gate. The canonical pin lives in `engines.lock.json` (git-tracked), not
+the substrate log. Hashing uses the canonical BLAKE3 path
 (`scripts/drift/_hash.py`) — never SHA-*.

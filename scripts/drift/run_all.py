@@ -5,10 +5,12 @@ Convenience: run all drift checks.
 Severity model (revised 2026-05-18):
 
   - FATAL checks gate commits: hashlib linter, fitted-correction
-    linter, manifest consistency, graph orphans, CAS verification.
-    A nonzero rc contributes to the exit code and, under
-    --stop-on-fail, aborts immediately. These encode judgment or a
-    real integrity violation (e.g. CAS corruption).
+    linter, manifest consistency, graph orphans, engine pin gate,
+    CAS verification. A nonzero rc contributes to the exit code and,
+    under --stop-on-fail, aborts immediately. These encode judgment
+    or a real integrity violation (e.g. CAS corruption, or an engine
+    script that changed after its output CID was pinned — see
+    check_engine_pins.py, #328 Card 5).
 
   - ADVISORY checks never gate: working-tree drift, the
     session-status snapshot, and DAG acyclicity. The acyclicity
@@ -49,6 +51,7 @@ CHECKS = [
     ("fitted-correction linter", "lint_fitted_corrections.py"),
     ("manifest consistency", "check_manifest.py"),
     ("graph orphans", "check_graph_orphans.py"),
+    ("engine pin gate", "check_engine_pins.py"),
     ("DAG acyclicity", "check_dag_acyclic.py"),
     ("graph sealed-projection", "check_graph_sealed.py"),
     ("class-tag coverage", "lint_class_tags.py"),

@@ -7,10 +7,14 @@ Speaks JSON-RPC 2.0 over line-delimited stdin/stdout (the same transport
 framework engine and quote a CID-verified result instead of estimating:
 
   - list_engines()        -> the registry (name, what it computes, pinned?)
-  - run_engine(name)      -> runs a whitelisted engine, seals stdout in the
-                             ket CAS, and reports {cid, expect_cid, matches,
-                             output}. matches=true means the result is
-                             bit-identical to the sealed canonical run.
+  - run_engine(name)      -> VERIFY: runs a whitelisted engine, recomputes
+                             its stdout's BLAKE3 CID, compares to the pinned
+                             canonical CID, and reports {cid, expect_cid,
+                             matches, output}. matches=true means recomputed-
+                             and-identical to the pinned canonical run.
+                             Read-only (#328 Card 10): writes nothing — no
+                             CAS write, no ledger line. Sealing happens only
+                             via run_engine.py's explicit `--seal` / `pin`.
 
 Register in .mcp.json:
   "engines": { "command": "python3",
@@ -45,11 +49,12 @@ TOOLS = [
     {
         "name": "run_engine",
         "description": (
-            "Run a whitelisted derivation engine and return its result. The "
-            "stdout is sealed in the ket CAS and its BLAKE3 CID compared to "
-            "the pinned canonical CID: matches=true means the result is "
-            "bit-identical to the sealed canonical run (verified, not "
-            "estimated). Quote the 'output' field, not a guess."
+            "Run a whitelisted derivation engine and VERIFY its result: the "
+            "stdout's BLAKE3 CID is recomputed and compared to the pinned "
+            "canonical CID. matches=true means recomputed-and-identical to "
+            "the pinned canonical run (verified, not estimated). Read-only: "
+            "this tool writes nothing — no CAS write, no ledger line. Quote "
+            "the 'output' field, not a guess."
         ),
         "inputSchema": {
             "type": "object",
@@ -83,7 +88,8 @@ def _tool_run_engine(args: dict) -> dict:
     name = (args or {}).get("name")
     if not name:
         return {"error": "missing required argument: name"}
-    return R.run_engine(name)
+    # Verify semantics, explicitly: never seal from the MCP path.
+    return R.run_engine(name, seal=False)
 
 
 def _dispatch_tool(name: str, args: dict) -> tuple[dict, bool]:
