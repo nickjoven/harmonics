@@ -19,10 +19,18 @@ Inputs:
 Output: docs/claims-index.json
   {generated, ingest: {annotator, telemetry, canon_rev?}, claims: {
      <proposition_cid>: {subject, witness, routes,
-                         corroboration, corroboration_frontier,
+                         corroboration, corroboration_docs,
+                         corroboration_frontier,
                          docs: [{doc, frontier}], assertion_cids: n}},
    edges: [{from, to, kind, annotation_cid}],
    terms: {term: {home, cid?}}}
+
+Corroboration counts INDEPENDENT witnesses (#328 Card 2): docs joined
+by succession edges are one witness — the 13 koide iteration drafts
+plus their canonical head are one document's history, not 14
+corroborating sources. `corroboration` and `corroboration_frontier`
+are succession-chain-deduped; `corroboration_docs` keeps the raw doc
+count for transparency.
 
 Regeneration is manual for now (requires the canon-demo binary,
 prose features, pre-integration branch); the report is committed so
@@ -44,9 +52,31 @@ INDEX = ROOT / "docs" / "corpus-index.json"
 OUT = ROOT / "docs" / "claims-index.json"
 
 
+def succession_resolver(corpus: dict):
+    """doc_id -> a stable id for its succession chain (union-find over
+    superseded_by edges, path-compressed). Two docs share a chain id iff
+    they are connected through supersession — a draft and its successor,
+    however long the ladder. A doc with no succession edges is its own
+    chain."""
+    parent: dict = {}
+
+    def find(x: str) -> str:
+        parent.setdefault(x, x)
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+
+    for doc, meta in corpus.items():
+        for succ in meta.get("superseded_by", []):
+            parent[find(doc)] = find(succ)
+    return find
+
+
 def build() -> dict:
     report = json.loads(REPORT.read_text())
     corpus = json.loads(INDEX.read_text())["docs"]
+    chain = succession_resolver(corpus)
 
     def frontier(doc_id: str) -> bool:
         return "superseded_by" not in corpus.get(doc_id, {})
@@ -85,8 +115,14 @@ def build() -> dict:
                                if k not in ("term", "name")}
 
     for c in claims.values():
-        c["corroboration"] = len(c["docs"])
-        c["corroboration_frontier"] = sum(1 for d in c["docs"] if d["frontier"])
+        # Independent witnesses, not raw docs (#328 Card 2): a succession
+        # chain's drafts all repeating a value is one witness. K_lepton=2/3
+        # showed corroboration 19 where 13 of the docs were iterations of
+        # ONE koide document.
+        c["corroboration"] = len({chain(d["doc"]) for d in c["docs"]})
+        c["corroboration_docs"] = len(c["docs"])
+        c["corroboration_frontier"] = len(
+            {chain(d["doc"]) for d in c["docs"] if d["frontier"]})
         c["docs"].sort(key=lambda d: (not d["frontier"], d["doc"]))
 
     import subprocess
