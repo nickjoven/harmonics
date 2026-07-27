@@ -484,3 +484,5 @@
 2026-07-26T02:12:18Z | put | sync_cost/derivations/framework_status.md -> a7b171512bd4592ace22373b9549253eb82415439bc677e7e7c5321b9c366df9
 2026-07-26T02:12:18Z | put | sync_cost/derivations/numerology_inventory.md -> 5c46277bcf7410d71173d31034747943ae29a2467f9ee008a105b148c30ad78d
 2026-07-26T02:12:18Z | put | sync_cost/derivations/down_type_double_cover_phase_d.md -> 58a9a92c36aabe201450695f0117bc8fb49205d85e8058e6cc8bca8d5e673fed
+2026-07-27T22:49:48Z | put | sync_cost/ingest/report.json -> c98818edd02d0f6f857b84708b26904d63a97ec5d2d2ee45eff27657402e6538
+2026-07-27T22:49:48Z | dag:create | 488580e3fc995dd037e6e07b4feb46257d7f50fff0c19895112ec6e157906820

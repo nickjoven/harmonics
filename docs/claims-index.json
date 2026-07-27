@@ -1,31 +1,31 @@
 {
- "generated": "e45c00e",
+ "generated": "cd31a13",
  "generator": "scripts/build_claims_index.py",
  "ingest": {
   "annotator": null,
   "telemetry": {
    "docs": 326,
    "utterances_sealed": 326,
-   "unstructured": 189,
-   "edges_promoted": 36,
-   "references_untyped": 3130,
-   "propositions": 322,
+   "unstructured": 190,
+   "edges_promoted": 47,
+   "references_untyped": 3133,
+   "propositions": 299,
    "terms_bound": 110,
-   "corroborated": 40,
-   "unattributed_values": 52894,
-   "needs_review_depth": 14,
+   "corroborated": 36,
+   "unattributed_values": 52899,
+   "needs_review_depth": 2,
    "reassertion_blocks": 0,
-   "heads_superseded": 0
+   "heads_superseded": 5
   }
  },
- "claim_count": 130,
+ "claim_count": 99,
  "claims": {
   "0256777fe98e154d9133004d3808a72bfa56a5972b4d0b70007d09e55e398af2": {
    "subject": "omega_b",
    "witness": "13/264",
    "routes": [
-    "urtext-regex-postfix-v1",
-    "urtext-regex-prefix-v1"
+    "urtext-regex-postfix-v2",
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
@@ -35,13 +35,14 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "05932b96fb77cfc49b128ccfe50ccd6a9598f5035af2ceb47915875e7eeab2da": {
    "subject": "omega_lambda",
    "witness": "181/264",
    "routes": [
-    "urtext-regex-prefix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
@@ -51,6 +52,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "0594c4ecc41f1ed842b4b79b3031877d02759d76c06795775be3470679aa63e8": {
@@ -67,6 +69,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "067aea9375175cff727c4a22da303c60eea0f0c29e14aa8485e450653080f2a2": {
@@ -131,27 +134,8 @@
    ],
    "assertion_cids": 13,
    "corroboration": 13,
+   "corroboration_docs": 13,
    "corroboration_frontier": 13
-  },
-  "0e6bde8924222cdee0d2ae2d8f09ded292098679ed8d814f6c4d3e481eb95b57": {
-   "subject": "omega_dm",
-   "witness": "5/1",
-   "routes": [
-    "urtext-regex-prefix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "derivation_atlas",
-     "frontier": true
-    },
-    {
-     "doc": "omega_b_two_component_sketch",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 2,
-   "corroboration": 2,
-   "corroboration_frontier": 2
   },
   "0fea91107aee1eae4b3fa09b8924985152d7b2965e5c9b5b2b8620a871d285ed": {
    "subject": "q_3",
@@ -198,7 +182,8 @@
     }
    ],
    "assertion_cids": 9,
-   "corroboration": 9,
+   "corroboration": 4,
+   "corroboration_docs": 9,
    "corroboration_frontier": 4
   },
   "11d9cd6f60dde36555c039e3362466604047acffffb073ae6d5ce30dfe6566f4": {
@@ -243,23 +228,8 @@
    ],
    "assertion_cids": 8,
    "corroboration": 8,
+   "corroboration_docs": 8,
    "corroboration_frontier": 8
-  },
-  "13039cc328acde0c24688c1fe223f2e2d0e3d5e710f33d3fe11a3a699cc09361": {
-   "subject": "omega_b",
-   "witness": "2018/1",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "structural_lemmas",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
   },
   "140a82b54fd074e7e6c79ba9c3f096cae52f0e72771cd4139167ef89493a3d65": {
    "subject": "rate_C",
@@ -275,22 +245,24 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
-  "14ed4377e06f8777fe50faccf4be73ee82e4b7a5107f5726fff1a384ee68c98a": {
-   "subject": "Omega_DM",
-   "witness": "5/19",
+  "156040a293f46d8815b081d9eddd574751c1d6c515dd9f30a242fb39bbfa40a4": {
+   "subject": "w_plus",
+   "witness": "459/500",
    "routes": [
-    "ratio/v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
-     "doc": "baryon_fraction",
+     "doc": "omega_b_alpha_beta_phase_b",
      "frontier": true
     }
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "15fbd8ff4a41ba6f6f53d47e0bc107932401d3d97ec0aafd49d5198633205cf0": {
@@ -335,23 +307,8 @@
    ],
    "assertion_cids": 8,
    "corroboration": 8,
+   "corroboration_docs": 8,
    "corroboration_frontier": 8
-  },
-  "18cf697e72b8cc69e1e6b57fddd332ede467898349579dbdaafca3f09b488dbe": {
-   "subject": "omega_dm",
-   "witness": "3/50",
-   "routes": [
-    "urtext-regex-prefix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "structural_lemmas",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
   },
   "1a4a567552834d07aaa0a402a74c788eac1714f016b49c07b1613ff25461b76e": {
    "subject": "Q",
@@ -367,6 +324,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "1ca836fb6eb40cbdb5178952bd4a811b247fc20da95182b9b03d5080fd30afe1": {
@@ -383,6 +341,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "1d30a2cda0e93c793421720faf055479f091d96c28b3fbf4761a028667359d34": {
@@ -399,6 +358,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "1de7168ae50af4b10ce68975bfaee1ee227c26fcd707fb9ade1107d068d71922": {
@@ -415,14 +375,16 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "1eec18879a97c539c3ec6d65b440344dbd08a1028bdaa47df4020e39e57b4e8c": {
    "subject": "omega_dm",
    "witness": "5/19",
    "routes": [
-    "urtext-regex-prefix-v1",
-    "urtext-regex-postfix-v1"
+    "urtext-regex-prefix-v2",
+    "ratio/v1",
+    "urtext-regex-postfix-v2"
    ],
    "docs": [
     {
@@ -442,10 +404,6 @@
      "frontier": true
     },
     {
-     "doc": "gamma06_w6_invariance_opposite_view_audit",
-     "frontier": true
-    },
-    {
      "doc": "lesson_rotation_curves_a0",
      "frontier": true
     },
@@ -454,25 +412,10 @@
      "frontier": true
     }
    ],
-   "assertion_cids": 7,
-   "corroboration": 7,
-   "corroboration_frontier": 7
-  },
-  "23bd6497c403e7415b2b1107ff1adfa9fdd7751c65fe407d48661399ccb89507": {
-   "subject": "omega_lambda",
-   "witness": "2/3",
-   "routes": [
-    "urtext-regex-prefix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "omega_b_w_plus_cross_ratio_search",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
+   "assertion_cids": 6,
+   "corroboration": 6,
+   "corroboration_docs": 6,
+   "corroboration_frontier": 6
   },
   "24ac41577975719fe011ede1f6ace4e29fe7863497fa80b8fa8ed11481809c8b": {
    "subject": "d",
@@ -496,54 +439,24 @@
    ],
    "assertion_cids": 3,
    "corroboration": 3,
+   "corroboration_docs": 3,
    "corroboration_frontier": 3
   },
-  "296ed535bce14a65c3169f112d1cb5d40493c4bf4055913ad5b63bb1575a65fe": {
-   "subject": "omega_b",
-   "witness": "2/1",
+  "2882be38debe7f6009aae366a5895968ed9c356a5bf7239cce831b112192356f": {
+   "subject": "w_plus",
+   "witness": "12/13",
    "routes": [
-    "urtext-regex-postfix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
-     "doc": "klein_bridge_audit_and_probe",
-     "frontier": true
-    },
-    {
-     "doc": "omega_b_alpha_beta_closure",
-     "frontier": true
-    },
-    {
-     "doc": "omega_b_c5_closure",
-     "frontier": true
-    },
-    {
-     "doc": "omega_b_substrate_side_audit",
-     "frontier": true
-    },
-    {
-     "doc": "session_audit",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 5,
-   "corroboration": 5,
-   "corroboration_frontier": 5
-  },
-  "2c0497c539db389174dd0146779bbc236c9264ccc25016ace7ed3e1be5dc9a63": {
-   "subject": "Omega_b",
-   "witness": "1/19",
-   "routes": [
-    "ratio/v1"
-   ],
-   "docs": [
-    {
-     "doc": "baryon_fraction",
+     "doc": "omega_b_w_plus_cross_ratio_search",
      "frontier": true
     }
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "2c43844268f40661148669ba669bd6228ef9a31fbd2a2224889a0ef7936836bf": {
@@ -564,13 +477,15 @@
    ],
    "assertion_cids": 2,
    "corroboration": 2,
+   "corroboration_docs": 2,
    "corroboration_frontier": 1
   },
   "2d74b58134dd57e4c5c522eebec673381c591545af75175e79a9712d39e381b7": {
    "subject": "omega_lambda",
    "witness": "11/16",
    "routes": [
-    "urtext-regex-prefix-v1"
+    "ratio/v1",
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
@@ -584,13 +499,31 @@
    ],
    "assertion_cids": 2,
    "corroboration": 2,
+   "corroboration_docs": 2,
    "corroboration_frontier": 2
+  },
+  "3037d73f8d5a84de7b1ba8d1c03398bce51d9f7ab2330a023d91ab3127880996": {
+   "subject": "w_minus",
+   "witness": "987/1000",
+   "routes": [
+    "urtext-regex-prefix-v2"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_alpha_beta_phase_b",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_docs": 1,
+   "corroboration_frontier": 1
   },
   "3181b8d58d3649efa9cfa1605f6db41d0e661cf24f1aea52cdf378c55f8def09": {
    "subject": "omega_b",
    "witness": "343/500",
    "routes": [
-    "urtext-regex-prefix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
@@ -600,6 +533,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "326cc007cc41b161c7bc45ab8e64983c8880bf074db5e98125da4dac662dd74b": {
@@ -616,14 +550,15 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 0
   },
   "32bccc987f0e23046313956ad8632e13326af02638f55c31219ab941d3f0e981": {
    "subject": "omega_lambda",
    "witness": "6847/10000",
    "routes": [
-    "urtext-regex-prefix-v1",
-    "urtext-regex-postfix-v1"
+    "urtext-regex-prefix-v2",
+    "urtext-regex-postfix-v2"
    ],
    "docs": [
     {
@@ -673,6 +608,7 @@
    ],
    "assertion_cids": 11,
    "corroboration": 11,
+   "corroboration_docs": 11,
    "corroboration_frontier": 11
   },
   "352addc67843929673b5dc0e84d067519e891871770c58335a2abde4e6d80501": {
@@ -689,13 +625,14 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "356c5c5b2cc2871947dc915b39a555e1c0f18d5805c7ab7df499c0bfd67c7aa0": {
    "subject": "omega_b",
    "witness": "259/5000",
    "routes": [
-    "urtext-regex-postfix-v1"
+    "urtext-regex-postfix-v2"
    ],
    "docs": [
     {
@@ -705,6 +642,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "35d66c47c58939aa2d606df0253b9e5ab3cab507575b46bcad66f39bb2d5a464": {
@@ -721,6 +659,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "35f4ebcf18840ee4fc12ef6c6e62aa1a676dbcf47834c51a2d1f42874b2db273": {
@@ -737,22 +676,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "3bce113183840d2dab978d49b6e87a6ef0b0cc07a2d656aa54961f075cf9def1": {
-   "subject": "omega_b",
-   "witness": "5/19",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "omega_b_residual_phase_a",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "3e34fe4e65fa28c25311877c21712334cc590abae0239cb029a907852d8435f6": {
@@ -769,22 +693,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "3eeeeda85ce906e2f17d8bd560cff21412c4e20c7d3e0ddf2f2b8aae2d20a5e5": {
-   "subject": "omega_b",
-   "witness": "3/25",
-   "routes": [
-    "urtext-regex-prefix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "structural_lemmas",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "42aefc1a0fb099bf439a27d96872f1a8128d05068d0e76b8696ef7bef50753cc": {
@@ -813,13 +722,14 @@
    ],
    "assertion_cids": 4,
    "corroboration": 4,
+   "corroboration_docs": 4,
    "corroboration_frontier": 3
   },
   "43aa00af1ce2b8c00bea832ebe652c021f1cf0b2aef04a8075bd101d501d76ef": {
    "subject": "omega_dm",
    "witness": "1657/6250",
    "routes": [
-    "urtext-regex-prefix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
@@ -829,6 +739,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "476c68198222cb0852eabcaa604f4c5ce2592643ba1ca8e4ee7e0cc3335067f5": {
@@ -845,6 +756,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 0
   },
   "49a761b69ec4e20b349472f595fde7cae8c085883707d1a230a9977d78f4700d": {
@@ -861,6 +773,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "4b15d98223262083061914da2676680d9fe1f10783a03f74fec8080bcf6abe86": {
@@ -877,6 +790,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "5137d1a4fc34d2ecd2737868d4125c8ff094744278a110178b065696cd579619": {
@@ -893,22 +807,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "51d9a1403a066030529ba95713f16119eaa4451190b3d73b8ea09497a3d42632": {
-   "subject": "omega_dm",
-   "witness": "1/19",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "baryon_fraction",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "5268685d5ab343c9f0ddf5add664de7ba0eeef86d66cef7908a3c213b72d7aa1": {
@@ -925,6 +824,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "52952c9d03ca1853e3ca8fdcc21a551eef44a726bb6163169fcf33e4d5b3123d": {
@@ -1012,14 +912,15 @@
     }
    ],
    "assertion_cids": 19,
-   "corroboration": 19,
+   "corroboration": 6,
+   "corroboration_docs": 19,
    "corroboration_frontier": 6
   },
   "534468169c43b4e6103cda7767c9c5409c6c848c4a8f9874ff5bd1fec03f4987": {
    "subject": "omega_dm",
    "witness": "35/132",
    "routes": [
-    "urtext-regex-prefix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
@@ -1029,22 +930,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "564473bce12d078a49999d92e95bdf2dc9e33bd60903128ccf31ea4f86c62f8b": {
-   "subject": "omega_b",
-   "witness": "13/19",
-   "routes": [
-    "urtext-regex-prefix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "omega_b_c5_closure",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "59a74b2a1cf3cceb70ddac8a9257851c9c988ddaf6388f01a7a1ebd7e5267013": {
@@ -1061,49 +947,14 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "5c4f065c093c9e3a954dee6ee3bf5977d04fd053d6ffaeaf2e2b196ba552c89d": {
-   "subject": "omega_lambda",
-   "witness": "83/100",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "anchor_extremes_audit",
-     "frontier": true
-    },
-    {
-     "doc": "born_rule_mode_count_extremes_audit",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 2,
-   "corroboration": 2,
-   "corroboration_frontier": 2
-  },
-  "5ce5049e0a34c527db94b8b4d9266d0daeaa61a3f13ac1ec0bdc3e3d4e60d391": {
-   "subject": "Omega_Lambda",
-   "witness": "11/16",
-   "routes": [
-    "ratio/v1"
-   ],
-   "docs": [
-    {
-     "doc": "boundary_weight",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "5dd4d6089003f392f16a15fbd95dc7d030de6173c6c3081817e28193df305ace": {
    "subject": "omega_dm",
    "witness": "5/16",
    "routes": [
-    "urtext-regex-prefix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
@@ -1113,54 +964,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "5e324c9d1e596b609e65ae5365d4d11979282fcd1672f4a4815c1b6dda8a5b65": {
-   "subject": "omega_lambda",
-   "witness": "7/10",
-   "routes": [
-    "urtext-regex-prefix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "klein_antipodal_z2_rep_pattern",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "5f80e44ec8f7dfb1efa547dcf84e5e8b656524935778bf0d5a29815d20df564b": {
-   "subject": "omega_dm",
-   "witness": "11/16",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "omega_b_residual_phase_a",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "60bfedda10b7e2371073f397b94b737f2dd6e3df14ff43a1d65a388d1b412a1c": {
-   "subject": "omega_b",
-   "witness": "181/1",
-   "routes": [
-    "urtext-regex-prefix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "derivation_atlas",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "61552ef6244538032d9bcd24c8824625f846656181c24052b6135c998ff3e762": {
@@ -1177,6 +981,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "621fa334d5eb382ab13cf9b4e99e6a168e81777af55aca4d4139f6a7df6d7c2e": {
@@ -1193,30 +998,16 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 0
-  },
-  "62c634a82f8e30929f2ebbf17fa4dde57b670b9b6a89c1e04e86a773c3823baa": {
-   "subject": "omega_lambda",
-   "witness": "1/19",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "gamma06_w6_invariance_opposite_view_audit",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
   },
   "63280090dcce574b2ac5a924776e46c66d610c77f729372d610ea4351612e61f": {
    "subject": "omega_b",
    "witness": "1/19",
    "routes": [
-    "urtext-regex-prefix-v1",
-    "urtext-regex-postfix-v1"
+    "urtext-regex-prefix-v2",
+    "urtext-regex-postfix-v2",
+    "ratio/v1"
    ],
    "docs": [
     {
@@ -1237,10 +1028,6 @@
     },
     {
      "doc": "gamma06_cosmological_modular_surface_audit",
-     "frontier": true
-    },
-    {
-     "doc": "gamma06_w6_invariance_opposite_view_audit",
      "frontier": true
     },
     {
@@ -1272,30 +1059,63 @@
      "frontier": true
     }
    ],
-   "assertion_cids": 13,
-   "corroboration": 13,
-   "corroboration_frontier": 13
+   "assertion_cids": 12,
+   "corroboration": 12,
+   "corroboration_docs": 12,
+   "corroboration_frontier": 12
   },
-  "67da97b0e5239350b57be018e01b7d10f39d06c8dae4fb71121fcf779bd88a57": {
-   "subject": "omega_b",
-   "witness": "5/1",
+  "6b50808bb2d4346fa70a831e9207e0ef2dd064cc18cfb8816196b9f47b760aa8": {
+   "subject": "w_minus",
+   "witness": "1/1",
    "routes": [
-    "urtext-regex-prefix-v1",
-    "urtext-regex-postfix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
-     "doc": "baryon_fraction",
+     "doc": "L1_substrate_cusp_ground_state",
      "frontier": true
     },
     {
-     "doc": "numerology_inventory",
+     "doc": "derivation_atlas",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_alpha_beta_closure",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_w_plus_candidate",
+     "frontier": true
+    },
+    {
+     "doc": "partition_logit_form",
+     "frontier": true
+    },
+    {
+     "doc": "psl2z_subgroup_identification_phase_a",
+     "frontier": true
+    },
+    {
+     "doc": "psl2z_subgroup_phase_b",
+     "frontier": true
+    },
+    {
+     "doc": "structural_lemmas",
+     "frontier": true
+    },
+    {
+     "doc": "vocabulary_is_the_work_pattern",
+     "frontier": true
+    },
+    {
+     "doc": "w_plus_formalization",
      "frontier": true
     }
    ],
-   "assertion_cids": 2,
-   "corroboration": 2,
-   "corroboration_frontier": 2
+   "assertion_cids": 10,
+   "corroboration": 10,
+   "corroboration_docs": 10,
+   "corroboration_frontier": 10
   },
   "6c9d029d8797c73c6dc10cfd158a189ccb0b268c72a00d46c78c7a17273394d4": {
    "subject": "K",
@@ -1323,6 +1143,7 @@
    ],
    "assertion_cids": 4,
    "corroboration": 4,
+   "corroboration_docs": 4,
    "corroboration_frontier": 4
   },
   "6d1ee517198b7abcdabf98eba7edcc8ddc265be822d8991f095eb3e408f31c36": {
@@ -1343,6 +1164,7 @@
    ],
    "assertion_cids": 2,
    "corroboration": 2,
+   "corroboration_docs": 2,
    "corroboration_frontier": 2
   },
   "6e036f62ef8831026da1496af76af96e5279aced9ac5bec4d1228a7ccfa4b6b2": {
@@ -1359,44 +1181,8 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
-  },
-  "6f63c5fdd8303847d06e1fc25b90a90b707ea8c7d48d4bd74849d36b73b0d572": {
-   "subject": "omega_b",
-   "witness": "1/1",
-   "routes": [
-    "urtext-regex-postfix-v1",
-    "urtext-regex-prefix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "cross_ratio_irrep_reframe",
-     "frontier": true
-    },
-    {
-     "doc": "derivation_atlas",
-     "frontier": true
-    },
-    {
-     "doc": "omega_b_two_component_sketch",
-     "frontier": true
-    },
-    {
-     "doc": "omega_b_w_plus_candidate",
-     "frontier": true
-    },
-    {
-     "doc": "omega_b_w_plus_cross_ratio_search",
-     "frontier": true
-    },
-    {
-     "doc": "psl2z_subgroup_phase_b",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 6,
-   "corroboration": 6,
-   "corroboration_frontier": 6
   },
   "709b433036b3ef4c4c9afdb442b518bae05cb9cbdc2aa4435bc22c202123a03e": {
    "subject": "b_1",
@@ -1420,13 +1206,14 @@
    ],
    "assertion_cids": 3,
    "corroboration": 3,
+   "corroboration_docs": 3,
    "corroboration_frontier": 3
   },
   "70c239c4e5b8b60490342b98c0b605b6e3f35054f196a92bfb75fc7c04cc7c59": {
    "subject": "omega_lambda",
    "witness": "137/200",
    "routes": [
-    "urtext-regex-prefix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
@@ -1464,6 +1251,7 @@
    ],
    "assertion_cids": 8,
    "corroboration": 8,
+   "corroboration_docs": 8,
    "corroboration_frontier": 8
   },
   "730fdd5538a00872ff23437c0a54169114874ada609277ac8023cb7ab895eb2d": {
@@ -1480,45 +1268,31 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
-  "73fdc475c94f504168999fc28cfb568f1c4eb10e64591db3a65709edb2b5b5c7": {
-   "subject": "omega_lambda",
-   "witness": "13/100",
+  "756304f500f2ea763157fbe65b0c444e5fec8bcda09135f1c9d3ea39e7221cd0": {
+   "subject": "w_minus",
+   "witness": "171/200",
    "routes": [
-    "urtext-regex-prefix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
-     "doc": "structural_lemmas",
+     "doc": "omega_b_alpha_beta_phase_b",
      "frontier": true
     }
    ],
    "assertion_cids": 1,
    "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "79ccda2be80dd0e3fc55a50256ec46dd33f0a0d57c15322e54176d6b9e797eda": {
-   "subject": "omega_b",
-   "witness": "3/1",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "a_s_g1_closure_attempt",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "7b331d822295e5856227c89cc667d5029c1a13d00286b345efa9ef36575e9c4b": {
    "subject": "omega_b",
    "witness": "493/10000",
    "routes": [
-    "urtext-regex-prefix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
@@ -1536,43 +1310,8 @@
    ],
    "assertion_cids": 3,
    "corroboration": 3,
+   "corroboration_docs": 3,
    "corroboration_frontier": 3
-  },
-  "7ee4f4f7eb007aea39e0dc4fa46ee5543d4656feb220f5662ebf761d1778bbff": {
-   "subject": "Omega_Lambda",
-   "witness": "13/19",
-   "routes": [
-    "ratio/v1"
-   ],
-   "docs": [
-    {
-     "doc": "baryon_fraction",
-     "frontier": true
-    },
-    {
-     "doc": "boundary_weight",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 2,
-   "corroboration": 2,
-   "corroboration_frontier": 2
-  },
-  "7fc7b01801f45b1de18e5130b7ec945195696ea1fccad030350f6afea270ff8a": {
-   "subject": "omega_dm",
-   "witness": "1231/25000",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "audit_punch_list_2026-04",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
   },
   "802b05fe225370d893fc9f0afccc5f52161ed23125c6c504ad6136743089e133": {
    "subject": "alpha_2",
@@ -1588,6 +1327,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "8113df869e5b431cb15496248be286a457d7f9e5b0954c0ca40f7a38001f10d6": {
@@ -1604,22 +1344,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "81153ce0d0ed426cbe88c80b5a6629d17a460c34fa882a49ce39a23510986682": {
-   "subject": "omega_lambda",
-   "witness": "207/250",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "omega_b_residual_phase_a",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "839c4b4c417daeebb90d418ab8506666cc3feed4c082fe6f99a7f468c743b7d9": {
@@ -1640,6 +1365,7 @@
    ],
    "assertion_cids": 2,
    "corroboration": 2,
+   "corroboration_docs": 2,
    "corroboration_frontier": 2
   },
   "83f3f9f9b260da4e26e8343f43dc6786c1f7f901b2cd831613d79606d88bc453": {
@@ -1656,6 +1382,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 0
   },
   "84f1d8a1545885478bddd1884ba51123cc30726d184880aa0baae36644e6a7d5": {
@@ -1672,6 +1399,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "86346e14a5bc11d6bedeb9430ba744700b95a84a48110e249f314bf1b284f68e": {
@@ -1688,29 +1416,14 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "8683659f20fbc1157cbbe3e556dcd1e003d06764e45f56692cb81dcf33004c55": {
-   "subject": "omega_b",
-   "witness": "7/1",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "omega_b_c5_closure",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "87b9ea3f90770448cc09dc4aa006c5459de0b2943ac3b6bc18be6ae7d0243802": {
    "subject": "omega_dm",
    "witness": "53/200",
    "routes": [
-    "urtext-regex-prefix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
@@ -1720,13 +1433,14 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "88693fe584b975dc9b6dbb4be034b92b02a10e693250802d76c7e87d0cf4bd25": {
    "subject": "omega_lambda",
    "witness": "1266/1849",
    "routes": [
-    "urtext-regex-prefix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
@@ -1736,23 +1450,89 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
-  "8c3c5a08b40519c45d8a2fda5ea92a14a7cc0eceb980f5e9a97d9983c5046e92": {
-   "subject": "omega_b",
-   "witness": "6/1",
+  "8cd901ad030318d4b192ca60af902d83df7175432574302a56daa93cc99d1971": {
+   "subject": "w_plus",
+   "witness": "13/14",
    "routes": [
-    "urtext-regex-postfix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
+     "doc": "L1_substrate_cusp_ground_state",
+     "frontier": true
+    },
+    {
+     "doc": "audit_punch_list_2026-04",
+     "frontier": true
+    },
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_w_plus_candidate",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_w_plus_cross_ratio_search",
+     "frontier": true
+    },
+    {
+     "doc": "pattern_identification_discipline_candidate",
+     "frontier": true
+    },
+    {
+     "doc": "phenomenology_cross_reference",
+     "frontier": true
+    },
+    {
+     "doc": "primitive_completeness_audit",
+     "frontier": true
+    },
+    {
+     "doc": "psl2z_subgroup_phase_a_results",
+     "frontier": true
+    },
+    {
+     "doc": "psl2z_subgroup_phase_b",
+     "frontier": true
+    },
+    {
+     "doc": "psl2z_subgroup_phase_c_inventory",
+     "frontier": true
+    },
+    {
      "doc": "remaining_gap_shapes",
+     "frontier": true
+    },
+    {
+     "doc": "structural_lemmas",
+     "frontier": true
+    },
+    {
+     "doc": "torus_branch_iteration_1",
+     "frontier": true
+    },
+    {
+     "doc": "torus_branch_iteration_2_step_1",
+     "frontier": true
+    },
+    {
+     "doc": "torus_branch_iteration_2_step_2",
+     "frontier": true
+    },
+    {
+     "doc": "w_plus_formalization",
      "frontier": true
     }
    ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
+   "assertion_cids": 17,
+   "corroboration": 17,
+   "corroboration_docs": 17,
+   "corroboration_frontier": 17
   },
   "92b64db1f2b4bc9e15ce485b5cd331544aeda611f6dab0764c7afa1470be41e9": {
    "subject": "R",
@@ -1768,22 +1548,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "94bff2f74b735878909b8d42c599303a5d291b802b8f5867c798f000292c3c3b": {
-   "subject": "omega_dm",
-   "witness": "3421/5000",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "derivation_atlas",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "95110cd68d300a6f4d2753f8d9c8db68c6da63f8b6c0cdae19f1c5d024c61196": {
@@ -1800,21 +1565,22 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
-  "9594b42cbc9324b842030e1c1148e281e5d1a990fd110e8760b33c09087265a2": {
-   "subject": "omega_b",
-   "witness": "13/1",
+  "98095a9fd9d3906803cb6899441f7e91be3f70cb7dd4cf50b252fb672318b13d": {
+   "subject": "w_plus",
+   "witness": "929/1000",
    "routes": [
-    "urtext-regex-prefix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
-     "doc": "derivation_atlas",
+     "doc": "omega_b_alpha_beta_closure",
      "frontier": true
     },
     {
-     "doc": "omega_partition_combinatorial",
+     "doc": "omega_b_w_plus_candidate",
      "frontier": true
     },
     {
@@ -1824,75 +1590,8 @@
    ],
    "assertion_cids": 3,
    "corroboration": 3,
+   "corroboration_docs": 3,
    "corroboration_frontier": 3
-  },
-  "95c91ae42a99ea271809d6c0b96342fbdd5439c1297229f89376603ade03d748": {
-   "subject": "omega_lambda",
-   "witness": "35/132",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "audit_punch_list_2026-04",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "966df995db30d51d98f96ab22862b5564a14955d3b7a87376fbbcf528214038c": {
-   "subject": "omega_dm",
-   "witness": "13/5",
-   "routes": [
-    "urtext-regex-prefix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "derivation_atlas",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "9c1944aa8d62f37a0df9defbc1ca8accd3a5ac12c5bbb330c0d064725d0e9051": {
-   "subject": "omega_b",
-   "witness": "67/10",
-   "routes": [
-    "urtext-regex-prefix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "klein_dynamics_roadmap",
-     "frontier": true
-    },
-    {
-     "doc": "omega_b_c5_closure",
-     "frontier": true
-    },
-    {
-     "doc": "omega_b_residual_phase_a",
-     "frontier": true
-    },
-    {
-     "doc": "omega_b_substrate_side_audit",
-     "frontier": true
-    },
-    {
-     "doc": "omega_b_two_component_sketch",
-     "frontier": true
-    },
-    {
-     "doc": "vocabulary_is_the_work_pattern",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 6,
-   "corroboration": 6,
-   "corroboration_frontier": 6
   },
   "9d38c79943ef43ec41ae5922ba32384ab9121c9639fa9b2be480283c0451cb3e": {
    "subject": "a_down",
@@ -1908,22 +1607,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "9eb433d3e99de2950804ee26d36cd6f57f9b7e0a7706b5f18be8c5a6b32909cd": {
-   "subject": "omega_b",
-   "witness": "13/14",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "audit_punch_list_2026-04",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "9fc42ff3b53a21b1a431aadfcffc80c490b69b1df91e990aecf764690d5f0363": {
@@ -1944,13 +1628,14 @@
    ],
    "assertion_cids": 2,
    "corroboration": 2,
+   "corroboration_docs": 2,
    "corroboration_frontier": 1
   },
   "a1900236c76d144636d3c592f381a24d945481db3ded976de970eb42517d51d2": {
    "subject": "omega_dm",
    "witness": "361/1000",
    "routes": [
-    "urtext-regex-postfix-v1"
+    "urtext-regex-postfix-v2"
    ],
    "docs": [
     {
@@ -1960,6 +1645,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "a3cd4e069198c9a3a7f01866d7bbb0230e127acedb679ea3b53598eaf504acab": {
@@ -1976,13 +1662,14 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "a64f0b5fc11ddd7e1907cadc1399f89e81965ce6f22fa67b104a7bbf7adb614f": {
    "subject": "omega_b",
    "witness": "0/1",
    "routes": [
-    "urtext-regex-prefix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
@@ -1992,6 +1679,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "af8376bd508c31b6835fb28bd73647953168d519bff762ec23f513be32787e1b": {
@@ -2008,6 +1696,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "b09055f52b795e214238c87f340ff30e3f06f91e0c41ca1d8f19d52657f3bb5d": {
@@ -2024,6 +1713,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "b454fc34c3293d2b096831bbf69e4daedcc1a6f0373a83891c31941abb86ebea": {
@@ -2044,6 +1734,7 @@
    ],
    "assertion_cids": 2,
    "corroboration": 2,
+   "corroboration_docs": 2,
    "corroboration_frontier": 2
   },
   "b6d0cf079ea7091afb3a3187ece3e38051b501d06607d99d2a698ca726716ba3": {
@@ -2068,6 +1759,7 @@
    ],
    "assertion_cids": 3,
    "corroboration": 3,
+   "corroboration_docs": 3,
    "corroboration_frontier": 3
   },
   "b7029f76f267ec6338d3537728901f457568a65803cac0a096afa2c601dc357e": {
@@ -2155,7 +1847,8 @@
     }
    ],
    "assertion_cids": 19,
-   "corroboration": 19,
+   "corroboration": 12,
+   "corroboration_docs": 19,
    "corroboration_frontier": 12
   },
   "b7228582e26c174e5bec80b0ae3c8697fb5ea61e1d5f0360527377446f76d5bb": {
@@ -2172,45 +1865,14 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "b7a57cdb8cb46215b57c80233810a8dfd353b60d68d482c8218728f2a54b80a8": {
-   "subject": "omega_dm",
-   "witness": "13/19",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "omega_b_residual_phase_a",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "b83cf19dcbff0e327c12f46d507c707fc0d11dd228eb35a9e4fd18cae6642d15": {
-   "subject": "omega_b",
-   "witness": "5/6",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "omega_b_w_plus_cross_ratio_search",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "baeb68f08ddb8825aab496a56539e710589e840b1cf9a94620df1edfb877fbb4": {
    "subject": "omega_lambda",
    "witness": "34279/50000",
    "routes": [
-    "urtext-regex-prefix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
@@ -2220,6 +1882,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "bbef6da15ad826e84f8b0cc94f1e8bcf34a21ade57c119bad210bc2dc4849893": {
@@ -2236,6 +1899,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "be27874591886f406d45e9b5a1307946cd35eeb28a6a30811175c10d670b2cee": {
@@ -2260,6 +1924,7 @@
    ],
    "assertion_cids": 3,
    "corroboration": 3,
+   "corroboration_docs": 3,
    "corroboration_frontier": 3
   },
   "c27619e19482920440821d278a38568b8cf886a5d7376ed407550cfd0dabfc78": {
@@ -2276,22 +1941,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "c3042ebbcbd96221c162a9c8fc97cfd20423ba0aea41c0006b5345d869aab4d2": {
-   "subject": "omega_b",
-   "witness": "329/1250",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "derivation_atlas",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "c4100594e2f06b868a4e27c2b1e3880b0cc2db61fe3de05254b1b62df102088e": {
@@ -2308,6 +1958,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "c64e75548c376fdaf8524004c0700bc6c75ba61ac6d8e4fcdbeb7ea52c05b472": {
@@ -2336,6 +1987,7 @@
    ],
    "assertion_cids": 4,
    "corroboration": 4,
+   "corroboration_docs": 4,
    "corroboration_frontier": 3
   },
   "c9a1e3ec8aceba10e15bb8f1724ba3df04fcdb718014a9065f1f7ca86e5e41e6": {
@@ -2352,23 +2004,8 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 0
-  },
-  "cae0a3bb3e70aec4c306b62bd187e21b1dd5fafd062ca88a62302ea94957594d": {
-   "subject": "omega_dm",
-   "witness": "67/10",
-   "routes": [
-    "urtext-regex-prefix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "klein_antipodal_z2_rep_pattern",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
   },
   "d04613853bcc0ddab3dc3ad80520dd4f7bf3d28412d35f790d03d81d9aaad73d": {
    "subject": "f_unlocked",
@@ -2384,6 +2021,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "d20ef07b70861bb7b7621a2f6df225237e3fff33054ceeec29696e57b9d87484": {
@@ -2400,6 +2038,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "d4b1a28eb96f8f6ba2f6ce388d307977900acedde7e3017f1ec3d03ffd92b0ac": {
@@ -2420,13 +2059,14 @@
    ],
    "assertion_cids": 2,
    "corroboration": 2,
+   "corroboration_docs": 2,
    "corroboration_frontier": 1
   },
   "d4fc4bf18b07238fe201bcfc8112eaa45d023e68d7f406b100309045fcd4403b": {
    "subject": "omega_b",
    "witness": "463/500",
    "routes": [
-    "urtext-regex-prefix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
@@ -2436,27 +2076,8 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
-  },
-  "d561c5b6cb1ac6c4a1af4a3b104615200fdd9e9cef8a011644214f94c2cc0b43": {
-   "subject": "omega_dm",
-   "witness": "1/1",
-   "routes": [
-    "urtext-regex-prefix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "farey_partition",
-     "frontier": true
-    },
-    {
-     "doc": "omega_partition_combinatorial",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 2,
-   "corroboration": 2,
-   "corroboration_frontier": 2
   },
   "d5f90dbd1adb6f48b7edbfe5b498072b57dede88c16b0e0448d125e086f5cf37": {
    "subject": "D_0",
@@ -2472,6 +2093,24 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
+   "corroboration_frontier": 1
+  },
+  "d6c2897634dd109a322220e7fea72ee262df64b2523b65de63d6049daf796873": {
+   "subject": "w_plus",
+   "witness": "1/1",
+   "routes": [
+    "urtext-regex-prefix-v2"
+   ],
+   "docs": [
+    {
+     "doc": "partition_logit_form",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "d9bdb38838f1e295fa6702212484a7ec1d241e0a9c3c4d8b0e37d6d6ba3ffb9c": {
@@ -2488,6 +2127,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 0
   },
   "dabb1cc829333f5bc3cbda511e0d135ea99534d42ebff072ad87a0795a335749": {
@@ -2504,6 +2144,24 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
+   "corroboration_frontier": 1
+  },
+  "db83f58229aea667052d07092e5ac826bb18daa7473315a00109e8507cd55d2d": {
+   "subject": "w_plus",
+   "witness": "581/625",
+   "routes": [
+    "urtext-regex-prefix-v2"
+   ],
+   "docs": [
+    {
+     "doc": "omega_b_w_plus_candidate",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "dcbce1a0f8366e8afed2c8881d4d5a22a26807298ea5cc58ee6f6c7f77878665": {
@@ -2551,24 +2209,9 @@
     }
    ],
    "assertion_cids": 9,
-   "corroboration": 9,
+   "corroboration": 3,
+   "corroboration_docs": 9,
    "corroboration_frontier": 3
-  },
-  "e078defbed06e83cba5bd2ed42c27ce7990eed384d5c8076c3cb994f6eb67093": {
-   "subject": "omega_b",
-   "witness": "269/50",
-   "routes": [
-    "urtext-regex-prefix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "path_closures_iter4",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
   },
   "e6e455897f5fe4489759ec55c8f461f0a613cea3688ca03d74a6b2f6a1a78dbd": {
    "subject": "r",
@@ -2584,13 +2227,14 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
   "e72ef04fcc76689b24337d7ce293f6088ba8b069251241ea5011e9a962e020c6": {
    "subject": "omega_lambda",
    "witness": "6857/10000",
    "routes": [
-    "urtext-regex-prefix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
@@ -2600,23 +2244,58 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 1
   },
-  "eb2048c975e7239eec35d88e05a7d58c1b99a817372dc354b7d092f1b82e93ef": {
-   "subject": "omega_lambda",
-   "witness": "63/200",
+  "e73e30dfe3b459f6b2172704eac735a9e16ddcd261b92fc5e6734a78b8b97036": {
+   "subject": "w_plus",
+   "witness": "4649/5000",
    "routes": [
-    "urtext-regex-postfix-v1"
+    "urtext-regex-prefix-v2"
    ],
    "docs": [
     {
-     "doc": "high_z_mond",
+     "doc": "derivation_atlas",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_alpha_beta_closure",
      "frontier": true
     }
    ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
+   "assertion_cids": 2,
+   "corroboration": 2,
+   "corroboration_docs": 2,
+   "corroboration_frontier": 2
+  },
+  "e87a6fc6ec57e46c1c217d5832d337e8a08d1553a2352d34ac3453f1605c2bf1": {
+   "subject": "w_plus",
+   "witness": "93/100",
+   "routes": [
+    "urtext-regex-prefix-v2"
+   ],
+   "docs": [
+    {
+     "doc": "L1_substrate_cusp_ground_state",
+     "frontier": true
+    },
+    {
+     "doc": "derivation_atlas",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_alpha_beta_closure",
+     "frontier": true
+    },
+    {
+     "doc": "omega_b_alpha_beta_phase_b",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 4,
+   "corroboration": 4,
+   "corroboration_docs": 4,
+   "corroboration_frontier": 4
   },
   "ef1d723d8106ba28c9158c4a90c02f619558890e431e7a0410260309b25ec3bb": {
    "subject": "B",
@@ -2632,6 +2311,7 @@
    ],
    "assertion_cids": 1,
    "corroboration": 1,
+   "corroboration_docs": 1,
    "corroboration_frontier": 0
   },
   "f1abc320378331e68e2d0a91400674f0128b7372c24bd915bce5eef127e0b9c9": {
@@ -2664,23 +2344,8 @@
    ],
    "assertion_cids": 5,
    "corroboration": 5,
+   "corroboration_docs": 5,
    "corroboration_frontier": 5
-  },
-  "f2edae2f179555912d8a1f0efd06ecd638d48786c006310868ef207a165c3daf": {
-   "subject": "omega_b",
-   "witness": "8/1",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "vocabulary_is_the_work_pattern",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
   },
   "f3d115e470593b56cb747b90bf6bdf21c196e5544ffcbb0097cca3b260347fc6": {
    "subject": "d",
@@ -2700,6 +2365,7 @@
    ],
    "assertion_cids": 2,
    "corroboration": 2,
+   "corroboration_docs": 2,
    "corroboration_frontier": 2
   },
   "f798f910625ea0cd345bf7ec9bb81ef0b7e3329404f5ce3bb5ad5b83bf883ff9": {
@@ -2728,46 +2394,16 @@
    ],
    "assertion_cids": 4,
    "corroboration": 4,
+   "corroboration_docs": 4,
    "corroboration_frontier": 4
-  },
-  "fbf1c7610e858f4db0b3d02052c15cb730382992b0464517f40379e5be18134e": {
-   "subject": "omega_dm",
-   "witness": "1/3",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "omega_b_w_plus_cross_ratio_search",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
-  },
-  "fe2b10a9928fa417c47fef176d3c256f194c4682a7d61c47913c3dabaf568476": {
-   "subject": "omega_b",
-   "witness": "5/16",
-   "routes": [
-    "urtext-regex-postfix-v1"
-   ],
-   "docs": [
-    {
-     "doc": "omega_b_residual_phase_a",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_frontier": 1
   },
   "febf3ea4dac3d3284995cbde0569a8fe17d23ffece1748f60e449df15f98e2b0": {
    "subject": "omega_lambda",
    "witness": "13/19",
    "routes": [
-    "urtext-regex-prefix-v1",
-    "urtext-regex-postfix-v1"
+    "urtext-regex-prefix-v2",
+    "ratio/v1",
+    "urtext-regex-postfix-v2"
    ],
    "docs": [
     {
@@ -2873,6 +2509,7 @@
    ],
    "assertion_cids": 25,
    "corroboration": 25,
+   "corroboration_docs": 25,
    "corroboration_frontier": 25
   }
  },
@@ -2881,217 +2518,283 @@
    "from": "baryon_fraction",
    "to": "discrete_gauge_resolution",
    "kind": "grounds",
-   "annotation_cid": "bbc824c9075d2592704d501ac9277d5269132201fae9be5943df530fe3a15417"
+   "annotation_cid": "612f53008916ea70da7a8b9a6165e769deaec29e0ae0ac193883d4fbf4420ec9"
   },
   {
    "from": "baryon_fraction",
    "to": "gauge_sector_lovelock",
    "kind": "grounds",
-   "annotation_cid": "d29467561af219369764a51cab45a491f93d1c4c6ad57de29b1a9f67bd5cedaa"
+   "annotation_cid": "97cfcd9d73b01a98affe65de91805c01390a7fa6fc71578110d6b2968d9dcf2d"
   },
   {
    "from": "baryon_fraction",
    "to": "farey_partition",
    "kind": "derives",
-   "annotation_cid": "7e0b2501d0b9b3fbde67f28ed3f3845d01cdf945bf8ccd64474be2fbb5c0059c"
+   "annotation_cid": "610f605b49ba6fb7d5099131e89ba57f9aff5e2405e40f60db8f1ac91efaf56d"
   },
   {
    "from": "baryon_fraction",
    "to": "omega_partition_combinatorial",
    "kind": "derives",
-   "annotation_cid": "361467275242ebb1eb09a4e61960ff6649a091ccf3ddebab5c1b2bf674155cc3"
+   "annotation_cid": "3e155757b2060fd421093e4d3a91b3f4b08fba429e0eb449b4ca86195583fb6f"
   },
   {
    "from": "baryon_fraction",
    "to": "gell_mann_nishijima",
    "kind": "derives",
-   "annotation_cid": "053d68fbc9d32b4daafc35ec819ef362d0309ff6a7125732ef5dcc2f58c6f2be"
+   "annotation_cid": "708db41db0e8022ec0cf4ba03d2b4edddc4ee829a75f05287589a21b9e67694a"
   },
   {
    "from": "baryon_fraction",
    "to": "a0_threshold",
    "kind": "proposes",
-   "annotation_cid": "d4abd6a99fe97b21928c8ae9d30bea0e5a9d710590838322997da28b19b87d2e"
+   "annotation_cid": "2191659729a16928cc86dc6315781b48411f14ce9d190905225f522bbdc982bb"
   },
   {
    "from": "baryon_fraction",
    "to": "a1_from_saddle_node",
    "kind": "proposes",
-   "annotation_cid": "e7ac061b88dd64faea062fa8a3a4fe7fdb186f588970717fda9f8e836cf3a71d"
+   "annotation_cid": "54dc8382229248e1923cbb4e42af09e074a28a31a55e5a991f383e7002124089"
   },
   {
    "from": "baryon_fraction",
    "to": "duty_cycle_dictionary",
    "kind": "proposes",
-   "annotation_cid": "99fec3a7c5748acf06b4d314091d1c24685ceb3c579157194076e32c4c99fc97"
+   "annotation_cid": "3f579afb0c0e8bc02a5b16d6180605605d460d900f7ac7de90b74de174bc7f87"
   },
   {
    "from": "baryon_fraction",
    "to": "boundary_weight",
    "kind": "proposes",
-   "annotation_cid": "d2b046423bd6555d41015685e371af1e1880430812d502fb2ed971a68afb3af2"
+   "annotation_cid": "43fe96eef47881b4627400d192bb7bafaab924850e4340b11265342044b2b6b1"
   },
   {
    "from": "coupling_scales",
    "to": "discrete_gauge_resolution",
    "kind": "grounds",
-   "annotation_cid": "661b35cb96220238751590efa993f267b44edd3bb53e1743f105a3a7ed2b4f07"
+   "annotation_cid": "f2bf478f1af7fd7efb57a33ab5e5840f334932ce153482ce635ecef22e8b0c3e"
   },
   {
    "from": "coupling_scales",
    "to": "gauge_sector_lovelock",
    "kind": "grounds",
-   "annotation_cid": "66bcb3756bdcf7ca58a260683387529997353f8c162cc293f971e04a550547b4"
+   "annotation_cid": "a18edf0a1407a07d1551cfb6d2c90048c69840dfd289b5bf1aa30eaaca408dcb"
   },
   {
    "from": "coupling_scales",
    "to": "duty_cycle_dictionary",
    "kind": "derives",
-   "annotation_cid": "e4e7ea5f9f4711f9ca10055e8fd67526e31824d6a2ccfe3e4fd8626e30d8f90b"
+   "annotation_cid": "c1d55a805ef21c0ffc1cfe379d89b7dedc671285c3a0e1798f7abc52a0bd0970"
   },
   {
    "from": "coupling_scales",
    "to": "hierarchy_gaussian_lattice",
    "kind": "derives",
-   "annotation_cid": "d65e4377c7a3629ff8f8a54d6820122d62b14ee19d1a8465d55fc35ab34c69b9"
+   "annotation_cid": "5d78f76cf00b16383a4f43aa5eca8199a6058bdc1caf777088ce69b6b9306dc0"
   },
   {
    "from": "coupling_scales",
    "to": "planck_scale",
    "kind": "derives",
-   "annotation_cid": "f76b7d1293606fe5a056d944ace073b1185b520de0f53dd5d1f8a80dcc87caad"
+   "annotation_cid": "2cdb18a1c17c5cb38e6d98408a4d6bf9f13ca2ba9693c8af260a64770916aa10"
+  },
+  {
+   "from": "down_type_double_cover_closed",
+   "to": "down_type_double_cover_phase_a",
+   "kind": "grounds",
+   "annotation_cid": "c7adadbb86998b07223d4e8d224fc2ac1038047bcea02403e2dcc3badf381d98"
+  },
+  {
+   "from": "down_type_double_cover_closed",
+   "to": "down_type_double_cover_phase_b",
+   "kind": "grounds",
+   "annotation_cid": "c0414d9b00797df7718f66622b5d06d2274b48623438d5ebeb2de54e011a1967"
+  },
+  {
+   "from": "down_type_double_cover_closed",
+   "to": "down_type_double_cover_phase_b_followup",
+   "kind": "grounds",
+   "annotation_cid": "01a8fe657a88bb61de571a053ef06c1fb03ac4a4237cd15a28b9139832b9df05"
+  },
+  {
+   "from": "down_type_double_cover_closed",
+   "to": "down_type_double_cover_phase_c",
+   "kind": "grounds",
+   "annotation_cid": "814ee35ab3a221c2e8add510866be439d01c32494b08ee00c3c9edbcd159601b"
+  },
+  {
+   "from": "down_type_double_cover_closed",
+   "to": "down_type_double_cover_phase_d",
+   "kind": "grounds",
+   "annotation_cid": "0ca161029328681a43f86c9566d09a729f021f73abb89188a53416e831663840"
+  },
+  {
+   "from": "down_type_double_cover_closed",
+   "to": "born_rule",
+   "kind": "grounds",
+   "annotation_cid": "c1b2fa04754ad1d712fb739663ff7447ef91bc85e718293e9dd51afb1c8f6be7"
+  },
+  {
+   "from": "down_type_double_cover_closed",
+   "to": "boundary_weight",
+   "kind": "grounds",
+   "annotation_cid": "953b611a8efdb738251810c637b9b9d5956b2c6638e94c787ac399c0e6508c9d"
+  },
+  {
+   "from": "down_type_double_cover_closed",
+   "to": "hierarchy_gaussian_lattice",
+   "kind": "grounds",
+   "annotation_cid": "d19d8a55ce60695bfce02b37df9b75d328ecffa9af8d3f88f98af1c2ba6965ee"
+  },
+  {
+   "from": "down_type_double_cover_closed",
+   "to": "derivation_atlas",
+   "kind": "derives",
+   "annotation_cid": "dfd5dc2a77e25c5f9df5ba1f420ca287b883c7cb5e3406baa50d923999564711"
+  },
+  {
+   "from": "down_type_double_cover_closed",
+   "to": "canonical_glossary",
+   "kind": "derives",
+   "annotation_cid": "79dc99fba873f5b5b7468ab6d50b69950c7e3957c438f6e3d0a1462bd57057ec"
+  },
+  {
+   "from": "down_type_double_cover_closed",
+   "to": "phenomenology_cross_reference",
+   "kind": "derives",
+   "annotation_cid": "d2e4b4d11309bec49ae87aa0524738ff81ab92072bbe0c38c489c693613e22eb"
   },
   {
    "from": "higgs_reframing",
    "to": "duty_cycle_dictionary",
    "kind": "derives",
-   "annotation_cid": "45674a5d44d22d27cc87d6a90b505a7d1d4cbf2556fce0290a8263ea4362ef63"
+   "annotation_cid": "80629a1630bac4a182bba8cc8bcccfb156f6542ea1fd6f1d39d1a5ec975937bb"
   },
   {
    "from": "klein_bottle",
    "to": "mobius_container",
    "kind": "grounds",
-   "annotation_cid": "8515d869d6f3f0dc3ac8f77d38a657f8fee127cce1c8b62b58e2d78db0f0e32d"
+   "annotation_cid": "09afcff707a4b60ef40074cec3d0eee19cda5a64490e21880d6d4847fc505a90"
   },
   {
    "from": "klein_bottle",
    "to": "rational_field_equation",
    "kind": "derives",
-   "annotation_cid": "7719ff6f54119895eef1dce4c506a750c8588b6154ea02d1a8f3a1c5bcce76d8"
+   "annotation_cid": "5daca8acf0a20ae6a400fe4e71301b948aeb400dc68f90b40b14b28c59375a37"
   },
   {
    "from": "klein_bottle",
    "to": "planck_scale",
    "kind": "derives",
-   "annotation_cid": "c72cc5ca69ac972f60973ef6418c05326ca9df7b09afa8469bdf873d14326090"
+   "annotation_cid": "8d5a1d0da702cc72e4ba16f88eac7d5e5c19f9e3f882f59c6ff8986c30ddad77"
   },
   {
    "from": "klein_bottle",
    "to": "variable_denominator",
    "kind": "derives",
-   "annotation_cid": "880058a57f7c9b609aaff48ce6487c16c142f4d9399471963aa60d8e6890b06a"
+   "annotation_cid": "1a00dcef80ca0c3b0a163af3e71658cd61325df82728e388d4d79efe221bd889"
   },
   {
    "from": "klein_bottle",
    "to": "three_dimensions",
    "kind": "derives",
-   "annotation_cid": "5b79b081dd95d67c16b9e52116018b0fc11c13dc7247ef59b729152bd9d923ce"
+   "annotation_cid": "6d143b0e4a4738292fddb3eba72518e1df602a8c804091b5649b5809fab4f604"
   },
   {
    "from": "klein_bottle",
    "to": "continuum_limits",
    "kind": "proposes",
-   "annotation_cid": "5e66252e0d216fe5234ac83eeec2cd482e034ae1a47f073a280d9620534ca028"
+   "annotation_cid": "2bc43afb4f797120aabc280347fe589d4f0e52b562eb092e6e1fc2903e78599e"
   },
   {
    "from": "klein_bottle",
    "to": "einstein_from_kuramoto",
    "kind": "proposes",
-   "annotation_cid": "3f8dfed25d21566b0711a0d5b12a8275e6755bd64154c30904945808d116ad02"
+   "annotation_cid": "edc98ba2bfb85e03d659da8676b6c5f29a02c47460e00e6de6463fedb56a8b48"
   },
   {
    "from": "klein_bottle",
    "to": "lie_group_characterization",
    "kind": "proposes",
-   "annotation_cid": "35c1c81ec444248fad254137bc8ce06043b919c2a51bbb168ec3b3dbb60e4141"
+   "annotation_cid": "89187ef07430c605cd7f38dcc6654824c58cbdd28acb23a961451635fab2109b"
   },
   {
    "from": "klein_bottle",
    "to": "fidelity_bound",
    "kind": "proposes",
-   "annotation_cid": "3fd883156c161dc59da741e52e90bf3512aaaad0b3ac675779b8e46f3599a412"
+   "annotation_cid": "53d0043eee41195a8661fbfca771abd26ca977c4b2f2106e80c9b1cfbe9fff2d"
   },
   {
    "from": "mediant_derivation",
    "to": "minimum_alphabet",
    "kind": "grounds",
-   "annotation_cid": "a32fab26a692bef37603fab3d27640e4e1bd247129c45832cf6eedc833e3df02"
+   "annotation_cid": "43cea06a674bd2959111e6f0d85fdd2f8a4550c2223cf88fe48b8c6a680ffa0f"
   },
   {
    "from": "mediant_derivation",
    "to": "empty_fork_cap",
    "kind": "grounds",
-   "annotation_cid": "ad0c417ea64a71c719b75b917d75c6842ed7cb33738f29fc10062acdbf8a3714"
+   "annotation_cid": "c450dbc1a226a5c8e1f2721d09985b65a1d65c8a3c51f1b13e03b4e25d67ee50"
   },
   {
    "from": "mediant_derivation",
    "to": "klein_bottle",
    "kind": "derives",
-   "annotation_cid": "cc62c23fe2839234ef9c429d8afbd077af599e342642e0b4c8c54781a0fb233c"
+   "annotation_cid": "ac76397a5451555c9027a80b675355dcacc720378568379fa05d86eb6cf6b088"
   },
   {
    "from": "omega_b_alpha_beta_closure",
    "to": "klein_antipodal_z2_rep_pattern",
    "kind": "grounds",
-   "annotation_cid": "b9bed5c539f573d993be330acce6784a69264f995c8517a13da474a311ef69e4"
+   "annotation_cid": "4105409c9635deeb40154682f484ff342d958a0e2b82ed7f3e8a454e24442018"
   },
   {
    "from": "omega_b_alpha_beta_closure",
    "to": "baryon_fraction",
    "kind": "derives",
-   "annotation_cid": "bc4f14a4c69db225025e36e98d681f7dfd168516d0d4f4def792671adcbbfdc0"
+   "annotation_cid": "ea997c672c0f361f5f7240ad4b024d2d6b468d35e5234e8a4d3e73a6b130efe2"
   },
   {
    "from": "omega_b_alpha_beta_closure",
    "to": "omega_b_residual_phase_a",
    "kind": "derives",
-   "annotation_cid": "d2609ba9fd0585ebfddc1c2a313599e023ab9a89d7ec393f34a264b040bca7c6"
+   "annotation_cid": "3ea3452de114b1c9b39f69cbc9a2cd1d9a7556e8fd28bab2d8d28389a1c7ce23"
   },
   {
    "from": "omega_b_alpha_beta_closure",
    "to": "omega_b_alpha_beta_phase_b",
    "kind": "derives",
-   "annotation_cid": "b601cf14c36531a979c8159d0a36452a7074c901c25fe7d24cb64f11eac0d63c"
+   "annotation_cid": "a701185dd060f941a88b4a3f7af6c8ce21f49ae685869a49779a19a7cec8e874"
   },
   {
    "from": "omega_b_alpha_beta_closure",
    "to": "omega_b_two_component_sketch",
    "kind": "derives",
-   "annotation_cid": "b52b855871c0245e8af6c99a4d51cda5d69dbceebe8d496a570d06193529d959"
+   "annotation_cid": "4e459fafccb8883947aec2a50739a1d5089ad7b6e6844f65990ee68e16a34d0b"
   },
   {
    "from": "partition_logit_form",
    "to": "baryon_fraction",
    "kind": "derives",
-   "annotation_cid": "b6e3abe728aa1dbb2515b823ce44ce3c48981802cf9342ca0e46e3fcf6a806f8"
+   "annotation_cid": "06f6a714f19b3aa66f6e883fafb9a8d6ef02c2c29df7f91a04b3836f98f6f8d4"
   },
   {
    "from": "partition_logit_form",
    "to": "omega_b_alpha_beta_closure",
    "kind": "derives",
-   "annotation_cid": "240e851b2d8c76c071551235bfe2999364ca0370dd4e31c4dd453996917f501c"
+   "annotation_cid": "ca92a0fcfece822a5959ccad6993c9c30ed697cb341c70f6e86474f2143fef6d"
   },
   {
    "from": "partition_logit_form",
    "to": "klein_antipodal_z2_rep_pattern",
    "kind": "proposes",
-   "annotation_cid": "05114c7baffc384980f638a2bf55ddaf9ace9faf48d70dfa5bb6a8073c0fe970"
+   "annotation_cid": "73d55ae5b3ce3f69a60077cbdb40e4418c1e8ddfa55c0513f2a47b67531a0c09"
   },
   {
    "from": "partition_logit_form",
    "to": "numerology_inventory",
    "kind": "proposes",
-   "annotation_cid": "f814dfad58d944c091f160edbbe42e266e2f37fe12a1d49738047383d6f2e843"
+   "annotation_cid": "b58574c832b30e9b623b7b00f588273a76075b709d8d21b317424afe628ea3aa"
   }
  ],
  "terms": {

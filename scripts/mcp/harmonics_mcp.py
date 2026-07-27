@@ -369,7 +369,11 @@ def _tool_claim_search(args: dict) -> dict:
             "proposition_cid": cid,
             "subject": c["subject"],
             "witness": c["witness"],
+            # succession-chain-deduped (#328 Card 2): drafts are not
+            # independent witnesses; corroboration_docs is the raw count.
             "corroboration": c["corroboration"],
+            "corroboration_docs": c.get("corroboration_docs",
+                                        c["corroboration"]),
             "corroboration_frontier": c["corroboration_frontier"],
         })
     hits.sort(key=lambda h: -h["corroboration_frontier"])
@@ -619,9 +623,12 @@ TOOLS = [
         "description": (
             "Search the sealed-claims projection: quantitative "
             "propositions from the clean ingest, keyed by content "
-            "address, corroboration split into frontier vs superseded "
-            "support. The way to discuss corpus claims without context "
-            "rot: cite proposition CIDs, not remembered prose."
+            "address. Corroboration counts INDEPENDENT witnesses "
+            "(succession chains collapse to one — drafts are not "
+            "witnesses); corroboration_docs is the raw doc count, "
+            "corroboration_frontier the frontier split. The way to "
+            "discuss corpus claims without context rot: cite "
+            "proposition CIDs, not remembered prose."
         ),
         "inputSchema": {
             "type": "object",
