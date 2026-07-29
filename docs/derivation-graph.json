@@ -1,5 +1,5 @@
 {
-  "generated": "cd31a131ade9e3ca5e5dd87a5cf16d897e461ecf",
+  "generated": "69a7040618f31dc142cbee5ca6000181dd8de739",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -24103,7 +24103,7 @@
     {
       "id": "koide_form_substrate_iteration_1",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_1.md",
-      "cid": "74653c8060075076d8e5323ed35b75c1099f213a45a648a5b20a7c4b8f3d7df8",
+      "cid": "b54cbdab8a1f768c7626077a252753492c55efcf5f2028fa651794aeaf6b1c53",
       "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 1",
       "summary": "**Iterative formalization, step 1.** Sharpens the Koide-form gap\nidentified in the Thread 2 roadblock and the existing\n`fermion_mass_running.md` Class-1 disposition: the value `Q = 2/3`\nin the Koide constraint is substrate-derived (Klein-bottle population\nratio, `klein_bottle.md` D19); the specific algebraic form\n`K = \u03a3m / (\u03a3\u221am)\u00b2 = Q` is currently imported despite a claim in\n`fermion_mass_running.md` \u00a74c that it follows from \"SL(2,Z) trace\nstructure (D34 \u00a76)\" \u2014 a claim whose actual derivation ha",
@@ -24113,7 +24113,6 @@
         "free_parameter_scorecard",
         "generation_mechanism",
         "klein_bottle",
-        "koide_form_substrate_iteration_14",
         "mass_sector_closure",
         "numerology_inventory",
         "physics_relevance_measurement_catalog"
@@ -24143,10 +24142,6 @@
         },
         {
           "target": "klein_bottle",
-          "kind": "references"
-        },
-        {
-          "target": "koide_form_substrate_iteration_14",
           "kind": "references"
         },
         {
@@ -24182,6 +24177,11 @@
       ],
       "git": [
         {
+          "hash": "11df457",
+          "date": "2026-07-29",
+          "subject": "Recover the koide succession quanta stranded off main; gate the hole that hid them (#334)"
+        },
+        {
           "hash": "89d8873",
           "date": "2026-07-21",
           "subject": "Frontier reads + standing divergence check (#294, #316) (#317)"
@@ -24196,7 +24196,7 @@
     {
       "id": "koide_form_substrate_iteration_10",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_10.md",
-      "cid": "919950d8071a4c16d88e50fcc53e9b73beea4a537eb0525234fc938ef2d2b985",
+      "cid": "ae80fe0b0200f1258ae4e7544a143c7b11fb90b64ef3e319814c5795e5b8872e",
       "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 10",
       "summary": "**Iteration 10. Reversibility-class clarification.** Reframes the\niteration 9 null result as a *category clarification* rather than\na tactical miss, identifying that the framework's substrate\nmachinery splits into reversibility classes and that Koide's\nsubstrate-derivation belongs in a specific class.",
@@ -24210,7 +24210,6 @@
         "ghz_from_substrate",
         "klein_antipodal_z2_rep_pattern",
         "klein_bottle",
-        "koide_form_substrate_iteration_14",
         "koide_form_substrate_iteration_9",
         "lesson_forced_basin_selection",
         "mass_sector_closure",
@@ -24260,10 +24259,6 @@
           "kind": "references"
         },
         {
-          "target": "koide_form_substrate_iteration_14",
-          "kind": "references"
-        },
-        {
           "target": "koide_form_substrate_iteration_9",
           "kind": "references"
         },
@@ -24300,6 +24295,11 @@
       ],
       "git": [
         {
+          "hash": "11df457",
+          "date": "2026-07-29",
+          "subject": "Recover the koide succession quanta stranded off main; gate the hole that hid them (#334)"
+        },
+        {
           "hash": "89d8873",
           "date": "2026-07-21",
           "subject": "Frontier reads + standing divergence check (#294, #316) (#317)"
@@ -24314,7 +24314,7 @@
     {
       "id": "koide_form_substrate_iteration_11",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_11.md",
-      "cid": "e8bb298e2daefc938803b7e6d8129159a790961ee4733ca8d17a414d0e9e93be",
+      "cid": "1e9b677cf6a092440f090206c9165ea57a3847b85eeb1ce6e0ce604e8ef50573",
       "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 11",
       "summary": "**Iteration 11.** Tests Candidate A4 from iteration 10: derive the\nmatrix `M = q_3 I \u2212 q_2 J` (Lorentzian signature `(2, 1)`) on\nthree-generation amplitude space via the same observability-split\nargument that `minkowski_signature.md` (D32) uses to derive\nspacetime's signature `(3, 1)`.",
@@ -24324,7 +24324,6 @@
         "klein_antipodal_z2_rep_pattern",
         "klein_bottle",
         "koide_form_substrate_iteration_10",
-        "koide_form_substrate_iteration_14",
         "mass_sector_closure",
         "minkowski_signature",
         "substrate_prediction_selection"
@@ -24356,10 +24355,6 @@
           "kind": "references"
         },
         {
-          "target": "koide_form_substrate_iteration_14",
-          "kind": "references"
-        },
-        {
           "target": "mass_sector_closure",
           "kind": "references"
         },
@@ -24388,6 +24383,11 @@
       ],
       "git": [
         {
+          "hash": "11df457",
+          "date": "2026-07-29",
+          "subject": "Recover the koide succession quanta stranded off main; gate the hole that hid them (#334)"
+        },
+        {
           "hash": "89d8873",
           "date": "2026-07-21",
           "subject": "Frontier reads + standing divergence check (#294, #316) (#317)"
@@ -24402,7 +24402,7 @@
     {
       "id": "koide_form_substrate_iteration_12",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_12.md",
-      "cid": "b0bb484df3ebeb3b034c736cea1c049ef6dcb4d1441731dc02e56a5dca0df7a3",
+      "cid": "1a7100a97f92b557ef6e3d527badf3e1d799972de68c3ea29acd4420e5d3d7dd",
       "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 12",
       "summary": "**Iteration 12.** Tests whether the two residual ingredients\nidentified in iteration 11 can be substrate-derived from\nfoundational quantities. Targets Options A and B from iteration\n11's recommended next iterations.",
@@ -24412,7 +24412,6 @@
         "generation_mechanism",
         "klein_bottle",
         "koide_form_substrate_iteration_11",
-        "koide_form_substrate_iteration_14",
         "mass_sector_closure",
         "substrate_prediction_selection"
       ],
@@ -24441,10 +24440,6 @@
           "kind": "references"
         },
         {
-          "target": "koide_form_substrate_iteration_14",
-          "kind": "references"
-        },
-        {
           "target": "mass_sector_closure",
           "kind": "references"
         },
@@ -24461,6 +24456,11 @@
       ],
       "git": [
         {
+          "hash": "11df457",
+          "date": "2026-07-29",
+          "subject": "Recover the koide succession quanta stranded off main; gate the hole that hid them (#334)"
+        },
+        {
           "hash": "89d8873",
           "date": "2026-07-21",
           "subject": "Frontier reads + standing divergence check (#294, #316) (#317)"
@@ -24475,7 +24475,7 @@
     {
       "id": "koide_form_substrate_iteration_13",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_13.md",
-      "cid": "2e65fd75d8ddbe9ca52f88f72be1d9c133cb1e396efe6f5bde78d428677fb808",
+      "cid": "4763cb5491a372a2dff5c8965560d1f3d12e40100a941215483cc605f7c38c80",
       "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 13",
       "summary": "**Iteration 13.** Pursues iteration 12's recommended next step:\nderive `M = q_3 I \u2212 q_2 J` *as a unified substrate-natural\nquadratic form*, not as a sum of separately-derived parts.",
@@ -24486,7 +24486,6 @@
         "klein_bottle",
         "koide_form_substrate_iteration_11",
         "koide_form_substrate_iteration_12",
-        "koide_form_substrate_iteration_14",
         "mass_sector_closure",
         "substrate_prediction_selection"
       ],
@@ -24521,10 +24520,6 @@
           "kind": "references"
         },
         {
-          "target": "koide_form_substrate_iteration_14",
-          "kind": "references"
-        },
-        {
           "target": "mass_sector_closure",
           "kind": "references"
         },
@@ -24548,6 +24543,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "11df457",
+          "date": "2026-07-29",
+          "subject": "Recover the koide succession quanta stranded off main; gate the hole that hid them (#334)"
+        },
         {
           "hash": "89d8873",
           "date": "2026-07-21",
@@ -24586,19 +24586,8 @@
         "horn_branch_iteration_2_step_1",
         "horn_branch_iteration_2_step_2",
         "horn_branch_iteration_3_step_1",
-        "koide_form_substrate_iteration_1",
-        "koide_form_substrate_iteration_10",
-        "koide_form_substrate_iteration_11",
-        "koide_form_substrate_iteration_12",
-        "koide_form_substrate_iteration_13",
-        "koide_form_substrate_iteration_2",
-        "koide_form_substrate_iteration_3",
-        "koide_form_substrate_iteration_4",
         "koide_form_substrate_iteration_5",
-        "koide_form_substrate_iteration_6",
-        "koide_form_substrate_iteration_7",
         "koide_form_substrate_iteration_8",
-        "koide_form_substrate_iteration_9",
         "substrate_prediction_selection"
       ],
       "edges": [
@@ -24669,55 +24658,11 @@
           "kind": "references"
         },
         {
-          "source": "koide_form_substrate_iteration_1",
-          "kind": "references"
-        },
-        {
-          "source": "koide_form_substrate_iteration_10",
-          "kind": "references"
-        },
-        {
-          "source": "koide_form_substrate_iteration_11",
-          "kind": "references"
-        },
-        {
-          "source": "koide_form_substrate_iteration_12",
-          "kind": "references"
-        },
-        {
-          "source": "koide_form_substrate_iteration_13",
-          "kind": "references"
-        },
-        {
-          "source": "koide_form_substrate_iteration_2",
-          "kind": "references"
-        },
-        {
-          "source": "koide_form_substrate_iteration_3",
-          "kind": "references"
-        },
-        {
-          "source": "koide_form_substrate_iteration_4",
-          "kind": "references"
-        },
-        {
           "source": "koide_form_substrate_iteration_5",
           "kind": "references"
         },
         {
-          "source": "koide_form_substrate_iteration_6",
-          "kind": "references"
-        },
-        {
-          "source": "koide_form_substrate_iteration_7",
-          "kind": "references"
-        },
-        {
           "source": "koide_form_substrate_iteration_8",
-          "kind": "references"
-        },
-        {
-          "source": "koide_form_substrate_iteration_9",
           "kind": "references"
         },
         {
@@ -24736,7 +24681,7 @@
     {
       "id": "koide_form_substrate_iteration_2",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_2.md",
-      "cid": "199e62b256d023f15bc1837d1b3a4920c85d867805070c9fb60e58267e4f9c03",
+      "cid": "845620c21efcab7d8561433187d21e6db9808460637c2397adfbd4096b0ae337",
       "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 2",
       "summary": "**Iteration 2.** Tests candidate 4 from\n`koide_form_substrate_iteration_1.md`: the claim in\n`fermion_mass_running.md` \u00a74c that \"the Koide constraint is the\ngeneration-mixing constraint from the SL(2,Z) trace structure\n(D34 \u00a76).\"",
@@ -24746,7 +24691,6 @@
         "generation_mechanism",
         "klein_bottle",
         "koide_form_substrate_iteration_1",
-        "koide_form_substrate_iteration_14",
         "mass_sector_closure"
       ],
       "depended_on_by": [
@@ -24774,10 +24718,6 @@
           "kind": "references"
         },
         {
-          "target": "koide_form_substrate_iteration_14",
-          "kind": "references"
-        },
-        {
           "target": "mass_sector_closure",
           "kind": "references"
         }
@@ -24789,6 +24729,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "11df457",
+          "date": "2026-07-29",
+          "subject": "Recover the koide succession quanta stranded off main; gate the hole that hid them (#334)"
+        },
         {
           "hash": "89d8873",
           "date": "2026-07-21",
@@ -24804,7 +24749,7 @@
     {
       "id": "koide_form_substrate_iteration_3",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_3.md",
-      "cid": "ad4d036ecfc6d7921a136f3f9d04ac6db9171d98a36b111077c1c3c3e8427bb4",
+      "cid": "b411d75597cac96a0c394b9af60d8c5f689162756ed60169dab7c7061be8ea7b",
       "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 3",
       "summary": "**Iteration 3.** Tests candidate 1 from iteration 1: the\nKlein-bottle \u03c4 action on three-generation space as a source of the\nequipartition `|v_sym|\u00b2 = |v_\u22a5|\u00b2`.",
@@ -24814,7 +24759,6 @@
         "generation_mechanism",
         "klein_bottle",
         "koide_form_substrate_iteration_1",
-        "koide_form_substrate_iteration_14",
         "koide_form_substrate_iteration_2"
       ],
       "depended_on_by": [
@@ -24842,10 +24786,6 @@
           "kind": "references"
         },
         {
-          "target": "koide_form_substrate_iteration_14",
-          "kind": "references"
-        },
-        {
           "target": "koide_form_substrate_iteration_2",
           "kind": "references"
         }
@@ -24857,6 +24797,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "11df457",
+          "date": "2026-07-29",
+          "subject": "Recover the koide succession quanta stranded off main; gate the hole that hid them (#334)"
+        },
         {
           "hash": "89d8873",
           "date": "2026-07-21",
@@ -24872,7 +24817,7 @@
     {
       "id": "koide_form_substrate_iteration_4",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_4.md",
-      "cid": "dea8056465a7a209fce1967ae01b8b99cba1561a96b28ddb24bf9fc0a9a531d3",
+      "cid": "d9463cb894d8345f2816052e9c33ab0d6824b0e160d644d8973c6dc7c42b8f88",
       "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 4",
       "summary": "**Iteration 4.** Tests the sharpened question from iteration 3:\n*does the substrate's inviolable apparatus force the full `S_3`\naction on three-generation amplitude space?*",
@@ -24881,7 +24826,6 @@
         "generation_mechanism",
         "klein_antipodal_z2_rep_pattern",
         "klein_bottle",
-        "koide_form_substrate_iteration_14",
         "koide_form_substrate_iteration_3",
         "mass_sector_closure"
       ],
@@ -24905,10 +24849,6 @@
         },
         {
           "target": "klein_bottle",
-          "kind": "references"
-        },
-        {
-          "target": "koide_form_substrate_iteration_14",
           "kind": "references"
         },
         {
@@ -24936,6 +24876,11 @@
       ],
       "git": [
         {
+          "hash": "11df457",
+          "date": "2026-07-29",
+          "subject": "Recover the koide succession quanta stranded off main; gate the hole that hid them (#334)"
+        },
+        {
           "hash": "89d8873",
           "date": "2026-07-21",
           "subject": "Frontier reads + standing divergence check (#294, #316) (#317)"
@@ -24950,7 +24895,7 @@
     {
       "id": "koide_form_substrate_iteration_5",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_5.md",
-      "cid": "650c03da92081777c06f053301128809e595e8848b74fa967e2c9708cab7902f",
+      "cid": "8455ec02ac3adf436f7fde4cf8afe8c3b1c44a56819f49836ba6b4703a9a47f3",
       "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 5",
       "summary": "**Iteration 5.** Tests candidate 2 (V_4 + dark-state restriction)\nidentified as the most concrete remaining candidate after\niteration 4. Decomposes the 4-component amplitude vector\n`w = (\u221am_A, \u221am_B, \u221am_C, \u221am_D)` into V_4 irreducible representations\nand imposes the dark-state constraint `m_D = 0` to derive a\nconstraint on the observable amplitude vector.",
@@ -25019,6 +24964,11 @@
       ],
       "git": [
         {
+          "hash": "11df457",
+          "date": "2026-07-29",
+          "subject": "Recover the koide succession quanta stranded off main; gate the hole that hid them (#334)"
+        },
+        {
           "hash": "89d8873",
           "date": "2026-07-21",
           "subject": "Frontier reads + standing divergence check (#294, #316) (#317)"
@@ -25038,7 +24988,7 @@
     {
       "id": "koide_form_substrate_iteration_6",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_6.md",
-      "cid": "82470802501dd56e42cadadc486ccb504ff25c51829169c6ffbc4181e057fe8e",
+      "cid": "d8e428c911d2306345cb623c3b7754b11f9e0bad1d9bb80e6afdf5329c384635",
       "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 6",
       "summary": "**Iteration 6.** Tests candidate mechanism 3 from iteration 5: the\ncube identity `q_2\u00b3 = q_2 + 2 q_3` (substrate-derived in\n`mass_sector_closure.md`) as the structural source for the V_4\ntrivial-vs-non-trivial squared-norm ratio `q_3 : MEDIANT`.",
@@ -25047,7 +24997,6 @@
         "discrete_extension_principle",
         "gauge_sector_lovelock",
         "klein_bottle",
-        "koide_form_substrate_iteration_14",
         "koide_form_substrate_iteration_5",
         "mass_sector_closure"
       ],
@@ -25072,10 +25021,6 @@
           "kind": "references"
         },
         {
-          "target": "koide_form_substrate_iteration_14",
-          "kind": "references"
-        },
-        {
           "target": "koide_form_substrate_iteration_5",
           "kind": "references"
         },
@@ -25092,6 +25037,11 @@
       ],
       "git": [
         {
+          "hash": "11df457",
+          "date": "2026-07-29",
+          "subject": "Recover the koide succession quanta stranded off main; gate the hole that hid them (#334)"
+        },
+        {
           "hash": "89d8873",
           "date": "2026-07-21",
           "subject": "Frontier reads + standing divergence check (#294, #316) (#317)"
@@ -25106,7 +25056,7 @@
     {
       "id": "koide_form_substrate_iteration_7",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_7.md",
-      "cid": "dfdac147adaf12674a60a4266edc0efe1e57925ffad3bbb98c4ee16cf0288a87",
+      "cid": "34d36900172e0030aca4e09785aad37d352e251f09bb61addc1b9eef583b5349",
       "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 7",
       "summary": "**Iteration 7. Pivot to a simpler matrix form.** Supersedes the\nV_4 + cube identity + chirality cross-link apparatus of iterations\n4\u20136 with a substantially simpler quadratic-form expression that\nuses only the substrate primitives `q_2 = 2` and `q_3 = 3` without\nany squared, cubed, or sector-cross-link multipliers.",
@@ -25117,7 +25067,6 @@
         "gap2_step4_farey_laplacian",
         "generation_mechanism",
         "klein_bottle",
-        "koide_form_substrate_iteration_14",
         "koide_form_substrate_iteration_6",
         "mass_sector_closure"
       ],
@@ -25150,10 +25099,6 @@
           "kind": "references"
         },
         {
-          "target": "koide_form_substrate_iteration_14",
-          "kind": "references"
-        },
-        {
           "target": "koide_form_substrate_iteration_6",
           "kind": "references"
         },
@@ -25170,6 +25115,11 @@
       ],
       "git": [
         {
+          "hash": "11df457",
+          "date": "2026-07-29",
+          "subject": "Recover the koide succession quanta stranded off main; gate the hole that hid them (#334)"
+        },
+        {
           "hash": "89d8873",
           "date": "2026-07-21",
           "subject": "Frontier reads + standing divergence check (#294, #316) (#317)"
@@ -25184,7 +25134,7 @@
     {
       "id": "koide_form_substrate_iteration_8",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_8.md",
-      "cid": "ad490d84964c263d6492ad4beedabc25a25ee4cd715defa8988f05645624e9ff",
+      "cid": "6073c41c9c921d79a017136a27161183184709f6b6f057e5c6ea6844a9c11b9c",
       "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 8",
       "summary": "**Iteration 8.** Tests reading 1 from iteration 7: derive the\nmatrix `M = q_3 I \u2212 q_2 J` from a substrate-natural quadratic form\non three-generation amplitude space.",
@@ -25258,6 +25208,11 @@
       ],
       "git": [
         {
+          "hash": "11df457",
+          "date": "2026-07-29",
+          "subject": "Recover the koide succession quanta stranded off main; gate the hole that hid them (#334)"
+        },
+        {
           "hash": "89d8873",
           "date": "2026-07-21",
           "subject": "Frontier reads + standing divergence check (#294, #316) (#317)"
@@ -25277,7 +25232,7 @@
     {
       "id": "koide_form_substrate_iteration_9",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_9.md",
-      "cid": "e2d7daef592acebb601c23db12a819b5ae9e7778aa4260df6f4c9f72a8f7d480",
+      "cid": "88c5fad51ab3f4fb79fc2bf37df2435916690772177c3f55a4c3cdbea0ef0ff9",
       "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 9",
       "summary": "**Iteration 9. Path A test: empirical check whether the framework's\nexisting three-generation amplitude apparatus produces the Koide\nconstraint.**",
@@ -25287,7 +25242,6 @@
         "dynamical_tool_audit",
         "generation_mechanism",
         "klein_bottle",
-        "koide_form_substrate_iteration_14",
         "koide_form_substrate_iteration_8",
         "mass_sector_closure",
         "substrate_prediction_selection"
@@ -25317,10 +25271,6 @@
           "kind": "references"
         },
         {
-          "target": "koide_form_substrate_iteration_14",
-          "kind": "references"
-        },
-        {
           "target": "koide_form_substrate_iteration_8",
           "kind": "references"
         },
@@ -25340,6 +25290,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "11df457",
+          "date": "2026-07-29",
+          "subject": "Recover the koide succession quanta stranded off main; gate the hole that hid them (#334)"
+        },
         {
           "hash": "89d8873",
           "date": "2026-07-21",
