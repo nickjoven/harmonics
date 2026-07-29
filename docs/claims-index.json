@@ -1,5 +1,5 @@
 {
- "generated": "cd31a13",
+ "generated": "56d4084",
  "generator": "scripts/build_claims_index.py",
  "ingest": {
   "annotator": null,
@@ -9,16 +9,16 @@
    "unstructured": 190,
    "edges_promoted": 47,
    "references_untyped": 3133,
-   "propositions": 299,
+   "propositions": 298,
    "terms_bound": 110,
    "corroborated": 36,
    "unattributed_values": 52899,
-   "needs_review_depth": 2,
+   "needs_review_depth": 3,
    "reassertion_blocks": 0,
-   "heads_superseded": 5
+   "heads_superseded": 0
   }
  },
- "claim_count": 99,
+ "claim_count": 98,
  "claims": {
   "0256777fe98e154d9133004d3808a72bfa56a5972b4d0b70007d09e55e398af2": {
    "subject": "omega_b",
@@ -1657,23 +1657,6 @@
    "docs": [
     {
      "doc": "higgs_from_tongue_boundary",
-     "frontier": true
-    }
-   ],
-   "assertion_cids": 1,
-   "corroboration": 1,
-   "corroboration_docs": 1,
-   "corroboration_frontier": 1
-  },
-  "a64f0b5fc11ddd7e1907cadc1399f89e81965ce6f22fa67b104a7bbf7adb614f": {
-   "subject": "omega_b",
-   "witness": "0/1",
-   "routes": [
-    "urtext-regex-prefix-v2"
-   ],
-   "docs": [
-    {
-     "doc": "omega_b_residual_phase_a",
      "frontier": true
     }
    ],
