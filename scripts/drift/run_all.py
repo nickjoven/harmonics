@@ -51,6 +51,7 @@ CHECKS = [
     ("fitted-correction linter", "lint_fitted_corrections.py"),
     ("manifest consistency", "check_manifest.py"),
     ("graph orphans", "check_graph_orphans.py"),
+    ("enforced-spine coverage", "check_enforced_coverage.py"),
     ("engine pin gate", "check_engine_pins.py"),
     ("DAG acyclicity", "check_dag_acyclic.py"),
     ("graph sealed-projection", "check_graph_sealed.py"),

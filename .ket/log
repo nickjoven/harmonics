@@ -486,3 +486,30 @@
 2026-07-26T02:12:18Z | put | sync_cost/derivations/down_type_double_cover_phase_d.md -> 58a9a92c36aabe201450695f0117bc8fb49205d85e8058e6cc8bca8d5e673fed
 2026-07-27T22:49:48Z | put | sync_cost/ingest/report.json -> c98818edd02d0f6f857b84708b26904d63a97ec5d2d2ee45eff27657402e6538
 2026-07-27T22:49:48Z | dag:create | 488580e3fc995dd037e6e07b4feb46257d7f50fff0c19895112ec6e157906820
+2026-07-29T21:42:21Z | put | sync_cost/derivations/koide_form_substrate_iteration_2.md -> 845620c21efcab7d8561433187d21e6db9808460637c2397adfbd4096b0ae337
+2026-07-29T21:42:21Z | dag:create | 586c7e8d4ffca259834f32a385be8604845dccb176b8392d539a6db75b0c3293
+2026-07-29T21:42:21Z | put | sync_cost/derivations/koide_form_substrate_iteration_3.md -> b411d75597cac96a0c394b9af60d8c5f689162756ed60169dab7c7061be8ea7b
+2026-07-29T21:42:21Z | dag:create | d2f1dbfe7d493f5860d1963ed0a362ee14bcbb08ac3c2c4ca1b1c11f4c05eda5
+2026-07-29T21:42:21Z | put | sync_cost/derivations/koide_form_substrate_iteration_4.md -> d9463cb894d8345f2816052e9c33ab0d6824b0e160d644d8973c6dc7c42b8f88
+2026-07-29T21:42:21Z | dag:create | 8a4a8e57812a8776315c0a4c155021b9ebf8c5a97ee4843a09076157a1133ea4
+2026-07-29T21:42:21Z | put | sync_cost/derivations/koide_form_substrate_iteration_5.md -> 8455ec02ac3adf436f7fde4cf8afe8c3b1c44a56819f49836ba6b4703a9a47f3
+2026-07-29T21:42:21Z | dag:create | 2fe25749d915e4847ba157ac70302a5969b62114275c7d55162e03d79b6ce902
+2026-07-29T21:42:21Z | put | sync_cost/derivations/koide_form_substrate_iteration_6.md -> d8e428c911d2306345cb623c3b7754b11f9e0bad1d9bb80e6afdf5329c384635
+2026-07-29T21:42:21Z | dag:create | 8da29c6fe0e38e1c4a70f08e3bc65b2a36665255e8cc128a724aa7970c8a7f19
+2026-07-29T21:42:21Z | put | sync_cost/derivations/koide_form_substrate_iteration_7.md -> 34d36900172e0030aca4e09785aad37d352e251f09bb61addc1b9eef583b5349
+2026-07-29T21:42:21Z | dag:create | 00d5a2cc75bf08737c5e93b2f5023c6261187355c87869dd946514c810ba6daf
+2026-07-29T21:42:21Z | put | sync_cost/derivations/koide_form_substrate_iteration_8.md -> 6073c41c9c921d79a017136a27161183184709f6b6f057e5c6ea6844a9c11b9c
+2026-07-29T21:42:21Z | dag:create | 060838b08971b719c1aafe0b245070e2f0e6efc8adc599c8148af88f4f603585
+2026-07-29T21:42:21Z | put | sync_cost/derivations/koide_form_substrate_iteration_9.md -> 88c5fad51ab3f4fb79fc2bf37df2435916690772177c3f55a4c3cdbea0ef0ff9
+2026-07-29T21:42:21Z | dag:create | 1f7dd3c9657967a48098f36b9e3c213f1b935947beb396343e0eb138e825d459
+2026-07-29T21:42:21Z | put | sync_cost/derivations/koide_form_substrate_iteration_10.md -> ae80fe0b0200f1258ae4e7544a143c7b11fb90b64ef3e319814c5795e5b8872e
+2026-07-29T21:42:21Z | dag:create | 5b90bb263f2475b30ec7f619864f5c44d962778e4b2b88f5f964dd2ab4b6e67a
+2026-07-29T21:42:21Z | put | sync_cost/derivations/koide_form_substrate_iteration_11.md -> 1e9b677cf6a092440f090206c9165ea57a3847b85eeb1ce6e0ce604e8ef50573
+2026-07-29T21:42:21Z | dag:create | c2dcd85031304f1e681f4edd9319f1a26dbe6b53e3931c9a87d0c6299280ce5d
+2026-07-29T21:42:21Z | put | sync_cost/derivations/koide_form_substrate_iteration_1.md -> b54cbdab8a1f768c7626077a252753492c55efcf5f2028fa651794aeaf6b1c53
+2026-07-29T21:42:21Z | dag:create | 6540f6d74d787bd46c9589ecb29b443d541de95fcdbf25b81304c25cc36d4887
+2026-07-29T21:42:21Z | put | sync_cost/derivations/koide_form_substrate_iteration_12.md -> 1a7100a97f92b557ef6e3d527badf3e1d799972de68c3ea29acd4420e5d3d7dd
+2026-07-29T21:42:21Z | dag:create | 881f19b20e5b11d61e53ef19ed08321a90ff17c947530994293fe93481cc10fb
+2026-07-29T21:42:21Z | put | sync_cost/derivations/koide_form_substrate_iteration_13.md -> 4763cb5491a372a2dff5c8965560d1f3d12e40100a941215483cc605f7c38c80
+2026-07-29T21:42:21Z | dag:create | 2b9510d1d837a6344deae31b13aac5f1a06f8578b4fcdd6e2d1bcb2c078813ba
+2026-07-29T22:12:54Z | put | sync_cost/successions.jsonl -> 3e09a6bae9e3e450ec5bfa4c926d71f181161de1a9377448422d250923d815f0
