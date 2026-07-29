@@ -1,12 +1,5 @@
 # Koide form substrate derivation — iteration 6
 
-> **Superseded by `koide_form_substrate_iteration_14.md`.** The
-> iteration arc closed as a productive null at iteration 14
-> (#263 ⓾ ruling, 2026-07-19); `K_lepton = 2/3` sits on the
-> empirical shelf. This doc is retained as the historical record
-> of iteration 6. Owner ruling 2026-07-21: the whole arc leaves
-> the default read surface.
-
 ## Status
 
 **Iteration 6.** Tests candidate mechanism 3 from iteration 5: the

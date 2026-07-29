@@ -82,10 +82,16 @@ def main() -> int:
                              f"{committed_weak}, surface asserts strength"))
         if "superseded_by" in meta:
             # basis "declared" means the doc self-declares its supersession
-            # (RULES 0-8 harvest), which is acknowledgment by definition;
-            # this branch exists for future non-declared bases (sealed
-            # SUCCEEDS quanta whose subject doc predates the ruling).
-            if str(meta.get("superseded_basis", "")) != "declared":
+            # (RULES 0-8 harvest), which is acknowledgment by definition.
+            # basis "quantum" is a sealed committed SUCCEEDS declaration in
+            # sync_cost/successions.jsonl — acknowledgment in the envelope,
+            # STRONGER than prose (commitment 8: provenance lives in the
+            # envelope, never in content), so demanding a surface banner on
+            # top would re-litigate the koide arc's banner removal (#319).
+            # This branch remains for genuinely un-acknowledged bases
+            # (e.g. a future inferred supersession).
+            if str(meta.get("superseded_basis", "")) not in (
+                    "declared", "quantum"):
                 successors = meta["superseded_by"]
                 status = meta.get("status_line") or ""
                 if (not any(s in status for s in successors)
