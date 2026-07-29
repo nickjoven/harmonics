@@ -598,6 +598,12 @@ def main(argv=None):
                         help="print human-readable summary (default unless --json)")
     parser.add_argument("--json", action="store_true", dest="as_json",
                         help="print machine-readable JSON result")
+    parser.add_argument("--gate", action="store_true",
+                        help="exit nonzero on missed/extra findings vs the "
+                             "fixtures (requires --fixtures); prints one "
+                             "line unless --report/--json also given. The "
+                             "drift-suite entry point "
+                             "(scripts/drift/check_retrodiction.py).")
     parser.add_argument("--self-test", action="store_true")
     args = parser.parse_args(argv)
 
@@ -626,10 +632,23 @@ def main(argv=None):
 
     if args.as_json:
         print(json.dumps(result, indent=2, sort_keys=True))
-    if args.report or not args.as_json:
+    if args.report or not (args.as_json or args.gate):
         if args.as_json:
             print()
         print_report(result)
+    if args.gate:
+        score = result.get("score")
+        if score is None:
+            print("ERROR: --gate requires --fixtures", file=sys.stderr)
+            return 1
+        bad = len(score["missed"]) + len(score["extra"])
+        if bad:
+            print(f"GATE: retrodiction regression — "
+                  f"missed={score['missed']} extra={score['extra']}",
+                  file=sys.stderr)
+            return bad
+        print(f"OK: retrodiction gate — {len(score['found'])} expected "
+              f"finding(s) reproduced, 0 extras")
     return 0
 
 

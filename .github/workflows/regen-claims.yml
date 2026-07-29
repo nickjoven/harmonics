@@ -61,10 +61,14 @@ env:
   # canon.d intake toolchain — PINNED, not floating. Bumping this rev is
   # a deliberate act: a new canon.d can change CIDs and report shape, so
   # move it only with a PR that re-proves idempotence against the
-  # committed report. intake-route-v2 head (canon.d#13, the route-v2
-  # build that produced the committed baseline; #328 Card 3). If #13
-  # squash-merges, bump to the merge SHA in the same sweep that lands it.
-  CANON_D_REV: 0ab4ba32de998ffb69db9c05dbf2f7c9d164f019
+  # committed report. Convention (2026-07-28): the SHA is the machine
+  # pin (immutable); at adoption the same rev gets an annotated tag
+  # `intake-baseline-YYYY-MM-DD` in canon.d as the human marker that
+  # survives branch cleanup — tags name, SHAs pin. Current: the
+  # canon.d#14 build (value laws for all lexicon subjects) that
+  # produced the committed baseline; bump to the squash SHA + tag when
+  # #14 merges.
+  CANON_D_REV: 4104b61680c5d436ac01484a1f11aa704d9f439d
   # urtext (canonicalizer behind the prose feature) — pinned for the
   # same reason. main HEAD as of 2026-07-23; the local fresh-clone-pair
   # proof reproduced the committed report byte-for-byte with this pair.
