@@ -40,6 +40,13 @@ specific binary; otherwise the tools fall back to `shutil.which("ket")`.
 | 7 | `session_status.py` | One-line substrate snapshot: CAS count, corrupt count, scorecard/bare_k1 sizes, git dirtiness, drift count. Run at session start. |
 | 8 | `check_dag_acyclic.py` | Cycles (strongly-connected components > 1 node) in the derivation `depends_on` graph. **Advisory** — the prose-built graph is cyclic by construction until edges are typed; reports the SCCs as a health signal rather than gating. |
 | 9 | `check_graph_sealed.py` | Graph nodes whose source is unsealed (in the graph, absent from `.ket/log`) or **drifted** (sealed but the file changed since its last put). **Advisory** — reports the sealed-projection coverage % as the signal; promote to gating once the corpus is fully sealed. |
+| 10 | `check_engine_pins.py` | Engine scripts whose current hash disagrees with `engines.lock.json` — a pinned output CID whose producer changed after pinning (#328 Card 5; the #272 stale-pin failure). |
+| 11 | `lint_class_tags.py` | Derivation docs without a self-declared class/status tag. **Advisory** — a coverage signal that self-heals on edit. |
+| 12 | `check_corpus_index.py` | `docs/corpus-index.json` stale against the corpus (generator `--check`). **Advisory** — CI-owned projection, regenerated on merge. |
+| 13 | `check_claims_index.py` | `docs/claims-index.json` stale against the committed ingest report (generator `--check`). **Advisory** — CI-owned; catches the report and projection moving independently. |
+| 14 | `check_nav_orphans.py` | Published pages absent from `docs/nav.json` (minus deliberate orphans). **Advisory**. |
+| 15 | `check_downstream_resolution.py` | Committed support edges landing on weak grounds (superseded or self-declared Class 1) while the citing doc still asserts strength (#294). **Advisory** while its false-positive rate accumulates. |
+| 16 | `check_retrodiction.py` | Retrodiction regression: the committed-layer divergence machinery must still reproduce the #263 ruling pass's findings from frozen fixtures (4 found, 0 extra — harmonics#314). Deterministic, so FATAL from birth. |
 
 ## Running
 
