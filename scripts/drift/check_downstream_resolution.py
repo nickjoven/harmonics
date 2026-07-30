@@ -23,8 +23,13 @@ superseded doc whose surface does not name its successor.
 
 Destination: this becomes a query over sealed claim quanta in the Dolt
 projection once canon.d#6/#11 land; this file is the projection-level
-interim. ADVISORY in run_all.py until a few weeks of false-positive
-data argue for promotion.
+interim. ADVISORY in run_all.py until the false-positive record argues
+for promotion. Promotion criterion (set 2026-07-29, per the gate
+ladder): FATAL after four consecutive weeks of CI runs with zero false
+positives dating from the Card 8 fix (#327, 2026-07-24) — i.e.
+promote on the first run_all touch after 2026-08-21 if the record
+stays clean. One false positive resets the clock and returns the
+predicate to apprenticeship.
 
 Exit code = number of divergent docs (advisory).
 """

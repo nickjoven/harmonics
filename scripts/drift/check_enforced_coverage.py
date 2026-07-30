@@ -43,16 +43,33 @@ def main() -> int:
     }
     log_path = ROOT / ".ket" / "log"
     logged = set()
+    malformed = []
     if log_path.exists():
-        for line in log_path.read_text().splitlines():
+        for n, line in enumerate(log_path.read_text().splitlines(), 1):
             m = PUT_LINE.match(line)
             if m:
                 logged.add(m.group("path"))
+            elif "| put |" in line:
+                # Put-shaped but unparseable — every log READER silently
+                # skips such a line, so without this branch a corrupted
+                # entry simply vanishes from enforcement. Real case
+                # (2026-07-30): `ket put` appends without a trailing-
+                # newline guard, so an append onto a no-LF EOF
+                # concatenated two entries into one unparseable line,
+                # and the sealed path silently left the audited set.
+                malformed.append((n, line[:80]))
 
     absent = sorted(p for p in enforced if not (ROOT / p).exists())
     unsealed = sorted(p for p in enforced - logged if p not in absent)
 
-    if not absent and not unsealed:
+    if malformed:
+        print(f"MALFORMED: {len(malformed)} put-shaped log line(s) no "
+              f"reader can parse")
+        for n, frag in malformed:
+            print(f"  .ket/log:{n}: {frag}")
+        print("  (likely a concatenated append onto a no-newline EOF — "
+              "split the entries; see ket newline-guard issue)")
+    if not absent and not unsealed and not malformed:
         print(f"OK: all {len(enforced)} enforced paths exist and are sealed")
         return 0
     if absent:
@@ -67,7 +84,7 @@ def main() -> int:
         for p in unsealed:
             print(f"  {p}")
         print("  (seal via `KET_HOME=.ket ket put <path>`)")
-    return len(absent) + len(unsealed)
+    return len(absent) + len(unsealed) + len(malformed)
 
 
 if __name__ == "__main__":

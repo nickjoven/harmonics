@@ -256,7 +256,8 @@
 2026-05-28T21:53:12Z | put | sync_cost/derivations/gr_qm_unification_synthesis.md -> 1ca6d1fb797caa452ec16d1268274b14fb630d40ae0c369019a3987dd45fdfb2
 2026-05-28T22:35:48Z | put | sync_cost/derivations/salpeter_gate_disposition.md -> 3938ef6a4d14da56606de8f54fdd5893385a5db7864329659b51802da57682f3
 2026-05-28T22:35:48Z | put | sync_cost/derivations/preferred_basis_dissolution.md -> 4f24ed847e8f886ffa92748b72ae6e3199c441d9f6d81729afdaeaec5a61c7a5
-2026-05-28T23:39:37Z | put | sync_cost/derivations/meaning_of_two_wip.md -> 9fd04088f65d3a3ad0338c3237644c95d278a69f9958a8f34fd084e1bbb286ed2026-05-29T02:32:29Z | put | sync_cost/derivations/ghz_from_substrate.md -> 9406270a9fc6a6be0f9154b1fd1524b02dc8ea5f716ecf095a4fb69aab8b0db9
+2026-05-28T23:39:37Z | put | sync_cost/derivations/meaning_of_two_wip.md -> 9fd04088f65d3a3ad0338c3237644c95d278a69f9958a8f34fd084e1bbb286ed
+2026-05-29T02:32:29Z | put | sync_cost/derivations/ghz_from_substrate.md -> 9406270a9fc6a6be0f9154b1fd1524b02dc8ea5f716ecf095a4fb69aab8b0db9
 2026-05-29T03:54:19Z doc-seal w_state_from_substrate.md cid=50f408a201a13d13de2b379cbf2bae17c158d45109684cb32c9030671b9bbf33
 2026-05-29T05:02:33Z | put | sync_cost/derivations/w_state_from_substrate.md -> 0222dd52f0dc1f1dd31854a1b383f6d54e70c110ddef87fef96f3a031055ffaf
 2026-05-29T05:02:33Z doc-reseal w_state_from_substrate.md (T1a extension: Dicke primitive, boundary mapping)
@@ -315,7 +316,8 @@
 2026-05-30T05:25:13Z | put | sync_cost/derivations/physics_relevance_measurement_catalog.md -> 6a7ad5f362451bcdcafcf1f77200391d0346c3867b7c72cc5cae907625b596df
 2026-05-30T06:10:48Z doc-seal physics_relevance_measurement_catalog.md (B7: physics-relevance × primitive-measurement catalog)
 2026-05-30T07:59:35Z | put | sync_cost/derivations/qm_reframing_programmatic.md -> a51481257996d443b7f62ce6eda5bdfec99be90cc2ba085c94c529bef73ce8c5
-2026-05-30T07:59:35Z doc-seal qm_reframing_programmatic.md (B1: programmatic QM-reframing)2026-05-30T17:25:58Z | put | sync_cost/derivations/koide_form_substrate_iteration_1.md -> b54cbdab8a1f768c7626077a252753492c55efcf5f2028fa651794aeaf6b1c53
+2026-05-30T07:59:35Z doc-seal qm_reframing_programmatic.md (B1: programmatic QM-reframing)
+2026-05-30T17:25:58Z | put | sync_cost/derivations/koide_form_substrate_iteration_1.md -> b54cbdab8a1f768c7626077a252753492c55efcf5f2028fa651794aeaf6b1c53
 2026-05-30T17:25:58Z doc-seal koide_form_substrate_iteration_1.md (Koide gap geometric reformulation)
 2026-05-30T18:06:20Z | put | sync_cost/derivations/koide_form_substrate_iteration_2.md -> 845620c21efcab7d8561433187d21e6db9808460637c2397adfbd4096b0ae337
 2026-05-30T18:06:20Z doc-seal koide_form_substrate_iteration_2.md (candidate 4 ruled out)
@@ -393,7 +395,8 @@
 2026-07-07T01:48:17Z | dag:create | 0d59c6a163e8e02b604d65fa4138a9880f6f8d78fdae2667bd9d68e709e4fc41
 2026-07-07T01:48:42Z | put | sync_cost/derivations/framework_status.md -> 56cb7f66483f3ffa9ff7789b3d52370050055011b0efd0792e4cea8008885c96
 2026-07-07T01:48:42Z | dag:create | ac34c5557079e287815500990f16e9e35967d0fcf2f3d8c81caea279b6327c85
-2026-07-07T01:49:06Z | put | sync_cost/derivations/framework_status.md -> 56cb7f66483f3ffa9ff7789b3d52370050055011b0efd0792e4cea8008885c962026-07-17T18:40:15Z | put | sync_cost/derivations/mediant_derivation.md -> 541f979ea8fb323b0fa677504f664179f131750c9938bf4cef7f72aaa267a597
+2026-07-07T01:49:06Z | put | sync_cost/derivations/framework_status.md -> 56cb7f66483f3ffa9ff7789b3d52370050055011b0efd0792e4cea8008885c96
+2026-07-17T18:40:15Z | put | sync_cost/derivations/mediant_derivation.md -> 541f979ea8fb323b0fa677504f664179f131750c9938bf4cef7f72aaa267a597
 2026-07-17T18:40:15Z | put | sync_cost/derivations/baryon_fraction.md -> 5fe6b2b017cb7ea064819305933460acf121627dcb2b5d40371c9312c986724f
 2026-07-17T18:40:15Z | put | sync_cost/derivations/klein_bottle.md -> 94f5f308f62b5eb86832dc627516a4f0d53b55d546ce7f5434d5fa6afdbf4f20
 2026-07-17T18:40:15Z | put | sync_cost/derivations/omega_b_alpha_beta_closure.md -> 80c32cc449c4cc0d7daad19ee27d940c610b3134c4ed6711b718d96bf8839784
@@ -415,7 +418,8 @@
 2026-07-20T00:42:27Z | put | sync_cost/derivations/boundary_weight.md -> 6a8a647b2e3d7e7e3634073ee3a853282a1dec428b46e995a410966006b09437
 2026-07-20T00:42:27Z | put | sync_cost/derivations/higgs_reframing.md -> f571cf091f2897d05e5fa45bc520a6ec0fcff95d5d81fe17fae36b26ac11d11b
 2026-07-20T00:42:27Z | put | sync_cost/derivations/three_formalizations.md -> 4dcb588e553e93ae78d690297acd3089dbd40fba746b9115229fb38432b844ff
-2026-07-20T00:42:27Z | put | sync_cost/derivations/coupling_scales.md -> edd78e5c91c924ab28d2b2df81d91280a275c5309e7b71f95d6fcc5c3e0da6942026-07-21T04:49:30Z | put | sync_cost/derivations/coupling_scales.md -> f0e6ddf6ddecc9d0b0c87927e33596d96b5076969ab23edf60eec1417575ce59
+2026-07-20T00:42:27Z | put | sync_cost/derivations/coupling_scales.md -> edd78e5c91c924ab28d2b2df81d91280a275c5309e7b71f95d6fcc5c3e0da694
+2026-07-21T04:49:30Z | put | sync_cost/derivations/coupling_scales.md -> f0e6ddf6ddecc9d0b0c87927e33596d96b5076969ab23edf60eec1417575ce59
 2026-07-21T04:49:30Z | put | sync_cost/derivations/higgs_reframing.md -> e0acd0587cfb34d0fa73a0227621295b385f80dde31f682fef85dd092cbce8fe
 2026-07-21T04:48:27Z | put | sync_cost/derivations/depth_connection_nulls.md -> 5e0108737acc8d9883bb74e8d6ac7c0b3dd6f178b55e71239cdffbba7395c6cf
 2026-07-21T04:48:27Z | dag:create | 4393a7c7942ffa5b87c872086af09cbd1cb3cbadfaf4c281b315af211ba1cc97
@@ -515,3 +519,5 @@
 2026-07-29T21:42:21Z | put | sync_cost/derivations/koide_form_substrate_iteration_13.md -> 4763cb5491a372a2dff5c8965560d1f3d12e40100a941215483cc605f7c38c80
 2026-07-29T21:42:21Z | dag:create | 2b9510d1d837a6344deae31b13aac5f1a06f8578b4fcdd6e2d1bcb2c078813ba
 2026-07-29T22:12:54Z | put | sync_cost/successions.jsonl -> 3e09a6bae9e3e450ec5bfa4c926d71f181161de1a9377448422d250923d815f0
+2026-07-30T03:26:36Z | put | sync_cost/ingest/report.json -> ad677b600463dd033692a8a2b503e5b5d9d4d2a9d2841da985db50194148f463
+2026-07-30T03:26:36Z | dag:create | fdbe6619a233fd55b88db5246857d37b9ec6412afe6ca3621ab6df7ba24a5ea7

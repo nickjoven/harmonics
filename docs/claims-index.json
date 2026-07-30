@@ -1,21 +1,21 @@
 {
- "generated": "56d4084",
+ "generated": "d362129",
  "generator": "scripts/build_claims_index.py",
  "ingest": {
   "annotator": null,
   "telemetry": {
    "docs": 326,
    "utterances_sealed": 326,
-   "unstructured": 190,
+   "unstructured": 191,
    "edges_promoted": 47,
-   "references_untyped": 3133,
-   "propositions": 298,
+   "references_untyped": 3122,
+   "propositions": 287,
    "terms_bound": 110,
    "corroborated": 36,
    "unattributed_values": 52899,
    "needs_review_depth": 3,
    "reassertion_blocks": 0,
-   "heads_superseded": 0
+   "heads_superseded": 14
   }
  },
  "claim_count": 98,
@@ -859,61 +859,17 @@
      "frontier": true
     },
     {
-     "doc": "koide_form_substrate_iteration_1",
-     "frontier": false
-    },
-    {
-     "doc": "koide_form_substrate_iteration_10",
-     "frontier": false
-    },
-    {
-     "doc": "koide_form_substrate_iteration_11",
-     "frontier": false
-    },
-    {
-     "doc": "koide_form_substrate_iteration_12",
-     "frontier": false
-    },
-    {
-     "doc": "koide_form_substrate_iteration_13",
-     "frontier": false
-    },
-    {
-     "doc": "koide_form_substrate_iteration_2",
-     "frontier": false
-    },
-    {
-     "doc": "koide_form_substrate_iteration_3",
-     "frontier": false
-    },
-    {
-     "doc": "koide_form_substrate_iteration_4",
-     "frontier": false
-    },
-    {
      "doc": "koide_form_substrate_iteration_5",
-     "frontier": false
-    },
-    {
-     "doc": "koide_form_substrate_iteration_6",
-     "frontier": false
-    },
-    {
-     "doc": "koide_form_substrate_iteration_7",
      "frontier": false
     },
     {
      "doc": "koide_form_substrate_iteration_8",
      "frontier": false
-    },
-    {
-     "doc": "koide_form_substrate_iteration_9",
-     "frontier": false
     }
    ],
-   "assertion_cids": 19,
+   "assertion_cids": 8,
    "corroboration": 6,
-   "corroboration_docs": 19,
+   "corroboration_docs": 8,
    "corroboration_frontier": 6
   },
   "534468169c43b4e6103cda7767c9c5409c6c848c4a8f9874ff5bd1fec03f4987": {
