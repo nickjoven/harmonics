@@ -58,6 +58,9 @@ CHECKS = [
     ("class-tag coverage", "lint_class_tags.py"),
     ("corpus-index freshness", "check_corpus_index.py"),
     ("claims-index freshness", "check_claims_index.py"),
+    ("claim signatures", "check_claim_signatures.py"),
+    ("MANIFEST-claims reconciliation", "check_manifest_claims.py"),
+    ("successions ledger", "check_successions.py"),
     ("nav orphans", "check_nav_orphans.py"),
     ("downstream resolution", "check_downstream_resolution.py"),
     ("retrodiction gate", "check_retrodiction.py"),
@@ -79,14 +82,20 @@ ADVISORY = {
     "lint_class_tags.py",
     "check_corpus_index.py",
     "check_claims_index.py",
+    "check_claim_signatures.py",
+    "check_manifest_claims.py",
     "check_nav_orphans.py",
     "check_downstream_resolution.py",
 }
-# check_retrodiction.py is deliberately NOT advisory: it is deterministic
-# over committed projections + frozen fixtures (scripts/experiments/
-# fixtures_263.json), so its predicate is crisp and its error model is
-# the fixture set — FATAL from birth, unlike the observational checks
-# above that must first earn authority with false-positive data.
+# check_retrodiction.py, check_enforced_coverage.py and
+# check_successions.py are deliberately NOT advisory: each is
+# deterministic over committed state (frozen fixtures, the enforced-path
+# list, the sealed ledger), so the predicate is crisp and the error
+# model exact — FATAL from birth, unlike the observational checks above
+# that must first earn authority with false-positive data.
+# check_claim_signatures.py is the opposite pole: structural false
+# positives (genuine fits rendered decimal), so permanently advisory —
+# a review queue, never a verdict.
 
 
 def main() -> int:

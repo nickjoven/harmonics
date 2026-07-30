@@ -64,11 +64,11 @@ env:
   # committed report. Convention (2026-07-28): the SHA is the machine
   # pin (immutable); at adoption the same rev gets an annotated tag
   # `intake-baseline-YYYY-MM-DD` in canon.d as the human marker that
-  # survives branch cleanup — tags name, SHAs pin. Current: the
-  # canon.d#14 build (value laws for all lexicon subjects) that
-  # produced the committed baseline; bump to the squash SHA + tag when
-  # #14 merges.
-  CANON_D_REV: 4104b61680c5d436ac01484a1f11aa704d9f439d
+  # survives branch cleanup — tags name, SHAs pin. Current:
+  # intake-baseline-2026-07-29 (canon.d#14 squash — value laws for all
+  # lexicon subjects + golden claim-set snapshot; tree-identical to the
+  # pre-merge build that produced the committed baseline).
+  CANON_D_REV: d22cc98c77842e71eddfa70d266d1bcccc239421
   # urtext (canonicalizer behind the prose feature) — pinned for the
   # same reason. main HEAD as of 2026-07-23; the local fresh-clone-pair
   # proof reproduced the committed report byte-for-byte with this pair.

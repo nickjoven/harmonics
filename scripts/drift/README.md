@@ -47,6 +47,10 @@ specific binary; otherwise the tools fall back to `shutil.which("ket")`.
 | 14 | `check_nav_orphans.py` | Published pages absent from `docs/nav.json` (minus deliberate orphans). **Advisory**. |
 | 15 | `check_downstream_resolution.py` | Committed support edges landing on weak grounds (superseded or self-declared Class 1) while the citing doc still asserts strength (#294). **Advisory** while its false-positive rate accumulates. |
 | 16 | `check_retrodiction.py` | Retrodiction regression: the committed-layer divergence machinery must still reproduce the #263 ruling pass's findings from frozen fixtures (4 found, 0 extra — harmonics#314). Deterministic, so FATAL from birth. |
+| 17 | `check_enforced_coverage.py` | Enforced paths missing from the working tree or never sealed (no `put` entry) — invisible to check 4, which audits only logged paths. FATAL; born from the #319 stranding (the successions ledger lost off main for a week under green gates). |
+| 18 | `check_claim_signatures.py` | Singleton claims wearing the junk fingerprint (den-1 or decimal-artifact denominators). **Advisory permanently** — known structural false positives (genuine fits rendered decimal); a ranked review queue, never a verdict. |
+| 19 | `check_manifest_claims.py` | Mapped MANIFEST scorecard values with no frontier corroboration in the claims projection — the two-records-nobody-joins failure shape, mechanized. **Advisory** during apprenticeship; promotion criterion in the docstring. |
+| 20 | `check_successions.py` | Malformed, dangling, or cyclic SUCCEEDS records in the successions ledger — reader-side validation of what declare_succession checks only at write time. FATAL from birth (structural validity, exact error model). |
 
 ## Running
 

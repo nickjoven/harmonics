@@ -497,9 +497,22 @@ def _tool_corpus_health(args: dict) -> dict:
         [sys.executable, str(ROOT / "scripts/drift/session_status.py")],
         capture_output=True, text=True, cwd=str(ROOT), timeout=120,
     )
-    return {"status_line": proc.stdout.strip(),
-            "exit_code": proc.returncode,
-            "stderr": proc.stderr.strip() or None}
+    out = {"status_line": proc.stdout.strip(),
+           "exit_code": proc.returncode,
+           "stderr": proc.stderr.strip() or None}
+    # The claims-layer review queue (#328 follow-through): singleton
+    # claims wearing the junk fingerprint, surfaced here so a session
+    # sees where review attention belongs without running the suite.
+    sig = subprocess.run(
+        [sys.executable,
+         str(ROOT / "scripts/drift/check_claim_signatures.py")],
+        capture_output=True, text=True, cwd=str(ROOT), timeout=60,
+    )
+    out["claim_review_queue"] = {
+        "flagged": sig.returncode,
+        "detail": sig.stdout.strip().splitlines()[1:] or None,
+    }
+    return out
 
 
 TOOLS = [
