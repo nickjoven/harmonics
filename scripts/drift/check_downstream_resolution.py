@@ -31,18 +31,19 @@ promote on the first run_all touch after 2026-08-21 if the record
 stays clean. One false positive resets the clock and returns the
 predicate to apprenticeship.
 
-Exit code = number of divergent docs (advisory).
+Exit code: 0 clean, 1 divergence(s) present (advisory; count in stdout).
 """
 
 import json
-import re
+
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).parent))
+from _status import ACK_RE, CLASS1_RE, CLASS5_RE, DERIVED_RE, self_status
+
 ROOT = Path(__file__).resolve().parents[2]
 
-DERIVED_RE = re.compile(r"\bDerived\b")
-ACK_RE = re.compile(r"rescoped|superseded|historical", re.IGNORECASE)
 COMMITTED_KINDS = {"grounds", "derives"}
 
 
@@ -50,18 +51,10 @@ def main() -> int:
     graph = json.loads((ROOT / "docs/derivation-graph.json").read_text())
     index = json.loads((ROOT / "docs/corpus-index.json").read_text())["docs"]
 
-    # Class membership must be SELF-DECLARED (the doc's own status line or
-    # Status-section bold), never the corpus-index `classes` scrape — that
-    # field records every prose MENTION, so reference docs that discuss
-    # Class 1 (glossary, cross-reference atlas) carry classes=[1,2,4,5]
-    # without being any of them. First audit session's Card 8 was this
-    # false positive (2026-07-24); the audit misdiagnosed it as an edge-
-    # direction bug, but direction was correct — membership was polluted.
-    def self_status(m):
-        return " ".join(filter(None, [m.get("status_line"),
-                                      m.get("status_bold")]))
-
-    CLASS1_RE = re.compile(r"\bClass[ -]?1\b")
+    # Class membership must be SELF-DECLARED (_status.self_status: the
+    # doc's own status line or Status-section bold), never the
+    # corpus-index `classes` scrape — that field records every prose
+    # MENTION (the Card 8 false positive, 2026-07-24).
     weak = {d for d, m in index.items()
             if "superseded_by" in m or CLASS1_RE.search(self_status(m))}
 
@@ -78,7 +71,7 @@ def main() -> int:
             # coupling_scales, this check's motivating doc, is one
             # (review finding 5, 2026-07-21).
             status = self_status(meta)
-            asserts = (re.search(r"\bClass[ -]?5\b", status)
+            asserts = (CLASS5_RE.search(status)
                        or (DERIVED_RE.search(status)
                            and not ACK_RE.search(status)))
             if asserts:

@@ -2,15 +2,17 @@
 """
 Convenience: run all drift checks.
 
-Severity model (revised 2026-05-18):
+Severity model (revised 2026-05-18; membership lives in CHECKS and
+ADVISORY below — the docstring names the PRINCIPLE, not the roster,
+after the 2026-07-30 review found the enumerated lists here three
+revisions stale):
 
-  - FATAL checks gate commits: hashlib linter, fitted-correction
-    linter, manifest consistency, graph orphans, engine pin gate,
-    CAS verification. A nonzero rc contributes to the exit code and,
-    under --stop-on-fail, aborts immediately. These encode judgment
-    or a real integrity violation (e.g. CAS corruption, or an engine
-    script that changed after its output CID was pinned — see
-    check_engine_pins.py, #328 Card 5).
+  - FATAL checks gate commits: a nonzero rc contributes to the exit
+    code and, under --stop-on-fail, aborts immediately. A check earns
+    FATAL when its predicate is crisp and its error model exact
+    (integrity violations, deterministic regressions); observational
+    checks apprentice in ADVISORY until their false-positive record
+    argues for promotion.
 
   - ADVISORY checks never gate: working-tree drift, the
     session-status snapshot, and DAG acyclicity. The acyclicity

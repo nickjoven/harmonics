@@ -50,6 +50,12 @@ def flagged_claims(claims: dict) -> list:
             _, den = witness.split("/")
             den = int(den)
         except ValueError:
+            # A witness that is not `n/m` is itself junk-shaped — a raw
+            # decimal or malformed value is exactly what this queue
+            # exists to surface, so it is flagged, never skipped
+            # (review 2026-07-30: the skip dropped the target class).
+            out.append((c.get("subject"), witness, "unparseable-witness",
+                        cid[:12]))
             continue
         if den == 1 or decimal_artifact(den):
             shape = "den-1" if den == 1 else "decimal-artifact"

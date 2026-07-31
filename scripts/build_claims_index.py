@@ -53,24 +53,43 @@ OUT = ROOT / "docs" / "claims-index.json"
 
 
 def succession_resolver(corpus: dict):
-    """doc_id -> a stable id for its succession chain (union-find over
-    superseded_by edges, path-compressed). Two docs share a chain id iff
-    they are connected through supersession — a draft and its successor,
-    however long the ladder. A doc with no succession edges is its own
-    chain."""
-    parent: dict = {}
+    """doc_id -> its witness-chain representative.
 
-    def find(x: str) -> str:
-        parent.setdefault(x, x)
-        while parent[x] != x:
-            parent[x] = parent[parent[x]]
-            x = parent[x]
-        return x
+    A frontier doc represents itself; a superseded doc collapses into
+    the deterministic min of the frontier heads it resolves to (its
+    live line of work). Cycle-trapped docs with no frontier head
+    collapse into the min of the reachable set.
 
-    for doc, meta in corpus.items():
-        for succ in meta.get("superseded_by", []):
-            parent[find(doc)] = find(succ)
-    return find
+    Refined 2026-07-31 (review): the earlier union-find merged JOINT
+    SUCCESSORS with each other — two independent frontier docs that
+    together displaced one predecessor counted as ONE witness, the
+    silent inverse of the K_lepton=19 inflation this field exists to
+    fix. Under min-head: frontier docs never merge with each other;
+    drafts still collapse into their line (koide 13+1 -> 1 witness);
+    and a lone asserting draft with two successors contributes one
+    witness, not two."""
+    memo: dict = {}
+
+    def heads(doc: str, trail: frozenset = frozenset()) -> tuple:
+        if doc in memo:
+            return memo[doc]
+        succ = corpus.get(doc, {}).get("superseded_by") or []
+        if not succ:
+            memo[doc] = (doc,)
+            return memo[doc]
+        if doc in trail:  # cycle: represent by the members themselves
+            return (doc,)
+        trail = trail | {doc}
+        out = []
+        for s in succ:
+            out.extend(heads(s, trail))
+        memo[doc] = tuple(dict.fromkeys(out)) or (doc,)
+        return memo[doc]
+
+    def chain(doc: str) -> str:
+        return min(heads(doc))
+
+    return chain
 
 
 def build() -> dict:

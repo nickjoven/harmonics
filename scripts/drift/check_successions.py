@@ -63,6 +63,14 @@ def main() -> int:
         if missing:
             violations.append(f"line {n}: missing field(s) {missing}")
             continue
+        if rec["modality"] not in ("committed", "proposed"):
+            # Required-but-never-read was a hole (review 2026-07-30): a
+            # hand-written novel modality would have projected as a
+            # committed supersession.
+            violations.append(
+                f"line {n}: unknown modality {rec['modality']!r} "
+                f"(committed|proposed)")
+            continue
         old = rec["old"]
         new = rec["new"] if isinstance(rec["new"], list) else [rec["new"]]
         for doc in [old, *new]:
@@ -72,13 +80,23 @@ def main() -> int:
         for target in new:
             if target == old:
                 violations.append(f"line {n}: `{old}` succeeds itself")
-            edges.append((old, target))
+        edges.append((old, [t for t in new if t != old]))
 
-    # Acyclicity over the full declared graph (multi-record cycles that
-    # no single write could see).
+    # Cycle detection runs on the FRONTIER edge set: last declaration
+    # per `old` wins — the same semantics the generator, the MCP
+    # overlay, and declare_succession's re-declaration path all use.
+    # Unioning every record ever written diverged from all three
+    # (review 2026-07-30): a legal re-declaration sequence (A→B, then
+    # A→C, then B→A) would have made this FATAL red permanently, over
+    # a frontier that is genuinely acyclic. Historical records stay in
+    # the ledger; only the current frontier must be a DAG.
+    frontier = {}
+    for old, targets in edges:
+        frontier[old] = targets
     adj = {}
-    for a, b in edges:
-        adj.setdefault(a, set()).add(b)
+    for a, targets in frontier.items():
+        for b in targets:
+            adj.setdefault(a, set()).add(b)
     WHITE, GRAY, BLACK = 0, 1, 2
     color = {}
 
@@ -104,7 +122,9 @@ def main() -> int:
         return 1  # never a count: exit status truncates mod 256
     note = f", {other_kinds} non-SUCCEEDS record(s) ignored" \
         if other_kinds else ""
-    print(f"OK: {len(edges)} SUCCEEDS edge(s) well-formed, targets "
+    n_edges = sum(len(t) for t in frontier.values())
+    print(f"OK: {n_edges} frontier SUCCEEDS edge(s) ({len(edges)} "
+          f"record(s)) well-formed, targets "
           f"resolve, acyclic{note}")
     return 0
 

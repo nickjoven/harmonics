@@ -44,6 +44,14 @@ on:
 permissions:
   contents: write
 
+env:
+  # ket toolchain — PINNED (review 2026-07-30: a floating-HEAD clone
+  # under a sticky cache means "whatever ket HEAD was when the cache
+  # last went cold", silently jumping on eviction, in a repo whose
+  # doctrine is "SHAs pin"). Bump deliberately; the cache key carries
+  # the rev so a bump rebuilds.
+  KET_REV: c51ecab6f33fd89a391d29b48a878d3abcd4c0ab
+
 concurrency:
   group: substrate-maintenance
   cancel-in-progress: false
@@ -68,7 +76,7 @@ jobs:
         uses: actions/cache@v5
         with:
           path: ~/.local/bin/ket
-          key: ket-binary-${{ runner.os }}-v1
+          key: ket-binary-${{ runner.os }}-${{ env.KET_REV }}
 
       - name: Install Rust toolchain
         if: steps.ket-cache.outputs.cache-hit != 'true'
@@ -82,13 +90,14 @@ jobs:
             ~/.cargo/registry
             ~/.cargo/git
             /tmp/ket-src/target
-          key: ket-cargo-${{ runner.os }}-v1
+          key: ket-cargo-${{ runner.os }}-${{ env.KET_REV }}
 
       - name: Build ket binary
         if: steps.ket-cache.outputs.cache-hit != 'true'
         run: |
-          git clone --depth 1 https://github.com/nickjoven/ket.git /tmp/ket-src
+          git clone https://github.com/nickjoven/ket.git /tmp/ket-src
           cd /tmp/ket-src
+          git checkout "$KET_REV"
           cargo build --release -p ket-cli
           mkdir -p ~/.local/bin
           cp target/release/ket ~/.local/bin/ket
@@ -129,16 +138,34 @@ jobs:
         run: python3 scripts/drift/run_all.py
         continue-on-error: false
 
-      - name: Commit reconciliation
+      - name: Commit reconciliation (race-safe)
+        # The one bot without a retry loop (review 2026-07-30): four
+        # writers can trigger off the same human push, each in its own
+        # concurrency group, so a sibling's push in our window used to
+        # fail this step non-fast-forward and DROP the reconciliation
+        # until the next qualifying push. Same fetch/reset/regen retry
+        # shape as regen-derivation-graph.yml — reconciliation is a
+        # pure function of the tree, so rebuilding on the new tip is
+        # always safe.
         run: |
-          if [[ -n "$(git status -s .ket/)" ]]; then
-            git config user.name "harmonics-bot"
-            git config user.email "harmonics-bot@users.noreply.github.com"
+          git config user.name "harmonics-bot"
+          git config user.email "harmonics-bot@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            if [[ -z "$(git status -s .ket/)" ]]; then
+              echo "Nothing to reconcile"
+              exit 0
+            fi
             git add .ket/
             COUNT=$(git diff --cached --numstat .ket/ | wc -l)
             git commit -m "bot: reconcile substrate drift ($COUNT entries)"
-            git push
-            echo "Pushed reconciliation commit"
-          else
-            echo "Nothing to reconcile"
-          fi
+            if git push; then
+              echo "Pushed reconciliation commit (attempt $attempt)"
+              exit 0
+            fi
+            echo "::warning::push rejected (attempt $attempt); syncing and re-reconciling"
+            git fetch origin main
+            git reset --hard FETCH_HEAD
+            python3 scripts/maintenance/reconcile_substrate.py || true
+          done
+          echo "::error::could not push reconciliation after 5 attempts"
+          exit 1

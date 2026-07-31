@@ -80,7 +80,10 @@ STATE_RANK = {GROUNDED: 2, PROVISIONAL: 1, UNGROUNDED: 0}
 # (INDEX, ...) collide with ordinary prose.
 MIN_ANCHOR_STEM = 6
 
-DERIVED_RE = re.compile(r"\bDerived\b")  # case-sensitive, standalone
+DERIVED_RE = re.compile(r"\bDerived\b")  # case-sensitive, standalone.
+# Deliberately a LOCAL copy, not scripts/drift/_status.py's: this
+# predicate is pinned by fixtures_263.json and gated FATALly, so it
+# moves only with a fixture re-proof (see _status.py).
 
 
 def load_json(path: Path):

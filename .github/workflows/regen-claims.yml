@@ -75,6 +75,10 @@ env:
   URTEXT_REV: c78f3a07ad59bfad3212917642410e7ab015e916
   # The attestation identity CI ingests under (see annotator note above).
   CI_ANNOTATOR: harmonics-ci
+  # ket toolchain — PINNED like everything else here (review 2026-07-30:
+  # a floating-HEAD clone under a sticky cache silently jumps on
+  # eviction). Bump deliberately; the cache key carries the rev.
+  KET_REV: c51ecab6f33fd89a391d29b48a878d3abcd4c0ab
 
 jobs:
   regen:
@@ -133,7 +137,7 @@ jobs:
         uses: actions/cache@v5
         with:
           path: ~/.local/bin/ket
-          key: ket-binary-${{ runner.os }}-v1
+          key: ket-binary-${{ runner.os }}-${{ env.KET_REV }}
 
       - name: Install Rust toolchain (ket build)
         if: steps.ket-cache.outputs.cache-hit != 'true'
@@ -142,8 +146,9 @@ jobs:
       - name: Build ket binary
         if: steps.ket-cache.outputs.cache-hit != 'true'
         run: |
-          git clone --depth 1 https://github.com/nickjoven/ket.git /tmp/ket-src
+          git clone https://github.com/nickjoven/ket.git /tmp/ket-src
           cd /tmp/ket-src
+          git checkout "$KET_REV"
           cargo build --release -p ket-cli
           mkdir -p ~/.local/bin
           cp target/release/ket ~/.local/bin/ket
