@@ -67,7 +67,10 @@ def _resolve_source_id(name: str) -> str:
     """Map a scorecard source to a derivation-graph node id."""
     if name.endswith(".md"):
         name = name[:-3]
-    # D-numbers can't be resolved without INDEX.md — let the
+    # D-numbers can't be resolved without INDEX.md here; the coverage
+    # hole this leaves (a D-only scorecard row escaping the Class-1/3
+    # checks) is gated at check_manifest.py, where an unresolved
+    # D-number is a VIOLATION since 2026-07-31 — let the
     # missing-node check catch them.
     return name
 
@@ -84,7 +87,7 @@ def _class_1_3_files(path: Path) -> set[str]:
             current = int(m.group(1))
             continue
         if current in (1, 3):
-            for fn in re.findall(r"`([a-z_0-9]+\.md)`", line):
+            for fn in re.findall(r"`([A-Za-z_0-9]+\.md)`", line):
                 files.add(fn[:-3])  # strip .md to match graph ids
     # Aggregator/status docs mentioned in a Class 1/3 entry are
     # cross-references, not withdrawn content — never a bad dep target.

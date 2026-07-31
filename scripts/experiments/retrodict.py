@@ -80,7 +80,10 @@ STATE_RANK = {GROUNDED: 2, PROVISIONAL: 1, UNGROUNDED: 0}
 # (INDEX, ...) collide with ordinary prose.
 MIN_ANCHOR_STEM = 6
 
-DERIVED_RE = re.compile(r"\bDerived\b")  # case-sensitive, standalone
+DERIVED_RE = re.compile(r"\bDerived\b")  # case-sensitive, standalone.
+# Deliberately a LOCAL copy, not scripts/drift/_status.py's: this
+# predicate is pinned by fixtures_263.json and gated FATALly, so it
+# moves only with a fixture re-proof (see _status.py).
 
 
 def load_json(path: Path):
@@ -646,7 +649,9 @@ def main(argv=None):
             print(f"GATE: retrodiction regression — "
                   f"missed={score['missed']} extra={score['extra']}",
                   file=sys.stderr)
-            return bad
+            # never a count: exit status truncates mod 256, and with 325
+            # nodes a total regression could reach exactly 256 → "pass"
+            return 1
         print(f"OK: retrodiction gate — {len(score['found'])} expected "
               f"finding(s) reproduced, 0 extras")
     return 0

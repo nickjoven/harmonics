@@ -47,6 +47,9 @@ jobs:
           python-version: "3.11"
 
       - name: Sweep
+        # shell: bash adds pipefail; without it the pipeline's status is
+        # tee's (always 0) and a crash mid-sweep reports success.
+        shell: bash
         run: |
           ARGS=""
           if [ "${{ inputs.dry_run }}" != "true" ]; then

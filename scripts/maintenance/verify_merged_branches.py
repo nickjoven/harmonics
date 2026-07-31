@@ -46,9 +46,19 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 def git(*args: str) -> str:
-    return subprocess.run(
+    """Run git; RAISE on failure. Deletion decisions must never run on
+    a silently-failed command: the review (2026-07-30) found a failed
+    `log --format=%ct` fell through to epoch 0, which read as a
+    ~20,000-day-old branch and SATISFIED the min-age safety guard —
+    fail-old where the guard needed fail-young."""
+    proc = subprocess.run(
         ["git", "-C", str(ROOT), *args], capture_output=True, text=True
-    ).stdout
+    )
+    if proc.returncode != 0:
+        raise RuntimeError(
+            f"git {' '.join(args)} failed (rc {proc.returncode}): "
+            f"{proc.stderr.strip()[:200]}")
+    return proc.stdout
 
 
 def open_pr_heads() -> set:
@@ -132,7 +142,13 @@ def main() -> int:
                 problems.append("empty diff vs merge-base")
 
         tip = git("rev-parse", ref).strip()
-        age_days = (now - int(git("log", "-1", "--format=%ct", ref).strip() or 0)) / 86400
+        # An unreadable timestamp fails YOUNG (age 0, guard refuses to
+        # delete), never old — see git()'s docstring.
+        try:
+            ts = int(git("log", "-1", "--format=%ct", ref).strip())
+        except (RuntimeError, ValueError):
+            ts = now
+        age_days = (now - ts) / 86400
         entry = {"branch": name, "tip": tip, "age_days": round(age_days, 1),
                  "problems": problems[:5], "cas_only": cas_only[:5],
                  "pr_head": name in protected}

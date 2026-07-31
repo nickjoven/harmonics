@@ -42,20 +42,21 @@ KET = os.environ.get("KET_BIN", "ket")
 
 sys.path.insert(0, str(ROOT / "scripts" / "drift"))
 from _hash import hash_file, HashingUnavailable  # noqa: E402
+from _ketlog import read_log  # noqa: E402  (the one put-line grammar)
 
 
-PUT = re.compile(
-    r"^\S+\s+\|\s+put\s+\|\s+(?P<path>\S[^\n]*?)\s+->\s+(?P<cid>[0-9a-f]{64})\s*$"
-)
 DAG = re.compile(r"^\S+\s+\|\s+dag:create\s+\|\s+(?P<cid>[0-9a-f]{64})\s*$")
 
 
 def find_drifted() -> list[tuple[str, str, str]]:
-    last_put: dict[str, str] = {}
-    for line in LOG.read_text().splitlines():
-        m = PUT.match(line)
-        if m and m.group("path") != "-":
-            last_put[m.group("path")] = m.group("cid")
+    view = read_log(LOG)
+    for n, frag in view.malformed:
+        # A malformed line hides entries from EVERY reader; the healer
+        # must not heal quietly over it (check_enforced_coverage FATALs
+        # on the same condition).
+        print(f"WARNING: unparseable put-shaped log line {n}: {frag}",
+              file=sys.stderr)
+    last_put = view.last_cid
 
     drifted = []
     for path, declared in last_put.items():

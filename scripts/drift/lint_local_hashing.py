@@ -57,7 +57,12 @@ def main() -> int:
                 continue
             try:
                 text = path.read_text(errors="ignore")
-            except Exception:
+            except Exception as e:
+                # Uncovered is not clean (review 2026-07-30): a file
+                # this FATAL linter cannot read leaves hashlib usage
+                # unexamined — flag it as a finding.
+                findings.append((path.relative_to(root), 0,
+                                 f"UNREADABLE: {e}"))
                 continue
             for i, line in enumerate(text.splitlines(), 1):
                 if any(p.search(line) for p in SUSPECT_PATTERNS):

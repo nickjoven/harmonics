@@ -28,6 +28,7 @@ the server is per-session, so staleness tracks the working tree.
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -156,6 +157,11 @@ def _tool_doc_get(args: dict) -> dict:
             "classes": meta["classes"],
             "coverage": meta["coverage"],
             "status_line": meta["status_line"],
+            # Section-style statuses ('## Status' + bold verdict) have
+            # status_line: null and live in status_bold — the entire
+            # quantum-superseded koide family reads blank without it
+            # (review 2026-07-30).
+            "status_bold": meta.get("status_bold"),
             "d_numbers": meta["d_numbers"],
         })
         if "superseded_by" in meta:
@@ -346,7 +352,12 @@ def _tool_resolve(args: dict) -> dict:
         out["basis"] = index[chain[0]].get("superseded_basis")
     if len(heads) == 1:
         head_meta = index.get(heads[0], {})
-        out["head_status_line"] = head_meta.get("status_line")
+        # status_line falls back to status_bold: section-style statuses
+        # have no inline line, and a null here on exactly the frontier
+        # head the caller asked about is information loss (review
+        # 2026-07-30).
+        out["head_status_line"] = (head_meta.get("status_line")
+                                   or head_meta.get("status_bold"))
         out["head_classes"] = head_meta.get("classes")
     return out
 
@@ -377,8 +388,30 @@ def _tool_claim_search(args: dict) -> dict:
             "corroboration_frontier": c["corroboration_frontier"],
         })
     hits.sort(key=lambda h: -h["corroboration_frontier"])
-    return {"count": len(hits), "hits": hits[:25],
-            "truncated": len(hits) > 25}
+    out = {"count": len(hits), "hits": hits[:25],
+           "truncated": len(hits) > 25}
+    stale = _claims_staleness_note()
+    if stale:
+        out["staleness_note"] = stale
+    return out
+
+
+def _claims_staleness_note():
+    """The claims layer has no read-your-write overlay (its frontier
+    fields bake in at generation), so a succession declared this
+    session is visible in doc_get/resolve but not here until CI
+    regenerates — say so instead of silently disagreeing with the
+    doc-side tools (review 2026-07-30)."""
+    try:
+        ci = ROOT / "docs" / "claims-index.json"
+        if (SUCCESSIONS_LEDGER.exists() and ci.exists()
+                and SUCCESSIONS_LEDGER.stat().st_mtime > ci.stat().st_mtime):
+            return ("successions have been declared since this projection "
+                    "was generated; frontier/corroboration fields may lag "
+                    "until CI regenerates (doc_get/resolve are live)")
+    except OSError:
+        pass
+    return None
 
 
 def _tool_claim_get(args: dict) -> dict:
@@ -393,6 +426,9 @@ def _tool_claim_get(args: dict) -> dict:
     out = {"proposition_cid": full, **claims[full]}
     out["superseded_supporters"] = [
         d["doc"] for d in out["docs"] if not d["frontier"]]
+    stale = _claims_staleness_note()
+    if stale:
+        out["staleness_note"] = stale
     return out
 
 
@@ -417,6 +453,17 @@ def _tool_declare_succession(args: dict) -> dict:
         return {"error": f"unknown doc: {old!r}"}
     if not new or any(t not in index for t in new):
         return {"error": f"unknown successor(s): {new!r}"}
+    # Disk must agree with the index: the FATAL ledger validator
+    # (check_successions) checks sync_cost/derivations/<id>.md existence,
+    # and the ledger is append-only, so writing a record the validator
+    # rejects would be a permanent red (review 2026-07-30 — the two
+    # tools validated against different universes).
+    missing = [d for d in [old, *new]
+               if not (ROOT / "sync_cost" / "derivations" / f"{d}.md").exists()]
+    if missing:
+        return {"error": f"doc(s) in the index but not on disk (stale "
+                         f"index?): {missing!r} — refusing a record the "
+                         f"ledger validator would permanently reject"}
     if old in new:
         return {"error": "a doc cannot succeed itself"}
     warnings = []
@@ -462,7 +509,12 @@ def _tool_declare_succession(args: dict) -> dict:
     if not os.environ.get("HARMONICS_MCP_NO_SEAL"):
         try:
             proc = subprocess.run(
-                ["ket", "put", str(SUCCESSIONS_LEDGER.relative_to(ROOT))],
+                # KET_BIN honored like every other ket caller in the
+                # repo (reconcile_substrate, post_edit_regen); the bare
+                # "ket" fallback used to fail on boxes where ket lives
+                # only behind KET_BIN (review 2026-07-30).
+                [os.environ.get("KET_BIN", "ket"), "put",
+                 str(SUCCESSIONS_LEDGER.relative_to(ROOT))],
                 capture_output=True, text=True, cwd=str(ROOT),
                 env={**os.environ,
                      "KET_HOME": os.environ.get("KET_HOME", ".ket")},
@@ -503,15 +555,28 @@ def _tool_corpus_health(args: dict) -> dict:
     # The claims-layer review queue (#328 follow-through): singleton
     # claims wearing the junk fingerprint, surfaced here so a session
     # sees where review attention belongs without running the suite.
-    sig = subprocess.run(
-        [sys.executable,
-         str(ROOT / "scripts/drift/check_claim_signatures.py")],
-        capture_output=True, text=True, cwd=str(ROOT), timeout=60,
-    )
-    out["claim_review_queue"] = {
-        "flagged": sig.returncode,
-        "detail": sig.stdout.strip().splitlines()[1:] or None,
-    }
+    # The count is parsed from stdout, never taken from the exit code:
+    # exit status truncates mod 256, and a crashed check would have
+    # masqueraded as "1 flagged claim" (review 2026-07-30).
+    try:
+        sig = subprocess.run(
+            [sys.executable,
+             str(ROOT / "scripts/drift/check_claim_signatures.py")],
+            capture_output=True, text=True, cwd=str(ROOT), timeout=60,
+        )
+        lines = sig.stdout.strip().splitlines()
+        m = re.match(r"NOTE: (\d+) singleton", lines[0]) if lines else None
+        if m:
+            queue = {"flagged": int(m.group(1)), "detail": lines[1:]}
+        elif lines and lines[0].startswith("OK:"):
+            queue = {"flagged": 0, "detail": None}
+        else:
+            queue = {"flagged": None,
+                     "error": (sig.stderr.strip() or sig.stdout.strip()
+                               or f"rc {sig.returncode}")[:300]}
+    except subprocess.TimeoutExpired:
+        queue = {"flagged": None, "error": "signature check timed out"}
+    out["claim_review_queue"] = queue
     return out
 
 

@@ -46,7 +46,17 @@ def main() -> int:
     lock = R.load_lock()
     pins, scripts = lock["pins"], lock["scripts"]
     if not pins:
-        print("engine pin gate: no pinned engines; nothing to check.")
+        # An empty pin set while engines exist is a DISARMED gate, not a
+        # clean one: a deleted or key-renamed engines.lock.json used to
+        # print "nothing to check" and pass (review 2026-07-30). A repo
+        # genuinely without engines still passes.
+        if engines:
+            print(f"engine pin gate: {len(engines)} engine(s) registered "
+                  f"but ZERO pins loaded — engines.lock.json missing, "
+                  f"unreadable, or key-renamed. A vanished lock must not "
+                  f"read as a pass.")
+            return 1
+        print("engine pin gate: no engines registered; nothing to check.")
         return 0
 
     stale: list[tuple[str, str]] = []

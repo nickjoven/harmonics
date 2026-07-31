@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Tool #8: SPINE.yml structural gate + regen-no-diff check.
+Tool #21: SPINE.yml structural gate + regen-no-diff check.
 
 SPINE.yml is the declarative backbone — each entry is a typed edge
 (based-on premises → subject, or subject inherits-from source) carrying

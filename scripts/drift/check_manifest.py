@@ -32,15 +32,20 @@ except ImportError:
 
 
 # Tokens in a markdown's leading lines that signal it's no longer
-# authoritative as a scorecard source.
+# authoritative as a scorecard source. Class tags are matched as
+# regexes because the corpus's accepted spellings include "Class-1"
+# (lint_class_tags's grammar); a plain substring missed the hyphenated
+# form (review 2026-07-30).
 RETRACTION_TOKENS = (
     "declined",
     "retracted",
     "withdrawn",
     "ruled out",
-    "Class 1",  # numerology confirmed
-    "Class 3",  # numerology by association
     "honest-null",
+)
+RETRACTION_RES = (
+    re.compile(r"\bClass[ -]?1\b"),  # numerology confirmed
+    re.compile(r"\bClass[ -]?3\b"),  # numerology by association
 )
 
 
@@ -49,8 +54,11 @@ def _looks_retracted(md_path: Path, max_scan_lines: int = 80) -> list[str]:
     if not md_path.exists():
         return []
     text = md_path.read_text()
-    head = "\n".join(text.splitlines()[:max_scan_lines]).lower()
-    return [t for t in RETRACTION_TOKENS if t.lower() in head]
+    head_raw = "\n".join(text.splitlines()[:max_scan_lines])
+    head = head_raw.lower()
+    hits = [t for t in RETRACTION_TOKENS if t.lower() in head]
+    hits += [r.pattern for r in RETRACTION_RES if r.search(head_raw)]
+    return hits
 
 
 def _load_index(deriv_dir: Path) -> dict[str, str]:
@@ -66,7 +74,7 @@ def _load_index(deriv_dir: Path) -> dict[str, str]:
     text = index_path.read_text()
     mapping: dict[str, str] = {}
     row_re = re.compile(
-        r"^\|\s*(D\d+)\s*\|\s*\[`?([a-z_0-9]+\.(?:md|py))`?\]",
+        r"^\|\s*(D\d+)\s*\|\s*\[`?([A-Za-z_0-9]+\.(?:md|py))`?\]",
         re.MULTILINE,
     )
     for dnum, fname in row_re.findall(text):
@@ -141,7 +149,7 @@ def main() -> int:
             current_class = int(m.group(1))
             continue
         if current_class in (1, 3) and _CARRIER_LINE.match(line):
-            for fn in re.findall(r"`([a-z_0-9]+\.md)`", line):
+            for fn in re.findall(r"`([A-Za-z_0-9]+\.md)`", line):
                 class_1_3_files.add(fn)
 
     d_index = _load_index(deriv_dir)
@@ -178,16 +186,17 @@ def main() -> int:
                 )
 
     if unresolved_dnums:
-        print(
-            f"NOTE: {len(unresolved_dnums)} scorecard D-number(s) not resolved "
-            f"by sync_cost/derivations/INDEX.md:"
-        )
-        for ref in unresolved_dnums[:3]:
-            print(f"  {ref}")
-        if len(unresolved_dnums) > 3:
-            print(f"  ... and {len(unresolved_dnums) - 3} more")
-        print("Add a row for each to INDEX.md's mapping table.")
-        print()
+        # A violation, not a NOTE (review 2026-07-30): most scorecard
+        # rows are D-only, so an unresolved D-number silently exempts
+        # the row from every Class-1/3 and retraction check — an
+        # INDEX.md table reformat could recreate the founding
+        # weinberg-class failure with all gates green.
+        for ref in unresolved_dnums:
+            violations.append(
+                f"{ref}: scorecard D-number unresolved by "
+                f"sync_cost/derivations/INDEX.md — the row is invisible "
+                f"to the Class-1/3 and retraction checks until mapped"
+            )
 
     if cross_repo_refs:
         print(f"NOTE: {len(cross_repo_refs)} cross-repo source(s) (federation):")

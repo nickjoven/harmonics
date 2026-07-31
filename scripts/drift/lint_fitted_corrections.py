@@ -64,7 +64,10 @@ WATCHED_DIRS = ("sync_cost", "docs", "scripts", "README.md", "RESULTS.md", "MANI
 
 # Skip scratch/exploratory directories — those contain failed
 # hypotheses and intentional dead ends.
-SKIP_PATH_PARTS = ("/scratch/", "/data/")
+# Matched against the REPO-RELATIVE path, never the absolute one: a
+# checkout under /data/nick/harmonics used to skip every file and pass
+# vacuously (review 2026-07-30).
+SKIP_PATH_PARTS = ("scratch/", "data/")
 
 # Allowlist: specific files whose matches are known-legit enumeration
 # tables (scanning many candidate expressions against a target), not
@@ -104,16 +107,17 @@ def main() -> int:
                 candidates.extend(p.rglob(f"*{ext}"))
 
     unmarked: list[tuple[Path, int, str, str]] = []
+    unreadable: list[str] = []
     for path in sorted(set(candidates)):
-        str_path = str(path)
-        if any(skip in str_path for skip in SKIP_PATH_PARTS):
-            continue
         rel_path = path.relative_to(root).as_posix() if path.is_absolute() else path.as_posix()
+        if any(skip in rel_path for skip in SKIP_PATH_PARTS):
+            continue
         if any(rel_path.endswith(allow) or rel_path == allow for allow, _ in FILE_ALLOWLIST):
             continue
         try:
             text = path.read_text(errors="ignore")
-        except Exception:
+        except Exception as e:
+            unreadable.append(f"{rel_path}: {e}")
             continue
         lines = text.splitlines()
         for i, line in enumerate(lines):
@@ -122,6 +126,12 @@ def main() -> int:
                     if not _has_retraction_nearby(lines, i):
                         unmarked.append((path.relative_to(root), i + 1, pat.pattern, line.strip()))
 
+    if unreadable:
+        # A file this linter cannot read is uncovered, not clean —
+        # report it (review 2026-07-30: silent skip in a FATAL linter).
+        print(f"UNREADABLE (coverage gap): {len(unreadable)} file(s)")
+        for u in unreadable:
+            print(f"  {u}")
     if unmarked:
         print(f"Unmarked fitted corrections: {len(unmarked)} occurrence(s)")
         for rel, i, pat, snippet in unmarked:
@@ -132,6 +142,8 @@ def main() -> int:
         print("or (b) remove the correction and mark it retracted.")
         return 1
 
+    if unreadable:
+        return 1
     print(f"OK: scanned {len(candidates)} files, 0 unmarked fitted corrections")
     return 0
 
