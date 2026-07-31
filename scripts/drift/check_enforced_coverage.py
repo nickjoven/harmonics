@@ -1,34 +1,34 @@
 #!/usr/bin/env python3
 """
-Check: enforced-spine coverage (FATAL).
+Check: enforced-spine coverage AND currency (FATAL).
 
-Every path in enforced_paths.txt must (a) exist in the working tree and
-(b) have at least one `put` entry in .ket/log. check_working_tree.py
-audits drift only for paths that HAVE a log entry, so an enforced path
-with no entry at all is invisible to it — and the whole check is
-advisory besides.
+Every path in enforced_paths.txt must (a) exist in the working tree,
+(b) have at least one parseable `put` entry in .ket/log, and (c) hash
+to its last-sealed CID. Plus (d): no put-shaped log line may be
+unparseable — a malformed line hides entries from EVERY reader, which
+is how the 2026-07-30 concatenation corruption survived five of them.
 
-Born from a real loss (2026-07-29): sync_cost/successions.jsonl — the
-koide arc's 13 committed SUCCEEDS declarations, an owner ruling — was
-enrolled in enforced_paths.txt, but the commit carrying the file and
-its seal (#319) merged into a side branch (provenance-envelope) that
-never reached main. For a week, main declared the ledger enforced
-while not containing it, and every gate ran green over the absence.
-The predicate here is crisp (path exists, log names it) and the error
-model is exact, so per the gate ladder this is FATAL from birth.
+History: born 2026-07-29 from the #319 stranding (an enforced path
+lost off main for a week under green gates) covering only (a)+(b).
+The 2026-07-30 review then found the spine's core documented
+invariant — "an edit that isn't re-`put` blocks a commit" — was
+enforced by NO FATAL check anywhere (check_working_tree is advisory),
+so (c) moved here: enforced-spine drift now gates. Retrieval-tier
+drift stays advisory in check_working_tree, by design.
 
-Exit code: number of enforced paths missing from tree or log.
+Exit code: 0 clean, 1 violation(s) — never a count (POSIX truncates
+exit status mod 256; 256 violations would read as success).
 """
 
-import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).parent))
+from _hash import hash_file, HashingUnavailable
+from _ketlog import read_log
+
 ROOT = Path(__file__).resolve().parents[2]
 ENFORCED = Path(__file__).resolve().parent / "enforced_paths.txt"
-PUT_LINE = re.compile(
-    r"^\S+\s+\|\s+put\s+\|\s+(?P<path>\S[^\n]*?)\s+->\s+[0-9a-f]{64}\s*$"
-)
 
 
 def main() -> int:
@@ -42,36 +42,34 @@ def main() -> int:
         if ln.strip() and not ln.lstrip().startswith("#")
     }
     log_path = ROOT / ".ket" / "log"
-    logged = set()
-    malformed = []
-    if log_path.exists():
-        for n, line in enumerate(log_path.read_text().splitlines(), 1):
-            m = PUT_LINE.match(line)
-            if m:
-                logged.add(m.group("path"))
-            elif "| put |" in line:
-                # Put-shaped but unparseable — every log READER silently
-                # skips such a line, so without this branch a corrupted
-                # entry simply vanishes from enforcement. Real case
-                # (2026-07-30): `ket put` appends without a trailing-
-                # newline guard, so an append onto a no-LF EOF
-                # concatenated two entries into one unparseable line,
-                # and the sealed path silently left the audited set.
-                malformed.append((n, line[:80]))
+    view = read_log(log_path) if log_path.exists() else None
+    last_cid = view.last_cid if view else {}
+    malformed = view.malformed if view else []
 
     absent = sorted(p for p in enforced if not (ROOT / p).exists())
-    unsealed = sorted(p for p in enforced - logged if p not in absent)
+    unsealed = sorted(p for p in enforced - set(last_cid)
+                      if p not in absent)
+    drifted = []
+    try:
+        for p in sorted(enforced - set(absent) - set(unsealed)):
+            actual = hash_file(ROOT / p)
+            if actual != last_cid[p]:
+                drifted.append((p, last_cid[p][:12], actual[:12]))
+    except HashingUnavailable as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 2
 
+    if not (absent or unsealed or drifted or malformed):
+        print(f"OK: all {len(enforced)} enforced paths exist, are "
+              f"sealed, and are current")
+        return 0
     if malformed:
         print(f"MALFORMED: {len(malformed)} put-shaped log line(s) no "
               f"reader can parse")
         for n, frag in malformed:
             print(f"  .ket/log:{n}: {frag}")
         print("  (likely a concatenated append onto a no-newline EOF — "
-              "split the entries; see ket newline-guard issue)")
-    if not absent and not unsealed and not malformed:
-        print(f"OK: all {len(enforced)} enforced paths exist and are sealed")
-        return 0
+              "split the entries; see ket#18)")
     if absent:
         print(f"MISSING from working tree: {len(absent)} enforced path(s)")
         for p in absent:
@@ -84,7 +82,14 @@ def main() -> int:
         for p in unsealed:
             print(f"  {p}")
         print("  (seal via `KET_HOME=.ket ket put <path>`)")
-    return len(absent) + len(unsealed) + len(malformed)
+    if drifted:
+        print(f"DRIFTED: {len(drifted)} enforced path(s) edited without "
+              f"re-sealing")
+        for p, declared, actual in drifted:
+            print(f"  {p}  declared {declared}  actual {actual}")
+        print("  (re-seal via `KET_HOME=.ket ket put <path>` — the "
+              "spine's core invariant: an un-resealed edit blocks)")
+    return 1
 
 
 if __name__ == "__main__":

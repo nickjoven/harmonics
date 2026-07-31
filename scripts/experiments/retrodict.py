@@ -646,7 +646,9 @@ def main(argv=None):
             print(f"GATE: retrodiction regression — "
                   f"missed={score['missed']} extra={score['extra']}",
                   file=sys.stderr)
-            return bad
+            # never a count: exit status truncates mod 256, and with 325
+            # nodes a total regression could reach exactly 256 → "pass"
+            return 1
         print(f"OK: retrodiction gate — {len(score['found'])} expected "
               f"finding(s) reproduced, 0 extras")
     return 0

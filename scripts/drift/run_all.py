@@ -108,17 +108,21 @@ def main() -> int:
         path = SCRIPT_DIR / script
         print(f"\n=== {label} ===")
         r = subprocess.run([sys.executable, str(path)], check=False)
+        # Normalize: a signal-killed check returns a NEGATIVE code,
+        # which max() would treat as passing (review 2026-07-30) — any
+        # nonzero, either sign, is a failure; 2 stays the env-error tier.
+        rc = 0 if r.returncode == 0 else (2 if r.returncode == 2 else 1)
         if script in ADVISORY:
-            if r.returncode != 0:
+            if rc != 0:
                 print(
                     f"(advisory: {label} rc {r.returncode} — not gating; "
                     f"self-heals on edit, reconciled in CI)"
                 )
             continue
-        worst = max(worst, r.returncode)
-        if args.stop_on_fail and r.returncode != 0:
+        worst = max(worst, rc)
+        if args.stop_on_fail and rc != 0:
             print(f"\nstop-on-fail: aborting after {label} (rc {r.returncode})")
-            return r.returncode
+            return rc
     print(f"\n=== all checks done; worst rc: {worst} ===")
     return worst
 

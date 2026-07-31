@@ -28,6 +28,7 @@ the server is per-session, so staleness tracks the working tree.
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -503,15 +504,28 @@ def _tool_corpus_health(args: dict) -> dict:
     # The claims-layer review queue (#328 follow-through): singleton
     # claims wearing the junk fingerprint, surfaced here so a session
     # sees where review attention belongs without running the suite.
-    sig = subprocess.run(
-        [sys.executable,
-         str(ROOT / "scripts/drift/check_claim_signatures.py")],
-        capture_output=True, text=True, cwd=str(ROOT), timeout=60,
-    )
-    out["claim_review_queue"] = {
-        "flagged": sig.returncode,
-        "detail": sig.stdout.strip().splitlines()[1:] or None,
-    }
+    # The count is parsed from stdout, never taken from the exit code:
+    # exit status truncates mod 256, and a crashed check would have
+    # masqueraded as "1 flagged claim" (review 2026-07-30).
+    try:
+        sig = subprocess.run(
+            [sys.executable,
+             str(ROOT / "scripts/drift/check_claim_signatures.py")],
+            capture_output=True, text=True, cwd=str(ROOT), timeout=60,
+        )
+        lines = sig.stdout.strip().splitlines()
+        m = re.match(r"NOTE: (\d+) singleton", lines[0]) if lines else None
+        if m:
+            queue = {"flagged": int(m.group(1)), "detail": lines[1:]}
+        elif lines and lines[0].startswith("OK:"):
+            queue = {"flagged": 0, "detail": None}
+        else:
+            queue = {"flagged": None,
+                     "error": (sig.stderr.strip() or sig.stdout.strip()
+                               or f"rc {sig.returncode}")[:300]}
+    except subprocess.TimeoutExpired:
+        queue = {"flagged": None, "error": "signature check timed out"}
+    out["claim_review_queue"] = queue
     return out
 
 

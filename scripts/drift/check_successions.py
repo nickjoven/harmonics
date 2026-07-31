@@ -101,12 +101,12 @@ def main() -> int:
         print(f"FATAL: {len(violations)} successions-ledger violation(s):")
         for v in violations:
             print(f"  {v}")
-    else:
-        note = f", {other_kinds} non-SUCCEEDS record(s) ignored" \
-            if other_kinds else ""
-        print(f"OK: {len(edges)} SUCCEEDS edge(s) well-formed, targets "
-              f"resolve, acyclic{note}")
-    return len(violations)
+        return 1  # never a count: exit status truncates mod 256
+    note = f", {other_kinds} non-SUCCEEDS record(s) ignored" \
+        if other_kinds else ""
+    print(f"OK: {len(edges)} SUCCEEDS edge(s) well-formed, targets "
+          f"resolve, acyclic{note}")
+    return 0
 
 
 if __name__ == "__main__":

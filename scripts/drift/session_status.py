@@ -57,23 +57,17 @@ def _cas_counts(cas: Path) -> tuple[int, int]:
 def _drift_count(root: Path, log_path: Path) -> int:
     if not log_path.exists():
         return 0
-    import re
-    PUT = re.compile(
-        r"^\S+\s+\|\s+put\s+\|\s+(?P<path>\S[^\n]*?)\s+->\s+(?P<cid>[0-9a-f]{64})\s*$"
-    )
-    last = {}
-    for line in log_path.read_text().splitlines():
-        m = PUT.match(line)
-        if m:
-            path = m.group("path")
-            if path == "-":  # stdin put; not a tracked file
-                continue
-            last[path] = m.group("cid")
-    drift = 0
+    from _ketlog import read_log  # the one put-line grammar
+    view = read_log(log_path)
+    # Malformed put-shaped lines and sealed-but-deleted files are both
+    # drift for the snapshot's purposes: the review found the old count
+    # reported "drift 0" over a missing enforced file and over log
+    # corruption, so the session-start trigger never fired.
+    drift = len(view.malformed)
     try:
-        for rel, declared in last.items():
+        for rel, declared in view.last_cid.items():
             p = root / rel
-            if p.exists() and hash_file(p) != declared:
+            if not p.exists() or hash_file(p) != declared:
                 drift += 1
     except HashingUnavailable:
         return -1

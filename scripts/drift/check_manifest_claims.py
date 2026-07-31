@@ -94,11 +94,11 @@ def main() -> int:
               f"claims projection (advisory — see docstring):")
         for key, field, why in divergent:
             print(f"  {key}.{field}: {why}")
-    else:
-        checked = sum(len(f) for _, f in MAPPED.values())
-        print(f"OK: {len(MAPPED)} scorecard rows ({checked} fields) "
-              f"frontier-corroborated in the claims projection")
-    return len(divergent)
+        return 1  # never a count: exit status truncates mod 256
+    checked = sum(len(f) for _, f in MAPPED.values())
+    print(f"OK: {len(MAPPED)} scorecard rows ({checked} fields) "
+          f"frontier-corroborated in the claims projection")
+    return 0
 
 
 if __name__ == "__main__":

@@ -41,24 +41,16 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from _hash import hash_file, HashingUnavailable
 
-# Same log shape as check_working_tree.py: anchored full-line so stored
-# content containing "-> <hex>" can't masquerade as a put entry.
-PUT_LINE = re.compile(
-    r"^\S+\s+\|\s+put\s+\|\s+(?P<path>\S[^\n]*?)\s+->\s+(?P<cid>[0-9a-f]{64})\s*$"
-)
+from _ketlog import read_log  # the one put-line grammar (review 2026-07-30)
+
 SAMPLE_CAP = 25
 
 
 def load_sealed(log_path: Path) -> dict:
     """Map repo-relative path -> last-sealed CID from .ket/log (last wins)."""
-    sealed: dict = {}
     if not log_path.exists():
-        return sealed
-    for line in log_path.read_text().splitlines():
-        m = PUT_LINE.match(line)
-        if m and m.group("path") != "-":
-            sealed[m.group("path")] = m.group("cid")
-    return sealed
+        return {}
+    return read_log(log_path).last_cid
 
 
 def _sample(ids: list) -> None:

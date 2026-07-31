@@ -110,10 +110,10 @@ def main() -> int:
               f"(advisory — see issue #294):")
         for doc_id, why in divergent:
             print(f"  {doc_id}: {why}")
-    else:
-        print(f"OK: no committed support on weak grounds "
-              f"({len(weak)} weak-ground docs tracked)")
-    return len(divergent)
+        return 1  # never a count: exit status truncates mod 256
+    print(f"OK: no committed support on weak grounds "
+          f"({len(weak)} weak-ground docs tracked)")
+    return 0
 
 
 if __name__ == "__main__":

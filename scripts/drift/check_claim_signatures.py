@@ -71,7 +71,7 @@ def main() -> int:
           f"(advisory review queue — known false positives, see docstring):")
     for subject, witness, shape, cid in hits:
         print(f"  {subject} = {witness}  [{shape}]  {cid}")
-    return len(hits)
+    return 1  # count lives in stdout; exit status truncates mod 256
 
 
 if __name__ == "__main__":

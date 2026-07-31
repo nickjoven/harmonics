@@ -34,6 +34,12 @@ jobs:
         run: pip install --quiet blake3 pyyaml
 
       - name: FATAL gates
+        # `shell: bash` is load-bearing: it adds pipefail, without which
+        # the pipeline's exit status is tee's (always 0) and this FATAL
+        # step can never fail the job — the review (2026-07-30) found
+        # every green run to date had no authority. The default
+        # unspecified shell is `bash -e {0}`, WITHOUT pipefail.
+        shell: bash
         run: |
           {
             echo '## Drift suite'
