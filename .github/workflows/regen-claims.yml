@@ -26,11 +26,6 @@ name: Regenerate claims ingest
 #      this workflow just drifted — and records a reconciliation DAG
 #      node. The .ket/ changes ride in the same bot commit.
 #
-# urtext is a PRIVATE repo: the default GITHUB_TOKEN cannot read it.
-# A fine-grained PAT with Contents:read on nickjoven/urtext must exist
-# as the URTEXT_READ_TOKEN repo secret or this workflow fails early
-# with an explicit error.
-#
 # Annotator note: edge annotations seal (from, to, annotator) into
 # their CID, so the FIRST run under CI_ANNOTATOR re-attributes the 36
 # typed edges (one deliberate re-ingest commit, heads_superseded: 0,
@@ -84,13 +79,6 @@ jobs:
   regen:
     runs-on: ubuntu-latest
     steps:
-      - name: Require URTEXT_READ_TOKEN
-        run: |
-          if [ -z "${{ secrets.URTEXT_READ_TOKEN }}" ]; then
-            echo "::error::URTEXT_READ_TOKEN secret is not set. urtext is private and canon.d's prose feature path-depends on it; create a fine-grained PAT with Contents:read on nickjoven/urtext and add it as a repo secret."
-            exit 1
-          fi
-
       - uses: actions/checkout@v5
         # Shallow is fine: the race-safe retry loop fetches main on
         # demand, and build_claims_index.py only embeds `rev-parse HEAD`.
@@ -111,10 +99,11 @@ jobs:
           path: .canon-build/canon.d
 
       - uses: actions/checkout@v5
+        # urtext is public (MIT, 2026-08-01) — no token needed; the
+        # rev pin stays, same doctrine as CANON_D_REV.
         with:
           repository: nickjoven/urtext
           ref: ${{ env.URTEXT_REV }}
-          token: ${{ secrets.URTEXT_READ_TOKEN }}
           path: .canon-build/urtext
 
       - uses: dtolnay/rust-toolchain@stable
