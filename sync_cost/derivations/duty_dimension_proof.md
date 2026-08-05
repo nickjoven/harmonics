@@ -1,6 +1,30 @@
 # Proof: The Duty Cycle Exponent Equals the Group Dimension
 
-## Theorem (n=2, proved)
+> **CORRECTION NOTICE (2026-08-04).** The width premise of Step 1a
+> is contradicted by this repo's own measurements, recorded in
+> `tongue_width_universality.py` (commit 181c29f) and
+> `farey_tongue_width_null.py`, and never propagated here until now:
+>
+> - w(p/q, K=1)·q² is **not** constant — it falls monotonically
+>   (0.2959 → 0.1970 over q = 2..7); the local exponent drifts
+>   2.18 → 2.88 and never sits at 2.
+> - The universal critical exponent, from the golden-mean sequence,
+>   is β = ln(δ_FKS)/ln(φ) = **2.164** (Shenker's constant
+>   δ_FKS = 2.8336), not 2.
+> - A uniform c/q² law is impossible a priori: Σφ(q)/q² diverges
+>   while the locked intervals at K = 1 have total measure 1
+>   (`farey_tongue_width_null.py`).
+>
+> Consequently **duty(q) = 1/q³ is not a theorem about the circle
+> map**. It remains true only as arithmetic on the *defined*
+> combinatorial weight (1/q²)/q, and every downstream use should
+> cite it as a definition, not a measurement: `duty_cycle_dictionary.md`
+> §1–3 and `beta_from_tongues.md` §2 inherit this correction. The
+> "Theorem (n=2, proved)" header below is retained for the record;
+> its status is now **retired as a statement about the map**. The
+> SL(n,R) conjecture inherits the same defect at n = 2.
+
+## Theorem (n=2, proved — see correction notice: retired as a map statement)
 
 For the standard circle map with SL(2,Z) Farey structure, the duty
 cycle of the mode-locked tongue at p/q scales as
