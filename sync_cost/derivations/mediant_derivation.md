@@ -78,20 +78,48 @@ Numbers," Chapter III; or Brocot's original construction.)
 
 ## The derivation
 
-**Step 1.** Physical systems of coupled oscillators satisfy
-betweenness (energy conservation) and minimality (Arnold tongue
-stability).
+> **REPAIRED (2026-08-04).** The previous version claimed the
+> mediant is forced by betweenness + minimality alone, invoking the
+> Stern-Brocot theorem "on adjacent rationals." On non-adjacent
+> pairs those premises select the least-denominator fraction, which
+> is **not** the mediant — between 1/3 and 3/4 they select 1/2,
+> while the mediant is 4/7 — and restricting to adjacent pairs
+> presupposed the tree being derived. The repair inverts the
+> logical order: least-denominator selection is the primitive, and
+> adjacency becomes an inductive invariant instead of a hypothesis.
 
-**Step 2.** The Stern-Brocot theorem says: the unique operation
-satisfying betweenness and minimality on adjacent rationals is
-the mediant.
+**Step 1 (dynamics).** Between two locked ratios, the widest Arnold
+tongue in the gap sits at the fraction of least denominator: for
+first-harmonic-dominant couplings (scope note in the universality
+section below), width falls with denominator as (K/2)^q at small K
+(Arnold 1961), so *widest* = *least denominator*.
 
-**Step 3.** Therefore the mediant is the unique combining operation
-for coupled oscillator frequency ratios.
+**Step 2 (base).** The construction starts from the pair
+(0/1, 1/1), which is adjacent: 1·1 − 0·1 = 1. This base pair is a
+declared axiom of the construction — the choice of unit interval —
+alongside the circle (Axiom 1, `minimum_alphabet.md`).
 
-The mediant is not an axiom. It is a theorem about the ONLY
-operation consistent with energy conservation and Arnold tongue
-stability applied to frequency ratios.
+**Step 3 (classical theorem — its hypothesis is now available).**
+For an *adjacent* pair a/b, c/d with bc − ad = 1, the unique
+fraction of least denominator strictly between them is the mediant
+(a+c)/(b+d). (Hardy & Wright, ch. III.)
+
+**Step 4 (invariant).** Inserting the mediant produces two new
+pairs, both adjacent: b(a+c) − a(b+d) = bc − ad = 1. One line of
+algebra makes this universal; curriculum module 05's engine
+verifies it on all 8,191 neighbor pairs of the depth-12 tree.
+
+**Step 5 (induction).** By Steps 2 and 4, every gap the
+construction ever produces is between adjacent fractions; by Step
+3, least-denominator selection in every such gap is the mediant.
+So widest-tongue selection generates exactly the Stern-Brocot tree,
+at every depth.
+
+The mediant is therefore not an axiom, and not forced by
+betweenness + minimality alone. It is the unique operation
+implementing least-denominator (widest-tongue) selection *given
+the base pair* — with the base pair and the circle carried
+explicitly as the construction's two axioms.
 
 ## What this replaces
 
@@ -202,29 +230,42 @@ sin(θ_j − θ_i) has a single Fourier harmonic. Its iterates
 produce tongues at ALL rationals p/q, with width scaling as
 (K/2)^q — ordered by denominator.
 
-Any periodic, antisymmetric coupling function can be expanded in
-a Fourier series. The fundamental mode (sin) dominates at weak
-coupling. The tongue structure at all rationals, ordered by
-denominator q, is universal — it does not depend on the specific
-coupling function, only on its periodicity and antisymmetry.
+**Scope (corrected 2026-08-04).** Denominator-ordered tongue widths
+are **not** universal over all periodic antisymmetric couplings.
+Computed counterexample: the coupling sin(4πθ) at K = 0.5 gives
+width(1/4) = 0.03697 > width(1/3) = 0.01527 — a coupling whose
+fundamental harmonic vanishes feeds the even-denominator tongues
+directly and breaks the ordering. The correct statement is scoped:
+for couplings whose Fourier spectrum is dominated by the first
+harmonic (the Kuramoto sin(θ_j − θ_i) is the canonical case), the
+small-K widths scale as (K/2)^q and are ordered by denominator.
+The counterexample is the scope's witness, not a defect: it shows
+the first-harmonic condition is doing real work.
 
-A different discretization (powers of 2, decimals, algebraic
-numbers) would not reproduce this tongue ordering because the
-tongues occur at ALL rationals, not at a subset. The Stern-Brocot
-tree is the unique enumeration that respects the tongue width
-ordering.
+Within that scope, a different discretization (powers of 2,
+decimals, algebraic numbers) would not reproduce the tongue
+ordering, because tongues occur at ALL rationals, not at a subset.
+And the tree's uniqueness is now a theorem rather than an
+assertion: by Steps 2–5 above, greedy widest-tongue insertion from
+the base pair generates the Stern-Brocot tree and nothing else,
+because the least-denominator fraction in each adjacent gap is
+unique.
 
 ### The universality argument
 
-The result rests on three properties of the coupling:
+The result rests on four properties of the coupling (the fourth
+added 2026-08-04; the counterexample above shows three do not
+suffice):
 1. **Periodicity** (phases are circular: θ ∈ S¹)
 2. **Antisymmetry** (coupling is mutual: f(θ) = −f(−θ))
 3. **Smoothness** (Fourier series converges)
+4. **First-harmonic dominance** (the fundamental Fourier mode is
+   nonvanishing and dominant — sin(4πθ) satisfies (1)-(3) and
+   breaks the ordering)
 
-Any coupling satisfying (1)-(3) produces Arnold tongues at all
+Any coupling satisfying (1)-(4) produces Arnold tongues at all
 rationals, ordered by denominator. The Stern-Brocot tree is the
-configuration space of the resulting dynamics. No other structure
-emerges.
+configuration space of the resulting dynamics.
 
 If the coupling were not periodic (e.g., linear springs), there
 would be no mode-locking and no rational structure. If it were not
@@ -232,15 +273,17 @@ antisymmetric, the coupling would not be mutual and the system
 would not synchronize. If it were not smooth, the Fourier analysis
 would fail.
 
-The three properties (1)-(3) are the defining properties of
-coupled oscillators on a circle. They are not choices — they are
-the definition of the physical system. The Stern-Brocot tree is
-their unique consequence.
+Properties (1)-(3) are the defining properties of coupled
+oscillators on a circle — the definition of the physical system.
+Property (4) is a genuine restriction *within* that definition:
+first-harmonic dominance selects the coupling class, and the
+Stern-Brocot tree is the unique consequence of (1)-(4), not of
+the definition alone.
 
-> **Scope note (do not over-read).** "They are the definition" is
-> exact and load-bearing: (1)-(3) are **posited**, not derived
-> (only S¹ is derived, and only *conditional on* the oscillator
-> posit). This is *why* "the continuum requires the discrete
+> **Scope note (do not over-read).** (1)-(4) are **posited**, not
+> derived — including S¹ itself, which is Axiom 1
+> (`minimum_alphabet.md`, status correction 2026-08-04), carried
+> alongside the base pair (0/1, 1/1). This is *why* "the continuum requires the discrete
 > generator" (R1) is **unprovable in principle** — the root is a
 > basepointless Z₂-torsor (∅), formalized and capped in
 > `empty_fork_cap.md`. This section is a *partial*

@@ -44,12 +44,19 @@ Therefore p ≡ 0 in the phase space. Since p is an arbitrary integer,
 **all integers must be equivalent to 0**. The phase space is R/Z.
 That is S¹. That is the circle.
 
-The mod-1 topology is not an axiom. It is the unique topology
-consistent with integer counting and self-reference. You cannot have
-periodic orbits with integer winding counts on a line — the line has
-no fixed points of translation. The moment you demand that an orbit
-returns (fixed-point equation) after counting an integer number of
-full advances, you have quotiented by Z. You have a circle.
+> **STATUS CORRECTION (2026-08-04).** The argument above is a
+> consistency observation, not a derivation. Writing f^q(x) = x and
+> f^q(x) = x + p as *simultaneous* conditions already treats x and
+> x + p as names for one state — and that identification IS the
+> quotient R/Z being "derived." No weaker premise forces the circle:
+> the line admits the same dynamics with no periodic orbits, and
+> nothing in counting + self-reference excludes the line without
+> first identifying x with x + 1. **The circle is Axiom 1 of the
+> framework.** What the argument genuinely shows is that this axiom
+> is exactly what reconciles return-to-start with nonzero winding —
+> a motivation for the axiom, not a proof of it. Downstream
+> documents (D7, D11, D12, both proof chains) use the circle itself,
+> never its derivedness; no downstream mathematics changes.
 
 ### 2. Orientation is derived (parabola)
 
