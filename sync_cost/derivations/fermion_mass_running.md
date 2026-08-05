@@ -265,13 +265,18 @@ This is **Floor**, not a forced reduction (retired "N → 1" framing removed).
 
 ## Status
 
-The tree-level formula is exact and parameter-free. The running
-correction from tree scale to physical scale uses the standard
-RGE with framework-derived inputs. The one-loop correction closes
-the μ/e gap to ~6%; the quark mass gaps close to ~1% with QCD
-running. Two-loop precision requires the full SM RGE machinery,
-which is a computation (not a new derivation) using the framework's
-derived gauge structure.
+**(Rewritten 2026-08-04 to match the 2026-05 correction box above,
+which this paragraph had never inherited.)** The tree-level formula
+is exact arithmetic on the 26:7:1 seed and the (2, 5/2, 3)
+exponents; per the correction box, both the base and the exponents
+are un-forced, so "parameter-free" is retired. The lepton ratios
+sit at the ~1% coincidence floor (τ/e 0.9% tree; μ/e ~1% via the
+imported Koide form with Q = 2/3). The earlier "~6%" figure has no
+supporting computation in this document. The quark gaps do **not**
+close to ~1%: §6's own table records 24% (m_b/m_d) and 78% (m_t/m_u)
+residuals attributed to QCD running, with the running correction
+itself Class 2. Two-loop precision would require the full SM RGE
+machinery.
 
 ---
 

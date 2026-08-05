@@ -1,5 +1,31 @@
 # Beta Functions from Tongue Widths
 
+> **CORRECTION NOTICE (2026-08-04).** Three statements below are
+> contradicted by this doc's own cited script, re-run and verified:
+>
+> - **K\* = 0.892 is not produced by any computation in this repo.**
+>   `beta_from_tongues.py` §2's solve returns K\* = 1.0000000000
+>   (the target ratio 3.4878 is unreachable below K = 1, where the
+>   duty ratio is ≥ 27/8); the figure 0.892 exists only as a
+>   hardcoded constant in `decoherence_correction.py:45`.
+> - **The "0.3% match" to SM running does not reproduce.** The
+>   script's §6 comparison outputs an RMS residual of **131.89%**
+>   (per-coefficient 2.2%–227%) while its summary block prints
+>   "fully closed"; the summary is prose, not a computed result.
+> - **§4d's product identity is false as stated.** ∏[1 − K cos(2πj/q)]
+>   ≠ T_q(1 − K²/2) (q = 2, K = 0.3: LHS 0.910, RHS 0.824). The
+>   correct classical identity is ∏(1 − K cos(2πj/q)) =
+>   2(K/2)^q (T_q(1/K) − 1).
+>
+> **What survives, and is worth keeping:** the §6 perturbative
+> ratio theorem — d ln[duty(q_a)/duty(q_b)] / d ln K = q_a − q_b,
+> independent of the width constants — is correct, and is the one
+> result in this document that does not depend on any of the
+> statements corrected above. The headline claim (SM β coefficients
+> computed from tongue widths) is **retired**: §7's own text
+> concedes the 11/3 is standard Yang–Mills, and no tongue-based
+> derivation of any b_i exists here.
+
 ## Claim
 
 The one-loop beta function coefficients of the Standard Model
@@ -279,7 +305,8 @@ The script `beta_from_tongues.py` computes:
 
 The key numerical result:
 
-    Framework β-ratio at K* = 0.892:
+    Framework β-ratio (perturbative regime; the K* = 0.892 evaluation
+    point is retired — see correction notice):
       d ln(duty(2)/duty(3)) / d ln K = −1.000 (exact in perturbative regime)
 
     SM β-ratio:
@@ -317,9 +344,10 @@ The coupling ratio runs as K⁻¹, which means:
 
     duty(2)/duty(3) = (9/2) × K⁻¹
 
-At K = K* = 0.892: ratio = 4.5/0.892 = 5.045
 At K = 1: ratio = 4.5 (but the perturbative formula overestimates;
-  the exact value is 27/8 = 3.375)
+  the exact value is 27/8 = 3.375). (An earlier evaluation at
+  "K* = 0.892" is retired: that constant is not produced by any
+  computation in this repo — see correction notice.)
 
 The crossover from perturbative (K^q) to critical (1/q²) scaling
 modifies the running near K = 1. The full running requires the
@@ -384,9 +412,9 @@ novelty is that the inputs to the computation are themselves derived.
 | Gap | Before D49 | After D49 |
 |-----|-----------|-----------|
 | β-functions from framework | SM β-functions used as target | **Derived**: tongue exponents give running; SM inputs (groups, generations, charges) all derived |
-| Ratio running | Numerical (0.3% match) | **Analytic**: d ln(ratio)/d ln K = q_a − q_b (exact in perturbative regime) |
+| Ratio running | Numerical ("0.3% match" retired — script outputs 131.89% RMS; see correction notice) | **Analytic**: d ln(ratio)/d ln K = q_a − q_b (exact in perturbative regime) |
 | Individual β_i | External input | **Derived**: all inputs to the one-loop formula come from the framework (D19, D34, D42, D43, D44) |
-| §8.5 of gap analysis | Open | **Closed** |
+| §8.5 of gap analysis | Open | **Reopened** — the analytic ratio theorem stands; the b_i derivation is retired (see correction notice) |
 
 ---
 
