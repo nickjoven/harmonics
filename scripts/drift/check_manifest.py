@@ -131,26 +131,61 @@ def main() -> int:
 
     # Load numerology classifications so we can cross-check.  Narrow
     # sweep: we only flag a file as Class 1/3 if its name appears in
-    # an H3 title (`### ... `foo.md`` — rare but possible) OR in a
-    # line beginning with `- Source:` / `- **Primary` under a Class
-    # 1/3 section.  Upstream structural references (e.g. a `three_
-    # dimensions.md` mention inside a `- Source of the bare identity:`
-    # bullet) are intentionally not flagged — they cite dependencies
-    # of the demoted claim, not the claim's carrier file.
+    # an H3 title OR in a *carrier bullet* under a Class 1/3 section.
+    # Carrier bullets are `- Source:` / `- **Primary` / the live
+    # convention `- Bare K=1 identity: ... from `foo.md``.  Upstream
+    # structural references (e.g. a mention inside a `- Source of the
+    # bare identity:` bullet) are intentionally not flagged — they
+    # cite dependencies of the demoted claim, not the claim's carrier
+    # file.
+    #
+    # Corrected 2026-08-04: the original matcher required the `.md`
+    # name on the SAME line as the bullet head, but the inventory
+    # wraps bullets — filenames sit on indented continuation lines —
+    # so extraction returned the empty set on every revision of the
+    # file that has ever existed, and this branch had never fired.
+    # Bullets are now joined into logical lines before matching, and
+    # an empty extraction in the presence of Class 1/3 sections is an
+    # error rather than a silent pass.
     numerology_text = numerology_path.read_text() if numerology_path.exists() else ""
     class_1_3_files: set[str] = set()
     current_class = None
-    _CARRIER_LINE = re.compile(
-        r"^(?:###\s|- \*\*Primary|- Source\s*:)",
+    saw_class_1_3 = False
+    _CARRIER_HEAD = re.compile(
+        r"^(?:- \*\*Primary|- Source\s*:|- Bare K=1 identity)",
     )
+    # Join wrapped bullets: a line starting with whitespace continues
+    # the previous logical line.
+    logical: list[tuple[int, str]] = []  # (class, joined text)
     for line in numerology_text.splitlines():
         m = re.match(r"^## Class (\d)", line)
         if m:
             current_class = int(m.group(1))
+            if current_class in (1, 3):
+                saw_class_1_3 = True
             continue
-        if current_class in (1, 3) and _CARRIER_LINE.match(line):
-            for fn in re.findall(r"`([A-Za-z_0-9]+\.md)`", line):
+        if current_class not in (1, 3):
+            continue
+        if line.startswith("###"):
+            logical.append((current_class, line))
+        elif line.startswith("- "):
+            logical.append((current_class, line))
+        elif line[:1].isspace() and line.strip() and logical:
+            cls, prev = logical[-1]
+            logical[-1] = (cls, prev + " " + line.strip())
+    for _cls, text_line in logical:
+        if text_line.startswith("###") or _CARRIER_HEAD.match(text_line):
+            for fn in re.findall(r"`([A-Za-z_0-9]+\.md)`", text_line):
                 class_1_3_files.add(fn)
+    if saw_class_1_3 and not class_1_3_files:
+        print(
+            "error: numerology_inventory.md has Class 1/3 sections but "
+            "the carrier extractor matched no files — the extractor is "
+            "stale against the inventory's format and every Class-1/3 "
+            "check below would silently pass",
+            file=sys.stderr,
+        )
+        return 2
 
     d_index = _load_index(deriv_dir)
 
