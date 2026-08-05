@@ -88,10 +88,13 @@ Two constraints single the square out:
    does any regular polygon with seven or more sides.
 
 2. **Its rotational symmetry is a power of two.** Among the three
-   tilers, only the square admits the binary chain of half-turn,
-   quarter-turn, eighth-turn, sixteenth-turn — each a symmetry of
-   the square lattice. The triangle and hexagon admit thirds and
-   sixths but not the binary refinements.
+   tilers, only the square has rotational order a power of two:
+   half-turn and quarter-turn (order 4 = 2²). The triangle and
+   hexagon admit thirds and sixths but no binary chain. (An
+   eighth-turn is *not* a lattice symmetry — the crystallographic
+   restriction caps rotation at order 4 — so the binary refinement
+   continues in scale, not rotation: halving the lattice constant
+   maps the square lattice into itself.)
 
 The square is the unique regular polygon that is *both* a plane-tile
 *and* binary-rotationally-divisible. It is the simplest discrete
