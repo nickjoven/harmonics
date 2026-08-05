@@ -321,10 +321,10 @@
       symbol: "n\u209b \u2248 0.965",
       formal: "The CMB power spectrum slope, derived from the Farey density exponent.",
       description:
-        "The framework predicts n\u209b = 1 \u2212 2/(|F\u2086|+q\u2082q\u2083) = 1 \u2212 2/19 \u2248 0.9649, " +
-        "matching the Planck 2018 measurement n\u209b = 0.9649 \u00b1 0.0042 to within 0.01\u03c3.",
-      refs: ["farey_partition"],
-      derivation: "../derivations/02_spectral_tilt.md",
+        "The framework's admitted value is n\u209b = 1 \u2212 (2/57)\u00b7ln \u03c6\u00b2 \u2248 0.9662, " +
+        "against the Planck 2018 measurement n\u209b = 0.9649 \u00b1 0.0042 (+0.3\u03c3).",
+      refs: ["spectral_tilt_reframed"],
+      derivation: "../derivations/spectral_tilt_reframed.md",
       pages: []
     }
   };
