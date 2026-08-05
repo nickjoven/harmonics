@@ -259,8 +259,8 @@ for K in [0.5, 0.7, 0.8, 0.9, 0.95, 0.99, 1.0]:
     print(f"  {K:6.2f}  {ratio:12.6f}  {ratio*100:8.4f}%")
 
 print()
-print("  At K=1: q=2 fiber ratio = 1/4 = 25%.")
-print("  The q=2 fiber mode is 25% of the base at K=1.")
+print("  At K=1: q=2 fiber ratio = (1/2)²/2 = 1/8 = 12.5%.")
+print("  The q=2 fiber mode is 12.5% of the base at K=1.")
 print("  The q=2 sector is substantially open.")
 print()
 
@@ -275,7 +275,7 @@ print("=" * 78)
 print("""
   1. q=2 (SU(2) / weak): OPEN fiber.
      k=2 representative accessible at all K.
-     Ratio to base: (K/2)²/2. At K=1: 25%.
+     Ratio to base: (K/2)²/2. At K=1: 12.5%.
      The weak force DOES NOT CONFINE because its fiber modes
      are XOR-allowed. The gauge bosons (W, Z) have accessible
      fiber representatives.

@@ -57,10 +57,11 @@ but the XOR constraint prevents the triple-gluon vertex.
 The population ratio N(q=3)/N(q=2) does not track the Standard Model
 beta function ratio b_3/b_2 = 42/19 at any tree depth.
 
-However, the within-sector ratio N(1/3)/N(2/3) converges to exactly
-2/3 at all depths (4 through 8), with deviation < 10^-2. This 2/3 is
-the mediant of 1/3 and 2/3 — the denominator of the interaction
-mediator. The asymmetry is structural, not running.
+However, the within-sector ratio N(1/3)/N(2/3) is depth-invariant at
+0.67473 across all depths (4 through 8) — `depth_sweep_v2.py` prints
+"Deviation from 2/3: 8.06e-03" at every depth. The depth-invariance
+is real; the value is near, but is not, 2/3. The asymmetry is
+structural, not running.
 
 The discrete RG (tree depth as energy scale) does not reproduce
 one-loop running in any simple way. But the structural ratios are
@@ -121,8 +122,9 @@ a confinement/deconfinement asymmetry between denominator classes:
 
 **q = 2 (weak sector): OPEN.** Scaling by k=2 preserves XOR parity.
 The fiber mode at (2/4, 1/3) is allowed. At K=1 the fiber mode is
-25% of the base. The weak force does not confine because its fiber
-modes are XOR-allowed.
+(1/2)²/2 = 12.5% of the base (`xor_asymmetry.py`, corrected — the
+earlier "25%" mis-evaluated the script's own formula). The weak
+force does not confine because its fiber modes are XOR-allowed.
 
 **q = 3 (strong sector): LOCKED.** Scaling by k=2 breaks XOR parity.
 The fiber mode at (2/6, 1/3) is forbidden at all K <= 1. Deconfinement
