@@ -175,7 +175,7 @@
       "forms": [
         "Ω_Λ = 13/19 inherits from Z_6 mode counting at Stern-Brocot depth 6: 13 locked-mode fractions, 6 unlocked modes (2 × 3), ratio 13 / (13 + 6).",
         "The dark-energy fraction is 13/19 because that is the only ratio admitted by the substrate's mode counting at depth 6.",
-        "Ω_Λ = 13/19 = 0.6842, against Planck 2018's 0.685 ± 0.007 — a 0.07σ residual without fitted parameters."
+        "Ω_Λ = 13/19 = 0.6842, against Planck 2018's 0.685 ± 0.007 — a 0.07σ residual (parameter accounting per MANIFEST free_parameters_note)."
       ],
       "from": "Z6-mode-counting-at-stern-brocot-depth-6"
     },
