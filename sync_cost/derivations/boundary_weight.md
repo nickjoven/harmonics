@@ -285,7 +285,7 @@ will be addressed in a subsequent derivation.
 fitted factors"): Ω_Λ ∈ [11/16, 13/19] from the Farey partition
 structure (D25, D28), the Euler totient phi(6) = 2, and the
 monotonicity of Omega_Lambda(w). The *interior point* w* = 0.83 →
-Ω_Λ = 0.6847 (0.004σ) is **Class 2** — observation-inverted, per the
+Ω_Λ = 0.6847 (0.04σ) is **Class 2** — observation-inverted, per the
 AUDIT NOTICE at the top of this doc: the w* derivation is algebraic
 inversion from observed Ω_Λ, the scan/fixed-point sections are
 "decorative", and the clean substrate prediction remains

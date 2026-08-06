@@ -31,7 +31,7 @@ Theorem (direct counting): N(n) is piecewise constant with
 plateaus, stepping up only at primes p coprime to 6. The plateau
 values are
 
-    N = 1, 3, 6, 11, 17, 23, ...
+    N = 1, 3, 6, 11, 17, 25, ...
 
 with transitions at n = 5, 7, 11, 13, 17, ... Increments are
 `(p−1)/2` for each new prime `p` coprime to 6:

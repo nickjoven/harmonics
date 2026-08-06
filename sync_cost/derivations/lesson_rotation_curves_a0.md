@@ -90,7 +90,7 @@ cosmic abundance is fixed by the same Farey/Z₂ counting that gave
 `Ω_Λ = 13/19`:
 
 ```
- Ω_DM = 5/19 ≈ 0.263      (Planck: 0.265 → ~0.06%)
+ Ω_DM = 5/19 ≈ 0.263      (Planck: 0.265 → ~0.7%)
 ```
 
 (Class 5, `omega_partition_combinatorial.md`, `baryon_fraction.md`.)

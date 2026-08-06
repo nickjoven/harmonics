@@ -117,7 +117,7 @@ The two integers `3` and `5` are framework primitives:
 |---|---|---|
 | `q_3` (color triplet count) | 3 | Numerator of |w_χ_0|² fraction |
 | `MEDIANT = q_2 + q_3` (DM logit numerator) | 5 | Numerator of |w_⊥V_4|² fraction |
-| Sum: `q_3 + MEDIANT = 2 q_2 + q_3 = 2 + 6 = 8 = q_2³ = k_quark` | 8 | Denominator |
+| Sum: `q_3 + MEDIANT = q_2 + 2 q_3 = 2 + 6 = 8 = q_2³ = k_quark` | 8 | Denominator |
 
 The denominator `q_2³ = q_2 + 2 q_3 = 8` is the SU(3) adjoint
 dimension (`mass_sector_closure.md` Theorem). The numerators

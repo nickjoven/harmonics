@@ -30,9 +30,13 @@ substrate noise.
 
 Required framework structure: a **noise model**. The framework
 does not currently have one. The closest thing is
-`λ_unlock = (4G − π ln 2)/π ≈ 0.471` from
-`kam_bridge_synthesis.md`, which is a Lyapunov exponent at the
-unlocking transition — not an observer-measurement noise.
+`λ_unlock = (4G − π ln 2)/π ≈ 0.473` (corrected 2026-08-05; the
+closed form evaluates to 0.4731 — `lambda_unlock_closed_form.py`
+verifies to 1e-15 — and an earlier revision printed 0.471). The
+citation `kam_bridge_synthesis.md` is a ghost: that document was
+net-rejected and never committed (`canonical_glossary.md:88`); the
+surviving artifact is the script. λ_unlock is a Lyapunov exponent
+at the unlocking transition — not an observer-measurement noise.
 
 Conversion attempt: if the substrate "decoheres" at rate
 `λ_unlock` per iteration, and the observer integrates over `n`

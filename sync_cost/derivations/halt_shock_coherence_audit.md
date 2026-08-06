@@ -370,7 +370,7 @@ by PRs #221–#223:
   rule IS an attractor halt; the 12.66-mode cardinality IS a
   configuration the Hubble-boundary shock truncates from 14.
   The chain's empirical alignments (Ω_Λ = 0.6847 match at
-  0.004σ) corroborate halt-coherence at the cosmological scale.
+  0.04σ) corroborate halt-coherence at the cosmological scale.
 - **PR #223 anchor extension**: H_0 and v_EW constancy IS a
   halt assertion; the H_0 tension is a potential shock
   signature (if anchor constancy fails); F3 from PR #223 IS

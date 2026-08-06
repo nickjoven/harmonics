@@ -550,7 +550,7 @@ drafted as the next major doc.
 - `q_mod2_planck_emergence_audit.md` (PR #221) — structural-
   identity precedent
 - `born_rule_mode_count_extremes_audit.md` (PR #222) — chain
-  extension; Ω_Λ at 0.004σ alignment
+  extension; Ω_Λ at 0.04σ alignment
 - `anchor_extremes_audit.md` (PR #223) — anchor analysis
 - `halt_shock_coherence_audit.md` (PR #224) — halt taxonomy used
   in Bridge 2

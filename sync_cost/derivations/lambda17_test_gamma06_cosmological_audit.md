@@ -349,7 +349,8 @@ theory.
 
 ### Connection to Ω partition
 
-The framework's Ω_Λ = 13/19 = 0.6847 emerges from cusp
+The framework's Ω_Λ = 13/19 = 0.6842 (corrected 2026-08-05; 13/19
+= 0.68421, not 0.6847) emerges from cusp
 Eisenstein constants at Γ_0(6) per PR #242. The Hecke action
 on Eisenstein constants is consistent with λ_17 = σ_{k−1}(17)
 nonzero. No tension between PR #242's Ω partition

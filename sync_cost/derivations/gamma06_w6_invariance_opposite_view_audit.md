@@ -401,7 +401,7 @@ not as new substrate primitives.
   partition; this audit only characterizes its W_6-invariance
   properties.
 - **Not a new prediction.** The numerical content (13:5:1/19,
-  Ω_Λ = 13/19 ≈ 0.6847, 0.07σ from Planck) is unchanged; this audit
+  Ω_Λ = 13/19 ≈ 0.6842, 0.07σ from Planck) is unchanged; this audit
   adds a structural reading of the *symmetry status* of that content.
 - **Not a Born-rule alternative.** The session's earlier conceptual
   thread about "other dice rolls" surfaced this audit as a structural

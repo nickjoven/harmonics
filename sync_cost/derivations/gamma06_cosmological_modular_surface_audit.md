@@ -334,11 +334,13 @@ content.
 
 ## Empirical alignment
 
-### Ω partition at 0.004σ
+### Ω partition at 0.07σ
 
-The framework's Ω_Λ = 13/19 = 0.6847 matches observed Ω_Λ =
-0.685 ± 0.007 at 0.004σ (per PR #222 + PR #226). This is the
-framework's strongest empirical alignment.
+The framework's Ω_Λ = 13/19 = 0.6842 sits 0.07σ from the observed
+Ω_Λ = 0.6847 ± 0.0073. (Corrected 2026-08-05: an earlier revision
+printed "13/19 = 0.6847 … at 0.004σ", conflating 13/19 = 0.68421
+with the w*-interpolation value 0.6847 and misstating the residual;
+canonical figures per `hierarchy.md`.)
 
 This audit predicts: the matched value emerges from Γ_0(6)'s
 Eisenstein series structure at the q=6 boundary cusp. The
@@ -524,7 +526,7 @@ substrate's primitives are the modular surface's singularity
 structure. The 4 cusps of Γ_0(6) correspond to the framework's
 Ω partition `13:5:1/19` components and total via Eisenstein
 series constant terms at each cusp. Empirical alignment: Ω_Λ
-= 13/19 = 0.6847 matches observed at 0.004σ (PR #222 + PR
+= 13/19 = 0.6847 matches observed at 0.04σ (PR #222 + PR
 #226); this audit predicts the match emerges from Γ_0(6)'s
 Eisenstein series structure at q=6 boundary. MODAL ✓ /
 GENERATIVE ✓ on the structural identity. Five falsifier

@@ -38,9 +38,11 @@ Three specific claims to formalize:
 2. The q₂ tongue also occupies `1/q₂^d = 1/8` of the Ω axis. A
    symmetric treatment would subtract both:
 
-       d_eff = d − 1/q₂^d − 1/q₃^d = 3 − 1/8 − 1/27 = 181/216 off bare.
+       d_eff = d − 1/q₂^d − 1/q₃^d = 3 − 1/8 − 1/27 = 613/216 ≈ 2.838
+       (the subtraction is 35/216; an earlier revision printed
+       "181/216", which is 1 − 35/216 — wrong base).
 
-   `sin²θ_W(d_eff = 181/216 · something)` would be a different
+   `sin²θ_W(d_eff = 613/216 · something)` would be a different
    number; Z1 must then be re-tested.
 
 3. Alternatively, a sector-specific argument would say the
@@ -51,9 +53,11 @@ Three specific claims to formalize:
 
        sin²θ_W = q₂^d / (q₂^d + q₃^{d_eff})
 
-   which gives `8 / (8 + 3^{80/27}) = 8 / 34.976 = 0.2288`,
-   **different** from the 0.23123 value and 1.9% off observation
-   (12σ). This variant therefore fails Z1 and should be ruled out.
+   which gives `8 / (8 + 3^{80/27}) = 8 / 33.923 = 0.23583`
+   (corrected 2026-08-05; an earlier revision printed 8/34.976 =
+   0.2288), **different** from the 0.23123 value and 2.0% off
+   observation (~115σ against the PDG error). This variant
+   therefore fails Z1 and should be ruled out.
 
 ## Success criterion (structural)
 
@@ -98,8 +102,9 @@ favored and the claim demotes from Class 4 to Class 2 or 1.
 - q₃-only correction: d_eff = 80/27 → 0.23123 (0.5σ). ✓
 - Both corrections symmetrically:
   d_eff = 3 − 1/8 − 1/27 ≈ 2.838,
-  sin²θ_W = 2^{2.838} / (2^{2.838} + 3^{2.838}) ≈ 0.2322
-  (~2.6σ from observation).
+  sin²θ_W = 2^{2.838} / (2^{2.838} + 3^{2.838}) ≈ 0.2403
+  (~229σ from observation; corrected 2026-08-05 — an earlier
+  revision printed 0.2322 / ~2.6σ, understating the failure).
 
 The three options disagree observationally. The q₃-only variant
 uniquely hits 0.5σ. But this is Z1-compatibility, not Z2: Gap 2

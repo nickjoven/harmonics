@@ -65,8 +65,11 @@ it below (and keep the D-numbering globally unique).
   resolution; the bare identity is now under `bare_k1_identities.sin2_theta_W`).
   No canonical file; mapping unnecessary.
 
-- **D2, D5, D16–D18, D20–D24, D30, D35, D38–D40, D46** — unused in
-  `MANIFEST.yml:scorecard` at the time of writing.  Some have
+- **D2, D5, D17, D20–D24, D30, D35, D39–D40, D46** — unused in
+  `MANIFEST.yml:scorecard` at the time of writing.  (Corrected
+  2026-08-05: D16, D18, and D38 were listed here while also being
+  mapped in the table above — they ARE mapped; removed from this
+  list.)  Some have
   in-text citations (e.g. `D21`, `D24`) but are not MANIFEST sources,
   so their resolution is not required for `check_manifest.py` to
   pass.  If any of these are later referenced in MANIFEST, add the
@@ -83,7 +86,8 @@ without breaking the resolution.
 ## Status
 
 **Navigation index for derivation chain.** Maps D-numbers
-(D1-D47 per `MANIFEST.yml` derivation_count) to filenames for
+(D1–D49; the table extends beyond `MANIFEST.yml`'s
+derivation_count of 47 to include D48/D49) to filenames for
 machine-readable lookup. Maintained as derivations are added or
 renamed. Cross-checked by `check_manifest.py`.
 

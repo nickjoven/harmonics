@@ -186,9 +186,12 @@ derived from S_3 acting on Z_2 × Z_3 lattice. Orbit dimensions
 {1, 3} = {q_3-trivial, q_3-vector}; factor 6 emerges as
 |L| = q_2 · q_3 from orbit-counting.
 
-Numerical: matches PDG 2024 down-type quark masses to 0.04σ
-(five-digit match using only framework integers q_2 and q_3,
-no fitted parameters).
+Numerical: matches PDG 2024 down-type quark masses to 0.04σ —
+about three significant figures at the quoted uncertainty, not the
+"five-digit match" an earlier revision claimed. Uses framework
+integers q_2 and q_3; parameter accounting per MANIFEST
+`free_parameters_note` (the blanket "no fitted parameters" phrasing
+is retired).
 
 Source for: down-type
 factor 6 in `derivation_atlas.md` Part IX §9.4,
