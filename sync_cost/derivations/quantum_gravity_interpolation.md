@@ -134,6 +134,11 @@ From the tongue coverage analysis (decoherence_correction.py):
     ε(K) = 1 − Σ_{p/q: q ≤ q_max(K)} w(p/q, K)
 
 At K* = 0.892: ε ≈ 0.034 (3.4% unlocked — the decoherence tax).
+(Provenance correction 2026-08-05: K* = 0.892 is unsourced — no
+computation in this repo produces it; it is hardcoded in
+`decoherence_correction.py:45`. Canonical K* = 2^(−3/14) ≈ 0.862,
+`framework_constants.py:113`. ε would need recomputing at the
+canonical value.)
 At K → 1: ε → 0 (all tongues fill).
 
 The deviation ε from perfect coherence is the quantum correction
@@ -231,7 +236,8 @@ The effective gravitational constant at scale μ is:
     G_eff(μ) = G × (1 − ε(K(μ)))²
 
 At K = 1: G_eff = G (classical).
-At K* = 0.892: G_eff = G × (1 − 0.034)² = G × 0.933 (3.4% correction).
+At K* = 0.892: G_eff = G × (1 − 0.034)² = G × 0.933 (3.4% correction;
+K* = 0.892 unsourced — see the provenance correction above).
 
 This running of G with energy scale is a prediction. The
 framework says G_eff decreases (weakens) at lower energies,

@@ -82,7 +82,13 @@ sourced by the **unlocked** oscillator density, with
 K = 1: ε = 0, the pressure vanishes, pure Einstein + Λ (tension
 only). At K → 0: ε → 1, the pressure dominates (fully quantum).
 The decoherence tax at the electroweak operating point is
-`ε(K*) ≈ 0.034` at `K* = 0.892` (M_Z).
+`ε(K*) ≈ 0.034` at `K* = 0.892` (M_Z). (Provenance correction
+2026-08-05: no computation in this repo produces K* = 0.892 — the
+value exists only as a hardcoded constant in
+`decoherence_correction.py:45`, and `beta_from_tongues.py`'s own
+solve returns K* = 1.0; the canonical framework constant is
+K* = 2^(−3/14) ≈ 0.862, `framework_constants.py:113`. The ε here
+inherits the unsourced input.)
 
 ### I.3 The threshold between them carries a shadow price
 
@@ -148,7 +154,7 @@ vocabularies.
 |---|---|---|
 | K = 1 critical line | tension/pressure separation | `w_DE = −1` purity: any robust `w_DE ≠ −1` (evolving dark energy) presses the locked-sector tension reading |
 | a₀ = cH₀/(2π) (EM-MOND threshold) | shadow price activates | RAR at 4%; `a₀(z) = cH(z)/(2π)` rising with z (RC100 direction matches) |
-| K* = 0.892 (M_Z operating point) | pressure tax ε ≈ 3.4% | decoherence-tax accounting in Ω_b residual (`baryon_fraction.md`) |
+| K* = 0.892 (M_Z operating point — unsourced; see §I.2 provenance correction) | pressure tax ε ≈ 3.4% | decoherence-tax accounting in Ω_b residual (`baryon_fraction.md`) |
 | Anchor row, coherence matrix | denomination constancy | H₀ tension already flagged as candidate bifurcation signature in three cells (`coherence_matrix_completion_audit.md`) — a *drifting denomination* would be a stress non-equilibrium, the first meta-structure observable |
 | Fuzzy Planck floor | stress support ends | no direct handle; ordering constraints only (Part III) |
 

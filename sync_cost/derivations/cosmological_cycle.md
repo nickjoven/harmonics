@@ -127,7 +127,7 @@ net flow is from tongues to gaps — from us to the twin.
 | Planck (t = 0) | 1.0 | 100% | 0% | All ours, no twin |
 | Inflation end | ~0.98 | ~99% | ~1% | Twin barely exists |
 | Recombination | ~0.95 | ~95% | ~5% | Twin growing |
-| Present | ~0.89 | 81.3% | 18.7% | F₆ equilibrium |
+| Present | ~0.89 (unsourced — no repo computation produces K≈0.89; canonical K* = 2^(−3/14) ≈ 0.862) | 81.3% | 18.7% | F₆ equilibrium |
 | Far future | decreasing | shrinking | growing | Roles reversing |
 | De Sitter | K_eq | 13/19 | 6/19 | Equilibrium |
 
