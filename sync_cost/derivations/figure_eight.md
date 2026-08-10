@@ -41,8 +41,14 @@ two sectors. The traversal is time. The twist is imaginary number.
 ## The two loops
 
 From Derivation 19, the Klein bottle's XOR parity constraint
-collapses 1,764 candidate mode pairs to exactly 4 survivors at
-(q_1, q_2) in {(2,3), (3,2)}. These organize into two sectors:
+reduces 3,969 depth-6 mode pairs to 1,764 allowed pairs, and the
+field-equation dynamics (`field_equation_klein.py`) collapses those
+to exactly 4 dominant survivors at (q_1, q_2) in {(2,3), (3,2)}
+*(corrected 2026-08-10: the filter and the dynamical collapse are
+distinct steps — the earlier text attributed the full 1,764 → 4
+collapse to the XOR rule alone; the parity rule itself is
+conjectural per `xor_derivation.md`'s correction banner)*. These
+organize into two sectors:
 
 - **Loop 1** = sector (2,3): modes A and B.
   - Mode A: locked in both directions (q_1=2 locked, q_2=3 locked)

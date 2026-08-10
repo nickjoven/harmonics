@@ -154,6 +154,19 @@ forces the symmetric form:
 The smallest surviving denominators: q₂ = 2 (even) and q₃ = 3
 (the smallest odd admitting non-trivial probability — Section 7). □
 
+> **Correction (2026-08-10 audit).** Lemma 5 overstates its source
+> twice. (a) `xor_derivation.md` establishes (conjecturally — its
+> fraction-parity translation is itself unproven; see that file's
+> correction banner) a pair *filter*, not a *selection*: 1,764
+> surviving pairs at its quoted depth, with top-weight survivors
+> involving q = 1. It contains no selection of {2, 3}. (b) The
+> exclusion of q = 1 via "non-trivial probability — Section 7" has no
+> support at the pointer: Section 7 is the phase-state/Clifford lemma
+> and contains no probability-minimality argument. The {2, 3}
+> selection's documented route is the cube-identity/Mihailescu
+> argument (`mass_sector_closure.md`), which is independent of the
+> XOR filter.
+
 ---
 
 ## 7. The Observability Structure
@@ -230,7 +243,19 @@ condition (P3). Numerical solution: w* = 0.83 at K* = 0.862, giving:
 
     Ω_Λ(0.83) = (11 + 1.66) / (16 + 2.49) = 12.66 / 18.49 = 0.6847
 
-Matching observation to **0.00%** within the quoted precision.
+> **Correction (2026-08-10 audit).** The "0.00% match" is not a
+> prediction: `boundary_weight.py`'s own summary documents that w* is
+> obtained by algebraic inversion of Ω_Λ(w) = (11+2w)/(16+3w) at the
+> observed Planck value (w* = 0.828), so the interior point matches
+> observation by construction (Class 2, observation-inverted — see
+> `boundary_weight.md` Status). The predictive content of this section
+> is the interval Ω_Λ ∈ [13/19, 11/16] = [0.6842, 0.6875] in (iii).
+> Note also 12.66/18.49 = 0.68469 ≠ 13/19 = 0.68421 (Δ ≈ 4.8×10⁻⁴);
+> docs asserting `12.66/18.49 = 13/19` conflate the fitted interior
+> point with the w = 1 endpoint. Additionally, the computation in
+> `boundary_weight.py` contains no parity predicate: |F₅| = 11 and
+> |F₆| = 13 count all Farey fractions, so this number is not an XOR
+> consequence and does not corroborate the XOR filter.
 
 **(v) The predictions.** At any w ∈ [0,1], the following predictions
 are w-independent (they depend only on q₂ = 2 and q₃ = 3):

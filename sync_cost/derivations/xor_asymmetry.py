@@ -1,6 +1,27 @@
 """
 The XOR filter is asymmetric between q=2 and q=3.
 
+CORRECTION (2026-08-10 audit) — three findings against this script's
+own output; the prose below overstates what the code shows:
+1. "LOCKED" is only even-k exclusion: every base mode tallies exactly
+   18/36 fiber modes allowed (the q=3 slot admits all odd multiples),
+   so neither fiber is absolutely locked.
+2. The twist-access asymmetry is empty: allowed-AND-flipped = 0 in
+   ALL sectors (structurally forced — XOR-allowedness pins k*q parity
+   to q's parity), so the q=2 sector never accesses a conjugate twist
+   either; "SU(2) doesn't confine / SU(3) does" does not follow from
+   these tallies.
+3. The predicate acts on UNREDUCED scaled denominators, an ontology
+   never justified elsewhere: the flagship "forbidden" mode 2/6
+   reduces to the allowed base mode 1/3. The parity rule itself is
+   conjectural (see xor_derivation.md correction banner); under the
+   XNOR alternative all four base modes are forbidden outright.
+Also: numpy is imported but never used (crashes in a clean env), and
+the printed self-correction in Part 3 ("wait, that's ODD. Let me
+recheck") ships an acknowledged mid-computation error in the output.
+
+Original prose follows.
+
 Scaling by k=2:
   q=2 slot: kq=4 (even). 4+3=7 (odd) → ALLOWED
   q=3 slot: kq=6 (even). 6+2=8 (even) → FORBIDDEN

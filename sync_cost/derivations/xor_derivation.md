@@ -1,5 +1,41 @@
 # Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions
 
+> **CORRECTION (2026-08-10 audit).** This document's theorem claim is
+> demoted to: **spectrum theorem proven; fraction-parity translation
+> conjectured.** Specifics:
+>
+> 1. **Scope of the proof.** Sections 3–4 establish the line-bundle
+>    spectrum fact (half-integer x-modes ⊗ even y-modes) ⊕ (integer
+>    x-modes ⊗ odd y-modes) — valid for the multiplicative
+>    (orientation-bundle) field only; the additive phase field admits
+>    counterexamples (see the Remark on the two Z₂ structures below).
+>    The Theorem's fraction clause `q_1 % 2 != q_2 % 2` is NOT proved
+>    by those sections: the QED cites Sections 3–4, which never
+>    mention denominators. Section 5 concedes q is unrestricted in
+>    three of four cases before the correspondence is stipulated
+>    (lines "generically… no constraint"), and Section 6 contains no
+>    equations.
+> 2. **The verification cannot discriminate the rule.** The Section 8
+>    counts labeled "depth 5" (3,969 pairs / 1,764 allowed / 44.4%)
+>    are a 6-round tree; the 5-round tree gives 961 / 440 / 45.8%
+>    (this is what `klein_bottle.md` calls depth 5). At 6 rounds,
+>    numerator-parity XOR also allows exactly 1,764 pairs (a different
+>    set), so the 44.4% figure is consistent with two incompatible
+>    rule forms; concrete verdicts diverge, e.g. (1/2, 1/3) is
+>    q-allowed but p-forbidden. The Section 8.2 survivor table lists
+>    (1/2, 1/1), which the enumeration's own 0 < f < 1 filter cannot
+>    produce.
+> 3. **Convention provenance.** Denominator parity entered the corpus
+>    via code (`62a95a6`, the Möbius field-equation script's
+>    `parity(f) = f.denominator % 2`) before any document named the
+>    convention; `q_mod2_mediant_projection.md` pins the numerator
+>    form as a live alternative. The parity object (p, q, or p+q) is
+>    an open choice, and downstream conclusions flip across it.
+>
+> Downstream fraction-level XOR claims (4-mode collapse, gauge
+> 12-count, {2,3} sector selection, confinement asymmetry) are
+> conditional on the unproven translation.
+
 ## Purpose
 
 This derivation closes gap #5 in `PROOFREADER_RESPONSE.md`: the XOR parity
@@ -507,8 +543,12 @@ spectrum, derived from the boundary conditions by Fourier analysis.
 
 ## 10. Summary
 
-The XOR parity filter q_1 % 2 != q_2 % 2 is a theorem, not an
-observation. It follows from three steps:
+~~The XOR parity filter q_1 % 2 != q_2 % 2 is a theorem, not an
+observation.~~ **Corrected (2026-08-10): the wavenumber-parity
+spectrum fact (steps 1–2 below) is a theorem for the orientation
+line bundle; the fraction-parity form q_1 % 2 != q_2 % 2 is a
+conjecture — step 3's translation is stipulated, not derived (see
+the correction banner at the top of this file).** The claimed chain:
 
 1. **Fourier decomposition** on the Klein bottle requires eigenfunctions
    of both the translation operator (x -> x + L_1) and the reflection
