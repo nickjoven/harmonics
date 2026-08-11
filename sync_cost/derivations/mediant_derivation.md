@@ -230,7 +230,7 @@ sin(θ_j − θ_i) has a single Fourier harmonic. Its iterates
 produce tongues at ALL rationals p/q, with width scaling as
 (K/2)^q — ordered by denominator.
 
-**Scope (corrected 2026-08-04).** Denominator-ordered tongue widths
+**Scope.** Denominator-ordered tongue widths
 are **not** universal over all periodic antisymmetric couplings.
 Computed counterexample: the coupling sin(4πθ) at K = 0.5 gives
 width(1/4) = 0.03697 > width(1/3) = 0.01527 — a coupling whose

@@ -99,11 +99,10 @@ The figure-8 is in the fourth category, per the test below.
 >
 > The figure-8 = Loop 1 ∪ Loop 2, with Loop 1 ∩ Loop 2 = {D}."
 
-*[2026-08-10 correction at source: the quoted "collapses 1,764
-candidate mode pairs to exactly 4 survivors" misattributes the
-collapse — the XOR filter reduces 3,969 pairs to 1,764; the
-field-equation dynamics collapses those to 4. `figure_eight.md` has
-been corrected; the quote is preserved as it stood.]*
+*[The quoted "1,764 → 4 via the XOR constraint" was corrected at
+source (`figure_eight.md`; ERRATA.md E5): the filter does 3,969 →
+1,764, the field-equation dynamics does 1,764 → 4. Quote preserved
+as it stood.]*
 
 So the figure-8 reading asserts:
 1. Each (q_x, q_y) family is a continuous S¹ (a loop).

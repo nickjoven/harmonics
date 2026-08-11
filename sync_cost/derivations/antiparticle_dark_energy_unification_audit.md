@@ -323,10 +323,9 @@ decoherence → uniform medium + protected pockets.
 
 The integrated antipodal-pair contribution at the cosmological
 boundary IS the cancellation residue. Per Bridge 3: this equals
-the boundary-weight derivation Ω_Λ = 12.66/18.49 ≈ 13/19
-(corrected 2026-08-10: not an equality — 0.68469 vs 0.68421,
-endpoint vs fitted interior point; see
-`unification_bridge_audits_gaps_1_3.md`).
+the boundary-weight derivation Ω_Λ = 12.66/18.49 ≈ 13/19 (distinct
+values — 0.68469 vs 0.68421, fitted interior point vs w = 1 endpoint;
+see `unification_bridge_audits_gaps_1_3.md`).
 
 In the cancellation-residue reading:
 - **Ω_Λ = 13/19**: cancelled antipodal-pair contribution; the
@@ -356,7 +355,7 @@ remains open).
   heat from dissipation/equilibration that produced the medium's
   current uniformity
 - **Ω_Λ = 0.685 ± 0.007** matching framework's 0.6847 at
-  0.04σ (corrected 2026-08-05; earlier revisions printed 0.04σ — |0.6847−0.685|/0.007 = 0.04σ): direct corroboration of cancellation residue =
+  0.04σ (|0.6847−0.685|/0.007): direct corroboration of cancellation residue =
   integrated antipodal contribution
 - **Matter-antimatter asymmetry ~10⁻¹⁰**: empirical realization
   of survival-filter asymmetry
@@ -655,12 +654,12 @@ the empirical instance corroborates the structural claim.
 - **F2 — Stable horizon not classifiable as composite halt**.
   Would falsify Sub-claim B's halt-type classification.
 - **F3 — Ω_Λ moving outside the interval [13/19, 11/16] by
-  precision improvements** (corrected 2026-08-10: the two values
-  are already distinct — 12.66/18.49 = 0.68469 ≠ 13/19 = 0.68421 —
-  so "moving outside their equality" was not a well-formed
-  falsifier; the interval from `boundary_weight.md` is the
-  falsifiable object). Would falsify Bridge 3's dual-derivation
-  reading + Sub-claim C's cancellation-residue reading.
+  precision improvements** (the interval from `boundary_weight.md`
+  is the falsifiable object; the fitted interior point 12.66/18.49
+  and the endpoint 13/19 are distinct values, so an equality between
+  them cannot serve as the falsifier). Would falsify Bridge 3's
+  dual-derivation reading + Sub-claim C's cancellation-residue
+  reading.
 - **F4 — Boundary demonstrably non-leaky at any scale**. Would
   falsify Sub-claim D's universal boundary-leakage principle.
 - **F5 — Cosmological observations falsifying matter-antimatter

@@ -18,16 +18,10 @@ audit's outline:
   integrated antipodal-pair contribution, or just match
   empirically?
 
-> **Arithmetic correction (2026-08-10 audit).** The chained equality
-> `12.66/18.49 = 13/19` used throughout this document is false:
-> 12.66/18.49 = 0.68469, 13/19 = 0.68421 (Δ ≈ 4.8×10⁻⁴). The two
-> numbers are different points of the same pipeline — 13/19 is the
-> w = 1 endpoint of Ω_Λ(w) = (11+2w)/(16+3w); 12.66/18.49 is the
-> interior point at w* = 0.828, which `boundary_weight.py` documents
-> as algebraically inverted from the observed Ω_Λ (Class 2,
-> observation-inverted). Bridge 3's structural-identity analysis
-> should be read as relating the *pipelines*, not as an equality of
-> the two values.
+*[Arithmetic note: `12.66/18.49 = 13/19` as used throughout this
+document is false — 0.68469 vs 0.68421, fitted interior point vs
+w = 1 endpoint of the same pipeline (ERRATA.md E3). Read Bridge 3's
+equality claims as relating the pipelines, not the values.]*
 
 **Aggregate verdict: MODAL ✓ / GENERATIVE ✓** on all three
 bridges, with one refinement at Gap 2 (horizons are *topological
@@ -484,9 +478,8 @@ The boundary-weight derivation and the antipodal-pair integration
 are the same derivation in different vocabularies. The equality
 `Ω_Λ = 12.66/18.49 = 13/19 = integrated antipodal-pair
 contribution` is forced by the structural identity of the two
-derivations. *(2026-08-10 correction: as an equality of numbers this
-is false — 12.66/18.49 = 0.68469 ≠ 13/19 = 0.68421; see the
-arithmetic correction in the Gap 3 statement above. The verdict
+derivations. *(As an equality of numbers this is false — 0.68469 ≠
+0.68421, see the arithmetic note in the Gap 3 statement; the verdict
 stands only as a statement about the shared pipeline.)*
 
 The unification audit can claim that the 13/19 partition is

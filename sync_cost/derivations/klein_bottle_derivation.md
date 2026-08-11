@@ -577,16 +577,11 @@ The argument has three layers of increasing strength:
 - **Dynamical** (secondary): the arrow of time from rank-1 Fréchet
   derivative (D46) independently requires non-orientability.
 
-- **Self-consistency** (tertiary): ~~the XOR filter on K² produces the
-  correct mode count (12.66 effective modes, Ω_Λ = 0.6847); no XOR
-  filter on T² gives a completely different — and excluded — spectrum.~~
-  **Retired (2026-08-10 audit):** the 12.66 count is not an XOR
-  consequence — `boundary_weight.py` contains no parity predicate
-  (|F₅| = 11, |F₆| = 13 count all Farey fractions) and its w* = 0.828
-  is algebraically inverted from the observed Ω_Λ, so this leg neither
-  uses the XOR filter nor corroborates it, and the T²-contrast count
-  was never computed. K² uniqueness rests on the topological and
-  dynamical layers above.
+K² uniqueness rests on the two layers above. (A formerly cited third
+leg — an Ω_Λ self-consistency check via the XOR filter — is retired:
+the 12.66 effective-mode count is computed in `boundary_weight.py`
+with no parity predicate and an observation-inverted w*, so it
+neither uses nor corroborates the filter.)
 
 The two-S¹ structure is closed: fractions are irreducibly binary
 (numerator, denominator), the mediant operates on 2-vectors in

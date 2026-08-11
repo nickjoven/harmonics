@@ -1,47 +1,31 @@
-# Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions
-
-> **CORRECTION (2026-08-10 audit).** This document's theorem claim is
-> demoted to: **spectrum theorem proven; fraction-parity translation
-> conjectured.** Specifics:
->
-> 1. **Scope of the proof.** Sections 3–4 establish the line-bundle
->    spectrum fact (half-integer x-modes ⊗ even y-modes) ⊕ (integer
->    x-modes ⊗ odd y-modes) — valid for the multiplicative
->    (orientation-bundle) field only; the additive phase field admits
->    counterexamples (see the Remark on the two Z₂ structures below).
->    The Theorem's fraction clause `q_1 % 2 != q_2 % 2` is NOT proved
->    by those sections: the QED cites Sections 3–4, which never
->    mention denominators. Section 5 concedes q is unrestricted in
->    three of four cases before the correspondence is stipulated
->    (lines "generically… no constraint"), and Section 6 contains no
->    equations.
-> 2. **The verification cannot discriminate the rule.** The Section 8
->    counts labeled "depth 5" (3,969 pairs / 1,764 allowed / 44.4%)
->    are a 6-round tree; the 5-round tree gives 961 / 440 / 45.8%
->    (this is what `klein_bottle.md` calls depth 5). At 6 rounds,
->    numerator-parity XOR also allows exactly 1,764 pairs (a different
->    set), so the 44.4% figure is consistent with two incompatible
->    rule forms; concrete verdicts diverge, e.g. (1/2, 1/3) is
->    q-allowed but p-forbidden. The Section 8.2 survivor table lists
->    (1/2, 1/1), which the enumeration's own 0 < f < 1 filter cannot
->    produce.
-> 3. **Convention provenance.** Denominator parity entered the corpus
->    via code (`62a95a6`, the Möbius field-equation script's
->    `parity(f) = f.denominator % 2`) before any document named the
->    convention; `q_mod2_mediant_projection.md` pins the numerator
->    form as a live alternative. The parity object (p, q, or p+q) is
->    an open choice, and downstream conclusions flip across it.
->
-> Downstream fraction-level XOR claims (4-mode collapse, gauge
-> 12-count, {2,3} sector selection, confinement asymmetry) are
-> conditional on the unproven translation.
+<!-- edition 2 (2026-08-11) · supersedes the 2026-03-26 text (git 7190a9b) · changes ledgered in ERRATA.md E1 -->
+# Derivation: The Klein Bottle Mode-Pairing Spectrum, and the Conjectured XOR Parity Filter
 
 ## Purpose
 
-This derivation closes gap #5 in `PROOFREADER_RESPONSE.md`: the XOR parity
-rule `q_1 % 2 != q_2 % 2` was previously confirmed by simulation
-(`klein_bottle_kuramoto.py`) and argued heuristically, but not derived from
-first principles. Here we carry out the Fourier analysis explicitly.
+This document does two things with different epistemic standings:
+
+1. **Theorem (Sections 1–4, 7).** Explicit Fourier analysis of the
+   Klein bottle boundary conditions establishes the mode-pairing
+   spectrum: half-integer x-wavenumbers pair with even (cosine)
+   y-modes, integer x-wavenumbers with odd (sine) y-modes. This holds
+   for the multiplicative (orientation line bundle) field; the
+   additive phase field admits counterexamples (see the Remark on the
+   two Z₂ structures below).
+2. **Conjecture (Sections 5–6).** A proposed translation of that
+   spectrum into a parity rule on Stern-Brocot denominators,
+   `q_1 % 2 != q_2 % 2`. The translation's key correspondence is
+   stipulated, not derived, and the parity object (numerator,
+   denominator, or their sum) is not forced by anything in this
+   document; `q_mod2_mediant_projection.md` develops the numerator
+   form as a live alternative. Downstream results that consume the
+   fraction-level rule (4-mode collapse, gauge transition count,
+   {2,3} sector selection, confinement asymmetry) inherit conjecture
+   status.
+
+The simulations cited in Section 8 test the wavenumber spectrum, not
+the fraction rule: their aggregate counts are identical under the
+numerator- and denominator-parity forms.
 
 ---
 
@@ -270,7 +254,12 @@ This is the XOR constraint, derived from the boundary conditions alone.
 
 ---
 
-## 5. Translation to winding-number denominators
+## 5. Translation to winding-number denominators (conjectural step)
+
+*Status: this section proposes, but does not derive, the
+correspondence between wavenumber type and fraction-denominator
+parity. Its own analysis below finds the denominator unrestricted in
+the generic cases; the sharpened correspondence is a stipulation.*
 
 ### 5.1 From Fourier wavenumbers to rational winding numbers
 
@@ -337,7 +326,11 @@ which is:
 
 ---
 
-## 6. The role of non-orientability: why XOR and not just "q_1 even"
+## 6. The role of non-orientability: why XOR and not just "q_1 even" (heuristic)
+
+*Status: the symmetrization argument in this section is verbal; no
+equation forces it. It motivates the symmetric XOR form given the
+Section 5 correspondence, which is itself conjectural.*
 
 ### 6.1 The asymmetric version
 
@@ -433,9 +426,9 @@ direction.
 
 ---
 
-## 7. Formal statement of the theorem
+## 7. Formal statement: theorem and conjecture
 
-**Theorem (XOR parity filter).** Let K^2 be the Klein bottle with
+**Theorem (mode-pairing spectrum).** Let K^2 be the Klein bottle with
 boundary conditions:
 
     theta(x + L_1, y) = theta(x, L_2 - y) + pi     (antiperiodic + reflect)
@@ -447,19 +440,24 @@ Fourier expansion in the eigenbasis of the y-reflection, with:
     psi_n^+(y) = cos(2 pi n y / L_2)    (even, n >= 0)
     psi_n^-(y) = sin(2 pi n y / L_2)    (odd, n >= 1)
 
-Then the allowed mode numbers are:
+Then, for the multiplicative (orientation line bundle) field, the
+allowed mode numbers are:
 
     (m, n) with m = k + 1/2 (half-integer)  paired with  psi_n^+ (even y-mode)
     (m, n) with m = k (integer)             paired with  psi_n^- (odd y-mode)
 
-In terms of the winding-number denominators (q_1, q_2) on the
-Stern-Brocot lattice, this is equivalent to:
+**Proof.** Sections 3-4 above.  QED.
+
+**Conjecture (fraction-parity form).** In terms of winding-number
+denominators (q_1, q_2) on the Stern-Brocot lattice, the spectrum
+corresponds to:
 
     q_1 mod 2  +  q_2 mod 2  =  1  (mod 2)
 
-i.e., exactly one of q_1, q_2 is even.
-
-**Proof.** Sections 3-4 above.  QED.
+i.e., exactly one of q_1, q_2 is even. This rests on the Section 5
+correspondence (wavenumber type ↔ denominator parity), which is
+stipulated rather than derived, and on the Section 6 symmetrization
+heuristic. It is not a consequence of the Theorem.
 
 ---
 
@@ -470,35 +468,45 @@ Klein bottle boundary conditions on a discrete lattice and runs Kuramoto
 dynamics. The `xor_filter_analysis()` function explicitly constructs the
 Stern-Brocot tree and checks which mode pairs survive.
 
-### 8.1 Predicted vs observed
+### 8.1 Enumeration counts — and what they cannot show
 
-From the XOR filter analysis output:
+After 6 mediant-insertion rounds (63 interior tree nodes, fractions
+strictly between 0 and 1):
 
-- **Total mode pairs at depth 5:** 3,969 (63 tree nodes squared)
-- **Allowed (XOR = 1):** 1,764 pairs (44.4%)
-- **Forbidden (XOR = 0):** 2,205 pairs (55.6%)
+- **Total mode pairs:** 3,969 (63²)
+- **Allowed (denominator-parity XOR = 1):** 1,764 pairs (44.4%)
+- **Forbidden:** 2,205 pairs (55.6%)
 
-The allowed fraction 44.4% is close to but not exactly 50% because the
-Stern-Brocot tree at finite depth has an unequal number of even-q and
-odd-q fractions (the Farey sequence at any depth has more odd-denominator
-fractions than even-denominator ones, due to the structure of the mediant
-operation).
+After 5 rounds (31 nodes): 961 pairs, 440 allowed (45.8%) — this is
+the enumeration `klein_bottle.md` reports as depth 5.
+
+The allowed fraction sits below 50% because the tree at finite depth
+has more odd-denominator than even-denominator fractions.
+
+**These aggregate counts do not discriminate the rule's form:** at 6
+rounds, numerator-parity XOR also allows exactly 1,764 pairs — a
+different set with the same cardinality. Any test of the
+denominator-parity form must check specific pairs where the two forms
+disagree, e.g. (1/2, 1/3) (denominator-allowed, numerator-forbidden)
+or (1/3, 2/3) (denominator-forbidden, numerator-allowed). No such
+discriminating test has been run dynamically.
 
 ### 8.2 Top surviving modes
 
-The highest-weight allowed mode pairs are:
+The highest-weight allowed mode pairs in the enumeration (which
+restricts to fractions strictly between 0 and 1, so q = 1 endpoints
+do not appear):
 
 | Mode pair (p_1/q_1, p_2/q_2) | q_1 | q_2 | Weight 1/(q_1 q_2) | Parity |
 |-------------------------------|-----|-----|---------------------|--------|
-| (1/2, 1/1)                   | 2   | 1   | 0.500               | (0,1)  |
-| (1/1, 1/2)                   | 1   | 2   | 0.500               | (1,0)  |
 | (1/2, 1/3)                   | 2   | 3   | 0.167               | (0,1)  |
 | (1/3, 1/2)                   | 3   | 2   | 0.167               | (1,0)  |
 | (1/2, 2/3)                   | 2   | 3   | 0.167               | (0,1)  |
 | (2/3, 1/2)                   | 3   | 2   | 0.167               | (1,0)  |
 
-Every surviving pair has exactly one even denominator, confirming the
-XOR filter.
+Every listed pair has exactly one even denominator — consistent with
+the denominator-parity form by construction of the filter, not a test
+of it (see 8.1).
 
 ### 8.3 Forbidden pairs (spot check)
 
@@ -521,8 +529,11 @@ The Klein bottle simulation at K = 8, 3x3 lattice shows:
   integer winding mode n = 0 or n = 1 in the periodic direction.
 
 The dominant mode is (m, n) = (1/2, 0): half-integer x, constant y. This
-has x-parity 1 and y-parity 0, satisfying p_x + p_y = 1. The XOR
-condition is confirmed dynamically.
+has x-parity 1 and y-parity 0, satisfying p_x + p_y = 1. This confirms
+the wavenumber-spectrum Theorem dynamically. It does not test the
+fraction-parity Conjecture: which fraction pair this mode maps to
+depends on the Section 5 correspondence, which the simulation does not
+probe.
 
 ---
 
@@ -535,20 +546,20 @@ Derivation 19 presents the Klein bottle spectrum in a table (Section
 - cos modes (even y): x-wavenumbers are half-integer => (p_x, p_y) = (1, 0)
 - sin modes (odd y): x-wavenumbers are integer => (p_x, p_y) = (0, 1)
 
-All rows satisfy p_x XOR p_y = 1. No row has p_x = p_y. The XOR filter
-is not an additional assumption imposed on the spectrum -- it IS the
-spectrum, derived from the boundary conditions by Fourier analysis.
+All rows satisfy p_x XOR p_y = 1. No row has p_x = p_y. The
+wavenumber-parity XOR is not an additional assumption imposed on the
+spectrum -- it IS the spectrum, derived from the boundary conditions
+by Fourier analysis. The fraction-denominator form remains a separate
+translation step (Section 5) that the mode table does not decide.
 
 ---
 
 ## 10. Summary
 
-~~The XOR parity filter q_1 % 2 != q_2 % 2 is a theorem, not an
-observation.~~ **Corrected (2026-08-10): the wavenumber-parity
-spectrum fact (steps 1–2 below) is a theorem for the orientation
-line bundle; the fraction-parity form q_1 % 2 != q_2 % 2 is a
-conjecture — step 3's translation is stipulated, not derived (see
-the correction banner at the top of this file).** The claimed chain:
+The wavenumber-parity spectrum (steps 1-2 below) is a theorem for the
+orientation line bundle. The fraction-parity filter
+q_1 % 2 != q_2 % 2 is a conjecture: step 3's translation is
+stipulated, not derived. The chain:
 
 1. **Fourier decomposition** on the Klein bottle requires eigenfunctions
    of both the translation operator (x -> x + L_1) and the reflection
@@ -559,12 +570,15 @@ the correction banner at the top of this file).** The claimed chain:
    forces the x-wavenumber to be half-integer when paired with even
    y-modes, and integer when paired with odd y-modes.
 
-3. **Half-integer x-wavenumbers** correspond to even denominators in the
-   Stern-Brocot representation, and **integer x-wavenumbers** correspond
-   to odd denominators. The pairing in step 2 then reads:
-   (q_1 even, q_2 odd) or (q_1 odd, q_2 even) -- exactly the XOR filter.
+3. **(Conjectural.)** Half-integer x-wavenumbers are proposed to
+   correspond to even denominators in the Stern-Brocot representation,
+   and integer x-wavenumbers to odd denominators. Under that
+   correspondence the pairing in step 2 reads: (q_1 even, q_2 odd) or
+   (q_1 odd, q_2 even) -- the XOR filter. This step is where the
+   derivation is open.
 
-The non-orientability of the Klein bottle ensures this constraint is
-symmetric: it does not privilege "direction 1" over "direction 2" in a
-globally consistent way, which is why the condition is XOR (symmetric)
-rather than "q_1 must be even" (asymmetric).
+The non-orientability of the Klein bottle motivates the symmetric form:
+it does not privilege "direction 1" over "direction 2" in a globally
+consistent way, which is why the proposed condition is XOR (symmetric)
+rather than "q_1 must be even" (asymmetric). This symmetrization is a
+heuristic (Section 6), not a proof.

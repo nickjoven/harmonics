@@ -61,13 +61,8 @@ canonical uniqueness claim per the basepoint discriminator).
 > no XOR filter on T² gives a completely different — and
 > excluded — spectrum.
 
-*[2026-08-10 correction: the quoted tertiary leg has been retired at
-its source (`klein_bottle_derivation.md`) — the 12.66 count is
-computed in `boundary_weight.py` with no parity predicate and its w*
-is observation-inverted, so it neither uses nor corroborates the XOR
-filter; the T² count invoked for contrast was never computed (see
-Layer 3 below). The Layer 3 analysis in this audit reached the
-consistent conclusion.]*
+*[The quoted tertiary leg is retired at source; see ERRATA.md E4 and
+Layer 3 below, which reached the consistent conclusion.]*
 
 Each layer's inputs decompose into substrate-internal vs
 observation-conditional. The audit:
@@ -243,8 +238,8 @@ electron-quark structure.
 
 **(b) Different mode count.** The XOR filter on K² reduces 3,969
 depth-6 pairs to 1,764 allowed candidates; field-equation dynamics
-collapses those to 4 survivors *(corrected 2026-08-10 — the filter
-alone does not produce the 4)*.
+collapses those to 4 survivors (the filter alone does not produce
+the 4).
 On T² (no antiperiodicity), there is no XOR filter. The mode
 spectrum is the full Stern-Brocot rational lattice on the (q_x,
 q_y) torus, with all denominators populated. The "boundary
@@ -423,12 +418,9 @@ The refined honest framing per this audit:
 > parallel to L vs R orientation (7th) and R1/∅ (1st) at
 > distinct layers of the framework stack."
 
-*[2026-08-10 correction: the "Ω_Λ ≈ 0.685 match under the XOR
-filter" clause in the quoted formulation is retired — the 12.66
-count is computed without any parity predicate and its w* is
-observation-inverted (`boundary_weight.py`), and the contrasting T²
-value was never computed. The observation-fixing of the K²/T²
-selection rests on the fermion-existence leg alone.]*
+*[The "Ω_Λ match under the XOR filter" clause is retired (ERRATA.md
+E4); the K²/T² observation-fixing rests on the fermion-existence leg
+alone.]*
 
 This refinement is in resolution-mode: no apparatus
 modification; honest re-naming of substrate-admitted vs

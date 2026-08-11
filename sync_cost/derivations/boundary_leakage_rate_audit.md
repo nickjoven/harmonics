@@ -433,7 +433,7 @@ matches the Born rule's "degrades at scale ~ l_P" reading.
 - **Attractor escape rates**: Kramers-Arrhenius widely
   confirmed in chemical kinetics, materials science.
 - **Fixed-point stability**: K_STAR validation via PDG mass
-  data at 0.594σ; w* validation via Ω_Λ at 0.04σ (corrected 2026-08-05; earlier revisions printed 0.04σ — |0.6847−0.685|/0.007 = 0.04σ).
+  data at 0.594σ; w* validation via Ω_Λ at 0.04σ (|0.6847−0.685|/0.007).
 
 ### Empirical alignment summary
 

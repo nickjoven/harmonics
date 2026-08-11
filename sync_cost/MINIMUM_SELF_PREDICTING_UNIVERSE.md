@@ -1,3 +1,4 @@
+<!-- edition 2 (2026-08-11) · Lemma 5 and §6(iv) revised; prior text: git 3597650^ · ERRATA.md E2, E3 -->
 # The Minimum Self-Predicting Universe
 
 ## An Algebraic Proof
@@ -130,10 +131,10 @@ period. For SL(2,R): d = 3 = 2 + 1. □
 
 ## 6. The Klein Bottle and Mode Selection
 
-**Lemma 5** (xor_derivation.md). *The XOR parity filter selects
-q₂ = 2 and q₃ = 3.*
+**Lemma 5** (conjectural; xor_derivation.md). *The mode-pair filter
+takes the fraction-parity form q₁ mod 2 ≠ q₂ mod 2.*
 
-**Derivation from boundary conditions.** The Klein bottle has:
+**Basis.** The Klein bottle has:
 - Direction 1 (antiperiodic): θ(x + L₁, y) = θ(x, y) + π
 - Direction 2 (periodic): θ(x, y + L₂) = θ(x, y)
 
@@ -141,31 +142,24 @@ Absorb the half-twist into a linear ramp: θ = πx/L₁ + φ(x,y),
 where φ is periodic. Fourier-expanding φ: the allowed x-wavenumbers
 are half-integers m = k + 1/2. The Klein bottle's y-reflection
 (y → L₂ − y) pairs even y-modes with half-integer x-modes and
-odd y-modes with integer x-modes. In the Stern-Brocot representation:
-half-integer wavenumbers correspond to even denominators, integer
-wavenumbers to odd denominators.
+odd y-modes with integer x-modes. This mode-pairing spectrum is a
+theorem for the orientation line bundle (xor_derivation.md,
+Sections 1–4).
 
-The surviving condition: one direction even-q, the other odd-q.
-Non-orientability (the two directions cannot be globally distinguished)
-forces the symmetric form:
+The passage to fractions is not: the correspondence "half-integer
+wavenumber ↔ even denominator, integer ↔ odd" is stipulated
+(xor_derivation.md Section 5), and the symmetric XOR form rests on a
+non-orientability heuristic (Section 6). Lemma 5 is therefore a
+conjecture, not a consequence of the spectrum theorem. □(conditional)
 
-    q₁ mod 2 ≠ q₂ mod 2    (XOR)
-
-The smallest surviving denominators: q₂ = 2 (even) and q₃ = 3
-(the smallest odd admitting non-trivial probability — Section 7). □
-
-> **Correction (2026-08-10 audit).** Lemma 5 overstates its source
-> twice. (a) `xor_derivation.md` establishes (conjecturally — its
-> fraction-parity translation is itself unproven; see that file's
-> correction banner) a pair *filter*, not a *selection*: 1,764
-> surviving pairs at its quoted depth, with top-weight survivors
-> involving q = 1. It contains no selection of {2, 3}. (b) The
-> exclusion of q = 1 via "non-trivial probability — Section 7" has no
-> support at the pointer: Section 7 is the phase-state/Clifford lemma
-> and contains no probability-minimality argument. The {2, 3}
-> selection's documented route is the cube-identity/Mihailescu
-> argument (`mass_sector_closure.md`), which is independent of the
-> XOR filter.
+**What the filter does and does not provide.** The filter is a pair
+*filter*, not a sector *selection*: at the quoted tree depth it
+admits 1,764 of 3,969 mode pairs. The selection of specifically
+(q₂, q₃) = (2, 3) is supplied by the cube-identity/Mihailescu
+argument (`mass_sector_closure.md`), which is independent of the
+parity filter; the field-equation dynamics
+(`field_equation_klein.py`) then concentrates population on the
+(2,3)/(3,2) sectors.
 
 ---
 
@@ -243,19 +237,17 @@ condition (P3). Numerical solution: w* = 0.83 at K* = 0.862, giving:
 
     Ω_Λ(0.83) = (11 + 1.66) / (16 + 2.49) = 12.66 / 18.49 = 0.6847
 
-> **Correction (2026-08-10 audit).** The "0.00% match" is not a
-> prediction: `boundary_weight.py`'s own summary documents that w* is
-> obtained by algebraic inversion of Ω_Λ(w) = (11+2w)/(16+3w) at the
-> observed Planck value (w* = 0.828), so the interior point matches
-> observation by construction (Class 2, observation-inverted — see
-> `boundary_weight.md` Status). The predictive content of this section
-> is the interval Ω_Λ ∈ [13/19, 11/16] = [0.6842, 0.6875] in (iii).
-> Note also 12.66/18.49 = 0.68469 ≠ 13/19 = 0.68421 (Δ ≈ 4.8×10⁻⁴);
-> docs asserting `12.66/18.49 = 13/19` conflate the fitted interior
-> point with the w = 1 endpoint. Additionally, the computation in
-> `boundary_weight.py` contains no parity predicate: |F₅| = 11 and
-> |F₆| = 13 count all Farey fractions, so this number is not an XOR
-> consequence and does not corroborate the XOR filter.
+The interior point matches observation by construction, not by
+prediction: `boundary_weight.py` obtains w* = 0.828 by algebraic
+inversion of Ω_Λ(w) = (11 + 2w)/(16 + 3w) at the observed Planck
+value (Class 2, observation-inverted; see `boundary_weight.md`
+Status). The predictive content of this section is the interval in
+(iii), Ω_Λ ∈ [13/19, 11/16]. The w = 1 endpoint 13/19 = 0.68421 and
+the fitted interior point 12.66/18.49 = 0.68469 are distinct values
+of the same pipeline, not equal quantities. The Farey cardinalities
+|F₅| = 11 and |F₆| = 13 count all fractions — no parity filter enters
+this computation, so this number neither uses nor corroborates
+Lemma 5.
 
 **(v) The predictions.** At any w ∈ [0,1], the following predictions
 are w-independent (they depend only on q₂ = 2 and q₃ = 3):

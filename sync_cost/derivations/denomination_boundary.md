@@ -59,13 +59,11 @@ At the boundary (w << 1 but non-negligible):
 
 $$K_*(q) \approx 2 \cdot q^{-1/(q-1)}$$
 
-> **Arithmetic correction (2026-08-05).** The formula above and the
-> table below disagree: the table's values follow $q^{1/(q-1)}$
-> (2.00, 1.73, 1.59, 1.50, … → **1**), while the printed formula
-> $2\,q^{-1/(q-1)}$ evaluates to 1.00, 1.15, 1.26, 1.34, … → **2**.
-> Neither limit is the "√2" the original table row and the density
-> interval below claimed. Which law is intended is an open question
-> for the derivation above; both statements cannot stand.
+**Open discrepancy.** The formula above and the table below disagree:
+the table's values follow $q^{1/(q-1)}$ (2.00, 1.73, 1.59, 1.50, …
+→ 1), while the printed formula $2\,q^{-1/(q-1)}$ evaluates to 1.00,
+1.15, 1.26, 1.34, … → 2. Which law the derivation intends is
+unresolved; the table law is used for the values below.
 
 This is a **different K* for each denominator q**. The denomination
 boundary is not a single coupling value — it is a sequence:
@@ -88,9 +86,8 @@ The boundary in (K, q) space is a decreasing function — it is the
 Between any two denomination switches K*(q) and K*(q+1), there are
 denomination switches for all mediants (composite modes with
 denominators between q and q+1 on the Stern-Brocot tree). The set
-of K* values is dense in the interval [1, 2] (corrected 2026-08-05:
-under the table law q^{1/(q−1)} the limit is 1, not √2; see the
-arithmetic correction above).
+of K* values is dense in the interval [1, 2]; under the table law
+K*(q) = q^{1/(q−1)}, the large-q limit is 1.
 
 The boundary between energy-denominated and entropy-denominated
 cost is not a line. It is a **Cantor-like set** — the devil's

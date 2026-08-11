@@ -30,9 +30,8 @@ substrate noise.
 
 Required framework structure: a **noise model**. The framework
 does not currently have one. The closest thing is
-`λ_unlock = (4G − π ln 2)/π ≈ 0.473` (corrected 2026-08-05; the
-closed form evaluates to 0.4731 — `lambda_unlock_closed_form.py`
-verifies to 1e-15 — and an earlier revision printed 0.471). The
+`λ_unlock = (4G − π ln 2)/π = 0.4731` (`lambda_unlock_closed_form.py`
+verifies the closed form to 1e-15). The
 citation `kam_bridge_synthesis.md` is a ghost: that document was
 net-rejected and never committed (`canonical_glossary.md:88`); the
 surviving artifact is the script. λ_unlock is a Lyapunov exponent

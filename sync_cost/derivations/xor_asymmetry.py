@@ -1,33 +1,27 @@
 """
-The XOR filter is asymmetric between q=2 and q=3.
+Parity of scaled mode fibers under the conjectural XOR filter.
 
-CORRECTION (2026-08-10 audit) — three findings against this script's
-own output; the prose below overstates what the code shows:
-1. "LOCKED" is only even-k exclusion: every base mode tallies exactly
-   18/36 fiber modes allowed (the q=3 slot admits all odd multiples),
-   so neither fiber is absolutely locked.
-2. The twist-access asymmetry is empty: allowed-AND-flipped = 0 in
-   ALL sectors (structurally forced — XOR-allowedness pins k*q parity
-   to q's parity), so the q=2 sector never accesses a conjugate twist
-   either; "SU(2) doesn't confine / SU(3) does" does not follow from
-   these tallies.
-3. The predicate acts on UNREDUCED scaled denominators, an ontology
-   never justified elsewhere: the flagship "forbidden" mode 2/6
-   reduces to the allowed base mode 1/3. The parity rule itself is
-   conjectural (see xor_derivation.md correction banner); under the
-   XNOR alternative all four base modes are forbidden outright.
-Also: numpy is imported but never used (crashes in a clean env), and
-the printed self-correction in Part 3 ("wait, that's ODD. Let me
-recheck") ships an acknowledged mid-computation error in the output.
+What this script shows (per its own tallies): under the
+denominator-parity predicate applied to UNREDUCED scaled
+denominators (k1*q1 + k2*q2 odd), doubling behaves asymmetrically —
+k=2 scaling of the q=2 slot stays allowed (4+3=7 odd) while k=2
+scaling of the q=3 slot is excluded (6+2=8 even).
 
-Original prose follows.
-
-Scaling by k=2:
-  q=2 slot: kq=4 (even). 4+3=7 (odd) → ALLOWED
-  q=3 slot: kq=6 (even). 6+2=8 (even) → FORBIDDEN
-
-The q=2 fiber is partially open. The q=3 fiber is locked.
-SU(2) doesn't confine. SU(3) does.
+Scope limits, verified against the script's output:
+- Every base mode tallies exactly 18/36 fiber modes allowed (the q=3
+  slot admits all odd multiples), so neither fiber is absolutely
+  locked; "locked" means even-k exclusion only.
+- allowed-AND-twist-flipped = 0 in ALL sectors (structurally forced:
+  XOR-allowedness pins k*q parity to q's parity), so no sector
+  accesses a conjugate twist; a confinement asymmetry ("SU(2)
+  doesn't confine / SU(3) does") does not follow from these tallies.
+- The unreduced-fiber ontology is a modeling choice made only here:
+  reduced, the "forbidden" mode 2/6 is the allowed base mode 1/3.
+- The fraction-parity rule itself is conjectural (xor_derivation.md);
+  under the XNOR alternative all four base modes are forbidden.
+Known defects: numpy is imported but never used (crashes in a clean
+env); Part 3's printed output contains a self-acknowledged
+mid-computation error ("wait, that's ODD. Let me recheck").
 
 This script maps out:
 1. Which fiber modes are allowed/forbidden for each base mode

@@ -393,8 +393,7 @@ L147-149:
                    = 12.66 / 18.49
                    = 0.6847
 
-Match within 0.04σ (corrected 2026-08-05: |0.6847 − 0.685|/0.007 =
-0.04σ; an earlier revision printed 0.004σ). The 12.66 effective mode count at the
+Match within 0.04σ (|0.6847 − 0.685|/0.007). The 12.66 effective mode count at the
 Hubble boundary is **directly corroborated** by the cosmological
 constant observation. This is the strongest empirical anchor
 in the audit — a quantitative prediction matching observation
