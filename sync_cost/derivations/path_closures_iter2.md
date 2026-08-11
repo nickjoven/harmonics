@@ -1,3 +1,4 @@
+<!-- edition 2 (2026-08-11) · strikethrough dispositions converted to plain statements; prior text: git show c61f743:sync_cost/derivations/path_closures_iter2.md · reading-layer policy, ERRATA.md preamble -->
 # Path closures — iteration 2
 
 ## What this file is
@@ -281,19 +282,19 @@ focused articulations needed."
 |---|---|
 | **D.1 Klein π_1 two generators** | OPEN; multi-session structural work |
 | **D.3 K=1 vs K<1 regimes** | **PROMOTED**; Phase B ready (3 articulations needed) |
-| ~~D.2 q_2/q_3 prime split~~ | Demoted to refinement-of-D.1; not standalone |
-| ~~D.4 Spectral gap on SB tree~~ | NULL (iter 1) |
-| ~~D.5 Anomaly between sectors~~ | NULL (iter 1) |
-| ~~D.6 K_eff = K_0/2 split~~ | NULL weak (iter 1) |
+| D.2 q_2/q_3 prime split | Demoted to refinement-of-D.1; not standalone |
+| D.4 Spectral gap on SB tree | NULL (iter 1) |
+| D.5 Anomaly between sectors | NULL (iter 1) |
+| D.6 K_eff = K_0/2 split | NULL weak (iter 1) |
 
 ### Region B (depth-15 connection): 3 → 1 substantive
 
 | Path | Status |
 |---|---|
 | **(c) Cross-sector tongue identification** | OPEN; substantive single-session probe |
-| ~~(b) Sub-Fibonacci depth~~ | REDUCES to Class 2 φ⁻⁸⁰ (iter 2) |
-| ~~(d) Anomaly-cancellation depth~~ | BLOCKED on prerequisite (iter 2) |
-| ~~(e) Conformal-equivalence depth~~ | BLOCKED on prerequisite (iter 1) |
+| (b) Sub-Fibonacci depth | REDUCES to Class 2 φ⁻⁸⁰ (iter 2) |
+| (d) Anomaly-cancellation depth | BLOCKED on prerequisite (iter 2) |
+| (e) Conformal-equivalence depth | BLOCKED on prerequisite (iter 1) |
 
 ## What this iteration accomplished
 

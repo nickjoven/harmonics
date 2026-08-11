@@ -1,3 +1,4 @@
+<!-- edition 2 (2026-08-11) · strikethrough dispositions converted to plain statements; prior text: git show c61f743:sync_cost/derivations/path_closures_iter1.md · reading-layer policy, ERRATA.md preamble -->
 # Path closures — iteration 1
 
 ## What this file is
@@ -251,9 +252,9 @@ substrate-derived FRW + Higgs structure exists.
 | D.1 Klein π_1 two generators | OPEN; multi-session work |
 | D.2 q_2 vs q_3 prime split | OPEN; multi-session work |
 | D.3 K=1 vs K<1 regimes | OPEN; possibly single-session |
-| ~~D.4 Spectral gap on SB tree~~ | NULL (this iteration) |
-| ~~D.5 Anomaly between sectors~~ | NULL (this iteration) |
-| ~~D.6 K_eff = K_0/2 split~~ | NULL weak (this iteration) |
+| D.4 Spectral gap on SB tree | NULL (this iteration) |
+| D.5 Anomaly between sectors | NULL (this iteration) |
+| D.6 K_eff = K_0/2 split | NULL weak (this iteration) |
 
 ### Region B (depth-15 connection): 5 → 3
 
@@ -262,7 +263,7 @@ substrate-derived FRW + Higgs structure exists.
 | Path (b) Sub-Fibonacci depth at EW | OPEN (multi-session) |
 | Path (c) Cross-sector tongue identification | OPEN (single or multi-session) |
 | Path (d) Anomaly-cancellation depth | OPEN (multi-session) |
-| ~~Path (e) Conformal-equivalence depth~~ | BLOCKED on prerequisite |
+| Path (e) Conformal-equivalence depth | BLOCKED on prerequisite |
 | (Klein-quotient second invariant — was already listed
    "unattempted" not closed by this iteration) | OPEN |
 

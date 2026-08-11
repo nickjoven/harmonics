@@ -1,3 +1,4 @@
+<!-- edition 2 (2026-08-11) · strikethrough dispositions converted to plain statements; prior text: git show c61f743:sync_cost/derivations/framework_status.md · reading-layer policy, ERRATA.md preamble -->
 # Framework status map
 
 At-a-glance inventory. One line per item. Full analysis lives in the
@@ -86,9 +87,9 @@ Categories:
 
 | Former entry | Disposition |
 |---|---|
-| ~~A_s 11% / 7.7σ~~ | **Closed Instance 7**: substrate-side prediction A_s = 2.33×10⁻⁹ is complete; gap is anchor-side amplification, no framework-internal claim about magnitude. Promoted to Survives entry above. |
-| ~~Ω_b 6.7%~~ | **Closed full Class 5** via two-component (sign-rep no-EM) + Γ_0(6) cusp + L1 substrate ground state. Predictions sub-σ on all three observables. Promoted to Survives. |
-| ~~Ω_c / Ω_b 7.5%~~ | **Closed (inherits from Ω_b)**: 0.6% residual under two-component closure. Promoted to Survives. |
+| A_s 11% / 7.7σ | **Closed Instance 7**: substrate-side prediction A_s = 2.33×10⁻⁹ is complete; gap is anchor-side amplification, no framework-internal claim about magnitude. Promoted to Survives entry above. |
+| Ω_b 6.7% | **Closed full Class 5** via two-component (sign-rep no-EM) + Γ_0(6) cusp + L1 substrate ground state. Predictions sub-σ on all three observables. Promoted to Survives. |
+| Ω_c / Ω_b 7.5% | **Closed (inherits from Ω_b)**: 0.6% residual under two-component closure. Promoted to Survives. |
 
 The hybrid strategy (`Ω_b = (1/19)·|r|²`, `A_s = 2.33·|r|³ × 10⁻⁹`)
 matches observation ≤ 1σ for Ω_b and A_s but with different
@@ -182,8 +183,8 @@ travels with each.)
 
 | Former entry | Disposition |
 |---|---|
-| ~~sin²θ_W = 8/35~~ | Consolidated into `Bare K=1 substrate-side identities` (SM running disproof preserved). |
-| ~~1/α_em (tree) = 35~~ | Consolidated into `Bare K=1 substrate-side identities` (same running analysis as sin²θ_W). |
+| sin²θ_W = 8/35 | Consolidated into `Bare K=1 substrate-side identities` (SM running disproof preserved). |
+| 1/α_em (tree) = 35 | Consolidated into `Bare K=1 substrate-side identities` (same running analysis as sin²θ_W). |
 
 ## Eliminated (coincidences or structural-attempt nulls)
 
@@ -225,9 +226,9 @@ travels with each.)
 
 | Item | Disposition |
 |---|---|
-| ~~K_c(F_n/F_{n+1}) closed form~~ | **Out of scope, not a framework gap.** Gap-1 K_c closed (`k_critical_phase_b.md`); framework uses `K_map = 1` *exact*. The finite-`n` Fibonacci closed-form is a known-hard *external* KAM problem the framework neither has nor needs. (Secondary: RFE branch born first-order at `K_c^RFE≈1.56`; `K_c^RFE=Σw(1)` a **flagged conjecture, not claimed**.) |
-| ~~T2#7 measurement-arc residuals~~ | **Closed.** Iteration-to-time anchor = Basepoint-decline (#INF pattern); continuous-K(t) = dynamic saddle-node sweep (Born preserved, rate-independent); multi-tongue = direct collapse dominant, cascade `(K/2)^{Δq}`-suppressed. `proposed_residual_closure.md`. |
-| ~~K-zoo kink-mass ratios `M_k(d,n,b)/M_k(K=1)`~~ | **Reduction promoted to Survives (Class-3, structurally forced)** — see Survives entry below. Ratio `= b^(−n/(2d))·√(r_n)` (K-scaling forced; `√r_n` an honest flagged correction). Only the *observable-identification* (which object ↔ which kink per sector) stays **Class-2, declined, not chased**. |
+| K_c(F_n/F_{n+1}) closed form | **Out of scope, not a framework gap.** Gap-1 K_c closed (`k_critical_phase_b.md`); framework uses `K_map = 1` *exact*. The finite-`n` Fibonacci closed-form is a known-hard *external* KAM problem the framework neither has nor needs. (Secondary: RFE branch born first-order at `K_c^RFE≈1.56`; `K_c^RFE=Σw(1)` a **flagged conjecture, not claimed**.) |
+| T2#7 measurement-arc residuals | **Closed.** Iteration-to-time anchor = Basepoint-decline (#INF pattern); continuous-K(t) = dynamic saddle-node sweep (Born preserved, rate-independent); multi-tongue = direct collapse dominant, cascade `(K/2)^{Δq}`-suppressed. `proposed_residual_closure.md`. |
+| K-zoo kink-mass ratios `M_k(d,n,b)/M_k(K=1)` | **Reduction promoted to Survives (Class-3, structurally forced)** — see Survives entry below. Ratio `= b^(−n/(2d))·√(r_n)` (K-scaling forced; `√r_n` an honest flagged correction). Only the *observable-identification* (which object ↔ which kink per sector) stays **Class-2, declined, not chased**. |
 
 The Proposed tier is **empty of open framework deliverables**.
 What remains is one quantitative correction (`√r_n`) and one

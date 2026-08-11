@@ -1,3 +1,4 @@
+<!-- edition 2 (2026-08-11) · strikethrough dispositions converted to plain statements; prior text: git show c61f743:sync_cost/derivations/remaining_gap_shapes.md · reading-layer policy, ERRATA.md preamble -->
 # Remaining gap shapes after the disambiguation pattern
 
 ## What this file is
@@ -230,21 +231,21 @@ What remains:
 
 The work map after 2026-04:
 
-1. ~~Direction 4 Phase C~~ — **closed; w_+ = 13/14 lifts to Class 5**
+1. Direction 4 Phase C — **closed; w_+ = 13/14 lifts to Class 5**
    per `L1_substrate_cusp_ground_state.md` + `w_plus_formalization.md`.
    L1 closes via composition of MOND smooth crossover + EM lock-in
    + substrate discreteness + local linearity. Recognize-mode.
-2. ~~Region C Phase B~~ — **closed; PIGEONHOLE verdict** per
+2. Region C Phase B — **closed; PIGEONHOLE verdict** per
    `numerology_count_phase_b.md`. Cloud is noise; further
    near-match closure attempts will land Class 2 by construction.
-3. ~~A_s closure~~ — **Instance 7 ACCEPTED**. A_s = 2.33×10⁻⁹
+3. A_s closure — **Instance 7 ACCEPTED**. A_s = 2.33×10⁻⁹
    substrate-side prediction is complete; the 11% gap to A_s_obs
    is the inflation amplification factor f_amp, anchor-side, with
    no framework-internal prediction of its magnitude (per Region C
    verdict on multi-candidate (H/M_P)² ansätze). Substrate-inflation
    derivation (reading b) remains a possible future extension but
    is not a gap.
-4. ~~Shape F primitive-completeness audit~~ — **closed (2026-04-26)**
+4. Shape F primitive-completeness audit — **closed (2026-04-26)**
    per `primitive_completeness_audit.md`. Four primitives complete
    through 2026-04 closures; no fifth needed. Hygiene routine
    cleared (stale refs, script reproducibility, drift, MANIFEST).

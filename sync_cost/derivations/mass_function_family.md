@@ -1,3 +1,4 @@
+<!-- edition 2 (2026-08-11) · strikethrough dispositions converted to plain statements; prior text: git show c61f743:sync_cost/derivations/mass_function_family.md · reading-layer policy, ERRATA.md preamble -->
 # Mass-function family across cascade depths
 
 The master cascade-lock identity gives a one-parameter slope family:
@@ -15,8 +16,8 @@ observed mass functions correspond to different cascade depths:
 | Globular-cluster MF | — | 0 | -2.000 | universal GC MF | boundary (n=0) · generic, cheap |
 | Bowed cascade (Phase II) | 3 | 1 | -7/3 ≈ -2.333 | Salpeter IMF | **in-domain** (d=3 ✓) · 0.33σ |
 | Clarinet cascade (q_3-base) | 2 | 1 | -5/2 | predicted | **in-domain** (d=2 ✓) · untested |
-| ~~Z_6 cascade~~ | 6 | 1 | -13/6 ≈ -2.167 | ~~subhalo MF~~ | **out-of-domain** — d=6 ∉ {2,3,4}; subhalo is non-fragmentation (see Domain) |
-| ~~Matter equilibrium K*~~ | 14 | 3 | -31/14 ≈ -2.214 | — | **out-of-domain** — d=14 ∉ {2,3,4}; matter-sector running, not fragmentation |
+| Z_6 cascade | 6 | 1 | -13/6 ≈ -2.167 | subhalo MF (declined) | **out-of-domain** — d=6 ∉ {2,3,4}; subhalo is non-fragmentation (see Domain) |
+| Matter equilibrium K* | 14 | 3 | -31/14 ≈ -2.214 | — | **out-of-domain** — d=14 ∉ {2,3,4}; matter-sector running, not fragmentation |
 
 ## Domain — what licenses a rung (category correction)
 
@@ -143,8 +144,8 @@ fragmentation slope:
 | K = 1 boundary | -2.000 | 1.000 |
 | Bowed (d=3, n=1) | -7/3 ≈ -2.333 (in-domain) | 2^(-1/6) ≈ 0.891 |
 | Clarinet (d=2, n=1) | -5/2 (in-domain) | 3^(-1/4) ≈ 0.760 |
-| Z_6 (d=6, n=1) | ~~-13/6~~ out-of-domain | 2^(-1/12) ≈ 0.944 |
-| Matter K* (d=14, n=3) | ~~-31/14~~ out-of-domain | 2^(-3/28) ≈ 0.928 |
+| Z_6 (d=6, n=1) | -13/6 (out-of-domain) | 2^(-1/12) ≈ 0.944 |
+| Matter K* (d=14, n=3) | -31/14 (out-of-domain) | 2^(-3/28) ≈ 0.928 |
 
 > **Validity scope (soliton column only).** The kink-mass formula
 > `M_k = 8 σ √(K r)` is rigorous only at K ≈ 1 per
