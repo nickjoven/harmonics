@@ -99,6 +99,16 @@ def main():
     print(f"  K*     = {K_star:.10f}")
     print(f"  Check:   duty(2)/duty(3) at K* = {r_check:.6f}")
     print(f"  Δ      = {abs(r_check - RATIO_32_MZ):.2e}")
+    if K_star > 1 - 1e-9:
+        print()
+        print("  WARNING: the target ratio is unreachable below K = 1 — the")
+        print("  perturbative duty ratio is (9/2)/K ≥ 4.5 for K ≤ 1 and jumps")
+        print("  to 27/8 = 3.375 at K = 1 exactly, so the target falls in the")
+        print("  discontinuity gap and the bisection clamps to K* = 1. The Δ")
+        print("  above is a real miss, not a residual; everything downstream")
+        print("  is evaluated at the clamped K* = 1 and reads as tree-scale")
+        print("  identity, not an M_Z prediction (see beta_from_tongues.md,")
+        print("  ERRATA E8).")
     print()
     print(f"  K=1 (tree scale):  ratio = {duty_ratio(2, 3, 1.0):.6f}  (= 27/8)")
     print(f"  K*={K_star:.4f} (M_Z):     ratio = {r_check:.6f}")
@@ -275,7 +285,11 @@ def main():
 
     print(f"  ln(M_Z/M_Pl) = {ln_mz_mpl:.2f}")
     print(f"  ΔK = 1 - K* = {1 - K_star:.6f}")
-    print(f"  If linear: d(ln μ)/dK ≈ {ln_mz_mpl / (K_star - 1):.1f}")
+    if abs(K_star - 1) < 1e-9:
+        print("  K* = 1 exactly: the linear K→μ mapping estimate is degenerate")
+        print("  (ΔK = 0); no slope can be extracted.")
+    else:
+        print(f"  If linear: d(ln μ)/dK ≈ {ln_mz_mpl / (K_star - 1):.1f}")
 
     # ── 8. Unification ───────────────────────────────────────────────────
     print(f"\n{'─' * 75}")

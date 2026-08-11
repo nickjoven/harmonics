@@ -416,10 +416,10 @@ def main():
     print(f"""
   Gate duty cycle: duty(q) = w(q, K) / q = 1/q³ at K=1.
 
-  COUPLING RATIO TEST:
-    duty(q=2)/duty(q=3) = 27/8 = 3.375
+  COUPLING RATIO TEST (computed from tongue_width at K=1):
+    duty(q=2)/duty(q=3) = {d2_bare/d3_bare:.4f}  (equals 27/8 = 3.375 when w(q,1) = 1/q²)
     α_s/α₂ at M_Z       = {RATIO_32_MZ:.3f}
-    Δ                    = {abs(27/8 - RATIO_32_MZ)/RATIO_32_MZ:.1%}
+    Δ                    = {abs(d2_bare/d3_bare - RATIO_32_MZ)/RATIO_32_MZ:.1%}
 
   WEINBERG ANGLE TEST:
     duty(q=1)/[duty(q=1)+duty(q=2)] = {s2tw_tree:.4f}

@@ -82,11 +82,11 @@ TARGETS = [
             ],
         },
         "probes": [
-            # Headline coupling-ratio test: 27/8 and its Delta are hardcoded
-            # arithmetic — invariant under any width-law mutation (pass-2
-            # tautology finding, now pinned).
-            ("coupling-ratio-test", r"duty\(q=2\)/duty\(q=3\) = 27/8|α_s/α₂ at M_Z",
-             {"critical-width-law": "VACUOUS"}),
+            # Headline coupling-ratio test: formerly hardcoded 27/8
+            # arithmetic (pass-2 tautology); now computed from tongue_width,
+            # so it must flip under the width-law mutation.
+            ("coupling-ratio-test", r"duty\(q=2\)/duty\(q=3\) =|α_s/α₂ at M_Z",
+             {"critical-width-law": "DISCRIMINATES"}),
             # Weinberg tree-scale test actually consumes tongue_width at K=1.
             ("weinberg-tree", r"duty\(q=1\)/\[duty\(q=1\)\+duty\(q=2\)\]",
              {"critical-width-law": "DISCRIMINATES"}),
@@ -101,19 +101,26 @@ TARGETS = [
                  "    return 2 * (K / 2) ** q / q",
                  "    return 2 * (K / 2) ** q / (q * q)"),
             ],
+            "critical-width-law": [
+                ("circle_map_utils.py",
+                 "        return 1.0 / (q * q)",
+                 "        return 1.0 / (q ** 2.164)"),
+            ],
         },
         "probes": [
-            # K* is SOLVED from the observed ratio, then the ratio is checked
-            # at K*: the fit re-absorbs any width-law mutation, so this check
-            # cannot fail — observation-inverted verifier (cf. w_+ pattern).
-            # Baseline currently crashes: find_K_star returns exactly 1.0
-            # (E8 — target ratio unreachable below K=1), then K*-1 divides
-            # by zero. Standing debt: the verifier cannot run at all.
-            ("kstar-selfcheck", r"^\s+Δ\s+=\s+\d",
-             {"perturbative-width-law": "BROKEN(baseline)"}),
-            # sin²θ_W at the re-solved K* is a genuine derived quantity.
+            # find_K_star clamps to exactly 1.0 (E8: the target ratio falls
+            # in the perturbative→critical discontinuity gap); the script now
+            # reports the clamp honestly and the Δ line is a real miss.
+            # Because K* = 1, every downstream number consumes the CRITICAL
+            # branch only: perturbative mutations are absorbed by the clamp
+            # (VACUOUS — pinned as the clamp signature), critical mutations
+            # must flip the verdicts.
+            ("kstar-selfcheck", r"^\s+Δ\s{2,}=\s+\d",
+             {"perturbative-width-law": "VACUOUS",
+              "critical-width-law": "DISCRIMINATES"}),
             ("sin2thetaw", r"sin²θ_W = duty|predicted = 0\.",
-             {"perturbative-width-law": "BROKEN(baseline)"}),
+             {"perturbative-width-law": "VACUOUS",
+              "critical-width-law": "DISCRIMINATES"}),
         ],
     },
     {
