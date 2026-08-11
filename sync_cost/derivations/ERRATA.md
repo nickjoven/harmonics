@@ -119,6 +119,19 @@ The d = 3 chain breaks at three_dimensions.md's undefined "SL(2,Z)
 completes to SL(2,R)" step; qd_origins support is circular;
 so(2,1) ≠ so(3). Full break anatomy in MANIFEST `open_problems`.
 
+## E15 — Ω partition canon (decision D1: option C)
+**Files:** `MANIFEST.yml` (5 cosmology rows), `framework_constants.py`, `scripts/drift/check_manifest_claims.py`. **Fix commit:** this branch.
+The two rival Ω families are dispositioned: the single-w bare
+partition (1/19, 5/19, 13/19 — computed by `framework_constants.py`
+and carried by ~70 docs) is canonical as **substrate-side reference
+arithmetic, not a prediction** (Ω_b sits 6.7% from Planck); the
+two-component family (13/264, 35/132, 181/264; w₊ = 13/14) is
+**retracted Class 5 → Class 2 (observation-fitted)**: w₊ enters as a
+numerical fit (`400f558`, table prints "0.000% (fit)"), the Γ_0(6)
+cusp account was written 3h33m post-fit, and no script computes the
+family. It remains a named refinement with a re-promotion path: a
+non-fitted derivation of w₊ plus a computing script.
+
 ## E14 — Chain 1 repaired; circle is Axiom 1
 **Files:** `minimum_alphabet.md` (edition 2), `mediant_derivation.md`, universality condition (4). **Fix commit:** `d582403`; prior `d582403^`.
 The circle-derivation argument presupposes the R/Z identification it

@@ -92,7 +92,7 @@ scorecard:
     observed: "0.6847 ± 0.0073"
     residual: "0.07σ"
     source: ["D25", "D28"]
-    closure_status: "Class 5 (single-w form) — Ω_Λ = 13/19 from the Farey-7 partition 13:5:1/19 (omega_partition_combinatorial.md, baryon_fraction.md); refined under two-component closure — see dark_energy_fraction_two_component below"
+    closure_status: "Substrate-side bare partition (canonical per D1/C16): Ω_Λ = 13/19 from the Farey-7 partition 13:5:1/19 (omega_partition_combinatorial.md, baryon_fraction.md). Reference arithmetic, not a prediction at observational precision (numerology_count_phase_b.md carries this value in its pigeonhole table). Two-component refinement is Class 2 (observation-fitted) — see dark_energy_fraction_two_component below"
 
   hierarchy:
     name: "Planck/Hubble ratio R"
@@ -177,43 +177,43 @@ scorecard:
 
   dark_matter_fraction:
     name: "Dark matter fraction Ω_DM"
-    computed: "35/132 = 0.26515 (two-component closure, w_+ = 13/14)"
-    computed_single_w: "5/19 = 0.2632"
+    computed: "5/19 = 0.2632 (substrate-side bare partition; canonical per D1/C16)"
+    computed_fitted: "35/132 = 0.26515 (two-component refinement; fitted w_+ = 13/14)"
     observed: "0.265 ± 0.007"
-    residual: "0.06%"
-    residual_single_w: "0.7%"
+    residual: "0.7%"
+    residual_fitted: "0.06% (by construction of the fit)"
     source: ["D47", "omega_b_alpha_beta_closure", "psl2z_subgroup_phase_b", "L1_substrate_cusp_ground_state"]
-    closure_status: "Class 5 (full) — two-component (sym/antisym) + w_- = 1 from sign-rep no-EM + w_+ = 13/14 from Γ_0(6) cusp 1/2 ground state"
+    closure_status: "Bare partition = reference, not a prediction. Two-component refinement retracted Class 5 → Class 2 (observation-fitted): w_+ = 13/14 enters as a numerical fit (400f558; its table prints '0.000% (fit)'), the Γ_0(6) cusp 1/2 account was written 3h33m post-fit and does not independently derive w_+, and no script computes this family. Re-promotes iff w_+ gains a non-fitted derivation plus a computing script."
 
   baryon_fraction:
     name: "Baryon fraction Ω_b"
-    computed: "13/264 = 0.04924 (two-component closure, w_+ = 13/14)"
-    computed_single_w: "1/19 = 0.0526"
+    computed: "1/19 = 0.0526 (substrate-side bare partition; canonical per D1/C16)"
+    computed_fitted: "13/264 = 0.04924 (two-component refinement; fitted w_+ = 13/14)"
     observed: "0.0493 ± 0.0003"
-    residual: "0.12%"
-    residual_single_w: "6.7%"
+    residual: "6.7% (real and unexplained at partition level; reference status, not a prediction)"
+    residual_fitted: "0.12% (by construction of the fit)"
     source: ["D47", "omega_b_alpha_beta_closure", "psl2z_subgroup_phase_b", "L1_substrate_cusp_ground_state"]
-    closure_status: "Class 5 (full) — see dark_matter_fraction"
+    closure_status: "Bare partition = reference, not a prediction. Two-component refinement Class 2 (observation-fitted) — see dark_matter_fraction."
 
   dm_baryon_ratio:
     name: "Ω_DM/Ω_b"
-    computed: "70/13 ≈ 5.385 (two-component closure)"
-    computed_single_w: "5"
+    computed: "5 (= (5/19)/(1/19), substrate-side bare partition; canonical per D1/C16)"
+    computed_fitted: "70/13 ≈ 5.385 (two-component refinement)"
     observed: "5.41"
-    residual: "0.6%"
-    residual_single_w: "7.5%"
+    residual: "7.5%"
+    residual_fitted: "0.6% (by construction of the fit)"
     source: ["D47", "omega_b_alpha_beta_closure"]
-    closure_status: "Class 5 (inherits from baryon_fraction)"
+    closure_status: "Ratio of the bare partition; reference, not a prediction. Refinement inherits Class 2 from baryon_fraction."
 
   dark_energy_fraction_two_component:
-    name: "Dark energy fraction Ω_Λ (two-component closure)"
-    computed: "181/264 = 0.68561 (two-component closure, w_+ = 13/14)"
-    computed_single_w: "13/19 = 0.6842"
+    name: "Dark energy fraction Ω_Λ (two-component refinement; fitted)"
+    computed: "181/264 = 0.68561 (two-component refinement; fitted w_+ = 13/14)"
+    computed_single_w: "13/19 = 0.6842 (canonical bare partition — see dark_energy)"
     observed: "0.6847 ± 0.0073"
-    residual: "0.13%"
+    residual: "0.13% (by construction of the fit)"
     residual_single_w: "0.07σ"
     source: ["omega_b_alpha_beta_closure", "psl2z_subgroup_phase_b"]
-    closure_status: "Class 5 (full) — refined under two-component closure"
+    closure_status: "Class 2 (observation-fitted), retracted from Class 5: w_+ = 13/14 is a numerical fit (400f558); the Γ_0(6) cusp account is post-hoc; no script computes this family. Kept as a named refinement; re-promotes iff w_+ gains a non-fitted derivation plus a computing script."
 
 # --- Bare K=1 identities ---
 # Measure-theoretic consequences of duty(q) = 1/q^d at critical coupling

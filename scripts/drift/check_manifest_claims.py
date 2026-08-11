@@ -38,8 +38,8 @@ MAPPED = {
     "dark_energy": ("omega_lambda", ["computed"]),
     "dark_energy_fraction_two_component":
         ("omega_lambda", ["computed", "computed_single_w"]),
-    "dark_matter_fraction": ("omega_dm", ["computed", "computed_single_w"]),
-    "baryon_fraction": ("omega_b", ["computed", "computed_single_w"]),
+    "dark_matter_fraction": ("omega_dm", ["computed", "computed_fitted"]),
+    "baryon_fraction": ("omega_b", ["computed", "computed_fitted"]),
 }
 
 LEADING_RATIONAL = re.compile(r"^\s*(\d+)\s*/\s*(\d+)\b")

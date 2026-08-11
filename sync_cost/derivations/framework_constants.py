@@ -194,7 +194,11 @@ ALPHA_Y_MZ:   float = ALPHA_EM_MZ / (1 - SIN2_TW_MZ)
 
 
 # ============================================================================
-# Cosmological parameters
+# Cosmological parameters — substrate-side bare partition (canonical, D1/C16)
+# Reference arithmetic from the Farey partition 13:5:1/19; NOT predictions
+# at observational precision (OMEGA_B sits 6.7% from Planck). The fitted
+# two-component refinement (w_+ = 13/14; Class 2, observation-fitted) is
+# ledgered in MANIFEST.yml and computed by no script.
 # ============================================================================
 
 OMEGA_B:  float = 1 / 19                          # baryons
