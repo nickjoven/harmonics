@@ -1,3 +1,6 @@
+<!-- provides: omega-lambda-interval status=derived -->
+<!-- provides: omega-lambda-fitted-point status=fitted -->
+<!-- premises: q23-selection@mass_sector_closure, omega-bare-partition@omega_partition_combinatorial -->
 # The Boundary Weight
 
 > **AUDIT NOTICE — read `boundary_weight.py` L13-56 for the honest

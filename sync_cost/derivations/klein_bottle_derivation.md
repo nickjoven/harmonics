@@ -1,3 +1,5 @@
+<!-- provides: k2-surface-selection status=conditional -->
+<!-- premises: klein-spectrum-theorem@xor_derivation, xor-parity-translation@xor_derivation -->
 # The Klein Bottle from Self-Consistency
 
 ## Claim

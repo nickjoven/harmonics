@@ -1,3 +1,4 @@
+<!-- provides: q23-selection status=proven -->
 # The Mass Sector Closure: Integer Conservation and Gauge Adjoints
 
 ## Theorem

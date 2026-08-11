@@ -1,3 +1,5 @@
+<!-- provides: figure-eight-mode-structure status=conditional -->
+<!-- premises: xor-parity-translation@xor_derivation -->
 # The Figure-Eight Topology
 
 > **Disposition note (added 2026-05).** One open flag and one

@@ -1,3 +1,4 @@
+<!-- provides: omega-bare-partition status=definition -->
 # Ω partition: combinatorial derivation at depth 19
 
 > **Forward-pointing note (2026-04-26)**: this doc derives the

@@ -1,4 +1,5 @@
 <!-- edition 2 (2026-08-11) · integrates the 2026-08-04 correction (f161d6c); prior text: git show f161d6c^ · ERRATA.md E7 -->
+<!-- provides: duty-cube-definition status=definition -->
 # The Duty-Cycle Exponent and the Group Dimension: Definition, Not Map Law
 
 ## Status

@@ -1,3 +1,5 @@
+<!-- provides: mediant-adjacency-theorem status=proven -->
+<!-- premises: mediant-primitive@minimum_alphabet -->
 # The Mediant Is Not an Axiom
 
 ## The challenge

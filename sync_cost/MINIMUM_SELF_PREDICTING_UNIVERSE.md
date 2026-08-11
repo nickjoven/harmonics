@@ -1,4 +1,6 @@
 <!-- edition 2 (2026-08-11) · Lemma 5 and §6(iv) revised; prior text: git 3597650^ · ERRATA.md E2, E3 -->
+<!-- provides: mspu-synthesis status=conditional -->
+<!-- premises: circle-axiom@minimum_alphabet, klein-spectrum-theorem@xor_derivation, xor-parity-translation@xor_derivation, q23-selection@mass_sector_closure, omega-lambda-interval@boundary_weight -->
 # The Minimum Self-Predicting Universe
 
 ## An Algebraic Proof

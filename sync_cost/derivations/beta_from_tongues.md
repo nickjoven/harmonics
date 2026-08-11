@@ -1,4 +1,6 @@
 <!-- edition 2 (2026-08-11) · integrates the 2026-08-04 correction (4f2a379); prior text: git show 4f2a379^ · ERRATA.md E8 -->
+<!-- provides: duty-ratio-theorem status=proven -->
+<!-- premises: duty-cube-definition@duty_dimension_proof -->
 # Tongue-Width Running: the Ratio Theorem (SM β-Coefficient Claim Retired)
 
 ## Claim
