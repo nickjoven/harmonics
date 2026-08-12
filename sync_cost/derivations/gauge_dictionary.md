@@ -1,3 +1,5 @@
+<!-- provides: gauge-dictionary-count-match status=conditional -->
+<!-- premises: xor-parity-translation@xor_derivation -->
 # Gauge-Sector Dictionary Promotion
 
 > **Gluon ontology.** The 8 su(3)-sector mode transitions (6 roots +
@@ -136,8 +138,20 @@ a smooth manifold are not the same kind of object.
 
 Sub-identification #3b merges with Identification #2 below.
 
-**Status of #3**: factors into #3a (FORCED by graph/algebra structure)
-and #3b (IDENTIFIED, merged with #2).
+**Status of #3**: factors into #3a (count-match, CONDITIONAL — see
+below) and #3b (IDENTIFIED, merged with #2).
+
+*Status (2026-08-12; fan-out CONFIRMED).* #3a's "forced"
+holds only for the cardinality split 12 = 8 + 4 given a 4-mode
+roster. The roster itself is manufactured by the conjectured
+fraction-parity filter (`xor_derivation.md` e2, ERRATA E1): under the
+XNOR alternative the same component set yields 5 modes, 20 directed
+transitions, and an 8 + 12 split — the dim-12 match and the
+Cartan/off-diagonal alignment dissolve. #3a is therefore conditional
+on the unproven translation, and the 8+4 ↔ 8+2+1+1 reconciliation
+additionally leans on the electroweak-mixing near-coincidence noted
+above. Many algebras satisfy the bare cardinality split; the
+dictionary's forcing power rests entirely on premises that are open.
 
 ## Identification #2: `Z₃ ↪ Z(SU(3))` — merged irreducible
 

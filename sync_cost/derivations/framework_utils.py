@@ -249,7 +249,10 @@ def duty_cycle(q: int, d: int = 3) -> float:
 
     duty(q, d) = 1 / q^d
 
-    At d = 3 this is the framework's standard duty-cycle formula,
-    equal to alpha_i(tree) for the gauge couplings.
+    DEFINITION, not a measured circle-map law (duty_dimension_proof.md
+    e2, ERRATA E7): the measured critical width exponent is 2.164, and
+    the d = 3 spatial reading imports the demoted three_dimensions.md.
+    At d = 3 this is the framework's bare duty-cycle weight, used as
+    the alpha_i(tree) reference (not a prediction at M_Z).
     """
     return 1 / (q ** d)

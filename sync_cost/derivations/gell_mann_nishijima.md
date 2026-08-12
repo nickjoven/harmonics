@@ -1,3 +1,5 @@
+<!-- provides: gmn-charge-form status=derived -->
+<!-- premises: klein-spectrum-theorem@xor_derivation -->
 # The Gell-Mann-Nishijima Relation from Klein Bottle Geometry
 
 ## Theorem
@@ -171,8 +173,14 @@ Using Q = T_3 + Y/2 with the Klein bottle fractions:
 - d_R: Q = -1/3, Y = 2(-1/3) = -2/3
 - e_R: Q = -1, Y = 2(-1) = -2
 
-These are exactly the Standard Model hypercharges. No free
-parameters.
+These reproduce the Standard Model hypercharges — but note the
+direction of computation: Y is obtained by back-solving Q = T₃ + Y/2
+at the OBSERVED electric charges (Q_ν = 0, Q_e = −1, Q_u = 2/3 are
+inputs here, not outputs). The relation organizes the observed
+charges; it does not derive them, and "no free parameters" is
+withdrawn for this table (fan-out 2026-08-09, CONFIRMED; cf. ERRATA
+E1 scope notes). What is geometric and XOR-independent is the FORM
+Q = T₃ + Y/2 (antiperiodic spectrum + order-2 reflection).
 
 ### Why the doublet consistency works
 

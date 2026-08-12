@@ -1,3 +1,5 @@
+<!-- provides: duty-coupling-dictionary status=conjectured -->
+<!-- premises: duty-cube-definition@duty_dimension_proof, q23-selection@mass_sector_closure, xor-parity-translation@xor_derivation -->
 # The Duty Cycle Dictionary
 
 ## Status (honest-null resolution)
@@ -15,8 +17,10 @@ direction for sin²θ_W from any framework-internal tree scale
 file have been updated accordingly.
 
 The dictionary's mathematical content — duty(q) = 1/q^d at K = 1 — is
-unchanged and rigorous; it is a consequence of the Gauss-Kuzmin
-measure on Farey rationals (`duty_dimension_proof.md`).
+a DEFINITION: arithmetic on the Gauss-Kuzmin/Ford-circle weight
+(1/q²)·(1/q). As a measured circle-map law it is refuted — measured
+w(q,1)·q² drifts and the critical exponent is 2.164
+(`duty_dimension_proof.md` e2, ERRATA E7).
 
 ## Claim (original, at K = 1 only)
 
@@ -51,10 +55,13 @@ orbit period (gate repetition interval). At K = 1 (critical coupling):
     T(q) = q            (period of a p/q orbit)
     duty(q) = 1/q^3     = 1/q^d
 
-The exponent equals d = 3, the spatial dimension.
+The exponent 3 is the exponent of the defined weight. Reading it as
+d = 3, the spatial dimension, imports `three_dimensions.md`, which is
+demoted to an open problem (MANIFEST open_problems; the "SL(2,Z)
+completes to SL(2,R)" step is undefined).
 
-**This is proved in `duty_dimension_proof.md`.** The exponent is not a
-coincidence. The duty cycle is the d-dimensional volume density at the
+**The identity is definitional** (`duty_dimension_proof.md` e2). The
+decomposition is exact arithmetic on the definition. The duty cycle is the d-dimensional volume density at the
 Stern-Brocot cusp: a density on a d-dimensional manifold scales as
 1/(characteristic length)^d. The factorization into tongue width
 (transverse density, 1/q^2) and period (longitudinal density, q) is the
@@ -317,8 +324,8 @@ derivation in the framework (see `numerology_inventory.md` §Class 1/3).
 
 Previous fitted corrections (`+ 8/F_10^2`, `+ 1/q_3^2`, `+ 1/228`)
 have been removed from this table: they are not derived in the
-repository. The K=1 bare values are measure-theoretic consequences
-of the duty theorem (`duty_dimension_proof.md`); the gap to M_Z is
+repository. The K=1 bare values are arithmetic on
+the duty definition (`duty_dimension_proof.md` e2, ERRATA E7); the gap to M_Z is
 unresolved. The previous "decoherence tax" row identifying 1 − |r|
 with the residual has been dropped along with its derivation claim
 (§7).
@@ -327,13 +334,16 @@ with the residual has been dropped along with its derivation claim
 
 ## Proof dependencies
 
-- **D14** (`three_dimensions.md`): d = 3 from mediant -> SL(2,R) ->
-  self-consistent adjacency. The exponent in 1/q^d = 1/q^3 is the
-  spatial dimension, not an independent input.
+- **D14** (`three_dimensions.md`): DEMOTED to open problem (MANIFEST
+  open_problems, decision D2): the "completes to SL(2,R)" step is
+  undefined. The d = 3 reading of the exponent is open; the exponent
+  itself stands as the defined weight's arithmetic.
 
-- **D19** (`klein_bottle.md`): The Klein bottle XOR filter selects
-  q = 2 and q = 3 as the only surviving sectors. Without D19, we would
-  not know WHICH denominators to use.
+- **D19** (`klein_bottle.md`): the fraction-parity filter is
+  CONJECTURED (xor_derivation.md e2, ERRATA E1), and it is a pair
+  filter, not a sector selection (ERRATA E2). The documented {2, 3}
+  selection is the cube-identity/Mihailescu argument
+  (`mass_sector_closure.md`), independent of the filter.
 
 - **D31** (`speed_of_light.md`): The gate picture. c is the rate at
   which gates propagate; the duty cycle is the fraction of time each

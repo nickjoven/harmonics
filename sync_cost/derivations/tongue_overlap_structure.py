@@ -1,6 +1,28 @@
 """
 D21-B + D30 synthesis: Tongue overlap as interaction vertex.
 
+SCOPE CORRECTION (D3 whiteboard + 2026-08-09 fan-out, CONFIRMED):
+this script's headline conclusion ("NOT SU(3)xSU(2)xU(1); the XOR
+filter is too restrictive for non-abelian") is RETIRED as
+convention-dependent, on four verified grounds:
+1. The prose below conflates numerator-parity and denominator-parity
+   rules in adjacent lines; the two rules give different verdicts on
+   e.g. (1/2, 1/3).
+2. The verdict flips across the convention grid: under q-parity XNOR
+   all three mediation types are allowed; under p-parity XOR on
+   unreduced mediants the sector mediations are allowed.
+3. Under the script's own rule, ALL pair-level mediations are
+   forbidden — matter-matter interaction is rescued at slot level
+   while mediator self-coupling is rejected at pair level. Same
+   filter, two levels of application, chosen per case.
+4. The sector mediations take mediants of non-Farey-adjacent pairs
+   (bc - ad = 3 for (1/3, 2/3)), outside the mediant's licensed
+   domain (mediant_derivation.md adjacency theorem).
+The interaction-algebra question is ill-posed until the
+spectrum-to-tree translation is derived (xor_derivation.md e2,
+ERRATA E1). The computations below are retained as data for the
+q-parity-XOR-reduced convention cell only.
+
 D21 asked: do Arnold tongue overlaps at denominator classes 2 and 3
 reproduce gauge theory vertex structure?
 
@@ -280,11 +302,14 @@ print("  - q=3 pairs interact through q=2 (their mediant is 1/2)")
 print("  - q=2 pairs CANNOT self-interact (their mediant is forbidden)")
 print("  - Cross-sector pairs CANNOT interact (their mediant is forbidden)")
 print()
-print("This is NOT SU(3) × SU(2) × U(1). It is a simpler structure:")
+print("Within the q-parity XOR reduced-mediant convention cell ONLY,")
+print("this is not SU(3) × SU(2) × U(1) but a simpler structure:")
 print("  - One abelian mediator (q=2 = 1/2)")
 print("  - Two matter modes (q=3 = 1/3, 2/3)")
 print("  - No self-coupling of the mediator")
 print()
-print("The XOR filter is too restrictive for non-abelian gauge theory.")
-print("Non-abelian requires gauge bosons that self-couple — mediants of")
-print("mediants — which the XOR parity forbids at every step.")
+print("CAVEAT (see header): this conclusion is convention-dependent —")
+print("it inverts under q-parity XNOR and under p-parity XOR on")
+print("unreduced mediants, and the sector mediations above use")
+print("non-Farey-adjacent pairs, outside the mediant's licensed domain.")
+print("Retired as a gauge-group verdict; see xor_derivation.md e2.")

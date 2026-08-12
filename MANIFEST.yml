@@ -157,7 +157,8 @@ scorecard:
     observed: "SU(3) × SU(2) × U(1)"
     residual: "exact"
     source: ["D41", "D42"]
-    closure_status: "Class 5 (exact) — SU(3) × SU(2) × U(1) from the Klein-bottle mode lattice Z₆ = Z₂ × Z₃ (D41, D42)"
+    premises: ["xor-parity-translation@xor_derivation"]
+    closure_status: "Conditional (retracted from Class 5 exact, 2026-08-12): the 12-transition count consumes the 4-mode roster manufactured by the conjectured fraction-parity filter (xor_derivation.md e2, ERRATA E1); under the XNOR alternative the roster is 5 modes → 20 transitions with an 8+12 split, dissolving the dim-12 match (fan-out 2026-08-09, CONFIRMED). Type identification #3b conceded irreducible (gauge_dictionary.md); D42 cocycle support is vacuous over the trivial discrete base (gap3_principal_bundle.py concedes triviality). Z₆ center arithmetic survives in weakened form. Re-promotes with the spectrum→tree translation theorem."
 
   strong_cp:
     name: "θ (strong CP)"
@@ -173,7 +174,8 @@ scorecard:
     observed: "all 6 conditions = 0"
     residual: "exact"
     source: ["D41"]
-    closure_status: "Class 5 (exact) — all 6 SM gauge-anomaly conditions verified at the substrate level (D41)"
+    premises: ["xor-parity-translation@xor_derivation"]
+    closure_status: "Verified for the IMPORTED charge assignment (retracted from Class 5 exact, 2026-08-12): D41 hardcodes the hypercharges (discrete_gauge_resolution.md) and gell_mann_nishijima.md obtains Y by back-solving from observed electric charges, so the 6 conditions confirm the consistency of the imported SM assignment — they are not a substrate derivation of it."
 
   dark_matter_fraction:
     name: "Dark matter fraction Ω_DM"

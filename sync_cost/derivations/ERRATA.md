@@ -119,6 +119,24 @@ The d = 3 chain breaks at three_dimensions.md's undefined "SL(2,Z)
 completes to SL(2,R)" step; qd_origins support is circular;
 so(2,1) ≠ so(3). Full break anatomy in MANIFEST `open_problems`.
 
+## E16 — Repercussive-feedback batch: demotions propagated to consumers
+**Files:** `MANIFEST.yml` (gauge_group, anomaly_cancellation), `gauge_dictionary.md`, `tongue_overlap_structure.py`, `duty_cycle_dictionary.md`, `framework_utils.py`, `gell_mann_nishijima.md`. **Fix commit:** this branch.
+Corrections E1/E2/E7 and decision D2 changed the status of premises
+whose consumers had not been re-statused. Propagated: gauge_group
+retracted Class 5 → conditional (12-count consumes the conjectured
+4-mode roster; XNOR gives 5 modes/20 transitions; #3b conceded;
+cocycles vacuous); anomaly_cancellation retracted Class 5 →
+verified-for-imported-charges (D41 hardcodes hypercharges; GMN
+back-solves Y from observed Q — "no free parameters" withdrawn at
+source); tongue_overlap_structure's "NOT SU(3)×SU(2)×U(1) / too
+restrictive" retired as convention-dependent (rule conflation,
+grid-flip, slot/pair level mixing, non-adjacent mediants);
+duty_cycle_dictionary's "duty theorem"/"proved" language converted to
+definition status with D2/E2 dependency notes; framework_utils
+duty_cycle docstring aligned. Systemic fix: MANIFEST rows now carry
+`premises:` fields checked by `check_premises.py` — Class 5/exact on
+an unsettled premise is a machine violation (red/green verified).
+
 ## E15 — Ω partition canon (decision D1: option C)
 **Files:** `MANIFEST.yml` (5 cosmology rows), `framework_constants.py`, `scripts/drift/check_manifest_claims.py`. **Fix commit:** this branch.
 The two rival Ω families are dispositioned: the single-w bare

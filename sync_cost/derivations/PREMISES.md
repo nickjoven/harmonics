@@ -43,6 +43,16 @@ rests on it.
 3. **Propagation** — the rule above, transitively.
 4. **Cycles** — the premise graph is acyclic.
 
+## MANIFEST rows
+
+Scorecard rows in `MANIFEST.yml` may declare a `premises:` list of
+the same `name@doc` entries. A row whose premises resolve to an
+unsettled anchor may not claim `Class 5` / `exact` in its
+`closure_status` unless the status text itself carries the hedge
+(conditional / retracted / reference / imported / fitted). This is
+the repercussive-feedback guard: a demotion at a providing doc
+reaches the scorecard mechanically.
+
 ## Ratchet policy
 
 Enforcement is incremental: docs that declare anchors are checked;

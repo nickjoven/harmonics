@@ -64,8 +64,62 @@ def scan():
     return provides, premises, errors
 
 
+SETTLED_MARKERS = ("conditional", "conjectur", "class 2", "retracted",
+                   "reference", "imported", "fitted", "open problem",
+                   "not a prediction", "verified for the imported")
+
+
+def check_manifest(provides, errors):
+    """MANIFEST rows may declare premises: ["name@doc", ...]. A row whose
+    premises resolve (directly) to an unsettled anchor must carry a
+    non-strong closure_status — Class 5 / 'exact' on an unsettled
+    premise is the neglected-repercussion failure mode."""
+    try:
+        import yaml
+        manifest = yaml.safe_load((ROOT / "MANIFEST.yml").read_text())
+    except Exception as exc:  # pragma: no cover
+        errors.append(f"MANIFEST.yml unreadable: {exc}")
+        return
+
+    def walk(node, path):
+        if not isinstance(node, dict):
+            return
+        prem = node.get("premises")
+        if isinstance(prem, list):
+            unsettled = []
+            for raw in prem:
+                e = ENTRY_RE.match(str(raw))
+                if not e:
+                    errors.append(f"MANIFEST:{path}: unparseable premise '{raw}'")
+                    continue
+                name, pdoc = e.group(1), Path(e.group(2)).stem
+                if name not in provides:
+                    errors.append(f"MANIFEST:{path}: premise '{name}' has no provider")
+                    continue
+                if provides[name][0] != pdoc:
+                    errors.append(
+                        f"MANIFEST:{path}: premise '{name}' attributed to {pdoc}, "
+                        f"but its provider is {provides[name][0]}")
+                if provides[name][1] not in SETTLED:
+                    unsettled.append(name)
+            status = str(node.get("closure_status", "")).lower()
+            strong = ("class 5" in status or "exact" in status)
+            hedged = any(m in status for m in SETTLED_MARKERS)
+            if unsettled and strong and not hedged:
+                errors.append(
+                    f"MANIFEST:{path}: closure_status claims Class 5/exact but "
+                    f"premises {unsettled} are unsettled — strongest allowed is "
+                    "conditional")
+        for key, val in node.items():
+            if key != "premises":
+                walk(val, f"{path}.{key}" if path else str(key))
+
+    walk(manifest, "")
+
+
 def main() -> int:
     provides, premises, errors = scan()
+    check_manifest(provides, errors)
 
     # 1. resolution
     for doc, entries in premises.items():
