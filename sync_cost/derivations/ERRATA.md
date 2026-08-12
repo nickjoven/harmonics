@@ -119,6 +119,23 @@ The d = 3 chain breaks at three_dimensions.md's undefined "SL(2,Z)
 completes to SL(2,R)" step; qd_origins support is circular;
 so(2,1) ≠ so(3). Full break anatomy in MANIFEST `open_problems`.
 
+## E17 — strong_cp retraction, d=3 caveats, presentation headliners
+**Files:** `MANIFEST.yml` (strong_cp), `coupling_scales.md`, MSPU, `exponent.md`, `three_zeros.md`, `README.md`, `docs/problem-map.md`, `VISUAL_ONTOLOGY_PROMPT.md`. **Fix commit:** this branch.
+strong_cp retracted Class 5 → conditional: the θ = 0 argument runs on
+the K² premise (ledgered conditional) and its "eta invariant vanishes
+for flat Pin+ manifolds" step is an unverified import — flatness does
+not generally force vanishing η (2d Pin bordism carries nonzero
+invariants on flat representatives, e.g. Arf–Brown–Kervaire ℤ/8);
+needs a mathematics audit. d = 3/(3,1) caveats integrated at the
+three live sites still asserting the demoted D14/D15 chain (MSPU
+predictions list, exponent.md self-consistency claim, three_zeros.md
+"same 3" question). Note: the Koide "(2,1) signature" sites were
+inspected and NOT caveated — their route is the iteration-11
+cube-identity chain, independent of D14/D15. Presentation headliners:
+problem-map strong-CP entry conditionalized; README 2026-04 status
+snapshot annotated with the D1 retraction; VISUAL_ONTOLOGY_PROMPT's
+three "zero free parameters" phrases retired.
+
 ## E16 — Repercussive-feedback batch: demotions propagated to consumers
 **Files:** `MANIFEST.yml` (gauge_group, anomaly_cancellation), `gauge_dictionary.md`, `tongue_overlap_structure.py`, `duty_cycle_dictionary.md`, `framework_utils.py`, `gell_mann_nishijima.md`. **Fix commit:** this branch.
 Corrections E1/E2/E7 and decision D2 changed the status of premises

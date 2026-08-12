@@ -356,7 +356,10 @@ The mental shift: accept that the QCD vacuum angle vanishes
 exactly because of the substrate's Klein-antipodal $Z_2$
 invariance, not because of an undetected Peccei-Quinn axion.
 
-**If accepted**: the strong CP problem is resolved structurally.
+**If accepted** — and the argument is currently conditional: the K²
+configuration space is a conditional premise and the
+eta-invariant-vanishing step is an unverified import (MANIFEST
+`strong_cp`) — the strong CP problem would be resolved structurally.
 The 40-year search for axions becomes unnecessary at the
 substrate level (axions can still exist as effective theory
 constructs, but the strong CP "problem" doesn't motivate them).
@@ -525,9 +528,11 @@ the formal statement.
 
 The framework completed a substantial closure round in 2026-04:
 
-- **Ω_b two-component closure** to full Class 5 — zero free
-  parameters at closure level; $w_+ = 13/14$ derived in
-  recognize mode via Hecke modular structure on $X_0(6)$
+- **Ω_b two-component closure** — claimed full Class 5 in 2026-04;
+  retracted to Class 2 (observation-fitted) on 2026-08-11, decision
+  D1: $w_+ = 13/14$ enters as a numerical fit and the family is
+  computed by no script (MANIFEST rows, ERRATA E15); the Hecke/X₀(6)
+  account
   ([`L1_substrate_cusp_ground_state.md`](sync_cost/derivations/L1_substrate_cusp_ground_state.md))
 - **D.3 sector decoupling** to Class 5 — anchor obstruction #5
   closed structurally

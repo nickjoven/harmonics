@@ -155,8 +155,11 @@ the observed hierarchy.
 
 The self-reference is the content: a universe whose spatial dimension
 equals its spatial resolution class produces a hierarchy of exactly
-this size. No other value of d is self-consistent (D14 derives d = 3
-independently), so no other hierarchy is possible.
+this size. The claimed independent support — D14's derivation of
+d = 3 — is demoted to an open problem (MANIFEST open_problems,
+decision D2: the "completes to SL(2,R)" step is undefined), so the
+self-consistency argument here currently stands alone; "no other
+hierarchy is possible" is conditional on d = 3 being established.
 
 ## Status
 

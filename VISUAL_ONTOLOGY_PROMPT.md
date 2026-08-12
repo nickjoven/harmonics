@@ -161,7 +161,7 @@ Locked fraction = 13/19 = 0.6842 = Ω_Λ
 
 ---
 
-## 9. The Scorecard (zero free parameters)
+## 9. The Scorecard (bare substrate references; "zero free parameters" is retired repo-wide — w₊ is fitted, see MANIFEST free_parameters_note)
 
 | Observable | Computed | Observed | Residual |
 |-----------|----------|----------|----------|
@@ -191,7 +191,7 @@ B: Polynomial → Quantum Mechanics     (11 propositions, 5 shared with A)
    Four primitives → circle map → K<1 → superposition → Schrödinger
 
 C: The Bridge                          (7 propositions)
-   Connects A and B: Λ → a₀, one frequency, zero free parameters
+   Connects A and B: Λ → a₀, one frequency (the "zero free parameters" phrase is retired; see MANIFEST free_parameters_note)
 ```
 
 ---
@@ -266,7 +266,7 @@ File: `animate_mediants.py` — five scenes:
 |------|------|
 | harmonics | Derivation chain — the equation and its consequences |
 | rfe | Numerical engine — field equation solver, all observables |
-| proslambenomenos | Λ → a₀: one frequency, zero free parameters |
+| proslambenomenos | Λ → a₀: one frequency (free-parameter accounting: MANIFEST free_parameters_note) |
 | submediant-site | Derivation site: polynomial → evidence |
 | intersections | Stick-slip dynamics and dark matter |
 

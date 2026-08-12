@@ -118,10 +118,13 @@ one constraint (total = constant) have 3 degrees of freedom.
 
 ### Connection to d = 3
 
-Derivation 14 derives d = 3 spatial dimensions from the mediant
-via dim SL(2,ℝ) = 3. The Klein bottle Jacobian independently
-produces a 3-dimensional eigenspace. The question: is this the
-SAME 3?
+Derivation 14 proposed d = 3 spatial dimensions from the mediant
+via dim SL(2,ℝ) = 3; that derivation is demoted to an open problem
+(MANIFEST open_problems, decision D2 — the "completes to SL(2,R)"
+step is undefined). The Klein bottle Jacobian independently produces
+a 3-dimensional eigenspace. The question — is this the SAME 3? —
+therefore currently relates an open proposal to a computation, not
+two derivations.
 
 The chain:
 - The Klein bottle has 4 surviving modes (from XOR on the

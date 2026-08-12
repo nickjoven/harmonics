@@ -260,6 +260,15 @@ are w-independent (they depend only on q₂ = 2 and q₃ = 3):
     signature = (2² − 1, 1) = (3,1)
     generations = 2² − 1 = 3
 
+Status of the last three lines: the identification of 2² − 1 with
+the spatial dimension and the (3,1) signature imports
+three_dimensions.md/D15, demoted to open problems (MANIFEST
+open_problems, decision D2: the "SL(2,Z) completes to SL(2,R)" step
+is undefined and so(2,1) ≠ so(3)). As written they are arithmetic
+patterns in q₂, not derived spacetime facts. The first two lines are
+the bare K=1 reference identities (not predictions at M_Z; MANIFEST
+bare_k1_identities).
+
 The Ω_Λ prediction depends on w but is confined to [0.6842, 0.6875].
 
 **(vi) Sufficiency.** The predictions depend only on q₂, q₃, d, and

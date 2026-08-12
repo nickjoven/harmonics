@@ -166,7 +166,8 @@ scorecard:
     observed: "< 10⁻¹⁰"
     residual: "exact"
     source: ["D45"]
-    closure_status: "Class 5 (exact) — substrate forces θ_QCD = 0 (D45); resolves the strong-CP problem at the substrate layer"
+    premises: ["k2-surface-selection@klein_bottle_derivation"]
+    closure_status: "Conditional (retracted from Class 5 exact, 2026-08-12): the derivation runs entirely on the K² configuration space, whose selection is itself conditional (premise ledger), and the load-bearing step — 'the eta invariant vanishes for flat Pin+ manifolds' (coupling_scales.md Part V) — is an unverified import: flatness does not generally force vanishing eta (2d Pin bordism invariants, e.g. Arf-Brown-Kervaire Z/8, are nonzero on flat representatives), and the Pin+(3)-on-K² setup is not pinned to a specific index-theorem statement. Needs a mathematics audit before re-promotion."
 
   anomaly_cancellation:
     name: "SM anomaly cancellation"

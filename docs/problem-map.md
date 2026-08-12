@@ -42,7 +42,7 @@ The magnitude of Λ is derived, not tuned: Λ·ℓ_P² = 13⁻¹⁰⁸/12 = 3/R�
 
 ### Strong CP problem
 
-θ_QCD = 0 exactly, forced by Pin⁺(3) topology on the Klein bottle (D45): the substrate admits no θ-term. Resolves strong CP with no axion and no tuning.
+θ_QCD = 0 proposed via Pin⁺(3) topology on the Klein bottle (D45). Conditional, not established: the argument runs on the K² configuration space (itself a conditional premise) and its eta-invariant-vanishing step is an unverified import (MANIFEST `strong_cp`, retracted from Class 5 on 2026-08-12). If both hold, strong CP dissolves with no axion and no tuning.
 
 **MANIFEST claims:** `strong_cp`
 

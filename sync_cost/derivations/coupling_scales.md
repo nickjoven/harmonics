@@ -1,3 +1,5 @@
+<!-- provides: strong-cp-theta-zero status=conditional -->
+<!-- premises: k2-surface-selection@klein_bottle_derivation -->
 # The Coupling Scales and the Bare Diffusion Constant
 
 ## The question
@@ -328,9 +330,16 @@ and CP). The Klein bottle provides the physical reason why the
 manifold is non-orientable, and the non-orientability provides the
 reason why theta = 0.
 
-**Status**: theta = 0 derived from Pin+(3) on the Klein bottle.
-The strong CP problem dissolves — like the cosmological constant
-problem (D24), it was computed on the wrong configuration space.
+**Status**: theta = 0 is conditional, not derived. The argument
+runs entirely on the K² configuration space (a conditional premise —
+see the ledger anchor above), and its load-bearing mathematical step,
+"the eta invariant vanishes for flat Pin+ manifolds," is an
+unverified import: flatness does not in general force a vanishing
+eta invariant (2d Pin bordism carries nonzero invariants on flat
+representatives, e.g. the Arf-Brown-Kervaire Z/8 for Pin−), and the
+Pin+(3)-on-K² claim is not pinned to a specific index-theorem
+statement in the literature. If both hold, the strong-CP dissolution
+follows; neither has been audited.
 
 ---
 
