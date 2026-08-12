@@ -3,6 +3,13 @@
 Machine-readable dependency anchors for the derivation corpus,
 checked by `scripts/drift/check_premises.py`.
 
+**Trust boundary:** a clean check is consistency accounting, not a
+soundness certificate — statuses are recorded human attestations,
+undeclared premises are invisible, and green means only "no detected
+inconsistency." The portable pattern, its threat model (deterministic
+theater), and the mandatory countermeasures are documented in
+`docs/premise-ledger-pattern.md`. Reds are theorems; greens are not.
+
 ## Schema
 
 Anchors are HTML comments (parser-safe, invisible to renderers and
