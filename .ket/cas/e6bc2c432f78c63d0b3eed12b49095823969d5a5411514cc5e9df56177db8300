@@ -1,0 +1,310 @@
+# Koide form substrate derivation — iteration 5
+
+## Status
+
+**Iteration 5.** Tests candidate 2 (V_4 + dark-state restriction)
+identified as the most concrete remaining candidate after
+iteration 4. Decomposes the 4-component amplitude vector
+`w = (√m_A, √m_B, √m_C, √m_D)` into V_4 irreducible representations
+and imposes the dark-state constraint `m_D = 0` to derive a
+constraint on the observable amplitude vector.
+
+**Result: substantive reformulation in substrate primitives.** The
+Koide constraint `K = 2/3` is equivalent to:
+
+    |w_trivial|² : |w_⊥V_4|²  =  q_3 : MEDIANT  =  3 : 5
+
+where:
+- `q_3 = 3` is the color-triplet count (framework primitive)
+- `MEDIANT = q_2 + q_3 = 5` is the combinatorial sum (framework primitive, DM logit numerator)
+- `q_3 + MEDIANT = 8 = q_2³ = k_quark` is the SU(3) adjoint dimension
+
+Both the ratio numerator and denominator are substrate primitives,
+and their sum is the quark-sector adjoint dimension.
+
+**This is a reformulation, not a closure.** It expresses the Koide
+gap in terms of three substrate primitives (`q_3`, `MEDIANT`, `q_2³`)
+rather than in terms of the abstract S_3 trivial/standard
+decomposition. The substrate-derivation question becomes sharper
+but still open: *does the substrate's V_4 action force the
+trivial-vs-non-trivial squared-norm ratio to be `q_3 : MEDIANT`*?
+
+Numerical match: PDG gives `|w_trivial|² / |w|² = 0.375005`;
+prediction `q_3/q_2³ = 3/8 = 0.375000`. Match to 0.002%.
+
+No new substrate primitive. The contribution is the V_4
+reformulation in framework primitives.
+
+---
+
+## V_4 irreducible decomposition of the 4-amplitude vector
+
+### Setup
+
+The four-state amplitude vector in the order `(A, B, C, D)`:
+
+    w  =  (√m_A, √m_B, √m_C, √m_D)  ∈  ℝ⁴
+
+with the framework's assignments `A = e, B = τ, C = μ, D = dark`
+(from `generation_mechanism.md` §2 weights: A is lightest, B is
+heaviest, C is middle, D is dark).
+
+### V_4 = Z_2 × Z_2 action
+
+From iteration 4: V_4 acts via two independent toggles
+(`τ_2`: flip q_2 lock; `τ_3`: flip q_3 lock):
+
+| Element | Permutation on (A, B, C, D) |
+|---|---|
+| identity | fixed |
+| `τ_2` (q_2 flip) | (A C)(B D) |
+| `τ_3` (q_3 flip) | (A B)(C D) |
+| `τ_2 τ_3` | (A D)(B C) |
+
+### V_4 irreducible representations on ℝ⁴
+
+V_4 is abelian with four 1-dim irreducible representations. In the
+basis ordered by V_4 character on `τ_2, τ_3, τ_2τ_3`:
+
+| Rep | `τ_2` | `τ_3` | `τ_2 τ_3` | Basis vector (orthonormal) |
+|---|---|---|---|---|
+| `χ_0` (trivial) | +1 | +1 | +1 | `(1, 1, 1, 1) / 2` |
+| `χ_3` | −1 | +1 | −1 | `(1, 1, −1, −1) / 2` |
+| `χ_2` | +1 | −1 | −1 | `(1, −1, 1, −1) / 2` |
+| `χ_4` | −1 | −1 | +1 | `(1, −1, −1, 1) / 2` |
+
+### Decomposition of `w` with `m_D = 0`
+
+For the four-amplitude vector with the dark state contributing
+zero observable mass:
+
+    |w|²              =  m_A + m_B + m_C  (= Σ m_obs)
+    |w_χ_0|²          =  (√m_A + √m_B + √m_C)² / 4  =  (Σ √m_obs)² / 4
+    |w_χ_3|²          =  (√m_A + √m_B − √m_C)² / 4
+    |w_χ_2|²          =  (√m_A − √m_B + √m_C)² / 4
+    |w_χ_4|²          =  (√m_A − √m_B − √m_C)² / 4
+
+Sum check: by the parallelogram identity,
+`Σ |w_χ_i|² = |w|² = Σ m_obs`. Verified numerically.
+
+---
+
+## Koide in V_4 form
+
+### Derivation of the equivalent V_4 ratio
+
+The Koide constraint `K = Σm/(Σ√m)² = 2/3` rearranges to:
+
+    (Σ √m_obs)²  =  (3/2) · Σ m_obs
+
+Substituting into the V_4 trivial component:
+
+    |w_χ_0|²  =  (Σ √m_obs)² / 4  =  (3/2 · Σ m_obs) / 4  =  (3/8) · |w|²
+
+And:
+
+    |w_⊥V_4|²  =  |w|² − |w_χ_0|²  =  (5/8) · |w|²
+
+Therefore:
+
+    |w_χ_0|² : |w_⊥V_4|²  =  3 : 5
+
+### Substrate primitives in this ratio
+
+The two integers `3` and `5` are framework primitives:
+
+| Framework primitive | Value | Identity in V_4 ratio |
+|---|---|---|
+| `q_3` (color triplet count) | 3 | Numerator of |w_χ_0|² fraction |
+| `MEDIANT = q_2 + q_3` (DM logit numerator) | 5 | Numerator of |w_⊥V_4|² fraction |
+| Sum: `q_3 + MEDIANT = q_2 + 2 q_3 = 2 + 6 = 8 = q_2³ = k_quark` | 8 | Denominator |
+
+The denominator `q_2³ = q_2 + 2 q_3 = 8` is the SU(3) adjoint
+dimension (`mass_sector_closure.md` Theorem). The numerators
+`q_3` and `MEDIANT` are foundational substrate primitives.
+
+### Numerical verification (PDG)
+
+| Quantity | PDG value | Substrate prediction | Match |
+|---|---|---|---|
+| `|w_χ_0|² / |w|²` | `0.375005` | `q_3/q_2³ = 3/8 = 0.375000` | 0.002% |
+| `|w_⊥V_4|² / |w|²` | `0.624995` | `MEDIANT/q_2³ = 5/8 = 0.625000` | 0.001% |
+| `|w_χ_0|² / |w_⊥V_4|²` | `0.600012` | `q_3/MEDIANT = 3/5 = 0.600000` | 0.002% |
+
+Match to substrate primitive ratio is at the precision of the
+Koide constraint itself (which holds to ~10⁻⁵ on PDG data).
+
+---
+
+## What this reformulation establishes
+
+### Stronger than iteration 1's geometric reformulation
+
+Iteration 1 expressed Koide as `|v_sym|² = |v_⊥|²` — an
+equipartition between trivial and standard `S_3` reps of the
+3-vector. The ratio `1 : 1` does not reference substrate
+primitives; it is a pure geometric equipartition.
+
+Iteration 5 expresses Koide as `|w_χ_0|² : |w_⊥V_4|² = q_3 :
+MEDIANT` — a substrate-primitive-valued ratio in V_4
+decomposition of the 4-vector. The substrate primitives appearing
+(`q_3`, `MEDIANT`, `q_2³`) are foundational framework integers.
+
+The V_4 form makes the substrate-derivation question more
+tractable: instead of "why equipartition," the question becomes
+"why `q_3 : MEDIANT`?" — a question with explicit substrate
+primitives in the answer.
+
+### Open derivation question after iteration 5
+
+**Does the substrate's V_4 action on four-state amplitude space
+force the trivial-vs-non-trivial squared-norm ratio to be
+`q_3 : MEDIANT`?**
+
+Equivalently: does the substrate impose `|w_χ_0|² = (q_3/q_2³)
+|w|²` on the lepton 4-amplitude vector?
+
+The substrate apparatus provides:
+- The V_4 group action (iteration 4).
+- The dark-state restriction `m_D = 0` (`generation_mechanism.md` §1).
+- The framework primitives `q_3, MEDIANT, q_2³`
+  (`klein_bottle.md`, `mass_sector_closure.md`).
+
+It does not yet provide a derivation chain forcing the specific
+ratio `q_3 : MEDIANT` on the V_4 decomposition. Candidate
+mechanisms:
+
+1. **Lepton-quark adjoint cross-link.** `mass_sector_closure.md`
+   establishes `k_lepton/k_quark = 9/8 = q_3²/q_2³`. The ratio
+   `q_3/q_2³ = 3/8` from iteration 5 is structurally related:
+   numerator is `q_3` (square root of `k_lepton`), denominator is
+   `q_2³ = k_quark`. A specific cross-link mechanism mapping
+   `(q_3, q_2³)` to the V_4 amplitude decomposition would close.
+
+2. **V_4 character orthogonality.** Each V_4 character `χ_i` is
+   associated with a Klein-bottle topological invariant. If the
+   substrate imposes a specific weighting on V_4 characters that
+   reflects the cascade-station / SB-path structure of each lepton
+   generation, the resulting amplitude decomposition could match
+   `q_3 : MEDIANT`.
+
+3. **Cube identity `q_2³ = q_2 + 2 q_3`.** The denominator
+   `q_2³ = 8 = q_2 + 2 q_3 = 2 + 6` expresses the framework's
+   substrate-internal cube identity (which forces `(q_2, q_3) =
+   (2, 3)` per `mass_sector_closure.md` Theorem). The Koide ratio
+   `q_3/(q_2 + 2 q_3)` might emerge as a direct consequence of
+   this cube identity through the V_4 mode-counting structure.
+
+These are candidate next-iteration tests. None is yet a
+derivation; each is a substrate mechanism whose deployment on the
+V_4 amplitude vector would be the iteration-6 substance.
+
+---
+
+## Audit
+
+| Component | Status |
+|---|---|
+| Iteration 1 geometric reformulation `|v_sym|² = |v_⊥|²` | Stands as S_3 equivalent |
+| Iteration 5 V_4 reformulation `|w_χ_0|² : |w_⊥V_4|² = q_3 : MEDIANT` | **Established** (mathematically equivalent to iter 1; substantively sharper because in substrate primitives) |
+| Substrate forces V_4 action on 4-state space | Yes (iter 4) |
+| Substrate enforces `m_D = 0` (dark state has zero observable mass) | Yes (`generation_mechanism.md` §1) |
+| Substrate forces `|w_χ_0|² = (q_3/q_2³) |w|²` specifically | **Open**: this is the remaining substrate-derivation gap |
+| Floor → Survives upgrade | Pending closure of the V_4 ratio derivation |
+
+> **Arc closed downstream (2026-07-19, #263 ⓾ ruling).** The iteration
+> arc 1–13 was closed as a productive null at iteration 14; Koide
+> `K_lepton = 2/3` moved to the empirical shelf — see
+> `koide_form_substrate_iteration_14.md` (Class 3, arc-closing step).
+> The "upgrade pending" framing above is historical.
+
+The iteration produces a reformulation in substrate primitives but
+does not close the substrate-derivation gap. The gap is sharper
+and points toward three specific candidate mechanisms (lepton-quark
+adjoint cross-link, V_4 character weighting, cube identity).
+
+---
+
+## Falsifiers
+
+- **A substrate-aligned derivation of `|w_χ_0|² = (q_3/q_2³) |w|²`
+  via one of the three candidate mechanisms identified above.**
+  Would close the gap and upgrade Floor → Survives.
+- **A demonstration that the three candidate mechanisms each fail
+  to produce the required constraint.** Would push toward a
+  structurally-bounded verdict (DEP row 2: declare structural
+  boundary if no candidate succeeds after careful enumeration).
+- **A different V_4 reformulation that uses different substrate
+  primitives** (e.g., a different numerator integer than `q_3`).
+  Would either supersede this iteration's framing or reveal that
+  the framing is over-specified.
+- **An identification of which V_4 irreps `(χ_2, χ_3, χ_4)`
+  correspond to which lepton mode pairings** that produces the
+  Koide ratio directly via mode-counting.
+
+---
+
+## Recommended next iteration
+
+Test one of the three candidate mechanisms. Most concrete: candidate
+mechanism 3 (cube identity `q_2³ = q_2 + 2 q_3`). The cube identity
+is substrate-derived in `mass_sector_closure.md`; if the V_4
+amplitude decomposition can be shown to reduce to this identity,
+the Koide ratio is substrate-forced.
+
+Specifically: derive a chain from the substrate primitives
+`q_2 = 2, q_3 = 3` and the V_4 action through to
+`|w_χ_0|² = (q_3/q_2³) |w|²`. This requires identifying which
+substrate quantities the four V_4 irreps measure, and showing that
+the cube identity governs their squared-norm distribution.
+
+If candidate mechanism 3 succeeds, the Koide gap closes. If it
+fails, iteration 7 tests mechanism 1 (lepton-quark adjoint
+cross-link). If that fails, iteration 8 tests mechanism 2 (V_4
+character orthogonality with cascade weighting).
+
+---
+
+## Cross-links
+
+- `koide_form_substrate_iteration_4.md` — V_4 structure on four
+  phase states established; candidate 2 identified as concrete next
+  test.
+- `klein_bottle.md` (D19) — substrate's Z_2 × Z_3 structure.
+- `generation_mechanism.md` (D34) §1, §2 — four phase states, weights.
+- `mass_sector_closure.md` — `q_2³ = 8 = k_quark` (SU(3) adjoint);
+  cube identity `q_2³ = q_2 + 2 q_3`; lepton/quark cross-link
+  `k_lepton/k_quark = 9/8`.
+- `partition_logit_form.md` — `MEDIANT = q_2 + q_3 = 5` as DM logit
+  numerator.
+- `omega_partition_combinatorial.md` — `MEDIANT` in the cosmic
+  partition.
+- `discrete_extension_principle.md` (PR #191) — methodology.
+
+---
+
+## One-line summary
+
+The Koide constraint `K = Σm/(Σ√m)² = 2/3` is equivalent to
+`|w_χ_0|² : |w_⊥V_4|² = q_3 : MEDIANT = 3 : 5` in V_4
+decomposition of the four-component amplitude vector `w = (√m_A,
+√m_B, √m_C, √m_D)` with the dark-state restriction `√m_D = 0`
+(framework's V_4 = Z_2 × Z_2 from `{locked, unlocked}²`,
+established in iteration 4); both numerator `q_3 = 3` (color
+triplet) and denominator `MEDIANT = q_2 + q_3 = 5` (combinatorial
+sum) are substrate primitives, with their sum `q_3 + MEDIANT =
+8 = q_2³ = k_quark` (SU(3) adjoint dimension) also substrate-
+internal via the cube identity `q_2³ = q_2 + 2 q_3` from
+`mass_sector_closure.md`; numerical match against PDG at 0.002%
+(`|w_χ_0|² / |w|² = 0.375005` vs predicted `3/8 = 0.375000`); the
+reformulation is *substantively sharper* than iteration 1's S_3
+equipartition because the ratio uses framework primitives rather
+than abstract `1 : 1`, but does not close the substrate-derivation
+gap — the question is now "does the substrate's V_4 action force
+the trivial-vs-non-trivial squared-norm ratio to be specifically
+`q_3 : MEDIANT`?"; three candidate mechanisms identified for next
+iterations: (1) lepton-quark adjoint cross-link via
+`k_lepton/k_quark = 9/8`, (2) V_4 character orthogonality with
+cascade-station weighting, (3) the cube identity `q_2³ = q_2 +
+2 q_3` as the structural source; recommended next iteration tests
+candidate 3 (cube identity) as most concrete.

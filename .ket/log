@@ -521,3 +521,26 @@
 2026-07-29T22:12:54Z | put | sync_cost/successions.jsonl -> 3e09a6bae9e3e450ec5bfa4c926d71f181161de1a9377448422d250923d815f0
 2026-07-30T03:26:36Z | put | sync_cost/ingest/report.json -> ad677b600463dd033692a8a2b503e5b5d9d4d2a9d2841da985db50194148f463
 2026-07-30T03:26:36Z | dag:create | fdbe6619a233fd55b88db5246857d37b9ec6412afe6ca3621ab6df7ba24a5ea7
+2026-08-14T18:06:18Z | put | MANIFEST.yml -> e797baaae6941b1cba8bc1daabd4bb619ef3a892c58b4d70d1eab1c70cdb7cdb
+2026-08-14T18:06:18Z | put | sync_cost/derivations/INDEX.md -> 6ce6c7242ffa05411ab518a4a9afb7724ec136ca07f90c28ccbad32cdddb4185
+2026-08-14T18:06:18Z | put | sync_cost/derivations/beta_from_tongues.md -> 61599ee7ce85aab8a317bcc3f6be2e0555ad6ddb39649cf7e91ec386d0915b8a
+2026-08-14T18:06:18Z | put | sync_cost/derivations/boundary_weight.md -> 3ebbbfdcf9d190d574490655943acbca6191bfa97fd04db35a1178d2802ab99d
+2026-08-14T18:06:18Z | put | sync_cost/derivations/canonical_glossary.md -> 2681f204daf23edc984bf09095fd11ce759abfda7df54fd1226732508ef1dee4
+2026-08-14T18:06:18Z | put | sync_cost/derivations/coupling_scales.md -> fefb5f42e557f8c49b91bab060f53875141c9558f98224ef9c953df6b3fa1853
+2026-08-14T18:06:18Z | put | sync_cost/derivations/down_type_double_cover_closed.md -> 2e80468af888d0be4bc46f396e11e81c1c56374383a3facf060ed27b011c73a8
+2026-08-14T18:06:18Z | put | sync_cost/derivations/epsilon_physical_reading.md -> 551c2c4ed9a49d828781d97c8e16f6a9d820cb690e7741b930469ec70a97d10e
+2026-08-14T18:06:18Z | put | sync_cost/derivations/fermion_mass_running.md -> 0a2392b394a2832dbad95e75ff796633a8811bd0bd1ff8e90c5f8b0cc82dd0e0
+2026-08-14T18:06:18Z | put | sync_cost/derivations/figure_eight.md -> 34743a450627a50db0cc5175a5c9b5b9711df124c29f4034405054c38bb1c673
+2026-08-14T18:06:18Z | put | sync_cost/derivations/framework_constants.py -> 7e30abfcc16c62cde5878481f2b5d14fdb7bfb6165353c79ea27973aeb2f9c7d
+2026-08-14T18:06:18Z | put | sync_cost/derivations/framework_status.md -> eb8266c2607bfdf5823a3fd2cb52e45c1fe41927579a823ce36229aa29dc7659
+2026-08-14T18:06:18Z | put | sync_cost/derivations/gamma06_cosmological_modular_surface_audit.md -> 23168539613f5d72ff032804da42a7c69944302bdda27874774eb06d639756dc
+2026-08-14T18:06:18Z | put | sync_cost/derivations/k_axis_uniqueness.md -> 1338990075a3df44533b349cb99744af779e586b63ba5495800c124c1631f6f0
+2026-08-14T18:06:18Z | put | sync_cost/derivations/koide_form_substrate_iteration_5.md -> e6bc2c432f78c63d0b3eed12b49095823969d5a5411514cc5e9df56177db8300
+2026-08-14T18:06:18Z | put | sync_cost/derivations/lesson_rotation_curves_a0.md -> 23f3ede0de32129bf6eb1bc71ba855fbac97bdc25b3ac170bb26e9bfe6099e41
+2026-08-14T18:06:18Z | put | sync_cost/derivations/mass_sector_closure.md -> e1b9a71a03fbbc446cb40654fef5a6560f2af10e2ec48dccf9361de61a95fb16
+2026-08-14T18:06:18Z | put | sync_cost/derivations/mediant_derivation.md -> bcc720b5eba111ba1c65658ba4b89dbf9b12cf9b42d31e43c0eeaaee8ade66ea
+2026-08-14T18:06:18Z | put | sync_cost/derivations/path_closures_iter1.md -> 2200365e3ec1a6819905c8fa7a0933b676a5af270ebb6412b1d76c06f0301765
+2026-08-14T18:06:18Z | put | sync_cost/derivations/path_closures_iter2.md -> 29d305f30b6d3755e5608c19de3b90d601fd3429d3112b0fac841637d890b1b7
+2026-08-14T18:06:18Z | put | sync_cost/derivations/quantum_gravity_interpolation.md -> f29bce5d763dce3a6aabbe8b4d57f6cf0adb029f24f1290929bf334cb0fc8845
+2026-08-14T18:06:18Z | put | sync_cost/derivations/remaining_gap_shapes.md -> 5449d7feb9e616d4ec0b291a78195e7d406556244f28f67a76119a3f016a57f5
+2026-08-14T18:06:18Z | put | sync_cost/derivations/vacuum_stress_meta_structure_audit.md -> 4818ec308cd77c55385703c36995413b1fc7e9e8af9d32875c9182802cec8f71
