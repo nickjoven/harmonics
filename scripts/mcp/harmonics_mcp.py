@@ -376,7 +376,7 @@ def _tool_claim_search(args: dict) -> dict:
             continue
         if c["corroboration"] < min_corr:
             continue
-        hits.append({
+        hit = {
             "proposition_cid": cid,
             "subject": c["subject"],
             "witness": c["witness"],
@@ -386,10 +386,25 @@ def _tool_claim_search(args: dict) -> dict:
             "corroboration_docs": c.get("corroboration_docs",
                                         c["corroboration"]),
             "corroboration_frontier": c["corroboration_frontier"],
-        })
+        }
+        # Serve epistemic status with the claim (pattern doc §5.7:
+        # retrieval must not strip status).
+        if "status" in c:
+            hit["status"] = c["status"]
+            hit["status_source"] = c.get("status_source")
+        hits.append(hit)
     hits.sort(key=lambda h: -h["corroboration_frontier"])
     out = {"count": len(hits), "hits": hits[:25],
-           "truncated": len(hits) > 25}
+           "truncated": len(hits) > 25,
+           "corroboration_note": (
+               "corroboration counts distinct asserting lines "
+               "(succession-deduped documents), not independent "
+               "verification — audit docs and syllabi count as "
+               "asserting lines"),
+           "status_note": (
+               "a hit without a status field is unclassified, not "
+               "settled; the status join covers only values the "
+               "2026-08 campaign explicitly classified")}
     stale = _claims_staleness_note()
     if stale:
         out["staleness_note"] = stale
@@ -426,6 +441,11 @@ def _tool_claim_get(args: dict) -> dict:
     out = {"proposition_cid": full, **claims[full]}
     out["superseded_supporters"] = [
         d["doc"] for d in out["docs"] if not d["frontier"]]
+    if "status" not in out:
+        out["status_note"] = ("unclassified: this value was not "
+                              "explicitly classified by the 2026-08 "
+                              "status join — treat as unvetted, not "
+                              "settled")
     stale = _claims_staleness_note()
     if stale:
         out["staleness_note"] = stale
@@ -701,11 +721,13 @@ TOOLS = [
         "description": (
             "Search the sealed-claims projection: quantitative "
             "propositions from the clean ingest, keyed by content "
-            "address. Corroboration counts INDEPENDENT witnesses "
-            "(succession chains collapse to one — drafts are not "
-            "witnesses); corroboration_docs is the raw doc count, "
-            "corroboration_frontier the frontier split. The way to "
-            "discuss corpus claims without context rot: cite "
+            "address. Hits carry epistemic status where the 2026-08 "
+            "campaign classified the value (Class 2 fitted, "
+            "reference-not-prediction, Class 5); a hit WITHOUT a "
+            "status field is unclassified, not settled. Corroboration "
+            "counts distinct asserting lines (succession chains "
+            "collapse to one), NOT independent verification. The way "
+            "to discuss corpus claims without context rot: cite "
             "proposition CIDs, not remembered prose."
         ),
         "inputSchema": {
@@ -721,8 +743,9 @@ TOOLS = [
         "name": "claim_get",
         "description": (
             "Fetch one sealed claim by proposition CID (prefix ok): "
-            "witness value, routes, and every supporting doc with its "
-            "frontier state."
+            "witness value, routes, epistemic status (if classified "
+            "by the 2026-08 join; otherwise an explicit unclassified "
+            "note), and every supporting doc with its frontier state."
         ),
         "inputSchema": {
             "type": "object",

@@ -51,6 +51,71 @@ REPORT = ROOT / "sync_cost" / "ingest" / "report.json"
 INDEX = ROOT / "docs" / "corpus-index.json"
 OUT = ROOT / "docs" / "claims-index.json"
 
+# Status join (2026-08 campaign): epistemic status for claims whose
+# values the correction campaign classified. Keyed by EXACT
+# (subject, witness) — deliberately not a value-mentioned-anywhere
+# predicate (that matcher class is how reconciliation checks
+# overcount; theater-lens findings). Coverage is partial by design
+# and the index says so: a claim without a status field is
+# UNCLASSIFIED, not settled.
+STATUS_JOIN = {
+    ("w_plus", "13/14"): {
+        "status": "Class 2 (observation-fitted; retracted from Class 5) — "
+                  "numerical fit to Planck values, computed by no script",
+        "source": "MANIFEST.yml scorecard; ERRATA.md E15 (D1 disposition)",
+    },
+    ("omega_lambda", "181/264"): {
+        "status": "Class 2 — inherits the fitted w_+ = 13/14; residual "
+                  "holds by construction of the fit",
+        "source": "MANIFEST.yml dark_energy_fraction_two_component; ERRATA.md E15",
+    },
+    ("omega_b", "13/264"): {
+        "status": "Class 2 — inherits the fitted w_+ = 13/14; residual "
+                  "holds by construction of the fit",
+        "source": "MANIFEST.yml baryon_fraction (computed_fitted); ERRATA.md E15",
+    },
+    ("omega_dm", "35/132"): {
+        "status": "Class 2 — inherits the fitted w_+ = 13/14; residual "
+                  "holds by construction of the fit",
+        "source": "MANIFEST.yml dark_matter_fraction (computed_fitted); ERRATA.md E15",
+    },
+    ("omega_lambda", "13/19"): {
+        "status": "bare-partition reference, not a prediction (the same "
+                  "partition puts Omega_b 6.7% from observation)",
+        "source": "MANIFEST.yml dark_energy; ERRATA.md E15 (D1/C16)",
+    },
+    ("omega_b", "1/19"): {
+        "status": "bare-partition reference, not a prediction (6.7% from "
+                  "observation)",
+        "source": "MANIFEST.yml baryon_fraction (computed); ERRATA.md E15",
+    },
+    ("omega_dm", "5/19"): {
+        "status": "bare-partition reference, not a prediction (0.7% from "
+                  "observation)",
+        "source": "MANIFEST.yml dark_matter_fraction (computed); ERRATA.md E15",
+    },
+    ("Omega_m", "6/19"): {
+        "status": "bare-partition reference (complement of 13/19), not a "
+                  "prediction",
+        "source": "MANIFEST.yml dark_energy; ERRATA.md E15",
+    },
+    ("Lambda", "13/19"): {
+        "status": "bare-partition reference, not a prediction",
+        "source": "MANIFEST.yml dark_energy; ERRATA.md E15",
+    },
+    ("cadence", "2/57"): {
+        "status": "Class 5 — substrate-forced cadence via the K(t) "
+                  "closure (supersedes the n_s-anchored 61.3 figure)",
+        "source": "MANIFEST.yml efolds",
+    },
+    ("alpha_2", "27/8"): {
+        "status": "bare K=1 reference identity, not an M_Z prediction; "
+                  "the {2,3} selection behind it is conditional on the "
+                  "conjectured XOR parity translation",
+        "source": "negative_results_ledger.md; ERRATA.md E1",
+    },
+}
+
 
 def succession_resolver(corpus: dict):
     """doc_id -> its witness-chain representative.
@@ -133,6 +198,7 @@ def build() -> dict:
                 terms[name] = {k: v for k, v in t.items()
                                if k not in ("term", "name")}
 
+    classified = 0
     for c in claims.values():
         # Independent witnesses, not raw docs (#328 Card 2): a succession
         # chain's drafts all repeating a value is one witness. K_lepton=2/3
@@ -143,6 +209,11 @@ def build() -> dict:
         c["corroboration_frontier"] = len(
             {chain(d["doc"]) for d in c["docs"] if d["frontier"]})
         c["docs"].sort(key=lambda d: (not d["frontier"], d["doc"]))
+        joined = STATUS_JOIN.get((c.get("subject"), c.get("witness")))
+        if joined:
+            c["status"] = joined["status"]
+            c["status_source"] = joined["source"]
+            classified += 1
 
     import subprocess
     head = subprocess.run(["git", "-C", str(ROOT), "rev-parse", "--short",
@@ -156,6 +227,13 @@ def build() -> dict:
             "telemetry": report.get("telemetry", {}),
         },
         "claim_count": len(claims),
+        "status_coverage": {
+            "classified": classified,
+            "unclassified": len(claims) - classified,
+            "note": "a claim without a status field is unclassified, "
+                    "not settled — the join covers only values the "
+                    "2026-08 campaign explicitly classified",
+        },
         "claims": dict(sorted(claims.items())),
         "edges": edges,
         "terms": dict(sorted(terms.items())),
@@ -187,9 +265,12 @@ def main() -> int:
         return 0
     OUT.write_text(rendered)
     t = index["ingest"]["telemetry"]
+    sc = index["status_coverage"]
     print(f"wrote docs/claims-index.json: {index['claim_count']} claims, "
           f"{len(index['edges'])} typed edges, {len(index['terms'])} terms "
-          f"(from {t.get('docs')} docs, {t.get('corroborated')} corroborated)")
+          f"(from {t.get('docs')} docs, {t.get('corroborated')} corroborated); "
+          f"status join: {sc['classified']} classified / "
+          f"{sc['unclassified']} unclassified")
     return 0
 
 
