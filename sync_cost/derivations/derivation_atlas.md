@@ -1,3 +1,4 @@
+<!-- edition 2 (2026-08-14) · prior text: git show 2c4fd6c:sync_cost/derivations/derivation_atlas.md · ERRATA.md E1/E13/E15/E17 -->
 # Derivation Atlas — from four primitives to physical predictions
 
 ## Prelude
@@ -683,63 +684,44 @@ specific values 13:5:1/19, which Part VII develops.
 
 ---
 
-## Part V — Geometric and topological derivations
+## Part V — Geometric and topological arguments
 
-This part presents three derivations whose results are exact
-(zero residual) and whose mechanisms involve substrate primitives
-in foundational rather than parametric ways: spatial dimension
-= 3, Lorentz symmetry = Spin(3,1), and the Born rule exponent =
-2.
+This part presents one derivation whose result is exact and
+established (the Born rule exponent = 2) and two arguments that
+are currently open (spatial dimension = 3 and Lorentz symmetry
+= Spin(3,1); both were demoted from the scorecard in 2026-08,
+D2 disposition).
 
-### §5.1 — Spatial dimension = 3
+### §5.1 — Spatial dimension = 3 (open)
 
-The substrate's natural mode-counting on Z_6 = Z_2 × Z_3
-identifies q_3 = 3 with the color triplet count. Per
-`three_dimensions.md`, the same q_3 is the spatial dimension
-count: the framework derives that physical space is three-
-dimensional from the substrate's Z_3 sector structure, not as
-an observational input.
+Two routes have been proposed. The substrate's mode-counting on
+Z_6 = Z_2 × Z_3 identifies q_3 = 3 with the color triplet
+count, and the reading lifts this Z_3 sector to three
+independent spatial extension directions. `three_dimensions.md`
+argues instead through the mediant's SL(2,ℤ) symmetry
+completing to SL(2,ℝ), whose dimension 2² − 1 = 3.
 
-The argument's structure: the substrate's mode space has a
-natural Z_3 sector (the color triplet); the spatial geometry
-inherits this triplet structure as three independent extension
-directions. The substrate is fundamentally three-dimensional in
-the Z_3 sector sense, and the macroscopic spatial dimension is
-this Z_3 sector lifted to the continuum.
+Both routes are open. The Z_3-sector lift asserts, and does not
+construct, the identification of an internal counting sector
+with extension directions. The SL(2,ℝ) route's continuum-
+completion step names no mathematical operation (SL(2,ℤ) is
+discrete and closed in SL(2,ℝ)), and the same premises admit
+d = 2 and d = 1 constructions (`three_dimensions.md`). The
+claim returns to the scorecard if a construction forces dim 3
+without assuming it.
 
-The result is exact: spatial dimension = q_3 = 3, no residual.
-Z1-Z3 status: pass. Class: Survives.
+### §5.2 — Lorentz symmetry = Spin(3,1) (open)
 
-The contrast with standard physics: standard physics treats
-spatial dimension as an empirical input (we observe three
-dimensions). The framework derives it from substrate structure;
-no other dimension is consistent with the q_3 = 3 sector.
-Higher-dimensional theories (string theory's compactified extra
-dimensions, Kaluza-Klein, etc.) are framework-incompatible at
-the substrate level, though they can be valid as effective
-descriptions of dynamics within the q_3 = 3 substrate.
-
-### §5.2 — Lorentz symmetry = Spin(3,1)
-
-The framework derives Lorentz symmetry as Spin(3,1) (the double
-cover of SO+(3,1)) from substrate structure. The argument
-combines spatial dimension (= 3 from §5.1) with the substrate's
-orientation (from the parabola, §2.2) to produce a specific
-spinor structure.
-
-The Spin(3,1) double cover is the unique simply-connected Lie
-group covering the proper orthochronous Lorentz group SO+(3,1)
-with the specific spinor representation realized by quarks and
-leptons in the SM. The framework's derivation gives this
-specific cover, not just SO(3,1) in general.
-
-Result: Lorentz symmetry = Spin(3,1), exact.
-
-The contrast with standard physics: standard physics typically
-takes Lorentz symmetry as an empirical input or as a postulate
-of special relativity. The framework derives the specific
-spinor structure (Spin double cover) from substrate orientation
-+ q_3 spatial dimension count.
+SL(2,ℂ) ≅ Spin(3,1) — the unique simply-connected double cover
+of the proper orthochronous Lorentz group, with the spinor
+representation realized by SM fermions — is a true imported
+theorem, and complexifying SL(2,ℝ) reaches it. Every arrow
+leading there is open: the argument inherits the §5.1 break,
+and 𝔰𝔩(2,ℝ) is 𝔰𝔬(2,1), not 𝔰𝔬(3), so it cannot serve as the
+claimed rotation subalgebra. The published signature argument
+additionally rests on a sign rule that contradicts the
+orientation character being a homomorphism
+(`minkowski_signature.md`).
 
 ### §5.3 — Born rule from saddle-node parabola
 
@@ -1097,9 +1079,12 @@ Predictions at w_+ = 0.9298:
 - Ω_Λ: 0.68558 (0.129% off observed)
 
 All three sub-σ on the Planck data, with one fit parameter.
-Per Z1-Z3, this is Class 5 at the (α, β) + mechanism level;
-the value w_+ ≈ 0.93 was the remaining empirical parameter
-until the L1 closure (Part VIII).
+The (α, β) = (0, 1) mechanism argument stands on its own; the
+value w_+ ≈ 0.93 is and remains an empirical fit. The L1
+closure (Part VIII), which claimed to derive w_+ = 13/14
+structurally, was retracted to Class 2 in 2026-08: the closure
+was written after the fitted value (ERRATA.md E-ledger;
+commit forensics in the D1 disposition).
 
 ### §7.6 — The spectral tilt n_s
 
@@ -1152,18 +1137,18 @@ side and anchor-side predictions.
 
 ---
 
-## Part VIII — Modular structure and the Γ_0(6) closure
+## Part VIII — Modular structure and the Γ_0(6) closure (retracted to Class 2)
 
-The 2026-04 round's headline result is the Class 5 closure of
-w_+ = 13/14 via Hecke modular structure. This part walks
-through the derivation: the framework's substrate preserves
-the Hecke congruence subgroup Γ_0(6) of PSL(2, ℤ); the boundary
-mode ψ_+(1, 5) inhabits the cusp 1/2 of the modular curve
-X_0(6); the substrate's discrete cusp grain combined with the
-MOND threshold's smooth crossover forces the substrate's
-ground state to the maximum-locking discrete representative,
-which at denominator q = 14 (matter sector cusp grain) is
-exactly w_+ = 13/14.
+The 2026-04 round presented the closure of w_+ = 13/14 via
+Hecke modular structure as its headline Class 5 result. That
+status was retracted in 2026-08 (D1 disposition): w_+ = 13/14
+is a numerical fit to Planck values — the fitting commit
+(400f558) prints "0.000% (fit)" and the structural closure was
+written 3h33m later — and no script in the repo computes it.
+This part retains the modular walkthrough because the Γ_0(6)
+and cusp machinery is genuine mathematics; the selection step
+that lands on w_+ = 13/14 (L1, §8.6) is where the chain fails
+to be a derivation.
 
 ### §8.1 — PSL(2, ℤ) Möbius action on P¹(ℚ)
 
@@ -1361,42 +1346,37 @@ By L1 (§8.6), the substrate ground state at q = 14 is
 
 w_+ = (14 - 1) / 14 = 13 / 14
 
-This is the complete Class 5 derivation of w_+. All eight
-components (T1-T7 of `w_plus_formalization.md` plus L1) are
-Class 5 or follow algebraically from Class 5 results. The
-chain is:
+The chain as presented in 2026-04, with current statuses:
 
-1. T1: Z_6 + Klein → partition (13:5:1)/19 (Class 5,
-   `baryon_fraction.md`)
+1. T1: Z_6 + Klein → partition (13:5:1)/19 (bare partition —
+   a reference, not a prediction; `baryon_fraction.md`)
 2. T2: M_i = (|F_7| - N_i)/q_2 → q_3-quantities (3, 7, 9)
    (algebra)
-3. T3: ψ_-(1, 5) sign-rep no-EM ⟹ w_- = 1 (Class 5)
+3. T3: ψ_-(1, 5) sign-rep no-EM ⟹ w_- = 1 (structural)
 4. T4: ψ_+(1, 5) trivial Klein, EM-coupled, partial-locks at
-   w_+ (Class 5)
-5. T5: Substrate preserves Γ_0(6) = Γ_0(2) ∩ Γ_0(3) (Class 5,
-   §8.4)
-6. T6: ψ_+(1, 5) trivial q_2 rep ↔ cusp 1/2 of X_0(6) (Class
-   5, §8.5)
+   w_+ (structural; the *value* of w_+ is not fixed here)
+5. T5: Substrate preserves Γ_0(6) = Γ_0(2) ∩ Γ_0(3) (§8.4)
+6. T6: ψ_+(1, 5) trivial q_2 rep ↔ cusp 1/2 of X_0(6) (§8.5)
 7. T7: Substrate at K < 1 is discrete; cusp-1/2 grain at q is
-   1/q (Class 5, §6.6)
-8. L1: Substrate ground state at cusp 1/2 = (q-1)/q (Class 5,
-   §8.6)
+   1/q (§6.6)
+8. L1: Substrate ground state at cusp 1/2 = (q-1)/q — the
+   selection step. Retracted: written after the fitted value,
+   overruling the repo's own Class-2 self-audit; it selects
+   the number the fit had already produced.
 
-THM (w_+ = 13/14) follows by composition, all Class 5.
-
-Numerical realization at w_+ = 13/14:
+Composition therefore yields Class 2 (observation-fitted), not
+Class 5. Numerical realization at w_+ = 13/14:
 
 | Observable | Predicted | Observed | Residual |
 |---|---|---|---|
-| Ω_b | 13/264 = 0.04924 | 0.04930 | 0.12% |
-| Ω_DM | 35/132 = 0.26515 | 0.26500 | 0.06% |
-| Ω_Λ | 181/264 = 0.68561 | 0.68470 | 0.13% |
+| Ω_b | 13/264 = 0.04924 | 0.04930 | by construction of the fit |
+| Ω_DM | 35/132 = 0.26515 | 0.26500 | by construction of the fit |
+| Ω_Λ | 181/264 = 0.68561 | 0.68470 | by construction of the fit |
 
-All three sub-σ. **Zero free parameters at the closure level.**
-
-This is the Ω_b two-component closure as a fully derived Class
-5 prediction. The matter sector's cosmic abundance is therefore
-not a fit; it is a substrate prediction.
+The sub-σ residuals are inherited from the fit, not evidence
+for the selection step. The canonical substrate-side object is
+the bare partition 13:5:1/19 — a reference, not a prediction
+(D1 disposition; MANIFEST scorecard).
 
 ---
 
@@ -1407,20 +1387,19 @@ the SM gauge group, anomaly cancellation, the strong CP angle,
 the down-type and up-type quark factors, and the bare K = 1
 identities for the EW / Higgs sector.
 
-### §9.1 — SM gauge group SU(3) × SU(2) × U(1)
+### §9.1 — SM gauge group SU(3) × SU(2) × U(1) (conditional)
 
-The framework derives the Standard Model gauge group structurally
-from the substrate's q_3 (color triplet → SU(3)), q_2 (Klein-
-antipodal → SU(2) with appropriate hypercharge structure), and
-U(1) hypercharge. Per derivation chain D41, D42, the gauge
-group is exact: SU(3) × SU(2) × U(1).
-
-The derivation is structural rather than empirical. The
-framework's substrate has a Z_3 sector (the color triplet of
-§4.3) and a Z_2 sector (the Klein-antipodal of §4.2); the
-gauge group inherits these as continuous group structure. The
-specific group is not a postulate of the SM but a derivation
-from substrate primitives.
+The framework reads the Standard Model gauge group off the
+substrate's q_3 (color triplet → SU(3)), q_2 (Klein-antipodal
+→ SU(2)), and U(1) hypercharge (derivation chain D41, D42).
+The claim is conditional, retracted from Class 5 in 2026-08:
+the 12-transition count consumes the 4-mode roster, which
+rests on the conjectured XOR fraction-parity translation
+(`xor_derivation.md` §5). If that translation is proven, the
+group reading follows; until then the specific group is
+conditional on an unsettled premise, and the strongest
+independent leg is Yang-Mills uniqueness via Utiyama + Cartan
+given the substrate's kinematics (`gauge_sector_lovelock.md`).
 
 ### §9.2 — Anomaly cancellation as substrate identities
 
@@ -1431,20 +1410,15 @@ is a constraint on the matter content; the SM's specific matter
 content (with three generations) is "lucky" to satisfy all six
 conditions.
 
-Per derivation chain D41, the framework derives these
-conditions structurally from substrate mode-counting + Klein
-representation theory. Each anomaly condition becomes a
-substrate identity: the sum of substrate charges over modes in
-a given sector vanishes by Klein-antipodal pairing.
-
-The result is exact: all 6 conditions = 0. Z1-Z3 status: pass.
-Class: Survives.
-
-The contrast with standard physics: standard physics observes
-anomaly cancellation in the SM matter content; the framework
-derives it from substrate structure. The framework therefore
-"explains" why the SM has consistent gauge structure: the
-substrate's Klein representation theory ensures it.
+Per derivation chain D41, the framework verifies these
+conditions as identities — for the imported charge assignment:
+D41 hardcodes the SM hypercharges rather than deriving them
+(retracted from "substrate identity" status, 2026-08). The
+computation confirms that the standard assignment cancels all
+six anomalies (a true, standard fact); it does not explain why
+the substrate selects that assignment. Gell-Mann–Nishijima
+holds with Y back-solved from the known charges, not derived
+(`gell_mann_nishijima.md`).
 
 ### §9.3 — Strong CP θ = 0 from substrate symmetry
 
@@ -1454,13 +1428,16 @@ naturally O(1) in absence of fine-tuning. This is the strong CP
 problem; standard solutions invoke a Peccei-Quinn axion or
 other mechanism to dynamically suppress θ.
 
-Per derivation chain D45, the framework derives θ = 0 exactly
-from substrate symmetry. The Klein-antipodal Z_2 invariance of
-the substrate forces the QCD vacuum angle to vanish; no axion
-is required.
-
-The result: θ = 0, exact. The strong CP problem is therefore
-resolved structurally, not phenomenologically.
+Per derivation chain D45, the framework proposes θ = 0 exactly
+from Pin⁺(3) topology. The claim is conditional, retracted
+from Class 5 in 2026-08: the derivation runs entirely on the
+K² configuration space, whose selection is an unsettled
+premise (`klein_bottle_derivation.md`), and the
+eta-invariant-vanishing step is an unverified import
+(`coupling_scales.md` Part V). If those premises hold, the
+substrate admits no θ-term and strong CP dissolves with no
+axion and no tuning; any measurement of θ ≠ 0 falsifies the
+chain outright.
 
 ### §9.4 — Down-type quark factor 6 from S_3 orbits
 
@@ -1730,15 +1707,18 @@ open problems, and identifies open extensions.
 
 ### §11.1 — What the framework provides
 
-The framework provides a constructive first-principles derivation
-of dimensionless cosmological and particle-physics ratios from
-four primitives, with all closure-level free parameters
-eliminated post-2026-04 round. The headline deliverables:
+The framework provides a constructive treatment of
+dimensionless cosmological and particle-physics ratios from
+four primitives. Statuses below are current (post-2026-08
+correction campaign; forensics in ERRATA.md):
 
-- **Cosmic partition** Ω_Λ : Ω_DM : Ω_b = 181 : 70 : 13 / 264
-  (two-component closure, w_+ = 13/14): residuals 0.13% / 0.06%
-  / 0.12% on Planck 2018 data, zero free parameters at closure
-  level
+- **Cosmic partition**: the bare partition
+  Ω_Λ : Ω_DM : Ω_b = 13 : 5 : 1 / 19 is the canonical
+  substrate-side object — a reference, not a prediction (the
+  same partition puts Ω_b 6.7% from observation). The
+  two-component refinement (w_+ = 13/14; 181 : 70 : 13 / 264)
+  is Class 2: w_+ is a numerical fit and its sub-percent
+  residuals hold by construction of the fit
 - **Cosmic hierarchy** R = 6 · 13⁵⁴ at 0.48% on observed Planck/
   Hubble ratio
 - **Cosmological constant** Λ · ℓ_P² = 13⁻¹⁰⁸/12 at 0.1% in
@@ -1750,15 +1730,17 @@ eliminated post-2026-04 round. The headline deliverables:
   anchor-side amplification per Instance 7)
 - **MOND scale** a_0 = c · H_0 / (2π√g*) = 1.25 × 10⁻¹⁰ m/s² at
   4% on Lelli et al. 2017 RAR (g*-corrected; bare c·H_0/(2π) = 1.04 × 10⁻¹⁰)
-- **Spatial dimension** = 3 (exact, from substrate q_3 sector)
-- **Lorentz symmetry** = Spin(3,1) (exact, double cover from
-  substrate orientation)
+- **Spatial dimension** = 3 (open — completion step undefined;
+  D2 demotion)
+- **Lorentz symmetry** = Spin(3,1) (open — inherits the d = 3
+  break; the covering theorem itself is a true import)
 - **Born rule** exponent = 2 (exact, from saddle-node parabola)
-- **SM gauge group** SU(3) × SU(2) × U(1) (exact, from substrate
-  Z_3 × Z_2 + U(1) hypercharge)
-- **Strong CP** θ = 0 (exact, from substrate symmetry)
-- **SM anomaly cancellation** all 6 conditions = 0 (exact, from
-  substrate identities)
+- **SM gauge group** SU(3) × SU(2) × U(1) (conditional on the
+  conjectured XOR parity translation)
+- **Strong CP** θ = 0 (conditional on the K² configuration-
+  space selection + eta-invariant import)
+- **SM anomaly cancellation** all 6 conditions = 0 (verified
+  for the imported charge assignment; charges not derived)
 - **Down-type quark factor** 6 = q_2 · q_3 (0.04σ on PDG)
 - **Up-type quark factor** 9 = q_3² (0.34σ on PDG)
 - **Two-anchor minimum** (H_0 + v_EW) is structural, not a gap
@@ -1817,26 +1799,29 @@ in standard physics:
   quadratic divergences in the substrate)
 - **Hierarchy problem (v << M_P)**: doesn't translate per
   Instance 6; v / M_P is anchor-side input
-- **Strong CP problem**: θ = 0 exact from substrate symmetry,
-  no Peccei-Quinn axion required
+- **Strong CP problem**: θ = 0 proposed via Pin⁺(3) topology,
+  conditional on unsettled premises; if they hold, no
+  Peccei-Quinn axion required
 - **GR-QM unification**: shared substrate, two non-smoothly
   separated continuum limits (K = 1 = Einstein, K < 1 =
   Schrödinger); structural rather than smooth interpolation
 - **Galactic rotation without particulate dark matter**: MOND
   scale a_0 derived structurally; "dark matter" identified as
   substrate sector (sign-rep modes with Klein-monodromy -1, no
-  EM coupling); cosmic abundance Ω_DM = 5/19 fits Planck to
-  0.06%
+  EM coupling); the bare-partition abundance Ω_DM = 5/19 sits
+  0.7% from Planck (a reference, not a prediction)
 - **Origin of three generations**: q_3 = 3 (color triplet
   doubles as generation count in framework reading)
-- **Origin of SM gauge group**: derived structurally from
-  substrate Z_6 + Klein-antipodal Z_2 + color Z_3
+- **Origin of SM gauge group**: read off substrate Z_6 +
+  Klein-antipodal Z_2 + color Z_3, conditional on the
+  conjectured XOR parity translation
 - **Born rule**: derived from saddle-node parabola (forced
   exponent 2)
-- **Spatial dimension = 3**: derived from q_3 sector, not
-  assumed
+- **Spatial dimension = 3**: open (both proposed routes break;
+  D2 demotion)
 - **Origin of cosmic Ω partition**: 13:5:1/19 from Z_6 mode-
-  counting + Klein-singlet ∩ coprime-to-6 selection (Class 5)
+  counting + Klein-singlet ∩ coprime-to-6 selection — a
+  reference partition, not a prediction
 - **EPR / Bell-inequality violation**: pieces present (Born
   rule + Z_2-pair conservation theorem + substrate non-locality
   on Stern-Brocot tree); the `Q mod 2` substrate-Z₂ piece is
@@ -1875,9 +1860,12 @@ The framework's current scope leaves several open extensions:
   CMB-S4 / LiteBIRD observational test in ~2030 would confirm or
   falsify. (Supersedes the earlier n_s-anchored 61.3 ± 0.7.)
 
-These are extensions, not gaps. The framework's current state
-is structurally complete on its declared scope; extensions
-would expand the scope rather than fill missing pieces.
+Alongside these extensions, the 2026-08 campaign left genuine
+open problems inside the declared scope: the XOR fraction-parity
+translation (which the gauge sector is conditional on), the
+d = 3 / Lorentz completion, the K² configuration-space
+selection, and a derivation of the Ω-partition weights that
+would promote the bare reference to a prediction.
 
 ---
 
@@ -1885,16 +1873,17 @@ would expand the scope rather than fill missing pieces.
 
 The defense posture, stated honestly:
 
-The framework provides a constructive first-principles derivation,
-from four primitives (integers, mediant, fixed-point, parabola),
-of the dimensionless cosmological and particle-physics ratios
-that the standard model treats as observational input. Where it
-engages with classical "open problems" (cosmological constant,
-hierarchy, GR-QM unification, strong CP, galactic rotation
-without dark matter), it either resolves them constructively
-(CC, partition, gauge structure, anomaly cancellation, strong
-CP) or shows them to be category errors of imported framings
-(hierarchy, sometimes CC) — with explicit structural reasons.
+The framework provides a constructive treatment, from four
+primitives (integers, mediant, fixed-point, parabola), of
+dimensionless cosmological and particle-physics ratios that the
+standard model treats as observational input. Where it engages
+with classical "open problems", the current honest inventory
+is: constructively resolved (cosmological constant magnitude,
+Born rule, MOND scale), conditional on unsettled premises
+(gauge structure, strong CP), open (spatial dimension, Lorentz,
+the Ω partition as prediction), or shown to be category errors
+of imported framings (hierarchy, sometimes CC) — with explicit
+structural reasons in each case.
 
 Anchor-side absolutes (H_0, v_EW, A_s_obs) are correctly
 declined; this is a structural feature (two-anchor minimum,
@@ -1905,22 +1894,23 @@ representation theory, PSL(2, ℤ) modular forms, Hecke cusps on
 X_0(N), Arnold tongues, saddle-node bifurcation theory — all
 well-vetted by the broader mathematics community. What is novel
 is the composition: that these standard mathematical objects,
-when assembled in the order this atlas presents, generate the
-universe's quantitative structure with sub-σ accuracy on the
-strongest cosmological predictions and zero free parameters at
-the closure level for the headline derivations.
+when assembled in the order this atlas presents, generate a
+quantitative structure whose surviving Class 5 rows (the
+cosmological-constant magnitude and hierarchy exponent, the
+Born exponent, the MOND scale, the tilt) hold at their stated
+residuals — while the retracted and conditional rows mark
+exactly where composition outran derivation.
 
-The framework's specific competitive advantages versus the
-standard model are: derivation of the cosmic partition to 0.06%-
-0.13% with zero free parameters (versus SM treating Ω_b, Ω_DM,
-Ω_Λ as observational input); structural derivation of the gauge
-group and anomaly cancellation (versus postulation); derivation
-of spatial dimension = 3 (versus observational input);
-prediction of the MOND scale from Λ (versus separate fit);
-identification of dark matter as a substrate sector (versus
-particle to be searched for); reduction of the cosmological
-constant problem to two-anchor minimum (versus naturalness fine-
-tuning).
+The framework's specific competitive claims versus the standard
+model, at current statuses: derivation of the cosmological
+constant magnitude and hierarchy exponent (Class 5); the Born
+rule exponent from saddle-node universality (versus
+postulation); prediction of the MOND scale from Λ (versus
+separate fit); identification of dark matter as a substrate
+sector (versus particle to be searched for); a conditional
+route to the gauge group (pending the XOR translation); and a
+bare cosmic-partition reference whose promotion to prediction
+awaits a derivation of the weights.
 
 What the framework does not compete with the standard model on:
 inflation dynamics, reheating, baryogenesis (anchor-side, not
@@ -1942,19 +1932,22 @@ following the canonical glossary and the phenomenology cross-
 reference. Together, they constitute the framework's first
 external-facing presentation: vocabulary translation,
 phenomenological comparison, and end-to-end derivation chain.
-The framework's substantive derivation work is complete on its
-declared scope; the homework that remains is communication, not
-derivation.
+The framework's remaining homework is derivation as well as
+communication: the conditional and open rows above name the
+proofs still owed.
 
 ## Status
 
-**Atlas v1, 2026-04-26.** End-to-end derivation chain from four
-primitives to ~15 substrate-side Class 5 / Survives predictions
-(Ω partition, R, Λ·ℓ_P², n_s, A_s_substrate, MOND a_0, Born
-rule, gauge group, anomaly cancellation, strong CP, down-type
-factor 6, up-type factor 9, spatial dimension, Lorentz, two-
-anchor minimum, sector decoupling) with explicit substrate-side
-vs anchor-side classification and Z1-Z3 status.
+**Atlas edition 2, 2026-08-14** (v1: 2026-04-26). End-to-end
+walkthrough from four primitives with statuses carried from the
+2026-08 correction campaign. Class 5 rows: R, Λ·ℓ_P², n_s,
+A_s_substrate, MOND a_0, Born rule, N_efolds cadence, down-type
+factor 6, up-type factor 9, two-anchor minimum, sector
+decoupling. Conditional: gauge group, anomaly cancellation
+(imported charges), strong CP. Open: spatial dimension,
+Lorentz. Reference (not prediction): the bare Ω partition;
+two-component closure Class 2 (fitted). Authoritative registry:
+MANIFEST.yml scorecard; forensics: ERRATA.md.
 
 Companion to `canonical_glossary.md` (vocabulary translation)
 and `phenomenology_cross_reference.md` (observation/prediction
