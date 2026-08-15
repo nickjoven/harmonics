@@ -66,6 +66,10 @@ def build() -> OrderedDict:
         record["kind"] = kind
         record["source"] = entry["source"]
         record["subject"] = entry["subject"]
+        if "status" in entry:
+            record["status"] = entry["status"]
+        if "status_note" in entry:
+            record["status_note"] = entry["status_note"]
         record["forms"] = list(entry["forms"])
         if kind == "based-on":
             record["premises"] = list(entry["premises"])

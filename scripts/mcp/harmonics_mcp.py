@@ -265,7 +265,11 @@ def _tool_spine_get(args: dict) -> dict:
     entry = data["entries"].get(entry_id)
     if entry is None:
         return {"error": f"unknown spine id: {entry_id!r}"}
-    return {"id": entry_id, **entry}
+    out = {"id": entry_id, **entry}
+    if "status" not in out:
+        out["status_note"] = ("no status field: this edge is "
+                              "unclassified, not settled")
+    return out
 
 
 def _dnumber_to_doc() -> dict:
@@ -677,8 +681,9 @@ TOOLS = [
         "name": "spine_get",
         "description": (
             "Fetch one entry from the epistemic spine (SPINE.yml projection): "
-            "kind, source, subject, forms, premises. Without an id, lists "
-            "all spine entry ids."
+            "kind, source, subject, forms, premises, and epistemic status "
+            "where classified (entries without a status are unclassified, "
+            "not settled). Without an id, lists all spine entry ids."
         ),
         "inputSchema": {
             "type": "object",

@@ -15,6 +15,8 @@ BLOCKING:
     Domain notation — `Lambda`, `K1`, `n_s` — is allowed inside an id.
   - the source document file exists on disk (the part of `source:`
     before any " (section)" parenthetical resolves to a real path).
+  - optional `status:` values come from STATUS_VOCAB (the premise-
+    ledger vocabulary + open/reference).
   - docs/spine-data.json is in sync with SPINE.yml — i.e.
     `python3 scripts/build_spine_data.py --check` returns 0.
   - every form is a non-empty string.
@@ -48,6 +50,14 @@ BUILD_SCRIPT = ROOT / "scripts" / "build_spine_data.py"
 
 SPINE_ID = re.compile(r"^[A-Za-z][A-Za-z0-9_-]*$")
 SOURCE_FILE = re.compile(r"^([^\s(]+)")  # strip everything from first " (" or whitespace
+
+# Optional per-entry `status:` — the premise-ledger vocabulary
+# (PREMISES.md) plus `open` and `reference`. Absence means the edge
+# is unclassified, not settled; coverage is reported in the OK line.
+STATUS_VOCAB = {
+    "axiom", "definition", "proven", "derived", "imported",
+    "conditional", "conjectured", "fitted", "open", "reference",
+}
 
 
 def _resolve_source_path(source: str) -> Path:
@@ -98,6 +108,11 @@ def main() -> int:
                 f"{loc}: source document `{src_path.relative_to(ROOT)}` "
                 f"(from `source: {source}`) does not exist"
             )
+
+        status = entry.get("status")
+        if status is not None and status not in STATUS_VOCAB:
+            blocking.append(
+                f"{loc}: status `{status}` not in {sorted(STATUS_VOCAB)}")
 
         forms = entry.get("forms")
         if not isinstance(forms, list) or not forms:
@@ -168,7 +183,11 @@ def main() -> int:
             print(f"  - {f}")
         return 1
 
-    print(f"OK: {len(entries)} spine entries; docs/spine-data.json in sync")
+    statused = sum(1 for e in entries
+                   if isinstance(e, dict) and "status" in e)
+    print(f"OK: {len(entries)} spine entries; docs/spine-data.json in sync; "
+          f"status coverage {statused}/{len(entries)} "
+          f"(unstatused = unclassified, not settled)")
     return 0
 
 

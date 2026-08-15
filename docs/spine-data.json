@@ -5,6 +5,8 @@
       "kind": "based-on",
       "source": "README.md (lede)",
       "subject": "mode-locking-at-small-integer-ratios",
+      "status": "imported",
+      "status_note": "Textbook synchronization theory (Arnold tongues).",
       "forms": [
         "Based on coupling between continuous oscillators, mode-locking at small-integer-ratio frequencies occurs.",
         "Coupled continuous oscillators produce discrete mode-locked tongues; the integers count locked states, not pixels.",
@@ -98,10 +100,12 @@
       "kind": "inherits-from",
       "source": "README.md (What the mechanism forces)",
       "subject": "spatial-dimension-d-equals-3",
+      "status": "open",
+      "status_note": "D2 demotion: the continuum completion of SL(2,ℤ) into SL(2,ℝ) names no mathematical operation, and the same premises admit d = 2 and d = 1 (three_dimensions.md).",
       "forms": [
-        "Spatial dimension d = 3 inherits from dim SL(2, ℝ) = 3 — the continuum closure of the Stern-Brocot symmetry group SL(2, ℤ).",
-        "Iterating the mediant generates SL(2, ℤ); the spatial manifold's dimension is fixed by the dimension of its continuum closure SL(2, ℝ).",
-        "Three-dimensional space is what the geometry must be to stay consistent with the substrate's combining operation."
+        "The claimed inheritance d = 3 from dim SL(2, ℝ) = 3 is open: no operation completing SL(2, ℤ) into SL(2, ℝ) has been exhibited.",
+        "Iterating the mediant generates SL(2, ℤ); whether a continuum completion forces a three-dimensional manifold is an open problem — the same premises admit d = 2 and d = 1.",
+        "Three-dimensional space would follow if the completion step held; that step is currently a conjecture, not a construction."
       ],
       "from": "dim-SL2R-equals-3"
     },
@@ -109,10 +113,12 @@
       "kind": "inherits-from",
       "source": "README.md (What the mechanism forces)",
       "subject": "gauge-group-and-three-generations",
+      "status": "conditional",
+      "status_note": "The Z₆ roster consumes the conjectured XOR fraction-parity translation (xor_derivation §5); the generation-count reading is additionally unproven (generation_mechanism break).",
       "forms": [
-        "Three generations of fermions and the gauge factorisation SU(3) × SU(2) × U(1) inherit from Z_6 = Z_2 × Z_3.",
-        "The Klein bottle's two smallest accessible denominators (q₂ = 2, q₃ = 3) produce the Z_6 mode lattice; the Standard Model gauge group is its automorphism structure.",
-        "Three generations is what the framework gets for free once Z_6 is fixed."
+        "Three generations and the gauge factorisation SU(3) × SU(2) × U(1) are read from Z_6 = Z_2 × Z_3 — conditional on the conjectured XOR parity translation that selects the mode roster.",
+        "If the conjectured parity filter holds, the Klein bottle's two smallest accessible denominators (q₂ = 2, q₃ = 3) produce the Z_6 mode lattice the gauge reading runs on.",
+        "The Z_6 → generations-and-gauge reading is conditional: its mode roster rests on an unproven translation step."
       ],
       "from": "Z6-mode-structure-on-klein-bottle"
     },
@@ -120,6 +126,8 @@
       "kind": "based-on",
       "source": "README.md (What the mechanism forces)",
       "subject": "integer-charge-quantization",
+      "status": "conditional",
+      "status_note": "The landing on the charge sector runs through the imported charge assignment (D41 hardcodes the hypercharges; Gell-Mann–Nishijima Y is back-solved, not derived).",
       "forms": [
         "Based on the mediant primitive identifying integer phase translations, S¹ compactness is forced; charge quantization in units of e/3 inherits from this.",
         "S¹ has integer winding number for any continuous self-map; the framework's mediant primitive lands this on the charge sector.",
@@ -134,10 +142,12 @@
       "kind": "based-on",
       "source": "README.md (The largest residue)",
       "subject": "admissible-field-mode-topology",
+      "status": "conditional",
+      "status_note": "The K² uniqueness leg (the two-leg selection argument in klein_bottle_derivation.md) is an unsettled premise (k2-surface-selection in the premise ledger).",
       "forms": [
-        "Based on substrate self-consistency, the Klein bottle is the only admissible field-mode topology.",
-        "The vacuum's topology is not a modelling choice; substrate self-consistency uniquely admits the Klein bottle.",
-        "Of all 2-manifolds, only the Klein bottle survives the substrate's parity-conservation requirement on field modes."
+        "Based on substrate self-consistency, the Klein bottle is proposed as the admissible field-mode topology; the uniqueness leg is an unsettled premise.",
+        "The vacuum's topology is argued, not chosen: substrate self-consistency selects the Klein bottle if the two-leg uniqueness argument holds.",
+        "The Klein bottle is the candidate 2-manifold surviving the substrate's parity-conservation requirement; uniqueness among 2-manifolds is conditional."
       ],
       "premises": [
         "substrate-self-consistency"
@@ -147,10 +157,12 @@
       "kind": "based-on",
       "source": "README.md (The largest residue)",
       "subject": "surviving-zero-point-mode-count",
+      "status": "conditional",
+      "status_note": "The 4-mode count consumes the conjectured XOR fraction-parity translation (xor_derivation §5, E1); the line-bundle spectrum theorem it translates is proven.",
       "forms": [
-        "Based on Klein-bottle topology and a Z₂ parity filter, exactly four zero-point modes survive.",
-        "A Z₂ parity filter on the Klein bottle admits four modes and no others; the vacuum has four constituent states.",
-        "Four is what zero-point counting gives when run on the substrate's actual topology, not on the assumed torus."
+        "Based on Klein-bottle topology and the conjectured parity translation of its proven mode spectrum, four zero-point modes survive.",
+        "If the conjectured Z₂ parity filter holds on the Klein bottle, it admits four modes and no others.",
+        "Four is what zero-point counting gives on the substrate's proposed topology under the conjectured filter — versus the torus's ~10¹⁸³."
       ],
       "premises": [
         "klein-bottle-topology",
@@ -161,6 +173,8 @@
       "kind": "inherits-from",
       "source": "README.md (The largest residue)",
       "subject": "cosmological-constant-Lambda",
+      "status": "conditional",
+      "status_note": "The Λ magnitude identity Λ·ℓ_P² = 13⁻¹⁰⁸/12 is Class 5 via the hierarchy; the four-mode ROUTE to it inherits the conjectured parity translation from residue-four-mode-vacuum.",
       "forms": [
         "Λ ≈ 10⁻⁴⁷ GeV⁴ inherits from a four-mode vacuum, not from fine-tuning a many-mode sum.",
         "The observed cosmological-constant value sits where four zero-point modes put it — no tuning required.",
@@ -172,10 +186,12 @@
       "kind": "inherits-from",
       "source": "README.md (What the mechanism predicts)",
       "subject": "dark-energy-fraction",
+      "status": "reference",
+      "status_note": "Canonical per D1/C16 as a substrate-side reference, not a prediction: the same bare partition puts Ω_b = 1/19, 6.7% from observation.",
       "forms": [
-        "Ω_Λ = 13/19 inherits from Z_6 mode counting at Stern-Brocot depth 6: 13 locked-mode fractions, 6 unlocked modes (2 × 3), ratio 13 / (13 + 6).",
-        "The dark-energy fraction is 13/19 because that is the only ratio admitted by the substrate's mode counting at depth 6.",
-        "Ω_Λ = 13/19 = 0.6842, against Planck 2018's 0.685 ± 0.007 — a 0.07σ residual (parameter accounting per MANIFEST free_parameters_note)."
+        "Ω_Λ = 13/19 is the bare-partition reference from Z_6 mode counting at Stern-Brocot depth 6: 13 locked-mode fractions, 6 unlocked modes (2 × 3), ratio 13 / (13 + 6) — a reference, not a prediction.",
+        "The substrate's mode counting at depth 6 admits the ratio 13/19 as its bare partition; the partition is a reference point, since the same counting puts Ω_b 6.7% from observation.",
+        "Ω_Λ = 13/19 = 0.6842 sits 0.07σ from Planck 2018's 0.685 ± 0.007, as a reference value (parameter accounting per MANIFEST free_parameters_note)."
       ],
       "from": "Z6-mode-counting-at-stern-brocot-depth-6"
     },
@@ -183,6 +199,8 @@
       "kind": "inherits-from",
       "source": "README.md (What the mechanism predicts)",
       "subject": "scalar-spectral-tilt",
+      "status": "derived",
+      "status_note": "Class 5 in the MANIFEST scorecard (spectral_tilt row).",
       "forms": [
         "n_s ≈ 0.965 inherits from Stern-Brocot self-similarity at the golden-ratio winding.",
         "The scalar spectral tilt is what self-similarity gives at the 1/φ winding number; no inflaton potential is needed.",
@@ -194,6 +212,8 @@
       "kind": "inherits-from",
       "source": "README.md (What the mechanism predicts)",
       "subject": "bare-K1-identities-status",
+      "status": "derived",
+      "status_note": "A negative result established by executed check (sinW_running_check.py): the bare identities do not survive RG running and are excluded from the corroborated list.",
       "forms": [
         "The bare K = 1 identities 8/35 and 27/8 inherit from substrate-scale arithmetic only and do not survive renormalization-group running to the electroweak scale; they are reference identities, not predictions.",
         "8/35 and 27/8 land near the electroweak measurements but with the wrong sign of running; they are excluded from the corroborated list.",
