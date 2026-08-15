@@ -65,7 +65,7 @@
         "At a critical parameter value, a single equilibrium splits into two via a square-root.  " +
         "This universal geometry appears at every Arnold tongue boundary and determines the Born-rule exponent.",
       refs: ["fixed_point"],
-      derivation: "../derivations/01_born_rule.md",
+      derivation: "../derivations/born_rule.md",
       pages: ["ontology"]
     },
 
@@ -92,7 +92,7 @@
         "whether the system locks to a rational frequency or wanders quasi-periodically.  " +
         "K\u2009=\u20091 is the critical (Einstein) regime; K\u2009<\u20091 is the quantum (Schr\u00f6dinger) regime.",
       refs: ["circle"],
-      derivation: "../derivations/09_circle_map_master.md",
+      derivation: "../derivations/circle_map.py",
       pages: ["ontology", "double_pendulum"]
     },
 
@@ -106,7 +106,7 @@
         "Width decreases exponentially with denominator q: simple fractions dominate.  " +
         "Every stable astronomical resonance sits inside a tongue.",
       refs: ["circle_map", "stern_brocot_tree"],
-      derivation: "../derivations/10_tongue_width.md",
+      derivation: "../derivations/tongue_width_universality.py",
       pages: ["ontology", "double_pendulum", "three_body_catalog"]
     },
 
@@ -118,7 +118,7 @@
       description:
         "A fractal step function whose plateaus are the Arnold tongues projected onto the \u03a9 axis.  " +
         "At K\u2009=\u20091 the plateaus fill the line; the gaps (irrationals) have measure zero.  " +
-        "Self-similar at 1/\u03c6 with scaling \u03c6\u00b2.",
+        "Self-similar at the golden winding with Shenker scaling \u03b4 \u2248 2.834 (not \u03c6\u00b2 = 2.618).",
       refs: ["arnold_tongues", "farey_partition"],
       derivation: null,
       pages: ["ontology"]
@@ -160,7 +160,7 @@
         "forces a square-root dependence, so the occupation measure scales as the square of the amplitude.  " +
         "This is the framework\u2019s derivation of quantum probability.",
       refs: ["parabola", "arnold_tongues"],
-      derivation: "../derivations/01_born_rule.md",
+      derivation: "../derivations/born_rule.md",
       pages: ["ontology"]
     },
 
@@ -174,7 +174,7 @@
         "and the tongue width \u2014 where the tongue width itself depends on the total count.  " +
         "The self-consistent solution is the fixed point of the framework.",
       refs: ["stern_brocot_tree", "arnold_tongues", "fixed_point"],
-      derivation: "../derivations/12_field_equation.md",
+      derivation: "../derivations/PROOF_A_gravity.md",
       pages: ["ontology"]
     },
 
@@ -182,12 +182,13 @@
       id: "three_dimensions",
       name: "Three dimensions",
       symbol: "d = 2\u00b2 \u2212 1 = 3",
-      formal: "The mediant lives in SL(2,\u2124) whose Lie algebra has dimension 3.",
+      formal: "Conjectured: SL(2,\u2124) completing to SL(2,\u211d) would give dim 2\u00b2\u22121 = 3.  The completion step is open.",
       description:
-        "Spatial dimension is derived, not assumed.  The mediant has two components (numerator, denominator); " +
-        "its symmetry group SL(2,\u211d) has dimension 2\u00b2\u22121 = 3.  Space has three directions because fractions have two parts.",
+        "The mediant acts by SL(2,\u2124) matrices; the claim that their continuum completion is SL(2,\u211d) " +
+        "(dimension 2\u00b2\u22121 = 3) is open \u2014 no operation forcing the completion has been exhibited, " +
+        "and the same premises admit d = 2 and d = 1 constructions (D2 demotion, 2026-08).",
       refs: ["mediant", "stern_brocot_tree"],
-      derivation: "../derivations/15_three_dimensions.md",
+      derivation: "../derivations/three_dimensions.md",
       pages: ["ontology"]
     },
 
@@ -195,13 +196,13 @@
       id: "klein_bottle",
       name: "Klein bottle",
       symbol: "K\u00b2",
-      formal: "Two antiperiodic identifications.  XOR parity filter: 1764 candidate modes \u2192 4 survivors.",
+      formal: "Two antiperiodic identifications.  Line-bundle mode spectrum: theorem.  XOR fraction-parity filter: conjectured.",
       description:
         "The non-orientable surface that serves as the topology container for the field equation.  " +
-        "Its antiperiodic boundary conditions select exactly the modes that survive the twist, " +
-        "reducing the mode count to those consistent with the Farey partition.",
+        "Its line-bundle mode spectrum is a proven theorem; the further reading of that spectrum " +
+        "as an XOR parity filter selecting a 4-mode roster is a conjectured translation (xor_derivation \u00a75).",
       refs: ["circle", "farey_partition"],
-      derivation: "../derivations/22_klein_topology.md",
+      derivation: "../derivations/klein_bottle.md",
       pages: ["ontology", "mobius_projector", "mobius_views"]
     },
 
@@ -212,10 +213,11 @@
       formal: "|F\u2086| = 13 resolved states, budget = 13 + q\u2082q\u2083 = 19.  \u03a9\u039b = 13/19 = 0.6842.",
       description:
         "The Farey sequence F\u2086 has 13 fractions.  Adding the 6 interaction channels (q\u2082\u00d7q\u2083 = 2\u00d73) " +
-        "gives a budget of 19.  The ratio 13/19 matches the Planck measurement of dark energy (\u03a9\u039b = 0.6847 \u00b1 0.0073) " +
-        "to 0.07\u03c3.  Zero free parameters.",
+        "gives a budget of 19.  The ratio 13/19 sits 0.07\u03c3 from the Planck dark-energy measurement " +
+        "(\u03a9\u039b = 0.6847 \u00b1 0.0073), but is a substrate-side reference, not a prediction: " +
+        "the same bare partition puts \u03a9_b = 1/19, 6.7% from observation.",
       refs: ["stern_brocot_tree", "klein_bottle", "continued_fraction"],
-      derivation: "../derivations/25_farey_partition.md",
+      derivation: "../derivations/farey_partition.md",
       pages: ["ontology", "stern_brocot_walk", "mobius_projector", "mobius_views"]
     },
 
@@ -323,7 +325,7 @@
       description:
         "The framework's admitted value is n\u209b = 1 \u2212 (2/57)\u00b7ln \u03c6\u00b2 \u2248 0.9662, " +
         "against the Planck 2018 measurement n\u209b = 0.9649 \u00b1 0.0042 (+0.3\u03c3).",
-      refs: ["spectral_tilt_reframed"],
+      refs: ["devils_staircase"],
       derivation: "../derivations/spectral_tilt_reframed.md",
       pages: []
     }
