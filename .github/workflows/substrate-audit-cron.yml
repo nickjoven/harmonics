@@ -3,9 +3,10 @@ name: substrate-audit-cron
 # Scheduled adversarial audit: runs the committed /substrate-audit
 # protocol (.claude/commands/substrate-audit.md) with Claude Code in
 # CI and files the session report as an issue comment on the rolling
-# audit thread. Requires the ANTHROPIC_API_KEY repository secret;
-# until it is set, runs no-op with a notice, so this workflow is safe
-# to merge before the secret exists.
+# audit thread. Requires the ANTHROPIC_API_KEY repository secret.
+# If the secret is missing the job FAILS — a scheduled audit that
+# did not run must not show a green checkmark (an earlier revision
+# no-opped green, which read as "audited" when nothing ran).
 
 on:
   schedule:
@@ -29,32 +30,27 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-      - name: Check secret
-        id: gate
+      - name: Require the audit to be runnable
         env:
           KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           if [ -z "$KEY" ]; then
-            echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "::notice::ANTHROPIC_API_KEY not set; audit skipped"
-          else
-            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "::error::ANTHROPIC_API_KEY not set — the scheduled \
+          audit DID NOT RUN. Set the secret or disable the schedule; \
+          a green no-op here would misreport audit coverage."
+            exit 1
           fi
 
       - uses: actions/checkout@v5
-        if: steps.gate.outputs.run == 'true'
 
       - uses: actions/setup-python@v6
-        if: steps.gate.outputs.run == 'true'
         with:
           python-version: "3.11"
 
       - name: Install deps
-        if: steps.gate.outputs.run == 'true'
         run: pip install --quiet blake3 pyyaml
 
       - name: Run the audit
-        if: steps.gate.outputs.run == 'true'
         uses: anthropics/claude-code-action@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
