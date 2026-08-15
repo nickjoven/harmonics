@@ -51,53 +51,57 @@ problems:
   - id: dark_energy_fraction
     title: "Dark energy fraction / cosmic coincidence problem"
     moniker: "why is Ω_Λ order unity now?"
-    posture: forced
-    mode: derived
+    posture: open
+    mode: articulated
     statement: >
-      Ω_Λ = 13/19 (0.07σ vs Planck 2018), refined to 181/264 = 0.68561
-      (0.13%) under the two-component closure with w₊ = 13/14 from the
-      Γ₀(6) cusp-1/2 ground state. The fraction is combinatorial (Farey-6
-      partition + Z₂ rep theory), so no coincidence remains to explain.
+      The bare Farey partition 13:5:1 over 19 supplies a substrate-side
+      reference point Ω_Λ = 13/19 ≈ 0.684 — canonical per D1/C16 as a
+      reference, not a prediction (the same partition puts Ω_b = 1/19,
+      6.7% from observation). The two-component refinement (w₊ = 13/14,
+      Ω_Λ = 181/264) is retracted to Class 2: w₊ is a numerical fit to
+      Planck values and is computed by no script in the repo. The
+      coincidence problem is open here; the partition is bookkeeping
+      until a derivation forces the weights.
     resolution_docs: [omega_partition_combinatorial, farey_partition, baryon_fraction,
                       omega_b_alpha_beta_closure, psl2z_subgroup_phase_b,
                       L1_substrate_cusp_ground_state, w_plus_formalization]
     manifest_claims: [dark_energy, dark_energy_fraction_two_component]
-    test: >
-      Euclid/DESI refinement of Ω_Λ outside the 13/19 window falsifies the
-      F₆ partition; w = −1 (+ small twist-breathing correction) testable
-      ~2028.
 
   - id: dark_sector_composition
     title: "Dark matter and baryon fractions"
     moniker: "what fixes Ω_DM : Ω_b ≈ 5.4?"
-    posture: forced
-    mode: derived
+    posture: open
+    mode: articulated
     statement: >
-      Ω_DM = 35/132 (0.06%), Ω_b = 13/264 (0.12%), Ω_DM/Ω_b = 70/13
-      (0.6%) from the same 13:5:1/19 partition plus the two-component
-      closure. The dark-matter abundance question is answered at the
-      fraction level (what shares exist), not the particle level.
+      The bare partition gives Ω_DM : Ω_b = 5 : 1 against an observed
+      ≈ 5.4 — a reference ratio, not a prediction (D1/C16). The
+      two-component numbers previously quoted here (Ω_DM = 35/132,
+      Ω_b = 13/264, ratio 70/13) inherit Class 2 from the fitted
+      w₊ = 13/14 closure and are computed by no script. What fixes the
+      ratio is open, at the fraction level and the particle level alike.
     resolution_docs: [baryon_fraction, omega_partition_combinatorial,
                       omega_b_alpha_beta_closure, L1_substrate_cusp_ground_state]
     manifest_claims: [dark_matter_fraction, baryon_fraction, dm_baryon_ratio]
     caveats: >
-      No particle candidate is offered; the framework's dark-matter story
-      is fractional/combinatorial, with galactic phenomenology handled by
-      the a₀ row below.
+      No particle candidate is offered; galactic phenomenology is handled
+      by the a₀ row below and does not depend on this partition.
 
   - id: strong_cp_problem
     title: "Strong CP problem"
-    posture: forced
-    mode: derived
+    posture: proposed
+    mode: conditional
     statement: >
-      θ_QCD = 0 exactly, forced by Pin⁺(3) topology on the Klein bottle
-      (D45): the substrate admits no θ-term. Resolves strong CP with no
-      axion and no tuning.
+      θ_QCD = 0 via Pin⁺(3) topology (D45) — conditional, retracted from
+      Class 5 (2026-08-12): the derivation runs entirely on the K²
+      configuration space, whose selection is an unsettled premise, and
+      the eta-invariant input is an unverified import. If those premises
+      hold, the substrate admits no θ-term: no axion, no tuning.
     resolution_docs: [coupling_scales]
     manifest_claims: [strong_cp]
     test: >
-      Any measurement of θ ≠ 0 falsifies; discovery of a QCD axion doing
-      the resolving would undercut the mechanism.
+      Any measurement of θ ≠ 0 falsifies the conditional chain outright;
+      discovery of a QCD axion doing the resolving would undercut the
+      mechanism.
 
   - id: measurement_problem
     title: "Quantum measurement problem"
@@ -144,26 +148,35 @@ problems:
   - id: spacetime_dimensionality
     title: "Dimensionality and signature of spacetime"
     moniker: "why 3+1 and why Lorentz?"
-    posture: forced
-    mode: derived
+    posture: open
+    mode: open
     statement: >
-      d = 3 from the SL(2,ℝ) Lie-group dimension forced by the mediant's
-      SL(2,ℤ) symmetry (D14); Minkowski signature and Spin(3,1) from the
-      Klein-bottle Cl(3,1) construction (D32, D15). Exact, structural.
+      Open (demoted from the scorecard 2026-08-06, D2 disposition).
+      d = 3 was claimed via the identification M = SL(2,ℝ), but the
+      continuum-completion step names no mathematical operation
+      (SL(2,ℤ) is discrete and closed in SL(2,ℝ)), and the same premises
+      admit d = 2 and d = 1. The signature argument rests on a sign rule
+      that contradicts the orientation character being a homomorphism.
+      SL(2,ℂ) = Spin(3,1) is a true imported theorem; every arrow
+      leading to it is open.
     resolution_docs: [three_dimensions, minkowski_signature, lie_group_characterization]
-    manifest_claims: [spatial_dimension, lorentz]
+    open_problem_claims: [spatial_dimension, lorentz]
 
   - id: gauge_group_origin
     title: "Origin of the Standard Model gauge group"
     moniker: "why SU(3)×SU(2)×U(1), why do anomalies cancel?"
-    posture: forced
-    mode: derived
+    posture: proposed
+    mode: conditional
     statement: >
-      SU(3)×SU(2)×U(1) from the Klein-bottle mode lattice Z₆ = Z₂ × Z₃
-      (D41/D42); Yang-Mills dynamics unique via Utiyama + Cartan given the
-      substrate's kinematics (gauge-sector Lovelock); all 6 SM anomaly
-      conditions verified as substrate mode-count identities; charge
-      quantization via Gell-Mann–Nishijima (D43).
+      SU(3)×SU(2)×U(1) is read off the Klein-bottle mode lattice
+      Z₆ = Z₂ × Z₃ (D41/D42) — conditional, retracted from Class 5
+      (2026-08-12): the 12-transition count consumes the 4-mode roster,
+      which rests on the conjectured XOR parity translation
+      (xor_derivation §5). The 6 SM anomaly conditions are verified for
+      the imported charge assignment (D41 hardcodes the hypercharges);
+      Gell-Mann–Nishijima holds with Y back-solved, not derived.
+      Yang-Mills uniqueness via Utiyama + Cartan is the strongest leg,
+      conditional on the same kinematics.
     resolution_docs: [gauge_sector_lovelock, discrete_gauge_resolution, gell_mann_nishijima]
     manifest_claims: [gauge_group, anomaly_cancellation]
     engines: [anomaly_check.py, fiber_bundle.py, xor_asymmetry.py]

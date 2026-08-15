@@ -20,36 +20,6 @@ The magnitude of Λ is derived, not tuned: Λ·ℓ_P² = 13⁻¹⁰⁸/12 = 3/R�
 
 **Test / falsifier:** Tighter joint (Λ, H₀) determinations move R; the identity fails if the exponent drifts beyond its 0.1% window.
 
-### Dark energy fraction / cosmic coincidence problem — *why is Ω_Λ order unity now?*
-
-Ω_Λ = 13/19 (0.07σ vs Planck 2018), refined to 181/264 = 0.68561 (0.13%) under the two-component closure with w₊ = 13/14 from the Γ₀(6) cusp-1/2 ground state. The fraction is combinatorial (Farey-6 partition + Z₂ rep theory), so no coincidence remains to explain.
-
-**MANIFEST claims:** `dark_energy`, `dark_energy_fraction_two_component`
-
-**Docs:** [`omega_partition_combinatorial`](../sync_cost/derivations/omega_partition_combinatorial.md), [`farey_partition`](../sync_cost/derivations/farey_partition.md), [`baryon_fraction`](../sync_cost/derivations/baryon_fraction.md), [`omega_b_alpha_beta_closure`](../sync_cost/derivations/omega_b_alpha_beta_closure.md), [`psl2z_subgroup_phase_b`](../sync_cost/derivations/psl2z_subgroup_phase_b.md), [`L1_substrate_cusp_ground_state`](../sync_cost/derivations/L1_substrate_cusp_ground_state.md), [`w_plus_formalization`](../sync_cost/derivations/w_plus_formalization.md)
-
-**Test / falsifier:** Euclid/DESI refinement of Ω_Λ outside the 13/19 window falsifies the F₆ partition; w = −1 (+ small twist-breathing correction) testable ~2028.
-
-### Dark matter and baryon fractions — *what fixes Ω_DM : Ω_b ≈ 5.4?*
-
-Ω_DM = 35/132 (0.06%), Ω_b = 13/264 (0.12%), Ω_DM/Ω_b = 70/13 (0.6%) from the same 13:5:1/19 partition plus the two-component closure. The dark-matter abundance question is answered at the fraction level (what shares exist), not the particle level.
-
-**MANIFEST claims:** `dark_matter_fraction`, `baryon_fraction`, `dm_baryon_ratio`
-
-**Docs:** [`baryon_fraction`](../sync_cost/derivations/baryon_fraction.md), [`omega_partition_combinatorial`](../sync_cost/derivations/omega_partition_combinatorial.md), [`omega_b_alpha_beta_closure`](../sync_cost/derivations/omega_b_alpha_beta_closure.md), [`L1_substrate_cusp_ground_state`](../sync_cost/derivations/L1_substrate_cusp_ground_state.md)
-
-**Caveat:** No particle candidate is offered; the framework's dark-matter story is fractional/combinatorial, with galactic phenomenology handled by the a₀ row below.
-
-### Strong CP problem
-
-θ_QCD = 0 proposed via Pin⁺(3) topology on the Klein bottle (D45). Conditional, not established: the argument runs on the K² configuration space (itself a conditional premise) and its eta-invariant-vanishing step is an unverified import (MANIFEST `strong_cp`, retracted from Class 5 on 2026-08-12). If both hold, strong CP dissolves with no axion and no tuning.
-
-**MANIFEST claims:** `strong_cp`
-
-**Docs:** [`coupling_scales`](../sync_cost/derivations/coupling_scales.md)
-
-**Test / falsifier:** Any measurement of θ ≠ 0 falsifies; discovery of a QCD axion doing the resolving would undercut the mechanism.
-
 ### Quantum measurement problem — *often called the most embarrassing problem in physics*
 
 Dissolved, not solved-by-interpretation: the substrate carries no projection postulate to reconcile with unitary evolution. Collapse is fidelity-bounded self-measurement; the preferred basis is basin selection (the saddle-node normal form fixes each context's basis structurally); the Born exponent 2 is saddle-node universality, not an axiom.
@@ -69,24 +39,6 @@ Bell-violating, non-signaling statistics at exactly the Tsirelson bound (and Mer
 **Docs:** [`epr_bell_assembly_theorem`](../sync_cost/derivations/epr_bell_assembly_theorem.md), [`bell_bounds_from_substrate`](../sync_cost/derivations/bell_bounds_from_substrate.md), [`ghz_from_substrate`](../sync_cost/derivations/ghz_from_substrate.md), [`q_mod2_conservation_theorem`](../sync_cost/derivations/q_mod2_conservation_theorem.md)
 
 **Caveat:** Reproduces QM's bounds rather than predicting deviations from them; the claim is structural explanation, not new statistics.
-
-### Dimensionality and signature of spacetime — *why 3+1 and why Lorentz?*
-
-d = 3 from the SL(2,ℝ) Lie-group dimension forced by the mediant's SL(2,ℤ) symmetry (D14); Minkowski signature and Spin(3,1) from the Klein-bottle Cl(3,1) construction (D32, D15). Exact, structural.
-
-**MANIFEST claims:** `spatial_dimension`, `lorentz`
-
-**Docs:** [`three_dimensions`](../sync_cost/derivations/three_dimensions.md), [`minkowski_signature`](../sync_cost/derivations/minkowski_signature.md), [`lie_group_characterization`](../sync_cost/derivations/lie_group_characterization.md)
-
-### Origin of the Standard Model gauge group — *why SU(3)×SU(2)×U(1), why do anomalies cancel?*
-
-SU(3)×SU(2)×U(1) from the Klein-bottle mode lattice Z₆ = Z₂ × Z₃ (D41/D42); Yang-Mills dynamics unique via Utiyama + Cartan given the substrate's kinematics (gauge-sector Lovelock); all 6 SM anomaly conditions verified as substrate mode-count identities; charge quantization via Gell-Mann–Nishijima (D43).
-
-**MANIFEST claims:** `gauge_group`, `anomaly_cancellation`
-
-**Docs:** [`gauge_sector_lovelock`](../sync_cost/derivations/gauge_sector_lovelock.md), [`discrete_gauge_resolution`](../sync_cost/derivations/discrete_gauge_resolution.md), [`gell_mann_nishijima`](../sync_cost/derivations/gell_mann_nishijima.md)
-
-**Scripts:** `anomaly_check.py`, `fiber_bundle.py`, `xor_asymmetry.py`
 
 ### Unification of general relativity and quantum mechanics
 
@@ -162,6 +114,26 @@ The doublet/singlet kinematic split is substrate-forced (Catalan equation: Mihai
 
 ## Tier 3 — proposed (conditional or unreconciled; testable)
 
+### Strong CP problem
+
+θ_QCD = 0 via Pin⁺(3) topology (D45) — conditional, retracted from Class 5 (2026-08-12): the derivation runs entirely on the K² configuration space, whose selection is an unsettled premise, and the eta-invariant input is an unverified import. If those premises hold, the substrate admits no θ-term: no axion, no tuning.
+
+**MANIFEST claims:** `strong_cp`
+
+**Docs:** [`coupling_scales`](../sync_cost/derivations/coupling_scales.md)
+
+**Test / falsifier:** Any measurement of θ ≠ 0 falsifies the conditional chain outright; discovery of a QCD axion doing the resolving would undercut the mechanism.
+
+### Origin of the Standard Model gauge group — *why SU(3)×SU(2)×U(1), why do anomalies cancel?*
+
+SU(3)×SU(2)×U(1) is read off the Klein-bottle mode lattice Z₆ = Z₂ × Z₃ (D41/D42) — conditional, retracted from Class 5 (2026-08-12): the 12-transition count consumes the 4-mode roster, which rests on the conjectured XOR parity translation (xor_derivation §5). The 6 SM anomaly conditions are verified for the imported charge assignment (D41 hardcodes the hypercharges); Gell-Mann–Nishijima holds with Y back-solved, not derived. Yang-Mills uniqueness via Utiyama + Cartan is the strongest leg, conditional on the same kinematics.
+
+**MANIFEST claims:** `gauge_group`, `anomaly_cancellation`
+
+**Docs:** [`gauge_sector_lovelock`](../sync_cost/derivations/gauge_sector_lovelock.md), [`discrete_gauge_resolution`](../sync_cost/derivations/discrete_gauge_resolution.md), [`gell_mann_nishijima`](../sync_cost/derivations/gell_mann_nishijima.md)
+
+**Scripts:** `anomaly_check.py`, `fiber_bundle.py`, `xor_asymmetry.py`
+
 ### Neutrino masses and nature
 
 Σm_ν ≈ 66.7 meV, normal ordering, Majorana — closed via a finite-K interaction-scale correction per neutrino_mass_audit.md, testable by 0νββ at LEGEND-1000 / nEXO.
@@ -181,6 +153,32 @@ m_τ = 1776.78875 ± 0.00004 MeV (22 ppb, ~3100× tighter than PDG) from the muo
 **Test / falsifier:** A future m_τ measurement at σ < 0.03 MeV converging to 1776.86 MeV or higher falsifies the closed form cleanly.
 
 ## Tier 4 — operationally open (the honest gaps)
+
+### Dark energy fraction / cosmic coincidence problem — *why is Ω_Λ order unity now?*
+
+The bare Farey partition 13:5:1 over 19 supplies a substrate-side reference point Ω_Λ = 13/19 ≈ 0.684 — canonical per D1/C16 as a reference, not a prediction (the same partition puts Ω_b = 1/19, 6.7% from observation). The two-component refinement (w₊ = 13/14, Ω_Λ = 181/264) is retracted to Class 2: w₊ is a numerical fit to Planck values and is computed by no script in the repo. The coincidence problem is open here; the partition is bookkeeping until a derivation forces the weights.
+
+**MANIFEST claims:** `dark_energy`, `dark_energy_fraction_two_component`
+
+**Docs:** [`omega_partition_combinatorial`](../sync_cost/derivations/omega_partition_combinatorial.md), [`farey_partition`](../sync_cost/derivations/farey_partition.md), [`baryon_fraction`](../sync_cost/derivations/baryon_fraction.md), [`omega_b_alpha_beta_closure`](../sync_cost/derivations/omega_b_alpha_beta_closure.md), [`psl2z_subgroup_phase_b`](../sync_cost/derivations/psl2z_subgroup_phase_b.md), [`L1_substrate_cusp_ground_state`](../sync_cost/derivations/L1_substrate_cusp_ground_state.md), [`w_plus_formalization`](../sync_cost/derivations/w_plus_formalization.md)
+
+### Dark matter and baryon fractions — *what fixes Ω_DM : Ω_b ≈ 5.4?*
+
+The bare partition gives Ω_DM : Ω_b = 5 : 1 against an observed ≈ 5.4 — a reference ratio, not a prediction (D1/C16). The two-component numbers previously quoted here (Ω_DM = 35/132, Ω_b = 13/264, ratio 70/13) inherit Class 2 from the fitted w₊ = 13/14 closure and are computed by no script. What fixes the ratio is open, at the fraction level and the particle level alike.
+
+**MANIFEST claims:** `dark_matter_fraction`, `baryon_fraction`, `dm_baryon_ratio`
+
+**Docs:** [`baryon_fraction`](../sync_cost/derivations/baryon_fraction.md), [`omega_partition_combinatorial`](../sync_cost/derivations/omega_partition_combinatorial.md), [`omega_b_alpha_beta_closure`](../sync_cost/derivations/omega_b_alpha_beta_closure.md), [`L1_substrate_cusp_ground_state`](../sync_cost/derivations/L1_substrate_cusp_ground_state.md)
+
+**Caveat:** No particle candidate is offered; galactic phenomenology is handled by the a₀ row below and does not depend on this partition.
+
+### Dimensionality and signature of spacetime — *why 3+1 and why Lorentz?*
+
+Open (demoted from the scorecard 2026-08-06, D2 disposition). d = 3 was claimed via the identification M = SL(2,ℝ), but the continuum-completion step names no mathematical operation (SL(2,ℤ) is discrete and closed in SL(2,ℝ)), and the same premises admit d = 2 and d = 1. The signature argument rests on a sign rule that contradicts the orientation character being a homomorphism. SL(2,ℂ) = Spin(3,1) is a true imported theorem; every arrow leading to it is open.
+
+**MANIFEST open-problem rows:** `spatial_dimension`, `lorentz`
+
+**Docs:** [`three_dimensions`](../sync_cost/derivations/three_dimensions.md), [`minkowski_signature`](../sync_cost/derivations/minkowski_signature.md), [`lie_group_characterization`](../sync_cost/derivations/lie_group_characterization.md)
 
 ### Flavor problem (fermion mass ratios, CKM/PMNS mixing)
 
@@ -206,13 +204,8 @@ Not addressed at the η_B level; matter-antimatter structure appears only in aud
 flowchart LR
   subgraph forced["Tier 1 — substrate-forced (the firm lines)"]
     cosmological_constant_problem["Cosmological constant problem"]
-    dark_energy_fraction["Dark energy fraction / cosmic coincidence problem"]
-    dark_sector_composition["Dark matter and baryon fractions"]
-    strong_cp_problem["Strong CP problem"]
     measurement_problem["Quantum measurement problem"]
     bell_nonlocality["Bell nonlocality / EPR"]
-    spacetime_dimensionality["Dimensionality and signature of spacetime"]
-    gauge_group_origin["Origin of the Standard Model gauge group"]
     gr_qm_unification["Unification of general relativity and quantum mechanics"]
     galactic_acceleration_scale["MOND scale and the radial acceleration relation"]
     inflation_duration["Inflation duration (e-fold count)"]
@@ -225,22 +218,22 @@ flowchart LR
     parity_violation_direction["Why the weak interaction couples to left-handed states"]
   end
   subgraph proposed["Tier 3 — proposed (conditional or unreconciled; testable)"]
+    strong_cp_problem["Strong CP problem"]
+    gauge_group_origin["Origin of the Standard Model gauge group"]
     neutrino_masses["Neutrino masses and nature"]
     tau_mass_precision["Tau mass forward prediction"]
   end
   subgraph open["Tier 4 — operationally open (the honest gaps)"]
+    dark_energy_fraction["Dark energy fraction / cosmic coincidence problem"]
+    dark_sector_composition["Dark matter and baryon fractions"]
+    spacetime_dimensionality["Dimensionality and signature of spacetime"]
     flavor_problem["Flavor problem (fermion mass ratios, CKM/PMNS mixing)"]
     muon_g2["Muon g−2 anomaly"]
     baryon_asymmetry["Baryon asymmetry of the universe"]
   end
   cosmological_constant_problem --> doc_hierarchy_gaussian_lattice(["hierarchy_gaussian_lattice.md"])
-  dark_energy_fraction --> doc_omega_partition_combinatorial(["omega_partition_combinatorial.md"])
-  dark_sector_composition --> doc_baryon_fraction(["baryon_fraction.md"])
-  strong_cp_problem --> doc_coupling_scales(["coupling_scales.md"])
   measurement_problem --> doc_collapse_dissolution(["collapse_dissolution.md"])
   bell_nonlocality --> doc_epr_bell_assembly_theorem(["epr_bell_assembly_theorem.md"])
-  spacetime_dimensionality --> doc_three_dimensions(["three_dimensions.md"])
-  gauge_group_origin --> doc_gauge_sector_lovelock(["gauge_sector_lovelock.md"])
   gr_qm_unification --> doc_einstein_from_kuramoto(["einstein_from_kuramoto.md"])
   galactic_acceleration_scale --> doc_a0_threshold(["a0_threshold.md"])
   inflation_duration --> doc_k_of_t_residual_disposition(["k_of_t_residual_disposition.md"])
@@ -249,8 +242,13 @@ flowchart LR
   gauge_couplings_at_mz --> doc_duty_cycle_dictionary(["duty_cycle_dictionary.md"])
   absolute_scales --> doc_basepoint_principle(["basepoint_principle.md"])
   parity_violation_direction --> doc_vocabulary_bridge_iteration_2_step_2(["vocabulary_bridge_iteration_2_step_2.md"])
+  strong_cp_problem --> doc_coupling_scales(["coupling_scales.md"])
+  gauge_group_origin --> doc_gauge_sector_lovelock(["gauge_sector_lovelock.md"])
   neutrino_masses --> doc_neutrino_mass_audit(["neutrino_mass_audit.md"])
   tau_mass_precision --> doc_CHAIN_KSTAR(["CHAIN_KSTAR.md"])
+  dark_energy_fraction --> doc_omega_partition_combinatorial(["omega_partition_combinatorial.md"])
+  dark_sector_composition --> doc_baryon_fraction(["baryon_fraction.md"])
+  spacetime_dimensionality --> doc_three_dimensions(["three_dimensions.md"])
   flavor_problem --> doc_free_parameter_scorecard(["free_parameter_scorecard.md"])
   muon_g2 --> doc_framework_status(["framework_status.md"])
   baryon_asymmetry --> doc_free_parameter_scorecard(["free_parameter_scorecard.md"])
@@ -261,11 +259,8 @@ flowchart LR
 Warnings raised by the generator on the current tree:
 
 - WARN: INDEX.md maps D-numbers beyond MANIFEST derivation_count=47: D48, D49
-- WARN: INDEX.md lists D-numbers as unmapped that its own table maps: D16, D18, D38
-- note: spacetime_dimensionality: cited doc minkowski_signature is prose-only (articulation-grade)
-- note: spacetime_dimensionality: cited doc lie_group_characterization is prose-only (articulation-grade)
 
 ---
 
-Problems: 21 (forced 12, declined 4, proposed 2, open 3). Source of truth for quantities: `MANIFEST.yml`; for status:
+Problems: 21 (forced 7, declined 4, proposed 4, open 6). Source of truth for quantities: `MANIFEST.yml`; for status:
 `framework_status.md`. This map is a view, not a registry.
