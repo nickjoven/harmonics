@@ -47,10 +47,14 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).parent
 
+# Entries are (label, script) or (label, script, [extra args]).
 CHECKS = [
     ("session status", "session_status.py"),
     ("hashlib linter", "lint_local_hashing.py"),
     ("fitted-correction linter", "lint_fitted_corrections.py"),
+    ("reading-layer scars", "check_reading_layer.py"),
+    ("premise ledger", "check_premises.py"),
+    ("negation seals", "lint_negation_seals.py"),
     ("manifest consistency", "check_manifest.py"),
     ("graph orphans", "check_graph_orphans.py"),
     ("enforced-spine coverage", "check_enforced_coverage.py"),
@@ -69,6 +73,9 @@ CHECKS = [
     ("working-tree drift", "check_working_tree.py"),
     ("CAS verification", "verify_cas.py"),
     ("SPINE.yml integrity", "check_spine.py"),
+    # Last: slowest check even under --quick (runs verifier scripts
+    # against staged mutations; slow targets are skipped by --quick).
+    ("mutation gate (quick)", "check_mutation_gate.py", ["--quick"]),
 ]
 
 # Nonzero rc is reported but never gates: never adds to the exit
@@ -77,6 +84,7 @@ CHECKS = [
 # because the corpus is only partially sealed today (coverage signal, not
 # a violation); promote it once the corpus is fully sealed.
 ADVISORY = {
+    "lint_negation_seals.py",
     "session_status.py",
     "check_working_tree.py",
     "check_dag_acyclic.py",
@@ -98,6 +106,13 @@ ADVISORY = {
 # check_claim_signatures.py is the opposite pole: structural false
 # positives (genuine fits rendered decimal), so permanently advisory —
 # a review queue, never a verdict.
+# check_reading_layer.py, check_premises.py, and
+# check_mutation_gate.py are FATAL from birth: deterministic over
+# committed state (fixed textual patterns with an explicit exemption
+# list; anchor parsing + a propagation rule; per-probe pinned
+# expectations with SKIPPED never failing), so the predicate is crisp.
+# lint_negation_seals.py apprentices in ADVISORY: its context-marker
+# heuristic can misread historical citation as fresh assertion.
 
 
 def main() -> int:
@@ -106,10 +121,12 @@ def main() -> int:
     args = parser.parse_args()
 
     worst = 0
-    for label, script in CHECKS:
+    for entry in CHECKS:
+        label, script = entry[0], entry[1]
+        extra = entry[2] if len(entry) > 2 else []
         path = SCRIPT_DIR / script
         print(f"\n=== {label} ===")
-        r = subprocess.run([sys.executable, str(path)], check=False)
+        r = subprocess.run([sys.executable, str(path), *extra], check=False)
         # Normalize: a signal-killed check returns a NEGATIVE code,
         # which max() would treat as passing (review 2026-07-30) — any
         # nonzero, either sign, is a failure; 2 stays the env-error tier.

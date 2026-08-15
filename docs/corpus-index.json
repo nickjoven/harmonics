@@ -1,9 +1,9 @@
 {
- "count": 326,
+ "count": 328,
  "coverage_totals": {
-  "classified": 201,
-  "prose-only": 29,
-  "unclassified-quantitative": 96
+  "classified": 203,
+  "prose-only": 28,
+  "unclassified-quantitative": 97
  },
  "docs": {
   "CHAIN_KSTAR": {
@@ -17,6 +17,18 @@
    "status_bold": "Derived from canonical L0/L1/L3 framework objects (structural):",
    "status_line": null,
    "title": "K_STAR closed form"
+  },
+  "ERRATA": {
+   "classes": [
+    2,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_bold": null,
+   "status_line": null,
+   "title": "ERRATA"
   },
   "FRAMEWORK_TOPOLOGY": {
    "classes": [
@@ -51,6 +63,17 @@
    "status_bold": "L1 closes Class 5 in recognize mode.",
    "status_line": "Class 5.",
    "title": "L1 closure — substrate cusp-1/2 ground state from soft-boundary + discreteness"
+  },
+  "PREMISES": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_bold": null,
+   "status_line": null,
+   "title": "Premise Ledger"
   },
   "PROOF_A_gravity": {
    "classes": [
@@ -340,7 +363,7 @@
    "has_lineage": false,
    "status_bold": null,
    "status_line": null,
-   "title": "Beta Functions from Tongue Widths"
+   "title": "Tongue-Width Running: the Ratio Theorem (SM β-Coefficient Claim Retired)"
   },
   "bicone_golden_z2_identification": {
    "classes": [
@@ -563,7 +586,7 @@
    ],
    "has_lineage": true,
    "status_bold": "Derived (partial), rescoped (#263 ⓾ ruling, 2026-07-19).",
-   "status_line": "theta = 0 derived from Pin+(3) on the Klein bottle.",
+   "status_line": "theta = 0 is conditional, not derived. The argument",
    "title": "The Coupling Scales and the Bare Diffusion Constant"
   },
   "cross_ratio_irrep_reframe": {
@@ -639,7 +662,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
-   "status_bold": "Atlas v1, 2026-04-26.",
+   "status_bold": "Atlas edition 2, 2026-08-14",
    "status_line": null,
    "title": "Derivation Atlas — from four primitives to physical predictions"
   },
@@ -786,9 +809,9 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
-   "status_bold": null,
+   "status_bold": "definition",
    "status_line": null,
-   "title": "Proof: The Duty Cycle Exponent Equals the Group Dimension"
+   "title": "The Duty-Cycle Exponent and the Group Dimension: Definition, Not Map Law"
   },
   "dynamical_quantization": {
    "classes": [
@@ -1053,7 +1076,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
-   "status_bold": null,
+   "status_bold": "(Rewritten 2026-08-04 to match the 2026-05 correction box above, which this paragraph had never inherited.)",
    "status_line": null,
    "title": "Fermion Mass Running from the K → μ Map"
   },
@@ -2204,7 +2227,7 @@
   },
   "mediant_derivation": {
    "classes": [],
-   "coverage": "prose-only",
+   "coverage": "unclassified-quantitative",
    "d_numbers": [
     "D29"
    ],
@@ -3608,10 +3631,10 @@
    "has_lineage": false,
    "status_bold": null,
    "status_line": null,
-   "title": "Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions"
+   "title": "Derivation: The Klein Bottle Mode-Pairing Spectrum, and the Conjectured XOR Parity Filter"
   }
  },
- "generated": "69a7040",
+ "generated": "80be529",
  "generator": "scripts/build_corpus_index.py",
  "rule8_flags": []
 }
