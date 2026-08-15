@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- edition 2 (2026-08-14) · prior text: git show 2c4fd6c:docs/preprint.html · sync_cost/derivations/ERRATA.md -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -52,10 +53,12 @@ first dissertation-ready external presentation.</p>
   catalogued for citation. Each lemma is independently statable with
   proof source, Z1-Z3 status, and substrate / anchor classification.</p>
   <ol style="margin: 0.4em 0 0 1.2em;">
-    <li><strong>w<sub>+</sub> closure (headline)</strong>:
+    <li><strong>w<sub>+</sub> closure</strong>:
       $Z_6$ + $\Gamma_0(6)$ cusp 1/2 + $(q-1)/q$ ground state
       $\Rightarrow$ $w_+ = 13/14$, partition $\Omega_b : \Omega_{DM}
-      : \Omega_\Lambda = 13 : 70 : 181$.</li>
+      : \Omega_\Lambda = 13 : 70 : 181$. <em>Current status: Class 2
+      &mdash; $w_+$ is a numerical fit to Planck values, computed by
+      no script; retracted from Class 5.</em></li>
     <li><strong>Sign-rep no-EM</strong>: antisym Klein eigenmode has
       Klein-monodromy $-1$, no EM coupling, locks at $w_- = 1$;
       forces $(\alpha, \beta) = (0, 1)$.</li>
@@ -74,15 +77,19 @@ first dissertation-ready external presentation.</p>
     <li><strong>Born rule exponent $= 2$</strong> from saddle-node
       parabola universality.</li>
     <li><strong>Spatial dimension $= q_3 = 3$</strong>: substrate's
-      $Z_3$ sector forces three independent extension directions.</li>
+      $Z_3$ sector forces three independent extension directions.
+      <em>Current status: open &mdash; the continuum-completion step
+      is undefined (D2 demotion).</em></li>
     <li><strong>Pigeonhole calibration (Region C)</strong>: at
       $\alpha = 0.05$, multi-candidate framework-integer ansatz is
       statistically consistent with permutation null.</li>
   </ol>
-  <p>Composition graph: lemmas 4 &rarr; 5 &rarr; 6 + 2 &rarr; 1 produces
-  the cosmic partition two-component closure with zero free parameters
-  at the closure level. Lemmas 3, 7, 8 are independent structural
-  results; lemma 9 is methodological.</p>
+  <p>Composition graph: lemmas 4 &rarr; 5 &rarr; 6 + 2 &rarr; 1 was
+  presented as producing the cosmic partition two-component closure;
+  with lemma 1 retracted to Class 2, the composition terminates at the
+  bare partition (a reference, not a prediction). Lemmas 3, 7 are
+  independent structural results; lemma 8 is open; lemma 9 is
+  methodological.</p>
 </div>
 
 <div class="card">
@@ -110,8 +117,10 @@ first dissertation-ready external presentation.</p>
   comparison for ~40 well-documented phenomena across 11 thematic
   sections, with explicit Z1-Z3 status, closure class, and
   substrate-side / anchor-side classification.</p>
-  <p><strong>Headline</strong>: ~15 Survives entries (zero free
-  parameters at closure level), 1 Instance 7 acceptance ($A_s$),
+  <p><strong>Headline</strong>: ~15 Survives entries as of 2026-04
+  (several since demoted &mdash; see the current
+  <a href="https://github.com/nickjoven/harmonics/blob/main/MANIFEST.yml">MANIFEST.yml</a>
+  scorecard), 1 Instance 7 acceptance ($A_s$),
   ~3-5 Floor / pigeonhole, large Class 2 population for flavor /
   mass / CKM matches, explicit out-of-class for anchor-dependent
   absolutes. Includes a "standard physics open problems addressed"
@@ -123,9 +132,11 @@ first dissertation-ready external presentation.</p>
   <h3>4. Derivation atlas
     (<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/derivation_atlas.md">derivation_atlas.md</a>)</h3>
   <p><strong>~50 pages, 1943 lines.</strong> Single linear walkthrough
-  of the framework's derivation chain, from the four primitives to
-  approximately 15 substrate-side Class 5 / Survives predictions, in
-  11 parts plus prelude / postlude.</p>
+  of the framework's derivation chain, from the four primitives to the
+  substrate-side predictions as classified at writing time (2026-04;
+  several rows have since been demoted &mdash; the current scorecard is
+  <a href="https://github.com/nickjoven/harmonics/blob/main/MANIFEST.yml">MANIFEST.yml</a>),
+  in 11 parts plus prelude / postlude.</p>
   <p><strong>Parts</strong>: I. Four primitives (irreducibility +
   sufficiency); II. Derived objects (circle, $\mathbb{Q}$, continuum,
   circle map); III. Dynamical content (Arnold tongues, devil's
@@ -144,19 +155,23 @@ first dissertation-ready external presentation.</p>
   document does not lend itself to skimming.</p>
 </div>
 
-<h2>Status snapshot (2026-04 closure round)</h2>
+<h2>Status snapshot</h2>
 
 <p>The framework completed a substantial closure round in 2026-04.
-Headline results:</p>
+The 2026-08 correction campaign
+(<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/ERRATA.md">ERRATA.md</a>)
+subsequently re-examined the round's headline results. Statuses below
+are current:</p>
 
 <ul>
-  <li><strong>$\Omega_b$ two-component closure</strong> to full
-    Class 5 &mdash; zero free parameters at closure level. $w_+ = 13/14$
-    derived in recognize mode via Hecke modular structure on $X_0(6)$
-    (<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/L1_substrate_cusp_ground_state.md">L1
-    closure</a>). Predictions: $\Omega_b = 13/264$ at 0.12%,
-    $\Omega_{DM} = 35/132$ at 0.06%, $\Omega_\Lambda = 181/264$
-    at 0.13%; all sub-$\sigma$ on Planck 2018.</li>
+  <li><strong>$\Omega_b$ two-component closure</strong> &mdash;
+    retracted from Class 5 to Class 2: $w_+ = 13/14$ is a numerical
+    fit to Planck values (commit 400f558 prints "0.000% (fit)"),
+    computed by no script; the sub-percent residuals on
+    $\Omega_b = 13/264$, $\Omega_{DM} = 35/132$,
+    $\Omega_\Lambda = 181/264$ hold by construction of the fit. The
+    canonical substrate-side object is the bare partition
+    $13\!:\!5\!:\!1/19$, a reference, not a prediction.</li>
   <li><strong>D.3 sector decoupling</strong> to Class 5 &mdash; anchor
     obstruction #5 closed structurally via $K = 1 \leftrightarrow K < 1$
     non-smooth separation.</li>
@@ -174,13 +189,15 @@ Headline results:</p>
     primitives verified sufficient through the round's closures.</li>
 </ul>
 
-<p>After the round: the Floor section is empty; all five anchor-count
-obstructions are reframed / closed; the framework's open list contains
-only optional Q4 follow-ups (Instance 7-style status tagging for
-tensor-to-scalar $r$, $\tau_{unlock}$, etc.) and periodic audit
-re-runs. See
+<p>The open list is no longer the 2026-04 residue of optional
+follow-ups: the 2026-08 campaign returned $d = 3$, Lorentz symmetry,
+and the $(3,1)$ signature to open status, made the gauge-group and
+strong-CP rows conditional on unsettled premises, and retracted the
+two-component cosmology to Class 2. See
 <a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/framework_status.md">framework_status.md</a>
-for the current at-a-glance map.</p>
+for the current at-a-glance map and
+<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/PREMISES.md">PREMISES.md</a>
+for the premise ledger.</p>
 
 <h2>Audit findings</h2>
 
@@ -207,7 +224,13 @@ preprint-readiness phase. Results:</p>
 <p>Findings recorded in
 <a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/audit_punch_list_2026-04.md">audit_punch_list_2026-04.md</a>;
 remediation in the standardization commit
-(<a href="https://github.com/nickjoven/harmonics/pull/82">PR #82</a>).</p>
+(<a href="https://github.com/nickjoven/harmonics/pull/82">PR #82</a>).
+That audit checked internal consistency only. The 2026-08
+falsifiability audit went further &mdash; provenance of each headline
+number against its own commit history &mdash; and its corrections are
+ledgered in
+<a href="https://github.com/nickjoven/harmonics/blob/main/sync_cost/derivations/ERRATA.md">ERRATA.md</a>
+(E1&ndash;E17).</p>
 
 <h2>Methodological notes</h2>
 
@@ -249,8 +272,9 @@ modes, audit-trail preservation), see the methodological notes above.</p>
 
 <p class="footer-note">
 Page generated 2026-04-26 as part of Phase B1 (deployed-assets
-reorganization) following the 2026-04 closure round. Linked from
-the predictions table on <a href="index.html">Reference</a>.
+reorganization); edition 2, 2026-08-14, carrying the correction
+campaign's statuses. Linked from the predictions table on
+<a href="index.html">Reference</a>.
 </p>
 
 </body>
