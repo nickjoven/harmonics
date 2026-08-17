@@ -261,6 +261,50 @@ preview-list:
 nav-audit:
 	@$(PYTHON) scripts/site_nav_audit.py || true
 
+# ───────────────────────── Owner actions ─────────────────────────
+#
+# Canonical interface for actions that write the sealed substrate or
+# publish (run by Nick, not agents — agent runs are classifier-blocked
+# by design). Each target wraps the audited script; nothing here
+# duplicates logic.
+#
+#   make drift              # full drift suite (safe, read-only)
+#   make owner-list         # show what would be resealed (read-only)
+#   make owner-reseal       # ket put drifted spine files + verify + commit .ket
+#   make owner-successions  # seal the 2026-08 stale-arc succession batch
+#                           # (18 records + banner trims + regen + verify)
+#   make owner-succession OLD=<doc> NEW="<doc> [doc…]" REASON="…"
+#                           # one-off committed SUCCEEDS declaration
+#   make owner-ket-merge    # merge ket porting-instructions into main + tests
+#   make owner-push         # push harmonics corrections branch + ket main
+#                           # (PUBLISHES — deliberate final step)
+
+drift:
+	$(PYTHON) scripts/drift/run_all.py
+
+owner-list:
+	bash scripts/maintenance/owner_actions_2026-08.sh list
+
+owner-reseal:
+	bash scripts/maintenance/owner_actions_2026-08.sh reseal
+
+owner-successions:
+	$(PYTHON) scripts/maintenance/declare_successions_2026-08.py
+
+owner-succession:
+	@test -n "$(OLD)" -a -n "$(NEW)" || \
+		{ echo "usage: make owner-succession OLD=<doc> NEW=\"<doc> [doc…]\" REASON=\"…\""; exit 6; }
+	$(PYTHON) scripts/maintenance/declare_succession_cli.py $(OLD) $(NEW) --reason "$(REASON)"
+
+owner-ket-merge:
+	bash scripts/maintenance/owner_actions_2026-08.sh ket-merge
+
+owner-push:
+	bash scripts/maintenance/owner_actions_2026-08.sh push
+
+.PHONY: drift owner-list owner-reseal owner-successions owner-succession \
+	owner-ket-merge owner-push
+
 .PHONY: preview preview-dag preview-index preview-claims preview-page \
 	preview-list nav-audit preview-live preview-bg preview-stop
 
