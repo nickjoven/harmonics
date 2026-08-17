@@ -1,6 +1,8 @@
 <!-- edition 2 (2026-08-11) · integrates the 2026-08-04 status correction (d582403); prior text: git show d582403^ · ERRATA.md E14 -->
 <!-- provides: circle-axiom status=axiom -->
 <!-- provides: mediant-primitive status=definition -->
+<!-- provides: continuous-oscillator-coupling status=axiom -->
+<!-- provides: combinatorial-substrate status=axiom -->
 # The Minimum Alphabet
 
 ## Claim

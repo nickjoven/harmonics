@@ -1,4 +1,5 @@
 <!-- provides: gmn-charge-form status=derived -->
+<!-- provides: mediant-identifies-integer-phase-translations status=conjectured -->
 <!-- premises: klein-spectrum-theorem@xor_derivation -->
 # The Gell-Mann-Nishijima Relation from Klein Bottle Geometry
 

@@ -17,6 +17,12 @@ BLOCKING:
     before any " (section)" parenthetical resolves to a real path).
   - optional `status:` values come from STATUS_VOCAB (the premise-
     ledger vocabulary + open/reference).
+  - status propagation across the ledger join: an edge with
+    status proven/derived may not rest on a premises[]/from ref that
+    resolves to an unsettled premise-ledger anchor (conjectured/
+    fitted/conditional) or to an unsettled spine edge (conditional/
+    conjectured/fitted/open/reference). Mirrors the PREMISES.md
+    propagation rule; strongest allowed is `conditional`.
   - docs/spine-data.json is in sync with SPINE.yml — i.e.
     `python3 scripts/build_spine_data.py --check` returns 0.
   - every form is a non-empty string.
@@ -24,8 +30,12 @@ BLOCKING:
 ADVISORY (printed as NOTE, not blocking):
   - entries with only one form — the shake-btn surface hides itself
     for these but the entry is still a valid edge.
-  - premises[]/from ids that look kebab-case but aren't another SPINE
-    entry id (likely an external concept; could also be a typo).
+  - premises[]/from ids that resolve to neither another SPINE entry
+    id nor a premise-ledger `provides:` anchor (check_premises scan)
+    — an unregistered external concept, or a typo.
+  - a proven/derived edge resting on an UNCLASSIFIED spine edge
+    (no status field) — unclassified is not settled; classify the
+    upstream edge or weaken the downstream one.
 
 Run:
   python3 scripts/drift/check_spine.py
@@ -58,6 +68,12 @@ STATUS_VOCAB = {
     "axiom", "definition", "proven", "derived", "imported",
     "conditional", "conjectured", "fitted", "open", "reference",
 }
+
+# Propagation across the join (mirrors PREMISES.md): an edge claiming
+# proven/derived may not rest on an unsettled upstream.
+STRONG = {"proven", "derived"}
+LEDGER_UNSETTLED = {"conjectured", "fitted", "conditional"}
+SPINE_UNSETTLED = {"conditional", "conjectured", "fitted", "open", "reference"}
 
 
 def _resolve_source_path(source: str) -> Path:
@@ -137,9 +153,16 @@ def main() -> int:
             if not isinstance(frm, str) or not frm:
                 blocking.append(f"{loc}: inherits-from entry must carry non-empty `from`")
 
-    # Cross-reference advisory: kebab-case premises/from values that
-    # don't resolve to another spine id may be external concepts (fine)
-    # or typos (worth flagging).
+    # Cross-reference: premises/from values resolve against spine ids
+    # AND the premise-ledger `provides:` anchors (check_premises scan).
+    # Unresolved refs are advisory (unregistered concept or typo);
+    # a proven/derived edge resting on an unsettled resolution is
+    # BLOCKING (propagation rule across the join).
+    import check_premises
+    ledger_provides, _, _ = check_premises.scan()
+    edge_status = {e["id"]: e.get("status") for e in entries
+                   if isinstance(e, dict) and isinstance(e.get("id"), str)}
+
     for entry in entries:
         if not isinstance(entry, dict):
             continue
@@ -153,11 +176,34 @@ def main() -> int:
             frm = entry.get("from")
             if isinstance(frm, str):
                 refs.append(("from", frm))
+        strong = entry.get("status") in STRONG
         for field, val in refs:
-            if SPINE_ID.match(val) and val not in seen_ids:
+            if not SPINE_ID.match(val):
+                continue
+            if val in seen_ids:
+                upstream = edge_status.get(val)
+                if strong and upstream in SPINE_UNSETTLED:
+                    blocking.append(
+                        f"id={eid}: status={entry['status']} rests on spine "
+                        f"edge `{val}` with status={upstream} — strongest "
+                        f"allowed is `conditional`")
+                elif strong and upstream is None:
+                    advisory.append(
+                        f"id={eid}: status={entry['status']} rests on "
+                        f"UNCLASSIFIED spine edge `{val}` (no status field)")
+            elif val in ledger_provides:
+                anchor_status = ledger_provides[val][1]
+                if strong and anchor_status in LEDGER_UNSETTLED:
+                    blocking.append(
+                        f"id={eid}: status={entry['status']} rests on ledger "
+                        f"anchor `{val}` with status={anchor_status} "
+                        f"(provided by {ledger_provides[val][0]}) — strongest "
+                        f"allowed is `conditional`")
+            else:
                 advisory.append(
-                    f"id={eid}: {field}=`{val}` not a known spine id "
-                    f"(external concept or typo)"
+                    f"id={eid}: {field}=`{val}` resolves to neither a spine "
+                    f"id nor a premise-ledger anchor (unregistered concept "
+                    f"or typo)"
                 )
 
     # Regen-no-diff: SPINE.yml ↔ docs/spine-data.json must agree.

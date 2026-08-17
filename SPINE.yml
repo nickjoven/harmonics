@@ -141,7 +141,7 @@ spine:
     kind: inherits-from
     source: README.md (What the mechanism forces)
     subject: spatial-dimension-d-equals-3
-    from: dim-SL2R-equals-3
+    from: dim-sl2r-equals-3
     status: open
     status_note: >-
       D2 demotion: the continuum completion of SL(2,ℤ) into SL(2,ℝ)
@@ -156,7 +156,7 @@ spine:
     kind: inherits-from
     source: README.md (What the mechanism forces)
     subject: gauge-group-and-three-generations
-    from: Z6-mode-structure-on-klein-bottle
+    from: z6-mode-structure
     status: conditional
     status_note: >-
       The Z₆ roster consumes the conjectured XOR fraction-parity
@@ -173,7 +173,7 @@ spine:
     subject: integer-charge-quantization
     premises:
       - mediant-identifies-integer-phase-translations
-      - S1-compactness
+      - s1-compactness
     status: conditional
     status_note: >-
       The landing on the charge sector runs through the imported
@@ -209,8 +209,8 @@ spine:
     source: README.md (The largest residue)
     subject: surviving-zero-point-mode-count
     premises:
-      - klein-bottle-topology
-      - Z2-parity-filter
+      - residue-klein-bottle-topology
+      - xor-parity-translation
     status: conditional
     status_note: >-
       The 4-mode count consumes the conjectured XOR fraction-parity
@@ -225,7 +225,7 @@ spine:
     kind: inherits-from
     source: README.md (The largest residue)
     subject: cosmological-constant-Lambda
-    from: four-mode-vacuum
+    from: residue-four-mode-vacuum
     status: conditional
     status_note: >-
       The Λ magnitude identity Λ·ℓ_P² = 13⁻¹⁰⁸/12 is Class 5 via the
@@ -244,7 +244,7 @@ spine:
     kind: inherits-from
     source: README.md (What the mechanism predicts)
     subject: dark-energy-fraction
-    from: Z6-mode-counting-at-stern-brocot-depth-6
+    from: omega-bare-partition
     status: reference
     status_note: >-
       Canonical per D1/C16 as a substrate-side reference, not a
@@ -340,7 +340,7 @@ spine:
     source: README.md (Two independent anchors)
     subject: regime-separation
     premises:
-      - K1-critical-line-tongue-coverage-discontinuity
+      - k1-tongue-coverage-discontinuity
     forms:
       - "Based on the K = 1 / K < 1 critical-line tongue-coverage discontinuity, the cosmological and particle-sector regimes are non-smoothly separated."
       - "The Einstein (K = 1) and Schrödinger (K < 1) continuum limits are separated by a non-smooth tongue-coverage step."
@@ -350,7 +350,7 @@ spine:
     kind: inherits-from
     source: README.md (Two independent anchors)
     subject: anchor-count
-    from: regime-separation
+    from: anchors-K1-non-smooth-separation
     forms:
       - "The two-anchor minimum (H_0 and v_EW = 246 GeV) inherits from this regime obstruction; it is a structural feature, not a derivation gap."
       - "Each regime requires its own anchor; reduction to one anchor is structurally obstructed."
@@ -366,7 +366,7 @@ spine:
     source: "docs/genesis.html (companion: stairs)"
     subject: continued-fraction-staircase-at-depth-1-over-13
     premises:
-      - cosmic-partition-configuration
+      - omega-bare-partition
     forms:
       - "Continued-fraction staircase at depth 1/13, budget 19. The configuration the headline Ω_Λ = 13/19 prediction lives in."
       - "The framework's cosmic-partition number, made into a moving picture: thirteen locked modes against a budget of nineteen."
@@ -377,7 +377,7 @@ spine:
     source: "docs/genesis.html (companion: orbit)"
     subject: stern-brocot-orbit-at-7-over-60
     premises:
-      - modular-tree-walk
+      - iterated-mediant-insertion
     forms:
       - "A Stern-Brocot walk traced in polar coordinates. Eight lefts, one right, one left, three rights — the walk lands on 7/60 as a rational on the unit circle."
       - "Modular orbit L⁸R¹L¹R³: a thirteen-step path through the Stern-Brocot tree ending at 7/60."
@@ -399,7 +399,7 @@ spine:
     source: "docs/genesis.html (companion: spiral)"
     subject: continuum-spiral-evolution
     premises:
-      - substrate-evolution-in-the-K-less-than-1-regime
+      - k-less-than-1-regime
     forms:
       - "Spiral evolution. The continuum-side companion to the discrete tree: the same substrate read at a different regime."
       - "The K < 1 regime is not a sea of locked plateaus; it is a slow continuous wind, drawn here as a spiral."
@@ -410,7 +410,7 @@ spine:
     source: "docs/genesis.html (companion: triangles)"
     subject: farey-triangulation-of-upper-half-plane
     premises:
-      - SL2Z-action-on-upper-half-plane
+      - sl2z-action-on-upper-half-plane
     forms:
       - "Farey triangles tiling the upper half plane under the SL(2, ℤ) action — the symmetry group that forces dim = 3 on the spatial manifold."
       - "Every Farey triangle is a fundamental domain image; the tiling is what dim SL(2, ℝ) = 3 looks like before it closes."

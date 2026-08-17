@@ -1,6 +1,7 @@
 <!-- edition 2 (2026-08-11) · supersedes the 2026-03-26 text (git 7190a9b) · changes ledgered in ERRATA.md E1 -->
 <!-- provides: klein-spectrum-theorem status=proven -->
 <!-- provides: xor-parity-translation status=conjectured -->
+<!-- provides: z6-mode-structure status=conditional -->
 # Derivation: The Klein Bottle Mode-Pairing Spectrum, and the Conjectured XOR Parity Filter
 
 ## Purpose

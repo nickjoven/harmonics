@@ -1,4 +1,6 @@
 <!-- edition 2 (2026-08-14) · prior text: git show 2c4fd6c:sync_cost/derivations/derivation_atlas.md · ERRATA.md E1/E13/E15/E17 -->
+<!-- provides: shallow-combinatorial-derivation-depth status=definition -->
+<!-- provides: no-alternative-constraint-satisfaction status=conjectured -->
 # Derivation Atlas — from four primitives to physical predictions
 
 ## Prelude

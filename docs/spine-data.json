@@ -107,7 +107,7 @@
         "Iterating the mediant generates SL(2, ℤ); whether a continuum completion forces a three-dimensional manifold is an open problem — the same premises admit d = 2 and d = 1.",
         "Three-dimensional space would follow if the completion step held; that step is currently a conjecture, not a construction."
       ],
-      "from": "dim-SL2R-equals-3"
+      "from": "dim-sl2r-equals-3"
     },
     "forces-z6-mode-structure": {
       "kind": "inherits-from",
@@ -120,7 +120,7 @@
         "If the conjectured parity filter holds, the Klein bottle's two smallest accessible denominators (q₂ = 2, q₃ = 3) produce the Z_6 mode lattice the gauge reading runs on.",
         "The Z_6 → generations-and-gauge reading is conditional: its mode roster rests on an unproven translation step."
       ],
-      "from": "Z6-mode-structure-on-klein-bottle"
+      "from": "z6-mode-structure"
     },
     "forces-charge-quantization": {
       "kind": "based-on",
@@ -135,7 +135,7 @@
       ],
       "premises": [
         "mediant-identifies-integer-phase-translations",
-        "S1-compactness"
+        "s1-compactness"
       ]
     },
     "residue-klein-bottle-topology": {
@@ -165,8 +165,8 @@
         "Four is what zero-point counting gives on the substrate's proposed topology under the conjectured filter — versus the torus's ~10¹⁸³."
       ],
       "premises": [
-        "klein-bottle-topology",
-        "Z2-parity-filter"
+        "residue-klein-bottle-topology",
+        "xor-parity-translation"
       ]
     },
     "residue-Lambda-from-four-modes": {
@@ -180,7 +180,7 @@
         "The observed cosmological-constant value sits where four zero-point modes put it — no tuning required.",
         "The 10¹²¹-order QFT discrepancy inherits from the torus-topology modelling choice, not from a physics mismatch."
       ],
-      "from": "four-mode-vacuum"
+      "from": "residue-four-mode-vacuum"
     },
     "predicts-omega-lambda-13-over-19": {
       "kind": "inherits-from",
@@ -193,7 +193,7 @@
         "The substrate's mode counting at depth 6 admits the ratio 13/19 as its bare partition; the partition is a reference point, since the same counting puts Ω_b 6.7% from observation.",
         "Ω_Λ = 13/19 = 0.6842 sits 0.07σ from Planck 2018's 0.685 ± 0.007, as a reference value (parameter accounting per MANIFEST free_parameters_note)."
       ],
-      "from": "Z6-mode-counting-at-stern-brocot-depth-6"
+      "from": "omega-bare-partition"
     },
     "predicts-n_s-golden-winding": {
       "kind": "inherits-from",
@@ -277,7 +277,7 @@
         "There is no smooth path across K = 1; the two regimes cannot share an anchor."
       ],
       "premises": [
-        "K1-critical-line-tongue-coverage-discontinuity"
+        "k1-tongue-coverage-discontinuity"
       ]
     },
     "anchors-two-minimum": {
@@ -289,7 +289,7 @@
         "Each regime requires its own anchor; reduction to one anchor is structurally obstructed.",
         "Two is the minimum the framework can run on; not three, not one."
       ],
-      "from": "regime-separation"
+      "from": "anchors-K1-non-smooth-separation"
     },
     "companion-stairs": {
       "kind": "based-on",
@@ -301,7 +301,7 @@
         "Each step of this staircase is a mediant insertion; depth 13 is where the Ω_Λ ratio closes."
       ],
       "premises": [
-        "cosmic-partition-configuration"
+        "omega-bare-partition"
       ]
     },
     "companion-orbit": {
@@ -314,7 +314,7 @@
         "What the substrate looks like from inside the tree, as a single rational picks itself out of an unbounded enumeration."
       ],
       "premises": [
-        "modular-tree-walk"
+        "iterated-mediant-insertion"
       ]
     },
     "companion-rose": {
@@ -340,7 +340,7 @@
         "Substrate dynamics outside the locked tongues, where the framework's Schrödinger limit lives."
       ],
       "premises": [
-        "substrate-evolution-in-the-K-less-than-1-regime"
+        "k-less-than-1-regime"
       ]
     },
     "companion-triangles": {
@@ -353,7 +353,7 @@
         "The triangulation viewer for the same group whose continuum closure gives the spatial manifold its dimension."
       ],
       "premises": [
-        "SL2Z-action-on-upper-half-plane"
+        "sl2z-action-on-upper-half-plane"
       ]
     }
   }

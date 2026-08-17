@@ -1,3 +1,4 @@
+<!-- provides: k-less-than-1-regime status=definition -->
 # Proof Chain B: Polynomial → Quantum Mechanics
 
 N. Joven — 2026 — CC0 1.0

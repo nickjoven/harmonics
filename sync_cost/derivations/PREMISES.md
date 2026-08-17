@@ -66,3 +66,58 @@ Enforcement is incremental: docs that declare anchors are checked;
 docs without anchors are not (yet) required to have them. Backfill
 order: spine docs first. A doc touched by any correction batch gets
 anchors as part of the edit.
+
+## Imported premises registry
+
+External mathematics and physics the framework consumes without
+deriving. Each anchor makes the import explicit so SPINE edges and
+doc `premises:` lines can resolve to it. `imported` is a settled
+status — the fact is established in the cited literature, not here;
+what the framework *does* with the import is what carries a status
+of its own.
+
+<!-- provides: energy-conservation status=imported -->
+- `energy-conservation` — energy conservation in closed systems
+  (Noether's theorem for time-translation invariance). Standard
+  classical mechanics.
+<!-- provides: stability-under-coupling status=imported -->
+- `stability-under-coupling` — weakly coupled self-sustained
+  oscillators phase-lock across finite parameter windows (Arnold
+  tongues). Synchronization theory; Pikovsky–Rosenblum–Kurths,
+  *Synchronization* (2001).
+<!-- provides: s1-compactness status=imported -->
+- `s1-compactness` — S¹ is compact and π₁(S¹) ≅ ℤ: every continuous
+  self-map of the circle carries an integer winding number. Standard
+  topology.
+<!-- provides: sl2z-action-on-upper-half-plane status=imported -->
+- `sl2z-action-on-upper-half-plane` — SL(2, ℤ) acts on the upper
+  half-plane by Möbius transformations with the standard fundamental
+  domain and its tessellation. Standard modular-group theory.
+<!-- provides: dim-sl2r-equals-3 status=imported -->
+- `dim-sl2r-equals-3` — SL(2, ℝ) is a 3-dimensional Lie group.
+  Standard Lie theory. (Whether any completion of SL(2, ℤ) into
+  SL(2, ℝ) is forced is a separate, open framework claim — see the
+  spine edge `forces-three-dimensions`.)
+<!-- provides: lissajous-figure-at-rational-frequency-ratio status=imported -->
+- `lissajous-figure-at-rational-frequency-ratio` — a two-dimensional
+  harmonic orbit with rational frequency ratio closes into a
+  Lissajous figure. Classical kinematics (Lissajous 1857).
+<!-- provides: wightman-axiom-convention status=imported -->
+- `wightman-axiom-convention` — the Wightman axioms as the convention
+  fixing what counts as a quantum field theory. Streater & Wightman,
+  *PCT, Spin and Statistics, and All That*.
+<!-- provides: standard-model-silences status=imported -->
+- `standard-model-silences` — the Standard Model treats its ~19
+  Lagrangian parameters as measured inputs and does not derive them.
+  PDG reviews.
+<!-- provides: k1-tongue-coverage-discontinuity status=imported -->
+- `k1-tongue-coverage-discontinuity` — for the standard circle map
+  the mode-locked intervals fill the critical line K = 1 up to
+  measure 1 (the complete devil's staircase), while for K < 1 the
+  locked measure is strictly below 1. Jensen, Bak & Bohr (1983–84).
+<!-- provides: stern-brocot-self-similarity-at-golden-ratio-winding status=imported -->
+- `stern-brocot-self-similarity-at-golden-ratio-winding` — the
+  winding-number structure is locally self-similar at the golden-mean
+  winding (continued fraction [1, 1, 1, …]), with Shenker's scaling
+  δ ≈ 2.834 at criticality (not φ² = 2.618; see ERRATA on the
+  earlier φ² claim). Shenker (1982).

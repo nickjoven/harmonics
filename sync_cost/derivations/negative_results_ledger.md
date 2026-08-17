@@ -1,3 +1,4 @@
+<!-- provides: scale-inconsistency-with-renormalization-group status=derived -->
 # Negative-results ledger — the single archival home for failed, null, and superseded claims
 
 **This is the one place the framework's negative results live.**
