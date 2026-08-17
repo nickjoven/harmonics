@@ -80,7 +80,13 @@ def main() -> int:
         for target in new:
             if target == old:
                 violations.append(f"line {n}: `{old}` succeeds itself")
-        edges.append((old, [t for t in new if t != old]))
+        if rec["modality"] == "committed":
+            # Only committed records move the frontier — same filter as
+            # build_corpus_index.load_quantum_successions and the MCP
+            # overlay. Proposed records are structurally validated above
+            # but excluded here so this cycle check runs on the same
+            # frontier the consumers actually project.
+            edges.append((old, [t for t in new if t != old]))
 
     # Cycle detection runs on the FRONTIER edge set: last declaration
     # per `old` wins — the same semantics the generator, the MCP
@@ -124,8 +130,8 @@ def main() -> int:
         if other_kinds else ""
     n_edges = sum(len(t) for t in frontier.values())
     print(f"OK: {n_edges} frontier SUCCEEDS edge(s) ({len(edges)} "
-          f"record(s)) well-formed, targets "
-          f"resolve, acyclic{note}")
+          f"committed record(s); proposed validated but non-forcing) "
+          f"well-formed, targets resolve, acyclic{note}")
     return 0
 
 

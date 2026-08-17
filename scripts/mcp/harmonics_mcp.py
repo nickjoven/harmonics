@@ -77,6 +77,9 @@ def _corpus_index() -> dict:
                     continue
                 if rec.get("kind") != "SUCCEEDS":
                     continue
+                if rec.get("modality") != "committed":
+                    # proposed records do not move the frontier
+                    continue
                 new = rec.get("new")
                 new = new if isinstance(new, list) else [new]
                 targets = list(dict.fromkeys(
