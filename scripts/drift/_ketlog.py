@@ -16,6 +16,18 @@ uses, strict enough that a concatenated line cannot parse:
 
 Anything put-shaped that fails the grammar is returned as `malformed`,
 never dropped.
+
+Tombstones (2026-08-18): the log also accepts `rm` lines —
+`<ts> | rm | <path> (<reason>)` — recording a DELIBERATE working-tree
+deletion of a previously sealed path. Last-wins with `put`: a
+tombstone clears the path from `last_cid` (so sealed-but-deleted
+stops counting as drift), and a later `put` at the same path
+reinstates it. The reason parenthetical is mandatory — a deletion
+without a stated reason is indistinguishable from an accident, which
+is exactly what the drift check exists to catch. The ket binary
+ignores foreign lines (verified against status/log/verify 2026-08-18);
+the proper `ket rm` verb is queued on the ket side. Anything rm-shaped
+that fails the grammar is `malformed`, same policy as put.
 """
 
 import re
@@ -28,6 +40,15 @@ PUT_LINE = re.compile(
     r"\s+\|\s+put\s+\|\s+"
     r"(?P<path>(?:(?!\s->\s).)+?)"
     r"\s+->\s+(?P<cid>[0-9a-f]{64})\s*$"
+)
+
+# Tombstone grammar: path may not contain " -> " or "(", the reason
+# parenthetical is mandatory and terminates the line.
+RM_LINE = re.compile(
+    r"^(?P<ts>\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z)"
+    r"\s+\|\s+rm\s+\|\s+"
+    r"(?P<path>(?:(?!\s->\s)[^(])+?)"
+    r"\s+\((?P<reason>[^()]+)\)\s*$"
 )
 
 
@@ -47,6 +68,12 @@ def read_log(log_path) -> LogView:
             # `ket put -` (stdin) logs "-" as the path; not a file.
             if path != "-":
                 last_cid[path] = m.group("cid")
-        elif "| put |" in line:
+            continue
+        r = RM_LINE.match(line)
+        if r:
+            # Tombstone: deliberate deletion, last-wins vs put.
+            last_cid.pop(r.group("path"), None)
+            continue
+        if "| put |" in line or "| rm |" in line:
             malformed.append((n, line[:80]))
     return LogView(last_cid, malformed)

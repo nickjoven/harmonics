@@ -296,6 +296,11 @@ owner-succession:
 		{ echo "usage: make owner-succession OLD=<doc> NEW=\"<doc> [doc…]\" REASON=\"…\""; exit 6; }
 	$(PYTHON) scripts/maintenance/declare_succession_cli.py $(OLD) $(NEW) --reason "$(REASON)"
 
+owner-tombstone:
+	@test -n "$(PATHS)" -a -n "$(REASON)" || \
+		{ echo "usage: make owner-tombstone PATHS=\"<path> [path…]\" REASON=\"…\""; exit 6; }
+	$(PYTHON) scripts/maintenance/tombstone_cli.py $(PATHS) --reason "$(REASON)"
+
 owner-ket-merge:
 	bash scripts/maintenance/owner_actions_2026-08.sh ket-merge
 
@@ -303,7 +308,7 @@ owner-push:
 	bash scripts/maintenance/owner_actions_2026-08.sh push
 
 .PHONY: drift owner-list owner-reseal owner-successions owner-succession \
-	owner-ket-merge owner-push
+	owner-tombstone owner-ket-merge owner-push
 
 .PHONY: preview preview-dag preview-index preview-claims preview-page \
 	preview-list nav-audit preview-live preview-bg preview-stop
