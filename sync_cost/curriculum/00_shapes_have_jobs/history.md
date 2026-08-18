@@ -72,10 +72,13 @@ classical results:
    or more sides.
 
 2. **Among these three, the square is the only one whose rotational
-   order is divisible by four.** The half-turn, quarter-turn,
-   eighth-turn, and finer binary subdivisions of the rotation are all
+   order is divisible by four.** The half-turn and quarter-turn are
    symmetries of the square lattice; the triangle and hexagon admit
-   thirds and sixths but not these binary refinements.
+   thirds and sixths but no order divisible by four. Finer binary
+   refinement (eighth-turn and beyond) is not available as rotation —
+   the crystallographic restriction below caps lattice rotation at
+   order 4 — but is available as scale: dyadic subdivision of the
+   square cell.
 
 The seventeen wallpaper groups (the complete classification of
 two-dimensional crystallographic symmetries) were enumerated by
@@ -84,8 +87,9 @@ Three of the seventeen — p4, p4m, and p4g — are built on the square
 lattice with four-fold rotational symmetry; they are the only
 crystallographic plane groups that admit it.
 
-In this framework, the square's bisectability — the half/quarter/
-eighth-turn chain — anchors every later use of binary structure: the
+In this framework, the square's bisectability — quarter-turn
+rotation plus dyadic subdivision in scale — anchors every later use
+of binary structure: the
 two-children-per-node form of the Stern-Brocot tree (introduced in
 Module 4), the 2-adic mode-counting of the substrate, and the Catalan
 forcing that distinguishes 2 from larger primitive integers (Module

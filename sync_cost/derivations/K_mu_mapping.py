@@ -388,8 +388,12 @@ def main():
         print(f"  At SB depth {d_sb_mz} (≈ M_Z):")
         print(f"    |r| = {match[3]:.4f}")
         print(f"    duty ratio = {match[7]:.4f}")
-        print(f"    Expected K* = 0.892, ratio = 3.488")
-        print(f"    Δ(|r|) = {abs(match[3] - 0.892)/0.892:.1%}")
+        # 0.892 retired 2026-08-05: unsourced (only ever hardcoded in
+        # decoherence_correction.py:45); canonical K* = 2^(-3/14).
+        print(f"    Reference K* = 2^(-3/14) = {2**(-3/14):.4f} "
+              f"(0.892 retired: unsourced), ratio = 3.488")
+        print(f"    Δ(|r|) vs canonical = "
+              f"{abs(match[3] - 2**(-3/14))/2**(-3/14):.1%}")
         print(f"    Δ(ratio) = {abs(match[7] - 3.488)/3.488:.1%}")
 
     # ── Summary ───────────────────────────────────────────────────────────

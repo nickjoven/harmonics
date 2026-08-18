@@ -1,3 +1,4 @@
+<!-- provides: instantiated-physical-medium status=definition -->
 # Medium-change demo: address vs. structure
 
 A physical demonstration of the distinction between the framework's two

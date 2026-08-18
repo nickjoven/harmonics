@@ -11,7 +11,9 @@ The correction factor is 1/π. This script reruns the chain survival
 analysis from chain_topology.py using these corrected widths to find:
 
   1. Where the 4th generation detaches with 1/(πq²) widths
-  2. Whether K ≈ 0.89 (our scale, M_Z) gives exactly 3 generations
+  2. Whether K ≈ 0.89 gives exactly 3 generations (NOTE 2026-08-05:
+     the "K ≈ 0.89 = M_Z operating point" premise is unsourced — no
+     repo computation produces it; canonical K* = 2^(-3/14) ≈ 0.862)
   3. The energy scale of the detachment via the K→μ mapping
 
 Key question: does the π correction move the 3→4 boundary from

@@ -61,6 +61,9 @@ canonical uniqueness claim per the basepoint discriminator).
 > no XOR filter on T² gives a completely different — and
 > excluded — spectrum.
 
+*[The quoted tertiary leg is retired at source; see ERRATA.md E4 and
+Layer 3 below, which reached the consistent conclusion.]*
+
 Each layer's inputs decompose into substrate-internal vs
 observation-conditional. The audit:
 
@@ -233,8 +236,10 @@ wavenumbers. No half-integer spinor sector. Matter would be
 entirely bosonic. No Pauli exclusion, no fermion statistics, no
 electron-quark structure.
 
-**(b) Different mode count.** The XOR filter on K² collapses
-1764 candidates to 4 survivors via the antiperiodic identification.
+**(b) Different mode count.** The XOR filter on K² reduces 3,969
+depth-6 pairs to 1,764 allowed candidates; field-equation dynamics
+collapses those to 4 survivors (the filter alone does not produce
+the 4).
 On T² (no antiperiodicity), there is no XOR filter. The mode
 spectrum is the full Stern-Brocot rational lattice on the (q_x,
 q_y) torus, with all denominators populated. The "boundary
@@ -412,6 +417,10 @@ The refined honest framing per this audit:
 > framework's 8th candidate basepoint-principle instance,
 > parallel to L vs R orientation (7th) and R1/∅ (1st) at
 > distinct layers of the framework stack."
+
+*[The "Ω_Λ match under the XOR filter" clause is retired (ERRATA.md
+E4); the K²/T² observation-fixing rests on the fermion-existence leg
+alone.]*
 
 This refinement is in resolution-mode: no apparatus
 modification; honest re-naming of substrate-admitted vs

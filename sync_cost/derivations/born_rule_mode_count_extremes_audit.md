@@ -32,7 +32,7 @@ algebraic-vs-topological split. It sits between dissipation
 (purely algebraic, layer-invariant) and Q mod 2 / mode count
 (purely topological, scale-specific).
 
-Three empirical alignments anchor the audit: CMB Ω_Λ at 0.004σ
+Three empirical alignments anchor the audit: CMB Ω_Λ at 0.04σ
 match to the 12.66-mode prediction (direct corroboration);
 Higgs decay-product entanglement as an in-principle Tsirelson
 test (early-stage experimentally; HL-LHC sharpens); λ_HHH at
@@ -356,7 +356,7 @@ Genuinely open empirical question.
 
 - **F4 — Ω_Λ inconsistent with 12.66 modes**. Current observed
   Ω_Λ = 0.685 ± 0.007 matches framework prediction 0.6847 at
-  0.004σ. If precision improves and observed Ω_Λ moves outside
+  0.04σ. If precision improves and observed Ω_Λ moves outside
   framework prediction, the boundary-weight derivation
   falsifies. Most actionable observational falsifier in the
   audit.
@@ -393,7 +393,7 @@ L147-149:
                    = 12.66 / 18.49
                    = 0.6847
 
-Match within 0.004σ. The 12.66 effective mode count at the
+Match within 0.04σ (|0.6847 − 0.685|/0.007). The 12.66 effective mode count at the
 Hubble boundary is **directly corroborated** by the cosmological
 constant observation. This is the strongest empirical anchor
 in the audit — a quantitative prediction matching observation
@@ -451,7 +451,7 @@ Three independent empirical results, three different observational
 regimes (CMB cosmological, LHC TeV-scale collider, HL-LHC
 high-luminosity future): all consistent with the audit's
 verdicts. The CMB Ω_Λ match is the strongest — a quantitative
-prediction at 0.004σ precision. Higgs decay entanglement is
+prediction at 0.04σ precision. Higgs decay entanglement is
 the most discriminating future test for the Born rule chain.
 λ_HHH sharpens the marginal-metastability picture but doesn't
 falsify the structural verdict.
@@ -567,7 +567,7 @@ the Hubble boundary (boundary weight w* ≈ 0.83), fuzzy emergence
 at the Planck floor. All non-dissipation invariants inherit
 the fuzzy Planck floor via PR #221's structural identity.
 Three empirical alignments anchor the audit: CMB Ω_Λ = 0.685
-matches the 12.66-mode prediction at 0.004σ (strongest, direct
+matches the 12.66-mode prediction at 0.04σ (strongest, direct
 corroboration); Higgs decay entanglement is the most
 discriminating future Tsirelson test (HL-LHC); λ_HHH at HL-LHC
 sharpens the vacuum-metastability reading. Four gaps and six

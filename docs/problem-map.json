@@ -29,9 +29,9 @@
       "id": "dark_energy_fraction",
       "title": "Dark energy fraction / cosmic coincidence problem",
       "moniker": "why is \u03a9_\u039b order unity now?",
-      "posture": "forced",
-      "mode": "derived",
-      "statement": "\u03a9_\u039b = 13/19 (0.07\u03c3 vs Planck 2018), refined to 181/264 = 0.68561 (0.13%) under the two-component closure with w\u208a = 13/14 from the \u0393\u2080(6) cusp-1/2 ground state. The fraction is combinatorial (Farey-6 partition + Z\u2082 rep theory), so no coincidence remains to explain.\n",
+      "posture": "open",
+      "mode": "articulated",
+      "statement": "The bare Farey partition 13:5:1 over 19 supplies a substrate-side reference point \u03a9_\u039b = 13/19 \u2248 0.684 \u2014 canonical per D1/C16 as a reference, not a prediction (the same partition puts \u03a9_b = 1/19, 6.7% from observation). The two-component refinement (w\u208a = 13/14, \u03a9_\u039b = 181/264) is retracted to Class 2: w\u208a is a numerical fit to Planck values and is computed by no script in the repo. The coincidence problem is open here; the partition is bookkeeping until a derivation forces the weights.\n",
       "resolution_docs": [
         "omega_partition_combinatorial",
         "farey_partition",
@@ -45,7 +45,6 @@
         "dark_energy",
         "dark_energy_fraction_two_component"
       ],
-      "test": "Euclid/DESI refinement of \u03a9_\u039b outside the 13/19 window falsifies the F\u2086 partition; w = \u22121 (+ small twist-breathing correction) testable ~2028.\n",
       "doc_paths": {
         "omega_partition_combinatorial": "sync_cost/derivations/omega_partition_combinatorial.md",
         "farey_partition": "sync_cost/derivations/farey_partition.md",
@@ -60,9 +59,9 @@
       "id": "dark_sector_composition",
       "title": "Dark matter and baryon fractions",
       "moniker": "what fixes \u03a9_DM : \u03a9_b \u2248 5.4?",
-      "posture": "forced",
-      "mode": "derived",
-      "statement": "\u03a9_DM = 35/132 (0.06%), \u03a9_b = 13/264 (0.12%), \u03a9_DM/\u03a9_b = 70/13 (0.6%) from the same 13:5:1/19 partition plus the two-component closure. The dark-matter abundance question is answered at the fraction level (what shares exist), not the particle level.\n",
+      "posture": "open",
+      "mode": "articulated",
+      "statement": "The bare partition gives \u03a9_DM : \u03a9_b = 5 : 1 against an observed \u2248 5.4 \u2014 a reference ratio, not a prediction (D1/C16). The two-component numbers previously quoted here (\u03a9_DM = 35/132, \u03a9_b = 13/264, ratio 70/13) inherit Class 2 from the fitted w\u208a = 13/14 closure and are computed by no script. What fixes the ratio is open, at the fraction level and the particle level alike.\n",
       "resolution_docs": [
         "baryon_fraction",
         "omega_partition_combinatorial",
@@ -74,7 +73,7 @@
         "baryon_fraction",
         "dm_baryon_ratio"
       ],
-      "caveats": "No particle candidate is offered; the framework's dark-matter story is fractional/combinatorial, with galactic phenomenology handled by the a\u2080 row below.\n",
+      "caveats": "No particle candidate is offered; galactic phenomenology is handled by the a\u2080 row below and does not depend on this partition.\n",
       "doc_paths": {
         "baryon_fraction": "sync_cost/derivations/baryon_fraction.md",
         "omega_partition_combinatorial": "sync_cost/derivations/omega_partition_combinatorial.md",
@@ -85,16 +84,16 @@
     {
       "id": "strong_cp_problem",
       "title": "Strong CP problem",
-      "posture": "forced",
-      "mode": "derived",
-      "statement": "\u03b8_QCD = 0 exactly, forced by Pin\u207a(3) topology on the Klein bottle (D45): the substrate admits no \u03b8-term. Resolves strong CP with no axion and no tuning.\n",
+      "posture": "proposed",
+      "mode": "conditional",
+      "statement": "\u03b8_QCD = 0 via Pin\u207a(3) topology (D45) \u2014 conditional, retracted from Class 5 (2026-08-12): the derivation runs entirely on the K\u00b2 configuration space, whose selection is an unsettled premise, and the eta-invariant input is an unverified import. If those premises hold, the substrate admits no \u03b8-term: no axion, no tuning.\n",
       "resolution_docs": [
         "coupling_scales"
       ],
       "manifest_claims": [
         "strong_cp"
       ],
-      "test": "Any measurement of \u03b8 \u2260 0 falsifies; discovery of a QCD axion doing the resolving would undercut the mechanism.\n",
+      "test": "Any measurement of \u03b8 \u2260 0 falsifies the conditional chain outright; discovery of a QCD axion doing the resolving would undercut the mechanism.\n",
       "doc_paths": {
         "coupling_scales": "sync_cost/derivations/coupling_scales.md"
       }
@@ -155,15 +154,15 @@
       "id": "spacetime_dimensionality",
       "title": "Dimensionality and signature of spacetime",
       "moniker": "why 3+1 and why Lorentz?",
-      "posture": "forced",
-      "mode": "derived",
-      "statement": "d = 3 from the SL(2,\u211d) Lie-group dimension forced by the mediant's SL(2,\u2124) symmetry (D14); Minkowski signature and Spin(3,1) from the Klein-bottle Cl(3,1) construction (D32, D15). Exact, structural.\n",
+      "posture": "open",
+      "mode": "open",
+      "statement": "Open (demoted from the scorecard 2026-08-06, D2 disposition). d = 3 was claimed via the identification M = SL(2,\u211d), but the continuum-completion step names no mathematical operation (SL(2,\u2124) is discrete and closed in SL(2,\u211d)), and the same premises admit d = 2 and d = 1. The signature argument rests on a sign rule that contradicts the orientation character being a homomorphism. SL(2,\u2102) = Spin(3,1) is a true imported theorem; every arrow leading to it is open.\n",
       "resolution_docs": [
         "three_dimensions",
         "minkowski_signature",
         "lie_group_characterization"
       ],
-      "manifest_claims": [
+      "open_problem_claims": [
         "spatial_dimension",
         "lorentz"
       ],
@@ -177,9 +176,9 @@
       "id": "gauge_group_origin",
       "title": "Origin of the Standard Model gauge group",
       "moniker": "why SU(3)\u00d7SU(2)\u00d7U(1), why do anomalies cancel?",
-      "posture": "forced",
-      "mode": "derived",
-      "statement": "SU(3)\u00d7SU(2)\u00d7U(1) from the Klein-bottle mode lattice Z\u2086 = Z\u2082 \u00d7 Z\u2083 (D41/D42); Yang-Mills dynamics unique via Utiyama + Cartan given the substrate's kinematics (gauge-sector Lovelock); all 6 SM anomaly conditions verified as substrate mode-count identities; charge quantization via Gell-Mann\u2013Nishijima (D43).\n",
+      "posture": "proposed",
+      "mode": "conditional",
+      "statement": "SU(3)\u00d7SU(2)\u00d7U(1) is read off the Klein-bottle mode lattice Z\u2086 = Z\u2082 \u00d7 Z\u2083 (D41/D42) \u2014 conditional, retracted from Class 5 (2026-08-12): the 12-transition count consumes the 4-mode roster, which rests on the conjectured XOR parity translation (xor_derivation \u00a75). The 6 SM anomaly conditions are verified for the imported charge assignment (D41 hardcodes the hypercharges); Gell-Mann\u2013Nishijima holds with Y back-solved, not derived. Yang-Mills uniqueness via Utiyama + Cartan is the strongest leg, conditional on the same kinematics.\n",
       "resolution_docs": [
         "gauge_sector_lovelock",
         "discrete_gauge_resolution",
@@ -460,11 +459,7 @@
     }
   ],
   "warnings": [
-    "INDEX.md maps D-numbers beyond MANIFEST derivation_count=47: D48, D49",
-    "INDEX.md lists D-numbers as unmapped that its own table maps: D16, D18, D38"
+    "INDEX.md maps D-numbers beyond MANIFEST derivation_count=47: D48, D49"
   ],
-  "notes": [
-    "spacetime_dimensionality: cited doc minkowski_signature is prose-only (articulation-grade)",
-    "spacetime_dimensionality: cited doc lie_group_characterization is prose-only (articulation-grade)"
-  ]
+  "notes": []
 }

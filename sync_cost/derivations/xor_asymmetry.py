@@ -1,12 +1,27 @@
 """
-The XOR filter is asymmetric between q=2 and q=3.
+Parity of scaled mode fibers under the conjectural XOR filter.
 
-Scaling by k=2:
-  q=2 slot: kq=4 (even). 4+3=7 (odd) → ALLOWED
-  q=3 slot: kq=6 (even). 6+2=8 (even) → FORBIDDEN
+What this script shows (per its own tallies): under the
+denominator-parity predicate applied to UNREDUCED scaled
+denominators (k1*q1 + k2*q2 odd), doubling behaves asymmetrically —
+k=2 scaling of the q=2 slot stays allowed (4+3=7 odd) while k=2
+scaling of the q=3 slot is excluded (6+2=8 even).
 
-The q=2 fiber is partially open. The q=3 fiber is locked.
-SU(2) doesn't confine. SU(3) does.
+Scope limits, verified against the script's output:
+- Every base mode tallies exactly 18/36 fiber modes allowed (the q=3
+  slot admits all odd multiples), so neither fiber is absolutely
+  locked; "locked" means even-k exclusion only.
+- allowed-AND-twist-flipped = 0 in ALL sectors (structurally forced:
+  XOR-allowedness pins k*q parity to q's parity), so no sector
+  accesses a conjugate twist; a confinement asymmetry ("SU(2)
+  doesn't confine / SU(3) does") does not follow from these tallies.
+- The unreduced-fiber ontology is a modeling choice made only here:
+  reduced, the "forbidden" mode 2/6 is the allowed base mode 1/3.
+- The fraction-parity rule itself is conjectural (xor_derivation.md);
+  under the XNOR alternative all four base modes are forbidden.
+Known defects: numpy is imported but never used (crashes in a clean
+env); Part 3's printed output contains a self-acknowledged
+mid-computation error ("wait, that's ODD. Let me recheck").
 
 This script maps out:
 1. Which fiber modes are allowed/forbidden for each base mode
@@ -259,8 +274,8 @@ for K in [0.5, 0.7, 0.8, 0.9, 0.95, 0.99, 1.0]:
     print(f"  {K:6.2f}  {ratio:12.6f}  {ratio*100:8.4f}%")
 
 print()
-print("  At K=1: q=2 fiber ratio = 1/4 = 25%.")
-print("  The q=2 fiber mode is 25% of the base at K=1.")
+print("  At K=1: q=2 fiber ratio = (1/2)²/2 = 1/8 = 12.5%.")
+print("  The q=2 fiber mode is 12.5% of the base at K=1.")
 print("  The q=2 sector is substantially open.")
 print()
 
@@ -275,7 +290,7 @@ print("=" * 78)
 print("""
   1. q=2 (SU(2) / weak): OPEN fiber.
      k=2 representative accessible at all K.
-     Ratio to base: (K/2)²/2. At K=1: 25%.
+     Ratio to base: (K/2)²/2. At K=1: 12.5%.
      The weak force DOES NOT CONFINE because its fiber modes
      are XOR-allowed. The gauge bosons (W, Z) have accessible
      fiber representatives.

@@ -1,9 +1,9 @@
 {
- "count": 326,
+ "count": 328,
  "coverage_totals": {
-  "classified": 201,
-  "prose-only": 29,
-  "unclassified-quantitative": 96
+  "classified": 203,
+  "prose-only": 28,
+  "unclassified-quantitative": 97
  },
  "docs": {
   "CHAIN_KSTAR": {
@@ -17,6 +17,18 @@
    "status_bold": "Derived from canonical L0/L1/L3 framework objects (structural):",
    "status_line": null,
    "title": "K_STAR closed form"
+  },
+  "ERRATA": {
+   "classes": [
+    2,
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_bold": null,
+   "status_line": null,
+   "title": "ERRATA"
   },
   "FRAMEWORK_TOPOLOGY": {
    "classes": [
@@ -51,6 +63,17 @@
    "status_bold": "L1 closes Class 5 in recognize mode.",
    "status_line": "Class 5.",
    "title": "L1 closure — substrate cusp-1/2 ground state from soft-boundary + discreteness"
+  },
+  "PREMISES": {
+   "classes": [
+    5
+   ],
+   "coverage": "classified",
+   "d_numbers": [],
+   "has_lineage": false,
+   "status_bold": null,
+   "status_line": null,
+   "title": "Premise Ledger"
   },
   "PROOF_A_gravity": {
    "classes": [
@@ -340,7 +363,7 @@
    "has_lineage": false,
    "status_bold": null,
    "status_line": null,
-   "title": "Beta Functions from Tongue Widths"
+   "title": "Tongue-Width Running: the Ratio Theorem (SM β-Coefficient Claim Retired)"
   },
   "bicone_golden_z2_identification": {
    "classes": [
@@ -563,7 +586,7 @@
    ],
    "has_lineage": true,
    "status_bold": "Derived (partial), rescoped (#263 ⓾ ruling, 2026-07-19).",
-   "status_line": "theta = 0 derived from Pin+(3) on the Klein bottle.",
+   "status_line": "theta = 0 is conditional, not derived. The argument",
    "title": "The Coupling Scales and the Bare Diffusion Constant"
   },
   "cross_ratio_irrep_reframe": {
@@ -606,6 +629,10 @@
    "has_lineage": false,
    "status_bold": "leading-order correct",
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "discrete_reduction_computed"
+   ],
    "title": "Dark-twin correction: the S_v ≈ 13 retraction was wrong"
   },
   "denomination_boundary": {
@@ -639,7 +666,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
-   "status_bold": "Atlas v1, 2026-04-26.",
+   "status_bold": "Atlas edition 2, 2026-08-14",
    "status_line": null,
    "title": "Derivation Atlas — from four primitives to physical predictions"
   },
@@ -786,9 +813,9 @@
    "coverage": "prose-only",
    "d_numbers": [],
    "has_lineage": false,
-   "status_bold": null,
+   "status_bold": "definition",
    "status_line": null,
-   "title": "Proof: The Duty Cycle Exponent Equals the Group Dimension"
+   "title": "The Duty-Cycle Exponent and the Group Dimension: Definition, Not Map Law"
   },
   "dynamical_quantization": {
    "classes": [
@@ -831,7 +858,7 @@
    "has_lineage": false,
    "status_bold": null,
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "discrete_reduction_computed"
    ],
@@ -946,6 +973,10 @@
    "has_lineage": false,
    "status_bold": "partially vindicates Finding 3",
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "discrete_reduction_computed"
+   ],
    "title": "The explicit 4×4 reduction matrix: real Phase 2"
   },
   "exponent": {
@@ -1003,7 +1034,7 @@
    "has_lineage": false,
    "status_bold": "Class 3 articulation; superseded by [[gauge_sector_lovelock]] (D42, Yang-Mills derived) and [[discrete_gauge_resolution]] (five sub-computations resolved), both landed in April 2026 — before this doc ",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "gauge_sector_lovelock",
     "discrete_gauge_resolution"
@@ -1053,7 +1084,7 @@
    "coverage": "classified",
    "d_numbers": [],
    "has_lineage": false,
-   "status_bold": null,
+   "status_bold": "(Rewritten 2026-08-04 to match the 2026-05 correction box above, which this paragraph had never inherited.)",
    "status_line": null,
    "title": "Fermion Mass Running from the K → μ Map"
   },
@@ -1162,6 +1193,11 @@
    "has_lineage": false,
    "status_bold": null,
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "gap2_sub_e_status_reconciled",
+    "k_critical_phase_b"
+   ],
    "title": "Analytic Proof: Levi-Civita from Kuramoto at K=1"
   },
   "gap1_theorem": {
@@ -1171,6 +1207,11 @@
    "has_lineage": false,
    "status_bold": "Proved, conditionally.",
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "gap2_sub_e_status_reconciled",
+    "k_critical_phase_b"
+   ],
    "title": "Gap 1 Theorem: Christoffel Connection from Kuramoto in the Continuum Limit"
   },
   "gap2_analytic_proof": {
@@ -1198,6 +1239,11 @@
    "has_lineage": false,
    "status_bold": "Verified.",
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "gap2_sub_e_status_reconciled",
+    "k_critical_phase_b"
+   ],
    "title": "Gap 2, Step 4: The Stern-Brocot Tree IS the Spatial Lattice"
   },
   "gap2_sub_e_status_reconciled": {
@@ -1225,6 +1271,11 @@
    "has_lineage": false,
    "status_bold": "Closed in the continuum limit",
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "gap2_sub_e_status_reconciled",
+    "k_critical_phase_b"
+   ],
    "title": "Gap 1: The Christoffel Connection from Kuramoto Ensemble Averages"
   },
   "gap_2_spatial_diffusion": {
@@ -1234,6 +1285,11 @@
    "has_lineage": false,
    "status_bold": "Break 1 addressed; Break 2 remains open.",
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "gap2_sub_e_status_reconciled",
+    "k_critical_phase_b"
+   ],
    "title": "Gap 2: Spatial Diffusion and the Bare Coupling D₀"
   },
   "gauge_dictionary": {
@@ -2204,7 +2260,7 @@
   },
   "mediant_derivation": {
    "classes": [],
-   "coverage": "prose-only",
+   "coverage": "unclassified-quantitative",
    "d_numbers": [
     "D29"
    ],
@@ -2382,6 +2438,10 @@
    "has_lineage": false,
    "status_bold": "regime-clarifying finding",
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "discrete_reduction_computed"
+   ],
    "title": "Non-perturbative Phase 3: K < 1 sectors and the lengthscale-regime question"
   },
   "numerology_count_phase_a": {
@@ -2579,6 +2639,10 @@
    "has_lineage": false,
    "status_bold": "Phase π",
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "discrete_reduction_computed"
+   ],
    "title": "Orthogonal-kink interaction: decomposition into AB-phase + jog energy"
   },
   "padic_lfunction_mihailescu_pair_f64_audit": {
@@ -3096,6 +3160,11 @@
    "has_lineage": false,
    "status_bold": null,
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "gap2_sub_e_status_reconciled",
+    "k_critical_phase_b"
+   ],
    "title": "Session audit: overclaims, revisions, and stale content"
   },
   "sigma_squared_disambiguation": {
@@ -3204,7 +3273,7 @@
    "has_lineage": false,
    "status_bold": "Open",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "spectral_tilt_reframed"
    ],
@@ -3608,10 +3677,10 @@
    "has_lineage": false,
    "status_bold": null,
    "status_line": null,
-   "title": "Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions"
+   "title": "Derivation: The Klein Bottle Mode-Pairing Spectrum, and the Conjectured XOR Parity Filter"
   }
  },
- "generated": "69a7040",
+ "generated": "e4214fc",
  "generator": "scripts/build_corpus_index.py",
  "rule8_flags": []
 }

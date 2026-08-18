@@ -1,10 +1,16 @@
+<!-- edition 2 (2026-08-11) · integrates the 2026-08-04 status correction (d582403); prior text: git show d582403^ · ERRATA.md E14 -->
+<!-- provides: circle-axiom status=axiom -->
+<!-- provides: mediant-primitive status=definition -->
+<!-- provides: continuous-oscillator-coupling status=axiom -->
+<!-- provides: combinatorial-substrate status=axiom -->
 # The Minimum Alphabet
 
 ## Claim
 
-The framework's entire structure — the circle, the devil's staircase,
-Arnold tongues, the Born rule, the RAR, and the uncertainty relation —
-follows from compositions of exactly four irreducible primitives:
+The framework's structure — the devil's staircase, Arnold tongues,
+the Born rule, the RAR, and the uncertainty relation — follows from
+compositions of four irreducible primitives acting on the circle,
+which is Axiom 1 (assumed, not derived; see Part I §1):
 
 | # | Primitive | What it provides |
 |---|-----------|-----------------|
@@ -21,7 +27,7 @@ linearized limit.
 
 ## Part I: Construction
 
-### 1. The circle is derived (integers + fixed-point)
+### 1. The circle is Axiom 1 (motivated by integers + fixed-point)
 
 Start with two primitives: integers (counting cycles) and the
 fixed-point condition (x = f(x), return to start).
@@ -40,16 +46,21 @@ Both hold simultaneously, so:
 
     x + p = x   in the phase space
 
-Therefore p ≡ 0 in the phase space. Since p is an arbitrary integer,
-**all integers must be equivalent to 0**. The phase space is R/Z.
-That is S¹. That is the circle.
+For both to hold, x and x + p must name the same state — that
+identification is the quotient R/Z. The phase space is S¹, the
+circle.
 
-The mod-1 topology is not an axiom. It is the unique topology
-consistent with integer counting and self-reference. You cannot have
-periodic orbits with integer winding counts on a line — the line has
-no fixed points of translation. The moment you demand that an orbit
-returns (fixed-point equation) after counting an integer number of
-full advances, you have quotiented by Z. You have a circle.
+This argument is a consistency observation, not a derivation: taking
+the two conditions as simultaneous already presupposes the
+identification it appears to produce. No weaker premise forces the
+circle — the line admits the same dynamics with no periodic orbits,
+and nothing in counting + self-reference excludes the line without
+first identifying x with x + 1. **The circle is Axiom 1 of the
+framework.** What the argument genuinely shows is that this axiom is
+exactly what reconciles return-to-start with nonzero winding — a
+motivation for the axiom, not a proof of it. Downstream documents
+(D7, D11, D12, both proof chains) use the circle itself, never its
+derivedness.
 
 ### 2. Orientation is derived (parabola)
 

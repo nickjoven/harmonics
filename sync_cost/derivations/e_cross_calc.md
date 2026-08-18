@@ -1,10 +1,6 @@
 # E_cross calculation: the textbook route gives a pathology
 
-> **SUPERSEDED — historical artifact (continuum-route attempt).**
-> Current value: `discrete_reduction_computed.md` (canonical).
-> Lineage: `thread_chronology.md`. The body below is left
-> unedited as the recorded dead end; do not read its numbers as
-> current.
+Historical artifact: the continuum-route attempt below is a recorded dead end (see the successions ledger; current value in `discrete_reduction_computed.md`, lineage in `thread_chronology.md`). The body is left unedited — do not read its numbers as current.
 
 Item 1 of the remaining bounded work: compute `E_cross`, the
 crossed-sine-Gordon jog energy at the q₁/q₂ orthogonal kink

@@ -104,7 +104,9 @@ The inverse stereographic projection of our flat 3-space onto a
   geometrically (per Bridge 1).
 - **Yellow background glow**: the integrated antipodal-pair
   contribution distributing uniformly across the sphere — Ω_Λ
-  = 13/19 = `12.66/18.49` (per Bridge 3).
+  = 13/19 ≈ `12.66/18.49` (per Bridge 3; the two values differ by
+  4.8×10⁻⁴ — endpoint vs fitted interior point, see the arithmetic
+  correction in `unification_bridge_audits_gaps_1_3.md`).
 - **Right legend**: the `13:5:1/19` Ω partition mapped onto its
   geometric origin (cancellation residue + topologically-
   protected matter).
@@ -321,7 +323,9 @@ decoherence → uniform medium + protected pockets.
 
 The integrated antipodal-pair contribution at the cosmological
 boundary IS the cancellation residue. Per Bridge 3: this equals
-the boundary-weight derivation Ω_Λ = 12.66/18.49 = 13/19.
+the boundary-weight derivation Ω_Λ = 12.66/18.49 ≈ 13/19 (distinct
+values — 0.68469 vs 0.68421, fitted interior point vs w = 1 endpoint;
+see `unification_bridge_audits_gaps_1_3.md`).
 
 In the cancellation-residue reading:
 - **Ω_Λ = 13/19**: cancelled antipodal-pair contribution; the
@@ -351,7 +355,7 @@ remains open).
   heat from dissipation/equilibration that produced the medium's
   current uniformity
 - **Ω_Λ = 0.685 ± 0.007** matching framework's 0.6847 at
-  0.004σ: direct corroboration of cancellation residue =
+  0.04σ (|0.6847−0.685|/0.007): direct corroboration of cancellation residue =
   integrated antipodal contribution
 - **Matter-antimatter asymmetry ~10⁻¹⁰**: empirical realization
   of survival-filter asymmetry
@@ -474,7 +478,7 @@ sufficiently sensitive observers.
 | Horizons are topological + fixed-point composite halts | PR #225 Bridge 2 | Sealed |
 | Boundary-weight ≡ antipodal-pair integration | PR #225 Bridge 3 | Sealed |
 | Sine-Gordon kinks as topological halts | `sine_gordon_substrate.md` + PR #224 | Sealed |
-| Ω_Λ = 13/19 from boundary weight | `horn_branch_iteration_2_step_2.md`, PR #222 | Empirical 0.004σ |
+| Ω_Λ = 13/19 from boundary weight | `horn_branch_iteration_2_step_2.md`, PR #222 | Empirical 0.04σ |
 | Single J → ℂ-QM → Tsirelson | `complex_amplitude_uniqueness.md` + `klein_bottle_restructure_price.md` | Sealed |
 | Cosmological constant problem dissolution | PR #221 (substrate discreteness) | Sealed |
 | Allowed cancellations | PR #224 | Sealed |
@@ -577,11 +581,11 @@ the substrate-to-cosmological scale hierarchy.
 Six independent observational domains corroborate the composite
 reading.
 
-### CMB Ω_Λ at 0.004σ (strongest)
+### CMB Ω_Λ at 0.04σ (strongest)
 
 Planck CMB measurements: Ω_Λ = 0.685 ± 0.007. Framework
 prediction (Bridge 3 dual derivation): Ω_Λ = 12.66/18.49 =
-0.6847. Match at 0.004σ. This is the framework's strongest
+0.6847. Match at 0.04σ. This is the framework's strongest
 empirical alignment and provides the cancellation-residue
 reading with direct numerical corroboration.
 
@@ -631,7 +635,7 @@ the empirical instance corroborates the structural claim.
 
 | Domain | Strength | What it corroborates |
 |---|---|---|
-| CMB Ω_Λ | Strongest (0.004σ) | Cancellation residue = antipodal integration |
+| CMB Ω_Λ | Strongest (0.04σ) | Cancellation residue = antipodal integration |
 | Tsirelson saturation | Strong | Single-J → ψ ↔ −ψ structure |
 | Particle annihilation | Strong | Allowed-cancellation channel realization |
 | Hawking radiation | Theoretical | Universal boundary leakage at gravitational scale |
@@ -649,9 +653,13 @@ the empirical instance corroborates the structural claim.
   basis breaks.
 - **F2 — Stable horizon not classifiable as composite halt**.
   Would falsify Sub-claim B's halt-type classification.
-- **F3 — Ω_Λ moving outside 12.66/18.49 = 13/19 by precision
-  improvements**. Would falsify Bridge 3's dual-derivation
-  equality + Sub-claim C's cancellation-residue reading.
+- **F3 — Ω_Λ moving outside the interval [13/19, 11/16] by
+  precision improvements** (the interval from `boundary_weight.md`
+  is the falsifiable object; the fitted interior point 12.66/18.49
+  and the endpoint 13/19 are distinct values, so an equality between
+  them cannot serve as the falsifier). Would falsify Bridge 3's
+  dual-derivation reading + Sub-claim C's cancellation-residue
+  reading.
 - **F4 — Boundary demonstrably non-leaky at any scale**. Would
   falsify Sub-claim D's universal boundary-leakage principle.
 - **F5 — Cosmological observations falsifying matter-antimatter
@@ -735,7 +743,7 @@ candidates:
 - `q_mod2_planck_emergence_audit.md` (PR #221) — structural-
   identity precedent; fuzzy-floor framing
 - `born_rule_mode_count_extremes_audit.md` (PR #222) — chain
-  extension; Ω_Λ at 0.004σ alignment
+  extension; Ω_Λ at 0.04σ alignment
 - `anchor_extremes_audit.md` (PR #223) — anchor analysis; other
   admitted pockets per indeterminacy class
 - `halt_shock_coherence_audit.md` (PR #224) — halt taxonomy
@@ -787,7 +795,7 @@ antiparticles; integrated antipodal contribution distributes
 uniformly across the 3-sphere as Ω_Λ; our pocket-soliton
 occupies a small region near one pole; the K=1 medium fills
 the rest. Six empirical alignments at varying strengths (CMB
-Ω_Λ at 0.004σ strongest; particle annihilation + Tsirelson
+Ω_Λ at 0.04σ strongest; particle annihilation + Tsirelson
 strong; Hawking theoretical; CMB anisotropies + GW backgrounds
 observed; slime-mold biological analog). Six falsifier classes
 flagged. Five quantitative gaps (4: Hawking rate, 5: matter-

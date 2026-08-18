@@ -99,6 +99,11 @@ The figure-8 is in the fourth category, per the test below.
 >
 > The figure-8 = Loop 1 ∪ Loop 2, with Loop 1 ∩ Loop 2 = {D}."
 
+*[The quoted "1,764 → 4 via the XOR constraint" was corrected at
+source (`figure_eight.md`; ERRATA.md E5): the filter does 3,969 →
+1,764, the field-equation dynamics does 1,764 → 4. Quote preserved
+as it stood.]*
+
 So the figure-8 reading asserts:
 1. Each (q_x, q_y) family is a continuous S¹ (a loop).
 2. The two loops share exactly one point: D.

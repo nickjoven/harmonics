@@ -40,7 +40,7 @@ boundary fraction is `5/6` directly.
 derives w* = 0.83 numerically from the field-equation fixed-point
 condition at the F_5/F_6 boundary. This is the partial-locking
 weight for the q=6 boundary modes that produces `Ω_Λ = 0.6847`
-(within 0.004σ of observation).
+(within 0.04σ of observation).
 
 These three are not three independent quantities — they are three
 readings of one substrate object, namely **the q=6 boundary at
@@ -146,7 +146,7 @@ Substituting:
 
     Ω_Λ(0.83) = (11 + 1.66) / (16 + 2.49) = 12.66 / 18.49 = 0.6847
 
-This matches observed Ω_Λ = 0.685 ± 0.007 within 0.004σ.
+This matches observed Ω_Λ = 0.685 ± 0.007 within 0.04σ.
 
 The cosmological derivation is independent of any mass-sector
 work. w* is forced by the field equation at the boundary, not

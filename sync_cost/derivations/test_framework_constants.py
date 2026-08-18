@@ -242,18 +242,20 @@ def test_generation_exponent_law_from_leptons():
 # Electroweak derived identities: alpha_2 = alpha_em / sin^2 theta_W
 # ============================================================
 
-def test_alpha_2_alpha_Y_identities_at_MZ():
+def test_alpha_2_alpha_Y_against_independent_pdg_literals():
     """
-    ALPHA_2_MZ and ALPHA_Y_MZ must follow from ALPHA_EM_MZ and
-    SIN2_TW_MZ via the textbook identities:
-
-        alpha_2 = alpha_em / sin^2 theta_W
-        alpha_Y = alpha_em / cos^2 theta_W = alpha_em / (1 - sin^2 theta_W)
+    External anchor: the derived couplings must land on values
+    computed here from PDG literals typed INDEPENDENTLY of
+    framework_constants.py (alpha_em^-1 = 127.951, sin^2 theta_W-hat
+    = 0.23122, PDG 2024 EW review). Comparing ALPHA_2_MZ to its own
+    defining expression cannot fail and anchors nothing.
     """
-    a_2_expected = ALPHA_EM_MZ / SIN2_TW_MZ
-    a_Y_expected = ALPHA_EM_MZ / (1 - SIN2_TW_MZ)
-    assert abs(ALPHA_2_MZ - a_2_expected) / ALPHA_2_MZ < 1e-12
-    assert abs(ALPHA_Y_MZ - a_Y_expected) / ALPHA_Y_MZ < 1e-12
+    a_2_pdg = (1 / 127.951) / 0.23122
+    a_Y_pdg = (1 / 127.951) / (1 - 0.23122)
+    assert abs(ALPHA_2_MZ - a_2_pdg) / a_2_pdg < 5e-4, (
+        f"ALPHA_2_MZ = {ALPHA_2_MZ:.6f} vs PDG-derived {a_2_pdg:.6f}")
+    assert abs(ALPHA_Y_MZ - a_Y_pdg) / a_Y_pdg < 5e-4, (
+        f"ALPHA_Y_MZ = {ALPHA_Y_MZ:.6f} vs PDG-derived {a_Y_pdg:.6f}")
 
 
 # ============================================================
@@ -320,29 +322,12 @@ def test_lambda_unlock_closed_form():
     )
 
 
-# ============================================================
-# Madelung-derived field-theoretic mass m
-# (a_s_geometric_proof.md Lemma 1; PROOF_B Q4 + gap2 sub-E)
-# ============================================================
-
-def test_m_from_madelung_phi_lambda():
-    """
-    The framework's Lagrangian kinetic coefficient m is derived from
-    the Madelung identification hbar = 2 m D_eff:
-
-        m / m_P = (1 - phi^{-4}) / lambda_unlock
-
-    Closed-form expression with no fit. Numerically m ~= 1.806 m_P
-    using the canonical lambda_unlock = 0.473.
-    """
-    phi = (1 + math.sqrt(5)) / 2
-    m_over_mP = (1 - 1 / phi ** 4) / LAMBDA_UNLOCK
-    expected = 1.8057
-    residual = abs(m_over_mP - expected) / expected
-    assert residual < 1e-3, (
-        f"m / m_P = {m_over_mP:.6f}, expected ~ {expected}, "
-        f"residual {residual*100:.4f}%"
-    )
+# The former test_m_from_madelung_phi_lambda evaluated
+# (1 - phi^-4)/LAMBDA_UNLOCK against its own pre-computed result —
+# an algebra identity that could only fail if LAMBDA_UNLOCK changed,
+# which the closed-form test above already guards. Removed as
+# unfalsifiable rather than kept as a green light that verified
+# nothing (theater-lens finding, 2026-08).
 
 
 # ============================================================

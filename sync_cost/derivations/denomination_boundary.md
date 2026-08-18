@@ -59,17 +59,23 @@ At the boundary (w << 1 but non-negligible):
 
 $$K_*(q) \approx 2 \cdot q^{-1/(q-1)}$$
 
+**Open discrepancy.** The formula above and the table below disagree:
+the table's values follow $q^{1/(q-1)}$ (2.00, 1.73, 1.59, 1.50, …
+→ 1), while the printed formula $2\,q^{-1/(q-1)}$ evaluates to 1.00,
+1.15, 1.26, 1.34, … → 2. Which law the derivation intends is
+unresolved; the table law is used for the values below.
+
 This is a **different K* for each denominator q**. The denomination
 boundary is not a single coupling value — it is a sequence:
 
-| q | K*(q) | Tongue |
+| q | K*(q) = q^{1/(q−1)} (table law) | Tongue |
 |---|-------|--------|
 | 1 | — | Always locked (trivial) |
 | 2 | 2.00 | 1/2 |
 | 3 | 1.73 | 1/3, 2/3 |
 | 4 | 1.59 | 1/4, 3/4 |
 | 5 | 1.50 | Fibonacci convergents |
-| ... | → √2 | Limit |
+| ... | → 1 | Limit (not √2) |
 
 Higher-denominator modes switch denomination at *lower* coupling.
 The boundary in (K, q) space is a decreasing function — it is the
@@ -80,7 +86,8 @@ The boundary in (K, q) space is a decreasing function — it is the
 Between any two denomination switches K*(q) and K*(q+1), there are
 denomination switches for all mediants (composite modes with
 denominators between q and q+1 on the Stern-Brocot tree). The set
-of K* values is dense in the interval [√2, 2].
+of K* values is dense in the interval [1, 2]; under the table law
+K*(q) = q^{1/(q−1)}, the large-q limit is 1.
 
 The boundary between energy-denominated and entropy-denominated
 cost is not a line. It is a **Cantor-like set** — the devil's
@@ -178,7 +185,12 @@ a fractal dimension determined by the Stern-Brocot tree structure.
 For the golden-ratio staircase, the box-counting dimension of the
 tongue boundaries is:
 
-$$d_{\text{box}} = 1 - \frac{\ln \varphi^2}{\ln 2} \approx 0.306$$
+$$d_{\text{box}} = 1 - \frac{\ln \varphi}{\ln 2} \approx 0.306$$
+
+(Corrected 2026-08-05: the value 0.306 corresponds to ln φ; the
+formula as previously printed used ln φ², which evaluates to −0.389
+— not a dimension. Value kept, formula aligned; whether ln φ is the
+*right* exponent for this boundary remains to be derived.)
 
 This is measurable in the lattice by sweeping F_n finely across the
 transition region and recording the coupling values at which new
@@ -279,9 +291,13 @@ measure at coupling K is:
 
 $$\mu_{\text{free}}(K) = \sum_{p/q} w(p/q, K) = \sum_{q=1}^{\infty} \sum_{\substack{p=1 \\ \gcd(p,q)=1}}^{q-1} \left(\frac{K}{2}\right)^q$$
 
-As K → 1, this sum approaches 1 (the tongues fill [0,1]). At K < 1,
-the free measure is less than 1 and the path must traverse some
-costly transitions.
+(Corrected 2026-08-05: at K = 1 this width model sums to
+Σ φ(q)/2^q ≈ 1.368 — ≈ 0.868 excluding q = 1 — not 1. The true
+statement that locked intervals fill [0,1] at K = 1 is
+Jensen–Bak–Bohr, a fact about the map, not about this subcritical
+width model; the model is not valid at K = 1.) At K < 1, the free
+measure is less than 1 and the path must traverse some costly
+transitions.
 
 The cost-minimizing strategy is to occupy the **widest available
 tongues first** — the ones with smallest denominator q, since their

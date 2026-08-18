@@ -102,7 +102,7 @@ The framework's operations sort into clear computational tiers:
 | Operation | Recognition | Replaces |
 |---|---|---|
 | Cusp 1/2 ↔ q_2-rep at X_0(6) | Modular forms theory + Hecke action | Direct cusp computation |
-| 4 XOR-survivors at `(q_x, q_y) ∈ {(2,3), (3,2)}` | Klein-bottle XOR rule | Searching 1764 candidate mode pairs |
+| 4 XOR-survivors at `(q_x, q_y) ∈ {(2,3), (3,2)}` | Klein-bottle parity rule (conjectural; reduces 3,969 pairs to 1,764) + field-equation dynamics (collapses to 4) | Searching 3,969 candidate mode pairs |
 | Pauli stabilizer / SNMC class membership | D2 SNMC formalization | Direct multi-mode state characterization |
 | Toroidal/poloidal direction identification with SU(3)/SU(2) | Gauge-sector chain (Cartan + 4 criteria) | Per-context re-derivation |
 | Mass-sector vocabulary closure (3×3 matrix) | Substrate vocabulary enumeration | Per-claim substrate verification |

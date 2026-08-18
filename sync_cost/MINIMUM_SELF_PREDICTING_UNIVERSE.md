@@ -1,3 +1,8 @@
+<!-- edition 2 (2026-08-11) · Lemma 5 and §6(iv) revised; prior text: git 3597650^ · ERRATA.md E2, E3 -->
+<!-- provides: mspu-synthesis status=conditional -->
+<!-- provides: substrate-self-consistency status=axiom -->
+<!-- provides: standard-model-parameters-should-not-be-free status=conjectured -->
+<!-- premises: circle-axiom@minimum_alphabet, klein-spectrum-theorem@xor_derivation, xor-parity-translation@xor_derivation, q23-selection@mass_sector_closure, omega-lambda-interval@boundary_weight -->
 # The Minimum Self-Predicting Universe
 
 ## An Algebraic Proof
@@ -130,10 +135,10 @@ period. For SL(2,R): d = 3 = 2 + 1. □
 
 ## 6. The Klein Bottle and Mode Selection
 
-**Lemma 5** (xor_derivation.md). *The XOR parity filter selects
-q₂ = 2 and q₃ = 3.*
+**Lemma 5** (conjectural; xor_derivation.md). *The mode-pair filter
+takes the fraction-parity form q₁ mod 2 ≠ q₂ mod 2.*
 
-**Derivation from boundary conditions.** The Klein bottle has:
+**Basis.** The Klein bottle has:
 - Direction 1 (antiperiodic): θ(x + L₁, y) = θ(x, y) + π
 - Direction 2 (periodic): θ(x, y + L₂) = θ(x, y)
 
@@ -141,18 +146,24 @@ Absorb the half-twist into a linear ramp: θ = πx/L₁ + φ(x,y),
 where φ is periodic. Fourier-expanding φ: the allowed x-wavenumbers
 are half-integers m = k + 1/2. The Klein bottle's y-reflection
 (y → L₂ − y) pairs even y-modes with half-integer x-modes and
-odd y-modes with integer x-modes. In the Stern-Brocot representation:
-half-integer wavenumbers correspond to even denominators, integer
-wavenumbers to odd denominators.
+odd y-modes with integer x-modes. This mode-pairing spectrum is a
+theorem for the orientation line bundle (xor_derivation.md,
+Sections 1–4).
 
-The surviving condition: one direction even-q, the other odd-q.
-Non-orientability (the two directions cannot be globally distinguished)
-forces the symmetric form:
+The passage to fractions is not: the correspondence "half-integer
+wavenumber ↔ even denominator, integer ↔ odd" is stipulated
+(xor_derivation.md Section 5), and the symmetric XOR form rests on a
+non-orientability heuristic (Section 6). Lemma 5 is therefore a
+conjecture, not a consequence of the spectrum theorem. □(conditional)
 
-    q₁ mod 2 ≠ q₂ mod 2    (XOR)
-
-The smallest surviving denominators: q₂ = 2 (even) and q₃ = 3
-(the smallest odd admitting non-trivial probability — Section 7). □
+**What the filter does and does not provide.** The filter is a pair
+*filter*, not a sector *selection*: at the quoted tree depth it
+admits 1,764 of 3,969 mode pairs. The selection of specifically
+(q₂, q₃) = (2, 3) is supplied by the cube-identity/Mihailescu
+argument (`mass_sector_closure.md`), which is independent of the
+parity filter; the field-equation dynamics
+(`field_equation_klein.py`) then concentrates population on the
+(2,3)/(3,2) sectors.
 
 ---
 
@@ -230,7 +241,17 @@ condition (P3). Numerical solution: w* = 0.83 at K* = 0.862, giving:
 
     Ω_Λ(0.83) = (11 + 1.66) / (16 + 2.49) = 12.66 / 18.49 = 0.6847
 
-Matching observation to **0.00%** within the quoted precision.
+The interior point matches observation by construction, not by
+prediction: `boundary_weight.py` obtains w* = 0.828 by algebraic
+inversion of Ω_Λ(w) = (11 + 2w)/(16 + 3w) at the observed Planck
+value (Class 2, observation-inverted; see `boundary_weight.md`
+Status). The predictive content of this section is the interval in
+(iii), Ω_Λ ∈ [13/19, 11/16]. The w = 1 endpoint 13/19 = 0.68421 and
+the fitted interior point 12.66/18.49 = 0.68469 are distinct values
+of the same pipeline, not equal quantities. The Farey cardinalities
+|F₅| = 11 and |F₆| = 13 count all fractions — no parity filter enters
+this computation, so this number neither uses nor corroborates
+Lemma 5.
 
 **(v) The predictions.** At any w ∈ [0,1], the following predictions
 are w-independent (they depend only on q₂ = 2 and q₃ = 3):
@@ -240,6 +261,15 @@ are w-independent (they depend only on q₂ = 2 and q₃ = 3):
     d = 2² − 1 = 3
     signature = (2² − 1, 1) = (3,1)
     generations = 2² − 1 = 3
+
+Status of the last three lines: the identification of 2² − 1 with
+the spatial dimension and the (3,1) signature imports
+three_dimensions.md/D15, demoted to open problems (MANIFEST
+open_problems, decision D2: the "SL(2,Z) completes to SL(2,R)" step
+is undefined and so(2,1) ≠ so(3)). As written they are arithmetic
+patterns in q₂, not derived spacetime facts. The first two lines are
+the bare K=1 reference identities (not predictions at M_Z; MANIFEST
+bare_k1_identities).
 
 The Ω_Λ prediction depends on w but is confined to [0.6842, 0.6875].
 

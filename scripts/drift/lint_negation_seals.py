@@ -20,8 +20,10 @@ A pattern hit with no marker in its window is flagged. Run:
 
   python3 scripts/drift/lint_negation_seals.py
 
-Exit 0 = clean; 1 = at least one unmarked occurrence. Not yet wired into
-run_all.py - keep standalone until the seal list is stable.
+Exit 0 = clean; 1 = at least one unmarked occurrence. Wired into
+run_all.py as ADVISORY (the context-marker heuristic can misread a
+historical citation as a fresh assertion; promote once its
+false-positive record is established).
 """
 
 import argparse

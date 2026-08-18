@@ -85,8 +85,10 @@ simplest ratio strictly between 0 and 1 commands the widest interval.
 The next-longest treads are at 1/3 and 2/3; shorter ones at the
 quarters; shorter still at the fifths. Between the treads, on the
 sloped parts, the oscillator never locks — it drifts through its driver
-at an unending irrational ratio. Those drifting rates are real and they
-have positive measure, but every one of them is bracketed by locks, and
+at an unending irrational ratio. Those drifting rates are real — below
+K = 1 they occupy positive measure, though at this demo's K = 1 they
+shrink to a dust of zero total length (see the staircase in
+`history.md`) — but every one of them is bracketed by locks, and
 the simpler the neighboring ratio, the wider the lock.
 
 ## The width ordering — the simplest ratio wins

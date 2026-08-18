@@ -18,6 +18,11 @@ audit's outline:
   integrated antipodal-pair contribution, or just match
   empirically?
 
+*[Arithmetic note: `12.66/18.49 = 13/19` as used throughout this
+document is false — 0.68469 vs 0.68421, fitted interior point vs
+w = 1 endpoint of the same pipeline (ERRATA.md E3). Read Bridge 3's
+equality claims as relating the pipelines, not the values.]*
+
 **Aggregate verdict: MODAL ✓ / GENERATIVE ✓** on all three
 bridges, with one refinement at Gap 2 (horizons are *topological
 + fixed-point composite halts*, not strictly solitons).
@@ -473,7 +478,9 @@ The boundary-weight derivation and the antipodal-pair integration
 are the same derivation in different vocabularies. The equality
 `Ω_Λ = 12.66/18.49 = 13/19 = integrated antipodal-pair
 contribution` is forced by the structural identity of the two
-derivations.
+derivations. *(As an equality of numbers this is false — 0.68469 ≠
+0.68421, see the arithmetic note in the Gap 3 statement; the verdict
+stands only as a statement about the shared pipeline.)*
 
 The unification audit can claim that the 13/19 partition is
 *both* the boundary-weight closure AND the antipodal-pair
@@ -550,7 +557,7 @@ drafted as the next major doc.
 - `q_mod2_planck_emergence_audit.md` (PR #221) — structural-
   identity precedent
 - `born_rule_mode_count_extremes_audit.md` (PR #222) — chain
-  extension; Ω_Λ at 0.004σ alignment
+  extension; Ω_Λ at 0.04σ alignment
 - `anchor_extremes_audit.md` (PR #223) — anchor analysis
 - `halt_shock_coherence_audit.md` (PR #224) — halt taxonomy used
   in Bridge 2

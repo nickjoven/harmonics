@@ -420,7 +420,7 @@ position on which outcome obtains.
 ### Ω_Λ (anchored prediction via 12.66 modes)
 
 Same alignment as in PR #222: framework's Ω_Λ(w*=0.83) =
-0.6847 matches observed 0.685 ± 0.007 at 0.004σ. Anchored to
+0.6847 matches observed 0.685 ± 0.007 at 0.04σ (|0.6847−0.685|/0.007). Anchored to
 H_0 — the match is conditional on H_0's status as the
 cosmological anchor. If H_0 tension falsifies anchor constancy
 (F3), this anchored prediction needs re-evaluation.

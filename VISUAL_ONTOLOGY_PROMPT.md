@@ -140,12 +140,12 @@ The resolution boundary is set by q₂ × q₃ = 2 × 3 = **6**.
 
 ```
 Total budget = |F₆| + q₂q₃ = 13 + 6 = 19
-Locked fraction = 13/19 = 0.6842 = Ω_Λ
+Locked fraction = 13/19 = 0.6842 = Ω_Λ (reference, not a prediction)
 ```
 
 ---
 
-## 8. Key Constants (all derived, none free)
+## 8. Key Constants
 
 | Symbol | Value | Source | What it is |
 |--------|-------|--------|------------|
@@ -154,30 +154,29 @@ Locked fraction = 13/19 = 0.6842 = Ω_Λ
 | q₂q₃ | 6 | Product | Resolution scale |
 | \|F₆\| | 13 | Euler totient sum | Farey states at boundary |
 | 19 | 13 + 6 | Budget | Total partition |
-| 54 | 2 × 27 = q₂ × q₃^d | Exponent | Hierarchy exponent |
+| 54 | 2 × 27 = q₂ × q₃³ | Exponent | Hierarchy exponent (the reading 3 = d is open) |
 | 108 | 2 × 54 | Double exponent | Λ exponent |
 | φ | (1+√5)/2 ≈ 1.618 | Fixed point of x=1+1/x | Golden ratio |
 | 1/φ | ≈ 0.618 | φ − 1 | Most irrational number |
 
 ---
 
-## 9. The Scorecard (zero free parameters)
+## 9. The Scorecard (statuses from MANIFEST.yml; "zero free parameters" is retired repo-wide — w₊ is fitted, see MANIFEST free_parameters_note)
 
-| Observable | Computed | Observed | Residual |
-|-----------|----------|----------|----------|
-| Dark energy Ω_Λ | 13/19 = 0.6842 | 0.6847 ± 0.0073 | 0.07σ |
-| Spectral tilt n_s | 0.963–0.966 | 0.9649 ± 0.0042 | < 0.2% |
-| Born rule exponent | 2 | 2 | exact |
-| Spatial dimensions | 3 | 3 | exact |
-| Lorentz group | Spin(3,1) | SO⁺(3,1) | exact |
-| MOND scale a₀ | 1.25 × 10⁻¹⁰ m/s² | 1.2 × 10⁻¹⁰ | 4% |
-| Planck/Hubble ratio | 6 × 13⁵⁴ | 8.492 × 10⁶⁰ | 0.48% |
-| Λ l_P² | 13⁻¹⁰⁸/12 | ~10⁻¹²¹·⁵ | 0.1% in exponent |
-| Higgs v/2 | 123.1 GeV | 123.1 GeV | 1.6% |
-| sin²θ_W | 8/35 | 0.2312 | 1.1% |
-| m_τ/m_e | 26^(5/2) = 3447 | 3477 | 0.9% |
-| Generations | 3 | 3 | exact |
-| Gauge bosons | 12 | 12 | exact |
+| Observable | Computed | Observed | Residual | Status |
+|-----------|----------|----------|----------|--------|
+| Dark energy Ω_Λ | 13/19 = 0.6842 | 0.6847 ± 0.0073 | 0.07σ | reference, not a prediction (same partition: Ω_b 6.7% off) |
+| Spectral tilt n_s | 0.963–0.966 | 0.9649 ± 0.0042 | < 0.2% | Class 5 |
+| Born rule exponent | 2 | 2 | exact | Class 5 |
+| Spatial dimensions | 3 (conjectured) | 3 | — | open (completion step undefined) |
+| Lorentz group | Spin(3,1) (conjectured) | SO⁺(3,1) | — | open (inherits the d = 3 break) |
+| MOND scale a₀ | 1.25 × 10⁻¹⁰ m/s² | 1.2 × 10⁻¹⁰ | 4% | Class 5 |
+| Planck/Hubble ratio | 6 × 13⁵⁴ | 8.492 × 10⁶⁰ | 0.48% | Class 5 |
+| Λ l_P² | 13⁻¹⁰⁸/12 | ~10⁻¹²¹·⁵ | 0.1% in exponent | Class 5 |
+| m_H/v | 1/2 | 0.5085 | 1.7% | bare K=1 identity, not an M_Z prediction |
+| sin²θ_W | 8/35 | 0.2312 | 1.1% | bare K=1 identity, not an M_Z prediction |
+| Gauge bosons | 12 | 12 | exact | conditional on the conjectured XOR parity translation |
+| m_τ (forward) | 1776.78875 ± 3.9×10⁻⁵ MeV | 1776.86 ± 0.12 MeV | 0.594σ | prediction — decided by σ(m_τ) < 0.03 MeV |
 
 ---
 
@@ -191,7 +190,7 @@ B: Polynomial → Quantum Mechanics     (11 propositions, 5 shared with A)
    Four primitives → circle map → K<1 → superposition → Schrödinger
 
 C: The Bridge                          (7 propositions)
-   Connects A and B: Λ → a₀, one frequency, zero free parameters
+   Connects A and B: Λ → a₀, one frequency (the "zero free parameters" phrase is retired; see MANIFEST free_parameters_note)
 ```
 
 ---
@@ -266,7 +265,7 @@ File: `animate_mediants.py` — five scenes:
 |------|------|
 | harmonics | Derivation chain — the equation and its consequences |
 | rfe | Numerical engine — field equation solver, all observables |
-| proslambenomenos | Λ → a₀: one frequency, zero free parameters |
+| proslambenomenos | Λ → a₀: one frequency (free-parameter accounting: MANIFEST free_parameters_note) |
 | submediant-site | Derivation site: polynomial → evidence |
 | intersections | Stick-slip dynamics and dark matter |
 

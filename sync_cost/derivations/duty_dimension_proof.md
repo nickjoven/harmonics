@@ -1,15 +1,36 @@
-# Proof: The Duty Cycle Exponent Equals the Group Dimension
+<!-- edition 2 (2026-08-11) · integrates the 2026-08-04 correction (f161d6c); prior text: git show f161d6c^ · ERRATA.md E7 -->
+<!-- provides: duty-cube-definition status=definition -->
+# The Duty-Cycle Exponent and the Group Dimension: Definition, Not Map Law
 
-## Theorem (n=2, proved)
+## Status
 
-For the standard circle map with SL(2,Z) Farey structure, the duty
-cycle of the mode-locked tongue at p/q scales as
+`duty(q) = 1/q³` is a **definition** — arithmetic on the combinatorial
+weight (1/q²)/q — not a theorem about the circle map. The repo's own
+measurements (`tongue_width_universality.py`, commit 181c29f;
+`farey_tongue_width_null.py`) rule out the map-law reading:
+
+- Measured w(p/q, K=1)·q² is not constant — it falls monotonically
+  (0.2959 → 0.1970 over q = 2..7), with local exponent drifting
+  2.18 → 2.88.
+- The universal critical exponent from the golden-mean sequence is
+  β = ln(δ_FKS)/ln(φ) = 2.164 (Shenker's δ_FKS = 2.8336), not 2.
+- A uniform c/q² width law is impossible a priori: Σφ(q)/q² diverges
+  while the locked intervals at K = 1 have total measure 1.
+
+Downstream uses (`duty_cycle_dictionary.md` §1–3,
+`beta_from_tongues.md` §2) must cite duty(q) = 1/q³ as a definition.
+The SL(n,R) conjecture below carries the same limitation at n = 2.
+
+## The identity (n = 2, on the defined weight)
+
+On the defined weight, the duty cycle assigned to the tongue at p/q is
 
     duty(q) = 1/q^3 = 1/q^(dim SL(2,R))
 
-This is not a numerical coincidence. The exponent 3 = dim SL(2,R)
-arises structurally from two independent scaling laws whose exponents
-sum to the group dimension.
+The exponent decomposition below (width exponent + period exponent =
+group dimension) is exact arithmetic on that definition; the
+group-dimension reading is a structural pattern of the definition,
+not a measured property of the map.
 
 ## Conjecture (general n)
 
@@ -34,12 +55,16 @@ Check: (n^2 - n) + (n - 1) = n^2 - 1. The identity holds for all n.
 
 The proof has three steps, each invoking a classical result.
 
-### Step 1a. Tongue width scales as 1/q^2
+### Step 1a. The 1/q^2 weight — Farey measure, not measured width
 
-**Claim.** At critical coupling (K = 1), the width of the Arnold
-tongue at rotation number p/q scales as w(p/q) ~ 1/q^2.
+**Claim (definitional).** The SL(2,Z)-invariant Farey/Ford-circle
+structure assigns weight 1/q^2 to the cusp at p/q. This weight is the
+width factor used in the duty-cycle *definition*. The identification
+of this weight with the measured Arnold-tongue width at K = 1 fails:
+measured w(p/q, K=1)·q² drifts (see Status), so the remainder of this
+step describes the measure's structure, not the map's widths.
 
-**Proof.** The Farey mediant structure of the circle map is governed
+**The measure.** The Farey mediant structure of the circle map is governed
 by the action of SL(2,Z) on the projective line P^1(R) = R cup {infty},
 which is identified with the boundary of the hyperbolic plane H^2.
 
@@ -63,12 +88,13 @@ The geometric origin: in the upper half-plane model of H^2 with the
 Poincare metric ds^2 = (dx^2 + dy^2)/y^2, the horoball neighborhood
 of the cusp p/q (under the SL(2,Z) action) has Euclidean diameter
 1/q^2. Specifically, the Ford circle tangent to the real axis at p/q
-has radius 1/(2q^2). The tongue width at K = 1 is controlled by this
-Ford circle radius because mode-locking occurs precisely when the
-orbit enters the horoball neighborhood of the corresponding cusp.
+has radius 1/(2q^2).
 
-This identification — tongue width = Ford circle diameter — is
-established in the theory of continued fractions and circle maps.
+The identification "tongue width at K = 1 = Ford circle diameter" is
+heuristic and is contradicted quantitatively by this repo's
+measurements (see Status): the measured width exponent drifts and the
+critical exponent is β = 2.164. The Ford-circle weight enters the
+duty-cycle construction as a definition.
 The key references are:
 
 - Hardy & Wright, *An Introduction to the Theory of Numbers*, Ch. III
@@ -268,10 +294,10 @@ decomposition of the group manifold into spatial (cusp) and temporal
 
 | Statement | n = 2 | n >= 3 |
 |-----------|-------|--------|
-| Tongue width ~ 1/q^{n^2-n} | **Proved** (Ford circles, Gauss-Kuzmin) | **Conjectured** (requires Siegel domain volumes) |
+| Weight ~ 1/q^{n^2-n} | **Definitional** (Ford circles, Gauss-Kuzmin measure; as a measured width law it is refuted — see Status) | **Conjectured** (requires Siegel domain volumes) |
 | Orbit period ~ q^{n-1} | **Proved** (definition of period-q orbit) | **Conjectured** (requires higher-rank synchronization theory) |
-| duty(q) = 1/q^{dim SL(n,R)} | **Proved** (combining the above) | **Conjectured** (combining the above) |
-| Exponent = dimension (structural) | **Proved** (d-dimensional density argument) | **Proved** (same argument, independent of n) |
+| duty(q) = 1/q^{dim SL(n,R)} | **Definitional** (combining the above) | **Conjectured** (combining the above) |
+| Exponent = dimension (structural) | Holds for the defined density (d-dimensional density argument) | Same argument, independent of n |
 
 The structural explanation (Part 3) holds for all n: the duty cycle
 is a d-dimensional density, so its exponent must be d. What remains

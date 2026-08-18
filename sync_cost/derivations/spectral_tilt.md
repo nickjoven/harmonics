@@ -1,12 +1,6 @@
 # Spectral Tilt from Synchronization Cost Gradient
 
-> **Superseded by [spectral_tilt_reframed.md](spectral_tilt_reframed.md).**
-> The cost function approach below produces the correct tilt but always
-> gives wrong-sign running (positive instead of negative). A systematic
-> scan (`cost_function_scan.py`) proved this is a theorem, not a fitting
-> problem. The reframed derivation replaces the cost function with the
-> devil's staircase of the circle map, which resolves the running sign
-> and leads to the φ² self-similarity result.
+Historical artifact: the cost-function approach below produces the correct tilt magnitude but wrong-sign running — a theorem, not a fitting problem (`cost_function_scan.py`). The current derivation is `spectral_tilt_reframed.md` (see the successions ledger).
 
 > The universe is not scale-invariant. It almost is — and the almost
 > is the whole story.

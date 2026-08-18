@@ -184,11 +184,11 @@ mechanism produces 13/19 = 0.6842. At depth 6 of the Stern-Brocot
 tree (denominators up to 6), the substrate contains 13 locked-mode
 fractions; the smallest even and smallest odd denominators
 combine into 2 × 3 = 6 unlocked modes; the configuration
-13 / (13 + 6) = 13/19 is the only ratio admitted. The result is
-not selected from a range of possibilities; it is the unique value
-admitted by the framework's constraints, with no fitted parameters.
-The discrepancy from observation is 0.07σ, well within Planck's
-experimental error.
+13 / (13 + 6) = 13/19 is the ratio this mode counting admits.
+(Framework-wide parameter accounting lives in MANIFEST.yml
+`free_parameters_note`; per-claim classification in
+`statistical_conventions.md`.) The discrepancy from observation
+is 0.07σ, well within Planck's experimental error.
 
 One additional dimensionless parameter is forced by the same
 machinery:
@@ -290,8 +290,10 @@ derivation of the cosmic partition $13:5:1/19$ from $Z_6$ mode
 counting becomes the natural reading. The two-component refinement
 ([`omega_b_alpha_beta_closure.md`](sync_cost/derivations/omega_b_alpha_beta_closure.md))
 sharpens to $\Omega_b = 13/264$ at 0.12%, $\Omega_{DM} = 35/132$
-at 0.06%, $\Omega_\Lambda = 181/264$ at 0.13% — full Class 5
-closure with zero free parameters.
+at 0.06%, $\Omega_\Lambda = 181/264$ at 0.13%. (The phrase "zero
+free parameters" is retired repo-wide — see MANIFEST.yml
+`free_parameters_note` and `statistical_conventions.md`; the
+two-component closure's remaining freedom sits in $w_+$.)
 
 See: [Lemma 4](sync_cost/derivations/structural_lemmas.md) (cosmic
 partition) and [Lemma 1](sync_cost/derivations/structural_lemmas.md)
@@ -354,7 +356,10 @@ The mental shift: accept that the QCD vacuum angle vanishes
 exactly because of the substrate's Klein-antipodal $Z_2$
 invariance, not because of an undetected Peccei-Quinn axion.
 
-**If accepted**: the strong CP problem is resolved structurally.
+**If accepted** — and the argument is currently conditional: the K²
+configuration space is a conditional premise and the
+eta-invariant-vanishing step is an unverified import (MANIFEST
+`strong_cp`) — the strong CP problem would be resolved structurally.
 The 40-year search for axions becomes unnecessary at the
 substrate level (axions can still exist as effective theory
 constructs, but the strong CP "problem" doesn't motivate them).
@@ -414,10 +419,12 @@ entries (E3-E6) follow as natural extensions.
 | $N_{\text{efolds}}$ | 63.7 (band [62, 66]) | TBD | CMB-S4 / LiteBIRD, ~2030 | [`k_of_t_residual_disposition.md`](sync_cost/derivations/k_of_t_residual_disposition.md) |
 
 The two-component closure ([`L1_substrate_cusp_ground_state.md`](sync_cost/derivations/L1_substrate_cusp_ground_state.md))
-gives the cosmic partition with **zero free parameters at the
-closure level**: $w_+ = 13/14$ is the substrate's cusp-1/2
-ground state on $X_0(6)$, derived from the Hecke modular
-structure (Direction 4, 2026-04 closure round).
+identifies $w_+ = 13/14$ with the substrate's cusp-1/2
+ground state on $X_0(6)$ (Direction 4, 2026-04 closure round).
+(The phrase "zero free parameters" is retired repo-wide — see
+MANIFEST.yml `free_parameters_note`; $w_+$ was first obtained
+numerically from the $\Omega_b$ residual, per
+`omega_b_alpha_beta_closure.md`'s own "(fit)" annotation.)
 
 ## Reading paths
 
@@ -521,9 +528,11 @@ the formal statement.
 
 The framework completed a substantial closure round in 2026-04:
 
-- **Ω_b two-component closure** to full Class 5 — zero free
-  parameters at closure level; $w_+ = 13/14$ derived in
-  recognize mode via Hecke modular structure on $X_0(6)$
+- **Ω_b two-component closure** — claimed full Class 5 in 2026-04;
+  retracted to Class 2 (observation-fitted) on 2026-08-11, decision
+  D1: $w_+ = 13/14$ enters as a numerical fit and the family is
+  computed by no script (MANIFEST rows, ERRATA E15); the Hecke/X₀(6)
+  account
   ([`L1_substrate_cusp_ground_state.md`](sync_cost/derivations/L1_substrate_cusp_ground_state.md))
 - **D.3 sector decoupling** to Class 5 — anchor obstruction #5
   closed structurally

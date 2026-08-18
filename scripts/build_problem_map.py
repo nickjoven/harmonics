@@ -12,7 +12,8 @@ missing files / unknown claims are ERRORs and fail the build):
   2. every entry in resolution_docs resolves to a file under
      sync_cost/derivations/ (.md or .py) or the repo root.
   3. every manifest_claims key exists in MANIFEST.yml:scorecard;
-     every bare_k1_claims key exists in MANIFEST.yml:bare_k1_identities.
+     every bare_k1_claims key exists in MANIFEST.yml:bare_k1_identities;
+     every open_problem_claims key exists in MANIFEST.yml:open_problems.
   4. every engines entry resolves to a script on disk.
   5. posture=forced rows: each cited scorecard claim's closure_status
      mentions Class 5 (else WARN — tier/claim mismatch).
@@ -105,6 +106,7 @@ def main():
     modes = set(spec.get("mode_vocab", []))
     scorecard = manifest.get("scorecard", {})
     bare_k1 = manifest.get("bare_k1_identities", {})
+    open_problems = manifest.get("open_problems", {})
 
     problems = spec["problems"]
     seen_ids = set()
@@ -134,7 +136,8 @@ def main():
                 errors.append(f"{pid}: manifest claim {c!r} not in MANIFEST.yml:scorecard")
             elif p.get("posture") == "forced":
                 status = str(scorecard[c].get("closure_status", ""))
-                if "Class 5" not in status:
+                # Anchored: "retracted from Class 5" must not pass.
+                if not re.match(r"Class 5\b", status.strip()):
                     warns.append(
                         f"{pid}: forced-tier row cites scorecard claim {c!r} "
                         f"whose closure_status is not Class 5: {status[:80]!r}"
@@ -142,6 +145,9 @@ def main():
         for c in p.get("bare_k1_claims", []):
             if c not in bare_k1:
                 errors.append(f"{pid}: bare-K=1 claim {c!r} not in MANIFEST.yml:bare_k1_identities")
+        for c in p.get("open_problem_claims", []):
+            if c not in open_problems:
+                errors.append(f"{pid}: open-problem claim {c!r} not in MANIFEST.yml:open_problems")
         for s in p.get("engines", []):
             if resolve_doc(s.removesuffix(".py")) is None and resolve_doc(s) is None:
                 errors.append(f"{pid}: engine/script {s!r} not found on disk")
@@ -194,6 +200,10 @@ def main():
             claims = p.get("manifest_claims", []) + p.get("bare_k1_claims", [])
             if claims:
                 lines += ["**MANIFEST claims:** " + ", ".join(f"`{c}`" for c in claims), ""]
+            op_claims = p.get("open_problem_claims", [])
+            if op_claims:
+                lines += ["**MANIFEST open-problem rows:** "
+                          + ", ".join(f"`{c}`" for c in op_claims), ""]
             lines += ["**Docs:** " + doc_links(p), ""]
             if p.get("engines"):
                 lines += ["**Scripts:** " + ", ".join(f"`{s}`" for s in p["engines"]), ""]

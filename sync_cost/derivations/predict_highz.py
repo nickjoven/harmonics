@@ -54,6 +54,9 @@ c_m_s = C_LIGHT      # m/s
 
 H0_km_s_Mpc = H_0_KM_S_MPC
 H0_si = H_0_SI
+# Derived from the two H0 forms so the display conversion is exactly
+# the inverse of framework_constants' km/s/Mpc -> s^-1 conversion.
+Mpc_in_m = H0_km_s_Mpc * 1e3 / H0_si   # ~ 3.0857e22 m
 # Observed Planck 2018 (not framework's 6/19, 13/19).
 Omega_m, Omega_L = 0.315, 0.685
 

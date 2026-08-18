@@ -121,8 +121,9 @@ def bin_amplitude(signal, dt, omega_target):
         theta = omega_target * k * dt
         re += x * math.cos(theta)
         im -= x * math.sin(theta)
-    T = len(signal) * dt
-    return 2.0 * math.hypot(re, im) / T
+    # Normalize by sample count N, not duration N·dt: dividing by T
+    # returned A/dt (200.0 for a unit-amplitude tone at dt = 0.005).
+    return 2.0 * math.hypot(re, im) / len(signal)
 
 
 def line_search(signal, dt, omega_center, half_window_frac=0.30, n_probes=61):

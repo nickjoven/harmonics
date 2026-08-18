@@ -1,5 +1,5 @@
 {
- "generated": "e547477",
+ "generated": "6bb2a62",
  "generator": "scripts/build_claims_index.py",
  "ingest": {
   "annotator": null,
@@ -19,6 +19,11 @@
   }
  },
  "claim_count": 98,
+ "status_coverage": {
+  "classified": 11,
+  "unclassified": 87,
+  "note": "a claim without a status field is unclassified, not settled — the join covers only values the 2026-08 campaign explicitly classified"
+ },
  "claims": {
   "0256777fe98e154d9133004d3808a72bfa56a5972b4d0b70007d09e55e398af2": {
    "subject": "omega_b",
@@ -36,7 +41,9 @@
    "assertion_cids": 1,
    "corroboration": 1,
    "corroboration_docs": 1,
-   "corroboration_frontier": 1
+   "corroboration_frontier": 1,
+   "status": "Class 2 — inherits the fitted w_+ = 13/14; residual holds by construction of the fit",
+   "status_source": "MANIFEST.yml baryon_fraction (computed_fitted); ERRATA.md E15"
   },
   "05932b96fb77cfc49b128ccfe50ccd6a9598f5035af2ceb47915875e7eeab2da": {
    "subject": "omega_lambda",
@@ -53,7 +60,9 @@
    "assertion_cids": 1,
    "corroboration": 1,
    "corroboration_docs": 1,
-   "corroboration_frontier": 1
+   "corroboration_frontier": 1,
+   "status": "Class 2 — inherits the fitted w_+ = 13/14; residual holds by construction of the fit",
+   "status_source": "MANIFEST.yml dark_energy_fraction_two_component; ERRATA.md E15"
   },
   "0594c4ecc41f1ed842b4b79b3031877d02759d76c06795775be3470679aa63e8": {
    "subject": "r",
@@ -342,7 +351,9 @@
    "assertion_cids": 1,
    "corroboration": 1,
    "corroboration_docs": 1,
-   "corroboration_frontier": 1
+   "corroboration_frontier": 1,
+   "status": "bare-partition reference, not a prediction",
+   "status_source": "MANIFEST.yml dark_energy; ERRATA.md E15"
   },
   "1d30a2cda0e93c793421720faf055479f091d96c28b3fbf4761a028667359d34": {
    "subject": "A",
@@ -415,7 +426,9 @@
    "assertion_cids": 6,
    "corroboration": 6,
    "corroboration_docs": 6,
-   "corroboration_frontier": 6
+   "corroboration_frontier": 6,
+   "status": "bare-partition reference, not a prediction (0.7% from observation)",
+   "status_source": "MANIFEST.yml dark_matter_fraction (computed); ERRATA.md E15"
   },
   "24ac41577975719fe011ede1f6ace4e29fe7863497fa80b8fa8ed11481809c8b": {
    "subject": "d",
@@ -694,7 +707,9 @@
    "assertion_cids": 1,
    "corroboration": 1,
    "corroboration_docs": 1,
-   "corroboration_frontier": 1
+   "corroboration_frontier": 1,
+   "status": "bare-partition reference (complement of 13/19), not a prediction",
+   "status_source": "MANIFEST.yml dark_energy; ERRATA.md E15"
   },
   "42aefc1a0fb099bf439a27d96872f1a8128d05068d0e76b8696ef7bef50753cc": {
    "subject": "K",
@@ -887,7 +902,9 @@
    "assertion_cids": 1,
    "corroboration": 1,
    "corroboration_docs": 1,
-   "corroboration_frontier": 1
+   "corroboration_frontier": 1,
+   "status": "Class 2 — inherits the fitted w_+ = 13/14; residual holds by construction of the fit",
+   "status_source": "MANIFEST.yml dark_matter_fraction (computed_fitted); ERRATA.md E15"
   },
   "59a74b2a1cf3cceb70ddac8a9257851c9c988ddaf6388f01a7a1ebd7e5267013": {
    "subject": "INTERACT",
@@ -1018,7 +1035,9 @@
    "assertion_cids": 12,
    "corroboration": 12,
    "corroboration_docs": 12,
-   "corroboration_frontier": 12
+   "corroboration_frontier": 12,
+   "status": "bare-partition reference, not a prediction (6.7% from observation)",
+   "status_source": "MANIFEST.yml baryon_fraction (computed); ERRATA.md E15"
   },
   "6b50808bb2d4346fa70a831e9207e0ef2dd064cc18cfb8816196b9f47b760aa8": {
    "subject": "w_minus",
@@ -1284,7 +1303,9 @@
    "assertion_cids": 1,
    "corroboration": 1,
    "corroboration_docs": 1,
-   "corroboration_frontier": 1
+   "corroboration_frontier": 1,
+   "status": "bare K=1 reference identity, not an M_Z prediction; the {2,3} selection behind it is conditional on the conjectured XOR parity translation",
+   "status_source": "negative_results_ledger.md; ERRATA.md E1"
   },
   "8113df869e5b431cb15496248be286a457d7f9e5b0954c0ca40f7a38001f10d6": {
    "subject": "p",
@@ -1488,7 +1509,9 @@
    "assertion_cids": 17,
    "corroboration": 17,
    "corroboration_docs": 17,
-   "corroboration_frontier": 17
+   "corroboration_frontier": 17,
+   "status": "Class 2 (observation-fitted; retracted from Class 5) — numerical fit to Planck values, computed by no script",
+   "status_source": "MANIFEST.yml scorecard; ERRATA.md E15 (D1 disposition)"
   },
   "92b64db1f2b4bc9e15ce485b5cd331544aeda611f6dab0764c7afa1470be41e9": {
    "subject": "R",
@@ -2284,7 +2307,9 @@
    "assertion_cids": 5,
    "corroboration": 5,
    "corroboration_docs": 5,
-   "corroboration_frontier": 5
+   "corroboration_frontier": 5,
+   "status": "Class 5 — substrate-forced cadence via the K(t) closure (supersedes the n_s-anchored 61.3 figure)",
+   "status_source": "MANIFEST.yml efolds"
   },
   "f3d115e470593b56cb747b90bf6bdf21c196e5544ffcbb0097cca3b260347fc6": {
    "subject": "d",
@@ -2449,7 +2474,9 @@
    "assertion_cids": 25,
    "corroboration": 25,
    "corroboration_docs": 25,
-   "corroboration_frontier": 25
+   "corroboration_frontier": 25,
+   "status": "bare-partition reference, not a prediction (the same partition puts Omega_b 6.7% from observation)",
+   "status_source": "MANIFEST.yml dark_energy; ERRATA.md E15 (D1/C16)"
   }
  },
  "edges": [

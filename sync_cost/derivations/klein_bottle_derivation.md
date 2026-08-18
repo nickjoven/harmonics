@@ -1,3 +1,5 @@
+<!-- provides: k2-surface-selection status=conditional -->
+<!-- premises: klein-spectrum-theorem@xor_derivation, xor-parity-translation@xor_derivation -->
 # The Klein Bottle from Self-Consistency
 
 ## Claim
@@ -577,9 +579,11 @@ The argument has three layers of increasing strength:
 - **Dynamical** (secondary): the arrow of time from rank-1 Fréchet
   derivative (D46) independently requires non-orientability.
 
-- **Self-consistency** (tertiary): the XOR filter on K² produces the
-  correct mode count (12.66 effective modes, Ω_Λ = 0.6847); no XOR
-  filter on T² gives a completely different — and excluded — spectrum.
+K² uniqueness rests on the two layers above. (A formerly cited third
+leg — an Ω_Λ self-consistency check via the XOR filter — is retired:
+the 12.66 effective-mode count is computed in `boundary_weight.py`
+with no parity predicate and an observation-inverted w*, so it
+neither uses nor corroborates the filter.)
 
 The two-S¹ structure is closed: fractions are irreducibly binary
 (numerator, denominator), the mediant operates on 2-vectors in

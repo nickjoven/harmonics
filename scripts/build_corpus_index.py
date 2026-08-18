@@ -153,6 +153,11 @@ def load_quantum_successions(root: Path, known: set) -> dict:
             continue
         if rec.get("kind") != "SUCCEEDS":
             continue
+        if rec.get("modality") != "committed":
+            # `proposed` records are visible in the ledger but do not
+            # move the frontier (modality was write-only before this:
+            # a proposed record projected as a committed supersession).
+            continue
         old = rec.get("old")
         new = rec.get("new")
         new = new if isinstance(new, list) else [new]
