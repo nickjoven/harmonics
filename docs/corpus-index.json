@@ -629,6 +629,10 @@
    "has_lineage": false,
    "status_bold": "leading-order correct",
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "discrete_reduction_computed"
+   ],
    "title": "Dark-twin correction: the S_v ≈ 13 retraction was wrong"
   },
   "denomination_boundary": {
@@ -854,7 +858,7 @@
    "has_lineage": false,
    "status_bold": null,
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "discrete_reduction_computed"
    ],
@@ -969,6 +973,10 @@
    "has_lineage": false,
    "status_bold": "partially vindicates Finding 3",
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "discrete_reduction_computed"
+   ],
    "title": "The explicit 4×4 reduction matrix: real Phase 2"
   },
   "exponent": {
@@ -1026,7 +1034,7 @@
    "has_lineage": false,
    "status_bold": "Class 3 articulation; superseded by [[gauge_sector_lovelock]] (D42, Yang-Mills derived) and [[discrete_gauge_resolution]] (five sub-computations resolved), both landed in April 2026 — before this doc ",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "gauge_sector_lovelock",
     "discrete_gauge_resolution"
@@ -1185,6 +1193,11 @@
    "has_lineage": false,
    "status_bold": null,
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "gap2_sub_e_status_reconciled",
+    "k_critical_phase_b"
+   ],
    "title": "Analytic Proof: Levi-Civita from Kuramoto at K=1"
   },
   "gap1_theorem": {
@@ -1194,6 +1207,11 @@
    "has_lineage": false,
    "status_bold": "Proved, conditionally.",
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "gap2_sub_e_status_reconciled",
+    "k_critical_phase_b"
+   ],
    "title": "Gap 1 Theorem: Christoffel Connection from Kuramoto in the Continuum Limit"
   },
   "gap2_analytic_proof": {
@@ -1221,6 +1239,11 @@
    "has_lineage": false,
    "status_bold": "Verified.",
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "gap2_sub_e_status_reconciled",
+    "k_critical_phase_b"
+   ],
    "title": "Gap 2, Step 4: The Stern-Brocot Tree IS the Spatial Lattice"
   },
   "gap2_sub_e_status_reconciled": {
@@ -1248,6 +1271,11 @@
    "has_lineage": false,
    "status_bold": "Closed in the continuum limit",
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "gap2_sub_e_status_reconciled",
+    "k_critical_phase_b"
+   ],
    "title": "Gap 1: The Christoffel Connection from Kuramoto Ensemble Averages"
   },
   "gap_2_spatial_diffusion": {
@@ -1257,6 +1285,11 @@
    "has_lineage": false,
    "status_bold": "Break 1 addressed; Break 2 remains open.",
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "gap2_sub_e_status_reconciled",
+    "k_critical_phase_b"
+   ],
    "title": "Gap 2: Spatial Diffusion and the Bare Coupling D₀"
   },
   "gauge_dictionary": {
@@ -2405,6 +2438,10 @@
    "has_lineage": false,
    "status_bold": "regime-clarifying finding",
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "discrete_reduction_computed"
+   ],
    "title": "Non-perturbative Phase 3: K < 1 sectors and the lengthscale-regime question"
   },
   "numerology_count_phase_a": {
@@ -2602,6 +2639,10 @@
    "has_lineage": false,
    "status_bold": "Phase π",
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "discrete_reduction_computed"
+   ],
    "title": "Orthogonal-kink interaction: decomposition into AB-phase + jog energy"
   },
   "padic_lfunction_mihailescu_pair_f64_audit": {
@@ -3119,6 +3160,11 @@
    "has_lineage": false,
    "status_bold": null,
    "status_line": null,
+   "superseded_basis": "quantum",
+   "superseded_by": [
+    "gap2_sub_e_status_reconciled",
+    "k_critical_phase_b"
+   ],
    "title": "Session audit: overclaims, revisions, and stale content"
   },
   "sigma_squared_disambiguation": {
@@ -3227,7 +3273,7 @@
    "has_lineage": false,
    "status_bold": "Open",
    "status_line": null,
-   "superseded_basis": "declared",
+   "superseded_basis": "quantum",
    "superseded_by": [
     "spectral_tilt_reframed"
    ],
@@ -3634,7 +3680,7 @@
    "title": "Derivation: The Klein Bottle Mode-Pairing Spectrum, and the Conjectured XOR Parity Filter"
   }
  },
- "generated": "5d866c9",
+ "generated": "e4214fc",
  "generator": "scripts/build_corpus_index.py",
  "rule8_flags": []
 }
