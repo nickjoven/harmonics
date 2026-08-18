@@ -559,3 +559,5 @@
 2026-08-18T19:15:23Z | put | sync_cost/successions.jsonl -> e587f0aeffdaeccf29a115ba0b10acfaf4dd93a14fadeba82241db5752ff888d
 2026-08-18T19:16:13Z | put | sync_cost/derivations/mediant_derivation.md -> 9a6dc526c93944de6262d4075362ea6077c2b3ab7707de9dfcfc9847de51ef1a
 2026-08-18T19:16:13Z | put | sync_cost/derivations/negative_results_ledger.md -> 34b0b6ed72dfc5c0bdb239193b6e82f6465c14939ea21f17a5ca67a3ecb4c5d5
+2026-08-18T22:50:47Z | put | sync_cost/ingest/report.json -> 120d52d86519677a11f81b3b4d089aaae33a840ca6b3fc079d8ba2128e623515
+2026-08-18T22:50:47Z | dag:create | 3aba1fdbdf26b44155c752c523f48db0c94b9f7c2ba0b552e74a6f6458dc90aa

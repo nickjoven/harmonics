@@ -1,27 +1,27 @@
 {
- "generated": "6bb2a62",
+ "generated": "c24b5ae",
  "generator": "scripts/build_claims_index.py",
  "ingest": {
   "annotator": null,
   "telemetry": {
-   "docs": 326,
-   "utterances_sealed": 326,
-   "unstructured": 191,
+   "docs": 328,
+   "utterances_sealed": 328,
+   "unstructured": 193,
    "edges_promoted": 47,
-   "references_untyped": 3122,
-   "propositions": 287,
+   "references_untyped": 3183,
+   "propositions": 288,
    "terms_bound": 110,
    "corroborated": 36,
-   "unattributed_values": 52899,
+   "unattributed_values": 54033,
    "needs_review_depth": 3,
    "reassertion_blocks": 0,
-   "heads_superseded": 14
+   "heads_superseded": 54
   }
  },
- "claim_count": 98,
+ "claim_count": 99,
  "status_coverage": {
   "classified": 11,
-  "unclassified": 87,
+  "unclassified": 88,
   "note": "a claim without a status field is unclassified, not settled — the join covers only values the 2026-08 campaign explicitly classified"
  },
  "claims": {
@@ -591,6 +591,10 @@
      "frontier": true
     },
     {
+     "doc": "gamma06_cosmological_modular_surface_audit",
+     "frontier": true
+    },
+    {
      "doc": "halt_shock_coherence_audit",
      "frontier": true
     },
@@ -619,10 +623,10 @@
      "frontier": true
     }
    ],
-   "assertion_cids": 11,
-   "corroboration": 11,
-   "corroboration_docs": 11,
-   "corroboration_frontier": 11
+   "assertion_cids": 12,
+   "corroboration": 12,
+   "corroboration_docs": 12,
+   "corroboration_frontier": 12
   },
   "352addc67843929673b5dc0e84d067519e891871770c58335a2abde4e6d80501": {
    "subject": "b_1",
@@ -723,22 +727,22 @@
      "frontier": true
     },
     {
-     "doc": "nonperturbative_phase3",
-     "frontier": true
-    },
-    {
      "doc": "seam_profile",
      "frontier": true
     },
     {
      "doc": "koide_form_substrate_iteration_6",
      "frontier": false
+    },
+    {
+     "doc": "nonperturbative_phase3",
+     "frontier": false
     }
    ],
    "assertion_cids": 4,
    "corroboration": 4,
    "corroboration_docs": 4,
-   "corroboration_frontier": 3
+   "corroboration_frontier": 2
   },
   "43aa00af1ce2b8c00bea832ebe652c021f1cf0b2aef04a8075bd101d501d76ef": {
    "subject": "omega_dm",
@@ -800,6 +804,23 @@
    "docs": [
     {
      "doc": "L1_substrate_cusp_ground_state",
+     "frontier": true
+    }
+   ],
+   "assertion_cids": 1,
+   "corroboration": 1,
+   "corroboration_docs": 1,
+   "corroboration_frontier": 1
+  },
+  "4d0505cb03a98a14d5fc1e459cc5c65c36d4e2c3a8b75694e264fe9a6e460063": {
+   "subject": "Q_u",
+   "witness": "2/3",
+   "routes": [
+    "ratio/v1"
+   ],
+   "docs": [
+    {
+     "doc": "gell_mann_nishijima",
      "frontier": true
     }
    ],
@@ -1104,22 +1125,22 @@
      "frontier": true
     },
     {
-     "doc": "nonperturbative_phase3",
-     "frontier": true
-    },
-    {
      "doc": "seam_profile",
      "frontier": true
     },
     {
      "doc": "unitless_audit",
      "frontier": true
+    },
+    {
+     "doc": "nonperturbative_phase3",
+     "frontier": false
     }
    ],
    "assertion_cids": 4,
    "corroboration": 4,
    "corroboration_docs": 4,
-   "corroboration_frontier": 4
+   "corroboration_frontier": 3
   },
   "6d1ee517198b7abcdabf98eba7edcc8ddc265be822d8991f095eb3e408f31c36": {
    "subject": "INTERACT",
@@ -1204,10 +1225,6 @@
      "frontier": true
     },
     {
-     "doc": "gamma06_cosmological_modular_surface_audit",
-     "frontier": true
-    },
-    {
      "doc": "high_z_mond",
      "frontier": true
     },
@@ -1224,10 +1241,10 @@
      "frontier": true
     }
    ],
-   "assertion_cids": 8,
-   "corroboration": 8,
-   "corroboration_docs": 8,
-   "corroboration_frontier": 8
+   "assertion_cids": 7,
+   "corroboration": 7,
+   "corroboration_docs": 7,
+   "corroboration_frontier": 7
   },
   "730fdd5538a00872ff23437c0a54169114874ada609277ac8023cb7ab895eb2d": {
    "subject": "rate_B",
@@ -2484,835 +2501,835 @@
    "from": "baryon_fraction",
    "to": "discrete_gauge_resolution",
    "kind": "grounds",
-   "annotation_cid": "612f53008916ea70da7a8b9a6165e769deaec29e0ae0ac193883d4fbf4420ec9"
+   "annotation_cid": "3bb59b66a0961bedf15e3e20a419d33ec06228abe87c548568bee52b67ede470"
   },
   {
    "from": "baryon_fraction",
    "to": "gauge_sector_lovelock",
    "kind": "grounds",
-   "annotation_cid": "97cfcd9d73b01a98affe65de91805c01390a7fa6fc71578110d6b2968d9dcf2d"
+   "annotation_cid": "6b49bb90c7646d616ed767834a2254bcfb95cbfcfab272bf9241610105cdbbc5"
   },
   {
    "from": "baryon_fraction",
    "to": "farey_partition",
    "kind": "derives",
-   "annotation_cid": "610f605b49ba6fb7d5099131e89ba57f9aff5e2405e40f60db8f1ac91efaf56d"
+   "annotation_cid": "93aa2bcdaf2f04b2010bdae2e4de16dcbc5900b21edee14f92631f6b414eed0a"
   },
   {
    "from": "baryon_fraction",
    "to": "omega_partition_combinatorial",
    "kind": "derives",
-   "annotation_cid": "3e155757b2060fd421093e4d3a91b3f4b08fba429e0eb449b4ca86195583fb6f"
+   "annotation_cid": "94b598a118ee51c482e46d8c7c80211f1612051257923b435e543693378cbce8"
   },
   {
    "from": "baryon_fraction",
    "to": "gell_mann_nishijima",
    "kind": "derives",
-   "annotation_cid": "708db41db0e8022ec0cf4ba03d2b4edddc4ee829a75f05287589a21b9e67694a"
+   "annotation_cid": "c80c285bc8254be48d2729f891b9d8b42eabaeca844224cde2391ef98209cb6b"
   },
   {
    "from": "baryon_fraction",
    "to": "a0_threshold",
    "kind": "proposes",
-   "annotation_cid": "2191659729a16928cc86dc6315781b48411f14ce9d190905225f522bbdc982bb"
+   "annotation_cid": "4f9840b4400012966c528fdc38f20903f7f4d895c14e4b8829edcfeff48d471f"
   },
   {
    "from": "baryon_fraction",
    "to": "a1_from_saddle_node",
    "kind": "proposes",
-   "annotation_cid": "54dc8382229248e1923cbb4e42af09e074a28a31a55e5a991f383e7002124089"
+   "annotation_cid": "d755140623a5786d89b6a0239eb36c0b0bcfa15717ab36bfeee53a76fff9dc04"
   },
   {
    "from": "baryon_fraction",
    "to": "duty_cycle_dictionary",
    "kind": "proposes",
-   "annotation_cid": "3f579afb0c0e8bc02a5b16d6180605605d460d900f7ac7de90b74de174bc7f87"
+   "annotation_cid": "0d85dfe704a1b4ceeff71ada6a60aac9083372759aa92f1ce4bff9bd5d74fece"
   },
   {
    "from": "baryon_fraction",
    "to": "boundary_weight",
    "kind": "proposes",
-   "annotation_cid": "43fe96eef47881b4627400d192bb7bafaab924850e4340b11265342044b2b6b1"
+   "annotation_cid": "13ec0e9ec7edbc99b8c8d34cf23fe7c965f8338116370523080dfa937e01f2d3"
   },
   {
    "from": "coupling_scales",
    "to": "discrete_gauge_resolution",
    "kind": "grounds",
-   "annotation_cid": "f2bf478f1af7fd7efb57a33ab5e5840f334932ce153482ce635ecef22e8b0c3e"
+   "annotation_cid": "6039f4e625de39bd4ceac0361ccda6c4b6bde8be7540823c84fb5485c191c55f"
   },
   {
    "from": "coupling_scales",
    "to": "gauge_sector_lovelock",
    "kind": "grounds",
-   "annotation_cid": "a18edf0a1407a07d1551cfb6d2c90048c69840dfd289b5bf1aa30eaaca408dcb"
+   "annotation_cid": "389cf267b74ff461f68522551fb1c83e4364f5fdc9014730e5a83a76b17b1d58"
   },
   {
    "from": "coupling_scales",
    "to": "duty_cycle_dictionary",
    "kind": "derives",
-   "annotation_cid": "c1d55a805ef21c0ffc1cfe379d89b7dedc671285c3a0e1798f7abc52a0bd0970"
+   "annotation_cid": "e53855debb3a0a4ad2d71c7c9390607ee870f124e3bb91cec8d1eeb301e793f1"
   },
   {
    "from": "coupling_scales",
    "to": "hierarchy_gaussian_lattice",
    "kind": "derives",
-   "annotation_cid": "5d78f76cf00b16383a4f43aa5eca8199a6058bdc1caf777088ce69b6b9306dc0"
+   "annotation_cid": "e6803aaf5b77ed564953849b5db039c4de6a61279439662568ce6421508e54e8"
   },
   {
    "from": "coupling_scales",
    "to": "planck_scale",
    "kind": "derives",
-   "annotation_cid": "2cdb18a1c17c5cb38e6d98408a4d6bf9f13ca2ba9693c8af260a64770916aa10"
+   "annotation_cid": "b1b4cb166785dc18d52e260be9136dfd6817626d7fd8dee8ea38cb73f3380733"
   },
   {
    "from": "down_type_double_cover_closed",
    "to": "down_type_double_cover_phase_a",
    "kind": "grounds",
-   "annotation_cid": "c7adadbb86998b07223d4e8d224fc2ac1038047bcea02403e2dcc3badf381d98"
+   "annotation_cid": "fee45560b8bafc6a5ea7902f6acaf74b77ff11fe68380d61eb14656ce4064175"
   },
   {
    "from": "down_type_double_cover_closed",
    "to": "down_type_double_cover_phase_b",
    "kind": "grounds",
-   "annotation_cid": "c0414d9b00797df7718f66622b5d06d2274b48623438d5ebeb2de54e011a1967"
+   "annotation_cid": "2d3069e21161fe83f5d39b348c9278e7c171a7318706e43b09595767de6f3437"
   },
   {
    "from": "down_type_double_cover_closed",
    "to": "down_type_double_cover_phase_b_followup",
    "kind": "grounds",
-   "annotation_cid": "01a8fe657a88bb61de571a053ef06c1fb03ac4a4237cd15a28b9139832b9df05"
+   "annotation_cid": "279378a6481e836f2f1c597fba84ea32d14f23e72d421a51e643d35e59ff5eb2"
   },
   {
    "from": "down_type_double_cover_closed",
    "to": "down_type_double_cover_phase_c",
    "kind": "grounds",
-   "annotation_cid": "814ee35ab3a221c2e8add510866be439d01c32494b08ee00c3c9edbcd159601b"
+   "annotation_cid": "86443e69dc7b80a0afb082bcd466e141f526d606fca4f89a0dc44908f024895b"
   },
   {
    "from": "down_type_double_cover_closed",
    "to": "down_type_double_cover_phase_d",
    "kind": "grounds",
-   "annotation_cid": "0ca161029328681a43f86c9566d09a729f021f73abb89188a53416e831663840"
+   "annotation_cid": "2b6601f7d88144e79663ebe2a65ca221e3deb36fcdfb8e749a99e2e5b4bed25d"
   },
   {
    "from": "down_type_double_cover_closed",
    "to": "born_rule",
    "kind": "grounds",
-   "annotation_cid": "c1b2fa04754ad1d712fb739663ff7447ef91bc85e718293e9dd51afb1c8f6be7"
+   "annotation_cid": "da1559929fabfae5848513d5d58dd18d64d1535198b3c623cb9f504c6acb83f3"
   },
   {
    "from": "down_type_double_cover_closed",
    "to": "boundary_weight",
    "kind": "grounds",
-   "annotation_cid": "953b611a8efdb738251810c637b9b9d5956b2c6638e94c787ac399c0e6508c9d"
+   "annotation_cid": "1489ca0d467e49ad4433e8e5a22e894a7cf19e043b8bc1725d962639c0a84878"
   },
   {
    "from": "down_type_double_cover_closed",
    "to": "hierarchy_gaussian_lattice",
    "kind": "grounds",
-   "annotation_cid": "d19d8a55ce60695bfce02b37df9b75d328ecffa9af8d3f88f98af1c2ba6965ee"
+   "annotation_cid": "e1f0bb7e2788fa517e5959c77acd207fde51b2282cd4a64f60934c23ce2bc222"
   },
   {
    "from": "down_type_double_cover_closed",
    "to": "derivation_atlas",
    "kind": "derives",
-   "annotation_cid": "dfd5dc2a77e25c5f9df5ba1f420ca287b883c7cb5e3406baa50d923999564711"
+   "annotation_cid": "fa6df30e58d62468196b23b73f35a904a4161653e5be0626d6baa01db787945d"
   },
   {
    "from": "down_type_double_cover_closed",
    "to": "canonical_glossary",
    "kind": "derives",
-   "annotation_cid": "79dc99fba873f5b5b7468ab6d50b69950c7e3957c438f6e3d0a1462bd57057ec"
+   "annotation_cid": "b3015645cfac8062be6915a627d5a2baaf6238726cd7a7106e9a9c8bce885085"
   },
   {
    "from": "down_type_double_cover_closed",
    "to": "phenomenology_cross_reference",
    "kind": "derives",
-   "annotation_cid": "d2e4b4d11309bec49ae87aa0524738ff81ab92072bbe0c38c489c693613e22eb"
+   "annotation_cid": "c9ef3778e1fcadd923a62db4e77585f1dab02364043c3adbaa43fadfcdb1dafd"
   },
   {
    "from": "higgs_reframing",
    "to": "duty_cycle_dictionary",
    "kind": "derives",
-   "annotation_cid": "80629a1630bac4a182bba8cc8bcccfb156f6542ea1fd6f1d39d1a5ec975937bb"
+   "annotation_cid": "8177f6f6e7f4baea20aa44ecfb6e4e82bc9c84fd611504813f63605e35da3f5a"
   },
   {
    "from": "klein_bottle",
    "to": "mobius_container",
    "kind": "grounds",
-   "annotation_cid": "09afcff707a4b60ef40074cec3d0eee19cda5a64490e21880d6d4847fc505a90"
+   "annotation_cid": "6654dde2d4e9da63505ec86959608ab5e3a997e63f0e08b0e48082d6ea1162e2"
   },
   {
    "from": "klein_bottle",
    "to": "rational_field_equation",
    "kind": "derives",
-   "annotation_cid": "5daca8acf0a20ae6a400fe4e71301b948aeb400dc68f90b40b14b28c59375a37"
+   "annotation_cid": "e99210dc8f2febd1844fe3c1b4bacc4fbec0c808b1bdf257dcb2089d4a86cb83"
   },
   {
    "from": "klein_bottle",
    "to": "planck_scale",
    "kind": "derives",
-   "annotation_cid": "8d5a1d0da702cc72e4ba16f88eac7d5e5c19f9e3f882f59c6ff8986c30ddad77"
+   "annotation_cid": "45f7e504bca0bc37c97b103717de5cdf41e80e2bd50389eed646397296f20e62"
   },
   {
    "from": "klein_bottle",
    "to": "variable_denominator",
    "kind": "derives",
-   "annotation_cid": "1a00dcef80ca0c3b0a163af3e71658cd61325df82728e388d4d79efe221bd889"
+   "annotation_cid": "5634a1bd68139fc9191c814e2e12140063a63c03c60d174be9c556ebefe09bbc"
   },
   {
    "from": "klein_bottle",
    "to": "three_dimensions",
    "kind": "derives",
-   "annotation_cid": "6d143b0e4a4738292fddb3eba72518e1df602a8c804091b5649b5809fab4f604"
+   "annotation_cid": "678e495a9f07d4afa84dca4f06beb0e6ebda5f8e0dde8af4f37e3557f5973c4e"
   },
   {
    "from": "klein_bottle",
    "to": "continuum_limits",
    "kind": "proposes",
-   "annotation_cid": "2bc43afb4f797120aabc280347fe589d4f0e52b562eb092e6e1fc2903e78599e"
+   "annotation_cid": "548ff18a9e5f60c76167d1614b2ee6dcaab27e2594d5dd4f74b31d8abe4d0cfd"
   },
   {
    "from": "klein_bottle",
    "to": "einstein_from_kuramoto",
    "kind": "proposes",
-   "annotation_cid": "edc98ba2bfb85e03d659da8676b6c5f29a02c47460e00e6de6463fedb56a8b48"
+   "annotation_cid": "45238f0988b1b7939ccb83046975fc463f7e469c6c2b5e62b6044daf6c5dbbf5"
   },
   {
    "from": "klein_bottle",
    "to": "lie_group_characterization",
    "kind": "proposes",
-   "annotation_cid": "89187ef07430c605cd7f38dcc6654824c58cbdd28acb23a961451635fab2109b"
+   "annotation_cid": "71dc21199bb9ae62347ced2f26ef3f8afadad0840eb96d636d7c77b31e92b8a4"
   },
   {
    "from": "klein_bottle",
    "to": "fidelity_bound",
    "kind": "proposes",
-   "annotation_cid": "53d0043eee41195a8661fbfca771abd26ca977c4b2f2106e80c9b1cfbe9fff2d"
+   "annotation_cid": "fe8c2f4efc925bbcd2d0c1b6dea70c789655c2d9504043ee290a7e2afacb188e"
   },
   {
    "from": "mediant_derivation",
    "to": "minimum_alphabet",
    "kind": "grounds",
-   "annotation_cid": "43cea06a674bd2959111e6f0d85fdd2f8a4550c2223cf88fe48b8c6a680ffa0f"
+   "annotation_cid": "8f9e3708cf00076b6d9759a17b88b5e9d51d774ff76c40db5e18fc7a16d1b5b6"
   },
   {
    "from": "mediant_derivation",
    "to": "empty_fork_cap",
    "kind": "grounds",
-   "annotation_cid": "c450dbc1a226a5c8e1f2721d09985b65a1d65c8a3c51f1b13e03b4e25d67ee50"
+   "annotation_cid": "faf6f22ab0cfa877e5fe185f4bdd2ca5de584eb3e35637b15378a19872ea0707"
   },
   {
    "from": "mediant_derivation",
    "to": "klein_bottle",
    "kind": "derives",
-   "annotation_cid": "ac76397a5451555c9027a80b675355dcacc720378568379fa05d86eb6cf6b088"
+   "annotation_cid": "98dd54e3d351934d94264905cf3ca664ca00a6a86d046bde5423dcbc64989aff"
   },
   {
    "from": "omega_b_alpha_beta_closure",
    "to": "klein_antipodal_z2_rep_pattern",
    "kind": "grounds",
-   "annotation_cid": "4105409c9635deeb40154682f484ff342d958a0e2b82ed7f3e8a454e24442018"
+   "annotation_cid": "bc9992004bd222cfc91b522124debb58306bfc1e9a524f54a3d46092536842b9"
   },
   {
    "from": "omega_b_alpha_beta_closure",
    "to": "baryon_fraction",
    "kind": "derives",
-   "annotation_cid": "ea997c672c0f361f5f7240ad4b024d2d6b468d35e5234e8a4d3e73a6b130efe2"
+   "annotation_cid": "72b7a65c151185525b383ec45e7e940ffb57f120f57808ce04e562b8eaa28f72"
   },
   {
    "from": "omega_b_alpha_beta_closure",
    "to": "omega_b_residual_phase_a",
    "kind": "derives",
-   "annotation_cid": "3ea3452de114b1c9b39f69cbc9a2cd1d9a7556e8fd28bab2d8d28389a1c7ce23"
+   "annotation_cid": "8bda7d1d3d94fd11aa4906b37eef35c09d3cfec2b0ca5b10647333f9a39760b0"
   },
   {
    "from": "omega_b_alpha_beta_closure",
    "to": "omega_b_alpha_beta_phase_b",
    "kind": "derives",
-   "annotation_cid": "a701185dd060f941a88b4a3f7af6c8ce21f49ae685869a49779a19a7cec8e874"
+   "annotation_cid": "59f06771084bfa5a006659980c47b509a76d944c6cd6d95342558b122ec68e06"
   },
   {
    "from": "omega_b_alpha_beta_closure",
    "to": "omega_b_two_component_sketch",
    "kind": "derives",
-   "annotation_cid": "4e459fafccb8883947aec2a50739a1d5089ad7b6e6844f65990ee68e16a34d0b"
+   "annotation_cid": "dce960afc107e8004d79189184d5ec3cf5012ce60ffdda6bb872b20d16db072d"
   },
   {
    "from": "partition_logit_form",
    "to": "baryon_fraction",
    "kind": "derives",
-   "annotation_cid": "06f6a714f19b3aa66f6e883fafb9a8d6ef02c2c29df7f91a04b3836f98f6f8d4"
+   "annotation_cid": "732b77b20ae2aad85b177091268170e3f73e210c772ed53dd1ea6fae4fcae31a"
   },
   {
    "from": "partition_logit_form",
    "to": "omega_b_alpha_beta_closure",
    "kind": "derives",
-   "annotation_cid": "ca92a0fcfece822a5959ccad6993c9c30ed697cb341c70f6e86474f2143fef6d"
+   "annotation_cid": "44617a42f07ba06ab764018933a863774120004ebae4a446647238d0439e4f66"
   },
   {
    "from": "partition_logit_form",
    "to": "klein_antipodal_z2_rep_pattern",
    "kind": "proposes",
-   "annotation_cid": "73d55ae5b3ce3f69a60077cbdb40e4418c1e8ddfa55c0513f2a47b67531a0c09"
+   "annotation_cid": "319f42730cd439f866ddca916b13e080a856d97d69e5e91e52c6a77eaa7cf94d"
   },
   {
    "from": "partition_logit_form",
    "to": "numerology_inventory",
    "kind": "proposes",
-   "annotation_cid": "b58574c832b30e9b623b7b00f588273a76075b709d8d21b317424afe628ea3aa"
+   "annotation_cid": "1d2fa8ed96b1ca687295737c7ce92aa2f96b0a81b85a0f24acbea5a61dd2e35f"
   }
  ],
  "terms": {
   "'t Hooft naturalness": {
    "home": "canonical_glossary",
    "term_cid": "3b7d07fe8f4bc3a937c00b5001b739d86a98b711eeb0e5bf7c590f25528a3e62",
-   "assertion_cid": "731143c3b34b812f6741fc72f57566dabb76d2d759f2b560bbad342accea39aa"
+   "assertion_cid": "a5df48c1f3891028a5e9ae732b04d71c782689ef0ddfef8a8311163821402245"
   },
   "A_s_obs": {
    "home": "canonical_glossary",
    "term_cid": "d7480a53334283b3b9bfe6673dc9e60fe99ef0d80d47de1f3b69ca3dd45b4e91",
-   "assertion_cid": "a7c4afc31ca818b80db2b583e1105050434615cd19187ae9e4d3a3b62b47db20"
+   "assertion_cid": "28f086b2bffe506e87087047f662dea12eac0020b66ca177ec9a291f10723996"
   },
   "A_s_substrate": {
    "home": "canonical_glossary",
    "term_cid": "5c1dedc80f91b08799d27e9f17c191762ae07753c45cc798bd87efba4040dff7",
-   "assertion_cid": "c739858ada8c93b7a740023cec89f479560acffe8e6f080ee25223ea332421b1"
+   "assertion_cid": "05b0a04adb2ea6756f4e5b69aa07b4bf00dd3fdbeb55bacc82f4d8b643ccb2ec"
   },
   "Anchor-side": {
    "home": "canonical_glossary",
    "term_cid": "d2c8a358bd7deab8c815ffd1925b8a4c1762e65e4ca3015adfd254c4cd1acffe",
-   "assertion_cid": "b79d659dc1592e0d7a2d0316ea6a3dbed5fa72f0e83314beec1ea82823f62d1d"
+   "assertion_cid": "76278937ac6dd9c9e32b610c093c7ebb662c24bc2dfde52e1d850253ca080d6a"
   },
   "Anharmonic group": {
    "home": "canonical_glossary",
    "term_cid": "85415bb87c47e35458b9fefc5210a9a541751c88605c9eb335a5bdb5302ea201",
-   "assertion_cid": "452112a2c4e315c00637f316a86341c1de7e98671d9a68250fbbbc2d72647a61"
+   "assertion_cid": "8a93c83771a04c787375d461791d40f4f5d4dddc5b1d23a485eaccb25dc4b248"
   },
   "Ansatz audit policy": {
    "home": "canonical_glossary",
    "term_cid": "26defc98ebff1d3cad0960eeece5e8f89453c3f8903b27a97ae83c4c109a0a90",
-   "assertion_cid": "cbe7941979976855dca235e018b47304497e652ad3bcc1699b1e1d2547421806"
+   "assertion_cid": "2fb4f8fcc1dab8aeb4a6cb20670eda7128ae6b3a1a437497295a1cea890d3451"
   },
   "Antiperiodic-cycle count → amplitude field": {
    "home": "canonical_glossary",
    "term_cid": "f6dd759302d0cc74bfc26387036a35e1fb811d9ce7dbe8f5f4d6998669f0b616",
-   "assertion_cid": "e327681a34af0ce2e8383e350a1a5042cbc84090ca37a6551af42978d114e3a3"
+   "assertion_cid": "c03b2ceb9859f31d2b1aeab16b23f897751641fe62774a1e92d7b4452c27819a"
   },
   "Boundary modes {1, 5}": {
    "home": "canonical_glossary",
    "term_cid": "698de6840bb9b2dc8cc5a3ab7adc3a1e93b7b5e01dce73094a378f7b5bdf678b",
-   "assertion_cid": "dc14fc89119ede47b7074be876a57491b7f2cf134e673ceba1a2782f2304dd72"
+   "assertion_cid": "0b1b92aae63b43acca380dcbdce5de933ab587bf10d02ce9a37395fc61784b55"
   },
   "Catalan equation / Mihailescu's theorem": {
    "home": "canonical_glossary",
    "term_cid": "5235a15fcc6ad7cf60c06038d608aa0e06d3f62e863423c409ace301d1f280d8",
-   "assertion_cid": "63c0d9261be3734ba533dc3a78e22300751d3516bce014981f1738e409fa65a0"
+   "assertion_cid": "f0006dae4333637886886b8a722913addac1d8a66443dedc8ee1d8c7780498b9"
   },
   "Chirality (SM L/R)": {
    "home": "canonical_glossary",
    "term_cid": "195a3be6657697a62450f55a415ef51b56868dea7521d67128be46394d2adeee",
-   "assertion_cid": "6da8fede858f187c15ba3a1201e2a7cde996ff93ed1f8027dcec7d3151c31831"
+   "assertion_cid": "7095aa2068433c598efc0f75d56532febd7aa41b8ec70e22ea66931122714076"
   },
   "Circle map": {
    "home": "canonical_glossary",
    "term_cid": "942e99c82e701103f6ec0f2de022e485331361ff1f3d7727426e80020f4a6477",
-   "assertion_cid": "e189239219012a550235914438548f94a45a931ce2a2a52335ead712ab667f99"
+   "assertion_cid": "b29812d1209408fe6d1ea44a3a88b0621e08865a7a5a0f68b62f8e13ea46b5a2"
   },
   "Class 1-5": {
    "home": "canonical_glossary",
    "term_cid": "d547fcc5457fcbec48aba63984e41379e918ae18047ba8b5384909620e9bed9f",
-   "assertion_cid": "86e5ca3e7e2817f788eb1dcfacd2e43c23485b61251a3c0f66126a0751e5799d"
+   "assertion_cid": "75295387873dfd3907d11809ce196f241b3f0ea3a0856f0e97902920d8005f38"
   },
   "Color triplet rotation σ": {
    "home": "canonical_glossary",
    "term_cid": "efea5852f1f9d4a3d015575617a03ba56e1318c61e080561b9ed8cd53cff1f0f",
-   "assertion_cid": "0f157588628202c420d04ddc4ca5c31534e9c6ee93a9dd518863ade421b4bff0"
+   "assertion_cid": "d8b4966d372d175c39f7cadd883a9d55c0f1417e54f172682ddd06b387f24754"
   },
   "Conditional pair-wise apparatus": {
    "home": "canonical_glossary",
    "term_cid": "cd96df3d9489abe8ff962d3212de8e5d5d23a013f0020e627050975ff05f1dde",
-   "assertion_cid": "2d94c86ae3a27c5c1e3a36a2ecee567ef66e9485477e2e5a243c34dd267370ab"
+   "assertion_cid": "bdd1400bd0e73c4f7eb6e66ecf79b4c74feadb78c75940d964e7d7cd1c0b9384"
   },
   "Continuum (ℝ)": {
    "home": "canonical_glossary",
    "term_cid": "9a519a73653e6bb19b82f430ad5fd7f8f88e29e79f524b1634622cc42d936135",
-   "assertion_cid": "41541e4613d5a829b39a40343e890617557b8d20d6c96b2d271965fdf7feb411"
+   "assertion_cid": "9968b043843598a1c7a4acd6a2d8ba373edb2c72d3883be12917285cbedfaf02"
   },
   "Cusp 1/2 of Γ_0(6)": {
    "home": "canonical_glossary",
    "term_cid": "29358f710ebe785725f028a9ed240a4fe302637b882b1f7759246de3fd07f448",
-   "assertion_cid": "d0e72ce1fc10725418613f1e657217c65eeb8cf573c88315beb3e9416604ff2c"
+   "assertion_cid": "93c3bae6a405755a2f0307e7132995047a25e3daaf23f9cf4d452fef7b7d472e"
   },
   "Cutoff": {
    "home": "canonical_glossary",
    "term_cid": "7b1aeba853d0b2b55e71767d2422cdb00b8425178f6672c376c437e30c349ea9",
-   "assertion_cid": "8b19b601ad9300145f1a5de5b3f84aca853190f037efcb936ca3abd1426813a8"
+   "assertion_cid": "e3e5f3ff1bc0f1c25bd7a6b8ecf8d49c2ce7cefa113753df012aeaf892728b66"
   },
   "Derive-mode": {
    "home": "canonical_glossary",
    "term_cid": "f04f67692ed939e2ad1dd29f764b7e5436295f939ff08bc300961ee3f6909be6",
-   "assertion_cid": "bcb9fb8b77e7e440bcb28d9e4253c5f245d081182efb470de498c4a5825be7d9"
+   "assertion_cid": "24b6e6a205b9461a574b210a89f6eacd9bbaf957abe26e59312d871a12729454"
   },
   "Dicke primitive (N, k)": {
    "home": "canonical_glossary",
    "term_cid": "192888021d5b509811adc92edfa2186076499191933a8feaef37ae7818f7f023",
-   "assertion_cid": "25813b04bd2fb219dc4d6a802cd3bb741e60ded26db0b17aa9bd2e25a1e61c5d"
+   "assertion_cid": "2ccb3b8e7272411c0881a5b8fa53a426d1ea91b9a58012132a17a63fa54a5dfa"
   },
   "Discrete Extension Principle": {
    "home": "canonical_glossary",
    "term_cid": "ef4fff9e05d11dbd159d09289e66dfc5eb16761a4103c2a43dce2258954ab6b3",
-   "assertion_cid": "d4301168730220848900cb1ec2c336e860ef034df4114794d247dc24b6b3d058"
+   "assertion_cid": "905ac755140f11f6010386c691d82cae8aeac8bfc1ce997ccb87deb2a830e629"
   },
   "Discrete time / Planck-time stepping": {
    "home": "canonical_glossary",
    "term_cid": "69cdffea2d09ce1b7405d6bc8f8c2fc52bd01c70b76857c9437fbbb35e2435d2",
-   "assertion_cid": "fe6f6231c6f2596446099635860c41ba2eedf92035fdce4bc6a63dddea1967b6"
+   "assertion_cid": "261b500d10382cbe8932315a9f5d044664cf35ab4c7caad58d586c1af357084b"
   },
   "Discrete-lossless / quantum-lossy": {
    "home": "canonical_glossary",
    "term_cid": "9fb28574d6af4b91db5f6fe00d328891e8a632dd5bdfb72549e49d0a57b70ad8",
-   "assertion_cid": "5150b50e0a2e54e2c5be28eeeec7e3656c80814c3cd278febe25c538217549a0"
+   "assertion_cid": "0447035585052ed26e272651e1617ac4f7a17a5186509efe3e1d47970531aaf1"
   },
   "Discriminator clause (multi-mode)": {
    "home": "canonical_glossary",
    "term_cid": "40091c21024139f26b101309888f5c337e40869f7271d86179740aaf83f99904",
-   "assertion_cid": "8af0fce8423992e2b227374b621305a6d3a0c80ee7c34cebc2d7a74074a23217"
+   "assertion_cid": "ae9787cad746c721d84d8fad99efdc39bda3f5b65cd20bf5b7b3c0a9bce6d06a"
   },
   "Down-type quark factor 6": {
    "home": "canonical_glossary",
    "term_cid": "801a5b1e438f8bea19eea0950477cd70b9ae2939cd33de2552eb1381b72f492a",
-   "assertion_cid": "a33287cacbfc44774c22fb3873e10a19524420a6235cb6e74acece6419620082"
+   "assertion_cid": "18b41b2dad3094de7093befe4565853d4ee8b46e4d3d1927e9957c5a3ef9cc19"
   },
   "Eliminate-mode": {
    "home": "canonical_glossary",
    "term_cid": "30dc23978c50c05e2329e79a8e65d176f6205988ab9b0bf94fd6d7e428ce25f4",
-   "assertion_cid": "7109494590d455e9021ea699ada42ce04c39b49883dbc854b247785d318bada6"
+   "assertion_cid": "24e82add980e2688462d46128bcc7c90f2dcd2c4db11f2474240078910600d90"
   },
   "Floor": {
    "home": "canonical_glossary",
    "term_cid": "8e0f0c33a27dfbc31c6da4462e2a0fba33b7111f25b572516c9184c91d67f886",
-   "assertion_cid": "1d345cf6276acbf68754959d5080e32cd8e923e15d80efa3a477c4bc14e5bae9"
+   "assertion_cid": "21a3f3d7e5e740dbc0c17d2b4afe687bc1af831297873dff9118e7d9dc9855bc"
   },
   "Gauge group": {
    "home": "canonical_glossary",
    "term_cid": "d6408b92b5f5a4b2dd52ebc4b0f560a7a5ff713b8a4f439b72ed84995c03a8b3",
-   "assertion_cid": "d0c59ccbdf378d1db0bb4c04bb51b4f09f0587579b4e6891e9bb7253a058204d"
+   "assertion_cid": "9b41da9b2b1d4a7eb2156c01466c0752e37223408de3607830317e5ccd5b2472"
   },
   "Hecke cusps of X_0(6)": {
    "home": "canonical_glossary",
    "term_cid": "24859e34a23a8953a92e9f3e89d88bd856e5460bd7645ffc1110db66a30e148b",
-   "assertion_cid": "1d839529dde116db31eb38302514a5aa4a7892f228d22bce664170f04dfe0afc"
+   "assertion_cid": "21ac7c098bfe64492bf983c1e5dbaf5f1e13e1e44583e92595bb42f4baca196d"
   },
   "Hierarchy problem": {
    "home": "canonical_glossary",
    "term_cid": "1c14025becfa9c62f892836ca2702c4b71e00472192dc6c54c14d86a6faaa84d",
-   "assertion_cid": "ed944c4737f7b73c0953712ec89a9804a250b27b25e06b954ad602c5c7a90e08"
+   "assertion_cid": "1ef5cf383ce937bf9dfbcd5f1a1e941f495f79df162273641bb3418209e0c66a"
   },
   "Honest-landing loop": {
    "home": "canonical_glossary",
    "term_cid": "f30c99ee8f027580c72dd63d747da89933b20dfbfda5d1fbb14055d840ef3df7",
-   "assertion_cid": "200f055deba0449e84727ab6843a89df92479eeb9221a4700ec9c7a7700b768d"
+   "assertion_cid": "c7a05ac373cc23c73a0fba593994f00646c155bfc0d135d9ec2889c224306e4a"
   },
   "INTERACT = q_2·q_3 = 6": {
    "home": "canonical_glossary",
    "term_cid": "41861f79576957656f80597ae93717ef85a3cc1150ccf2159e24e221f190ce0e",
-   "assertion_cid": "ae07e826cdde73a31214d4f7bd1d9fa27de860b5b9ff59e66d13493c50d727d8"
+   "assertion_cid": "49de32168b179fbf57258126cb6f499a553ef1033b7dfc9de6cbf3c24a5dfeed"
   },
   "Inner modes {0, 2, 3, 4}": {
    "home": "canonical_glossary",
    "term_cid": "a64f23dd63556d6e51e1e839033d99ec3021a6c1c8ab265338c2a28fcb30b100",
-   "assertion_cid": "c37a16aa8bbc8d6848eb7fc984c864f8e233ef2696305750689d9eddcefba45a"
+   "assertion_cid": "67c3202262abbf903a2cc7621175e58d1d53a0a278fc054841345e4d332d4621"
   },
   "K (coupling)": {
    "home": "canonical_glossary",
    "term_cid": "307a8cb84091b9422264a050b4dad813bb8c9d0369511088f0a24f66d577dc97",
-   "assertion_cid": "c59ee2b4bd7131f41d41dd27f9ee4a709b29078f56f1f0c67ca39f8f22fe6d0d"
+   "assertion_cid": "15d2e53f1c56e55f01a31d7c2cb8dac9e6af565a4e34c33c053455e3ee60c261"
   },
   "K < 1 (subcritical)": {
    "home": "canonical_glossary",
    "term_cid": "e88297218481dc21332b94824224c63045b5aee1f345dd9eb87a959a7119ea15",
-   "assertion_cid": "f909945c2135fa15b2f692a0ec9bae8bd75366c485c6cad94781927440cd4b17"
+   "assertion_cid": "8c72e835c715d770062726666d433fed43f8287352dd385d7ffd3cb8b92429cf"
   },
   "K = 1 (critical)": {
    "home": "canonical_glossary",
    "term_cid": "73deeaf381e41bfeeebdd3c8394fc2709765bd18240804b59823e889b23d9d93",
-   "assertion_cid": "a8f43208e3cb31e29dcea985de5195abc4cea89905bb28fa372fbd7cc01417a1"
+   "assertion_cid": "4bbd8a1774e990c7e785183020a96f4aaf0d756b54beb404f523eb504d10b405"
   },
   "K = K_c (Kuramoto critical)": {
    "home": "canonical_glossary",
    "term_cid": "df702cf7101ce40c688748f4bc71197f3c6040e18fb86c9455b533f4330f2726",
-   "assertion_cid": "c46c128f5fd146ec3518bfc4dd226d697184f3a3ade825f5eb54e577e55f8fb8"
+   "assertion_cid": "b04abff34ebf4ca9f230893c988f2a9479ea5e1763a3d0879f8e94fb1804de99"
   },
   "K=1 ↔ K<1 boundary": {
    "home": "canonical_glossary",
    "term_cid": "80f1040b15263cdec1da2a10b9bde5f44c6456c46699a88570c0cbfa3826d449",
-   "assertion_cid": "a09d26009f716edbd1731154c2cc1f48e45474af3b3b5be057539e60c7597156"
+   "assertion_cid": "d23912b6f300da3fc490984a6d1ca3ba18138971cd379d48aaba3f560c860985"
   },
   "K_0 ~ 3 (RFE nucleation)": {
    "home": "canonical_glossary",
    "term_cid": "ac7407c8a7b049124f538361f754a8b490d2416dafb01f9021f19cec0b7816dd",
-   "assertion_cid": "3ad77a0b544172cef676c542fa376ce561a200facdd0788f19fd7049ab684f6c"
+   "assertion_cid": "a1a9d8c88b47c6b2bbbb08d8e361a6c4cf2ea1133194463e7ce784d98feec46a"
   },
   "K_LEPTON = q_3² = 9": {
    "home": "canonical_glossary",
    "term_cid": "d844eba5c12501557d510d7bb381059e0cce6a4a2438cba864bdb3f1eaee73b9",
-   "assertion_cid": "43d7e705d124db97c71c1b864cc5c1590ae0c33c327d1fa0c0deaeece9eddda4"
+   "assertion_cid": "75e6da8fd82641045d7f0cd875eac68c918e38bcaaa471503cefe08ea156885d"
   },
   "K_QUARK = q_2³ = 8": {
    "home": "canonical_glossary",
    "term_cid": "2a453855360b2e5e7299f9f021d59d79d0f46b2a27180f94555ddcf6964a8256",
-   "assertion_cid": "22a770f9ddab937c0ea0c352198c5ea02268e361d8c44303b8297be91ce9da76"
+   "assertion_cid": "fa660275610588a81d9ee81e5e223f2a4aa26609612f1bb75ab5ebd68549c765"
   },
   "K_STAR ≈ 0.86196": {
    "home": "canonical_glossary",
    "term_cid": "7a32e3bc2c00c882c2b2fae1292a455b5660b7385afdf69d7babbcb174ca4d2d",
-   "assertion_cid": "6ac9110efca9e9785ae310e4ede7a82c68b150a38bf50095c5f995984399b0ec"
+   "assertion_cid": "ee6b1e8c895a434128a4f62a4dad3a29ff2329d6157a545e9de250aa440c5a72"
   },
   "K_c (Kuramoto critical)": {
    "home": "canonical_glossary",
    "term_cid": "5fee34fbf205e7fd6573b853f76e6989c35108aeaccb734d354f0df136006730",
-   "assertion_cid": "740988f4225fb486f98d4138d556bc22f13f1bcf8d010e5a14c8b504e9a17b5c"
+   "assertion_cid": "5fd39ef6fa2fc3a6f954c5c7f5be36625a818883b2f51b3e2d8cbb8bc3e7b356"
   },
   "Klein-antipodal Z_2 rep": {
    "home": "canonical_glossary",
    "term_cid": "1a144ad5996799fac8bf9d9031248b89940dcaf56f18e32ace3f01abe6e44e11",
-   "assertion_cid": "c469e6eaec3a986a5d43fcd75bbae5b4215fdee51792632b136826ce36ea38dc"
+   "assertion_cid": "4bffbc260209f60622834021f166619cf7c1e135a02237765a5b38d0d18ade14"
   },
   "Klein-antipodal involution τ": {
    "home": "canonical_glossary",
    "term_cid": "0d20cbadc97b2e44f53c3dc468b19f93507aad51e9b29c97e7c3175f68e75218",
-   "assertion_cid": "60531564d2c5b022b8c4812e4b950d0f8d0d86733b2b29bc05f19d8b74ef14e4"
+   "assertion_cid": "44a4a7617b40fece42f63a86cc8588f4112ba8af0b5055f66fc15190d067418e"
   },
   "Klein-monodromy ±1": {
    "home": "canonical_glossary",
    "term_cid": "3314297c98ec191cbbfa9cc7be07c5d67b74b5e091d48d03315da9cb4d6f59d8",
-   "assertion_cid": "10113667ce986e2d0e05d9fca97d19615db82969acbb761fd4cdb0959a689c3a"
+   "assertion_cid": "4d04569fc47c689aaa15aa2ac3ff95fba50eb23f6e612b4e4a725d29492a749c"
   },
   "Klein-singlet ∩ coprime-to-6": {
    "home": "canonical_glossary",
    "term_cid": "8c0ef929db75b5db4dff28f52c2edb7c25be73a48b56c35e3409d81eeb53f24a",
-   "assertion_cid": "49c342a2e2dc13664acf60156a71316847c34fbc87eea01f625228560569be34"
+   "assertion_cid": "6977a74ea631e395b0565ca085350ed1ad6362f1cd484bb7aed815bf97891446"
   },
   "MEDIANT = q_2 + q_3 = 5": {
    "home": "canonical_glossary",
    "term_cid": "a7bd8d405b65aa07062e044e0d7e36a674c214b481081bffa17914359a5ceeec",
-   "assertion_cid": "9a3666c9cfbaff9bd0c21391be72d8909afb55b0c10b8616c4ad02dd732261ea"
+   "assertion_cid": "2d7aa4fce9e12c7c8aa14afaa064ccc66f19f1bcabbf4060b66535b3ed1b50bd"
   },
   "MOND threshold": {
    "home": "canonical_glossary",
    "term_cid": "936a02a43b64c323d945723a5a4b91be3c9e0a5ccfbea64743dc984292a3c7dc",
-   "assertion_cid": "26055fa9d5025bf329bda5990572fa96abb265da16289343b1239d59ebb25acf"
+   "assertion_cid": "eb5e48f44cb2cbabd97ae952068ad9b2592d052a08131e5ec64948311fdc5295"
   },
   "MOND threshold a_0": {
    "home": "canonical_glossary",
    "term_cid": "12c9a8001fb6b0acd4ba501663173ac59e23cfa2f0243f0c2f57ab4e063c54a8",
-   "assertion_cid": "f55f159f471da71a176f7eccdb5d8f23c222497e18c216675ff236dd26585052"
+   "assertion_cid": "dcac31c4f7b6acafe65d0c569c830d32a5c40db3d84e7012beccbc14b8da4237"
   },
   "Mediant operation": {
    "home": "canonical_glossary",
    "term_cid": "64ef6566b31c3e01246f83d67ccfa0aa87e1dde3b85039e77bb276acacff6b77",
-   "assertion_cid": "14bacd311e53f36430d32de1d23c18d9fc1dc2ef4173ecaa9a65c6687a85788e"
+   "assertion_cid": "0e6881bb36b10521a98fd901f5b4ad4f163fdc149298baf0fe169b83a4a7b5d7"
   },
   "PSL(2,ℤ)": {
    "home": "canonical_glossary",
    "term_cid": "2427e59453bbf67bb9b0395202ab43a9fc1d4c3cab49549a3fb18bb1fd3d8a55",
-   "assertion_cid": "64a6625c1a256261fb5250fce982308013f479d704f5007d697e1b4f681571ea"
+   "assertion_cid": "f172234edeaec0c6c09894e2a7830770607ef2421a9f32fb7041fab35313150e"
   },
   "Pauli stabilizer apparatus": {
    "home": "canonical_glossary",
    "term_cid": "251a2a558117c88e6f36678f5a1558e75d9048df195648f0db049b4908a54e94",
-   "assertion_cid": "f06d8511617437ac5d51d1717f12e16f1baf1171f955a3f98aca5918e0921d0c"
+   "assertion_cid": "6898900e761948f042f22fc2952edb20ad0872c28294934d973ff0bd09924877"
   },
   "Pigeonhole verdict": {
    "home": "canonical_glossary",
    "term_cid": "adae73b1ee9013b083a3abda4d55e8420138639f7041f9109b3aa34c8db42db6",
-   "assertion_cid": "458b81a7fc815637df4ec51bdb63e22263ba8ae17dc65e7965f3ff6f7b829277"
+   "assertion_cid": "cae4acd8b085b820d8accc1225c8e22b02d4ae6486770e7e152979a2b8196df9"
   },
   "Possibility-discipline": {
    "home": "canonical_glossary",
    "term_cid": "97a3c96041105e8effdc83418912fa77e70632415f44bb523c0a4f84bcbd2345",
-   "assertion_cid": "2142606de50468a45b13e0fd5be38eb35b23fb9a88483ca33ee2fac944570069"
+   "assertion_cid": "ffaeebae33e183f88bedce8baf382e8162d6cee5212a2f2119334614da9d93da"
   },
   "Primitive 1: integers Z": {
    "home": "canonical_glossary",
    "term_cid": "7d727ced1b6bf53fe3f53e1debf25db517c521aff90931fa4cdfbac6a15a7367",
-   "assertion_cid": "55b4431f5e676bc8bd8df27772a544738315dba5d3bbab9e059d48c3c56b584e"
+   "assertion_cid": "a8d27d67b97db4fa96fa990e2c2e0837c625948c88f0af2766f724015ef213c4"
   },
   "Primitive 2: mediant": {
    "home": "canonical_glossary",
    "term_cid": "f0a51e3821d5690387742dfcf498146dd0c90eebfc092d8c60759ab95b0ed17b",
-   "assertion_cid": "378d24f6b695bfc7ee5cb27bf86ca6575f00095edcd2d94a503c776858d79081"
+   "assertion_cid": "963eabe4a930c39a59af349b75a39940a80f94a826863b9894f2da113c2168a8"
   },
   "Primitive 3: fixed-point": {
    "home": "canonical_glossary",
    "term_cid": "6e597ae1c9e764ac0036ba334506b840f885b4cb667bb8ee0d92b99d0288cb81",
-   "assertion_cid": "206539a7d9226324b3cd6b476e616fe6ac1d49d5157fd7679a388cf10edce606"
+   "assertion_cid": "4d0ab6ad7ac561048260924dbef1ab7fc37c774e72597a3ae90b43dfdd105002"
   },
   "Primitive 4: parabola": {
    "home": "canonical_glossary",
    "term_cid": "bfe89f7b18979a8853a96b27f6cfd715e703a693750f39c413b9d64d72a813d1",
-   "assertion_cid": "00478bd6ef61e14393a6e51999ffafd4c61421c508e658022ecf5c1152f0702f"
+   "assertion_cid": "62c1d461d5649d09d0f771354543b8e3b2fc79244eea1c22b0092f5660052cba"
   },
   "Productive null / substrate-admitted-with-cluster": {
    "home": "canonical_glossary",
    "term_cid": "9caf96a09184e318cf51a62c1711b5de0f5168d636aaa56fb041ff4dbdaab54d",
-   "assertion_cid": "58016b42d8607b6d5f198e8c96b7967e49295107adab831f07203da002e201f7"
+   "assertion_cid": "89ff174ffdec0ab0190f6076f37e9babafed8e85331ec2fb277fe7eca826411b"
   },
   "Q mod 2 (topological charge)": {
    "home": "canonical_glossary",
    "term_cid": "f91cef45b5b6830ae97378d1b21bd2956ee8379a2b079ef6ec9a3edfe84f78ba",
-   "assertion_cid": "cd6fd8f3d76c8d7b7eac94a93a1a4a60371326e1be712ee17abd6cb32eb7cbe3"
+   "assertion_cid": "50c687a431f3bf6f344738a5d142f35d646eef7cf4212f16b634d8b76c093842"
   },
   "Q_{ABC} mod 2 (triple, XOR extension)": {
    "home": "canonical_glossary",
    "term_cid": "fd646e74e6cec5df4ba2e147ef79e0c0d7c3f663d1c7f7b45ee71ecc88566786",
-   "assertion_cid": "9a14675b429f7334848b6fccf5638a270716a98763ef5f06fc3da404a2899e09"
+   "assertion_cid": "0464343f9c0e4eb5374af6565fa5200aa3db193e55e31555d8827fb6c6f304bb"
   },
   "Q_{AB} mod 2 (pair-wise)": {
    "home": "canonical_glossary",
    "term_cid": "ef0920ecc7725c1647ec1fbe7b07bf0d257649e5bf1b5860de66536eb93c8639",
-   "assertion_cid": "a6730da234c4fd0f588b4e3070c78c6ed5dc0f9aff577b9a051f2af6927f4bc8"
+   "assertion_cid": "ba5bf861b0883748517854024f7e268abab54333272822abfc2f5839838a1769"
   },
   "Quadratic UV divergences": {
    "home": "canonical_glossary",
    "term_cid": "5fe1e44d9a099b4ad5785feb6b5cc3aba2c35be1cec2a41e688cb7022e796c26",
-   "assertion_cid": "5efd73868844efa07dbef3d97ba4c33463a47fd3e878e26565f7346dbb274d7b"
+   "assertion_cid": "b91166cce7e0e04dddd8432398429a0f9c49538a305da23355d8d2a7324e10f7"
   },
   "R = 6·13⁵⁴": {
    "home": "canonical_glossary",
    "term_cid": "486c535abf6f03f45afa2b5130463dcc1b62e7fedbfdd59c9397d5f75b6a563f",
-   "assertion_cid": "79bc60762a2fbbb155579e69b8bac495f14471393a20dd00a29a57c58a6d3340"
+   "assertion_cid": "4ce6122e9c6847d2b92beee9e3c003799e3db859c4269b085675a1dd47eb99ac"
   },
   "Recognize-mode": {
    "home": "canonical_glossary",
    "term_cid": "b6a24c6fbfe6078a212ae5588b5aa3510d9725e8edcbac685402dce6c209ba61",
-   "assertion_cid": "ab3366218debd8ec6c991fb26019f579bd37b07445ab53455c5881d3fad184be"
+   "assertion_cid": "ff52aa71e11bf1f458aadc6ce10e3b05e5f53e1e1a771e41ddcc7e14fd5722fc"
   },
   "Recursive Schmidt structure (Dicke)": {
    "home": "canonical_glossary",
    "term_cid": "1695f7a6daf863975563a876a355b3a0231edf68e42d6e2e889d3e20babb214a",
-   "assertion_cid": "506b4ba4c9701cbe83b86151aebcbb25a4b6b5e8001efb567c47aa1cac8a23ce"
+   "assertion_cid": "a2909b4d7b6fcff482011dc38be43dd7407384e9e5d9103e121ddd35490eb65f"
   },
   "Resolution vs reconstruction": {
    "home": "canonical_glossary",
    "term_cid": "9d50273420a24b4aff7388d9170c9a96bfdd2296cd9f3ce75e7c5d260b70a369",
-   "assertion_cid": "2adea325e046b7dd6caf6b05456f3bbee66fc9d7b92d44fae07e1c176ecc45ec"
+   "assertion_cid": "16fead58fc2bb696238eec1d45b4ef6228b8f2ec8955ee32958ce3e766301f5a"
   },
   "SM anomaly cancellation": {
    "home": "canonical_glossary",
    "term_cid": "ab94be5241f8a36d3bbfbd7784f0c5aa74b456c12e067ad0cca21fcdd81df7ec",
-   "assertion_cid": "6bbd55a4d6387d675558b77ffc44361454d21737672b9a34d37ba21f724c2619"
+   "assertion_cid": "478f8e34053404d9375f222da7db00168a3a9588f4a9a8d76bd3a3ece1a81326"
   },
   "SNMC (Substrate-Natural Multipartite Class)": {
    "home": "canonical_glossary",
    "term_cid": "0b16b10aee398d878f8e71a0531a4c94e7082201921e7b6c860e20042e2f1c89",
-   "assertion_cid": "4f1553ea6e3dd945d352195c2792568d68fc1605b4152d8bd9aff33d9e984074"
+   "assertion_cid": "693a493f4e8adeae907004033211371342d8df7a7f64324abe016d66fb834413"
   },
   "Self-consistency (field-equation)": {
    "home": "canonical_glossary",
    "term_cid": "93bbdc7ec15113d437d9141cd50f0576ba034abfbdb8357d03517669260baa19",
-   "assertion_cid": "b683381b7ea888a15124e5b29d2f5c4a0face6c2e379b50125d6e222f00924af"
+   "assertion_cid": "b50e66fa8b32e236261ec287aa99d08a90cab2336ac948a3ca96b99e722edf06"
   },
   "Stern-Brocot tree": {
    "home": "canonical_glossary",
    "term_cid": "fc309cd0a6a89abe1dda4e07ff5929ebbe19d6846fec536e1923bea166824f4a",
-   "assertion_cid": "0fbf46fc45957acb6a27cbd2bbb00d80a6bf34fc29175225f98242dc1ad9e74b"
+   "assertion_cid": "fe3311e8f4695f750f7a579120f3fd0aa0a390bf47b49ff57309251defecce4c"
   },
   "Strong CP θ = 0": {
    "home": "canonical_glossary",
    "term_cid": "deac0a2a793095736f57dba232d70c2b6b7388ab3950fb82af2fa4e5bf5e94bf",
-   "assertion_cid": "8701e31eaf5e2caff535b26202239e895049498ccf741c83f3fcbcfa892a9470"
+   "assertion_cid": "4e3e83a05d6404db934f2d4c1becb7fd3c16dc4ae92a59fe3eae67315af52dee"
   },
   "Substrate's natural multi-mode reach": {
    "home": "canonical_glossary",
    "term_cid": "2170f50a36e715e81c07b8802d55acdc8b440cece35d2172eebbb8b76dc6ce9c",
-   "assertion_cid": "da2c0768c33b2407ba3df0068935840540f4d2bda875e11a6478cdbcc0c3ec8b"
+   "assertion_cid": "47e7bb24a55e539f418c068e271c5111925764a585883f10e1802b076af46ce1"
   },
   "Substrate-admitted": {
    "home": "canonical_glossary",
    "term_cid": "740fa34f21c08e1dd060d155b588b4d2fd7d10f0e00a4ac5c0ac9523a4e166d3",
-   "assertion_cid": "fa4abe938051b2afa0a3a79cd9d42a4cf6f53ed4f59653ae4db8a7be3b6c6992"
+   "assertion_cid": "722ececa54423e23f86db45c68f4d198357eaa9155758568e19d1d4f14979e32"
   },
   "Substrate-forced": {
    "home": "canonical_glossary",
    "term_cid": "94b5802027e0b8eff92251a9c996c846acd8d2387f5d522b859f7d4bdf80dc16",
-   "assertion_cid": "6ac36a66cd2e88fd7965ba3a7f288d22aa8e676b5617a3ef199a8e6ca1e532d0"
+   "assertion_cid": "331a54ca6a7f0e2514ebc755865340c79ba655b460841e565f7052126b753234"
   },
   "Substrate-natural entanglement measures": {
    "home": "canonical_glossary",
    "term_cid": "a72862626453cef9b11e8c45d677cadbb8dc759732a1232144d3e6a63225c531",
-   "assertion_cid": "33b550e7ae871d937515b926344fbaba3119ccfe824c8b713cace40766953a07"
+   "assertion_cid": "18e37d53fe2cce3d3ed29c3ca0cea56f965655969e23dbd8dd5e0c65fd56a292"
   },
   "Substrate-side": {
    "home": "canonical_glossary",
    "term_cid": "2c42ef8b7ae33fb664269872422246b6ad52b0308a8e308faa472f9fb0ad48d2",
-   "assertion_cid": "76e01869f3902de99f1a7bbcfb4a43e747cd296675aeb6d895c4b0eac2d445f0"
+   "assertion_cid": "c7b55719a8121dce1c3c58dc405b1ee81a2b3278e32b1c97fcf7261504036929"
   },
   "Survives": {
    "home": "canonical_glossary",
    "term_cid": "833c07baf2c193838895de3279863c506b8f5f4ae13e856885751a0dcdefd2b8",
-   "assertion_cid": "57413fdcaa399762fb34e6ec1e61d05a7ad243db5f6e51ce0e11ff4a11d1d0d6"
+   "assertion_cid": "c003d350afee3f43791087a27126c6658273f626069e0abd4b44616379f9bf3d"
   },
   "Sym/antisym decomposition": {
    "home": "canonical_glossary",
    "term_cid": "d8f0330000d9be8aec0012ab71f4f0c6ef23d94d5f2e1c2f3d74675c58d53703",
-   "assertion_cid": "a19b65cfedb28d83e2d88eae900ae0dbe32a8bd5744803be7e333ff9c2910ed7"
+   "assertion_cid": "d53b97e1e2b2e0da057eee28abd35cc7be92e41727e0d5fc0e080891a015a6f0"
   },
   "S¹ (circle)": {
    "home": "canonical_glossary",
    "term_cid": "ce7721133ee68efa9ef45566e789f027d02e8788ad4f9868e3a07e488dacd8a5",
-   "assertion_cid": "912a911d5c3e12b2d13789448568cec015f74f98d276d4c1a9aa579a90aac935"
+   "assertion_cid": "4317da9ee30b2ec83934133d0bcd490fcb3e49da6553813b3f452b4bf93780c7"
   },
   "Two-anchor minimum": {
    "home": "canonical_glossary",
    "term_cid": "50e054598b3698e635d68cc5f00300b67b2abad044fdbb2ee81c519bd781afbf",
-   "assertion_cid": "6f152beca0d40960200cce49ddc6f387d1402e2626ff3fe66fa837d9d8aec8d5"
+   "assertion_cid": "058feea1ac3c16a262ed6548f204f175d487e35e1f34b451db03335cd1f53b7f"
   },
   "Up-type quark factor 9": {
    "home": "canonical_glossary",
    "term_cid": "a19b82970c1aa87d10618a8a3667bd422d1543ab7935aeb5af2c265a02f2c682",
-   "assertion_cid": "6dc3db962b5597e2d896975c89e672bf7bffa25b24c4c4d1c0d08e07c9e3b405"
+   "assertion_cid": "fe6049a406cfef49c8e554f978594c3a46407b335c06fbb422f36aed531e7135"
   },
   "Vocabulary-is-the-work pattern": {
    "home": "canonical_glossary",
    "term_cid": "07fa5693376b394e30bbdca9770716a0aa9ab3e2c9fb82dafe3729587acfa55d",
-   "assertion_cid": "aa60f6ed396a51d64fcf0f1bb64412f24208056737686400a5970dae71bcd214"
+   "assertion_cid": "2c92f7078cc585a23954faca47f9ae1133f6366905e0b8bacd5da52303dc42b0"
   },
   "X_0(N) cusps": {
    "home": "canonical_glossary",
    "term_cid": "417c22d5f882c2dc2577dd6f575179ab0ea6d246c587d8b41b14831a07a7189c",
-   "assertion_cid": "fe2b25dc97a74ba78de9e6c002408aa8beb35e07b8c4bdbcf5188b05fcc28074"
+   "assertion_cid": "6262391cb9cf03a9fa7a66832ba6bc4e0d761e2795ff2a934b75399cb6164b8f"
   },
   "Z1-Z3 discipline": {
    "home": "canonical_glossary",
    "term_cid": "5da727e3eb3a724f225f450c1428f8ba19464b0b59a62fb8f93555283ff10738",
-   "assertion_cid": "cd37a2324aebfe7508729c1f9226207b2d5a96c2405de6a741479332f2267433"
+   "assertion_cid": "0f9a737ec3a327a61b6e463f6ed5ab50e9fc2f96a7bd86b7728819016fd30e06"
   },
   "Z_3 rep (color)": {
    "home": "canonical_glossary",
    "term_cid": "f76da77ab61851719d0d19c3d665e987a6ff1c4b1b7b929ffbeb9a896f552146",
-   "assertion_cid": "b45c3d80de51272c2e90ecc5d6bffeb2f7d1fb2878ee106a8909961d41da5e59"
+   "assertion_cid": "d51f094ba17cab482d9c4afd08f2656afdf84d8d059370fde437db95c51fab1f"
   },
   "Z_6 mode lattice": {
    "home": "canonical_glossary",
    "term_cid": "56a39bce289116d22aa5c43981647cd97b8212dd6c4421d75699ab6b8f9505e9",
-   "assertion_cid": "a366c3e062d8f8a4a5ce51f40e80ea765f5fb540e0ff1d7ee8dc63c3ad7ecf61"
+   "assertion_cid": "12943348a5663fd3c0812ed0ca54e93039356929c4f1f95dbe13f3c4f23e484d"
   },
   "a_0 = cH_0/(2π)": {
    "home": "canonical_glossary",
    "term_cid": "e690e9696e3f868e98da7e64ffecb4938a3423a3fddc7225c6719cd75d8080ea",
-   "assertion_cid": "71387dca54e19b5af1cf1733fd9222ac62a863f6ad122f257f6695d0185c5981"
+   "assertion_cid": "ff03b24fd43085a69535ddf7c7174c0fcbdfd766a83f00c7e59483662afdef70"
   },
   "f_amp": {
    "home": "canonical_glossary",
    "term_cid": "2e2c4f52120ce7a0c5f2d1ae8b48896f70a62d2118ff10ad8a6fd00fc1426799",
-   "assertion_cid": "aade3a9c2eba1b100d316e69afa62019e4d456e530c65619f975e96ba4e3da67"
+   "assertion_cid": "afb32a0b58468a0f694496cdca43a50e7637ca3e767fb9f059f2fa32768badc0"
   },
   "j-invariant": {
    "home": "canonical_glossary",
    "term_cid": "16e855620f3c9facd09ed2f2be131b0cae22349be0fcb4d401201b078db3b2dc",
-   "assertion_cid": "bb0b69b7528b3be50a964646bd1c10ba8dbe927385c514bf944578d17c64778f"
+   "assertion_cid": "6e94d50101174f7ad1458012f36f22a391b5e95764aa66e267a6fd95062ad29b"
   },
   "m_H/v = 1/2": {
    "home": "canonical_glossary",
    "term_cid": "e317125ef2ccf58eeeb84a0f5fbbe5e13697c7bf713513af50d6c2a8a48a6207",
-   "assertion_cid": "34af917f655359f3aab83fb5b3357768a47c5e70d8dddcb4966cb7bbd0b6fcf1"
+   "assertion_cid": "dfde41475eaaa37e37bc34e465782ff7acbe8b128b5e841ff772d46c639f760a"
   },
   "n_s": {
    "home": "canonical_glossary",
    "term_cid": "233c2cc4dad4639c1fc9588cd9543c2ba64f5c6714d89b65ab69c37620dcb1a6",
-   "assertion_cid": "c03e779c36c01418f8ad9776bad384cef5ee3259b1fcfc9548af85c13143cbce"
+   "assertion_cid": "a5d3389be6ab3100ca47f32c5f8e75029ec8609e149fa5af964e3811fd8d268e"
   },
   "q_2 = 2": {
    "home": "canonical_glossary",
    "term_cid": "07721c33b9771134e5834f5310fdf13e81d5c1b54a2d83d42187cf40048637eb",
-   "assertion_cid": "413c71f13fdd9f6713059c16c6819f5d5811616cc859f90a9f80dbec7a2ab96c"
+   "assertion_cid": "ada68aa3980ddf1bfd1bed623ffdff39a5a2f648bf6859f7c72a1fc12c3495e1"
   },
   "q_3 = 3": {
    "home": "canonical_glossary",
    "term_cid": "14d204430c70ff89d226e21a015320c53568afd4dd2020180f3e8090df9f80dc",
-   "assertion_cid": "856135d22a939dc813d01fa79f36b335fc70015a39845cf0fd7051108549cf29"
+   "assertion_cid": "9ace088661b926b794dc691afa87f99bcfd0f636bdb112be431b8cf54d4e4275"
   },
   "w (partial-locking weight)": {
    "home": "canonical_glossary",
    "term_cid": "07eef8f4480ec205f07df4031c294e101d620cea8c13f161cd2ae6b97017a40c",
-   "assertion_cid": "784425907b0e39e6ba8ef2eec09a125ec93792806653814003a023241a5914be"
+   "assertion_cid": "34ee9b9595eaec775b2e11838479c7ba807d29ca92268fc994a890a7acf2ca22"
   },
   "w_+": {
    "home": "canonical_glossary",
    "term_cid": "9074d289e0faf774c82a51c51524dee8f130d8d05e13e29f5d8c91082d2f4502",
-   "assertion_cid": "65ac1ad476ff8ddfe432ac26b8b24ca6ad4a8c80124ccb96d5b58f4684473c05"
+   "assertion_cid": "9c50ab53f51a247803e87f38bfad9bb2054c954cf1cb2b89cb058a3b1a8dd5e5"
   },
   "w_- = 1": {
    "home": "canonical_glossary",
    "term_cid": "82f88bd4bf181a22f685005026eeef76ae7d95eb4d1d5d29a619b4edd5b98c5c",
-   "assertion_cid": "7cf84d212c28ad54165ac3d6b01aa7dead103ff4a3832b20162ab2577cd03855"
+   "assertion_cid": "e6191a544cbf564e17f22634b8f2bba116f7d221cb706ea40e551bf4703b18eb"
   },
   "|F_n| (Farey count)": {
    "home": "canonical_glossary",
    "term_cid": "8e138cd8ada72da9c5c553d78169da4a4da4fe0a01d72fcc30532288f7050a69",
-   "assertion_cid": "931abecbbaca4f738c53ee4bbc6d5ac0928f3c137d9a139cd2be86c64d2135b2"
+   "assertion_cid": "60f6dce31af368e374edcf09db24fcd85daabaf31536fa59e9a9ac814e828744"
   },
   "Γ_0(6) = Γ_0(2) ∩ Γ_0(3)": {
    "home": "canonical_glossary",
    "term_cid": "65b310ef6efb7fed31071483cf348a3da5ae221e28c27885ec3ce9d7173af767",
-   "assertion_cid": "01924962cff58b2fec8bc960468498df17365d625755fe95ec6c0605e7e277eb"
+   "assertion_cid": "c26b9b0bd28619794329f6a4bff14c2eb2bcbbcc4b0a16df2d814fa338de6fea"
   },
   "Γ_0(N)": {
    "home": "canonical_glossary",
    "term_cid": "0390e176a86c83f4efa01c5f36b9e46cf06cd46ecf0e648015757e7ef10b1339",
-   "assertion_cid": "cc73e391ddd988e831489df8623189d49249eb0aacb52b927a59bdf4967b7608"
+   "assertion_cid": "71fdb1c26eabc5ccc8187a3017cac2113fc9f6da782d2f76d70b828cbacf8400"
   },
   "Λ·ℓ_P² = 13⁻¹⁰⁸/12 = 3/R²": {
    "home": "canonical_glossary",
    "term_cid": "72c9a804609afe4f8d7c27749e89336cc6d7173ab25413d5f631310644dc4792",
-   "assertion_cid": "cb139d57d8385008c300c81f33fcb29ca72d1321387e1fb033cd0c5027b0f794"
+   "assertion_cid": "802513f8fd1f68c35151bd36a7cd55c5ea09070932b6134c7c9f6f1e613d60f6"
   },
   "Ω_DM": {
    "home": "canonical_glossary",
    "term_cid": "ffeae6377780d636dc9ecc3b18027124dcb5e6e4c3f132086c87041015a6b878",
-   "assertion_cid": "dbbda66dc965655c5070c48964fb073da2619273e1b4d52c5e1ae7143ab46082"
+   "assertion_cid": "6c5c71101e0ba39bacbbbd696699d25df51a4e0cabcedcd70336668e2846ce75"
   },
   "Ω_b": {
    "home": "canonical_glossary",
    "term_cid": "54b8ea4f8e964a5640992d6b8fabd636ee96ae1c0be09355076c247cde185537",
-   "assertion_cid": "9874e5c49ff444982ee07826070604f7af6d35c3b17afa408ce5935c56055a3e"
+   "assertion_cid": "9d7c3a49c3de63b4a1a0a7b99971306045d7ad5e34df078bc2c1fb6916bd14a6"
   },
   "Ω_Λ": {
    "home": "canonical_glossary",
    "term_cid": "d7aea3ddb6459ff09fe949008d39531590ec17f1dc2a3317e7cd8de3ab67be12",
-   "assertion_cid": "89cdec2a4c4ffd87b2d5339ab29441c6b13bb0f5094c6d476d5adfe092275d71"
+   "assertion_cid": "e72b85f838a4e3cd84fb63821a023f04d7c08fc301cce4b42cd7d462fe41168e"
   },
   "α_s/α_2 = 27/8": {
    "home": "canonical_glossary",
    "term_cid": "57c6c886ceafa8c5b9137d1b69bb609e5d563af148d01babd94bc09e56532e25",
-   "assertion_cid": "ce9aa1049959ca3525cab2d9d333ec11c43004b82dba0b1db043b281b484dfaf"
+   "assertion_cid": "128934bcb48f5668fd5910d60723281ba88750e256bf0f6da385e70023edca9a"
   },
   "λ_Higgs = 1/8": {
    "home": "canonical_glossary",
    "term_cid": "5ac30eda9edf12e96d78c3e0bade95e4734c2c963a15a0b0dcad04952df9e05a",
-   "assertion_cid": "3a8a4bded6bc099f27d77b7aa71c5ef9d126a345f648703f4f21733c1000de1d"
+   "assertion_cid": "e3c7a577a922e42ae6aaf4e10fe511c1f59cd6670970de9914431ec1a0ce817b"
   },
   "λ_unlock = (4G − π·ln 2)/π": {
    "home": "canonical_glossary",
    "term_cid": "bc67b163cbd8fb9ce0863cf2185b739879bff140625ecf2d6f3bfcb3b801f606",
-   "assertion_cid": "768a0554ec38aba37ab99e2b8643d3033aab98f130907ddb45732c4ab3c24273"
+   "assertion_cid": "3cd18e4067f80325078d3559eb2f5227551797be12da0921d4b0bd9bde1c0fcf"
   },
   "ψ_+ (sym mode)": {
    "home": "canonical_glossary",
    "term_cid": "6d2085d2dd34213089d7274e65a2bfe0b9a4e2de7c9bf1ca1a9a7228133e2da4",
-   "assertion_cid": "87155f327eeae1e92b400e497470e2c2f29b09450f7a45c0ed8028ca189812da"
+   "assertion_cid": "f50161969333a4e9484e95a6fe3fb9afb8c4414a5a215512d75419b97ba3d8a7"
   },
   "ψ_- (antisym mode)": {
    "home": "canonical_glossary",
    "term_cid": "716da43666e8d958e73f5b40862681c1a10e5eae5ba49296d6ea48a04ef249eb",
-   "assertion_cid": "e6fb9a9144712484af115348fc552040285fdc6c6dd51594a8200355ba7383c0"
+   "assertion_cid": "2d269d5a3f7b8dbdab42fe4c3505573129711d06c5c51779abd76102976f4a02"
   },
   "ℚ (rationals)": {
    "home": "canonical_glossary",
    "term_cid": "2e91b10499463c629ba21c13e404861e1f04751f1f6fe13b9f615d69afc13936",
-   "assertion_cid": "dcf8b213469b6593a86db83e5d158148566696c5408cc2778f434d5dbcdb3cde"
+   "assertion_cid": "f609e09eb941f232d5953efe62adc508f4fb76cb7f2416957c9c6aaeb1fe2235"
   }
  }
 }
