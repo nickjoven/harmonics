@@ -1,5 +1,5 @@
 {
-  "generated": "69a7040618f31dc142cbee5ca6000181dd8de739",
+  "generated": "50a53af5d9309eeb80a8a31fdf23bb49b1832a9b",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -175,6 +175,269 @@
       ]
     },
     {
+      "id": "ERRATA",
+      "path": "sync_cost/derivations/ERRATA.md",
+      "cid": null,
+      "sealed": false,
+      "title": "ERRATA",
+      "summary": "Corrections ledger for the derivation corpus. Policy: **documents\nstate current truth only** \u2014 a corrected doc is republished as a new\nedition (marked by an HTML comment on line 1 naming the edition, the\nprior text's git ref, and its errata entries). The defect, evidence,\nand history live here, not in the reading surface. Audit documents\n(`*_audit.md`) are point-in-time records: they are never rewritten\nand carry at most a one-line pointer to this file. Prior text of any\nedition: `git show <ref>",
+      "depends_on": [
+        "INDEX",
+        "antiparticle_dark_energy_unification_audit",
+        "beta_from_tongues",
+        "born_rule",
+        "boundary_weight",
+        "canonical_glossary",
+        "cosmological_cycle",
+        "coupling_scales",
+        "denomination_boundary",
+        "discrete_gauge_resolution",
+        "duty_cycle_dictionary",
+        "duty_dimension_proof",
+        "epsilon_physical_reading",
+        "exponent",
+        "fermion_mass_running",
+        "figure_eight",
+        "figure_eight_necessitation_audit",
+        "gauge_dictionary",
+        "gell_mann_nishijima",
+        "klein_bottle_derivation",
+        "lie_group_characterization",
+        "mass_sector_closure",
+        "mediant_derivation",
+        "minimum_alphabet",
+        "mobius_container",
+        "pattern_identification_discipline_candidate",
+        "q_mod2_mediant_projection",
+        "quantum_gravity_interpolation",
+        "surface_uniqueness_audit",
+        "three_dimensions",
+        "three_zeros",
+        "unification_bridge_audits_gaps_1_3",
+        "vacuum_stress_meta_structure_audit",
+        "variable_denominator",
+        "xor_derivation"
+      ],
+      "depended_on_by": [
+        "beta_from_tongues",
+        "derivation_atlas",
+        "duty_dimension_proof",
+        "figure_eight_necessitation_audit",
+        "framework_status",
+        "mass_function_family",
+        "minimum_alphabet",
+        "path_closures_iter1",
+        "path_closures_iter2",
+        "remaining_gap_shapes",
+        "surface_uniqueness_audit",
+        "unification_bridge_audits_gaps_1_3",
+        "xor_derivation"
+      ],
+      "edges": [
+        {
+          "target": "INDEX",
+          "kind": "references"
+        },
+        {
+          "target": "antiparticle_dark_energy_unification_audit",
+          "kind": "references"
+        },
+        {
+          "target": "beta_from_tongues",
+          "kind": "references"
+        },
+        {
+          "target": "born_rule",
+          "kind": "references"
+        },
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
+        {
+          "target": "canonical_glossary",
+          "kind": "references"
+        },
+        {
+          "target": "cosmological_cycle",
+          "kind": "references"
+        },
+        {
+          "target": "coupling_scales",
+          "kind": "references"
+        },
+        {
+          "target": "denomination_boundary",
+          "kind": "references"
+        },
+        {
+          "target": "discrete_gauge_resolution",
+          "kind": "references"
+        },
+        {
+          "target": "duty_cycle_dictionary",
+          "kind": "references"
+        },
+        {
+          "target": "duty_dimension_proof",
+          "kind": "references"
+        },
+        {
+          "target": "epsilon_physical_reading",
+          "kind": "references"
+        },
+        {
+          "target": "exponent",
+          "kind": "references"
+        },
+        {
+          "target": "fermion_mass_running",
+          "kind": "references"
+        },
+        {
+          "target": "figure_eight",
+          "kind": "references"
+        },
+        {
+          "target": "figure_eight_necessitation_audit",
+          "kind": "references"
+        },
+        {
+          "target": "gauge_dictionary",
+          "kind": "references"
+        },
+        {
+          "target": "gell_mann_nishijima",
+          "kind": "references"
+        },
+        {
+          "target": "klein_bottle_derivation",
+          "kind": "references"
+        },
+        {
+          "target": "lie_group_characterization",
+          "kind": "references"
+        },
+        {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
+          "target": "mediant_derivation",
+          "kind": "references"
+        },
+        {
+          "target": "minimum_alphabet",
+          "kind": "references"
+        },
+        {
+          "target": "mobius_container",
+          "kind": "references"
+        },
+        {
+          "target": "pattern_identification_discipline_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_mediant_projection",
+          "kind": "references"
+        },
+        {
+          "target": "quantum_gravity_interpolation",
+          "kind": "references"
+        },
+        {
+          "target": "surface_uniqueness_audit",
+          "kind": "references"
+        },
+        {
+          "target": "three_dimensions",
+          "kind": "references"
+        },
+        {
+          "target": "three_zeros",
+          "kind": "references"
+        },
+        {
+          "target": "unification_bridge_audits_gaps_1_3",
+          "kind": "references"
+        },
+        {
+          "target": "vacuum_stress_meta_structure_audit",
+          "kind": "references"
+        },
+        {
+          "target": "variable_denominator",
+          "kind": "references"
+        },
+        {
+          "target": "xor_derivation",
+          "kind": "references"
+        }
+      ],
+      "edged_by": [
+        {
+          "source": "beta_from_tongues",
+          "kind": "references"
+        },
+        {
+          "source": "derivation_atlas",
+          "kind": "references"
+        },
+        {
+          "source": "duty_dimension_proof",
+          "kind": "references"
+        },
+        {
+          "source": "figure_eight_necessitation_audit",
+          "kind": "references"
+        },
+        {
+          "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "mass_function_family",
+          "kind": "references"
+        },
+        {
+          "source": "minimum_alphabet",
+          "kind": "references"
+        },
+        {
+          "source": "path_closures_iter1",
+          "kind": "references"
+        },
+        {
+          "source": "path_closures_iter2",
+          "kind": "references"
+        },
+        {
+          "source": "remaining_gap_shapes",
+          "kind": "references"
+        },
+        {
+          "source": "surface_uniqueness_audit",
+          "kind": "references"
+        },
+        {
+          "source": "unification_bridge_audits_gaps_1_3",
+          "kind": "references"
+        },
+        {
+          "source": "xor_derivation",
+          "kind": "references"
+        }
+      ],
+      "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        }
+      ]
+    },
+    {
       "id": "FRAMEWORK_TOPOLOGY",
       "path": "sync_cost/derivations/FRAMEWORK_TOPOLOGY.md",
       "cid": "74fab4b863eb7d006713962e0141a401cad554d890107b8cb1c3b62d9d531780",
@@ -325,10 +588,10 @@
     {
       "id": "INDEX",
       "path": "sync_cost/derivations/INDEX.md",
-      "cid": "55181d4c60068bb2548969625bb1c9df2feb85b33f517ae778a2aa42d9ec98f8",
+      "cid": "6ce6c7242ffa05411ab518a4a9afb7724ec136ca07f90c28ccbad32cdddb4185",
       "sealed": true,
       "title": "Derivation Index",
-      "summary": "**Navigation index for derivation chain.** Maps D-numbers\n(D1-D47 per `MANIFEST.yml` derivation_count) to filenames for\nmachine-readable lookup. Maintained as derivations are added or\nrenamed. Cross-checked by `check_manifest.py`.",
+      "summary": "**Navigation index for derivation chain.** Maps D-numbers\n(D1\u2013D49; the table extends beyond `MANIFEST.yml`'s\nderivation_count of 47 to include D48/D49) to filenames for\nmachine-readable lookup. Maintained as derivations are added or\nrenamed. Cross-checked by `check_manifest.py`.",
       "depends_on": [
         "PROOF_A_gravity",
         "a0_threshold",
@@ -369,6 +632,7 @@
         "variable_denominator"
       ],
       "depended_on_by": [
+        "ERRATA",
         "FRAMEWORK_TOPOLOGY"
       ],
       "edges": [
@@ -523,11 +787,20 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "FRAMEWORK_TOPOLOGY",
           "kind": "references"
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "74bb0d0",
           "date": "2026-07-21",
@@ -924,6 +1197,25 @@
       ]
     },
     {
+      "id": "PREMISES",
+      "path": "sync_cost/derivations/PREMISES.md",
+      "cid": null,
+      "sealed": false,
+      "title": "Premise Ledger",
+      "summary": "Machine-readable dependency anchors for the derivation corpus,\nchecked by `scripts/drift/check_premises.py`.",
+      "depends_on": [],
+      "depended_on_by": [],
+      "edges": [],
+      "edged_by": [],
+      "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        }
+      ]
+    },
+    {
       "id": "PROOF_A_gravity",
       "path": "sync_cost/derivations/PROOF_A_gravity.md",
       "cid": null,
@@ -1262,6 +1554,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "a6a4f5d",
           "date": "2026-04-26",
@@ -2073,6 +2370,7 @@
         "figure_eight",
         "higgs_from_tongue_boundary",
         "medium_change_demo",
+        "minimum_alphabet",
         "phenomenology_cross_reference"
       ],
       "edges": [
@@ -2124,6 +2422,10 @@
         },
         {
           "source": "medium_change_demo",
+          "kind": "references"
+        },
+        {
+          "source": "minimum_alphabet",
           "kind": "references"
         },
         {
@@ -2918,6 +3220,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "dd68ce6",
           "date": "2026-06-05",
           "subject": "Anchors at extremes audit (chain extension) (#223)"
@@ -3369,6 +3676,7 @@
         "unification_bridge_audits_gaps_1_3"
       ],
       "depended_on_by": [
+        "ERRATA",
         "angular_momentum_three_source_inviolability_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
@@ -3462,6 +3770,10 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "angular_momentum_three_source_inviolability_audit",
           "kind": "references"
         },
@@ -3511,6 +3823,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "29ff2d2",
           "date": "2026-06-05",
@@ -5078,11 +5395,12 @@
     {
       "id": "beta_from_tongues",
       "path": "sync_cost/derivations/beta_from_tongues.md",
-      "cid": "cdcad905d740b9dc4099f2045c5ca43b6696a06d59bf0532910d33d7d4a12857",
+      "cid": "61599ee7ce85aab8a317bcc3f6be2e0555ad6ddb39649cf7e91ec386d0915b8a",
       "sealed": true,
-      "title": "Beta Functions from Tongue Widths",
-      "summary": "The one-loop beta function coefficients of the Standard Model\n(b\u2081 = 41/10, b\u2082 = \u221219/6, b\u2083 = \u22127) can be computed from the\nK-dependence of Arnold tongue widths, without using the SM\nbeta functions as a target. The running of coupling constants\nis a consequence of the circle map dynamics, not an independent\ninput.",
+      "title": "Tongue-Width Running: the Ratio Theorem (SM \u03b2-Coefficient Claim Retired)",
+      "summary": "**What this document establishes.** The perturbative ratio theorem\n(\u00a76): for circle-map duty cycles in the perturbative regime,",
       "depends_on": [
+        "ERRATA",
         "duty_cycle_dictionary",
         "gauge_sector_lovelock",
         "gell_mann_nishijima",
@@ -5094,17 +5412,24 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "ERRATA",
         "INDEX",
         "articulation_audit_2026-05",
+        "duty_dimension_proof",
         "dynamical_tool_audit",
         "fermion_mass_running",
         "gluon_reframing",
         "hierarchy_problem_translation",
         "sqrt_r_n_correction",
         "third_twist_meta_structure_audit",
-        "thread_chronology"
+        "thread_chronology",
+        "vacuum_stress_meta_structure_audit"
       ],
       "edges": [
+        {
+          "target": "ERRATA",
+          "kind": "references"
+        },
         {
           "target": "duty_cycle_dictionary",
           "kind": "references"
@@ -5144,11 +5469,19 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "INDEX",
           "kind": "references"
         },
         {
           "source": "articulation_audit_2026-05",
+          "kind": "references"
+        },
+        {
+          "source": "duty_dimension_proof",
           "kind": "references"
         },
         {
@@ -5178,9 +5511,18 @@
         {
           "source": "thread_chronology",
           "kind": "references"
+        },
+        {
+          "source": "vacuum_stress_meta_structure_audit",
+          "kind": "references"
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "dffc200",
           "date": "2026-04-22",
@@ -5397,6 +5739,7 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "ERRATA",
         "INDEX",
         "PROOF_A_gravity",
         "PROOF_B_quantum",
@@ -5484,6 +5827,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "INDEX",
           "kind": "references"
@@ -5979,6 +6326,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "ef1e22c",
           "date": "2026-06-05",
           "subject": "Born rule + mode count at extremes audit (chain extension) (#222)"
@@ -6230,6 +6582,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "a39af8c",
           "date": "2026-06-05",
           "subject": "Boundary leakage rate audit \u2014 Gaps 4 + 8 (#227)"
@@ -6239,7 +6596,7 @@
     {
       "id": "boundary_weight",
       "path": "sync_cost/derivations/boundary_weight.md",
-      "cid": "6a8a647b2e3d7e7e3634073ee3a853282a1dec428b46e995a410966006b09437",
+      "cid": "3ebbbfdcf9d190d574490655943acbca6191bfa97fd04db35a1178d2802ab99d",
       "sealed": true,
       "title": "The Boundary Weight",
       "summary": "The n=5 vs n=6 question dissolves. The Farey depth is not an\ninteger. The boundary modes (q=6) are partially locked at a\nfractional weight w* determined by self-consistency. The dark\nenergy fraction Omega_Lambda is a continuous, monotone function\nof this weight, and the observed value uniquely determines w*.",
@@ -6254,6 +6611,7 @@
         "rational_field_equation"
       ],
       "depended_on_by": [
+        "ERRATA",
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
         "a_s_geometric_proof",
@@ -6280,6 +6638,7 @@
         "item12_C_from_K_star",
         "k_critical_phase_a",
         "k_of_t_friedmann",
+        "klein_bottle_derivation",
         "mass_sector_sqrt_w_phase_a",
         "mode_locking_exhibits",
         "omega_b_alpha_beta_phase_b",
@@ -6331,6 +6690,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "FRAMEWORK_TOPOLOGY",
           "kind": "references"
@@ -6436,6 +6799,10 @@
           "kind": "references"
         },
         {
+          "source": "klein_bottle_derivation",
+          "kind": "references"
+        },
+        {
           "source": "mass_sector_sqrt_w_phase_a",
           "kind": "references"
         },
@@ -6498,6 +6865,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "c9a7683",
           "date": "2026-07-20",
           "subject": "#263 \u24fe ruling pass: class judgments applied to the 12-doc queue (#312)"
@@ -6527,7 +6899,7 @@
     {
       "id": "canonical_glossary",
       "path": "sync_cost/derivations/canonical_glossary.md",
-      "cid": "db27ec108cba4b37bb07bf912ba9f2f9c89781ebc4236e7db3280122f444b28e",
+      "cid": "2681f204daf23edc984bf09095fd11ce759abfda7df54fd1226732508ef1dee4",
       "sealed": true,
       "title": "Canonical glossary \u2014 framework \u2194 standard physics vocabulary",
       "summary": "Glossary v1, 2026-04-26. ~70 framework terms mapped to standard\nphysics / math equivalents across 10 thematic sections. Intended\nto be readable end-to-end in 30 minutes by a working physicist\nwith no prior framework exposure.",
@@ -6593,9 +6965,11 @@
         "three_dimensions",
         "vocabulary_bridge_iteration_1",
         "vocabulary_is_the_work_pattern",
-        "w_state_from_substrate"
+        "w_state_from_substrate",
+        "xor_derivation"
       ],
       "depended_on_by": [
+        "ERRATA",
         "a1_from_saddle_node",
         "audit_punch_list_2026-04",
         "bell_bounds_from_substrate",
@@ -6607,6 +6981,7 @@
         "dicke_apparatus_theorem",
         "discrete_extension_principle",
         "down_type_double_cover_closed",
+        "epsilon_physical_reading",
         "fm_beat_crt_correspondence_audit",
         "framework_status",
         "gamma06_w6_invariance_opposite_view_audit",
@@ -6877,9 +7252,17 @@
         {
           "target": "w_state_from_substrate",
           "kind": "references"
+        },
+        {
+          "target": "xor_derivation",
+          "kind": "references"
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "a1_from_saddle_node",
           "kind": "references"
@@ -6923,6 +7306,10 @@
         {
           "source": "down_type_double_cover_closed",
           "kind": "derives"
+        },
+        {
+          "source": "epsilon_physical_reading",
+          "kind": "references"
         },
         {
           "source": "fm_beat_crt_correspondence_audit",
@@ -7010,6 +7397,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "861378d",
           "date": "2026-07-03",
@@ -8536,6 +8928,7 @@
         "higgs_from_tongue_boundary",
         "klein_bottle",
         "lesson_epr_gr_qm_unification",
+        "minimum_alphabet",
         "mode_locking_exhibits",
         "omega_b_c5_beta_audit",
         "path_closures_iter1",
@@ -8758,6 +9151,10 @@
           "kind": "references"
         },
         {
+          "source": "minimum_alphabet",
+          "kind": "references"
+        },
+        {
           "source": "mode_locking_exhibits",
           "kind": "references"
         },
@@ -8898,6 +9295,7 @@
         "variable_denominator"
       ],
       "depended_on_by": [
+        "ERRATA",
         "articulation_audit_2026-05",
         "coherence_matrix_completion_audit",
         "era_timeline_disposition",
@@ -8942,6 +9340,10 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "articulation_audit_2026-05",
           "kind": "references"
         },
@@ -8972,6 +9374,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "b2deee7",
           "date": "2026-04-07",
           "subject": "Narrative pruning: strip numeric prefixes from all derivation filenames"
@@ -8986,8 +9393,8 @@
     {
       "id": "coupling_scales",
       "path": "sync_cost/derivations/coupling_scales.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "fefb5f42e557f8c49b91bab060f53875141c9558f98224ef9c953df6b3fa1853",
+      "sealed": true,
       "title": "The Coupling Scales and the Bare Diffusion Constant",
       "summary": "**Derived (partial), rescoped (#263 \u24fe ruling, 2026-07-19).** What\nstands: D_0 = 1/2 from the tree geometry, the hierarchy consistency\ncheck (Part II), and theta = 0 (Part V). The five gauge-sector ratio\nrows are superseded \u2014 bare K=1 identities, not predictions at M_Z; see\nthe registry dispositions marked in Parts III and IV. The absolute\ncoupling scales reduce to one dimensionful input (the root oscillator\nfrequency), which no mathematical framework can produce.",
       "depends_on": [
@@ -9004,6 +9411,7 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "ERRATA",
         "INDEX",
         "address_and_quantity",
         "adm_dictionary",
@@ -9071,6 +9479,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "INDEX",
           "kind": "references"
@@ -9149,6 +9561,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "8c0b552",
           "date": "2026-07-21",
@@ -9654,6 +10071,7 @@
         "rational_field_equation"
       ],
       "depended_on_by": [
+        "ERRATA",
         "L1_substrate_cusp_ground_state",
         "canonical_glossary",
         "derivation_atlas",
@@ -9692,6 +10110,10 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "L1_substrate_cusp_ground_state",
           "kind": "references"
         },
@@ -9729,6 +10151,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "b2deee7",
           "date": "2026-04-07",
@@ -9895,8 +10322,9 @@
       "cid": null,
       "sealed": false,
       "title": "Derivation Atlas \u2014 from four primitives to physical predictions",
-      "summary": "**Atlas v1, 2026-04-26.** End-to-end derivation chain from four\nprimitives to ~15 substrate-side Class 5 / Survives predictions\n(\u03a9 partition, R, \u039b\u00b7\u2113_P\u00b2, n_s, A_s_substrate, MOND a_0, Born\nrule, gauge group, anomaly cancellation, strong CP, down-type\nfactor 6, up-type factor 9, spatial dimension, Lorentz, two-\nanchor minimum, sector decoupling) with explicit substrate-side\nvs anchor-side classification and Z1-Z3 status.",
+      "summary": "**Atlas edition 2, 2026-08-14** (v1: 2026-04-26). End-to-end\nwalkthrough from four primitives with statuses carried from the\n2026-08 correction campaign. Class 5 rows: R, \u039b\u00b7\u2113_P\u00b2, n_s,\nA_s_substrate, MOND a_0, Born rule, N_efolds cadence, down-type\nfactor 6, up-type factor 9, two-anchor minimum, sector\ndecoupling. Conditional: gauge group, anomaly cancellation\n(imported charges), strong CP. Open: spatial dimension,\nLorentz. Reference (not prediction): the bare \u03a9 partition;\ntwo-component closure C",
       "depends_on": [
+        "ERRATA",
         "L1_substrate_cusp_ground_state",
         "a0_threshold",
         "a1_from_saddle_node",
@@ -9914,18 +10342,21 @@
         "discrete_gauge_resolution",
         "down_type_double_cover_closed",
         "gauge_sector_lovelock",
+        "gell_mann_nishijima",
         "h_inf_status",
         "hierarchy_gaussian_lattice",
         "hierarchy_problem_translation",
         "k_axis_uniqueness",
         "k_of_t_residual_disposition",
         "klein_antipodal_z2_rep_pattern",
+        "klein_bottle_derivation",
         "klein_bridge_audit_and_probe",
         "klein_nodal_parity",
         "lie_group_characterization",
         "mass_sector_closure",
         "mediant_derivation",
         "minimum_alphabet",
+        "minkowski_signature",
         "numerology_count_phase_b",
         "omega_b_alpha_beta_closure",
         "omega_b_w_plus_cross_ratio_search",
@@ -9939,7 +10370,7 @@
         "statistical_conventions",
         "three_dimensions",
         "vocabulary_is_the_work_pattern",
-        "w_plus_formalization"
+        "xor_derivation"
       ],
       "depended_on_by": [
         "PROOF_A_gravity",
@@ -9954,6 +10385,10 @@
         "thread_chronology"
       ],
       "edges": [
+        {
+          "target": "ERRATA",
+          "kind": "references"
+        },
         {
           "target": "L1_substrate_cusp_ground_state",
           "kind": "references"
@@ -10023,6 +10458,10 @@
           "kind": "references"
         },
         {
+          "target": "gell_mann_nishijima",
+          "kind": "references"
+        },
+        {
           "target": "h_inf_status",
           "kind": "references"
         },
@@ -10047,6 +10486,10 @@
           "kind": "references"
         },
         {
+          "target": "klein_bottle_derivation",
+          "kind": "references"
+        },
+        {
           "target": "klein_bridge_audit_and_probe",
           "kind": "references"
         },
@@ -10068,6 +10511,10 @@
         },
         {
           "target": "minimum_alphabet",
+          "kind": "references"
+        },
+        {
+          "target": "minkowski_signature",
           "kind": "references"
         },
         {
@@ -10123,7 +10570,7 @@
           "kind": "references"
         },
         {
-          "target": "w_plus_formalization",
+          "target": "xor_derivation",
           "kind": "references"
         }
       ],
@@ -10170,6 +10617,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "29e05bb",
           "date": "2026-06-19",
@@ -10531,6 +10983,7 @@
         "lie_group_characterization"
       ],
       "depended_on_by": [
+        "ERRATA",
         "INDEX",
         "baryon_fraction",
         "coupling_scales",
@@ -10560,6 +11013,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "INDEX",
           "kind": "references"
@@ -10630,6 +11087,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "9bed549",
           "date": "2026-04-24",
@@ -10886,7 +11348,7 @@
     {
       "id": "down_type_double_cover_closed",
       "path": "sync_cost/derivations/down_type_double_cover_closed.md",
-      "cid": "2fb6a8b12b4de5a6c979edca2b604d5ef1f153ac17103a8477378a42ff0eebef",
+      "cid": "2e80468af888d0be4bc46f396e11e81c1c56374383a3facf060ed27b011c73a8",
       "sealed": true,
       "title": "Down-type double cover \u2014 derivation summary",
       "summary": "**Class 5 / Survives.** Down-type quark factor 6 = q_2 \u00b7 q_3\nderived from S_3 acting on Z_2 \u00d7 Z_3 lattice. Orbit dimensions\n{1, 3} = {q_3-trivial, q_3-vector}; factor 6 emerges as\n|L| = q_2 \u00b7 q_3 from orbit-counting.",
@@ -11064,6 +11526,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "aee3b6a",
           "date": "2026-07-25",
@@ -11541,14 +12008,17 @@
       "depends_on": [
         "duty_dimension_proof",
         "klein_bottle",
+        "mass_sector_closure",
         "numerology_inventory",
         "rational_field_equation",
         "sinw_effective_dimension",
         "sinw_fixed_point",
         "speed_of_light",
-        "three_dimensions"
+        "three_dimensions",
+        "xor_derivation"
       ],
       "depended_on_by": [
+        "ERRATA",
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
         "articulation_audit_2026-05",
@@ -11556,6 +12026,7 @@
         "beta_from_tongues",
         "canonical_glossary",
         "coupling_scales",
+        "duty_dimension_proof",
         "fermion_mass_running",
         "gauge_sector_lovelock",
         "gluon_reframing",
@@ -11582,6 +12053,10 @@
           "kind": "references"
         },
         {
+          "target": "mass_sector_closure",
+          "kind": "references"
+        },
+        {
           "target": "numerology_inventory",
           "kind": "references"
         },
@@ -11604,9 +12079,17 @@
         {
           "target": "three_dimensions",
           "kind": "references"
+        },
+        {
+          "target": "xor_derivation",
+          "kind": "references"
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "FRAMEWORK_TOPOLOGY",
           "kind": "references"
@@ -11634,6 +12117,10 @@
         {
           "source": "coupling_scales",
           "kind": "derives"
+        },
+        {
+          "source": "duty_dimension_proof",
+          "kind": "references"
         },
         {
           "source": "fermion_mass_running",
@@ -11698,6 +12185,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "dffc200",
           "date": "2026-04-22",
           "subject": "Claude/audit dependency chain zq3f2 (#70)"
@@ -11724,17 +12216,39 @@
       "path": "sync_cost/derivations/duty_dimension_proof.md",
       "cid": null,
       "sealed": false,
-      "title": "Proof: The Duty Cycle Exponent Equals the Group Dimension",
-      "summary": "For the standard circle map with SL(2,Z) Farey structure, the duty\ncycle of the mode-locked tongue at p/q scales as",
-      "depends_on": [],
+      "title": "The Duty-Cycle Exponent and the Group Dimension: Definition, Not Map Law",
+      "summary": "`duty(q) = 1/q\u00b3` is a **definition** \u2014 arithmetic on the combinatorial\nweight (1/q\u00b2)/q \u2014 not a theorem about the circle map. The repo's own\nmeasurements (`tongue_width_universality.py`, commit 181c29f;\n`farey_tongue_width_null.py`) rule out the map-law reading:",
+      "depends_on": [
+        "ERRATA",
+        "beta_from_tongues",
+        "duty_cycle_dictionary"
+      ],
       "depended_on_by": [
+        "ERRATA",
         "FRAMEWORK_TOPOLOGY",
         "duty_cycle_dictionary",
         "framework_status",
         "numerology_inventory"
       ],
-      "edges": [],
+      "edges": [
+        {
+          "target": "ERRATA",
+          "kind": "references"
+        },
+        {
+          "target": "beta_from_tongues",
+          "kind": "references"
+        },
+        {
+          "target": "duty_cycle_dictionary",
+          "kind": "references"
+        }
+      ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "FRAMEWORK_TOPOLOGY",
           "kind": "references"
@@ -11753,6 +12267,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "f9b1c32",
           "date": "2026-03-26",
@@ -12225,6 +12744,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "fd6201b",
           "date": "2026-05-16",
@@ -12890,12 +13414,13 @@
     {
       "id": "epsilon_physical_reading",
       "path": "sync_cost/derivations/epsilon_physical_reading.md",
-      "cid": "ca3c3ddfa054e7132a24aa5d42af325ca2b3b2376290ba5fb17c1806aa445ef5",
+      "cid": "551c2c4ed9a49d828781d97c8e16f6a9d820cb690e7741b930469ec70a97d10e",
       "sealed": true,
       "title": "Substrate-forced \u03b5, sub-problem 1: physical reading",
       "summary": "A focused dive on sub-problem 1 of\n`epsilon_substrate_decomposition.md`: what *is* \u03b5 physically, in\nframework-native vocabulary? Three candidate readings, each\nmapped to framework structures and tested against the K-axis\nwindow `\u03b5 \u2208 [1e-4, 1e-3]` that gives K_STAR \u2192 INTERACT.",
       "depends_on": [
         "anchor_count_audit",
+        "canonical_glossary",
         "epsilon_substrate_decomposition",
         "framework_status",
         "k_axis_uniqueness",
@@ -12904,6 +13429,7 @@
         "observer_register_closure"
       ],
       "depended_on_by": [
+        "ERRATA",
         "depth_connection_nulls",
         "dynamical_tool_audit",
         "primitive_completeness_audit",
@@ -12912,6 +13438,10 @@
       "edges": [
         {
           "target": "anchor_count_audit",
+          "kind": "references"
+        },
+        {
+          "target": "canonical_glossary",
           "kind": "references"
         },
         {
@@ -12941,6 +13471,10 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "depth_connection_nulls",
           "kind": "references"
         },
@@ -12958,6 +13492,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "ebaf42e",
           "date": "2026-04-25",
@@ -13402,6 +13941,7 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "ERRATA",
         "INDEX",
         "third_twist_meta_structure_audit"
       ],
@@ -13429,6 +13969,10 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "INDEX",
           "kind": "references"
         },
@@ -13438,6 +13982,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "5d6c2e2",
           "date": "2026-07-09",
@@ -14249,7 +14798,7 @@
     {
       "id": "fermion_mass_running",
       "path": "sync_cost/derivations/fermion_mass_running.md",
-      "cid": "7c297f721fa90ef8a873f3efc34b2e05478fe62ccbcec84979f4bde84f5bd0c5",
+      "cid": "0a2392b394a2832dbad95e75ff796633a8811bd0bd1ff8e90c5f8b0cc82dd0e0",
       "sealed": true,
       "title": "Fermion Mass Running from the K \u2192 \u03bc Map",
       "summary": "The tree-level fermion mass formula (D34) gives mass ratios as\n(W_heavy/W_light)^a with sector exponents a = d \u2212 1/2 + charge/2.\nThe \u03c4/e ratio at a = 5/2 matches to 0.9%, but the \u03bc/e ratio has\na 37% residual. This residual is the tree-to-physical running\ncorrection. This derivation computes the correction from the K \u2192\n\u03bc mapping, closing the fermion mass gap (\u00a78.2).",
@@ -14267,6 +14816,7 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "ERRATA",
         "INDEX",
         "free_parameter_scorecard",
         "generation_mechanism",
@@ -14328,6 +14878,10 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "INDEX",
           "kind": "references"
         },
@@ -14377,6 +14931,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "543d8b6",
           "date": "2026-05-27",
@@ -14483,7 +15042,7 @@
     {
       "id": "figure_eight",
       "path": "sync_cost/derivations/figure_eight.md",
-      "cid": "1d3333c5fc14380ef33c921c287e51072b4a2efc9f42605bd7d05fb169d32b4f",
+      "cid": "34743a450627a50db0cc5175a5c9b5b9711df124c29f4034405054c38bb1c673",
       "sealed": true,
       "title": "The Figure-Eight Topology",
       "summary": "The Klein bottle's self-intersection in 3D embedding is a figure-8\n(lemniscate). Two loops sharing one crossing point. This is the\nphysical topology of the four Klein bottle modes (D19).",
@@ -14502,9 +15061,11 @@
         "omega_partition_combinatorial",
         "rational_field_equation",
         "sine_gordon_substrate",
-        "speed_of_light"
+        "speed_of_light",
+        "xor_derivation"
       ],
       "depended_on_by": [
+        "ERRATA",
         "articulation_audit_2026-05",
         "canonical_glossary",
         "collapse_dissolution",
@@ -14599,9 +15160,17 @@
         {
           "target": "speed_of_light",
           "kind": "references"
+        },
+        {
+          "target": "xor_derivation",
+          "kind": "references"
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "articulation_audit_2026-05",
           "kind": "references"
@@ -14737,6 +15306,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "c9a7683",
           "date": "2026-07-20",
           "subject": "#263 \u24fe ruling pass: class judgments applied to the 12-doc queue (#312)"
@@ -14771,6 +15345,7 @@
       "title": "Figure-8 necessitation audit \u2014 basepoint-principle inspection",
       "summary": "**Audit verdict: CLASS 2 (re-description / useful frame), NOT\nSUBSTRATE-FORCED.** The figure-8 topology in `figure_eight.md` is\nadopted as an organizing frame for the substrate's 4 surviving\nKlein-bottle modes; it is **not** structurally forced by the\nsubstrate apparatus.",
       "depends_on": [
+        "ERRATA",
         "ansatz_audit_policy",
         "basepoint_principle",
         "boundary_weight",
@@ -14784,6 +15359,7 @@
         "vocabulary_bridge_iteration_1"
       ],
       "depended_on_by": [
+        "ERRATA",
         "canonical_glossary",
         "figure_eight",
         "surface_uniqueness_audit",
@@ -14791,6 +15367,10 @@
         "vocabulary_bridge_iteration_2_step_2"
       ],
       "edges": [
+        {
+          "target": "ERRATA",
+          "kind": "references"
+        },
         {
           "target": "ansatz_audit_policy",
           "kind": "references"
@@ -14838,6 +15418,10 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "canonical_glossary",
           "kind": "references"
         },
@@ -14859,6 +15443,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "5412915",
           "date": "2026-06-03",
@@ -15005,11 +15594,12 @@
     {
       "id": "framework_status",
       "path": "sync_cost/derivations/framework_status.md",
-      "cid": "a7b171512bd4592ace22373b9549253eb82415439bc677e7e7c5321b9c366df9",
+      "cid": "eb8266c2607bfdf5823a3fd2cb52e45c1fe41927579a823ce36229aa29dc7659",
       "sealed": true,
       "title": "Framework status map",
       "summary": "At-a-glance inventory. One line per item. Full analysis lives in the\nreferenced files; this is the bird's-eye view to prevent duplicate\nwork and re-derivation of eliminated content.",
       "depends_on": [
+        "ERRATA",
         "L1_substrate_cusp_ground_state",
         "PROOF_A_gravity",
         "a0_threshold",
@@ -15200,6 +15790,10 @@
         "wave_particle_substrate"
       ],
       "edges": [
+        {
+          "target": "ERRATA",
+          "kind": "references"
+        },
         {
           "target": "L1_substrate_cusp_ground_state",
           "kind": "references"
@@ -15949,6 +16543,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "1a934ca",
           "date": "2026-07-27",
           "subject": "#328 Card 1 ruling: down-type Class 5 stands, registry rows added (#329)"
@@ -16286,7 +16885,7 @@
     {
       "id": "gamma06_cosmological_modular_surface_audit",
       "path": "sync_cost/derivations/gamma06_cosmological_modular_surface_audit.md",
-      "cid": "ab51a437bd2464fe3764d8c03b2695c0379b9b9b2beb557feb3d40cc1c5de78b",
+      "cid": "23168539613f5d72ff032804da42a7c69944302bdda27874774eb06d639756dc",
       "sealed": true,
       "title": "\u0393_0(6) cosmological modular surface \u2014 polynomial readings + arithmetic prime audit",
       "summary": "**Verdict: MODAL \u2713 / GENERATIVE \u2713** on the structural identity",
@@ -16300,6 +16899,7 @@
         "cyclotomic_content_mass_ratios_audit",
         "half_twist_meta_structure_audit",
         "halt_shock_coherence_audit",
+        "hierarchy",
         "horn_branch_iteration_2_step_2",
         "klein_bottle",
         "lepton_state_group_reconciliation_audit",
@@ -16355,6 +16955,10 @@
         },
         {
           "target": "halt_shock_coherence_audit",
+          "kind": "references"
+        },
+        {
+          "target": "hierarchy",
           "kind": "references"
         },
         {
@@ -16430,6 +17034,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "a6ce274",
           "date": "2026-07-19",
           "subject": "Salvage lepton state-group reconciliation from unmerged 2026-06-08 branch (#308)"
@@ -16502,6 +17111,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "71d67a8",
           "date": "2026-06-08",
@@ -17082,9 +17696,11 @@
         "gluon_reframing",
         "klein_bottle",
         "klein_connection",
-        "sinw_fixed_point"
+        "sinw_fixed_point",
+        "xor_derivation"
       ],
       "depended_on_by": [
+        "ERRATA",
         "articulation_audit_2026-05",
         "gauge_high_scale_identification",
         "gluon_reframing",
@@ -17130,9 +17746,17 @@
         {
           "target": "sinw_fixed_point",
           "kind": "references"
+        },
+        {
+          "target": "xor_derivation",
+          "kind": "references"
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "articulation_audit_2026-05",
           "kind": "references"
@@ -17183,6 +17807,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "00dc7af",
           "date": "2026-05-21",
@@ -17699,10 +18328,12 @@
         "xor_derivation"
       ],
       "depended_on_by": [
+        "ERRATA",
         "INDEX",
         "baryon_fraction",
         "basepoint_principle",
         "beta_from_tongues",
+        "derivation_atlas",
         "fermion_mass_running",
         "fourth_generation_revisited",
         "gauge_factorization",
@@ -17740,6 +18371,10 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "INDEX",
           "kind": "references"
         },
@@ -17753,6 +18388,10 @@
         },
         {
           "source": "beta_from_tongues",
+          "kind": "references"
+        },
+        {
+          "source": "derivation_atlas",
           "kind": "references"
         },
         {
@@ -17805,6 +18444,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "e27106f",
           "date": "2026-05-10",
@@ -18226,8 +18870,8 @@
     {
       "id": "ghz_from_substrate",
       "path": "sync_cost/derivations/ghz_from_substrate.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "9406270a9fc6a6be0f9154b1fd1524b02dc8ea5f716ecf095a4fb69aab8b0db9",
+      "sealed": true,
       "title": "GHZ correlations from the substrate event-log (worked example)",
       "summary": "**Level-3 worked example for the QM-reframing thread.** Demonstrates\nthat the pair-wise EPR/Bell apparatus\n(`epr_bell_assembly_theorem.md`) generalizes naturally to N-mode\nsystems, with explicit calculation for the 3-mode GHZ case. The\nsubstrate's machinery reproduces:",
       "depends_on": [
@@ -19363,6 +20007,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "b73705d",
           "date": "2026-06-05",
           "subject": "Halt and shock coherence audit (coherence-type matrix initialization) (#224)"
@@ -19383,7 +20032,8 @@
         "three_dimensions"
       ],
       "depended_on_by": [
-        "FRAMEWORK_TOPOLOGY"
+        "FRAMEWORK_TOPOLOGY",
+        "gamma06_cosmological_modular_surface_audit"
       ],
       "edges": [
         {
@@ -19406,6 +20056,10 @@
       "edged_by": [
         {
           "source": "FRAMEWORK_TOPOLOGY",
+          "kind": "references"
+        },
+        {
+          "source": "gamma06_cosmological_modular_surface_audit",
           "kind": "references"
         }
       ],
@@ -20542,6 +21196,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "6d2bea4",
           "date": "2026-06-02",
           "subject": "Axial-trajectory arc: falsifier chain \u2192 price ledger \u2192 horn-branch \u2192 null-promotion sweep (#211)"
@@ -21374,7 +22033,7 @@
     {
       "id": "k_axis_uniqueness",
       "path": "sync_cost/derivations/k_axis_uniqueness.md",
-      "cid": "ac909b3dff250175f2c46e3711062d03da5ff0ff96041b9379844d7c61084e99",
+      "cid": "1338990075a3df44533b349cb99744af779e586b63ba5495800c124c1631f6f0",
       "sealed": true,
       "title": "K-axis uniqueness probe: composed Klein-antipodal + coprime-to-6",
       "summary": "The bare K-scan (`k_scaling_scan.md`, PR #76) landed Class 2\nbecause the bare circle map *ranks* rationals by tongue width but\nnever *forbids* any \u2014 every `p/q` opens at some K. The writeup\nflagged the natural follow-up: compose the K-scan with one of the\nframework's existing forcing filters (Klein-antipodal Z\u2082-rep, XOR\non Stern-Brocot, anomaly cancellation) to see whether the\nsurviving tongue count at a canonical K equals a framework integer\nfor *structural* reasons.",
@@ -21467,6 +22126,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "ebaf42e",
           "date": "2026-04-25",
@@ -23084,6 +23748,7 @@
       "title": "The Klein Bottle from Self-Consistency",
       "summary": "The Klein bottle is not assumed. It is the unique compact surface\ncompatible with the four primitives, the phase-state structure, and\nthe arrow of time. The torus and real projective plane are both\nexcluded by self-consistency arguments.",
       "depends_on": [
+        "boundary_weight",
         "klein_bottle",
         "mediant_derivation",
         "minimum_alphabet",
@@ -23097,10 +23762,12 @@
         "xor_derivation"
       ],
       "depended_on_by": [
+        "ERRATA",
         "a_s_geometric_proof",
         "audit_findings_3_4_disposition",
         "cone_twist_substrate",
         "conservation_scale_stratification_audit",
+        "derivation_atlas",
         "down_type_double_cover_phase_a",
         "down_type_double_cover_phase_c",
         "f2_scoping",
@@ -23130,6 +23797,10 @@
         "wave_particle_substrate"
       ],
       "edges": [
+        {
+          "target": "boundary_weight",
+          "kind": "references"
+        },
         {
           "target": "klein_bottle",
           "kind": "references"
@@ -23177,6 +23848,10 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "a_s_geometric_proof",
           "kind": "references"
         },
@@ -23190,6 +23865,10 @@
         },
         {
           "source": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "derivation_atlas",
           "kind": "references"
         },
         {
@@ -23302,6 +23981,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "bf0cf7e",
           "date": "2026-05-14",
@@ -24895,7 +25579,7 @@
     {
       "id": "koide_form_substrate_iteration_5",
       "path": "sync_cost/derivations/koide_form_substrate_iteration_5.md",
-      "cid": "8455ec02ac3adf436f7fde4cf8afe8c3b1c44a56819f49836ba6b4703a9a47f3",
+      "cid": "e6bc2c432f78c63d0b3eed12b49095823969d5a5411514cc5e9df56177db8300",
       "sealed": true,
       "title": "Koide form substrate derivation \u2014 iteration 5",
       "summary": "**Iteration 5.** Tests candidate 2 (V_4 + dark-state restriction)\nidentified as the most concrete remaining candidate after\niteration 4. Decomposes the 4-component amplitude vector\n`w = (\u221am_A, \u221am_B, \u221am_C, \u221am_D)` into V_4 irreducible representations\nand imposes the dark-state constraint `m_D = 0` to derive a\nconstraint on the observable amplitude vector.",
@@ -24963,6 +25647,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "11df457",
           "date": "2026-07-29",
@@ -25393,6 +26082,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "191a4ac",
           "date": "2026-06-07",
@@ -25941,7 +26635,7 @@
     {
       "id": "lesson_rotation_curves_a0",
       "path": "sync_cost/derivations/lesson_rotation_curves_a0.md",
-      "cid": "103fc751830df0e480a1c1e59c1d9ade13169a5be20c5edf5ce2174d068ac8ba",
+      "cid": "23f3ede0de32129bf6eb1bc71ba855fbac97bdc25b3ac170bb26e9bfe6099e41",
       "sealed": true,
       "title": "Lesson \u2014 stars at the spiral's edge: a\u2080 = cH\u2080/(2\u03c0) and a false dichotomy",
       "summary": "The second of three pedagogy lessons (after `lesson_8_35_vs_13_19.md`).\nWhere lesson 1 was *cautionary* \u2014 kill your prettiest hit \u2014 this one\nis a clean **win**: the framework's single most satisfying napkin\nresult, `a\u2080 = cH\u2080/(2\u03c0)`, derived and defended. It teaches a different\nreframing move: **a decades-old false dichotomy can dissolve.**",
@@ -26005,6 +26699,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "3d80dde",
           "date": "2026-05-23",
           "subject": "Pedagogy trilogy (2/3, 3/3): rotation curves + cosmological constant (#155)"
@@ -26020,6 +26719,7 @@
       "summary": "$\\mathrm{SL}(2,\\mathbb{R})$ is the unique connected real Lie group that can\nserve as the continuum substrate of the synchronization framework. This is\nnot merely \"a 3D Lie group works.\" It is a characterization: any candidate\nsubstrate satisfying the framework's structural requirements is isomorphic\nto $\\mathrm{SL}(2,\\mathbb{R})$ (up to the $\\mathbb{Z}_2$ quotient\n$\\mathrm{PSL}(2,\\mathbb{R})$).",
       "depends_on": [],
       "depended_on_by": [
+        "ERRATA",
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
         "PROOF_A_gravity",
@@ -26038,6 +26738,10 @@
       ],
       "edges": [],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "FRAMEWORK_TOPOLOGY",
           "kind": "references"
@@ -26229,6 +26933,7 @@
       "title": "Mass-function family across cascade depths",
       "summary": "The master cascade-lock identity gives a one-parameter slope family:",
       "depends_on": [
+        "ERRATA",
         "baryon_fraction",
         "imf_bowed_cascade",
         "master_cascade_identity",
@@ -26243,6 +26948,10 @@
         "salpeter_gate_disposition"
       ],
       "edges": [
+        {
+          "target": "ERRATA",
+          "kind": "references"
+        },
         {
           "target": "baryon_fraction",
           "kind": "references"
@@ -26288,6 +26997,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "798d2d2",
           "date": "2026-05-26",
           "subject": "Category/ontology correction to the mass-function family: domain, not \"tension\" (#170)"
@@ -26317,7 +27031,7 @@
     {
       "id": "mass_sector_closure",
       "path": "sync_cost/derivations/mass_sector_closure.md",
-      "cid": "d4a02345f73682a0aabc7d4771bd56c35765dff45e1fc4ae200ce84ba28dc311",
+      "cid": "e1b9a71a03fbbc446cb40654fef5a6560f2af10e2ec48dccf9361de61a95fb16",
       "sealed": true,
       "title": "The Mass Sector Closure: Integer Conservation and Gauge Adjoints",
       "summary": "The integer conservation law governing fermion mass hierarchies:",
@@ -26330,6 +27044,7 @@
       ],
       "depended_on_by": [
         "CHAIN_KSTAR",
+        "ERRATA",
         "FRAMEWORK_TOPOLOGY",
         "address_and_quantity",
         "anchor_count_audit",
@@ -26343,6 +27058,7 @@
         "cyclotomic_content_mass_ratios_audit",
         "depth_connection_nulls",
         "derivation_atlas",
+        "duty_cycle_dictionary",
         "dynamics_arithmetic_distinction_refinement_audit",
         "figure_eight_necessitation_audit",
         "fourth_generation_revisited",
@@ -26415,6 +27131,10 @@
           "kind": "references"
         },
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "FRAMEWORK_TOPOLOGY",
           "kind": "references"
         },
@@ -26464,6 +27184,10 @@
         },
         {
           "source": "derivation_atlas",
+          "kind": "references"
+        },
+        {
+          "source": "duty_cycle_dictionary",
           "kind": "references"
         },
         {
@@ -26640,6 +27364,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "5412915",
           "date": "2026-06-03",
@@ -26972,8 +27701,8 @@
     {
       "id": "meaning_of_two_wip",
       "path": "sync_cost/derivations/meaning_of_two_wip.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "9fd04088f65d3a3ad0338c3237644c95d278a69f9958a8f34fd084e1bbb286ed",
+      "sealed": true,
       "title": "WIP \u2014 meaning of `2` in the framework",
       "summary": "**WIP / staging note**, explicitly *not* a closure or consolidation\nclaim. This is an audit of what \"`2`\" means in the framework's\nsubstrate vocabulary \u2014 which identifications between the framework's\nmany `2`s are rigorously established in the existing corpus, which\nare related at the substrate-source level but distinct as\nmathematical objects, and which are claimed-but-not-derived.",
       "depends_on": [
@@ -27101,8 +27830,8 @@
     {
       "id": "mediant_derivation",
       "path": "sync_cost/derivations/mediant_derivation.md",
-      "cid": null,
-      "sealed": false,
+      "cid": "9a6dc526c93944de6262d4075362ea6077c2b3ab7707de9dfcfc9847de51ef1a",
+      "sealed": true,
       "title": "The Mediant Is Not an Axiom",
       "summary": "**Derived.** The mediant is the unique operation satisfying\nbetweenness (energy conservation) and minimality (widest Arnold\ntongue). The Stern-Brocot theorem (1858/1860) proves this.\nThe framework's primitive (2) is replaced by a physical property\n(2') that is experimentally verifiable.",
       "depends_on": [
@@ -27117,6 +27846,7 @@
         "rational_field_equation"
       ],
       "depended_on_by": [
+        "ERRATA",
         "INDEX",
         "L1_substrate_cusp_ground_state",
         "PROOF_A_gravity",
@@ -27173,6 +27903,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "INDEX",
           "kind": "references"
@@ -27239,6 +27973,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "f93adf4",
           "date": "2026-07-17",
@@ -27557,6 +28296,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "9a97408",
           "date": "2026-05-10",
           "subject": "Pedagogical: link EML/lambda split to bowed-string/clarinet/flute trio (#96)"
@@ -27574,16 +28318,21 @@
       "cid": null,
       "sealed": false,
       "title": "The Minimum Alphabet",
-      "summary": "The framework's entire structure \u2014 the circle, the devil's staircase,\nArnold tongues, the Born rule, the RAR, and the uncertainty relation \u2014\nfollows from compositions of exactly four irreducible primitives:",
+      "summary": "The framework's structure \u2014 the devil's staircase, Arnold tongues,\nthe Born rule, the RAR, and the uncertainty relation \u2014 follows from\ncompositions of four irreducible primitives acting on the circle,\nwhich is Axiom 1 (assumed, not derived; see Part I \u00a71):",
       "depends_on": [
+        "ERRATA",
         "PROOF_A_gravity",
         "PROOF_B_quantum",
+        "address_and_quantity",
         "continuity_in_K_nulls",
+        "continuum_limits",
         "k_of_t_problem_statement",
         "k_of_t_residual_disposition",
+        "rational_field_equation",
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "ERRATA",
         "INDEX",
         "PROOF_A_gravity",
         "PROOF_B_quantum",
@@ -27619,6 +28368,10 @@
       ],
       "edges": [
         {
+          "target": "ERRATA",
+          "kind": "references"
+        },
+        {
           "target": "PROOF_A_gravity",
           "kind": "references"
         },
@@ -27627,7 +28380,15 @@
           "kind": "references"
         },
         {
+          "target": "address_and_quantity",
+          "kind": "references"
+        },
+        {
           "target": "continuity_in_K_nulls",
+          "kind": "references"
+        },
+        {
+          "target": "continuum_limits",
           "kind": "references"
         },
         {
@@ -27639,11 +28400,19 @@
           "kind": "references"
         },
         {
+          "target": "rational_field_equation",
+          "kind": "references"
+        },
+        {
           "target": "substrate_determinism",
           "kind": "references"
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "INDEX",
           "kind": "references"
@@ -27775,6 +28544,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "29e05bb",
           "date": "2026-06-19",
           "subject": "N_efolds: promote derived form (63.7 from cadence closure) across surfaces (#264)"
@@ -27837,6 +28611,7 @@
         "INDEX",
         "beta_from_tongues",
         "cosmological_cycle",
+        "derivation_atlas",
         "equivalence_dissolution",
         "figure_eight",
         "figure_eight_necessitation_audit",
@@ -27898,6 +28673,10 @@
         },
         {
           "source": "cosmological_cycle",
+          "kind": "references"
+        },
+        {
+          "source": "derivation_atlas",
           "kind": "references"
         },
         {
@@ -28055,6 +28834,7 @@
         "variable_denominator"
       ],
       "depended_on_by": [
+        "ERRATA",
         "INDEX",
         "engineering_targets",
         "f2_scoping",
@@ -28079,6 +28859,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "INDEX",
           "kind": "references"
@@ -28354,7 +29138,7 @@
     {
       "id": "negative_results_ledger",
       "path": "sync_cost/derivations/negative_results_ledger.md",
-      "cid": "ed37fe58cb8b8add656e1fe1b7fc8c7c36e2f97b89529621358de17727d2526d",
+      "cid": "34b0b6ed72dfc5c0bdb239193b6e82f6465c14939ea21f17a5ca67a3ecb4c5d5",
       "sealed": true,
       "title": "Negative-results ledger \u2014 the single archival home for failed, null, and superseded claims",
       "summary": "- Public surfaces (README, `index.html`, the deployed glossaries)\n  must not present any of these as corroborated results. When a\n  claim here appears anywhere as a \"prediction,\" \"forced value,\"\n  or \"verified\" entry, that is an overstatement to fix.\n- The derivation corpus records these dispositions in scattered\n  places (`numerology_inventory.md` Class 1, `framework_status.md`\n  Eliminated/Fails, `thread_chronology.md`, `no_rescaling.md`).\n  This ledger consolidates the *negative* dispositions",
@@ -28502,6 +29286,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "8579ac6",
           "date": "2026-06-01",
@@ -31283,6 +32072,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "a6a4f5d",
           "date": "2026-04-26",
           "subject": "Audit + standardization + structural lemmas: preprint-ready presentation (#82)"
@@ -31744,11 +32538,12 @@
     {
       "id": "path_closures_iter1",
       "path": "sync_cost/derivations/path_closures_iter1.md",
-      "cid": "0736ce3e22f353aa79e5f541a30b5cc8c973f6e00d0a173b0e5d27e348a8f5d6",
+      "cid": "2200365e3ec1a6819905c8fa7a0933b676a5af270ebb6412b1d76c06f0301765",
       "sealed": true,
       "title": "Path closures \u2014 iteration 1",
       "summary": "Iteration 1 of \"close paths\" mode complete. Four candidates\nclosed (3 NULL, 1 BLOCKED). Region D narrowed 6\u21923. Region B\nnarrowed 4\u21923. Subtractive progress. Loop pattern broken for\nthis iteration.",
       "depends_on": [
+        "ERRATA",
         "a0_threshold",
         "a_s_geometric_proof",
         "baryon_fraction",
@@ -31768,6 +32563,10 @@
         "path_closures_iter4"
       ],
       "edges": [
+        {
+          "target": "ERRATA",
+          "kind": "references"
+        },
         {
           "target": "a0_threshold",
           "kind": "references"
@@ -31833,6 +32632,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "400f558",
           "date": "2026-04-25",
           "subject": "K-axis uniqueness \u2192 3 Class 5 closures: sector decoupling + \u03a9_b two-component (#78)"
@@ -31842,11 +32646,12 @@
     {
       "id": "path_closures_iter2",
       "path": "sync_cost/derivations/path_closures_iter2.md",
-      "cid": "6586bebf9bc0737a62834dbca4a1188178efe7b25ac213958dfea9469a1ff4c2",
+      "cid": "29d305f30b6d3755e5608c19de3b90d601fd3429d3112b0fac841637d890b1b7",
       "sealed": true,
       "title": "Path closures \u2014 iteration 2",
       "summary": "Iteration 2 complete. 4 candidates closed/promoted. Open list\nnarrowed to 3 substantive candidates total across Regions B/C/D.\nLoop pattern still broken: definite verdicts, not multi-candidate\nansatz outputs.",
       "depends_on": [
+        "ERRATA",
         "anchor_count_audit",
         "continuity_in_K_nulls",
         "continuum_limits",
@@ -31860,6 +32665,10 @@
         "path_closures_iter3"
       ],
       "edges": [
+        {
+          "target": "ERRATA",
+          "kind": "references"
+        },
         {
           "target": "anchor_count_audit",
           "kind": "references"
@@ -31900,6 +32709,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "400f558",
           "date": "2026-04-25",
@@ -32190,7 +33004,9 @@
         "primitives_vs_addresses_candidate",
         "surface_uniqueness_audit"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "ERRATA"
+      ],
       "edges": [
         {
           "target": "bicyclist_observer_sequence",
@@ -32245,8 +33061,18 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        }
+      ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "357cecb",
           "date": "2026-06-04",
@@ -34779,12 +35605,14 @@
         "wave_particle_substrate"
       ],
       "depended_on_by": [
+        "ERRATA",
         "bicone_golden_z2_identification",
         "framework_status",
         "gr_qm_unification_synthesis",
         "k_of_t_residual_disposition",
         "predictions_horizon_2026",
-        "salpeter_gate_disposition"
+        "salpeter_gate_disposition",
+        "xor_derivation"
       ],
       "edges": [
         {
@@ -34834,6 +35662,10 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "bicone_golden_z2_identification",
           "kind": "references"
         },
@@ -34855,6 +35687,10 @@
         },
         {
           "source": "salpeter_gate_disposition",
+          "kind": "references"
+        },
+        {
+          "source": "xor_derivation",
           "kind": "references"
         }
       ],
@@ -35261,7 +36097,7 @@
     {
       "id": "quantum_gravity_interpolation",
       "path": "sync_cost/derivations/quantum_gravity_interpolation.md",
-      "cid": "89e3d7e89a9da3cf1abe72ae46b1efee155238cf61d3db3c0c38c496a5c323f9",
+      "cid": "f29bce5d763dce3a6aabbe8b4d57f6cf0adb029f24f1290929bf334cb0fc8845",
       "sealed": true,
       "title": "Quantum Gravity from the Rational Field Equation at K \u2248 1",
       "summary": "The rational field equation (D11) is exact at all values of the\ncoupling parameter K. The K = 1 limit gives Einstein's field\nequations (D12, D13). The K < 1 linearized limit gives the\nSchr\u00f6dinger equation (D12). The K \u2248 1 regime \u2014 where both\ngravitational and quantum effects are comparable \u2014 is the\nframework's quantum gravity. This derivation characterizes the\ninterpolating dynamics and extracts its physical predictions.",
@@ -35278,6 +36114,7 @@
         "speed_of_light"
       ],
       "depended_on_by": [
+        "ERRATA",
         "master_cascade_identity",
         "vacuum_stress_meta_structure_audit"
       ],
@@ -35325,6 +36162,10 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "master_cascade_identity",
           "kind": "references"
         },
@@ -35334,6 +36175,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "dffc200",
           "date": "2026-04-22",
@@ -35440,6 +36286,7 @@
         "klein_bottle_derivation",
         "mediant_derivation",
         "mediant_forcing_lemma",
+        "minimum_alphabet",
         "mobius_container",
         "mode_locking_exhibits",
         "proposed_items_disposition",
@@ -35540,6 +36387,10 @@
         },
         {
           "source": "mediant_forcing_lemma",
+          "kind": "references"
+        },
+        {
+          "source": "minimum_alphabet",
           "kind": "references"
         },
         {
@@ -35762,11 +36613,12 @@
     {
       "id": "remaining_gap_shapes",
       "path": "sync_cost/derivations/remaining_gap_shapes.md",
-      "cid": "891eef5f19bed2ac44d47365fa6dcafa2c8c4559a75cdddff0ef3967e518d240",
+      "cid": "5449d7feb9e616d4ec0b291a78195e7d406556244f28f67a76119a3f016a57f5",
       "sealed": true,
       "title": "Remaining gap shapes after the disambiguation pattern",
       "summary": "A forward-looking inventory of what's genuinely open in the\nframework after the `vocabulary_is_the_work_pattern.md`\nconsolidation has cleared the surface. Five distinct shapes,\ncharacterized by what kind of work they need and what kind of\nresult would close them.",
       "depends_on": [
+        "ERRATA",
         "L1_substrate_cusp_ground_state",
         "anchor_count_audit",
         "cross_ratio_irrep_reframe",
@@ -35800,6 +36652,10 @@
         "sector_decoupling_phase_a"
       ],
       "edges": [
+        {
+          "target": "ERRATA",
+          "kind": "references"
+        },
         {
           "target": "L1_substrate_cusp_ground_state",
           "kind": "references"
@@ -35920,6 +36776,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "5f41c24",
           "date": "2026-04-26",
@@ -37752,6 +38613,11 @@
       ],
       "git": [
         {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
+        {
           "hash": "e387fe3",
           "date": "2026-04-14",
           "subject": "Archive stale derivations and consolidate framework constants (#61)"
@@ -39224,6 +40090,7 @@
       "title": "Surface uniqueness audit \u2014 Klein bottle's \"uniqueness\" decomposed",
       "summary": "**Audit verdict: the surface uniqueness claim is layered. The\nsubstrate-internal arguments do NOT uniquely select K\u00b2; they\nexclude RP\u00b2 genuinely (the framework's apparatus literally\ncannot operate on RP\u00b2) but leave K\u00b2 and T\u00b2 as substrate-admitted\nalternatives. The selection of K\u00b2 over T\u00b2 is observation-fixed\n(fermion existence; \u03a9_\u039b match). This is exactly the\nbasepoint-principle pattern.**",
       "depends_on": [
+        "ERRATA",
         "basepoint_principle",
         "canonical_glossary",
         "discrete_gauge_resolution",
@@ -39238,6 +40105,7 @@
         "vocabulary_bridge_iteration_2_step_2"
       ],
       "depended_on_by": [
+        "ERRATA",
         "angular_momentum_three_source_inviolability_audit",
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
@@ -39257,6 +40125,10 @@
         "third_twist_meta_structure_audit"
       ],
       "edges": [
+        {
+          "target": "ERRATA",
+          "kind": "references"
+        },
         {
           "target": "basepoint_principle",
           "kind": "references"
@@ -39307,6 +40179,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "angular_momentum_three_source_inviolability_audit",
           "kind": "references"
@@ -39377,6 +40253,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "642c186",
           "date": "2026-06-03",
@@ -40098,6 +40979,7 @@
         "qd_origins"
       ],
       "depended_on_by": [
+        "ERRATA",
         "FRAMEWORK_TOPOLOGY",
         "INDEX",
         "PROOF_A_gravity",
@@ -40160,6 +41042,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "FRAMEWORK_TOPOLOGY",
           "kind": "references"
@@ -40438,7 +41324,9 @@
         "mobius_container",
         "three_dimensions"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "ERRATA"
+      ],
       "edges": [
         {
           "target": "continuum_limits",
@@ -40457,8 +41345,18 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        }
+      ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "b2deee7",
           "date": "2026-04-07",
@@ -41059,6 +41957,7 @@
       "summary": "Three bridge audits feeding into the planned antiparticle/dark-\nenergy unification audit (which folds in horizons-as-solitons +\nmedium-as-cancellation-residue + universal boundary-leakage).\nEach bridge addresses one of the open gaps from the unification\naudit's outline:",
       "depends_on": [
         "CHAIN_KSTAR",
+        "ERRATA",
         "anchor_extremes_audit",
         "born_rule_mode_count_extremes_audit",
         "boundary_weight",
@@ -41075,6 +41974,7 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "ERRATA",
         "antiparticle_dark_energy_unification_audit",
         "arrow_inviolability_and_unification_closure_audit",
         "boundary_leakage_rate_audit",
@@ -41089,6 +41989,10 @@
       "edges": [
         {
           "target": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "target": "ERRATA",
           "kind": "references"
         },
         {
@@ -41150,6 +42054,10 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "antiparticle_dark_energy_unification_audit",
           "kind": "references"
         },
@@ -41191,6 +42099,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "c6db782",
           "date": "2026-06-05",
@@ -41480,7 +42393,7 @@
     {
       "id": "vacuum_stress_meta_structure_audit",
       "path": "sync_cost/derivations/vacuum_stress_meta_structure_audit.md",
-      "cid": "18e350c877784affdb6b8e68b3b47e0be84d97805d2bc6c0b60d59e08f7378b4",
+      "cid": "4818ec308cd77c55385703c36995413b1fc7e9e8af9d32875c9182802cec8f71",
       "sealed": true,
       "title": "Vacuum stress meta-structure: anchors as stress denominations, complementary slackness, and the de-emergence ordering",
       "summary": "Exploration-audit, Class 3 over Class 5 pieces. Recognize-mode in\nPart I (assembly of `baryon_fraction.md`,\n`quantum_gravity_interpolation.md`, `continuum_limits.md` \u00a76,\n`a0_threshold.md` \u2014 no new content); framing in Part II (consistent\nrestatement of Lemma 3, upgrade path named in residual 2); mixed in\nPart III (forced on chains, open on totality). Names three objects:\nthe **sector-resolved stress map** (tension | shadow price |\npressure), **anchors as stress denominations**, and **LIFO\nunwind",
@@ -41492,6 +42405,7 @@
         "anchor_count_reaudit",
         "baryon_fraction",
         "basepoint_principle",
+        "beta_from_tongues",
         "coherence_matrix_completion_audit",
         "conservation_scale_stratification_audit",
         "continuum_limits",
@@ -41504,7 +42418,9 @@
         "tick_continuum_construction",
         "vocabulary_is_the_work_pattern"
       ],
-      "depended_on_by": [],
+      "depended_on_by": [
+        "ERRATA"
+      ],
       "edges": [
         {
           "target": "PROOF_A_gravity",
@@ -41532,6 +42448,10 @@
         },
         {
           "target": "basepoint_principle",
+          "kind": "references"
+        },
+        {
+          "target": "beta_from_tongues",
           "kind": "references"
         },
         {
@@ -41579,8 +42499,18 @@
           "kind": "references"
         }
       ],
-      "edged_by": [],
+      "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        }
+      ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "e225e7c",
           "date": "2026-06-12",
@@ -41600,6 +42530,7 @@
         "minimum_alphabet"
       ],
       "depended_on_by": [
+        "ERRATA",
         "INDEX",
         "cosmological_cycle",
         "f2_scoping",
@@ -41619,6 +42550,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "INDEX",
           "kind": "references"
@@ -42418,7 +43353,6 @@
       ],
       "depended_on_by": [
         "L1_substrate_cusp_ground_state",
-        "derivation_atlas",
         "framework_status",
         "omega_partition_combinatorial",
         "remaining_gap_shapes",
@@ -42485,10 +43419,6 @@
       "edged_by": [
         {
           "source": "L1_substrate_cusp_ground_state",
-          "kind": "references"
-        },
-        {
-          "source": "derivation_atlas",
           "kind": "references"
         },
         {
@@ -42890,18 +43820,26 @@
       "path": "sync_cost/derivations/xor_derivation.md",
       "cid": null,
       "sealed": false,
-      "title": "Derivation: The XOR Parity Filter from Klein Bottle Antiperiodic Boundary Conditions",
-      "summary": "This derivation closes gap #5 in `PROOFREADER_RESPONSE.md`: the XOR parity\nrule `q_1 % 2 != q_2 % 2` was previously confirmed by simulation\n(`klein_bottle_kuramoto.py`) and argued heuristically, but not derived from\nfirst principles. Here we carry out the Fourier analysis explicitly.",
+      "title": "Derivation: The Klein Bottle Mode-Pairing Spectrum, and the Conjectured XOR Parity Filter",
+      "summary": "This document does two things with different epistemic standings:",
       "depends_on": [
+        "ERRATA",
         "klein_bottle",
+        "q_mod2_mediant_projection",
         "sine_gordon_substrate"
       ],
       "depended_on_by": [
+        "ERRATA",
+        "canonical_glossary",
         "conservation_scale_stratification_audit",
+        "derivation_atlas",
         "discrete_reduction_computed",
         "discrete_reduction_problem",
+        "duty_cycle_dictionary",
         "f2_possibility_b_jacobian",
+        "figure_eight",
         "framework_status",
+        "gauge_dictionary",
         "gauge_factorization",
         "gell_mann_nishijima",
         "klein_bottle_derivation",
@@ -42913,7 +43851,15 @@
       ],
       "edges": [
         {
+          "target": "ERRATA",
+          "kind": "references"
+        },
+        {
           "target": "klein_bottle",
+          "kind": "references"
+        },
+        {
+          "target": "q_mod2_mediant_projection",
           "kind": "references"
         },
         {
@@ -42923,7 +43869,19 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
+          "source": "canonical_glossary",
+          "kind": "references"
+        },
+        {
           "source": "conservation_scale_stratification_audit",
+          "kind": "references"
+        },
+        {
+          "source": "derivation_atlas",
           "kind": "references"
         },
         {
@@ -42935,11 +43893,23 @@
           "kind": "references"
         },
         {
+          "source": "duty_cycle_dictionary",
+          "kind": "references"
+        },
+        {
           "source": "f2_possibility_b_jacobian",
           "kind": "references"
         },
         {
+          "source": "figure_eight",
+          "kind": "references"
+        },
+        {
           "source": "framework_status",
+          "kind": "references"
+        },
+        {
+          "source": "gauge_dictionary",
           "kind": "references"
         },
         {
@@ -42976,6 +43946,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "68b029e",
+          "date": "2026-08-18",
+          "subject": "2026-08 correction campaign: docs state truth, gates that can fail, sealed successions (#339)"
+        },
         {
           "hash": "e27106f",
           "date": "2026-05-10",
