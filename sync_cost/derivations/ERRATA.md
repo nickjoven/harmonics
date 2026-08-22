@@ -176,3 +176,24 @@ derivation carries the least-denominator selection + inductive
 invariant. Denominator-ordered widths are not universal over
 couplings (sin(4πθ) at K = 0.5: w(1/4) = 0.03697 > w(1/3) = 0.01527);
 first-harmonic dominance added as condition (4).
+
+## E18 — Proof Chain A (Kuramoto → Einstein) refuted
+**Files:** `PROOF_A_gravity.md`, `adm_dictionary.md` (banners); `MANIFEST.yml proof_chains.A` (status owed). **Fix commit:** this branch. **Refutation of record:** proslambenomenos claim `einstein-from-kuramoto-chain-a`, script `scripts/verify/kuramoto_einstein_refutation.py` (link-005).
+Four independent failures: parabolic vs hyperbolic (spreading exponent 0.500 vs 1; the inertial mutant gives 0.989, so the check discriminates); the lapse is uniform in any locked state by definition; the correlation-tensor metric is a graph metric (Gauss equation checked to 4e-4), codimension-one flat-embeddable; P8's covariance hypothesis is supplied by a three-dimensional group. "Survives" → **refuted**.
+
+## E19 — Neutrino "0.31 σ" is a Δm²₃₁/Δm²₃₂ mislabel
+**Files:** `neutrino_mass_audit.md` (banner); `item12_neutrino_solar_closure.py:50` (comparison target). **Fix commit:** this branch.
+Against Δm²₃₁ the prediction is 2.25 σ; the solar 0.12 σ was reached by adding a −1/36 term (from 1.77 σ); ≥ 5 alphabet choices. "Closed … not a fit" → **open, fitted, 2.25 σ**. Σm_ν = 66.7 meV / NO / m₁ = 6.2 meV kept as the falsifiable residue.
+
+## E20 — Fermion mass sector: no scale prescription; §5 backwards; §6 incomplete
+**Files:** `fermion_mass_running.md` (banner), `fermion_mass_running.py` (deleted, #338, `ebfb97b`). **Fix commit:** this branch.
+All sector matches are pole/mixed-scheme against a tree/Planck formula and degrade at M_Z (τ/e +3.2%, Koide +0.19%). Running moves m_b/m_d and m_t/m_u away from tree. m_s/m_d (+146%) and m_c/m_u (−35%) are scale-insensitive falsifications omitted from the table.
+
+## E21 — Koide "Floor" reconciliation reverted (double count)
+**Files:** `numerology_inventory.md` (banner), `free_parameter_scorecard.md` L55-78 (inherits). **Fix commit:** this branch.
+"Koide + tree τ/e → μ/e at 1%" credits the framework with Koide 1982's result degraded by the framework's own input (0.005% → 0.96%). Lepton μ/e → **Class 1**. Koide arc: Foot 1994 and Koide 1983 unattributed; iteration-13 theorem circular; iteration-14 null closure stands.
+
+## E22 — 26:7:1 asserted, not derived; cyclotomic "sub-percent" withdrawn
+**Files:** `generation_mechanism.md`, `cyclotomic_content_mass_ratios_audit.md` (banners). **Fix commit:** this branch.
+Duty/gap products give 3.5:3:1 or 25:14:2 (`three_generations_Q.py:126`); 26 and 7 are then asserted as q³−1. Two definitions of "generation", two mass formulas, a det-0 "SL(2,Z)" matrix. √26 ∉ Q(ζ₂₆). Status → **asserted**.
+

@@ -1,5 +1,7 @@
 # The Generation Mechanism
 
+> **Status correction (2026-08-22, ERRATA E22).** 26:7:1 is **not derived** from the duty/gap weights of sections 1-2: the products give 3.5:3:1 (coverage) or 25:14:2 (duty) - `three_generations_Q.py:126-136` prints "still not 26:7:1" - after which 26 = 3^3 - 1 and 7 = 2^3 - 1 are asserted. Two incompatible definitions of "generation" (locking status vs Stern-Brocot path length) and two incompatible mass formulas (26^a vs phi^{2 Delta n}, the latter unfalsifiable at 27% by construction) coexist below; the SL(2,Z) matrix [[1,1],[1,1]] at L160 has determinant 0. Status: **asserted**, not "Partially derived (Floor)."
+
 ## Claim
 
 Three generations of fermions are not free parameters. They are the

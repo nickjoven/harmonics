@@ -1,5 +1,7 @@
 # Numerology inventory
 
+> **Status correction (2026-08-22, ERRATA E21).** The 2026-05 "Reconciliation" promoting lepton mu/e to **Floor** via Koide is a double count and is **reverted to Class 1**. Koide with observed tau/e gives mu/e to 0.005%; with the framework's tree tau/e (26^{5/2}, 0.87% off) it gives 0.96%. The framework's contribution is a degradation of Koide's 1982 result; no framework content reaches mu/e. `free_parameter_scorecard.md` L55-78 inherits this reversion. The 14 Koide iterations re-derive Foot 1994 and Koide 1983 without attribution (iteration 13's uniqueness theorem assumes Koide in its assumption (c)); iteration 14's null closure stands.
+
 Compilation of framework predictions / observations that are confirmed
 numerology, noted coincidences, or suspects — so we know what to stop
 chasing as if it were structural.

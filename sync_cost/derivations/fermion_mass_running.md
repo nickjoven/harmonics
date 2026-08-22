@@ -1,5 +1,7 @@
 # Fermion Mass Running from the K → μ Map
 
+> **Status correction (2026-08-22, ERRATA E20).** Three corrections. **No scale prescription**: every match in this sector (26^{5/2}, Koide 2/3, the a_1^2 ratios) uses pole or mixed-scheme masses against a formula declared tree/Planck-scale; at M_Z tau/e is 3589 (+3.2%) and Koide Q is 0.6679 (+0.19%), so the matches degrade at the scale the formula claims - evidence against, not for. **Sections 5a/5b are backwards**: running m_b(m_b) and m_t to 2 GeV makes both heavier, so m_b/m_d and m_t/m_u move **away** from tree (1033 and ~1.3e5 vs 676 and 17576); "attributed to QCD running" is false, and `fermion_mass_running.py`'s own output said so before its deletion (#338: its running exponent evaluated to 2.19 where 12/23 is correct, and its alpha_s log lacked the factor 2). **Section 6 omits four of six quark ratios**: m_s/m_d = 19.9 observed vs 49 predicted (+146%) and m_c/m_u = 343 vs 526 are scale-insensitive and falsify a = 2, a = 3 outright. The Koide "1%" in section 4c is Koide 1982 alone (0.005% with observed tau/e) degraded by the framework's 0.87%-off input - see E21.
+
 ## Claim
 
 The tree-level fermion mass formula (D34) gives mass ratios as

@@ -1,5 +1,7 @@
 # Cyclotomic content of framework mass ratios (A2: PR #235 methodology instance)
 
+> **Status correction (2026-08-22, ERRATA E22).** L410 "26:7:1 ... Sub-percent" is false: five of six quark ratios miss by 24-146% (E20). L130-146: sqrt(26) is not in Q(zeta_26) (it lies in Q(zeta_104); Q(zeta_13) contains sqrt(-13)). The MODAL/GENERATIVE verdicts that rest on the 26:7:1 row are withdrawn.
+
 ## Status
 
 **Verdict: MODAL ✓ / GENERATIVE ✓** on the identification of

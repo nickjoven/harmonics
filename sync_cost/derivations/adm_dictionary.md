@@ -1,5 +1,7 @@
 # The ADM Dictionary
 
+> **Status correction (2026-08-22, ERRATA E18).** The dictionary's three identifications fail for the reasons recorded in `PROOF_A_gravity.md`'s banner: the lapse is uniform in any locked state; the correlation-tensor metric is a graph metric; no first-order flow produces ADM evolution. The "uniqueness" arguments below select among objects none of which is an ADM variable.
+
 ## Claim
 
 The mapping from Kuramoto variables to ADM variables is the unique
