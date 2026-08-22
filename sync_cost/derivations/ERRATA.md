@@ -197,3 +197,11 @@ All sector matches are pole/mixed-scheme against a tree/Planck formula and degra
 **Files:** `generation_mechanism.md`, `cyclotomic_content_mass_ratios_audit.md` (banners). **Fix commit:** this branch.
 Duty/gap products give 3.5:3:1 or 25:14:2 (`three_generations_Q.py:126`); 26 and 7 are then asserted as q³−1. Two definitions of "generation", two mass formulas, a det-0 "SL(2,Z)" matrix. √26 ∉ Q(ζ₂₆). Status → **asserted**.
 
+## E23 — Iwasawa one-stage claim false; classification corrected
+**Files:** `planck_scale.md` (banner). **Fix commit:** this branch. **Of record:** proslambenomenos claims `iwasawa-one-stage-original` (refuted) / `sl2r-connected-subgroups` (proven, classical), R-2.
+The Borel subgroup AN kills two stages; "one-parameter or discrete" omits dims 2 and 3. Dimension-3 conclusion survives on dim H >= 1 alone.
+
+## E24 — H_1(K^2) torsion is the y-loop, not the x-loop
+**Files:** `klein_bottle_derivation.md` (banner). **Fix commit:** this branch.
+Abelianisation of <t, g | g t g^-1 = t^-1> gives t^2 = 1; the glide g is the free generator.
+
