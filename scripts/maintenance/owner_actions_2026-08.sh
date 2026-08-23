@@ -140,12 +140,17 @@ cmd_ket_merge() {
 }
 
 cmd_push() {
-  say "pushing (this publishes)"
+  # BRANCH defaults to the currently checked-out harmonics branch; pass
+  # BRANCH=name to override. The old hard-wired corrections/inexpensive-
+  # batch-1 silently reported "up-to-date" for every other branch.
+  local branch="${BRANCH:-$(git -C "$HARMONICS" branch --show-current)}"
+  [ -n "$branch" ] || die "no branch checked out and BRANCH not set" 6
+  say "pushing harmonics branch '$branch' and ket (this publishes)"
   cd "$KET_REPO"        && git push origin main && git push origin log-newline-guard \
     || die "ket push failed" 4
-  cd "$HARMONICS"       && git push -u origin corrections/inexpensive-batch-1 \
+  cd "$HARMONICS"       && git push -u origin "$branch" \
     || die "harmonics push failed" 4
-  say "pushed"
+  say "pushed $branch"
 }
 
 case "${1:-}" in
