@@ -563,3 +563,6 @@
 2026-08-18T22:50:47Z | dag:create | 3aba1fdbdf26b44155c752c523f48db0c94b9f7c2ba0b552e74a6f6458dc90aa
 2026-08-18T23:13:58Z | rm | sync_cost/derivations/cascade_cluster_order.py (deleted c7df11b, dead-script disposition)
 2026-08-18T23:13:58Z | rm | sync_cost/derivations/cascade_kink_vs_fermion.py (deleted c7df11b, dead-script disposition)
+2026-08-22T05:23:31Z | put | sync_cost/derivations/cyclotomic_content_mass_ratios_audit.md -> 8becd04a4505f73a3b1e1487143db00e928c06f3fddfb1f6118c63535be170c8
+2026-08-22T05:23:31Z | put | sync_cost/derivations/fermion_mass_running.md -> ab9539bd109c8b973b32c170bd0f1dd507fab861bb5d0ffc0adea24cf5fa85a0
+2026-08-22T05:23:31Z | put | sync_cost/derivations/numerology_inventory.md -> dd3ba20ae1be2fc1eb61ea08a6a130a02fe8fac7b2fb67202d91780b6bdefa3f

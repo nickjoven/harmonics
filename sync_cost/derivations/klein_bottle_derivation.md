@@ -2,6 +2,8 @@
 <!-- premises: klein-spectrum-theorem@xor_derivation, xor-parity-translation@xor_derivation -->
 # The Klein Bottle from Self-Consistency
 
+> **Status correction (2026-08-22, ERRATA E24).** Lines 170-174 assign the Z_2 torsion of H_1(K^2) to the x-loop (the antiperiodic direction). Abelianising pi_1 = <t, g | g t g^-1 = t^-1> gives t^2 = 1: the torsion class is the **y-loop t**, and the glide g (the x-direction) is the free Z generator. The "antiperiodic direction = torsion" reading is backwards. Found by the 2026-08-22 context-free audit of proslambenomenos link-005 (LC-5 side finding).
+
 ## Claim
 
 The Klein bottle is not assumed. It is the unique compact surface

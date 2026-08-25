@@ -1,5 +1,7 @@
 # Planck Scale from Self-Sustaining Threshold
 
+> **Status correction (2026-08-22, ERRATA E23).** The "Result" at line 234 ("every continuous H != {e} in SL(2,R) kills exactly one of the three coupling stages") is **false**: the connected Borel subgroup AN = {[[p,q],[0,1/p]] : p > 0} is 2-dimensional, contains A and N, and has dim G/AN = 1 - it kills two stages; the exhaustiveness paragraph (224-228) omits dimensions 2 and 3, and "exactly one" is meaningful only up to conjugacy. The correct classification of connected subgroups of SL(2,R) is {e}; K, A, N; AN; G (proslambenomenos claim `sl2r-connected-subgroups`, script `scripts/verify/iwasawa_one_stage.py`, R-2). The dimension-3 conclusion survives because it only ever used dim H >= 1; the physics premises (SL(2,R) as substrate; N <= 2 non-self-sustaining) are untouched and remain unsupported.
+
 ## Claim
 
 The Planck scale is not an imposed cutoff. It is the minimum domain

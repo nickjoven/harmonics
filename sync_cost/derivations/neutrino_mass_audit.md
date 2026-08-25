@@ -1,5 +1,7 @@
 # Neutrino mass audit: already closed, not a depth-limit problem
 
+> **Status correction (2026-08-22, ERRATA E19).** The "0.31 sigma atmospheric" figure compares the predicted Delta m^2_31 (2.446e-3 eV^2) against the observed **Delta m^2_32** (PDG 2.455e-3) via `item12_neutrino_solar_closure.py:50` - a mislabel. Against NuFIT Delta m^2_31 = 2.507 +/- 0.027 the prediction is **2.25 sigma**; the predicted Delta m^2_32 = 2.372 is 2.95 sigma from 2.455. The solar 0.12 sigma was obtained by adding the "-1/36" term that moved it from 1.77 sigma (`item12...py:10,25`); with >= 5 alphabet choices in m_3 = v (K*/2)^35 2^(1/3), m_1 = m_3/8, m_2 = m_1(sqrt 3 - 1/36), "not a fit" does not hold. Status: **open, 2.25 sigma, fitted** - not "closed." The surviving falsifiable content is Sum m_nu = 66.7 meV, normal ordering, m_1 = 6.2 meV, which DESI/CMB-S4 will test.
+
 ## The finding
 
 Issue #56 Tier 2 item 9 lists:

@@ -304,8 +304,8 @@ owner-tombstone:
 owner-ket-merge:
 	bash scripts/maintenance/owner_actions_2026-08.sh ket-merge
 
-owner-push:
-	bash scripts/maintenance/owner_actions_2026-08.sh push
+owner-push:   # pushes the checked-out branch; BRANCH=name to override
+	BRANCH=$(BRANCH) bash scripts/maintenance/owner_actions_2026-08.sh push
 
 .PHONY: drift owner-list owner-reseal owner-successions owner-succession \
 	owner-tombstone owner-ket-merge owner-push

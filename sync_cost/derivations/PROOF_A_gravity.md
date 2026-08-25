@@ -1,5 +1,7 @@
 # Proof Chain A: Polynomial → General Relativity
 
+> **Status correction (2026-08-22, ERRATA E18).** This chain is **refuted**, not "Survives." Four independent failures, three computed (proslambenomenos `scripts/verify/kuramoto_einstein_refutation.py`, claim `einstein-from-kuramoto-chain-a`): (1) Kuramoto is first order in time - a locked-lattice perturbation spreads with exponent 0.500 (parabolic), while ADM evolution is hyperbolic (exponent 1); no differentiation of the flow yields the second-order system, and P7's "follows from differentiating" was never written down; (2) in a locked state every oscillator has the same frequency by definition, so the dictionary's lapse N = r has no position-dependent clock rate to encode; (3) gamma = I + grad theta grad theta^T is the induced metric of the graph z = theta(x) (Gauss equation checked to 4e-4), a codimension-one flat embedding, not a general 3-metric (Janet-Cartan); (4) P8 supplies Lovelock's general-covariance hypothesis with "SL(2,R) acts transitively" - Diff(M) is infinite-dimensional, SL(2,R) is three-dimensional. The Status section below and `MANIFEST.yml proof_chains.A` are superseded by this banner.
+
 N. Joven — 2026 — CC0 1.0
 
 ---

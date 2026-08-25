@@ -18,7 +18,6 @@ sync_cost/derivations/dynamical_tool_audit.md
 sync_cost/derivations/epsilon_physical_reading.md
 sync_cost/derivations/epsilon_substrate_decomposition.md
 sync_cost/derivations/fermion_mass_running.md
-sync_cost/derivations/fermion_mass_running.py
 sync_cost/derivations/framework_constants.py
 sync_cost/derivations/framework_status.md
 sync_cost/derivations/hierarchy_problem_translation.md
