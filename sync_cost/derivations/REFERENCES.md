@@ -5,7 +5,7 @@
 
 External literature cited inline (as `arXiv:` / `doi:`) across the
 derivation docs, resolved to canonical metadata via the arXiv and
-CrossRef APIs. 6 reference(s). Generated 2026-08-18.
+CrossRef APIs. 6 reference(s). Generated 2026-08-25.
 
 - **[Camara2008]** Carlos G. Camara, Juan V. Escobar, Jonathan R. Hird, Seth J. Putterman (2008). *Correlation between nanosecond X-ray flashes and stick–slip friction in peeling tape*. Nature.
   [doi:10.1038/nature07378](https://doi.org/10.1038/nature07378)
