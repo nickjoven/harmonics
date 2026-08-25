@@ -20,6 +20,7 @@
   },
   "ERRATA": {
    "classes": [
+    1,
     2,
     5
    ],
@@ -3680,7 +3681,7 @@
    "title": "Derivation: The Klein Bottle Mode-Pairing Spectrum, and the Conjectured XOR Parity Filter"
   }
  },
- "generated": "50a53af",
+ "generated": "8090f25",
  "generator": "scripts/build_corpus_index.py",
  "rule8_flags": []
 }

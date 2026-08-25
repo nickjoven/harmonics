@@ -1,5 +1,5 @@
 {
-  "generated": "50a53af5d9309eeb80a8a31fdf23bb49b1832a9b",
+  "generated": "8090f256900f5bd98ee13102b0065a123b4fe568",
   "nodes": [
     {
       "id": "CHAIN_KSTAR",
@@ -183,6 +183,8 @@
       "summary": "Corrections ledger for the derivation corpus. Policy: **documents\nstate current truth only** \u2014 a corrected doc is republished as a new\nedition (marked by an HTML comment on line 1 naming the edition, the\nprior text's git ref, and its errata entries). The defect, evidence,\nand history live here, not in the reading surface. Audit documents\n(`*_audit.md`) are point-in-time records: they are never rewritten\nand carry at most a one-line pointer to this file. Prior text of any\nedition: `git show <ref>",
       "depends_on": [
         "INDEX",
+        "PROOF_A_gravity",
+        "adm_dictionary",
         "antiparticle_dark_energy_unification_audit",
         "beta_from_tongues",
         "born_rule",
@@ -190,6 +192,7 @@
         "canonical_glossary",
         "cosmological_cycle",
         "coupling_scales",
+        "cyclotomic_content_mass_ratios_audit",
         "denomination_boundary",
         "discrete_gauge_resolution",
         "duty_cycle_dictionary",
@@ -199,15 +202,20 @@
         "fermion_mass_running",
         "figure_eight",
         "figure_eight_necessitation_audit",
+        "free_parameter_scorecard",
         "gauge_dictionary",
         "gell_mann_nishijima",
+        "generation_mechanism",
         "klein_bottle_derivation",
         "lie_group_characterization",
         "mass_sector_closure",
         "mediant_derivation",
         "minimum_alphabet",
         "mobius_container",
+        "neutrino_mass_audit",
+        "numerology_inventory",
         "pattern_identification_discipline_candidate",
+        "planck_scale",
         "q_mod2_mediant_projection",
         "quantum_gravity_interpolation",
         "surface_uniqueness_audit",
@@ -239,6 +247,14 @@
           "kind": "references"
         },
         {
+          "target": "PROOF_A_gravity",
+          "kind": "references"
+        },
+        {
+          "target": "adm_dictionary",
+          "kind": "references"
+        },
+        {
           "target": "antiparticle_dark_energy_unification_audit",
           "kind": "references"
         },
@@ -264,6 +280,10 @@
         },
         {
           "target": "coupling_scales",
+          "kind": "references"
+        },
+        {
+          "target": "cyclotomic_content_mass_ratios_audit",
           "kind": "references"
         },
         {
@@ -303,11 +323,19 @@
           "kind": "references"
         },
         {
+          "target": "free_parameter_scorecard",
+          "kind": "references"
+        },
+        {
           "target": "gauge_dictionary",
           "kind": "references"
         },
         {
           "target": "gell_mann_nishijima",
+          "kind": "references"
+        },
+        {
+          "target": "generation_mechanism",
           "kind": "references"
         },
         {
@@ -335,7 +363,19 @@
           "kind": "references"
         },
         {
+          "target": "neutrino_mass_audit",
+          "kind": "references"
+        },
+        {
+          "target": "numerology_inventory",
+          "kind": "references"
+        },
+        {
           "target": "pattern_identification_discipline_candidate",
+          "kind": "references"
+        },
+        {
+          "target": "planck_scale",
           "kind": "references"
         },
         {
@@ -430,6 +470,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "2ebe2cb",
+          "date": "2026-08-24",
+          "subject": "unseal fermion mass running (#343)"
+        },
         {
           "hash": "68b029e",
           "date": "2026-08-18",
@@ -1236,8 +1281,10 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "ERRATA",
         "INDEX",
         "PROOF_B_quantum",
+        "adm_dictionary",
         "articulation_audit_2026-05",
         "boundary_weight",
         "conservation_computability",
@@ -1307,11 +1354,19 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "INDEX",
           "kind": "references"
         },
         {
           "source": "PROOF_B_quantum",
+          "kind": "references"
+        },
+        {
+          "source": "adm_dictionary",
           "kind": "references"
         },
         {
@@ -1396,6 +1451,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "2ebe2cb",
+          "date": "2026-08-24",
+          "subject": "unseal fermion mass running (#343)"
+        },
         {
           "hash": "a6a4f5d",
           "date": "2026-04-26",
@@ -2459,12 +2519,14 @@
       "title": "The ADM Dictionary",
       "summary": "The mapping from Kuramoto variables to ADM variables is the unique\nidentification consistent with the symmetries of the locked-state\nKuramoto system at K=1. Each entry is forced by a uniqueness argument.",
       "depends_on": [
+        "PROOF_A_gravity",
         "continuum_limits",
         "coupling_scales",
         "einstein_from_kuramoto",
         "three_dimensions"
       ],
       "depended_on_by": [
+        "ERRATA",
         "articulation_audit_2026-05",
         "graviton_reframing",
         "k_of_t_friedmann",
@@ -2473,6 +2535,10 @@
         "vacuum_stress_meta_structure_audit"
       ],
       "edges": [
+        {
+          "target": "PROOF_A_gravity",
+          "kind": "references"
+        },
         {
           "target": "continuum_limits",
           "kind": "references"
@@ -2491,6 +2557,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "articulation_audit_2026-05",
           "kind": "references"
@@ -2517,6 +2587,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "2ebe2cb",
+          "date": "2026-08-24",
+          "subject": "unseal fermion mass running (#343)"
+        },
         {
           "hash": "cc11b2e",
           "date": "2026-04-07",
@@ -9807,7 +9882,7 @@
     {
       "id": "cyclotomic_content_mass_ratios_audit",
       "path": "sync_cost/derivations/cyclotomic_content_mass_ratios_audit.md",
-      "cid": "b0343e088919c5ce4e26e4552567e495647199df8dce023fc0389adfd37c64bf",
+      "cid": "8becd04a4505f73a3b1e1487143db00e928c06f3fddfb1f6118c63535be170c8",
       "sealed": true,
       "title": "Cyclotomic content of framework mass ratios (A2: PR #235 methodology instance)",
       "summary": "**Verdict: MODAL \u2713 / GENERATIVE \u2713** on the identification of\nspecific cyclotomic content in framework mass ratios. The\nframework's mass ratios sit at framework-native cyclotomic\nstructures \u2014 roots of unity from Z_n subgroups derived from\nMihailescu primes and Farey-cardinality content \u2014 not at\ngeneric cyclotomic positions.",
@@ -9834,6 +9909,7 @@
         "substrate_determinism"
       ],
       "depended_on_by": [
+        "ERRATA",
         "cuspidal_lambda17_weight4_audit",
         "gamma06_cosmological_modular_surface_audit",
         "half_twist_meta_structure_audit",
@@ -9926,6 +10002,10 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "cuspidal_lambda17_weight4_audit",
           "kind": "references"
         },
@@ -9955,6 +10035,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "2ebe2cb",
+          "date": "2026-08-24",
+          "subject": "unseal fermion mass running (#343)"
+        },
         {
           "hash": "a6ce274",
           "date": "2026-07-19",
@@ -14798,7 +14883,7 @@
     {
       "id": "fermion_mass_running",
       "path": "sync_cost/derivations/fermion_mass_running.md",
-      "cid": "0a2392b394a2832dbad95e75ff796633a8811bd0bd1ff8e90c5f8b0cc82dd0e0",
+      "cid": "ab9539bd109c8b973b32c170bd0f1dd507fab861bb5d0ffc0adea24cf5fa85a0",
       "sealed": true,
       "title": "Fermion Mass Running from the K \u2192 \u03bc Map",
       "summary": "The tree-level fermion mass formula (D34) gives mass ratios as\n(W_heavy/W_light)^a with sector exponents a = d \u2212 1/2 + charge/2.\nThe \u03c4/e ratio at a = 5/2 matches to 0.9%, but the \u03bc/e ratio has\na 37% residual. This residual is the tree-to-physical running\ncorrection. This derivation computes the correction from the K \u2192\n\u03bc mapping, closing the fermion mass gap (\u00a78.2).",
@@ -14931,6 +15016,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "2ebe2cb",
+          "date": "2026-08-24",
+          "subject": "unseal fermion mass running (#343)"
+        },
         {
           "hash": "68b029e",
           "date": "2026-08-18",
@@ -16732,6 +16822,7 @@
         "two_forces"
       ],
       "depended_on_by": [
+        "ERRATA",
         "algebraic_forcing_partition",
         "equivalence_dissolution",
         "fermion_mass_running",
@@ -16835,6 +16926,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "algebraic_forcing_partition",
           "kind": "references"
@@ -18497,6 +18592,7 @@
         "three_dimensions"
       ],
       "depended_on_by": [
+        "ERRATA",
         "INDEX",
         "axial_trajectory_conservation_audit",
         "beta_from_tongues",
@@ -18576,6 +18672,10 @@
         }
       ],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "INDEX",
           "kind": "references"
@@ -18702,6 +18802,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "2ebe2cb",
+          "date": "2026-08-24",
+          "subject": "unseal fermion mass running (#343)"
+        },
         {
           "hash": "543d8b6",
           "date": "2026-05-27",
@@ -23981,6 +24086,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "2ebe2cb",
+          "date": "2026-08-24",
+          "subject": "unseal fermion mass running (#343)"
+        },
         {
           "hash": "68b029e",
           "date": "2026-08-18",
@@ -29314,7 +29424,7 @@
       "cid": null,
       "sealed": false,
       "title": "Neutrino mass audit: already closed, not a depth-limit problem",
-      "summary": "This is an **outdated attribution**. `item12_neutrino_solar_closure.py`\ncloses the full neutrino mass sector via a **finite-K\ninteraction-scale correction**, not a depth \u2192 \u221e limit.",
+      "summary": "> **Status correction (2026-08-22, ERRATA E19).** The \"0.31 sigma atmospheric\" figure compares the predicted Delta m^2_31 (2.446e-3 eV^2) against the observed **Delta m^2_32** (PDG 2.455e-3) via `item12_neutrino_solar_closure.py:50` - a mislabel. Against NuFIT Delta m^2_31 = 2.507 +/- 0.027 the prediction is **2.25 sigma**; the predicted Delta m^2_32 = 2.372 is 2.95 sigma from 2.455. The solar 0.12 sigma was obtained by adding the \"-1/36\" term that moved it from 1.77 sigma (`item12...py:10,25`);",
       "depends_on": [
         "gap2_spatialization_decomposition",
         "hierarchy_gaussian_lattice",
@@ -29325,6 +29435,7 @@
         "statistical_conventions"
       ],
       "depended_on_by": [
+        "ERRATA",
         "higgs_from_tongue_boundary",
         "statistical_conventions"
       ],
@@ -29360,6 +29471,10 @@
       ],
       "edged_by": [
         {
+          "source": "ERRATA",
+          "kind": "references"
+        },
+        {
           "source": "higgs_from_tongue_boundary",
           "kind": "references"
         },
@@ -29369,6 +29484,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "2ebe2cb",
+          "date": "2026-08-24",
+          "subject": "unseal fermion mass running (#343)"
+        },
         {
           "hash": "b2e99ef",
           "date": "2026-05-24",
@@ -30172,10 +30292,10 @@
     {
       "id": "numerology_inventory",
       "path": "sync_cost/derivations/numerology_inventory.md",
-      "cid": "5c46277bcf7410d71173d31034747943ae29a2467f9ee008a105b148c30ad78d",
+      "cid": "dd3ba20ae1be2fc1eb61ea08a6a130a02fe8fac7b2fb67202d91780b6bdefa3f",
       "sealed": true,
       "title": "Numerology inventory",
-      "summary": "Compilation of framework predictions / observations that are confirmed\nnumerology, noted coincidences, or suspects \u2014 so we know what to stop\nchasing as if it were structural.",
+      "summary": "> **Status correction (2026-08-22, ERRATA E21).** The 2026-05 \"Reconciliation\" promoting lepton mu/e to **Floor** via Koide is a double count and is **reverted to Class 1**. Koide with observed tau/e gives mu/e to 0.005%; with the framework's tree tau/e (26^{5/2}, 0.87% off) it gives 0.96%. The framework's contribution is a degradation of Koide's 1982 result; no framework content reaches mu/e. `free_parameter_scorecard.md` L55-78 inherits this reversion. The 14 Koide iterations re-derive Foot 19",
       "depends_on": [
         "CHAIN_KSTAR",
         "a0_threshold",
@@ -30212,6 +30332,7 @@
       ],
       "depended_on_by": [
         "CHAIN_KSTAR",
+        "ERRATA",
         "a0_threshold",
         "a_s_g1_closure_attempt",
         "a_s_geometric_proof",
@@ -30403,6 +30524,10 @@
       "edged_by": [
         {
           "source": "CHAIN_KSTAR",
+          "kind": "references"
+        },
+        {
+          "source": "ERRATA",
           "kind": "references"
         },
         {
@@ -30635,6 +30760,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "2ebe2cb",
+          "date": "2026-08-24",
+          "subject": "unseal fermion mass running (#343)"
+        },
         {
           "hash": "1a934ca",
           "date": "2026-07-27",
@@ -33553,6 +33683,7 @@
       "summary": "The Planck scale is not an imposed cutoff. It is the minimum domain\nwhere the synchronization substrate can sustain itself \u2014 the N = 3\nthreshold of the coupling loop.",
       "depends_on": [],
       "depended_on_by": [
+        "ERRATA",
         "INDEX",
         "anchor_count_audit",
         "anchor_extremes_audit",
@@ -33584,6 +33715,10 @@
       ],
       "edges": [],
       "edged_by": [
+        {
+          "source": "ERRATA",
+          "kind": "references"
+        },
         {
           "source": "INDEX",
           "kind": "references"
@@ -33698,6 +33833,11 @@
         }
       ],
       "git": [
+        {
+          "hash": "2ebe2cb",
+          "date": "2026-08-24",
+          "subject": "unseal fermion mass running (#343)"
+        },
         {
           "hash": "b2deee7",
           "date": "2026-04-07",
