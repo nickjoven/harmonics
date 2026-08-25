@@ -1,5 +1,5 @@
 {
- "generated": "c24b5ae",
+ "generated": "76aa910",
  "generator": "scripts/build_claims_index.py",
  "ingest": {
   "annotator": null,
@@ -8,14 +8,14 @@
    "utterances_sealed": 328,
    "unstructured": 193,
    "edges_promoted": 47,
-   "references_untyped": 3183,
+   "references_untyped": 3192,
    "propositions": 288,
    "terms_bound": 110,
    "corroborated": 36,
-   "unattributed_values": 54033,
+   "unattributed_values": 54135,
    "needs_review_depth": 3,
    "reassertion_blocks": 0,
-   "heads_superseded": 54
+   "heads_superseded": 11
   }
  },
  "claim_count": 99,

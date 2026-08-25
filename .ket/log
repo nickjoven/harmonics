@@ -566,3 +566,5 @@
 2026-08-22T05:23:31Z | put | sync_cost/derivations/cyclotomic_content_mass_ratios_audit.md -> 8becd04a4505f73a3b1e1487143db00e928c06f3fddfb1f6118c63535be170c8
 2026-08-22T05:23:31Z | put | sync_cost/derivations/fermion_mass_running.md -> ab9539bd109c8b973b32c170bd0f1dd507fab861bb5d0ffc0adea24cf5fa85a0
 2026-08-22T05:23:31Z | put | sync_cost/derivations/numerology_inventory.md -> dd3ba20ae1be2fc1eb61ea08a6a130a02fe8fac7b2fb67202d91780b6bdefa3f
+2026-08-25T03:20:58Z | put | sync_cost/ingest/report.json -> 08efcdeb9b0922802f65cd8489233a9655300f169c834b295078f1f6fe6d1911
+2026-08-25T03:20:58Z | dag:create | e979f7ff345985a33a5a59bb43ca38242b1eb75ec3d1523a305a16f12b87212b
